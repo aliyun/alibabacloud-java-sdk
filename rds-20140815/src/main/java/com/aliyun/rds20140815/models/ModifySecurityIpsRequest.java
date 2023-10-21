@@ -37,7 +37,7 @@ public class ModifySecurityIpsRequest extends TeaModel {
     public String freshWhiteListReadins;
 
     /**
-     * <p>The method that is used to modify the IP address whitelist. Valid values:</p>
+     * <p>The method that is used to modify the whitelist. Valid values:</p>
      * <br>
      * <p>*   **Cover**: Use the IP addresses and CIDR blocks that are specified in the **SecurityIps** parameter to overwrite the existing IP addresses and CIDR blocks in the IP address whitelist.</p>
      * <p>*   **Append**: Add the IP addresses and CIDR blocks that are specified in the **SecurityIps** parameter to the IP address whitelist.</p>

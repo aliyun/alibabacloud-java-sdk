@@ -11,7 +11,7 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
     public GetDbProxyInstanceSslResponseBodyDbProxyCertListItems dbProxyCertListItems;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -45,7 +45,7 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
         public String certCommonName;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("DbInstanceName")
         public String dbInstanceName;
@@ -63,7 +63,7 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
         public String endpointType;
 
         /**
-         * <p>The time when the certificate expires.</p>
+         * <p>The time at which the certificate expires.</p>
          */
         @NameInMap("SslExpiredTime")
         public String sslExpiredTime;

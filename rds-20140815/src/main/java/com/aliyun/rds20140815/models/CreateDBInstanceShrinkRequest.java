@@ -9,13 +9,9 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      * <br>
      * <p>Valid values: **1** to **20**. Default value: **1**.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If you want to create multiple ApsaraDB RDS for MySQL instances at a time by using a single request, you can add tags to all the instances by using the **Tag.Key** parameter and the **Tag.Value** parameter. After the instances are created, you can manage the instances based on the tags.</p>
-     * <br>
-     * <p>*   After you submit a request to create multiple ApsaraDB RDS for MySQL instances, this operation returns **TaskId**, **RequestId**, and **Message**. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the details of an instance.</p>
-     * <br>
-     * <p>*   If the value of the **Engine** parameter is not **MySQL** and the value of the Amount parameter is greater than **1**, this operation fails and returns an error code `InvalidParam.Engine`.</p>
+     * <p>> *   If you want to create multiple ApsaraDB RDS for MySQL instances at a time by using a single request, you can add tags to all the instances by using the **Tag.Key** parameter and the **Tag.Value** parameter. After the instances are created, you can manage the instances based on the tags.</p>
+     * <p>> *   After you submit a request to create multiple ApsaraDB RDS for MySQL instances, this operation returns **TaskId**, **RequestId**, and **Message**. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the details of an instance.</p>
+     * <p>> *   If the value of the **Engine** parameter is not **MySQL** and the value of the Amount parameter is greater than **1**, this operation fails and returns an error code `InvalidParam.Engine`.</p>
      */
     @NameInMap("Amount")
     public Integer amount;
@@ -23,10 +19,10 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically complete the payment. Valid values:</p>
      * <br>
-     * <p>*   **true**: automatically completes the payment. You must make sure that your account balance is sufficient.</p>
-     * <p>*   **false**: does not automatically complete the payment. An unpaid order is generated.</p>
+     * <p>*   **true**: enables the feature. Make sure that your account balance is sufficient.</p>
+     * <p>*   **false**: disables the feature. An unpaid order is generated.</p>
      * <br>
-     * <p>> : The default value is true. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can pay for the order in the ApsaraDB RDS console.</p>
+     * <p>>  Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to pay for the order.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
@@ -37,11 +33,8 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      * <p>*   **true**</p>
      * <p>*   **false**</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The auto-renewal cycle is one month for a monthly subscription.</p>
-     * <br>
-     * <p>*   The auto-renewal cycle is one year for a yearly subscription.</p>
+     * <p>> *   The auto-renewal cycle is one month for a monthly subscription.</p>
+     * <p>> *   The auto-renewal cycle is one year for a yearly subscription.</p>
      */
     @NameInMap("AutoRenew")
     public String autoRenew;
@@ -84,7 +77,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     /**
      * <p>The RDS edition of the instance. Valid values:</p>
      * <br>
-     * <p>*   Regular RDS instance</p>
+     * <p>*   Regular instance</p>
      * <br>
      * <p>    *   **Basic**: RDS Basic Edition</p>
      * <p>    *   **HighAvailability**: RDS High-availability Edition</p>
@@ -95,12 +88,10 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      * <p>*   Serverless instance</p>
      * <br>
      * <p>    *   **serverless_basic**: RDS Serverless Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.</p>
-     * <p>    *   **serverless_standard**: RDS Serverless High-availability Edition for MySQL</p>
+     * <p>    *   **serverless_standard**: RDS Serverless High-availability Edition. This edition is available only for instances that run MySQL and PostgreSQL.</p>
      * <p>    *   **serverless_ha** RDS Serverless High-availability Edition for SQL Server.</p>
      * <br>
-     * <p>    **</p>
-     * <br>
-     * <p>    **Note**: This parameter is required if you want to create a serverless instance.</p>
+     * <p>> This parameter must be specified when you create a serverless instance.</p>
      */
     @NameInMap("Category")
     public String category;
@@ -140,14 +131,15 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String createStrategy;
 
     /**
-     * <p>The instance type. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).</p>
+     * <p>The instance type of the instance. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).</p>
      * <br>
-     * <p>To create a serverless instance, set this parameter to one of the following values:</p>
+     * <p>To create a serverless instance, configure this parameter based on the following rules:</p>
      * <br>
      * <p>*   If you want to create a serverless instance that runs MySQL on RDS Basic Edition, set this parameter to **mysql.n2.serverless.1c**.</p>
      * <p>*   If you want to create a serverless instance that runs MySQL on RDS High-availability Edition, set this parameter to **mysql.n2.serverless.2c**.</p>
      * <p>*   If you want to create a serverless instance that runs SQL Server, set this parameter to **mssql.mem2.serverless.s2**.</p>
-     * <p>*   If you want to create a serverless instance that runs PostgreSQL, set this parameter to **pg.n2.serverless.1c**.</p>
+     * <p>*   If you want to create a serverless instance that runs PostgreSQL on RDS Basic Edition, set this parameter to **pg.n2.serverless.1c**</p>
+     * <p>*   If you want to create a serverless instance that runs PostgreSQL on RDS High-availability Edition, set this parameter to **pg.n2.serverless.2c**</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
@@ -178,7 +170,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      * <p>*   **local_ssd**: local SSD. This is the recommended storage type.</p>
      * <p>*   **cloud_ssd**: standard SSD. This storage type is not recommended. Standard SSDs are no longer available for purchase in some Alibaba Cloud regions.</p>
      * <p>*   **cloud_essd**: enhanced SSD (ESSD) of performance level 1 (PL1).</p>
-     * <p>*   **cloud_essd2**: ESSD of PL2</p>
+     * <p>*   **cloud_essd2**: ESSD of PL2.</p>
      * <p>*   **cloud_essd3**: ESSD of PL3.</p>
      * <br>
      * <p>The default value of this parameter is determined by the instance type specified by the **DBInstanceClass** parameter.</p>
@@ -186,7 +178,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      * <p>*   If the instance type specifies the local SSD storage type, the default value of this parameter is **local_ssd**.</p>
      * <p>*   If the instance type specifies the standard SSD or ESSD storage type, the default value of this parameter is **cloud_essd**.</p>
      * <br>
-     * <p>> : Serverless instances support only ESSDs of PL 1. For a serverless instance, you must set this parameter to **cloud_essd**.</p>
+     * <p>>  Serverless instances use only ESSDs of PL1. If you create a serverless instance, you must set this parameter to **cloud_essd**.</p>
      */
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
@@ -221,11 +213,8 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      * <p>    *   The time zone of the instance is not in UTC. For more information, see [Time zones](~~297356~~).</p>
      * <p>    *   You can specify this parameter only when the instance runs PostgreSQL with standard SSDs or ESSDs.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   You can specify the time zone when you create a primary instance. You cannot specify the time zone when you create a read-only instance. Read-only instances inherit the time zone of their primary instance.</p>
-     * <br>
-     * <p>*   If you do not specify this parameter, the system automatically assigns the default time zone of the region in which the instance resides.</p>
+     * <p>> *   You can specify the time zone when you create a primary instance. You cannot specify the time zone when you create a read-only instance. Read-only instances inherit the time zone of their primary instance.</p>
+     * <p>> *   If you do not specify this parameter, the system automatically assigns the default time zone of the region in which the instance resides.</p>
      */
     @NameInMap("DBTimeZone")
     public String DBTimeZone;
@@ -260,9 +249,11 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the key that is used for disk encryption in the region in which the instance resides. If you specify the EncryptionKey parameter, disk encryption is automatically enabled. In this case, you must also specify the **RoleARN** parameter. Disk encryption cannot be disabled after it is enabled.</p>
+     * <p>The ID of the key that is used to encrypt data on standard SSDs or ESSDs in the region of the instance. If you specify the EncryptionKey parameter, cloud disk encryption is automatically enabled. In this case, you must also specify the **RoleARN** parameter. Cloud disk encryption cannot be disabled after it is enabled.</p>
      * <br>
      * <p>You can obtain the ID of the key from the Key Management Service (KMS) console. You can also create a key. For more information, see [Create a CMK](~~181610~~).</p>
+     * <br>
+     * <p>>  This parameter is optional when you create an ApsaraDB RDS for PostgreSQL instance. You need to only specify the **RoleARN** parameter to create an instance that has cloud disk encryption enabled by using the obtained key ID.</p>
      */
     @NameInMap("EncryptionKey")
     public String encryptionKey;
@@ -304,16 +295,12 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     /**
      * <p>The network type of the instance. Valid values:</p>
      * <br>
-     * <p>*   **VPC**: a VPC</p>
-     * <p>*   **Classic**: the classic network</p>
+     * <p>*   **VPC**: virtual private cloud (VPC)</p>
+     * <p>*   **Classic**: classic network</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If the instance runs MySQL and uses cloud disks, you must set this parameter to **VPC**.</p>
-     * <br>
-     * <p>*   If the instance runs PostgreSQL or MariaDB, you must set this parameter to **VPC**.</p>
-     * <br>
-     * <p>*   RDS instances that run SQL Server Basic and SQL Server Web can reside in the classic network and virtual private clouds (VPCs). If the instance runs other database engines, you must set this parameter to **VPC**.</p>
+     * <p>> *   If the instance runs MySQL and uses cloud disks, you must set this parameter to **VPC**.</p>
+     * <p>> *   If the instance runs PostgreSQL or MariaDB, you must set this parameter to **VPC**.</p>
+     * <p>> *   If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engines, you must set this parameter to **VPC**.</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
@@ -336,7 +323,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      * <p>*   **Year**</p>
      * <p>*   **Month**</p>
      * <br>
-     * <p>> : If you set PayType to **Prepaid**, you must also specify this parameter.</p>
+     * <p>>  If you set the PayType parameter to **Prepaid**, you must specify the UsedTime parameter.</p>
      */
     @NameInMap("Period")
     public String period;
@@ -386,24 +373,24 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     /**
      * <p>The settings of the serverless instance. This parameter is required when you create a serverless instance.</p>
      * <br>
-     * <p>> : ApsaraDB RDS for MariaDB does not support serverless instances.</p>
+     * <p>>  ApsaraDB RDS for MariaDB does not support serverless instances.</p>
      */
     @NameInMap("ServerlessConfig")
     public String serverlessConfigShrink;
 
     /**
-     * <p>Specifies whether to enable the automatic storage expansion feature for the instance. This feature is supported if your RDS instance runs MySQL or PostgreSQL. Valid values:</p>
+     * <p>Specifies whether to enable the automatic storage expansion feature for the instance. The feature is supported if the instance runs MySQL or PostgreSQL. Valid values:</p>
      * <br>
      * <p>*   **Enable**: enables the feature.</p>
      * <p>*   **Disable** (default): disables the feature.</p>
      * <br>
-     * <p>> : After the instance is created, you can call the [ModifyDasInstanceConfig](~~610391~~) operation to adjust the settings of automatic storage expansion for the instance. For more information, see [Configure automatic storage expansion for an ApsaraDB RDS for MySQL instance](~~173826~~).</p>
+     * <p>>  After the instance is created, you can call the [ModifyDasInstanceConfig](~~610391~~) operation to adjust the settings of automatic storage expansion for the instance. For more information, see [Configure automatic storage expansion for an ApsaraDB RDS for MySQL instance](~~173826~~).</p>
      */
     @NameInMap("StorageAutoScale")
     public String storageAutoScale;
 
     /**
-     * <p>The thresholdon which automatic storage expansion is triggered. Unit: percent. Valid values:</p>
+     * <p>The threshold based on which automatic storage expansion is triggered. Unit: percent. Valid values:</p>
      * <br>
      * <p>*   **10**</p>
      * <p>*   **20**</p>
@@ -411,7 +398,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      * <p>*   **40**</p>
      * <p>*   **50**</p>
      * <br>
-     * <p>> : If you set the **StorageAutoScale** parameter to **Enable**, you must specify this parameter.</p>
+     * <p>>  If you set the **StorageAutoScale** parameter to **Enable**, you must specify this parameter.</p>
      */
     @NameInMap("StorageThreshold")
     public Integer storageThreshold;
@@ -419,11 +406,8 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     /**
      * <p>The maximum storage capacity that is allowed for automatic storage expansion. The storage capacity of the instance cannot exceed the maximum storage capacity. Unit: GB.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   Valid values: an integer greater than or equal to 0.</p>
-     * <br>
-     * <p>*   If you set **StorageAutoScale** to **Enable**, you must specify this parameter.</p>
+     * <p>> *   Valid values: an integer greater than or equal to 0.</p>
+     * <p>> *   If you set **StorageAutoScale** to **Enable**, you must specify this parameter.</p>
      */
     @NameInMap("StorageUpperBound")
     public Integer storageUpperBound;
@@ -482,29 +466,25 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      * <p>    *   xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.</p>
      * <p>    *   xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.</p>
      * <br>
-     * <p>    **</p>
-     * <br>
-     * <p>    **Note**: You can call the [DescribeDBMiniEngineVersions](~~610643~~) operation to query the minor engine version. For more information about minor engine versions, see [Release notes of minor AliSQL versions](~~96060~~).</p>
+     * <p>> You can call the [DescribeDBMiniEngineVersions](~~610643~~) operation to query the minor engine version. For more information about minor engine versions, see [Release notes of minor AliSQL versions](~~96060~~).</p>
      * <br>
      * <p>*   If you create an instance that runs PostgreSQL, the value is in the following format: `rds_postgres_<Major engine version>00_<Minor engine version>`. Example: `rds_postgres_1400_20220830`. The following list describes the fields in the example value:</p>
      * <br>
      * <p>    *   1400: The major engine version is PostgreSQL 14.</p>
      * <p>    *   20220830: the AliPG version. You can call the [DescribeDBMiniEngineVersions](~~610643~~) operation to query the AliPG version. For more information about minor engine versions, see [Release notes for AliPG](~~126002~~).</p>
      * <br>
-     * <p>    **</p>
-     * <br>
-     * <p>    **Note**: If you configure the **BabelfishConfig** parameter for your instance that runs PostgreSQL and set the babelfishEnabled field to true, the value of this parameter is in the following format: `rds_postgres_Major engine version00_AliPG version_babelfish`.</p>
+     * <p>> If you configure the **BabelfishConfig** parameter for your instance that runs PostgreSQL and set the babelfishEnabled field to true, the value of this parameter is in the following format: `rds_postgres_Major engine version00_AliPG version_babelfish`.</p>
      */
     @NameInMap("TargetMinorVersion")
     public String targetMinorVersion;
 
     /**
-     * <p>The subscription duration of the instance.</p>
+     * <p>The subscription duration of the instance. Valid values:</p>
      * <br>
      * <p>*   If you set the **Period** parameter to **Year**, the value of the **UsedTime** parameter ranges from **1 to 5**.</p>
      * <p>*   If you set the **Period** parameter to **Month**, the value of the **UsedTime** parameter ranges from **1 to 11**.</p>
      * <br>
-     * <p>> : If you set the PayType parameter to **Prepaid**, you must specify this parameter.</p>
+     * <p>>  If you set the PayType parameter to **Prepaid**, you must specify the UsedTime parameter.</p>
      */
     @NameInMap("UsedTime")
     public String usedTime;
@@ -551,13 +531,21 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String zoneId;
 
     /**
-     * <p>The ID of the zone in which the secondary instance resides. If you set the ZoneIdSlave1 parameter and the **ZoneId** parameter to the same value, the single-zone deployment method is used. If you set the ZoneIdSlave1 parameter and the **ZoneId** parameter to different values, the multi-zone deployment method is used.</p>
+     * <p>The zone ID of the secondary instance.</p>
+     * <br>
+     * <p>*   If you set this parameter to **Auto**, the multi-zone deployment method is used and the zone of the secondary instance is automatically configured.</p>
+     * <p>*   If you set this parameter to the same value as the **ZoneId** parameter, the single-zone deployment method is used.</p>
+     * <p>*   If you set this parameter to a value that is different from the value of the **ZoneId** parameter, the multiple-zone deployment method is used.</p>
      */
     @NameInMap("ZoneIdSlave1")
     public String zoneIdSlave1;
 
     /**
-     * <p>The ID of the zone in which the secondary instance or logger instance resides. If you set the ZoneIdSlave2 parameter to the same value as the **ZoneId** parameter, the single-zone deployment method is used. If you set the ZoneIdSlave2 parameter to a different value from the **ZoneId** parameter, the multi-zone deployment method is used.</p>
+     * <p>The ID of the zone in which the secondary instance or logger instance resides.</p>
+     * <br>
+     * <p>*   If you set this parameter to **Auto**, the multi-zone deployment method is used and the zone of the secondary instance or logger instance is automatically configured.</p>
+     * <p>*   If you set this parameter to the same value as the **ZoneId** parameter, the single-zone deployment method is used.</p>
+     * <p>*   If you set this parameter to a value that is different from the value of the **ZoneId** parameter, the multiple-zone deployment method is used.</p>
      */
     @NameInMap("ZoneIdSlave2")
     public String zoneIdSlave2;

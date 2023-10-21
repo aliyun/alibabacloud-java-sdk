@@ -7,8 +7,8 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
     /**
      * <p>The status of the cross-region backup feature on the instance. Valid values:</p>
      * <br>
-     * <p>*   **Disable**: The feature is disabled.</p>
-     * <p>*   **Enable**: The feature is enabled.</p>
+     * <p>*   **Disable**</p>
+     * <p>*   **Enable**</p>
      */
     @NameInMap("BackupEnabled")
     public String backupEnabled;
@@ -20,7 +20,7 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
     public String backupEnabledTime;
 
     /**
-     * <p>The ID of the region in which the cross-region backup files of the instance is stored.</p>
+     * <p>The ID of the destination region where the cross-region backup files of the instance are stored.</p>
      */
     @NameInMap("CrossBackupRegion")
     public String crossBackupRegion;
@@ -32,15 +32,15 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
     public String crossBackupType;
 
     /**
-     * <p>The name of the instance. It must be 2 to 256 characters in length. The name can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name of the instance. It must be 2 to 256 characters in length. The value can contain letters, digits, underscores (\_), and hyphens (-), and must start with a letter.</p>
      * <br>
-     * <p>> The name cannot start with http:// or https://.</p>
+     * <p>>  The value cannot start with http:// or https://.</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
     /**
-     * <p>The ID of the instance</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -52,13 +52,13 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
     public String DBInstanceStatus;
 
     /**
-     * <p>The type of the database engine.</p>
+     * <p>The database engine of the instance.</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
-     * <p>The database engine version of the instance.</p>
+     * <p>The database engine version.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -69,7 +69,7 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
      * <p>*   **Unlock**: The instance is not locked.</p>
      * <p>*   **ManualLock**: The instance is manually locked.</p>
      * <p>*   **LockByExpiration**: The instance is automatically locked due to instance expiration.</p>
-     * <p>*   **LockByRestoration**: The instance is automatically locked due to instance restoration.</p>
+     * <p>*   **LockByRestoration**: The instance is automatically locked before a rollback.</p>
      * <p>*   **LockByDiskQuota**: The instance is automatically locked because its storage capacity is exhausted and the instance is inaccessible.</p>
      */
     @NameInMap("LockMode")
@@ -78,14 +78,14 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
     /**
      * <p>The status of the cross-region log backup feature on the instance. Valid values:</p>
      * <br>
-     * <p>*   **Disable**: The feature is disabled.</p>
-     * <p>*   **Enable**: The feature is enabled.</p>
+     * <p>*   **Disable**</p>
+     * <p>*   **Enable**</p>
      */
     @NameInMap("LogBackupEnabled")
     public String logBackupEnabled;
 
     /**
-     * <p>The time when cross-region log backup was enabled on the instance. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The time when cross-region log backup was enabled on the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
      */
     @NameInMap("LogBackupEnabledTime")
     public String logBackupEnabledTime;
@@ -97,7 +97,7 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

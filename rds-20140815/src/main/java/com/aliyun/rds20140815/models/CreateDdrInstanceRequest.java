@@ -159,7 +159,7 @@ public class CreateDdrInstanceRequest extends TeaModel {
      * <p>The method that is used to restore data. Valid values:</p>
      * <br>
      * <p>*   **BackupSet**: restores data from a backup set. If you use this value, you must also specify **BackupSetID**.</p>
-     * <p>*   **BackupTime**: restores data to a point in time. You must also specify **RestoreTime**, **SourceRegion**, and **SourceDBInstanceName**.</p>
+     * <p>*   **BackupTime**: restores data to a point in time. If you use this value, you must also specify **RestoreTime**, **SourceRegion**, and **SourceDBInstanceName**.</p>
      */
     @NameInMap("RestoreType")
     public String restoreType;

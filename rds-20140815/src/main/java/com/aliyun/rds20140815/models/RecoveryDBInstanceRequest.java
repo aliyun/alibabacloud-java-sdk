@@ -23,11 +23,8 @@ public class RecoveryDBInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the original instance.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If you specify BackupId, you do not need to specify this parameter.</p>
-     * <br>
-     * <p>*   If you specify RestoreTime, you must also specify this parameter.</p>
+     * <p>> *   If you specify BackupId, you do not need to specify this parameter.</p>
+     * <p>> *   If you specify RestoreTime, you must also specify this parameter.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public DescribeDBInstanceEndpointsResponseBodyData data;
@@ -39,13 +39,13 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointAddressItemsAddressItem extends TeaModel {
         /**
-         * <p>The endpoint of the instance.</p>
+         * <p>The endpoints of the instance.</p>
          */
         @NameInMap("ConnectionString")
         public String connectionString;
 
         /**
-         * <p>The IP address of the endpoint.</p>
+         * <p>The IP address.</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
@@ -66,13 +66,13 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         public String port;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The VPC ID.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -153,13 +153,13 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointNodeItemsNodeItem extends TeaModel {
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
@@ -224,7 +224,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpoint extends TeaModel {
         /**
-         * <p>An array that consists of the details of the endpoint.</p>
+         * <p>The information about the endpoint.</p>
          */
         @NameInMap("AddressItems")
         public DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointAddressItems addressItems;
@@ -244,14 +244,14 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         /**
          * <p>The type of the endpoint. Valid values:</p>
          * <br>
-         * <p>*   **Primary**: read/write endpoint of the instance</p>
-         * <p>*   **Readonly**: read-only endpoint of the instance</p>
+         * <p>*   **Primary**: the read/write endpoint of the instance</p>
+         * <p>*   **Readonly**: the read-only endpoint of the instance</p>
          */
         @NameInMap("EndpointType")
         public String endpointType;
 
         /**
-         * <p>An array consisting of the details of the node that is configured for the endpoint.</p>
+         * <p>The information about the node that is configured for the endpoint.</p>
          */
         @NameInMap("NodeItems")
         public DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpointsDBInstanceEndpointNodeItems nodeItems;
@@ -324,7 +324,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceEndpointsResponseBodyData extends TeaModel {
         /**
-         * <p>An array that consists of details of the endpoint.</p>
+         * <p>The information of the endpoints of the instance.</p>
          */
         @NameInMap("DBInstanceEndpoints")
         public DescribeDBInstanceEndpointsResponseBodyDataDBInstanceEndpoints DBInstanceEndpoints;

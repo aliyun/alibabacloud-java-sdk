@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
     /**
-     * <p>The details of the accounts.</p>
+     * <p>The details of the account.</p>
      */
     @NameInMap("Accounts")
     public DescribeAccountsResponseBodyAccounts accounts;
@@ -97,11 +97,11 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * <p>The type of the permissions. Valid values:</p>
          * <br>
-         * <p>*   **ReadWrite**: read and write permissions</p>
-         * <p>*   **ReadOnly**: read-only permissions</p>
-         * <p>*   **DDLOnly**: DDL-only permissions</p>
-         * <p>*   **DMLOnly**: DML-only permissions</p>
-         * <p>*   **Custom**: custom permissions (You can modify the permissions of the account by using SQL commands.)</p>
+         * <p>*   **ReadWrite**: read and write permissions.</p>
+         * <p>*   **ReadOnly**: read-only permissions.</p>
+         * <p>*   **DDLOnly**: DDL-only permissions.</p>
+         * <p>*   **DMLOnly**: DML-only permissions.</p>
+         * <p>*   **Custom**: custom permissions. You can modify the permissions of the account by using SQL commands.</p>
          */
         @NameInMap("AccountPrivilege")
         public String accountPrivilege;
@@ -176,7 +176,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         public String accountDescription;
 
         /**
-         * <p>The username of the account.</p>
+         * <p>The name of the database account.</p>
          */
         @NameInMap("AccountName")
         public String accountName;
@@ -206,7 +206,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
          * <p>*   **t**: yes</p>
          * <p>*   **f**: no</p>
          * <br>
-         * <p>> This parameter is returned only for instances that run PostgreSQL.</p>
+         * <p>>  This parameter is returned only for instances that run PostgreSQL.</p>
          */
         @NameInMap("BypassRLS")
         public String bypassRLS;
@@ -217,7 +217,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
          * <p>*   **t**: yes</p>
          * <p>*   **f**: no</p>
          * <br>
-         * <p>> This parameter is returned only for instances that run PostgreSQL.</p>
+         * <p>>  This parameter is returned only for instances that run PostgreSQL.</p>
          */
         @NameInMap("CreateDB")
         public String createDB;
@@ -228,7 +228,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
          * <p>*   **t**: yes</p>
          * <p>*   **f**: no</p>
          * <br>
-         * <p>> This parameter is returned only for instances that run PostgreSQL.</p>
+         * <p>>  This parameter is returned only for instances that run PostgreSQL.</p>
          */
         @NameInMap("CreateRole")
         public String createRole;
@@ -260,7 +260,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
          * <p>*   **t**: yes</p>
          * <p>*   **f**: no</p>
          * <br>
-         * <p>> This parameter is returned only for instances that run PostgreSQL.</p>
+         * <p>>  This parameter is returned only for instances that run PostgreSQL.</p>
          */
         @NameInMap("Replication")
         public String replication;
@@ -272,7 +272,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
          * <p>*   **Empty**: The expiration time is not specified.</p>
          * <p>*   **Actual expiration time** in the format of *yyyy-MM-dd*T*HH:mm:ss*Z in UTC. Example: 2022-10-01T00:00:00Z.</p>
          * <br>
-         * <p>> This parameter is returned only for instances that run PostgreSQL.</p>
+         * <p>>  This parameter is returned only for instances that run PostgreSQL.</p>
          */
         @NameInMap("ValidUntil")
         public String validUntil;

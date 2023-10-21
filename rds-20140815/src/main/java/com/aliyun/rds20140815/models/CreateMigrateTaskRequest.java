@@ -21,7 +21,7 @@ public class CreateMigrateTaskRequest extends TeaModel {
      * <br>
      * <p>Default value: **AsyncExecuteDBCheck** (compatible with SQL Server 2008 R2).</p>
      * <br>
-     * <p>> When you set **IsOnlineDB** to **True**, the value of this parameter is valid.</p>
+     * <p>>  This parameter is valid when IsOnlineDB is set to **True**.</p>
      */
     @NameInMap("CheckDBMode")
     public String checkDBMode;

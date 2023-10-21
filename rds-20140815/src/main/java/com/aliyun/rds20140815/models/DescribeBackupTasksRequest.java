@@ -13,8 +13,8 @@ public class DescribeBackupTasksRequest extends TeaModel {
     /**
      * <p>The status of the backup task. Valid values:</p>
      * <br>
-     * <p>*   **NoStart**: The backup task is not started.</p>
-     * <p>*   **Progressing**: The backup task is in progress.</p>
+     * <p>*   **NoStart**</p>
+     * <p>*   **Progressing**</p>
      * <br>
      * <p>By default, this operation returns backup tasks in both states.</p>
      */
@@ -31,13 +31,13 @@ public class DescribeBackupTasksRequest extends TeaModel {
     public String backupMode;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>Specifies the client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

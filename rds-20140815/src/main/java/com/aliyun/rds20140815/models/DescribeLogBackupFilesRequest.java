@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLogBackupFilesRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -23,7 +23,7 @@ public class DescribeLogBackupFilesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Valid values: any non-zero positive integer.</p>
+     * <p>The page number. Pages start from page 1.</p>
      * <br>
      * <p>Default value: **1**.</p>
      */
@@ -43,7 +43,7 @@ public class DescribeLogBackupFilesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

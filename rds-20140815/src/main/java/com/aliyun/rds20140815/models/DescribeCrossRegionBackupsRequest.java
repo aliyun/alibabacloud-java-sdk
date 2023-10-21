@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCrossRegionBackupsRequest extends TeaModel {
     /**
-     * <p>The ID of the cross-region data backup file.</p>
+     * <p>The ID of the backup file.</p>
      */
     @NameInMap("BackupId")
     public Integer backupId;
@@ -19,13 +19,13 @@ public class DescribeCrossRegionBackupsRequest extends TeaModel {
     public Integer crossBackupId;
 
     /**
-     * <p>The ID of the destination region where the cross-region data backup file is stored.</p>
+     * <p>The ID of the region in which the cross-region data backup file is stored.</p>
      */
     @NameInMap("CrossBackupRegion")
     public String crossBackupRegion;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -40,7 +40,7 @@ public class DescribeCrossRegionBackupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Valid values: any non-zero positive integer.</p>
+     * <p>The page number. Valid values: any non-zero positive integer.</p>
      * <br>
      * <p>Default value: **1**.</p>
      */
@@ -48,7 +48,7 @@ public class DescribeCrossRegionBackupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <br>
      * <p>*   **30**</p>
      * <p>*   **50**</p>
@@ -60,7 +60,7 @@ public class DescribeCrossRegionBackupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

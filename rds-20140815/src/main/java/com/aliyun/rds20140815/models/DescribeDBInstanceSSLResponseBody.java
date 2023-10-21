@@ -31,7 +31,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String clientCACert;
 
     /**
-     * <p>The content of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. This parameter is not supported now.</p>
+     * <p>The time when the public key of the CA that issues client certificates expires. This parameter is supported only when the instance runs PostgreSQL with cloud disks. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. This parameter is not supported now.</p>
      */
     @NameInMap("ClientCACertExpireTime")
     public String clientCACertExpireTime;
@@ -98,7 +98,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String requireUpdate;
 
     /**
-     * <p>The server certificate that needs to be updated. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
+     * <p>The server certificate that needs to be updated. This parameter is supported only when the instance runs PostgreSQL with cloud disk.</p>
      */
     @NameInMap("RequireUpdateItem")
     public String requireUpdateItem;
@@ -110,7 +110,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String requireUpdateReason;
 
     /**
-     * <p>The time when the server certificate was created. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is valid only when CAType is set to aliyun.</p>
+     * <p>The time when the server certificate was created. This parameter is supported only when the instance runs PostgreSQL with cloud disks. In addition, this parameter is valid only when the CAType parameter value is aliyun.</p>
      */
     @NameInMap("SSLCreateTime")
     public String SSLCreateTime;
@@ -138,7 +138,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String SSLExpireTime;
 
     /**
-     * <p>The URL of the certificate that is used to issue the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
+     * <p>The URL of the certificate that is used to issue the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disk.</p>
      */
     @NameInMap("ServerCAUrl")
     public String serverCAUrl;

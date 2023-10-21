@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyDbProxyInstanceSslRequest extends TeaModel {
     /**
-     * <p>An internal parameter. You do not need to specify this parameter.</p>
+     * <p>A reserved parameter. You do not need to specify this parameter.</p>
      */
     @NameInMap("DBProxyEngineType")
     public String DBProxyEngineType;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
@@ -23,7 +23,7 @@ public class ModifyDbProxyInstanceSslRequest extends TeaModel {
     public String dbProxyConnectString;
 
     /**
-     * <p>The ID of the proxy endpoint. You can call the [DescribeDBProxyEndpoint](~~140955~~) operation to query the ID of the proxy endpoint.</p>
+     * <p>The ID of the proxy endpoint. You can call the [DescribeDBProxyEndpoint](~~610507~~) operation to query the ID of the proxy endpoint.</p>
      */
     @NameInMap("DbProxyEndpointId")
     public String dbProxyEndpointId;
@@ -41,7 +41,7 @@ public class ModifyDbProxyInstanceSslRequest extends TeaModel {
     public String dbProxySslEnabled;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

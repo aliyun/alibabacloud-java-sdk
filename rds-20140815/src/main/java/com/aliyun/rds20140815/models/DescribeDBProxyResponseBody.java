@@ -59,39 +59,10 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     /**
      * <p>The status of the proxy instance.</p>
      * <br>
-     * <p>Valid values:</p>
-     * <br>
-     * <p>*   DBInstanceClassChanging</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Creating</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Running</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Deleting</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <p>*   DBInstanceClassChanging: The specifications of the proxy instance are being changed.</p>
+     * <p>*   Creating: The proxy instance is being created.</p>
+     * <p>*   Running: The proxy instance is being running.</p>
+     * <p>*   Deleting: The proxy instance is being deleted.</p>
      */
     @NameInMap("DBProxyInstanceStatus")
     public String DBProxyInstanceStatus;
@@ -99,33 +70,10 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     /**
      * <p>The type of the database proxy that is enabled on the instance.</p>
      * <br>
-     * <p>> ApsaraDB RDS for PostgreSQL instances support only dedicated proxies.</p>
+     * <p>*   1: shared proxy</p>
+     * <p>*   2: dedicated proxy</p>
      * <br>
-     * <p>Valid values:</p>
-     * <br>
-     * <p>*   1</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    shared proxy</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   2</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    dedicated proxy</p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <p>>  ApsaraDB RDS for PostgreSQL instances support only dedicated proxies.</p>
      */
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;
@@ -133,23 +81,8 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     /**
      * <p>The status of the database proxy.</p>
      * <br>
-     * <p>Valid values:</p>
-     * <br>
-     * <p>*   Shutdown</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Startup</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <p>*   Shutdown: disabled</p>
+     * <p>*   Startup: enabled</p>
      */
     @NameInMap("DBProxyServiceStatus")
     public String DBProxyServiceStatus;
@@ -318,31 +251,8 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         /**
          * <p>The network type of the proxy endpoint.</p>
          * <br>
-         * <p>Valid values:</p>
-         * <br>
-         * <p>*   OuterString</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    Internet</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   InnerString</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    internal network</p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   OuterString: Internet</p>
+         * <p>*   InnerString: internal network</p>
          */
         @NameInMap("DBProxyConnectStringNetType")
         public String DBProxyConnectStringNetType;
@@ -350,43 +260,9 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         /**
          * <p>The network type of the database proxy.</p>
          * <br>
-         * <p>Valid values:</p>
-         * <br>
-         * <p>*   0</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    Internet</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   1</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    classic network</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   2</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    virtual private cloud (VPC)</p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   0: Internet</p>
+         * <p>*   1: classic network</p>
+         * <p>*   2: virtual private cloud (VPC)</p>
          */
         @NameInMap("DBProxyConnectStringNetWorkType")
         public String DBProxyConnectStringNetWorkType;
@@ -541,31 +417,8 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         /**
          * <p>The type of the proxy terminal.</p>
          * <br>
-         * <p>Valid values:</p>
-         * <br>
-         * <p>*   Custom</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    custom proxy terminal</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   RWSplit</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    default proxy terminal</p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   Custom: custom proxy terminal</p>
+         * <p>*   RWSplit: default proxy terminal</p>
          */
         @NameInMap("DbProxyEndpointType")
         public String dbProxyEndpointType;
@@ -573,23 +426,8 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         /**
          * <p>The read and write attributes of the proxy terminal.</p>
          * <br>
-         * <p>Valid values:</p>
-         * <br>
-         * <p>*   ReadOnly</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   ReadWrite</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>*   ReadOnly: The proxy terminal supports only read requests.</p>
+         * <p>*   ReadWrite: The proxy terminal supports read and write requests.</p>
          */
         @NameInMap("DbProxyReadWriteMode")
         public String dbProxyReadWriteMode;

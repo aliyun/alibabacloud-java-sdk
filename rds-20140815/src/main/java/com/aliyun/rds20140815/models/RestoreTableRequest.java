@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class RestoreTableRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set.</p>
+     * <p>The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to obtain the ID of the backup set.</p>
      * <br>
-     * <p>You can call the [DescribeBackups](~~26273~~) operation to obtain the ID of the backup set.</p>
-     * <br>
-     * <p>> You must specify at least one of **BackupId** and **RestoreTime**.</p>
+     * <p>> You must specify at least one of BackupId or **RestoreTime** parameters.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
@@ -52,11 +50,8 @@ public class RestoreTableRequest extends TeaModel {
     /**
      * <p>The point in time to which you want to restore data. The point in time must fall within the specified log backup retention period. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   You must specify at least one of **BackupId** and **RestoreTime**.</p>
-     * <br>
-     * <p>*   You must enable the log backup feature. For more information, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).</p>
+     * <p>> *   You must specify at least one of **BackupId** and **RestoreTime**.</p>
+     * <p>> *   You must enable the log backup feature. For more information, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).</p>
      */
     @NameInMap("RestoreTime")
     public String restoreTime;

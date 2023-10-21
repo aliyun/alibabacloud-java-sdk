@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribePGHbaConfigResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>An array that consists of the default configuration items in the pg_hba.conf file.</p>
+     * <p>The default configuration items of the pg_hba.conf file.</p>
      */
     @NameInMap("DefaultHbaItems")
     public DescribePGHbaConfigResponseBodyDefaultHbaItems defaultHbaItems;
@@ -23,13 +23,11 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
     public String hbaModifyTime;
 
     /**
-     * <p>The status of the previous modification to the pg_hba.conf file.</p>
+     * <p>The status of the previous modification to the pg_hba.conf file. Valid values:</p>
      * <br>
-     * <p>Valid values:</p>
-     * <br>
-     * <p>*   **success**: The modification is successful.</p>
-     * <p>*   **setting**: The modification is being applied.</p>
-     * <p>*   **failed**: The modification fails.</p>
+     * <p>*   **success**</p>
+     * <p>*   **setting**</p>
+     * <p>*   **failed**</p>
      */
     @NameInMap("LastModifyStatus")
     public String lastModifyStatus;
@@ -41,13 +39,13 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
     public String modifyStatusReason;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>An array that consists of the current configuration items in the pg_hba.conf file.</p>
+     * <p>The current configuration items of the pg_hba.conf file.</p>
      */
     @NameInMap("RunningHbaItems")
     public DescribePGHbaConfigResponseBodyRunningHbaItems runningHbaItems;
@@ -260,13 +258,13 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
         public String address;
 
         /**
-         * <p>The name of the database that the specified users are allowed to access.</p>
+         * <p>The name of the database.</p>
          */
         @NameInMap("Database")
         public String database;
 
         /**
-         * <p>The mask of the instance.</p>
+         * <p>The mask of the IP address.</p>
          */
         @NameInMap("Mask")
         public String mask;
@@ -284,23 +282,23 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
         public String option;
 
         /**
-         * <p>The priority of the instance.</p>
+         * <p>The priority.</p>
          */
         @NameInMap("PriorityId")
         public Integer priorityId;
 
         /**
-         * <p>The type of the connection. </p>
+         * <p>The connection type. Valor:</p>
          * <br>
-         * <p>- **host**: The record matches TCP/IP connections, including SSL connections and non-SSL connections.</p>
-         * <p>- **hostssl**: The record matches only TCP/IP connections that are established over SSL.</p>
-         * <p>- **hostnossl**: The record matches only TCP/IP connections that are not established over SSL.</p>
+         * <p>*   **host**: The record matches TCP/IP connections, including SSL connections and non-SSL connections.</p>
+         * <p>*   **hostssl**: The record matches only TCP/IP connections that are established over SSL.</p>
+         * <p>*   **hostnossl**: The record matches only TCP/IP connections that are not established over SSL connections.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The username of the account that is used to connect to the instance.</p>
+         * <p>The username of the account.</p>
          */
         @NameInMap("User")
         public String user;

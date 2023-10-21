@@ -24,25 +24,22 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     public String configDBProxyFeatures;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The ID of the proxy endpoint. You can call the [DescribeDBProxyEndpoint](~~140955~~) operation to query the ID of the proxy endpoint.</p>
+     * <p>The ID of the proxy endpoint. You can call the [DescribeDBProxyEndpoint](~~610507~~) operation to query the ID of the proxy endpoint.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If the instance runs MySQL and you set **DbEndpointOperator** to **Delete** or **Modify**, you must specify DBProxyEndpointId.</p>
-     * <br>
-     * <p>*   If the instance runs PostgreSQL and you set **DbEndpointOperator** to **Delete**, **Modify**, or **Create**, you must specify DBProxyEndpointId.</p>
+     * <p>> *   If the instance runs MySQL and you set **DbEndpointOperator** to **Delete** or **Modify**, you must specify DBProxyEndpointId.</p>
+     * <p>> *   If the instance runs PostgreSQL and you set **DbEndpointOperator** to **Delete**, **Modify**, or **Create**, you must specify DBProxyEndpointId.</p>
      */
     @NameInMap("DBProxyEndpointId")
     public String DBProxyEndpointId;
 
     /**
-     * <p>An internal parameter. You do not need to specify this parameter.</p>
+     * <p>A reserved parameter. You do not need to specify this parameter.</p>
      */
     @NameInMap("DBProxyEngineType")
     public String DBProxyEngineType;
@@ -69,11 +66,8 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
      * <p>*   **ReadWrite**: The proxy terminal connects to the primary instance and can receive both read and write requests.</p>
      * <p>*   **ReadOnly**: The proxy terminal does not connect to the primary instance and can receive only read requests. This is the default value.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If you set **DbEndpointOperator** to **Create**, you must also specify DbEndpointReadWriteMode.</p>
-     * <br>
-     * <p>*   If the instance runs MySQL and you change the value of this parameter from **ReadWrite** to **ReadOnly**, the transaction splitting feature is disabled.</p>
+     * <p>> *   If you set **DbEndpointOperator** to **Create**, you must also specify DbEndpointReadWriteMode.</p>
+     * <p>> *   If the instance runs MySQL and you change the value of this parameter from **ReadWrite** to **ReadOnly**, the transaction splitting feature is disabled.</p>
      */
     @NameInMap("DbEndpointReadWriteMode")
     public String dbEndpointReadWriteMode;
@@ -111,21 +105,21 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
      * <br>
      * <p>*   Standard instance: `{"ID of the primary instance":"Weight","ID of the read-only instance":"Weight"...}`</p>
      * <br>
-     * <p>    Example: `{"rm-uf6wjk5xxxx":"500","rr-tfhfgk5xxx":"200"...}`</p>
+     * <p>    Example: `{"rm-uf6wjk5****":"500","rr-tfhfgk5xxx":"200"...}`</p>
      * <br>
-     * <p>*   Instance on RDS Cluster Edition: `{"ID of the read-only instance ID":"Weight","DBClusterNode":{"ID of the primary node":"Weight","ID of the secondary node ID":"Weight","ID of the secondary node ID":"Weight"...}}`</p>
+     * <p>*   Instance on RDS Cluster Edition: `{"ID of the read-only instance":"Weight","DBClusterNode":{"ID of the primary node":"Weight","ID of the secondary node":"Weight","ID of the secondary node":"Weight"...}}`</p>
      * <br>
-     * <p>    Example: `{"rr-tfhfgk5xxx":"200","DBClusterNode":{"rn-2z****":"0","rn-2z****":"400","rn-2z****":"400"...}}`</p>
+     * <p>    Example: `{"rr-tfhfgk5****":"200","DBClusterNode":{"rn-2z****":"0","rn-2z****":"400","rn-2z****":"400"...}}`</p>
      * <br>
      * <p>    **</p>
      * <br>
-     * <p>    **Note****DBClusterNode** is required if the instance runs RDS Cluster Edition. The DBClusterNode parameter includes information about **IDs** and **weights** of the primary and secondary nodes.</p>
+     * <p>    **Note** **DBClusterNode** is required if the instance runs RDS Cluster Edition. The DBClusterNode parameter includes information about **IDs** and **weights** of the primary and secondary nodes..</p>
      */
     @NameInMap("ReadOnlyInstanceWeight")
     public String readOnlyInstanceWeight;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

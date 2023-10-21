@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CalculateDBInstanceWeightRequest extends TeaModel {
     /**
-     * <p>The ID of the primary instance.</p>
+     * <p>The ID of the primary instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

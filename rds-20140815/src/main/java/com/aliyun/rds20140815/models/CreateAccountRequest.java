@@ -15,8 +15,6 @@ public class CreateAccountRequest extends TeaModel {
     /**
      * <p>The username of the account.</p>
      * <br>
-     * <p>> </p>
-     * <br>
      * <p>*   The value must be unique.</p>
      * <br>
      * <p>*   The value must start with a lowercase letter, and end with a lowercase letter or a digit.</p>
@@ -39,8 +37,7 @@ public class CreateAccountRequest extends TeaModel {
 
     /**
      * <p>The password of the account.</p>
-     * <br>
-     * <p>> </p>
+     * <p> </p>
      * <br>
      * <p>*   The value must be 8 to 32 characters in length.</p>
      * <br>

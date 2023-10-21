@@ -3,31 +3,25 @@ package com.aliyun.rds20140815.models;
 
 import com.aliyun.tea.*;
 
-public class MigrateToOtherZoneResponseBody extends TeaModel {
-    /**
-     * <p>The instance ID.</p>
-     */
+public class ModifyDBNodeResponseBody extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    /**
-     * <p>The ID of the order. This parameter is returned only when the instance runs MySQL.</p>
-     */
     @NameInMap("OrderId")
     public Long orderId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static MigrateToOtherZoneResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        MigrateToOtherZoneResponseBody self = new MigrateToOtherZoneResponseBody();
+    @NameInMap("Success")
+    public Boolean success;
+
+    public static ModifyDBNodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ModifyDBNodeResponseBody self = new ModifyDBNodeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public MigrateToOtherZoneResponseBody setDBInstanceId(String DBInstanceId) {
+    public ModifyDBNodeResponseBody setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
     }
@@ -35,7 +29,7 @@ public class MigrateToOtherZoneResponseBody extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public MigrateToOtherZoneResponseBody setOrderId(Long orderId) {
+    public ModifyDBNodeResponseBody setOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
     }
@@ -43,12 +37,20 @@ public class MigrateToOtherZoneResponseBody extends TeaModel {
         return this.orderId;
     }
 
-    public MigrateToOtherZoneResponseBody setRequestId(String requestId) {
+    public ModifyDBNodeResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ModifyDBNodeResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

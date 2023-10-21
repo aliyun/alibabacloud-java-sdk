@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyHASwitchConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The status of the automatic primary/secondary switchover feature. Valid values:</p>
+     * <p>The mode of the automatic primary/secondary switchover feature. Valid values:</p>
      * <br>
-     * <p>*   **Auto:** The automatic primary/secondary switchover feature is enabled. The system automatically switches your workloads over from the instance to its secondary instance in the event of a fault.</p>
-     * <p>*   **Manual:** The automatic primary/secondary switchover feature is disabled. You must manually switch your workloads over from the instance to its secondary instance in the event of a fault.</p>
+     * <p>*   **Auto**: The automatic primary/secondary switchover feature is enabled. The system automatically switches your workloads over from the instance to its secondary instance in the event of a fault.</p>
+     * <p>*   **Manual**: The automatic primary/secondary switchover feature is disabled. You must manually switch your workloads over from the instance to its secondary instance in the event of a fault.</p>
      * <br>
      * <p>Default value: **Auto**.</p>
      * <br>
@@ -24,7 +24,7 @@ public class ModifyHASwitchConfigRequest extends TeaModel {
     public String HAConfig;
 
     /**
-     * <p>The time after which the automatic primary/secondary switchover feature is enabled. At most, you can set this parameter to 23:59:59 seven days later. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The time to disable the automatic primary/secondary switchover feature. The time can range from the current time to 23:59:59 seven days later. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      * <br>
      * <p>>  This parameter takes effect only when you set the **HAConfig** parameter to **Manual**.</p>
      */
@@ -35,7 +35,7 @@ public class ModifyHASwitchConfigRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

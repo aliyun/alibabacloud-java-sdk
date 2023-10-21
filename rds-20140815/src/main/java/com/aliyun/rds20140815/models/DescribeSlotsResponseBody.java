@@ -11,7 +11,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of information about replication slots.</p>
+     * <p>Details about the replication slot.</p>
      */
     @NameInMap("Slots")
     public java.util.List<DescribeSlotsResponseBodySlots> slots;
@@ -45,7 +45,33 @@ public class DescribeSlotsResponseBody extends TeaModel {
         public String database;
 
         /**
-         * <p>The extension that is used by the replication slot.</p>
+         * <p>The extension used by the replication slot.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   test_decoding</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   pgoutput</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   wal2json</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("Plugin")
         public String plugin;
@@ -82,18 +108,36 @@ public class DescribeSlotsResponseBody extends TeaModel {
 
         /**
          * <p>The type of the replication slot.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   physical</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   logical</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("SlotType")
         public String slotType;
 
         /**
-         * <p>The current Replication Slot corresponds to the specific delay of the logical subscription of the subscriber, in seconds (s)</p>
+         * <p>The latency of the logical subscription on the subscriber node that corresponds to the current replication slot. Unit: seconds.</p>
          */
         @NameInMap("SubReplayLag")
         public String subReplayLag;
 
         /**
-         * <p>Indicates whether the replication slot is temporary.</p>
+         * <p>Indicates whether the replication slot is a temporary replication slot.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
@@ -117,7 +161,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
         public String temporary;
 
         /**
-         * <p>The number of logs that are accumulated for the replication slot.</p>
+         * <p>The number of logs accumulated in the replication slot.</p>
          */
         @NameInMap("WalDelay")
         public String walDelay;

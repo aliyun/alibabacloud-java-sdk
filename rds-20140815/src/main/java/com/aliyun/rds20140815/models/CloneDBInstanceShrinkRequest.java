@@ -55,11 +55,13 @@ public class CloneDBInstanceShrinkRequest extends TeaModel {
      * <p>*   **cluster**: RDS Cluster Edition for MySQL.</p>
      * <p>*   **Finance**: RDS Enterprise Edition. This edition is available only on the China site (aliyun.com).</p>
      * <br>
-     * <p>**Serverless instances**</p>
+     * <p>**Serverless instance**</p>
      * <br>
      * <p>*   **serverless_basic**: RDS Serverless Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.</p>
      * <p>*   **serverless_standard**: RDS Serverless High-availability Edition for MySQL.</p>
-     * <p>*   **serverless_ha** RDS Serverless High-availability Edition for SQL Server.</p>
+     * <p>*   **serverless_ha**: RDS Serverless High-availability Edition for SQL Server.</p>
+     * <br>
+     * <p>>  You do not need to configure this parameter. The value of this parameter is the same as that of the original instance.</p>
      */
     @NameInMap("Category")
     public String category;

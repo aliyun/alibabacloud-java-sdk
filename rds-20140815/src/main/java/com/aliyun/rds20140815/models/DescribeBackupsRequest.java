@@ -38,7 +38,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public String backupType;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -72,7 +72,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

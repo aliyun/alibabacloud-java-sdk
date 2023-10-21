@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeWhitelistTemplateRequest extends TeaModel {
     /**
-     * <p>资源组ID。 关于资源组的更多信息，请参见什么是资源组。</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -17,7 +17,7 @@ public class DescribeWhitelistTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the whitelist template. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist template.</p>
+     * <p>The ID of the whitelist template. You can call the [DescribeAllWhitelistTemplate](~~2412075~~) operation to obtain the ID of the whitelist template.</p>
      */
     @NameInMap("TemplateId")
     public Integer templateId;
