@@ -8,7 +8,7 @@ public class ActivateRouterInterfaceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the router interface belongs.</p>
+     * <p>The region ID of the router interface.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */

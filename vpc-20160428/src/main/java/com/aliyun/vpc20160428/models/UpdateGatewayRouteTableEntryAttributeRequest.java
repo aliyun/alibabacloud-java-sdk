@@ -37,6 +37,9 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("GatewayRouteTableId")
+    public String gatewayRouteTableId;
+
     /**
      * <p>The ID of the gateway route table that you want to modify.</p>
      */
@@ -128,6 +131,14 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public UpdateGatewayRouteTableEntryAttributeRequest setGatewayRouteTableId(String gatewayRouteTableId) {
+        this.gatewayRouteTableId = gatewayRouteTableId;
+        return this;
+    }
+    public String getGatewayRouteTableId() {
+        return this.gatewayRouteTableId;
     }
 
     public UpdateGatewayRouteTableEntryAttributeRequest setIPv4GatewayRouteTableId(String IPv4GatewayRouteTableId) {

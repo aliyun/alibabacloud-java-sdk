@@ -11,11 +11,14 @@ public class CreateDhcpOptionsSetResponseBody extends TeaModel {
     public String dhcpOptionsSetId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group to which the DHCP options set belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

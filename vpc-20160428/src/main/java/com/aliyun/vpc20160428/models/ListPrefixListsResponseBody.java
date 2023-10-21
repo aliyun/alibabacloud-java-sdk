@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListPrefixListsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: **1** to **100**. Default value: **20**.</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
-     * <p>*   If a value is returned for **NextToken**, the value indicates the token that is used for the next query.</p>
+     * <p>*   If **NextToken** is empty, no next page exists.</p>
+     * <p>*   If a value is returned for **NextToken**, the value indicates the token that is used for the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -26,7 +26,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
     public java.util.List<ListPrefixListsResponseBodyPrefixLists> prefixLists;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -134,7 +134,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
         /**
          * <p>The IP version of the prefix list. Valid values:</p>
          * <br>
-         * <p>*   **IPv4**</p>
+         * <p>*   **IPV4**</p>
          * <p>*   **IPV6**</p>
          */
         @NameInMap("IpVersion")
@@ -198,7 +198,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
          * <p>Indicates whether the prefix list is shared. Valid values:</p>
          * <br>
          * <p>*   **Shared**: The prefix list is shared.</p>
-         * <p>*   If an empty value is returned, it indicates that the prefix list is not shared.</p>
+         * <p>*   If an empty value is returned, the prefix list is not shared.</p>
          */
         @NameInMap("ShareType")
         public String shareType;
@@ -214,7 +214,7 @@ public class ListPrefixListsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The list of tags that are added to the resource group.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListPrefixListsResponseBodyPrefixListsTags> tags;

@@ -11,10 +11,10 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
     public Long count;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
-     * <p>*   If **NextToken** is not empty, the value indicates the token that is used for the next query.</p>
+     * <p>*   If **NextToken** is empty, no next page exists.</p>
+     * <p>*   If a value is returned for **NextToken**, the value indicates the token that is used for the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -26,7 +26,7 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
     public java.util.List<GetVpcPrefixListEntriesResponseBodyPrefixListEntry> prefixListEntry;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -11,25 +11,27 @@ public class DescribeRouteTablesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**</p>
+     * <p>The page number. Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the virtual private cloud (VPC) to which the route table belongs.</p>
+     * <p>The region ID of the VPC to which the route table belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the route table belongs.</p>
+     * <p>The ID of the resource group to which the route table to be queried belongs.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -48,12 +50,14 @@ public class DescribeRouteTablesRequest extends TeaModel {
 
     /**
      * <p>The name of the route table that you want to query.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("RouteTableName")
     public String routeTableName;
 
     /**
-     * <p>The ID of the vRouter or VBR to which the route table belongs.</p>
+     * <p>The ID of the router to which the route table belongs.</p>
      */
     @NameInMap("RouterId")
     public String routerId;
@@ -61,26 +65,25 @@ public class DescribeRouteTablesRequest extends TeaModel {
     /**
      * <p>The type of the router to which the route table belongs. Valid values:</p>
      * <br>
-     * <p>*   **VRouter**: a vRouter</p>
-     * <p>*   **VBR**: a virtual border router (VBR)</p>
+     * <p>*   **VRouter** (default)</p>
+     * <p>*   **VBR**</p>
      */
     @NameInMap("RouterType")
     public String routerType;
 
     /**
-     * <p>The type of route table that you want to query. Valid values:</p>
+     * <p>The route type. Valid values:</p>
      * <br>
-     * <p>*   **System** : a system route table</p>
-     * <p>*   **Custom**: a custom route table</p>
-     * <p>*   **BGP**: a Border Gateway Protocol (BGP) route table</p>
+     * <p>*   **Custom**</p>
+     * <p>*   **System**</p>
+     * <p>*   **BGP**</p>
+     * <p>*   **CEN**</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
-     * <p>The ID of the vRouter to which the route table belongs.</p>
-     * <br>
-     * <p>After you set this parameter, **RouterType** is automatically set to **VRouter**.</p>
+     * <p>The ID of the vRouter.</p>
      */
     @NameInMap("VRouterId")
     public String VRouterId;
