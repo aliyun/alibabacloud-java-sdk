@@ -19,10 +19,11 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The key method for instance level TDE encryption, with values:</p>
-     * <p>- **Aliyun_Generate_Key**</p>
-     * <p>- **Customer_Provided_Key**</p>
-     * <p>- **Unknown**</p>
+     * <p>The method that is used to generate the key for TDE at the instance level. Valid values:</p>
+     * <br>
+     * <p>*   **Aliyun_Generate_Key**</p>
+     * <p>*   **Customer_Provided_Key**</p>
+     * <p>*   **Unknown**</p>
      */
     @NameInMap("TDEMode")
     public String TDEMode;

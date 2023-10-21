@@ -89,14 +89,14 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     public String dedicatedHostGroupId;
 
     /**
-     * <p>The type of the change that you want to perform on the instance. Valid values:</p>
+     * <p>The type of change that you want to perform on the instance. Valid values:</p>
      * <br>
      * <p>*   **Up** (default): upgrades a subscription instance, or upgrades or downgrades a pay-as-you-go instance.</p>
      * <p>*   **Down**: downgrades a subscription instance.</p>
      * <p>*   **TempUpgrade**: performs auto scaling on a subscription instance that runs SQL Server. This value is required for auto scaling.</p>
      * <p>*   **Serverless**: modifies the auto scaling settings of a serverless instance This value is required if you want to modify the auto scaling settings of a serverless instance.</p>
      * <br>
-     * <p>> If you want to change only the value of the **DBInstanceStorageType** parameter, you can leave the Direction parameter empty. For example, if you want to change the storage type of the instance from standard SSD to ESSD, you do not need to specify the Direction parameter.</p>
+     * <p>>  If you specify only **DBInstanceStorageType**, you can leave Direction empty. For example, if you want to change only the storage type of the instance from standard SSD to ESSD, you do not need to specify Direction.</p>
      */
     @NameInMap("Direction")
     public String direction;
@@ -180,9 +180,13 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     public String switchTime;
 
     /**
-     * <p>The minor engine version of the instance. This parameter is required only when you create an instance that runs PostgreSQL.</p>
+     * <p>The number of the minor version.</p>
      * <br>
-     * <p>> For more information about minor engine versions, see [Release notes for AliPG](~~126002~~).</p>
+     * <p>This parameter is required only for instances that run PostgreSQL. If the minor engine version does not support changing the instance type, you must specify the minor engine version to update the minor engine version when you change the instance type.</p>
+     * <br>
+     * <p>Format: `rds_postgres_<Major engine version>00_<Minor engine version>`. Example: `rds_postgres_1200_20200830`.</p>
+     * <br>
+     * <p>>  For more information about minor engine versions, see [Release notes for AliPG](~~126002~~).</p>
      */
     @NameInMap("TargetMinorVersion")
     public String targetMinorVersion;

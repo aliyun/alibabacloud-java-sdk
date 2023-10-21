@@ -13,7 +13,7 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     public String classicExpiredDays;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -31,7 +31,7 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The internal IP address of the instance. The internal IP address must be within the CIDR block supported by the specified vSwitch. ApsaraDB RDS automatically assigns an internal IP address to the instance based on the values of the **VPCId** and **VSwitchId** parameters.</p>
+     * <p>The internal IP address of the instance. The internal IP address must be within the CIDR block supported by the specified vSwitch. The system automatically assigns a private IP address to an instance based on the values of **VPCId** and **VSwitchId**.</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -39,15 +39,15 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     /**
      * <p>The number of days for which you want to retain the read/write splitting endpoint of the classic network type. Valid values: **1 to 120**. Default value: **7**.</p>
      * <br>
-     * <p>> This parameter takes effect only when a read/write splitting endpoint of the classic network type exists and the **RetainClassic** parameter is set to **True**.</p>
+     * <p>>  This parameter takes effect only when a read/write splitting endpoint of the classic network type exists and the **RetainClassic** parameter is set to **True**.</p>
      */
     @NameInMap("ReadWriteSplittingClassicExpiredDays")
     public Integer readWriteSplittingClassicExpiredDays;
 
     /**
-     * <p>The internal IP address that corresponds to the read/write splitting endpoint of the instance. The internal IP address must be within the CIDR block supported by the specified vSwitch. The system automatically assigns an internal IP address to the read-only instance based on the values of the **VPCId** and **VSwitchId** parameters.</p>
+     * <p>The internal IP address that corresponds to the read/write splitting endpoint of the instance. The internal IP address must be within the CIDR block supported by the specified vSwitch. The system automatically assigns a private IP address to an instance based on the values of **VPCId** and **VSwitchId**.</p>
      * <br>
-     * <p>> This value is valid when a read/write splitting endpoint of the classic network type exists.</p>
+     * <p>>  This parameter is valid when a read/write splitting endpoint of the classic network type exists.</p>
      */
     @NameInMap("ReadWriteSplittingPrivateIpAddress")
     public String readWriteSplittingPrivateIpAddress;
@@ -62,15 +62,13 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
      * <p>Specifies whether to retain the classic network endpoint. Valid values:</p>
      * <br>
      * <p>*   **True**: retains the classic network endpoint.</p>
-     * <p>*   **False**: does not retain the classic network endpoint.</p>
-     * <br>
-     * <p>Default value: **False**.</p>
+     * <p>*   **False** (default): does not retain the classic network endpoint.</p>
      */
     @NameInMap("RetainClassic")
     public String retainClassic;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The VPC ID.</p>
      */
     @NameInMap("VPCId")
     public String VPCId;

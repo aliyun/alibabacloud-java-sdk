@@ -11,9 +11,9 @@ public class DescribeAccountsRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      * <br>
-     * <p>> This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.</p>
+     * <p>>  This operation is not supported for instances that run SQL Server 2017 (cluster edition).</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -25,7 +25,7 @@ public class DescribeAccountsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid value: **30 to 200**. Default value: **30**.</p>
+     * <p>The number of entries to return on each page. Valid value: **30 to 200**. Default value: **30**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

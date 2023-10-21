@@ -43,7 +43,7 @@ public class CreateDBInstanceForRebuildRequest extends TeaModel {
      * <br>
      * <p>Default value: Classic.</p>
      * <br>
-     * <p>> : If you set this parameter to **VPC**, you must also specify **VpcId** and **VSwitchId**.</p>
+     * <p>>  The **VPCId** and **VSwitchId** parameters must be specified when this parameter is set to **VPC**.</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
@@ -69,7 +69,7 @@ public class CreateDBInstanceForRebuildRequest extends TeaModel {
      * <p>*   **Year**</p>
      * <p>*   **Month**</p>
      * <br>
-     * <p>> : If you set PayType to **Prepaid**, you must also specify this parameter.</p>
+     * <p>>  This parameter must be specified when the PayType parameter is set to **Prepaid**.</p>
      */
     @NameInMap("Period")
     public String period;

@@ -10,11 +10,8 @@ public class TransformDBInstancePayTypeRequest extends TeaModel {
      * <p>*   **true**</p>
      * <p>*   **false**</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   This parameter is valid only when you change the billing method from pay-as-you-go to subscription.</p>
-     * <br>
-     * <p>*   All strings except **true** are considered **false**.</p>
+     * <p>> - This parameter is valid only when you change the billing method from pay-as-you-go to subscription.</p>
+     * <p>> - All strings except **true** are considered **false**.</p>
      */
     @NameInMap("AutoRenew")
     public String autoRenew;

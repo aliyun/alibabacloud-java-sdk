@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
     /**
-     * <p>The end of the time range that is queried.</p>
+     * <p>The end of the time range to query.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>An array that consists of details of the cross-region data backup files.</p>
+     * <p>The cross-region data backup files.</p>
      */
     @NameInMap("Items")
     public DescribeCrossRegionBackupsResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page. Valid values: any non-zero positive integer.</p>
+     * <p>The page number. Pages start from page 1.</p>
      * <br>
      * <p>Default value: **1**.</p>
      */
@@ -37,19 +37,19 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The beginning of the time range that is queried.</p>
+     * <p>The beginning of the time range to query.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries that are returned.</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -194,8 +194,8 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         /**
          * <p>The RDS edition of the instance. Valid values:</p>
          * <br>
-         * <p>*   **Basic**: Basic Edition.</p>
-         * <p>*   **HighAvailability**: High-availability Edition.</p>
+         * <p>*   **Basic**: RDS Basic Edition</p>
+         * <p>*   **HighAvailability**: RDS High-availability Edition</p>
          * <p>*   **Finance**: Enterprise Edition. This edition is supported only by the China site (aliyun.com).</p>
          */
         @NameInMap("Category")
@@ -220,7 +220,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         public Integer crossBackupId;
 
         /**
-         * <p>The ID of the destination region where the cross-region data backup file of the instance is stored.</p>
+         * <p>The ID of the region in which the cross-region backup files of the instance are stored.</p>
          */
         @NameInMap("CrossBackupRegion")
         public String crossBackupRegion;
@@ -248,19 +248,19 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
          * <br>
          * <p>*   **local_ssd**: local SSD. This is the recommended storage type.</p>
          * <p>*   **cloud_ssd**: standard SSD.</p>
-         * <p>*   **cloud_essd**: enhanced SSD (ESSD).</p>
+         * <p>*   **cloud_essd**: enhanced SSD (ESSD)</p>
          */
         @NameInMap("DBInstanceStorageType")
         public String DBInstanceStorageType;
 
         /**
-         * <p>The engine of the database.</p>
+         * <p>The database engine of the instance.</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
-         * <p>The version of the database engine.</p>
+         * <p>The database engine version of the instance.</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;

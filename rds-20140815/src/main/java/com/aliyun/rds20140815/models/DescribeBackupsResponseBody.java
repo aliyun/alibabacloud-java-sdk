@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the details of the returned backup sets.</p>
+     * <p>The queried backup sets.</p>
      */
     @NameInMap("Items")
     public DescribeBackupsResponseBodyItems items;
@@ -172,7 +172,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * <p>The URL that is used to download the backup set over the Internet. If the backup set cannot be downloaded, null is returned.</p>
          * <br>
-         * <p>> For example, if BackupMethod of an ApsaraDB RDS for SQL Server instance is set to **Snapshot**, a null string is returned.</p>
+         * <p>>  For example, if BackupMethod of an ApsaraDB RDS for SQL Server instance is set to **Snapshot**, a null string is returned.</p>
          */
         @NameInMap("BackupDownloadURL")
         public String backupDownloadURL;
@@ -201,7 +201,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * <p>The URL that is used to download the backup set over an internal network. If the backup set cannot be downloaded, null is returned.</p>
          * <br>
-         * <p>> For example, if BackupMethod of an ApsaraDB RDS for SQL Server instance is set to **Snapshot**, a null string is returned.</p>
+         * <p>>  For example, if BackupMethod of an ApsaraDB RDS for SQL Server instance is set to **Snapshot**, a null string is returned.</p>
          */
         @NameInMap("BackupIntranetDownloadURL")
         public String backupIntranetDownloadURL;
@@ -226,19 +226,19 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupMode;
 
         /**
-         * <p>The backup size. Unit: bytes.</p>
+         * <p>The size of the data backup file. Unit: bytes.</p>
          */
         @NameInMap("BackupSize")
         public Long backupSize;
 
         /**
-         * <p>The start time of the backup task. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
+         * <p>The start time of the backup. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
         /**
-         * <p>The status of the backup set.</p>
+         * <p>The state of the backup set.</p>
          */
         @NameInMap("BackupStatus")
         public String backupStatus;
@@ -246,8 +246,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * <p>The backup type of the backup set. Valid values:</p>
          * <br>
-         * <p>*   **FullBackup**: full backup</p>
-         * <p>*   **IncrementalBackup**: incremental backup</p>
+         * <p>*   **FullBackup**</p>
+         * <p>*   **IncrementalBackup**</p>
          */
         @NameInMap("BackupType")
         public String backupType;
@@ -261,7 +261,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * <p>The point in time at which the data in the backup set is consistent. The return value of this parameter is a timestamp.</p>
          * <br>
-         * <p>> If the instance runs MySQL 5.6, a timestamp is returned. Otherwise, the value 0 is returned.</p>
+         * <p>>  If the instance runs MySQL 5.6, a timestamp is returned. Otherwise, the value 0 is returned.</p>
          */
         @NameInMap("ConsistentTime")
         public Long consistentTime;
@@ -272,13 +272,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
          * <p>*   0: the standard mode. This mode supports full backups and incremental backups.</p>
          * <p>*   1: the copy-only mode. This mode supports only full backups.</p>
          * <br>
-         * <p>> This parameter is returned only when the instance runs SQL Server.</p>
+         * <p>>  This parameter is returned only when the instance runs SQL Server.</p>
          */
         @NameInMap("CopyOnlyBackup")
         public String copyOnlyBackup;
 
         /**
-         * <p>The ID of the instance</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
@@ -290,7 +290,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String encryption;
 
         /**
-         * <p>The No. of the instance that generates the backup set. This parameter is used to indicate whether the instance that generates the backup set is a primary instance or a secondary instance.</p>
+         * <p>The ID of the instance that generates the backup set. This parameter is used to indicate whether the instance that generates the backup set is a primary instance or a secondary instance.</p>
          */
         @NameInMap("HostInstanceID")
         public String hostInstanceID;
@@ -307,17 +307,17 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * <p>The status of the backup set that is used to restore individual databases or tables. Valid values:</p>
          * <br>
-         * <p>*   **OK**: The backup set is normal.</p>
-         * <p>*   **LARGE**: The backup set contains an abnormally large number of tables. It cannot be used to restore individual databases or tables.</p>
-         * <p>*   **EMPTY**: The backup set is generated from a failed backup task.</p>
+         * <p>*   **OK**: The data backup file is normal.</p>
+         * <p>*   **LARGE**: The data backup file contains an abnormally large number of tables. It cannot be used to restore individual databases or tables.</p>
+         * <p>*   **EMPTY**: The data backup file is generated from a failed backup task.</p>
          * <br>
-         * <p>> If an empty string is returned, the backup set cannot be used to restore individual databases or tables.</p>
+         * <p>>  If an empty string is returned, the data backup file cannot be used to restore individual databases or tables.</p>
          */
         @NameInMap("MetaStatus")
         public String metaStatus;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;

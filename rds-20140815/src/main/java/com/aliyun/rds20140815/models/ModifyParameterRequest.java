@@ -36,11 +36,8 @@ public class ModifyParameterRequest extends TeaModel {
     /**
      * <p>The ID of the parameter template.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If you specify this parameter, you do not need to specify **Parameters**.</p>
-     * <br>
-     * <p>*   If the parameter template can be applied only after the instance is restarted, you must specify **Forcerestart**.</p>
+     * <p>> *   If you specify this parameter, you do not need to specify **Parameters**.</p>
+     * <p>> *   If the parameter template can be applied only after the instance is restarted, you must specify **Forcerestart**.</p>
      */
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;

@@ -5,25 +5,27 @@ import com.aliyun.tea.*;
 
 public class ModifyDatabaseConfigRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
+     * <br>
+     * <p>>  You can specify only one database name.</p>
      */
     @NameInMap("DBName")
     public String DBName;
 
     /**
-     * <p>The name of the database property expected to be modified.</p>
+     * <p>The name of the database property that you want to modify.</p>
      */
     @NameInMap("DatabasePropertyName")
     public String databasePropertyName;
 
     /**
-     * <p>The database property value that is expected to be modified.</p>
+     * <p>The value of the database property that you want to modify.</p>
      */
     @NameInMap("DatabasePropertyValue")
     public String databasePropertyValue;

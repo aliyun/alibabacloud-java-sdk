@@ -24,34 +24,24 @@ public class ModifyDBInstanceProxyConfigurationRequest extends TeaModel {
     public String proxyConfigurationKey;
 
     /**
-     * <p>The value of the **configuration item** for the database proxy. Valid values:</p>
+     * <p>The features and status of the database proxy:</p>
      * <br>
-     * <p>*   If you set the ProxyConfigurationKey parameter to **TransparentSwitch**, you can set this parameter to one of the following values:</p>
+     * <p>*   **TransparentSwitch**: transparent switchover. Valid values:</p>
      * <br>
-     * <p>    *   **Enable**. This is the default value.</p>
-     * <p>    *   **Disable**. Example: {"status":"Enable"}.</p>
+     * <p>    *   **Enable**: The feature is enabled. This is the default value.</p>
+     * <p>    *   **Disable**: The feature is disabled.</p>
      * <br>
-     * <p>*   If you set the ProxyConfigurationKey parameter to **PersistentConnections**, you can set this parameter to one of the following values:</p>
+     * <p>*   **PersistentConnections**: short-lived connection optimization. Valid values:</p>
      * <br>
-     * <p>    *   **Enable**.</p>
-     * <p>    *   **Disable**. This is the default value. Example: {"status":"Disable"}.</p>
+     * <p>    *   **Enable**: The feature is enabled.</p>
+     * <p>    *   **Disable**: The feature is disabled. This is the default value.</p>
      * <br>
-     * <p>*   If you set the ProxyConfigurationKey parameter to **AttacksProtection**, you can set this parameter to one of the following values:</p>
+     * <p>*   **AttacksProtection**: brute-force attack protection. Valid values:</p>
      * <br>
-     * <p>    *   **Enable**.</p>
-     * <p>    *   **Disable**. This is the default value. Example: {"status":"Disable"}.</p>
+     * <p>    *   **Enable**: The feature is enabled.</p>
+     * <p>    *   **Disable**: The feature is disabled. This is the default value.</p>
      * <br>
-     * <p>In this case, the return value is a JSON string. Example:</p>
-     * <br>
-     * <p>    {"status":"Disable", "check_interval_seconds": 60,</p>
-     * <p>                    "max_failed_login_attempts": 60, "blocking_seconds": 600}</p>
-     * <br>
-     * <p>Description and valid values:</p>
-     * <br>
-     * <p>*   Each client allows {max_failed_login_attempts} logon attempts upon failure within {check_interval_seconds} seconds. If the number of logon attempts exceeds the limit, the client is disabled for {blocking_seconds} seconds before the client can try again.</p>
-     * <p>*   The following list describes the valid values of each field in the preceding example.</p>
-     * <br>
-     * <p>check_interval_seconds: **30 to 600**. Unit: seconds. max_failed_login_attempts: **10 to 5000**. Unit: number of times. blocking_seconds: **30 to 3600**. Unit: seconds.</p>
+     * <p>Format: {"Feature 1":"Status 1","Feature 2":"Status 2"...}</p>
      */
     @NameInMap("ProxyConfigurationValue")
     public String proxyConfigurationValue;

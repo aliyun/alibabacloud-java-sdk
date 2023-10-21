@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the details of the IP address whitelists.</p>
+     * <p>An array that consists of the details about the IP address whitelists.</p>
      */
     @NameInMap("Items")
     public DescribeDBInstanceIPArrayListResponseBodyItems items;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -41,7 +41,7 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
         /**
          * <p>The attribute of the IP address whitelist. By default, this parameter is empty.</p>
          * <br>
-         * <p>> The IP address whitelists that have the hidden attribute are not displayed in the ApsaraDB RDS console. These IP address whitelists are used to access Alibaba Cloud services, such as Data Transmission Service (DTS).</p>
+         * <p>>  A whitelist with the hidden attribute does not appear in the console. Such IP address whitelists are used to access Alibaba Cloud services, such as Data Transmission Service (DTS).</p>
          */
         @NameInMap("DBInstanceIPArrayAttribute")
         public String DBInstanceIPArrayAttribute;

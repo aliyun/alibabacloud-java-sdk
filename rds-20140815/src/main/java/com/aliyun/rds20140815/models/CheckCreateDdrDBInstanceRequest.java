@@ -7,7 +7,7 @@ public class CheckCreateDdrDBInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the backup set that is used for the restoration. You can call the [DescribeCrossRegionBackups](~~121733~~) operation to query the ID of the backup set.</p>
      * <br>
-     * <p>> : If you set **RestoreType** to **0**, you must also specify this parameter.</p>
+     * <p>> If you set **RestoreType** to **0**, you must also specify this parameter.</p>
      */
     @NameInMap("BackupSetId")
     public String backupSetId;
@@ -68,7 +68,7 @@ public class CheckCreateDdrDBInstanceRequest extends TeaModel {
     /**
      * <p>The point in time to which you want to restore data. The point in time that you specify must be earlier than the current time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
      * <br>
-     * <p>> : If you set **RestoreType** to **1**, you must also specify this parameter.</p>
+     * <p>> If you set **RestoreType** to **1**, you must also specify this parameter.</p>
      */
     @NameInMap("RestoreTime")
     public String restoreTime;
@@ -87,7 +87,7 @@ public class CheckCreateDdrDBInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the source instance if you want to restore data to a point in time.</p>
      * <br>
-     * <p>> : If you set **RestoreType** to **1**, you must also specify this parameter.</p>
+     * <p>> If you set **RestoreType** to **1**, you must also specify this parameter.</p>
      */
     @NameInMap("SourceDBInstanceName")
     public String sourceDBInstanceName;
@@ -95,7 +95,7 @@ public class CheckCreateDdrDBInstanceRequest extends TeaModel {
     /**
      * <p>The region ID of the source instance if you want to restore data to a point in time.</p>
      * <br>
-     * <p>> : If you set **RestoreType** to **1**, you must also specify this parameter.</p>
+     * <p>> If you set **RestoreType** to **1**, you must also specify this parameter.</p>
      */
     @NameInMap("SourceRegion")
     public String sourceRegion;

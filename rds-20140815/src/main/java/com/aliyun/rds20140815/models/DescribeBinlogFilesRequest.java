@@ -25,7 +25,7 @@ public class DescribeBinlogFilesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number. Valid values: any non-zero positive integer.</p>
      * <br>
      * <p>Default value: **1**.</p>
      */
@@ -33,7 +33,7 @@ public class DescribeBinlogFilesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * <br>
      * <p>Valid values: **30** to **100**.</p>
      * <br>

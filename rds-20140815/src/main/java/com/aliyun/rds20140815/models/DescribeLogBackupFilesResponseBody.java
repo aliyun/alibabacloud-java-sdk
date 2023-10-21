@@ -11,7 +11,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
     public DescribeLogBackupFilesResponseBodyItems items;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the page returned.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -23,7 +23,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -113,7 +113,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         public String intranetDownloadLink;
 
         /**
-         * <p>The expiration time of the URL. The time follows the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The expiration time of the URL. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("LinkExpiredTime")
         public String linkExpiredTime;

@@ -87,6 +87,15 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ClassCode")
         public String classCode;
 
+        @NameInMap("ClassType")
+        public String classType;
+
+        @NameInMap("Cpu")
+        public String cpu;
+
+        @NameInMap("Memory")
+        public String memory;
+
         /**
          * <p>The node ID.</p>
          */
@@ -114,6 +123,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("NodeZoneId")
         public String nodeZoneId;
 
+        @NameInMap("Status")
+        public String status;
+
         public static DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode self = new DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode();
             return TeaModel.build(map, self);
@@ -125,6 +137,30 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getClassCode() {
             return this.classCode;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode setClassType(String classType) {
+            this.classType = classType;
+            return this;
+        }
+        public String getClassType() {
+            return this.classType;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode setCpu(String cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public String getCpu() {
+            return this.cpu;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode setMemory(String memory) {
+            this.memory = memory;
+            return this;
+        }
+        public String getMemory() {
+            return this.memory;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode setNodeId(String nodeId) {
@@ -157,6 +193,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getNodeZoneId() {
             return this.nodeZoneId;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodesDBClusterNode setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

@@ -11,13 +11,13 @@ public class ModifyPGHbaConfigRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The details of the AD domain.</p>
+     * <p>An array that consists of the details of the AD domain services.</p>
      */
     @NameInMap("HbaItem")
     public java.util.List<ModifyPGHbaConfigRequestHbaItem> hbaItem;
@@ -124,19 +124,19 @@ public class ModifyPGHbaConfigRequest extends TeaModel {
         /**
          * <p>The name of the database. If you set this parameter to all, the specified users are allowed to access all databases on the instance.</p>
          * <br>
-         * <p>If you specify multiple users, separate the usernames with commas (,).</p>
+         * <p>If you specify multiple entries, separate the entries with commas (,).</p>
          */
         @NameInMap("Database")
         public String database;
 
         /**
-         * <p>The mask of the instance. If the value of the **Address** parameter is an IP address, you can use this parameter to specify the mask of the IP address.</p>
+         * <p>The mask of the IP address. If the value of the **Address** parameter is an IP address, you can use this parameter to specify the mask of the IP address.</p>
          */
         @NameInMap("Mask")
         public String mask;
 
         /**
-         * <p>The authentication method. Valid values: authorization_code and refresh_token.</p>
+         * <p>The authentication method. Valid values:</p>
          * <br>
          * <p>*   **trust**</p>
          * <p>*   **reject**</p>
@@ -154,7 +154,7 @@ public class ModifyPGHbaConfigRequest extends TeaModel {
         public String method;
 
         /**
-         * <p>Optional. The value of this parameter varies based on the value of the Method parameter. In this topic, LDAP is used as an example. You must configure this parameter. For more information, see [Authentication Methods](https://www.postgresql.org/docs/11/auth-methods.html).</p>
+         * <p>The options of the authentication method. In this topic, LDAP is used as an example. You must configure this parameter. For more information, see [Authentication Methods](https://www.postgresql.org/docs/11/auth-methods.html).</p>
          */
         @NameInMap("Option")
         public String option;
@@ -172,17 +172,17 @@ public class ModifyPGHbaConfigRequest extends TeaModel {
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   **host**: The AD domain verifies TCP/IP connections, including SSL connections and non-SSL connections.</p>
+         * <p>*   **host**: The record matches TCP/IP connections, including SSL connections and non-SSL connections.</p>
          * <p>*   **hostssl**: The record matches only TCP/IP connections that are established over SSL.</p>
-         * <p>*   **hostnossl**: The record matches only TCP/IP connections that are not established over SSL.</p>
+         * <p>*   **hostnossl**: The record matches only TCP/IP connections that are not established over SSL connections.</p>
          * <br>
-         * <p>> You can set this parameter to hostssl only when SSL encryption is enabled for the instance. For more information, see [Configure SSL encryption for an ApsaraDB RDS for PostgreSQL instance](~~229518~~).</p>
+         * <p>>  You can set this parameter to hostssl only when SSL encryption is enabled for the instance. For more information, see Configure SSL encryption for an ApsaraDB RDS for PostgreSQL instance.[](~~229518~~)</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The user who is allowed to access the specified databases. You must specify the user that is used to log on to the RDS instance. If you specify multiple users, separate the usernames with commas (,).</p>
+         * <p>The user who is allowed to access the specified databases. You must specify the user that is used to log on to the RDS instance. If you specify multiple entries, separate the entries with commas (,).</p>
          */
         @NameInMap("User")
         public String user;

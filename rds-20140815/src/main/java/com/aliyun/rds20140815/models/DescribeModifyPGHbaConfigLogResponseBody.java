@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -23,7 +23,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
     public Integer logItemCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,7 +67,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
 
     public static class DescribeModifyPGHbaConfigLogResponseBodyHbaLogItemsHbaLogItemAfterHbaItemsHbaItem extends TeaModel {
         /**
-         * <p>The IP address of the instance.</p>
+         * <p>The IP address.</p>
          */
         @NameInMap("Address")
         public String address;
@@ -79,7 +79,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         public String database;
 
         /**
-         * <p>The mask of the instance.</p>
+         * <p>The mask of the IP address.</p>
          */
         @NameInMap("Mask")
         public String mask;
@@ -97,19 +97,19 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         public String option;
 
         /**
-         * <p>The priority of the configuration item in the pg_hba.conf file.</p>
+         * <p>The priority.</p>
          */
         @NameInMap("PriorityId")
         public Integer priorityId;
 
         /**
-         * <p>The type of the connection.</p>
+         * <p>The connection type.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The username of the account that was used to connect to the instance.</p>
+         * <p>The username of the account.</p>
          */
         @NameInMap("User")
         public String user;
@@ -206,7 +206,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
 
     public static class DescribeModifyPGHbaConfigLogResponseBodyHbaLogItemsHbaLogItemBeforeHbaItemsHbaItem extends TeaModel {
         /**
-         * <p>The IP address of the instance.</p>
+         * <p>The IP address.</p>
          */
         @NameInMap("Address")
         public String address;
@@ -218,7 +218,7 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         public String database;
 
         /**
-         * <p>The mask of the instance.</p>
+         * <p>The mask of the IP address.</p>
          */
         @NameInMap("Mask")
         public String mask;
@@ -230,25 +230,25 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
         public String method;
 
         /**
-         * <p>The value of this parameter was set based on the value of the Method parameter.</p>
+         * <p>The value of this parameter varies based on the value of the Method parameter.</p>
          */
         @NameInMap("Option")
         public String option;
 
         /**
-         * <p>The priority of the configuration item in the pg_hba.conf file.</p>
+         * <p>The priority.</p>
          */
         @NameInMap("PriorityId")
         public Integer priorityId;
 
         /**
-         * <p>The type of the connection.</p>
+         * <p>The connection type.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The username of the account that was used to connect to the instance.</p>
+         * <p>The username of the account.</p>
          */
         @NameInMap("User")
         public String user;
@@ -345,13 +345,13 @@ public class DescribeModifyPGHbaConfigLogResponseBody extends TeaModel {
 
     public static class DescribeModifyPGHbaConfigLogResponseBodyHbaLogItemsHbaLogItem extends TeaModel {
         /**
-         * <p>The configuration of the pg_hba.conf file after the modification was made.</p>
+         * <p>The configurations of the pg_hba.conf file after modification.</p>
          */
         @NameInMap("AfterHbaItems")
         public DescribeModifyPGHbaConfigLogResponseBodyHbaLogItemsHbaLogItemAfterHbaItems afterHbaItems;
 
         /**
-         * <p>The configuration of the pg_hba.conf file before the modification was made.</p>
+         * <p>The configurations of the pg_hba.conf file before modification.</p>
          */
         @NameInMap("BeforeHbaItems")
         public DescribeModifyPGHbaConfigLogResponseBodyHbaLogItemsHbaLogItemBeforeHbaItems beforeHbaItems;

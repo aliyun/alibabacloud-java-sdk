@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class ModifyAccountDescriptionRequest extends TeaModel {
     /**
-     * <p>The description of the account. The value must be 2 to 256 characters in length The value can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The description of the account. The value must be 2 to 256 characters in length. The value can contain letters, digits, underscores (\_), and hyphens (-), and must start with a letter.</p>
      * <br>
-     * <p>> The value cannot start with http:// or https://.</p>
+     * <p>>  The description cannot start with http:// or https://.</p>
      */
     @NameInMap("AccountDescription")
     public String accountDescription;
 
     /**
-     * <p>The name of the account.</p>
+     * <p>The username of the account. You can call the [DescribeAccounts](~~610454~~) operation to query the username of the account.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

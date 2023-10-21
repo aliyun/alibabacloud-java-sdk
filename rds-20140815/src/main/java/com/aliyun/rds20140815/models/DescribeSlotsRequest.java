@@ -13,7 +13,7 @@ public class DescribeSlotsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>实例ID。可调用[DescribeDBInstances](~~26232~~)查询。</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -25,7 +25,7 @@ public class DescribeSlotsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>资源组ID，可以为空。</p>
+     * <p>The ID of the resource group. You can leave this parameter empty.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

@@ -7,10 +7,10 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the automatic payment feature. Valid values:</p>
      * <br>
-     * <p>1.  **true**: enables the feature. You must make sure that your account balance is sufficient.</p>
+     * <p>1.  **true**: enables the feature. Make sure that your account balance is sufficient.</p>
      * <p>2.  **false**: disables the feature. An unpaid order is generated.</p>
      * <br>
-     * <p>>  The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
+     * <p>>  Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
@@ -113,7 +113,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
      * <p>*   **true**: enables the feature.</p>
      * <p>*   **false** (default): disables the feature.</p>
      * <br>
-     * <p>> This feature can be enabled only when you set the **PayType** parameter to **Postpaid**.</p>
+     * <p>>  You can enable the release protection feature for the read-only instance only when you set the **Billing Method** parameter to **Pay-As-You-Go**.</p>
      */
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
@@ -178,7 +178,9 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>Supports initializing the port when creating a read-only instance on the RDS MySQL master instance. Valid values: **1000 to 65534**.</p>
+     * <p>支持在RDS MySQL主实例创建只读实例时初始化端口。</p>
+     * <br>
+     * <p>取值范围：1000~65534</p>
      */
     @NameInMap("Port")
     public String port;

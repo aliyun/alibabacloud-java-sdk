@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CalculateDBInstanceWeightResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the system-assigned read weights.</p>
+     * <p>An array that consists of information about the system-assigned read weight.</p>
      */
     @NameInMap("Items")
     public CalculateDBInstanceWeightResponseBodyItems items;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +39,13 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
 
     public static class CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight extends TeaModel {
         /**
-         * <p>The ID of instance.</p>
+         * <p>The instance ID</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
-         * <p>The role of the instance. Valid values:</p>
+         * <p>The type of the instance. Valid values:</p>
          * <br>
          * <p>*   **Master**: primary instance</p>
          * <p>*   **Readonly**: read-only instance</p>
@@ -54,13 +54,13 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
         public String DBInstanceType;
 
         /**
-         * <p>The threshold for the latency of data replication from the primary instance to the read-only instances. The read-only instances start to synchronize data from the primary instance after the time specified by the **ReadonlyInstanceSQLDelayedTime** parameter elapses. Unit: seconds.</p>
+         * <p>The latency at which the read-only instances replicate data. The read-only instances replicate data from the primary instance at the latency that is specified by the **ReadonlyInstanceSQLDelayedTime** parameter. Unit: seconds.</p>
          */
         @NameInMap("ReadonlyInstanceSQLDelayedTime")
         public String readonlyInstanceSQLDelayedTime;
 
         /**
-         * <p>The read weight that ApsaraDB RDS calculates in real time for the instance.</p>
+         * <p>The read weight that the system calculates in real time for the instance.</p>
          */
         @NameInMap("Weight")
         public String weight;

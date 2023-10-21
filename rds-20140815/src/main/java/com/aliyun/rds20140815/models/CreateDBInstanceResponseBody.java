@@ -33,11 +33,8 @@ public class CreateDBInstanceResponseBody extends TeaModel {
      * <p>*   **true**</p>
      * <p>*   **false**</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If the system does not perform a dry run, this parameter is not returned.</p>
-     * <br>
-     * <p>*   If the request failed the dry run, an error message is returned.</p>
+     * <p>> *   If the system does not perform a dry run, this parameter is not returned.</p>
+     * <p>> *   If the request failed the dry run, an error message is returned.</p>
      */
     @NameInMap("DryRunResult")
     public Boolean dryRunResult;
