@@ -235,6 +235,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("invoice_title")
         public String invoiceTitle;
 
+        @NameInMap("item_type")
+        public String itemType;
+
         @NameInMap("itinerary_num")
         public String itineraryNum;
 
@@ -357,6 +360,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("voucher_type")
         public Integer voucherType;
+
+        @NameInMap("voyage_name")
+        public String voyageName;
 
         public static FlightBillSettlementQueryResponseBodyModuleDataList build(java.util.Map<String, ?> map) throws Exception {
             FlightBillSettlementQueryResponseBodyModuleDataList self = new FlightBillSettlementQueryResponseBodyModuleDataList();
@@ -779,6 +785,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             return this.invoiceTitle;
         }
 
+        public FlightBillSettlementQueryResponseBodyModuleDataList setItemType(String itemType) {
+            this.itemType = itemType;
+            return this;
+        }
+        public String getItemType() {
+            return this.itemType;
+        }
+
         public FlightBillSettlementQueryResponseBodyModuleDataList setItineraryNum(String itineraryNum) {
             this.itineraryNum = itineraryNum;
             return this;
@@ -1097,6 +1111,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public Integer getVoucherType() {
             return this.voucherType;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModuleDataList setVoyageName(String voyageName) {
+            this.voyageName = voyageName;
+            return this;
+        }
+        public String getVoyageName() {
+            return this.voyageName;
         }
 
     }
