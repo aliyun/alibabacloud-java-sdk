@@ -31,6 +31,36 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
         return this.resources;
     }
 
+    public static class CreateWorkspaceResourceRequestResourcesLabels extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateWorkspaceResourceRequestResourcesLabels build(java.util.Map<String, ?> map) throws Exception {
+            CreateWorkspaceResourceRequestResourcesLabels self = new CreateWorkspaceResourceRequestResourcesLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWorkspaceResourceRequestResourcesLabels setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateWorkspaceResourceRequestResourcesLabels setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class CreateWorkspaceResourceRequestResourcesQuotas extends TeaModel {
         @NameInMap("Id")
         public String id;
@@ -59,6 +89,9 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
 
         @NameInMap("IsDefault")
         public Boolean isDefault;
+
+        @NameInMap("Labels")
+        public java.util.List<CreateWorkspaceResourceRequestResourcesLabels> labels;
 
         @NameInMap("Name")
         public String name;
@@ -105,6 +138,14 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
         }
         public Boolean getIsDefault() {
             return this.isDefault;
+        }
+
+        public CreateWorkspaceResourceRequestResources setLabels(java.util.List<CreateWorkspaceResourceRequestResourcesLabels> labels) {
+            this.labels = labels;
+            return this;
+        }
+        public java.util.List<CreateWorkspaceResourceRequestResourcesLabels> getLabels() {
+            return this.labels;
         }
 
         public CreateWorkspaceResourceRequestResources setName(String name) {

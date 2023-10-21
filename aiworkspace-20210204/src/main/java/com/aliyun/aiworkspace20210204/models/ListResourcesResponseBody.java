@@ -102,6 +102,36 @@ public class ListResourcesResponseBody extends TeaModel {
 
     }
 
+    public static class ListResourcesResponseBodyResourcesLabels extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListResourcesResponseBodyResourcesLabels build(java.util.Map<String, ?> map) throws Exception {
+            ListResourcesResponseBodyResourcesLabels self = new ListResourcesResponseBodyResourcesLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public ListResourcesResponseBodyResourcesLabels setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListResourcesResponseBodyResourcesLabels setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListResourcesResponseBodyResourcesQuotasSpecs extends TeaModel {
         @NameInMap("Name")
         public String name;
@@ -250,6 +280,9 @@ public class ListResourcesResponseBody extends TeaModel {
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        @NameInMap("Labels")
+        public java.util.List<ListResourcesResponseBodyResourcesLabels> labels;
+
         @NameInMap("Name")
         public String name;
 
@@ -327,6 +360,14 @@ public class ListResourcesResponseBody extends TeaModel {
         }
         public Boolean getIsDefault() {
             return this.isDefault;
+        }
+
+        public ListResourcesResponseBodyResources setLabels(java.util.List<ListResourcesResponseBodyResourcesLabels> labels) {
+            this.labels = labels;
+            return this;
+        }
+        public java.util.List<ListResourcesResponseBodyResourcesLabels> getLabels() {
+            return this.labels;
         }
 
         public ListResourcesResponseBodyResources setName(String name) {

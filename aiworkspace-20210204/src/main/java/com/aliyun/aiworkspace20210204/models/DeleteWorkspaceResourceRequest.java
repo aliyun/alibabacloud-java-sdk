@@ -7,11 +7,17 @@ public class DeleteWorkspaceResourceRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
+    @NameInMap("Labels")
+    public String labels;
+
     @NameInMap("Option")
     public String option;
 
     @NameInMap("ProductType")
     public String productType;
+
+    @NameInMap("ResourceIds")
+    public String resourceIds;
 
     @NameInMap("ResourceType")
     public String resourceType;
@@ -29,6 +35,14 @@ public class DeleteWorkspaceResourceRequest extends TeaModel {
         return this.groupName;
     }
 
+    public DeleteWorkspaceResourceRequest setLabels(String labels) {
+        this.labels = labels;
+        return this;
+    }
+    public String getLabels() {
+        return this.labels;
+    }
+
     public DeleteWorkspaceResourceRequest setOption(String option) {
         this.option = option;
         return this;
@@ -43,6 +57,14 @@ public class DeleteWorkspaceResourceRequest extends TeaModel {
     }
     public String getProductType() {
         return this.productType;
+    }
+
+    public DeleteWorkspaceResourceRequest setResourceIds(String resourceIds) {
+        this.resourceIds = resourceIds;
+        return this;
+    }
+    public String getResourceIds() {
+        return this.resourceIds;
     }
 
     public DeleteWorkspaceResourceRequest setResourceType(String resourceType) {

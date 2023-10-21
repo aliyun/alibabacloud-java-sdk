@@ -7,6 +7,9 @@ public class ListResourcesRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
+    @NameInMap("Labels")
+    public String labels;
+
     @NameInMap("Option")
     public String option;
 
@@ -19,6 +22,9 @@ public class ListResourcesRequest extends TeaModel {
     @NameInMap("ProductTypes")
     public String productTypes;
 
+    @NameInMap("QuotaIds")
+    public String quotaIds;
+
     @NameInMap("ResourceName")
     public String resourceName;
 
@@ -27,6 +33,9 @@ public class ListResourcesRequest extends TeaModel {
 
     @NameInMap("Verbose")
     public Boolean verbose;
+
+    @NameInMap("VerboseFields")
+    public String verboseFields;
 
     @NameInMap("WorkspaceId")
     public String workspaceId;
@@ -42,6 +51,14 @@ public class ListResourcesRequest extends TeaModel {
     }
     public String getGroupName() {
         return this.groupName;
+    }
+
+    public ListResourcesRequest setLabels(String labels) {
+        this.labels = labels;
+        return this;
+    }
+    public String getLabels() {
+        return this.labels;
     }
 
     public ListResourcesRequest setOption(String option) {
@@ -76,6 +93,14 @@ public class ListResourcesRequest extends TeaModel {
         return this.productTypes;
     }
 
+    public ListResourcesRequest setQuotaIds(String quotaIds) {
+        this.quotaIds = quotaIds;
+        return this;
+    }
+    public String getQuotaIds() {
+        return this.quotaIds;
+    }
+
     public ListResourcesRequest setResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -98,6 +123,14 @@ public class ListResourcesRequest extends TeaModel {
     }
     public Boolean getVerbose() {
         return this.verbose;
+    }
+
+    public ListResourcesRequest setVerboseFields(String verboseFields) {
+        this.verboseFields = verboseFields;
+        return this;
+    }
+    public String getVerboseFields() {
+        return this.verboseFields;
     }
 
     public ListResourcesRequest setWorkspaceId(String workspaceId) {
