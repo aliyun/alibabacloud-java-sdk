@@ -29,6 +29,9 @@ public class DissociateRouteTableFromGatewayRequest extends TeaModel {
     @NameInMap("GatewayId")
     public String gatewayId;
 
+    @NameInMap("GatewayType")
+    public String gatewayType;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -82,6 +85,14 @@ public class DissociateRouteTableFromGatewayRequest extends TeaModel {
     }
     public String getGatewayId() {
         return this.gatewayId;
+    }
+
+    public DissociateRouteTableFromGatewayRequest setGatewayType(String gatewayType) {
+        this.gatewayType = gatewayType;
+        return this;
+    }
+    public String getGatewayType() {
+        return this.gatewayType;
     }
 
     public DissociateRouteTableFromGatewayRequest setOwnerAccount(String ownerAccount) {

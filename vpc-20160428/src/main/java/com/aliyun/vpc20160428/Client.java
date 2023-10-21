@@ -73,7 +73,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
+      * 、After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
       * >  You cannot activate a router interface that has overdue payments.
       *
       * @param request ActivateRouterInterfaceRequest
@@ -121,7 +121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
+      * 、After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
       * >  You cannot activate a router interface that has overdue payments.
       *
       * @param request ActivateRouterInterfaceRequest
@@ -1844,6 +1844,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GatewayId", request.gatewayId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayType)) {
+            query.put("GatewayType", request.gatewayType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -3452,6 +3456,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createDefaultVpcWithOptions(request, runtime);
     }
 
+    /**
+      * *   **CreateDhcpOptionsSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetDhcpOptionsSet](~~448820~~) to query the status of the task.
+      *     *   If the vSwitch is in the **Pending** state, the DHCP options set is being configured.
+      *     *   If the vSwitch is in the **Available** state, the DHCP options set is available.
+      *
+      * @param request CreateDhcpOptionsSetRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDhcpOptionsSetResponse
+     */
     public CreateDhcpOptionsSetResponse createDhcpOptionsSetWithOptions(CreateDhcpOptionsSetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3532,6 +3545,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDhcpOptionsSetResponse());
     }
 
+    /**
+      * *   **CreateDhcpOptionsSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetDhcpOptionsSet](~~448820~~) to query the status of the task.
+      *     *   If the vSwitch is in the **Pending** state, the DHCP options set is being configured.
+      *     *   If the vSwitch is in the **Available** state, the DHCP options set is available.
+      *
+      * @param request CreateDhcpOptionsSetRequest
+      * @return CreateDhcpOptionsSetResponse
+     */
     public CreateDhcpOptionsSetResponse createDhcpOptionsSet(CreateDhcpOptionsSetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDhcpOptionsSetWithOptions(request, runtime);
@@ -10063,11 +10084,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * When you call this operation, take note of the following items:
-      * *   You can delete only route entries that are in the **Available** state.
-      * *   You cannot delete a route entry of a virtual private cloud (VPC) in which a vSwitch or another route entry is being created or deleted.
-      * *   **DeleteRouteEntries** is an asynchronous operation. After you call this operation, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route entry.
-      *     *   If the route entry is in the **Deleting** state, the route entry is being deleted.
-      *     *   If you cannot query the route entry, the route entry is deleted.
+      * *   You can delete only routes that are in the **Available** state.
+      * *   You cannot delete a route of a virtual private cloud (VPC) in which a vSwitch or another route is being created or deleted.
+      * *   **DeleteRouteEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task.
+      *     *   If the route is in the **Deleting** state, the route is being deleted.
+      *     *   If you cannot query the route, the route is deleted.
       * *   You cannot repeatedly call **DeleteRouteEntries** within a specific period of time.
       *
       * @param request DeleteRouteEntriesRequest
@@ -10124,11 +10145,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * When you call this operation, take note of the following items:
-      * *   You can delete only route entries that are in the **Available** state.
-      * *   You cannot delete a route entry of a virtual private cloud (VPC) in which a vSwitch or another route entry is being created or deleted.
-      * *   **DeleteRouteEntries** is an asynchronous operation. After you call this operation, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route entry.
-      *     *   If the route entry is in the **Deleting** state, the route entry is being deleted.
-      *     *   If you cannot query the route entry, the route entry is deleted.
+      * *   You can delete only routes that are in the **Available** state.
+      * *   You cannot delete a route of a virtual private cloud (VPC) in which a vSwitch or another route is being created or deleted.
+      * *   **DeleteRouteEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task.
+      *     *   If the route is in the **Deleting** state, the route is being deleted.
+      *     *   If you cannot query the route, the route is deleted.
       * *   You cannot repeatedly call **DeleteRouteEntries** within a specific period of time.
       *
       * @param request DeleteRouteEntriesRequest
@@ -10830,7 +10851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HAVIPs).
       * *   You can delete only vSwitches that are in the **Available** state.
       * *   You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.
-      * *   **DeleteVSwitch** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+      * *   **DeleteVSwitch** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of the task:
       *     *   If the vSwitch is in the **Pending** state, the vSwitch is being deleted.
       *     *   If you cannot query the vSwitch, the vSwitch is deleted.
       * *   You cannot repeatedly call the **DeleteVSwitch** operation to delete a vSwitch within the specified period of time.
@@ -10888,7 +10909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HAVIPs).
       * *   You can delete only vSwitches that are in the **Available** state.
       * *   You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.
-      * *   **DeleteVSwitch** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+      * *   **DeleteVSwitch** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of the task:
       *     *   If the vSwitch is in the **Pending** state, the vSwitch is being deleted.
       *     *   If you cannot query the vSwitch, the vSwitch is deleted.
       * *   You cannot repeatedly call the **DeleteVSwitch** operation to delete a vSwitch within the specified period of time.
@@ -13521,12 +13542,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
@@ -16803,6 +16832,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
             query.put("GatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayType)) {
+            query.put("GatewayType", request.gatewayType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -26023,6 +26056,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayRouteTableId)) {
+            query.put("GatewayRouteTableId", request.gatewayRouteTableId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.IPv4GatewayRouteTableId)) {

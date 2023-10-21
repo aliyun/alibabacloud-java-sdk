@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetVpcPrefixListEntriesRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: **1** to **100**. Default value: **20**.</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If this is your first query and no next queries are to be sent, ignore this parameter.</p>
-     * <p>*   If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListenerCertificates operation.</p>
+     * <p>*   You do not need to specify this parameter for the first request.</p>
+     * <p>*   You must specify the token that is obtained from the previous query as the value of NextToken.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -34,7 +34,7 @@ public class GetVpcPrefixListEntriesRequest extends TeaModel {
     /**
      * <p>The region ID of the prefix list.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query available regions.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

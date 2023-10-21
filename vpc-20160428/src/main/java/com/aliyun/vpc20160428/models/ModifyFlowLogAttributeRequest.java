@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyFlowLogAttributeRequest extends TeaModel {
     /**
-     * <p>The new sampling interval of the flow log. Unit: seconds. Valid values: **1**, **5**, and **10**.</p>
+     * <p>The new sampling interval of the flow log. Unit: minutes. Valid values: **1**, **5**, and **10**.</p>
      */
     @NameInMap("AggregationInterval")
     public Integer aggregationInterval;
@@ -13,7 +13,7 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
     /**
      * <p>The new description of the flow log.</p>
      * <br>
-     * <p>The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -27,7 +27,7 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
     /**
      * <p>The new name of the flow log.</p>
      * <br>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("FlowLogName")
     public String flowLogName;

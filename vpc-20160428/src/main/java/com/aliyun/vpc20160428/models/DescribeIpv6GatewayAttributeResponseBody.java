@@ -32,6 +32,9 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
+    @NameInMap("GatewayRouteTableId")
+    public String gatewayRouteTableId;
+
     /**
      * <p>The metering method of the IPv6 gateway.</p>
      */
@@ -124,6 +127,14 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
     }
     public String getExpiredTime() {
         return this.expiredTime;
+    }
+
+    public DescribeIpv6GatewayAttributeResponseBody setGatewayRouteTableId(String gatewayRouteTableId) {
+        this.gatewayRouteTableId = gatewayRouteTableId;
+        return this;
+    }
+    public String getGatewayRouteTableId() {
+        return this.gatewayRouteTableId;
     }
 
     public DescribeIpv6GatewayAttributeResponseBody setInstanceChargeType(String instanceChargeType) {

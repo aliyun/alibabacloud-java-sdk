@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListPrefixListsRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: **1** to **100**. Default value: **20**.</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If this is your first query and no next queries are to be sent, ignore this parameter.</p>
-     * <p>*   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     * <p>*   You do not need to specify this parameter for the first request.</p>
+     * <p>*   You must specify the token that is obtained from the previous query as the value of NextToken.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -25,13 +25,16 @@ public class ListPrefixListsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The IDs of prefix lists to be queried. Valid values of **N** are **1** to **100**, which specifies that you can query up to 100 prefix lists at a time.</p>
+     */
     @NameInMap("PrefixListIds")
     public java.util.List<String> prefixListIds;
 
     /**
      * <p>The name of the prefix list to query.</p>
      * <br>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("PrefixListName")
     public String prefixListName;
@@ -56,6 +59,9 @@ public class ListPrefixListsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListPrefixListsRequestTags> tags;
 
@@ -154,7 +160,7 @@ public class ListPrefixListsRequest extends TeaModel {
 
     public static class ListPrefixListsRequestTags extends TeaModel {
         /**
-         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
          * <br>
          * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
          */
@@ -162,9 +168,9 @@ public class ListPrefixListsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. You can specify at most 20 tag values. It can be an empty string.</p>
+         * <p>The tag value. You can specify up to 20 tag values. The tag value can be an empty string.</p>
          * <br>
-         * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

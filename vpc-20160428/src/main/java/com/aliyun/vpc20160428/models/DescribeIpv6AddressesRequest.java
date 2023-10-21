@@ -86,11 +86,17 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeIpv6AddressesRequestTag> tag;
 
     /**
      * <p>The ID of the vSwitch to which the IPv6 address belongs.</p>
@@ -213,6 +219,14 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DescribeIpv6AddressesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public DescribeIpv6AddressesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -229,6 +243,14 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public DescribeIpv6AddressesRequest setTag(java.util.List<DescribeIpv6AddressesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeIpv6AddressesRequestTag> getTag() {
+        return this.tag;
+    }
+
     public DescribeIpv6AddressesRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
@@ -243,6 +265,36 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public static class DescribeIpv6AddressesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeIpv6AddressesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeIpv6AddressesRequestTag self = new DescribeIpv6AddressesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeIpv6AddressesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeIpv6AddressesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

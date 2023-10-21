@@ -31,6 +31,9 @@ public class AssociateRouteTableWithGatewayRequest extends TeaModel {
     @NameInMap("GatewayId")
     public String gatewayId;
 
+    @NameInMap("GatewayType")
+    public String gatewayType;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -84,6 +87,14 @@ public class AssociateRouteTableWithGatewayRequest extends TeaModel {
     }
     public String getGatewayId() {
         return this.gatewayId;
+    }
+
+    public AssociateRouteTableWithGatewayRequest setGatewayType(String gatewayType) {
+        this.gatewayType = gatewayType;
+        return this;
+    }
+    public String getGatewayType() {
+        return this.gatewayType;
     }
 
     public AssociateRouteTableWithGatewayRequest setOwnerAccount(String ownerAccount) {
