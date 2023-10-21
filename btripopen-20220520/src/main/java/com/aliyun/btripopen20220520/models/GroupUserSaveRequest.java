@@ -79,6 +79,9 @@ public class GroupUserSaveRequest extends TeaModel {
         @NameInMap("depart_ids")
         public java.util.List<String> departIds;
 
+        @NameInMap("email")
+        public String email;
+
         @NameInMap("leave_status")
         public Integer leaveStatus;
 
@@ -102,6 +105,14 @@ public class GroupUserSaveRequest extends TeaModel {
         }
         public java.util.List<String> getDepartIds() {
             return this.departIds;
+        }
+
+        public GroupUserSaveRequestSubCorpIdList setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
         }
 
         public GroupUserSaveRequestSubCorpIdList setLeaveStatus(Integer leaveStatus) {
