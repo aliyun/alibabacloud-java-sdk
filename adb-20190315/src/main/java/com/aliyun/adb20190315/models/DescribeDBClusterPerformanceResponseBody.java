@@ -86,6 +86,9 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("Tags")
+        public String tags;
+
         /**
          * <p>The values of the queried performance metrics.</p>
          */
@@ -103,6 +106,14 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeDBClusterPerformanceResponseBodyPerformancesSeries setTags(String tags) {
+            this.tags = tags;
+            return this;
+        }
+        public String getTags() {
+            return this.tags;
         }
 
         public DescribeDBClusterPerformanceResponseBodyPerformancesSeries setValues(java.util.List<String> values) {

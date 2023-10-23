@@ -72,11 +72,17 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("ResourcePools")
+    public String resourcePools;
 
     /**
      * <p>The start time of the query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.</p>
@@ -129,6 +135,14 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public DescribeDBClusterPerformanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public DescribeDBClusterPerformanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -143,6 +157,14 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeDBClusterPerformanceRequest setResourcePools(String resourcePools) {
+        this.resourcePools = resourcePools;
+        return this;
+    }
+    public String getResourcePools() {
+        return this.resourcePools;
     }
 
     public DescribeDBClusterPerformanceRequest setStartTime(String startTime) {

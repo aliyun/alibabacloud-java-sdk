@@ -189,6 +189,9 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("StorageType")
     public String storageType;
 
+    /**
+     * <p>The tags to add to the cluster.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateDBClusterRequestTag> tag;
 
@@ -478,9 +481,19 @@ public class CreateDBClusterRequest extends TeaModel {
     }
 
     public static class CreateDBClusterRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N to add to the cluster. You can use tags to filter clusters. Valid values of N: 1 to 20. The values that you specify for N must be unique and consecutive integers that start from 1. Each value of `Tag.N.Key` is paired with a value of `Tag.N.Value`.</p>
+         * <br>
+         * <p>>  The tag key can be up to 64 characters in length and cannot start with `aliyun`, `acs:`, `http://`, or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N to add to the cluster. You can use tags to filter clusters. Valid values of N: 1 to 20. The values that you specify for N must be unique and consecutive integers that start from 1. Each value of `Tag.N.Key` is paired with a value of `Tag.N.Value`.</p>
+         * <br>
+         * <p>>  The tag value can be up to 64 characters in length and cannot start with `aliyun`, `acs:`, `http://`, or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 
