@@ -40,15 +40,13 @@ public class RunApplicationActionRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>运行失败策略。取值范围：</p>
-     * <p>- FAILED_BLOCK：失败后阻塞。</p>
-     * <p>- FAILED_CONTINUE：失败后继续。</p>
+     * <p>运行策略。</p>
      */
     @NameInMap("ExecuteStrategy")
     public String executeStrategy;
 
     /**
-     * <p>滚动执行间隔时间。</p>
+     * <p>间隔时间。</p>
      */
     @NameInMap("Interval")
     public Long interval;

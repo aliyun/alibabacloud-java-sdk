@@ -77,7 +77,7 @@ public class Cluster extends TeaModel {
     public Long readyTime;
 
     /**
-     * <p>区域ID。</p>
+     * <p>地域ID。</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -102,6 +102,12 @@ public class Cluster extends TeaModel {
 
     @NameInMap("StateChangeReason")
     public ClusterStateChangeReason stateChangeReason;
+
+    /**
+     * <p>集群状态，值同clusterState</p>
+     */
+    @NameInMap("Status")
+    public String status;
 
     /**
      * <p>预付费配置。</p>
@@ -254,6 +260,14 @@ public class Cluster extends TeaModel {
     }
     public ClusterStateChangeReason getStateChangeReason() {
         return this.stateChangeReason;
+    }
+
+    public Cluster setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public Cluster setSubscriptionConfig(SubscriptionConfig subscriptionConfig) {
