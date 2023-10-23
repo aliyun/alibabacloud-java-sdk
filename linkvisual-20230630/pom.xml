@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>linkvisual20230630</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <packaging>jar</packaging>
   <name>linkvisual20230630</name>
   <description>Alibaba Cloud LinkVisual (20230630) SDK for Java
@@ -57,6 +57,11 @@
       <groupId>com.aliyun</groupId>
       <artifactId>tea</artifactId>
       <version>1.2.7</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>openapiutil</artifactId>
+      <version>0.2.1</version>
     </dependency>
   </dependencies>
   <build>
