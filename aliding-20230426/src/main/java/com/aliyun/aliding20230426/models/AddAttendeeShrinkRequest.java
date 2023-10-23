@@ -13,6 +13,12 @@ public class AddAttendeeShrinkRequest extends TeaModel {
     @NameInMap("EventId")
     public String eventId;
 
+    @NameInMap("chatNotification")
+    public Boolean chatNotification;
+
+    @NameInMap("pushNotification")
+    public Boolean pushNotification;
+
     public static AddAttendeeShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         AddAttendeeShrinkRequest self = new AddAttendeeShrinkRequest();
         return TeaModel.build(map, self);
@@ -40,6 +46,22 @@ public class AddAttendeeShrinkRequest extends TeaModel {
     }
     public String getEventId() {
         return this.eventId;
+    }
+
+    public AddAttendeeShrinkRequest setChatNotification(Boolean chatNotification) {
+        this.chatNotification = chatNotification;
+        return this;
+    }
+    public Boolean getChatNotification() {
+        return this.chatNotification;
+    }
+
+    public AddAttendeeShrinkRequest setPushNotification(Boolean pushNotification) {
+        this.pushNotification = pushNotification;
+        return this;
+    }
+    public Boolean getPushNotification() {
+        return this.pushNotification;
     }
 
 }
