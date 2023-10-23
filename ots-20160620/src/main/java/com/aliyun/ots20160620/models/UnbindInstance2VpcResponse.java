@@ -8,6 +8,10 @@ public class UnbindInstance2VpcResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public UnbindInstance2VpcResponseBody body;
@@ -23,6 +27,14 @@ public class UnbindInstance2VpcResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public UnbindInstance2VpcResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public UnbindInstance2VpcResponse setBody(UnbindInstance2VpcResponseBody body) {

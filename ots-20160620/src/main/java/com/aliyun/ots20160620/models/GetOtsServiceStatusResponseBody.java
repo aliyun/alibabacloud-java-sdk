@@ -4,35 +4,27 @@ package com.aliyun.ots20160620.models;
 import com.aliyun.tea.*;
 
 public class GetOtsServiceStatusResponseBody extends TeaModel {
-    // data
     @NameInMap("Data")
     public Boolean data;
 
-    // dynamicCode
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
-    // dynamicMessage
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
-    // errCode
     @NameInMap("ErrCode")
     public String errCode;
 
-    // httpStatusCode
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 
