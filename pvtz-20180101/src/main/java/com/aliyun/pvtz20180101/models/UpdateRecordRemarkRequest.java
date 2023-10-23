@@ -4,6 +4,9 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class UpdateRecordRemarkRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("Lang")
     public String lang;
 
@@ -16,6 +19,14 @@ public class UpdateRecordRemarkRequest extends TeaModel {
     public static UpdateRecordRemarkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateRecordRemarkRequest self = new UpdateRecordRemarkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateRecordRemarkRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public UpdateRecordRemarkRequest setLang(String lang) {

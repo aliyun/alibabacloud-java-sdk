@@ -4,6 +4,9 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class UpdateZoneRemarkRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("Lang")
     public String lang;
 
@@ -22,6 +25,14 @@ public class UpdateZoneRemarkRequest extends TeaModel {
     public static UpdateZoneRemarkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateZoneRemarkRequest self = new UpdateZoneRemarkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateZoneRemarkRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public UpdateZoneRemarkRequest setLang(String lang) {

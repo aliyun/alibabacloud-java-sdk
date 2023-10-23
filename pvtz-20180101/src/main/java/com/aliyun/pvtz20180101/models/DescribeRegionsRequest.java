@@ -13,6 +13,9 @@ public class DescribeRegionsRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("Scene")
+    public String scene;
+
     @NameInMap("UserClientIp")
     public String userClientIp;
 
@@ -46,6 +49,14 @@ public class DescribeRegionsRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeRegionsRequest setScene(String scene) {
+        this.scene = scene;
+        return this;
+    }
+    public String getScene() {
+        return this.scene;
     }
 
     public DescribeRegionsRequest setUserClientIp(String userClientIp) {

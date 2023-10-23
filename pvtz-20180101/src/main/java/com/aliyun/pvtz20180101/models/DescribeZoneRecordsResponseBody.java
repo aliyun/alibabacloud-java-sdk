@@ -76,6 +76,15 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeZoneRecordsResponseBodyRecordsRecord extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("CreateTimestamp")
+        public Long createTimestamp;
+
+        @NameInMap("Line")
+        public String line;
+
         @NameInMap("Priority")
         public Integer priority;
 
@@ -97,12 +106,48 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
+        @NameInMap("UpdateTimestamp")
+        public Long updateTimestamp;
+
         @NameInMap("Value")
         public String value;
+
+        @NameInMap("Weight")
+        public Integer weight;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeZoneRecordsResponseBodyRecordsRecord build(java.util.Map<String, ?> map) throws Exception {
             DescribeZoneRecordsResponseBodyRecordsRecord self = new DescribeZoneRecordsResponseBodyRecordsRecord();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeZoneRecordsResponseBodyRecordsRecord setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeZoneRecordsResponseBodyRecordsRecord setCreateTimestamp(Long createTimestamp) {
+            this.createTimestamp = createTimestamp;
+            return this;
+        }
+        public Long getCreateTimestamp() {
+            return this.createTimestamp;
+        }
+
+        public DescribeZoneRecordsResponseBodyRecordsRecord setLine(String line) {
+            this.line = line;
+            return this;
+        }
+        public String getLine() {
+            return this.line;
         }
 
         public DescribeZoneRecordsResponseBodyRecordsRecord setPriority(Integer priority) {
@@ -161,12 +206,44 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
             return this.type;
         }
 
+        public DescribeZoneRecordsResponseBodyRecordsRecord setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public DescribeZoneRecordsResponseBodyRecordsRecord setUpdateTimestamp(Long updateTimestamp) {
+            this.updateTimestamp = updateTimestamp;
+            return this;
+        }
+        public Long getUpdateTimestamp() {
+            return this.updateTimestamp;
+        }
+
         public DescribeZoneRecordsResponseBodyRecordsRecord setValue(String value) {
             this.value = value;
             return this;
         }
         public String getValue() {
             return this.value;
+        }
+
+        public DescribeZoneRecordsResponseBodyRecordsRecord setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
+        }
+
+        public DescribeZoneRecordsResponseBodyRecordsRecord setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

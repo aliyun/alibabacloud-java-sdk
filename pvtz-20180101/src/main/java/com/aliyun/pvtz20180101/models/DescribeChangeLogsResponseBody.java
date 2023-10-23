@@ -79,6 +79,15 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        @NameInMap("CreatorId")
+        public String creatorId;
+
+        @NameInMap("CreatorSubType")
+        public String creatorSubType;
+
+        @NameInMap("CreatorType")
+        public String creatorType;
+
         @NameInMap("EntityId")
         public String entityId;
 
@@ -114,6 +123,30 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public DescribeChangeLogsResponseBodyChangeLogsChangeLog setCreatorId(String creatorId) {
+            this.creatorId = creatorId;
+            return this;
+        }
+        public String getCreatorId() {
+            return this.creatorId;
+        }
+
+        public DescribeChangeLogsResponseBodyChangeLogsChangeLog setCreatorSubType(String creatorSubType) {
+            this.creatorSubType = creatorSubType;
+            return this;
+        }
+        public String getCreatorSubType() {
+            return this.creatorSubType;
+        }
+
+        public DescribeChangeLogsResponseBodyChangeLogsChangeLog setCreatorType(String creatorType) {
+            this.creatorType = creatorType;
+            return this;
+        }
+        public String getCreatorType() {
+            return this.creatorType;
         }
 
         public DescribeChangeLogsResponseBodyChangeLogsChangeLog setEntityId(String entityId) {
