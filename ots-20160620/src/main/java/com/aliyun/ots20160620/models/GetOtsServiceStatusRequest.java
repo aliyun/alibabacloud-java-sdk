@@ -4,7 +4,6 @@ package com.aliyun.ots20160620.models;
 import com.aliyun.tea.*;
 
 public class GetOtsServiceStatusRequest extends TeaModel {
-    // ownerId
     @NameInMap("OwnerId")
     public Long ownerId;
 
