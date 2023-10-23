@@ -97,6 +97,20 @@ public class ClusterSummary extends TeaModel {
     public ClusterStateChangeReason stateChangeReason;
 
     /**
+     * <p>集群状态。取值范围：</p>
+     * <p>- STARTING：启动中。</p>
+     * <p>- START_FAILED：启动失败。</p>
+     * <p>- BOOTSTRAPPING：引导操作初始化。</p>
+     * <p>- RUNNING：运行中。</p>
+     * <p>- TERMINATING：终止中。</p>
+     * <p>- TERMINATED：已终止。</p>
+     * <p>- TERMINATED_WITH_ERRORS：发生异常导致终止。</p>
+     * <p>- TERMINATE_FAILED：终止失败。</p>
+     */
+    @NameInMap("Status")
+    public String status;
+
+    /**
      * <p>标签列表。</p>
      */
     @NameInMap("Tags")
@@ -209,6 +223,14 @@ public class ClusterSummary extends TeaModel {
     }
     public ClusterStateChangeReason getStateChangeReason() {
         return this.stateChangeReason;
+    }
+
+    public ClusterSummary setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public ClusterSummary setTags(java.util.List<Tag> tags) {

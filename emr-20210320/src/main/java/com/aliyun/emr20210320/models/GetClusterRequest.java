@@ -11,7 +11,7 @@ public class GetClusterRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>区域ID。</p>
+     * <p>地域ID。</p>
      */
     @NameInMap("RegionId")
     public String regionId;
