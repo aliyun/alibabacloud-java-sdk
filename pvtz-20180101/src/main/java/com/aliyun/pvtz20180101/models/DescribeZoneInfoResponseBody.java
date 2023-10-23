@@ -13,6 +13,18 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     @NameInMap("CreateTimestamp")
     public Long createTimestamp;
 
+    @NameInMap("Creator")
+    public String creator;
+
+    @NameInMap("CreatorType")
+    public String creatorType;
+
+    @NameInMap("DnsGroup")
+    public String dnsGroup;
+
+    @NameInMap("DnsGroupChanging")
+    public Boolean dnsGroupChanging;
+
     @NameInMap("IsPtr")
     public Boolean isPtr;
 
@@ -82,6 +94,38 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     }
     public Long getCreateTimestamp() {
         return this.createTimestamp;
+    }
+
+    public DescribeZoneInfoResponseBody setCreator(String creator) {
+        this.creator = creator;
+        return this;
+    }
+    public String getCreator() {
+        return this.creator;
+    }
+
+    public DescribeZoneInfoResponseBody setCreatorType(String creatorType) {
+        this.creatorType = creatorType;
+        return this;
+    }
+    public String getCreatorType() {
+        return this.creatorType;
+    }
+
+    public DescribeZoneInfoResponseBody setDnsGroup(String dnsGroup) {
+        this.dnsGroup = dnsGroup;
+        return this;
+    }
+    public String getDnsGroup() {
+        return this.dnsGroup;
+    }
+
+    public DescribeZoneInfoResponseBody setDnsGroupChanging(Boolean dnsGroupChanging) {
+        this.dnsGroupChanging = dnsGroupChanging;
+        return this;
+    }
+    public Boolean getDnsGroupChanging() {
+        return this.dnsGroupChanging;
     }
 
     public DescribeZoneInfoResponseBody setIsPtr(Boolean isPtr) {

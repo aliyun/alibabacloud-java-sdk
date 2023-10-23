@@ -4,6 +4,9 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class SetProxyPatternRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("Lang")
     public String lang;
 
@@ -19,6 +22,14 @@ public class SetProxyPatternRequest extends TeaModel {
     public static SetProxyPatternRequest build(java.util.Map<String, ?> map) throws Exception {
         SetProxyPatternRequest self = new SetProxyPatternRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SetProxyPatternRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public SetProxyPatternRequest setLang(String lang) {

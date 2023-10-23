@@ -4,6 +4,9 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DeleteZoneRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("Lang")
     public String lang;
 
@@ -19,6 +22,14 @@ public class DeleteZoneRequest extends TeaModel {
     public static DeleteZoneRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteZoneRequest self = new DeleteZoneRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteZoneRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DeleteZoneRequest setLang(String lang) {

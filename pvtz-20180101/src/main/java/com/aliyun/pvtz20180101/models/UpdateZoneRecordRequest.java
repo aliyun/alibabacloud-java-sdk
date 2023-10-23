@@ -4,8 +4,14 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class UpdateZoneRecordRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("Lang")
     public String lang;
+
+    @NameInMap("Line")
+    public String line;
 
     @NameInMap("Priority")
     public Integer priority;
@@ -28,9 +34,20 @@ public class UpdateZoneRecordRequest extends TeaModel {
     @NameInMap("Value")
     public String value;
 
+    @NameInMap("Weight")
+    public Integer weight;
+
     public static UpdateZoneRecordRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateZoneRecordRequest self = new UpdateZoneRecordRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateZoneRecordRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public UpdateZoneRecordRequest setLang(String lang) {
@@ -39,6 +56,14 @@ public class UpdateZoneRecordRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public UpdateZoneRecordRequest setLine(String line) {
+        this.line = line;
+        return this;
+    }
+    public String getLine() {
+        return this.line;
     }
 
     public UpdateZoneRecordRequest setPriority(Integer priority) {
@@ -95,6 +120,14 @@ public class UpdateZoneRecordRequest extends TeaModel {
     }
     public String getValue() {
         return this.value;
+    }
+
+    public UpdateZoneRecordRequest setWeight(Integer weight) {
+        this.weight = weight;
+        return this;
+    }
+    public Integer getWeight() {
+        return this.weight;
     }
 
 }

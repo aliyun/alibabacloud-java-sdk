@@ -4,6 +4,9 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class BindZoneVpcRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("Lang")
     public String lang;
 
@@ -19,6 +22,14 @@ public class BindZoneVpcRequest extends TeaModel {
     public static BindZoneVpcRequest build(java.util.Map<String, ?> map) throws Exception {
         BindZoneVpcRequest self = new BindZoneVpcRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BindZoneVpcRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public BindZoneVpcRequest setLang(String lang) {

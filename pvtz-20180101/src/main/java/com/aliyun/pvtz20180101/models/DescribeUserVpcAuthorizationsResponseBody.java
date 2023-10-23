@@ -85,6 +85,12 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
         @NameInMap("AuthorizedUserId")
         public Long authorizedUserId;
 
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("CreateTimestamp")
+        public Long createTimestamp;
+
         public static DescribeUserVpcAuthorizationsResponseBodyUsers build(java.util.Map<String, ?> map) throws Exception {
             DescribeUserVpcAuthorizationsResponseBodyUsers self = new DescribeUserVpcAuthorizationsResponseBodyUsers();
             return TeaModel.build(map, self);
@@ -112,6 +118,22 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
         }
         public Long getAuthorizedUserId() {
             return this.authorizedUserId;
+        }
+
+        public DescribeUserVpcAuthorizationsResponseBodyUsers setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeUserVpcAuthorizationsResponseBodyUsers setCreateTimestamp(Long createTimestamp) {
+            this.createTimestamp = createTimestamp;
+            return this;
+        }
+        public Long getCreateTimestamp() {
+            return this.createTimestamp;
         }
 
     }

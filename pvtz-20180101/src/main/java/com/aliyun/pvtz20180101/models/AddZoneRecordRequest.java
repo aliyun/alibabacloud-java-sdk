@@ -4,8 +4,14 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class AddZoneRecordRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("Lang")
     public String lang;
+
+    @NameInMap("Line")
+    public String line;
 
     @NameInMap("Priority")
     public Integer priority;
@@ -28,6 +34,9 @@ public class AddZoneRecordRequest extends TeaModel {
     @NameInMap("Value")
     public String value;
 
+    @NameInMap("Weight")
+    public Integer weight;
+
     /**
      * <p>Zone ID。</p>
      */
@@ -39,12 +48,28 @@ public class AddZoneRecordRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AddZoneRecordRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public AddZoneRecordRequest setLang(String lang) {
         this.lang = lang;
         return this;
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public AddZoneRecordRequest setLine(String line) {
+        this.line = line;
+        return this;
+    }
+    public String getLine() {
+        return this.line;
     }
 
     public AddZoneRecordRequest setPriority(Integer priority) {
@@ -101,6 +126,14 @@ public class AddZoneRecordRequest extends TeaModel {
     }
     public String getValue() {
         return this.value;
+    }
+
+    public AddZoneRecordRequest setWeight(Integer weight) {
+        this.weight = weight;
+        return this;
+    }
+    public Integer getWeight() {
+        return this.weight;
     }
 
     public AddZoneRecordRequest setZoneId(String zoneId) {

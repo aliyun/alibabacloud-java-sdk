@@ -171,6 +171,9 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         @NameInMap("VpcType")
         public String vpcType;
 
+        @NameInMap("VpcUserId")
+        public String vpcUserId;
+
         public static DescribeResolverRuleResponseBodyBindVpcs build(java.util.Map<String, ?> map) throws Exception {
             DescribeResolverRuleResponseBodyBindVpcs self = new DescribeResolverRuleResponseBodyBindVpcs();
             return TeaModel.build(map, self);
@@ -214,6 +217,14 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         }
         public String getVpcType() {
             return this.vpcType;
+        }
+
+        public DescribeResolverRuleResponseBodyBindVpcs setVpcUserId(String vpcUserId) {
+            this.vpcUserId = vpcUserId;
+            return this;
+        }
+        public String getVpcUserId() {
+            return this.vpcUserId;
         }
 
     }
