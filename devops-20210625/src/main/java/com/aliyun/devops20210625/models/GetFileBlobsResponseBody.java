@@ -68,6 +68,9 @@ public class GetFileBlobsResponseBody extends TeaModel {
         @NameInMap("content")
         public String content;
 
+        @NameInMap("size")
+        public Long size;
+
         @NameInMap("totalLines")
         public Integer totalLines;
 
@@ -82,6 +85,14 @@ public class GetFileBlobsResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public GetFileBlobsResponseBodyResult setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
         }
 
         public GetFileBlobsResponseBodyResult setTotalLines(Integer totalLines) {
