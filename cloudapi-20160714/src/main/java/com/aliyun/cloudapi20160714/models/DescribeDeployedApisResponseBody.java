@@ -86,6 +86,9 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
         @NameInMap("ApiId")
         public String apiId;
 
+        /**
+         * <p>The HTTP method of the API request.</p>
+         */
         @NameInMap("ApiMethod")
         public String apiMethod;
 
@@ -95,6 +98,9 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>The request path of the API.</p>
+         */
         @NameInMap("ApiPath")
         public String apiPath;
 
