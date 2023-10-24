@@ -668,6 +668,9 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @NameInMap("AutoReleaseTime")
         public String autoReleaseTime;
 
+        @NameInMap("CreditSpecification")
+        public String creditSpecification;
+
         /**
          * <p>Details about the data disks.</p>
          */
@@ -928,6 +931,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
         public String getAutoReleaseTime() {
             return this.autoReleaseTime;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setCreditSpecification(String creditSpecification) {
+            this.creditSpecification = creditSpecification;
+            return this;
+        }
+        public String getCreditSpecification() {
+            return this.creditSpecification;
         }
 
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setDataDisks(DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisks dataDisks) {

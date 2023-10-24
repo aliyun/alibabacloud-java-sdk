@@ -170,6 +170,9 @@ public class DescribeActivationsResponseBody extends TeaModel {
         @NameInMap("RegisteredCount")
         public Integer registeredCount;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The tags of the activation code.</p>
          */
@@ -257,6 +260,14 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
         public Integer getRegisteredCount() {
             return this.registeredCount;
+        }
+
+        public DescribeActivationsResponseBodyActivationList setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeActivationsResponseBodyActivationList setTags(java.util.List<DescribeActivationsResponseBodyActivationListTags> tags) {
