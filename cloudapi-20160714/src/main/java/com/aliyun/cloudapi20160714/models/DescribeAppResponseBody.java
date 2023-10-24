@@ -4,24 +4,45 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the app.</p>
+     */
     @NameInMap("AppId")
     public Long appId;
 
+    /**
+     * <p>The name of the app.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The time when the app was created.</p>
+     */
     @NameInMap("CreatedTime")
     public String createdTime;
 
+    /**
+     * <p>The description of the app.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Extended Fields.</p>
+     */
     @NameInMap("Extend")
     public String extend;
 
+    /**
+     * <p>The time when the app was modified.</p>
+     */
     @NameInMap("ModifiedTime")
     public String modifiedTime;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

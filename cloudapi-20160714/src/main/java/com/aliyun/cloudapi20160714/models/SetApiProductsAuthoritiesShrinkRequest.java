@@ -10,6 +10,9 @@ public class SetApiProductsAuthoritiesShrinkRequest extends TeaModel {
     @NameInMap("AppId")
     public Long appId;
 
+    @NameInMap("AuthValidTime")
+    public String authValidTime;
+
     @NameInMap("Description")
     public String description;
 
@@ -35,6 +38,14 @@ public class SetApiProductsAuthoritiesShrinkRequest extends TeaModel {
     }
     public Long getAppId() {
         return this.appId;
+    }
+
+    public SetApiProductsAuthoritiesShrinkRequest setAuthValidTime(String authValidTime) {
+        this.authValidTime = authValidTime;
+        return this;
+    }
+    public String getAuthValidTime() {
+        return this.authValidTime;
     }
 
     public SetApiProductsAuthoritiesShrinkRequest setDescription(String description) {

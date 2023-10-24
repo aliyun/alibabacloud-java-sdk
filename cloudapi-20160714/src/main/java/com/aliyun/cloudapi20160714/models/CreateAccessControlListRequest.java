@@ -10,6 +10,9 @@ public class CreateAccessControlListRequest extends TeaModel {
     @NameInMap("AclName")
     public String aclName;
 
+    /**
+     * <p>The IP version. Valid values: **ipv4** and **ipv6**.</p>
+     */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 

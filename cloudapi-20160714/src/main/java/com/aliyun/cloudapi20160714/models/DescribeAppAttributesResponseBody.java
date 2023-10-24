@@ -159,6 +159,9 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Extended Fields.</p>
+         */
         @NameInMap("Extend")
         public String extend;
 
