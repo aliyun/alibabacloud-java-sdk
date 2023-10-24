@@ -2628,6 +2628,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
@@ -3118,6 +3122,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
@@ -4839,6 +4847,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AutoReleaseTime", request.autoReleaseTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.creditSpecification)) {
+            query.put("CreditSpecification", request.creditSpecification);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dataDisk)) {
             query.put("DataDisk", request.dataDisk);
         }
@@ -5069,6 +5081,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoReleaseTime)) {
             query.put("AutoReleaseTime", request.autoReleaseTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.creditSpecification)) {
+            query.put("CreditSpecification", request.creditSpecification);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dataDisk)) {
@@ -9321,6 +9337,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
@@ -10283,6 +10303,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {

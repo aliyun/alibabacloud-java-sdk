@@ -10,6 +10,9 @@ public class CreateLaunchTemplateResponseBody extends TeaModel {
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
 
+    @NameInMap("LaunchTemplateVersionNumber")
+    public Long launchTemplateVersionNumber;
+
     /**
      * <p>The ID of the request.</p>
      */
@@ -27,6 +30,14 @@ public class CreateLaunchTemplateResponseBody extends TeaModel {
     }
     public String getLaunchTemplateId() {
         return this.launchTemplateId;
+    }
+
+    public CreateLaunchTemplateResponseBody setLaunchTemplateVersionNumber(Long launchTemplateVersionNumber) {
+        this.launchTemplateVersionNumber = launchTemplateVersionNumber;
+        return this;
+    }
+    public Long getLaunchTemplateVersionNumber() {
+        return this.launchTemplateVersionNumber;
     }
 
     public CreateLaunchTemplateResponseBody setRequestId(String requestId) {

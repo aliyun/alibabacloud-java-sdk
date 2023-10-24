@@ -17,6 +17,9 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     @NameInMap("AutoReleaseTime")
     public String autoReleaseTime;
 
+    @NameInMap("CreditSpecification")
+    public String creditSpecification;
+
     /**
      * <p>The data disks.</p>
      */
@@ -340,6 +343,14 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     }
     public String getAutoReleaseTime() {
         return this.autoReleaseTime;
+    }
+
+    public CreateLaunchTemplateVersionRequest setCreditSpecification(String creditSpecification) {
+        this.creditSpecification = creditSpecification;
+        return this;
+    }
+    public String getCreditSpecification() {
+        return this.creditSpecification;
     }
 
     public CreateLaunchTemplateVersionRequest setDataDisk(java.util.List<CreateLaunchTemplateVersionRequestDataDisk> dataDisk) {

@@ -347,6 +347,9 @@ public class DescribeCommandsResponseBody extends TeaModel {
         @NameInMap("Provider")
         public String provider;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The tags of the command.</p>
          */
@@ -476,6 +479,14 @@ public class DescribeCommandsResponseBody extends TeaModel {
         }
         public String getProvider() {
             return this.provider;
+        }
+
+        public DescribeCommandsResponseBodyCommandsCommand setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeCommandsResponseBodyCommandsCommand setTags(DescribeCommandsResponseBodyCommandsCommandTags tags) {
