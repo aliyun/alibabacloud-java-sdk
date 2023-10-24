@@ -28,6 +28,9 @@ public class ListProjectsRequest extends TeaModel {
     @NameInMap("tenantId")
     public String tenantId;
 
+    @NameInMap("type")
+    public String type;
+
     public static ListProjectsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListProjectsRequest self = new ListProjectsRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class ListProjectsRequest extends TeaModel {
     }
     public String getTenantId() {
         return this.tenantId;
+    }
+
+    public ListProjectsRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

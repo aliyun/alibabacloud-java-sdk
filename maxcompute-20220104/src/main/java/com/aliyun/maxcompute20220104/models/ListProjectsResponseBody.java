@@ -166,9 +166,6 @@ public class ListProjectsResponseBody extends TeaModel {
         @NameInMap("allowFullScan")
         public Boolean allowFullScan;
 
-        @NameInMap("elderTunnelQuota")
-        public String elderTunnelQuota;
-
         @NameInMap("enableDecimal2")
         public Boolean enableDecimal2;
 
@@ -207,14 +204,6 @@ public class ListProjectsResponseBody extends TeaModel {
         }
         public Boolean getAllowFullScan() {
             return this.allowFullScan;
-        }
-
-        public ListProjectsResponseBodyDataProjectsProperties setElderTunnelQuota(String elderTunnelQuota) {
-            this.elderTunnelQuota = elderTunnelQuota;
-            return this;
-        }
-        public String getElderTunnelQuota() {
-            return this.elderTunnelQuota;
         }
 
         public ListProjectsResponseBodyDataProjectsProperties setEnableDecimal2(Boolean enableDecimal2) {

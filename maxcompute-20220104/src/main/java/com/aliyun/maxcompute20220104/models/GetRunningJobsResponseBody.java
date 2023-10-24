@@ -4,18 +4,34 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetRunningJobsResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public GetRunningJobsResponseBodyData data;
 
+    /**
+     * <p>*   If the value of success was false, an error code was returned.</p>
+     * <p>*   If the value of success was true, a null value was returned.</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
+    /**
+     * <p>Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.</p>
+     */
     @NameInMap("httpCode")
     public Integer httpCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -65,30 +81,57 @@ public class GetRunningJobsResponseBody extends TeaModel {
     }
 
     public static class GetRunningJobsResponseBodyDataRunningJobInfoList extends TeaModel {
+        /**
+         * <p>The compute unit (CU) snapshot proportion of the job.</p>
+         */
         @NameInMap("cuSnapshot")
         public Double cuSnapshot;
 
+        /**
+         * <p>The instance ID.</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>The account that submits the job.</p>
+         */
         @NameInMap("jobOwner")
         public String jobOwner;
 
+        /**
+         * <p>The memory snapshot proportion of the job.</p>
+         */
         @NameInMap("memorySnapshot")
         public Double memorySnapshot;
 
+        /**
+         * <p>The progress of the job.</p>
+         */
         @NameInMap("progress")
         public Double progress;
 
+        /**
+         * <p>The name of the MaxCompute project.</p>
+         */
         @NameInMap("project")
         public String project;
 
+        /**
+         * <p>The nickname of the quota that is used by the job.</p>
+         */
         @NameInMap("quotaNickname")
         public String quotaNickname;
 
+        /**
+         * <p>The time when the job starts to run.</p>
+         */
         @NameInMap("runningAtTime")
         public Long runningAtTime;
 
+        /**
+         * <p>The time when the job is submitted.</p>
+         */
         @NameInMap("submittedAtTime")
         public Long submittedAtTime;
 
@@ -172,15 +215,27 @@ public class GetRunningJobsResponseBody extends TeaModel {
     }
 
     public static class GetRunningJobsResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("pageNumber")
         public Long pageNumber;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("pageSize")
         public Long pageSize;
 
+        /**
+         * <p>The list of jobs in the running state.</p>
+         */
         @NameInMap("runningJobInfoList")
         public java.util.List<GetRunningJobsResponseBodyDataRunningJobInfoList> runningJobInfoList;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("totalCount")
         public Long totalCount;
 
