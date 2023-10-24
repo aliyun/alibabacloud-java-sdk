@@ -5771,6 +5771,324 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.insInvoiceScanQueryWithOptions(request, headers, runtime);
     }
 
+    public InsureOrderApplyResponse insureOrderApplyWithOptions(InsureOrderApplyRequest request, InsureOrderApplyHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.btripUserId)) {
+            body.put("btrip_user_id", request.btripUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.buyerName)) {
+            body.put("buyer_name", request.buyerName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.insOrderId)) {
+            body.put("ins_order_id", request.insOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isvName)) {
+            body.put("isv_name", request.isvName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outOrderId)) {
+            body.put("out_order_id", request.outOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outSubOrderId)) {
+            body.put("out_sub_order_id", request.outSubOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.supplierCode)) {
+            body.put("supplier_code", request.supplierCode);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InsureOrderApply"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-flight/v1/insurances/action/apply"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InsureOrderApplyResponse());
+    }
+
+    public InsureOrderApplyResponse insureOrderApply(InsureOrderApplyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        InsureOrderApplyHeaders headers = new InsureOrderApplyHeaders();
+        return this.insureOrderApplyWithOptions(request, headers, runtime);
+    }
+
+    public InsureOrderCancelResponse insureOrderCancelWithOptions(String insOrderId, InsureOrderCancelRequest request, InsureOrderCancelHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.btripUserId)) {
+            query.put("btrip_user_id", request.btripUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.buyerName)) {
+            query.put("buyer_name", request.buyerName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isvName)) {
+            query.put("isv_name", request.isvName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.supplierCode)) {
+            query.put("supplier_code", request.supplierCode);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InsureOrderCancel"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-flight/v1/insurances/" + com.aliyun.openapiutil.Client.getEncodeParam(insOrderId) + "/action/cancel"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InsureOrderCancelResponse());
+    }
+
+    public InsureOrderCancelResponse insureOrderCancel(String insOrderId, InsureOrderCancelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        InsureOrderCancelHeaders headers = new InsureOrderCancelHeaders();
+        return this.insureOrderCancelWithOptions(insOrderId, request, headers, runtime);
+    }
+
+    public InsureOrderCreateResponse insureOrderCreateWithOptions(InsureOrderCreateRequest tmpReq, InsureOrderCreateHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        InsureOrderCreateShrinkRequest request = new InsureOrderCreateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.applicant)) {
+            request.applicantShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.applicant, "applicant", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.insPersonAndSegmentList)) {
+            request.insPersonAndSegmentListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.insPersonAndSegmentList, "ins_person_and_segment_list", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicantShrink)) {
+            body.put("applicant", request.applicantShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.btripUserId)) {
+            body.put("btrip_user_id", request.btripUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.buyerName)) {
+            body.put("buyer_name", request.buyerName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.insPersonAndSegmentListShrink)) {
+            body.put("ins_person_and_segment_list", request.insPersonAndSegmentListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isvName)) {
+            body.put("isv_name", request.isvName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outInsOrderId)) {
+            body.put("out_ins_order_id", request.outInsOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outOrderId)) {
+            body.put("out_order_id", request.outOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outSubOrderId)) {
+            body.put("out_sub_order_id", request.outSubOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.supplierCode)) {
+            body.put("supplier_code", request.supplierCode);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InsureOrderCreate"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-flight/v1/insurances/action/create"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InsureOrderCreateResponse());
+    }
+
+    public InsureOrderCreateResponse insureOrderCreate(InsureOrderCreateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        InsureOrderCreateHeaders headers = new InsureOrderCreateHeaders();
+        return this.insureOrderCreateWithOptions(request, headers, runtime);
+    }
+
+    public InsureOrderDetailResponse insureOrderDetailWithOptions(InsureOrderDetailRequest request, InsureOrderDetailHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.btripUserId)) {
+            query.put("btrip_user_id", request.btripUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.buyerName)) {
+            query.put("buyer_name", request.buyerName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.insOrderId)) {
+            query.put("ins_order_id", request.insOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isvName)) {
+            query.put("isv_name", request.isvName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.supplierCode)) {
+            query.put("supplier_code", request.supplierCode);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InsureOrderDetail"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-flight/v1/insurances/action/detail"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InsureOrderDetailResponse());
+    }
+
+    public InsureOrderDetailResponse insureOrderDetail(InsureOrderDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        InsureOrderDetailHeaders headers = new InsureOrderDetailHeaders();
+        return this.insureOrderDetailWithOptions(request, headers, runtime);
+    }
+
+    public InsureOrderPayResponse insureOrderPayWithOptions(String insOrderId, InsureOrderPayRequest request, InsureOrderPayHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.btripUserId)) {
+            body.put("btrip_user_id", request.btripUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.buyerName)) {
+            body.put("buyer_name", request.buyerName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isvName)) {
+            body.put("isv_name", request.isvName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outOrderId)) {
+            body.put("out_order_id", request.outOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outSubOrderId)) {
+            body.put("out_sub_order_id", request.outSubOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paymentAmount)) {
+            body.put("payment_amount", request.paymentAmount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.supplierCode)) {
+            body.put("supplier_code", request.supplierCode);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InsureOrderPay"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-flight/v1/insurances/" + com.aliyun.openapiutil.Client.getEncodeParam(insOrderId) + "/action/pay"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InsureOrderPayResponse());
+    }
+
+    public InsureOrderPayResponse insureOrderPay(String insOrderId, InsureOrderPayRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        InsureOrderPayHeaders headers = new InsureOrderPayHeaders();
+        return this.insureOrderPayWithOptions(insOrderId, request, headers, runtime);
+    }
+
     public InvoiceAddResponse invoiceAddWithOptions(InvoiceAddRequest request, InvoiceAddHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
