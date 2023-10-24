@@ -128,6 +128,9 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         @NameInMap("CveId")
         public String cveId;
 
+        @NameInMap("CveLink")
+        public String cveLink;
+
         /**
          * <p>The Common Vulnerability Scoring System (CVSS) score of the vulnerability in the Alibaba Cloud vulnerability library.</p>
          */
@@ -304,6 +307,14 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         }
         public String getCveId() {
             return this.cveId;
+        }
+
+        public DescribeVulDetailsResponseBodyCves setCveLink(String cveLink) {
+            this.cveLink = cveLink;
+            return this;
+        }
+        public String getCveLink() {
+            return this.cveLink;
         }
 
         public DescribeVulDetailsResponseBodyCves setCvssScore(String cvssScore) {
