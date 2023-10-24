@@ -53,7 +53,7 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
     public Integer scanMachine;
 
     /**
-     * <p>The number of windows system vulnerabilities.</p>
+     * <p>The total number of Windows system vulnerabilities.</p>
      */
     @NameInMap("SysVulCount")
     public String sysVulCount;

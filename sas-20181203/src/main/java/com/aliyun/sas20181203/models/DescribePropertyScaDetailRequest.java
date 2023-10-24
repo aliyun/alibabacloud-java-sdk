@@ -80,7 +80,7 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
     public Long processStartedEnd;
 
     /**
-     * <p>The timestamp generated when the process starts. Unit: milliseconds.</p>
+     * <p>The timestamp when the process starts. Unit: milliseconds.</p>
      */
     @NameInMap("ProcessStartedStart")
     public Long processStartedStart;
