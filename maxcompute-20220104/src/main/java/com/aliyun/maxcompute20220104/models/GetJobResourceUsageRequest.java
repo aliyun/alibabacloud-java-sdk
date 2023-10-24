@@ -4,18 +4,33 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetJobResourceUsageRequest extends TeaModel {
+    /**
+     * <p>The date that is accurate to the day part for the query. The date must be in the yyyy-MM-dd format.</p>
+     */
     @NameInMap("date")
     public String date;
 
+    /**
+     * <p>The list of job executors.</p>
+     */
     @NameInMap("jobOwnerList")
     public java.util.List<String> jobOwnerList;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 
+    /**
+     * <p>The list of nicknames of quotas that are used by jobs.</p>
+     */
     @NameInMap("quotaNicknameList")
     public java.util.List<String> quotaNicknameList;
 

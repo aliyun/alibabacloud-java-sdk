@@ -4,12 +4,21 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class KillJobsResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public String data;
 
+    /**
+     * <p>Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.</p>
+     */
     @NameInMap("httpCode")
     public Integer httpCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

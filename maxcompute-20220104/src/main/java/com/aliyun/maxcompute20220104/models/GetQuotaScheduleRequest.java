@@ -4,6 +4,9 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetQuotaScheduleRequest extends TeaModel {
+    @NameInMap("displayTimezone")
+    public String displayTimezone;
+
     /**
      * <p>The ID of the region.</p>
      */
@@ -19,6 +22,14 @@ public class GetQuotaScheduleRequest extends TeaModel {
     public static GetQuotaScheduleRequest build(java.util.Map<String, ?> map) throws Exception {
         GetQuotaScheduleRequest self = new GetQuotaScheduleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetQuotaScheduleRequest setDisplayTimezone(String displayTimezone) {
+        this.displayTimezone = displayTimezone;
+        return this;
+    }
+    public String getDisplayTimezone() {
+        return this.displayTimezone;
     }
 
     public GetQuotaScheduleRequest setRegion(String region) {

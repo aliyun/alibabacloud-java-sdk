@@ -363,6 +363,9 @@ public class GetQuotaResponseBody extends TeaModel {
         @NameInMap("operatorName")
         public String operatorName;
 
+        @NameInMap("timezone")
+        public String timezone;
+
         public static GetQuotaResponseBodyDataScheduleInfo build(java.util.Map<String, ?> map) throws Exception {
             GetQuotaResponseBodyDataScheduleInfo self = new GetQuotaResponseBodyDataScheduleInfo();
             return TeaModel.build(map, self);
@@ -422,6 +425,14 @@ public class GetQuotaResponseBody extends TeaModel {
         }
         public String getOperatorName() {
             return this.operatorName;
+        }
+
+        public GetQuotaResponseBodyDataScheduleInfo setTimezone(String timezone) {
+            this.timezone = timezone;
+            return this;
+        }
+        public String getTimezone() {
+            return this.timezone;
         }
 
     }
@@ -519,6 +530,9 @@ public class GetQuotaResponseBody extends TeaModel {
         @NameInMap("operatorName")
         public String operatorName;
 
+        @NameInMap("timezone")
+        public String timezone;
+
         public static GetQuotaResponseBodyDataSubQuotaInfoListScheduleInfo build(java.util.Map<String, ?> map) throws Exception {
             GetQuotaResponseBodyDataSubQuotaInfoListScheduleInfo self = new GetQuotaResponseBodyDataSubQuotaInfoListScheduleInfo();
             return TeaModel.build(map, self);
@@ -580,6 +594,14 @@ public class GetQuotaResponseBody extends TeaModel {
             return this.operatorName;
         }
 
+        public GetQuotaResponseBodyDataSubQuotaInfoListScheduleInfo setTimezone(String timezone) {
+            this.timezone = timezone;
+            return this;
+        }
+        public String getTimezone() {
+            return this.timezone;
+        }
+
     }
 
     public static class GetQuotaResponseBodyDataSubQuotaInfoList extends TeaModel {
@@ -594,9 +616,6 @@ public class GetQuotaResponseBody extends TeaModel {
 
         @NameInMap("creatorId")
         public String creatorId;
-
-        @NameInMap("groupName")
-        public String groupName;
 
         @NameInMap("id")
         public String id;
@@ -672,14 +691,6 @@ public class GetQuotaResponseBody extends TeaModel {
         }
         public String getCreatorId() {
             return this.creatorId;
-        }
-
-        public GetQuotaResponseBodyDataSubQuotaInfoList setGroupName(String groupName) {
-            this.groupName = groupName;
-            return this;
-        }
-        public String getGroupName() {
-            return this.groupName;
         }
 
         public GetQuotaResponseBodyDataSubQuotaInfoList setId(String id) {
@@ -801,9 +812,6 @@ public class GetQuotaResponseBody extends TeaModel {
         @NameInMap("creatorId")
         public String creatorId;
 
-        @NameInMap("groupName")
-        public String groupName;
-
         @NameInMap("id")
         public String id;
 
@@ -881,14 +889,6 @@ public class GetQuotaResponseBody extends TeaModel {
         }
         public String getCreatorId() {
             return this.creatorId;
-        }
-
-        public GetQuotaResponseBodyData setGroupName(String groupName) {
-            this.groupName = groupName;
-            return this;
-        }
-        public String getGroupName() {
-            return this.groupName;
         }
 
         public GetQuotaResponseBodyData setId(String id) {
@@ -1057,6 +1057,9 @@ public class GetQuotaResponseBody extends TeaModel {
         @NameInMap("operatorName")
         public String operatorName;
 
+        @NameInMap("timezone")
+        public String timezone;
+
         public static GetQuotaResponseBodyScheduleInfo build(java.util.Map<String, ?> map) throws Exception {
             GetQuotaResponseBodyScheduleInfo self = new GetQuotaResponseBodyScheduleInfo();
             return TeaModel.build(map, self);
@@ -1116,6 +1119,14 @@ public class GetQuotaResponseBody extends TeaModel {
         }
         public String getOperatorName() {
             return this.operatorName;
+        }
+
+        public GetQuotaResponseBodyScheduleInfo setTimezone(String timezone) {
+            this.timezone = timezone;
+            return this;
+        }
+        public String getTimezone() {
+            return this.timezone;
         }
 
     }
@@ -1213,6 +1224,9 @@ public class GetQuotaResponseBody extends TeaModel {
         @NameInMap("operatorName")
         public String operatorName;
 
+        @NameInMap("timezone")
+        public String timezone;
+
         public static GetQuotaResponseBodySubQuotaInfoListScheduleInfo build(java.util.Map<String, ?> map) throws Exception {
             GetQuotaResponseBodySubQuotaInfoListScheduleInfo self = new GetQuotaResponseBodySubQuotaInfoListScheduleInfo();
             return TeaModel.build(map, self);
@@ -1272,6 +1286,14 @@ public class GetQuotaResponseBody extends TeaModel {
         }
         public String getOperatorName() {
             return this.operatorName;
+        }
+
+        public GetQuotaResponseBodySubQuotaInfoListScheduleInfo setTimezone(String timezone) {
+            this.timezone = timezone;
+            return this;
+        }
+        public String getTimezone() {
+            return this.timezone;
         }
 
     }

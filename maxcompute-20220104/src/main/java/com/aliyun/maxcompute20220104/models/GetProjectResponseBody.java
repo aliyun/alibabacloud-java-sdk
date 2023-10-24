@@ -137,6 +137,92 @@ public class GetProjectResponseBody extends TeaModel {
 
     }
 
+    public static class GetProjectResponseBodyDataPropertiesStorageTierInfoStorageTierSize extends TeaModel {
+        /**
+         * <p>The long-term storage.</p>
+         */
+        @NameInMap("longTermSize")
+        public Long longTermSize;
+
+        /**
+         * <p>The IA storage.</p>
+         */
+        @NameInMap("lowFrequencySize")
+        public Long lowFrequencySize;
+
+        /**
+         * <p>The standard storage.</p>
+         */
+        @NameInMap("standardSize")
+        public Long standardSize;
+
+        public static GetProjectResponseBodyDataPropertiesStorageTierInfoStorageTierSize build(java.util.Map<String, ?> map) throws Exception {
+            GetProjectResponseBodyDataPropertiesStorageTierInfoStorageTierSize self = new GetProjectResponseBodyDataPropertiesStorageTierInfoStorageTierSize();
+            return TeaModel.build(map, self);
+        }
+
+        public GetProjectResponseBodyDataPropertiesStorageTierInfoStorageTierSize setLongTermSize(Long longTermSize) {
+            this.longTermSize = longTermSize;
+            return this;
+        }
+        public Long getLongTermSize() {
+            return this.longTermSize;
+        }
+
+        public GetProjectResponseBodyDataPropertiesStorageTierInfoStorageTierSize setLowFrequencySize(Long lowFrequencySize) {
+            this.lowFrequencySize = lowFrequencySize;
+            return this;
+        }
+        public Long getLowFrequencySize() {
+            return this.lowFrequencySize;
+        }
+
+        public GetProjectResponseBodyDataPropertiesStorageTierInfoStorageTierSize setStandardSize(Long standardSize) {
+            this.standardSize = standardSize;
+            return this;
+        }
+        public Long getStandardSize() {
+            return this.standardSize;
+        }
+
+    }
+
+    public static class GetProjectResponseBodyDataPropertiesStorageTierInfo extends TeaModel {
+        /**
+         * <p>The backup storage.</p>
+         */
+        @NameInMap("projectBackupSize")
+        public Long projectBackupSize;
+
+        /**
+         * <p>The tiered storage.</p>
+         */
+        @NameInMap("storageTierSize")
+        public GetProjectResponseBodyDataPropertiesStorageTierInfoStorageTierSize storageTierSize;
+
+        public static GetProjectResponseBodyDataPropertiesStorageTierInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetProjectResponseBodyDataPropertiesStorageTierInfo self = new GetProjectResponseBodyDataPropertiesStorageTierInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetProjectResponseBodyDataPropertiesStorageTierInfo setProjectBackupSize(Long projectBackupSize) {
+            this.projectBackupSize = projectBackupSize;
+            return this;
+        }
+        public Long getProjectBackupSize() {
+            return this.projectBackupSize;
+        }
+
+        public GetProjectResponseBodyDataPropertiesStorageTierInfo setStorageTierSize(GetProjectResponseBodyDataPropertiesStorageTierInfoStorageTierSize storageTierSize) {
+            this.storageTierSize = storageTierSize;
+            return this;
+        }
+        public GetProjectResponseBodyDataPropertiesStorageTierInfoStorageTierSize getStorageTierSize() {
+            return this.storageTierSize;
+        }
+
+    }
+
     public static class GetProjectResponseBodyDataPropertiesTableLifecycle extends TeaModel {
         /**
          * <p>The type of the lifecycle. Valid values: -**mandatory**: The lifecycle clause is required. You must configure a lifecycle for a table. -**optional**: The lifecycle clause is optional in a table creation statement. If you do not configure a lifecycle for a table, the table does not expire. -**inherit**: If you do not configure a lifecycle for a table when you create the table, the value of the odps.table.lifecycle.value parameter is used by default.</p>
@@ -181,12 +267,6 @@ public class GetProjectResponseBody extends TeaModel {
         public Boolean allowFullScan;
 
         /**
-         * <p>This operation does not return a value for this parameter.</p>
-         */
-        @NameInMap("elderTunnelQuota")
-        public String elderTunnelQuota;
-
-        /**
          * <p>Indicates whether the DECIMAL data type in MaxCompute V2.0 is enabled.</p>
          */
         @NameInMap("enableDecimal2")
@@ -215,6 +295,12 @@ public class GetProjectResponseBody extends TeaModel {
          */
         @NameInMap("sqlMeteringMax")
         public String sqlMeteringMax;
+
+        /**
+         * <p>The information about the tiered storage.</p>
+         */
+        @NameInMap("storageTierInfo")
+        public GetProjectResponseBodyDataPropertiesStorageTierInfo storageTierInfo;
 
         /**
          * <p>The lifecycle of the table in the project.</p>
@@ -251,14 +337,6 @@ public class GetProjectResponseBody extends TeaModel {
         }
         public Boolean getAllowFullScan() {
             return this.allowFullScan;
-        }
-
-        public GetProjectResponseBodyDataProperties setElderTunnelQuota(String elderTunnelQuota) {
-            this.elderTunnelQuota = elderTunnelQuota;
-            return this;
-        }
-        public String getElderTunnelQuota() {
-            return this.elderTunnelQuota;
         }
 
         public GetProjectResponseBodyDataProperties setEnableDecimal2(Boolean enableDecimal2) {
@@ -299,6 +377,14 @@ public class GetProjectResponseBody extends TeaModel {
         }
         public String getSqlMeteringMax() {
             return this.sqlMeteringMax;
+        }
+
+        public GetProjectResponseBodyDataProperties setStorageTierInfo(GetProjectResponseBodyDataPropertiesStorageTierInfo storageTierInfo) {
+            this.storageTierInfo = storageTierInfo;
+            return this;
+        }
+        public GetProjectResponseBodyDataPropertiesStorageTierInfo getStorageTierInfo() {
+            return this.storageTierInfo;
         }
 
         public GetProjectResponseBodyDataProperties setTableLifecycle(GetProjectResponseBodyDataPropertiesTableLifecycle tableLifecycle) {
