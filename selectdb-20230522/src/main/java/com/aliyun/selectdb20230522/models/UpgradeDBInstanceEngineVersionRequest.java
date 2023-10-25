@@ -16,6 +16,9 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SwitchTimeMode")
+    public String switchTimeMode;
+
     public static UpgradeDBInstanceEngineVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeDBInstanceEngineVersionRequest self = new UpgradeDBInstanceEngineVersionRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public UpgradeDBInstanceEngineVersionRequest setSwitchTimeMode(String switchTimeMode) {
+        this.switchTimeMode = switchTimeMode;
+        return this;
+    }
+    public String getSwitchTimeMode() {
+        return this.switchTimeMode;
     }
 
 }
