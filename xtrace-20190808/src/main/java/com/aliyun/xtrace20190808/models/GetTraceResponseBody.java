@@ -4,9 +4,15 @@ package com.aliyun.xtrace20190808.models;
 import com.aliyun.tea.*;
 
 public class GetTraceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the trace.</p>
+     */
     @NameInMap("Spans")
     public GetTraceResponseBodySpans spans;
 
@@ -32,9 +38,15 @@ public class GetTraceResponseBody extends TeaModel {
     }
 
     public static class GetTraceResponseBodySpansSpanLogEventListLogEventTagEntryListTagEntry extends TeaModel {
+        /**
+         * <p>The tag key in the log event.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value in the log event.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -81,9 +93,15 @@ public class GetTraceResponseBody extends TeaModel {
     }
 
     public static class GetTraceResponseBodySpansSpanLogEventListLogEvent extends TeaModel {
+        /**
+         * <p>The tags in the log event.</p>
+         */
         @NameInMap("TagEntryList")
         public GetTraceResponseBodySpansSpanLogEventListLogEventTagEntryList tagEntryList;
 
+        /**
+         * <p>The timestamp when the log event was generated.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
@@ -130,9 +148,15 @@ public class GetTraceResponseBody extends TeaModel {
     }
 
     public static class GetTraceResponseBodySpansSpanTagEntryListTagEntry extends TeaModel {
+        /**
+         * <p>The tag key in the span.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value in the span.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -179,42 +203,84 @@ public class GetTraceResponseBody extends TeaModel {
     }
 
     public static class GetTraceResponseBodySpansSpan extends TeaModel {
+        /**
+         * <p>The time used to call the trace. Unit: milliseconds.</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <p>Indicates whether the span has child spans. Valid values:</p>
+         * <br>
+         * <p>- true: The span has child spans. </p>
+         * <p>- false: The span has no child spans.</p>
+         */
         @NameInMap("HaveStack")
         public Boolean haveStack;
 
+        /**
+         * <p>The log events in the trace.</p>
+         */
         @NameInMap("LogEventList")
         public GetTraceResponseBodySpansSpanLogEventList logEventList;
 
+        /**
+         * <p>The name of the span.</p>
+         */
         @NameInMap("OperationName")
         public String operationName;
 
+        /**
+         * <p>The ID of the parent span.</p>
+         */
         @NameInMap("ParentSpanId")
         public String parentSpanId;
 
+        /**
+         * <p>The status code.</p>
+         */
         @NameInMap("ResultCode")
         public String resultCode;
 
+        /**
+         * <p>The parent-child and sibling relationship between spans. For example, span 1.1 is the parent of span 1.1.1, and span 1.1.2 and span 1.1.1 are siblings.</p>
+         */
         @NameInMap("RpcId")
         public String rpcId;
 
+        /**
+         * <p>The IP address of the server where the span resides.</p>
+         */
         @NameInMap("ServiceIp")
         public String serviceIp;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>Span ID.</p>
+         */
         @NameInMap("SpanId")
         public String spanId;
 
+        /**
+         * <p>The tags in the span.</p>
+         */
         @NameInMap("TagEntryList")
         public GetTraceResponseBodySpansSpanTagEntryList tagEntryList;
 
+        /**
+         * <p>The timestamp when the span was generated. Unit: microseconds.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        /**
+         * <p>The unique ID of the trace.</p>
+         */
         @NameInMap("TraceID")
         public String traceID;
 

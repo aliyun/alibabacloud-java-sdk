@@ -4,9 +4,15 @@ package com.aliyun.xtrace20190808.models;
 import com.aliyun.tea.*;
 
 public class ListSpanNamesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The span names.</p>
+     */
     @NameInMap("SpanNames")
     public ListSpanNamesResponseBodySpanNames spanNames;
 

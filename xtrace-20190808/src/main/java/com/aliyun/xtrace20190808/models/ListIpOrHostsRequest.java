@@ -4,15 +4,27 @@ package com.aliyun.xtrace20190808.models;
 import com.aliyun.tea.*;
 
 public class ListIpOrHostsRequest extends TeaModel {
+    /**
+     * <p>The timestamp of the end time of the time range to query. The timestamp is accurate to milliseconds.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the application. If you do not set this parameter, the IP addresses of all applications in the specified region are returned.</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The timestamp of the start time of the time range to query. The timestamp is accurate to milliseconds.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

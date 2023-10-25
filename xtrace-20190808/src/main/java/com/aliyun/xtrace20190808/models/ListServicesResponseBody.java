@@ -4,9 +4,15 @@ package com.aliyun.xtrace20190808.models;
 import com.aliyun.tea.*;
 
 public class ListServicesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The applications.</p>
+     */
     @NameInMap("Services")
     public ListServicesResponseBodyServices services;
 
@@ -32,12 +38,21 @@ public class ListServicesResponseBody extends TeaModel {
     }
 
     public static class ListServicesResponseBodyServicesService extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("Pid")
         public String pid;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 

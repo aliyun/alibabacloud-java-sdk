@@ -3,7 +3,7 @@ package com.aliyun.xtrace20190808.models;
 
 import com.aliyun.tea.*;
 
-public class ListSpanNamesResponse extends TeaModel {
+public class OpenXtraceServiceResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ListSpanNamesResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListSpanNamesResponseBody body;
+    public OpenXtraceServiceResponseBody body;
 
-    public static ListSpanNamesResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListSpanNamesResponse self = new ListSpanNamesResponse();
+    public static OpenXtraceServiceResponse build(java.util.Map<String, ?> map) throws Exception {
+        OpenXtraceServiceResponse self = new OpenXtraceServiceResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListSpanNamesResponse setHeaders(java.util.Map<String, String> headers) {
+    public OpenXtraceServiceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ListSpanNamesResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListSpanNamesResponse setStatusCode(Integer statusCode) {
+    public OpenXtraceServiceResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ListSpanNamesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListSpanNamesResponse setBody(ListSpanNamesResponseBody body) {
+    public OpenXtraceServiceResponse setBody(OpenXtraceServiceResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListSpanNamesResponseBody getBody() {
+    public OpenXtraceServiceResponseBody getBody() {
         return this.body;
     }
 
