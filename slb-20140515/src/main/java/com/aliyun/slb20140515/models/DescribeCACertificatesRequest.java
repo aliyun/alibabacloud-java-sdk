@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCACertificatesRequest extends TeaModel {
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The CA certificate ID.</p>
      */
     @NameInMap("CACertificateId")
     public String CACertificateId;
@@ -17,15 +17,15 @@ public class DescribeCACertificatesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The timestamp that indicates when the CA certificate expires. Unit: milliseconds.</p>
+     * <p>The region of the CA certificates.</p>
      * <br>
-     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -36,6 +36,9 @@ public class DescribeCACertificatesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags of the CA certificates.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeCACertificatesRequestTag> tag;
 
@@ -109,9 +112,17 @@ public class DescribeCACertificatesRequest extends TeaModel {
     }
 
     public static class DescribeCACertificatesRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N. Valid values of N: **1 to 20**. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be up to 64 characters in length, and cannot contain `http://` or `https://`. It must not start with `aliyun` or `acs:`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N. Valid values of N: **1 to 20**. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. It must not start with `aliyun` or `acs:`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

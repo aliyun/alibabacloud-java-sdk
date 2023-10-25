@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateDomainExtensionRequest extends TeaModel {
     /**
-     * <p>The ID of the certificate used by the domain name.</p>
+     * <p>The domain name to be created.</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
-     * <p>The domain name to be created.</p>
+     * <p>The frontend port of the HTTPS listener.</p>
+     * <br>
+     * <p>Value range:** 1 to 65535**</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
-     * <p>The frontend port of the HTTPS listener.</p>
-     * <br>
-     * <p>Value range:** 1 to 65535**</p>
+     * <p>The ID of the SLB instance.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -31,7 +31,7 @@ public class CreateDomainExtensionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the SLB instance.</p>
+     * <p>The ID of the region to which the SLB instance belongs.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -43,7 +43,7 @@ public class CreateDomainExtensionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The frontend port used by the SLB instance.</p>
+     * <p>The ID of the certificate used by the domain name.</p>
      */
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;

@@ -4,12 +4,21 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class UploadServerCertificateRequest extends TeaModel {
+    /**
+     * <p>AliCloud certificate ID.</p>
+     */
     @NameInMap("AliCloudCertificateId")
     public String aliCloudCertificateId;
 
+    /**
+     * <p>AliCloud certificate name.</p>
+     */
     @NameInMap("AliCloudCertificateName")
     public String aliCloudCertificateName;
 
+    /**
+     * <p>The region ID of AliCloud certificate.</p>
+     */
     @NameInMap("AliCloudCertificateRegionId")
     public String aliCloudCertificateRegionId;
 
@@ -19,12 +28,23 @@ public class UploadServerCertificateRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The private key of the certificate.</p>
+     */
     @NameInMap("PrivateKey")
     public String privateKey;
 
+    /**
+     * <p>The region ID of the CLB instance.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -34,12 +54,23 @@ public class UploadServerCertificateRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The server certificate to be uploaded.</p>
+     */
     @NameInMap("ServerCertificate")
     public String serverCertificate;
 
+    /**
+     * <p>The name of the server certificate.</p>
+     * <br>
+     * <p>The name must be 1 to 80 characters in length. It must start with an English letter. It can contain letters, numbers, periods (.), underscores (\_), and hyphens (-).</p>
+     */
     @NameInMap("ServerCertificateName")
     public String serverCertificateName;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<UploadServerCertificateRequestTag> tag;
 
@@ -153,9 +184,17 @@ public class UploadServerCertificateRequest extends TeaModel {
     }
 
     public static class UploadServerCertificateRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N. Valid values of N: **1 to 20**. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be up to 64 characters in length, and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N. Valid values of N: **1 to 20**. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` and `acs:`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

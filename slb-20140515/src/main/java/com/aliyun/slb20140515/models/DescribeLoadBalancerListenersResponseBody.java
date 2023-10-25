@@ -4,18 +4,38 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
+    /**
+     * <p>The list of listeners on the CLB instance.</p>
+     * <br>
+     * <p>>  This parameter is not returned if no listener is created on the CLB instance.</p>
+     */
     @NameInMap("Listeners")
     public java.util.List<DescribeLoadBalancerListenersResponseBodyListeners> listeners;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <br>
+     * <p>*   If **NextToken** is empty, it indicates that no subsequent query is to be sent.</p>
+     * <p>*   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,84 +85,212 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
     }
 
     public static class DescribeLoadBalancerListenersResponseBodyListenersHTTPListenerConfig extends TeaModel {
+        /**
+         * <p>The cookie that is configured on the server.</p>
+         */
         @NameInMap("Cookie")
         public String cookie;
 
+        /**
+         * <p>The timeout period of a cookie. Unit: seconds.</p>
+         * <br>
+         * <p>Valid values: **1** to **86400**.</p>
+         */
         @NameInMap("CookieTimeout")
         public Integer cookieTimeout;
 
+        /**
+         * <p>The listening port that is used to redirect HTTP requests to HTTPS.</p>
+         * <br>
+         * <p>>  If the **ListenerForward** parameter is set to **off**, this parameter is not displayed.</p>
+         */
         @NameInMap("ForwardPort")
         public Integer forwardPort;
 
+        /**
+         * <p>Indicates whether Gzip compression is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("Gzip")
         public String gzip;
 
+        /**
+         * <p>Indicates whether the health check feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("HealthCheck")
         public String healthCheck;
 
+        /**
+         * <p>The port that is used for health checks.</p>
+         * <br>
+         * <p>>  This parameter takes effect when the **HealthCheck** parameter is set to **on**.</p>
+         */
         @NameInMap("HealthCheckConnectPort")
         public Integer healthCheckConnectPort;
 
+        /**
+         * <p>The domain name that is used for health checks.</p>
+         */
         @NameInMap("HealthCheckDomain")
         public String healthCheckDomain;
 
+        /**
+         * <p>The HTTP status codes that are used to determine whether the backend server passes the health check.</p>
+         */
         @NameInMap("HealthCheckHttpCode")
         public String healthCheckHttpCode;
 
+        /**
+         * <p>The HTTP version that is used for health checks.</p>
+         */
         @NameInMap("HealthCheckHttpVersion")
         public String healthCheckHttpVersion;
 
+        /**
+         * <p>The interval at which health checks are performed. Unit: seconds.</p>
+         */
         @NameInMap("HealthCheckInterval")
         public Integer healthCheckInterval;
 
+        /**
+         * <p>The health check method. Valid values: **head** and **get**.</p>
+         */
         @NameInMap("HealthCheckMethod")
         public String healthCheckMethod;
 
+        /**
+         * <p>The maximum timeout period of a health check. Unit: seconds.</p>
+         */
         @NameInMap("HealthCheckTimeout")
         public Integer healthCheckTimeout;
 
+        /**
+         * <p>The protocol that is used for health checks.</p>
+         */
         @NameInMap("HealthCheckType")
         public String healthCheckType;
 
+        /**
+         * <p>The URI that is used for health checks.</p>
+         */
         @NameInMap("HealthCheckURI")
         public String healthCheckURI;
 
+        /**
+         * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.</p>
+         * <br>
+         * <p>Valid values: **2** to **10**.</p>
+         */
         @NameInMap("HealthyThreshold")
         public Integer healthyThreshold;
 
+        /**
+         * <p>The timeout period of an idle connection. Unit: seconds. Valid values: **1** to **60**.</p>
+         * <br>
+         * <p>If no request is received within the specified timeout period, CLB closes the connection. When a request is received, CLB establishes a new connection.</p>
+         */
         @NameInMap("IdleTimeout")
         public Integer idleTimeout;
 
+        /**
+         * <p>Indicates whether HTTP-to-HTTPS redirection is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("ListenerForward")
         public String listenerForward;
 
+        /**
+         * <p>The timeout period of a request. Unit: seconds. Valid values: **1** to **180**.</p>
+         * <br>
+         * <p>If no response is received from a backend server during the request timeout period, CLB sends the `HTTP 504` status code to the client.</p>
+         */
         @NameInMap("RequestTimeout")
         public Integer requestTimeout;
 
+        /**
+         * <p>Indicates whether session persistence is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("StickySession")
         public String stickySession;
 
+        /**
+         * <p>The method that is used to handle a cookie. Valid values:</p>
+         * <br>
+         * <p>*   **insert**: inserts a cookie. CLB inserts a cookie (SERVERID) into the first HTTP or HTTPS response that is sent to a client. The next request from the client contains this cookie, and the listener forwards this request to the recorded backend server.</p>
+         * <p>*   **server**: rewrites a cookie. When CLB detects a user-defined cookie, it overwrites the original cookie with the user-defined cookie. The next request from the client carries the user-defined cookie, and the listener will distribute the request to the recorded backend server.</p>
+         */
         @NameInMap("StickySessionType")
         public String stickySessionType;
 
+        /**
+         * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.</p>
+         * <br>
+         * <p>Valid values: **2** to **10**.</p>
+         */
         @NameInMap("UnhealthyThreshold")
         public Integer unhealthyThreshold;
 
+        /**
+         * <p>Indicates whether the `XForwardedFor` header is used to retrieve client IP addresses. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("XForwardedFor")
         public String XForwardedFor;
 
+        /**
+         * <p>Indicates whether the `XForwardedFor_ClientSrcPort` header is used to retrieve the client port. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("XForwardedFor_ClientSrcPort")
         public String XForwardedFor_ClientSrcPort;
 
+        /**
+         * <p>Indicates whether the `SLB-ID` header is used to retrieve the ID of the CLB instance. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("XForwardedFor_SLBID")
         public String XForwardedFor_SLBID;
 
+        /**
+         * <p>Indicates whether the `SLB-IP` header is used to retrieve the virtual IP address requested by the client. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("XForwardedFor_SLBIP")
         public String XForwardedFor_SLBIP;
 
+        /**
+         * <p>Indicates whether the `XForwardedFor_SLBPORT` header is used to retrieve the listening port. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("XForwardedFor_SLBPORT")
         public String XForwardedFor_SLBPORT;
 
+        /**
+         * <p>Indicates whether the `X-Forwarded-Proto` header is used to retrieve the listening protocol. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("XForwardedFor_proto")
         public String XForwardedFor_proto;
 
@@ -370,102 +518,286 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
     }
 
     public static class DescribeLoadBalancerListenersResponseBodyListenersHTTPSListenerConfig extends TeaModel {
+        /**
+         * <p>The ID of the certificate authority (CA) certificate.</p>
+         */
         @NameInMap("CACertificateId")
         public String CACertificateId;
 
+        /**
+         * <p>The cookie that is configured on the server.</p>
+         */
         @NameInMap("Cookie")
         public String cookie;
 
+        /**
+         * <p>The timeout period of a cookie. Unit: seconds.</p>
+         * <br>
+         * <p>Valid values: **1** to **86400**.</p>
+         */
         @NameInMap("CookieTimeout")
         public Integer cookieTimeout;
 
+        /**
+         * <p>Indicates whether `HTTP 2.0` is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("EnableHttp2")
         public String enableHttp2;
 
+        /**
+         * <p>Indicates whether Gzip compression is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("Gzip")
         public String gzip;
 
+        /**
+         * <p>Indicates whether the health check feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("HealthCheck")
         public String healthCheck;
 
+        /**
+         * <p>The port that is used for health checks.</p>
+         */
         @NameInMap("HealthCheckConnectPort")
         public Integer healthCheckConnectPort;
 
+        /**
+         * <p>The domain name that is used for health checks.</p>
+         */
         @NameInMap("HealthCheckDomain")
         public String healthCheckDomain;
 
+        /**
+         * <p>The HTTP status codes that are used to determine whether the backend server passes the health check.</p>
+         */
         @NameInMap("HealthCheckHttpCode")
         public String healthCheckHttpCode;
 
+        /**
+         * <p>The HTTP version that is used for health checks.</p>
+         */
         @NameInMap("HealthCheckHttpVersion")
         public String healthCheckHttpVersion;
 
+        /**
+         * <p>The interval at which health checks are performed. Unit: seconds.</p>
+         */
         @NameInMap("HealthCheckInterval")
         public Integer healthCheckInterval;
 
+        /**
+         * <p>The health check method.</p>
+         */
         @NameInMap("HealthCheckMethod")
         public String healthCheckMethod;
 
+        /**
+         * <p>The maximum timeout period of a health check. Unit: seconds.</p>
+         */
         @NameInMap("HealthCheckTimeout")
         public Integer healthCheckTimeout;
 
+        /**
+         * <p>The protocol that is used for health checks.</p>
+         */
         @NameInMap("HealthCheckType")
         public String healthCheckType;
 
+        /**
+         * <p>The URI that is used for health checks.</p>
+         */
         @NameInMap("HealthCheckURI")
         public String healthCheckURI;
 
+        /**
+         * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.</p>
+         * <br>
+         * <p>Valid values: **2** to **10**.</p>
+         */
         @NameInMap("HealthyThreshold")
         public Integer healthyThreshold;
 
+        /**
+         * <p>The timeout period of an idle connection. Unit: seconds. Valid values: **1** to **60**.</p>
+         * <br>
+         * <p>If no request is received within the specified timeout period, CLB closes the connection. When a request is received, CLB establishes a new connection.</p>
+         */
         @NameInMap("IdleTimeout")
         public Integer idleTimeout;
 
+        /**
+         * <p>The request timeout period. Unit: seconds. Valid values: **1** to **180**.</p>
+         * <br>
+         * <p>If no response is received from a backend server during the request timeout period, CLB sends the `HTTP 504` status code to the client.</p>
+         */
         @NameInMap("RequestTimeout")
         public Integer requestTimeout;
 
+        /**
+         * <p>The ID of the server certificate.</p>
+         */
         @NameInMap("ServerCertificateId")
         public String serverCertificateId;
 
+        /**
+         * <p>Indicates whether session persistence is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("StickySession")
         public String stickySession;
 
+        /**
+         * <p>The method that is used to handle a cookie.</p>
+         * <br>
+         * <p>*   **insert**: inserts a cookie. CLB inserts a cookie (SERVERID) into the first HTTP or HTTPS response that is sent to a client. The next request from the client contains this cookie, and the listener forwards this request to the recorded backend server.</p>
+         * <p>*   **server**: rewrites a cookie. When CLB detects a user-defined cookie, it overwrites the original cookie with the user-defined cookie. The next request from the client carries the user-defined cookie, and the listener will distribute the request to the recorded backend server.</p>
+         */
         @NameInMap("StickySessionType")
         public String stickySessionType;
 
+        /**
+         * <p>The Transport Layer Security (TLS) security policy. Each security policy contains TLS protocol versions and cipher suites available for HTTPS.</p>
+         * <br>
+         * <p>*   **tls_cipher_policy\_1\_0**:</p>
+         * <br>
+         * <p>    Supported TLS versions: TLS 1.0, TLS 1.1, and TLS 1.2</p>
+         * <br>
+         * <p>    Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</p>
+         * <br>
+         * <p>*   **tls_cipher_policy\_1\_1**:</p>
+         * <br>
+         * <p>    Supported TLS versions: TLS 1.1 and TLS 1.2</p>
+         * <br>
+         * <p>    Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</p>
+         * <br>
+         * <p>*   **tls_cipher_policy\_1\_2**</p>
+         * <br>
+         * <p>    Supported TLS version: TLS 1.2</p>
+         * <br>
+         * <p>    Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</p>
+         * <br>
+         * <p>*   **tls_cipher_policy\_1\_2\_strict**</p>
+         * <br>
+         * <p>    Supported TLS version: TLS 1.2</p>
+         * <br>
+         * <p>    Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</p>
+         * <br>
+         * <p>*   **tls_cipher_policy\_1\_2\_strict_with\_1\_3**</p>
+         * <br>
+         * <p>    Supported TLS versions: TLS 1.2 and TLS 1.3</p>
+         * <br>
+         * <p>    Supported cipher suites: TLS_AES\_128\_GCM_SHA256, TLS_AES\_256\_GCM_SHA384, TLS_CHACHA20\_POLY1305\_SHA256, TLS_AES\_128\_CCM_SHA256, TLS_AES\_128\_CCM\_8\_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</p>
+         */
         @NameInMap("TLSCipherPolicy")
         public String TLSCipherPolicy;
 
+        /**
+         * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.</p>
+         * <br>
+         * <p>Valid values: **2** to **10**.</p>
+         */
         @NameInMap("UnhealthyThreshold")
         public Integer unhealthyThreshold;
 
+        /**
+         * <p>Indicates whether the `XForwardedFor` header is used to retrieve client IP addresses. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("XForwardedFor")
         public String XForwardedFor;
 
+        /**
+         * <p>Indicates whether the `XForwardedFor_ClientCertClientVerify` header is used to retrieve the verification result of the client certificate. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("XForwardedFor_ClientCertClientVerify")
         public String XForwardedFor_ClientCertClientVerify;
 
+        /**
+         * <p>Indicates whether the `XForwardedFor_ClientCertFingerprint` header is used to retrieve the fingerprint of the client certificate. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("XForwardedFor_ClientCertFingerprint")
         public String XForwardedFor_ClientCertFingerprint;
 
+        /**
+         * <p>Indicates whether the `XForwardedFor_ClientCertIssuerDN` header is used to retrieve information about the authority that issues the client certificate. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("XForwardedFor_ClientCertIssuerDN")
         public String XForwardedFor_ClientCertIssuerDN;
 
+        /**
+         * <p>Indicates whether the `XForwardedFor_ClientCertSubjectDN` header is used to retrieve information about the owner of the client certificate. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("XForwardedFor_ClientCertSubjectDN")
         public String XForwardedFor_ClientCertSubjectDN;
 
+        /**
+         * <p>Indicates whether the `XForwardedFor_ClientSrcPort` header is used to retrieve the client port. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("XForwardedFor_ClientSrcPort")
         public String XForwardedFor_ClientSrcPort;
 
+        /**
+         * <p>Indicates whether the `SLB-ID` header is used to retrieve the ID of the CLB instance. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("XForwardedFor_SLBID")
         public String XForwardedFor_SLBID;
 
+        /**
+         * <p>Indicates whether the `SLB-IP` header is used to retrieve the virtual IP address requested by the client. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("XForwardedFor_SLBIP")
         public String XForwardedFor_SLBIP;
 
+        /**
+         * <p>Indicates whether the `XForwardedFor_SLBPORT` header is used to retrieve the listening port. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("XForwardedFor_SLBPORT")
         public String XForwardedFor_SLBPORT;
 
+        /**
+         * <p>Indicates whether the `X-Forwarded-Proto` header is used to retrieve the listening protocol. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("XForwardedFor_proto")
         public String XForwardedFor_proto;
 
@@ -741,54 +1073,126 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
     }
 
     public static class DescribeLoadBalancerListenersResponseBodyListenersTCPListenerConfig extends TeaModel {
+        /**
+         * <p>Indicates whether connection draining is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("ConnectionDrain")
         public String connectionDrain;
 
+        /**
+         * <p>The timeout period of connection draining. Unit: seconds.</p>
+         * <br>
+         * <p>Value values: **10 to 900**.</p>
+         */
         @NameInMap("ConnectionDrainTimeout")
         public Integer connectionDrainTimeout;
 
+        /**
+         * <p>The timeout period of a connection. Unit: seconds.</p>
+         */
         @NameInMap("EstablishedTimeout")
         public Integer establishedTimeout;
 
+        /**
+         * <p>Indicates whether the health check feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("HealthCheck")
         public String healthCheck;
 
+        /**
+         * <p>The port that is used for health checks.</p>
+         */
         @NameInMap("HealthCheckConnectPort")
         public Integer healthCheckConnectPort;
 
+        /**
+         * <p>The timeout period of health checks. Unit: seconds.</p>
+         * <br>
+         * <p>Valid values: **1** to **300**.</p>
+         */
         @NameInMap("HealthCheckConnectTimeout")
         public Integer healthCheckConnectTimeout;
 
+        /**
+         * <p>The domain name that is used for health checks.</p>
+         */
         @NameInMap("HealthCheckDomain")
         public String healthCheckDomain;
 
+        /**
+         * <p>The HTTP status codes that are used to determine whether the backend server passes the health check.</p>
+         */
         @NameInMap("HealthCheckHttpCode")
         public String healthCheckHttpCode;
 
+        /**
+         * <p>The interval between two consecutive health checks. Unit: seconds.</p>
+         */
         @NameInMap("HealthCheckInterval")
         public Integer healthCheckInterval;
 
+        /**
+         * <p>The health check method.</p>
+         */
         @NameInMap("HealthCheckMethod")
         public String healthCheckMethod;
 
+        /**
+         * <p>The protocol that is used for health checks.</p>
+         */
         @NameInMap("HealthCheckType")
         public String healthCheckType;
 
+        /**
+         * <p>The URI that is used for health checks.</p>
+         */
         @NameInMap("HealthCheckURI")
         public String healthCheckURI;
 
+        /**
+         * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.</p>
+         * <br>
+         * <p>Valid values: **2** to **10**.</p>
+         */
         @NameInMap("HealthyThreshold")
         public Integer healthyThreshold;
 
+        /**
+         * <p>The ID of the primary/secondary server group that is associated with the listener.</p>
+         */
         @NameInMap("MasterSlaveServerGroupId")
         public String masterSlaveServerGroupId;
 
+        /**
+         * <p>Indicates whether session persistence is enabled. Unit: seconds.</p>
+         * <br>
+         * <p>Valid values: **0** to **3600**.</p>
+         * <br>
+         * <p>**0** indicates that session persistence is disabled.</p>
+         */
         @NameInMap("PersistenceTimeout")
         public Integer persistenceTimeout;
 
+        /**
+         * <p>Indicates whether the Proxy protocol is used to pass client IP addresses to backend servers. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("ProxyProtocolV2Enabled")
         public String proxyProtocolV2Enabled;
 
+        /**
+         * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.</p>
+         * <br>
+         * <p>Valid values: **2** to **10**.</p>
+         */
         @NameInMap("UnhealthyThreshold")
         public Integer unhealthyThreshold;
 
@@ -936,9 +1340,15 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
     }
 
     public static class DescribeLoadBalancerListenersResponseBodyListenersTags extends TeaModel {
+        /**
+         * <p>资源的标签键。</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>资源的标签值。</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -966,39 +1376,86 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
     }
 
     public static class DescribeLoadBalancerListenersResponseBodyListenersUDPListenerConfig extends TeaModel {
+        /**
+         * <p>Indicates whether connection draining is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("ConnectionDrain")
         public String connectionDrain;
 
+        /**
+         * <p>The timeout period of connection draining. Unit: seconds.</p>
+         * <br>
+         * <p>Value values: **10 to 900**.</p>
+         */
         @NameInMap("ConnectionDrainTimeout")
         public Integer connectionDrainTimeout;
 
+        /**
+         * <p>Indicates whether the health check feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("HealthCheck")
         public String healthCheck;
 
+        /**
+         * <p>The port that is used for health checks.</p>
+         */
         @NameInMap("HealthCheckConnectPort")
         public Integer healthCheckConnectPort;
 
+        /**
+         * <p>The timeout period for a health check response.</p>
+         */
         @NameInMap("HealthCheckConnectTimeout")
         public Integer healthCheckConnectTimeout;
 
+        /**
+         * <p>The response string for UDP listener health checks.</p>
+         */
         @NameInMap("HealthCheckExp")
         public String healthCheckExp;
 
+        /**
+         * <p>The interval between two consecutive health checks. Unit: seconds.</p>
+         */
         @NameInMap("HealthCheckInterval")
         public Integer healthCheckInterval;
 
+        /**
+         * <p>The request string for UDP listener health checks.</p>
+         */
         @NameInMap("HealthCheckReq")
         public String healthCheckReq;
 
+        /**
+         * <p>The number of times that a backend server must consecutively pass health checks before it is declared healthy.</p>
+         */
         @NameInMap("HealthyThreshold")
         public Integer healthyThreshold;
 
+        /**
+         * <p>The ID of the primary/secondary server group that is associated with the listener.</p>
+         */
         @NameInMap("MasterSlaveServerGroupId")
         public String masterSlaveServerGroupId;
 
+        /**
+         * <p>Indicates whether the Proxy protocol is used to pass client IP addresses to backend servers. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("ProxyProtocolV2Enabled")
         public String proxyProtocolV2Enabled;
 
+        /**
+         * <p>The number of times that a backend server must consecutively fail health checks before it is declared unhealthy.</p>
+         */
         @NameInMap("UnhealthyThreshold")
         public Integer unhealthyThreshold;
 
@@ -1106,54 +1563,127 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
     }
 
     public static class DescribeLoadBalancerListenersResponseBodyListeners extends TeaModel {
+        /**
+         * <p>The ID of the network ACL.</p>
+         */
         @NameInMap("AclId")
         public String aclId;
 
+        /**
+         * <p>Indicates whether access control is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **on**: yes</p>
+         * <p>*   **off**: no</p>
+         */
         @NameInMap("AclStatus")
         public String aclStatus;
 
+        /**
+         * <p>The type of the network access control list (ACL). Valid values:</p>
+         * <br>
+         * <p>*   **white**: a whitelist. Only requests from the IP addresses or CIDR blocks in the network ACL are forwarded. Whitelists apply to scenarios in which you want to allow only specific IP addresses to access an application. Your service may be adversely affected if the whitelist is not properly configured. After a whitelist is configured, only requests from IP addresses that are added to the whitelist are forwarded by the listener.</p>
+         * <br>
+         * <p>If you enable a whitelist but do not add an IP address to the whitelist, the listener forwards all requests.</p>
+         * <br>
+         * <p>*   **black**: a blacklist. All requests from the IP addresses or CIDR blocks in the network ACL are denied. A blacklist applies to scenarios in which you want to deny access from specific IP addresses.</p>
+         * <br>
+         * <p>If a blacklist is configured for a listener but no IP address is added to the blacklist, the listener forwards all requests.</p>
+         */
         @NameInMap("AclType")
         public String aclType;
 
+        /**
+         * <p>The port of the backend server.</p>
+         * <br>
+         * <p>>  This parameter takes effect when the `VServerGroupId` parameter and the `MasterSlaveServerGroupId` parameter are empty.</p>
+         */
         @NameInMap("BackendServerPort")
         public Integer backendServerPort;
 
+        /**
+         * <p>The maximum bandwidth of the listener. Unit: Mbit/s. Valid values:</p>
+         * <br>
+         * <p>*   **-1**: If -1 is returned, it indicates that the bandwidth of the listener is unlimited.</p>
+         * <p>*   **1 to 5120**: If a value from 1 to 5120 is returned, the value indicates the maximum bandwidth of the listener. The sum of the maximum bandwidth of all listeners added to a CLB instance does not exceed the maximum bandwidth of the CLB instance.</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        /**
+         * <p>The description of the listener.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The configuration of the HTTP listener.</p>
+         */
         @NameInMap("HTTPListenerConfig")
         public DescribeLoadBalancerListenersResponseBodyListenersHTTPListenerConfig HTTPListenerConfig;
 
+        /**
+         * <p>The configuration of the HTTPS listener.</p>
+         */
         @NameInMap("HTTPSListenerConfig")
         public DescribeLoadBalancerListenersResponseBodyListenersHTTPSListenerConfig HTTPSListenerConfig;
 
+        /**
+         * <p>The listening port.</p>
+         */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
+        /**
+         * <p>The protocol used by the listener.</p>
+         */
         @NameInMap("ListenerProtocol")
         public String listenerProtocol;
 
+        /**
+         * <p>The ID of the CLB instance.</p>
+         */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
+        /**
+         * <p>The scheduling algorithm. Valid values:</p>
+         * <br>
+         * <p>*   **wrr**: Backend servers with higher weights receive more requests than those with lower weights.</p>
+         * <p>*   **rr**: Requests are distributed to backend servers in sequence.</p>
+         */
         @NameInMap("Scheduler")
         public String scheduler;
 
+        /**
+         * <p>The status of the listener. Valid values:</p>
+         * <br>
+         * <p>*   **running**: The listener runs as expected.</p>
+         * <p>*   **stopped**: The listener is disabled.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The configuration of the TCP listener.</p>
+         */
         @NameInMap("TCPListenerConfig")
         public DescribeLoadBalancerListenersResponseBodyListenersTCPListenerConfig TCPListenerConfig;
 
+        /**
+         * <p>标签列表。</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeLoadBalancerListenersResponseBodyListenersTags> tags;
 
+        /**
+         * <p>The configuration of the UDP listener.</p>
+         */
         @NameInMap("UDPListenerConfig")
         public DescribeLoadBalancerListenersResponseBodyListenersUDPListenerConfig UDPListenerConfig;
 
+        /**
+         * <p>The ID of the vServer group that is associated with the listener.</p>
+         */
         @NameInMap("VServerGroupId")
         public String VServerGroupId;
 

@@ -4,14 +4,20 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
+    @NameInMap("Description")
+    public String description;
+
     /**
-     * <p>The list of backend servers in the primary/secondary server group.</p>
+     * <p>Specifies whether to return information about the associated listeners. Valid values:</p>
+     * <br>
+     * <p>*   **true**: returns information about the associated listeners.</p>
+     * <p>*   **false**: does not return information about the associated listeners.</p>
      */
     @NameInMap("IncludeListener")
     public Boolean includeListener;
 
     /**
-     * <p>The ID of the primary/secondary server group.</p>
+     * <p>The ID of the CLB instance.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -23,7 +29,7 @@ public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The listening port.</p>
+     * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -34,12 +40,23 @@ public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeMasterSlaveServerGroupsRequestTag> tag;
 
     public static DescribeMasterSlaveServerGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMasterSlaveServerGroupsRequest self = new DescribeMasterSlaveServerGroupsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMasterSlaveServerGroupsRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public DescribeMasterSlaveServerGroupsRequest setIncludeListener(Boolean includeListener) {
@@ -107,9 +124,19 @@ public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
     }
 
     public static class DescribeMasterSlaveServerGroupsRequestTag extends TeaModel {
+        /**
+         * <p>The tag key. You can specify at most 20 tag keys.</p>
+         * <br>
+         * <p>The tag key cannot be an empty string. The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. You can specify at most 20 tag values. The tag value cannot be an empty string.</p>
+         * <br>
+         * <p>The tag value must be 1 to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

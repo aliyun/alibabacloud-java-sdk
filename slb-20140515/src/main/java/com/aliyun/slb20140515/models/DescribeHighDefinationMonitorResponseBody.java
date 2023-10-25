@@ -5,20 +5,29 @@ import com.aliyun.tea.*;
 
 public class DescribeHighDefinationMonitorResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the Log Service project.</p>
      */
     @NameInMap("LogProject")
     public String logProject;
 
+    /**
+     * <p>The name of the Logstore.</p>
+     */
     @NameInMap("LogStore")
     public String logStore;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeHighDefinationMonitor**.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public String success;
 

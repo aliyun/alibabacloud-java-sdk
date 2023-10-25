@@ -5,22 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyVServerGroupBackendServersResponseBody extends TeaModel {
     /**
-     * <p>The weight of the backend server.</p>
+     * <p>The list of backend servers.</p>
      */
     @NameInMap("BackendServers")
     public ModifyVServerGroupBackendServersResponseBodyBackendServers backendServers;
 
     /**
-     * <p>The type of backend server. Valid values:</p>
-     * <br>
-     * <p>*   **ecs**: an ECS instance. This is the default value.</p>
-     * <p>*   **eni**: an ENI.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of backend servers.</p>
+     * <p>The ID of the vServer group.</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
@@ -56,31 +53,34 @@ public class ModifyVServerGroupBackendServersResponseBody extends TeaModel {
 
     public static class ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer extends TeaModel {
         /**
-         * <p>The port that is used by the backend server.</p>
+         * <p>The description of the backend server.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>You can call this operation to replace the backend servers in a specified vServer group. To modify the configurations of the backend servers, such as their weights, you can call the [SetVServerGroupAttribute](~~35217~~) operation.</p>
+         * <p>The port that is used by the backend server.</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
-         * <p>Replaces backend servers in a specified vServer group.</p>
+         * <p>The ID of the ECS instance or ENI.</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
-         * <p>The description of the backend server.</p>
+         * <p>The type of backend server. Valid values:</p>
+         * <br>
+         * <p>*   **ecs**: an ECS instance. This is the default value.</p>
+         * <p>*   **eni**: an ENI.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>Backend server description</p>
+         * <p>The weight of the backend server.</p>
          */
         @NameInMap("Weight")
         public Integer weight;

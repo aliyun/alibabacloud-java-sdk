@@ -5,26 +5,23 @@ import com.aliyun.tea.*;
 
 public class StopLoadBalancerListenerRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The frontend listening port used by the listener.</p>
+     * <br>
+     * <p>Value range: **1 to 65535**</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
-     * <p>Before you make this API call, note the following:</p>
+     * <p>The frontend listening protocol used by the SLB instance.</p>
      * <br>
-     * <p>*   After the API call is successfully made, the listener enters the stopped state.</p>
-     * <p>*   If the Server Load Balancer (SLB) instance to which the listener to be stopped belongs is in the locked state, this API call cannot be made.</p>
-     * <br>
-     * <p>>  If you stop the listener, your services will be disrupted. Exercise caution when you perform this action.</p>
+     * <p>>  This parameter is required when listeners with different protocols use the same port.</p>
      */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
     /**
-     * <p>The frontend listening protocol used by the SLB instance.</p>
-     * <br>
-     * <p>>  This parameter is required when listeners with different protocols use the same port.</p>
+     * <p>The ID of the SLB instance to which the listener belongs.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -36,7 +33,9 @@ public class StopLoadBalancerListenerRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the SLB instance to which the listener belongs.</p>
+     * <p>The ID of the region to which the SLB instance belongs.</p>
+     * <br>
+     * <p>To query the region ID, refer to the list of [regions and zones](~~40654~~) or call [DescribeRegions](~~25609~~).</p>
      */
     @NameInMap("RegionId")
     public String regionId;

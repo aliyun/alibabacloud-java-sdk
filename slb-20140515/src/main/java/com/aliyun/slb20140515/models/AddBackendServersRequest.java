@@ -5,24 +5,6 @@ import com.aliyun.tea.*;
 
 public class AddBackendServersRequest extends TeaModel {
     /**
-     * <p>The description of the backend server.</p>
-     */
-    @NameInMap("BackendServers")
-    public String backendServers;
-
-    /**
-     * <p>The ID of the CLB instance.</p>
-     */
-    @NameInMap("LoadBalancerId")
-    public String loadBalancerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    /**
      * <p>The list of backend servers that you want to add. Set the following parameters:</p>
      * <br>
      * <p>*   **ServerId**: Required. This value must be a string. Enter the ID of an ECS instance, elastic network interface (ENI), or elastic container instance. If **ServerId** is set to the ID of an ENI or elastic container instance, **Type** is required.</p>
@@ -52,6 +34,26 @@ public class AddBackendServersRequest extends TeaModel {
      * <p>*   Elastic container instance: `[{ "ServerId": "eci-xxxxxxxxx", "Weight": "100", "Type": "eci", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-114" }]`</p>
      * <br>
      * <p>>  The backend servers that you add to a CLB instance must be in the Running state. You can add at most 20 backend servers to a CLB instance in each request.</p>
+     */
+    @NameInMap("BackendServers")
+    public String backendServers;
+
+    /**
+     * <p>The ID of the CLB instance.</p>
+     */
+    @NameInMap("LoadBalancerId")
+    public String loadBalancerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    /**
+     * <p>The ID of the region where the Classic Load Balancer (CLB) instance is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

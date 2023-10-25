@@ -11,7 +11,7 @@ public class DescribeVServerGroupAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the vServer group.</p>
+     * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -23,7 +23,7 @@ public class DescribeVServerGroupAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeVServerGroupAttribute**.</p>
+     * <p>The ID of the vServer group.</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;

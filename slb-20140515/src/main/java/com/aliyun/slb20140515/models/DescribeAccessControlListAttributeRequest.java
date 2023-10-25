@@ -4,9 +4,17 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessControlListAttributeRequest extends TeaModel {
+    /**
+     * <p>The remarks of the ACL entry.</p>
+     * <br>
+     * <p>It must be 2 to 100 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+     */
     @NameInMap("AclEntryComment")
     public String aclEntryComment;
 
+    /**
+     * <p>The ID of the ACL.</p>
+     */
     @NameInMap("AclId")
     public String aclId;
 
@@ -16,9 +24,15 @@ public class DescribeAccessControlListAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("Page")
     public Integer page;
 
+    /**
+     * <p>The number of entries returned on each page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

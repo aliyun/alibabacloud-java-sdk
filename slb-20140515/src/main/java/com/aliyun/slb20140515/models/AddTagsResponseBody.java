@@ -5,14 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddTagsResponseBody extends TeaModel {
     /**
-     * <p># Limits</p>
-     * <br>
-     * <p>Before you call this API, note the following limits:</p>
-     * <br>
-     * <p>*   You can add up to 10 tags to each SLB instance.</p>
-     * <p>*   You can add up to five pairs of tags at a time.</p>
-     * <p>*   All the tags and keys added to an SLB instance must be unique.</p>
-     * <p>*   If you add a tag of which the key is the same as that of an existing tag, but the value is different, the new tag overwrites the existing one.</p>
+     * <p>The ID of the SLB instance.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

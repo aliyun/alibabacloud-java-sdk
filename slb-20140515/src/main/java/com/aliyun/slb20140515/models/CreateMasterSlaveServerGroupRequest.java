@@ -5,16 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateMasterSlaveServerGroupRequest extends TeaModel {
     /**
-     * <p>The name of the primary/secondary server group.</p>
+     * <p>The ID of the Classic Load Balancer (CLB) instance.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
-
-    /**
-     * <p>The ID of the primary/secondary server group.</p>
-     */
-    @NameInMap("MasterSlaveBackendServers")
-    public String masterSlaveBackendServers;
 
     /**
      * <p>The list of backend servers in the primary/secondary server group.</p>
@@ -57,6 +51,12 @@ public class CreateMasterSlaveServerGroupRequest extends TeaModel {
      * <p>*   ENI: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "Port":"80","ServerType":"Master","Description":"test-112" }, { "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","ServerType":"Slave","Description":"test-112" }]`</p>
      * <p>*   ENI with multiple IP addresses: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni","ServerIp": "192.168.**.**", "Port":"80","ServerType":"Master","Description":"test-112" }, { "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni","ServerIp": "192.168.**.**", "Port":"80","ServerType":"Slave","Description":"test-112" }]`</p>
      */
+    @NameInMap("MasterSlaveBackendServers")
+    public String masterSlaveBackendServers;
+
+    /**
+     * <p>The name of the primary/secondary server group.</p>
+     */
     @NameInMap("MasterSlaveServerGroupName")
     public String masterSlaveServerGroupName;
 
@@ -67,7 +67,7 @@ public class CreateMasterSlaveServerGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the Classic Load Balancer (CLB) instance.</p>
+     * <p>The ID of the region where the CLB instance is deployed.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

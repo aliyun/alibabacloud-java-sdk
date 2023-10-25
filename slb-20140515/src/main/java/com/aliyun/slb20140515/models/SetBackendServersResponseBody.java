@@ -5,22 +5,19 @@ import com.aliyun.tea.*;
 
 public class SetBackendServersResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The list of backend servers.</p>
      */
     @NameInMap("BackendServers")
     public SetBackendServersResponseBodyBackendServers backendServers;
 
     /**
-     * <p>The type of the backend server. Valid values:</p>
-     * <br>
-     * <p>*   **ecs** (default): an ECS instance</p>
-     * <p>*   **eni**: an elastic network interface (ENI)</p>
+     * <p>The ID of the CLB instance.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
-     * <p>The list of backend servers.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -55,20 +52,29 @@ public class SetBackendServersResponseBody extends TeaModel {
     }
 
     public static class SetBackendServersResponseBodyBackendServersBackendServer extends TeaModel {
+        /**
+         * <p>The description of the backend server.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the server.</p>
+         */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
-         * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
+         * <p>The type of the backend server. Valid values:</p>
+         * <br>
+         * <p>*   **ecs** (default): an ECS instance</p>
+         * <p>*   **eni**: an elastic network interface (ENI)</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>Sets the weights of backend servers.</p>
+         * <p>The weight of the backend server.</p>
          */
         @NameInMap("Weight")
         public String weight;

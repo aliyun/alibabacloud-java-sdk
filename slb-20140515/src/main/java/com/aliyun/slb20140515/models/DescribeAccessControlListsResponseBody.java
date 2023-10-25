@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessControlListsResponseBody extends TeaModel {
     /**
-     * <p>A list of network ACLs.</p>
+     * <p>A list of ACLs.</p>
      */
     @NameInMap("Acls")
     public DescribeAccessControlListsResponseBodyAcls acls;
 
     /**
-     * <p>The number of network ACLs on the current page.</p>
+     * <p>The number of ACLs on the current page.</p>
      */
     @NameInMap("Count")
     public Integer count;
@@ -35,7 +35,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of network ACLs.</p>
+     * <p>The total number of ACLs.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -94,9 +94,15 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessControlListsResponseBodyAclsAclTagsTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -150,13 +156,13 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         public String aclId;
 
         /**
-         * <p>The name of the ACL.</p>
+         * <p>The ACL name.</p>
          */
         @NameInMap("AclName")
         public String aclName;
 
         /**
-         * <p>The IP version that is used by the associated CLB instance.</p>
+         * <p>The IP version that is used by the CLB instance associated with the ACL.</p>
          */
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
@@ -168,7 +174,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;

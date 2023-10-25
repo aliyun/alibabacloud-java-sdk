@@ -4,48 +4,101 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class UploadServerCertificateResponseBody extends TeaModel {
+    /**
+     * <p>The AliCloud certificate ID.</p>
+     */
     @NameInMap("AliCloudCertificateId")
     public String aliCloudCertificateId;
 
+    /**
+     * <p>The AliCloud certificate name.</p>
+     */
     @NameInMap("AliCloudCertificateName")
     public String aliCloudCertificateName;
 
+    /**
+     * <p>The domain name of the CA certificate.</p>
+     */
     @NameInMap("CommonName")
     public String commonName;
 
+    /**
+     * <p>The time when the CA certificate is uploaded.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The timestamp generated when the CA certificate is uploaded.</p>
+     */
     @NameInMap("CreateTimeStamp")
     public Long createTimeStamp;
 
+    /**
+     * <p>The time when the CA certificate expires.</p>
+     */
     @NameInMap("ExpireTime")
     public String expireTime;
 
+    /**
+     * <p>The timestamp generated when the CA certificate expires.</p>
+     */
     @NameInMap("ExpireTimeStamp")
     public Long expireTimeStamp;
 
+    /**
+     * <p>The fingerprint of the CA certificate.</p>
+     */
     @NameInMap("Fingerprint")
     public String fingerprint;
 
+    /**
+     * <p>Indicates whether the certificate is provided by Alibaba Cloud Certificate Management Service. Valid values:</p>
+     * <p>- **0**: The certificate is not provided by Alibaba Cloud Certificate Management Service.</p>
+     * <p>- **1**: The certificate is provided by Alibaba Cloud Certificate Management Service.</p>
+     */
     @NameInMap("IsAliCloudCertificate")
     public Integer isAliCloudCertificate;
 
+    /**
+     * <p>The ID of the region where the Classic Load Balancer (CLB) instance is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The ID of the server certificate.</p>
+     */
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;
 
+    /**
+     * <p>The name of the server certificate.</p>
+     * <br>
+     * <p>The name must be 1 to 80 characters in length. It must start with an English letter. It can contain letters, numbers, periods (.), underscores (\_), and hyphens (-).</p>
+     */
     @NameInMap("ServerCertificateName")
     public String serverCertificateName;
 
+    /**
+     * <p>The subject alternative names.</p>
+     * <br>
+     * <p>A domain name list is supported. A maximum of 10 domain names are supported.</p>
+     */
     @NameInMap("SubjectAlternativeNames")
     public UploadServerCertificateResponseBodySubjectAlternativeNames subjectAlternativeNames;
 

@@ -11,7 +11,9 @@ public class SetServerCertificateNameRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the server certificate.</p>
+     * <p>The ID of the region to which the Server Load Balancer (SLB) instance belongs.</p>
+     * <br>
+     * <p>To query the region ID, call [DescribeRegions](~~27584~~).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -23,15 +25,15 @@ public class SetServerCertificateNameRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the server certificate.</p>
-     * <br>
-     * <p>The name must be 1 to 80 characters in length. It must start with an English letter. It can contain letters, numbers, periods (.), underscores (\_), and hyphens (-).</p>
+     * <p>The ID of the server certificate.</p>
      */
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the server certificate.</p>
+     * <br>
+     * <p>The name must be 1 to 80 characters in length. It must start with an English letter. It can contain letters, numbers, periods (.), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("ServerCertificateName")
     public String serverCertificateName;

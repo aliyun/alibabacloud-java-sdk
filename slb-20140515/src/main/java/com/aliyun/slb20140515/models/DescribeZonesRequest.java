@@ -4,21 +4,33 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
+    /**
+     * <p>The logon name of the RAM user.</p>
+     */
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The region ID of the Server Load Balancer (SLB) instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>ResourceOwnerAccount</p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The ID of the asset owner.</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 

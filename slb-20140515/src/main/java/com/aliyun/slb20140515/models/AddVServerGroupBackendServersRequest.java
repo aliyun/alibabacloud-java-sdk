@@ -5,30 +5,6 @@ import com.aliyun.tea.*;
 
 public class AddVServerGroupBackendServersRequest extends TeaModel {
     /**
-     * <p>The ID of the server group.</p>
-     */
-    @NameInMap("BackendServers")
-    public String backendServers;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    /**
-     * <p>The ID of the server group.</p>
-     */
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    /**
      * <p>The list of backend servers. You can specify up to 20 backend servers in each request.</p>
      * <br>
      * <p>The following parameters are used to specify the backend servers:</p>
@@ -53,6 +29,30 @@ public class AddVServerGroupBackendServersRequest extends TeaModel {
      * <p>*   ECS instance:`  [{ "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port": "80", "Description": "test-112" }]. `</p>
      * <p>*   ENI:`  [{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168. **. **", "Port":"80","Description":"test-112" }] `</p>
      * <p>*   ENI with multiple IP addresses:`  [{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168. **. **", "Port":"80","Description":"test-112" },{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "172.166. **. **", "Port":"80","Description":"test-113" }] `</p>
+     */
+    @NameInMap("BackendServers")
+    public String backendServers;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    /**
+     * <p>The ID of the region where the Classic Load Balancer (CLB) instance is created.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    /**
+     * <p>The ID of the server group.</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;

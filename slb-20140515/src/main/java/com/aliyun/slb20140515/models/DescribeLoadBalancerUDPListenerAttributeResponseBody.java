@@ -5,101 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the network ACL.</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
-     * <p>The ID of the vServer group that is associated with the listener.</p>
+     * <p>Indicates whether access control is enabled. Valid values: **on** and **off**. Default value: off.</p>
      */
     @NameInMap("AclStatus")
     public String aclStatus;
-
-    /**
-     * <p>Indicates whether the Proxy protocol is used to pass client IP addresses to backend servers. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
-     */
-    @NameInMap("AclType")
-    public String aclType;
-
-    /**
-     * <p>The frontend port used by the CLB instance.</p>
-     * <br>
-     * <p>Valid values: **1** to **65535**.</p>
-     */
-    @NameInMap("BackendServerPort")
-    public Integer backendServerPort;
-
-    /**
-     * <p>Indicates whether access control is enabled. Valid values: **on** and **off**. Default value: off.</p>
-     */
-    @NameInMap("Bandwidth")
-    public Integer bandwidth;
-
-    /**
-     * <p>The timeout period of a health check. If a backend Elastic Compute Service (ECS) instance does not return a health check response within the specified timeout period, the server fails the health check. Valid values: **1** to **300**. Unit: seconds.</p>
-     */
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("HealthCheck")
-    public String healthCheck;
-
-    /**
-     * <p>The interval between two consecutive health checks. Valid values: **1** to **50**. Unit: seconds.</p>
-     */
-    @NameInMap("HealthCheckConnectPort")
-    public Integer healthCheckConnectPort;
-
-    /**
-     * <p>The backend port used by the CLB instance.</p>
-     * <br>
-     * <p>>  If the listener is associated with a vServer group, this parameter is not returned.</p>
-     */
-    @NameInMap("HealthCheckConnectTimeout")
-    public Integer healthCheckConnectTimeout;
-
-    /**
-     * <p>The healthy threshold. The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**. Valid values: **2** to **10**.</p>
-     */
-    @NameInMap("HealthCheckExp")
-    public String healthCheckExp;
-
-    /**
-     * <p>The description of the listener.</p>
-     */
-    @NameInMap("HealthCheckInterval")
-    public Integer healthCheckInterval;
-
-    @NameInMap("HealthCheckReq")
-    public String healthCheckReq;
-
-    /**
-     * <p>The status of the listener. Valid values:</p>
-     * <br>
-     * <p>*   **running**</p>
-     * <p>*   **stopped**</p>
-     */
-    @NameInMap("HealthyThreshold")
-    public Integer healthyThreshold;
-
-    /**
-     * <p>The ID of the CLB instance.</p>
-     */
-    @NameInMap("ListenerPort")
-    public Integer listenerPort;
-
-    @NameInMap("LoadBalancerId")
-    public String loadBalancerId;
-
-    /**
-     * <p>The ID of the CLB instance.</p>
-     */
-    @NameInMap("MasterSlaveServerGroupId")
-    public String masterSlaveServerGroupId;
 
     /**
      * <p>The type of the ACL. Valid values:</p>
@@ -112,23 +27,16 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
      * <br>
      * <p>    If a blacklist is configured for a listener but no IP address is added to the blacklist, the listener forwards all requests.</p>
      */
-    @NameInMap("ProxyProtocolV2Enabled")
-    public Boolean proxyProtocolV2Enabled;
+    @NameInMap("AclType")
+    public String aclType;
 
     /**
-     * <p>The frontend port used by the CLB instance.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    /**
-     * <p>Indicates whether the health check feature is enabled. Valid values:</p>
+     * <p>The backend port used by the CLB instance.</p>
      * <br>
-     * <p>*   **on**: yes</p>
-     * <p>*   **off**: no</p>
+     * <p>>  If the listener is associated with a vServer group, this parameter is not returned.</p>
      */
-    @NameInMap("Scheduler")
-    public String scheduler;
+    @NameInMap("BackendServerPort")
+    public Integer backendServerPort;
 
     /**
      * <p>The maximum bandwidth of the listener. Unit: Mbit/s. Valid values:</p>
@@ -136,20 +44,127 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
      * <p>*   **-1**: For a pay-by-data-transfer Internet-facing CLB instance, this parameter is set to -1. This indicates that the bandwidth of the listener is unlimited.</p>
      * <p>*   **1** to **5120**: For a pay-by-bandwidth Internet-facing CLB instance, you can specify the maximum bandwidth of each listener. The sum of maximum bandwidth of all listeners cannot exceed the maximum bandwidth of the CLB instance.</p>
      */
+    @NameInMap("Bandwidth")
+    public Integer bandwidth;
+
+    /**
+     * <p>The description of the listener.</p>
+     */
+    @NameInMap("Description")
+    public String description;
+
+    /**
+     * <p>Indicates whether the health check feature is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **on**: yes</p>
+     * <p>*   **off**: no</p>
+     */
+    @NameInMap("HealthCheck")
+    public String healthCheck;
+
+    /**
+     * <p>The port that is used for health checks. Valid values: **1** to **65535**. If this parameter is not set, the port specified by BackendServerPort is used for health checks.</p>
+     * <br>
+     * <p>>  This parameter takes effect only when the **HealthCheck** parameter is set to **on**.</p>
+     */
+    @NameInMap("HealthCheckConnectPort")
+    public Integer healthCheckConnectPort;
+
+    /**
+     * <p>The timeout period of a health check. If a backend Elastic Compute Service (ECS) instance does not return a health check response within the specified timeout period, the server fails the health check. Valid values: **1** to **300**. Unit: seconds.</p>
+     */
+    @NameInMap("HealthCheckConnectTimeout")
+    public Integer healthCheckConnectTimeout;
+
+    /**
+     * <p>The response string for UDP listener health checks. The string is up to 64 characters in length, and can contain letters and digits.</p>
+     */
+    @NameInMap("HealthCheckExp")
+    public String healthCheckExp;
+
+    /**
+     * <p>The interval between two consecutive health checks. Valid values: **1** to **50**. Unit: seconds.</p>
+     */
+    @NameInMap("HealthCheckInterval")
+    public Integer healthCheckInterval;
+
+    /**
+     * <p>The request string for UDP listener health checks. The string is up to 64 characters in length, and can contain letters and digits.</p>
+     */
+    @NameInMap("HealthCheckReq")
+    public String healthCheckReq;
+
+    /**
+     * <p>The healthy threshold. The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**. Valid values: **2** to **10**.</p>
+     */
+    @NameInMap("HealthyThreshold")
+    public Integer healthyThreshold;
+
+    /**
+     * <p>The frontend port used by the CLB instance.</p>
+     */
+    @NameInMap("ListenerPort")
+    public Integer listenerPort;
+
+    /**
+     * <p>The ID of the CLB instance.</p>
+     */
+    @NameInMap("LoadBalancerId")
+    public String loadBalancerId;
+
+    /**
+     * <p>The ID of the primary/secondary server group that is associated with the listener.</p>
+     */
+    @NameInMap("MasterSlaveServerGroupId")
+    public String masterSlaveServerGroupId;
+
+    /**
+     * <p>Indicates whether the Proxy protocol is used to pass client IP addresses to backend servers. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
+    @NameInMap("ProxyProtocolV2Enabled")
+    public Boolean proxyProtocolV2Enabled;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>The scheduling algorithm. Valid values:</p>
+     * <br>
+     * <p>*   **wrr** (default): Backend servers with higher weights receive more requests than backend servers with lower weights.</p>
+     * <p>*   **rr**: Requests are distributed to backend servers in sequence.</p>
+     */
+    @NameInMap("Scheduler")
+    public String scheduler;
+
+    /**
+     * <p>The status of the listener. Valid values:</p>
+     * <br>
+     * <p>*   **running**</p>
+     * <p>*   **stopped**</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public DescribeLoadBalancerUDPListenerAttributeResponseBodyTags tags;
 
     /**
-     * <p>The response string for UDP listener health checks. The string is up to 64 characters in length, and can contain letters and digits.</p>
+     * <p>The unhealthy threshold. The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**. Valid values: **2** to **10**.</p>
      */
     @NameInMap("UnhealthyThreshold")
     public Integer unhealthyThreshold;
 
     /**
-     * <p>The unhealthy threshold. The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**. Valid values: **2** to **10**.</p>
+     * <p>The ID of the vServer group that is associated with the listener.</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
@@ -344,9 +359,15 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     }
 
     public static class DescribeLoadBalancerUDPListenerAttributeResponseBodyTagsTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

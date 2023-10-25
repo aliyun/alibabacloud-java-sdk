@@ -5,34 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLoadBalancerRequest extends TeaModel {
     /**
-     * <p>If the SLB instance that you want to delete has deletion protection enabled, the system reports an error in the following formats:</p>
-     * <br>
-     * <p>*   JSON format</p>
-     * <br>
-     * <p>    ```</p>
-     * <br>
-     * <p>        {</p>
-     * <p>        "RequestId": "7B7AB375-1EA6-4A18-9D1C-F258F2D57638",</p>
-     * <p>        "HostId": "slb.aliyuncs.com",</p>
-     * <p>        "Code": "OperationDenied.DeleteProtectionIsOn",</p>
-     * <p>        "Message": "The loadbalancer can\"t be deleted due to DeleteProtection is enabled."</p>
-     * <p>         }</p>
-     * <p>       </p>
-     * <p>    ```</p>
-     * <br>
-     * <p>*   XML format</p>
-     * <br>
-     * <p>    ```</p>
-     * <br>
-     * <p>       <?xml version="1.0" encoding="UTF-8" ?></p>
-     * <p>            <DeleteLoadBabalancerResponse></p>
-     * <p>        <RequestId>7B7AB375-1EA6-4A18-9D1C-F258F2D57638</RequestId></p>
-     * <p>        <HostId>slb.aliyuncs.com</HostId></p>
-     * <p>        <Code>OperationDenied.DeleteProtectionIsOn</Code></p>
-     * <p>        <Message>The loadbalancer can\"t be deleted due to DeleteProtection is enabled.</Message></p>
-     * <p>           </DeleteLoadBabalancerResponse></p>
-     * <p>       </p>
-     * <p>    ```</p>
+     * <p>The SLB instance ID.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -44,7 +17,9 @@ public class DeleteLoadBalancerRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The region ID of the SLB instance.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

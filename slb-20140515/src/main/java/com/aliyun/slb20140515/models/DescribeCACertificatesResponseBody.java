@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCACertificatesResponseBody extends TeaModel {
     /**
-     * <p>The fingerprint of the CA certificate.</p>
+     * <p>The information about the CA certificate.</p>
      */
     @NameInMap("CACertificates")
     public DescribeCACertificatesResponseBodyCACertificates CACertificates;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeCACertificates**.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,9 +38,15 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
     }
 
     public static class DescribeCACertificatesResponseBodyCACertificatesCACertificateTagsTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -88,58 +94,72 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
 
     public static class DescribeCACertificatesResponseBodyCACertificatesCACertificate extends TeaModel {
         /**
-         * <p>The ID of the CA certificate.</p>
+         * <p>The CA certificate ID.</p>
          */
         @NameInMap("CACertificateId")
         public String CACertificateId;
 
+        /**
+         * <p>The CA certificate name.</p>
+         */
         @NameInMap("CACertificateName")
         public String CACertificateName;
 
+        /**
+         * <p>The domain name of the CA certificate.</p>
+         */
         @NameInMap("CommonName")
         public String commonName;
 
         /**
-         * <p>The time when the CA certificate expires. The time is in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         * <p>The time when the CA certificate was created. The time is in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The information about the CA certificate.</p>
+         * <p>The timestamp when the CA certificate was created. Unit: milliseconds.</p>
+         * <br>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("CreateTimeStamp")
         public Long createTimeStamp;
 
         /**
-         * <p>The region where the CA certificates are created.</p>
-         * <br>
-         * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+         * <p>The time when the CA certificate expires. The time is in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
-         * <p>The name of the CA certificate.</p>
+         * <p>The timestamp that indicates when the CA certificate expires. Unit: milliseconds.</p>
+         * <br>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("ExpireTimeStamp")
         public Long expireTimeStamp;
 
         /**
-         * <p>The region where the CA certificate is created.</p>
+         * <p>The fingerprint of the CA certificate.</p>
          */
         @NameInMap("Fingerprint")
         public String fingerprint;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The region of the CA certificate.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The resource group ID.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The tag.</p>
+         */
         @NameInMap("Tags")
         public DescribeCACertificatesResponseBodyCACertificatesCACertificateTags tags;
 

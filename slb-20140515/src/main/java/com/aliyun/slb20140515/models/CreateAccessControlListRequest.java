@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateAccessControlListRequest extends TeaModel {
     /**
-     * <p>The ID of the resource group to which the ACL belongs.</p>
+     * <p>The operation that you want to perform. Set the value to **CreateAccessControlList**.</p>
      */
     @NameInMap("AclName")
     public String aclName;
 
     /**
-     * <p>The ID of the ACL.</p>
+     * <p>The ID of the region where you want to create the ACL.</p>
      */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
@@ -23,13 +23,13 @@ public class CreateAccessControlListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The IP version. Valid values: **ipv4** and **ipv6**.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the ACL. The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (\_). The name of the ACL that you create must be unique within each region.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -40,6 +40,9 @@ public class CreateAccessControlListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateAccessControlListRequestTag> tag;
 
@@ -121,9 +124,19 @@ public class CreateAccessControlListRequest extends TeaModel {
     }
 
     public static class CreateAccessControlListRequestTag extends TeaModel {
+        /**
+         * <p>The tag key of the bastion host. Valid values of N: **1 to 20**. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be at most 64 characters in length, and cannot contain `http://` or `https://`. It must not start with `aliyun` or `acs:`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. You can specify at most 20 tag values. The tag value cannot be an empty string.</p>
+         * <br>
+         * <p>The tag value must be 1 to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

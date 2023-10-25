@@ -149,6 +149,9 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     @NameInMap("SlaveZoneId")
     public String slaveZoneId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeLoadBalancersRequestTag> tag;
 
@@ -378,9 +381,19 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     }
 
     public static class DescribeLoadBalancersRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be at most 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

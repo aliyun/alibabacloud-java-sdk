@@ -4,17 +4,20 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class CreateDomainExtensionResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the created domain name extension.</p>
+     */
     @NameInMap("DomainExtensionId")
     public String domainExtensionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The frontend port used by the SLB instance.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
-     * <p>The ID of the created domain name extension.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

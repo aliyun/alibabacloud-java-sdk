@@ -4,24 +4,35 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class SetListenerAccessControlStatusRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable the whitelist. Valid values:</p>
+     * <br>
+     * <p>*   **open_white_list**: enables the whitelist.</p>
+     * <p>*   **close**: disables the whitelist.</p>
+     * <br>
+     * <p>>  After the whitelist is enabled, if no IP address is added to the whitelist, the CLB instance does not distribute network traffic.</p>
+     */
     @NameInMap("AccessControlStatus")
     public String accessControlStatus;
+
+    /**
+     * <p>The frontend port that is used by the CLB instance.</p>
+     * <br>
+     * <p>Valid values: **1 to 65535**.</p>
+     */
+    @NameInMap("ListenerPort")
+    public Integer listenerPort;
 
     /**
      * <p>The frontend protocol that is used by the CLB instance.</p>
      * <br>
      * <p>>  This parameter is required when listeners that use different protocols listen on the same port.</p>
      */
-    @NameInMap("ListenerPort")
-    public Integer listenerPort;
-
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
     /**
-     * <p>The region where the Classic Load Balancer (CLB) instance is created.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>The ID of the CLB instance.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -33,12 +44,9 @@ public class SetListenerAccessControlStatusRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to enable the whitelist. Valid values:</p>
+     * <p>The region where the Classic Load Balancer (CLB) instance is created.</p>
      * <br>
-     * <p>*   **open_white_list**: enables the whitelist.</p>
-     * <p>*   **close**: disables the whitelist.</p>
-     * <br>
-     * <p>>  After the whitelist is enabled, if no IP address is added to the whitelist, the CLB instance does not distribute network traffic.</p>
+     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

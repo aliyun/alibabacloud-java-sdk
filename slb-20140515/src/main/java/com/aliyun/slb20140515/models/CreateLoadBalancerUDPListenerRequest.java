@@ -5,6 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     /**
+     * <p>The ID of the network ACL that is associated with the listener.</p>
+     * <br>
+     * <p>If **AclStatus** is set to **on**, this parameter is required.</p>
+     */
+    @NameInMap("AclId")
+    public String aclId;
+
+    /**
+     * <p>Specifies whether to enable access control. Valid values:</p>
+     * <br>
+     * <p>*   **on**: yes</p>
+     * <p>*   **off** (default): no</p>
+     */
+    @NameInMap("AclStatus")
+    public String aclStatus;
+
+    /**
      * <p>The type of the network ACL. Valid values:</p>
      * <br>
      * <p>*   **white**: a whitelist. Only requests from the IP addresses or CIDR blocks in the network ACL are forwarded. Whitelists apply to scenarios in which you want to allow only specific IP addresses to access an application. After a whitelist is configured, only IP addresses in the whitelist can access the CLB listener. Risks may arise if the whitelist is improperly set.</p>
@@ -17,8 +34,8 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
      * <br>
      * <p>If **AclStatus** is set to **on**, this parameter is required.</p>
      */
-    @NameInMap("AclId")
-    public String aclId;
+    @NameInMap("AclType")
+    public String aclType;
 
     /**
      * <p>The backend port used by the CLB instance.</p>
@@ -27,71 +44,44 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
      * <br>
      * <p>If the **VServerGroupId** parameter is not set, this parameter is required.</p>
      */
-    @NameInMap("AclStatus")
-    public String aclStatus;
-
-    /**
-     * <p>Specifies whether to use the Proxy protocol to pass client IP addresses to backend servers. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
-     */
-    @NameInMap("AclType")
-    public String aclType;
-
-    /**
-     * <p>The response string for UDP listener health checks. The string must be 1 to 64 characters in length and can contain only letters and digits.</p>
-     */
     @NameInMap("BackendServerPort")
     public Integer backendServerPort;
-
-    /**
-     * <p>The frontend port used by the CLB instance.</p>
-     * <br>
-     * <p>Valid values: **1** to **65535**.</p>
-     */
-    @NameInMap("Bandwidth")
-    public Integer bandwidth;
-
-    /**
-     * <p>The ID of the vServer group.</p>
-     */
-    @NameInMap("Description")
-    public String description;
-
-    /**
-     * <p>The name of the listener.</p>
-     * <br>
-     * <p>The name must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).</p>
-     */
-    @NameInMap("HealthCheckConnectPort")
-    public Integer healthCheckConnectPort;
 
     /**
      * <p>The maximum bandwidth of the listener. Unit: Mbit/s. Valid values:</p>
      * <br>
      * <p>**-1**: For a pay-by-data-transfer Internet-facing CLB instance, you can set this parameter to **-1**. This way, the bandwidth of the listener is unlimited.</p>
      */
+    @NameInMap("Bandwidth")
+    public Integer bandwidth;
+
+    /**
+     * <p>The name of the listener.</p>
+     * <br>
+     * <p>The name must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).</p>
+     */
+    @NameInMap("Description")
+    public String description;
+
+    /**
+     * <p>The port that is used for health checks.</p>
+     * <br>
+     * <p>Valid values: **1** to **65535**.</p>
+     * <br>
+     * <p>If this parameter is not set, the backend port specified by **BackendServerPort** is used for health checks.</p>
+     */
+    @NameInMap("HealthCheckConnectPort")
+    public Integer healthCheckConnectPort;
+
+    /**
+     * <p>The timeout period of a health check.</p>
+     * <br>
+     * <p>If a backend server, such as an Elastic Compute Service (ECS) instance, does not respond to a probe packet within the specified timeout period, the server fails the health check. Unit: seconds.</p>
+     * <br>
+     * <p>Valid values: **1** to **300**.</p>
+     */
     @NameInMap("HealthCheckConnectTimeout")
     public Integer healthCheckConnectTimeout;
-
-    @NameInMap("HealthCheckSwitch")
-    public String healthCheckSwitch;
-
-    /**
-     * <p>Specifies whether to enable access control. Valid values:</p>
-     * <br>
-     * <p>*   **on**: yes</p>
-     * <p>*   **off** (default): no</p>
-     */
-    @NameInMap("HealthyThreshold")
-    public Integer healthyThreshold;
-
-    /**
-     * <p>The ID of the CLB instance.</p>
-     */
-    @NameInMap("ListenerPort")
-    public Integer listenerPort;
 
     /**
      * <p>Specifies whether to enable the health check feature. Valid values:</p>
@@ -99,13 +89,35 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
      * <p>*   **on** (default): yes</p>
      * <p>*   **off**: no</p>
      */
+    @NameInMap("HealthCheckSwitch")
+    public String healthCheckSwitch;
+
+    /**
+     * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.</p>
+     * <br>
+     * <p>Valid values: **2** to **10**.</p>
+     */
+    @NameInMap("HealthyThreshold")
+    public Integer healthyThreshold;
+
+    /**
+     * <p>The frontend port used by the CLB instance.</p>
+     * <br>
+     * <p>Valid values: **1** to **65535**.</p>
+     */
+    @NameInMap("ListenerPort")
+    public Integer listenerPort;
+
+    /**
+     * <p>The ID of the CLB instance.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
-     * <p>The ID of the network ACL that is associated with the listener.</p>
+     * <p>The ID of the primary/secondary server group.</p>
      * <br>
-     * <p>If **AclStatus** is set to **on**, this parameter is required.</p>
+     * <p>>  You can set only one of the VServerGroupId and MasterSlaveServerGroupId parameters.</p>
      */
     @NameInMap("MasterSlaveServerGroupId")
     public String masterSlaveServerGroupId;
@@ -117,13 +129,16 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Specifies whether to use the Proxy protocol to pass client IP addresses to backend servers. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false** (default): no</p>
      */
     @NameInMap("ProxyProtocolV2Enabled")
     public Boolean proxyProtocolV2Enabled;
 
     /**
-     * <p>The request string for UDP listener health checks. The string must be 1 to 64 characters in length and can contain only letters and digits.</p>
+     * <p>The ID of the region where the CLB instance is deployed.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -135,34 +150,41 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.</p>
+     * <p>The routing algorithm. Valid values:</p>
      * <br>
-     * <p>Valid values: **2** to **10**.</p>
+     * <p>*   **wrr** (default): Backend servers with higher weights receive more requests than backend servers with lower weights.</p>
+     * <p>*   **rr**: Requests are distributed to backend servers in sequence.</p>
+     * <p>*   **sch**: specifies consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</p>
+     * <p>*   **tch**: specifies consistent hashing that is based on four factors: source IP address, destination IP address, source port, and destination port. Requests that contain the same information based on the four factors are distributed to the same backend server.</p>
+     * <p>*   **qch**: specifies consistent hashing that is based on QUIC connection IDs. Requests that contain the same QUIC connection ID are distributed to the same backend server.</p>
+     * <br>
+     * <p>Only high-performance CLB instances support the sch, tch, and qch consistent hashing algorithms.</p>
      */
     @NameInMap("Scheduler")
     public String scheduler;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateLoadBalancerUDPListenerRequestTag> tag;
 
     /**
-     * <p>The ID of the region where the CLB instance is deployed.</p>
+     * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.</p>
+     * <br>
+     * <p>Valid values: **2** to **10**.</p>
      */
     @NameInMap("UnhealthyThreshold")
     public Integer unhealthyThreshold;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **CreateLoadBalancerUDPListener**.</p>
+     * <p>The ID of the vServer group.</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
 
     /**
-     * <p>The timeout period of a health check.</p>
-     * <br>
-     * <p>If a backend server, such as an Elastic Compute Service (ECS) instance, does not respond to a probe packet within the specified timeout period, the server fails the health check. Unit: seconds.</p>
-     * <br>
-     * <p>Valid values: **1** to **300**.</p>
+     * <p>The response string for UDP listener health checks. The string must be 1 to 64 characters in length and can contain only letters and digits.</p>
      */
     @NameInMap("healthCheckExp")
     public String healthCheckExp;
@@ -176,15 +198,7 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     public Integer healthCheckInterval;
 
     /**
-     * <p>The routing algorithm. Valid values:</p>
-     * <br>
-     * <p>*   **wrr** (default): Backend servers with higher weights receive more requests than backend servers with lower weights.</p>
-     * <p>*   **rr**: Requests are distributed to backend servers in sequence.</p>
-     * <p>*   **sch**: specifies consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</p>
-     * <p>*   **tch**: specifies consistent hashing that is based on four factors: source IP address, destination IP address, source port, and destination port. Requests that contain the same information based on the four factors are distributed to the same backend server.</p>
-     * <p>*   **qch**: specifies consistent hashing that is based on QUIC connection IDs. Requests that contain the same QUIC connection ID are distributed to the same backend server.</p>
-     * <br>
-     * <p>Only high-performance CLB instances support the sch, tch, and qch consistent hashing algorithms.</p>
+     * <p>The request string for UDP listener health checks. The string must be 1 to 64 characters in length and can contain only letters and digits.</p>
      */
     @NameInMap("healthCheckReq")
     public String healthCheckReq;
@@ -403,9 +417,19 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     }
 
     public static class CreateLoadBalancerUDPListenerRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. Valid values of N: **1 to 20**. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

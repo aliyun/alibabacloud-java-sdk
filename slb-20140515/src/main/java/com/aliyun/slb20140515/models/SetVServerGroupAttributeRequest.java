@@ -5,30 +5,6 @@ import com.aliyun.tea.*;
 
 public class SetVServerGroupAttributeRequest extends TeaModel {
     /**
-     * <p>The name of the vServer group.</p>
-     */
-    @NameInMap("BackendServers")
-    public String backendServers;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    /**
-     * <p>The name of the vServer group. You can specify a custom name for the vServer group.</p>
-     */
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    /**
      * <p>The list of backend servers in the vServer group. You can specify at most 20 backend servers for a vServer group in each call.</p>
      * <br>
      * <p>*   **ServerId**: required. The ID of the Elastic Compute Service (ECS) instance or elastic network interface (ENI) that serves as a backend server. This parameter must be of the STRING type.</p>
@@ -52,11 +28,35 @@ public class SetVServerGroupAttributeRequest extends TeaModel {
      * <p>*   An ENI: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-112" }]`</p>
      * <p>*   An ENI with multiple IP addresses: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-112" },{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "172.166.**.**", "Port":"80","Description":"test-113" }]`</p>
      */
+    @NameInMap("BackendServers")
+    public String backendServers;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    /**
+     * <p>The ID of the region where the Classic Load Balancer (CLB) instance is deployed. This parameter cannot be modified.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    /**
+     * <p>The ID of the vServer group. This parameter cannot be modified.</p>
+     */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
 
     /**
-     * <p>The ID of the vServer group.</p>
+     * <p>The name of the vServer group. You can specify a custom name for the vServer group.</p>
      */
     @NameInMap("VServerGroupName")
     public String VServerGroupName;

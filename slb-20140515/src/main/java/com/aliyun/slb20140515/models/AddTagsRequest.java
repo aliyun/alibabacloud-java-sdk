@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class AddTagsRequest extends TeaModel {
     /**
-     * <p>A list of tags to be added.</p>
+     * <p>The name of this action.</p>
+     * <br>
+     * <p>Value: **AddTags**</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -17,7 +19,7 @@ public class AddTagsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the SLB instance.</p>
+     * <p>The ID of the region to which the SLB instance belongs.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -29,7 +31,7 @@ public class AddTagsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the region to which the SLB instance belongs.</p>
      */
     @NameInMap("Tags")
     public String tags;
