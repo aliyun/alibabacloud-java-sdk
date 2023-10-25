@@ -4,18 +4,33 @@ package com.aliyun.xtrace20190808.models;
 import com.aliyun.tea.*;
 
 public class GetTagKeyRequest extends TeaModel {
+    /**
+     * <p>The timestamp of the end time of the time range to query. The timestamp is accurate to milliseconds.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the application.</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The name of the span.</p>
+     */
     @NameInMap("SpanName")
     public String spanName;
 
+    /**
+     * <p>The timestamp of the start time of the time range to query. The timestamp is accurate to milliseconds.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

@@ -4,9 +4,15 @@ package com.aliyun.xtrace20190808.models;
 import com.aliyun.tea.*;
 
 public class ListIpOrHostsResponseBody extends TeaModel {
+    /**
+     * <p>The IP addresses.</p>
+     */
     @NameInMap("IpNames")
     public ListIpOrHostsResponseBodyIpNames ipNames;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

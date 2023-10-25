@@ -4,12 +4,21 @@ package com.aliyun.xtrace20190808.models;
 import com.aliyun.tea.*;
 
 public class GetTraceRequest extends TeaModel {
+    /**
+     * <p>The type of the application. You can set the value to **XTRACE** or leave this parameter unspecified.</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The unique ID of the trace.</p>
+     */
     @NameInMap("TraceID")
     public String traceID;
 

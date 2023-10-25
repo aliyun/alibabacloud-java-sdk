@@ -4,9 +4,15 @@ package com.aliyun.xtrace20190808.models;
 import com.aliyun.tea.*;
 
 public class GetTagKeyResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The tag keys.</p>
+     */
     @NameInMap("TagKeys")
     public GetTagKeyResponseBodyTagKeys tagKeys;
 
