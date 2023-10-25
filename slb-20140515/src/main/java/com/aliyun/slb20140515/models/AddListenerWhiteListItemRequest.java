@@ -5,20 +5,21 @@ import com.aliyun.tea.*;
 
 public class AddListenerWhiteListItemRequest extends TeaModel {
     /**
-     * <p>The frontend protocol that is used by the CLB instance.</p>
-     * <br>
-     * <p>>  This parameter is required when listeners that use different protocols listen on the same port.</p>
+     * <p>The frontend port that is used by the CLB instance.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
+    /**
+     * <p>The frontend protocol that is used by the CLB instance.</p>
+     * <br>
+     * <p>>  This parameter is required when listeners that use different protocols listen on the same port.</p>
+     */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
     /**
-     * <p>The ID of the region where the Classic Load Balancer (CLB) instance is created.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The ID of the CLB instance.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -30,13 +31,9 @@ public class AddListenerWhiteListItemRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The IP addresses or CIDR blocks that you want to add to the whitelist.</p>
+     * <p>The ID of the region where the Classic Load Balancer (CLB) instance is created.</p>
      * <br>
-     * <p>This parameter takes effect when the **AccessControlStatus** parameter of the listener is set to **open_white_list**.</p>
-     * <br>
-     * <p>Separate multiple IP addresses or CIDR blocks with commas (,).</p>
-     * <br>
-     * <p>You cannot enter **0.0.0.0** or **0.0.0.0/0**. To disable access control, you can call the [SetListenerAccessControlStatus](~~27599~~) operation to set the value of the **AccessControlStatus** parameter to **close**.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -47,6 +44,15 @@ public class AddListenerWhiteListItemRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The IP addresses or CIDR blocks that you want to add to the whitelist.</p>
+     * <br>
+     * <p>This parameter takes effect when the **AccessControlStatus** parameter of the listener is set to **open_white_list**.</p>
+     * <br>
+     * <p>Separate multiple IP addresses or CIDR blocks with commas (,).</p>
+     * <br>
+     * <p>You cannot enter **0.0.0.0** or **0.0.0.0/0**. To disable access control, you can call the [SetListenerAccessControlStatus](~~27599~~) operation to set the value of the **AccessControlStatus** parameter to **close**.</p>
+     */
     @NameInMap("SourceItems")
     public String sourceItems;
 

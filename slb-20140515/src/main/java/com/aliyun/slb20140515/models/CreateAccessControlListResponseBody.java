@@ -5,15 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateAccessControlListResponseBody extends TeaModel {
     /**
-     * <p>You can create multiple ACLs. Each ACL can contain one or more IP addresses or CIDR blocks. Before you create an ACL, take note of the following limits:</p>
-     * <br>
-     * <p>*   An account can have a maximum of 50 ACLs in each region.</p>
-     * <p>*   You can add a maximum of 50 IP addresses or CIDR blocks at a time within an account.</p>
-     * <p>*   Each ACL can contain a maximum of 300 IP addresses or CIDR blocks.</p>
+     * <p>The IP version. Valid values: **ipv4** and **ipv6**.</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
+    /**
+     * <p>The ID of the resource group to which the ACL belongs.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

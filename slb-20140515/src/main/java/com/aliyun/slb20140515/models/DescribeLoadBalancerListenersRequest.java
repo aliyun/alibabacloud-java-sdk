@@ -4,15 +4,43 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerListenersRequest extends TeaModel {
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("ListenerPort")
+    public Integer listenerPort;
+
+    /**
+     * <p>The protocol used by the listener. Valid values:</p>
+     * <br>
+     * <p>*   **tcp**</p>
+     * <p>*   **udp**</p>
+     * <p>*   **http**</p>
+     * <p>*   **https**</p>
+     */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
+    /**
+     * <p>The ID of the CLB instance. You can specify at most 10 IDs.</p>
+     */
     @NameInMap("LoadBalancerId")
     public java.util.List<String> loadBalancerId;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: **1** to **100**. If you do not specify a value, the default value **20** is used.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query and no subsequent queries are to be sent, ignore this parameter.</p>
+     * <p>*   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -22,6 +50,13 @@ public class DescribeLoadBalancerListenersRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the CLB instance is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.</p>
+     * <br>
+     * <p>>  If the endpoint of the selected region is slb.aliyuncs.com, the `RegionId` parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -31,12 +66,31 @@ public class DescribeLoadBalancerListenersRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>标签列表。</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeLoadBalancerListenersRequestTag> tag;
 
     public static DescribeLoadBalancerListenersRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLoadBalancerListenersRequest self = new DescribeLoadBalancerListenersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLoadBalancerListenersRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public DescribeLoadBalancerListenersRequest setListenerPort(Integer listenerPort) {
+        this.listenerPort = listenerPort;
+        return this;
+    }
+    public Integer getListenerPort() {
+        return this.listenerPort;
     }
 
     public DescribeLoadBalancerListenersRequest setListenerProtocol(String listenerProtocol) {
@@ -120,9 +174,18 @@ public class DescribeLoadBalancerListenersRequest extends TeaModel {
     }
 
     public static class DescribeLoadBalancerListenersRequestTag extends TeaModel {
+        /**
+         * <p>资源的标签键。N的取值范围：**1~20**。一旦输入该值，则不允许为空字符串。</p>
+         * <br>
+         * <p>最多支持64个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>资源的标签值。N的取值范围：**1~20**。一旦输入该值，可以为空字符串。</p>
+         * <p>最多支持128个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。</p>
+         */
         @NameInMap("Value")
         public String value;
 

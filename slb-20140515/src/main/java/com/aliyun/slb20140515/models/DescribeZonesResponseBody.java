@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeZonesResponseBody extends TeaModel {
     /**
-     * <p>The list of zones.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the zone.</p>
+     * <p>The zones.</p>
      */
     @NameInMap("Zones")
     public DescribeZonesResponseBodyZones zones;
@@ -39,13 +39,13 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     public static class DescribeZonesResponseBodyZonesZoneSlaveZonesSlaveZone extends TeaModel {
         /**
-         * <p>Hangzhou Zone G</p>
+         * <p>The name of the secondary zone.</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
-         * <p>The name of the secondary zone.</p>
+         * <p>The ID of the secondary zone.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -94,19 +94,19 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     public static class DescribeZonesResponseBodyZonesZone extends TeaModel {
         /**
-         * <p>Hangzhou Zone B</p>
+         * <p>The name of the zone.</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
-         * <p>The ID of the secondary zone.</p>
+         * <p>The secondary zones.</p>
          */
         @NameInMap("SlaveZones")
         public DescribeZonesResponseBodyZonesZoneSlaveZones slaveZones;
 
         /**
-         * <p>The name of the zone.</p>
+         * <p>The ID of the zone.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

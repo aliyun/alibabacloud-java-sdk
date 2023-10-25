@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
     /**
-     * <p>The associated resources.</p>
+     * <p>The list of backend servers in the primary/secondary server group.</p>
      */
     @NameInMap("MasterSlaveServerGroups")
     public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroups masterSlaveServerGroups;
 
     /**
-     * <p>The listening protocol.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,9 +38,15 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener extends TeaModel {
+        /**
+         * <p>The listening port.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The listening protocol.</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
@@ -88,7 +94,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
 
     public static class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects extends TeaModel {
         /**
-         * <p>Queries backend servers in a primary/secondary server group.</p>
+         * <p>The list of listeners.</p>
          */
         @NameInMap("Listeners")
         public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListeners listeners;
@@ -109,9 +115,15 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTagsTag extends TeaModel {
+        /**
+         * <p>The tag keys.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag values.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -159,26 +171,32 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
 
     public static class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup extends TeaModel {
         /**
-         * <p>The name of the primary/secondary server group.</p>
+         * <p>The associated resources.</p>
          */
         @NameInMap("AssociatedObjects")
         public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects associatedObjects;
 
+        /**
+         * <p>The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of the primary/secondary server group.</p>
          */
         @NameInMap("MasterSlaveServerGroupId")
         public String masterSlaveServerGroupId;
 
         /**
-         * <p>The operation that you want to perform. Set the value to **DescribeMasterSlaveServerGroups**.</p>
+         * <p>The name of the primary/secondary server group.</p>
          */
         @NameInMap("MasterSlaveServerGroupName")
         public String masterSlaveServerGroupName;
 
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Tags")
         public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupTags tags;
 

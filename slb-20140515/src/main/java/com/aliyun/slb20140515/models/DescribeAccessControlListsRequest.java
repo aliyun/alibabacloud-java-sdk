@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessControlListsRequest extends TeaModel {
     /**
-     * <p>The name of the network ACL. The name of the network ACL. The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (\_). The name of the network ACL must be unique within each region. Fuzzy match is supported.</p>
+     * <p>The ACL name. The ACL name. The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (\_). The name of each ACL must be unique within a region. Fuzzy match is supported.</p>
      */
     @NameInMap("AclName")
     public String aclName;
 
     /**
-     * <p>The IP version of the Classic Load Balancer (CLB) instance with which the network ACL is associated. Valid values:</p>
+     * <p>The IP version of the Classic Load Balancer (CLB) instance with which the ACL is associated. Valid values:</p>
      * <br>
      * <p>*   **ipv4**</p>
      * <p>*   **ipv6**</p>
@@ -26,7 +26,7 @@ public class DescribeAccessControlListsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -38,7 +38,7 @@ public class DescribeAccessControlListsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the ACL is created.</p>
+     * <p>The region ID of the ACL.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
      */
@@ -46,7 +46,7 @@ public class DescribeAccessControlListsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -57,6 +57,9 @@ public class DescribeAccessControlListsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeAccessControlListsRequestTag> tag;
 
@@ -154,9 +157,19 @@ public class DescribeAccessControlListsRequest extends TeaModel {
     }
 
     public static class DescribeAccessControlListsRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. You can specify at most 20 tag values. The tag value cannot be an empty string.</p>
+         * <br>
+         * <p>The tag value must be 1 to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

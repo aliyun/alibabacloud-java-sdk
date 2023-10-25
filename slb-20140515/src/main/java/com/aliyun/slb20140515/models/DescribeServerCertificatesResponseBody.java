@@ -57,9 +57,15 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
     }
 
     public static class DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTagsTag extends TeaModel {
+        /**
+         * <p>The tag keys of the resource.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -193,6 +199,9 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
         @NameInMap("SubjectAlternativeNames")
         public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateSubjectAlternativeNames subjectAlternativeNames;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTags tags;
 

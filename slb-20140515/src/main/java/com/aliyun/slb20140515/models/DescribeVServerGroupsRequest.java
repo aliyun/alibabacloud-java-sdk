@@ -4,22 +4,29 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeVServerGroupsRequest extends TeaModel {
+    @NameInMap("Description")
+    public String description;
+
     /**
-     * <p>The ID of the server group.</p>
+     * <p>Specifies whether to return information about the associated listeners. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false** (default): no</p>
      */
     @NameInMap("IncludeListener")
     public Boolean includeListener;
 
     /**
-     * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
+     * <p>Specifies whether to return the forwarding rules associated with the vServer groups. Valid values:</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false** (default): no</p>
      */
     @NameInMap("IncludeRule")
     public Boolean includeRule;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeVServerGroups**.</p>
+     * <p>The ID of the CLB instance.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -31,7 +38,9 @@ public class DescribeVServerGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The items associated with the server groups.</p>
+     * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -42,12 +51,23 @@ public class DescribeVServerGroupsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeVServerGroupsRequestTag> tag;
 
     public static DescribeVServerGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVServerGroupsRequest self = new DescribeVServerGroupsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVServerGroupsRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public DescribeVServerGroupsRequest setIncludeListener(Boolean includeListener) {
@@ -123,9 +143,15 @@ public class DescribeVServerGroupsRequest extends TeaModel {
     }
 
     public static class DescribeVServerGroupsRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

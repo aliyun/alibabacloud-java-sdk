@@ -5,41 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateVServerGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the vServer group.</p>
-     */
-    @NameInMap("BackendServers")
-    public String backendServers;
-
-    /**
-     * <p>The name of the vServer group.</p>
-     * <br>
-     * <p>The name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (\_).</p>
-     */
-    @NameInMap("LoadBalancerId")
-    public String loadBalancerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    /**
-     * <p>The ID of the Server Load Balancer (SLB) instance.</p>
-     */
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("Tag")
-    public java.util.List<CreateVServerGroupRequestTag> tag;
-
-    /**
      * <p>The list of backend servers to be added.</p>
      * <br>
      * <p>The value of this parameter must be a STRING list in the JSON format. You can specify up to 20 elements in each request.</p>
@@ -64,6 +29,44 @@ public class CreateVServerGroupRequest extends TeaModel {
      * <p>*   ECS instance:`  [{ "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port": "80", "Description": "test-112" }]. `</p>
      * <p>*   ENI:`  [{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-112" }] `</p>
      * <p>*   ENI with multiple IP addresses:`  [{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","Description":"test-112" },{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "172.166.**.**", "Port":"80","Description":"test-113" }] `</p>
+     */
+    @NameInMap("BackendServers")
+    public String backendServers;
+
+    /**
+     * <p>The ID of the Server Load Balancer (SLB) instance.</p>
+     */
+    @NameInMap("LoadBalancerId")
+    public String loadBalancerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    /**
+     * <p>The ID of the region where the SLB instance is deployed.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    /**
+     * <p>标签列表。</p>
+     */
+    @NameInMap("Tag")
+    public java.util.List<CreateVServerGroupRequestTag> tag;
+
+    /**
+     * <p>The name of the vServer group.</p>
+     * <br>
+     * <p>The name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (\_).</p>
      */
     @NameInMap("VServerGroupName")
     public String VServerGroupName;
@@ -146,9 +149,18 @@ public class CreateVServerGroupRequest extends TeaModel {
     }
 
     public static class CreateVServerGroupRequestTag extends TeaModel {
+        /**
+         * <p>资源的标签键。N的取值范围：**1~20**。一旦输入该值，则不允许为空字符串。</p>
+         * <br>
+         * <p>最多支持64个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>资源的标签值。N的取值范围：**1~20**。一旦输入该值，可以为空字符串。</p>
+         * <p>最多支持128个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -38,6 +38,9 @@ public class DescribeServerCertificatesRequest extends TeaModel {
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeServerCertificatesRequestTag> tag;
 
@@ -111,9 +114,15 @@ public class DescribeServerCertificatesRequest extends TeaModel {
     }
 
     public static class DescribeServerCertificatesRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

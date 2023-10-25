@@ -5,22 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
     /**
-     * <p>The type of the backend server. Valid values:</p>
-     * <br>
-     * <p>*   **ecs**: an ECS instance</p>
-     * <p>*   **eni**: an ENI</p>
+     * <p>The list of backend servers in the primary/secondary server group.</p>
      */
     @NameInMap("MasterSlaveBackendServers")
     public CreateMasterSlaveServerGroupResponseBodyMasterSlaveBackendServers masterSlaveBackendServers;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the primary/secondary server group.</p>
      */
     @NameInMap("MasterSlaveServerGroupId")
     public String masterSlaveServerGroupId;
 
     /**
-     * <p>The list of backend servers in the primary/secondary server group.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -56,39 +53,42 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
 
     public static class CreateMasterSlaveServerGroupResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer extends TeaModel {
         /**
-         * <p>The port number used by the backend server.</p>
+         * <p>The description of the primary/secondary server group.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the ECS instance or ENI that is added.</p>
+         * <p>The port number used by the backend server.</p>
          */
         @NameInMap("Port")
         public Integer port;
+
+        /**
+         * <p>The ID of the ECS instance or ENI that is added.</p>
+         */
+        @NameInMap("ServerId")
+        public String serverId;
 
         /**
          * <p>The type of the backend server.</p>
          * <br>
          * <p>Valid values: **Master** and **Slave**.</p>
          */
-        @NameInMap("ServerId")
-        public String serverId;
-
-        /**
-         * <p>Creates a primary/secondary server group. A primary/secondary server group can contain only two Elastic Compute Service (ECS) instances: one of the ECS instances functions as the primary server and the other functions as the secondary server.</p>
-         */
         @NameInMap("ServerType")
         public String serverType;
 
         /**
-         * <p>The weight of the backend server.</p>
+         * <p>The type of the backend server. Valid values:</p>
+         * <br>
+         * <p>*   **ecs**: an ECS instance</p>
+         * <p>*   **eni**: an ENI</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The description of the primary/secondary server group.</p>
+         * <p>The weight of the backend server.</p>
          */
         @NameInMap("Weight")
         public Integer weight;

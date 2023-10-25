@@ -4,33 +4,66 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The IP entries that you want to remove from the network ACL. Valid values:</p>
+     * <br>
+     * <p>*   **entry**: the IP address or CIDR block that you want to remove from the network ACL. Separate multiple IP addresses or CIDR blocks with commas (,).</p>
+     * <p>*   **comment**: the description of the network ACL.</p>
+     */
     @NameInMap("AclEntrys")
     public DescribeAccessControlListAttributeResponseBodyAclEntrys aclEntrys;
 
+    /**
+     * <p>The ID of the network ACL.</p>
+     */
     @NameInMap("AclId")
     public String aclId;
 
+    /**
+     * <p>The ACL name. The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (\_). The name of each ACL must be unique within a region. Fuzzy match is supported.</p>
+     */
     @NameInMap("AclName")
     public String aclName;
 
+    /**
+     * <p>The IP version. Valid values: **ipv4** and **ipv6**.</p>
+     */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
+    /**
+     * <p>The time when the ACL was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The listeners that are associated with the network ACL.</p>
+     */
     @NameInMap("RelatedListeners")
     public DescribeAccessControlListAttributeResponseBodyRelatedListeners relatedListeners;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public DescribeAccessControlListAttributeResponseBodyTags tags;
 
+    /**
+     * <p>The total number of access control entries.</p>
+     */
     @NameInMap("TotalAclEntry")
     public Integer totalAclEntry;
 
@@ -120,9 +153,15 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessControlListAttributeResponseBodyAclEntrysAclEntry extends TeaModel {
+        /**
+         * <p>The description of the ACL entry.</p>
+         */
         @NameInMap("AclEntryComment")
         public String aclEntryComment;
 
+        /**
+         * <p>The IP address specified in the ACL entry.</p>
+         */
         @NameInMap("AclEntryIP")
         public String aclEntryIP;
 
@@ -169,15 +208,30 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener extends TeaModel {
+        /**
+         * <p>The type of ACL. Valid values:</p>
+         * <br>
+         * <p>*   **black**</p>
+         * <p>*   **white**</p>
+         */
         @NameInMap("AclType")
         public String aclType;
 
+        /**
+         * <p>The frontend port of the listener with which the ACL is associated.</p>
+         */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
+        /**
+         * <p>The CLB instance ID.</p>
+         */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
+        /**
+         * <p>The type of protocol that the associated listener uses.</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
@@ -240,9 +294,15 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessControlListAttributeResponseBodyTagsTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

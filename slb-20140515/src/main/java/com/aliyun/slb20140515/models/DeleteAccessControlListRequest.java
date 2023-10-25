@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAccessControlListRequest extends TeaModel {
     /**
-     * <p>>  An access control list can be deleted only after it is disassociated from a listener.</p>
+     * <p>The ACL ID.</p>
      */
     @NameInMap("AclId")
     public String aclId;
@@ -17,7 +17,9 @@ public class DeleteAccessControlListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The region ID of the ACL.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

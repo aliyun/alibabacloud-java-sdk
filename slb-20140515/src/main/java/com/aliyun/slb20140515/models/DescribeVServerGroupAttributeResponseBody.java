@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
     /**
-     * <p>The name of the vServer group.</p>
+     * <p>The list of backend servers.</p>
      */
     @NameInMap("BackendServers")
     public DescribeVServerGroupAttributeResponseBodyBackendServers backendServers;
 
+    /**
+     * <p>The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
@@ -20,22 +23,25 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
     public String loadBalancerId;
 
     /**
-     * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The tag list.</p>
+     */
     @NameInMap("Tags")
     public DescribeVServerGroupAttributeResponseBodyTags tags;
 
     /**
-     * <p>The port used by the backend server.</p>
+     * <p>The ID of the vServer group.</p>
      */
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
 
     /**
-     * <p>The IP address of the ECS instance, ENI, or elastic container instance.</p>
+     * <p>The name of the vServer group.</p>
      */
     @NameInMap("VServerGroupName")
     public String VServerGroupName;
@@ -103,17 +109,26 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
 
     public static class DescribeVServerGroupAttributeResponseBodyBackendServersBackendServer extends TeaModel {
         /**
-         * <p>The ID of the request.</p>
+         * <p>The description of the vServer group.</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The port used by the backend server.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The ID of the ECS instance, ENI, or elastic container instance.</p>
+         */
         @NameInMap("ServerId")
         public String serverId;
 
+        /**
+         * <p>The IP address of the ECS instance, ENI, or elastic container instance.</p>
+         */
         @NameInMap("ServerIp")
         public String serverIp;
 
@@ -128,7 +143,7 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The list of backend servers.</p>
+         * <p>The weight of the backend server.</p>
          */
         @NameInMap("Weight")
         public Integer weight;
@@ -208,9 +223,15 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeVServerGroupAttributeResponseBodyTagsTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class UploadCACertificateRequest extends TeaModel {
     /**
-     * <p>The ID of the enterprise resource group.</p>
+     * <p>The name of this action.</p>
+     * <br>
+     * <p>Value: **UploadCACertificate**</p>
      */
     @NameInMap("CACertificate")
     public String CACertificate;
 
     /**
-     * <p>The timestamp generated when the CA certificate is uploaded.</p>
+     * <p>The ID of the region to which the CA certificate belongs.</p>
+     * <br>
+     * <p>To query the region ID, call [DescribeRegions](~~27584~~).</p>
      */
     @NameInMap("CACertificateName")
     public String CACertificateName;
@@ -23,13 +27,13 @@ public class UploadCACertificateRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the CA certificate.</p>
+     * <p>The region id.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The content of the CA certificate to be uploaded.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -40,6 +44,9 @@ public class UploadCACertificateRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<UploadCACertificateRequestTag> tag;
 
@@ -121,9 +128,19 @@ public class UploadCACertificateRequest extends TeaModel {
     }
 
     public static class UploadCACertificateRequestTag extends TeaModel {
+        /**
+         * <p>The tag key. You can specify at most 20 tag keys.</p>
+         * <br>
+         * <p>The tag key cannot be an empty string. The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. Valid values of N: **1 to 20**. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

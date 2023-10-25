@@ -142,7 +142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the CLB instance.
+      * >  If multiple identical Elastic Compute Service (ECS) instances are specified in a request, only the first ECS instance is added. The other ECS instances are ignored. If the backend server that you add is the same as one of the existing backend servers that are already associated with the listener, an error message is returned.
       *
       * @param request AddBackendServersRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -197,7 +197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the CLB instance.
+      * >  If multiple identical Elastic Compute Service (ECS) instances are specified in a request, only the first ECS instance is added. The other ECS instances are ignored. If the backend server that you add is the same as one of the existing backend servers that are already associated with the listener, an error message is returned.
       *
       * @param request AddBackendServersRequest
       * @return AddBackendServersResponse
@@ -269,8 +269,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The name of this action.
-      * Value: **AddTags**
+      * # Limits
+      * Before you call this API, note the following limits:
+      * *   You can add up to 10 tags to each SLB instance.
+      * *   You can add up to five pairs of tags at a time.
+      * *   All the tags and keys added to an SLB instance must be unique.
+      * *   If you add a tag of which the key is the same as that of an existing tag, but the value is different, the new tag overwrites the existing one.
       *
       * @param request AddTagsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -325,8 +329,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The name of this action.
-      * Value: **AddTags**
+      * # Limits
+      * Before you call this API, note the following limits:
+      * *   You can add up to 10 tags to each SLB instance.
+      * *   You can add up to five pairs of tags at a time.
+      * *   All the tags and keys added to an SLB instance must be unique.
+      * *   If you add a tag of which the key is the same as that of an existing tag, but the value is different, the new tag overwrites the existing one.
       *
       * @param request AddTagsRequest
       * @return AddTagsResponse
@@ -390,7 +398,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region where you want to create the ACL.
+      * You can create multiple ACLs. Each ACL can contain one or more IP addresses or CIDR blocks. Before you create an ACL, take note of the following limits:
+      * *   An account can have a maximum of 50 ACLs in each region.
+      * *   You can add a maximum of 50 IP addresses or CIDR blocks at a time within an account.
+      * *   Each ACL can contain a maximum of 300 IP addresses or CIDR blocks.
       *
       * @param request CreateAccessControlListRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -453,7 +464,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region where you want to create the ACL.
+      * You can create multiple ACLs. Each ACL can contain one or more IP addresses or CIDR blocks. Before you create an ACL, take note of the following limits:
+      * *   An account can have a maximum of 50 ACLs in each region.
+      * *   You can add a maximum of 50 IP addresses or CIDR blocks at a time within an account.
+      * *   Each ACL can contain a maximum of 300 IP addresses or CIDR blocks.
       *
       * @param request CreateAccessControlListRequest
       * @return CreateAccessControlListResponse
@@ -525,7 +539,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The order ID of the subscription CLB instance.
+      * *   Before you create a CLB instance, call the [DescribeAvailableResource](~~DescribeAvailableResource~~) operation to query the resources available for purchase in the region where you want to create the CLB instance.
+      * *   After a CLB instance is created, you are charged for using the CLB instance.
+      * *   The pay-as-you-go billing method supports the pay-by-specification and pay-by-LCU metering methods.
       *
       * @param request CreateLoadBalancerRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -660,7 +676,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The order ID of the subscription CLB instance.
+      * *   Before you create a CLB instance, call the [DescribeAvailableResource](~~DescribeAvailableResource~~) operation to query the resources available for purchase in the region where you want to create the CLB instance.
+      * *   After a CLB instance is created, you are charged for using the CLB instance.
+      * *   The pay-as-you-go billing method supports the pay-by-specification and pay-by-LCU metering methods.
       *
       * @param request CreateLoadBalancerRequest
       * @return CreateLoadBalancerResponse
@@ -671,9 +689,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The timeout period of a cookie. Unit: seconds.
-      * Valid values: **1** to **86400**.
-      * >  If **StickySession** is set to **on** and **StickySessionType** is set to **insert**, this parameter is required.
+      * A newly created listener is in the **stopped** state. After a listener is created, you can call the [StartLoadBalancerListener](~~StartLoadBalancerListener~~) operation to start the listener. After the listener is started, the listener can forward traffic to backend servers.
+      * ## Prerequisites
+      * A Classic Load Balancer (CLB) instance is created. For more information, see [CreateLoadBalancer](~~StartLoadBalancerListener~~).
       *
       * @param request CreateLoadBalancerHTTPListenerRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -856,9 +874,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The timeout period of a cookie. Unit: seconds.
-      * Valid values: **1** to **86400**.
-      * >  If **StickySession** is set to **on** and **StickySessionType** is set to **insert**, this parameter is required.
+      * A newly created listener is in the **stopped** state. After a listener is created, you can call the [StartLoadBalancerListener](~~StartLoadBalancerListener~~) operation to start the listener. After the listener is started, the listener can forward traffic to backend servers.
+      * ## Prerequisites
+      * A Classic Load Balancer (CLB) instance is created. For more information, see [CreateLoadBalancer](~~StartLoadBalancerListener~~).
       *
       * @param request CreateLoadBalancerHTTPListenerRequest
       * @return CreateLoadBalancerHTTPListenerResponse
@@ -869,9 +887,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The timeout period of a cookie. Unit: seconds.
-      * Valid values: **1** to **86400**.
-      * >  If **StickySession** is set to **on** and **StickySessionType** is set to **insert**, this parameter is required.
+      * A newly created listener is in the **stopped** state. After a listener is created, you can call the [StartLoadBalancerListener](~~27597~~) operation to start the listener. After the listener is started, the listener can forward traffic to backend servers.
+      * ## Prerequisites
+      * A Classic Load Balancer (CLB) instance is created. For more information, see [CreateLoadBalancer](https://www.alibabacloud.com/help/en/server-load-balancer/latest/createloadbalancer-2).
       *
       * @param request CreateLoadBalancerHTTPSListenerRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1062,9 +1080,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The timeout period of a cookie. Unit: seconds.
-      * Valid values: **1** to **86400**.
-      * >  If **StickySession** is set to **on** and **StickySessionType** is set to **insert**, this parameter is required.
+      * A newly created listener is in the **stopped** state. After a listener is created, you can call the [StartLoadBalancerListener](~~27597~~) operation to start the listener. After the listener is started, the listener can forward traffic to backend servers.
+      * ## Prerequisites
+      * A Classic Load Balancer (CLB) instance is created. For more information, see [CreateLoadBalancer](https://www.alibabacloud.com/help/en/server-load-balancer/latest/createloadbalancer-2).
       *
       * @param request CreateLoadBalancerHTTPSListenerRequest
       * @return CreateLoadBalancerHTTPSListenerResponse
@@ -1075,8 +1093,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.
-      * Valid values: **2** to **10**.
+      * >  A newly created listener is in the **stopped** state. After a listener is created, you can call the [StartLoadBalancerListener](~~27597~~) operation to enable the listener to forward traffic to backend servers.
       *
       * @param request CreateLoadBalancerTCPListenerRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1231,8 +1248,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.
-      * Valid values: **2** to **10**.
+      * >  A newly created listener is in the **stopped** state. After a listener is created, you can call the [StartLoadBalancerListener](~~27597~~) operation to enable the listener to forward traffic to backend servers.
       *
       * @param request CreateLoadBalancerTCPListenerRequest
       * @return CreateLoadBalancerTCPListenerResponse
@@ -1243,9 +1259,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The port that is used for health checks.
-      * Valid values: **1** to **65535**.
-      * If this parameter is not set, the backend port specified by **BackendServerPort** is used for health checks.
+      * UDP listeners of Classic Load Balancer (CLB) instances in a classic network cannot pass client IP addresses to backend servers.
+      * >  A newly created listener is in the **stopped** state. After a listener is created, you can call the [StartLoadBalancerListener](~~27597~~) operation to enable the listener to forward traffic to backend servers.
       *
       * @param request CreateLoadBalancerUDPListenerRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1376,9 +1391,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The port that is used for health checks.
-      * Valid values: **1** to **65535**.
-      * If this parameter is not set, the backend port specified by **BackendServerPort** is used for health checks.
+      * UDP listeners of Classic Load Balancer (CLB) instances in a classic network cannot pass client IP addresses to backend servers.
+      * >  A newly created listener is in the **stopped** state. After a listener is created, you can call the [StartLoadBalancerListener](~~27597~~) operation to enable the listener to forward traffic to backend servers.
       *
       * @param request CreateLoadBalancerUDPListenerRequest
       * @return CreateLoadBalancerUDPListenerResponse
@@ -1629,8 +1643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region to which the access control list belongs.
-      * To query the region ID, call [DescribeRegions](~~27584~~).
+      * You can delete an ACL only if it is not associated with a listener.
       *
       * @param request DeleteAccessControlListRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1681,8 +1694,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region to which the access control list belongs.
-      * To query the region ID, call [DescribeRegions](~~27584~~).
+      * You can delete an ACL only if it is not associated with a listener.
       *
       * @param request DeleteAccessControlListRequest
       * @return DeleteAccessControlListResponse
@@ -1750,8 +1762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The region to which the CA certificate belongs.
-      * To query the region ID, call [DescribeRegions](~~27584~~).
+      * You cannot delete a CA certificate that is in use.
       *
       * @param request DeleteCACertificateRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1802,8 +1813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The region to which the CA certificate belongs.
-      * To query the region ID, call [DescribeRegions](~~27584~~).
+      * You cannot delete a CA certificate that is in use.
       *
       * @param request DeleteCACertificateRequest
       * @return DeleteCACertificateResponse
@@ -1863,8 +1873,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform.
-      * Set the value to **DeleteLoadBalancer**.
+      * > The listeners and tags of the SLB instance are deleted along with the SLB instance.
       *
       * @param request DeleteLoadBalancerRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1915,8 +1924,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform.
-      * Set the value to **DeleteLoadBalancer**.
+      * > The listeners and tags of the SLB instance are deleted along with the SLB instance.
       *
       * @param request DeleteLoadBalancerRequest
       * @return DeleteLoadBalancerResponse
@@ -2046,8 +2054,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region where the Server Load Balancer (SLB) instance is deployed.
-      * You can call the [DescribeRegions](~~27584~~) operation to query region IDs.
+      * ## Limits
+      * The RuleIds parameter is required. You can specify up to 10 forwarding rules in each request.
       *
       * @param request DeleteRulesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2098,8 +2106,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region where the Server Load Balancer (SLB) instance is deployed.
-      * You can call the [DescribeRegions](~~27584~~) operation to query region IDs.
+      * ## Limits
+      * The RuleIds parameter is required. You can specify up to 10 forwarding rules in each request.
       *
       * @param request DeleteRulesRequest
       * @return DeleteRulesResponse
@@ -2110,8 +2118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The region where the Server Load Balancer (SLB) instance is created.
-      * You can call the [DescribeRegions](~~27584~~) operation to query region IDs.
+      * >  You cannot delete server certificates that are in use.
       *
       * @param request DeleteServerCertificateRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2162,8 +2169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The region where the Server Load Balancer (SLB) instance is created.
-      * You can call the [DescribeRegions](~~27584~~) operation to query region IDs.
+      * >  You cannot delete server certificates that are in use.
       *
       * @param request DeleteServerCertificateRequest
       * @return DeleteServerCertificateResponse
@@ -2467,7 +2473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region.
+      * > Only the available resources and zones are returned.
       *
       * @param request DescribeAvailableResourceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2522,7 +2528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region.
+      * > Only the available resources and zones are returned.
       *
       * @param request DescribeAvailableResourceRequest
       * @return DescribeAvailableResourceResponse
@@ -2533,7 +2539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The time when the CA certificate was created. The time is in the `YYYY-MM-DDThh:mm:ssZ` format.
+      * > To ensure data confidentiality, only the certificate fingerprint and name are returned. The certificate content is not returned.
       *
       * @param request DescribeCACertificatesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2592,7 +2598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The time when the CA certificate was created. The time is in the `YYYY-MM-DDThh:mm:ssZ` format.
+      * > To ensure data confidentiality, only the certificate fingerprint and name are returned. The certificate content is not returned.
       *
       * @param request DescribeCACertificatesRequest
       * @return DescribeCACertificatesResponse
@@ -2872,9 +2878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The metering method of the CLB instance. Valid values:
-      * *   **PayBySpec:** pay-by-specification.
-      * *   **PayByCLCU:** pay-by-LCU.
+      * >  If backend servers are deployed in a vServer group, you can call the [DescribeVServerGroupAttribute](~~35224~~) operation to query the backend servers.
       *
       * @param request DescribeLoadBalancerAttributeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2925,9 +2929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The metering method of the CLB instance. Valid values:
-      * *   **PayBySpec:** pay-by-specification.
-      * *   **PayByCLCU:** pay-by-LCU.
+      * >  If backend servers are deployed in a vServer group, you can call the [DescribeVServerGroupAttribute](~~35224~~) operation to query the backend servers.
       *
       * @param request DescribeLoadBalancerAttributeRequest
       * @return DescribeLoadBalancerAttributeResponse
@@ -2938,7 +2940,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The HTTP status codes that are used to determine whether the backend server passes the health check.
+      * *   A Classic Load Balancer (CLB) instance is created. For more information, see [CreateLoadBalancer](~~27577~~).
+      * *   An HTTP listener is created. For more information about how to create an HTTP listener, see [CreateLoadBalancerHTTPListener](~~27592~~).
       *
       * @param request DescribeLoadBalancerHTTPListenerAttributeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2993,7 +2996,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The HTTP status codes that are used to determine whether the backend server passes the health check.
+      * *   A Classic Load Balancer (CLB) instance is created. For more information, see [CreateLoadBalancer](~~27577~~).
+      * *   An HTTP listener is created. For more information about how to create an HTTP listener, see [CreateLoadBalancerHTTPListener](~~27592~~).
       *
       * @param request DescribeLoadBalancerHTTPListenerAttributeRequest
       * @return DescribeLoadBalancerHTTPListenerAttributeResponse
@@ -3004,9 +3008,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Indicates whether the `XForwardedFor_ClientCertClientVerify` header is used to retrieve the verification result of the client certificate. Valid values:
-      * *   **on**: yes
-      * *   **off**: no
+      * *   A Classic Load Balancer (CLB) instance is created. For more information, see [CreateLoadBalancer](~~27577~~).
+      * *   An HTTPS listener is created. For more information about how to create an HTTPS listener, see [CreateLoadBalancerHTTPSListener](~~27593~~).
       *
       * @param request DescribeLoadBalancerHTTPSListenerAttributeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3061,9 +3064,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Indicates whether the `XForwardedFor_ClientCertClientVerify` header is used to retrieve the verification result of the client certificate. Valid values:
-      * *   **on**: yes
-      * *   **off**: no
+      * *   A Classic Load Balancer (CLB) instance is created. For more information, see [CreateLoadBalancer](~~27577~~).
+      * *   An HTTPS listener is created. For more information about how to create an HTTPS listener, see [CreateLoadBalancerHTTPSListener](~~27593~~).
       *
       * @param request DescribeLoadBalancerHTTPSListenerAttributeRequest
       * @return DescribeLoadBalancerHTTPSListenerAttributeResponse
@@ -3074,9 +3076,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Indicates whether the Proxy protocol is used to pass client IP addresses to backend servers. Valid values:
-      * *   **true**: yes
-      * *   **false**: no
+      * *   A CLB instance is created. For more information, see [CreateLoadBalancer](~~2401685~~).
+      * *   One or more listeners are added to the CLB instance. For more information, see the following topics:
+      *     *   [CreateLoadBalancerUDPListener](~~CreateLoadBalancerUDPListener~~)
+      *     *   [CreateLoadBalancerTCPListener](~~CreateLoadBalancerTCPListener~~)
+      *     *   [CreateLoadBalancerHTTPListener](~~CreateLoadBalancerHTTPListener~~)
+      *     *   [CreateLoadBalancerHTTPSListener](~~CreateLoadBalancerHTTPSListener~~)
       *
       * @param request DescribeLoadBalancerListenersRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3085,6 +3090,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeLoadBalancerListenersResponse describeLoadBalancerListenersWithOptions(DescribeLoadBalancerListenersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.listenerPort)) {
+            query.put("ListenerPort", request.listenerPort);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.listenerProtocol)) {
             query.put("ListenerProtocol", request.listenerProtocol);
         }
@@ -3143,9 +3156,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Indicates whether the Proxy protocol is used to pass client IP addresses to backend servers. Valid values:
-      * *   **true**: yes
-      * *   **false**: no
+      * *   A CLB instance is created. For more information, see [CreateLoadBalancer](~~2401685~~).
+      * *   One or more listeners are added to the CLB instance. For more information, see the following topics:
+      *     *   [CreateLoadBalancerUDPListener](~~CreateLoadBalancerUDPListener~~)
+      *     *   [CreateLoadBalancerTCPListener](~~CreateLoadBalancerTCPListener~~)
+      *     *   [CreateLoadBalancerHTTPListener](~~CreateLoadBalancerHTTPListener~~)
+      *     *   [CreateLoadBalancerHTTPSListener](~~CreateLoadBalancerHTTPSListener~~)
       *
       * @param request DescribeLoadBalancerListenersRequest
       * @return DescribeLoadBalancerListenersResponse
@@ -3438,6 +3454,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeMasterSlaveServerGroupsResponse describeMasterSlaveServerGroupsWithOptions(DescribeMasterSlaveServerGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.includeListener)) {
             query.put("IncludeListener", request.includeListener);
         }
@@ -3857,6 +3877,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeVServerGroupsResponse describeVServerGroupsWithOptions(DescribeVServerGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.includeListener)) {
             query.put("IncludeListener", request.includeListener);
         }
@@ -4216,7 +4240,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the CLB instance.
+      * > *   For pay-as-you-go CLB instances, you can only change the metering method from pay-by-specification to pay-by-LCU. You cannot change the metering method from pay-by-LCU to pay-by-specification.
+      * >*   This operation can change the metering method of only one instance at a time.
       *
       * @param request ModifyLoadBalancerInstanceChargeTypeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4283,7 +4308,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the CLB instance.
+      * > *   For pay-as-you-go CLB instances, you can only change the metering method from pay-by-specification to pay-by-LCU. You cannot change the metering method from pay-by-LCU to pay-by-specification.
+      * >*   This operation can change the metering method of only one instance at a time.
       *
       * @param request ModifyLoadBalancerInstanceChargeTypeRequest
       * @return ModifyLoadBalancerInstanceChargeTypeResponse
@@ -4351,7 +4377,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the CLB instance.
+      * ## Description
+      * *   If you modify only the maximum bandwidth of a pay-by-bandwidth CLB instance, the new bandwidth immediately takes effect.
+      * *   If you modify the metering method (for example, switch from pay-by-bandwidth to pay-by-data-transfer), the new metering method and the other changes specified in the operation take effect at 00:00:00 the next day.
       *
       * @param request ModifyLoadBalancerInternetSpecRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4414,7 +4442,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the CLB instance.
+      * ## Description
+      * *   If you modify only the maximum bandwidth of a pay-by-bandwidth CLB instance, the new bandwidth immediately takes effect.
+      * *   If you modify the metering method (for example, switch from pay-by-bandwidth to pay-by-data-transfer), the new metering method and the other changes specified in the operation take effect at 00:00:00 the next day.
       *
       * @param request ModifyLoadBalancerInternetSpecRequest
       * @return ModifyLoadBalancerInternetSpecResponse
@@ -4490,7 +4520,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region where the Classic Load Balancer (CLB) instance is deployed.
+      * You can call this operation to replace the backend servers in a specified vServer group. To modify the configurations of the backend servers, such as their weights, you can call the [SetVServerGroupAttribute](~~35217~~) operation.
       *
       * @param request ModifyVServerGroupBackendServersRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4549,7 +4579,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region where the Classic Load Balancer (CLB) instance is deployed.
+      * You can call this operation to replace the backend servers in a specified vServer group. To modify the configurations of the backend servers, such as their weights, you can call the [SetVServerGroupAttribute](~~35217~~) operation.
       *
       * @param request ModifyVServerGroupBackendServersRequest
       * @return ModifyVServerGroupBackendServersResponse
@@ -4678,8 +4708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform.
-      * Set the value to **RemoveBackendServers**.
+      * >  If the backend servers that you want to remove are not in the server list of the Classic Load Balancer (CLB) instance, the request fails. However, the system does not report an error.
       *
       * @param request RemoveBackendServersRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4734,8 +4763,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform.
-      * Set the value to **RemoveBackendServers**.
+      * >  If the backend servers that you want to remove are not in the server list of the Classic Load Balancer (CLB) instance, the request fails. However, the system does not report an error.
       *
       * @param request RemoveBackendServersRequest
       * @return RemoveBackendServersResponse
@@ -4860,7 +4888,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region where the Classic Load Balancer (CLB) instance is deployed.
+      * >  If one or more backend servers specified by the **BackendServers** parameter do not exist in the specified vServer group, these backend servers are ignored and no error message is returned.
       *
       * @param request RemoveVServerGroupBackendServersRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4915,7 +4943,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region where the Classic Load Balancer (CLB) instance is deployed.
+      * >  If one or more backend servers specified by the **BackendServers** parameter do not exist in the specified vServer group, these backend servers are ignored and no error message is returned.
       *
       * @param request RemoveVServerGroupBackendServersRequest
       * @return RemoveVServerGroupBackendServersResponse
@@ -5142,7 +5170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region where the SLB instance is created.
+      * >  You cannot replace an additional certificate for a listener that is added to a shared-resource Server Load Balancer (SLB) instance.
       *
       * @param request SetDomainExtensionAttributeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5197,7 +5225,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region where the SLB instance is created.
+      * >  You cannot replace an additional certificate for a listener that is added to a shared-resource Server Load Balancer (SLB) instance.
       *
       * @param request SetDomainExtensionAttributeRequest
       * @return SetDomainExtensionAttributeResponse
@@ -5322,8 +5350,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region where the CLB instance is deployed.
-      * You can query the region ID from the [Regions and zones](~~27585~~) list or by calling the [DescribeRegions](~~27584~~) operation.
+      * ### Prerequisites
+      * *   A Classic Load Balancer (CLB) instance is created. For more information, see [CreateLoadBalancer](~~27577~~).
+      * *   An HTTP listener is created. For more information about how to create an HTTP listener, see [CreateLoadBalancerHTTPListener](~~27592~~).
       *
       * @param request SetLoadBalancerHTTPListenerAttributeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5494,8 +5523,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region where the CLB instance is deployed.
-      * You can query the region ID from the [Regions and zones](~~27585~~) list or by calling the [DescribeRegions](~~27584~~) operation.
+      * ### Prerequisites
+      * *   A Classic Load Balancer (CLB) instance is created. For more information, see [CreateLoadBalancer](~~27577~~).
+      * *   An HTTP listener is created. For more information about how to create an HTTP listener, see [CreateLoadBalancerHTTPListener](~~27592~~).
       *
       * @param request SetLoadBalancerHTTPListenerAttributeRequest
       * @return SetLoadBalancerHTTPListenerAttributeResponse
@@ -5506,8 +5536,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform.
-      * Set the value to **SetLoadBalancerHTTPSListenerAttribute**.
+      * *   A Classic Load Balancer (CLB) instance is created. For more information, see [CreateLoadBalancer](~~27577~~).
+      * *   An HTTPS listener is created. For more information about how to create an HTTPS listener, see [CreateLoadBalancerHTTPSListener](~~27593~~).
       *
       * @param request SetLoadBalancerHTTPSListenerAttributeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5694,8 +5724,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform.
-      * Set the value to **SetLoadBalancerHTTPSListenerAttribute**.
+      * *   A Classic Load Balancer (CLB) instance is created. For more information, see [CreateLoadBalancer](~~27577~~).
+      * *   An HTTPS listener is created. For more information about how to create an HTTPS listener, see [CreateLoadBalancerHTTPSListener](~~27593~~).
       *
       * @param request SetLoadBalancerHTTPSListenerAttributeRequest
       * @return SetLoadBalancerHTTPSListenerAttributeResponse
@@ -5869,10 +5899,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The timeout period of a health check.
-      * If a backend ECS instance does not return a health check response within the specified timeout period, the server fails the health check.
-      * Valid values: **1** to **300**. Unit: seconds.
-      * >  If the value of the **HealthCheckConnectTimeout** parameter is smaller than that of the **HealthCheckInterval** parameter, the timeout period specified by the **HCTimeout** parameter is ignored and the period of time specified by the **HealthCheckInterval** parameter is used as the timeout period.
+      * *   A CLB instance is created. For more information, see [CreateLoadBalancer](~~2401685~~).
+      * *   A TCP listener is created. For more information, see [CreateLoadBalancerTCPListener](~~CreateLoadBalancerTCPListener~~).
       *
       * @param request SetLoadBalancerTCPListenerAttributeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6031,10 +6059,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The timeout period of a health check.
-      * If a backend ECS instance does not return a health check response within the specified timeout period, the server fails the health check.
-      * Valid values: **1** to **300**. Unit: seconds.
-      * >  If the value of the **HealthCheckConnectTimeout** parameter is smaller than that of the **HealthCheckInterval** parameter, the timeout period specified by the **HCTimeout** parameter is ignored and the period of time specified by the **HealthCheckInterval** parameter is used as the timeout period.
+      * *   A CLB instance is created. For more information, see [CreateLoadBalancer](~~2401685~~).
+      * *   A TCP listener is created. For more information, see [CreateLoadBalancerTCPListener](~~CreateLoadBalancerTCPListener~~).
       *
       * @param request SetLoadBalancerTCPListenerAttributeRequest
       * @return SetLoadBalancerTCPListenerAttributeResponse
@@ -6045,7 +6071,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The response string for UDP listener health checks. The string must be 1 to 64 characters in length and can contain only letters and digits.
+      * *   A Classic Load Balancer (CLB) instance is created. For more information, see [CreateLoadBalancer](~~27577~~).
+      * *   A UDP listener is created. For more information, see [CreateLoadBalancerUDPListener](~~27595~~).
       *
       * @param request SetLoadBalancerUDPListenerAttributeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6176,7 +6203,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The response string for UDP listener health checks. The string must be 1 to 64 characters in length and can contain only letters and digits.
+      * *   A Classic Load Balancer (CLB) instance is created. For more information, see [CreateLoadBalancer](~~27577~~).
+      * *   A UDP listener is created. For more information, see [CreateLoadBalancerUDPListener](~~27595~~).
       *
       * @param request SetLoadBalancerUDPListenerAttributeRequest
       * @return SetLoadBalancerUDPListenerAttributeResponse
@@ -6418,7 +6446,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region where the Classic Load Balancer (CLB) instance is deployed. This parameter cannot be modified.
+      * This operation allows you to modify only the name of a vServer group and the weights of the backend servers in the vServer group.
+      * *   If you want to modify backend servers in a specified vServer group, call the [ModifyVServerGroupBackendServers](~~35220~~) operation.
+      * *   If you want to add backend servers to a specified vServer group, call the [AddVServerGroupBackendServers](~~35218~~) operation.
       *
       * @param request SetVServerGroupAttributeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6477,7 +6507,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region where the Classic Load Balancer (CLB) instance is deployed. This parameter cannot be modified.
+      * This operation allows you to modify only the name of a vServer group and the weights of the backend servers in the vServer group.
+      * *   If you want to modify backend servers in a specified vServer group, call the [ModifyVServerGroupBackendServers](~~35220~~) operation.
+      * *   If you want to add backend servers to a specified vServer group, call the [AddVServerGroupBackendServers](~~35218~~) operation.
       *
       * @param request SetVServerGroupAttributeRequest
       * @return SetVServerGroupAttributeResponse
@@ -6488,8 +6520,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform.
-      * Set the value to **StartLoadBalancerListener**.
+      * When you call this operation, note the following items:
+      * *   You can call the operation only when the listener is in the Stopped state.
+      * *   After the operation is called, the status of the listener changes to Starting.
+      * *   You cannot call this operation when the SLB instance to which the listener is bound is in the Locked state.
       *
       * @param request StartLoadBalancerListenerRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6548,8 +6582,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform.
-      * Set the value to **StartLoadBalancerListener**.
+      * When you call this operation, note the following items:
+      * *   You can call the operation only when the listener is in the Stopped state.
+      * *   After the operation is called, the status of the listener changes to Starting.
+      * *   You cannot call this operation when the SLB instance to which the listener is bound is in the Locked state.
       *
       * @param request StartLoadBalancerListenerRequest
       * @return StartLoadBalancerListenerResponse
@@ -6560,8 +6596,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The name of this action.
-      * Value: **StopLoadBalancerListener**
+      * Before you make this API call, note the following:
+      * *   After the API call is successfully made, the listener enters the stopped state.
+      * *   If the Server Load Balancer (SLB) instance to which the listener to be stopped belongs is in the locked state, this API call cannot be made.
+      * >  If you stop the listener, your services will be disrupted. Exercise caution when you perform this action.
       *
       * @param request StopLoadBalancerListenerRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6620,8 +6658,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The name of this action.
-      * Value: **StopLoadBalancerListener**
+      * Before you make this API call, note the following:
+      * *   After the API call is successfully made, the listener enters the stopped state.
+      * *   If the Server Load Balancer (SLB) instance to which the listener to be stopped belongs is in the locked state, this API call cannot be made.
+      * >  If you stop the listener, your services will be disrupted. Exercise caution when you perform this action.
       *
       * @param request StopLoadBalancerListenerRequest
       * @return StopLoadBalancerListenerResponse
@@ -6632,7 +6672,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request.
+      * >  You can add at most 20 tags to each instance. Before you add tags to a resource, Alibaba Cloud checks the number of existing tags of the resource. If the maximum number is reached, an error message is returned.
       *
       * @param request TagResourcesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6691,7 +6731,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request.
+      * >  You can add at most 20 tags to each instance. Before you add tags to a resource, Alibaba Cloud checks the number of existing tags of the resource. If the maximum number is reached, an error message is returned.
       *
       * @param request TagResourcesRequest
       * @return TagResourcesResponse
@@ -6763,8 +6803,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region to which the CA certificate belongs.
-      * To query the region ID, call [DescribeRegions](~~27584~~).
+      * You can upload only one CA certificate at a time. After a CA certificate is uploaded, the certificate ID, name, and fingerprint are returned.
       *
       * @param request UploadCACertificateRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6827,8 +6866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region to which the CA certificate belongs.
-      * To query the region ID, call [DescribeRegions](~~27584~~).
+      * You can upload only one CA certificate at a time. After a CA certificate is uploaded, the certificate ID, name, and fingerprint are returned.
       *
       * @param request UploadCACertificateRequest
       * @return UploadCACertificateResponse
@@ -6839,7 +6877,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The alternative domain names of the server certificate.
+      * *   You can upload only one server certificate and its private key in each call.
+      * *   After a server certificate and its private key are uploaded, the fingerprints of all server certificates that belong to your Alibaba Cloud account are returned.
       *
       * @param request UploadServerCertificateRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6918,7 +6957,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The alternative domain names of the server certificate.
+      * *   You can upload only one server certificate and its private key in each call.
+      * *   After a server certificate and its private key are uploaded, the fingerprints of all server certificates that belong to your Alibaba Cloud account are returned.
       *
       * @param request UploadServerCertificateRequest
       * @return UploadServerCertificateResponse
