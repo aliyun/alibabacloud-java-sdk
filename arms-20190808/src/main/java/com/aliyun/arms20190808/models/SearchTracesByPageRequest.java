@@ -17,9 +17,10 @@ public class SearchTracesByPageRequest extends TeaModel {
     public java.util.List<SearchTracesByPageRequestExclusionFilters> exclusionFilters;
 
     /**
-     * <p>是否过滤错误的调用链。</p>
-     * <p>- `true`：过滤</p>
-     * <p>- `false`（默认）：不过滤</p>
+     * <p>Specifies whether to include the traces of abnormal calls.</p>
+     * <br>
+     * <p>*   `true`: No</p>
+     * <p>*   `false` (default): Yes</p>
      */
     @NameInMap("IsError")
     public Boolean isError;
@@ -88,7 +89,7 @@ public class SearchTracesByPageRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<SearchTracesByPageRequestTags> tags;
@@ -253,7 +254,7 @@ public class SearchTracesByPageRequest extends TeaModel {
          * <p>*   traceId: the ID of the trace.</p>
          * <p>*   serverApp: the name of the server application.</p>
          * <p>*   clientApp: the name of the client application.</p>
-         * <p>*   service: the name of the operation.</p>
+         * <p>*   service: the name of the API operation.</p>
          * <p>*   rpc: the type of the call.</p>
          * <p>*   msOfSpan: the duration exceeds a specific value.</p>
          * <p>*   clientIp: the IP address of the client.</p>

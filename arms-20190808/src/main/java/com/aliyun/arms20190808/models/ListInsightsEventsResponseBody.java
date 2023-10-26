@@ -62,6 +62,9 @@ public class ListInsightsEventsResponseBody extends TeaModel {
         @NameInMap("Pid")
         public String pid;
 
+        @NameInMap("ProblemId")
+        public String problemId;
+
         /**
          * <p>The overall response time of the \[HTTP] service of the application \[sd] spikes at \[2022-07-27 10:57:00]</p>
          */
@@ -109,6 +112,14 @@ public class ListInsightsEventsResponseBody extends TeaModel {
         }
         public String getPid() {
             return this.pid;
+        }
+
+        public ListInsightsEventsResponseBodyInsightsEvents setProblemId(String problemId) {
+            this.problemId = problemId;
+            return this;
+        }
+        public String getProblemId() {
+            return this.problemId;
         }
 
         public ListInsightsEventsResponseBodyInsightsEvents setTitle(String title) {

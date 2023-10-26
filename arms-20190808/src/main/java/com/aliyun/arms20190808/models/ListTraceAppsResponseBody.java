@@ -151,6 +151,9 @@ public class ListTraceAppsResponseBody extends TeaModel {
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
+        @NameInMap("Language")
+        public String language;
+
         @NameInMap("Namespace")
         public String namespace;
 
@@ -263,6 +266,14 @@ public class ListTraceAppsResponseBody extends TeaModel {
         }
         public java.util.List<String> getLabels() {
             return this.labels;
+        }
+
+        public ListTraceAppsResponseBodyTraceApps setLanguage(String language) {
+            this.language = language;
+            return this;
+        }
+        public String getLanguage() {
+            return this.language;
         }
 
         public ListTraceAppsResponseBodyTraceApps setNamespace(String namespace) {

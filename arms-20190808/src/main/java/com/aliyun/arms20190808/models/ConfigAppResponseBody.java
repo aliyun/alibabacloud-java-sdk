@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigAppResponseBody extends TeaModel {
     /**
-     * <p>The result of turning on or turning off the main switch of the ARMS agent or the main switch status of the ARMS agent.</p>
+     * <p>The result of turning on or off the main switch of the ARMS agent or the main switch status of the ARMS agent. Indicates whether the request was successful. Valid values: success failed The main switch status of the ARMS agent. Valid values: true false</p>
      */
     @NameInMap("Data")
     public String data;

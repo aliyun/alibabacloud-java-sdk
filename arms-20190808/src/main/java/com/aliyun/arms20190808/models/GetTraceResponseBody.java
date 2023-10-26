@@ -200,28 +200,67 @@ public class GetTraceResponseBody extends TeaModel {
         /**
          * <p>The type of the remote procedure call (RPC) mode.</p>
          * <br>
-         * <p>*   0: HTTP entry</p>
-         * <p>*   25: HTTP call</p>
-         * <p>*   1: High-speed Service Framework (HSF) call</p>
-         * <p>*   2: HSF provision</p>
-         * <p>*   40: on-premises API call</p>
-         * <p>*   60: MySQL call</p>
-         * <p>*   62: Oracle call</p>
-         * <p>*   63: PostgreSQL call</p>
-         * <p>*   70: Redis call</p>
-         * <p>*   4: Taobao Distributed Data Layer (TDDL) call</p>
-         * <p>*   5: Tair call</p>
-         * <p>*   13: MetaQ message sending</p>
-         * <p>*   252: MetaQ message receiving</p>
-         * <p>*   3: notification sending</p>
-         * <p>*   254: notification receiving</p>
-         * <p>*   7: Apache Dubbo call</p>
-         * <p>*   8: Apache Dubbo provision</p>
-         * <p>*   19: SOFARPC call</p>
-         * <p>*   18: SOFARPC provision</p>
-         * <p>*   11: Distributed Service Framework (DSF) call</p>
-         * <p>*   12: DSF provision</p>
-         * <p>*   \-1: unknown call</p>
+         * <p>- 0 http</p>
+         * <p>- 25 http_client</p>
+         * <p>- 1 hsf_client</p>
+         * <p>- 2 hsf</p>
+         * <p>- 40 local</p>
+         * <p>- 41 async</p>
+         * <p>- 52 DB2</p>
+         * <p>- 53 Informix</p>
+         * <p>- 54 SequoiaDB</p>
+         * <p>- 55 Gbase</p>
+         * <p>- 56 GaussDB</p>
+         * <p>- 57 KingBase</p>
+         * <p>- 58 infuxdb</p>
+         * <p>- 59 clickhouse</p>
+         * <p>- 60 mysql</p>
+         * <p>- 61 mysql</p>
+         * <p>- 62 oracle</p>
+         * <p>- 63 postgresql</p>
+         * <p>- 64 mongodb</p>
+         * <p>- 65 ppas</p>
+         * <p>- 66 sqlserver</p>
+         * <p>- 67 mariadb</p>
+         * <p>- 68 dmdb</p>
+         * <p>- 69 oceanbase</p>
+         * <p>- 70 redis</p>
+         * <p>- 71 memcached</p>
+         * <p>- 72 elasticsearch</p>
+         * <p>- 73 kudu</p>
+         * <p>- 4 tddl</p>
+         * <p>- 5 tair</p>
+         * <p>- 13 mq_client</p>
+         * <p>- 252 mq</p>
+         * <p>- 23 kafka_client</p>
+         * <p>- 256 kafka</p>
+         * <p>- 3 notify_client</p>
+         * <p>- 254 notify</p>
+         * <p>- 7 dubbo_client</p>
+         * <p>- 8 dubbo</p>
+         * <p>- 11 dsf_client</p>
+         * <p>- 12 dsf</p>
+         * <p>- 9 grpc</p>
+         * <p>- 10 grpc_client</p>
+         * <p>- 16 thrift</p>
+         * <p>- 17 thrift_client</p>
+         * <p>- 18 sofa</p>
+         * <p>- 19 sofa_client</p>
+         * <p>- -1 unknown</p>
+         * <p>- 98 user_method</p>
+         * <p>- 100 root</p>
+         * <p>- 101 client</p>
+         * <p>- 102 server</p>
+         * <p>- 103 producer</p>
+         * <p>- 104 consumer</p>
+         * <p>- 105 db</p>
+         * <p>- 106 xtrace_other</p>
+         * <p>- 1301 schedulerx</p>
+         * <p>- 1302 XXL_Job</p>
+         * <p>- 1303 Spring_Scheduled</p>
+         * <p>- 1304 Quartz</p>
+         * <p>- 1305 ElasticJob</p>
+         * <p>- 1308 Jdk_Timer</p>
          */
         @NameInMap("RpcType")
         public Integer rpcType;
