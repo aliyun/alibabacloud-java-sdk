@@ -160,6 +160,36 @@ public class ApplyQueryResponseBody extends TeaModel {
 
     }
 
+    public static class ApplyQueryResponseBodyModuleCarRule extends TeaModel {
+        @NameInMap("scenario_template_id")
+        public String scenarioTemplateId;
+
+        @NameInMap("scenario_template_name")
+        public String scenarioTemplateName;
+
+        public static ApplyQueryResponseBodyModuleCarRule build(java.util.Map<String, ?> map) throws Exception {
+            ApplyQueryResponseBodyModuleCarRule self = new ApplyQueryResponseBodyModuleCarRule();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyQueryResponseBodyModuleCarRule setScenarioTemplateId(String scenarioTemplateId) {
+            this.scenarioTemplateId = scenarioTemplateId;
+            return this;
+        }
+        public String getScenarioTemplateId() {
+            return this.scenarioTemplateId;
+        }
+
+        public ApplyQueryResponseBodyModuleCarRule setScenarioTemplateName(String scenarioTemplateName) {
+            this.scenarioTemplateName = scenarioTemplateName;
+            return this;
+        }
+        public String getScenarioTemplateName() {
+            return this.scenarioTemplateName;
+        }
+
+    }
+
     public static class ApplyQueryResponseBodyModuleExternalTravelerListHotelCitys extends TeaModel {
         @NameInMap("city_code")
         public String cityCode;
@@ -689,6 +719,36 @@ public class ApplyQueryResponseBody extends TeaModel {
 
     }
 
+    public static class ApplyQueryResponseBodyModuleTravelerListCarCitySet extends TeaModel {
+        @NameInMap("city_code")
+        public String cityCode;
+
+        @NameInMap("city_name")
+        public String cityName;
+
+        public static ApplyQueryResponseBodyModuleTravelerListCarCitySet build(java.util.Map<String, ?> map) throws Exception {
+            ApplyQueryResponseBodyModuleTravelerListCarCitySet self = new ApplyQueryResponseBodyModuleTravelerListCarCitySet();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyQueryResponseBodyModuleTravelerListCarCitySet setCityCode(String cityCode) {
+            this.cityCode = cityCode;
+            return this;
+        }
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        public ApplyQueryResponseBodyModuleTravelerListCarCitySet setCityName(String cityName) {
+            this.cityName = cityName;
+            return this;
+        }
+        public String getCityName() {
+            return this.cityName;
+        }
+
+    }
+
     public static class ApplyQueryResponseBodyModuleTravelerListHotelCitys extends TeaModel {
         @NameInMap("city_code")
         public String cityCode;
@@ -734,6 +794,9 @@ public class ApplyQueryResponseBody extends TeaModel {
         @NameInMap("business_discount")
         public Integer businessDiscount;
 
+        @NameInMap("car_city_set")
+        public java.util.List<ApplyQueryResponseBodyModuleTravelerListCarCitySet> carCitySet;
+
         @NameInMap("economy_discount")
         public Integer economyDiscount;
 
@@ -772,6 +835,14 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
         public Integer getBusinessDiscount() {
             return this.businessDiscount;
+        }
+
+        public ApplyQueryResponseBodyModuleTravelerList setCarCitySet(java.util.List<ApplyQueryResponseBodyModuleTravelerListCarCitySet> carCitySet) {
+            this.carCitySet = carCitySet;
+            return this;
+        }
+        public java.util.List<ApplyQueryResponseBodyModuleTravelerListCarCitySet> getCarCitySet() {
+            return this.carCitySet;
         }
 
         public ApplyQueryResponseBodyModuleTravelerList setEconomyDiscount(Integer economyDiscount) {
@@ -860,6 +931,9 @@ public class ApplyQueryResponseBody extends TeaModel {
 
         @NameInMap("budget_merge")
         public Integer budgetMerge;
+
+        @NameInMap("car_rule")
+        public ApplyQueryResponseBodyModuleCarRule carRule;
 
         @NameInMap("corp_id")
         public String corpId;
@@ -992,6 +1066,14 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
         public Integer getBudgetMerge() {
             return this.budgetMerge;
+        }
+
+        public ApplyQueryResponseBodyModule setCarRule(ApplyQueryResponseBodyModuleCarRule carRule) {
+            this.carRule = carRule;
+            return this;
+        }
+        public ApplyQueryResponseBodyModuleCarRule getCarRule() {
+            return this.carRule;
         }
 
         public ApplyQueryResponseBodyModule setCorpId(String corpId) {

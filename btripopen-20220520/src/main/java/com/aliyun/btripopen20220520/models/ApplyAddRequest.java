@@ -10,6 +10,9 @@ public class ApplyAddRequest extends TeaModel {
     @NameInMap("budget_merge")
     public Integer budgetMerge;
 
+    @NameInMap("car_rule")
+    public ApplyAddRequestCarRule carRule;
+
     @NameInMap("corp_name")
     public String corpName;
 
@@ -125,6 +128,14 @@ public class ApplyAddRequest extends TeaModel {
     }
     public Integer getBudgetMerge() {
         return this.budgetMerge;
+    }
+
+    public ApplyAddRequest setCarRule(ApplyAddRequestCarRule carRule) {
+        this.carRule = carRule;
+        return this;
+    }
+    public ApplyAddRequestCarRule getCarRule() {
+        return this.carRule;
     }
 
     public ApplyAddRequest setCorpName(String corpName) {
@@ -373,6 +384,36 @@ public class ApplyAddRequest extends TeaModel {
     }
     public Long getVehicleBudget() {
         return this.vehicleBudget;
+    }
+
+    public static class ApplyAddRequestCarRule extends TeaModel {
+        @NameInMap("scenario_template_id")
+        public String scenarioTemplateId;
+
+        @NameInMap("scenario_template_name")
+        public String scenarioTemplateName;
+
+        public static ApplyAddRequestCarRule build(java.util.Map<String, ?> map) throws Exception {
+            ApplyAddRequestCarRule self = new ApplyAddRequestCarRule();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyAddRequestCarRule setScenarioTemplateId(String scenarioTemplateId) {
+            this.scenarioTemplateId = scenarioTemplateId;
+            return this;
+        }
+        public String getScenarioTemplateId() {
+            return this.scenarioTemplateId;
+        }
+
+        public ApplyAddRequestCarRule setScenarioTemplateName(String scenarioTemplateName) {
+            this.scenarioTemplateName = scenarioTemplateName;
+            return this;
+        }
+        public String getScenarioTemplateName() {
+            return this.scenarioTemplateName;
+        }
+
     }
 
     public static class ApplyAddRequestExternalTravelerList extends TeaModel {
@@ -997,6 +1038,36 @@ public class ApplyAddRequest extends TeaModel {
 
     }
 
+    public static class ApplyAddRequestTravelerStandardCarCitySet extends TeaModel {
+        @NameInMap("city_code")
+        public String cityCode;
+
+        @NameInMap("city_name")
+        public String cityName;
+
+        public static ApplyAddRequestTravelerStandardCarCitySet build(java.util.Map<String, ?> map) throws Exception {
+            ApplyAddRequestTravelerStandardCarCitySet self = new ApplyAddRequestTravelerStandardCarCitySet();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyAddRequestTravelerStandardCarCitySet setCityCode(String cityCode) {
+            this.cityCode = cityCode;
+            return this;
+        }
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        public ApplyAddRequestTravelerStandardCarCitySet setCityName(String cityName) {
+            this.cityName = cityName;
+            return this;
+        }
+        public String getCityName() {
+            return this.cityName;
+        }
+
+    }
+
     public static class ApplyAddRequestTravelerStandardHotelCitys extends TeaModel {
         @NameInMap("city_code")
         public String cityCode;
@@ -1042,6 +1113,9 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("business_discount")
         public Integer businessDiscount;
 
+        @NameInMap("car_city_set")
+        public java.util.List<ApplyAddRequestTravelerStandardCarCitySet> carCitySet;
+
         @NameInMap("economy_discount")
         public Integer economyDiscount;
 
@@ -1080,6 +1154,14 @@ public class ApplyAddRequest extends TeaModel {
         }
         public Integer getBusinessDiscount() {
             return this.businessDiscount;
+        }
+
+        public ApplyAddRequestTravelerStandard setCarCitySet(java.util.List<ApplyAddRequestTravelerStandardCarCitySet> carCitySet) {
+            this.carCitySet = carCitySet;
+            return this;
+        }
+        public java.util.List<ApplyAddRequestTravelerStandardCarCitySet> getCarCitySet() {
+            return this.carCitySet;
         }
 
         public ApplyAddRequestTravelerStandard setEconomyDiscount(Integer economyDiscount) {

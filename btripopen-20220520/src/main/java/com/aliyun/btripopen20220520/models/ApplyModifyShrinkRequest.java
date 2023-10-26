@@ -10,6 +10,9 @@ public class ApplyModifyShrinkRequest extends TeaModel {
     @NameInMap("budget_merge")
     public Integer budgetMerge;
 
+    @NameInMap("car_rule")
+    public String carRuleShrink;
+
     @NameInMap("corp_name")
     public String corpName;
 
@@ -122,6 +125,14 @@ public class ApplyModifyShrinkRequest extends TeaModel {
     }
     public Integer getBudgetMerge() {
         return this.budgetMerge;
+    }
+
+    public ApplyModifyShrinkRequest setCarRuleShrink(String carRuleShrink) {
+        this.carRuleShrink = carRuleShrink;
+        return this;
+    }
+    public String getCarRuleShrink() {
+        return this.carRuleShrink;
     }
 
     public ApplyModifyShrinkRequest setCorpName(String corpName) {
