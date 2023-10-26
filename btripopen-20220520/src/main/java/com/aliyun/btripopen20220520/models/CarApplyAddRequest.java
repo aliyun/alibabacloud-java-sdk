@@ -10,6 +10,9 @@ public class CarApplyAddRequest extends TeaModel {
     @NameInMap("city")
     public String city;
 
+    @NameInMap("city_code_set")
+    public String cityCodeSet;
+
     @NameInMap("date")
     public String date;
 
@@ -46,6 +49,9 @@ public class CarApplyAddRequest extends TeaModel {
     @NameInMap("title")
     public String title;
 
+    @NameInMap("traveler_standard")
+    public java.util.List<CarApplyAddRequestTravelerStandard> travelerStandard;
+
     @NameInMap("user_id")
     public String userId;
 
@@ -68,6 +74,14 @@ public class CarApplyAddRequest extends TeaModel {
     }
     public String getCity() {
         return this.city;
+    }
+
+    public CarApplyAddRequest setCityCodeSet(String cityCodeSet) {
+        this.cityCodeSet = cityCodeSet;
+        return this;
+    }
+    public String getCityCodeSet() {
+        return this.cityCodeSet;
     }
 
     public CarApplyAddRequest setDate(String date) {
@@ -166,12 +180,80 @@ public class CarApplyAddRequest extends TeaModel {
         return this.title;
     }
 
+    public CarApplyAddRequest setTravelerStandard(java.util.List<CarApplyAddRequestTravelerStandard> travelerStandard) {
+        this.travelerStandard = travelerStandard;
+        return this;
+    }
+    public java.util.List<CarApplyAddRequestTravelerStandard> getTravelerStandard() {
+        return this.travelerStandard;
+    }
+
     public CarApplyAddRequest setUserId(String userId) {
         this.userId = userId;
         return this;
     }
     public String getUserId() {
         return this.userId;
+    }
+
+    public static class CarApplyAddRequestTravelerStandardCarCitySet extends TeaModel {
+        @NameInMap("city_code")
+        public String cityCode;
+
+        @NameInMap("city_name")
+        public String cityName;
+
+        public static CarApplyAddRequestTravelerStandardCarCitySet build(java.util.Map<String, ?> map) throws Exception {
+            CarApplyAddRequestTravelerStandardCarCitySet self = new CarApplyAddRequestTravelerStandardCarCitySet();
+            return TeaModel.build(map, self);
+        }
+
+        public CarApplyAddRequestTravelerStandardCarCitySet setCityCode(String cityCode) {
+            this.cityCode = cityCode;
+            return this;
+        }
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        public CarApplyAddRequestTravelerStandardCarCitySet setCityName(String cityName) {
+            this.cityName = cityName;
+            return this;
+        }
+        public String getCityName() {
+            return this.cityName;
+        }
+
+    }
+
+    public static class CarApplyAddRequestTravelerStandard extends TeaModel {
+        @NameInMap("car_city_set")
+        public java.util.List<CarApplyAddRequestTravelerStandardCarCitySet> carCitySet;
+
+        @NameInMap("user_id")
+        public String userId;
+
+        public static CarApplyAddRequestTravelerStandard build(java.util.Map<String, ?> map) throws Exception {
+            CarApplyAddRequestTravelerStandard self = new CarApplyAddRequestTravelerStandard();
+            return TeaModel.build(map, self);
+        }
+
+        public CarApplyAddRequestTravelerStandard setCarCitySet(java.util.List<CarApplyAddRequestTravelerStandardCarCitySet> carCitySet) {
+            this.carCitySet = carCitySet;
+            return this;
+        }
+        public java.util.List<CarApplyAddRequestTravelerStandardCarCitySet> getCarCitySet() {
+            return this.carCitySet;
+        }
+
+        public CarApplyAddRequestTravelerStandard setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
     }
 
 }

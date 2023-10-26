@@ -333,6 +333,66 @@ public class CarApplyQueryResponseBody extends TeaModel {
 
     }
 
+    public static class CarApplyQueryResponseBodyApplyListTravelerStandardCarCitySet extends TeaModel {
+        @NameInMap("city_code")
+        public String cityCode;
+
+        @NameInMap("city_name")
+        public String cityName;
+
+        public static CarApplyQueryResponseBodyApplyListTravelerStandardCarCitySet build(java.util.Map<String, ?> map) throws Exception {
+            CarApplyQueryResponseBodyApplyListTravelerStandardCarCitySet self = new CarApplyQueryResponseBodyApplyListTravelerStandardCarCitySet();
+            return TeaModel.build(map, self);
+        }
+
+        public CarApplyQueryResponseBodyApplyListTravelerStandardCarCitySet setCityCode(String cityCode) {
+            this.cityCode = cityCode;
+            return this;
+        }
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        public CarApplyQueryResponseBodyApplyListTravelerStandardCarCitySet setCityName(String cityName) {
+            this.cityName = cityName;
+            return this;
+        }
+        public String getCityName() {
+            return this.cityName;
+        }
+
+    }
+
+    public static class CarApplyQueryResponseBodyApplyListTravelerStandard extends TeaModel {
+        @NameInMap("car_city_set")
+        public java.util.List<CarApplyQueryResponseBodyApplyListTravelerStandardCarCitySet> carCitySet;
+
+        @NameInMap("user_id")
+        public String userId;
+
+        public static CarApplyQueryResponseBodyApplyListTravelerStandard build(java.util.Map<String, ?> map) throws Exception {
+            CarApplyQueryResponseBodyApplyListTravelerStandard self = new CarApplyQueryResponseBodyApplyListTravelerStandard();
+            return TeaModel.build(map, self);
+        }
+
+        public CarApplyQueryResponseBodyApplyListTravelerStandard setCarCitySet(java.util.List<CarApplyQueryResponseBodyApplyListTravelerStandardCarCitySet> carCitySet) {
+            this.carCitySet = carCitySet;
+            return this;
+        }
+        public java.util.List<CarApplyQueryResponseBodyApplyListTravelerStandardCarCitySet> getCarCitySet() {
+            return this.carCitySet;
+        }
+
+        public CarApplyQueryResponseBodyApplyListTravelerStandard setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+    }
+
     public static class CarApplyQueryResponseBodyApplyList extends TeaModel {
         @NameInMap("approver_list")
         public java.util.List<CarApplyQueryResponseBodyApplyListApproverList> approverList;
@@ -360,6 +420,9 @@ public class CarApplyQueryResponseBody extends TeaModel {
 
         @NameInMap("thirdpart_id")
         public String thirdpartId;
+
+        @NameInMap("traveler_standard")
+        public java.util.List<CarApplyQueryResponseBodyApplyListTravelerStandard> travelerStandard;
 
         @NameInMap("trip_cause")
         public String tripCause;
@@ -448,6 +511,14 @@ public class CarApplyQueryResponseBody extends TeaModel {
         }
         public String getThirdpartId() {
             return this.thirdpartId;
+        }
+
+        public CarApplyQueryResponseBodyApplyList setTravelerStandard(java.util.List<CarApplyQueryResponseBodyApplyListTravelerStandard> travelerStandard) {
+            this.travelerStandard = travelerStandard;
+            return this;
+        }
+        public java.util.List<CarApplyQueryResponseBodyApplyListTravelerStandard> getTravelerStandard() {
+            return this.travelerStandard;
         }
 
         public CarApplyQueryResponseBodyApplyList setTripCause(String tripCause) {

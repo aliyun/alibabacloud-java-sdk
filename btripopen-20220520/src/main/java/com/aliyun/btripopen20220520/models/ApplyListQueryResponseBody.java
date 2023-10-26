@@ -160,6 +160,36 @@ public class ApplyListQueryResponseBody extends TeaModel {
 
     }
 
+    public static class ApplyListQueryResponseBodyModuleListCarRule extends TeaModel {
+        @NameInMap("scenario_template_id")
+        public String scenarioTemplateId;
+
+        @NameInMap("scenario_template_name")
+        public String scenarioTemplateName;
+
+        public static ApplyListQueryResponseBodyModuleListCarRule build(java.util.Map<String, ?> map) throws Exception {
+            ApplyListQueryResponseBodyModuleListCarRule self = new ApplyListQueryResponseBodyModuleListCarRule();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyListQueryResponseBodyModuleListCarRule setScenarioTemplateId(String scenarioTemplateId) {
+            this.scenarioTemplateId = scenarioTemplateId;
+            return this;
+        }
+        public String getScenarioTemplateId() {
+            return this.scenarioTemplateId;
+        }
+
+        public ApplyListQueryResponseBodyModuleListCarRule setScenarioTemplateName(String scenarioTemplateName) {
+            this.scenarioTemplateName = scenarioTemplateName;
+            return this;
+        }
+        public String getScenarioTemplateName() {
+            return this.scenarioTemplateName;
+        }
+
+    }
+
     public static class ApplyListQueryResponseBodyModuleListExternalTravelerList extends TeaModel {
         @NameInMap("user_name")
         public String userName;
@@ -448,7 +478,40 @@ public class ApplyListQueryResponseBody extends TeaModel {
 
     }
 
+    public static class ApplyListQueryResponseBodyModuleListTravelerListCarCitySet extends TeaModel {
+        @NameInMap("city_code")
+        public String cityCode;
+
+        @NameInMap("city_name")
+        public String cityName;
+
+        public static ApplyListQueryResponseBodyModuleListTravelerListCarCitySet build(java.util.Map<String, ?> map) throws Exception {
+            ApplyListQueryResponseBodyModuleListTravelerListCarCitySet self = new ApplyListQueryResponseBodyModuleListTravelerListCarCitySet();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyListQueryResponseBodyModuleListTravelerListCarCitySet setCityCode(String cityCode) {
+            this.cityCode = cityCode;
+            return this;
+        }
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        public ApplyListQueryResponseBodyModuleListTravelerListCarCitySet setCityName(String cityName) {
+            this.cityName = cityName;
+            return this;
+        }
+        public String getCityName() {
+            return this.cityName;
+        }
+
+    }
+
     public static class ApplyListQueryResponseBodyModuleListTravelerList extends TeaModel {
+        @NameInMap("car_city_set")
+        public java.util.List<ApplyListQueryResponseBodyModuleListTravelerListCarCitySet> carCitySet;
+
         @NameInMap("job_no")
         public String jobNo;
 
@@ -461,6 +524,14 @@ public class ApplyListQueryResponseBody extends TeaModel {
         public static ApplyListQueryResponseBodyModuleListTravelerList build(java.util.Map<String, ?> map) throws Exception {
             ApplyListQueryResponseBodyModuleListTravelerList self = new ApplyListQueryResponseBodyModuleListTravelerList();
             return TeaModel.build(map, self);
+        }
+
+        public ApplyListQueryResponseBodyModuleListTravelerList setCarCitySet(java.util.List<ApplyListQueryResponseBodyModuleListTravelerListCarCitySet> carCitySet) {
+            this.carCitySet = carCitySet;
+            return this;
+        }
+        public java.util.List<ApplyListQueryResponseBodyModuleListTravelerListCarCitySet> getCarCitySet() {
+            return this.carCitySet;
         }
 
         public ApplyListQueryResponseBodyModuleListTravelerList setJobNo(String jobNo) {
@@ -495,6 +566,9 @@ public class ApplyListQueryResponseBody extends TeaModel {
 
         @NameInMap("approver_list")
         public java.util.List<ApplyListQueryResponseBodyModuleListApproverList> approverList;
+
+        @NameInMap("car_rule")
+        public ApplyListQueryResponseBodyModuleListCarRule carRule;
 
         @NameInMap("corp_id")
         public String corpId;
@@ -590,6 +664,14 @@ public class ApplyListQueryResponseBody extends TeaModel {
         }
         public java.util.List<ApplyListQueryResponseBodyModuleListApproverList> getApproverList() {
             return this.approverList;
+        }
+
+        public ApplyListQueryResponseBodyModuleList setCarRule(ApplyListQueryResponseBodyModuleListCarRule carRule) {
+            this.carRule = carRule;
+            return this;
+        }
+        public ApplyListQueryResponseBodyModuleListCarRule getCarRule() {
+            return this.carRule;
         }
 
         public ApplyListQueryResponseBodyModuleList setCorpId(String corpId) {

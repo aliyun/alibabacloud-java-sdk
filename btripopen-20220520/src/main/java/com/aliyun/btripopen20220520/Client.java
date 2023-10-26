@@ -280,6 +280,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ApplyAddShrinkRequest request = new ApplyAddShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.carRule)) {
+            request.carRuleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.carRule, "car_rule", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.externalTravelerList)) {
             request.externalTravelerListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.externalTravelerList, "external_traveler_list", "json");
         }
@@ -315,6 +319,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.budgetMerge)) {
             body.put("budget_merge", request.budgetMerge);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.carRuleShrink)) {
+            body.put("car_rule", request.carRuleShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.corpName)) {
@@ -676,6 +684,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ApplyModifyShrinkRequest request = new ApplyModifyShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.carRule)) {
+            request.carRuleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.carRule, "car_rule", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.externalTravelerList)) {
             request.externalTravelerListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.externalTravelerList, "external_traveler_list", "json");
         }
@@ -711,6 +723,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.budgetMerge)) {
             body.put("budget_merge", request.budgetMerge);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.carRuleShrink)) {
+            body.put("car_rule", request.carRuleShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.corpName)) {
@@ -978,8 +994,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.btripBillInfoAdjustWithOptions(request, headers, runtime);
     }
 
-    public CarApplyAddResponse carApplyAddWithOptions(CarApplyAddRequest request, CarApplyAddHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CarApplyAddResponse carApplyAddWithOptions(CarApplyAddRequest tmpReq, CarApplyAddHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CarApplyAddShrinkRequest request = new CarApplyAddShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.travelerStandard)) {
+            request.travelerStandardShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.travelerStandard, "traveler_standard", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.cause)) {
             body.put("cause", request.cause);
@@ -987,6 +1009,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.city)) {
             body.put("city", request.city);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cityCodeSet)) {
+            body.put("city_code_set", request.cityCodeSet);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.date)) {
@@ -1035,6 +1061,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.title)) {
             body.put("title", request.title);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.travelerStandardShrink)) {
+            body.put("traveler_standard", request.travelerStandardShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {

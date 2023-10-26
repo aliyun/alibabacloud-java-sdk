@@ -10,6 +10,9 @@ public class ApplyModifyRequest extends TeaModel {
     @NameInMap("budget_merge")
     public Integer budgetMerge;
 
+    @NameInMap("car_rule")
+    public ApplyModifyRequestCarRule carRule;
+
     @NameInMap("corp_name")
     public String corpName;
 
@@ -122,6 +125,14 @@ public class ApplyModifyRequest extends TeaModel {
     }
     public Integer getBudgetMerge() {
         return this.budgetMerge;
+    }
+
+    public ApplyModifyRequest setCarRule(ApplyModifyRequestCarRule carRule) {
+        this.carRule = carRule;
+        return this;
+    }
+    public ApplyModifyRequestCarRule getCarRule() {
+        return this.carRule;
     }
 
     public ApplyModifyRequest setCorpName(String corpName) {
@@ -354,6 +365,36 @@ public class ApplyModifyRequest extends TeaModel {
     }
     public Long getVehicleBudget() {
         return this.vehicleBudget;
+    }
+
+    public static class ApplyModifyRequestCarRule extends TeaModel {
+        @NameInMap("scenario_template_id")
+        public String scenarioTemplateId;
+
+        @NameInMap("scenario_template_name")
+        public String scenarioTemplateName;
+
+        public static ApplyModifyRequestCarRule build(java.util.Map<String, ?> map) throws Exception {
+            ApplyModifyRequestCarRule self = new ApplyModifyRequestCarRule();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyModifyRequestCarRule setScenarioTemplateId(String scenarioTemplateId) {
+            this.scenarioTemplateId = scenarioTemplateId;
+            return this;
+        }
+        public String getScenarioTemplateId() {
+            return this.scenarioTemplateId;
+        }
+
+        public ApplyModifyRequestCarRule setScenarioTemplateName(String scenarioTemplateName) {
+            this.scenarioTemplateName = scenarioTemplateName;
+            return this;
+        }
+        public String getScenarioTemplateName() {
+            return this.scenarioTemplateName;
+        }
+
     }
 
     public static class ApplyModifyRequestExternalTravelerList extends TeaModel {
@@ -970,6 +1011,36 @@ public class ApplyModifyRequest extends TeaModel {
 
     }
 
+    public static class ApplyModifyRequestTravelerStandardCarCitySet extends TeaModel {
+        @NameInMap("city_code")
+        public String cityCode;
+
+        @NameInMap("city_name")
+        public String cityName;
+
+        public static ApplyModifyRequestTravelerStandardCarCitySet build(java.util.Map<String, ?> map) throws Exception {
+            ApplyModifyRequestTravelerStandardCarCitySet self = new ApplyModifyRequestTravelerStandardCarCitySet();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyModifyRequestTravelerStandardCarCitySet setCityCode(String cityCode) {
+            this.cityCode = cityCode;
+            return this;
+        }
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarCitySet setCityName(String cityName) {
+            this.cityName = cityName;
+            return this;
+        }
+        public String getCityName() {
+            return this.cityName;
+        }
+
+    }
+
     public static class ApplyModifyRequestTravelerStandardHotelCitys extends TeaModel {
         @NameInMap("city_code")
         public String cityCode;
@@ -1015,6 +1086,9 @@ public class ApplyModifyRequest extends TeaModel {
         @NameInMap("business_discount")
         public Integer businessDiscount;
 
+        @NameInMap("car_city_set")
+        public java.util.List<ApplyModifyRequestTravelerStandardCarCitySet> carCitySet;
+
         @NameInMap("economy_discount")
         public Integer economyDiscount;
 
@@ -1053,6 +1127,14 @@ public class ApplyModifyRequest extends TeaModel {
         }
         public Integer getBusinessDiscount() {
             return this.businessDiscount;
+        }
+
+        public ApplyModifyRequestTravelerStandard setCarCitySet(java.util.List<ApplyModifyRequestTravelerStandardCarCitySet> carCitySet) {
+            this.carCitySet = carCitySet;
+            return this;
+        }
+        public java.util.List<ApplyModifyRequestTravelerStandardCarCitySet> getCarCitySet() {
+            return this.carCitySet;
         }
 
         public ApplyModifyRequestTravelerStandard setEconomyDiscount(Integer economyDiscount) {
