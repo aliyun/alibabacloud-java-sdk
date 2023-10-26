@@ -359,6 +359,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("NodeGroups", request.nodeGroupsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchZoneId)) {
+            body.put("VSwitchZoneId", request.vSwitchZoneId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vpdSubnetsShrink)) {
             body.put("VpdSubnets", request.vpdSubnetsShrink);
         }
