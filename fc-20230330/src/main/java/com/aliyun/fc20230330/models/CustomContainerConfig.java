@@ -28,6 +28,9 @@ public class CustomContainerConfig extends TeaModel {
     @NameInMap("port")
     public Integer port;
 
+    @NameInMap("resolvedImageUri")
+    public String resolvedImageUri;
+
     public static CustomContainerConfig build(java.util.Map<String, ?> map) throws Exception {
         CustomContainerConfig self = new CustomContainerConfig();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class CustomContainerConfig extends TeaModel {
     }
     public Integer getPort() {
         return this.port;
+    }
+
+    public CustomContainerConfig setResolvedImageUri(String resolvedImageUri) {
+        this.resolvedImageUri = resolvedImageUri;
+        return this;
+    }
+    public String getResolvedImageUri() {
+        return this.resolvedImageUri;
     }
 
 }

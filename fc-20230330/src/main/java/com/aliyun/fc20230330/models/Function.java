@@ -61,6 +61,15 @@ public class Function extends TeaModel {
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
+    @NameInMap("lastUpdateStatus")
+    public String lastUpdateStatus;
+
+    @NameInMap("lastUpdateStatusReason")
+    public String lastUpdateStatusReason;
+
+    @NameInMap("lastUpdateStatusReasonCode")
+    public String lastUpdateStatusReasonCode;
+
     @NameInMap("layers")
     public java.util.List<FunctionLayer> layers;
 
@@ -81,6 +90,15 @@ public class Function extends TeaModel {
 
     @NameInMap("runtime")
     public String runtime;
+
+    @NameInMap("state")
+    public String state;
+
+    @NameInMap("stateReason")
+    public String stateReason;
+
+    @NameInMap("stateReasonCode")
+    public String stateReasonCode;
 
     @NameInMap("timeout")
     public Integer timeout;
@@ -248,6 +266,30 @@ public class Function extends TeaModel {
         return this.lastModifiedTime;
     }
 
+    public Function setLastUpdateStatus(String lastUpdateStatus) {
+        this.lastUpdateStatus = lastUpdateStatus;
+        return this;
+    }
+    public String getLastUpdateStatus() {
+        return this.lastUpdateStatus;
+    }
+
+    public Function setLastUpdateStatusReason(String lastUpdateStatusReason) {
+        this.lastUpdateStatusReason = lastUpdateStatusReason;
+        return this;
+    }
+    public String getLastUpdateStatusReason() {
+        return this.lastUpdateStatusReason;
+    }
+
+    public Function setLastUpdateStatusReasonCode(String lastUpdateStatusReasonCode) {
+        this.lastUpdateStatusReasonCode = lastUpdateStatusReasonCode;
+        return this;
+    }
+    public String getLastUpdateStatusReasonCode() {
+        return this.lastUpdateStatusReasonCode;
+    }
+
     public Function setLayers(java.util.List<FunctionLayer> layers) {
         this.layers = layers;
         return this;
@@ -302,6 +344,30 @@ public class Function extends TeaModel {
     }
     public String getRuntime() {
         return this.runtime;
+    }
+
+    public Function setState(String state) {
+        this.state = state;
+        return this;
+    }
+    public String getState() {
+        return this.state;
+    }
+
+    public Function setStateReason(String stateReason) {
+        this.stateReason = stateReason;
+        return this;
+    }
+    public String getStateReason() {
+        return this.stateReason;
+    }
+
+    public Function setStateReasonCode(String stateReasonCode) {
+        this.stateReasonCode = stateReasonCode;
+        return this;
+    }
+    public String getStateReasonCode() {
+        return this.stateReasonCode;
     }
 
     public Function setTimeout(Integer timeout) {
