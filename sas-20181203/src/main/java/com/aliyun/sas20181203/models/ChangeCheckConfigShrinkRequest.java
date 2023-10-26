@@ -13,6 +13,9 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
     @NameInMap("ConfigStandardIds")
     public String configStandardIdsShrink;
 
+    @NameInMap("Configure")
+    public String configure;
+
     @NameInMap("CycleDays")
     public java.util.List<Integer> cycleDays;
 
@@ -56,6 +59,9 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
     @NameInMap("StartTime")
     public Integer startTime;
 
+    @NameInMap("Vendors")
+    public java.util.List<String> vendors;
+
     public static ChangeCheckConfigShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ChangeCheckConfigShrinkRequest self = new ChangeCheckConfigShrinkRequest();
         return TeaModel.build(map, self);
@@ -83,6 +89,14 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
     }
     public String getConfigStandardIdsShrink() {
         return this.configStandardIdsShrink;
+    }
+
+    public ChangeCheckConfigShrinkRequest setConfigure(String configure) {
+        this.configure = configure;
+        return this;
+    }
+    public String getConfigure() {
+        return this.configure;
     }
 
     public ChangeCheckConfigShrinkRequest setCycleDays(java.util.List<Integer> cycleDays) {
@@ -147,6 +161,14 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
     }
     public Integer getStartTime() {
         return this.startTime;
+    }
+
+    public ChangeCheckConfigShrinkRequest setVendors(java.util.List<String> vendors) {
+        this.vendors = vendors;
+        return this;
+    }
+    public java.util.List<String> getVendors() {
+        return this.vendors;
     }
 
     public static class ChangeCheckConfigShrinkRequestAddedCheck extends TeaModel {

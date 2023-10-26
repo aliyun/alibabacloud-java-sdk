@@ -13,6 +13,9 @@ public class ChangeCheckConfigRequest extends TeaModel {
     @NameInMap("ConfigStandardIds")
     public ChangeCheckConfigRequestConfigStandardIds configStandardIds;
 
+    @NameInMap("Configure")
+    public String configure;
+
     @NameInMap("CycleDays")
     public java.util.List<Integer> cycleDays;
 
@@ -56,6 +59,9 @@ public class ChangeCheckConfigRequest extends TeaModel {
     @NameInMap("StartTime")
     public Integer startTime;
 
+    @NameInMap("Vendors")
+    public java.util.List<String> vendors;
+
     public static ChangeCheckConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ChangeCheckConfigRequest self = new ChangeCheckConfigRequest();
         return TeaModel.build(map, self);
@@ -83,6 +89,14 @@ public class ChangeCheckConfigRequest extends TeaModel {
     }
     public ChangeCheckConfigRequestConfigStandardIds getConfigStandardIds() {
         return this.configStandardIds;
+    }
+
+    public ChangeCheckConfigRequest setConfigure(String configure) {
+        this.configure = configure;
+        return this;
+    }
+    public String getConfigure() {
+        return this.configure;
     }
 
     public ChangeCheckConfigRequest setCycleDays(java.util.List<Integer> cycleDays) {
@@ -147,6 +161,14 @@ public class ChangeCheckConfigRequest extends TeaModel {
     }
     public Integer getStartTime() {
         return this.startTime;
+    }
+
+    public ChangeCheckConfigRequest setVendors(java.util.List<String> vendors) {
+        this.vendors = vendors;
+        return this;
+    }
+    public java.util.List<String> getVendors() {
+        return this.vendors;
     }
 
     public static class ChangeCheckConfigRequestAddedCheck extends TeaModel {
