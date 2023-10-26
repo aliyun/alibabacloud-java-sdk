@@ -22,6 +22,9 @@ public class GrafanaWorkspaceAccount extends TeaModel {
     @NameInMap("orgs")
     public java.util.List<GrafanaWorkspaceUserOrg> orgs;
 
+    @NameInMap("type")
+    public String type;
+
     public static GrafanaWorkspaceAccount build(java.util.Map<String, ?> map) throws Exception {
         GrafanaWorkspaceAccount self = new GrafanaWorkspaceAccount();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class GrafanaWorkspaceAccount extends TeaModel {
     }
     public java.util.List<GrafanaWorkspaceUserOrg> getOrgs() {
         return this.orgs;
+    }
+
+    public GrafanaWorkspaceAccount setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

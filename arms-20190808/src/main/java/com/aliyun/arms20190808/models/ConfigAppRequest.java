@@ -11,10 +11,10 @@ public class ConfigAppRequest extends TeaModel {
     public String appIds;
 
     /**
-     * <p>Specifies whether to turn on or turn off the main switch of the ARMS agent. The monitoring stops after the switch is turned off. If you do not specify this parameter, the main switch status of the ARMS agent is queried.</p>
+     * <p>Specifies whether to turn on or off the main switch of the ARMS agent. The monitoring stops after the switch is turned off. If you do not specify this parameter, the main switch status of the ARMS agent is queried.</p>
      * <br>
-     * <p>*   `true`</p>
-     * <p>*   `false`</p>
+     * <p>*   `true`: turns on the switch</p>
+     * <p>*   `false`: turns off the switch</p>
      */
     @NameInMap("Enable")
     public String enable;

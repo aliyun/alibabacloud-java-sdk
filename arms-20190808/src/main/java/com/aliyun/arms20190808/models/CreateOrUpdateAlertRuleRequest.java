@@ -185,6 +185,9 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     @NameInMap("Notice")
     public String notice;
 
+    @NameInMap("NotifyMode")
+    public String notifyMode;
+
     /**
      * <p>The notification policy.</p>
      * <br>
@@ -386,6 +389,14 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     }
     public String getNotice() {
         return this.notice;
+    }
+
+    public CreateOrUpdateAlertRuleRequest setNotifyMode(String notifyMode) {
+        this.notifyMode = notifyMode;
+        return this;
+    }
+    public String getNotifyMode() {
+        return this.notifyMode;
     }
 
     public CreateOrUpdateAlertRuleRequest setNotifyStrategy(String notifyStrategy) {

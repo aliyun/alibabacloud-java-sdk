@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>arms20190808</artifactId>
-  <version>5.2.2</version>
+  <version>5.3.0</version>
   <packaging>jar</packaging>
   <name>arms20190808</name>
   <description>Alibaba Cloud Application Real-Time Monitoring Service (20190808) SDK for Java
@@ -41,7 +41,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.20</version>
+      <version>0.2.21</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

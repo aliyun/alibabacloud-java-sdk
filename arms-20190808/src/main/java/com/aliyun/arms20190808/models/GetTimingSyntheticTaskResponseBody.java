@@ -183,8 +183,17 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         @NameInMap("IpType")
         public Integer ipType;
 
+        @NameInMap("IsOpenTrace")
+        public Boolean isOpenTrace;
+
         @NameInMap("MonitorSamples")
         public Integer monitorSamples;
+
+        @NameInMap("TraceClientType")
+        public Integer traceClientType;
+
+        @NameInMap("XtraceRegion")
+        public String xtraceRegion;
 
         public static GetTimingSyntheticTaskResponseBodyDataCommonSetting build(java.util.Map<String, ?> map) throws Exception {
             GetTimingSyntheticTaskResponseBodyDataCommonSetting self = new GetTimingSyntheticTaskResponseBodyDataCommonSetting();
@@ -207,12 +216,36 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             return this.ipType;
         }
 
+        public GetTimingSyntheticTaskResponseBodyDataCommonSetting setIsOpenTrace(Boolean isOpenTrace) {
+            this.isOpenTrace = isOpenTrace;
+            return this;
+        }
+        public Boolean getIsOpenTrace() {
+            return this.isOpenTrace;
+        }
+
         public GetTimingSyntheticTaskResponseBodyDataCommonSetting setMonitorSamples(Integer monitorSamples) {
             this.monitorSamples = monitorSamples;
             return this;
         }
         public Integer getMonitorSamples() {
             return this.monitorSamples;
+        }
+
+        public GetTimingSyntheticTaskResponseBodyDataCommonSetting setTraceClientType(Integer traceClientType) {
+            this.traceClientType = traceClientType;
+            return this;
+        }
+        public Integer getTraceClientType() {
+            return this.traceClientType;
+        }
+
+        public GetTimingSyntheticTaskResponseBodyDataCommonSetting setXtraceRegion(String xtraceRegion) {
+            this.xtraceRegion = xtraceRegion;
+            return this;
+        }
+        public String getXtraceRegion() {
+            return this.xtraceRegion;
         }
 
     }

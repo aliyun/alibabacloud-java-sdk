@@ -600,6 +600,9 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         @NameInMap("MetricsType")
         public String metricsType;
 
+        @NameInMap("NotifyMode")
+        public String notifyMode;
+
         /**
          * <p>The name of the notification policy.</p>
          */
@@ -786,6 +789,14 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         }
         public String getMetricsType() {
             return this.metricsType;
+        }
+
+        public CreateOrUpdateAlertRuleResponseBodyAlertRule setNotifyMode(String notifyMode) {
+            this.notifyMode = notifyMode;
+            return this;
+        }
+        public String getNotifyMode() {
+            return this.notifyMode;
         }
 
         public CreateOrUpdateAlertRuleResponseBodyAlertRule setNotifyStrategy(String notifyStrategy) {
