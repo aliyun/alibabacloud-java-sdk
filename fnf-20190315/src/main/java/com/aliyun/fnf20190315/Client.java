@@ -33,6 +33,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+      * ## [](#)Usage notes
+      * *   The number of flows that each user can create is restricted by resources. For more information, see [Limits](~~122093~~). If you want to create more flows, submit a ticket.
+      * *   At the user level, flows are distinguished by name. The name of a flow within one account must be unique.
+      *
+      * @param request CreateFlowRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateFlowResponse
+     */
     public CreateFlowResponse createFlowWithOptions(CreateFlowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -87,6 +96,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFlowResponse());
     }
 
+    /**
+      * ## [](#)Usage notes
+      * *   The number of flows that each user can create is restricted by resources. For more information, see [Limits](~~122093~~). If you want to create more flows, submit a ticket.
+      * *   At the user level, flows are distinguished by name. The name of a flow within one account must be unique.
+      *
+      * @param request CreateFlowRequest
+      * @return CreateFlowResponse
+     */
     public CreateFlowResponse createFlow(CreateFlowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createFlowWithOptions(request, runtime);
@@ -147,6 +164,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createScheduleWithOptions(request, runtime);
     }
 
+    /**
+      * ## [](#)Usage notes
+      * A delete operation is asynchronous. If this operation is successful, the system returns a successful response. If an existing flow is pending to be deleted, a new flow of the same name will not be affected by the existing one. After you delete a flow, you cannot query its historical executions. All executions in progress will stop after their most recent steps are complete.
+      *
+      * @param request DeleteFlowRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteFlowResponse
+     */
     public DeleteFlowResponse deleteFlowWithOptions(DeleteFlowRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -167,6 +192,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFlowResponse());
     }
 
+    /**
+      * ## [](#)Usage notes
+      * A delete operation is asynchronous. If this operation is successful, the system returns a successful response. If an existing flow is pending to be deleted, a new flow of the same name will not be affected by the existing one. After you delete a flow, you cannot query its historical executions. All executions in progress will stop after their most recent steps are complete.
+      *
+      * @param request DeleteFlowRequest
+      * @return DeleteFlowResponse
+     */
     public DeleteFlowResponse deleteFlow(DeleteFlowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteFlowWithOptions(request, runtime);
@@ -297,6 +329,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getExecutionHistoryWithOptions(request, runtime);
     }
 
+    /**
+      * ## [](#)Usage notes
+      * After you delete a flow, you cannot query its historical executions, even if you create a flow of the same name.
+      *
+      * @param request ListExecutionsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListExecutionsResponse
+     */
     public ListExecutionsResponse listExecutionsWithOptions(ListExecutionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -317,6 +357,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListExecutionsResponse());
     }
 
+    /**
+      * ## [](#)Usage notes
+      * After you delete a flow, you cannot query its historical executions, even if you create a flow of the same name.
+      *
+      * @param request ListExecutionsRequest
+      * @return ListExecutionsResponse
+     */
     public ListExecutionsResponse listExecutions(ListExecutionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listExecutionsWithOptions(request, runtime);
@@ -372,6 +419,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listSchedulesWithOptions(request, runtime);
     }
 
+    /**
+      * ## [](#)Usage notes
+      * You can use this operation to call back the task step of `pattern: waitForCallback`, which indicates that the current task fails to be executed.
+      *
+      * @param request ReportTaskFailedRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ReportTaskFailedResponse
+     */
     public ReportTaskFailedResponse reportTaskFailedWithOptions(ReportTaskFailedRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -410,11 +465,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReportTaskFailedResponse());
     }
 
+    /**
+      * ## [](#)Usage notes
+      * You can use this operation to call back the task step of `pattern: waitForCallback`, which indicates that the current task fails to be executed.
+      *
+      * @param request ReportTaskFailedRequest
+      * @return ReportTaskFailedResponse
+     */
     public ReportTaskFailedResponse reportTaskFailed(ReportTaskFailedRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.reportTaskFailedWithOptions(request, runtime);
     }
 
+    /**
+      * ## [](#)Usage notes
+      * You can use this operation to call back the task step of `pattern: waitForCallback`, which indicates that the current task is successfully executed.
+      *
+      * @param request ReportTaskSucceededRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ReportTaskSucceededResponse
+     */
     public ReportTaskSucceededResponse reportTaskSucceededWithOptions(ReportTaskSucceededRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -449,11 +519,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReportTaskSucceededResponse());
     }
 
+    /**
+      * ## [](#)Usage notes
+      * You can use this operation to call back the task step of `pattern: waitForCallback`, which indicates that the current task is successfully executed.
+      *
+      * @param request ReportTaskSucceededRequest
+      * @return ReportTaskSucceededResponse
+     */
     public ReportTaskSucceededResponse reportTaskSucceeded(ReportTaskSucceededRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.reportTaskSucceededWithOptions(request, runtime);
     }
 
+    /**
+      * ## [](#)Usage notes
+      * *   The flow is created.
+      * *   If you do not specify an execution, the system automatically generates an execution and starts the execution.
+      * *   If an ongoing execution has the same name as that of the execution to be started, the system directly returns the ongoing execution.
+      * *   If the ongoing execution with the same name has ended (succeeded or failed), the `ExecutionAlreadyExists` error is returned.
+      * *   If no execution with the same name exists, the system starts a new execution.
+      *
+      * @param request StartExecutionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StartExecutionResponse
+     */
     public StartExecutionResponse startExecutionWithOptions(StartExecutionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -496,11 +585,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartExecutionResponse());
     }
 
+    /**
+      * ## [](#)Usage notes
+      * *   The flow is created.
+      * *   If you do not specify an execution, the system automatically generates an execution and starts the execution.
+      * *   If an ongoing execution has the same name as that of the execution to be started, the system directly returns the ongoing execution.
+      * *   If the ongoing execution with the same name has ended (succeeded or failed), the `ExecutionAlreadyExists` error is returned.
+      * *   If no execution with the same name exists, the system starts a new execution.
+      *
+      * @param request StartExecutionRequest
+      * @return StartExecutionResponse
+     */
     public StartExecutionResponse startExecution(StartExecutionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startExecutionWithOptions(request, runtime);
     }
 
+    public StartSyncExecutionResponse startSyncExecutionWithOptions(StartSyncExecutionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
+            query.put("RequestId", request.requestId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.executionName)) {
+            body.put("ExecutionName", request.executionName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowName)) {
+            body.put("FlowName", request.flowName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            body.put("Input", request.input);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartSyncExecution"),
+            new TeaPair("version", "2019-03-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartSyncExecutionResponse());
+    }
+
+    public StartSyncExecutionResponse startSyncExecution(StartSyncExecutionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startSyncExecutionWithOptions(request, runtime);
+    }
+
+    /**
+      * ## [](#)Usage notes
+      * The flow must be in progress.
+      *
+      * @param request StopExecutionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StopExecutionResponse
+     */
     public StopExecutionResponse stopExecutionWithOptions(StopExecutionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -543,6 +694,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopExecutionResponse());
     }
 
+    /**
+      * ## [](#)Usage notes
+      * The flow must be in progress.
+      *
+      * @param request StopExecutionRequest
+      * @return StopExecutionResponse
+     */
     public StopExecutionResponse stopExecution(StopExecutionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopExecutionWithOptions(request, runtime);

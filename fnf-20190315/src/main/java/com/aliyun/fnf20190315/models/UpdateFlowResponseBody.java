@@ -4,33 +4,63 @@ package com.aliyun.fnf20190315.models;
 import com.aliyun.tea.*;
 
 public class UpdateFlowResponseBody extends TeaModel {
+    /**
+     * <p>The time when the flow was created.</p>
+     */
     @NameInMap("CreatedTime")
     public String createdTime;
 
+    /**
+     * <p>The definition of the flow.</p>
+     */
     @NameInMap("Definition")
     public String definition;
 
+    /**
+     * <p>The description of the flow.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The path of the external storage.</p>
+     */
     @NameInMap("ExternalStorageLocation")
     public String externalStorageLocation;
 
+    /**
+     * <p>The unique ID of the flow.</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The time when the flow was last modified.</p>
+     */
     @NameInMap("LastModifiedTime")
     public String lastModifiedTime;
 
+    /**
+     * <p>The name of the flow.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ARN of the RAM role.</p>
+     */
     @NameInMap("RoleArn")
     public String roleArn;
 
+    /**
+     * <p>The type of the flow.</p>
+     */
     @NameInMap("Type")
     public String type;
 

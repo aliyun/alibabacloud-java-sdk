@@ -4,30 +4,63 @@ package com.aliyun.fnf20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeExecutionResponseBody extends TeaModel {
+    /**
+     * <p>The definition of the flow.</p>
+     */
     @NameInMap("FlowDefinition")
     public String flowDefinition;
 
+    /**
+     * <p>The name of the flow.</p>
+     */
     @NameInMap("FlowName")
     public String flowName;
 
+    /**
+     * <p>The input of the execution, which is in the JSON format.</p>
+     */
     @NameInMap("Input")
     public String input;
 
+    /**
+     * <p>The name of the execution.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The execution result, which is in the JSON format.</p>
+     */
     @NameInMap("Output")
     public String output;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The time when the execution started.</p>
+     */
     @NameInMap("StartedTime")
     public String startedTime;
 
+    /**
+     * <p>The execution state. Valid values:</p>
+     * <br>
+     * <p>*   **Running**</p>
+     * <p>*   **Stopped**</p>
+     * <p>*   **Succeeded**</p>
+     * <p>*   **Failed**</p>
+     * <p>*   **TimedOut**</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The time when the execution stopped.</p>
+     */
     @NameInMap("StoppedTime")
     public String stoppedTime;
 

@@ -4,12 +4,21 @@ package com.aliyun.fnf20190315.models;
 import com.aliyun.tea.*;
 
 public class GetExecutionHistoryResponseBody extends TeaModel {
+    /**
+     * <p>The events.</p>
+     */
     @NameInMap("Events")
     public java.util.List<GetExecutionHistoryResponseBodyEvents> events;
 
+    /**
+     * <p>You do not need to specify this parameter for the first request. The returned value of **ScheduleEventId** is used as the token for the next query. No value is returned for the last query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,21 +52,61 @@ public class GetExecutionHistoryResponseBody extends TeaModel {
     }
 
     public static class GetExecutionHistoryResponseBodyEvents extends TeaModel {
+        /**
+         * <p>The details about the execution step.</p>
+         */
         @NameInMap("EventDetail")
         public String eventDetail;
 
+        /**
+         * <p>The ID of the execution step.</p>
+         */
         @NameInMap("EventId")
         public Long eventId;
 
+        /**
+         * <p>The ID of the scheduling step.</p>
+         */
         @NameInMap("ScheduleEventId")
         public Long scheduleEventId;
 
+        /**
+         * <p>The name of the execution step.</p>
+         */
         @NameInMap("StepName")
         public String stepName;
 
+        /**
+         * <p>The time when the event was updated.</p>
+         */
         @NameInMap("Time")
         public String time;
 
+        /**
+         * <p>The type of the execution step. Valid values:</p>
+         * <br>
+         * <p>*   **StepEntered**</p>
+         * <p>*   **StepStarted**</p>
+         * <p>*   **StepSucceeded**</p>
+         * <p>*   **StepFailed**</p>
+         * <p>*   **StepExited**</p>
+         * <p>*   **BranchEntered**</p>
+         * <p>*   **BranchExited**</p>
+         * <p>*   **IterationEntered**</p>
+         * <p>*   **IterationExited**</p>
+         * <p>*   **TaskScheduled**</p>
+         * <p>*   **TaskStarted**</p>
+         * <p>*   **TaskSubmitted**</p>
+         * <p>*   **TaskSubmitFailed**</p>
+         * <p>*   **TaskSucceeded**</p>
+         * <p>*   **TaskFailed**</p>
+         * <p>*   **TaskTimedOut**</p>
+         * <p>*   **ExecutionStarted**</p>
+         * <p>*   **ExecutionStopped**</p>
+         * <p>*   **ExecutionSucceeded**</p>
+         * <p>*   **ExecutionFailed**</p>
+         * <p>*   **ExecutionTimedOut**</p>
+         */
         @NameInMap("Type")
         public String type;
 

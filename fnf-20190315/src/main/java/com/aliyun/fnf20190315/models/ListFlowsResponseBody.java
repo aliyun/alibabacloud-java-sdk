@@ -4,12 +4,21 @@ package com.aliyun.fnf20190315.models;
 import com.aliyun.tea.*;
 
 public class ListFlowsResponseBody extends TeaModel {
+    /**
+     * <p>The details of flows.</p>
+     */
     @NameInMap("Flows")
     public java.util.List<ListFlowsResponseBodyFlows> flows;
 
+    /**
+     * <p>The start key for the next query. This parameter is not returned if all results have been returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,30 +52,57 @@ public class ListFlowsResponseBody extends TeaModel {
     }
 
     public static class ListFlowsResponseBodyFlows extends TeaModel {
+        /**
+         * <p>The time when the flow was created.</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>The definition of the flow. The definition must comply with the Flow Definition Language (FDL) syntax.</p>
+         */
         @NameInMap("Definition")
         public String definition;
 
+        /**
+         * <p>The description of the flow.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The execution mode or the enumeration type. Valid values: Express and Standard. The value Standard indicates an empty string.</p>
+         */
         @NameInMap("ExecutionMode")
         public String executionMode;
 
+        /**
+         * <p>The unique ID of the flow.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The time when the flow was last modified.</p>
+         */
         @NameInMap("LastModifiedTime")
         public String lastModifiedTime;
 
+        /**
+         * <p>The name of the flow.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role.</p>
+         */
         @NameInMap("RoleArn")
         public String roleArn;
 
+        /**
+         * <p>The type of the flow.</p>
+         */
         @NameInMap("Type")
         public String type;
 

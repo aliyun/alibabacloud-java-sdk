@@ -4,33 +4,63 @@ package com.aliyun.fnf20190315.models;
 import com.aliyun.tea.*;
 
 public class CreateFlowResponseBody extends TeaModel {
+    /**
+     * <p>The time when the flow was created.</p>
+     */
     @NameInMap("CreatedTime")
     public String createdTime;
 
+    /**
+     * <p>The definition of the flow.</p>
+     */
     @NameInMap("Definition")
     public String definition;
 
+    /**
+     * <p>The description of the flow.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The execution mode or the enumeration type. Valid values: Express and Standard. The value Standard indicates an empty string.</p>
+     */
     @NameInMap("ExecutionMode")
     public String executionMode;
 
+    /**
+     * <p>The unique ID of the flow.</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The time when the flow was last modified.</p>
+     */
     @NameInMap("LastModifiedTime")
     public String lastModifiedTime;
 
+    /**
+     * <p>The name of the flow.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The request ID. Each time an `HTTP status code` is returned, Serverless Workflow returns a value for the parameter.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ARN of the RAM role.</p>
+     */
     @NameInMap("RoleArn")
     public String roleArn;
 
+    /**
+     * <p>The type of the flow.</p>
+     */
     @NameInMap("Type")
     public String type;
 
