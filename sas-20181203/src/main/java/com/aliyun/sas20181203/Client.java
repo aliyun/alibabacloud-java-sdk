@@ -815,6 +815,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ConfigStandardIds", request.configStandardIdsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.configure)) {
+            query.put("Configure", request.configure);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cycleDays)) {
             query.put("CycleDays", request.cycleDays);
         }
@@ -845,6 +849,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vendors)) {
+            query.put("Vendors", request.vendors);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
