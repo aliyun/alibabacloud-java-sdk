@@ -16,6 +16,9 @@ public class ExtendClusterShrinkRequest extends TeaModel {
     @NameInMap("NodeGroups")
     public String nodeGroupsShrink;
 
+    @NameInMap("VSwitchZoneId")
+    public String vSwitchZoneId;
+
     @NameInMap("VpdSubnets")
     public String vpdSubnetsShrink;
 
@@ -54,6 +57,14 @@ public class ExtendClusterShrinkRequest extends TeaModel {
     }
     public String getNodeGroupsShrink() {
         return this.nodeGroupsShrink;
+    }
+
+    public ExtendClusterShrinkRequest setVSwitchZoneId(String vSwitchZoneId) {
+        this.vSwitchZoneId = vSwitchZoneId;
+        return this;
+    }
+    public String getVSwitchZoneId() {
+        return this.vSwitchZoneId;
     }
 
     public ExtendClusterShrinkRequest setVpdSubnetsShrink(String vpdSubnetsShrink) {

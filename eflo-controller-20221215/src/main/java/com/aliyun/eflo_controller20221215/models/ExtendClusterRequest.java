@@ -16,6 +16,9 @@ public class ExtendClusterRequest extends TeaModel {
     @NameInMap("NodeGroups")
     public java.util.List<ExtendClusterRequestNodeGroups> nodeGroups;
 
+    @NameInMap("VSwitchZoneId")
+    public String vSwitchZoneId;
+
     @NameInMap("VpdSubnets")
     public java.util.List<String> vpdSubnets;
 
@@ -54,6 +57,14 @@ public class ExtendClusterRequest extends TeaModel {
     }
     public java.util.List<ExtendClusterRequestNodeGroups> getNodeGroups() {
         return this.nodeGroups;
+    }
+
+    public ExtendClusterRequest setVSwitchZoneId(String vSwitchZoneId) {
+        this.vSwitchZoneId = vSwitchZoneId;
+        return this;
+    }
+    public String getVSwitchZoneId() {
+        return this.vSwitchZoneId;
     }
 
     public ExtendClusterRequest setVpdSubnets(java.util.List<String> vpdSubnets) {
@@ -358,6 +369,9 @@ public class ExtendClusterRequest extends TeaModel {
         @NameInMap("UserData")
         public String userData;
 
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         public static ExtendClusterRequestNodeGroups build(java.util.Map<String, ?> map) throws Exception {
             ExtendClusterRequestNodeGroups self = new ExtendClusterRequestNodeGroups();
             return TeaModel.build(map, self);
@@ -385,6 +399,14 @@ public class ExtendClusterRequest extends TeaModel {
         }
         public String getUserData() {
             return this.userData;
+        }
+
+        public ExtendClusterRequestNodeGroups setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }
