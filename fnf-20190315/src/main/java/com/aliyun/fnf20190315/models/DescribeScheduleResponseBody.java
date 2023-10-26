@@ -4,30 +4,60 @@ package com.aliyun.fnf20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeScheduleResponseBody extends TeaModel {
+    /**
+     * <p>The time when the time-based schedule was created.</p>
+     */
     @NameInMap("CreatedTime")
     public String createdTime;
 
+    /**
+     * <p>The CRON expression.</p>
+     */
     @NameInMap("CronExpression")
     public String cronExpression;
 
+    /**
+     * <p>The description of the time-based schedule.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Indicates whether the time-based schedule is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 
+    /**
+     * <p>The time when the time-based schedule was last modified.</p>
+     */
     @NameInMap("LastModifiedTime")
     public String lastModifiedTime;
 
+    /**
+     * <p>The trigger message of the time-based schedule.</p>
+     */
     @NameInMap("Payload")
     public String payload;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the time-based schedule.</p>
+     */
     @NameInMap("ScheduleId")
     public String scheduleId;
 
+    /**
+     * <p>The name of the time-based schedule.</p>
+     */
     @NameInMap("ScheduleName")
     public String scheduleName;
 

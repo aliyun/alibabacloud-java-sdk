@@ -4,9 +4,15 @@ package com.aliyun.fnf20190315.models;
 import com.aliyun.tea.*;
 
 public class ReportTaskSucceededResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the event.</p>
+     */
     @NameInMap("EventId")
     public Long eventId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

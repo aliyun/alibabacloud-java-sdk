@@ -4,6 +4,9 @@ package com.aliyun.fnf20190315.models;
 import com.aliyun.tea.*;
 
 public class DeleteFlowResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
