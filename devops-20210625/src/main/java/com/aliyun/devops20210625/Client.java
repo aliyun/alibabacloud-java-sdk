@@ -5936,6 +5936,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listWorkItemWorkFlowStatusWithOptions(organizationId, request, headers, runtime);
     }
 
+    public ListWorkitemAttachmentsResponse listWorkitemAttachmentsWithOptions(String organizationId, String workitemIdentifier, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListWorkitemAttachments"),
+            new TeaPair("version", "2021-06-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/organization/" + com.aliyun.openapiutil.Client.getEncodeParam(organizationId) + "/workitem/" + com.aliyun.openapiutil.Client.getEncodeParam(workitemIdentifier) + "/attachments"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListWorkitemAttachmentsResponse());
+    }
+
+    public ListWorkitemAttachmentsResponse listWorkitemAttachments(String organizationId, String workitemIdentifier) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listWorkitemAttachmentsWithOptions(organizationId, workitemIdentifier, headers, runtime);
+    }
+
     public ListWorkitemEstimateResponse listWorkitemEstimateWithOptions(String organizationId, String workitemId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
