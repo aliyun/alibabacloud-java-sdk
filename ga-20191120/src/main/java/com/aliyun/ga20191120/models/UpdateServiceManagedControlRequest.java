@@ -27,17 +27,17 @@ public class UpdateServiceManagedControlRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The type of the resource whose control mode you want to change. Valid value:</p>
+     * <p>The type of the resource whose control mode you want to change.</p>
      * <br>
-     * <p>*   **Accelerator**: standard GA instance.</p>
+     * <p>*   Set the value to **Accelerator**, which specifies a standard GA instance.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>Specifies the control mode of the resource. Valid value:</p>
+     * <p>The control mode of the resource.</p>
      * <br>
-     * <p>*   false: changes the control mode of the resource from managed mode to unmanaged mode.</p>
+     * <p>*   Set the value to false, which changes the control mode of the resource from managed mode to unmanaged mode.</p>
      * <br>
      * <p>>  You can change the control mode only from managed mode to unmanaged mode.</p>
      */

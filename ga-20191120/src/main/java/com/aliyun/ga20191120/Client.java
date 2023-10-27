@@ -8750,8 +8750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   This operation is applicable only to **managed** Global Accelerator (GA) instances.
       * *   After you change the control mode of a GA instance from managed mode to unmanaged mode, you cannot change the mode of the instance to managed mode.
       * *   After you change the control mode of a GA instance from managed mode to unmanaged mode, you can obtain all operation permissions on the instance.
-      *     **
-      *     **Warning** If you change or delete a configuration of a GA instance whose control mode is changed from managed mode to unmanaged mode, the cloud services that depend on the instance may not work as expected. Proceed with caution.
+      *   <warning>If you change or delete a configuration of a GA instance whose control mode is changed from managed mode to unmanaged mode, the cloud services that depend on the instance may not work as expected. Proceed with caution.></warning>
       *
       * @param request UpdateServiceManagedControlRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8801,8 +8800,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   This operation is applicable only to **managed** Global Accelerator (GA) instances.
       * *   After you change the control mode of a GA instance from managed mode to unmanaged mode, you cannot change the mode of the instance to managed mode.
       * *   After you change the control mode of a GA instance from managed mode to unmanaged mode, you can obtain all operation permissions on the instance.
-      *     **
-      *     **Warning** If you change or delete a configuration of a GA instance whose control mode is changed from managed mode to unmanaged mode, the cloud services that depend on the instance may not work as expected. Proceed with caution.
+      *   <warning>If you change or delete a configuration of a GA instance whose control mode is changed from managed mode to unmanaged mode, the cloud services that depend on the instance may not work as expected. Proceed with caution.></warning>
       *
       * @param request UpdateServiceManagedControlRequest
       * @return UpdateServiceManagedControlResponse

@@ -39,28 +39,31 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
 
     public static class ListAvailableBusiRegionsResponseBodyRegions extends TeaModel {
         /**
-         * <p>Whether China Mainland.</p>
+         * <p>Indicates whether the region is in the Chinese mainland. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("ChinaMainland")
         public Boolean chinaMainland;
 
         /**
-         * <p>The name of the region.</p>
+         * <p>The region name.</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
-         * <p>Indicates whether the region is a point of presence (PoP). Valid values:</p>
+         * <p>Indicates whether the region is a point of presence (PoP) of Alibaba Cloud. Valid values:</p>
          * <br>
-         * <p>*   **true**: The region is a PoP.</p>
-         * <p>*   **false**: The region is not a PoP.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("Pop")
         public Boolean pop;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

@@ -667,6 +667,9 @@ public class CreateListenerRequest extends TeaModel {
         @NameInMap("Endpoint")
         public String endpoint;
 
+        @NameInMap("SubAddress")
+        public String subAddress;
+
         /**
          * <p>The endpoint type of the intelligent routing listener. Valid values:</p>
          * <br>
@@ -720,6 +723,14 @@ public class CreateListenerRequest extends TeaModel {
         }
         public String getEndpoint() {
             return this.endpoint;
+        }
+
+        public CreateListenerRequestEndpointGroupConfigurationsEndpointConfigurations setSubAddress(String subAddress) {
+            this.subAddress = subAddress;
+            return this;
+        }
+        public String getSubAddress() {
+            return this.subAddress;
         }
 
         public CreateListenerRequestEndpointGroupConfigurationsEndpointConfigurations setType(String type) {
