@@ -240,6 +240,77 @@ public class CreateEndpointGroupsRequest extends TeaModel {
 
     }
 
+    public static class CreateEndpointGroupsRequestEndpointGroupConfigurationsSystemTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Scope")
+        public String scope;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEndpointGroupsRequestEndpointGroupConfigurationsSystemTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateEndpointGroupsRequestEndpointGroupConfigurationsSystemTag self = new CreateEndpointGroupsRequestEndpointGroupConfigurationsSystemTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEndpointGroupsRequestEndpointGroupConfigurationsSystemTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateEndpointGroupsRequestEndpointGroupConfigurationsSystemTag setScope(String scope) {
+            this.scope = scope;
+            return this;
+        }
+        public String getScope() {
+            return this.scope;
+        }
+
+        public CreateEndpointGroupsRequestEndpointGroupConfigurationsSystemTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateEndpointGroupsRequestEndpointGroupConfigurationsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEndpointGroupsRequestEndpointGroupConfigurationsTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateEndpointGroupsRequestEndpointGroupConfigurationsTag self = new CreateEndpointGroupsRequestEndpointGroupConfigurationsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEndpointGroupsRequestEndpointGroupConfigurationsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateEndpointGroupsRequestEndpointGroupConfigurationsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class CreateEndpointGroupsRequestEndpointGroupConfigurations extends TeaModel {
         /**
          * <p>Specifies whether to use the proxy protocol to preserve client IP addresses. Default value: false. Valid values:</p>
@@ -378,6 +449,12 @@ public class CreateEndpointGroupsRequest extends TeaModel {
         @NameInMap("PortOverrides")
         public java.util.List<CreateEndpointGroupsRequestEndpointGroupConfigurationsPortOverrides> portOverrides;
 
+        @NameInMap("SystemTag")
+        public java.util.List<CreateEndpointGroupsRequestEndpointGroupConfigurationsSystemTag> systemTag;
+
+        @NameInMap("Tag")
+        public java.util.List<CreateEndpointGroupsRequestEndpointGroupConfigurationsTag> tag;
+
         /**
          * <p>The number of consecutive health check failures that must occur before a healthy endpoint group is considered unhealthy, or the number of consecutive health check successes that must occur before an unhealthy endpoint group is considered healthy.</p>
          * <br>
@@ -513,6 +590,22 @@ public class CreateEndpointGroupsRequest extends TeaModel {
         }
         public java.util.List<CreateEndpointGroupsRequestEndpointGroupConfigurationsPortOverrides> getPortOverrides() {
             return this.portOverrides;
+        }
+
+        public CreateEndpointGroupsRequestEndpointGroupConfigurations setSystemTag(java.util.List<CreateEndpointGroupsRequestEndpointGroupConfigurationsSystemTag> systemTag) {
+            this.systemTag = systemTag;
+            return this;
+        }
+        public java.util.List<CreateEndpointGroupsRequestEndpointGroupConfigurationsSystemTag> getSystemTag() {
+            return this.systemTag;
+        }
+
+        public CreateEndpointGroupsRequestEndpointGroupConfigurations setTag(java.util.List<CreateEndpointGroupsRequestEndpointGroupConfigurationsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<CreateEndpointGroupsRequestEndpointGroupConfigurationsTag> getTag() {
+            return this.tag;
         }
 
         public CreateEndpointGroupsRequestEndpointGroupConfigurations setThresholdCount(Long thresholdCount) {
