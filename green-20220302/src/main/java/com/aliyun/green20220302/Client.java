@@ -46,6 +46,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public DescribeImageModerationResultResponse describeImageModerationResultWithOptions(DescribeImageModerationResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.reqId)) {
+            query.put("ReqId", request.reqId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeImageModerationResult"),
+            new TeaPair("version", "2022-03-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeImageModerationResultResponse());
+    }
+
+    public DescribeImageModerationResultResponse describeImageModerationResult(DescribeImageModerationResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeImageModerationResultWithOptions(request, runtime);
+    }
+
     public DescribeImageResultExtResponse describeImageResultExtWithOptions(DescribeImageResultExtRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -98,6 +127,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeUploadTokenResponse describeUploadToken() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeUploadTokenWithOptions(runtime);
+    }
+
+    public ImageAsyncModerationResponse imageAsyncModerationWithOptions(ImageAsyncModerationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.service)) {
+            query.put("Service", request.service);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceParameters)) {
+            query.put("ServiceParameters", request.serviceParameters);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ImageAsyncModeration"),
+            new TeaPair("version", "2022-03-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ImageAsyncModerationResponse());
+    }
+
+    public ImageAsyncModerationResponse imageAsyncModeration(ImageAsyncModerationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.imageAsyncModerationWithOptions(request, runtime);
     }
 
     public ImageModerationResponse imageModerationWithOptions(ImageModerationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
