@@ -11,7 +11,7 @@ public class UnlockUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the call.</p>
+     * <p>An array that consists of information about the result of the call.</p>
      */
     @NameInMap("Results")
     public java.util.List<UnlockUsersResponseBodyResults> results;
@@ -39,7 +39,7 @@ public class UnlockUsersResponseBody extends TeaModel {
 
     public static class UnlockUsersResponseBodyResults extends TeaModel {
         /**
-         * <p>The return code that indicates whether the call was successful. Valid values:</p>
+         * <p>The result of the call. Valid values:</p>
          * <br>
          * <p>*   **OK**: The call was successful.</p>
          * <br>
@@ -47,11 +47,15 @@ public class UnlockUsersResponseBody extends TeaModel {
          * <br>
          * <p>*   **INVALID_ARGUMENT**: A request parameter is invalid.</p>
          * <br>
-         * <p>> Make sure that the request parameters are valid and call the operation again.</p>
+         * <p>    **</p>
+         * <br>
+         * <p>    **Note**Make sure that the request parameters are valid and call the operation again.</p>
          * <br>
          * <p>*   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.</p>
          * <br>
-         * <p>> Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.</p>
+         * <p>    **</p>
+         * <br>
+         * <p>    **Note**Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.</p>
          * <br>
          * <p>*   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.</p>
          */

@@ -4,15 +4,9 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ModifyHostsActiveAddressTypeResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The result of the call.</p>
-     */
     @NameInMap("Results")
     public java.util.List<ModifyHostsActiveAddressTypeResponseBodyResults> results;
 
@@ -38,27 +32,12 @@ public class ModifyHostsActiveAddressTypeResponseBody extends TeaModel {
     }
 
     public static class ModifyHostsActiveAddressTypeResponseBodyResults extends TeaModel {
-        /**
-         * <p>The return code that indicates whether the call was successful. Valid values:</p>
-         * <br>
-         * <p>*   **OK**: The call was successful.</p>
-         * <p>*   **UNEXPECTED**: An unknown error occurred.</p>
-         * <p>*   **INVALID_ARGUMENT**: A request parameter is invalid.</p>
-         * <p>*   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.</p>
-         * <p>*   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The ID of the host.</p>
-         */
         @NameInMap("HostId")
         public String hostId;
 
-        /**
-         * <p>This parameter is deprecated.</p>
-         */
         @NameInMap("Message")
         public String message;
 

@@ -7,7 +7,7 @@ public class DeleteHostShareKeyRequest extends TeaModel {
     /**
      * <p>The ID of the shared key.</p>
      * <br>
-     * <p>>  You must specify this parameter.</p>
+     * <p>> You must specify this parameter.</p>
      */
     @NameInMap("HostShareKeyId")
     public String hostShareKeyId;

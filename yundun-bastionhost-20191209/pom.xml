@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>yundun_bastionhost20191209</artifactId>
-  <version>1.0.4</version>
+  <version>1.1.0</version>
   <packaging>jar</packaging>
   <name>yundun_bastionhost20191209</name>
   <description>Alibaba Cloud Yundun-bastionhost (20191209) SDK for Java
@@ -41,7 +41,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.16</version>
+      <version>0.2.21</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

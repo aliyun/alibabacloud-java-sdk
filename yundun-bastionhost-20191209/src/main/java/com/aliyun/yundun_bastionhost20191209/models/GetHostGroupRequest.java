@@ -5,25 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetHostGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the host group that you want to query.</p>
+     * <p>The region ID of the Bastionhost instance where you want to query the host group.</p>
      * <br>
-     * <p>>  You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.</p>
+     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
      */
     @NameInMap("HostGroupId")
     public String hostGroupId;
 
     /**
-     * <p>The ID of the Bastionhost instance where you want to query the host group.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
+     * <p>MyHostGroup</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The region ID of the Bastionhost instance where you want to query the host group.</p>
+     * <p>The ID of the Bastionhost instance where you want to query the host group.</p>
      * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

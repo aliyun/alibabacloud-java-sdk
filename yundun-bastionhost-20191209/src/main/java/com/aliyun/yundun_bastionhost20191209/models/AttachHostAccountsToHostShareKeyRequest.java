@@ -7,7 +7,7 @@ public class AttachHostAccountsToHostShareKeyRequest extends TeaModel {
     /**
      * <p>The IDs of the host accounts.</p>
      * <br>
-     * <p>>  You must specify this parameter.</p>
+     * <p>> You must specify this parameter.</p>
      */
     @NameInMap("HostAccountIds")
     public String hostAccountIds;
@@ -15,7 +15,7 @@ public class AttachHostAccountsToHostShareKeyRequest extends TeaModel {
     /**
      * <p>The ID of the shared key.</p>
      * <br>
-     * <p>>  You must specify this parameter.</p>
+     * <p>> You must specify this parameter.</p>
      */
     @NameInMap("HostShareKeyId")
     public String hostShareKeyId;

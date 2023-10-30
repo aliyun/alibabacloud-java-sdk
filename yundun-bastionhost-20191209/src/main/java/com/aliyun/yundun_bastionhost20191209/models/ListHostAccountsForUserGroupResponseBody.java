@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
     /**
-     * <p>The host accounts returned.</p>
+     * <p>An array that consists of the queried host accounts.</p>
      */
     @NameInMap("HostAccounts")
     public java.util.List<ListHostAccountsForUserGroupResponseBodyHostAccounts> hostAccounts;
@@ -17,7 +17,7 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of host accounts returned.</p>
+     * <p>The total number of host accounts that were queried.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -73,14 +73,14 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the user group is authorized to manage the host account. Valid values:</p>
          * <br>
-         * <p>*   **true**: The user group is authorized to manage the host account.</p>
-         * <p>*   **false**: The user group is not authorized to manage the host account.</p>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
          */
         @NameInMap("IsAuthorized")
         public Boolean isAuthorized;
 
         /**
-         * <p>The protocol that is used by the host account. Valid values:</p>
+         * <p>The protocol that is used by the host. Valid values:</p>
          * <br>
          * <p>*   **SSH**</p>
          * <p>*   **RDP**</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHostGroupAccountNamesForUserResponseBody extends TeaModel {
     /**
-     * <p>The names of host accounts returned.</p>
+     * <p>An array that consists of the names of host accounts.</p>
      */
     @NameInMap("HostAccountNames")
     public java.util.List<String> hostAccountNames;

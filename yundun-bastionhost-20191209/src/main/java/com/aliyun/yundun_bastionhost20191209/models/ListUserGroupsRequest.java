@@ -4,40 +4,18 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListUserGroupsRequest extends TeaModel {
-    /**
-     * <p>The ID of the bastion host on which you want to query user groups.</p>
-     * <br>
-     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The number of the page to return. Default value: **1**.</p>
-     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
-    /**
-     * <p>The number of entries to return on each page.\</p>
-     * <p>Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>> We recommend that you do not leave this parameter empty.</p>
-     */
     @NameInMap("PageSize")
     public String pageSize;
 
-    /**
-     * <p>The region ID of the bastion host on which you want to query user groups.</p>
-     * <br>
-     * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The name of the user group that you want to query. Only exact match is supported.</p>
-     */
     @NameInMap("UserGroupName")
     public String userGroupName;
 

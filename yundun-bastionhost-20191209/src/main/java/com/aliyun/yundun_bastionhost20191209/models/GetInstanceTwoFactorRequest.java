@@ -5,17 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetInstanceTwoFactorRequest extends TeaModel {
     /**
-     * <p>The ID of the bastion host to query.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The region ID of the bastion host to query.</p>
-     * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <p>The operation that you want to perform. Set the value to **GetInstanceTwoFactor**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

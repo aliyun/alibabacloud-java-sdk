@@ -125,7 +125,7 @@ public class AttachHostAccountsToUserGroupResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The ID of the group.</p>
+         * <p>The ID of the user group.</p>
          */
         @NameInMap("UserGroupId")
         public String userGroupId;

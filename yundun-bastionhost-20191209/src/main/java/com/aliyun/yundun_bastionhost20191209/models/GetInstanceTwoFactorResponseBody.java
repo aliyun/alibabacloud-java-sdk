@@ -11,7 +11,9 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
     public GetInstanceTwoFactorResponseBodyConfig config;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The duration within which two-factor authentication is not required after a local user passes two-factor authentication. Valid values: `0 to 168`. Unit: hours.</p>
+     * <br>
+     * <p>>  If 0 is returned, a local user must pass two-factor authentication every time the local user logs on to the bastion host.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,25 +41,14 @@ public class GetInstanceTwoFactorResponseBody extends TeaModel {
 
     public static class GetInstanceTwoFactorResponseBodyConfig extends TeaModel {
         /**
-         * <p>Indicates whether two-factor authentication is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**: enabled</p>
-         * <p>*   **false**: disabled</p>
+         * <p>Queries the settings of two-factor authentication on a bastion host.</p>
          */
         @NameInMap("EnableTwoFactor")
         public Boolean enableTwoFactor;
 
-        /**
-         * <p>The duration within which two-factor authentication is not required after a local user passes two-factor authentication. Valid values: `0 to 168`. Unit: hours.</p>
-         * <br>
-         * <p>>  If 0 is returned, a local user must pass two-factor authentication every time the local user logs on to the bastion host.</p>
-         */
         @NameInMap("SkipTwoFactorTime")
         public Long skipTwoFactorTime;
 
-        /**
-         * <p>Indicates one or more methods that are used to send verification codes if two-factor authentication is enabled.</p>
-         */
         @NameInMap("TwoFactorMethods")
         public java.util.List<String> twoFactorMethods;
 

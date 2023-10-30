@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
     /**
-     * <p>The IDs of the bastion hosts.</p>
+     * <p>An array that consists of the IDs of the bastion hosts.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The state of the bastion host. Valid values:</p>
+     * <p>The status of the bastion host. Valid values:</p>
      * <br>
      * <p>*   **PENDING**: The bastion host is not initialized.</p>
      * <p>*   **CREATING**: The bastion host is being created.</p>
@@ -49,7 +49,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags.</p>
+     * <p>An array consisting of the tags that are added to the bastion hosts.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeInstancesRequestTag> tag;
@@ -117,13 +117,13 @@ public class DescribeInstancesRequest extends TeaModel {
 
     public static class DescribeInstancesRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the bastion host.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value of the bastion host.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("Value")
         public String value;

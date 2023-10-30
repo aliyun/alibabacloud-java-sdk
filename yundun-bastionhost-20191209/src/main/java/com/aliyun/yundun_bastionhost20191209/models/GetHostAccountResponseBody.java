@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHostAccountResponseBody extends TeaModel {
     /**
-     * <p>The details of the host account that were queried.</p>
+     * <p>The details of the host account that was queried.</p>
      */
     @NameInMap("HostAccount")
     public GetHostAccountResponseBodyHostAccount hostAccount;
@@ -39,10 +39,10 @@ public class GetHostAccountResponseBody extends TeaModel {
 
     public static class GetHostAccountResponseBodyHostAccount extends TeaModel {
         /**
-         * <p>Indicates whether a password is set for the host account. Valid values:</p>
+         * <p>Indicates whether a password is configured for the host account. Valid values:</p>
          * <br>
-         * <p>*   **true**: indicates that a password is set for the host account.</p>
-         * <p>*   **false**: indicates that no password is set for the host account.</p>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
          */
         @NameInMap("HasPassword")
         public Boolean hasPassword;
@@ -84,7 +84,7 @@ public class GetHostAccountResponseBody extends TeaModel {
         public String privateKeyFingerprint;
 
         /**
-         * <p>The protocol used by the host account. Valid values:</p>
+         * <p>The protocol that is used by the host. Valid values:</p>
          * <br>
          * <p>*   **SSH**</p>
          * <p>*   **RDP**</p>

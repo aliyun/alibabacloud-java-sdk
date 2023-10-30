@@ -17,7 +17,7 @@ public class ListTagKeysRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the Bastionhost instance.</p>
+     * <p>The region ID of the bastion host.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -25,7 +25,7 @@ public class ListTagKeysRequest extends TeaModel {
     /**
      * <p>The type of the resource.</p>
      * <br>
-     * <p>Set the value to INSTANCE, which indicates that the resource is a Bastionhost instance.</p>
+     * <p>Set the value to INSTANCE, which indicates that the resource is a bastion host.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

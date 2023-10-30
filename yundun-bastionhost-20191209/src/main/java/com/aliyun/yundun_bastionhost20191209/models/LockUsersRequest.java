@@ -7,7 +7,7 @@ public class LockUsersRequest extends TeaModel {
     /**
      * <p>The ID of the bastion host to which the users to be locked belong.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
+     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -15,7 +15,7 @@ public class LockUsersRequest extends TeaModel {
     /**
      * <p>The region ID of the bastion host to which the users to be locked belong.</p>
      * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -23,7 +23,7 @@ public class LockUsersRequest extends TeaModel {
     /**
      * <p>The ID of the user to be locked. The value is a JSON string. You can add up to 100 user IDs. If you specify multiple IDs, separate the IDs with commas (,).</p>
      * <br>
-     * <p>>  You can call the [ListUsers](~~204522~~) operation to query the IDs of users.</p>
+     * <p>> You can call the [ListUsers](~~204522~~) operation to query the ID of the user.</p>
      */
     @NameInMap("UserIds")
     public String userIds;

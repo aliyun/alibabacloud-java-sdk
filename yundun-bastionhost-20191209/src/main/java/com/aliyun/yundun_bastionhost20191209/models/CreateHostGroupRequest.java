@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHostGroupRequest extends TeaModel {
     /**
-     * <p>The description of the host group. The value can be up to 500 characters in length.</p>
+     * <p>The description of the host group. The description can be up to 500 characters in length.</p>
      */
     @NameInMap("Comment")
     public String comment;
@@ -17,17 +17,19 @@ public class CreateHostGroupRequest extends TeaModel {
     public String hostGroupName;
 
     /**
-     * <p>The ID of the Bastionhost instance where you want to create the host group.</p>
+     * <p>The ID of the bastion host on which you want to create a host group.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
+     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The region ID of the Bastionhost instance where you want to create the host group.</p>
+     * <p>The region ID of the bastion host on which you want to create a host group.</p>
      * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <p>**</p>
+     * <br>
+     * <p>**For more information about the mapping between region IDs and region names, see **Regions and zones[.](~~40654~~)</p>
      */
     @NameInMap("RegionId")
     public String regionId;

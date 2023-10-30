@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class ModifyHostRequest extends TeaModel {
     /**
-     * <p>The new description of the host. The value can be up to 500 characters in length.</p>
+     * <p>The new internal endpoint of the host. You can set this parameter to a domain name or an IP address.</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
-     * <p>The ID of the host.</p>
+     * <p>The ID of the Bastionhost instance where you want to modify the information of the host.</p>
      * <br>
-     * <p>>  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.</p>
+     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
      */
     @NameInMap("HostId")
     public String hostId;
@@ -25,38 +25,40 @@ public class ModifyHostRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The new internal endpoint of the host. You can set this parameter to a domain name or an IP address.</p>
+     * <p>The new description of the host. The value can be up to 500 characters in length.</p>
      */
     @NameInMap("HostPrivateAddress")
     public String hostPrivateAddress;
 
     /**
-     * <p>The new public endpoint of the host. You can set this parameter to a domain name or an IP address.</p>
+     * <p>The region ID of the Bastionhost instance where you want to modify the information of the host.</p>
+     * <br>
+     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
      */
     @NameInMap("HostPublicAddress")
     public String hostPublicAddress;
 
     /**
-     * <p>The ID of the Bastionhost instance where you want to modify the information of the host.</p>
+     * <p>You can call this operation to modify the basic information of an on-premises host, an Elastic Compute Service (ECS) instance, or a host in a dedicated cluster.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
+     * <p>>  The basic information of ECS instances and hosts in dedicated clusters within your Alibaba Cloud account is synchronized to Bastionhost on a regular basis. After you modify the basic information of an ECS instance or a host in a dedicated cluster, the modification result may be overwritten by the synchronized information.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
+
+    /**
+     * <p>The ID of the host.</p>
+     * <br>
+     * <p>>  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.</p>
+     */
+    @NameInMap("OSType")
+    public String OSType;
 
     /**
      * <p>The new operating system of the host. Valid values:</p>
      * <br>
      * <p>*   **Linux**</p>
      * <p>*   **Windows**</p>
-     */
-    @NameInMap("OSType")
-    public String OSType;
-
-    /**
-     * <p>The region ID of the Bastionhost instance where you want to modify the information of the host.</p>
-     * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
      */
     @NameInMap("RegionId")
     public String regionId;

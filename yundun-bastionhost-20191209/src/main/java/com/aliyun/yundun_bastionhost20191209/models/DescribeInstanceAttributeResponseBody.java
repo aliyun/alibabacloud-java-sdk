@@ -4,15 +4,9 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAttributeResponseBody extends TeaModel {
-    /**
-     * <p>The attribute information about the bastion host.</p>
-     */
     @NameInMap("InstanceAttribute")
     public DescribeInstanceAttributeResponseBodyInstanceAttribute instanceAttribute;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,21 +32,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAttributeResponseBodyInstanceAttributePorts extends TeaModel {
-        /**
-         * <p>The custom port.</p>
-         * <br>
-         * <p>> : You can change only the SSH and RDP ports. If O\&M ports are not specified, the value of the StandardPort parameter is returned.</p>
-         */
         @NameInMap("CustomPort")
         public Integer customPort;
 
-        /**
-         * <p>The standard port of the bastion host. Valid values:</p>
-         * <br>
-         * <p>*   **SSH**: 60022</p>
-         * <p>*   **RDP**: 63389</p>
-         * <p>*   **HTTPS**: 443</p>
-         */
         @NameInMap("StandardPort")
         public Integer standardPort;
 
@@ -80,182 +62,90 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAttributeResponseBodyInstanceAttribute extends TeaModel {
-        /**
-         * <p>An array that consists of the IDs of authorized security groups.</p>
-         */
         @NameInMap("AuthorizedSecurityGroups")
         public java.util.List<String> authorizedSecurityGroups;
 
-        /**
-         * <p>The status of the database O\&M feature.</p>
-         */
+        @NameInMap("Bandwidth")
+        public String bandwidth;
+
+        @NameInMap("BandwidthPackage")
+        public String bandwidthPackage;
+
         @NameInMap("DbOperationModule")
         public String dbOperationModule;
 
-        /**
-         * <p>The remarks of the bastion host.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the elastic network interface (ENI).</p>
-         */
         @NameInMap("EniInstanceId")
         public String eniInstanceId;
 
-        /**
-         * <p>The time when the bastion host expires.</p>
-         */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
-        /**
-         * <p>The ID of the bastion host.</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The status of the bastion host. Valid values:</p>
-         * <br>
-         * <p>*   **PENDING**: The bastion host is not initialized.</p>
-         * <p>*   **CREATING**: The bastion host is being created.</p>
-         * <p>*   **RUNNING**: The bastion host is running.</p>
-         * <p>*   **EXPIRED**: The bastion host expired.</p>
-         * <p>*   **CREATE_FAILED**: The bastion host fails to be created.</p>
-         * <p>*   **UPGRADING**: The configurations of the bastion host are being changed.</p>
-         * <p>*   **UPGRADE_FAILED**: The configurations of the bastion host fail to be changed.</p>
-         */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
-        /**
-         * <p>The public endpoint of the bastion host.</p>
-         */
         @NameInMap("InternetEndpoint")
         public String internetEndpoint;
 
-        /**
-         * <p>The internal endpoint of the bastion host.</p>
-         */
         @NameInMap("IntranetEndpoint")
         public String intranetEndpoint;
 
-        /**
-         * <p>The license code.</p>
-         */
         @NameInMap("LicenseCode")
         public String licenseCode;
 
-        /**
-         * <p>The status of the automatic password change feature.</p>
-         * <br>
-         * <p>*   **Enable**</p>
-         * <p>*   **Disable**</p>
-         */
         @NameInMap("ModifyPasswordModule")
         public String modifyPasswordModule;
 
-        /**
-         * <p>The status of the network domain feature.</p>
-         * <br>
-         * <p>*   **Enable**</p>
-         * <p>*   **Disable**</p>
-         */
         @NameInMap("NetworkProxyModule")
         public String networkProxyModule;
 
-        /**
-         * <p>An array that consists of the O\&M ports of the bastion host.</p>
-         */
         @NameInMap("Ports")
         public java.util.List<DescribeInstanceAttributeResponseBodyInstanceAttributePorts> ports;
 
-        /**
-         * <p>An array that consists of the egress private IP addresses of the bastion host.</p>
-         */
         @NameInMap("PrivateExportIps")
         public java.util.List<String> privateExportIps;
 
-        /**
-         * <p>An array that consists of private IP addresses in a whitelist for the bastion host.</p>
-         */
         @NameInMap("PrivateWhiteList")
         public java.util.List<String> privateWhiteList;
 
-        /**
-         * <p>An array that consists of the egress public IP addresses of the bastion host.</p>
-         */
         @NameInMap("PublicExportIps")
         public java.util.List<String> publicExportIps;
 
-        /**
-         * <p>An array that consists of the public IP addresses of the bastion host.</p>
-         */
         @NameInMap("PublicIps")
         public java.util.List<String> publicIps;
 
-        /**
-         * <p>Indicates whether the bastion host can be accessed over the Internet.</p>
-         */
         @NameInMap("PublicNetworkAccess")
         public Boolean publicNetworkAccess;
 
-        /**
-         * <p>An array that consists of public IP addresses in a whitelist for the bastion host.</p>
-         */
         @NameInMap("PublicWhiteList")
         public java.util.List<String> publicWhiteList;
 
-        /**
-         * <p>The ID of the region in which the bastion host resides.</p>
-         */
         @NameInMap("RegionId")
         public String regionId;
 
-        /**
-         * <p>The ID of the resource group to which the bastion host belongs.</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>An array that consists of the IDs of the security groups to which the bastion host belongs.</p>
-         */
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
 
-        /**
-         * <p>The time when the bastion host was purchased.</p>
-         */
         @NameInMap("StartTime")
         public Long startTime;
 
-        /**
-         * <p>The storage capacity of the bastion host.</p>
-         */
         @NameInMap("Storage")
         public Long storage;
 
-        /**
-         * <p>The ID of the virtual private cloud (VPC) to which the bastion host belongs.</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 
-        /**
-         * <p>The ID of the vSwitch to which the bastion host belongs.</p>
-         */
         @NameInMap("VswitchId")
         public String vswitchId;
 
-        /**
-         * <p>The status of the web terminal.</p>
-         * <br>
-         * <p>*   **Enable**</p>
-         * <p>*   **Disable**</p>
-         */
         @NameInMap("WebTerminalModule")
         public String webTerminalModule;
 
@@ -270,6 +160,22 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
         public java.util.List<String> getAuthorizedSecurityGroups() {
             return this.authorizedSecurityGroups;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setBandwidth(String bandwidth) {
+            this.bandwidth = bandwidth;
+            return this;
+        }
+        public String getBandwidth() {
+            return this.bandwidth;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setBandwidthPackage(String bandwidthPackage) {
+            this.bandwidthPackage = bandwidthPackage;
+            return this;
+        }
+        public String getBandwidthPackage() {
+            return this.bandwidthPackage;
         }
 
         public DescribeInstanceAttributeResponseBodyInstanceAttribute setDbOperationModule(String dbOperationModule) {

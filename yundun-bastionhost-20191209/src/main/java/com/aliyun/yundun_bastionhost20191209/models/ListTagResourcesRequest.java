@@ -5,33 +5,35 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The token for starting the next query.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The region ID of the Bastionhost instance.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The IDs of instances. The ID is up to 20.</p>
+     * <p>The value of the tag.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource.</p>
+     * <p>The operation that you want to perform.</p>
      * <br>
-     * <p>Set the value to INSTANCE, which indicates that the resource is a Bastionhost instance.</p>
+     * <p>Set the value to **ListTagResources**.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The key of tag N.</p>
+     * <br>
+     * <p>Valid values of N: 1 to 20.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -83,17 +85,15 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N.</p>
-         * <br>
-         * <p>Valid values of N: 1 to 20.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N.</p>
+         * <p>The type of the resource.</p>
          * <br>
-         * <p>Valid values of N: 1 to 20.</p>
+         * <p>The returned value is INSTANCE, which indicates that the resource is a Bastionhost instance.</p>
          */
         @NameInMap("Value")
         public String value;

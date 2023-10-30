@@ -4,35 +4,27 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ModifyHostsActiveAddressTypeRequest extends TeaModel {
-    /**
-     * <p>The new portal type of the host. Valid values:</p>
-     * <br>
-     * <p>*   **Public**: public portal</p>
-     * <p>*   **Private**: internal portal</p>
-     */
     @NameInMap("ActiveAddressType")
     public String activeAddressType;
 
     /**
-     * <p>The ID of the host for which you want to change the portal type. The value is a JSON string. You can add up to 100 host IDs.</p>
+     * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~148139~~).</p>
      * <br>
-     * <p>>  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.</p>
+     * <p>For more information about sample requests, see the "Examples" section of this topic.</p>
      */
     @NameInMap("HostIds")
     public String hostIds;
 
     /**
-     * <p>The ID of the bastion host for which you want to change the portal type of the host.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The region ID of the bastion host for which you want to change the portal type of the host.</p>
+     * <p>The operation that you want to perform.</p>
      * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <p>Set the value to **ModifyHostsActiveAddressType**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -4,15 +4,9 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAttributeRequest extends TeaModel {
-    /**
-     * <p>The ID of the bastion host to query.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The region ID of the bastion host to query.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

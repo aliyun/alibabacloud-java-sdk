@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
     /**
-     * <p>The settings of LDAP authentication.</p>
+     * <p>Indicates whether SSL is supported. Valid values:</p>
+     * <br>
+     * <p>*   **true**: supported</p>
+     * <p>*   **false**: not supported</p>
      */
     @NameInMap("LDAP")
     public GetInstanceLDAPAuthServerResponseBodyLDAP LDAP;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The settings of LDAP authentication.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,80 +42,67 @@ public class GetInstanceLDAPAuthServerResponseBody extends TeaModel {
 
     public static class GetInstanceLDAPAuthServerResponseBodyLDAP extends TeaModel {
         /**
-         * <p>The account of the LDAP server.</p>
+         * <p>The ID of the bastion host.</p>
+         * <br>
+         * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
          */
         @NameInMap("Account")
         public String account;
 
         /**
-         * <p>The Base distinguished name (DN).</p>
+         * <p>The field that is used to indicate the logon name of a user on the LDAP server.</p>
          */
         @NameInMap("BaseDN")
         public String baseDN;
 
         /**
-         * <p>The field that is used to indicate the email address of a user on the LDAP server.</p>
+         * <p>The address of the secondary LDAP server.</p>
          */
         @NameInMap("EmailMapping")
         public String emailMapping;
 
         /**
-         * <p>The condition that is used to filter users.</p>
+         * <p>The Base distinguished name (DN).</p>
          */
         @NameInMap("Filter")
         public String filter;
 
         /**
-         * <p>Indicates whether passwords are required. Valid values:</p>
-         * <br>
-         * <p>*   **true**: required</p>
-         * <p>*   **false**: not required</p>
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
          */
         @NameInMap("HasPassword")
         public String hasPassword;
 
         /**
-         * <p>Indicates whether SSL is supported. Valid values:</p>
-         * <br>
-         * <p>*   **true**: supported</p>
-         * <p>*   **false**: not supported</p>
+         * <p>The condition that is used to filter users.</p>
          */
         @NameInMap("IsSSL")
         public Boolean isSSL;
 
         /**
-         * <p>The field that is used to indicate the logon name of a user on the LDAP server.</p>
+         * <p>The port that is used to access the LDAP server.</p>
          */
         @NameInMap("LoginNameMapping")
         public String loginNameMapping;
 
         /**
-         * <p>The field that is used to indicate the mobile phone number of a user on the LDAP server.</p>
+         * <p>The field that is used to indicate the email address of a user on the LDAP server.</p>
          */
         @NameInMap("MobileMapping")
         public String mobileMapping;
 
         /**
-         * <p>The field that is used to indicate the name of a user on the LDAP server.</p>
+         * <p>The field that is used to indicate the mobile phone number of a user on the LDAP server.</p>
          */
         @NameInMap("NameMapping")
         public String nameMapping;
 
-        /**
-         * <p>The port that is used to access the LDAP server.</p>
-         */
         @NameInMap("Port")
         public Long port;
 
-        /**
-         * <p>The address of the LDAP server.</p>
-         */
         @NameInMap("Server")
         public String server;
 
-        /**
-         * <p>The address of the secondary LDAP server.</p>
-         */
         @NameInMap("StandbyServer")
         public String standbyServer;
 

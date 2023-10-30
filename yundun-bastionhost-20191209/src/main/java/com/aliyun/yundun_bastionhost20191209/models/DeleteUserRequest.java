@@ -5,25 +5,23 @@ import com.aliyun.tea.*;
 
 public class DeleteUserRequest extends TeaModel {
     /**
-     * <p>The ID of the Bastionhost instance to which the user to be deleted belongs.</p>
+     * <p>The ID of the bastion host to which the user to be deleted belongs.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
+     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The region ID of the Bastionhost instance to which the user to be deleted belongs.</p>
+     * <p>The region ID of the bastion host to which the user to be deleted belongs.</p>
      * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the user to be deleted.</p>
-     * <br>
-     * <p>>  You can call the [ListUsers](~~204522~~) operation to query the ID of the user.</p>
      */
     @NameInMap("UserId")
     public String userId;

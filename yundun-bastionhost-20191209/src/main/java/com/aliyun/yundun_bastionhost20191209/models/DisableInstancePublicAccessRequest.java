@@ -7,7 +7,7 @@ public class DisableInstancePublicAccessRequest extends TeaModel {
     /**
      * <p>The ID of the bastion host whose Internet access you want to disable.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to obtain the ID of the bastion host.</p>
+     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

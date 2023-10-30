@@ -4,14 +4,11 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListHostGroupAccountNamesForUserGroupResponseBody extends TeaModel {
-    /**
-     * <p>The names of host accounts returned.</p>
-     */
     @NameInMap("HostAccountNames")
     public java.util.List<String> hostAccountNames;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>ListHostGroupAccountNamesForUserGroup</p>
      */
     @NameInMap("RequestId")
     public String requestId;

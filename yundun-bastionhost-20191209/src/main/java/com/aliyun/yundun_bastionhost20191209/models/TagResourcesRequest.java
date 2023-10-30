@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The region ID of the Bastionhost instances to which tags need to be created and bound.</p>
+     * <p>The region ID of the bastion hosts to which you want to create and add tags.</p>
+     * <br>
+     * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The resource IDs.</p>
+     * <p>An array that consists of IDs of bastion hosts.</p>
+     * <br>
+     * <p>Valid values: 1 to 20.</p>
+     * <br>
+     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query IDs of bastion hosts.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -19,13 +25,13 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The type of the resource.</p>
      * <br>
-     * <p>Set the value to INSTANCE, which indicates that the resource is a Bastionhost instance.</p>
+     * <p>Set the value to **INSTANCE**, which indicates that the resource is a bastion host.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>An array that consists of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -69,25 +75,26 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the instance.</p>
-         * <br>
-         * <p>Valid values of N: 1 to 20.</p>
+         * <p>The key of tag N. Valid values of N: 1 to 20.</p>
          * <br>
          * <p>> </p>
-         * <p>*   The key can be up to 128 characters in length but cannot be an empty string.</p>
-         * <p>*   The key cannot start with **aliyun** or **acs:**. It cannot contain **http://** or **https://**.</p>
+         * <br>
+         * <p>*   The value can be up to 128 characters in length but cannot be an empty string.</p>
+         * <br>
+         * <p>*   The value cannot start with **aliyun** or **acs:**. The value cannot contain **http://** or **https://**.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the instance.</p>
-         * <br>
+         * <p>The value of tag N.\</p>
          * <p>Valid values of N: 1 to 20.</p>
          * <br>
          * <p>> </p>
+         * <br>
          * <p>*   The value can be up to 128 characters in length or an empty string.</p>
-         * <p>*   The value cannot start with **aliyun** or **acs:**. It cannot contain **http://** or **https://**.</p>
+         * <br>
+         * <p>*   The value cannot start with **aliyun** or **acs:**. The value cannot contain **http://** or **https://**.</p>
          */
         @NameInMap("Value")
         public String value;

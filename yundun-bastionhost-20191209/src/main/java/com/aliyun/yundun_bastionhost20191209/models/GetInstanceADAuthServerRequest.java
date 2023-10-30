@@ -5,17 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetInstanceADAuthServerRequest extends TeaModel {
     /**
-     * <p>The ID of the bastion host to query.</p>
-     * <br>
-     * <p>You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
+     * <p>The field that is used to indicate the email address of a user on the AD server.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The region ID of the bastion host to query.</p>
+     * <p>Indicates whether passwords are required. Valid values:</p>
      * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <p>*   **true**: required</p>
+     * <p>*   **false**: not required</p>
      */
     @NameInMap("RegionId")
     public String regionId;

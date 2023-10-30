@@ -5,34 +5,25 @@ import com.aliyun.tea.*;
 
 public class ResetHostAccountCredentialRequest extends TeaModel {
     /**
-     * <p>The type of the logon credential that you want to delete. Valid values:</p>
-     * <br>
-     * <p>*   **Password**: You want to delete the password.</p>
-     * <p>*   **PrivateKey**: You want to delete the SSH private key.</p>
+     * <p>ResetHostAccountCredential</p>
      */
     @NameInMap("CredentialType")
     public String credentialType;
 
     /**
-     * <p>The ID of the host account for which the logon credential is to be deleted.</p>
-     * <br>
-     * <p>>  You can call the [ListHostAccounts](~~204372~~) operation to query the ID of the host account.</p>
+     * <p>WB662865</p>
      */
     @NameInMap("HostAccountId")
     public String hostAccountId;
 
     /**
-     * <p>The ID of the Bastionhost instance where you want to delete the logon credential for the host account.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
+     * <p>Deletes the logon credential of a specified host account of a specified Bastionhost instance. The logon credential can be the password or SSH private key.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The region ID of the Bastionhost instance where you want to delete the logon credential for the host account.</p>
-     * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <p>ResetHostAccountCredential</p>
      */
     @NameInMap("RegionId")
     public String regionId;
