@@ -16,6 +16,9 @@ public class CreateModelFeatureRequest extends TeaModel {
     @NameInMap("ProjectId")
     public String projectId;
 
+    @NameInMap("SequenceFeatureViewIds")
+    public java.util.List<String> sequenceFeatureViewIds;
+
     public static CreateModelFeatureRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateModelFeatureRequest self = new CreateModelFeatureRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class CreateModelFeatureRequest extends TeaModel {
     }
     public String getProjectId() {
         return this.projectId;
+    }
+
+    public CreateModelFeatureRequest setSequenceFeatureViewIds(java.util.List<String> sequenceFeatureViewIds) {
+        this.sequenceFeatureViewIds = sequenceFeatureViewIds;
+        return this;
+    }
+    public java.util.List<String> getSequenceFeatureViewIds() {
+        return this.sequenceFeatureViewIds;
     }
 
     public static class CreateModelFeatureRequestFeatures extends TeaModel {
