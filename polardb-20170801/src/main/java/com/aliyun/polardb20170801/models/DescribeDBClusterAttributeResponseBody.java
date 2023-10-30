@@ -825,6 +825,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("AddedCpuCores")
         public String addedCpuCores;
 
+        @NameInMap("CpuCores")
+        public String cpuCores;
+
         /**
          * <p>The time when the node was created.</p>
          */
@@ -914,6 +917,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("MaxIOPS")
         public Integer maxIOPS;
 
+        @NameInMap("MemorySize")
+        public String memorySize;
+
         /**
          * <p>Indicates whether the global consistency (high-performance mode) feature is enabled for the node. Valid values:</p>
          * <br>
@@ -954,6 +960,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getAddedCpuCores() {
             return this.addedCpuCores;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBNodes setCpuCores(String cpuCores) {
+            this.cpuCores = cpuCores;
+            return this;
+        }
+        public String getCpuCores() {
+            return this.cpuCores;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBNodes setCreationTime(String creationTime) {
@@ -1042,6 +1056,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public Integer getMaxIOPS() {
             return this.maxIOPS;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBNodes setMemorySize(String memorySize) {
+            this.memorySize = memorySize;
+            return this;
+        }
+        public String getMemorySize() {
+            return this.memorySize;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBNodes setSccMode(String sccMode) {
