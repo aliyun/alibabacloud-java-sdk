@@ -5,19 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListHostsForUserResponseBody extends TeaModel {
     /**
-     * <p>The hosts returned.</p>
+     * <p>The ID of the user.</p>
+     * <br>
+     * <p>>  You can call the [ListUsers](~~204522~~) operation to query the ID of the user ID.</p>
      */
     @NameInMap("Hosts")
     public java.util.List<ListHostsForUserResponseBodyHosts> hosts;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The hosts returned.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of hosts returned.</p>
+     * <p>The public endpoint of the host. The value is a domain name or an IP address.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -53,49 +55,42 @@ public class ListHostsForUserResponseBody extends TeaModel {
 
     public static class ListHostsForUserResponseBodyHosts extends TeaModel {
         /**
-         * <p>The endpoint type of the host. Valid values:</p>
+         * <p>All Bastionhost API requests must include common request parameters. For more information about common request parameters, see [Common parameters](~~148139~~).</p>
          * <br>
-         * <p>*   **Public**: a public endpoint</p>
-         * <p>*   **Private**: an internal endpoint</p>
+         * <p>For more information about sample requests, see the "Examples" section of this topic.</p>
          */
         @NameInMap("ActiveAddressType")
         public String activeAddressType;
 
         /**
-         * <p>The description of the host.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("Comment")
         public String comment;
 
-        /**
-         * <p>The ID of the host.</p>
-         */
         @NameInMap("HostId")
         public String hostId;
 
         /**
-         * <p>The name of the host.</p>
+         * <p>ListHostsForUser</p>
          */
         @NameInMap("HostName")
         public String hostName;
 
         /**
-         * <p>The internal endpoint of the host. The value is a domain name or an IP address.</p>
+         * <p>WB662865</p>
          */
         @NameInMap("HostPrivateAddress")
         public String hostPrivateAddress;
 
         /**
-         * <p>The public endpoint of the host. The value is a domain name or an IP address.</p>
+         * <p>Queries the hosts that a specified user is authorized or not authorized to manage.</p>
          */
         @NameInMap("HostPublicAddress")
         public String hostPublicAddress;
 
         /**
-         * <p>The operating system of the host. Valid values:</p>
-         * <br>
-         * <p>*   **Linux**</p>
-         * <p>*   **Windows**</p>
+         * <p>ListHostsForUser</p>
          */
         @NameInMap("OSType")
         public String OSType;

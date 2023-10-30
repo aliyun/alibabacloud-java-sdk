@@ -5,24 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListHostsForUserGroupRequest extends TeaModel {
     /**
-     * <p>The endpoint of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.</p>
+     * <p>The operating system of the host that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **Linux**</p>
+     * <p>*   **Windows**</p>
      */
     @NameInMap("HostAddress")
     public String hostAddress;
-
-    /**
-     * <p>The name of the host that you want to query. Only exact match is supported.</p>
-     */
-    @NameInMap("HostName")
-    public String hostName;
 
     /**
      * <p>The ID of the Bastionhost instance where you want to query the hosts that the user group is authorized or not authorized to manage.</p>
      * <br>
      * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
      */
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("HostName")
+    public String hostName;
 
     /**
      * <p>The category of the host that you want to query. Valid values:</p>
@@ -30,20 +27,29 @@ public class ListHostsForUserGroupRequest extends TeaModel {
      * <p>*   **Authorized**: Query the hosts that the user group is authorized to manage. This is the default value.</p>
      * <p>*   **Unauthorized**: Query the hosts that the user group is not authorized to manage.</p>
      */
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    /**
+     * <p>The operating system of the host. Valid values:</p>
+     * <br>
+     * <p>*   **Linux**</p>
+     * <p>*   **Windows**</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
     /**
-     * <p>The operating system of the host that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **Linux**</p>
-     * <p>*   **Windows**</p>
+     * <p>The internal endpoint of the host. The value is a domain name or an IP address.</p>
      */
     @NameInMap("OSType")
     public String OSType;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The endpoint type of the host. Valid values:</p>
+     * <br>
+     * <p>*   **Public**: a public endpoint</p>
+     * <p>*   **Private**: an internal endpoint</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
@@ -59,17 +65,13 @@ public class ListHostsForUserGroupRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The region ID of the Bastionhost instance where you want to query the hosts that the user group is authorized or not authorized to manage.</p>
-     * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <p>The endpoint of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the user group for which you want to query hosts.</p>
-     * <br>
-     * <p>>  You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.</p>
+     * <p>The number of the page to return. Default value: 1.</p>
      */
     @NameInMap("UserGroupId")
     public String userGroupId;

@@ -11,17 +11,17 @@ public class ListHostAccountsForUserGroupRequest extends TeaModel {
     public String hostAccountName;
 
     /**
-     * <p>The ID of the host for which you want to query the host accounts that the user group is authorized to manage.</p>
+     * <p>The ID of the host to query.</p>
      * <br>
-     * <p>>  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.</p>
+     * <p>> You can call the [ListHosts](~~200665~~) operation to query the ID of the host.</p>
      */
     @NameInMap("HostId")
     public String hostId;
 
     /**
-     * <p>The ID of the Bastionhost instance where you want to query the host accounts that the user group is authorized to manage on the host.</p>
+     * <p>The ID of the bastion host on which you want to query the host accounts to be managed by the specified user group on the specified host.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
+     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -33,19 +33,18 @@ public class ListHostAccountsForUserGroupRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries to return on each page.\</p>
+     * <p>Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
      * <br>
-     * <p>The value of the PageSize parameter must not exceed 100. Default value: 20. If you leave the PageSize parameter empty, 20 entries are returned on each page.</p>
-     * <br>
-     * <p>>  We recommend that you do not leave the PageSize parameter empty.</p>
+     * <p>> We recommend that you do not leave this parameter empty.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
-     * <p>The region ID of the Bastionhost instance where you want to query the host accounts that the user group is authorized to manage on the host.</p>
+     * <p>The region ID of the bastion host on which you want to query the host accounts to be managed by the specified user group on the specified host.</p>
      * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -53,7 +52,7 @@ public class ListHostAccountsForUserGroupRequest extends TeaModel {
     /**
      * <p>The ID of the user group for which you want to query authorized host accounts.</p>
      * <br>
-     * <p>>  You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.</p>
+     * <p>> You can call the [ListUserGroups](~~204509~~) operation to query the ID of the user group.</p>
      */
     @NameInMap("UserGroupId")
     public String userGroupId;

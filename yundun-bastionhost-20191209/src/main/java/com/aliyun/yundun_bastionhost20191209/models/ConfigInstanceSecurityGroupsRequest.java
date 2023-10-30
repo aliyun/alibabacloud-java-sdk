@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigInstanceSecurityGroupsRequest extends TeaModel {
     /**
-     * <p>The IDs of authorized security group.</p>
+     * <p>An array that consists of the IDs of authorized security groups.</p>
      */
     @NameInMap("AuthorizedSecurityGroups")
     public java.util.List<String> authorizedSecurityGroups;
@@ -13,7 +13,7 @@ public class ConfigInstanceSecurityGroupsRequest extends TeaModel {
     /**
      * <p>The ID of the bastion host.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
+     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

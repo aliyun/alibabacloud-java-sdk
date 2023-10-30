@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetUserGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Queries the details of a specified user group in a specified Bastionhost instance.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The details of the user group returned.</p>
+     * <p>GetUserGroup</p>
      */
     @NameInMap("UserGroup")
     public GetUserGroupResponseBodyUserGroup userGroup;
@@ -39,19 +39,16 @@ public class GetUserGroupResponseBody extends TeaModel {
 
     public static class GetUserGroupResponseBodyUserGroup extends TeaModel {
         /**
-         * <p>The description of the user group.</p>
+         * <p>GetUserGroup</p>
          */
         @NameInMap("Comment")
         public String comment;
 
-        /**
-         * <p>The ID of the user group.</p>
-         */
         @NameInMap("UserGroupId")
         public String userGroupId;
 
         /**
-         * <p>The name of the user group.</p>
+         * <p>WB662865</p>
          */
         @NameInMap("UserGroupName")
         public String userGroupName;

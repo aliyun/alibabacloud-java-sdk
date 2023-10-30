@@ -64,9 +64,15 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The end of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.</p>
+         */
         @NameInMap("EffectiveEndTime")
         public Long effectiveEndTime;
 
+        /**
+         * <p>The beginning of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.</p>
+         */
         @NameInMap("EffectiveStartTime")
         public Long effectiveStartTime;
 
@@ -108,6 +114,12 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("MobileCountryCode")
         public String mobileCountryCode;
 
+        /**
+         * <p>Specifies whether password reset is required upon the next logon. Valid values:</p>
+         * <br>
+         * <p>- true: yes</p>
+         * <p>- false: no</p>
+         */
         @NameInMap("NeedResetPassword")
         public Boolean needResetPassword;
 
@@ -128,9 +140,19 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("SourceUserId")
         public String sourceUserId;
 
+        /**
+         * <p>The two-factor authentication method.</p>
+         */
         @NameInMap("TwoFactorMethods")
         public java.util.List<String> twoFactorMethods;
 
+        /**
+         * <p>The two-factor authentication status of the user. Valid values:</p>
+         * <br>
+         * <p>*   **Global:** follows the global settings</p>
+         * <p>*   **Disable:** disables two-factor authentication</p>
+         * <p>*   **Enable:** enable two-factor authentication and follows settings of the single user</p>
+         */
         @NameInMap("TwoFactorStatus")
         public String twoFactorStatus;
 

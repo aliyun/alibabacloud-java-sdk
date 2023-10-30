@@ -47,11 +47,15 @@ public class AddHostsToGroupResponseBody extends TeaModel {
          * <br>
          * <p>*   **INVALID_ARGUMENT**: A request parameter is invalid.</p>
          * <br>
-         * <p> > Make sure that the request parameters are valid and call the operation again.</p>
+         * <p>    **</p>
+         * <br>
+         * <p>    **Note**Make sure that the request parameters are valid and call the operation again.</p>
          * <br>
          * <p>*   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.</p>
          * <br>
-         * <p>> Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.</p>
+         * <p>    **</p>
+         * <br>
+         * <p>    **Note**Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.</p>
          * <br>
          * <p>*   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.</p>
          */

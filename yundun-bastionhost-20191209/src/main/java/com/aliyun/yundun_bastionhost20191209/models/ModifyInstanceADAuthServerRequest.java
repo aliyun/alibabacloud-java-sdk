@@ -43,8 +43,8 @@ public class ModifyInstanceADAuthServerRequest extends TeaModel {
     /**
      * <p>Specifies whether to support SSL. Valid values:</p>
      * <br>
-     * <p>*   **true**: supports SSL.</p>
-     * <p>*   **false**: does not support SSL.</p>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
      */
     @NameInMap("IsSSL")
     public String isSSL;

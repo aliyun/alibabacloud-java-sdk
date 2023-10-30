@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteUserResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

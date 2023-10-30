@@ -37,8 +37,8 @@ public class ModifyInstanceLDAPAuthServerRequest extends TeaModel {
     /**
      * <p>Specifies whether to support SSL. Valid values:</p>
      * <br>
-     * <p>*   **true**: supports SSL.</p>
-     * <p>*   **false**: does not support SSL.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("IsSSL")
     public String isSSL;
@@ -62,7 +62,7 @@ public class ModifyInstanceLDAPAuthServerRequest extends TeaModel {
     public String nameMapping;
 
     /**
-     * <p>The password of the account that is used for the LDAP server.</p>
+     * <p>The password of the account that is used for the LDAP server. You must configure a password when you configure LDAP authentication. If you leave this parameter empty when you modify the settings of LDAP authentication, the current password is used.</p>
      */
     @NameInMap("Password")
     public String password;

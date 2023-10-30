@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListHostsResponseBody extends TeaModel {
     /**
-     * <p>The hosts that were queried.</p>
+     * <p>An array that consists of the hosts returned.</p>
      */
     @NameInMap("Hosts")
     public java.util.List<ListHostsResponseBodyHosts> hosts;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of hosts that were queried.</p>
+     * <p>The total number of hosts returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -53,10 +53,10 @@ public class ListHostsResponseBody extends TeaModel {
 
     public static class ListHostsResponseBodyHosts extends TeaModel {
         /**
-         * <p>The endpoint type of the host. Valid values:</p>
+         * <p>The address type of the host. Valid values:</p>
          * <br>
-         * <p>*   **Public**: a public endpoint</p>
-         * <p>*   **Private**: an internal endpoint</p>
+         * <p>*   **Public**: a public address</p>
+         * <p>*   **Private**: a private address</p>
          */
         @NameInMap("ActiveAddressType")
         public String activeAddressType;
@@ -68,7 +68,7 @@ public class ListHostsResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The number of host accounts of the host.</p>
+         * <p>The number of host accounts.</p>
          */
         @NameInMap("HostAccountCount")
         public Integer hostAccountCount;
@@ -86,13 +86,13 @@ public class ListHostsResponseBody extends TeaModel {
         public String hostName;
 
         /**
-         * <p>The internal endpoint of the host. You can set this parameter to a domain name or an IP address.</p>
+         * <p>The private address of the host. The value is a domain name or an IP address.</p>
          */
         @NameInMap("HostPrivateAddress")
         public String hostPrivateAddress;
 
         /**
-         * <p>The public endpoint of the host. You can set this parameter to a domain name or an IP address.</p>
+         * <p>The public address of the host. The value is a domain name or an IP address.</p>
          */
         @NameInMap("HostPublicAddress")
         public String hostPublicAddress;
@@ -109,17 +109,17 @@ public class ListHostsResponseBody extends TeaModel {
         /**
          * <p>The source of the host. Valid values:</p>
          * <br>
-         * <p>*   **Local**: an on-premises host</p>
-         * <p>*   **Ecs**: an Elastic Compute Service (ECS) instance</p>
-         * <p>*   **Rds**: a host in a dedicated cluster</p>
+         * <p>*   **Local**: a host in a data center</p>
+         * <p>*   **Ecs**: an ECS instance</p>
+         * <p>*   **Rds**: a host in an ApsaraDB MyBase dedicated cluster</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
-         * <p>The ID of the ECS instance or dedicated cluster host that was queried.</p>
+         * <p>The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster.</p>
          * <br>
-         * <p>>  No value is returned for this parameter if the **Source** parameter is set to **Local**.</p>
+         * <p>> No value is returned for this parameter if the **Source** parameter is set to **Local**.</p>
          */
         @NameInMap("SourceInstanceId")
         public String sourceInstanceId;
@@ -127,9 +127,8 @@ public class ListHostsResponseBody extends TeaModel {
         /**
          * <p>The status of the host. Valid values:</p>
          * <br>
-         * <p>- **Normal**: The host is normal.</p>
-         * <br>
-         * <p>- **Release**: The host is released.</p>
+         * <p>*   **Normal**: normal</p>
+         * <p>*   **Release**: released</p>
          */
         @NameInMap("SourceInstanceState")
         public String sourceInstanceState;

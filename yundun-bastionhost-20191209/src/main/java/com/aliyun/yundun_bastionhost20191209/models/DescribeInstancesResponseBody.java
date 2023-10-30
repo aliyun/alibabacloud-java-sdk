@@ -77,7 +77,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The state of the bastion host. Valid values:</p>
+         * <p>The status of the bastion host. Valid values:</p>
          * <br>
          * <p>*   **PENDING**: The bastion host is not initialized.</p>
          * <p>*   **CREATING**: The bastion host is being created.</p>

@@ -16,13 +16,17 @@ public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>The region ID of the bastion host to query.</p>
      * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The resource IDs. You can specify a maximum of 20 resource IDs.</p>
+     * <p>An array that consists of IDs of bastion hosts.</p>
+     * <br>
+     * <p>Valid values: 1 to 20.</p>
+     * <br>
+     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -36,7 +40,9 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag keys of the resource.</p>
+     * <p>The key of tag N.</p>
+     * <br>
+     * <p>Valid values of N: 1 to 20.</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

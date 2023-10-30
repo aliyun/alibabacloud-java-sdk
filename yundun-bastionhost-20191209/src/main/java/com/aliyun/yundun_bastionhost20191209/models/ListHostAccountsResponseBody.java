@@ -5,19 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListHostAccountsResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the queried host accounts.</p>
+     * <p>The ID of the host account.</p>
      */
     @NameInMap("HostAccounts")
     public java.util.List<ListHostAccountsResponseBodyHostAccounts> hostAccounts;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>An array that consists of the queried host accounts.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of host accounts that are queried.</p>
+     * <p>The ID of the bastion host in which you want to query accounts of the specified host.</p>
+     * <br>
+     * <p>>  You can call the DescribeInstances operation to query the ID of the bastion host.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -53,51 +55,31 @@ public class ListHostAccountsResponseBody extends TeaModel {
 
     public static class ListHostAccountsResponseBodyHostAccounts extends TeaModel {
         /**
-         * <p>Indicates whether a password is configured for the host account.</p>
-         * <br>
-         * <p>Valid values:</p>
-         * <br>
-         * <p>*   true: A password is configured for the host account.</p>
-         * <p>*   false: No passwords are configured for the host account.</p>
+         * <p>The fingerprint of the private key for the host account.</p>
          */
         @NameInMap("HasPassword")
         public Boolean hasPassword;
 
         /**
-         * <p>The ID of the host account.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("HostAccountId")
         public String hostAccountId;
 
         /**
-         * <p>The name of the host account.</p>
+         * <p>The name of the shared key.</p>
          */
         @NameInMap("HostAccountName")
         public String hostAccountName;
 
-        /**
-         * <p>The ID of the host.</p>
-         */
         @NameInMap("HostId")
         public String hostId;
 
-        /**
-         * <p>The ID of the shared key.</p>
-         */
         @NameInMap("HostShareKeyId")
         public String hostShareKeyId;
 
-        /**
-         * <p>The name of the shared key.</p>
-         */
         @NameInMap("HostShareKeyName")
         public String hostShareKeyName;
-
-        /**
-         * <p>The fingerprint of the private key for the host account.</p>
-         */
-        @NameInMap("PrivateKeyFingerprint")
-        public String privateKeyFingerprint;
 
         /**
          * <p>The protocol that is used by the host.</p>
@@ -106,6 +88,12 @@ public class ListHostAccountsResponseBody extends TeaModel {
          * <br>
          * <p>*   SSH</p>
          * <p>*   RDP</p>
+         */
+        @NameInMap("PrivateKeyFingerprint")
+        public String privateKeyFingerprint;
+
+        /**
+         * <p>The number of the page to return. Default value: **1**.</p>
          */
         @NameInMap("ProtocolName")
         public String protocolName;

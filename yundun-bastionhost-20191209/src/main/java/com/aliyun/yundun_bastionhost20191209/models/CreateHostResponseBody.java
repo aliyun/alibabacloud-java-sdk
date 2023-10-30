@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHostResponseBody extends TeaModel {
     /**
-     * <p>The ID of the host that was created.</p>
+     * <p>The ID of the host.</p>
      */
     @NameInMap("HostId")
     public String hostId;

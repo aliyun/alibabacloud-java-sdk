@@ -71,7 +71,7 @@ public class ListHostAccountsForHostShareKeyResponseBody extends TeaModel {
         public String hostsAccountId;
 
         /**
-         * <p>The O&M protocol.</p>
+         * <p>The O\&M protocol.</p>
          */
         @NameInMap("ProtocolName")
         public String protocolName;

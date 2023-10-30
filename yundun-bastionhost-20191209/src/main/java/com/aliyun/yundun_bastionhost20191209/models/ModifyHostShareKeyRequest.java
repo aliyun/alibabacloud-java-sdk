@@ -23,7 +23,7 @@ public class ModifyHostShareKeyRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The password of the private key. The value is a Base64-encoded string.</p>
+     * <p>The passphrase of the private key. The value is a Base64-encoded string.</p>
      */
     @NameInMap("PassPhrase")
     public String passPhrase;

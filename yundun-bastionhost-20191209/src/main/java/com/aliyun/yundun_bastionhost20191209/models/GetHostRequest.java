@@ -5,25 +5,24 @@ import com.aliyun.tea.*;
 
 public class GetHostRequest extends TeaModel {
     /**
-     * <p>The ID of the host that you want to query. You can specify only one host ID.</p>
+     * <p>The protocol that is used to connect to the host. Valid values:</p>
      * <br>
-     * <p>>  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.</p>
+     * <p>*   **SSH**</p>
+     * <p>*   **RDP**</p>
      */
     @NameInMap("HostId")
     public String hostId;
 
     /**
-     * <p>The ID of the Bastionhost instance where you want to query the host.</p>
+     * <p>The ID of the host that you want to query. You can specify only one host ID.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
+     * <p>>  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The region ID of the Bastionhost instance where you want to query the host.</p>
-     * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <p>The name of the host.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

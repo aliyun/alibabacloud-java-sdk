@@ -7,23 +7,23 @@ public class DeleteHostRequest extends TeaModel {
     /**
      * <p>The ID of the host that you want to delete.</p>
      * <br>
-     * <p>>  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.</p>
+     * <p>> You can call the [ListHosts](~~200665~~) operation to query the ID of the host.</p>
      */
     @NameInMap("HostId")
     public String hostId;
 
     /**
-     * <p>The ID of the Bastionhost instance where you want to delete the host.</p>
+     * <p>The ID of the bastion host on which you want to delete the host.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
+     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The region ID of the Bastionhost instance where you want to delete the host.</p>
+     * <p>The region ID of the bastion host on which you want to delete the host.</p>
      * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
      */
     @NameInMap("RegionId")
     public String regionId;

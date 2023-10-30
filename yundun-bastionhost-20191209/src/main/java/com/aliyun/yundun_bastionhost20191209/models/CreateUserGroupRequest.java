@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUserGroupRequest extends TeaModel {
     /**
-     * <p>The remarks of the user group. The remarks can be up to 500 characters in length.</p>
+     * <p>The description of the user group. The description can be up to 500 characters in length.</p>
      */
     @NameInMap("Comment")
     public String comment;
@@ -13,7 +13,7 @@ public class CreateUserGroupRequest extends TeaModel {
     /**
      * <p>The ID of the bastion host for which you want to create a user group.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
+     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -21,7 +21,7 @@ public class CreateUserGroupRequest extends TeaModel {
     /**
      * <p>The region ID of the bastion host for which you want to create a user group.</p>
      * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
      */
     @NameInMap("RegionId")
     public String regionId;

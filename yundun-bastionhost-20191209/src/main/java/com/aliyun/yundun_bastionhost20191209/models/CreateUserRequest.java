@@ -16,9 +16,15 @@ public class CreateUserRequest extends TeaModel {
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <p>The end of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.</p>
+     */
     @NameInMap("EffectiveEndTime")
     public Long effectiveEndTime;
 
+    /**
+     * <p>The beginning of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.</p>
+     */
     @NameInMap("EffectiveStartTime")
     public Long effectiveStartTime;
 
@@ -68,6 +74,13 @@ public class CreateUserRequest extends TeaModel {
     @NameInMap("MobileCountryCode")
     public String mobileCountryCode;
 
+    /**
+     * <p>Specifies whether password reset is required upon the next logon. Valid values:</p>
+     * <br>
+     * <p>- true: yes</p>
+     * <br>
+     * <p>- false: no</p>
+     */
     @NameInMap("NeedResetPassword")
     public Boolean needResetPassword;
 
@@ -106,9 +119,26 @@ public class CreateUserRequest extends TeaModel {
     @NameInMap("SourceUserId")
     public String sourceUserId;
 
+    /**
+     * <p>The two-factor authentication method. You can select only one method. Valid values:</p>
+     * <br>
+     * <p>*   **sms:** text message</p>
+     * <p>*   **email:** email</p>
+     * <p>*   **dingtalk:** DingTalk</p>
+     * <p>*   **totp OTP:** time-based one-time password (TOTP) app</p>
+     * <br>
+     * <p>> *   When the TwoFactorStatus parameter is set to Enable, you must specify one of the preceding values.</p>
+     */
     @NameInMap("TwoFactorMethods")
     public String twoFactorMethods;
 
+    /**
+     * <p>The two-factor authentication status of the user. Valid values:</p>
+     * <br>
+     * <p>- Global: follows the global settings</p>
+     * <p>- Disable: disables two-factor authentication</p>
+     * <p>- Enable: enable two-factor authentication and follows settings of the single user</p>
+     */
     @NameInMap("TwoFactorStatus")
     public String twoFactorStatus;
 

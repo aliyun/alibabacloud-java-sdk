@@ -39,7 +39,7 @@ public class DetachHostAccountsFromHostShareKeyResponseBody extends TeaModel {
 
     public static class DetachHostAccountsFromHostShareKeyResponseBodyResults extends TeaModel {
         /**
-         * <p>The error code. If **OK** is returned, the disassociation was successful. If a different error code is returned, the disassociation failed.</p>
+         * <p>The error code returned. If **OK** is returned, the disassociation was successful. If a different error code is returned, the disassociation failed.</p>
          */
         @NameInMap("Code")
         public String code;
@@ -57,7 +57,7 @@ public class DetachHostAccountsFromHostShareKeyResponseBody extends TeaModel {
         public String hostShareKeyId;
 
         /**
-         * <p>The error message.</p>
+         * <p>The error message returned.</p>
          */
         @NameInMap("Message")
         public String message;

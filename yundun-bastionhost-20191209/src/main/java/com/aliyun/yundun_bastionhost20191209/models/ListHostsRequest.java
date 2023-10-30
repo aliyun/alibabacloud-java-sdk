@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListHostsRequest extends TeaModel {
     /**
-     * <p>The endpoint of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.</p>
+     * <p>The address of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.</p>
      */
     @NameInMap("HostAddress")
     public String hostAddress;
 
     /**
-     * <p>The ID of the host group to which the host that you want to query belongs.</p>
+     * <p>The ID of the host group to which the host to be queried belongs.</p>
      * <br>
-     * <p>>  You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.</p>
+     * <p>> You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.</p>
      */
     @NameInMap("HostGroupId")
     public String hostGroupId;
@@ -25,9 +25,9 @@ public class ListHostsRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The ID of the Bastionhost instance where you want to query hosts.</p>
+     * <p>The ID of the bastion host on which you want to query hosts.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
+     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -48,19 +48,17 @@ public class ListHostsRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries to return on each page. Default value: **10**.</p>
      * <br>
-     * <p>The value of the PageSize parameter must not exceed 100. Default value: 20. If you leave the PageSize parameter empty, 20 entries are returned on each page by default.</p>
-     * <br>
-     * <p>>  We recommend that you do not leave the PageSize parameter empty.</p>
+     * <p>> We recommend that you do not leave this parameter empty.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
-     * <p>The region ID of the Bastionhost instance where you want to query hosts.</p>
+     * <p>The region ID of the bastion host on which you want to query hosts.</p>
      * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -68,15 +66,15 @@ public class ListHostsRequest extends TeaModel {
     /**
      * <p>The source of the host that you want to query. Valid values:</p>
      * <br>
-     * <p>*   **Local**: an on-premises host</p>
+     * <p>*   **Local**: a host in a data center</p>
      * <p>*   **Ecs**: an Elastic Compute Service (ECS) instance</p>
-     * <p>*   **Rds**: a host in a dedicated cluster</p>
+     * <p>*   **Rds**: a host in an ApsaraDB MyBase dedicated cluster</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
-     * <p>The ID of the ECS instance or dedicated cluster host that you want to query. Only exact match is supported.</p>
+     * <p>The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster that you want to query. Only exact match is supported.</p>
      */
     @NameInMap("SourceInstanceId")
     public String sourceInstanceId;
@@ -84,9 +82,8 @@ public class ListHostsRequest extends TeaModel {
     /**
      * <p>The status of the host that you want to query. Valid values:</p>
      * <br>
-     * <p>- **Normal**: The host is normal.</p>
-     * <br>
-     * <p>- **Release**: The host is released.</p>
+     * <p>*   **Normal**: normal</p>
+     * <p>*   **Release**: released</p>
      */
     @NameInMap("SourceInstanceState")
     public String sourceInstanceState;

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetHostShareKeyRequest extends TeaModel {
     /**
-     * <p>The ID of the shared key whose details you want to query.</p>
+     * <p>The time when the information about the shared key was last modified.</p>
      */
     @NameInMap("HostShareKeyId")
     public String hostShareKeyId;
 
     /**
-     * <p>The ID of the bastion host. You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
+     * <p>The ID of the shared key whose details you want to query.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The region ID of the bastion host. For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <p>The name of the shared key.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

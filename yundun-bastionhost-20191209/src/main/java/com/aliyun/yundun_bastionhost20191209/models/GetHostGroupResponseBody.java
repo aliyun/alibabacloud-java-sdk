@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetHostGroupResponseBody extends TeaModel {
     /**
-     * <p>The details of the host group returned.</p>
+     * <p>The ID of the host group that you want to query.</p>
+     * <br>
+     * <p>>  You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.</p>
      */
     @NameInMap("HostGroup")
     public GetHostGroupResponseBodyHostGroup hostGroup;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>my host group.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,19 +41,19 @@ public class GetHostGroupResponseBody extends TeaModel {
 
     public static class GetHostGroupResponseBodyHostGroup extends TeaModel {
         /**
-         * <p>The description of the host group.</p>
+         * <p>The details of the host group returned.</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
-         * <p>The ID of the host group.</p>
+         * <p>The description of the host group.</p>
          */
         @NameInMap("HostGroupId")
         public String hostGroupId;
 
         /**
-         * <p>The name of the host group.</p>
+         * <p>The ID of the host group.</p>
          */
         @NameInMap("HostGroupName")
         public String hostGroupName;

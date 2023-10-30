@@ -7,7 +7,7 @@ public class StartInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the bastion host that you want to enable.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to obtain the ID of the bastion host.</p>
+     * <p>> You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -19,7 +19,7 @@ public class StartInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of the security groups.</p>
+     * <p>An array consisting of the IDs of security groups to which the bastion host is added.</p>
      */
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;

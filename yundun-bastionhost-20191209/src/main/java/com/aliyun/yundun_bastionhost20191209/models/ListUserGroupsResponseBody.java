@@ -4,21 +4,12 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListUserGroupsResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of user groups returned.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    /**
-     * <p>The user groups returned.</p>
-     */
     @NameInMap("UserGroups")
     public java.util.List<ListUserGroupsResponseBodyUserGroups> userGroups;
 
@@ -52,27 +43,15 @@ public class ListUserGroupsResponseBody extends TeaModel {
     }
 
     public static class ListUserGroupsResponseBodyUserGroups extends TeaModel {
-        /**
-         * <p>The description of the user group.</p>
-         */
         @NameInMap("Comment")
         public String comment;
 
-        /**
-         * <p>The number of users in the user group.</p>
-         */
         @NameInMap("MemberCount")
         public Integer memberCount;
 
-        /**
-         * <p>The ID of the user group.</p>
-         */
         @NameInMap("UserGroupId")
         public String userGroupId;
 
-        /**
-         * <p>The name of the user group.</p>
-         */
         @NameInMap("UserGroupName")
         public String userGroupName;
 

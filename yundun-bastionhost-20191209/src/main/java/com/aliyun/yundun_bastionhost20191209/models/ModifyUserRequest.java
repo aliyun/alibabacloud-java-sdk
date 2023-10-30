@@ -80,7 +80,10 @@ public class ModifyUserRequest extends TeaModel {
     public String mobileCountryCode;
 
     /**
-     * <p>The original password of the user. The password must be 8 to 128 characters in length and must contain lowercase letters, uppercase letters, digits, and special characters.</p>
+     * <p>Specifies whether password reset is required upon the next logon. Valid values:</p>
+     * <br>
+     * <p>- true: yes</p>
+     * <p>- false: no</p>
      */
     @NameInMap("NeedResetPassword")
     public Boolean needResetPassword;
@@ -107,9 +110,7 @@ public class ModifyUserRequest extends TeaModel {
      * <p>*   **dingtalk:** DingTalk</p>
      * <p>*   **totp OTP:** time-based one-time password (TOTP) app</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   When the TwoFactorStatus parameter is set to Enable, you must specify one of the preceding values.</p>
+     * <p>> *   When the TwoFactorStatus parameter is set to Enable, you must specify one of the preceding values.</p>
      */
     @NameInMap("TwoFactorMethods")
     public String twoFactorMethods;

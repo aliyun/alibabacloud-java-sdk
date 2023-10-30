@@ -11,7 +11,7 @@ public class GetUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information of the user that was queried.</p>
+     * <p>The details of the user that was queried.</p>
      */
     @NameInMap("User")
     public GetUserResponseBodyUser user;
@@ -50,9 +50,15 @@ public class GetUserResponseBody extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The end of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.</p>
+         */
         @NameInMap("EffectiveEndTime")
         public Long effectiveEndTime;
 
+        /**
+         * <p>The beginning of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.</p>
+         */
         @NameInMap("EffectiveStartTime")
         public Long effectiveStartTime;
 
@@ -63,17 +69,17 @@ public class GetUserResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>The mobile number of the user.</p>
+         * <p>The mobile phone number of the user.</p>
          */
         @NameInMap("Mobile")
         public String mobile;
 
         /**
-         * <p>The country where the mobile number of the user is registered. Valid values:</p>
+         * <p>The location in which the mobile number of the user is registered. Valid values:</p>
          * <br>
          * <p>*   **CN**: the Chinese mainland, whose country calling code is +86</p>
          * <p>*   **HK**: Hong Kong (China), whose country calling code is +852</p>
-         * <p>*   **MO**: Macau (China), whose country calling code is +853</p>
+         * <p>*   **MO**: Macao (China), whose country calling code is +853</p>
          * <p>*   **TW**: Taiwan (China), whose country calling code is +886</p>
          * <p>*   **RU**: Russia, whose country calling code is +7</p>
          * <p>*   **SG**: Singapore, whose country calling code is +65</p>
@@ -81,12 +87,12 @@ public class GetUserResponseBody extends TeaModel {
          * <p>*   **ID**: Indonesia, whose country calling code is +62</p>
          * <p>*   **DE**: Germany, whose country calling code is +49</p>
          * <p>*   **AU**: Australia, whose country calling code is +61</p>
-         * <p>*   **US**: United States, whose country calling code is +1</p>
+         * <p>*   **US**: US, whose country calling code is +1</p>
          * <p>*   **AE**: United Arab Emirates, whose country calling code is +971</p>
-         * <p>*   **JP**: Japan, whose country calling code is +81</p>
-         * <p>*   **GB**: United Kingdom, whose country calling code is +44</p>
+         * <p>*   **JP:** Japan, whose country calling code is +81</p>
+         * <p>*   **GB**: UK, whose country calling code is +44</p>
          * <p>*   **IN**: India, whose country calling code is +91</p>
-         * <p>*   **KR**: South Korea, whose country calling code is +82</p>
+         * <p>*   **KR**: Republic of Korea, whose country calling code is +82</p>
          * <p>*   **PH**: Philippines, whose country calling code is +63</p>
          * <p>*   **CH**: Switzerland, whose country calling code is +41</p>
          * <p>*   **SE**: Sweden, whose country calling code is +46</p>
@@ -94,6 +100,12 @@ public class GetUserResponseBody extends TeaModel {
         @NameInMap("MobileCountryCode")
         public String mobileCountryCode;
 
+        /**
+         * <p>Specifies whether password reset is required upon the next logon. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("NeedResetPassword")
         public Boolean needResetPassword;
 
@@ -109,14 +121,24 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * <p>The unique ID of the user.</p>
          * <br>
-         * <p>>  This parameter uniquely identifies a RAM user of the Bastionhost instance. A value is returned for this parameter if the **Source** parameter is set to **Ram**. No value is returned for this parameter if the **Source** parameter is set to **Local**.</p>
+         * <p>> This parameter uniquely identifies a RAM user of the bastion host. A value is returned for this parameter if the **Source** parameter is set to **Ram**. No value is returned for this parameter if the **Source** parameter is set to **Local**.</p>
          */
         @NameInMap("SourceUserId")
         public String sourceUserId;
 
+        /**
+         * <p>An array that consists of the details of the two-factor authentication method.</p>
+         */
         @NameInMap("TwoFactorMethods")
         public java.util.List<String> twoFactorMethods;
 
+        /**
+         * <p>The two-factor authentication status of the user. Valid values:</p>
+         * <br>
+         * <p>*   **Global**: The global settings are used.</p>
+         * <p>*   **Disable**: The two-factor authentication is disabled.</p>
+         * <p>*   **Enable**: The two-factor authentication is enabled and the user-specific setting is used.</p>
+         */
         @NameInMap("TwoFactorStatus")
         public String twoFactorStatus;
 
@@ -133,7 +155,7 @@ public class GetUserResponseBody extends TeaModel {
         public String userName;
 
         /**
-         * <p>The statuses of the user.</p>
+         * <p>An array that consists of the details of the user status.</p>
          */
         @NameInMap("UserState")
         public java.util.List<String> userState;

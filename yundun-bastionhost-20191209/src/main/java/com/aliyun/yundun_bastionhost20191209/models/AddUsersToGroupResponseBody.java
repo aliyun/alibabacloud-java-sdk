@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class AddUsersToGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~315526~~).</p>
+     * <br>
+     * <p>For more information about sample requests, see the "Examples" section of this topic.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The result of the call.</p>
+     * <p>Adds one or more users to a user group.</p>
      */
     @NameInMap("Results")
     public java.util.List<AddUsersToGroupResponseBodyResults> results;
@@ -39,40 +41,23 @@ public class AddUsersToGroupResponseBody extends TeaModel {
 
     public static class AddUsersToGroupResponseBodyResults extends TeaModel {
         /**
-         * <p>The return code that indicates whether the call was successful. Valid values:</p>
-         * <br>
-         * <p>*   **OK**: The call was successful.</p>
-         * <br>
-         * <p>*   **UNEXPECTED**: An unknown error occurred.</p>
-         * <br>
-         * <p>*   **INVALID_ARGUMENT**: A request parameter is invalid.</p>
-         * <br>
-         * <p>> Make sure that the request parameters are valid and call the operation again.</p>
-         * <br>
-         * <p>*   **OBJECT_NOT_FOUND**: The specified object on which you want to perform the operation does not exist.</p>
-         * <br>
-         * <p>> Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.</p>
-         * <br>
-         * <p>*   **OBJECT_AlREADY_EXISTS**: The specified object on which you want to perform the operation already exists.</p>
+         * <p>AddUsersToGroup</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>WB01014029</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The ID of the group.</p>
+         * <p>AddUsersToGroup</p>
          */
         @NameInMap("UserGroupId")
         public String userGroupId;
 
-        /**
-         * <p>The ID of the user.</p>
-         */
         @NameInMap("UserId")
         public String userId;
 

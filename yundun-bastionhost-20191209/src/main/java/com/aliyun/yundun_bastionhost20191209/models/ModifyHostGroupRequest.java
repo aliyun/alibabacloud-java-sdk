@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class ModifyHostGroupRequest extends TeaModel {
     /**
-     * <p>The new description of the host group. The value can be up to 500 characters in length.</p>
+     * <p>The new name of the host group. The name can be up to 128 characters in length.</p>
      */
     @NameInMap("Comment")
     public String comment;
+
+    /**
+     * <p>The region ID of the Bastionhost instance where you want to modify the information of the host group.</p>
+     * <br>
+     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     */
+    @NameInMap("HostGroupId")
+    public String hostGroupId;
 
     /**
      * <p>The ID of the host group that you want to modify.</p>
      * <br>
      * <p>>  You can call the [ListHostGroups](~~201307~~) operation to query the ID of the host group.</p>
      */
-    @NameInMap("HostGroupId")
-    public String hostGroupId;
-
-    /**
-     * <p>The new name of the host group. The name can be up to 128 characters in length.</p>
-     */
     @NameInMap("HostGroupName")
     public String hostGroupName;
 
     /**
-     * <p>The ID of the Bastionhost instance where you want to modify the information of the host group.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The region ID of the Bastionhost instance where you want to modify the information of the host group.</p>
+     * <p>The ID of the Bastionhost instance where you want to modify the information of the host group.</p>
      * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the Bastionhost instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

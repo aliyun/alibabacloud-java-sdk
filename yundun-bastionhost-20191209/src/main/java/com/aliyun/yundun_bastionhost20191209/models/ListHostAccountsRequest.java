@@ -5,29 +5,37 @@ import com.aliyun.tea.*;
 
 public class ListHostAccountsRequest extends TeaModel {
     /**
-     * <p>The name of the host account that you want to query. The name can be up to 128 characters in length. Only exact match is supported.</p>
+     * <p>Indicates whether a password is configured for the host account.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   true: A password is configured for the host account.</p>
+     * <p>*   false: No passwords are configured for the host account.</p>
      */
     @NameInMap("HostAccountName")
     public String hostAccountName;
 
     /**
-     * <p>The ID of the specified host whose accounts you want to query.</p>
+     * <p>The protocol used by the host whose accounts you want to query.</p>
      * <br>
-     * <p>>  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.</p>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   SSH</p>
+     * <p>*   RDP</p>
      */
     @NameInMap("HostId")
     public String hostId;
 
     /**
-     * <p>The ID of the bastion host in which you want to query accounts of the specified host.</p>
-     * <br>
-     * <p>>  You can call the DescribeInstances operation to query the ID of the bastion host.</p>
+     * <p>The ID of the shared key.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The operation that you want to perform.</p>
+     * <br>
+     * <p>Set the value to **ListHostAccounts**.</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
@@ -43,20 +51,15 @@ public class ListHostAccountsRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The protocol used by the host whose accounts you want to query.</p>
-     * <br>
-     * <p>Valid values:</p>
-     * <br>
-     * <p>*   SSH</p>
-     * <p>*   RDP</p>
+     * <p>The name of the host account that you want to query. The name can be up to 128 characters in length. Only exact match is supported.</p>
      */
     @NameInMap("ProtocolName")
     public String protocolName;
 
     /**
-     * <p>The region ID of the bastion host in which you want to query accounts of the specified host.</p>
+     * <p>The ID of the specified host whose accounts you want to query.</p>
      * <br>
-     * <p>>  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
+     * <p>>  You can call the [ListHosts](~~200665~~) operation to query the ID of the host.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
