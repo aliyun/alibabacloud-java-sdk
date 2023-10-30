@@ -89,6 +89,9 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
     }
 
     public static class QueryCreateInstancePriceRequestCreateInstanceRequest extends TeaModel {
+        @NameInMap("ArchitectureType")
+        public String architectureType;
+
         @NameInMap("AutoRenew")
         public Boolean autoRenew;
 
@@ -137,6 +140,14 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
         public static QueryCreateInstancePriceRequestCreateInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
             QueryCreateInstancePriceRequestCreateInstanceRequest self = new QueryCreateInstancePriceRequestCreateInstanceRequest();
             return TeaModel.build(map, self);
+        }
+
+        public QueryCreateInstancePriceRequestCreateInstanceRequest setArchitectureType(String architectureType) {
+            this.architectureType = architectureType;
+            return this;
+        }
+        public String getArchitectureType() {
+            return this.architectureType;
         }
 
         public QueryCreateInstancePriceRequestCreateInstanceRequest setAutoRenew(Boolean autoRenew) {

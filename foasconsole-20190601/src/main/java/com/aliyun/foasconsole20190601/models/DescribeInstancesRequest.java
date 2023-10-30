@@ -51,6 +51,9 @@ public class DescribeInstancesRequest extends TeaModel {
     }
 
     public static class DescribeInstancesRequestDescribeInstancesRequest extends TeaModel {
+        @NameInMap("ArchitectureType")
+        public String architectureType;
+
         @NameInMap("ChargeType")
         public String chargeType;
 
@@ -75,6 +78,14 @@ public class DescribeInstancesRequest extends TeaModel {
         public static DescribeInstancesRequestDescribeInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesRequestDescribeInstancesRequest self = new DescribeInstancesRequestDescribeInstancesRequest();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesRequestDescribeInstancesRequest setArchitectureType(String architectureType) {
+            this.architectureType = architectureType;
+            return this;
+        }
+        public String getArchitectureType() {
+            return this.architectureType;
         }
 
         public DescribeInstancesRequestDescribeInstancesRequest setChargeType(String chargeType) {

@@ -215,6 +215,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstances extends TeaModel {
+        @NameInMap("ArchitectureType")
+        public String architectureType;
+
         @NameInMap("AskClusterId")
         public String askClusterId;
 
@@ -275,6 +278,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static DescribeInstancesResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstances self = new DescribeInstancesResponseBodyInstances();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstances setArchitectureType(String architectureType) {
+            this.architectureType = architectureType;
+            return this;
+        }
+        public String getArchitectureType() {
+            return this.architectureType;
         }
 
         public DescribeInstancesResponseBodyInstances setAskClusterId(String askClusterId) {
