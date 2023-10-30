@@ -10,6 +10,9 @@ public class UpdateModelFeatureRequest extends TeaModel {
     @NameInMap("LabelTableId")
     public String labelTableId;
 
+    @NameInMap("SequenceFeatureViewIds")
+    public java.util.List<String> sequenceFeatureViewIds;
+
     public static UpdateModelFeatureRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateModelFeatureRequest self = new UpdateModelFeatureRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class UpdateModelFeatureRequest extends TeaModel {
     }
     public String getLabelTableId() {
         return this.labelTableId;
+    }
+
+    public UpdateModelFeatureRequest setSequenceFeatureViewIds(java.util.List<String> sequenceFeatureViewIds) {
+        this.sequenceFeatureViewIds = sequenceFeatureViewIds;
+        return this;
+    }
+    public java.util.List<String> getSequenceFeatureViewIds() {
+        return this.sequenceFeatureViewIds;
     }
 
     public static class UpdateModelFeatureRequestFeatures extends TeaModel {
