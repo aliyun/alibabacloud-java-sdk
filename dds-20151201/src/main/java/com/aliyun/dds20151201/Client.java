@@ -5166,10 +5166,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyDBInstanceNetExpireTimeResponse modifyDBInstanceNetExpireTimeWithOptions(ModifyDBInstanceNetExpireTimeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
-            query.put("Category", request.category);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.classicExpendExpiredDays)) {
             query.put("ClassicExpendExpiredDays", request.classicExpendExpiredDays);
         }
