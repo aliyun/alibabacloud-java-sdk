@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>cloudauth_intl20220809</artifactId>
-  <version>1.2.1</version>
+  <version>1.3.0</version>
   <packaging>jar</packaging>
   <name>cloudauth_intl20220809</name>
   <description>Alibaba Cloud Cloudauth-intl (20220809) SDK for Java
