@@ -113,8 +113,9 @@ public class EvaluateResourceRequest extends TeaModel {
     public String shardsInfo;
 
     /**
-     * <p>副本集的存储空间，单位为GB。</p>
-     * <p>> 实例规格为云盘型时，该参数必填。</props></p>
+     * <p>The storage capacity of the replica set instance. Unit: GB.</p>
+     * <br>
+     * <p>> This parameter is required for the instances that use cloud disks.</p>
      */
     @NameInMap("Storage")
     public String storage;

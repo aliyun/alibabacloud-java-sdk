@@ -4,9 +4,6 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceNetExpireTimeRequest extends TeaModel {
-    @NameInMap("Category")
-    public String category;
-
     /**
      * <p>The retention period of the original classic network address. Valid values: **14**, **30**, **60**, and** 120**. Unit: day.</p>
      */
@@ -43,14 +40,6 @@ public class ModifyDBInstanceNetExpireTimeRequest extends TeaModel {
     public static ModifyDBInstanceNetExpireTimeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceNetExpireTimeRequest self = new ModifyDBInstanceNetExpireTimeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyDBInstanceNetExpireTimeRequest setCategory(String category) {
-        this.category = category;
-        return this;
-    }
-    public String getCategory() {
-        return this.category;
     }
 
     public ModifyDBInstanceNetExpireTimeRequest setClassicExpendExpiredDays(Integer classicExpendExpiredDays) {
