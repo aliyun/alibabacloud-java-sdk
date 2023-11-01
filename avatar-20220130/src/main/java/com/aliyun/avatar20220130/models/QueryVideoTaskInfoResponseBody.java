@@ -71,6 +71,9 @@ public class QueryVideoTaskInfoResponseBody extends TeaModel {
         @NameInMap("AlphaUrl")
         public String alphaUrl;
 
+        @NameInMap("AttachmentUrl")
+        public String attachmentUrl;
+
         @NameInMap("FailCode")
         public String failCode;
 
@@ -103,6 +106,14 @@ public class QueryVideoTaskInfoResponseBody extends TeaModel {
         }
         public String getAlphaUrl() {
             return this.alphaUrl;
+        }
+
+        public QueryVideoTaskInfoResponseBodyDataListTaskResult setAttachmentUrl(String attachmentUrl) {
+            this.attachmentUrl = attachmentUrl;
+            return this;
+        }
+        public String getAttachmentUrl() {
+            return this.attachmentUrl;
         }
 
         public QueryVideoTaskInfoResponseBodyDataListTaskResult setFailCode(String failCode) {
