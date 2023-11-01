@@ -208,6 +208,9 @@ public class QueryRunningInstanceResponseBody extends TeaModel {
         @NameInMap("SessionId")
         public String sessionId;
 
+        @NameInMap("Token")
+        public String token;
+
         @NameInMap("User")
         public QueryRunningInstanceResponseBodyDataUser user;
 
@@ -230,6 +233,14 @@ public class QueryRunningInstanceResponseBody extends TeaModel {
         }
         public String getSessionId() {
             return this.sessionId;
+        }
+
+        public QueryRunningInstanceResponseBodyData setToken(String token) {
+            this.token = token;
+            return this;
+        }
+        public String getToken() {
+            return this.token;
         }
 
         public QueryRunningInstanceResponseBodyData setUser(QueryRunningInstanceResponseBodyDataUser user) {
