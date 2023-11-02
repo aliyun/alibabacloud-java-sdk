@@ -97,8 +97,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         @NameInMap("city_ad_code")
         public String cityAdCode;
 
+        @NameInMap("hotel_address")
+        public String hotelAddress;
+
         @NameInMap("hotel_name")
         public String hotelName;
+
+        @NameInMap("hotel_phone")
+        public String hotelPhone;
 
         @NameInMap("hotel_support_vat_invoice_type")
         public Integer hotelSupportVatInvoiceType;
@@ -149,12 +155,28 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             return this.cityAdCode;
         }
 
+        public HotelOrderQueryResponseBodyModuleHotelInfo setHotelAddress(String hotelAddress) {
+            this.hotelAddress = hotelAddress;
+            return this;
+        }
+        public String getHotelAddress() {
+            return this.hotelAddress;
+        }
+
         public HotelOrderQueryResponseBodyModuleHotelInfo setHotelName(String hotelName) {
             this.hotelName = hotelName;
             return this;
         }
         public String getHotelName() {
             return this.hotelName;
+        }
+
+        public HotelOrderQueryResponseBodyModuleHotelInfo setHotelPhone(String hotelPhone) {
+            this.hotelPhone = hotelPhone;
+            return this;
+        }
+        public String getHotelPhone() {
+            return this.hotelPhone;
         }
 
         public HotelOrderQueryResponseBodyModuleHotelInfo setHotelSupportVatInvoiceType(Integer hotelSupportVatInvoiceType) {
@@ -239,6 +261,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
 
         @NameInMap("depart_name")
         public String departName;
+
+        @NameInMap("exceed_apply_nos")
+        public java.util.List<String> exceedApplyNos;
 
         @NameInMap("extend_field")
         public String extendField;
@@ -327,6 +352,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         }
         public String getDepartName() {
             return this.departName;
+        }
+
+        public HotelOrderQueryResponseBodyModuleOrderBaseInfo setExceedApplyNos(java.util.List<String> exceedApplyNos) {
+            this.exceedApplyNos = exceedApplyNos;
+            return this;
+        }
+        public java.util.List<String> getExceedApplyNos() {
+            return this.exceedApplyNos;
         }
 
         public HotelOrderQueryResponseBodyModuleOrderBaseInfo setExtendField(String extendField) {
