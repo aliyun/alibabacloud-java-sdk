@@ -73,6 +73,9 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
     }
 
     public static class UpdateLoadBalancerZonesRequestZoneMappings extends TeaModel {
+        @NameInMap("IntranetAddress")
+        public String intranetAddress;
+
         /**
          * <p>The ID of the vSwitch in the zone. By default, you can specify only one vSwitch (subnet) for each zone of an ALB instance. You can specify up to 10 zone IDs.</p>
          */
@@ -88,6 +91,14 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
         public static UpdateLoadBalancerZonesRequestZoneMappings build(java.util.Map<String, ?> map) throws Exception {
             UpdateLoadBalancerZonesRequestZoneMappings self = new UpdateLoadBalancerZonesRequestZoneMappings();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateLoadBalancerZonesRequestZoneMappings setIntranetAddress(String intranetAddress) {
+            this.intranetAddress = intranetAddress;
+            return this;
+        }
+        public String getIntranetAddress() {
+            return this.intranetAddress;
         }
 
         public UpdateLoadBalancerZonesRequestZoneMappings setVSwitchId(String vSwitchId) {

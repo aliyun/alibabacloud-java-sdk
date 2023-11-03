@@ -68,6 +68,9 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     @NameInMap("UchConfig")
     public UpdateServerGroupAttributeRequestUchConfig uchConfig;
 
+    @NameInMap("UpstreamKeepaliveEnabled")
+    public Boolean upstreamKeepaliveEnabled;
+
     public static UpdateServerGroupAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateServerGroupAttributeRequest self = new UpdateServerGroupAttributeRequest();
         return TeaModel.build(map, self);
@@ -143,6 +146,14 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     }
     public UpdateServerGroupAttributeRequestUchConfig getUchConfig() {
         return this.uchConfig;
+    }
+
+    public UpdateServerGroupAttributeRequest setUpstreamKeepaliveEnabled(Boolean upstreamKeepaliveEnabled) {
+        this.upstreamKeepaliveEnabled = upstreamKeepaliveEnabled;
+        return this;
+    }
+    public Boolean getUpstreamKeepaliveEnabled() {
+        return this.upstreamKeepaliveEnabled;
     }
 
     public static class UpdateServerGroupAttributeRequestHealthCheckConfig extends TeaModel {
