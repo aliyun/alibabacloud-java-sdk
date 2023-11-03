@@ -51,6 +51,12 @@ public class GetPlayInfoRequest extends TeaModel {
     @NameInMap("Definition")
     public String definition;
 
+    /**
+     * <p>The type of the digital watermark. Valid values:</p>
+     * <br>
+     * <p>*   TraceMark: tracing watermark</p>
+     * <p>*   CopyrightMark: copyright watermark</p>
+     */
     @NameInMap("DigitalWatermarkType")
     public String digitalWatermarkType;
 
@@ -111,6 +117,12 @@ public class GetPlayInfoRequest extends TeaModel {
     @NameInMap("StreamType")
     public String streamType;
 
+    /**
+     * <p>The custom digital watermark.</p>
+     * <br>
+     * <p>*   If you set `DigitalWatermarkType` to `TraceMark`, specify this parameter to configure the video tracing watermark and return the video stream that contains the watermark. The value can be up to 1,024 characters in length and can contain letters and digits.</p>
+     * <p>*   If you set `DigitalWatermarkType` to `CopyrightMark`, specify the **watermark text** that you created for the watermark template for this parameter.`` You can specify this parameter to query and return the video stream that contains the specified watermark text.</p>
+     */
     @NameInMap("Trace")
     public String trace;
 

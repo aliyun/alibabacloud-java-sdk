@@ -4,12 +4,24 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetDigitalWatermarkExtractResultRequest extends TeaModel {
+    /**
+     * <p>The type of the digital watermark. Valid values:</p>
+     * <br>
+     * <p>*   TraceMark: tracing watermark</p>
+     * <p>*   CopyrightMark: copyright watermark</p>
+     */
     @NameInMap("ExtractType")
     public String extractType;
 
+    /**
+     * <p>The ID of the job.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>The ID of the video file. You can query the video ID by using the ApsaraVideo VOD console or calling the SearchMedia operation.</p>
+     */
     @NameInMap("MediaId")
     public String mediaId;
 

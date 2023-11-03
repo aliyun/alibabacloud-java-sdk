@@ -4,6 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ProduceEditingProjectVideoRequest extends TeaModel {
+    @NameInMap("AppId")
+    public String appId;
+
     /**
      * <p>The thumbnail URL of the online editing project.</p>
      */
@@ -71,6 +74,14 @@ public class ProduceEditingProjectVideoRequest extends TeaModel {
     public static ProduceEditingProjectVideoRequest build(java.util.Map<String, ?> map) throws Exception {
         ProduceEditingProjectVideoRequest self = new ProduceEditingProjectVideoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ProduceEditingProjectVideoRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
     }
 
     public ProduceEditingProjectVideoRequest setCoverURL(String coverURL) {

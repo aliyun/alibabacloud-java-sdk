@@ -33,9 +33,7 @@ public class SearchMediaRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The pagination identifier. The identifier can be up to 32 characters in length.</p>
-     * <br>
-     * <p>The first time you call this operation for each new search, you do not need to specify this parameter. The value of this parameter is returned each time data records that meet the specified filter criteria are found. The value is used to record the current position of queried data. Record the returned parameter value and set this parameter according to the following requirements during the next search:</p>
+     * <p>The pagination identifier. The password must be 32 characters in length The first time you call this operation for each new search, you do not need to specify this parameter. The value of this parameter is returned each time data records that meet the specified filter condition are found. The value is used to record the current position of queried data. Record the returned parameter value and set this parameter according to the following requirements during the next search:</p>
      * <br>
      * <p>*   If SearchType is set to **video** or **audio** and you need to traverse all data that meets the filter criteria, you must set the ScrollToken parameter.</p>
      * <p>*   If the value of the PageNo parameter exceeds **200**, we recommend that you set this parameter to optimize search performance.</p>
