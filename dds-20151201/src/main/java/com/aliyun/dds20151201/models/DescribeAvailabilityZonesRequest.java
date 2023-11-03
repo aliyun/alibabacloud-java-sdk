@@ -13,6 +13,9 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("DBInstanceClass")
+    public String DBInstanceClass;
+
     /**
      * <p>The database engine type of the instance. Valid values:</p>
      * <br>
@@ -21,6 +24,9 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
      */
     @NameInMap("DbType")
     public String dbType;
+
+    @NameInMap("EngineVersion")
+    public String engineVersion;
 
     @NameInMap("ExcludeSecondaryZoneId")
     public String excludeSecondaryZoneId;
@@ -112,12 +118,28 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
         return this.acceptLanguage;
     }
 
+    public DescribeAvailabilityZonesRequest setDBInstanceClass(String DBInstanceClass) {
+        this.DBInstanceClass = DBInstanceClass;
+        return this;
+    }
+    public String getDBInstanceClass() {
+        return this.DBInstanceClass;
+    }
+
     public DescribeAvailabilityZonesRequest setDbType(String dbType) {
         this.dbType = dbType;
         return this;
     }
     public String getDbType() {
         return this.dbType;
+    }
+
+    public DescribeAvailabilityZonesRequest setEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    public String getEngineVersion() {
+        return this.engineVersion;
     }
 
     public DescribeAvailabilityZonesRequest setExcludeSecondaryZoneId(String excludeSecondaryZoneId) {

@@ -4,6 +4,9 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceRequest extends TeaModel {
+    @NameInMap("DBInstanceClass")
+    public String DBInstanceClass;
+
     /**
      * <p>The architecture of the instance. Valid values:</p>
      * <br>
@@ -12,6 +15,9 @@ public class DescribeAvailableResourceRequest extends TeaModel {
      */
     @NameInMap("DbType")
     public String dbType;
+
+    @NameInMap("EngineVersion")
+    public String engineVersion;
 
     /**
      * <p>The billing method of the instance. Default value: PrePaid. Valid values:</p>
@@ -63,12 +69,28 @@ public class DescribeAvailableResourceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeAvailableResourceRequest setDBInstanceClass(String DBInstanceClass) {
+        this.DBInstanceClass = DBInstanceClass;
+        return this;
+    }
+    public String getDBInstanceClass() {
+        return this.DBInstanceClass;
+    }
+
     public DescribeAvailableResourceRequest setDbType(String dbType) {
         this.dbType = dbType;
         return this;
     }
     public String getDbType() {
         return this.dbType;
+    }
+
+    public DescribeAvailableResourceRequest setEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    public String getEngineVersion() {
+        return this.engineVersion;
     }
 
     public DescribeAvailableResourceRequest setInstanceChargeType(String instanceChargeType) {
