@@ -4,6 +4,9 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class AttachInstancesRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("Entrusted")
     public Boolean entrusted;
 
@@ -37,6 +40,14 @@ public class AttachInstancesRequest extends TeaModel {
     public static AttachInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachInstancesRequest self = new AttachInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AttachInstancesRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public AttachInstancesRequest setEntrusted(Boolean entrusted) {

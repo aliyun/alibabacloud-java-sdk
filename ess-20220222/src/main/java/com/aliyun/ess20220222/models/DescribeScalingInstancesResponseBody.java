@@ -115,6 +115,9 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;
 
+        @NameInMap("ScalingInstanceId")
+        public String scalingInstanceId;
+
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
@@ -234,6 +237,14 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         }
         public String getScalingGroupId() {
             return this.scalingGroupId;
+        }
+
+        public DescribeScalingInstancesResponseBodyScalingInstances setScalingInstanceId(String scalingInstanceId) {
+            this.scalingInstanceId = scalingInstanceId;
+            return this;
+        }
+        public String getScalingInstanceId() {
+            return this.scalingInstanceId;
         }
 
         public DescribeScalingInstancesResponseBodyScalingInstances setSpotStrategy(String spotStrategy) {
