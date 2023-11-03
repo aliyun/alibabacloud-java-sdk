@@ -156,6 +156,9 @@ public class ListServicesResponseBody extends TeaModel {
         @NameInMap("ArtifactVersion")
         public String artifactVersion;
 
+        @NameInMap("Categories")
+        public String categories;
+
         @NameInMap("CommodityCode")
         public String commodityCode;
 
@@ -167,6 +170,9 @@ public class ListServicesResponseBody extends TeaModel {
 
         @NameInMap("DeployType")
         public String deployType;
+
+        @NameInMap("HasDraft")
+        public Boolean hasDraft;
 
         @NameInMap("LatestResellSourceServiceVersion")
         public String latestResellSourceServiceVersion;
@@ -185,6 +191,9 @@ public class ListServicesResponseBody extends TeaModel {
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        @NameInMap("ServiceDiscoverable")
+        public String serviceDiscoverable;
 
         @NameInMap("ServiceId")
         public String serviceId;
@@ -269,6 +278,14 @@ public class ListServicesResponseBody extends TeaModel {
             return this.artifactVersion;
         }
 
+        public ListServicesResponseBodyServices setCategories(String categories) {
+            this.categories = categories;
+            return this;
+        }
+        public String getCategories() {
+            return this.categories;
+        }
+
         public ListServicesResponseBodyServices setCommodityCode(String commodityCode) {
             this.commodityCode = commodityCode;
             return this;
@@ -299,6 +316,14 @@ public class ListServicesResponseBody extends TeaModel {
         }
         public String getDeployType() {
             return this.deployType;
+        }
+
+        public ListServicesResponseBodyServices setHasDraft(Boolean hasDraft) {
+            this.hasDraft = hasDraft;
+            return this;
+        }
+        public Boolean getHasDraft() {
+            return this.hasDraft;
         }
 
         public ListServicesResponseBodyServices setLatestResellSourceServiceVersion(String latestResellSourceServiceVersion) {
@@ -347,6 +372,14 @@ public class ListServicesResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public ListServicesResponseBodyServices setServiceDiscoverable(String serviceDiscoverable) {
+            this.serviceDiscoverable = serviceDiscoverable;
+            return this;
+        }
+        public String getServiceDiscoverable() {
+            return this.serviceDiscoverable;
         }
 
         public ListServicesResponseBodyServices setServiceId(String serviceId) {

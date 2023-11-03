@@ -13,6 +13,9 @@ public class ListServiceUsagesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("SupplierRole")
+    public String supplierRole;
+
     public static ListServiceUsagesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListServiceUsagesRequest self = new ListServiceUsagesRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class ListServiceUsagesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListServiceUsagesRequest setSupplierRole(String supplierRole) {
+        this.supplierRole = supplierRole;
+        return this;
+    }
+    public String getSupplierRole() {
+        return this.supplierRole;
     }
 
     public static class ListServiceUsagesRequestFilter extends TeaModel {

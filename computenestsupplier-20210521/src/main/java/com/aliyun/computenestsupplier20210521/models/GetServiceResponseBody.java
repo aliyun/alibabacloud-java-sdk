@@ -10,6 +10,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("ApprovalType")
     public String approvalType;
 
+    @NameInMap("Categories")
+    public String categories;
+
     @NameInMap("CommodityCode")
     public String commodityCode;
 
@@ -76,6 +79,12 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("ServiceAuditDocumentUrl")
+    public String serviceAuditDocumentUrl;
+
+    @NameInMap("ServiceDiscoverable")
+    public String serviceDiscoverable;
+
     @NameInMap("ServiceDocUrl")
     public String serviceDocUrl;
 
@@ -93,6 +102,9 @@ public class GetServiceResponseBody extends TeaModel {
 
     @NameInMap("ShareType")
     public String shareType;
+
+    @NameInMap("ShareTypeStatus")
+    public String shareTypeStatus;
 
     @NameInMap("SourceServiceId")
     public String sourceServiceId;
@@ -167,6 +179,14 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public String getApprovalType() {
         return this.approvalType;
+    }
+
+    public GetServiceResponseBody setCategories(String categories) {
+        this.categories = categories;
+        return this;
+    }
+    public String getCategories() {
+        return this.categories;
     }
 
     public GetServiceResponseBody setCommodityCode(String commodityCode) {
@@ -345,6 +365,22 @@ public class GetServiceResponseBody extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public GetServiceResponseBody setServiceAuditDocumentUrl(String serviceAuditDocumentUrl) {
+        this.serviceAuditDocumentUrl = serviceAuditDocumentUrl;
+        return this;
+    }
+    public String getServiceAuditDocumentUrl() {
+        return this.serviceAuditDocumentUrl;
+    }
+
+    public GetServiceResponseBody setServiceDiscoverable(String serviceDiscoverable) {
+        this.serviceDiscoverable = serviceDiscoverable;
+        return this;
+    }
+    public String getServiceDiscoverable() {
+        return this.serviceDiscoverable;
+    }
+
     public GetServiceResponseBody setServiceDocUrl(String serviceDocUrl) {
         this.serviceDocUrl = serviceDocUrl;
         return this;
@@ -391,6 +427,14 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public String getShareType() {
         return this.shareType;
+    }
+
+    public GetServiceResponseBody setShareTypeStatus(String shareTypeStatus) {
+        this.shareTypeStatus = shareTypeStatus;
+        return this;
+    }
+    public String getShareTypeStatus() {
+        return this.shareTypeStatus;
     }
 
     public GetServiceResponseBody setSourceServiceId(String sourceServiceId) {

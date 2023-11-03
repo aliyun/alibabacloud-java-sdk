@@ -7,8 +7,8 @@ public class ListArtifactVersionsRequest extends TeaModel {
     @NameInMap("ArtifactId")
     public String artifactId;
 
-    @NameInMap("MaxResult")
-    public Integer maxResult;
+    @NameInMap("MaxResults")
+    public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
@@ -26,12 +26,12 @@ public class ListArtifactVersionsRequest extends TeaModel {
         return this.artifactId;
     }
 
-    public ListArtifactVersionsRequest setMaxResult(Integer maxResult) {
-        this.maxResult = maxResult;
+    public ListArtifactVersionsRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
-    public Integer getMaxResult() {
-        return this.maxResult;
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public ListArtifactVersionsRequest setNextToken(String nextToken) {
