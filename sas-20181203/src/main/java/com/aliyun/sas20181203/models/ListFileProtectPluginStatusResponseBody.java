@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListFileProtectPluginStatusResponseBody extends TeaModel {
+    /**
+     * <p>The data returned if the call is successful.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListFileProtectPluginStatusResponseBodyData> data;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListFileProtectPluginStatusResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,33 +52,69 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
     }
 
     public static class ListFileProtectPluginStatusResponseBodyData extends TeaModel {
+        /**
+         * <p>The version of the Security Center agent.</p>
+         */
         @NameInMap("ClientVersion")
         public String clientVersion;
 
+        /**
+         * <p>The returned code after you install the Security Center agent. Valid values:</p>
+         * <br>
+         * <p>1.  0: The installation is successful.</p>
+         * <p>2.  \-2: The kernel does not support the installation.</p>
+         */
         @NameInMap("InstallCode")
         public String installCode;
 
+        /**
+         * <p>The returned message after you install the Security Center agent.</p>
+         */
         @NameInMap("InstallMessage")
         public String installMessage;
 
+        /**
+         * <p>Indicates whether the Security Center agent is installed.</p>
+         */
         @NameInMap("Installed")
         public Boolean installed;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The public IP address that is associated with the instance.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The private IP address that is associated with the instance.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>Indicates whether the Security Center agent is online. Valid value:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Online")
         public Boolean online;
 
+        /**
+         * <p>Indicates whether the core file monitoring file is supported.</p>
+         */
         @NameInMap("SupportFile")
         public Boolean supportFile;
 
+        /**
+         * <p>The UUID of the asset.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
@@ -161,12 +206,21 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
     }
 
     public static class ListFileProtectPluginStatusResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

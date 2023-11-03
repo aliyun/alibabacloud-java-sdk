@@ -29,7 +29,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the alert events.</p>
+     * <p>The information about the alert event.</p>
      */
     @NameInMap("SuspEvents")
     public java.util.List<DescribeSuspEventsResponseBodySuspEvents> suspEvents;
@@ -113,7 +113,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         public String value;
 
         /**
-         * <p>The display path of the alert event.</p>
+         * <p>The display name of the path of the alert event.</p>
          */
         @NameInMap("ValueDisplay")
         public String valueDisplay;
@@ -209,13 +209,13 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
 
     public static class DescribeSuspEventsResponseBodySuspEventsTacticItems extends TeaModel {
         /**
-         * <p>The tactic name of the ATT\&CK attack.</p>
+         * <p>The ATT\&CK tactic name.</p>
          */
         @NameInMap("TacticDisplayName")
         public String tacticDisplayName;
 
         /**
-         * <p>The stage information about the ATT\&CK attack.</p>
+         * <p>The ATT\&CK stage information.</p>
          */
         @NameInMap("TacticId")
         public String tacticId;
@@ -257,7 +257,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         public String alarmEventName;
 
         /**
-         * <p>The name of the alert event.</p>
+         * <p>The name of the alert.</p>
          */
         @NameInMap("AlarmEventNameDisplay")
         public String alarmEventNameDisplay;
@@ -269,13 +269,13 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         public String alarmEventType;
 
         /**
-         * <p>The type of the alert event.</p>
+         * <p>The display name of the type of the alert event.</p>
          */
         @NameInMap("AlarmEventTypeDisplay")
         public String alarmEventTypeDisplay;
 
         /**
-         * <p>The ID of the alert event.</p>
+         * <p>The unique ID of the alert event.</p>
          */
         @NameInMap("AlarmUniqueInfo")
         public String alarmUniqueInfo;
@@ -293,7 +293,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         public Boolean autoBreaking;
 
         /**
-         * <p>Indicates whether the alert event can be handled online, such as quarantining the source file of the malicious process. Valid values:</p>
+         * <p>Indicates whether you can handle the alert event online, such as quarantining the source file of the malicious process. Valid values:</p>
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false**</p>
@@ -320,7 +320,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         public Boolean containHwMode;
 
         /**
-         * <p>The container ID.</p>
+         * <p>The ID of the container.</p>
          */
         @NameInMap("ContainerId")
         public String containerId;
@@ -356,7 +356,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         public java.util.List<DescribeSuspEventsResponseBodySuspEventsDetails> details;
 
         /**
-         * <p>Indicates whether the alert event can be detected by the cloud sandbox feature. Valid values:</p>
+         * <p>Indicates whether the alert event can be detected by cloud sandbox. Valid values:</p>
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false**</p>
@@ -373,13 +373,13 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         /**
          * <p>The status of the alert event. Valid values:</p>
          * <br>
-         * <p>*   **1**: The alert event is not handled.</p>
-         * <p>*   **2**: The alert event is ignored.</p>
-         * <p>*   **4**: The alert event is confirmed.</p>
-         * <p>*   **8**: The alert event is marked as a false positive.</p>
-         * <p>*   **16**: The alert event is being handled.</p>
-         * <p>*   **32**: The alert event is handled.</p>
-         * <p>*   **64**: The alert event expired.</p>
+         * <p>*   **1**: pending handling</p>
+         * <p>*   **2**: ignored</p>
+         * <p>*   **4**: confirmed</p>
+         * <p>*   **8**: marked as a false positive</p>
+         * <p>*   **16**: handling</p>
+         * <p>*   **32**: handled</p>
+         * <p>*   **64**: expired</p>
          */
         @NameInMap("EventStatus")
         public Integer eventStatus;
@@ -400,7 +400,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         public Boolean hasTraceInfo;
 
         /**
-         * <p>The ID of the alert event.</p>
+         * <p>The unique ID of the alert event.</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -424,7 +424,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The public IP address that is associated with instance.</p>
+         * <p>The public IP address of the associated instance.</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
@@ -436,37 +436,37 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
-         * <p>The ID of the ACK cluster.</p>
+         * <p>The ID of the Kubernetes cluster.</p>
          */
         @NameInMap("K8sClusterId")
         public String k8sClusterId;
 
         /**
-         * <p>The name of the Container Service for Kubernetes (ACK) cluster.</p>
+         * <p>The name of the Kubernetes cluster.</p>
          */
         @NameInMap("K8sClusterName")
         public String k8sClusterName;
 
         /**
-         * <p>The namespace of the ACK cluster.</p>
+         * <p>The namespace of the Kubernetes cluster.</p>
          */
         @NameInMap("K8sNamespace")
         public String k8sNamespace;
 
         /**
-         * <p>The ID of the node of the ACK cluster.</p>
+         * <p>The ID of the Kubernetes node.</p>
          */
         @NameInMap("K8sNodeId")
         public String k8sNodeId;
 
         /**
-         * <p>The name of the node in the ACK cluster.</p>
+         * <p>The name of the Kubernetes node.</p>
          */
         @NameInMap("K8sNodeName")
         public String k8sNodeName;
 
         /**
-         * <p>The name of the pod in the ACK cluster.</p>
+         * <p>The name of the Kubernetes pod.</p>
          */
         @NameInMap("K8sPodName")
         public String k8sPodName;
@@ -481,7 +481,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         public String lastTime;
 
         /**
-         * <p>The timestamp generated when the alert event was last detected. Unit: milliseconds.</p>
+         * <p>The timestamp when the alert event was last detected. Unit: milliseconds.</p>
          */
         @NameInMap("LastTimeStamp")
         public Long lastTimeStamp;
@@ -524,7 +524,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         public String occurrenceTime;
 
         /**
-         * <p>The timestamp generated when the alert event was first detected. Unit: milliseconds.</p>
+         * <p>The timestamp when the alert event was first detected. Unit: milliseconds.</p>
          */
         @NameInMap("OccurrenceTimeStamp")
         public Long occurrenceTimeStamp;
@@ -542,13 +542,13 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         public String operateMsg;
 
         /**
-         * <p>The timestamp generated when the alert event was handled. Unit: milliseconds.</p>
+         * <p>The handling timestamp of the alert event. Unit: milliseconds.</p>
          */
         @NameInMap("OperateTime")
         public Long operateTime;
 
         /**
-         * <p>The edition of Security Center in which alert event detection is supported. Valid values:</p>
+         * <p>The edition of Security Center in which the alert event can be detected. Valid values:</p>
          * <br>
          * <p>*   **0**: Basic edition</p>
          * <p>*   **1**: Enterprise edition</p>
@@ -575,19 +575,19 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         public java.util.List<DescribeSuspEventsResponseBodySuspEventsTacticItems> tacticItems;
 
         /**
-         * <p>The unique key of the alert event.</p>
+         * <p>The unique key of the alert.</p>
          */
         @NameInMap("UniqueInfo")
         public String uniqueInfo;
 
         /**
-         * <p>The ID of the associated instance.</p>
+         * <p>The unique ID of the associated instance.</p>
          */
         @NameInMap("Uuid")
         public String uuid;
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the cluster.</p>
          */
         @NameInMap("clusterId")
         public String clusterId;

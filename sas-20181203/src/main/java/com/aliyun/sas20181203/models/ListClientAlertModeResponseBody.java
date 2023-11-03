@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListClientAlertModeResponseBody extends TeaModel {
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public ListClientAlertModeResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class ListClientAlertModeResponseBody extends TeaModel {
     }
 
     public static class ListClientAlertModeResponseBodyData extends TeaModel {
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The UUIDs of the assets.</p>
+         */
         @NameInMap("Uuids")
         public java.util.List<String> uuids;
 

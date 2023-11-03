@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetFileProtectDashboardResponseBody extends TeaModel {
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public GetFileProtectDashboardResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,27 @@ public class GetFileProtectDashboardResponseBody extends TeaModel {
     }
 
     public static class GetFileProtectDashboardResponseBodyData extends TeaModel {
+        /**
+         * <p>The total number of enabled rules.</p>
+         */
         @NameInMap("EnableRuleCount")
         public Integer enableRuleCount;
 
+        /**
+         * <p>The total number of servers on which the Security Center agent is installed.</p>
+         */
         @NameInMap("PluginCount")
         public Integer pluginCount;
 
+        /**
+         * <p>The total number of servers on which the Security Center agent is offline.</p>
+         */
         @NameInMap("PluginOfflineCount")
         public Integer pluginOfflineCount;
 
+        /**
+         * <p>The total number of servers on which the Security Center agent is online.</p>
+         */
         @NameInMap("PluginOnlineCount")
         public Integer pluginOnlineCount;
 

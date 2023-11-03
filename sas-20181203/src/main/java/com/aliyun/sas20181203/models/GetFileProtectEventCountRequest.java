@@ -4,6 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetFileProtectEventCountRequest extends TeaModel {
+    /**
+     * <p>The status of the event. Valid values:</p>
+     * <br>
+     * <p>*   0: unhandled</p>
+     * <p>*   1: handled</p>
+     */
     @NameInMap("Status")
     public Integer status;
 

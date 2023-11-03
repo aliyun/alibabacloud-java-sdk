@@ -76,8 +76,7 @@ public class DescribeUuidsByVulNamesRequest extends TeaModel {
      * <p>The status of the vulnerability. Separate multiple states with commas (,). Valid values:</p>
      * <br>
      * <p>*   **1**: unfixed</p>
-     * <p>*   **4**: being fixed</p>
-     * <p>*   **7**: fixed</p>
+     * <p>*   **2**: fix failed</p>
      */
     @NameInMap("StatusList")
     public String statusList;
@@ -102,10 +101,6 @@ public class DescribeUuidsByVulNamesRequest extends TeaModel {
      * <br>
      * <p>*   **cve**: Linux software vulnerability</p>
      * <p>*   **sys**: Windows system vulnerability</p>
-     * <p>*   **cms**: Web-CMS vulnerability</p>
-     * <p>*   **app**: application vulnerability</p>
-     * <p>*   **emg**: urgent vulnerability</p>
-     * <p>*   **sca**: vulnerability that is detected based on software component analysis</p>
      */
     @NameInMap("Type")
     public String type;

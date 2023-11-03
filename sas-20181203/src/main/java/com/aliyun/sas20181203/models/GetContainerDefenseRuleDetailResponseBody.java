@@ -4,21 +4,42 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
+    /**
+     * <p>The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The details of the rule.</p>
+     */
     @NameInMap("Data")
     public GetContainerDefenseRuleDetailResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,12 +97,24 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
     }
 
     public static class GetContainerDefenseRuleDetailResponseBodyDataScope extends TeaModel {
+        /**
+         * <p>Indicates whether all namespaces are included. Valid values:</p>
+         * <br>
+         * <p>*   **0**: no</p>
+         * <p>*   **1**: yes</p>
+         */
         @NameInMap("AllNamespace")
         public Integer allNamespace;
 
+        /**
+         * <p>The ID of the container cluster.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The namespaces.</p>
+         */
         @NameInMap("Namespaces")
         public java.util.List<String> namespaces;
 
@@ -117,12 +150,20 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
     }
 
     public static class GetContainerDefenseRuleDetailResponseBodyDataWhitelist extends TeaModel {
+        /**
+         * <p>The hash values of the files that are added to the whitelist.</p>
+         * <br>
+         * <p>>  This parameter is not supported.</p>
+         */
         @NameInMap("Hash")
         public java.util.List<String> hash;
 
         @NameInMap("Image")
         public java.util.List<String> image;
 
+        /**
+         * <p>The paths to the files that are added to the whitelist.</p>
+         */
         @NameInMap("Path")
         public java.util.List<String> path;
 
@@ -158,36 +199,82 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
     }
 
     public static class GetContainerDefenseRuleDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The user ID.</p>
+         */
         @NameInMap("AliUid")
         public Long aliUid;
 
+        /**
+         * <p>The description of the rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The alert name. Valid values:</p>
+         * <br>
+         * <p>*   **Non-image Program Startup**</p>
+         */
         @NameInMap("EventName")
         public String eventName;
 
+        /**
+         * <p>The alert type. Valid values:</p>
+         * <br>
+         * <p>*   **Proactive Defense for Containers**</p>
+         */
         @NameInMap("EventType")
         public String eventType;
 
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The action specified in the rule. Valid values:</p>
+         * <br>
+         * <p>*   **1**: alert</p>
+         * <p>*   **2**: block</p>
+         */
         @NameInMap("RuleAction")
         public Integer ruleAction;
 
+        /**
+         * <p>The name of the rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The status of the rule. Valid values:</p>
+         * <br>
+         * <p>*   **1**: enabled</p>
+         * <p>*   **0**: disabled</p>
+         */
         @NameInMap("RuleSwitch")
         public Integer ruleSwitch;
 
+        /**
+         * <p>The type of the rule. Valid values:</p>
+         * <br>
+         * <p>*   **1**: system rule</p>
+         * <p>*   **2**: custom rule</p>
+         */
         @NameInMap("RuleType")
         public String ruleType;
 
+        /**
+         * <p>The effective scope of the rule.</p>
+         */
         @NameInMap("Scope")
         public java.util.List<GetContainerDefenseRuleDetailResponseBodyDataScope> scope;
 
+        /**
+         * <p>The whitelist.</p>
+         */
         @NameInMap("Whitelist")
         public GetContainerDefenseRuleDetailResponseBodyDataWhitelist whitelist;
 

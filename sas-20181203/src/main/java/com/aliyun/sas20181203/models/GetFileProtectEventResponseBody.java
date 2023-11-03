@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetFileProtectEventResponseBody extends TeaModel {
+    /**
+     * <p>The details of the returned data.</p>
+     */
     @NameInMap("Data")
     public GetFileProtectEventResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,57 +38,120 @@ public class GetFileProtectEventResponseBody extends TeaModel {
     }
 
     public static class GetFileProtectEventResponseBodyData extends TeaModel {
+        /**
+         * <p>The severity of alerts. Valid values:</p>
+         * <br>
+         * <p>*   0: does not generate alerts</p>
+         * <p>*   1: sends notifications</p>
+         * <p>*   2: suspicious</p>
+         * <p>*   3: high-risk</p>
+         */
         @NameInMap("AlertLevel")
         public Integer alertLevel;
 
+        /**
+         * <p>The event command line.</p>
+         */
         @NameInMap("CmdLine")
         public String cmdLine;
 
+        /**
+         * <p>The path to the file.</p>
+         */
         @NameInMap("FilePath")
         public String filePath;
 
+        /**
+         * <p>The permissions to run the process.</p>
+         */
         @NameInMap("FilePermission")
         public String filePermission;
 
+        /**
+         * <p>The timestamp at which the event was first detected.</p>
+         */
         @NameInMap("FirstTime")
         public Long firstTime;
 
+        /**
+         * <p>The time when the event was handled.</p>
+         */
         @NameInMap("HandleTime")
         public Long handleTime;
 
+        /**
+         * <p>The ID of the event.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The public IP address of the associated instance.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The private IP address of the associated instance.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The time when the event last occurred.</p>
+         */
         @NameInMap("LatestTime")
         public Long latestTime;
 
+        /**
+         * <p>The operation that the process performed on the file.</p>
+         */
         @NameInMap("Operation")
         public String operation;
 
+        /**
+         * <p>The path to the process.</p>
+         */
         @NameInMap("ProcPath")
         public String procPath;
 
+        /**
+         * <p>The process ID of the event.</p>
+         */
         @NameInMap("ProcessId")
         public String processId;
 
+        /**
+         * <p>The remarks.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The name of the rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The status of the event. Valid values:</p>
+         * <br>
+         * <p>*   0: not handled</p>
+         * <p>*   1: handled</p>
+         * <p>*   2: added to the whitelist</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The UUID of the asset.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 

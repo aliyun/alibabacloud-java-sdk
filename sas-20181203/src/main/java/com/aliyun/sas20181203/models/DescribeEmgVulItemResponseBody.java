@@ -11,7 +11,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>An array that consists of the urgent vulnerabilities returned.</p>
+     * <p>The information about the urgent vulnerabilities.</p>
      */
     @NameInMap("GroupedVulItems")
     public java.util.List<DescribeEmgVulItemResponseBodyGroupedVulItems> groupedVulItems;
@@ -119,11 +119,19 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         /**
          * <p>The progress of the urgent vulnerability detection task. Valid values: 0 to 100.</p>
          * <br>
-         * <p>> This parameter is returned only when an urgent vulnerability is being detected.</p>
+         * <p>>  This parameter takes effect only when an urgent vulnerability is being detected.</p>
          */
         @NameInMap("Progress")
         public Integer progress;
 
+        /**
+         * <p>Indicates whether the application protection feature is supported. Valid values:</p>
+         * <br>
+         * <p>*   **0**: no</p>
+         * <p>*   **1**: yes</p>
+         * <br>
+         * <p>>  If this parameter is not returned, the application protection is not supported.</p>
+         */
         @NameInMap("RaspDefend")
         public Integer raspDefend;
 

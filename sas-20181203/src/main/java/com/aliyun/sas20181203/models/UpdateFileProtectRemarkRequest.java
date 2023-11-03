@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class UpdateFileProtectRemarkRequest extends TeaModel {
+    /**
+     * <p>The ID of the event.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The remarks.</p>
+     */
     @NameInMap("Remark")
     public java.util.List<String> remark;
 

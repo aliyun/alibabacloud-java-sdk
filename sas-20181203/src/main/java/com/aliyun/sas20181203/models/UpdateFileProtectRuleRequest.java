@@ -4,27 +4,62 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class UpdateFileProtectRuleRequest extends TeaModel {
+    /**
+     * <p>The severity of alerts. Valid values:</p>
+     * <br>
+     * <p>*   0: does not generate alerts</p>
+     * <p>*   1: sends notifications</p>
+     * <p>*   2: suspicious</p>
+     * <p>*   3: high-risk</p>
+     */
     @NameInMap("AlertLevel")
     public Integer alertLevel;
 
+    /**
+     * <p>The operations performed on the files.</p>
+     */
     @NameInMap("FileOps")
     public java.util.List<String> fileOps;
 
+    /**
+     * <p>The paths to the monitored files. Wildcard characters are supported.</p>
+     */
     @NameInMap("FilePaths")
     public java.util.List<String> filePaths;
 
+    /**
+     * <p>The ID of the rule.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The paths to the monitored processes.</p>
+     */
     @NameInMap("ProcPaths")
     public java.util.List<String> procPaths;
 
+    /**
+     * <p>The handling method of the rule. Valid values:</p>
+     * <br>
+     * <p>*   pass: allow</p>
+     * <p>*   alert</p>
+     */
     @NameInMap("RuleAction")
     public String ruleAction;
 
+    /**
+     * <p>The name of the rule.</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The status of the rule. Valid values:</p>
+     * <br>
+     * <p>*   **0**: disabled</p>
+     * <p>*   **1**: enabled</p>
+     */
     @NameInMap("Status")
     public Integer status;
 

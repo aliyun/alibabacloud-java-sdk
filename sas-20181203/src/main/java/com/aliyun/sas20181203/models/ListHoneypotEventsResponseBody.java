@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListHoneypotEventsResponseBody extends TeaModel {
+    /**
+     * <p>The intrusion events.</p>
+     */
     @NameInMap("HoneypotEvents")
     public java.util.List<ListHoneypotEventsResponseBodyHoneypotEvents> honeypotEvents;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListHoneypotEventsResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +52,27 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
     }
 
     public static class ListHoneypotEventsResponseBodyHoneypotEventsMergeFieldList extends TeaModel {
+        /**
+         * <p>The supplementary information about the field.</p>
+         */
         @NameInMap("FieldExtInfo")
         public String fieldExtInfo;
 
+        /**
+         * <p>The key of the field.</p>
+         */
         @NameInMap("FieldKey")
         public String fieldKey;
 
+        /**
+         * <p>The type of the field.</p>
+         */
         @NameInMap("FieldType")
         public String fieldType;
 
+        /**
+         * <p>The value of the field key.</p>
+         */
         @NameInMap("FieldValue")
         public String fieldValue;
 
@@ -95,42 +116,88 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
     }
 
     public static class ListHoneypotEventsResponseBodyHoneypotEvents extends TeaModel {
+        /**
+         * <p>The probe ID.</p>
+         */
         @NameInMap("AgentId")
         public String agentId;
 
+        /**
+         * <p>The name of the probe.</p>
+         */
         @NameInMap("AgentName")
         public String agentName;
 
+        /**
+         * <p>The ID of the alert event.</p>
+         */
         @NameInMap("AlarmEventId")
         public Long alarmEventId;
 
+        /**
+         * <p>The destination IP address of the attack.</p>
+         */
         @NameInMap("DstIp")
         public String dstIp;
 
+        /**
+         * <p>The timestamp at which the event was first detected.</p>
+         */
         @NameInMap("FirstTime")
         public Long firstTime;
 
+        /**
+         * <p>The name of the honeypot.</p>
+         */
         @NameInMap("HoneypotName")
         public String honeypotName;
 
+        /**
+         * <p>The timestamp at which the event was last detected.</p>
+         */
         @NameInMap("LastTime")
         public Long lastTime;
 
+        /**
+         * <p>The region.</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The extended values that correspond to the field key.</p>
+         */
         @NameInMap("MergeFieldList")
         public java.util.List<ListHoneypotEventsResponseBodyHoneypotEventsMergeFieldList> mergeFieldList;
 
+        /**
+         * <p>The protocol. Valid values:</p>
+         * <br>
+         * <p>*   **tcp**</p>
+         * <p>*   **udp**</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The risk level. Valid values:</p>
+         * <br>
+         * <p>*   **2**: low</p>
+         * <p>*   **3**: medium</p>
+         * <p>*   **4**: high</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        /**
+         * <p>The ID of the intrusion event.</p>
+         */
         @NameInMap("SecurityEventId")
         public Long securityEventId;
 
+        /**
+         * <p>The source IP address of the attack.</p>
+         */
         @NameInMap("SrcIp")
         public String srcIp;
 
@@ -246,21 +313,39 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
     }
 
     public static class ListHoneypotEventsResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The key of the last data entry.</p>
+         */
         @NameInMap("LastRowKey")
         public String lastRowKey;
 
+        /**
+         * <p>The value of the NextToken parameter that is returned by using the NextToken method.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

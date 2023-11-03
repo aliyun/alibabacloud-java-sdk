@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetFileProtectEventCountResponseBody extends TeaModel {
+    /**
+     * <p>The data returned if the request is successful.</p>
+     */
     @NameInMap("Data")
     public Integer data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

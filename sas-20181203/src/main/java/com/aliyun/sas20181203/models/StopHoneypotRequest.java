@@ -4,9 +4,20 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class StopHoneypotRequest extends TeaModel {
+    /**
+     * <p>The honeypot ID.</p>
+     * <br>
+     * <p>>  You can call the [ListHoneypot](~~ListHoneypot~~) operation to obtain IDs of honeypots.</p>
+     */
     @NameInMap("HoneypotId")
     public String honeypotId;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

@@ -18,12 +18,23 @@ public class ExportVulRequest extends TeaModel {
     @NameInMap("AttachTypes")
     public String attachTypes;
 
+    /**
+     * <p>要查询漏洞影响的容器名称。</p>
+     */
     @NameInMap("ContainerName")
     public String containerName;
 
+    /**
+     * <p>首次扫描时间结束时间。</p>
+     * <p>> 时间戳，单位为毫秒。</p>
+     */
     @NameInMap("CreateTsEnd")
     public Long createTsEnd;
 
+    /**
+     * <p>首次扫描时间起始时间。</p>
+     * <p>> 时间戳，单位为毫秒。</p>
+     */
     @NameInMap("CreateTsStart")
     public Long createTsStart;
 
@@ -47,6 +58,9 @@ public class ExportVulRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>要查询漏洞影响的镜像名称。</p>
+     */
     @NameInMap("ImageName")
     public String imageName;
 
@@ -69,6 +83,9 @@ public class ExportVulRequest extends TeaModel {
     @NameInMap("Necessity")
     public String necessity;
 
+    /**
+     * <p>要查询漏洞影响的进程路径。</p>
+     */
     @NameInMap("Path")
     public String path;
 

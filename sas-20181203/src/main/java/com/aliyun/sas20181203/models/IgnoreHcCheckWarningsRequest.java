@@ -4,18 +4,39 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class IgnoreHcCheckWarningsRequest extends TeaModel {
+    /**
+     * <p>The ID of the check item.</p>
+     * <br>
+     * <p>>  You can call the [DescribeCheckWarnings](~~DescribeCheckWarnings~~) operation to query the IDs of check items.</p>
+     */
     @NameInMap("CheckIds")
     public String checkIds;
 
+    /**
+     * <p>The ID of the alert that is triggered by the check item. Separate multiple IDs with commas (,).</p>
+     * <br>
+     * <p>>  You can call the [DescribeCheckWarnings](~~DescribeCheckWarnings~~) operation to query the IDs of the alerts triggered by check items.</p>
+     */
     @NameInMap("CheckWarningIds")
     public String checkWarningIds;
 
     @NameInMap("Reason")
     public String reason;
 
+    /**
+     * <p>The ID of the risk item that you want to ignore or cancel ignoring.</p>
+     * <br>
+     * <p>>  You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of risk items.</p>
+     */
     @NameInMap("RiskId")
     public String riskId;
 
+    /**
+     * <p>The data source. If this parameter is left empty, the server baseline results are queried by default. Valid values:</p>
+     * <br>
+     * <p>*   **default**: server</p>
+     * <p>*   **agentless**</p>
+     */
     @NameInMap("Source")
     public String source;
 
