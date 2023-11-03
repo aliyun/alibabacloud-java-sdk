@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeGadInstancesRequest extends TeaModel {
     /**
-     * <p>The ID of the single global active database cluster that you want to query.</p>
+     * <p>The ID of the global active database cluster.</p>
      * <br>
      * <p>*   If you leave this parameter empty, this operation returns the details about all global active database clusters that are created within your Alibaba Cloud account.</p>
-     * <p>*   If you specify this parameter, this operation returns the details about the single global active database cluster that you specify.</p>
+     * <p>*   If you specify this parameter, this operation returns the details about the global active database cluster that you specify.</p>
      * <br>
-     * <p>>  You can call this operation with this parameter left empty to query the details about all global active database clusters that are created within your Alibaba Cloud account. Then, you can call this operation again with this parameter specified to query the details about the single global active database cluster that you specify.</p>
+     * <p>>  If you do not specify this parameter when you call this operation for the first time, the IDs of all clusters that are created by using the current account are returned. Then, you can specify the cluster ID to view the cluster details.</p>
      */
     @NameInMap("GadInstanceName")
     public String gadInstanceName;
 
     /**
-     * <p>The ID of the region where the global active database clusters that you want to query reside. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceMetricsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
-     * <p>An array consisting of the enhanced monitoring metrics that are enabled for the instance.</p>
+     * <p>An array consisting of the Enhanced Monitoring metrics that are enabled for the instance.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeDBInstanceMetricsResponseBodyItems> items;

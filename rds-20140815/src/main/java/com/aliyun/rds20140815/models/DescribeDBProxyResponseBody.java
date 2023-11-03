@@ -11,7 +11,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     public DescribeDBProxyResponseBodyDBProxyAVZones DBProxyAVZones;
 
     /**
-     * <p>An array consisting of the information about the proxy endpoint that is created for the instance.</p>
+     * <p>An array consisting of the information about the database proxy endpoint that is created for the instance.</p>
      */
     @NameInMap("DBProxyConnectStringItems")
     public DescribeDBProxyResponseBodyDBProxyConnectStringItems DBProxyConnectStringItems;
@@ -61,7 +61,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
      * <br>
      * <p>*   DBInstanceClassChanging: The specifications of the proxy instance are being changed.</p>
      * <p>*   Creating: The proxy instance is being created.</p>
-     * <p>*   Running: The proxy instance is being running.</p>
+     * <p>*   Running: The proxy instance is running.</p>
      * <p>*   Deleting: The proxy instance is being deleted.</p>
      */
     @NameInMap("DBProxyInstanceStatus")
@@ -298,7 +298,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         public String DBProxyVpcInstanceId;
 
         /**
-         * <p>The vSwitch that is associated with the proxy endpoint.</p>
+         * <p>The vSwitch of the proxy service.</p>
          */
         @NameInMap("DBProxyVswitchId")
         public String DBProxyVswitchId;

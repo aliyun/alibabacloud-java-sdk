@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeModifyParameterLogRequest extends TeaModel {
     /**
-     * <p>The ID of the RDS instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The end of the time range to query. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -23,7 +23,7 @@ public class DescribeModifyParameterLogRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1.</p>
+     * <p>The page number. Pages start from page 1.</p>
      * <br>
      * <p>Default value: **1**.</p>
      */
@@ -31,7 +31,7 @@ public class DescribeModifyParameterLogRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <br>
      * <p>*   **30**</p>
      * <p>*   **50**</p>

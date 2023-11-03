@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudMigrationResultResponseBody extends TeaModel {
     /**
-     * <p>The details of the cloud migration tasks.</p>
+     * <p>The details about the cloud migration task.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeCloudMigrationResultResponseBodyItems> items;
@@ -81,7 +81,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
 
     public static class DescribeCloudMigrationResultResponseBodyItems extends TeaModel {
         /**
-         * <p>The details of the task.</p>
+         * <p>The details about the migration task.</p>
          */
         @NameInMap("Detail")
         public String detail;
@@ -99,7 +99,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The migration phase in which the task stays.</p>
+         * <p>The migration phase of the migration task.</p>
          * <br>
          * <p>*   **precheck**: precheck</p>
          * <p>*   **basebackup**: full data backup</p>
@@ -130,7 +130,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
         public String replicationState;
 
         /**
-         * <p>The username of the account.</p>
+         * <p>The username.</p>
          */
         @NameInMap("SourceAccount")
         public String sourceAccount;
@@ -151,7 +151,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
         public String sourceIpAddress;
 
         /**
-         * <p>The password of the account.</p>
+         * <p>The password.</p>
          */
         @NameInMap("SourcePassword")
         public String sourcePassword;
@@ -163,13 +163,13 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
         public Long sourcePort;
 
         /**
-         * <p>The time when a switchover was performed.</p>
+         * <p>The time when the switchover was performed.</p>
          */
         @NameInMap("SwitchTime")
         public String switchTime;
 
         /**
-         * <p>A reserved parameter. The return value of this parameter is null.</p>
+         * <p>A reserved parameter. The return value of this parameter is empty.</p>
          */
         @NameInMap("TargetEip")
         public String targetEip;
@@ -181,13 +181,13 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
         public String targetInstanceName;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          */
         @NameInMap("TaskId")
         public Long taskId;
 
         /**
-         * <p>The name of the task.</p>
+         * <p>The task name.</p>
          */
         @NameInMap("TaskName")
         public String taskName;

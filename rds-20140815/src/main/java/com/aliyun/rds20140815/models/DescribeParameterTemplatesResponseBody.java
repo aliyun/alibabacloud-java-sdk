@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The database engine.</p>
+     * <p>The database engine of the instance.</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -23,13 +23,13 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     public String parameterCount;
 
     /**
-     * <p>The list of parameters.</p>
+     * <p>The details of the parameters.</p>
      */
     @NameInMap("Parameters")
     public DescribeParameterTemplatesResponseBodyParameters parameters;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -81,19 +81,25 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
 
     public static class DescribeParameterTemplatesResponseBodyParametersTemplateRecord extends TeaModel {
         /**
-         * <p>The value range of the parameter.</p>
+         * <p>The valid values of the parameter.</p>
          */
         @NameInMap("CheckingCode")
         public String checkingCode;
 
         /**
-         * <p>Indicates whether the parameter can be modified. Valid values: **true | false**</p>
+         * <p>Indicates whether the parameter can be modified. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("ForceModify")
         public String forceModify;
 
         /**
-         * <p>Indicates whether the modified parameter takes effect only after a database restart. Valid values: **true | false**</p>
+         * <p>Indicates whether you must restart the instance for the modifications to take effect. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("ForceRestart")
         public String forceRestart;

@@ -27,13 +27,13 @@ public class DescribeADInfoResponseBody extends TeaModel {
     public String ADStatus;
 
     /**
-     * <p>The cause of the exception.</p>
+     * <p>The cause of the error.</p>
      */
     @NameInMap("AbnormalReason")
     public String abnormalReason;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

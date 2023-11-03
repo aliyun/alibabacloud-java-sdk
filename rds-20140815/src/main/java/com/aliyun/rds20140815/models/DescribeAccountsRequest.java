@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountsRequest extends TeaModel {
     /**
-     * <p>The username of the account.</p>
+     * <p>The name of the database account.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.</p>
      * <br>
-     * <p>>  This operation is not supported for instances that run SQL Server 2017 (cluster edition).</p>
+     * <p>>  This parameter is not supported if your RDS instance runs RDS Cluster Edition and SQL Server 2017.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

@@ -7,7 +7,7 @@ public class DeleteBackupRequest extends TeaModel {
     /**
      * <p>The ID of the backup set. You can call the [DescribeBackups](~~610544~~) operation to query backup set IDs. Separate multiple values with commas (,). You can specify a maximum of 100 values in a single request.</p>
      * <br>
-     * <p>> After you call the [DescribeBackups](~~610544~~) operation, the returned backup sets whose **StoreStatus** is **Enabled** can be deleted.</p>
+     * <p>>  You can only delete backup sets whose **StoreStatus** is **Enabled** in [DescribeBackups](~~610544~~).</p>
      */
     @NameInMap("BackupId")
     public String backupId;

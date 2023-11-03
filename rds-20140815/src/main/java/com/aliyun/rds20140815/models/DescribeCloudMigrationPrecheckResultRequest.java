@@ -11,13 +11,13 @@ public class DescribeCloudMigrationPrecheckResultRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The page number. Valid values: any non-zero positive integer. The default value is 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 30 to 100. The default value is 30.</p>
+     * <p>The number of entries per page. Valid values: **30** to **100**. Default value: 30.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;

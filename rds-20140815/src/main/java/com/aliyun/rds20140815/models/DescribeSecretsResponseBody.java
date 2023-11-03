@@ -23,7 +23,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of the details about the credential.</p>
+     * <p>The details of the credential.</p>
      */
     @NameInMap("Secrets")
     public java.util.List<DescribeSecretsResponseBodySecrets> secrets;
@@ -79,7 +79,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

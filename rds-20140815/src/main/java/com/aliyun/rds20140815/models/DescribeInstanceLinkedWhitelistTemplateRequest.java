@@ -11,7 +11,7 @@ public class DescribeInstanceLinkedWhitelistTemplateRequest extends TeaModel {
     public String insName;
 
     /**
-     * <p>资源组ID，可以为空。</p>
+     * <p>The resource group ID. You can leave this parameter empty.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

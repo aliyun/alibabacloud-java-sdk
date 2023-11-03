@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -23,7 +23,7 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
     public DescribeDTCSecurityIpHostsForSQLServerResponseBodyItems items;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,7 +67,7 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
 
     public static class DescribeDTCSecurityIpHostsForSQLServerResponseBodyItemsWhiteListGroups extends TeaModel {
         /**
-         * <p>The IP address of the ECS instance and the hostname of the Windows computer. Format: IP address,Hostname. Multiple values are separated with semicolons (;).</p>
+         * <p>The IP address of the ECS instance and the hostname of the Windows computer. Format: `IP address,Hostname`. Multiple values are separated with semicolons (;).</p>
          */
         @NameInMap("SecurityIpHosts")
         public String securityIpHosts;

@@ -87,12 +87,24 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ClassCode")
         public String classCode;
 
+        /**
+         * <p>Node specification type. Value range:</p>
+         * <br>
+         * <p>*   **d**: Exclusive specifications</p>
+         * <p>*   **x**: General specifications</p>
+         */
         @NameInMap("ClassType")
         public String classType;
 
+        /**
+         * <p>The number of vCPUs that you want to allocate to the elastic container instance. Unit: cores.</p>
+         */
         @NameInMap("Cpu")
         public String cpu;
 
+        /**
+         * <p>The memory size that you applied for each instance. Unit: MB.</p>
+         */
         @NameInMap("Memory")
         public String memory;
 
@@ -123,6 +135,15 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("NodeZoneId")
         public String nodeZoneId;
 
+        /**
+         * <p>The status of the migration task. Valid values:</p>
+         * <br>
+         * <p>*   **NoStart**: The task has not started.</p>
+         * <p>*   **Running**:The task is in progress.</p>
+         * <p>*   **Success**: The task is successful.</p>
+         * <p>*   **Failed**: The task failed.</p>
+         * <p>*   **Waiting**: The task is waiting for an incremental backup file to be imported.</p>
+         */
         @NameInMap("Status")
         public String status;
 

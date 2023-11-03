@@ -14,7 +14,7 @@ public class CreateMigrateTaskResponseBody extends TeaModel {
     public String backupMode;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -38,7 +38,7 @@ public class CreateMigrateTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

@@ -64,13 +64,13 @@ public class DescribeTagsResponseBody extends TeaModel {
         public DescribeTagsResponseBodyItemsTagInfosDBInstanceIds DBInstanceIds;
 
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

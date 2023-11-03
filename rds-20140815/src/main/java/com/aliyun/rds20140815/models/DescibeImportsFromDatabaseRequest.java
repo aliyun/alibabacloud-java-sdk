@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescibeImportsFromDatabaseRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -23,10 +23,7 @@ public class DescibeImportsFromDatabaseRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The database engine of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **MySQL**</p>
-     * <p>*   **SQL Server**</p>
+     * <p>The database engine of the instance. Set the value to **MySQL**</p>
      */
     @NameInMap("Engine")
     public String engine;

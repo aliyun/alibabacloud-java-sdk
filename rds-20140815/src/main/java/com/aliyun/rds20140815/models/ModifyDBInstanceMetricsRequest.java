@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceMetricsRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
@@ -25,7 +25,7 @@ public class ModifyDBInstanceMetricsRequest extends TeaModel {
      * <p>The application scope of this modification. Valid values:</p>
      * <br>
      * <p>*   **instance**: This modification is applied only to the current instance.</p>
-     * <p>*   **region**: This modification is applied to all ApsaraDB RDS for PostgreSQL instances that are equipped with the same type of storage media as the current instance in the region to which the current instance belongs. For example, if the current instance is equipped with standard SSDs or enhanced SSDs (ESSDs), this modification is applied to all ApsaraDB RDS for PostgreSQL instances that are equipped with standard SSDs or ESSDs in the region to which the current instance belongs.</p>
+     * <p>*   **region**: This modification is applied to all ApsaraDB RDS for PostgreSQL instances that are equipped with the same type of storage media as the current instance in the region to which the current instance belongs. For example, if the current instance is equipped with cloud disks, this modification is applied to all ApsaraDB RDS for PostgreSQL instances that are equipped with cloud disks in the region to which the current instance belongs.</p>
      */
     @NameInMap("Scope")
     public String scope;

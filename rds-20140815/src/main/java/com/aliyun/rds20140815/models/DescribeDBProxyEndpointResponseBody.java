@@ -87,12 +87,12 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     public String readOnlyInstanceMaxDelayTime;
 
     /**
-     * <p>The read weights of the instance and its read-only instances. The value of this parameter is a JSON string that consists of the following fields:</p>
+     * <p>The read weights of the instance and its read-only instances. The value of this parameter is a JSON string that consists of the following parameters:</p>
      * <br>
      * <p>*   **DBInstanceId**: the ID of the instance.</p>
      * <p>*   **DBInstanceType**: the role of the instance. Valid values: **Master** and **ReadOnly**.</p>
-     * <p>*   **NodeID**: the IDs of the primary and secondary nodes on the primary instance if the instance runs RDS Cluster Edition.</p>
-     * <p>*   **NodeType**: the type of the node if the instance runs RDS Cluster Edition. Valid values: **Primary** and **Secondary**. The value Primary indicates the primary node on the primary instance. The value Secondary indicates the secondary node on the primary instance.</p>
+     * <p>*   **NodeID**: The IDs of the primary and secondary nodes of the cluster. An instance that runs RDS Cluster Edition refers to a cluster.</p>
+     * <p>*   **NodeType**: The node type. Valid values: **Primary** and **Secondary**.</p>
      * <p>*   **Weight**: the read weight of the instance. The read weight increases in increments of **100** and cannot exceed **10000**.</p>
      */
     @NameInMap("ReadOnlyInstanceWeight")

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the information about the instance.</p>
+     * <p>The details about the instance.</p>
      */
     @NameInMap("Items")
     public DescribeDBInstanceByTagsResponseBodyItems items;
@@ -81,13 +81,13 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceByTagsResponseBodyItemsDBInstanceTagTagsTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -136,13 +136,13 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceByTagsResponseBodyItemsDBInstanceTag extends TeaModel {
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
-         * <p>An array that consists of the queried tags.</p>
+         * <p>The details about the tag.</p>
          */
         @NameInMap("Tags")
         public DescribeDBInstanceByTagsResponseBodyItemsDBInstanceTagTags tags;

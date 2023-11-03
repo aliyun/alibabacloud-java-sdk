@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
     /**
-     * <p>The details of the assessment report.</p>
+     * <p>The details about the assessment report.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeCloudMigrationPrecheckResultResponseBodyItems> items;
@@ -99,7 +99,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The username of the account.</p>
+         * <p>The username.</p>
          */
         @NameInMap("SourceAccount")
         public String sourceAccount;
@@ -120,7 +120,7 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
         public String sourceIpAddress;
 
         /**
-         * <p>The password of the account.</p>
+         * <p>The password.</p>
          */
         @NameInMap("SourcePassword")
         public String sourcePassword;
@@ -132,25 +132,25 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
         public Long sourcePort;
 
         /**
-         * <p>A reserved parameter. The return value of this parameter is null.</p>
+         * <p>A reserved parameter. The return value of this parameter is empty.</p>
          */
         @NameInMap("TargetEip")
         public String targetEip;
 
         /**
-         * <p>The ID of the destination instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("TargetInstanceName")
         public String targetInstanceName;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          */
         @NameInMap("TaskId")
         public Long taskId;
 
         /**
-         * <p>The name of the task.</p>
+         * <p>The task name.</p>
          */
         @NameInMap("TaskName")
         public String taskName;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOssDownloadsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -23,7 +23,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
     public String migrateTaskId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -83,13 +83,13 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The description of the file.</p>
+         * <p>The description of the backup file.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The end of the time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
@@ -115,7 +115,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
         /**
          * <p>The state of the backup file. Valid values:</p>
          * <br>
-         * <p>*   **NoStart**:</p>
+         * <p>*   **NoStart**</p>
          * <p>*   **Downloading**</p>
          * <p>*   **Finished**</p>
          * <p>*   **DownloadFailed**</p>
@@ -126,7 +126,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
          * <p>*   **CheckFailed**</p>
          * <p>*   **Restoring**</p>
          * <p>*   **Restored**</p>
-         * <p>*   **RestoredFailed**</p>
+         * <p>*   **RestoreFailed**</p>
          */
         @NameInMap("Status")
         public String status;

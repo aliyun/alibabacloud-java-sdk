@@ -4,15 +4,24 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancePromoteActivityRequest extends TeaModel {
+    /**
+     * <p>The ID of the Alibaba Cloud account.</p>
+     */
     @NameInMap("AliUid")
     public String aliUid;
 
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("DbInstanceName")
     public String dbInstanceName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

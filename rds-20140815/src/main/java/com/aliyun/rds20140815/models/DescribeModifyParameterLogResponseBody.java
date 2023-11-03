@@ -5,43 +5,43 @@ import com.aliyun.tea.*;
 
 public class DescribeModifyParameterLogResponseBody extends TeaModel {
     /**
-     * <p>The ID of the RDS instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The database engine that the RDS instance runs.</p>
+     * <p>The database engine of the instance.</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
-     * <p>The version of the database engine that the RDS instance runs.</p>
+     * <p>The database engine version of the instance.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
-     * <p>An array that consists of parameter reconfiguration log entries.</p>
+     * <p>An array that consists of parameter modification log entries.</p>
      */
     @NameInMap("Items")
     public DescribeModifyParameterLogResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -123,7 +123,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
 
     public static class DescribeModifyParameterLogResponseBodyItemsParameterChangeLog extends TeaModel {
         /**
-         * <p>The time when the parameter was reconfigured. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the parameter was modified. This value is a UNIX timestamp. Unit: milliseconds.</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;

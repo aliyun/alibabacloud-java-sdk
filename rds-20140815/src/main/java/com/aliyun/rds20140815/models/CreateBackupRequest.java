@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBackupRequest extends TeaModel {
     /**
-     * <p>The backup type. Valid values:</p>
+     * <p>The backup type of the instance. Valid values:</p>
      * <br>
      * <p>*   **Logical**: logical backup</p>
      * <p>*   **Physical**: physical backup</p>
@@ -13,13 +13,10 @@ public class CreateBackupRequest extends TeaModel {
      * <br>
      * <p>Default value: **Physical**.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   You can perform a logical backup only when databases are created on the instance.</p>
-     * <br>
-     * <p>*   When you perform a snapshot backup on an ApsaraDB RDS for MariaDB instance, you must set this parameter to **Physical**.</p>
-     * <p>*   For more information about the supported backup types, see [Back up an ApsaraDB RDS for MySQL instance](~~98818~~).</p>
-     * <p>*   When you perform a snapshot backup on an ApsaraDB RDS for SQL Server instance that uses cloud disks, you must set this parameter to **Snapshot**.</p>
+     * <p>> *   You can perform a logical backup only when databases are created on the instance.</p>
+     * <p>> *   When you perform a snapshot backup on an ApsaraDB RDS for MariaDB instance, you must set this parameter to **Physical**.</p>
+     * <p>> *   For more information about the supported backup types, see [Use the data backup feature](~~98818~~).</p>
+     * <p>> *   When you perform a snapshot backup on an ApsaraDB RDS for SQL Server instance that uses cloud disks, you must set this parameter to **Snapshot**.</p>
      */
     @NameInMap("BackupMethod")
     public String backupMethod;
@@ -43,11 +40,8 @@ public class CreateBackupRequest extends TeaModel {
      * <br>
      * <p>Default value: **Auto**.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   You must set this parameter only when the instance runs SQL Server.</p>
-     * <br>
-     * <p>*   This parameter is valid only when you set the **BackupMethod** parameter to **Physical**.</p>
+     * <p>> *   You must set this parameter only when the instance runs SQL Server.</p>
+     * <p>> *   This parameter is valid only when you set the **BackupMethod** parameter to **Physical**.</p>
      */
     @NameInMap("BackupType")
     public String backupType;

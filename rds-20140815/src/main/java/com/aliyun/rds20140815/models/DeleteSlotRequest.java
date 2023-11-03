@@ -43,25 +43,10 @@ public class DeleteSlotRequest extends TeaModel {
     public String slotName;
 
     /**
-     * <p>The status of the replication slot. You can call the [DescribeSlots](~~613399~~) operation to query the status of the replication slot.</p>
-     * <br>
-     * <p>Valid values:</p>
+     * <p>The status of the replication slot. You can call the [DescribeSlots](~~613399~~) operation to query the status of the replication slot. Valid values:</p>
      * <br>
      * <p>*   ACTIVE</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
      * <p>*   INACTIVE</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
      */
     @NameInMap("SlotStatus")
     public String slotStatus;

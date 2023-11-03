@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDTCSecurityIpHostsForSQLServerRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -17,13 +17,13 @@ public class DescribeDTCSecurityIpHostsForSQLServerRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region in which the instances reside. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) to obtain the ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeGadInstancesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the details about the global active database clusters that are returned.</p>
+     * <p>The details about the global active database cluster.</p>
      */
     @NameInMap("GadInstances")
     public java.util.List<DescribeGadInstancesResponseBodyGadInstances> gadInstances;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,7 +39,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
 
     public static class DescribeGadInstancesResponseBodyGadInstancesGadInstanceMembers extends TeaModel {
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
          */
         @NameInMap("DBInstanceID")
         public String DBInstanceID;
@@ -47,7 +47,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         /**
          * <p>A JSON array that consists of the details about the Data Transmission Service (DTS) synchronization task.</p>
          * <br>
-         * <p>>  Each unit node uses DTS to synchronize data with the central node. This parameter contains the ID of the DTS synchronization link and the ID of the DTS synchronization request.</p>
+         * <p>>  Each unit node (secondary node) synchronizes data from the central node (primary node) by using DTS. This parameter contains the synchronization link ID and request ID of DTS.</p>
          */
         @NameInMap("DtsInstance")
         public String dtsInstance;
@@ -67,7 +67,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
-         * <p>The ID of the region where the node resides.</p>
+         * <p>The ID of the region in which the node resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -79,7 +79,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The type of the node. Valid values:</p>
+         * <p>The node type. Valid values:</p>
          * <br>
          * <p>*   **CENTRAL**: The node is the central node. Each global active database cluster has only one central node. All unit nodes synchronize data from the central node.</p>
          * <p>*   **UNIT**: The node is a unit node. Each global active database cluster can have up to 10 unit nodes. All unit nodes synchronize data from the central node.</p>
@@ -88,7 +88,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         public String role;
 
         /**
-         * <p>The status of the node. Valid values:</p>
+         * <p>The node status. Valid values:</p>
          * <br>
          * <p>*   **activation**: The node is running.</p>
          * <p>*   **creating**: The node is being created.</p>
@@ -175,13 +175,13 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The name of the global active database cluster.</p>
+         * <p>The cluster name.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>An array that consists of the details about the nodes in the global active database cluster.</p>
+         * <p>The information about each node in the cluster.</p>
          */
         @NameInMap("GadInstanceMembers")
         public java.util.List<DescribeGadInstancesResponseBodyGadInstancesGadInstanceMembers> gadInstanceMembers;
@@ -207,11 +207,11 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         public String service;
 
         /**
-         * <p>The status of the global active database cluster. Valid values:</p>
+         * <p>The cluster status. Valid values:</p>
          * <br>
-         * <p>*   **activation**: The global active database cluster is running.</p>
-         * <p>*   **creating**: The global active database cluster is being created.</p>
-         * <p>*   **replica_adding**: Nodes are being added to the global active database cluster.</p>
+         * <p>*   **activation**: The cluster is running.</p>
+         * <p>*   **creating**: The cluster is being created.</p>
+         * <p>*   **replica_adding**: Nodes are being added to the cluster.</p>
          */
         @NameInMap("Status")
         public String status;

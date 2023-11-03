@@ -107,7 +107,7 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
          * <p>The type of the migration task. Valid values:</p>
          * <br>
          * <p>*   **Full**: full migration</p>
-         * <p>*   **Incremental:**: incremental migration</p>
+         * <p>*   **Incremental**: incremental migration</p>
          */
         @NameInMap("ImportDataType")
         public String importDataType;
