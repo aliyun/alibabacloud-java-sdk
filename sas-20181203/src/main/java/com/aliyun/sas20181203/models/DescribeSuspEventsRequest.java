@@ -132,7 +132,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String operateTimeStart;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**. Maximum value: 100.</p>
+     * <p>The number of entries per page. Default value: **20**. Maximum value: 100.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
@@ -178,7 +178,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     /**
      * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
      * <br>
-     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.</p>
+     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the ID.</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
@@ -225,11 +225,11 @@ public class DescribeSuspEventsRequest extends TeaModel {
      * <p>*   **2**: ignored</p>
      * <p>*   **4**: confirmed</p>
      * <p>*   **8**: marked as a false positive</p>
-     * <p>*   **16**: being handled</p>
+     * <p>*   **16**: handling</p>
      * <p>*   **32**: handled</p>
      * <p>*   **64**: expired</p>
      * <p>*   **128**: deleted</p>
-     * <p>*   **512**: being automatically blocked</p>
+     * <p>*   **512**: automatically blocking</p>
      * <p>*   **513**: automatically blocked</p>
      */
     @NameInMap("Status")

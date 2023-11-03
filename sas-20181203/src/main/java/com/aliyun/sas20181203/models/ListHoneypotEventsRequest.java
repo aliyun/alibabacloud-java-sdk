@@ -4,36 +4,76 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListHoneypotEventsRequest extends TeaModel {
+    /**
+     * <p>The probe IDs.</p>
+     */
     @NameInMap("AgentIdList")
     public java.util.List<String> agentIdList;
 
+    /**
+     * <p>The ID of the alert.</p>
+     */
     @NameInMap("AlarmEventId")
     public Long alarmEventId;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The status of the event. Valid values:</p>
+     * <br>
+     * <p>*   **y**: handled</p>
+     * <p>*   **n**: unhandled</p>
+     * <p>*   **a**: all statuses</p>
+     */
     @NameInMap("Dealed")
     public String dealed;
 
+    /**
+     * <p>The honeypot IDs.</p>
+     */
     @NameInMap("HoneypotIdList")
     public java.util.List<String> honeypotIdList;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The number of entries per page. Default value: **20**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the attacker profile.</p>
+     */
     @NameInMap("PortraitId")
     public String portraitId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The risk levels.</p>
+     */
     @NameInMap("RiskLevelList")
     public java.util.List<String> riskLevelList;
 
+    /**
+     * <p>The source IP address of the attack.</p>
+     */
     @NameInMap("SrcIp")
     public String srcIp;
 

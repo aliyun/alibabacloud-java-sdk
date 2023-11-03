@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListFileProtectRuleResponseBody extends TeaModel {
+    /**
+     * <p>The details of returned data.</p>
+     */
     @NameInMap("FileProtectList")
     public java.util.List<ListFileProtectRuleResponseBodyFileProtectList> fileProtectList;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListFileProtectRuleResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,39 +52,86 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
     }
 
     public static class ListFileProtectRuleResponseBodyFileProtectList extends TeaModel {
+        /**
+         * <p>The handling method of the rule. Valid values:</p>
+         * <br>
+         * <p>*   pass: allow</p>
+         * <p>*   alert</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The severity of alerts. Valid values:</p>
+         * <br>
+         * <p>*   0: does not generate alerts</p>
+         * <p>*   1: sends notifications</p>
+         * <p>*   2: suspicious</p>
+         * <p>*   3: high-risk</p>
+         */
         @NameInMap("AlertLevel")
         public String alertLevel;
 
+        /**
+         * <p>The total number of affected assets.</p>
+         */
         @NameInMap("EffectInstanceCount")
         public Long effectInstanceCount;
 
+        /**
+         * <p>The operations performed on the files.</p>
+         */
         @NameInMap("FileOps")
         public java.util.List<String> fileOps;
 
+        /**
+         * <p>The paths to the monitored files. Wildcard characters are supported.</p>
+         */
         @NameInMap("FilePaths")
         public java.util.List<String> filePaths;
 
+        /**
+         * <p>The time when the rule was created.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The time when the rule was last modified.</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The paths to the monitored processes. Wildcard characters are supported.</p>
+         */
         @NameInMap("ProcPaths")
         public java.util.List<String> procPaths;
 
+        /**
+         * <p>The name of the rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The status of the rule. Valid values:</p>
+         * <br>
+         * <p>*   0: disabled</p>
+         * <p>*   1: enabled</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The switch ID of the rule.</p>
+         */
         @NameInMap("SwitchId")
         public String switchId;
 
@@ -183,12 +239,21 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
     }
 
     public static class ListFileProtectRuleResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -4,18 +4,37 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListFileProtectEventRequest extends TeaModel {
+    /**
+     * <p>The severities of alerts.</p>
+     */
     @NameInMap("AlertLevels")
     public java.util.List<Integer> alertLevels;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The name of the rule.</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The status of the event. Valid values:</p>
+     * <br>
+     * <p>*   0: unhandled</p>
+     * <p>*   1: handled</p>
+     * <p>*   2: added to the whitelist</p>
+     */
     @NameInMap("Status")
     public String status;
 

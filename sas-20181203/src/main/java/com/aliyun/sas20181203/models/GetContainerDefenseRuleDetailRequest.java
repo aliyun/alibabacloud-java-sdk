@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetContainerDefenseRuleDetailRequest extends TeaModel {
+    /**
+     * <p>The ID of the rule.</p>
+     * <br>
+     * <p>>  You can call the [ListContainerDefenseRule](~~xx~~) operation to obtain the IDs of rules.</p>
+     */
     @NameInMap("RuleId")
     public Long ruleId;
 

@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListFileProtectPluginStatusRequest extends TeaModel {
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the core file monitoring rule.</p>
+     */
     @NameInMap("SwitchId")
     public String switchId;
 

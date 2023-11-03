@@ -4,9 +4,20 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class UpdateCommonSwitchConfigRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to turn on the switch for newly added servers. Valid values:</p>
+     * <br>
+     * <p>*   **add**: yes</p>
+     * <p>*   **del**: no</p>
+     */
     @NameInMap("TargetDefault")
     public String targetDefault;
 
+    /**
+     * <p>The type of the switch.</p>
+     * <br>
+     * <p>>  You can call the [ListClientUserDefineRules](~~ListClientUserDefineRules~~) or [ListSystemClientRules](~~ListSystemClientRules~~) operation to obtain the type from the response parameter SwitchId.</p>
+     */
     @NameInMap("Type")
     public String type;
 

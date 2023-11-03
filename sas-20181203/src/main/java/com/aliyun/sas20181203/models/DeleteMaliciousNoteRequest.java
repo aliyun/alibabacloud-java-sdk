@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteMaliciousNoteRequest extends TeaModel {
+    /**
+     * <p>The ID of the remarks.</p>
+     * <br>
+     * <p>>  You can call the [ListAgentlessMaliciousFiles](~~ListAgentlessMaliciousFiles~~) operation to obtain the ID from the NoteId parameter.</p>
+     */
     @NameInMap("NoteId")
     public Long noteId;
 

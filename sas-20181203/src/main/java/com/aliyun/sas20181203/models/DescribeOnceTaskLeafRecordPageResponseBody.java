@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
     /**
-     * <p>The sub-tasks returned.</p>
+     * <p>The details of the sub-tasks.</p>
      */
     @NameInMap("OnceTasks")
     public java.util.List<DescribeOnceTaskLeafRecordPageResponseBodyOnceTasks> onceTasks;
@@ -86,7 +86,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         public String image;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID of the node.</p>
          */
         @NameInMap("NodeInstanceId")
         public String nodeInstanceId;
@@ -110,7 +110,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         public String pod;
 
         /**
-         * <p>The region of the server image.</p>
+         * <p>The region ID of the server image.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -297,7 +297,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         public Integer finish;
 
         /**
-         * <p>The number of assets that are scanned.</p>
+         * <p>The number of the assets that are scanned.</p>
          */
         @NameInMap("FinishCount")
         public String finishCount;
@@ -315,7 +315,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         public Long realRunTime;
 
         /**
-         * <p>The execution result of the task.</p>
+         * <p>The execution result of the sub-task.</p>
          */
         @NameInMap("ResultInfo")
         public String resultInfo;
@@ -327,7 +327,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The status information.</p>
+         * <p>The status.</p>
          */
         @NameInMap("Status")
         public String status;
@@ -338,7 +338,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
          * <p>*   **INIT**: The sub-task is not started.</p>
          * <p>*   **START**: The sub-task is started.</p>
          * <p>*   **SUCCESS**: The sub-task is complete.</p>
-         * <p>*   **TIMEOUT**: The sub-task timed out.</p>
+         * <p>*   **TIMEOUT**: The task timed out.</p>
          */
         @NameInMap("StatusText")
         public String statusText;
@@ -350,7 +350,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         public String target;
 
         /**
-         * <p>The type of the asset on which the sub-task is performed.</p>
+         * <p>The type of the assets that are scanned.</p>
          * <br>
          * <p>*   **IMAGE_REPO**: image repository</p>
          * <p>*   **IMAGE**: image</p>

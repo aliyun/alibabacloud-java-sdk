@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCloudAssetInstancesRequest extends TeaModel {
     /**
-     * <p>The cloud service assets.</p>
+     * <p>The cloud assets.</p>
      */
     @NameInMap("CloudAssetTypes")
     public java.util.List<ListCloudAssetInstancesRequestCloudAssetTypes> cloudAssetTypes;

@@ -64,7 +64,11 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The severity of the malicious image sample. Separate multiple severities with commas (,). Valid values: serious suspicious remind</p>
+     * <p>The severity. Separate multiple severities with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   **serious**</p>
+     * <p>*   **suspicious**</p>
+     * <p>*   **remind**</p>
      */
     @NameInMap("Levels")
     public String levels;
@@ -153,6 +157,13 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     @NameInMap("ScanRange")
     public java.util.List<String> scanRange;
 
+    /**
+     * <p>镜像恶意样本处理状态。取值：</p>
+     * <p>- **0**：未处理</p>
+     * <p>- **1**：已处理</p>
+     * <p>- **2**：验证中</p>
+     * <p>- **3**：已加白</p>
+     */
     @NameInMap("Status")
     public String status;
 

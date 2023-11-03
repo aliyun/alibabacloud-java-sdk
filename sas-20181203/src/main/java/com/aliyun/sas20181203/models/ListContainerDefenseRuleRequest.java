@@ -4,18 +4,34 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListContainerDefenseRuleRequest extends TeaModel {
+    /**
+     * <p>The conditions.</p>
+     */
     @NameInMap("Conditions")
     public java.util.List<ListContainerDefenseRuleRequestConditions> conditions;
 
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Specifies whether to query system rules.</p>
+     * <br>
+     * <p>>  This parameter is deprecated.</p>
+     */
     @NameInMap("IsDefaultRule")
     public Integer isDefaultRule;
 
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <br>
+     * <p>>  We recommend that you do not leave this parameter empty.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -76,9 +92,17 @@ public class ListContainerDefenseRuleRequest extends TeaModel {
     }
 
     public static class ListContainerDefenseRuleRequestConditions extends TeaModel {
+        /**
+         * <p>The type of the condition. Valid values:</p>
+         * <br>
+         * <p>*   **ruleName: the name of the rule**</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The value of the condition.</p>
+         */
         @NameInMap("Value")
         public String value;
 

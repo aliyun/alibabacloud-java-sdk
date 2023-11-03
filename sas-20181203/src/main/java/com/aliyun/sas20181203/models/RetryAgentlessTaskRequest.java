@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class RetryAgentlessTaskRequest extends TeaModel {
+    /**
+     * <p>The ID of the task. You can call the [ListAgentlessTask](~~ListAgentlessTask~~) operation to obtain the IDs of tasks.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
