@@ -1710,8 +1710,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AcceptLanguage", request.acceptLanguage);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceClass)) {
+            query.put("DBInstanceClass", request.DBInstanceClass);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dbType)) {
             query.put("DbType", request.dbType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.engineVersion)) {
+            query.put("EngineVersion", request.engineVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.excludeSecondaryZoneId)) {
@@ -1850,8 +1858,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAvailableResourceResponse describeAvailableResourceWithOptions(DescribeAvailableResourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceClass)) {
+            query.put("DBInstanceClass", request.DBInstanceClass);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dbType)) {
             query.put("DbType", request.dbType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.engineVersion)) {
+            query.put("EngineVersion", request.engineVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceChargeType)) {
