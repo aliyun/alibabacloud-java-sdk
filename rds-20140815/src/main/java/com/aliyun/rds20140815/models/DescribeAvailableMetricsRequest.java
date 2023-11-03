@@ -11,7 +11,7 @@ public class DescribeAvailableMetricsRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

@@ -120,13 +120,13 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
         public String ips;
 
         /**
-         * <p>The ID of the whitelist template.</p>
+         * <p>The whitelist template ID.</p>
          */
         @NameInMap("TemplateId")
         public Integer templateId;
 
         /**
-         * <p>The name of the whitelist template.</p>
+         * <p>The whitelist template name.</p>
          */
         @NameInMap("TemplateName")
         public String templateName;

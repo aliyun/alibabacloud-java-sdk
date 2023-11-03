@@ -4,24 +4,49 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancePromoteActivityResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the Alibaba Cloud account.</p>
+     */
     @NameInMap("AliUid")
     public String aliUid;
 
+    /**
+     * <p>China site: 26842 International site: 26888</p>
+     */
     @NameInMap("Bid")
     public String bid;
 
+    /**
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The instance name.</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>The type of the database engine. Valid values:</p>
+     * <br>
+     * <p>*   **MySQL**</p>
+     * <p>*   **PostgreSQL**</p>
+     * <p>*   **Oracle**</p>
+     */
     @NameInMap("DBType")
     public String DBType;
 
+    /**
+     * <p>The activity information about the instance. For more information, see [Instance activities](~~26312~~).</p>
+     */
     @NameInMap("IsActivity")
     public String isActivity;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

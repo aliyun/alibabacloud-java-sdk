@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -23,7 +23,7 @@ public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
     public String recoveryEndTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

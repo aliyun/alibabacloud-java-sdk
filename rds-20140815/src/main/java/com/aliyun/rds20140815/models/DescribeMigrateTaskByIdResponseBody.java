@@ -20,7 +20,7 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;

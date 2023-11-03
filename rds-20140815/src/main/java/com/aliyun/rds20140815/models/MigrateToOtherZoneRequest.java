@@ -9,8 +9,8 @@ public class MigrateToOtherZoneRequest extends TeaModel {
      * <br>
      * <p>*   **Basic**: RDS Basic Edition</p>
      * <p>*   **HighAvailability**: RDS High-availability Edition</p>
-     * <p>*   **AlwaysOn**: RDS Cluster Edition for SQL Server</p>
-     * <p>*   **cluster**: RDS Cluster Edition for MySQL</p>
+     * <p>*   **AlwaysOn**: SQL Server on RDS Cluster Edition</p>
+     * <p>*   **cluster**: MySQL on RDS Cluster Edition</p>
      * <p>*   **Finance**: RDS Enterprise Edition</p>
      */
     @NameInMap("Category")
@@ -106,17 +106,17 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public String zoneId;
 
     /**
-     * <p>The zone ID of the secondary instance.</p>
+     * <p>The secondary zone 1 of the instance.</p>
      * <br>
-     * <p>> If the instance does not run RDS Basic Edition, you must specify this parameter.</p>
+     * <p>>  This parameter must be configured if the instance runs RDS editions other than RDS Basic Edition.</p>
      */
     @NameInMap("ZoneIdSlave1")
     public String zoneIdSlave1;
 
     /**
-     * <p>The zone ID of the logger instance.</p>
+     * <p>The secondary zone 2 of the instance.</p>
      * <br>
-     * <p>> This parameter is available only when the instance runs RDS Enterprise Edition.</p>
+     * <p>>  You can specify this parameter only for instances that run RDS Enterprise Edition.</p>
      */
     @NameInMap("ZoneIdSlave2")
     public String zoneIdSlave2;

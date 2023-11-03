@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableMetricsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
-     * <p>An array that consists of the details of the enhanced monitoring metric.</p>
+     * <p>Details of the Enhanced Monitoring metric.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeAvailableMetricsResponseBodyItems> items;
@@ -67,13 +67,13 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
 
     public static class DescribeAvailableMetricsResponseBodyItems extends TeaModel {
         /**
-         * <p>The description of the enhanced monitoring metric.</p>
+         * <p>The description of the Enhanced Monitoring metric.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The category of the enhanced monitoring metric. Valid values:</p>
+         * <p>The category of the Enhanced Monitoring metric. Valid values:</p>
          * <br>
          * <p>*   **os**: OS metric</p>
          * <p>*   **db**: database metric</p>
@@ -82,47 +82,47 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
         public String dimension;
 
         /**
-         * <p>The key of the group to which the enhanced monitoring metric belongs.</p>
+         * <p>The key of the group to which the Enhanced Monitoring metric belongs.</p>
          */
         @NameInMap("GroupKey")
         public String groupKey;
 
         /**
-         * <p>The name of the group to which the enhanced monitoring metric belongs.</p>
+         * <p>The name of the group to which the Enhanced Monitoring metric belongs.</p>
          */
         @NameInMap("GroupKeyType")
         public String groupKeyType;
 
         /**
-         * <p>The method that is used to aggregate the monitoring data of the enhanced monitoring metric. Valid values:</p>
+         * <p>The method that is used to aggregate the monitoring data of the Enhanced Monitoring metric. Valid values:</p>
          * <br>
-         * <p>*   **avg**: The system calculates the average value of the enhanced monitoring metric.</p>
-         * <p>*   **min**: The system calculates the minimum value of the enhanced monitoring metric.</p>
-         * <p>*   **max**: The system calculates the maximum value of the enhanced monitoring metric.</p>
+         * <p>*   **avg**: The system calculates the average value of the Enhanced Monitoring metric.</p>
+         * <p>*   **min**: The system calculates the minimum value of the Enhanced Monitoring metric.</p>
+         * <p>*   **max**: The system calculates the maximum value of the Enhanced Monitoring metric.</p>
          */
         @NameInMap("Method")
         public String method;
 
         /**
-         * <p>The key of the enhanced monitoring metric.</p>
+         * <p>The key of the Enhanced Monitoring metric.</p>
          */
         @NameInMap("MetricsKey")
         public String metricsKey;
 
         /**
-         * <p>The alias of the enhanced monitoring metric.</p>
+         * <p>The alias of the Enhanced Monitoring metric.</p>
          */
         @NameInMap("MetricsKeyAlias")
         public String metricsKeyAlias;
 
         /**
-         * <p>The serial number of the enhanced monitoring metric.</p>
+         * <p>The serial number of the Enhanced Monitoring metric.</p>
          */
         @NameInMap("SortRule")
         public Integer sortRule;
 
         /**
-         * <p>The unit of the enhanced monitoring metric.</p>
+         * <p>The unit of the Enhanced Monitoring metric.</p>
          */
         @NameInMap("Unit")
         public String unit;

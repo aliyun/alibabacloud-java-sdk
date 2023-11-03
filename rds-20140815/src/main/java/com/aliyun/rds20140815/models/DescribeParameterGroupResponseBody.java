@@ -11,9 +11,9 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
     public DescribeParameterGroupResponseBodyParamGroup paramGroup;
 
     /**
-     * <p>The instance to which the parameter template was applied.</p>
+     * <p>The information about the instance to which the parameter template is applied.</p>
      * <br>
-     * <p>> This parameter is available only for ApsaraDB RDS for PostgreSQL instances.</p>
+     * <p>>  This parameter is available only for ApsaraDB RDS for PostgreSQL instances.</p>
      */
     @NameInMap("RelatedCustinsInfo")
     public DescribeParameterGroupResponseBodyRelatedCustinsInfo relatedCustinsInfo;
@@ -122,7 +122,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The version of the database engine.</p>
+         * <p>The database engine version of the instance.</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;

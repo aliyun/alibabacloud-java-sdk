@@ -12,7 +12,7 @@ public class CancelImportRequest extends TeaModel {
 
     /**
      * <p>The ID of the migration task.</p>
-     * <br>
+     * <p> </p>
      * <p>> This parameter is returned when the migration task is started. For more information, see [ImportDatabaseBetweenInstances](~~26301~~).</p>
      */
     @NameInMap("ImportId")
@@ -24,6 +24,9 @@ public class CancelImportRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

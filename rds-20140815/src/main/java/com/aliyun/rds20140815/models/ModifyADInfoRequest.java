@@ -35,7 +35,7 @@ public class ModifyADInfoRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

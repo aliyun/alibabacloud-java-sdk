@@ -47,7 +47,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
     public Long coldBackupSize;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -65,7 +65,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
     public Long diskUsed;
 
     /**
-     * <p>The database engine that the instance runs.</p>
+     * <p>The database engine of the instance.</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -77,13 +77,13 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
     public Long logSize;
 
     /**
-     * <p>The backup storage for which you must pay. ApsaraDB RDS provides a free quota on backup storage. You must pay for the backup storage that exceeds the free quota. Unit: bytes.</p>
+     * <p>The backup storage for which you must pay. The system provides a free quota on backup storage. You must pay for the backup storage that exceeds the free quota. Unit: bytes.</p>
      */
     @NameInMap("PaidBackupSize")
     public Long paidBackupSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

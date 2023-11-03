@@ -46,7 +46,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
      * <p>*   **HighAvailability** (default): RDS High-availability Edition</p>
      * <p>*   **AlwaysOn**: RDS Cluster Edition</p>
      * <br>
-     * <p>> If the primary instance runs PostgreSQL with cloud disks, you must set this parameter to **Basic**.</p>
+     * <p>>  The read-only instances of the primary instance that run PostgreSQL and use cloud disks run RDS Basic Edition. Therefore, set this parameter to **Basic**.</p>
      */
     @NameInMap("Category")
     public String category;
@@ -92,11 +92,8 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
      * <p>*   **cloud_essd2**: ESSDs of PL2</p>
      * <p>*   **cloud_essd3**: ESSDs of PL3</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If the primary instance runs MySQL with local disks, you must set this parameter to **local_ssd**. If the primary instance runs MySQL with cloud disks, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.</p>
-     * <br>
-     * <p>*   If the primary instance runs SQL Server, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.</p>
+     * <p>> *   If the primary instance runs MySQL with local disks, you must set this parameter to **local_ssd**. If the primary instance runs MySQL with cloud disks, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.</p>
+     * <p>> *   If the primary instance runs SQL Server, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.</p>
      */
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
@@ -119,11 +116,11 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public Boolean deletionProtection;
 
     /**
-     * <p>The major engine version of the read-only instance. The read-only instance and the primary instance must run the same major engine version.</p>
+     * <p>The version of the database engine. The read-only instance and the primary instance must run the same major engine version.</p>
      * <br>
      * <p>*   If the read-only instance runs MySQL, set this parameter to **5.6**, **5.7**, or **8.0**.</p>
-     * <p>*   If the read-only instance runs SQL Server, set this parameter to **2017\_ent or 2019\_ent**.</p>
-     * <p>*   If the read-only instance runs PostgreSQL, set this parameter to **10.0, 11.0, 12.0, 13.0, 14.0, or 15.0**</p>
+     * <p>*   If the read-only instance runs MySQL, set this parameter to **2017\_ent, 2019\_ent, or 2022\_ent**.</p>
+     * <p>*   If the read-only instance runs PostgreSQL, set this parameter to **10.0, 11.0, 12.0, 13.0, 14.0, or 15.0**.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -178,9 +175,9 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>支持在RDS MySQL主实例创建只读实例时初始化端口。</p>
+     * <p>The port that can be initialized when you create a read-only ApsaraDB RDS for MySQL instance.</p>
      * <br>
-     * <p>取值范围：1000~65534</p>
+     * <p>Valid values: 1000 to 65534.</p>
      */
     @NameInMap("Port")
     public String port;

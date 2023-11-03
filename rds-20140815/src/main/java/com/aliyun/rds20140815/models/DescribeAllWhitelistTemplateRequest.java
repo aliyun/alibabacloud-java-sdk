@@ -26,7 +26,7 @@ public class DescribeAllWhitelistTemplateRequest extends TeaModel {
     public Integer pageNumbers;
 
     /**
-     * <p>资源组ID。 关于资源组的更多信息，请参见什么是资源组。</p>
+     * <p>The resource group ID. For more information about resource groups, see related documentation.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -38,7 +38,7 @@ public class DescribeAllWhitelistTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the IP whitelist template. If you specify this parameter when you perform a fuzzy search, you can call the DescribeWhitelistTemplate operation to query the name of the whitelist template during the fuzzy search.</p>
+     * <p>The name of the IP whitelist template. If you specify this parameter when you perform a fuzzy search, you can call the [DescribeWhitelistTemplate](~~2412074~~) operation.</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

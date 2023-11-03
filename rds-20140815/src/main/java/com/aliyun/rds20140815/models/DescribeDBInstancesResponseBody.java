@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancesResponseBody extends TeaModel {
     /**
-     * <p>The information of instances.</p>
+     * <p>The details of the instance.</p>
      */
     @NameInMap("Items")
     public DescribeDBInstancesResponseBodyItems items;
@@ -142,8 +142,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the buffer pool extension (BPE) feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   **1**: The feature is enabled.</p>
-         * <p>*   **0**: The feature is disabled.</p>
+         * <p>*   **1**</p>
+         * <p>*   **0**</p>
          */
         @NameInMap("BpeEnabled")
         public String bpeEnabled;
@@ -151,8 +151,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the I/O burst feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: The feature is enabled.</p>
-         * <p>*   **false**: The feature is disabled.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
@@ -161,10 +161,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          * <p>The RDS edition of the instance. Valid values:</p>
          * <br>
          * <p>*   **Basic**: RDS Basic Edition</p>
-         * <p>*   **HighAvailability**: High-availability Edition</p>
+         * <p>*   **HighAvailability**: RDS High-availability Edition</p>
          * <p>*   **Finance**: RDS Enterprise Edition</p>
          * <br>
-         * <p>> This parameter is returned only when **InstanceLevel** is set to **1**.</p>
+         * <p>>  This parameter is returned only when the **InstanceLevel** parameter is set to **1**.</p>
          */
         @NameInMap("Category")
         public String category;
@@ -241,7 +241,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String DBInstanceType;
 
         /**
-         * <p>The dedicated cluster ID.</p>
+         * <p>The ID of the dedicated cluster.</p>
          */
         @NameInMap("DedicatedHostGroupId")
         public String dedicatedHostGroupId;
@@ -309,8 +309,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the release protection feature is enabled for the instance. Valid values:</p>
          * <br>
-         * <p>*   **true**: The feature is enabled.</p>
-         * <p>*   **false**: The feature is disabled.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("DeletionProtection")
         public Boolean deletionProtection;
@@ -322,7 +322,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String destroyTime;
 
         /**
-         * <p>The database engine of the serverless instance.</p>
+         * <p>The database engine of the instance.</p>
          */
         @NameInMap("Engine")
         public String engine;
@@ -336,7 +336,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The expiration time of the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          * <br>
-         * <p>> Pay-as-you-go instances never expire.</p>
+         * <p>>  Pay-as-you-go instances never expire.</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
@@ -368,7 +368,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          * <p>*   **Unlock**: The instance is not locked.</p>
          * <p>*   **ManualLock**: The instance is manually locked.</p>
          * <p>*   **LockByExpiration**: The instance is automatically locked due to instance expiration.</p>
-         * <p>*   **LockByRestoration**: The instance is automatically locked before it is rolled back.</p>
+         * <p>*   **LockByRestoration**: The instance is automatically locked before the instance is rolled back.</p>
          * <p>*   **LockByDiskQuota**: The instance is automatically locked due to exhausted storage capacity.</p>
          * <p>*   **Released**: The instance is released. After an instance is released, the instance cannot be unlocked. You can only restore the backup data of the instance to a new instance. This process requires a long period of time.</p>
          */
@@ -393,7 +393,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          * <p>*   **true**</p>
          * <p>*   **false**</p>
          * <br>
-         * <p>> If the multi-zone deployment method is used for the instance, the zone ID of the instance contains MAZ. Example: `cn-hangzhou-MAZ10(h,i)`.</p>
+         * <p>>  If the multi-zone deployment method is used for the instance, the zone ID of the instance contains MAZ. Example: `cn-hangzhou-MAZ10(h,i)`.</p>
          */
         @NameInMap("MutriORsignle")
         public Boolean mutriORsignle;
@@ -414,13 +414,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public DescribeDBInstancesResponseBodyItemsDBInstanceReadOnlyDBInstanceIds readOnlyDBInstanceIds;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID of the instance.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -450,7 +450,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          * <p>The severity level of the exception that is detected on the instance. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition. Valid values:</p>
          * <br>
          * <p>*   **1**: The instance is normal.</p>
-         * <p>*   **2**: The specifications of the read-only instances do not match the specifications of the primary instance, and the performance is affected. You must adjust the specifications of these instances based on your business requirements.</p>
+         * <p>*   **2**: The specifications of the read-only instances do not match the specifications of the primary instance, and instance performance may be affected. You must adjust the specifications of these instances based on your business requirements.</p>
          */
         @NameInMap("TipsLevel")
         public Integer tipsLevel;
@@ -468,7 +468,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String vpcCloudInstanceId;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The virtual private cloud (VPC) ID of the instance.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -480,7 +480,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String vpcName;
 
         /**
-         * <p>The zone ID of the instance.</p>
+         * <p>The zone ID.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

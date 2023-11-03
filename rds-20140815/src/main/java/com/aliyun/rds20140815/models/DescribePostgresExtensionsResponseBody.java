@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePostgresExtensionsResponseBody extends TeaModel {
     /**
-     * <p>The extensions that are installed on the database.</p>
+     * <p>The list of extensions that are installed on the specified database.</p>
      */
     @NameInMap("InstalledExtensions")
     public java.util.List<DescribePostgresExtensionsResponseBodyInstalledExtensions> installedExtensions;
@@ -23,7 +23,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The extensions that are not installed on the database.</p>
+     * <p>The list of extensions that are not installed on the specified database.</p>
      */
     @NameInMap("UninstalledExtensions")
     public java.util.List<DescribePostgresExtensionsResponseBodyUninstalledExtensions> uninstalledExtensions;

@@ -11,7 +11,7 @@ public class ModifyDasInstanceConfigRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -43,18 +43,18 @@ public class ModifyDasInstanceConfigRequest extends TeaModel {
      * <p>*   **40**</p>
      * <p>*   **50**</p>
      * <br>
-     * <p>>  If you set the **StorageAutoScale** parameter to **Enable**, you must specify this parameter.</p>
+     * <p>>  If you set the StorageAutoScale parameter to **Enable**, you must specify this parameter.</p>
      */
     @NameInMap("StorageThreshold")
     public Integer storageThreshold;
 
     /**
-     * <p>The maximum storage capacity that is allowed by automatic storage expansion. The value of this parameter must be equal to or greater than the current storage capacity of the instance.</p>
+     * <p>The maximum storage capacity that is allowed for an automatic storage expansion. The value of this parameter must be greater than or equal to the current storage capacity of the RDS instance.</p>
      * <br>
-     * <p>*   Valid value for instances with ESSDs: 32000. Unit: GB</p>
-     * <p>*   Valid value for instances with standard SSDs: 6000. Unit: GB</p>
+     * <p>*   If the RDS instance uses ESSDs, the maximum value of this parameter can be set to 32000 GB.</p>
+     * <p>*   If the RDS instance uses standard SSDs, the maximum value of this parameter can be set to 6000 GB.</p>
      * <br>
-     * <p>    > If you set the **StorageAutoScale** parameter to **Enable**, you must specify this parameter.</p>
+     * <p>>  If you set the **StorageAutoScale** parameter to **Enable**, you must specify this parameter.</p>
      */
     @NameInMap("StorageUpperBound")
     public Integer storageUpperBound;

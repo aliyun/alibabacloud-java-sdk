@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteUserBackupFileRequest extends TeaModel {
     /**
-     * <p>The ID of the backup file. You can call the [ListUserBackupFiles](~~257821~~) operation to query the ID of the file.</p>
+     * <p>The ID of the full backup file. You can call the [ListUserBackupFiles](~~257821~~) operation to query the ID of the file.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
@@ -20,7 +20,7 @@ public class DeleteUserBackupFileRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the ID of the resource group.</p>
+     * <p>The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) to obtain the ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

@@ -19,10 +19,6 @@ public class DescribeClassDetailsRequest extends TeaModel {
     /**
      * <p>The commodity code of the instance. Valid values:</p>
      * <br>
-     * <p>*   ****</p>
-     * <p>*   ****</p>
-     * <p>*   ****</p>
-     * <p>*   ****</p>
      * <p>*   **bards_intl**: The instance is a pay-as-you-go primary instance.</p>
      * <p>*   **rds_intl**: The instance is a subscription primary instance.</p>
      * <p>*   **rords_intl**: The instance is a pay-as-you-go read-only instance.</p>
@@ -53,7 +49,7 @@ public class DescribeClassDetailsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>资源组ID。可调用[DescribeDBInstanceAttribute](~~610394~~)获取。</p>
+     * <p>The resource group ID. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

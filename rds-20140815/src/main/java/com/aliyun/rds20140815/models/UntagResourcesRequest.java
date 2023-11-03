@@ -27,7 +27,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of instances. You can remove tags from N instances at a time. Valid values of N: **1** to **50**.</p>
+     * <p>The instance ID. You can remove tags from N instances at a time. Valid values of N: **1** to **50**.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;

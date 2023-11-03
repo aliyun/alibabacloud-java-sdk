@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The token required to obtain more results. This parameter is not required in the first query. If a query does not return all results, in the next query, you can specify the token returned from the previous query to obtain more results.</p>
+     * <p>The token required to obtain more results. This parameter is not required in the first query. If a query does not return all results, you can specify the token returned from the previous query for the next query to obtain more results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -14,13 +14,15 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The IDs of resources. You can specify up to 50 resource IDs.</p>
+     * <p>The instance ID. You can specify a maximum of **50** instance IDs.****</p>
+     * <br>
+     * <p>>  You must specify at least one of the **ResourceId** and **Key** parameters.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -38,7 +40,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags to query resources. You can specify up to 20 tags.</p>
+     * <p>The tag list.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -114,15 +116,15 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. You can query N tag keys at a time. Valid values of N: **1** to **20**. The value of this parameter cannot be an empty string.</p>
+         * <p>The tag key. You can query N tag keys at a time. Valid values of N: **1** to **20**. The value cannot be an empty string.</p>
          * <br>
-         * <p>>  You must specify at least one of the **ResourceId.N** and **Tag.N.Key** parameters.</p>
+         * <p>>  You must specify at least one of the **ResourceId** and **Key** parameters.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value that is associated with the specified tag key. You can specify N tag values at a time. Valid values of N: **1** to **20**. This parameter can be an empty string.</p>
+         * <p>The tag value that is associated with the specified tag key. You can specify N tag values at a time. Valid values of N: **1** to **20**. The value can be an empty string.</p>
          */
         @NameInMap("Value")
         public String value;

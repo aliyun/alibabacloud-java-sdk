@@ -7,8 +7,8 @@ public class CreateOrderForCreateDBNodesShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically complete the payment. Valid values:</p>
      * <br>
-     * <p>1.  **true**: automatically completes the payment. You must make sure that your account balance is sufficient.</p>
-     * <p>2.  **false**: does not automatically complete the payment. An unpaid order is generated.</p>
+     * <p>*   **true**: automatically completes the payment. You must make sure that your account balance is sufficient.</p>
+     * <p>*   **false**: does not automatically complete the payment. An unpaid order is generated.</p>
      * <br>
      * <p>>  Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
      */
@@ -43,7 +43,7 @@ public class CreateOrderForCreateDBNodesShrinkRequest extends TeaModel {
     public String commodityCode;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -57,10 +57,7 @@ public class CreateOrderForCreateDBNodesShrinkRequest extends TeaModel {
     /**
      * <p>The database engine version of the instance. Valid values:</p>
      * <br>
-     * <p>*   Valid values if you set Engine to MySQL: **5.5, 5.6, 5.7, and 8.0**</p>
-     * <p>*   Valid values if you set Engine to SQLServer: **2008r2, 08r2\_ent_ha, 2012, 2012\_ent_ha, 2012\_std_ha, 2012\_web, 2014\_std_ha, 2016\_ent_ha, 2016\_std_ha, 2016\_web, 2017\_std_ha, 2017\_ent, 2019\_std_ha, and 2019\_ent**</p>
-     * <p>*   Valid values if you set Engine to PostgreSQL: **10.0, 11.0, 12.0, 13.0, and 14.0**</p>
-     * <p>*   Valid value if you set Engine to MariaDB: **10.3**</p>
+     * <p>If the instance runs **MySQL**, set this parameter to **5.5**, **5.6**, **5.7**, or **8.0**.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -84,7 +81,7 @@ public class CreateOrderForCreateDBNodesShrinkRequest extends TeaModel {
     public String promotionCode;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -21,13 +21,13 @@ public class CreateMigrateTaskRequest extends TeaModel {
      * <br>
      * <p>Default value: **AsyncExecuteDBCheck** (compatible with SQL Server 2008 R2).</p>
      * <br>
-     * <p>>  This parameter is valid when IsOnlineDB is set to **True**.</p>
+     * <p>>  This parameter is valid when **IsOnlineDB** is set to **True**.</p>
      */
     @NameInMap("CheckDBMode")
     public String checkDBMode;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -55,11 +55,8 @@ public class CreateMigrateTaskRequest extends TeaModel {
      * <p>*   If you set **BackupMode** to **FULL**, the value of this parameter is empty. The full backup mode is compatible with instance that runs SQL Server 2008 R2.</p>
      * <p>*   If you set **BackupMode** to **UPDF**, the value of this parameter is the ID of the required full migration task.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If you set **IsOnlineDB** to **True**, the value of **BackupMode** must be **FULL**.</p>
-     * <br>
-     * <p>*   If you set **IsOnlineDB** to **False**, the value of **BackupMode** must be **UPDF**.</p>
+     * <p>> *   If you set **IsOnlineDB** to **True**, the value of **BackupMode** must be **FULL**.</p>
+     * <p>> *   If you set **IsOnlineDB** to **False**, the value of **BackupMode** must be **UPDF**.</p>
      */
     @NameInMap("MigrateTaskId")
     public String migrateTaskId;
@@ -69,7 +66,7 @@ public class CreateMigrateTaskRequest extends TeaModel {
      * <br>
      * <p>If you specify multiple URLs, separate them with vertical bars (|) and then encode them.</p>
      * <br>
-     * <p>> This parameter is required for instances that run SQL Server 2008 R2.</p>
+     * <p>>  This parameter is required for instances that run SQL Server 2008 R2.</p>
      */
     @NameInMap("OSSUrls")
     public String OSSUrls;
@@ -83,11 +80,8 @@ public class CreateMigrateTaskRequest extends TeaModel {
      * <p>*   Name of the OSS bucket: rdsmssqlsingapore.</p>
      * <p>*   Key of the backup file in the OSS bucket: autotest\_2008R2\_TestMigration_FULL.bak.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   This parameter is optional for instances that run SQL Server 2008 R2.</p>
-     * <br>
-     * <p>*   This parameter is required for instances that run a database engine version later than SQL Server 2008 R2.</p>
+     * <p>> *   This parameter is optional for instances that run SQL Server 2008 R2.</p>
+     * <p>> *   This parameter is required for instances that run a major engine version later than SQL Server 2008 R2.</p>
      */
     @NameInMap("OssObjectPositions")
     public String ossObjectPositions;

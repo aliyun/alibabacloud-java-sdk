@@ -75,7 +75,7 @@ public class CloneDBInstanceRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -210,18 +210,15 @@ public class CloneDBInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the virtual private cloud (VPC).</p>
      * <br>
-     * <p>> Make sure that the VPC belongs to the required region.</p>
+     * <p>>  Make sure that the VPC belongs to the required region.</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
 
     /**
-     * <p>The ID of the vSwitch. The vSwitch must belong to the zone that is specified by the **ZoneId** parameter.</p>
+     * <p>The ID of the vSwitch. The vSwitch must belong to the zone that is specified by **ZoneId**.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If you set the **InstanceNetworkType** parameter to **VPC**, you must also specify this parameter.</p>
-     * <br>
+     * <p>*   If you set **InstanceNetworkType** to **VPC**, you must also specify this parameter.</p>
      * <p>*   If you specify the **ZoneSlaveId1** parameter, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).</p>
      */
     @NameInMap("VSwitchId")

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     /**
-     * <p>The O\&M tasks of the instance.</p>
+     * <p>The details about the O\&M task.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeActiveOperationTasksResponseBodyItems> items;
@@ -141,7 +141,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String deadline;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          */
         @NameInMap("Id")
         public Integer id;
@@ -171,7 +171,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String insComment;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InsName")
         public String insName;
@@ -237,12 +237,12 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String taskParams;
 
         /**
-         * <p>The type of the task. Valid values:</p>
+         * <p>The type of the O\&M task. Valid values:</p>
          * <br>
          * <p>*   **rds_apsaradb_ha**: primary/secondary switchover</p>
          * <p>*   **rds_apsaradb_transfer**: instance migration</p>
          * <p>*   **rds_apsaradb_upgrade**: update of the minor engine version</p>
-         * <p>*   **rds_apsaradb_maxscale**: upgrade of the database proxy version</p>
+         * <p>*   **rds_apsaradb_maxscale**: minor version update of the database proxy</p>
          */
         @NameInMap("TaskType")
         public String taskType;

@@ -101,7 +101,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         public String date;
 
         /**
-         * <p>The queried values of the performance metric.</p>
+         * <p>The value of the performance metric.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -150,7 +150,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
 
     public static class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey extends TeaModel {
         /**
-         * <p>Specify the name of the performance metric.</p>
+         * <p>The name of the performance metric.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -164,13 +164,13 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         /**
          * <p>The format in which the value of the performance metric is returned.</p>
          * <br>
-         * <p>>  Multiple performance metric values are separated with ampersands (&). Example: com_delete\&com_insert\&com_insert_select\&com_replace.</p>
+         * <p>>  If a performance metric value consists of multiple fields, the values are separated with ampersands (&). Example: com_delete\&com_insert\&com_insert_select\&com_replace.</p>
          */
         @NameInMap("ValueFormat")
         public String valueFormat;
 
         /**
-         * <p>An array that consists of the values of the performance metric in the following format: {value1, value2, ...}.</p>
+         * <p>The performance metric values.</p>
          */
         @NameInMap("Values")
         public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyValues values;

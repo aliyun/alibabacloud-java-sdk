@@ -11,7 +11,7 @@ public class DetachWhitelistTemplateToInstanceRequest extends TeaModel {
     public String insName;
 
     /**
-     * <p>资源组ID。 关于资源组的更多信息，请参见什么是资源组。</p>
+     * <p>The resource group ID. For more information about resource groups, see Resource groups.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
