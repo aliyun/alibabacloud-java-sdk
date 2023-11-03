@@ -3,7 +3,7 @@ package com.aliyun.cr20181201.models;
 
 import com.aliyun.tea.*;
 
-public class CreateArtifactBuildRuleRequest extends TeaModel {
+public class CreateArtifactBuildRuleShrinkRequest extends TeaModel {
     @NameInMap("ArtifactType")
     public String artifactType;
 
@@ -11,7 +11,7 @@ public class CreateArtifactBuildRuleRequest extends TeaModel {
     public String instanceId;
 
     @NameInMap("Parameters")
-    public java.util.Map<String, ?> parameters;
+    public String parametersShrink;
 
     @NameInMap("ScopeId")
     public String scopeId;
@@ -19,12 +19,12 @@ public class CreateArtifactBuildRuleRequest extends TeaModel {
     @NameInMap("ScopeType")
     public String scopeType;
 
-    public static CreateArtifactBuildRuleRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateArtifactBuildRuleRequest self = new CreateArtifactBuildRuleRequest();
+    public static CreateArtifactBuildRuleShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateArtifactBuildRuleShrinkRequest self = new CreateArtifactBuildRuleShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateArtifactBuildRuleRequest setArtifactType(String artifactType) {
+    public CreateArtifactBuildRuleShrinkRequest setArtifactType(String artifactType) {
         this.artifactType = artifactType;
         return this;
     }
@@ -32,7 +32,7 @@ public class CreateArtifactBuildRuleRequest extends TeaModel {
         return this.artifactType;
     }
 
-    public CreateArtifactBuildRuleRequest setInstanceId(String instanceId) {
+    public CreateArtifactBuildRuleShrinkRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -40,15 +40,15 @@ public class CreateArtifactBuildRuleRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public CreateArtifactBuildRuleRequest setParameters(java.util.Map<String, ?> parameters) {
-        this.parameters = parameters;
+    public CreateArtifactBuildRuleShrinkRequest setParametersShrink(String parametersShrink) {
+        this.parametersShrink = parametersShrink;
         return this;
     }
-    public java.util.Map<String, ?> getParameters() {
-        return this.parameters;
+    public String getParametersShrink() {
+        return this.parametersShrink;
     }
 
-    public CreateArtifactBuildRuleRequest setScopeId(String scopeId) {
+    public CreateArtifactBuildRuleShrinkRequest setScopeId(String scopeId) {
         this.scopeId = scopeId;
         return this;
     }
@@ -56,7 +56,7 @@ public class CreateArtifactBuildRuleRequest extends TeaModel {
         return this.scopeId;
     }
 
-    public CreateArtifactBuildRuleRequest setScopeType(String scopeType) {
+    public CreateArtifactBuildRuleShrinkRequest setScopeType(String scopeType) {
         this.scopeType = scopeType;
         return this;
     }
