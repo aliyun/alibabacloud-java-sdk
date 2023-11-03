@@ -598,6 +598,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         @NameInMap("EipType")
         public String eipType;
 
+        @NameInMap("IntranetAddress")
+        public String intranetAddress;
+
         /**
          * <p>The protocol version. Valid values:</p>
          * <br>
@@ -634,6 +637,14 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         }
         public String getEipType() {
             return this.eipType;
+        }
+
+        public GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses setIntranetAddress(String intranetAddress) {
+            this.intranetAddress = intranetAddress;
+            return this;
+        }
+        public String getIntranetAddress() {
+            return this.intranetAddress;
         }
 
         public GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses setIpv6Address(String ipv6Address) {

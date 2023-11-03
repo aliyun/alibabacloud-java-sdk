@@ -98,6 +98,9 @@ public class CreateServerGroupRequest extends TeaModel {
     @NameInMap("UchConfig")
     public CreateServerGroupRequestUchConfig uchConfig;
 
+    @NameInMap("UpstreamKeepaliveEnabled")
+    public Boolean upstreamKeepaliveEnabled;
+
     /**
      * <p>The ID of the virtual private cloud (VPC). You can add only backend servers that are deployed in the specified VPC to the server group.</p>
      * <br>
@@ -205,6 +208,14 @@ public class CreateServerGroupRequest extends TeaModel {
     }
     public CreateServerGroupRequestUchConfig getUchConfig() {
         return this.uchConfig;
+    }
+
+    public CreateServerGroupRequest setUpstreamKeepaliveEnabled(Boolean upstreamKeepaliveEnabled) {
+        this.upstreamKeepaliveEnabled = upstreamKeepaliveEnabled;
+        return this;
+    }
+    public Boolean getUpstreamKeepaliveEnabled() {
+        return this.upstreamKeepaliveEnabled;
     }
 
     public CreateServerGroupRequest setVpcId(String vpcId) {
