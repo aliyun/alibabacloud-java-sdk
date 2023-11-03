@@ -65,7 +65,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String bitrate;
 
         /**
-         * <p>The creation time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the audio or video stream was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -94,10 +94,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String duration;
 
         /**
-         * <p>Indicates whether the media stream was encrypted. Valid values:</p>
+         * <p>Indicates whether the media stream is encrypted. Valid values:</p>
          * <br>
-         * <p>*   **0**: no</p>
-         * <p>*   **1**: yes.</p>
+         * <p>*   **0**: The media stream is not encrypted.</p>
+         * <p>*   **1**: The media stream is encrypted.</p>
          */
         @NameInMap("Encrypt")
         public Long encrypt;
@@ -142,11 +142,14 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String HDRType;
 
         /**
-         * <p>The height of the media stream. Unit: pixel.</p>
+         * <p>The height of the media stream. Unit: pixels.</p>
          */
         @NameInMap("Height")
         public Long height;
 
+        /**
+         * <p>The custom watermark information of the copyright watermark. This parameter is returned if you set `JobType` to `2`.</p>
+         */
         @NameInMap("JobExt")
         public String jobExt;
 
@@ -156,6 +159,12 @@ public class GetPlayInfoResponseBody extends TeaModel {
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The type of the digital watermark. Valid values:</p>
+         * <br>
+         * <p>*   **1**: tracing watermark</p>
+         * <p>*   **2**: copyright watermark</p>
+         */
         @NameInMap("JobType")
         public Integer jobType;
 
@@ -196,7 +205,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String specification;
 
         /**
-         * <p>The status of the media stream. Valid values:</p>
+         * <p>The status of the audio or video stream. Valid values:</p>
          * <br>
          * <p>*   **Normal**: The latest transcoded stream in each quality and format is in the Normal status.</p>
          * <p>*   **Invisible**: If multiple streams are transcoded in the same quality and format, the latest transcoded stream is in the Normal status and other streams are in the Invisible status.</p>
@@ -217,7 +226,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public String watermarkId;
 
         /**
-         * <p>The width of the media stream. Unit: pixel.</p>
+         * <p>The width of the media stream. Unit: pixels.</p>
          */
         @NameInMap("Width")
         public Long width;

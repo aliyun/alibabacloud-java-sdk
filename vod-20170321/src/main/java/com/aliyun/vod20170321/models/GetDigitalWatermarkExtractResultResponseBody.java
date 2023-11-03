@@ -4,9 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
+    /**
+     * <p>The information about the job.</p>
+     */
     @NameInMap("AiExtractResultList")
     public java.util.List<GetDigitalWatermarkExtractResultResponseBodyAiExtractResultList> aiExtractResultList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,43 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
     }
 
     public static class GetDigitalWatermarkExtractResultResponseBodyAiExtractResultList extends TeaModel {
+        /**
+         * <p>The time when the job was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The ID of the job.</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The time when the job was modified.</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <p>The status of the job. Valid values:</p>
+         * <br>
+         * <p>*   **Success**</p>
+         * <p>*   **Failed**</p>
+         * <p>*   **Processing**</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The extracted watermark text.</p>
+         */
         @NameInMap("WaterMarkText")
         public String waterMarkText;
 
