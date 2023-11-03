@@ -136,12 +136,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * The ID of the rule.
       *
-      * @param request CreateArtifactBuildRuleRequest
+      * @param tmpReq CreateArtifactBuildRuleRequest
       * @param runtime runtime options for this request RuntimeOptions
       * @return CreateArtifactBuildRuleResponse
      */
-    public CreateArtifactBuildRuleResponse createArtifactBuildRuleWithOptions(CreateArtifactBuildRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateArtifactBuildRuleResponse createArtifactBuildRuleWithOptions(CreateArtifactBuildRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateArtifactBuildRuleShrinkRequest request = new CreateArtifactBuildRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.parameters)) {
+            request.parametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.parameters, "Parameters", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.artifactType)) {
             query.put("ArtifactType", request.artifactType);
@@ -149,6 +155,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parametersShrink)) {
+            query.put("Parameters", request.parametersShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.scopeId)) {
