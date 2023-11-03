@@ -10,6 +10,9 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("ApprovalType")
     public String approvalType;
 
+    @NameInMap("BuildParameters")
+    public String buildParameters;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -98,6 +101,14 @@ public class CreateServiceRequest extends TeaModel {
     }
     public String getApprovalType() {
         return this.approvalType;
+    }
+
+    public CreateServiceRequest setBuildParameters(String buildParameters) {
+        this.buildParameters = buildParameters;
+        return this;
+    }
+    public String getBuildParameters() {
+        return this.buildParameters;
     }
 
     public CreateServiceRequest setClientToken(String clientToken) {
