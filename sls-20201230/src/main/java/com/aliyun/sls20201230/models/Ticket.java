@@ -25,14 +25,14 @@ public class Ticket extends TeaModel {
     @NameInMap("number")
     public Integer number;
 
-    @NameInMap("policy")
-    public String policy;
-
     @NameInMap("ticket")
     public String ticket;
 
     @NameInMap("ticketId")
     public String ticketId;
+
+    @NameInMap("type")
+    public String type;
 
     @NameInMap("unlimitedExpiration")
     public Boolean unlimitedExpiration;
@@ -107,14 +107,6 @@ public class Ticket extends TeaModel {
         return this.number;
     }
 
-    public Ticket setPolicy(String policy) {
-        this.policy = policy;
-        return this;
-    }
-    public String getPolicy() {
-        return this.policy;
-    }
-
     public Ticket setTicket(String ticket) {
         this.ticket = ticket;
         return this;
@@ -129,6 +121,14 @@ public class Ticket extends TeaModel {
     }
     public String getTicketId() {
         return this.ticketId;
+    }
+
+    public Ticket setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public Ticket setUnlimitedExpiration(Boolean unlimitedExpiration) {

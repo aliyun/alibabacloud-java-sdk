@@ -8,7 +8,7 @@ public class UntagResourcesRequest extends TeaModel {
     public Boolean all;
 
     @NameInMap("resourceId")
-    public String resourceId;
+    public java.util.List<String> resourceId;
 
     @NameInMap("resourceType")
     public String resourceType;
@@ -29,11 +29,11 @@ public class UntagResourcesRequest extends TeaModel {
         return this.all;
     }
 
-    public UntagResourcesRequest setResourceId(String resourceId) {
+    public UntagResourcesRequest setResourceId(java.util.List<String> resourceId) {
         this.resourceId = resourceId;
         return this;
     }
-    public String getResourceId() {
+    public java.util.List<String> getResourceId() {
         return this.resourceId;
     }
 
