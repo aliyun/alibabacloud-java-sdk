@@ -110,6 +110,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("IsOverBalance")
     public Boolean isOverBalance;
 
+    @NameInMap("IsPostpay")
+    public Boolean isPostpay;
+
     /**
      * <p>Indicates whether Security Center runs the free trial edition. Valid values:</p>
      * <br>
@@ -142,6 +145,18 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      */
     @NameInMap("OpenTime")
     public Long openTime;
+
+    @NameInMap("PostPayInstanceId")
+    public String postPayInstanceId;
+
+    @NameInMap("PostPayModuleSwitch")
+    public String postPayModuleSwitch;
+
+    @NameInMap("PostPayOpenTime")
+    public Long postPayOpenTime;
+
+    @NameInMap("PostPayStatus")
+    public Integer postPayStatus;
 
     /**
      * <p>The quota for application protection. Unit: process/month.</p>
@@ -354,6 +369,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         return this.isOverBalance;
     }
 
+    public DescribeVersionConfigResponseBody setIsPostpay(Boolean isPostpay) {
+        this.isPostpay = isPostpay;
+        return this;
+    }
+    public Boolean getIsPostpay() {
+        return this.isPostpay;
+    }
+
     public DescribeVersionConfigResponseBody setIsTrialVersion(Integer isTrialVersion) {
         this.isTrialVersion = isTrialVersion;
         return this;
@@ -392,6 +415,38 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
     public Long getOpenTime() {
         return this.openTime;
+    }
+
+    public DescribeVersionConfigResponseBody setPostPayInstanceId(String postPayInstanceId) {
+        this.postPayInstanceId = postPayInstanceId;
+        return this;
+    }
+    public String getPostPayInstanceId() {
+        return this.postPayInstanceId;
+    }
+
+    public DescribeVersionConfigResponseBody setPostPayModuleSwitch(String postPayModuleSwitch) {
+        this.postPayModuleSwitch = postPayModuleSwitch;
+        return this;
+    }
+    public String getPostPayModuleSwitch() {
+        return this.postPayModuleSwitch;
+    }
+
+    public DescribeVersionConfigResponseBody setPostPayOpenTime(Long postPayOpenTime) {
+        this.postPayOpenTime = postPayOpenTime;
+        return this;
+    }
+    public Long getPostPayOpenTime() {
+        return this.postPayOpenTime;
+    }
+
+    public DescribeVersionConfigResponseBody setPostPayStatus(Integer postPayStatus) {
+        this.postPayStatus = postPayStatus;
+        return this;
+    }
+    public Integer getPostPayStatus() {
+        return this.postPayStatus;
     }
 
     public DescribeVersionConfigResponseBody setRaspCapacity(Long raspCapacity) {
