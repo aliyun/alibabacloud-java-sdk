@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBVersionResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>This parameter is no longer returned.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
