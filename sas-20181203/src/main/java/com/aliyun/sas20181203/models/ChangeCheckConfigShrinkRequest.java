@@ -4,24 +4,57 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ChangeCheckConfigShrinkRequest extends TeaModel {
+    /**
+     * <p>The list of check items that you want to add to the policy.</p>
+     * <br>
+     * <p>>  If the ConfigStandardIds or ConfigRequirementIds parameter is configured, this parameter does not take effect.</p>
+     */
     @NameInMap("AddedCheck")
     public java.util.List<ChangeCheckConfigShrinkRequestAddedCheck> addedCheck;
 
+    /**
+     * <p>The requirement IDs that you want to specify for the check policy.</p>
+     * <br>
+     * <p>>  You can call the [ListCheckResult](~~ListCheckResult~~) operation to obtain the requirement ID. If the ConfigStandardIds parameter is configured, this parameter does not take effect.</p>
+     */
     @NameInMap("ConfigRequirementIds")
     public String configRequirementIdsShrink;
 
+    /**
+     * <p>The standard IDs that you want to specify for the check policy.</p>
+     * <br>
+     * <p>>  You can call the [ListCheckResult](~~ListCheckResult~~) operation to obtain the standard ID.</p>
+     */
     @NameInMap("ConfigStandardIds")
     public String configStandardIdsShrink;
 
+    /**
+     * <p>The configuration of the check item. Valid values:</p>
+     * <p>- **all**</p>
+     */
     @NameInMap("Configure")
     public String configure;
 
+    /**
+     * <p>The days in a week on which a check is performed.</p>
+     */
     @NameInMap("CycleDays")
     public java.util.List<Integer> cycleDays;
 
+    /**
+     * <p>Specifies whether to check the new check items in the selected requirement item. Valid values:</p>
+     * <p>- **true**</p>
+     * <p>- **false**</p>
+     */
     @NameInMap("EnableAddCheck")
     public Boolean enableAddCheck;
 
+    /**
+     * <p>Specifies whether to enable the automatic periodical check feature. Valid values:</p>
+     * <br>
+     * <p>- **true**</p>
+     * <p>- **false**</p>
+     */
     @NameInMap("EnableAutoCheck")
     public Boolean enableAutoCheck;
 
@@ -44,6 +77,11 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The list of the check items that you want to remove from the policy.</p>
+     * <br>
+     * <p>>  If the ConfigStandardIds or ConfigRequirementIds parameter is configured, this parameter does not take effect.</p>
+     */
     @NameInMap("RemovedCheck")
     public java.util.List<ChangeCheckConfigShrinkRequestRemovedCheck> removedCheck;
 
@@ -59,6 +97,9 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
     @NameInMap("StartTime")
     public Integer startTime;
 
+    /**
+     * <p>The service provider (SP) of the cloud asset.</p>
+     */
     @NameInMap("Vendors")
     public java.util.List<String> vendors;
 
@@ -172,9 +213,17 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
     }
 
     public static class ChangeCheckConfigShrinkRequestAddedCheck extends TeaModel {
+        /**
+         * <p>The ID of the check item.</p>
+         * <br>
+         * <p>>  You can call the [ListCheckResult](~~ListCheckResult~~) operation to obtain the ID of the check item.</p>
+         */
         @NameInMap("CheckId")
         public Long checkId;
 
+        /**
+         * <p>The section ID of the check item.</p>
+         */
         @NameInMap("SectionId")
         public Long sectionId;
 
@@ -202,9 +251,17 @@ public class ChangeCheckConfigShrinkRequest extends TeaModel {
     }
 
     public static class ChangeCheckConfigShrinkRequestRemovedCheck extends TeaModel {
+        /**
+         * <p>The ID of the check item.</p>
+         * <br>
+         * <p>>  You can call the [ListCheckResult](~~ListCheckResult~~) operation to obtain the ID of the check item.</p>
+         */
         @NameInMap("CheckId")
         public Long checkId;
 
+        /**
+         * <p>The section ID of the check item.</p>
+         */
         @NameInMap("SectionId")
         public Long sectionId;
 

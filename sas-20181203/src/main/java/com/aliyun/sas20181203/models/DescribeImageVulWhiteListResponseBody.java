@@ -4,27 +4,54 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageVulWhiteListResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned. A value of **200** indicates that the request was successful. Other values indicate that the request failed. You can identify the cause of the failure based on the value of this parameter.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The information about the whitelist of image vulnerabilities.</p>
+     */
     @NameInMap("ImageVulWhitelist")
     public java.util.List<DescribeImageVulWhiteListResponseBodyImageVulWhitelist> imageVulWhitelist;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeImageVulWhiteListResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The amount of time that was consumed to process the request. Unit: milliseconds.</p>
+     */
     @NameInMap("TimeCost")
     public Long timeCost;
 
@@ -98,21 +125,45 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
     }
 
     public static class DescribeImageVulWhiteListResponseBodyImageVulWhitelist extends TeaModel {
+        /**
+         * <p>The alias of the vulnerability that is specified in Common Vulnerabilities and Exposures (CVE).</p>
+         */
         @NameInMap("AliasName")
         public String aliasName;
 
+        /**
+         * <p>The primary key ID of the vulnerability.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the vulnerability.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The reason the vulnerability is added to the whitelist.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <p>The object on which the query is performed. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <br>
+         * <p>*   **type**: the object type. The value is fixed to repo.</p>
+         * <p>*   **target**: the object content. The value is in the Namespace/Image repository format.</p>
+         */
         @NameInMap("Target")
         public String target;
 
+        /**
+         * <p>The type of the vulnerability. Valid values:</p>
+         * <br>
+         * <p>*   **cve**: system vulnerability</p>
+         * <p>*   **sca**: application vulnerability</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -172,15 +223,27 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
     }
 
     public static class DescribeImageVulWhiteListResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
