@@ -54,6 +54,9 @@ public class DescribeListenerResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("IdleTimeout")
+    public Integer idleTimeout;
+
     /**
      * <p>The ID of the listener.</p>
      */
@@ -103,6 +106,9 @@ public class DescribeListenerResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("RequestTimeout")
+    public Integer requestTimeout;
 
     /**
      * <p>The ID of the security policy.</p>
@@ -247,6 +253,14 @@ public class DescribeListenerResponseBody extends TeaModel {
         return this.description;
     }
 
+    public DescribeListenerResponseBody setIdleTimeout(Integer idleTimeout) {
+        this.idleTimeout = idleTimeout;
+        return this;
+    }
+    public Integer getIdleTimeout() {
+        return this.idleTimeout;
+    }
+
     public DescribeListenerResponseBody setListenerId(String listenerId) {
         this.listenerId = listenerId;
         return this;
@@ -301,6 +315,14 @@ public class DescribeListenerResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeListenerResponseBody setRequestTimeout(Integer requestTimeout) {
+        this.requestTimeout = requestTimeout;
+        return this;
+    }
+    public Integer getRequestTimeout() {
+        return this.requestTimeout;
     }
 
     public DescribeListenerResponseBody setSecurityPolicyId(String securityPolicyId) {

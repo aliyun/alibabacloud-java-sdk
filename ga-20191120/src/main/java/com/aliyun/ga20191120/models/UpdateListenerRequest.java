@@ -41,6 +41,9 @@ public class UpdateListenerRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("IdleTimeout")
+    public Integer idleTimeout;
+
     /**
      * <p>The ID of the listener.</p>
      */
@@ -92,6 +95,9 @@ public class UpdateListenerRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("RequestTimeout")
+    public Integer requestTimeout;
 
     /**
      * <p>The ID of the security policy. Valid values:</p>
@@ -177,6 +183,14 @@ public class UpdateListenerRequest extends TeaModel {
         return this.description;
     }
 
+    public UpdateListenerRequest setIdleTimeout(Integer idleTimeout) {
+        this.idleTimeout = idleTimeout;
+        return this;
+    }
+    public Integer getIdleTimeout() {
+        return this.idleTimeout;
+    }
+
     public UpdateListenerRequest setListenerId(String listenerId) {
         this.listenerId = listenerId;
         return this;
@@ -223,6 +237,14 @@ public class UpdateListenerRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public UpdateListenerRequest setRequestTimeout(Integer requestTimeout) {
+        this.requestTimeout = requestTimeout;
+        return this;
+    }
+    public Integer getRequestTimeout() {
+        return this.requestTimeout;
     }
 
     public UpdateListenerRequest setSecurityPolicyId(String securityPolicyId) {
