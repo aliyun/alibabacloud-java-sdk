@@ -115,8 +115,9 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
         /**
          * <p>The storage type of the table. Valid values:</p>
          * <br>
-         * <p>*   **Heap**: heap table</p>
-         * <p>*   **AO**: append-optimized (AO) table</p>
+         * <p>*   **Heap Table**</p>
+         * <p>*   **Append-Only Heap Table**</p>
+         * <p>*   **Append-Only Columnar Table**</p>
          */
         @NameInMap("StorageType")
         public String storageType;

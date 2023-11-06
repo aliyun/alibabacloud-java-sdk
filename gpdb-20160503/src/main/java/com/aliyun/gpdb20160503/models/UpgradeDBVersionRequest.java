@@ -11,7 +11,7 @@ public class UpgradeDBVersionRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The major version of the instance.</p>
+     * <p>This parameter is no longer used and does not need to be specified.</p>
      */
     @NameInMap("MajorVersion")
     public String majorVersion;
@@ -32,13 +32,13 @@ public class UpgradeDBVersionRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The upgrade time.</p>
+     * <p>This parameter is no longer used and does not need to be specified.</p>
      */
     @NameInMap("SwitchTime")
     public String switchTime;
 
     /**
-     * <p>The upgrade method.</p>
+     * <p>This parameter is no longer used and does not need to be specified.</p>
      */
     @NameInMap("SwitchTimeMode")
     public String switchTimeMode;
