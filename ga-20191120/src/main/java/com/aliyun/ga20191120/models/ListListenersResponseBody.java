@@ -402,6 +402,9 @@ public class ListListenersResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("IdleTimeout")
+        public Integer idleTimeout;
+
         /**
          * <p>The ID of the listener.</p>
          */
@@ -439,6 +442,9 @@ public class ListListenersResponseBody extends TeaModel {
          */
         @NameInMap("ProxyProtocol")
         public Boolean proxyProtocol;
+
+        @NameInMap("RequestTimeout")
+        public Integer requestTimeout;
 
         /**
          * <p>The ID of the security policy.</p>
@@ -575,6 +581,14 @@ public class ListListenersResponseBody extends TeaModel {
             return this.description;
         }
 
+        public ListListenersResponseBodyListeners setIdleTimeout(Integer idleTimeout) {
+            this.idleTimeout = idleTimeout;
+            return this;
+        }
+        public Integer getIdleTimeout() {
+            return this.idleTimeout;
+        }
+
         public ListListenersResponseBodyListeners setListenerId(String listenerId) {
             this.listenerId = listenerId;
             return this;
@@ -613,6 +627,14 @@ public class ListListenersResponseBody extends TeaModel {
         }
         public Boolean getProxyProtocol() {
             return this.proxyProtocol;
+        }
+
+        public ListListenersResponseBodyListeners setRequestTimeout(Integer requestTimeout) {
+            this.requestTimeout = requestTimeout;
+            return this;
+        }
+        public Integer getRequestTimeout() {
+            return this.requestTimeout;
         }
 
         public ListListenersResponseBodyListeners setSecurityPolicyId(String securityPolicyId) {

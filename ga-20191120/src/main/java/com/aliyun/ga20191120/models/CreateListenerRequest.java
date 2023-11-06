@@ -61,6 +61,9 @@ public class CreateListenerRequest extends TeaModel {
     @NameInMap("EndpointGroupConfigurations")
     public java.util.List<CreateListenerRequestEndpointGroupConfigurations> endpointGroupConfigurations;
 
+    @NameInMap("IdleTimeout")
+    public Integer idleTimeout;
+
     /**
      * <p>The name of the listener.</p>
      * <br>
@@ -102,6 +105,9 @@ public class CreateListenerRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("RequestTimeout")
+    public Integer requestTimeout;
 
     /**
      * <p>The ID of the security policy. Valid values:</p>
@@ -218,6 +224,14 @@ public class CreateListenerRequest extends TeaModel {
         return this.endpointGroupConfigurations;
     }
 
+    public CreateListenerRequest setIdleTimeout(Integer idleTimeout) {
+        this.idleTimeout = idleTimeout;
+        return this;
+    }
+    public Integer getIdleTimeout() {
+        return this.idleTimeout;
+    }
+
     public CreateListenerRequest setName(String name) {
         this.name = name;
         return this;
@@ -256,6 +270,14 @@ public class CreateListenerRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateListenerRequest setRequestTimeout(Integer requestTimeout) {
+        this.requestTimeout = requestTimeout;
+        return this;
+    }
+    public Integer getRequestTimeout() {
+        return this.requestTimeout;
     }
 
     public CreateListenerRequest setSecurityPolicyId(String securityPolicyId) {
