@@ -13,6 +13,9 @@ public class CreateSkillGroupRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MediaType")
+    public String mediaType;
+
     @NameInMap("Name")
     public String name;
 
@@ -43,6 +46,14 @@ public class CreateSkillGroupRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public CreateSkillGroupRequest setMediaType(String mediaType) {
+        this.mediaType = mediaType;
+        return this;
+    }
+    public String getMediaType() {
+        return this.mediaType;
     }
 
     public CreateSkillGroupRequest setName(String name) {

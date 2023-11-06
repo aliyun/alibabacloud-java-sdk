@@ -85,6 +85,9 @@ public class ListDevicesResponseBody extends TeaModel {
         @NameInMap("DeviceId")
         public String deviceId;
 
+        @NameInMap("DeviceType")
+        public String deviceType;
+
         @NameInMap("Expires")
         public Long expires;
 
@@ -124,6 +127,14 @@ public class ListDevicesResponseBody extends TeaModel {
         }
         public String getDeviceId() {
             return this.deviceId;
+        }
+
+        public ListDevicesResponseBodyData setDeviceType(String deviceType) {
+            this.deviceType = deviceType;
+            return this;
+        }
+        public String getDeviceType() {
+            return this.deviceType;
         }
 
         public ListDevicesResponseBodyData setExpires(Long expires) {
