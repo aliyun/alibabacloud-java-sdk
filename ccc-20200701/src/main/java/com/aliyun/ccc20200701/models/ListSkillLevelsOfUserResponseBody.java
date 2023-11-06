@@ -65,6 +65,9 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
     }
 
     public static class ListSkillLevelsOfUserResponseBodyDataList extends TeaModel {
+        @NameInMap("MediaType")
+        public String mediaType;
+
         @NameInMap("SkillGroupId")
         public String skillGroupId;
 
@@ -77,6 +80,14 @@ public class ListSkillLevelsOfUserResponseBody extends TeaModel {
         public static ListSkillLevelsOfUserResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListSkillLevelsOfUserResponseBodyDataList self = new ListSkillLevelsOfUserResponseBodyDataList();
             return TeaModel.build(map, self);
+        }
+
+        public ListSkillLevelsOfUserResponseBodyDataList setMediaType(String mediaType) {
+            this.mediaType = mediaType;
+            return this;
+        }
+        public String getMediaType() {
+            return this.mediaType;
         }
 
         public ListSkillLevelsOfUserResponseBodyDataList setSkillGroupId(String skillGroupId) {

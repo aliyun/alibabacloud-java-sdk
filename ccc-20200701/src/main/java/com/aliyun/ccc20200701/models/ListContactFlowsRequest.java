@@ -7,11 +7,17 @@ public class ListContactFlowsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("OrderByField")
+    public String orderByField;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("SortOrder")
+    public String sortOrder;
 
     @NameInMap("Type")
     public String type;
@@ -29,6 +35,14 @@ public class ListContactFlowsRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public ListContactFlowsRequest setOrderByField(String orderByField) {
+        this.orderByField = orderByField;
+        return this;
+    }
+    public String getOrderByField() {
+        return this.orderByField;
+    }
+
     public ListContactFlowsRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -43,6 +57,14 @@ public class ListContactFlowsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListContactFlowsRequest setSortOrder(String sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    public String getSortOrder() {
+        return this.sortOrder;
     }
 
     public ListContactFlowsRequest setType(String type) {

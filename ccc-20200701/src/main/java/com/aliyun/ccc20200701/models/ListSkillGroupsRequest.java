@@ -7,6 +7,9 @@ public class ListSkillGroupsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MediaType")
+    public String mediaType;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -27,6 +30,14 @@ public class ListSkillGroupsRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListSkillGroupsRequest setMediaType(String mediaType) {
+        this.mediaType = mediaType;
+        return this;
+    }
+    public String getMediaType() {
+        return this.mediaType;
     }
 
     public ListSkillGroupsRequest setPageNumber(Integer pageNumber) {

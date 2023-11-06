@@ -74,6 +74,9 @@ public class GetSkillGroupResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("MediaType")
+        public String mediaType;
+
         @NameInMap("Name")
         public String name;
 
@@ -107,6 +110,14 @@ public class GetSkillGroupResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public GetSkillGroupResponseBodyData setMediaType(String mediaType) {
+            this.mediaType = mediaType;
+            return this;
+        }
+        public String getMediaType() {
+            return this.mediaType;
         }
 
         public GetSkillGroupResponseBodyData setName(String name) {
