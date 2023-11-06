@@ -13,12 +13,12 @@ public class ListAggregateResourceEvaluationResultsRequest extends TeaModel {
     public String aggregatorId;
 
     /**
-     * <p>The compliance evaluation result of the resources. Valid values:</p>
+     * <p>The compliance evaluation result of the resource. Valid values:</p>
      * <br>
-     * <p>*   COMPLIANT: The resources are evaluated as compliant.</p>
-     * <p>*   NON_COMPLIANT: The resources are evaluated as incompliant.</p>
-     * <p>*   NOT_APPLICABLE: The rule does not apply to your resources.</p>
-     * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
+     * <p>*   COMPLIANT: The resource is evaluated as compliant.</p>
+     * <p>*   NON_COMPLIANT: The resource is evaluated as non-compliant.</p>
+     * <p>*   NOT_APPLICABLE: The rule does not apply to the resource.</p>
+     * <p>*   INSUFFICIENT_DATA: No data is available.</p>
      * <p>*   IGNORED: The resource is ignored during compliance evaluation.</p>
      */
     @NameInMap("ComplianceType")

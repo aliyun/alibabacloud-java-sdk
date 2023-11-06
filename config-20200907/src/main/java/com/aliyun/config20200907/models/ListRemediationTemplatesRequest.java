@@ -13,7 +13,7 @@ public class ListRemediationTemplatesRequest extends TeaModel {
     public String managedRuleIdentifier;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number. Pages start from 1.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;

@@ -15,10 +15,10 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     /**
      * <p>The compliance evaluation result. Valid values:</p>
      * <br>
-     * <p>*   COMPLIANT: The resource was evaluated as compliant.</p>
-     * <p>*   NON_COMPLIANT: The resource was evaluated as incompliant.</p>
-     * <p>*   NOT_APPLICABLE: The rule did not apply to your resources.</p>
-     * <p>*   INSUFFICIENT_DATA: No resource data was available.</p>
+     * <p>*   COMPLIANT: The resource is evaluated as compliant.</p>
+     * <p>*   NON_COMPLIANT: The resource is evaluated as non-compliant.</p>
+     * <p>*   NOT_APPLICABLE: The rule does not apply to the resource.</p>
+     * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
      */
     @NameInMap("ComplianceType")
     public String complianceType;
@@ -32,9 +32,9 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     /**
      * <p>The status of the rule. Valid values:</p>
      * <br>
-     * <p>*   ACTIVE: The rule is being used to monitor resource configurations.</p>
+     * <p>*   ACTIVE: The rule is enabled.</p>
      * <p>*   DELETING: The rule is being deleted.</p>
-     * <p>*   EVALUATING: The rule is triggered and is being used to monitor resource configurations.</p>
+     * <p>*   EVALUATING: The rule is being used to evaluate resource configurations.</p>
      * <p>*   INACTIVE: The rule is disabled.</p>
      */
     @NameInMap("ConfigRuleState")
@@ -49,15 +49,15 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <br>
-     * <p>Minimum value: 1. Default value: 1.</p>
+     * <p>Pages start from page 1. Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <br>
      * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
      */

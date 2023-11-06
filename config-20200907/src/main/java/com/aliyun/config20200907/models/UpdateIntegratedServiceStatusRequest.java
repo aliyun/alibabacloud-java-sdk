@@ -4,6 +4,9 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class UpdateIntegratedServiceStatusRequest extends TeaModel {
+    @NameInMap("IntegratedTypes")
+    public String integratedTypes;
+
     /**
      * <p>The product code of the cloud product. Valid values:</p>
      * <br>
@@ -24,6 +27,14 @@ public class UpdateIntegratedServiceStatusRequest extends TeaModel {
     public static UpdateIntegratedServiceStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateIntegratedServiceStatusRequest self = new UpdateIntegratedServiceStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateIntegratedServiceStatusRequest setIntegratedTypes(String integratedTypes) {
+        this.integratedTypes = integratedTypes;
+        return this;
+    }
+    public String getIntegratedTypes() {
+        return this.integratedTypes;
     }
 
     public UpdateIntegratedServiceStatusRequest setServiceCode(String serviceCode) {

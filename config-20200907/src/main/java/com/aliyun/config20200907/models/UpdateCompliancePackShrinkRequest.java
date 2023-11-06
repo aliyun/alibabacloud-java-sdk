@@ -63,9 +63,9 @@ public class UpdateCompliancePackShrinkRequest extends TeaModel {
     /**
      * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
      * <br>
-     * <p>*   1: high risk level</p>
-     * <p>*   2: medium risk level</p>
-     * <p>*   3: low risk level</p>
+     * <p>*   1: high</p>
+     * <p>*   2: medium</p>
+     * <p>*   3: low</p>
      */
     @NameInMap("RiskLevel")
     public Integer riskLevel;

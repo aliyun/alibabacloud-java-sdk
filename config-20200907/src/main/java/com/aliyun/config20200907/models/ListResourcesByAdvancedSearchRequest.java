@@ -4,6 +4,9 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListResourcesByAdvancedSearchRequest extends TeaModel {
+    /**
+     * <p>The SQL statement.</p>
+     */
     @NameInMap("Sql")
     public String sql;
 

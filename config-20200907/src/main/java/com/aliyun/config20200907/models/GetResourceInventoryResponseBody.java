@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetResourceInventoryResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the resource inventory.</p>
+     */
     @NameInMap("ResourceInventory")
     public GetResourceInventoryResponseBodyResourceInventory resourceInventory;
 
@@ -32,12 +38,24 @@ public class GetResourceInventoryResponseBody extends TeaModel {
     }
 
     public static class GetResourceInventoryResponseBodyResourceInventory extends TeaModel {
+        /**
+         * <p>The download URL of the resource inventory.</p>
+         */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
+        /**
+         * <p>The time when the resource inventory was generated. The value is a timestamp.</p>
+         */
         @NameInMap("ResourceInventoryGenerateTime")
         public Long resourceInventoryGenerateTime;
 
+        /**
+         * <p>The generation status of the resource inventory. Valid values:</p>
+         * <br>
+         * <p>*   CREATING: The resource inventory is being generated.</p>
+         * <p>*   COMPLETE: The resource inventory is generated.</p>
+         */
         @NameInMap("Status")
         public String status;
 

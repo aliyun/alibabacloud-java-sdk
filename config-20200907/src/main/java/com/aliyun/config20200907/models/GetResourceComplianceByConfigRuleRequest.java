@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetResourceComplianceByConfigRuleRequest extends TeaModel {
     /**
-     * <p>The compliance evaluation results to be returned. Valid values:</p>
+     * <p>The compliance evaluation result of the resource. Valid values:</p>
      * <br>
-     * <p>*   COMPLIANT: The relevant resources are evaluated as compliant.</p>
-     * <p>*   NON_COMPLIANT: The relevant resources are evaluated as non-compliant.</p>
-     * <p>*   NOT_APPLICABLE: The rule does not apply to your resources.</p>
+     * <p>*   COMPLIANT: The resource is evaluated as compliant.</p>
+     * <p>*   NON_COMPLIANT: The resource is evaluated as non-compliant.</p>
+     * <p>*   NOT_APPLICABLE: The rule does not apply to the resource.</p>
      * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
      */
     @NameInMap("ComplianceType")

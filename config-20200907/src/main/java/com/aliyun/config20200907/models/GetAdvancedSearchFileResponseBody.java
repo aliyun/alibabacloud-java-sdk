@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetAdvancedSearchFileResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the resource file.</p>
+     */
     @NameInMap("ResourceSearch")
     public GetAdvancedSearchFileResponseBodyResourceSearch resourceSearch;
 
@@ -32,12 +38,24 @@ public class GetAdvancedSearchFileResponseBody extends TeaModel {
     }
 
     public static class GetAdvancedSearchFileResponseBodyResourceSearch extends TeaModel {
+        /**
+         * <p>The download URL of the resource file.</p>
+         */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
+        /**
+         * <p>The time when the resource file was generated. The value is a timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("ResourceInventoryGenerateTime")
         public Long resourceInventoryGenerateTime;
 
+        /**
+         * <p>The generation status of the resource file. Valid values:</p>
+         * <br>
+         * <p>*   CREATING: The resource file is being generated.</p>
+         * <p>*   COMPLETE: The resource file is generated.</p>
+         */
         @NameInMap("Status")
         public String status;
 

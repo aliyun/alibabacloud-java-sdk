@@ -145,8 +145,8 @@ public class CreateAggregateConfigRuleShrinkRequest extends TeaModel {
     /**
      * <p>The type of the rule. Valid values:</p>
      * <br>
-     * <p>*   ALIYUN: a managed rule.</p>
-     * <p>*   CUSTOM_FC: a custom rule.</p>
+     * <p>*   ALIYUN: managed rule</p>
+     * <p>*   CUSTOM_FC: custom rule</p>
      */
     @NameInMap("SourceOwner")
     public String sourceOwner;

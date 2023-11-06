@@ -13,6 +13,9 @@ public class GetIntegratedServiceStatusResponseBody extends TeaModel {
     @NameInMap("Data")
     public Boolean data;
 
+    @NameInMap("IntegratedTypes")
+    public String integratedTypes;
+
     /**
      * <p>The request ID.</p>
      */
@@ -30,6 +33,14 @@ public class GetIntegratedServiceStatusResponseBody extends TeaModel {
     }
     public Boolean getData() {
         return this.data;
+    }
+
+    public GetIntegratedServiceStatusResponseBody setIntegratedTypes(String integratedTypes) {
+        this.integratedTypes = integratedTypes;
+        return this;
+    }
+    public String getIntegratedTypes() {
+        return this.integratedTypes;
     }
 
     public GetIntegratedServiceStatusResponseBody setRequestId(String requestId) {

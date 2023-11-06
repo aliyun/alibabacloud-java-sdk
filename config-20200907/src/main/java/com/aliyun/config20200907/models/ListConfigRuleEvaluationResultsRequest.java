@@ -13,12 +13,12 @@ public class ListConfigRuleEvaluationResultsRequest extends TeaModel {
     public String compliancePackId;
 
     /**
-     * <p>The compliance evaluation result of resources. Valid values:</p>
+     * <p>The compliance evaluation result of the resource. Valid values:</p>
      * <br>
-     * <p>*   COMPLIANT: The resources are evaluated as compliant.</p>
-     * <p>*   NON_COMPLIANT: The resources are evaluated as non-compliant.</p>
-     * <p>*   NOT_APPLICABLE: The rule does not apply to the resources.</p>
-     * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
+     * <p>*   COMPLIANT: The resource is evaluated as compliant.</p>
+     * <p>*   NON_COMPLIANT: The resource is evaluated as non-compliant.</p>
+     * <p>*   NOT_APPLICABLE: The rule does not apply to the resource.</p>
+     * <p>*   INSUFFICIENT_DATA: No data is available.</p>
      * <p>*   IGNORED: The resource is ignored during compliance evaluation.</p>
      */
     @NameInMap("ComplianceType")
@@ -33,7 +33,7 @@ public class ListConfigRuleEvaluationResultsRequest extends TeaModel {
     public String configRuleId;
 
     /**
-     * <p>The maximum number of entries to return in a request. Valid values: 1 to 100.</p>
+     * <p>The maximum number of entries to return for a single request. Valid values: 1 to 100.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
