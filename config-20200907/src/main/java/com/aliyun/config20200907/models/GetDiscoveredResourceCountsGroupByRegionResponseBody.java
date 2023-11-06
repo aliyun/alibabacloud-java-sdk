@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetDiscoveredResourceCountsGroupByRegionResponseBody extends TeaModel {
     /**
-     * <p>The statistics on resources.</p>
+     * <p>The statistics on the resources.</p>
      */
     @NameInMap("DiscoveredResourceCountsSummary")
     public java.util.List<GetDiscoveredResourceCountsGroupByRegionResponseBodyDiscoveredResourceCountsSummary> discoveredResourceCountsSummary;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -41,7 +41,7 @@ public class GetDiscoveredResourceCountsGroupByRegionResponseBody extends TeaMod
         /**
          * <p>The dimension by which statistics are collected.</p>
          * <br>
-         * <p>>  In most cases, the `Region` parameter is returned instead of the GroupName parameter.</p>
+         * <p>>  In most cases, the `Region` parameter instead of the GroupName parameter is returned.</p>
          */
         @NameInMap("GroupName")
         public String groupName;
@@ -53,7 +53,7 @@ public class GetDiscoveredResourceCountsGroupByRegionResponseBody extends TeaMod
         public String region;
 
         /**
-         * <p>The total number of resources in the region.</p>
+         * <p>The total number of resources.</p>
          */
         @NameInMap("ResourceCount")
         public Long resourceCount;

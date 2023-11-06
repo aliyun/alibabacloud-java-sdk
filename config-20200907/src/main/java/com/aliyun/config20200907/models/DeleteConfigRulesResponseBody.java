@@ -45,10 +45,10 @@ public class DeleteConfigRulesResponseBody extends TeaModel {
         public String configRuleId;
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code.</p>
          * <br>
-         * <p>*   If the rule is deleted, no error code is returned.</p>
-         * <p>*   If the rule fails to be deleted, an error code is returned. For more information about error codes, see [Error codes](https://api.aliyun.com/document/Config/2020-09-07/errorCode).</p>
+         * <p>*   If the rule is disabled, no error code is returned.</p>
+         * <p>*   If the rule fails to be disabled, an error code is returned. For more information about error codes, see [Error codes](https://api.alibabacloud.com/document/Config/2020-09-07/errorCode).</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;

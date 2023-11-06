@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListAggregateConfigRuleEvaluationStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The statistics of compliance evaluation results.</p>
+     */
     @NameInMap("EvaluationResults")
     public java.util.List<ListAggregateConfigRuleEvaluationStatisticsResponseBodyEvaluationResults> evaluationResults;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,39 @@ public class ListAggregateConfigRuleEvaluationStatisticsResponseBody extends Tea
     }
 
     public static class ListAggregateConfigRuleEvaluationStatisticsResponseBodyEvaluationResults extends TeaModel {
+        /**
+         * <p>The ID of the account group.</p>
+         */
         @NameInMap("AggregatorId")
         public String aggregatorId;
 
+        /**
+         * <p>The number of resources that are evaluated as non-compliant.</p>
+         */
         @NameInMap("NonCompliantResourceCnt")
         public Integer nonCompliantResourceCnt;
 
+        /**
+         * <p>The number of rules based on which resources are evaluated as non-compliant.</p>
+         */
         @NameInMap("NonCompliantRuleCnt")
         public Integer nonCompliantRuleCnt;
 
+        /**
+         * <p>The date on which the statistics are obtained.</p>
+         */
         @NameInMap("StatisticDate")
         public String statisticDate;
 
+        /**
+         * <p>The total number of resources.</p>
+         */
         @NameInMap("TotalResourceCnt")
         public Integer totalResourceCnt;
 
+        /**
+         * <p>The total number of rules.</p>
+         */
         @NameInMap("TotalRuleCnt")
         public Integer totalRuleCnt;
 

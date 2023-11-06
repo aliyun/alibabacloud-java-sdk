@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
     /**
-     * <p>The list of the resources.</p>
+     * <p>The queried resources.</p>
      */
     @NameInMap("DiscoveredResourceProfiles")
     public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfiles discoveredResourceProfiles;
@@ -39,13 +39,13 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
 
     public static class ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs. We recommend that you use the ResourceOwnerId parameter.</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
 
         /**
-         * <p>The ID of the zone where the resource resides.</p>
+         * <p>The ID of the zone in which the resource resides.</p>
          */
         @NameInMap("AvailabilityZone")
         public String availabilityZone;
@@ -57,7 +57,7 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The timestamp when the resource was created. Unit: milliseconds.</p>
+         * <p>The time when the resource was created. Unit: milliseconds.</p>
          */
         @NameInMap("ResourceCreationTime")
         public Long resourceCreationTime;
@@ -65,8 +65,8 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         /**
          * <p>The status of the resource. Valid values:</p>
          * <br>
-         * <p>*   0: The resource was deleted.</p>
-         * <p>*   1: The resource was retained.</p>
+         * <p>*   0: The resource is deleted.</p>
+         * <p>*   1: The resource is retained.</p>
          */
         @NameInMap("ResourceDeleted")
         public Integer resourceDeleted;
@@ -78,7 +78,7 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The name of the resource.</p>
+         * <p>The resource name.</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
@@ -90,7 +90,7 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         public Long resourceOwnerId;
 
         /**
-         * <p>The status of the resource. The value of this parameter varies based on the resource type and may be empty. Examples:</p>
+         * <p>The status of the resource. The value of this parameter varies with the resource type and may be empty. Examples:</p>
          * <br>
          * <p>*   If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that is in a specific state. In this case, the valid values of this parameter are Running and Stopped.</p>
          * <p>*   If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is empty.</p>
@@ -99,7 +99,7 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         public String resourceStatus;
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The resource type.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -221,7 +221,7 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
 
     public static class ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfiles extends TeaModel {
         /**
-         * <p>The details of the resources.</p>
+         * <p>The queried resource.</p>
          */
         @NameInMap("DiscoveredResourceProfileList")
         public java.util.List<ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList> discoveredResourceProfileList;

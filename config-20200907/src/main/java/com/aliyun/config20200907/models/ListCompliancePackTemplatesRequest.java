@@ -28,6 +28,9 @@ public class ListCompliancePackTemplatesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The type of the resource evaluated by the rule.</p>
+     */
     @NameInMap("ResourceTypes")
     public String resourceTypes;
 

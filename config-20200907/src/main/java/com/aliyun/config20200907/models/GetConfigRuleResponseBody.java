@@ -269,21 +269,21 @@ public class GetConfigRuleResponseBody extends TeaModel {
         /**
          * <p>The event source.</p>
          * <br>
-         * <p>> Only events related to Cloud Config are supported. The value is fixed to aliyun.config.</p>
+         * <p>>  Only events related to Cloud Config are supported. Valid value: aliyun.config.</p>
          */
         @NameInMap("EventSource")
         public String eventSource;
 
         /**
-         * <p>The interval at which the rule was triggered. Valid values:</p>
+         * <p>The interval at which the rule is triggered. Valid values:</p>
          * <br>
-         * <p>*   One_Hour: 1 hour.</p>
-         * <p>*   Three_Hours: 3 hours.</p>
+         * <p>*   One_Hour: 1 hour</p>
+         * <p>*   Three_Hours: 3 hours</p>
          * <p>*   Six_Hours: 6 hours.</p>
-         * <p>*   Twelve_Hours: 12 hours.</p>
-         * <p>*   TwentyFour_Hours: 24 hours.</p>
+         * <p>*   Twelve_Hours: 12 hours</p>
+         * <p>*   TwentyFour_Hours: 24 hours</p>
          * <br>
-         * <p>> This parameter is returned if the managed rule is periodically triggered.</p>
+         * <p>>  This parameter is returned if the managed rule is periodically triggered.</p>
          */
         @NameInMap("MaximumExecutionFrequency")
         public String maximumExecutionFrequency;
@@ -291,8 +291,8 @@ public class GetConfigRuleResponseBody extends TeaModel {
         /**
          * <p>The trigger type of the rule. Valid values:</p>
          * <br>
-         * <p>*   ConfigurationItemChangeNotification: The rule was triggered by configuration changes.</p>
-         * <p>*   ScheduledNotification: The rule was periodically triggered.</p>
+         * <p>*   ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</p>
+         * <p>*   ScheduledNotification: The rule is periodically triggered.</p>
          */
         @NameInMap("MessageType")
         public String messageType;
@@ -366,15 +366,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
         public java.util.Map<String, ?> optionalInputParameterDetails;
 
         /**
-         * <p>The interval at which the rule is triggered. Valid values:</p>
-         * <br>
-         * <p>*   One_Hour: 1 hour</p>
-         * <p>*   Three_Hours: 3 hours</p>
-         * <p>*   Six_Hours: 6 hours</p>
-         * <p>*   Twelve_Hours: 12 hours</p>
-         * <p>*   TwentyFour_Hours: 24 hours</p>
-         * <br>
-         * <p>> This parameter is returned if the rule is periodically triggered.</p>
+         * <p>The details of the source of the managed rule.</p>
          */
         @NameInMap("SourceDetails")
         public java.util.List<GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails> sourceDetails;
@@ -468,21 +460,21 @@ public class GetConfigRuleResponseBody extends TeaModel {
         /**
          * <p>The event source.</p>
          * <br>
-         * <p>> Only events related to Cloud Config are supported. The value is fixed to aliyun.config.</p>
+         * <p>>  Only events related to Cloud Config are supported. Valid value: aliyun.config.</p>
          */
         @NameInMap("EventSource")
         public String eventSource;
 
         /**
-         * <p>The interval at which the rule was triggered. Valid values:</p>
+         * <p>The interval at which the rule is triggered. Valid values:</p>
          * <br>
-         * <p>*   One_Hour: 1 hour.</p>
-         * <p>*   Three_Hours: 3 hours.</p>
-         * <p>*   Six_Hours: 6 hours.</p>
-         * <p>*   Twelve_Hours: 12 hours.</p>
-         * <p>*   TwentyFour_Hours: 24 hours.</p>
+         * <p>*   One_Hour: 1 hour</p>
+         * <p>*   Three_Hours: 3 hours</p>
+         * <p>*   Six_Hours: 6 hours</p>
+         * <p>*   Twelve_Hours: 12 hours</p>
+         * <p>*   TwentyFour_Hours: 24 hours</p>
          * <br>
-         * <p>> This parameter is returned if the managed rule is periodically triggered.</p>
+         * <p>>  This parameter is returned if the rule is periodically triggered.</p>
          */
         @NameInMap("MaximumExecutionFrequency")
         public String maximumExecutionFrequency;
@@ -490,8 +482,8 @@ public class GetConfigRuleResponseBody extends TeaModel {
         /**
          * <p>The trigger type of the rule. Valid values:</p>
          * <br>
-         * <p>*   ConfigurationItemChangeNotification: The rule was triggered by configuration changes.</p>
-         * <p>*   ScheduledNotification: The rule was periodically triggered.</p>
+         * <p>*   ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</p>
+         * <p>*   ScheduledNotification: The rule is periodically triggered.</p>
          */
         @NameInMap("MessageType")
         public String messageType;
@@ -547,15 +539,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The interval at which the rule is triggered. Valid values:</p>
-         * <br>
-         * <p>*   One_Hour: 1 hour</p>
-         * <p>*   Three_Hours: 3 hours</p>
-         * <p>*   Six_Hours: 6 hours</p>
-         * <p>*   Twelve_Hours: 12 hours</p>
-         * <p>*   TwentyFour_Hours: 24 hours</p>
-         * <br>
-         * <p>> This parameter is returned if the rule is periodically triggered.</p>
+         * <p>The details of the source of the rule.</p>
          */
         @NameInMap("SourceDetails")
         public java.util.List<GetConfigRuleResponseBodyConfigRuleSourceSourceDetails> sourceDetails;

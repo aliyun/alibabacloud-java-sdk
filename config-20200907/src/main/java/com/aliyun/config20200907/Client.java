@@ -304,6 +304,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createAdvancedSearchFileWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to create a downloadable resource file for an account group whose ID is `ca-edd3626622af00b3****`. The resource file includes all the ECS instances in the account group.
+      *
+      * @param request CreateAggregateAdvancedSearchFileRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateAggregateAdvancedSearchFileResponse
+     */
     public CreateAggregateAdvancedSearchFileResponse createAggregateAdvancedSearchFileWithOptions(CreateAggregateAdvancedSearchFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -332,6 +339,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAggregateAdvancedSearchFileResponse());
     }
 
+    /**
+      * This topic provides an example on how to create a downloadable resource file for an account group whose ID is `ca-edd3626622af00b3****`. The resource file includes all the ECS instances in the account group.
+      *
+      * @param request CreateAggregateAdvancedSearchFileRequest
+      * @return CreateAggregateAdvancedSearchFileResponse
+     */
     public CreateAggregateAdvancedSearchFileResponse createAggregateAdvancedSearchFile(CreateAggregateAdvancedSearchFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createAggregateAdvancedSearchFileWithOptions(request, runtime);
@@ -3030,6 +3043,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getAggregateResourceCountsGroupByResourceTypeWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to query the most recently generated resource inventory of an account group whose ID is ca-a91d626622af0035\\*\\*\\*\\*.
+      *
+      * @param request GetAggregateResourceInventoryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetAggregateResourceInventoryResponse
+     */
     public GetAggregateResourceInventoryResponse getAggregateResourceInventoryWithOptions(GetAggregateResourceInventoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3054,6 +3074,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAggregateResourceInventoryResponse());
     }
 
+    /**
+      * This topic provides an example on how to query the most recently generated resource inventory of an account group whose ID is ca-a91d626622af0035\\*\\*\\*\\*.
+      *
+      * @param request GetAggregateResourceInventoryRequest
+      * @return GetAggregateResourceInventoryResponse
+     */
     public GetAggregateResourceInventoryResponse getAggregateResourceInventory(GetAggregateResourceInventoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAggregateResourceInventoryWithOptions(request, runtime);
@@ -3466,7 +3492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example of how to query the statistics on resources by region. The returned result shows that a total of 10 resources exist in the `cn-hangzhou` region.
+      * This topic provides an example to demonstrate how to query the statistics on resources by region. The returned result shows that a total of 10 resources exist in the `cn-hangzhou` region.
       *
       * @param request GetDiscoveredResourceCountsGroupByRegionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3497,7 +3523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example of how to query the statistics on resources by region. The returned result shows that a total of 10 resources exist in the `cn-hangzhou` region.
+      * This topic provides an example to demonstrate how to query the statistics on resources by region. The returned result shows that a total of 10 resources exist in the `cn-hangzhou` region.
       *
       * @param request GetDiscoveredResourceCountsGroupByRegionRequest
       * @return GetDiscoveredResourceCountsGroupByRegionResponse
@@ -3872,6 +3898,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getResourceConfigurationTimelineWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to query the most recently generated resource inventory of the current Alibaba Cloud account.
+      *
+      * @param request GetResourceInventoryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetResourceInventoryResponse
+     */
     public GetResourceInventoryResponse getResourceInventoryWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -3888,6 +3921,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceInventoryResponse());
     }
 
+    /**
+      * This topic provides an example on how to query the most recently generated resource inventory of the current Alibaba Cloud account.
+      *
+      * @return GetResourceInventoryResponse
+     */
     public GetResourceInventoryResponse getResourceInventory() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getResourceInventoryWithOptions(runtime);
@@ -4232,6 +4270,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listAggregateConfigRuleEvaluationResultsWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to query the statistics of compliance evaluation results of an account group whose ID is ca-edd3626622af00b3\\*\\*\\*\\*.
+      *
+      * @param request ListAggregateConfigRuleEvaluationStatisticsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListAggregateConfigRuleEvaluationStatisticsResponse
+     */
     public ListAggregateConfigRuleEvaluationStatisticsResponse listAggregateConfigRuleEvaluationStatisticsWithOptions(ListAggregateConfigRuleEvaluationStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4256,6 +4301,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListAggregateConfigRuleEvaluationStatisticsResponse());
     }
 
+    /**
+      * This topic provides an example on how to query the statistics of compliance evaluation results of an account group whose ID is ca-edd3626622af00b3\\*\\*\\*\\*.
+      *
+      * @param request ListAggregateConfigRuleEvaluationStatisticsRequest
+      * @return ListAggregateConfigRuleEvaluationStatisticsResponse
+     */
     public ListAggregateConfigRuleEvaluationStatisticsResponse listAggregateConfigRuleEvaluationStatistics(ListAggregateConfigRuleEvaluationStatisticsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAggregateConfigRuleEvaluationStatisticsWithOptions(request, runtime);
@@ -4409,6 +4460,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listAggregateDiscoveredResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to query the remediation records of the `cr-d04a626622af00af****` rule in the `ca-edd3626622af00b3****` account group.
+      *
+      * @param request ListAggregateRemediationExecutionsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListAggregateRemediationExecutionsResponse
+     */
     public ListAggregateRemediationExecutionsResponse listAggregateRemediationExecutionsWithOptions(ListAggregateRemediationExecutionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4453,6 +4511,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListAggregateRemediationExecutionsResponse());
     }
 
+    /**
+      * This topic provides an example on how to query the remediation records of the `cr-d04a626622af00af****` rule in the `ca-edd3626622af00b3****` account group.
+      *
+      * @param request ListAggregateRemediationExecutionsRequest
+      * @return ListAggregateRemediationExecutionsResponse
+     */
     public ListAggregateRemediationExecutionsResponse listAggregateRemediationExecutions(ListAggregateRemediationExecutionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAggregateRemediationExecutionsWithOptions(request, runtime);
@@ -5051,6 +5115,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listDiscoveredResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to query the cloud services that can be integrated by the current Alibaba Cloud account.
+      *
+      * @param request ListIntegratedServiceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListIntegratedServiceResponse
+     */
     public ListIntegratedServiceResponse listIntegratedServiceWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -5067,6 +5138,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListIntegratedServiceResponse());
     }
 
+    /**
+      * This topic provides an example on how to query the cloud services that can be integrated by the current Alibaba Cloud account.
+      *
+      * @return ListIntegratedServiceResponse
+     */
     public ListIntegratedServiceResponse listIntegratedService() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listIntegratedServiceWithOptions(runtime);
@@ -5463,6 +5539,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listResourceRelationsWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to query all resources with the business tag key and the online tag value in the current Alibaba Cloud account.
+      *
+      * @param request ListResourcesByAdvancedSearchRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListResourcesByAdvancedSearchResponse
+     */
     public ListResourcesByAdvancedSearchResponse listResourcesByAdvancedSearchWithOptions(ListResourcesByAdvancedSearchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5487,11 +5570,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourcesByAdvancedSearchResponse());
     }
 
+    /**
+      * This topic provides an example on how to query all resources with the business tag key and the online tag value in the current Alibaba Cloud account.
+      *
+      * @param request ListResourcesByAdvancedSearchRequest
+      * @return ListResourcesByAdvancedSearchResponse
+     */
     public ListResourcesByAdvancedSearchResponse listResourcesByAdvancedSearch(ListResourcesByAdvancedSearchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listResourcesByAdvancedSearchWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to query the cloud services and resource types that are supported by Cloud Config.
+      *
+      * @param request ListSupportedProductsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListSupportedProductsResponse
+     */
     public ListSupportedProductsResponse listSupportedProductsWithOptions(ListSupportedProductsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5520,6 +5616,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListSupportedProductsResponse());
     }
 
+    /**
+      * This topic provides an example on how to query the cloud services and resource types that are supported by Cloud Config.
+      *
+      * @param request ListSupportedProductsRequest
+      * @return ListSupportedProductsResponse
+     */
     public ListSupportedProductsResponse listSupportedProducts(ListSupportedProductsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listSupportedProductsWithOptions(request, runtime);
@@ -6930,6 +7032,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateIntegratedServiceStatusResponse updateIntegratedServiceStatusWithOptions(UpdateIntegratedServiceStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.integratedTypes)) {
+            body.put("IntegratedTypes", request.integratedTypes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serviceCode)) {
             body.put("ServiceCode", request.serviceCode);
         }

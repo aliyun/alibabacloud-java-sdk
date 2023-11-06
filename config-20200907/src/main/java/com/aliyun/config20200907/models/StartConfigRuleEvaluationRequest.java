@@ -9,7 +9,7 @@ public class StartConfigRuleEvaluationRequest extends TeaModel {
      * <br>
      * <p>For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](~~606968~~).</p>
      * <br>
-     * <p>> You must set one of the CompliancePackId and ConfigRuleId parameters.</p>
+     * <p>>  You must set either the CompliancePackId or ConfigRuleId parameter.</p>
      */
     @NameInMap("CompliancePackId")
     public String compliancePackId;

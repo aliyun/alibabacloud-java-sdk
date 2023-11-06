@@ -4,15 +4,27 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListSupportedProductsResponseBody extends TeaModel {
+    /**
+     * <p>The maximum number of entries returned for a single request. Valid values: 1 to 500.</p>
+     */
     @NameInMap("MaxResults")
     public String maxResults;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The cloud services that are supported by Cloud Config.</p>
+     */
     @NameInMap("Products")
     public java.util.List<ListSupportedProductsResponseBodyProducts> products;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,15 +66,27 @@ public class ListSupportedProductsResponseBody extends TeaModel {
     }
 
     public static class ListSupportedProductsResponseBodyProductsResourceTypeList extends TeaModel {
+        /**
+         * <p>The identifier of the resource type.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The English name of the resource type.</p>
+         */
         @NameInMap("TypeNameEn")
         public String typeNameEn;
 
+        /**
+         * <p>The Chinese name of the resource type.</p>
+         */
         @NameInMap("TypeNameZh")
         public String typeNameZh;
 
+        /**
+         * <p>The URL of the resource type in the console.</p>
+         */
         @NameInMap("TypePageLink")
         public String typePageLink;
 
@@ -106,12 +130,21 @@ public class ListSupportedProductsResponseBody extends TeaModel {
     }
 
     public static class ListSupportedProductsResponseBodyProducts extends TeaModel {
+        /**
+         * <p>The English name of the cloud service.</p>
+         */
         @NameInMap("ProductNameEn")
         public String productNameEn;
 
+        /**
+         * <p>The Chinese name of the cloud service.</p>
+         */
         @NameInMap("ProductNameZh")
         public String productNameZh;
 
+        /**
+         * <p>The resource types that are supported by Cloud Config.</p>
+         */
         @NameInMap("ResourceTypeList")
         public java.util.List<ListSupportedProductsResponseBodyProductsResourceTypeList> resourceTypeList;
 

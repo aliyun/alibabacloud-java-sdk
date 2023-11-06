@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListAggregateResourcesByAdvancedSearchRequest extends TeaModel {
+    /**
+     * <p>The ID of the account group.</p>
+     */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
+    /**
+     * <p>The SQL statement used to query resources.</p>
+     */
     @NameInMap("Sql")
     public String sql;
 

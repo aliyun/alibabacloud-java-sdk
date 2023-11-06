@@ -30,10 +30,6 @@ public class ListAggregateDiscoveredResourcesRequest extends TeaModel {
     @NameInMap("Regions")
     public String regions;
 
-    /**
-     * <p>账号组内待查询资源所属的阿里云账号ID。 </p>
-     * <p>> 参数ResourceAccountId和ResourceOwnerId二选一，推荐使用本参数。</p>
-     */
     @NameInMap("ResourceAccountId")
     public Long resourceAccountId;
 

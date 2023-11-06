@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetDiscoveredResourceCountsGroupByRegionRequest extends TeaModel {
     /**
-     * <p>The type of the resource.</p>
+     * <p>The resource type.</p>
      * <br>
-     * <p>For more information about how to query the type of a resource, see [ListDiscoveredResources](~~169620~~).</p>
+     * <p>For more information about how to obtain the type of a resource, see [ListDiscoveredResources](~~169620~~).</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
