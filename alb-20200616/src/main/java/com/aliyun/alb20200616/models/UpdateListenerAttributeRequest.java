@@ -246,9 +246,20 @@ public class UpdateListenerAttributeRequest extends TeaModel {
     }
 
     public static class UpdateListenerAttributeRequestCaCertificates extends TeaModel {
+        @NameInMap("CertificateId")
+        public String certificateId;
+
         public static UpdateListenerAttributeRequestCaCertificates build(java.util.Map<String, ?> map) throws Exception {
             UpdateListenerAttributeRequestCaCertificates self = new UpdateListenerAttributeRequestCaCertificates();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateListenerAttributeRequestCaCertificates setCertificateId(String certificateId) {
+            this.certificateId = certificateId;
+            return this;
+        }
+        public String getCertificateId() {
+            return this.certificateId;
         }
 
     }

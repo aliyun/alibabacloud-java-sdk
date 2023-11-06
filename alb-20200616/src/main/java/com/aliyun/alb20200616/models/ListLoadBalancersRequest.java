@@ -4,6 +4,9 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListLoadBalancersRequest extends TeaModel {
+    @NameInMap("AddressIpVersion")
+    public String addressIpVersion;
+
     /**
      * <p>The network type. Valid values:</p>
      * <br>
@@ -12,6 +15,12 @@ public class ListLoadBalancersRequest extends TeaModel {
      */
     @NameInMap("AddressType")
     public String addressType;
+
+    @NameInMap("DNSName")
+    public String DNSName;
+
+    @NameInMap("Ipv6AddressType")
+    public String ipv6AddressType;
 
     /**
      * <p>The service status of the ALB instance. Valid values:</p>
@@ -100,12 +109,36 @@ public class ListLoadBalancersRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListLoadBalancersRequest setAddressIpVersion(String addressIpVersion) {
+        this.addressIpVersion = addressIpVersion;
+        return this;
+    }
+    public String getAddressIpVersion() {
+        return this.addressIpVersion;
+    }
+
     public ListLoadBalancersRequest setAddressType(String addressType) {
         this.addressType = addressType;
         return this;
     }
     public String getAddressType() {
         return this.addressType;
+    }
+
+    public ListLoadBalancersRequest setDNSName(String DNSName) {
+        this.DNSName = DNSName;
+        return this;
+    }
+    public String getDNSName() {
+        return this.DNSName;
+    }
+
+    public ListLoadBalancersRequest setIpv6AddressType(String ipv6AddressType) {
+        this.ipv6AddressType = ipv6AddressType;
+        return this;
+    }
+    public String getIpv6AddressType() {
+        return this.ipv6AddressType;
     }
 
     public ListLoadBalancersRequest setLoadBalancerBussinessStatus(String loadBalancerBussinessStatus) {

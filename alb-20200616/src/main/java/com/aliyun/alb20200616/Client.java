@@ -2617,8 +2617,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListLoadBalancersResponse listLoadBalancersWithOptions(ListLoadBalancersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addressIpVersion)) {
+            query.put("AddressIpVersion", request.addressIpVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.addressType)) {
             query.put("AddressType", request.addressType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DNSName)) {
+            query.put("DNSName", request.DNSName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv6AddressType)) {
+            query.put("Ipv6AddressType", request.ipv6AddressType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.loadBalancerBussinessStatus)) {

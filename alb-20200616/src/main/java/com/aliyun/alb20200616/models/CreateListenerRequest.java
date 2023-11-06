@@ -299,9 +299,20 @@ public class CreateListenerRequest extends TeaModel {
     }
 
     public static class CreateListenerRequestCaCertificates extends TeaModel {
+        @NameInMap("CertificateId")
+        public String certificateId;
+
         public static CreateListenerRequestCaCertificates build(java.util.Map<String, ?> map) throws Exception {
             CreateListenerRequestCaCertificates self = new CreateListenerRequestCaCertificates();
             return TeaModel.build(map, self);
+        }
+
+        public CreateListenerRequestCaCertificates setCertificateId(String certificateId) {
+            this.certificateId = certificateId;
+            return this;
+        }
+        public String getCertificateId() {
+            return this.certificateId;
         }
 
     }
