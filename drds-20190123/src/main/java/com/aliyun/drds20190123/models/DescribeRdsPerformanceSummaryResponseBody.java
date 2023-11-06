@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
+    /**
+     * <p>A collection of objects.</p>
+     */
     @NameInMap("RdsPerformanceInfos")
     public java.util.List<DescribeRdsPerformanceSummaryResponseBodyRdsPerformanceInfos> rdsPerformanceInfos;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the API request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,21 +52,39 @@ public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeRdsPerformanceSummaryResponseBodyRdsPerformanceInfos extends TeaModel {
+        /**
+         * <p>The number of active sessions of the RDS instance.</p>
+         */
         @NameInMap("ActiveSessions")
         public Integer activeSessions;
 
+        /**
+         * <p>The CPU utilization of an RDS instance.</p>
+         */
         @NameInMap("Cpu")
         public Float cpu;
 
+        /**
+         * <p>The IOPS of the RDS instance.</p>
+         */
         @NameInMap("Iops")
         public Float iops;
 
+        /**
+         * <p>The ID of an RDS instance.</p>
+         */
         @NameInMap("RdsId")
         public String rdsId;
 
+        /**
+         * <p>The disk usage of apsaradb for RDS. Unit: MB.</p>
+         */
         @NameInMap("SpaceUsage")
         public Long spaceUsage;
 
+        /**
+         * <p>The total number of current RDS sessions.</p>
+         */
         @NameInMap("TotalSessions")
         public Integer totalSessions;
 

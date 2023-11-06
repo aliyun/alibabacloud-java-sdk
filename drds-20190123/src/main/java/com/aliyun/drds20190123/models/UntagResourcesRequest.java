@@ -4,15 +4,24 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to delete all tags of the resource.</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The type of the resource. Set the value to INSTANCE.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

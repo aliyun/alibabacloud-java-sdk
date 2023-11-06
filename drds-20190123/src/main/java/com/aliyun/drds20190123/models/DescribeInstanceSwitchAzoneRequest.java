@@ -4,6 +4,9 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSwitchAzoneRequest extends TeaModel {
+    /**
+     * <p>The ID of the DRDS instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 

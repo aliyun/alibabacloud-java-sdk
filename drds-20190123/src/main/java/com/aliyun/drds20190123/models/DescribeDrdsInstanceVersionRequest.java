@@ -4,9 +4,15 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsInstanceVersionRequest extends TeaModel {
+    /**
+     * <p>The ID of the PolarDB-X 1.0 instance whose version you want to query.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,21 +4,43 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsInstanceMonitorRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>The end time of the query. Specify the value in the UNIX timestamp format. The timestamp must be in UTC. Unit: ms.</p>
+     * <br>
+     * <p>>  If the time range that you specify is less than 1 hour, the monitoring data that is collected in a 1-hour period before the end time is returned.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The performance monitoring metrics. You can specify one or more metrics. Separate multiple metric names with commas (,).</p>
+     * <br>
+     * <p>>  For more information about performance monitoring metrics, see [Monitor instances](~~186703~~).</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>The multiple of the default time interval that you want to use to collect monitoring data. By default, the system collects monitoring data of resources at an interval of 1 minute. If you set the value of this parameter to 2, the system collects monitoring data of the instance at an interval of 2 minutes.</p>
+     */
     @NameInMap("PeriodMultiple")
     public Integer periodMultiple;
 
+    /**
+     * <p>The ID of the region where the instance is deployed.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The start time of the query. Specify the value in the UNIX timestamp format. The timestamp must be in UTC. Unit: ms.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

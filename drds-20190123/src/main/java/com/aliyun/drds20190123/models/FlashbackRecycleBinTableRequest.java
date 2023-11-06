@@ -4,15 +4,27 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class FlashbackRecycleBinTableRequest extends TeaModel {
+    /**
+     * <p>The name of the database to which the table belongs.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>The ID of the instance to which the table belongs.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the logical table to be restored.</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 

@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeRdsCommodityRequest extends TeaModel {
+    /**
+     * <p>The commodity code of the service.</p>
+     */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    /**
+     * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>The type of the order.</p>
+     */
     @NameInMap("OrderType")
     public String orderType;
 

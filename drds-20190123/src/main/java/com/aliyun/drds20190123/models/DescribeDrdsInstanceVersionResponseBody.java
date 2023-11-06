@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsInstanceVersionResponseBody extends TeaModel {
+    /**
+     * <p>The details about the instance version.</p>
+     */
     @NameInMap("Data")
     public DescribeDrdsInstanceVersionResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +52,15 @@ public class DescribeDrdsInstanceVersionResponseBody extends TeaModel {
     }
 
     public static class DescribeDrdsInstanceVersionResponseBodyData extends TeaModel {
+        /**
+         * <p>The current version of the instance.</p>
+         */
         @NameInMap("InstanceVersion")
         public String instanceVersion;
 
+        /**
+         * <p>The latest version of the instance.</p>
+         */
         @NameInMap("NewestVersion")
         public String newestVersion;
 

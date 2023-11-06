@@ -4,18 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeShardTaskInfoRequest extends TeaModel {
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the table that you want to convert or shard.</p>
+     */
     @NameInMap("SourceTableName")
     public String sourceTableName;
 
+    /**
+     * <p>The name of the table that is generated after you convert or shard the table.</p>
+     */
     @NameInMap("TargetTableName")
     public String targetTableName;
 

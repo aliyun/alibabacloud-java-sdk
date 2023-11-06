@@ -4,24 +4,45 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeTableListByTypeRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The field that you specify for your query.</p>
+     */
     @NameInMap("Query")
     public String query;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The type of tables. Valid values:</p>
+     */
     @NameInMap("TableType")
     public String tableType;
 

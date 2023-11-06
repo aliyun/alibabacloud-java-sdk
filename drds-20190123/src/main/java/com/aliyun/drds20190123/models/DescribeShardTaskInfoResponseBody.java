@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeShardTaskInfoResponseBody extends TeaModel {
+    /**
+     * <p>Indicates the data that is returned.</p>
+     */
     @NameInMap("Data")
     public DescribeShardTaskInfoResponseBodyData data;
 
+    /**
+     * <p>Indicates the unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,18 +52,33 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeShardTaskInfoResponseBodyDataFull extends TeaModel {
+        /**
+         * <p>Indicates the number of remaining days before the tasks expire.</p>
+         */
         @NameInMap("Expired")
         public Integer expired;
 
+        /**
+         * <p>Indicates the progress of the tasks.</p>
+         */
         @NameInMap("Progress")
         public Integer progress;
 
+        /**
+         * <p>Indicates the start time when the tasks are performed.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>Indicates the number of tasks.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
+        /**
+         * <p>Indicates the number of transactions processed by the database per second.</p>
+         */
         @NameInMap("Tps")
         public Integer tps;
 
@@ -106,18 +130,33 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeShardTaskInfoResponseBodyDataFullCheck extends TeaModel {
+        /**
+         * <p>Indicates the number of remaining days before the tasks expire.</p>
+         */
         @NameInMap("Expired")
         public Integer expired;
 
+        /**
+         * <p>Indicates the progress of the tasks.</p>
+         */
         @NameInMap("Progress")
         public Integer progress;
 
+        /**
+         * <p>Indicates the start time when the tasks are performed.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>Indicates the number of tasks.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
+        /**
+         * <p>Indicates the number of transactions processed by the database per second.</p>
+         */
         @NameInMap("Tps")
         public Integer tps;
 
@@ -169,18 +208,33 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeShardTaskInfoResponseBodyDataFullRevise extends TeaModel {
+        /**
+         * <p>Indicates the number of remaining days before the tasks expire.</p>
+         */
         @NameInMap("Expired")
         public Integer expired;
 
+        /**
+         * <p>Indicates the progress of the tasks.</p>
+         */
         @NameInMap("Progress")
         public Integer progress;
 
+        /**
+         * <p>Indicates the start time when the tasks are performed.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>Indicates the number of tasks.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
+        /**
+         * <p>Indicates the number of transactions processed by the database per second.</p>
+         */
         @NameInMap("Tps")
         public Integer tps;
 
@@ -232,12 +286,21 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeShardTaskInfoResponseBodyDataIncrement extends TeaModel {
+        /**
+         * <p>Indicates the latency of the incremental data synchronization.</p>
+         */
         @NameInMap("Delay")
         public Integer delay;
 
+        /**
+         * <p>Indicates the start time when the incremental data synchronization is performed.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>Indicates the number of transactions processed by the database per second.</p>
+         */
         @NameInMap("Tps")
         public Integer tps;
 
@@ -273,18 +336,33 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeShardTaskInfoResponseBodyDataReview extends TeaModel {
+        /**
+         * <p>Indicates the number of remaining days before the tasks expire.</p>
+         */
         @NameInMap("Expired")
         public Integer expired;
 
+        /**
+         * <p>Indicates the progress of the tasks.</p>
+         */
         @NameInMap("Progress")
         public Integer progress;
 
+        /**
+         * <p>Indicates the start time when the tasks are performed.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>Indicates the number of tasks.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
+        /**
+         * <p>Indicates the number of transactions processed by the database per second.</p>
+         */
         @NameInMap("Tps")
         public Integer tps;
 
@@ -336,36 +414,69 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeShardTaskInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates the number of remaining days before the tasks to shard tables or convert tables expire.</p>
+         */
         @NameInMap("Expired")
         public String expired;
 
+        /**
+         * <p>Indicates information about full migration tasks.</p>
+         */
         @NameInMap("Full")
         public DescribeShardTaskInfoResponseBodyDataFull full;
 
+        /**
+         * <p>Indicates information about full check tasks.</p>
+         */
         @NameInMap("FullCheck")
         public DescribeShardTaskInfoResponseBodyDataFullCheck fullCheck;
 
+        /**
+         * <p>Indicates information about full correction tasks.</p>
+         */
         @NameInMap("FullRevise")
         public DescribeShardTaskInfoResponseBodyDataFullRevise fullRevise;
 
+        /**
+         * <p>Indicates information about incremental data synchronization.</p>
+         */
         @NameInMap("Increment")
         public DescribeShardTaskInfoResponseBodyDataIncrement increment;
 
+        /**
+         * <p>Indicates the incremental data synchronization progress.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>Indicates check tasks.</p>
+         */
         @NameInMap("Review")
         public DescribeShardTaskInfoResponseBodyDataReview review;
 
+        /**
+         * <p>Indicates the name of the table that you convert or shard.</p>
+         */
         @NameInMap("SourceTableName")
         public String sourceTableName;
 
+        /**
+         * <p>Indicates the current stage of the task.</p>
+         */
         @NameInMap("Stage")
         public String stage;
 
+        /**
+         * <p>Indicates the state of the tasks to shard tables or convert tables.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Indicates the name of the table after you convert or shard the table.</p>
+         */
         @NameInMap("TargetTableName")
         public String targetTableName;
 

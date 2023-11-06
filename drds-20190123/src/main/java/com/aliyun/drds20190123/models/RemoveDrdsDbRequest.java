@@ -4,9 +4,15 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class RemoveDrdsDbRequest extends TeaModel {
+    /**
+     * <p>The name of the database you want to back up.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>The ID of the DRDS instance to which the destination database belongs.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 

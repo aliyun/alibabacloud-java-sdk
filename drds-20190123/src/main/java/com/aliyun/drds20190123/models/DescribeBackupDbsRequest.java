@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupDbsRequest extends TeaModel {
+    /**
+     * <p>Query by backup set ID</p>
+     */
     @NameInMap("BackupId")
     public String backupId;
 
+    /**
+     * <p>The ID of a DRDS instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>Query by restoration time.</p>
+     */
     @NameInMap("PreferredRestoreTime")
     public String preferredRestoreTime;
 

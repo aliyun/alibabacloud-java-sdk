@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupTimesResponseBody extends TeaModel {
+    /**
+     * <p>Indicates the ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates the information about the time range within which the data of the instance can be restored to a point in time.</p>
+     */
     @NameInMap("RestoreTime")
     public DescribeBackupTimesResponseBodyRestoreTime restoreTime;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +52,15 @@ public class DescribeBackupTimesResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupTimesResponseBodyRestoreTime extends TeaModel {
+        /**
+         * <p>Indicates the end time. The time is in the UNIX timestamp format. The time is in UTC. Unit: ms.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>Indicates the start time. The time is in the UNIX timestamp format. The time must be in UTC. Unit: ms.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 

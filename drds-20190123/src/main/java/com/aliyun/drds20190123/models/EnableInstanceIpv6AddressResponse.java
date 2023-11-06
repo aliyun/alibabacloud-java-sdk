@@ -8,6 +8,10 @@ public class EnableInstanceIpv6AddressResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public EnableInstanceIpv6AddressResponseBody body;
@@ -23,6 +27,14 @@ public class EnableInstanceIpv6AddressResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public EnableInstanceIpv6AddressResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public EnableInstanceIpv6AddressResponse setBody(EnableInstanceIpv6AddressResponseBody body) {

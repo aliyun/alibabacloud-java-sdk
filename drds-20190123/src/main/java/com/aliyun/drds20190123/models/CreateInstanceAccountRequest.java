@@ -4,15 +4,24 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceAccountRequest extends TeaModel {
+    /**
+     * <p>The username of the account you want to create.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
     @NameInMap("DbPrivilege")
     public java.util.List<CreateInstanceAccountRequestDbPrivilege> dbPrivilege;
 
+    /**
+     * <p>The ID of the PolarDB-X 1.0 instance for which you want to create the account.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>The password of the account you want to create.</p>
+     */
     @NameInMap("Password")
     public String password;
 
@@ -54,9 +63,15 @@ public class CreateInstanceAccountRequest extends TeaModel {
     }
 
     public static class CreateInstanceAccountRequestDbPrivilege extends TeaModel {
+        /**
+         * <p>The name of the database that you want to manage by using the account to create.</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <p>The permissions that you want to grant to the account to manage the database.</p>
+         */
         @NameInMap("Privilege")
         public String privilege;
 

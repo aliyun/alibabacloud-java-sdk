@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class CheckExpandStatusResponseBody extends TeaModel {
+    /**
+     * <p>The result of the verification.</p>
+     */
     @NameInMap("Data")
     public CheckExpandStatusResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of the request.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +52,15 @@ public class CheckExpandStatusResponseBody extends TeaModel {
     }
 
     public static class CheckExpandStatusResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether scale-out operations can be performed on the database.</p>
+         */
         @NameInMap("IsActive")
         public Boolean isActive;
 
+        /**
+         * <p>The additional information.</p>
+         */
         @NameInMap("Msg")
         public String msg;
 

@@ -4,15 +4,29 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceInternetAddressResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned when the activity fails.</p>
+     * <br>
+     * <p>>  This parameter appears only when an error occurs during the API call.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Indicates whether the public IP address was created.</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

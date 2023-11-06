@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackMenuResponseBody extends TeaModel {
+    /**
+     * <p>The backup information list.</p>
+     */
     @NameInMap("List")
     public DescribeBackMenuResponseBodyList list;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of request.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +52,18 @@ public class DescribeBackMenuResponseBody extends TeaModel {
     }
 
     public static class DescribeBackMenuResponseBodyListList extends TeaModel {
+        /**
+         * <p>The backup method. Valid values:</p>
+         * <br>
+         * <p>*   **Logic **: logical backup</p>
+         * <p>*   **phy**: physical backup</p>
+         */
         @NameInMap("MenuName")
         public String menuName;
 
+        /**
+         * <p>Indicates whether backup recovery is supported.</p>
+         */
         @NameInMap("Support")
         public Boolean support;
 

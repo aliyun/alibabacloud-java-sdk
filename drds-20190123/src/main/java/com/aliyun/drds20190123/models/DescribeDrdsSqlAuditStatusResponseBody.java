@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
+    /**
+     * <p>The returned data set.</p>
+     */
     @NameInMap("Data")
     public DescribeDrdsSqlAuditStatusResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of the request.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,24 +52,51 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeDrdsSqlAuditStatusResponseBodyDataData extends TeaModel {
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <p>Indicates whether the complete report of the SQL audit is supported. Valid values: true and false.</p>
+         */
         @NameInMap("Detailed")
         public String detailed;
 
+        /**
+         * <p>Indicates whether the SQL audit feature is enabled for the database. Valid values: true and false.</p>
+         */
         @NameInMap("Enabled")
         public String enabled;
 
+        /**
+         * <p>The UID of the external delivery.</p>
+         * <br>
+         * <p>> This parameter is returned only if external log delivery is enabled.</p>
+         */
         @NameInMap("ExtraAliUid")
         public Long extraAliUid;
 
+        /**
+         * <p>The Log Service Logstore from which logs are delivered.</p>
+         * <br>
+         * <p>> This parameter is returned only if external log delivery is enabled.</p>
+         */
         @NameInMap("ExtraSlsLogStore")
         public String extraSlsLogStore;
 
+        /**
+         * <p>The Log Service project from which logs are delivered.</p>
+         * <br>
+         * <p>> This parameter is returned only if external log delivery is enabled.</p>
+         */
         @NameInMap("ExtraSlsProject")
         public String extraSlsProject;
 
+        /**
+         * <p>Indicates whether external log delivery is enabled. Valid values: true and false.</p>
+         */
         @NameInMap("ExtraWriteEnabled")
         public Boolean extraWriteEnabled;
 

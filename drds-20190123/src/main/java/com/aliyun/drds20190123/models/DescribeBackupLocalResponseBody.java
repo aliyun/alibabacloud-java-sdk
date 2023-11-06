@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupLocalResponseBody extends TeaModel {
+    /**
+     * <p>The information about the backup policy.</p>
+     */
     @NameInMap("BackupPolicyDO")
     public DescribeBackupLocalResponseBodyBackupPolicyDO backupPolicyDO;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of the request.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,57 +52,114 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupLocalResponseBodyBackupPolicyDO extends TeaModel {
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("BackupAppName")
         public String backupAppName;
 
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("BackupDbName")
         public String backupDbName;
 
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("BackupLevel")
         public String backupLevel;
 
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("BackupLog")
         public String backupLog;
 
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("BackupMode")
         public String backupMode;
 
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("BackupPolicyMode")
         public String backupPolicyMode;
 
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("BackupRetentionPeriod")
         public Long backupRetentionPeriod;
 
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("BackupType")
         public String backupType;
 
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("DataBackupRetentionPeriod")
         public Long dataBackupRetentionPeriod;
 
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>Indicates whether the feature is enabled to forcibly delete binary log files if the used storage space of the instance exceeds 90% of the total storage space or the remaining storage space is less than 5 GB. Valid values:</p>
+         * <br>
+         * <p>*   1: The feature is enabled.</p>
+         * <p>*   0: The feature is disabled.</p>
+         */
         @NameInMap("HighSpaceUsageProtection")
         public Long highSpaceUsageProtection;
 
+        /**
+         * <p>The number of hours for which log backup files are retained on the instance. Valid values: 0 to 168. Default value: **18**. The value **0** indicates that log backup files are not retained.</p>
+         */
         @NameInMap("LocalLogRetentionHours")
         public Long localLogRetentionHours;
 
+        /**
+         * <p>The maximum storage usage that is allowed for local log files. Valid values: 0 to 50. Default value: 30.</p>
+         */
         @NameInMap("LocalLogRetentionSpace")
         public Long localLogRetentionSpace;
 
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("LogBackupRetentionPeriod")
         public Long logBackupRetentionPeriod;
 
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("NextBackupActuallyTime")
         public String nextBackupActuallyTime;
 
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("PreferredBackupPeriod")
         public String preferredBackupPeriod;
 
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("PreferredBackupTime")
         public String preferredBackupTime;
 

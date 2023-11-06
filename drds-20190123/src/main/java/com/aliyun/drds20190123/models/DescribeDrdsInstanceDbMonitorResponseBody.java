@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsInstanceDbMonitorResponseBody extends TeaModel {
+    /**
+     * <p>The list of monitoring data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeDrdsInstanceDbMonitorResponseBodyData> data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +52,15 @@ public class DescribeDrdsInstanceDbMonitorResponseBody extends TeaModel {
     }
 
     public static class DescribeDrdsInstanceDbMonitorResponseBodyDataValues extends TeaModel {
+        /**
+         * <p>The time point when the value of monitoring data was obtained. The value is in the UNIX timestamp format. Unit: ms.</p>
+         */
         @NameInMap("Date")
         public Long date;
 
+        /**
+         * <p>The data value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -73,12 +88,21 @@ public class DescribeDrdsInstanceDbMonitorResponseBody extends TeaModel {
     }
 
     public static class DescribeDrdsInstanceDbMonitorResponseBodyData extends TeaModel {
+        /**
+         * <p>The name of the monitoring metric.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The unit of the monitoring metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The details about the value of monitoring data.</p>
+         */
         @NameInMap("Values")
         public java.util.List<DescribeDrdsInstanceDbMonitorResponseBodyDataValues> values;
 

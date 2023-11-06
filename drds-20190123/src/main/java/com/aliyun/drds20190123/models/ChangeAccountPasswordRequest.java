@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class ChangeAccountPasswordRequest extends TeaModel {
+    /**
+     * <p>The name of the member account.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>The ID of the DRDS instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>The new password.</p>
+     */
     @NameInMap("Password")
     public String password;
 

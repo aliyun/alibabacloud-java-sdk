@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsDBResponseBody extends TeaModel {
+    /**
+     * <p>Indicates the details about the database.</p>
+     */
     @NameInMap("Data")
     public DescribeDrdsDBResponseBodyData data;
 
+    /**
+     * <p>Indicates the ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,24 +52,54 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
     }
 
     public static class DescribeDrdsDBResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates the time when the database was created. The value is in the UNIX timestamp format. Unit: ms.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Indicates the storage type of the database.</p>
+         */
         @NameInMap("DbInstType")
         public String dbInstType;
 
+        /**
+         * <p>Indicates the name of the database.</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <p>Indicates the type of the instance in which the database is deployed. Valid values:</p>
+         * <br>
+         * <p>*   **MASTER**: The instance is a primary instance.</p>
+         * <p>*   **SLAVE**: The instance is a read-only instance.</p>
+         */
         @NameInMap("InstRole")
         public String instRole;
 
+        /**
+         * <p>Indicates the database sharding method.</p>
+         * <br>
+         * <p>*   **HORIZONTAL**: The database is horizontally sharded.</p>
+         * <p>*   **VERTICAL**: The database is vertically sharded.</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>Indicates the schema name of the database.</p>
+         */
         @NameInMap("Schema")
         public String schema;
 
+        /**
+         * <p>Indicates the state of the database. Valid values:</p>
+         * <br>
+         * <p>*   **TO_BE_INIT**: The database is being created.</p>
+         * <p>*   **NORMAL**: The database is running.</p>
+         */
         @NameInMap("Status")
         public String status;
 

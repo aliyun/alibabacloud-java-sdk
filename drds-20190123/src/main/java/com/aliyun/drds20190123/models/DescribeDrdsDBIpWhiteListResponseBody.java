@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsDBIpWhiteListResponseBody extends TeaModel {
+    /**
+     * <p>The IP address whitelist.</p>
+     */
     @NameInMap("IpWhiteList")
     public DescribeDrdsDBIpWhiteListResponseBodyIpWhiteList ipWhiteList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

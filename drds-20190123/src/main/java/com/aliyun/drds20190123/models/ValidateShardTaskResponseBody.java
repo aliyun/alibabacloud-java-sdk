@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class ValidateShardTaskResponseBody extends TeaModel {
+    /**
+     * <p>Indicates the check results.</p>
+     */
     @NameInMap("List")
     public java.util.List<ValidateShardTaskResponseBodyList> list;
 
+    /**
+     * <p>Indicates the ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +52,18 @@ public class ValidateShardTaskResponseBody extends TeaModel {
     }
 
     public static class ValidateShardTaskResponseBodyList extends TeaModel {
+        /**
+         * <p>Indicates the name of a check item.</p>
+         */
         @NameInMap("Item")
         public String item;
 
+        /**
+         * <p>Indicates the result of the check item. Valid values:</p>
+         * <br>
+         * <p>*   **0**: indicates the task is valid.</p>
+         * <p>*   **1**: indicates the task is invalid.</p>
+         */
         @NameInMap("Result")
         public Integer result;
 

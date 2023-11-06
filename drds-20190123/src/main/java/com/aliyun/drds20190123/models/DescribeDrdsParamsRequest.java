@@ -4,15 +4,30 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsParamsRequest extends TeaModel {
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>The type of nodes whose parameters you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **INSTANCE: the instance level.**</p>
+     * <p>*   **DB**: the database level.</p>
+     */
     @NameInMap("ParamLevel")
     public String paramLevel;
 
+    /**
+     * <p>The ID of the region where the PolarDB-X 1.0 instance is created.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The information about the backup policy.</p>
+     */
     @NameInMap("BackupPolicyDO")
     public DescribeBackupPolicyResponseBodyBackupPolicyDO backupPolicyDO;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of the request.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,57 +52,131 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupPolicyResponseBodyBackupPolicyDO extends TeaModel {
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("BackupAppName")
         public String backupAppName;
 
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("BackupDbName")
         public String backupDbName;
 
+        /**
+         * <p>The backup level. Valid values:</p>
+         * <br>
+         * <p>*   **db**: database backup</p>
+         * <p>*   **instance**: instance backup</p>
+         */
         @NameInMap("BackupLevel")
         public String backupLevel;
 
+        /**
+         * <p>Indicates whether the log backup feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **1**: The log backup feature is enabled.</p>
+         * <p>*   **0**: The log backup feature is disabled.</p>
+         */
         @NameInMap("BackupLog")
         public String backupLog;
 
+        /**
+         * <p>The backup mode. Valid values:</p>
+         * <br>
+         * <p>*   **logic**: logical backup</p>
+         * <p>*   **phy**: fast backup</p>
+         */
         @NameInMap("BackupMode")
         public String backupMode;
 
+        /**
+         * <p>The type of the backup policy. Valid values:</p>
+         * <br>
+         * <p>*   **DataBackupPolicy**: a data backup policy</p>
+         * <p>*   **LogBackupPolicy**: a log backup policy</p>
+         */
         @NameInMap("BackupPolicyMode")
         public String backupPolicyMode;
 
+        /**
+         * <p>The retention period of backup files. Unit: days.</p>
+         */
         @NameInMap("BackupRetentionPeriod")
         public Long backupRetentionPeriod;
 
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("BackupType")
         public String backupType;
 
+        /**
+         * <p>The retention period of data backup files. Unit: days.</p>
+         */
         @NameInMap("DataBackupRetentionPeriod")
         public Long dataBackupRetentionPeriod;
 
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("HighSpaceUsageProtection")
         public Long highSpaceUsageProtection;
 
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("LocalLogRetentionHours")
         public Long localLogRetentionHours;
 
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("LocalLogRetentionSpace")
         public Long localLogRetentionSpace;
 
+        /**
+         * <p>The retention period of log backup files. Unit: days.</p>
+         */
         @NameInMap("LogBackupRetentionPeriod")
         public Long logBackupRetentionPeriod;
 
+        /**
+         * <p>No value is returned.</p>
+         */
         @NameInMap("NextBackupActuallyTime")
         public String nextBackupActuallyTime;
 
+        /**
+         * <p>The backup cycle. You can specify multiple backup cycles. Separate multiple backup cycles with commas (,). Valid values:</p>
+         * <br>
+         * <p>*   **0**: every Monday</p>
+         * <p>*   **1**: every Tuesday</p>
+         * <p>*   **2**: every Wednesday</p>
+         * <p>*   **3**: every Thursday</p>
+         * <p>*   **4**: every Friday</p>
+         * <p>*   **5**: every Saturday</p>
+         * <p>*   **6**: every Sunday</p>
+         */
         @NameInMap("PreferredBackupPeriod")
         public String preferredBackupPeriod;
 
+        /**
+         * <p>The time range in which a backup is performed. The time is displayed in UTC.</p>
+         */
         @NameInMap("PreferredBackupTime")
         public String preferredBackupTime;
 

@@ -4,9 +4,15 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class CreateOrderForRdsRequest extends TeaModel {
+    /**
+     * <p>The JSON string that contains the order details. For more information, see [CreateDBInstance](~~26228~~).</p>
+     */
     @NameInMap("Params")
     public String params;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

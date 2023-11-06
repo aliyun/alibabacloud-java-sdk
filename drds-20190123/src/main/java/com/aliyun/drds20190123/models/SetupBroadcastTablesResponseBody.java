@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SetupBroadcastTablesResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the broadcast table is configured.</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

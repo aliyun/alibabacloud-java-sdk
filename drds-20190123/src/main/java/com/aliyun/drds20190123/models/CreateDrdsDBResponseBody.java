@@ -4,9 +4,15 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class CreateDrdsDBResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of the request.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

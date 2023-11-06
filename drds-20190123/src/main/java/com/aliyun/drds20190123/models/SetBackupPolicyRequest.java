@@ -4,33 +4,82 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SetBackupPolicyRequest extends TeaModel {
+    /**
+     * <p>The databases to be backed up. Separate multiple databases with commas (,).</p>
+     * <br>
+     * <p>>  This parameter takes effect only when the backup level is database level.</p>
+     */
     @NameInMap("BackupDbNames")
     public String backupDbNames;
 
+    /**
+     * <p>The level of the backup. Valid values:</p>
+     * <br>
+     * <p>*   db: The database type.</p>
+     * <p>*   instance: instance</p>
+     */
     @NameInMap("BackupLevel")
     public String backupLevel;
 
+    /**
+     * <p>Specifies whether to enable log Backup. Valid values:</p>
+     * <br>
+     * <p>*   1: enabled.</p>
+     * <p>*   0: disabled.</p>
+     */
     @NameInMap("BackupLog")
     public String backupLog;
 
+    /**
+     * <p>The backup mode. Valid values:</p>
+     * <br>
+     * <p>*   **Logic **: logical backup</p>
+     * <p>*   **phy**: physical backup</p>
+     */
     @NameInMap("BackupMode")
     public String backupMode;
 
+    /**
+     * <p>The retention period of the backup data. Value range: 7 to 730.</p>
+     */
     @NameInMap("DataBackupRetentionPeriod")
     public String dataBackupRetentionPeriod;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>The log retention period. Valid values: 7 to 730. This value must be less than or equal to the number of data backup days.</p>
+     */
     @NameInMap("LogBackupRetentionPeriod")
     public String logBackupRetentionPeriod;
 
+    /**
+     * <p>The end time of the backup.</p>
+     */
     @NameInMap("PreferredBackupEndTime")
     public String preferredBackupEndTime;
 
+    /**
+     * <p>The backup cycle. Valid values:</p>
+     * <br>
+     * <p>*   0: Monday</p>
+     * <p>*   1: Tuesday</p>
+     * <p>*   2: Wednesday</p>
+     * <p>*   3: Thursday</p>
+     * <p>*   4: Friday</p>
+     * <p>*   5: Saturday</p>
+     * <p>*   6: Sunday</p>
+     */
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
 
+    /**
+     * <p>The start time of the backup.</p>
+     */
     @NameInMap("PreferredBackupStartTime")
     public String preferredBackupStartTime;
 

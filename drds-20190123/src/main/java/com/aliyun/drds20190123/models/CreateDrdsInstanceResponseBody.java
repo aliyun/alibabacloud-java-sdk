@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class CreateDrdsInstanceResponseBody extends TeaModel {
+    /**
+     * <p>Indicates the details of the result.</p>
+     */
     @NameInMap("Data")
     public CreateDrdsInstanceResponseBodyData data;
 
+    /**
+     * <p>Indicates the ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -62,9 +71,15 @@ public class CreateDrdsInstanceResponseBody extends TeaModel {
     }
 
     public static class CreateDrdsInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates the ID of the instance.</p>
+         */
         @NameInMap("DrdsInstanceIdList")
         public CreateDrdsInstanceResponseBodyDataDrdsInstanceIdList drdsInstanceIdList;
 
+        /**
+         * <p>Indicates the ID of the order.</p>
+         */
         @NameInMap("OrderId")
         public Long orderId;
 

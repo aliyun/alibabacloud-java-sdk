@@ -4,9 +4,15 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DisableSqlAuditRequest extends TeaModel {
+    /**
+     * <p>The name of the database for which you want to disable the SQL audit feature.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 

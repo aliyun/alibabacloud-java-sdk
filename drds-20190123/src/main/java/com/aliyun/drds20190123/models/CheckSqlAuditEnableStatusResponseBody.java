@@ -4,12 +4,24 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class CheckSqlAuditEnableStatusResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the SQL audit feature. Valid values:</p>
+     * <br>
+     * <p>*   enabled: The SQL audit feature is enabled.</p>
+     * <p>*   disabled: The SQL audit feature is disabled.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class UpgradeInstanceVersionRequest extends TeaModel {
+    /**
+     * <p>The ID of the PolarDB-X 1.0 instance that you want to upgrade.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The version number of the PolarDB-X 1.0 instance. You can leave this parameter unspecified.</p>
+     */
     @NameInMap("Rpm")
     public String rpm;
 

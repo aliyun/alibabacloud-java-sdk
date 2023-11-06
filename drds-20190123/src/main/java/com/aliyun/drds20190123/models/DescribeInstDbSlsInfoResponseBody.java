@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstDbSlsInfoResponseBody extends TeaModel {
+    /**
+     * <p>The details of the SQL audit.</p>
+     */
     @NameInMap("AuditInfo")
     public DescribeInstDbSlsInfoResponseBodyAuditInfo auditInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +52,15 @@ public class DescribeInstDbSlsInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeInstDbSlsInfoResponseBodyAuditInfo extends TeaModel {
+        /**
+         * <p>The name of the LogStore.</p>
+         */
         @NameInMap("LogStore")
         public String logStore;
 
+        /**
+         * <p>The name of the Log Service project.</p>
+         */
         @NameInMap("Project")
         public String project;
 

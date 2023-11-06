@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsTasksResponseBody extends TeaModel {
+    /**
+     * <p>Indicates the ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>Indicates information about the tasks.</p>
+     */
     @NameInMap("Tasks")
     public DescribeDrdsTasksResponseBodyTasks tasks;
 
@@ -43,12 +52,21 @@ public class DescribeDrdsTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeDrdsTasksResponseBodyTasksTask extends TeaModel {
+        /**
+         * <p>Indicates the content of a task.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>Indicates the ID of the task.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Indicates the state of the task.</p>
+         */
         @NameInMap("State")
         public String state;
 

@@ -4,9 +4,15 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeRdsSuperAccountInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The privileged accounts.</p>
+     */
     @NameInMap("DbInstances")
     public DescribeRdsSuperAccountInstancesResponseBodyDbInstances dbInstances;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeTableResponseBody extends TeaModel {
+    /**
+     * <p>Indicates the returned data.</p>
+     */
     @NameInMap("Data")
     public DescribeTableResponseBodyData data;
 
+    /**
+     * <p>Indicates the unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,21 +52,39 @@ public class DescribeTableResponseBody extends TeaModel {
     }
 
     public static class DescribeTableResponseBodyDataList extends TeaModel {
+        /**
+         * <p>Indicates the name of a column.</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <p>Indicates the type of the column.</p>
+         */
         @NameInMap("ColumnType")
         public String columnType;
 
+        /**
+         * <p>Extra</p>
+         */
         @NameInMap("Extra")
         public String extra;
 
+        /**
+         * <p>Indicates the primary key of the table.</p>
+         */
         @NameInMap("Index")
         public String index;
 
+        /**
+         * <p>Indicates whether the column can be empty.</p>
+         */
         @NameInMap("IsAllowNull")
         public String isAllowNull;
 
+        /**
+         * <p>Indicates whether the column is the primary key column of the table.</p>
+         */
         @NameInMap("IsPk")
         public String isPk;
 
@@ -117,6 +144,9 @@ public class DescribeTableResponseBody extends TeaModel {
     }
 
     public static class DescribeTableResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates the details about the table schema.</p>
+         */
         @NameInMap("List")
         public java.util.List<DescribeTableResponseBodyDataList> list;
 

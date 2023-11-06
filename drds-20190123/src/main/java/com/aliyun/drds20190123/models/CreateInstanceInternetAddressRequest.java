@@ -4,9 +4,15 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceInternetAddressRequest extends TeaModel {
+    /**
+     * <p>The ID of the DRDS instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>The ID of the region to which the DRDS instance belongs.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

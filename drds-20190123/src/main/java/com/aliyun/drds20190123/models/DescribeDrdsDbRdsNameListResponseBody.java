@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsDbRdsNameListResponseBody extends TeaModel {
+    /**
+     * <p>Indicates the instances that are used to store the data of a database.</p>
+     */
     @NameInMap("InstanceNameList")
     public DescribeDrdsDbRdsNameListResponseBodyInstanceNameList instanceNameList;
 
+    /**
+     * <p>Indicates the ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

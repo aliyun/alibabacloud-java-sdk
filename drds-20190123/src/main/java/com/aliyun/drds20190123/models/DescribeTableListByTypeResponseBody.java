@@ -4,21 +4,39 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeTableListByTypeResponseBody extends TeaModel {
+    /**
+     * <p>Indicates the information about tables.</p>
+     */
     @NameInMap("List")
     public java.util.List<DescribeTableListByTypeResponseBodyList> list;
 
+    /**
+     * <p>Indicates the page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>Indicates the number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Indicates the unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>Indicates the total number of returned tables.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -76,9 +94,15 @@ public class DescribeTableListByTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeTableListByTypeResponseBodyList extends TeaModel {
+        /**
+         * <p>Indicates the property of a table.</p>
+         */
         @NameInMap("Property")
         public String property;
 
+        /**
+         * <p>Indicates the name of the table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 

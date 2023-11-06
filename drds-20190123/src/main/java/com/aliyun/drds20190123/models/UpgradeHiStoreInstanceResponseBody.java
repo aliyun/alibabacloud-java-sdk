@@ -4,9 +4,15 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class UpgradeHiStoreInstanceResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the request was successful. A value of true indicates that the request was successful. An error message was returned if the request failed.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

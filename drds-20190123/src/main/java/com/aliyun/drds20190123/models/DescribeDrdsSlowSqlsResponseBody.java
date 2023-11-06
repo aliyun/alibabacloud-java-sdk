@@ -4,21 +4,39 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
+    /**
+     * <p>Indicates the details of the slow SQL query.</p>
+     */
     @NameInMap("Items")
     public DescribeDrdsSlowSqlsResponseBodyItems items;
 
+    /**
+     * <p>Indicates the page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>Indicates the number of entries returned on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Indicates the ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>Indicates the total number of entries.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -76,18 +94,33 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
     }
 
     public static class DescribeDrdsSlowSqlsResponseBodyItemsItem extends TeaModel {
+        /**
+         * <p>Indicates the IP address of the execution machine.</p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>Indicates the response time. Unit: ms.</p>
+         */
         @NameInMap("ResponseTime")
         public Long responseTime;
 
+        /**
+         * <p>Indicates the name of the database.</p>
+         */
         @NameInMap("Schema")
         public String schema;
 
+        /**
+         * <p>Indicates the time when the slow SQL query was sent. Unit: ms.</p>
+         */
         @NameInMap("SendTime")
         public Long sendTime;
 
+        /**
+         * <p>Indicates the content of the slow SQL query.</p>
+         */
         @NameInMap("Sql")
         public String sql;
 

@@ -4,15 +4,27 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SubmitHotExpandPreCheckTaskResponseBody extends TeaModel {
+    /**
+     * <p>The result of the task.</p>
+     */
     @NameInMap("Msg")
     public String msg;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The ID of the task.</p>
+     */
     @NameInMap("TaskId")
     public Long taskId;
 

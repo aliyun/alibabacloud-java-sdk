@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecycleBinTablesResponseBody extends TeaModel {
+    /**
+     * <p>The data object returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeRecycleBinTablesResponseBodyData> data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of the request.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,12 +52,21 @@ public class DescribeRecycleBinTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeRecycleBinTablesResponseBodyData extends TeaModel {
+        /**
+         * <p>The time when the table was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The original name of the table.</p>
+         */
         @NameInMap("OriginalTableName")
         public String originalTableName;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 

@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsDbInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the custom ApsaraDB RDS for MySQL instance that you want to query.</p>
+     */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
 
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>The name of the PolarDB-X 1.0 instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 

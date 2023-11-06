@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeExpandLogicTableInfoListResponseBody extends TeaModel {
+    /**
+     * <p>Indicates the result that is returned.</p>
+     */
     @NameInMap("Data")
     public DescribeExpandLogicTableInfoListResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,12 +52,21 @@ public class DescribeExpandLogicTableInfoListResponseBody extends TeaModel {
     }
 
     public static class DescribeExpandLogicTableInfoListResponseBodyDataData extends TeaModel {
+        /**
+         * <p>Indicates the database sharding key.</p>
+         */
         @NameInMap("ShardDbKey")
         public String shardDbKey;
 
+        /**
+         * <p>Indicates the table sharding key.</p>
+         */
         @NameInMap("ShardTbKey")
         public String shardTbKey;
 
+        /**
+         * <p>Indicates the name of the table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 

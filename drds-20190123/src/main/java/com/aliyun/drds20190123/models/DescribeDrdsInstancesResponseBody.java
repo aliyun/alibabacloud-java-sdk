@@ -4,18 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The list of returned instances.</p>
+     */
     @NameInMap("Instances")
     public DescribeDrdsInstancesResponseBodyInstances instances;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of instances returned on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of instances returned.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -84,20 +99,44 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDrdsInstancesResponseBodyInstancesInstanceVipsVip extends TeaModel {
+        /**
+         * <p>The virtual IP address.</p>
+         */
         @NameInMap("IP")
         public String IP;
 
+        /**
+         * <p>The ports that are opened on the VIP.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The type of the VIP. Valid values:</p>
+         * <br>
+         * <p>*   intranet: a private IP address</p>
+         * <p>*   internet: a public IP address</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
+
+        /**
+         * <p>The domain name that is mapped to the VIP.</p>
+         */
+        @NameInMap("dns")
+        public String dns;
 
         public static DescribeDrdsInstancesResponseBodyInstancesInstanceVipsVip build(java.util.Map<String, ?> map) throws Exception {
             DescribeDrdsInstancesResponseBodyInstancesInstanceVipsVip self = new DescribeDrdsInstancesResponseBodyInstancesInstanceVipsVip();
@@ -144,6 +183,14 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             return this.vswitchId;
         }
 
+        public DescribeDrdsInstancesResponseBodyInstancesInstanceVipsVip setDns(String dns) {
+            this.dns = dns;
+            return this;
+        }
+        public String getDns() {
+            return this.dns;
+        }
+
     }
 
     public static class DescribeDrdsInstancesResponseBodyInstancesInstanceVips extends TeaModel {
@@ -166,80 +213,179 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDrdsInstancesResponseBodyInstancesInstance extends TeaModel {
+        /**
+         * <p>The commodity code of the service.</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The timestamp that indicates when the instance is created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The description of the instance.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("DrdsInstanceId")
         public String drdsInstanceId;
 
+        /**
+         * <p>The timestamp that indicates when the instance expires.</p>
+         */
         @NameInMap("ExpireDate")
         public Long expireDate;
 
+        /**
+         * <p>The role of the instance. Valid values:</p>
+         * <br>
+         * <p>*   MASTER: The instance is a primary instance.</p>
+         * <p>*   SLAVE: The instance is a read-only instance to analyze complex queries.</p>
+         * <p>*   SLAVE_FLOW: The instance is a read-only instance for high-concurrency scenarios.</p>
+         */
         @NameInMap("InstRole")
         public String instRole;
 
+        /**
+         * <p>The instance series.</p>
+         */
         @NameInMap("InstanceSeries")
         public String instanceSeries;
 
+        /**
+         * <p>The specification of the instance.</p>
+         */
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
+        /**
+         * <p>The tag of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **NORMAL**: The instance is a standard instance.</p>
+         * <p>*   **HA**: The instance is a high-availability (HA) instance.</p>
+         * <p>*   **VPC**: The instance is a VPC-based instance.</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>The machine type of the instance. Valid value: ecs.</p>
+         */
         @NameInMap("MachineType")
         public String machineType;
 
+        /**
+         * <p>The ID of the primary instance.</p>
+         */
         @NameInMap("MasterInstanceId")
         public String masterInstanceId;
 
+        /**
+         * <p>The network type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **CLASSIC**</p>
+         * <p>*   **VPC**</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <p>The ID of the purchased instance.</p>
+         */
         @NameInMap("OrderInstanceId")
         public String orderInstanceId;
 
+        /**
+         * <p>The version of the service.</p>
+         */
         @NameInMap("ProductVersion")
         public String productVersion;
 
+        /**
+         * <p>The IDs of read-only instances that are associated with the instance.</p>
+         */
         @NameInMap("ReadOnlyDBInstanceIds")
         public DescribeDrdsInstancesResponseBodyInstancesInstanceReadOnlyDBInstanceIds readOnlyDBInstanceIds;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The status of the instance.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **PUBLIC**: The returned instance is a shared instance.</p>
+         * <p>*   **PRIVATE**: The returned instance is a dedicated instance.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The version of the instance.</p>
+         */
         @NameInMap("Version")
         public Long version;
 
+        /**
+         * <p>Indicates whether the version of the instance can be upgraded.</p>
+         */
         @NameInMap("VersionAction")
         public String versionAction;
 
+        /**
+         * <p>The list of returned virtual IP addresses (VIPs).</p>
+         */
         @NameInMap("Vips")
         public DescribeDrdsInstancesResponseBodyInstancesInstanceVips vips;
 
+        /**
+         * <p>The ID of the instance that is deployed in the VPC.</p>
+         */
         @NameInMap("VpcCloudInstanceId")
         public String vpcCloudInstanceId;
 
+        /**
+         * <p>The ID of the VPC to which the instance belongs.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The ID of the zone in which the resource is located.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
+
+        /**
+         * <p>The edition of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **starter**: Starter Edition</p>
+         * <p>*   **enterprise**: Enterprise Edition</p>
+         * <p>*   **standard**: Standard Edition</p>
+         */
+        @NameInMap("series")
+        public String series;
 
         public static DescribeDrdsInstancesResponseBodyInstancesInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeDrdsInstancesResponseBodyInstancesInstance self = new DescribeDrdsInstancesResponseBodyInstancesInstance();
@@ -444,6 +590,14 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
         }
         public String getZoneId() {
             return this.zoneId;
+        }
+
+        public DescribeDrdsInstancesResponseBodyInstancesInstance setSeries(String series) {
+            this.series = series;
+            return this;
+        }
+        public String getSeries() {
+            return this.series;
         }
 
     }

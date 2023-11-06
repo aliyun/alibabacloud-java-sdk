@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsParamsResponseBody extends TeaModel {
+    /**
+     * <p>Indicates information about parameters.</p>
+     */
     @NameInMap("List")
     public java.util.List<DescribeDrdsParamsResponseBodyList> list;
 
+    /**
+     * <p>Indicates the ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,36 +52,69 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
     }
 
     public static class DescribeDrdsParamsResponseBodyList extends TeaModel {
+        /**
+         * <p>Indicates the name of the database.</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <p>Indicates whether a restart is required.</p>
+         */
         @NameInMap("NeedRestart")
         public Boolean needRestart;
 
+        /**
+         * <p>Indicates the default value of a parameter.</p>
+         */
         @NameInMap("ParamDefaultValue")
         public String paramDefaultValue;
 
+        /**
+         * <p>Indicates the description of the parameter.</p>
+         */
         @NameInMap("ParamDesc")
         public String paramDesc;
 
+        /**
+         * <p>Indicates the name of the parameter.</p>
+         */
         @NameInMap("ParamEnglishName")
         public String paramEnglishName;
 
+        /**
+         * <p>Indicates the parameter level.</p>
+         */
         @NameInMap("ParamLevel")
         public String paramLevel;
 
+        /**
+         * <p>Indicates the name of the parameter.</p>
+         */
         @NameInMap("ParamName")
         public String paramName;
 
+        /**
+         * <p>Indicates the value range of the parameter.</p>
+         */
         @NameInMap("ParamRanges")
         public String paramRanges;
 
+        /**
+         * <p>Indicates the type of the parameter.</p>
+         */
         @NameInMap("ParamType")
         public String paramType;
 
+        /**
+         * <p>Indicates the value of the parameter.</p>
+         */
         @NameInMap("ParamValue")
         public String paramValue;
 
+        /**
+         * <p>Indicates the name of the variable.</p>
+         */
         @NameInMap("ParamVariableName")
         public String paramVariableName;
 

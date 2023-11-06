@@ -4,15 +4,27 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDbInstanceDbsResponseBody extends TeaModel {
+    /**
+     * <p>Indicates the information about the storage-layer databases.</p>
+     */
     @NameInMap("Databases")
     public DescribeDbInstanceDbsResponseBodyDatabases databases;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>Indicates the total number of storage-layer databases.</p>
+     */
     @NameInMap("Total")
     public String total;
 
@@ -54,12 +66,25 @@ public class DescribeDbInstanceDbsResponseBody extends TeaModel {
     }
 
     public static class DescribeDbInstanceDbsResponseBodyDatabasesDatabase extends TeaModel {
+        /**
+         * <p>Indicates the name of a storage-layer database.</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <p>Indicates the description of the storage-layer database.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates the state of the storage-layer database. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The database is being created.</p>
+         * <p>*   **1**: The database is available.</p>
+         * <p>*   **3**: The database is being deleted.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
