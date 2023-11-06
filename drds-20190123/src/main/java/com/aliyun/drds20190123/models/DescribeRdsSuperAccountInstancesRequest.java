@@ -4,9 +4,15 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeRdsSuperAccountInstancesRequest extends TeaModel {
+    /**
+     * <p>The type of the ApsaraDB RDS for MySQL instances. Default value: **RDS**.</p>
+     */
     @NameInMap("DbInstType")
     public String dbInstType;
 
+    /**
+     * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 

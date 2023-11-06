@@ -4,12 +4,24 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecycleBinStatusResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the table recycle bin. Valid values:</p>
+     * <br>
+     * <p>*   disable: The table recycle bin is enabled.</p>
+     * <p>*   enable: The table recycle bin is disabled.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The result of the request.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

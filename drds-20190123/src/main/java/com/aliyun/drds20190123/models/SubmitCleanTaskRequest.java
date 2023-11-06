@@ -4,18 +4,36 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SubmitCleanTaskRequest extends TeaModel {
+    /**
+     * <p>The name of the database that is scaled out.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>The scale-out type. Valid values:</p>
+     * <br>
+     * <p>*   smooth_expand: smooth scale-out</p>
+     * <p>*   hot_expand: hot-spot scale-out</p>
+     */
     @NameInMap("ExpandType")
     public String expandType;
 
+    /**
+     * <p>The job ID of the scale-out task. The value of this parameter is the same as that of the ParentJobId parameter.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>The ID of the scale-out task. This parameter is returned if you send a request for the smooth scale-out task.</p>
+     */
     @NameInMap("ParentJobId")
     public String parentJobId;
 

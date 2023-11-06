@@ -4,21 +4,42 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class ModifyDrdsIpWhiteListRequest extends TeaModel {
+    /**
+     * <p>The name of the DRDS database.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>The ID of the Message Queue for Apache Kafka instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>The attribute of the IP address whitelist group.</p>
+     */
     @NameInMap("GroupAttribute")
     public String groupAttribute;
 
+    /**
+     * <p>The name of the IP address whitelist group.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>The modified whitelist. Separate multiple IP addresses with commas (,).</p>
+     */
     @NameInMap("IpWhiteList")
     public String ipWhiteList;
 
+    /**
+     * <p>Specifies the mode. Valid values:</p>
+     * <br>
+     * <p>*   `True`: append modifications</p>
+     * <p>*   `False`: overwrite modification</p>
+     */
     @NameInMap("Mode")
     public Boolean mode;
 

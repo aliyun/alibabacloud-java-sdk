@@ -4,27 +4,50 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class CreateDrdsDBRequest extends TeaModel {
+    /**
+     * <p>The name of the account that has permissions to access all databases on the ApsaraDB RDS for MySQL instance.</p>
+     * <br>
+     * <p>This parameter is required only when the Type parameter is set to VERTICAL.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>The type of the storage instances that are used by the PolarDB-X 1.0 database. Set the value to RDS.</p>
+     */
     @NameInMap("DbInstType")
     public String dbInstType;
 
+    /**
+     * <p>Specifies whether the required ApsaraDB RDS for MySQL instance is being created.</p>
+     */
     @NameInMap("DbInstanceIsCreating")
     public Boolean dbInstanceIsCreating;
 
+    /**
+     * <p>The name of the PolarDB-X 1.0 database you want to create.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>The ID of the PolarDB-X 1.0 instance on which you want to create the database.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>The encoding method that is used by the database.</p>
+     */
     @NameInMap("Encode")
     public String encode;
 
     @NameInMap("InstDbName")
     public java.util.List<CreateDrdsDBRequestInstDbName> instDbName;
 
+    /**
+     * <p>The password that is used to log on to the database.</p>
+     */
     @NameInMap("Password")
     public String password;
 
@@ -34,6 +57,12 @@ public class CreateDrdsDBRequest extends TeaModel {
     @NameInMap("RdsSuperAccount")
     public java.util.List<CreateDrdsDBRequestRdsSuperAccount> rdsSuperAccount;
 
+    /**
+     * <p>The partitioning mode of the database. Valid values:</p>
+     * <br>
+     * <p>*   **HORIZONTAL**: The database is horizontally partitioned (sharded).</p>
+     * <p>*   **VERTICAL**: The database is vertically partitioned.</p>
+     */
     @NameInMap("Type")
     public String type;
 
@@ -131,6 +160,9 @@ public class CreateDrdsDBRequest extends TeaModel {
     }
 
     public static class CreateDrdsDBRequestInstDbName extends TeaModel {
+        /**
+         * <p>The ID of the ApsaraDB RDS for MySQL instance on which the databases need to be vertically partitioned. This parameter is required only when the Type parameter is set to VERTICAL.</p>
+         */
         @NameInMap("DbInstanceId")
         public String dbInstanceId;
 
@@ -161,12 +193,21 @@ public class CreateDrdsDBRequest extends TeaModel {
     }
 
     public static class CreateDrdsDBRequestRdsSuperAccount extends TeaModel {
+        /**
+         * <p>The account name of the super administrator that is used to connect to the ApsaraDB RDS for MySQL instance.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The ID of ApsaraDB RDS instance.</p>
+         */
         @NameInMap("DbInstanceId")
         public String dbInstanceId;
 
+        /**
+         * <p>The password of the super administrator account that is used to connect to the ApsaraDB RDS instance.</p>
+         */
         @NameInMap("Password")
         public String password;
 

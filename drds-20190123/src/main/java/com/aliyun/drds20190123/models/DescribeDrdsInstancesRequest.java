@@ -4,33 +4,63 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsInstancesRequest extends TeaModel {
+    /**
+     * <p>The description of the instances.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Specifies whether the instances that you want to query expire.</p>
+     */
     @NameInMap("Expired")
     public Boolean expired;
 
+    /**
+     * <p>Specifies whether hybrid queries are supported.</p>
+     */
     @NameInMap("Mix")
     public Boolean mix;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of instances returned on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The version of the service.</p>
+     */
     @NameInMap("ProductVersion")
     public String productVersion;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the instances you want to query belong. The value of this parameter can be NULL.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("Tag")
     public java.util.List<DescribeDrdsInstancesRequestTag> tag;
 
+    /**
+     * <p>The type of the instances that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **0**: shared instances</p>
+     * <p>*   **1**: dedicated instances</p>
+     */
     @NameInMap("Type")
     public String type;
 
@@ -120,9 +150,15 @@ public class DescribeDrdsInstancesRequest extends TeaModel {
     }
 
     public static class DescribeDrdsInstancesRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag configured for the instances you want to query.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag configured for the instances you want to query.</p>
+         */
         @NameInMap("Value")
         public String value;
 

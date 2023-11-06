@@ -4,18 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class ModifyPolarDbReadWeightRequest extends TeaModel {
+    /**
+     * <p>Polar cluster ID.</p>
+     */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
 
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>The node list in the destination apsaradb for PolarDB cluster. The nodes in each cluster are separated with commas (,) and colons (:).</p>
+     */
     @NameInMap("DbNodeIds")
     public String dbNodeIds;
 
+    /**
+     * <p>The ID of a DRDS instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>The weight of the PolarDB cluster. Separate multiple weights with commas (,).</p>
+     */
     @NameInMap("Weights")
     public String weights;
 

@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAccountsResponseBody extends TeaModel {
+    /**
+     * <p>Indicates the information about the instance accounts.</p>
+     */
     @NameInMap("InstanceAccounts")
     public DescribeInstanceAccountsResponseBodyInstanceAccounts instanceAccounts;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +52,20 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccountDbPrivilegesDbPrivilege extends TeaModel {
+        /**
+         * <p>Indicates the name of a database.</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <p>Indicates the permissions that an account is granted on the database. Valid values:</p>
+         * <br>
+         * <p>*   **R**: The account is granted the permissions that are required to read the data of the database.</p>
+         * <p>*   **W**: The account is granted the permissions that are required to write data to the database.</p>
+         * <p>*   **DDL**: The account is granted the permissions that are required to perform DDL operations on the database.</p>
+         * <p>*   **DML**: The account is granted the permissions that are required to perform DML operations on the database.</p>
+         */
         @NameInMap("Privilege")
         public String privilege;
 
@@ -92,18 +112,36 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccount extends TeaModel {
+        /**
+         * <p>Indicates the username of an instance account.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>Indicates the type of an instance account. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The instance account is a privileged account.</p>
+         * <p>*   **1**: The instance account is a standard account.</p>
+         */
         @NameInMap("AccountType")
         public Integer accountType;
 
+        /**
+         * <p>Indicates the information about the permissions of an account on a database.</p>
+         */
         @NameInMap("DbPrivileges")
         public DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccountDbPrivileges dbPrivileges;
 
+        /**
+         * <p>Indicates the description of an account. By default, if 0 is the value of the AccountType parameter, **Created by DRDS** is returned as the value of the Description parameter. If 1 is the value of the AccountType parameter, an empty string is returned as the value of the Description parameter. You can modify the description of an account on the Accounts page in the PolarDB-X console.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates an IP address that is allowed to access the database. The value **%** indicates that each IP address is allowed to access the database. \</note></p>
+         */
         @NameInMap("Host")
         public String host;
 

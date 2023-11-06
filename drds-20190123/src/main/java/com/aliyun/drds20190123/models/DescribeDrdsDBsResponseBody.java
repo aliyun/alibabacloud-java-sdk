@@ -4,21 +4,39 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsDBsResponseBody extends TeaModel {
+    /**
+     * <p>The list of returned databases.</p>
+     */
     @NameInMap("Data")
     public DescribeDrdsDBsResponseBodyData data;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of databases returned on each page.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The number of returned databases.</p>
+     */
     @NameInMap("Total")
     public String total;
 
@@ -76,21 +94,42 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
     }
 
     public static class DescribeDrdsDBsResponseBodyDataDb extends TeaModel {
+        /**
+         * <p>The time when the database is created. The value of this parameter is a UNIX timestamp. Unit: ms.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The type of the database. Valid values: **RDS** and **POLARDB**.</p>
+         */
         @NameInMap("DbInstType")
         public String dbInstType;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <p>The partitioning mode of the database. Valid values:</p>
+         * <br>
+         * <p>*   **HORIZONTAL**: The database is horizontally partitioned.</p>
+         * <p>*   **VERTICAL**: The database is vertically partitioned.</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The schema ID that is assigned to the partitioned database.</p>
+         */
         @NameInMap("Schema")
         public String schema;
 
+        /**
+         * <p>The state of the database.</p>
+         */
         @NameInMap("Status")
         public String status;
 

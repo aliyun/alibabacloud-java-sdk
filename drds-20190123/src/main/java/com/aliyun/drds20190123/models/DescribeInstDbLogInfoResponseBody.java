@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstDbLogInfoResponseBody extends TeaModel {
+    /**
+     * <p>The time range for log query.</p>
+     */
     @NameInMap("LogTimeRange")
     public DescribeInstDbLogInfoResponseBodyLogTimeRange logTimeRange;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +52,15 @@ public class DescribeInstDbLogInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeInstDbLogInfoResponseBodyLogTimeRange extends TeaModel {
+        /**
+         * <p>The start time of the query time range.</p>
+         */
         @NameInMap("SupportLatestTime")
         public Long supportLatestTime;
 
+        /**
+         * <p>The end time of the task.</p>
+         */
         @NameInMap("SupportOldestTime")
         public Long supportOldestTime;
 

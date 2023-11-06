@@ -4,6 +4,11 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsRdsInstancesRequest extends TeaModel {
+    /**
+     * <p>The ID of the PolarDB-X instance.</p>
+     * <br>
+     * <p>> You can call the [DescribeDrdsInstances](~~139284~~) operation to query the information about instances in the specified account, such as the IDs of the instances.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 

@@ -4,15 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class PutStartBackupRequest extends TeaModel {
+    /**
+     * <p>If you need to back up data at the database level, you must specify the list of databases to be backed up, and separate multiple databases with commas (,).</p>
+     */
     @NameInMap("BackupDbNames")
     public String backupDbNames;
 
+    /**
+     * <p>The backup level. Valid values:</p>
+     * <br>
+     * <p>*   instance: instance</p>
+     * <p>*   db: The database type.</p>
+     */
     @NameInMap("BackupLevel")
     public String backupLevel;
 
+    /**
+     * <p>The backup mode. For more information, see [backup mode](~~108631~~) and the valid values are as follows:</p>
+     * <br>
+     * <p>*   phy: fast backup</p>
+     * <p>*   logic: Consistent backup</p>
+     */
     @NameInMap("BackupMode")
     public String backupMode;
 
+    /**
+     * <p>The ID of the DRDS instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 

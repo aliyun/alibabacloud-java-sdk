@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeRDSPerformanceResponseBody extends TeaModel {
+    /**
+     * <p>The result set of the query.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeRDSPerformanceResponseBodyData> data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +52,15 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeRDSPerformanceResponseBodyDataValues extends TeaModel {
+        /**
+         * <p>The time point when the value of the monitoring metric was obtained. The value is in the UNIX timestamp format. The time is displayed in UTC. Unit: ms.</p>
+         */
         @NameInMap("Date")
         public Long date;
 
+        /**
+         * <p>The value of the monitoring metric.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -73,18 +88,35 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeRDSPerformanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The name of the monitoring metric.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The name of the node.</p>
+         * <br>
+         * <p>>  This parameter is returned only when the storage type of the database is PolarDB for MySQL. If the storage type of the database is ApsaraDB RDS for MySQL, this parameter is not returned.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The number of nodes.</p>
+         */
         @NameInMap("NodeNum")
         public Integer nodeNum;
 
+        /**
+         * <p>The unit of the monitoring metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The details of the monitoring metric data.</p>
+         */
         @NameInMap("Values")
         public java.util.List<DescribeRDSPerformanceResponseBodyDataValues> values;
 

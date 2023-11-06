@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsDBClusterResponseBody extends TeaModel {
+    /**
+     * <p>The details of each PolarDB cluster.</p>
+     */
     @NameInMap("DbInstance")
     public DescribeDrdsDBClusterResponseBodyDbInstance dbInstance;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of the request.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,15 +52,30 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
     }
 
     public static class DescribeDrdsDBClusterResponseBodyDbInstanceDBNodesDBNode extends TeaModel {
+        /**
+         * <p>The ID of the node in the apsaradb for PolarDB cluster.</p>
+         */
         @NameInMap("DBNodeId")
         public String DBNodeId;
 
+        /**
+         * <p>The role of a node in the apsaradb for PolarDB cluster. Valid values:</p>
+         * <br>
+         * <p>*   **Reader**</p>
+         * <p>*   **Writer**</p>
+         */
         @NameInMap("DBNodeRole")
         public String DBNodeRole;
 
+        /**
+         * <p>The status of the nodes in the PolarDB cluster.</p>
+         */
         @NameInMap("DBNodeStatus")
         public String DBNodeStatus;
 
+        /**
+         * <p>The ID of the zone where the node of the PolarDB cluster resides.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -114,12 +138,21 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
     }
 
     public static class DescribeDrdsDBClusterResponseBodyDbInstanceEndpointsEndpoint extends TeaModel {
+        /**
+         * <p>The ID of the PolarDB connection address.</p>
+         */
         @NameInMap("EndpointId")
         public String endpointId;
 
+        /**
+         * <p>The ID list of the nodes in the PolarDB connection string. Separate multiple nodes with commas (,).</p>
+         */
         @NameInMap("NodeIds")
         public String nodeIds;
 
+        /**
+         * <p>The read ratio of this connection address managed by the DRDS database.</p>
+         */
         @NameInMap("ReadWeight")
         public Integer readWeight;
 
@@ -174,45 +207,93 @@ public class DescribeDrdsDBClusterResponseBody extends TeaModel {
     }
 
     public static class DescribeDrdsDBClusterResponseBodyDbInstance extends TeaModel {
+        /**
+         * <p>The ID of the PolarDB cluster.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>The status of the PolarDB instance.</p>
+         */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;
 
+        /**
+         * <p>The information about the nodes in the PolarDB Cluster.</p>
+         */
         @NameInMap("DBNodes")
         public DescribeDrdsDBClusterResponseBodyDbInstanceDBNodes DBNodes;
 
+        /**
+         * <p>The type of storage used by the DRDS database.</p>
+         */
         @NameInMap("DbInstType")
         public String dbInstType;
 
+        /**
+         * <p>The endpoint of the PolarDB read /write splitting endpoint</p>
+         */
         @NameInMap("Endpoints")
         public DescribeDrdsDBClusterResponseBodyDbInstanceEndpoints endpoints;
 
+        /**
+         * <p>The type of the DRDS database storage engine.</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The version of the DRDS database storage engine.</p>
+         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        /**
+         * <p>The time when the PolarDB cluster expires.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The network type of the PolarDB cluster.</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <p>The billing method of the PolarDB cluster.</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <p>The PolarDB access port.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The type of RDS instance. PolarDB cluster does not support this parameter.</p>
+         */
         @NameInMap("RdsInstType")
         public String rdsInstType;
 
+        /**
+         * <p>This parameter specifies the Read mode when the database storage type is PolarDB.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   **DEFAULT**: the default mode (that is, all read traffic is sent to the PolarDB read /write node).</p>
+         * <p>*   **CUSTOM**: Custom mode (you can customize the ratio of traffic sent to read /write nodes and read-only nodes).</p>
+         * <p>*   **BALANCE**: read balancing mode (the read traffic is automatically distributed by the read load module of the PolarDB cluster, which can also be understood as the read traffic being evenly distributed to each node).</p>
+         */
         @NameInMap("ReadMode")
         public String readMode;
 
+        /**
+         * <p>The number of days remaining on the PolarDB for MySQL instance.</p>
+         */
         @NameInMap("RemainDays")
         public String remainDays;
 

@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SwitchGlobalBroadcastTypeResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the mode of broadcast tables was switched from the multi-write mode to the asynchronous link mode.</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

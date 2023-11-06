@@ -4,21 +4,43 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class ValidateShardTaskRequest extends TeaModel {
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>The ID of the region where the PolarDB-X 1.0 instance is created.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the table or table shard on which you want to perform the task.</p>
+     */
     @NameInMap("SourceTableName")
     public String sourceTableName;
 
+    /**
+     * <p>The name of the table or table shard on which you perform the task.</p>
+     */
     @NameInMap("TargetTableName")
     public String targetTableName;
 
+    /**
+     * <p>The type of the task. Valid values:</p>
+     * <br>
+     * <p>*   **SINGLE_TO_SHARD**: converts a single table to a table shard.</p>
+     * <p>*   **SHARD_TO_SINGLE**: converts a table shard to a single table.</p>
+     * <p>*   **SHARD_TO_SHARD**: converts a table shard to another table shard.</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 

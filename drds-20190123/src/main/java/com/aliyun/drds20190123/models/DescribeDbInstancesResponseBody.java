@@ -4,9 +4,15 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDbInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The details of the instance.</p>
+     */
     @NameInMap("Items")
     public DescribeDbInstancesResponseBodyItems items;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -51,33 +57,74 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDbInstancesResponseBodyItemsDBInstance extends TeaModel {
+        /**
+         * <p>The description of the storage instance.</p>
+         */
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
 
+        /**
+         * <p>The ID of the storage instance.</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>Storage layer instance status. Valid values:</p>
+         * <br>
+         * <p>*   **0**: creating</p>
+         * <p>*   **1**: In use</p>
+         * <p>*   **3**: Deleting</p>
+         * <p>*   **5**: restarting</p>
+         * <p>*   **6**: upgrading /Downgrading</p>
+         * <p>*   **7**: Recovering</p>
+         * <p>*   **8**: switching the Internet and intranet</p>
+         */
         @NameInMap("DBInstanceStatus")
         public Integer DBInstanceStatus;
 
+        /**
+         * <p>The storage layer instance type.</p>
+         */
         @NameInMap("DBInstanceType")
         public String DBInstanceType;
 
+        /**
+         * <p>The engine of the storage instance.</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The version of the engine for the storage instance.</p>
+         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        /**
+         * <p>The network type of the storage layer. Valid values:</p>
+         * <br>
+         * <p>*   **VPC**: VPC</p>
+         * <p>*   **CLASSIC **: Classic Network</p>
+         */
         @NameInMap("InstanceNetworkType")
         public String instanceNetworkType;
 
+        /**
+         * <p>The details about a read-only storage instance.</p>
+         */
         @NameInMap("ReadOnlyDBInstanceId")
         public DescribeDbInstancesResponseBodyItemsDBInstanceReadOnlyDBInstanceId readOnlyDBInstanceId;
 
+        /**
+         * <p>The ID of the region where the storage instance resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the zone where the storage instance resides.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

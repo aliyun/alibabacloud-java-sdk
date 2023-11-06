@@ -4,12 +4,24 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SubmitSmoothExpandPreCheckRequest extends TeaModel {
+    /**
+     * <p>The type of the database. Valid values:</p>
+     * <br>
+     * <p>*   RDS</p>
+     * <p>*   POLARDB</p>
+     */
     @NameInMap("DbInstType")
     public String dbInstType;
 
+    /**
+     * <p>The name of the PolarDB-X database.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 

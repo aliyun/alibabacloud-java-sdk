@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
+    /**
+     * <p>Indicates the ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>Indicates the information about the virtual private cloud (VPC) in which the instance is deployed.</p>
+     */
     @NameInMap("VpcInfos")
     public DescribeInstanceSwitchNetworkResponseBodyVpcInfos vpcInfos;
 
@@ -43,18 +52,33 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfoVswitchInfosVswitchInfo extends TeaModel {
+        /**
+         * <p>Indicates the ID of the zone in which the instance is deployed.</p>
+         */
         @NameInMap("AzoneId")
         public String azoneId;
 
+        /**
+         * <p>Indicates whether you can change the network type of the instance.</p>
+         */
         @NameInMap("DrdsSupported")
         public Boolean drdsSupported;
 
+        /**
+         * <p>Indicates the ID of the VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>Indicates the ID of the vSwitch.</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 
+        /**
+         * <p>Indicates the name of the vSwitch.</p>
+         */
         @NameInMap("VswitchName")
         public String vswitchName;
 
@@ -125,15 +149,27 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfo extends TeaModel {
+        /**
+         * <p>Indicates the ID of the region in which the instance is deployed.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Indicates the ID of the VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>Indicates the name of the VPC.</p>
+         */
         @NameInMap("VpcName")
         public String vpcName;
 
+        /**
+         * <p>Indicates information about the vSwitch to which the instance is connected.</p>
+         */
         @NameInMap("VswitchInfos")
         public DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfoVswitchInfos vswitchInfos;
 

@@ -4,18 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SetupBroadcastTablesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to activate a broadcast table for the database.</p>
+     */
     @NameInMap("Active")
     public Boolean active;
 
+    /**
+     * <p>The name of the database for which you want to configure a broadcast table.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>The ID of the region in which the PolarDB-X 1.0 instance resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the table.</p>
+     */
     @NameInMap("TableName")
     public java.util.List<String> tableName;
 

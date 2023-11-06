@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsDBClusterRequest extends TeaModel {
+    /**
+     * <p>The ID of the PolarDB cluster.</p>
+     */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
 
+    /**
+     * <p>The name of the DRDS database.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>The ID of a DRDS instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 

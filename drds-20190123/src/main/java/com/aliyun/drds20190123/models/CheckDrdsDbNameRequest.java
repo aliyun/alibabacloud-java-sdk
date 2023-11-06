@@ -4,9 +4,15 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class CheckDrdsDbNameRequest extends TeaModel {
+    /**
+     * <p>DRDS database name</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>DRDS instance ID</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 

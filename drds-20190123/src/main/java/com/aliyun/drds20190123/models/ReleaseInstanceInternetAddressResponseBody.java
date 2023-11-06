@@ -4,9 +4,15 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class ReleaseInstanceInternetAddressResponseBody extends TeaModel {
+    /**
+     * <p>The result returned by the current API.</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

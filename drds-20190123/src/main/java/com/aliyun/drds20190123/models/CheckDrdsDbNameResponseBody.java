@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class CheckDrdsDbNameResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the DRDS database name is valid. Valid values: true: The database name is valid. false: the database name is invalid.</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 
+    /**
+     * <p>Indicates whether the call is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

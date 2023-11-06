@@ -4,21 +4,41 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsInstanceDbMonitorRequest extends TeaModel {
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>The ID of the Distributed Relational Database Service (DRDS) instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>The end time. Specify the time in the UNIX timestamp format. The time must be in UTC. Unit: ms.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The performance monitoring metrics. You can specify one or more metrics for a query at a time. Separate multiple metric parameters with commas (,).</p>
+     * <br>
+     * <p>>  For more information about the details of performance monitoring metrics, see [Database monitoring](~~186704~~).</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The start time. Specify the time in the UNIX timestamp format. The time must be in UTC. Unit: ms.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

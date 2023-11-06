@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSwitchAzoneResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of the operation.</p>
+     */
     @NameInMap("Result")
     public DescribeInstanceSwitchAzoneResponseBodyResult result;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -62,15 +71,27 @@ public class DescribeInstanceSwitchAzoneResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceSwitchAzoneResponseBodyResult extends TeaModel {
+        /**
+         * <p>The ID of the source azoneId.</p>
+         */
         @NameInMap("OriginAzoneId")
         public String originAzoneId;
 
+        /**
+         * <p>regionId.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Indicates whether the job can be switched.</p>
+         */
         @NameInMap("SwitchAble")
         public Boolean switchAble;
 
+        /**
+         * <p>Target azones.</p>
+         */
         @NameInMap("TargetAzones")
         public DescribeInstanceSwitchAzoneResponseBodyResultTargetAzones targetAzones;
 

@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeRestoreOrderResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned data object.</p>
+     */
     @NameInMap("RestoreOrderDO")
     public DescribeRestoreOrderResponseBodyRestoreOrderDO restoreOrderDO;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,21 +52,42 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreOrderResponseBodyRestoreOrderDODrdsOrderDOListDrdsOrderDOList extends TeaModel {
+        /**
+         * <p>The ID of the zone for which to query resources.</p>
+         */
         @NameInMap("AzoneId")
         public String azoneId;
 
+        /**
+         * <p>The instance type of the instance.</p>
+         */
         @NameInMap("InstSpec")
         public String instSpec;
 
+        /**
+         * <p>The network type. Valid values:</p>
+         * <br>
+         * <p>*   **Classic **: Classic Network</p>
+         * <p>*   **vpc**: VPC</p>
+         */
         @NameInMap("Network")
         public String network;
 
+        /**
+         * <p>The region ID of the instance.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the vSwitch in the VPC.</p>
+         */
         @NameInMap("VSwtichId")
         public String VSwtichId;
 
+        /**
+         * <p>The ID of the VPC network.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -136,27 +166,54 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreOrderResponseBodyRestoreOrderDOPolarOrderDOListPolarOrderDOList extends TeaModel {
+        /**
+         * <p>The zone ID of the node.</p>
+         */
         @NameInMap("AzoneId")
         public String azoneId;
 
+        /**
+         * <p>The capacity of disk.</p>
+         */
         @NameInMap("DbInstanceStorage")
         public String dbInstanceStorage;
 
+        /**
+         * <p>The storage engine of PolarDB.</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The type of the instance.</p>
+         */
         @NameInMap("InstanceClass")
         public String instanceClass;
 
+        /**
+         * <p>The network type. Valid values:</p>
+         * <br>
+         * <p>*   **Classic**: Classic Network</p>
+         * <p>*   **vpc**: VPC</p>
+         */
         @NameInMap("Network")
         public String network;
 
+        /**
+         * <p>The number of streams that were returned.</p>
+         */
         @NameInMap("Num")
         public Long num;
 
+        /**
+         * <p>The region ID of the instance.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The version of the operating system.</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -251,27 +308,52 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreOrderResponseBodyRestoreOrderDORdsOrderDOListRdsOrderDOList extends TeaModel {
+        /**
+         * <p>The zone ID of the node.</p>
+         */
         @NameInMap("AzoneId")
         public String azoneId;
 
+        /**
+         * <p>The capacity of disk.</p>
+         */
         @NameInMap("DbInstanceStorage")
         public String dbInstanceStorage;
 
+        /**
+         * <p>The storage engine of the instance.</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The instance type of the instance.</p>
+         */
         @NameInMap("InstanceClass")
         public String instanceClass;
 
+        /**
+         * <p>The network type. Valid values: - **Classic **: Classic Network</p>
+         * <p>- **vpc**: VPC</p>
+         */
         @NameInMap("Network")
         public String network;
 
+        /**
+         * <p>The number of streams that were returned.</p>
+         */
         @NameInMap("Num")
         public Long num;
 
+        /**
+         * <p>The region ID of the instance.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The version of the operating system.</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -366,12 +448,21 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreOrderResponseBodyRestoreOrderDO extends TeaModel {
+        /**
+         * <p>The information of the restored order.</p>
+         */
         @NameInMap("DrdsOrderDOList")
         public DescribeRestoreOrderResponseBodyRestoreOrderDODrdsOrderDOList drdsOrderDOList;
 
+        /**
+         * <p>The ID of the restored apsaradb for PolarDB cluster.</p>
+         */
         @NameInMap("PolarOrderDOList")
         public DescribeRestoreOrderResponseBodyRestoreOrderDOPolarOrderDOList polarOrderDOList;
 
+        /**
+         * <p>The information of the restored RDS order.</p>
+         */
         @NameInMap("RdsOrderDOList")
         public DescribeRestoreOrderResponseBodyRestoreOrderDORdsOrderDOList rdsOrderDOList;
 

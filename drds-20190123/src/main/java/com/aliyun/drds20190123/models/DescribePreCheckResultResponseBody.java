@@ -4,12 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribePreCheckResultResponseBody extends TeaModel {
+    /**
+     * <p>Indicates the result of the precheck task.</p>
+     */
     @NameInMap("PreCheckResult")
     public DescribePreCheckResultResponseBodyPreCheckResult preCheckResult;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,15 +52,27 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
     }
 
     public static class DescribePreCheckResultResponseBodyPreCheckResultSubCheckItems extends TeaModel {
+        /**
+         * <p>Indicates the error code that is returned by a subtask.</p>
+         */
         @NameInMap("ErrorMsgCode")
         public String errorMsgCode;
 
+        /**
+         * <p>Indicates an error message.</p>
+         */
         @NameInMap("ErrorMsgParams")
         public java.util.List<String> errorMsgParams;
 
+        /**
+         * <p>Indicates the name of the subtask.</p>
+         */
         @NameInMap("PreCheckItemName")
         public String preCheckItemName;
 
+        /**
+         * <p>Indicates the state of the subtask.</p>
+         */
         @NameInMap("State")
         public String state;
 
@@ -95,12 +116,21 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
     }
 
     public static class DescribePreCheckResultResponseBodyPreCheckResult extends TeaModel {
+        /**
+         * <p>Indicates the name of the precheck task.</p>
+         */
         @NameInMap("PreCheckName")
         public String preCheckName;
 
+        /**
+         * <p>Indicates the state of the precheck task.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>Indicates the details about the subtasks of the precheck task.</p>
+         */
         @NameInMap("SubCheckItems")
         public java.util.List<DescribePreCheckResultResponseBodyPreCheckResultSubCheckItems> subCheckItems;
 

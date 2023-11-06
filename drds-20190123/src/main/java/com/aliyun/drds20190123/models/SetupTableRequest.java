@@ -4,15 +4,27 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SetupTableRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable full table scan.</p>
+     */
     @NameInMap("AllowFullTableScan")
     public Boolean allowFullTableScan;
 
+    /**
+     * <p>The name of the database in which the table resides.</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>The ID of the DRDS instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>The ID of the region where the streaming domain resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

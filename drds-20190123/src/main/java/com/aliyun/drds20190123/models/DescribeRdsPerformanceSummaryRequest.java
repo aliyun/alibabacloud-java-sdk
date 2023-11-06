@@ -4,12 +4,18 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeRdsPerformanceSummaryRequest extends TeaModel {
+    /**
+     * <p>The ID of a DRDS instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     @NameInMap("RdsInstanceId")
     public java.util.List<String> rdsInstanceId;
 
+    /**
+     * <p>The ID of the region where the streaming domain resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

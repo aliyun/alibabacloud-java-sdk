@@ -4,15 +4,27 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeHotDbListResponseBody extends TeaModel {
+    /**
+     * <p>The result that is returned.</p>
+     */
     @NameInMap("Data")
     public DescribeHotDbListResponseBodyData data;
 
+    /**
+     * <p>The message that is returned.</p>
+     */
     @NameInMap("Msg")
     public String msg;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,6 +88,9 @@ public class DescribeHotDbListResponseBody extends TeaModel {
         @NameInMap("HotDbList")
         public DescribeHotDbListResponseBodyDataListInstanceDbHotDbList hotDbList;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
@@ -122,9 +137,15 @@ public class DescribeHotDbListResponseBody extends TeaModel {
     }
 
     public static class DescribeHotDbListResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the databases on which hot-spot scale-out is performed.</p>
+         */
         @NameInMap("List")
         public DescribeHotDbListResponseBodyDataList list;
 
+        /**
+         * <p>The random number.</p>
+         */
         @NameInMap("RandomCode")
         public String randomCode;
 

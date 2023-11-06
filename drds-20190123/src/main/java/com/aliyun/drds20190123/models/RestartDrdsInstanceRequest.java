@@ -4,6 +4,9 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class RestartDrdsInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of a DRDS instance.</p>
+     */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
