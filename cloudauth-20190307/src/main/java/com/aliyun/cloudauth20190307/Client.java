@@ -790,6 +790,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FaceContrastPictureUrl", request.faceContrastPictureUrl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.faceGuardOutput)) {
+            query.put("FaceGuardOutput", request.faceGuardOutput);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ip)) {
             query.put("Ip", request.ip);
         }

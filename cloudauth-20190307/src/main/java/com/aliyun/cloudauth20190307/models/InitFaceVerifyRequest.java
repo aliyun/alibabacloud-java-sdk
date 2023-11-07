@@ -46,6 +46,9 @@ public class InitFaceVerifyRequest extends TeaModel {
     @NameInMap("FaceContrastPictureUrl")
     public String faceContrastPictureUrl;
 
+    @NameInMap("FaceGuardOutput")
+    public String faceGuardOutput;
+
     @NameInMap("Ip")
     public String ip;
 
@@ -212,6 +215,14 @@ public class InitFaceVerifyRequest extends TeaModel {
     }
     public String getFaceContrastPictureUrl() {
         return this.faceContrastPictureUrl;
+    }
+
+    public InitFaceVerifyRequest setFaceGuardOutput(String faceGuardOutput) {
+        this.faceGuardOutput = faceGuardOutput;
+        return this;
+    }
+    public String getFaceGuardOutput() {
+        return this.faceGuardOutput;
     }
 
     public InitFaceVerifyRequest setIp(String ip) {
