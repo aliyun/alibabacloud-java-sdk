@@ -642,6 +642,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetWebTerminalResponse getWebTerminalWithOptions(String JobId, String PodId, GetWebTerminalRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.isShared)) {
+            query.put("IsShared", request.isShared);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.podUid)) {
             query.put("PodUid", request.podUid);
         }

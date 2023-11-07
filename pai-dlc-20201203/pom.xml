@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>pai_dlc20201203</artifactId>
-  <version>1.3.1</version>
+  <version>1.3.2</version>
   <packaging>jar</packaging>
   <name>pai_dlc20201203</name>
   <description>Alibaba Cloud pai-dlc (20201203) SDK for Java
@@ -41,7 +41,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.20</version>
+      <version>0.2.21</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
