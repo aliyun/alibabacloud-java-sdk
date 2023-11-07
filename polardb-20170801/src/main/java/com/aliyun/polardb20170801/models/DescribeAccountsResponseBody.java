@@ -124,12 +124,6 @@ public class DescribeAccountsResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>The password of the account that is used to log on to the database.</p>
-         */
-        @NameInMap("AccountPassword")
-        public String accountPassword;
-
-        /**
          * <p>The validity period of the password.</p>
          */
         @NameInMap("AccountPasswordValidTime")
@@ -187,14 +181,6 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
         public String getAccountName() {
             return this.accountName;
-        }
-
-        public DescribeAccountsResponseBodyAccounts setAccountPassword(String accountPassword) {
-            this.accountPassword = accountPassword;
-            return this;
-        }
-        public String getAccountPassword() {
-            return this.accountPassword;
         }
 
         public DescribeAccountsResponseBodyAccounts setAccountPasswordValidTime(String accountPasswordValidTime) {

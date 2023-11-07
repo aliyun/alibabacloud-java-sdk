@@ -3506,6 +3506,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBClusterId", request.DBClusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.describeType)) {
+            query.put("DescribeType", request.describeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -8122,10 +8126,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.describeType)) {
-            query.put("DescribeType", request.describeType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nodeType)) {

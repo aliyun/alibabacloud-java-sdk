@@ -10,9 +10,6 @@ public class OpenAITaskRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    @NameInMap("DescribeType")
-    public String describeType;
-
     @NameInMap("NodeType")
     public String nodeType;
 
@@ -63,14 +60,6 @@ public class OpenAITaskRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
-    }
-
-    public OpenAITaskRequest setDescribeType(String describeType) {
-        this.describeType = describeType;
-        return this;
-    }
-    public String getDescribeType() {
-        return this.describeType;
     }
 
     public OpenAITaskRequest setNodeType(String nodeType) {
