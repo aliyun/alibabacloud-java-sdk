@@ -11,7 +11,7 @@ public class UpdateEventSourceShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The associated event bus.</p>
+     * <p>The event bus with which the event source is associated.</p>
      */
     @NameInMap("EventBusName")
     public String eventBusName;

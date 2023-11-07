@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateEventSourceResponseBody extends TeaModel {
     /**
-     * <p>The status code. The code 200 indicates that the request is successful. Other codes indicate that the call failed. For more information about error codes, see Error codes.</p>
+     * <p>The returned response code. Valid values:</p>
+     * <br>
+     * <p>*   Success: The request is successful.</p>
+     * <p>*   Other codes: The request failed. For more information about error codes, see Error codes.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -29,7 +32,7 @@ public class UpdateEventSourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     * <p>Indicates whether the operation is successful. The value true indicates that the operation is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

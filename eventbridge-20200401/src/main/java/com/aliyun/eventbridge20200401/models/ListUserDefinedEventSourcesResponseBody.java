@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
     /**
-     * <p>The returned response code. The value Success indicates that the request is successful.</p>
+     * <p>The returned response code. Valid values:</p>
+     * <br>
+     * <p>*   Success: The request is successful.</p>
+     * <p>*   Other codes: The request failed. For more information about error codes, see Error codes.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -29,7 +32,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation is successful. Valid values: true and false.</p>
+     * <p>Indicates whether the operation is successful. The value true indicates that the operation is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -81,38 +84,62 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
 
     public static class ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceHttpEventParameters extends TeaModel {
         /**
-         * <p>The CIDR blocks that are used for security settings. This parameter is required only if SecurityConfig is set to ip. You can enter CIDR blocks or IP addresses.</p>
+         * <p>The CIDR block that is used for security settings. This parameter is required only if SecurityConfig is set to ip. You can enter a CIDR block or an IP address.</p>
          */
         @NameInMap("Ip")
         public java.util.List<String> ip;
 
         /**
-         * <p>The HTTP request method supported by the generated webhook URL. You can select multiple values. Valid values: GET POST PUT PATCH DELETE HEAD OPTIONS TRACE GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS, TRACE, and CONNECT.</p>
+         * <p>The HTTP request method supported by the generated webhook URL. You can select multiple values. Valid values:</p>
+         * <br>
+         * <p>*   GET</p>
+         * <p>*   POST</p>
+         * <p>*   PUT</p>
+         * <p>*   PATCH</p>
+         * <p>*   DELETE</p>
+         * <p>*   HEAD</p>
+         * <p>*   OPTIONS</p>
+         * <p>*   TRACE</p>
+         * <p>*   CONNECT</p>
          */
         @NameInMap("Method")
         public java.util.List<String> method;
 
+        /**
+         * <p>The Internet request URL.</p>
+         */
         @NameInMap("PublicWebHookUrl")
         public java.util.List<String> publicWebHookUrl;
 
         /**
-         * <p>The security domain names. This parameter is required only if SecurityConfig is set to referer. You can enter domain names.</p>
+         * <p>The security domain name. This parameter is required only if SecurityConfig is set to referer. You can enter a domain name.</p>
          */
         @NameInMap("Referer")
         public java.util.List<String> referer;
 
         /**
-         * <p>The type of security settings. Valid values: none: No configuration is required. ip: CIDR blocks. referer: security domain names.</p>
+         * <p>The type of security settings. Valid values:</p>
+         * <br>
+         * <p>*   none: No configuration is required.</p>
+         * <p>*   ip: CIDR block.</p>
+         * <p>*   referer: security domain name.</p>
          */
         @NameInMap("SecurityConfig")
         public String securityConfig;
 
         /**
-         * <p>The protocol type that is supported by the generated webhook URL. Valid values: HTTP HTTPS HTTP, HTTPS, and HTTP&HTTPS.</p>
+         * <p>The protocol type that is supported by the generated webhook URL. Valid values:</p>
+         * <br>
+         * <p>*   HTTP</p>
+         * <p>*   HTTPS</p>
+         * <p>*   HTTP\&HTTPS</p>
          */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The internal request URL.</p>
+         */
         @NameInMap("VpcWebHookUrl")
         public java.util.List<String> vpcWebHookUrl;
 
@@ -180,33 +207,63 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
     }
 
     public static class ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceKafkaParameters extends TeaModel {
+        /**
+         * <p>The ID of the consumer group that subscribes to the topic.</p>
+         */
         @NameInMap("ConsumerGroup")
         public String consumerGroup;
 
+        /**
+         * <p>The ID of the Message Queue for Apache Kafka instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The maximum number of consumers.</p>
+         */
         @NameInMap("MaximumTasks")
         public Integer maximumTasks;
 
+        /**
+         * <p>The network. Valid values: Default and PublicNetwork. Default value: Default. The value PublicNetwork indicates a self-managed network.</p>
+         */
         @NameInMap("Network")
         public String network;
 
+        /**
+         * <p>The consumer offset.</p>
+         */
         @NameInMap("OffsetReset")
         public String offsetReset;
 
+        /**
+         * <p>The ID of the region where the Message Queue for Apache Kafka instance resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the security group to which the Message Queue for Apache Kafka instance belongs.</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The topic name.</p>
+         */
         @NameInMap("Topic")
         public String topic;
 
+        /**
+         * <p>The ID of the vSwitch with which the Message Queue for Apache Kafka instance is associated.</p>
+         */
         @NameInMap("VSwitchIds")
         public String vSwitchIds;
 
+        /**
+         * <p>The ID of the VPC to which the Message Queue for Apache Kafka instance belongs.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -305,7 +362,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public Boolean isBase64Decode;
 
         /**
-         * <p>The name of the queue in MNS.</p>
+         * <p>The name of the MNS queue.</p>
          */
         @NameInMap("QueueName")
         public String queueName;
@@ -349,13 +406,13 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
 
     public static class ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceRabbitMQParameters extends TeaModel {
         /**
-         * <p>The ID of the Message Queue for RabbitMQ instance. For more information, see Limits.</p>
+         * <p>The ID of the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The name of the queue in the Message Queue for RabbitMQ instance. For more information, see Limits.</p>
+         * <p>The name of the queue on the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).</p>
          */
         @NameInMap("QueueName")
         public String queueName;
@@ -367,7 +424,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The vhost name of the Message Queue for RabbitMQ instance. For more information, see Limits.</p>
+         * <p>The name of the vhost of the Message Queue for RabbitMQ instance. For more information, see [Limits](~~163289~~).</p>
          */
         @NameInMap("VirtualHostName")
         public String virtualHostName;
@@ -412,53 +469,78 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
     }
 
     public static class ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceRocketMQParameters extends TeaModel {
+        /**
+         * <p>The authentication type. This parameter can be set to ACL or left empty.</p>
+         */
         @NameInMap("AuthType")
         public String authType;
 
         /**
-         * <p>The ID of the consumer group in the Message Queue for Apache RocketMQ instance.</p>
+         * <p>The ID of the consumer group on the Message Queue for Apache RocketMQ instance.</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The endpoint that is used to access the Message Queue for Apache RocketMQ instance.</p>
+         */
         @NameInMap("InstanceEndpoint")
         public String instanceEndpoint;
 
         /**
-         * <p>The ID of the Message Queue for Apache RocketMQ instance. For more information, see Limits.</p>
+         * <p>The ID of the Message Queue for Apache RocketMQ instance. For more information, see [Limits](~~163289~~).</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The network that is used by the Message Queue for Apache RocketMQ instance.</p>
+         */
         @NameInMap("InstanceNetwork")
         public String instanceNetwork;
 
+        /**
+         * <p>The password that is used to access the Message Queue for Apache RocketMQ instance.</p>
+         */
         @NameInMap("InstancePassword")
         public String instancePassword;
 
+        /**
+         * <p>The ID of the security group to which the Message Queue for Apache RocketMQ instance belongs.</p>
+         */
         @NameInMap("InstanceSecurityGroupId")
         public String instanceSecurityGroupId;
 
+        /**
+         * <p>The instance type. Valid values: CLOUD\_4, CLOUD\_5, and SELF_BUILT. The value CLOUD\_4 indicates that the instance is a Message Queue for Apache RocketMQ 4.0 instance. The value CLOUD\_5 indicates that the instance is a Message Queue for Apache RocketMQ 5.0 instance. The value SELF_BUILT indicates that the instance is a self-managed RocketMQ instance.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The username that is used to access the Message Queue for Apache RocketMQ instance.</p>
+         */
         @NameInMap("InstanceUsername")
         public String instanceUsername;
 
+        /**
+         * <p>The ID of the vSwitch with which the Message Queue for Apache RocketMQ instance is associated.</p>
+         */
         @NameInMap("InstanceVSwitchIds")
         public String instanceVSwitchIds;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC) to which the Message Queue for Apache RocketMQ instance belongs.</p>
+         */
         @NameInMap("InstanceVpcId")
         public String instanceVpcId;
 
         /**
          * <p>The offset from which messages are consumed. Valid values:</p>
          * <br>
-         * <p>- CONSUME_FROM_LAST_OFFSET: Messages are consumed from the latest offset. </p>
-         * <br>
-         * <p>- CONSUME_FROM_FIRST_OFFSET: Messages are consumed from the earliest offset. </p>
-         * <br>
-         * <p>- CONSUME_FROM_TIMESTAMP: Messages are consumed from the offset at the specified point in time. </p>
+         * <p>*   CONSUME_FROM_LAST_OFFSET: Messages are consumed from the latest offset.</p>
+         * <p>*   CONSUME_FROM_FIRST_OFFSET: Messages are consumed from the earliest offset.</p>
+         * <p>*   CONSUME_FROM_TIMESTAMP: Messages are consumed from the offset at the specified point in time.</p>
          * <br>
          * <p>Default value: CONSUME_FROM_LAST_OFFSET.</p>
          */
@@ -484,7 +566,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public Float timestamp;
 
         /**
-         * <p>The name of the topic in Message Queue for Apache RocketMQ instance. For more information, see Limits.</p>
+         * <p>The name of the topic on the Message Queue for Apache RocketMQ instance. For more information, see [Limits](~~163289~~).</p>
          */
         @NameInMap("Topic")
         public String topic;
@@ -626,25 +708,25 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
 
     public static class ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceSLSParameters extends TeaModel {
         /**
-         * <p>The consumer offset. The value begin indicates the earliest offset, and the value end indicates the latest offset. You can also specify a time in seconds to start consumption.</p>
+         * <p>The consumer offset. The value begin indicates the earliest offset, and the value end indicates the latest offset. You can also specify a time in seconds to start message consumption.</p>
          */
         @NameInMap("ConsumePosition")
         public String consumePosition;
 
         /**
-         * <p>The Log Service Logstore.</p>
+         * <p>The Simple Log Service Logstore.</p>
          */
         @NameInMap("LogStore")
         public String logStore;
 
         /**
-         * <p>The Log Service project.</p>
+         * <p>The Simple Log Service project.</p>
          */
         @NameInMap("Project")
         public String project;
 
         /**
-         * <p>The role name. If you want to authorize EventBridge to use this role to read logs in Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the Resource Access Management (RAM) console. For information about the permission policy of this role, see Create a custom event source of the Log Service type.</p>
+         * <p>The role name. If you want to authorize EventBridge to use this role to read logs in Simple Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the Resource Access Management (RAM) console. For information about the permission policy of this role, see Create a custom event source of the Log Service type.</p>
          */
         @NameInMap("RoleName")
         public String roleName;
@@ -689,11 +771,20 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
     }
 
     public static class ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceScheduledEventParameters extends TeaModel {
+        /**
+         * <p>The cron expression.</p>
+         */
         @NameInMap("Schedule")
         public String schedule;
 
+        /**
+         * <p>The time zone in which the cron expression is executed.</p>
+         */
         @NameInMap("TimeZone")
         public String timeZone;
+
+        @NameInMap("UserData")
+        public String userData;
 
         public static ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceScheduledEventParameters build(java.util.Map<String, ?> map) throws Exception {
             ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceScheduledEventParameters self = new ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceScheduledEventParameters();
@@ -716,6 +807,14 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             return this.timeZone;
         }
 
+        public ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceScheduledEventParameters setUserData(String userData) {
+            this.userData = userData;
+            return this;
+        }
+        public String getUserData() {
+            return this.userData;
+        }
+
     }
 
     public static class ListUserDefinedEventSourcesResponseBodyDataEventSourceList extends TeaModel {
@@ -732,7 +831,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public Float ctime;
 
         /**
-         * <p>The name of the event bus.</p>
+         * <p>The name of the queried event bus.</p>
          */
         @NameInMap("EventBusName")
         public String eventBusName;
@@ -755,6 +854,9 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         @NameInMap("SourceHttpEventParameters")
         public ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceHttpEventParameters sourceHttpEventParameters;
 
+        /**
+         * <p>The parameters that are returned if the event source is Message Queue for Apache Kafka.</p>
+         */
         @NameInMap("SourceKafkaParameters")
         public ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceKafkaParameters sourceKafkaParameters;
 
@@ -777,22 +879,25 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceRocketMQParameters sourceRocketMQParameters;
 
         /**
-         * <p>The parameters that are configured if the event source is Log Service.</p>
+         * <p>The parameters that are returned if the event source is Simple Log Service.</p>
          */
         @NameInMap("SourceSLSParameters")
         public ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceSLSParameters sourceSLSParameters;
 
+        /**
+         * <p>The parameters that are returned if the event source is scheduled events.</p>
+         */
         @NameInMap("SourceScheduledEventParameters")
         public ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceScheduledEventParameters sourceScheduledEventParameters;
 
         /**
-         * <p>The status of the queried event source. Valid value: Activated.</p>
+         * <p>The status of the queried event source. The returned value Activated indicates that the event source is activated.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The type of the queried event source. Valid value: UserDefined: custom event source.</p>
+         * <p>The type of the queried event source. The returned value UserDefined indicates the event source is a custom event source.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -918,7 +1023,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
 
     public static class ListUserDefinedEventSourcesResponseBodyData extends TeaModel {
         /**
-         * <p>The security domain names. This parameter is required only if SecurityConfig is set to referer. You can enter domain names.</p>
+         * <p>The event sources.</p>
          */
         @NameInMap("EventSourceList")
         public java.util.List<ListUserDefinedEventSourcesResponseBodyDataEventSourceList> eventSourceList;
