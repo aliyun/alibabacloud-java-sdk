@@ -3213,17 +3213,44 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSourceSourceRocketMQParameters extends TeaModel {
+        @NameInMap("AuthType")
+        public String authType;
+
         /**
          * <p>The ID of the consumer group in the Message Queue for Apache RocketMQ instance.</p>
          */
         @NameInMap("GroupID")
         public String groupID;
 
+        @NameInMap("InstanceEndpoint")
+        public String instanceEndpoint;
+
         /**
          * <p>The ID of the Message Queue for Apache RocketMQ instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("InstanceNetwork")
+        public String instanceNetwork;
+
+        @NameInMap("InstancePassword")
+        public String instancePassword;
+
+        @NameInMap("InstanceSecurityGroupId")
+        public String instanceSecurityGroupId;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("InstanceUsername")
+        public String instanceUsername;
+
+        @NameInMap("InstanceVSwitchIds")
+        public String instanceVSwitchIds;
+
+        @NameInMap("InstanceVpcId")
+        public String instanceVpcId;
 
         /**
          * <p>The consumer offset of messages. Valid values: CONSUME_FROM_LAST_OFFSET: Start consumption from the latest offset. CONSUME_FROM_FIRST_OFFSET: Start consumption from the earliest offset. CONSUME_FROM_TIMESTAMP: Start consumption from the offset at the specified point in time.</p>
@@ -3260,6 +3287,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetEventStreamingResponseBodyDataSourceSourceRocketMQParameters setAuthType(String authType) {
+            this.authType = authType;
+            return this;
+        }
+        public String getAuthType() {
+            return this.authType;
+        }
+
         public GetEventStreamingResponseBodyDataSourceSourceRocketMQParameters setGroupID(String groupID) {
             this.groupID = groupID;
             return this;
@@ -3268,12 +3303,76 @@ public class GetEventStreamingResponseBody extends TeaModel {
             return this.groupID;
         }
 
+        public GetEventStreamingResponseBodyDataSourceSourceRocketMQParameters setInstanceEndpoint(String instanceEndpoint) {
+            this.instanceEndpoint = instanceEndpoint;
+            return this;
+        }
+        public String getInstanceEndpoint() {
+            return this.instanceEndpoint;
+        }
+
         public GetEventStreamingResponseBodyDataSourceSourceRocketMQParameters setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public GetEventStreamingResponseBodyDataSourceSourceRocketMQParameters setInstanceNetwork(String instanceNetwork) {
+            this.instanceNetwork = instanceNetwork;
+            return this;
+        }
+        public String getInstanceNetwork() {
+            return this.instanceNetwork;
+        }
+
+        public GetEventStreamingResponseBodyDataSourceSourceRocketMQParameters setInstancePassword(String instancePassword) {
+            this.instancePassword = instancePassword;
+            return this;
+        }
+        public String getInstancePassword() {
+            return this.instancePassword;
+        }
+
+        public GetEventStreamingResponseBodyDataSourceSourceRocketMQParameters setInstanceSecurityGroupId(String instanceSecurityGroupId) {
+            this.instanceSecurityGroupId = instanceSecurityGroupId;
+            return this;
+        }
+        public String getInstanceSecurityGroupId() {
+            return this.instanceSecurityGroupId;
+        }
+
+        public GetEventStreamingResponseBodyDataSourceSourceRocketMQParameters setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public GetEventStreamingResponseBodyDataSourceSourceRocketMQParameters setInstanceUsername(String instanceUsername) {
+            this.instanceUsername = instanceUsername;
+            return this;
+        }
+        public String getInstanceUsername() {
+            return this.instanceUsername;
+        }
+
+        public GetEventStreamingResponseBodyDataSourceSourceRocketMQParameters setInstanceVSwitchIds(String instanceVSwitchIds) {
+            this.instanceVSwitchIds = instanceVSwitchIds;
+            return this;
+        }
+        public String getInstanceVSwitchIds() {
+            return this.instanceVSwitchIds;
+        }
+
+        public GetEventStreamingResponseBodyDataSourceSourceRocketMQParameters setInstanceVpcId(String instanceVpcId) {
+            this.instanceVpcId = instanceVpcId;
+            return this;
+        }
+        public String getInstanceVpcId() {
+            return this.instanceVpcId;
         }
 
         public GetEventStreamingResponseBodyDataSourceSourceRocketMQParameters setOffset(String offset) {

@@ -4,15 +4,27 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class ListUserDefinedEventSourcesRequest extends TeaModel {
+    /**
+     * <p>The name of the event bus.</p>
+     */
     @NameInMap("EventBusName")
     public String eventBusName;
 
+    /**
+     * <p>The maximum number of entries to be returned in a call. You can use this parameter and NextToken to implement paging. Note: Up to 100 entries can be returned in a call.</p>
+     */
     @NameInMap("Limit")
     public Integer limit;
 
+    /**
+     * <p>The name of the event source.</p>
+     */
     @NameInMap("NamePrefix")
     public String namePrefix;
 
+    /**
+     * <p>If you configure Limit and excess return values exist, this parameter is returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

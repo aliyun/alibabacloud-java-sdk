@@ -1622,6 +1622,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EventId", request.eventId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.eventSource)) {
+            query.put("EventSource", request.eventSource);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));

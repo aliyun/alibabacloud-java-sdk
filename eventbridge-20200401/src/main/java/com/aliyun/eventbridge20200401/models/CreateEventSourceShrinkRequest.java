@@ -17,7 +17,7 @@ public class CreateEventSourceShrinkRequest extends TeaModel {
     public String eventBusName;
 
     /**
-     * <p>Then name of the event source.</p>
+     * <p>The name of the event source.</p>
      */
     @NameInMap("EventSourceName")
     public String eventSourceName;
@@ -35,7 +35,7 @@ public class CreateEventSourceShrinkRequest extends TeaModel {
     public String sourceKafkaParametersShrink;
 
     /**
-     * <p>The parameters that are configured if the event source is Message Service (MNS).</p>
+     * <p>The parameters that are configured if the event source is Message Service (MNS). If you specify MNS as the event source, you must configure RegionId, IsBase64Decode, and QueueName.</p>
      */
     @NameInMap("SourceMNSParameters")
     public String sourceMNSParametersShrink;

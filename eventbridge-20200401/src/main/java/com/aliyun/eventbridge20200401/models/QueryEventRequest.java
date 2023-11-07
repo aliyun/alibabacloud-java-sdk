@@ -16,6 +16,9 @@ public class QueryEventRequest extends TeaModel {
     @NameInMap("EventId")
     public String eventId;
 
+    @NameInMap("EventSource")
+    public String eventSource;
+
     public static QueryEventRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryEventRequest self = new QueryEventRequest();
         return TeaModel.build(map, self);
@@ -35,6 +38,14 @@ public class QueryEventRequest extends TeaModel {
     }
     public String getEventId() {
         return this.eventId;
+    }
+
+    public QueryEventRequest setEventSource(String eventSource) {
+        this.eventSource = eventSource;
+        return this;
+    }
+    public String getEventSource() {
+        return this.eventSource;
     }
 
 }

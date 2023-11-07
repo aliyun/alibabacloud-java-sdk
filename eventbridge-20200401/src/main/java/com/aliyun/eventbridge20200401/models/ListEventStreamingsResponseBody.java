@@ -2686,11 +2686,38 @@ public class ListEventStreamingsResponseBody extends TeaModel {
     }
 
     public static class ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceRocketMQParameters extends TeaModel {
+        @NameInMap("AuthType")
+        public String authType;
+
         @NameInMap("GroupID")
         public String groupID;
 
+        @NameInMap("InstanceEndpoint")
+        public String instanceEndpoint;
+
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("InstanceNetwork")
+        public String instanceNetwork;
+
+        @NameInMap("InstancePassword")
+        public String instancePassword;
+
+        @NameInMap("InstanceSecurityGroupId")
+        public String instanceSecurityGroupId;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("InstanceUsername")
+        public String instanceUsername;
+
+        @NameInMap("InstanceVSwitchIds")
+        public String instanceVSwitchIds;
+
+        @NameInMap("InstanceVpcId")
+        public String instanceVpcId;
 
         @NameInMap("Offset")
         public String offset;
@@ -2712,6 +2739,14 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceRocketMQParameters setAuthType(String authType) {
+            this.authType = authType;
+            return this;
+        }
+        public String getAuthType() {
+            return this.authType;
+        }
+
         public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceRocketMQParameters setGroupID(String groupID) {
             this.groupID = groupID;
             return this;
@@ -2720,12 +2755,76 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             return this.groupID;
         }
 
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceRocketMQParameters setInstanceEndpoint(String instanceEndpoint) {
+            this.instanceEndpoint = instanceEndpoint;
+            return this;
+        }
+        public String getInstanceEndpoint() {
+            return this.instanceEndpoint;
+        }
+
         public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceRocketMQParameters setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceRocketMQParameters setInstanceNetwork(String instanceNetwork) {
+            this.instanceNetwork = instanceNetwork;
+            return this;
+        }
+        public String getInstanceNetwork() {
+            return this.instanceNetwork;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceRocketMQParameters setInstancePassword(String instancePassword) {
+            this.instancePassword = instancePassword;
+            return this;
+        }
+        public String getInstancePassword() {
+            return this.instancePassword;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceRocketMQParameters setInstanceSecurityGroupId(String instanceSecurityGroupId) {
+            this.instanceSecurityGroupId = instanceSecurityGroupId;
+            return this;
+        }
+        public String getInstanceSecurityGroupId() {
+            return this.instanceSecurityGroupId;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceRocketMQParameters setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceRocketMQParameters setInstanceUsername(String instanceUsername) {
+            this.instanceUsername = instanceUsername;
+            return this;
+        }
+        public String getInstanceUsername() {
+            return this.instanceUsername;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceRocketMQParameters setInstanceVSwitchIds(String instanceVSwitchIds) {
+            this.instanceVSwitchIds = instanceVSwitchIds;
+            return this;
+        }
+        public String getInstanceVSwitchIds() {
+            return this.instanceVSwitchIds;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceRocketMQParameters setInstanceVpcId(String instanceVpcId) {
+            this.instanceVpcId = instanceVpcId;
+            return this;
+        }
+        public String getInstanceVpcId() {
+            return this.instanceVpcId;
         }
 
         public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceRocketMQParameters setOffset(String offset) {
