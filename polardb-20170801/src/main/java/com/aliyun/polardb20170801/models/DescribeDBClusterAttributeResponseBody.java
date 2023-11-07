@@ -129,12 +129,6 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public Integer deletionLock;
 
     /**
-     * <p>The unit to which the cluster belongs.</p>
-     */
-    @NameInMap("DeployUnit")
-    public String deployUnit;
-
-    /**
      * <p>The database type.</p>
      */
     @NameInMap("Engine")
@@ -528,14 +522,6 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
     public Integer getDeletionLock() {
         return this.deletionLock;
-    }
-
-    public DescribeDBClusterAttributeResponseBody setDeployUnit(String deployUnit) {
-        this.deployUnit = deployUnit;
-        return this;
-    }
-    public String getDeployUnit() {
-        return this.deployUnit;
     }
 
     public DescribeDBClusterAttributeResponseBody setEngine(String engine) {

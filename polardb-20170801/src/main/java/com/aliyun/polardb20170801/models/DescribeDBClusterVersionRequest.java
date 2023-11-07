@@ -12,6 +12,9 @@ public class DescribeDBClusterVersionRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("DescribeType")
+    public String describeType;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -35,6 +38,14 @@ public class DescribeDBClusterVersionRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public DescribeDBClusterVersionRequest setDescribeType(String describeType) {
+        this.describeType = describeType;
+        return this;
+    }
+    public String getDescribeType() {
+        return this.describeType;
     }
 
     public DescribeDBClusterVersionRequest setOwnerAccount(String ownerAccount) {
