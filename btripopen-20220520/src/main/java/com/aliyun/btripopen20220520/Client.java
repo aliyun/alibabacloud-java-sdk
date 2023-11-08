@@ -4924,6 +4924,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public HotelOrderCancelResponse hotelOrderCancelWithOptions(HotelOrderCancelRequest request, HotelOrderCancelHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.btripOrderId)) {
+            query.put("btrip_order_id", request.btripOrderId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.disOrderId)) {
             query.put("dis_order_id", request.disOrderId);
         }
@@ -5102,6 +5106,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public HotelOrderDetailInfoResponse hotelOrderDetailInfoWithOptions(HotelOrderDetailInfoRequest request, HotelOrderDetailInfoHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.btripOrderId)) {
+            query.put("btrip_order_id", request.btripOrderId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.disOrderId)) {
             query.put("dis_order_id", request.disOrderId);
         }
@@ -6705,12 +6713,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applyNeed)) {
+            body.put("apply_need", request.applyNeed);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.bookType)) {
             body.put("book_type", request.bookType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.bookuserListShrink)) {
             body.put("bookuser_list", request.bookuserListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleNeed)) {
+            body.put("rule_need", request.ruleNeed);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
