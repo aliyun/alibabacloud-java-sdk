@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetSwitchRegionDetailResponseBody extends TeaModel {
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public GetSwitchRegionDetailResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,30 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
     }
 
     public static class GetSwitchRegionDetailResponseBodyDataRegionStatus extends TeaModel {
+        /**
+         * <p>The number of ECS instances.</p>
+         */
         @NameInMap("EcsCount")
         public Integer ecsCount;
 
+        /**
+         * <p>The time when the migration is scheduled.</p>
+         */
         @NameInMap("GmtPlanSwitchTime")
         public Long gmtPlanSwitchTime;
 
+        /**
+         * <p>The region in which the server resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The migration status. Valid values:</p>
+         * <br>
+         * <p>*   **0**: pending</p>
+         * <p>*   **1**: successful</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
@@ -84,18 +105,33 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
     }
 
     public static class GetSwitchRegionDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The time when the permissions were modified.</p>
+         */
         @NameInMap("GmtIsAgreeModified")
         public Long gmtIsAgreeModified;
 
+        /**
+         * <p>The notification time.</p>
+         */
         @NameInMap("GmtNoticed")
         public Long gmtNoticed;
 
+        /**
+         * <p>Indicates whether the migration is approved.</p>
+         */
         @NameInMap("IsAgree")
         public String isAgree;
 
+        /**
+         * <p>Indicates whether the notification is sent.</p>
+         */
         @NameInMap("IsNoticed")
         public String isNoticed;
 
+        /**
+         * <p>The status of the switching to the region.</p>
+         */
         @NameInMap("RegionStatus")
         public java.util.List<GetSwitchRegionDetailResponseBodyDataRegionStatus> regionStatus;
 

@@ -12,6 +12,9 @@ public class GetClusterCheckItemWarningStatisticsRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("Uuid")
+    public String uuid;
+
     public static GetClusterCheckItemWarningStatisticsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetClusterCheckItemWarningStatisticsRequest self = new GetClusterCheckItemWarningStatisticsRequest();
         return TeaModel.build(map, self);
@@ -23,6 +26,14 @@ public class GetClusterCheckItemWarningStatisticsRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public GetClusterCheckItemWarningStatisticsRequest setUuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
+    public String getUuid() {
+        return this.uuid;
     }
 
 }
