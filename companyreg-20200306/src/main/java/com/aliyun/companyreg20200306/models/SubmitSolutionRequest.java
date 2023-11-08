@@ -10,6 +10,9 @@ public class SubmitSolutionRequest extends TeaModel {
     @NameInMap("IntentionBizId")
     public String intentionBizId;
 
+    @NameInMap("OperateType")
+    public String operateType;
+
     @NameInMap("Solution")
     public String solution;
 
@@ -35,6 +38,14 @@ public class SubmitSolutionRequest extends TeaModel {
     }
     public String getIntentionBizId() {
         return this.intentionBizId;
+    }
+
+    public SubmitSolutionRequest setOperateType(String operateType) {
+        this.operateType = operateType;
+        return this;
+    }
+    public String getOperateType() {
+        return this.operateType;
     }
 
     public SubmitSolutionRequest setSolution(String solution) {

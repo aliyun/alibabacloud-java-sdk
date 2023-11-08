@@ -1280,6 +1280,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IntentionBizId", request.intentionBizId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.operateType)) {
+            query.put("OperateType", request.operateType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.solution)) {
             query.put("Solution", request.solution);
         }
