@@ -7,6 +7,9 @@ public class StartInstanceShrinkRequest extends TeaModel {
     @NameInMap("App")
     public String appShrink;
 
+    @NameInMap("BizId")
+    public String bizId;
+
     @NameInMap("Channel")
     public String channelShrink;
 
@@ -30,6 +33,14 @@ public class StartInstanceShrinkRequest extends TeaModel {
     }
     public String getAppShrink() {
         return this.appShrink;
+    }
+
+    public StartInstanceShrinkRequest setBizId(String bizId) {
+        this.bizId = bizId;
+        return this;
+    }
+    public String getBizId() {
+        return this.bizId;
     }
 
     public StartInstanceShrinkRequest setChannelShrink(String channelShrink) {

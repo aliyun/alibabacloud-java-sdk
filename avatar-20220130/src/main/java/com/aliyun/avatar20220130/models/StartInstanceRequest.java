@@ -7,6 +7,9 @@ public class StartInstanceRequest extends TeaModel {
     @NameInMap("App")
     public StartInstanceRequestApp app;
 
+    @NameInMap("BizId")
+    public String bizId;
+
     @NameInMap("Channel")
     public StartInstanceRequestChannel channel;
 
@@ -30,6 +33,14 @@ public class StartInstanceRequest extends TeaModel {
     }
     public StartInstanceRequestApp getApp() {
         return this.app;
+    }
+
+    public StartInstanceRequest setBizId(String bizId) {
+        this.bizId = bizId;
+        return this;
+    }
+    public String getBizId() {
+        return this.bizId;
     }
 
     public StartInstanceRequest setChannel(StartInstanceRequestChannel channel) {
