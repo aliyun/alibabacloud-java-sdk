@@ -10,6 +10,9 @@ public class ImportEnterpriseDocumentShrinkRequest extends TeaModel {
     @NameInMap("DocumentList")
     public String documentListShrink;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("StoreId")
     public Long storeId;
 
@@ -35,6 +38,14 @@ public class ImportEnterpriseDocumentShrinkRequest extends TeaModel {
     }
     public String getDocumentListShrink() {
         return this.documentListShrink;
+    }
+
+    public ImportEnterpriseDocumentShrinkRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ImportEnterpriseDocumentShrinkRequest setStoreId(Long storeId) {
