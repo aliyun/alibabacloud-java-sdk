@@ -85,6 +85,9 @@ public class ListCheckItemWarningSummaryRequest extends TeaModel {
     @NameInMap("Source")
     public String source;
 
+    @NameInMap("UuidList")
+    public java.util.List<String> uuidList;
+
     public static ListCheckItemWarningSummaryRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCheckItemWarningSummaryRequest self = new ListCheckItemWarningSummaryRequest();
         return TeaModel.build(map, self);
@@ -184,6 +187,14 @@ public class ListCheckItemWarningSummaryRequest extends TeaModel {
     }
     public String getSource() {
         return this.source;
+    }
+
+    public ListCheckItemWarningSummaryRequest setUuidList(java.util.List<String> uuidList) {
+        this.uuidList = uuidList;
+        return this;
+    }
+    public java.util.List<String> getUuidList() {
+        return this.uuidList;
     }
 
 }

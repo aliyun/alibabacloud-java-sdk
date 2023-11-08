@@ -58,6 +58,12 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         @NameInMap("Advice")
         public String advice;
 
+        @NameInMap("AffiliatedRiskTypes")
+        public java.util.List<String> affiliatedRiskTypes;
+
+        @NameInMap("AffiliatedRisks")
+        public java.util.List<String> affiliatedRisks;
+
         /**
          * <p>The alias of the baseline type.</p>
          */
@@ -137,6 +143,22 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         }
         public String getAdvice() {
             return this.advice;
+        }
+
+        public ListCheckItemWarningSummaryResponseBodyList setAffiliatedRiskTypes(java.util.List<String> affiliatedRiskTypes) {
+            this.affiliatedRiskTypes = affiliatedRiskTypes;
+            return this;
+        }
+        public java.util.List<String> getAffiliatedRiskTypes() {
+            return this.affiliatedRiskTypes;
+        }
+
+        public ListCheckItemWarningSummaryResponseBodyList setAffiliatedRisks(java.util.List<String> affiliatedRisks) {
+            this.affiliatedRisks = affiliatedRisks;
+            return this;
+        }
+        public java.util.List<String> getAffiliatedRisks() {
+            return this.affiliatedRisks;
         }
 
         public ListCheckItemWarningSummaryResponseBodyList setAlias(String alias) {
