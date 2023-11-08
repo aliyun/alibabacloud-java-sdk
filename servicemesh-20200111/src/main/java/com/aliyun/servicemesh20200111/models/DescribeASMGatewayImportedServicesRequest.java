@@ -11,13 +11,13 @@ public class DescribeASMGatewayImportedServicesRequest extends TeaModel {
     public String ASMGatewayName;
 
     /**
-     * <p>The ID of the ASM instance.</p>
+     * <p>The ASM instance ID.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
     /**
-     * <p>The namespace in which the service resides.</p>
+     * <p>The namespace in which the services reside.</p>
      */
     @NameInMap("ServiceNamespace")
     public String serviceNamespace;

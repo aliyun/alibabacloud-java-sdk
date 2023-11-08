@@ -4,15 +4,27 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class UpdateControlPlaneLogConfigRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to collect control plane logs to Simple Log Service.</p>
+     */
     @NameInMap("Enabled")
     public Boolean enabled;
 
+    /**
+     * <p>The time to live (TTL) period of the collected logs. Unit: day.</p>
+     */
     @NameInMap("LogTTLInDay")
     public Integer logTTLInDay;
 
+    /**
+     * <p>The name of the Simple Log Service project to which control plane logs are collected.</p>
+     */
     @NameInMap("Project")
     public String project;
 
+    /**
+     * <p>The ID of the Service Mesh (ASM) instance.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 

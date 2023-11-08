@@ -422,7 +422,7 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
 
     public static class UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsRetries extends TeaModel {
         /**
-         * <p>The number of retries allowed for a request.</p>
+         * <p>The number of retries that are allowed for a request.</p>
          */
         @NameInMap("Attempts")
         public Integer attempts;
@@ -835,6 +835,9 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class UpdateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestinationPort extends TeaModel {
+        /**
+         * <p>The port number.</p>
+         */
         @NameInMap("Number")
         public Integer number;
 
@@ -860,6 +863,11 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>The port of the destination service.</p>
+         * <br>
+         * <p>>  If the destination service of the route has only one port, this field can be left empty. If the destination service has multiple ports, you must specify the port number.</p>
+         */
         @NameInMap("Port")
         public UpdateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestinationPort port;
 
@@ -937,6 +945,9 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class UpdateIstioGatewayRoutesRequestGatewayRoute extends TeaModel {
+        /**
+         * <p>The list of requested domain names.</p>
+         */
         @NameInMap("Domains")
         public java.util.List<String> domains;
 
@@ -953,11 +964,14 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
         public UpdateIstioGatewayRoutesRequestGatewayRouteMatchRequest matchRequest;
 
         /**
-         * <p>The namespace in which the destination service resides.</p>
+         * <p>The namespace.</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The original YAML file of the virtual service that is serialized in a JSON string.</p>
+         */
         @NameInMap("RawVSRoute")
         public Object rawVSRoute;
 

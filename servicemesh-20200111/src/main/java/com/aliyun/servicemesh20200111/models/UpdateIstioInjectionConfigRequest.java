@@ -4,6 +4,12 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class UpdateIstioInjectionConfigRequest extends TeaModel {
+    /**
+     * <p>The data plane mode of the namespace. This parameter is valid only when the Ambient Mesh mode is enabled for the current Service Mesh (ASM) instance. Valid values:</p>
+     * <br>
+     * <p>*   ambient: sets the data plane mode of the namespace to the Ambient Mesh mode.</p>
+     * <p>*   sidecar: sets the data plane mode of the namespace to the Sidecar mode.</p>
+     */
     @NameInMap("DataPlaneMode")
     public String dataPlaneMode;
 

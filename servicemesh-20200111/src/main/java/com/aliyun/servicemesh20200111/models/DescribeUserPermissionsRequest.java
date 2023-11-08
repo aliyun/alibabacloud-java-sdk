@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUserPermissionsRequest extends TeaModel {
     /**
-     * <p>The ID of the RAM user or RAM role.</p>
+     * <p>The ID of a RAM user or RAM role.</p>
      */
     @NameInMap("SubAccountUserId")
     public String subAccountUserId;

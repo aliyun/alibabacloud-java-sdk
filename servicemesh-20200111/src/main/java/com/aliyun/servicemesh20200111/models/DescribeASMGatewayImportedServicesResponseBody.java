@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeASMGatewayImportedServicesResponseBody extends TeaModel {
     /**
-     * <p>The imported services.</p>
+     * <p>The list of the imported services.</p>
      */
     @NameInMap("ImportedServices")
     public java.util.List<DescribeASMGatewayImportedServicesResponseBodyImportedServices> importedServices;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,7 +39,7 @@ public class DescribeASMGatewayImportedServicesResponseBody extends TeaModel {
 
     public static class DescribeASMGatewayImportedServicesResponseBodyImportedServices extends TeaModel {
         /**
-         * <p>The name of the service.</p>
+         * <p>The name of a service.</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;

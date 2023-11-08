@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSwimLaneListResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,7 +57,7 @@ public class GetSwimLaneListResponseBody extends TeaModel {
         public String ingressService;
 
         /**
-         * <p>The label key of the associated service workload. Fixed value: `ASM_TRAFFIC_TAG`.</p>
+         * <p>The label key of the associated service workload. The value is fixed as `ASM_TRAFFIC_TAG`.</p>
          */
         @NameInMap("LabelSelectorKey")
         public String labelSelectorKey;
@@ -69,7 +69,7 @@ public class GetSwimLaneListResponseBody extends TeaModel {
         public String labelSelectorValue;
 
         /**
-         * <p>The name of the lane.</p>
+         * <p>The name of a lane.</p>
          */
         @NameInMap("Name")
         public String name;

@@ -20,7 +20,7 @@ public class CreateIstioGatewayDomainsRequest extends TeaModel {
     public Boolean forceHttps;
 
     /**
-     * <p>The domain names of the one or more hosts that are exposed by the ASM gateway. Separate multiple domain names with commas (,).</p>
+     * <p>The one or more domain names that are exposed by the ASM gateway. Separate multiple domain names with commas (,).</p>
      */
     @NameInMap("Hosts")
     public String hosts;
@@ -62,7 +62,7 @@ public class CreateIstioGatewayDomainsRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The ID of the ASM instance.</p>
+     * <p>The ASM instance ID.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

@@ -11,7 +11,7 @@ public class DescribeServiceMeshLogsResponseBody extends TeaModel {
     public java.util.List<DescribeServiceMeshLogsResponseBodyLogs> logs;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -51,7 +51,7 @@ public class DescribeServiceMeshLogsResponseBody extends TeaModel {
         public String log;
 
         /**
-         * <p>The ID of the ASM instance.</p>
+         * <p>The ASM instance ID.</p>
          */
         @NameInMap("ServiceMeshId")
         public String serviceMeshId;

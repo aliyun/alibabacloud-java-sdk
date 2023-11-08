@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeUsersWithPermissionsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The IDs of the RAM users or RAM roles to which an RBAC role is assigned.</p>
+     * <p>The list of the IDs of the RAM users or RAM roles to which an RBAC role is assigned.</p>
      */
     @NameInMap("UIDs")
     public java.util.List<String> UIDs;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeGuestClusterPodsResponseBody extends TeaModel {
     /**
-     * <p>The names of the queried pods.</p>
+     * <p>The list of the names of the queried pods.</p>
      */
     @NameInMap("PodList")
     public java.util.List<String> podList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

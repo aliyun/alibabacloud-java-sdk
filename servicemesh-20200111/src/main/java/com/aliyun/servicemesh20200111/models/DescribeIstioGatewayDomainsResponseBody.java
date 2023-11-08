@@ -11,7 +11,7 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
     public java.util.List<DescribeIstioGatewayDomainsResponseBodyGatewaySecretDetails> gatewaySecretDetails;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -51,11 +51,14 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
         public String detail;
 
         /**
-         * <p>The domain name.</p>
+         * <p>The list of domain names.</p>
          */
         @NameInMap("Domains")
         public java.util.List<String> domains;
 
+        /**
+         * <p>The name of the Istio gateway.</p>
+         */
         @NameInMap("GatewayCRName")
         public String gatewayCRName;
 
@@ -66,7 +69,7 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The name of the port.</p>
+         * <p>The port name.</p>
          */
         @NameInMap("PortName")
         public String portName;

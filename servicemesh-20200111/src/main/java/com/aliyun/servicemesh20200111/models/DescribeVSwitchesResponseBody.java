@@ -117,7 +117,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>交换机所属的可用区。</p>
+         * <p>The zone to which the switch belongs.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

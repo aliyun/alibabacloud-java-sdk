@@ -11,7 +11,7 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
     public java.util.List<DescribeUserPermissionsResponseBodyPermissions> permissions;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -45,7 +45,7 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
         public String isRamRole;
 
         /**
-         * <p>This parameter is required by the system. The return value is fixed to `0`.</p>
+         * <p>The value is fixed as `0`.</p>
          */
         @NameInMap("ParentId")
         public String parentId;
@@ -57,7 +57,7 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>This parameter is required by the system. The return value is fixed to `cluster`.</p>
+         * <p>The value is fixed as `cluster`.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -65,7 +65,7 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
         /**
          * <p>The name of the permissions. Valid values:</p>
          * <br>
-         * <p>*   `istio-admin`: the permissions of Alibaba Cloud Service Mesh (ASM) administrators.</p>
+         * <p>*   `istio-admin`: the permissions of ASM administrators.</p>
          * <p>*   `istio-ops`: the permissions of ASM restricted users.</p>
          * <p>*   `istio-readonly`: the read-only permissions.</p>
          */
@@ -73,7 +73,7 @@ public class DescribeUserPermissionsResponseBody extends TeaModel {
         public String roleName;
 
         /**
-         * <p>This parameter is required by the system. The return value is fixed to `custom`.</p>
+         * <p>The value is fixed as `custom`.</p>
          */
         @NameInMap("RoleType")
         public String roleType;

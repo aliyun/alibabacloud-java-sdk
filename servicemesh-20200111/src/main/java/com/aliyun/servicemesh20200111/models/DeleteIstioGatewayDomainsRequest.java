@@ -17,25 +17,25 @@ public class DeleteIstioGatewayDomainsRequest extends TeaModel {
     public String istioGatewayName;
 
     /**
-     * <p>The maximum number of ASM gateways to query.</p>
+     * <p>The maximum number of Istio gateways to query.</p>
      */
     @NameInMap("Limit")
     public String limit;
 
     /**
-     * <p>The namespace in which the ASM gateway resides.</p>
+     * <p>The name of the namespace.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>The name of the port.</p>
+     * <p>The port name.</p>
      */
     @NameInMap("PortName")
     public String portName;
 
     /**
-     * <p>The ID of the ASM instance.</p>
+     * <p>The ASM instance ID.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

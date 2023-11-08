@@ -11,7 +11,7 @@ public class DescribeClusterGrafanaResponseBody extends TeaModel {
     public java.util.List<DescribeClusterGrafanaResponseBodyDashboards> dashboards;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -45,7 +45,7 @@ public class DescribeClusterGrafanaResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>The endpoint of the Grafana dashboard.</p>
+         * <p>The endpoint of a Grafana dashboard.</p>
          */
         @NameInMap("Url")
         public String url;

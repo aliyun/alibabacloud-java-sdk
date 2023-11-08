@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeImportedServicesDetailResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the clusters to which the service belongs.</p>
+     * <p>The details of the services.</p>
      */
     @NameInMap("Details")
     public java.util.List<DescribeImportedServicesDetailResponseBodyDetails> details;
 
     /**
-     * <p>The labels of the service.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,23 +39,32 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
 
     public static class DescribeImportedServicesDetailResponseBodyDetailsPorts extends TeaModel {
         /**
-         * <p>The container port.</p>
+         * <p>The name of a port.</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The node port.</p>
+         */
         @NameInMap("NodePort")
         public Integer nodePort;
 
+        /**
+         * <p>The port number.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
         /**
-         * <p>The node port.</p>
+         * <p>The protocol of the port.</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The container port.</p>
+         */
         @NameInMap("TargetPort")
         public Integer targetPort;
 
@@ -108,37 +117,37 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
 
     public static class DescribeImportedServicesDetailResponseBodyDetails extends TeaModel {
         /**
-         * <p>The name of the port.</p>
+         * <p>The clusters on the data plane.</p>
          */
         @NameInMap("ClusterIds")
         public java.util.List<String> clusterIds;
 
         /**
-         * <p>The ports declared for the service.</p>
+         * <p>The labels of the service.</p>
          */
         @NameInMap("Labels")
         public java.util.Map<String, String> labels;
 
         /**
-         * <p>Kubernetes</p>
+         * <p>The namespace in which the service resides.</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
-         * <p>The port number.</p>
+         * <p>The ports declared for the service.</p>
          */
         @NameInMap("Ports")
         public java.util.List<DescribeImportedServicesDetailResponseBodyDetailsPorts> ports;
 
         /**
-         * <p>The type of the service.</p>
+         * <p>The name of a service.</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
-         * <p>The protocol of the port.</p>
+         * <p>The type of the service.</p>
          */
         @NameInMap("ServiceType")
         public String serviceType;

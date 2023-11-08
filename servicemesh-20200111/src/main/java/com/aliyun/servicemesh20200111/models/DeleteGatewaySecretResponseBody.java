@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteGatewaySecretResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The record of deleting the secret.</p>
+     * <p>The records of deleting the secret in all clusters.</p>
      */
     @NameInMap("SecretDeleteRecord")
     public java.util.Map<String, SecretDeleteRecordValue> secretDeleteRecord;

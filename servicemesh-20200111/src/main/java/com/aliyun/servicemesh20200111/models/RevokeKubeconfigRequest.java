@@ -14,7 +14,7 @@ public class RevokeKubeconfigRequest extends TeaModel {
     public Boolean privateIpAddress;
 
     /**
-     * <p>The ID of the ASM instance for which you want to revoke a kubeconfig file.</p>
+     * <p>The ID of the ASM instance for which you want to revoke its kubeconfig file.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

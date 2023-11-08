@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeServiceMeshesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,7 +39,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
 
     public static class DescribeServiceMeshesResponseBodyServiceMeshesEndpoints extends TeaModel {
         /**
-         * <p>The endpoint that is used to access the API server from the internal network.</p>
+         * <p>The endpoint that is used to access the API server over the internal network.</p>
          */
         @NameInMap("IntranetApiServerEndpoint")
         public String intranetApiServerEndpoint;
@@ -51,7 +51,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         public String intranetPilotEndpoint;
 
         /**
-         * <p>The endpoint that is used to expose the API server to the Internet.</p>
+         * <p>The endpoint that is used to access the API server over the Internet.</p>
          */
         @NameInMap("PublicApiServerEndpoint")
         public String publicApiServerEndpoint;
@@ -117,13 +117,13 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
 
     public static class DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo extends TeaModel {
         /**
-         * <p>The point in time when the ASM instance was created.</p>
+         * <p>The time when the ASM instance was created.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The error message that is returned when the call failed.</p>
+         * <p>The error message.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
@@ -144,7 +144,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         public String profile;
 
         /**
-         * <p>The ID of the region in which the ASM instance resides.</p>
+         * <p>The region ID of the ASM instance.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -156,13 +156,13 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         public String serviceMeshId;
 
         /**
-         * <p>The status of the ASM instance.</p>
+         * <p>The state of the ASM instance.</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
-         * <p>The point in time when the ASM instance was last modified.</p>
+         * <p>The time when the ASM instance was last modified.</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
@@ -260,10 +260,10 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         public String apiServerLoadbalancerId;
 
         /**
-         * <p>Indicates whether the API Server is exposed to the Internet. Valid values:</p>
+         * <p>Indicates whether the API server is exposed to the Internet. Valid values:</p>
          * <br>
-         * <p>*   `true`: The API server is exposed to the Internet.</p>
-         * <p>*   `false`: The API server is not exposed to the Internet.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("ApiServerPublicEip")
         public Boolean apiServerPublicEip;
@@ -271,8 +271,8 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether Istio Pilot is exposed to the Internet. Valid values:</p>
          * <br>
-         * <p>*   `true`: Istio Pilot is exposed to the Internet.</p>
-         * <p>*   `false`: Istio Pilot is not exposed to the Internet.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("PilotPublicEip")
         public Boolean pilotPublicEip;
@@ -326,14 +326,14 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the support for HTTP 1.0 is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`: The support for HTTP 1.0 is enabled.</p>
-         * <p>*   `false`: The support for HTTP 1.0 is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("Http10Enabled")
         public Boolean http10Enabled;
 
         /**
-         * <p>The sampling percentage of tracing.</p>
+         * <p>The sampling rate when Tracing Analysis is enabled.</p>
          */
         @NameInMap("TraceSampling")
         public Float traceSampling;
@@ -365,14 +365,14 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether elevated privileges are required for the istio-init container when you perform traffic redirection for the istio-proxy container. Valid values:</p>
          * <br>
-         * <p>*   `true`: Elevated privileges are required for the istio-init container.</p>
-         * <p>*   `false`: Elevated privileges are not required for the istio-init container.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
-         * <p>The namespace for which sidecar injection is disabled.</p>
+         * <p>The namespace for which sidecar proxy injection is disabled.</p>
          */
         @NameInMap("ExcludeNamespaces")
         public String excludeNamespaces;
@@ -402,16 +402,16 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
 
     public static class DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigSidecarInjector extends TeaModel {
         /**
-         * <p>Indicates whether automatic sidecar injection is enabled by using annotations.</p>
+         * <p>Indicates whether automatic sidecar proxy injection is enabled by using annotations.</p>
          */
         @NameInMap("AutoInjectionPolicyEnabled")
         public Boolean autoInjectionPolicyEnabled;
 
         /**
-         * <p>Indicates whether automatic sidecar injection is enabled for all namespaces. Valid values:</p>
+         * <p>Indicates whether automatic sidecar proxy injection is enabled for all namespaces. Valid values:</p>
          * <br>
-         * <p>*   `true`: Automatic sidecar injection is enabled for all namespaces.</p>
-         * <p>*   `false`: Automatic sidecar injection is disabled for all namespaces.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("EnableNamespacesByDefault")
         public Boolean enableNamespacesByDefault;
@@ -455,10 +455,10 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
 
     public static class DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfig extends TeaModel {
         /**
-         * <p>Indicates whether the feature of routing traffic to the nearest instance is enabled. Valid values:</p>
+         * <p>Indicates whether nearby access is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`: The feature is enabled.</p>
-         * <p>*   `false`: The feature is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("Mtls")
         public Boolean mtls;
@@ -479,7 +479,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigPilot pilot;
 
         /**
-         * <p>The configurations of sidecar injection.</p>
+         * <p>The configurations of sidecar proxy injection.</p>
          */
         @NameInMap("SidecarInjector")
         public DescribeServiceMeshesResponseBodyServiceMeshesSpecMeshConfigSidecarInjector sidecarInjector;
@@ -491,10 +491,10 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         public Boolean strictMtls;
 
         /**
-         * <p>Indicates whether Prometheus monitoring is enabled. We recommend that you use Prometheus Service of Application Real-Time Monitoring Service (ARMS). Valid values:</p>
+         * <p>Indicates whether Prometheus monitoring is enabled. We recommend that you use Managed Service for Prometheus. Valid values:</p>
          * <br>
-         * <p>*   `true`: Prometheus monitoring is enabled.</p>
-         * <p>*   `false`: Prometheus monitoring is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("Telemetry")
         public Boolean telemetry;
@@ -502,8 +502,8 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the tracing feature is enabled. This feature can be enabled only after Tracing Analysis is activated. Valid values:</p>
          * <br>
-         * <p>*   `true`: The tracing feature is enabled.</p>
-         * <p>*   `false`: The tracing feature is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("Tracing")
         public Boolean tracing;
@@ -579,7 +579,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The IDs of vSwitches.</p>
+         * <p>The IDs of the vSwitches.</p>
          */
         @NameInMap("VSwitches")
         public java.util.List<String> vSwitches;
@@ -705,21 +705,21 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         /**
          * <p>The edition of the ASM instance. Valid values:</p>
          * <br>
-         * <p>- `standard`: Standard Edition</p>
-         * <p>- `enterprise`: Enterprise Edition</p>
-         * <p>- `ultimate`: Ultimate Edition</p>
+         * <p>*   `standard`: Standard Edition</p>
+         * <p>*   `enterprise`: Enterprise Edition</p>
+         * <p>*   `ultimate`: Ultimate Edition</p>
          */
         @NameInMap("ClusterSpec")
         public String clusterSpec;
 
         /**
-         * <p>The information about the clusters.</p>
+         * <p>The clusters.</p>
          */
         @NameInMap("Clusters")
         public java.util.List<String> clusters;
 
         /**
-         * <p>All endpoints of the ASM instance.</p>
+         * <p>The information about all endpoints of the ASM instances.</p>
          */
         @NameInMap("Endpoints")
         public DescribeServiceMeshesResponseBodyServiceMeshesEndpoints endpoints;
@@ -733,14 +733,14 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         /**
          * <p>The Alibaba Cloud service for which the ASM instance is created. Valid values:</p>
          * <br>
-         * <p>- `ackone`: The ASM instance is created for Alibaba Cloud Distributed Cloud Container Platform (ACK One).</p>
-         * <p>- An empty value indicates that the ASM instance is created by the user.</p>
+         * <p>*   `ackone`: The ASM instance is created for Alibaba Cloud Distributed Cloud Container Platform (ACK One).</p>
+         * <p>*   An empty value indicates that the ASM instance is created by the user.</p>
          */
         @NameInMap("OwnerType")
         public String ownerType;
 
         /**
-         * <p>The basic information about the ASM instance.</p>
+         * <p>The basic information about the ASM instances.</p>
          */
         @NameInMap("ServiceMeshInfo")
         public DescribeServiceMeshesResponseBodyServiceMeshesServiceMeshInfo serviceMeshInfo;
@@ -753,6 +753,9 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
 
         @NameInMap("Tag")
         public java.util.List<DescribeServiceMeshesResponseBodyServiceMeshesTag> tag;
+
+        @NameInMap("Upgradable")
+        public Boolean upgradable;
 
         public static DescribeServiceMeshesResponseBodyServiceMeshes build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshesResponseBodyServiceMeshes self = new DescribeServiceMeshesResponseBodyServiceMeshes();
@@ -821,6 +824,14 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         }
         public java.util.List<DescribeServiceMeshesResponseBodyServiceMeshesTag> getTag() {
             return this.tag;
+        }
+
+        public DescribeServiceMeshesResponseBodyServiceMeshes setUpgradable(Boolean upgradable) {
+            this.upgradable = upgradable;
+            return this;
+        }
+        public Boolean getUpgradable() {
+            return this.upgradable;
         }
 
     }

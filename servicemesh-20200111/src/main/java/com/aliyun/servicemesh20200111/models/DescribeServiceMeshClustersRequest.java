@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeServiceMeshClustersRequest extends TeaModel {
     /**
-     * <p>The maximum number of clusters in a cluster list.</p>
+     * <p>The maximum number of entries per page.</p>
      */
     @NameInMap("Limit")
     public Long limit;
@@ -17,7 +17,7 @@ public class DescribeServiceMeshClustersRequest extends TeaModel {
     public Long offset;
 
     /**
-     * <p>The ID of the ASM instance.</p>
+     * <p>The ASM instance ID.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

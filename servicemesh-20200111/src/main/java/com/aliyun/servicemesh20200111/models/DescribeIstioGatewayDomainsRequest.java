@@ -11,7 +11,7 @@ public class DescribeIstioGatewayDomainsRequest extends TeaModel {
     public String istioGatewayName;
 
     /**
-     * <p>The maximum number of ASM gateways to query.</p>
+     * <p>The maximum number of Istio gateways to query.</p>
      */
     @NameInMap("Limit")
     public String limit;
@@ -23,7 +23,7 @@ public class DescribeIstioGatewayDomainsRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The ID of the ASM instance.</p>
+     * <p>The ASM instance ID.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

@@ -11,13 +11,13 @@ public class DescribeGuestClusterPodsRequest extends TeaModel {
     public String guestClusterID;
 
     /**
-     * <p>The name of the namespace.</p>
+     * <p>The namespace.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>The ID of the ASM instance.</p>
+     * <p>The ASM instance ID.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

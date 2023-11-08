@@ -498,7 +498,7 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     public String OPAInjectorCPURequirement;
 
     /**
-     * <p>Specifies whether to create an SLB instance for accessing the ASM mesh topology.</p>
+     * <p>Specifies whether to create a CLB instance for accessing the ASM mesh topology.</p>
      */
     @NameInMap("OPAInjectorMemoryLimit")
     public String OPAInjectorMemoryLimit;

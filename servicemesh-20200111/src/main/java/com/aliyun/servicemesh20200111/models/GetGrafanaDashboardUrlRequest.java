@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetGrafanaDashboardUrlRequest extends TeaModel {
     /**
-     * <p>The ID of the Container Service for Kubernetes (ACK) or serverless Kubernetes (ASK) cluster.</p>
+     * <p>The ID of the Container Service for Kubernetes (ACK) or ACK Serverless cluster.</p>
      */
     @NameInMap("K8sClusterId")
     public String k8sClusterId;
 
     /**
-     * <p>The ID of the Alibaba Cloud Service Mesh (ASM) instance.</p>
+     * <p>The ID of the Service Mesh (ASM) instance.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
