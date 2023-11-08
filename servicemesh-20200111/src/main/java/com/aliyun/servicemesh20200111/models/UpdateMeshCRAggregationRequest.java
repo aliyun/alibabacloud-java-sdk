@@ -20,7 +20,7 @@ public class UpdateMeshCRAggregationRequest extends TeaModel {
      * <p>Specifies whether to enable the Kubernetes API on the data plane to access Istio resources in the ASM instance. Valid values:</p>
      * <br>
      * <p>*   `true`: enables the Kubernetes API to access Istio resources in the ASM instance.</p>
-     * <p>*   `false`: does not enable the Kubernetes API to access Istio resources in the ASM instance.</p>
+     * <p>*   `false`: disables the Kubernetes API to access Istio resources in the ASM instance.</p>
      */
     @NameInMap("Enabled")
     public Boolean enabled;
@@ -38,7 +38,7 @@ public class UpdateMeshCRAggregationRequest extends TeaModel {
     public String memoryRequirement;
 
     /**
-     * <p>The ID of the Alibaba Cloud Service Mesh (ASM) instance.</p>
+     * <p>The Service Mesh (ASM) instance ID.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

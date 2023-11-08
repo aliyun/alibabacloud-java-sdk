@@ -14,7 +14,7 @@ public class ReActivateAuditRequest extends TeaModel {
     public Boolean enableAudit;
 
     /**
-     * <p>The ID of the Alibaba Cloud Service Mesh (ASM) instance.</p>
+     * <p>The ID of the Service Mesh (ASM) instance.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

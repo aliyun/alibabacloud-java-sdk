@@ -23,13 +23,13 @@ public class CreateSwimLaneRequest extends TeaModel {
     public String labelSelectorValue;
 
     /**
-     * <p>The ID of the ASM instance.</p>
+     * <p>The ID of the Service Mesh (ASM) instance.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
     /**
-     * <p>The list of services associated with the lane. The value is a JSON array. The format of a single service is `$Cluster name /$Cluster ID/$Namespace/$Service name`.</p>
+     * <p>The list of services associated with the lane. The value is a JSON array. The format of a single service is `$Cluster name/$Cluster ID/$Namespace/$Service name`.</p>
      */
     @NameInMap("ServicesList")
     public String servicesList;

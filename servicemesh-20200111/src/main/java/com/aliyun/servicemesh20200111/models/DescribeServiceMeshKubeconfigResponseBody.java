@@ -4,6 +4,9 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceMeshKubeconfigResponseBody extends TeaModel {
+    /**
+     * <p>The expiration time of the kubeconfig certificate. The format is: YYYY-MM-DD hh: mm: ss.</p>
+     */
     @NameInMap("ExpireTime")
     public String expireTime;
 
@@ -14,7 +17,7 @@ public class DescribeServiceMeshKubeconfigResponseBody extends TeaModel {
     public String kubeconfig;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

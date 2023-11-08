@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeServiceMeshUpgradeStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The fully qualified names of ingress gateways in the ASM instance. Separate multiple names with commas (,).</p>
      */
     @NameInMap("AllIstioGatewayFullNames")
     public String allIstioGatewayFullNames;
 
     /**
-     * <p>The fully qualified names of ingress gateways in the ASM instance. Separate multiple names with commas (,).</p>
+     * <p>The IDs of the clusters on the data plane of the ASM instance. Separate multiple clusters with commas (,).</p>
      */
     @NameInMap("GuestClusterIds")
     public String guestClusterIds;
 
     /**
-     * <p>The IDs of the clusters on the data plane of the ASM instance. Separate multiple clusters with commas (,).</p>
+     * <p>The ASM instance ID.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

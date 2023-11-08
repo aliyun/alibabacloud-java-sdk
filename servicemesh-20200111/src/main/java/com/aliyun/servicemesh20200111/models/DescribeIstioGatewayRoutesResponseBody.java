@@ -50,9 +50,15 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Destination hosts list.</p>
+         */
         @NameInMap("DestinationHost")
         public java.util.List<String> destinationHost;
 
+        /**
+         * <p>Destination subset list.</p>
+         */
         @NameInMap("DestinationSubSet")
         public java.util.List<String> destinationSubSet;
 

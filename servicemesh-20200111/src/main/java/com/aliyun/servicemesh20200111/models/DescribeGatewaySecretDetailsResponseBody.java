@@ -11,7 +11,7 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
     public java.util.List<DescribeGatewaySecretDetailsResponseBodyGatewaySecretDetails> gatewaySecretDetails;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -64,7 +64,7 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The Server Name Indication (SNI) value that indicates the hostname of the service.</p>
+         * <p>The Server Name Indication (SNI) value.</p>
          */
         @NameInMap("SNI")
         public String SNI;

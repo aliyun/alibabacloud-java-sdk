@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -51,7 +51,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public String intranetPilotEndpoint;
 
         /**
-         * <p>The endpoint that is used to expose the API server to the Internet.</p>
+         * <p>The endpoint that is used to access the API server over the Internet.</p>
          */
         @NameInMap("PublicApiServerEndpoint")
         public String publicApiServerEndpoint;
@@ -109,7 +109,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The error message that is returned when the call failed.</p>
+         * <p>The returned error message.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
@@ -124,7 +124,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
          * <p>The edition of the ASM instance. Valid values:</p>
          * <br>
          * <p>*   `Default`: Standard Edition</p>
-         * <p>*   `Pro`: Professional Edition</p>
+         * <p>*   `Pro`: Enterprise Edition and Ultimate Edition</p>
          */
         @NameInMap("Profile")
         public String profile;
@@ -136,13 +136,13 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the ASM instance.</p>
+         * <p>The ASM instance ID.</p>
          */
         @NameInMap("ServiceMeshId")
         public String serviceMeshId;
 
         /**
-         * <p>The status of the ASM instance.</p>
+         * <p>The state of the ASM instance.</p>
          */
         @NameInMap("State")
         public String state;
@@ -240,7 +240,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecLoadBalancer extends TeaModel {
         /**
-         * <p>The ID of the SLB instance that is used when the API server is exposed to the Internet.</p>
+         * <p>The ID of the CLB instance that is used when the API server is exposed to the Internet.</p>
          */
         @NameInMap("ApiServerLoadbalancerId")
         public String apiServerLoadbalancerId;
@@ -248,8 +248,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the API server is exposed to the Internet. Valid values:</p>
          * <br>
-         * <p>*   `true`: The API server is exposed to the Internet.</p>
-         * <p>*   `false`: The API server is not exposed to the Internet.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("ApiServerPublicEip")
         public Boolean apiServerPublicEip;
@@ -257,14 +257,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether Istio Pilot is exposed to the Internet. Valid values:</p>
          * <br>
-         * <p>*   `true`: Istio Pilot is exposed to the Internet.</p>
-         * <p>*   `false`: Istio Pilot is not exposed to the Internet.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("PilotPublicEip")
         public Boolean pilotPublicEip;
 
         /**
-         * <p>The ID of the Server Load Balancer (SLB) instance that is used when Istio Pilot is exposed to the Internet.</p>
+         * <p>The ID of the Classic Load Balancer (CLB) instance that is used when Istio Pilot is exposed to the Internet.</p>
          */
         @NameInMap("PilotPublicLoadbalancerId")
         public String pilotPublicLoadbalancerId;
@@ -312,14 +312,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether access log collection is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`: Access log collection is enabled.</p>
-         * <p>*   `false`: Access log collection is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
-         * <p>The name of the Log Service project that stores access logs.</p>
+         * <p>The name of the Simple Log Service project that stores access logs.</p>
          */
         @NameInMap("Project")
         public String project;
@@ -360,14 +360,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether mesh audit is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`: Mesh audit is enabled.</p>
-         * <p>*   `false`: Mesh audit is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
-         * <p>The name of the Log Service project that is used for mesh audit.</p>
+         * <p>The name of the Simple Log Service project that is used for mesh audit.</p>
          */
         @NameInMap("Project")
         public String project;
@@ -405,10 +405,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigControlPlaneLogInfo extends TeaModel {
         /**
-         * <p>Indicates whether the collection of control-plane logs is enabled. Valid values:</p>
+         * <p>Indicates whether the collection of control plane logs is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`: The collection of control-plane logs is enabled.</p>
-         * <p>*   `false`: The collection of control-plane logs is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
@@ -417,7 +417,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public Integer logTTL;
 
         /**
-         * <p>The name of the Log Service project that stores control-plane logs.</p>
+         * <p>The name of the Simple Log Service project that stores control plane logs.</p>
          */
         @NameInMap("Project")
         public String project;
@@ -508,7 +508,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public Boolean gatewayEnabled;
 
         /**
-         * <p>The retention period for the access logs of the ingress gateway. Unit: day. The logs are collected by using the Log Service. For example, a value of 30 indicates that the logs are retained for 30 days.</p>
+         * <p>The retention period for the access logs of the ingress gateway. Unit: day. The logs are collected by using Simple Log Service. For example, the value 30 indicates that the logs are retained for 30 days.</p>
          */
         @NameInMap("GatewayLifecycle")
         public Integer gatewayLifecycle;
@@ -517,7 +517,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public Boolean sidecarEnabled;
 
         /**
-         * <p>The retention period for the access logs of sidecar proxies. Unit: day. The logs are collected by using the Log Service. For example, a value of 30 indicates that the logs are retained for 30 days.</p>
+         * <p>The retention period for the access logs of sidecar proxies. Unit: day. The logs are collected by using Simple Log Service. For example, the value 30 indicates that the logs are retained for 30 days.</p>
          */
         @NameInMap("SidecarLifecycle")
         public Integer sidecarLifecycle;
@@ -763,7 +763,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAutoDiagnosis extends TeaModel {
         /**
-         * <p>Indicates whether automatic diagnosis is enabled for the ASM instance. If you enable this feature, the ASM instance is automatically diagnosed five minutes after you modify an Istio resource.</p>
+         * <p>Indicates whether automatic diagnostics is enabled for the ASM instance. If you enable this feature, the ASM instance is automatically diagnosed 5 minutes after you modify an Istio resource.</p>
          */
         @NameInMap("AutoDiagnosisEnabled")
         public Boolean autoDiagnosisEnabled;
@@ -809,8 +809,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the rollback feature for Istio resources is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`: The rollback feature for Istio resources is enabled.</p>
-         * <p>*   `false`: The rollback feature for Istio resources is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("EnableHistory")
         public Boolean enableHistory;
@@ -832,7 +832,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePostStartExec extends TeaModel {
         /**
-         * <p>The executed command.</p>
+         * <p>The executed commands. The value is a string that consists of JSON arrays.</p>
          */
         @NameInMap("command")
         public java.util.List<String> command;
@@ -1040,7 +1040,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationLifecyclePreStopExec extends TeaModel {
         /**
-         * <p>The executed command.</p>
+         * <p>The executed commands. The value is a string that consists of JSON arrays.</p>
          */
         @NameInMap("command")
         public java.util.List<String> command;
@@ -1286,8 +1286,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether MulitiBuffer-based TLS acceleration is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`: MulitiBuffer-based TLS acceleration is enabled.</p>
-         * <p>*   `false`: MulitiBuffer-based TLS acceleration is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
@@ -1361,8 +1361,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the feature of controlling the OPA injection scope is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`: The feature is enabled.</p>
-         * <p>*   `false`: The feature is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("OPAScopeInjected")
         public Boolean OPAScopeInjected;
@@ -1456,7 +1456,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfiguration extends TeaModel {
         /**
-         * <p>The configurations of additional features for access log collection</p>
+         * <p>The configurations of additional features for access log collection.</p>
          */
         @NameInMap("AccessLogExtraConf")
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAccessLogExtraConf accessLogExtraConf;
@@ -1468,7 +1468,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAdaptiveXdsConfiguration adaptiveXdsConfiguration;
 
         /**
-         * <p>The configurations of automatic diagnosis for the ASM instance.</p>
+         * <p>The configurations of automatic diagnostics for the ASM instance.</p>
          */
         @NameInMap("AutoDiagnosis")
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAutoDiagnosis autoDiagnosis;
@@ -1482,14 +1482,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the Kubernetes API of clusters on the data plane can be used to access Istio resources. Valid values:</p>
          * <br>
-         * <p>*   `true`: The Kubernetes API of clusters on the data plane can be used to access Istio resources.</p>
-         * <p>*   `false`: The Kubernetes API of clusters on the data plane cannot be used to access Istio resources.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("CRAggregationEnabled")
         public Boolean CRAggregationEnabled;
 
         /**
-         * <p>The label selectors used to specify namespaces on the data plane. The control plane discovers and process only application services in the specified namespaces.</p>
+         * <p>The label selectors used to specify the namespaces of the clusters on the data plane. The control plane discovers and processes only application services in the specified namespaces.</p>
          */
         @NameInMap("DiscoverySelectors")
         public java.util.List<java.util.Map<String, ?>> discoverySelectors;
@@ -1531,7 +1531,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationSidecarProxyInitResourceLimit sidecarProxyInitResourceLimit;
 
         /**
-         * <p>The resources that are requested by the istio-init container.</p>
+         * <p>The resources that are required by the istio-init container.</p>
          */
         @NameInMap("SidecarProxyInitResourceRequest")
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationSidecarProxyInitResourceRequest sidecarProxyInitResourceRequest;
@@ -1665,8 +1665,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether Gateway API is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`: Gateway API is enabled.</p>
-         * <p>*   `false`: Gateway API is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("GatewayAPIEnabled")
         public Boolean gatewayAPIEnabled;
@@ -1688,10 +1688,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigKiali extends TeaModel {
         /**
-         * <p>Indicates whether mesh topology is enabled. Mesh topology can be enabled only when Prometheus monitoring is enabled. If Prometheus monitoring is disabled, you must set this parameter to `false`. Valid values:</p>
+         * <p>Indicates whether mesh topology is enabled. Mesh topology can be enabled only when Prometheus monitoring is enabled. If Prometheus monitoring is disabled, you must set this parameter to `false`.`` Valid values:</p>
          * <br>
-         * <p>*   `true`: Mesh topology is enabled.</p>
-         * <p>*   `false`: Mesh topology is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
@@ -1729,7 +1729,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>The configurations of cross-region traffic distribution.</p>
          * <br>
-         * <p>>  Only one of `Failover` and Distribute parameters can be set. If you set the `Distribute` parameter, you cannot set the Failover parameter.</p>
+         * <p>>  Either `Failover` or Distribute can be set. If you set `Distribute`, you cannot set Failover.</p>
          */
         @NameInMap("Distribute")
         public java.util.Map<String, ?> distribute;
@@ -1737,8 +1737,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether cross-region load balancing is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`: Cross-region load balancing is enabled.</p>
-         * <p>*   `false`: Cross-region load balancing is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
@@ -1746,7 +1746,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>The configurations of cross-region failover.</p>
          * <br>
-         * <p>>  Only one of Failover and `Distribute` parameters can be set. If you set the `Failover` parameter, you cannot set the `Distribute` parameter.</p>
+         * <p>>  Either Failover or `Distribute` can be set. If you set `Failover`, you cannot set `Distribute`.</p>
          */
         @NameInMap("Failover")
         public java.util.Map<String, ?> failover;
@@ -1786,8 +1786,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether MSE is enabled. Valid values:</p>
          * <br>
-         * <p>- `true`: MSE is enabled.</p>
-         * <p>- `false`: MSE is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
@@ -1811,8 +1811,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the OPA plug-in is installed. Valid values:</p>
          * <br>
-         * <p>*   `true`: The OPA plug-in is installed.</p>
-         * <p>*   `false`: The OPA plug-in is not installed.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
@@ -1842,7 +1842,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public String requestCPU;
 
         /**
-         * <p>The size of the memory that is requested by the OPA proxy container.</p>
+         * <p>The size of the memory that is requested by OPA.</p>
          */
         @NameInMap("RequestMemory")
         public String requestMemory;
@@ -1906,8 +1906,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether communication is allowed between external services and services in the mesh. Valid values:</p>
          * <br>
-         * <p>*   `true`: The communication is allowed.</p>
-         * <p>*   `false`: The communication is not allowed.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
@@ -1945,8 +1945,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether Secret Discovery Service (SDS) is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`: SDS is enabled.</p>
-         * <p>*   `false`: SDS is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("EnableSDSServer")
         public Boolean enableSDSServer;
@@ -1954,8 +1954,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether gateway configuration filtering is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`: Gateway configuration filtering is enabled.</p>
-         * <p>*   `false`: Gateway configuration filtering is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("FilterGatewayClusterConfig")
         public Boolean filterGatewayClusterConfig;
@@ -1999,8 +1999,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether HTTP/1.0 is supported. Valid values:</p>
          * <br>
-         * <p>*   `true`: HTTP/1.0 is supported.</p>
-         * <p>*   `false`: HTTP/1.0 is not supported.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("Http10Enabled")
         public Boolean http10Enabled;
@@ -2060,8 +2060,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether a custom Prometheus instance is used. Valid values:</p>
          * <br>
-         * <p>*   `true`: A custom Prometheus instance is used.</p>
-         * <p>*   `false`: No custom Prometheus instance is used.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("UseExternal")
         public Boolean useExternal;
@@ -2093,8 +2093,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether Dubbo Filter is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`: Dubbo Filter is enabled.</p>
-         * <p>*   `false`: Dubbo Filter is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("DubboFilterEnabled")
         public Boolean dubboFilterEnabled;
@@ -2102,8 +2102,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether MySQL Filter is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`: MySQL Filter is enabled.</p>
-         * <p>*   `false`: MySQL Filter is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("MysqlFilterEnabled")
         public Boolean mysqlFilterEnabled;
@@ -2111,8 +2111,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether Redis Filter is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`: Redis Filter is enabled.</p>
-         * <p>*   `false`: Redis Filter is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("RedisFilterEnabled")
         public Boolean redisFilterEnabled;
@@ -2120,8 +2120,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether Thrift Filter is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`: Thrift Filter is enabled.</p>
-         * <p>*   `false`: Thrift Filter is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("ThriftFilterEnabled")
         public Boolean thriftFilterEnabled;
@@ -2181,8 +2181,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether gRPC Access Log Service (ALS) for Envoy is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`: gRPC ALS for Envoy is enabled.</p>
-         * <p>*   `false`: gRPC ALS for Envoy is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("AccessLogServiceEnabled")
         public Boolean accessLogServiceEnabled;
@@ -2206,10 +2206,10 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public String clusterDomain;
 
         /**
-         * <p>Indicates whether the Domain Name System (DNS) proxy feature is enabled. Valid values: Valid values:</p>
+         * <p>Indicates whether the Domain Name System (DNS) proxy feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`: The DNS proxy feature is enabled.</p>
-         * <p>*   `false`: The DNS proxy feature is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("EnableDNSProxying")
         public Boolean enableDNSProxying;
@@ -2337,8 +2337,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the CNI plug-in is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`: The CNI plug-in is enabled.</p>
-         * <p>*   `false`: The CNI plug-in is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
@@ -2374,19 +2374,19 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigSidecarInjector extends TeaModel {
         /**
-         * <p>Indicates whether automatic sidecar injection can be enabled by using pod annotations. Valid values:</p>
+         * <p>Indicates whether automatic sidecar proxy injection can be enabled by using pod annotations. Valid values:</p>
          * <br>
-         * <p>*   `true`: Automatic sidecar injection can be enabled by using pod annotations.</p>
-         * <p>*   `false`: Automatic sidecar injection cannot be enabled by using pod annotations.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("AutoInjectionPolicyEnabled")
         public Boolean autoInjectionPolicyEnabled;
 
         /**
-         * <p>Indicates whether automatic sidecar injection is enabled for all namespaces. Valid values:</p>
+         * <p>Indicates whether automatic sidecar proxy injection is enabled for all namespaces. Valid values:</p>
          * <br>
-         * <p>*   `true`: Automatic sidecar injection is enabled for all namespaces.</p>
-         * <p>*   `false`: Automatic sidecar injection is not enabled for all namespaces.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("EnableNamespacesByDefault")
         public Boolean enableNamespacesByDefault;
@@ -2398,37 +2398,37 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigSidecarInjectorInitCNIConfiguration initCNIConfiguration;
 
         /**
-         * <p>The maximum number of CPU cores that are available to the sidecar injector pod.</p>
+         * <p>The maximum number of CPU cores that are available to the pod where the sidecar injector resides.</p>
          */
         @NameInMap("LimitCPU")
         public String limitCPU;
 
         /**
-         * <p>The maximum size of the memory that is available to the sidecar injector pod.</p>
+         * <p>The maximum size of the memory that is available to the pod where the sidecar injector resides.</p>
          */
         @NameInMap("LimitMemory")
         public String limitMemory;
 
         /**
-         * <p>The number of CPU cores that are requested by the sidecar injector pod.</p>
+         * <p>The number of CPU cores that are requested by the pod where the sidecar injector resides.</p>
          */
         @NameInMap("RequestCPU")
         public String requestCPU;
 
         /**
-         * <p>The size of the memory that is requested by the sidecar injector pod.</p>
+         * <p>The size of the memory that is requested by the pod where the sidecar injector resides.</p>
          */
         @NameInMap("RequestMemory")
         public String requestMemory;
 
         /**
-         * <p>The number of component replicas that are used for sidecar injection. Default value: `1`.</p>
+         * <p>The number of component replicas that are used for sidecar proxy injection. Default value: `1`.</p>
          */
         @NameInMap("SidecarInjectorNum")
         public Integer sidecarInjectorNum;
 
         /**
-         * <p>Other configurations of automatic sidecar injection, in the YAML format. For more information, see [Enable automatic sidecar injection by using multiple methods](~~186136~~).</p>
+         * <p>Other configurations of automatic sidecar proxy injection, in the YAML format. For more information, see [Enable automatic sidecar proxy injection](~~186136~~).</p>
          */
         @NameInMap("SidecarInjectorWebhookAsYaml")
         public String sidecarInjectorWebhookAsYaml;
@@ -2516,8 +2516,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether WebAssembly Filter is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`:WebAssembly Filter is enabled.</p>
-         * <p>*   `false`: WebAssembly Filter is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
@@ -2551,7 +2551,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigAudit audit;
 
         /**
-         * <p>The configurations of control-plane log collection.</p>
+         * <p>The configurations of control plane log collection.</p>
          */
         @NameInMap("ControlPlaneLogInfo")
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigControlPlaneLogInfo controlPlaneLogInfo;
@@ -2559,8 +2559,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether a custom Zipkin system is used. Valid values:</p>
          * <br>
-         * <p>*   `true`: A custom Zipkin system is used.</p>
-         * <p>*   `false`: No custom Zipkin system is used.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("CustomizedZipkin")
         public Boolean customizedZipkin;
@@ -2574,8 +2574,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the feature that routes traffic to the nearest instance is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`: The feature is enabled.</p>
-         * <p>*   `false`: The feature is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("EnableLocalityLB")
         public Boolean enableLocalityLB;
@@ -2680,19 +2680,19 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigSidecarInjector sidecarInjector;
 
         /**
-         * <p>Indicates whether Prometheus monitoring is enabled. We recommend that you use [Prometheus Service of Application Real-Time Monitoring Service (ARMS)](https://arms.console.aliyun.com/). Valid values:</p>
+         * <p>Indicates whether Prometheus monitoring is enabled. We recommend that you use [Managed Service for Prometheus](https://arms.console.aliyun.com/). Valid values:</p>
          * <br>
-         * <p>*   `true`: Prometheus monitoring is enabled.</p>
-         * <p>*   `false`: Prometheus monitoring is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("Telemetry")
         public Boolean telemetry;
 
         /**
-         * <p>Indicates whether tracing analysis is enabled. This feature can be enabled only after [Tracing Analysis](https://tracing-analysis.console.aliyun.com/) is activated. Valid values:</p>
+         * <p>Indicates whether tracing analysis is enabled. This feature can be enabled only after [Managed Service for OpenTelemetry](https://tracing-analysis.console.aliyun.com/) is activated. Valid values:</p>
          * <br>
-         * <p>*   `true`: Tracing analysis is enabled.</p>
-         * <p>*   `false`: Tracing analysis is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("Tracing")
         public Boolean tracing;
@@ -2912,13 +2912,13 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecNetwork extends TeaModel {
         /**
-         * <p>The ID of the security group.</p>
+         * <p>The security group ID.</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The virtual switches (vSwitches).</p>
          */
         @NameInMap("VSwitches")
         public java.util.List<String> vSwitches;
@@ -3014,15 +3014,15 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>The specification of the ASM instance. Valid values:</p>
          * <br>
-         * <p>- `standard`: Standard Edition</p>
-         * <p>- `enterprise`: Enterprise Edition</p>
-         * <p>- `ultimate`: Ultimate Edition</p>
+         * <p>*   `standard`: Standard Edition</p>
+         * <p>*   `enterprise`: Enterprise Edition</p>
+         * <p>*   `ultimate`: Ultimate Edition</p>
          */
         @NameInMap("ClusterSpec")
         public String clusterSpec;
 
         /**
-         * <p>The list of clusters.</p>
+         * <p>The clusters.</p>
          */
         @NameInMap("Clusters")
         public java.util.List<String> clusters;
@@ -3042,8 +3042,8 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         /**
          * <p>The Alibaba Cloud service for which the ASM instance is created. Valid values:</p>
          * <br>
-         * <p>- `ackone`: The ASM instance is created for Alibaba Cloud Distributed Cloud Container Platform (ACK One).</p>
-         * <p>- An empty value indicates that the ASM instance is created by the user.</p>
+         * <p>*   `ackone`: The ASM instance is created for Alibaba Cloud Distributed Cloud Container Platform (ACK One).</p>
+         * <p>*   An empty value indicates that the ASM instance is created by the user.</p>
          */
         @NameInMap("OwnerType")
         public String ownerType;

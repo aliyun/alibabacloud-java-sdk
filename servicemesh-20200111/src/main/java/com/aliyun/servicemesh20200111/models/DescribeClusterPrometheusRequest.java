@@ -17,7 +17,7 @@ public class DescribeClusterPrometheusRequest extends TeaModel {
     public String k8sClusterRegionId;
 
     /**
-     * <p>The ID of the ASM instance.</p>
+     * <p>The ASM instance ID.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

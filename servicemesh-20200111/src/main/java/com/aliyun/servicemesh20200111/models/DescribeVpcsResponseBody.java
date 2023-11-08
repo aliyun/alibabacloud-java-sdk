@@ -17,7 +17,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -99,7 +99,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The ID of a VPC.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

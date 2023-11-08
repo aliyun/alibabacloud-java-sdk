@@ -60,7 +60,7 @@ public class CreateServiceMeshRequest extends TeaModel {
     public Integer accessLogServicePort;
 
     /**
-     * <p>The type of the SLB instance that is bound to Istio Pilot. Valid values: `slb.s1.small`, `slb.s2.small`, `slb.s2.medium`, `slb.s3.small`, `slb.s3.medium`, and `slb.s3.large`.</p>
+     * <p>The type of the CLB instance that is bound to Istio Pilot. Valid values: `slb.s1.small`, `slb.s2.small`, `slb.s2.medium`, `slb.s3.small`, `slb.s3.medium`, and `slb.s3.large`.</p>
      */
     @NameInMap("ApiServerLoadBalancerSpec")
     public String apiServerLoadBalancerSpec;
@@ -87,7 +87,7 @@ public class CreateServiceMeshRequest extends TeaModel {
     public String auditProject;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the SLB instance if the SLB instance uses the subscription billing method. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal for the CLB instance if the CLB instance uses the subscription billing method. Valid values:</p>
      * <br>
      * <p>- true</p>
      * <br>
@@ -97,7 +97,7 @@ public class CreateServiceMeshRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal period of the SLB instance. This parameter is valid only if the `ChargeType` parameter is set to `PrePay`. If the original subscription period of the SLB instance is less than one year, the value of this parameter indicates the number of months for auto-renewal. If the original subscription period of the SLB instance is more than one year, the value of this parameter indicates the number of years for auto-renewal.</p>
+     * <p>The auto-renewal period of the CLB instance. This parameter is valid only if the `ChargeType` parameter is set to `PrePay`. If the original subscription period of the CLB instance is less than one year, the value of this parameter indicates the number of months for auto-renewal. If the original subscription period of the CLB instance is more than one year, the value of this parameter indicates the number of years for auto-renewal.</p>
      */
     @NameInMap("AutoRenewPeriod")
     public Integer autoRenewPeriod;
@@ -114,7 +114,7 @@ public class CreateServiceMeshRequest extends TeaModel {
     public Boolean CRAggregationEnabled;
 
     /**
-     * <p>The billing method of the SLB instance. Valid values:</p>
+     * <p>The billing method of the CLB instance. Valid values:</p>
      * <br>
      * <p>*   `PayOnDemand`: pay-as-you-go.</p>
      * <p>*   `PrePay`: subscription.</p>
@@ -218,6 +218,9 @@ public class CreateServiceMeshRequest extends TeaModel {
     @NameInMap("Edition")
     public String edition;
 
+    /**
+     * <p>Specifies whether to enable the Ambient Mesh mode for the ASM instance.</p>
+     */
     @NameInMap("EnableAmbient")
     public Boolean enableAmbient;
 
@@ -328,8 +331,7 @@ public class CreateServiceMeshRequest extends TeaModel {
     public Boolean gatewayAPIEnabled;
 
     /**
-     * <p>After this ASM instance is successfully created, automatically add an ACK cluster to it. </p>
-     * <p>Make sure this ASM instance and ACK cluster have same VPC, VSwitch, cluster domain.</p>
+     * <p>When you create an ASM instance, you can add a cluster to the ASM instance. If you do not specify this parameter, no cluster is added to the ASM instance. The cluster and the ASM instance must be in the same vSwitch of the same VPC and have the same domain name.</p>
      */
     @NameInMap("GuestCluster")
     public String guestCluster;
@@ -474,13 +476,13 @@ public class CreateServiceMeshRequest extends TeaModel {
     public Boolean openAgentPolicy;
 
     /**
-     * <p>The auto-renewal period of the SLB instance. This parameter is valid only if `ChargeType` is set to `PrePaid`. The value of this parameter indicates the purchased month of the SLB instance when the subscription billing method is used. For example, if the subscription period is one year, set this parameter to 12.</p>
+     * <p>The auto-renewal period of the CLB instance. This parameter is valid only if `ChargeType` is set to `PrePaid`. The value of this parameter indicates the purchased month of the CLB instance when the subscription billing method is used. For example, if the subscription period is one year, set this parameter to 12.</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
-     * <p>The type of the SLB instance that is bound to Istio Pilot. Valid values: `slb.s1.small`, `slb.s2.small`, `slb.s2.medium`, `slb.s3.small`, `slb.s3.medium`, and `slb.s3.large`.</p>
+     * <p>The type of the CLB instance that is bound to Istio Pilot. Valid values: `slb.s1.small`, `slb.s2.small`, `slb.s2.medium`, `slb.s3.small`, `slb.s3.medium`, and `slb.s3.large`.</p>
      */
     @NameInMap("PilotLoadBalancerSpec")
     public String pilotLoadBalancerSpec;
@@ -532,6 +534,12 @@ public class CreateServiceMeshRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Tag of the ASM instance. A tag contains the following information:</p>
+     * <br>
+     * <p>*   key: the name of the tag</p>
+     * <p>*   value: the value of the tag</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateServiceMeshRequestTag> tag;
 
@@ -1201,9 +1209,15 @@ public class CreateServiceMeshRequest extends TeaModel {
     }
 
     public static class CreateServiceMeshRequestTag extends TeaModel {
+        /**
+         * <p>The name of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 

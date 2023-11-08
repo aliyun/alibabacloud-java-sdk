@@ -86,11 +86,37 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
          * <p>*   `1`: The cluster cannot be added to the ASM instance because you do not have administrator permissions on the cluster.</p>
          * <p>*   `2`: The cluster cannot be added to the ASM instance because the cluster and the ASM instance reside in different VPCs between which no private connections are built.</p>
          * <p>*   `3`: The CIDR block of the cluster conflicts with that of the ASM instance.</p>
-         * <p>*   `4`: The cluster has a namespace that is named istio system.</p>
+         * <p>*   `4`: The cluster has a namespace that is named istio-system.</p>
          */
         @NameInMap("ForbiddenFlag")
         public Long forbiddenFlag;
 
+        /**
+         * <p>The reason why the cluster on the data plane cannot be added to the ASM instance. The value is a JSON string in the following format:</p>
+         * <br>
+         * <p>    [</p>
+         * <p>      {</p>
+         * <p>        "cluster": "cdd55bd6e054b4c6ca18ec02614******",</p>
+         * <p>        "object": "Pod",</p>
+         * <p>        "cidr": "172.16.0.0/24"</p>
+         * <p>      },</p>
+         * <p>      {</p>
+         * <p>        "cluster": "cfa37fdf7cb1641e1976f8293ac******",</p>
+         * <p>        "object": "Pod",</p>
+         * <p>        "cidr": "172.16.0.0/24"</p>
+         * <p>      }</p>
+         * <p>    ]</p>
+         * <br>
+         * <p>In the preceding example, the CIDR block `172.16.0.0/24` of the pod in the `cdd55bd6e054b4c6ca18ec02614******` cluster conflicts with the CIDR block `172.16.0.0/24` of the pod in the `cfa37fdf7cb1641e1976f8293ac******` cluster.</p>
+         * <br>
+         * <p>Valid values of the `object` parameter:</p>
+         * <br>
+         * <p>*   `Pod`</p>
+         * <p>*   `Service`</p>
+         * <p>*   `VSwitch`</p>
+         * <p>*   `VPC`</p>
+         * <p>*   `VPC CIDR`</p>
+         */
         @NameInMap("ForbiddenInfo")
         public String forbiddenInfo;
 
@@ -107,7 +133,7 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the ASM instance.</p>
+         * <p>The ASM instance ID.</p>
          */
         @NameInMap("ServiceMeshId")
         public String serviceMeshId;

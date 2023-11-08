@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGuestClusterNamespacesResponseBody extends TeaModel {
     /**
-     * <p>The labels of the namespaces. Labels are returned only when the `ShowNsLabels` parameter is set to `true`.</p>
+     * <p>The labels of the namespaces. Labels are returned only when `ShowNsLabels` is set to `true`.</p>
      */
     @NameInMap("NsLabels")
     public java.util.Map<String, ?> nsLabels;
@@ -17,7 +17,7 @@ public class DescribeGuestClusterNamespacesResponseBody extends TeaModel {
     public java.util.List<String> nsList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

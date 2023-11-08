@@ -11,7 +11,7 @@ public class DescribeGatewaySecretDetailsRequest extends TeaModel {
     public String istioGatewayName;
 
     /**
-     * <p>The ID of the ASM instance.</p>
+     * <p>The ASM instance ID.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

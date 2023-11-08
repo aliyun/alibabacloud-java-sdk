@@ -7,10 +7,10 @@ public class DescribeServiceMeshProxyStatusResponseBody extends TeaModel {
     /**
      * <p>The status code. Valid values:</p>
      * <br>
-     * <p>`200`: The status code returned because the operation is successful.</p>
+     * <p>`200`: The operation is successful.</p>
      * <br>
-     * <p>*   `403`: The status code returned because you are not authorized to perform this operation.</p>
-     * <p>*   `503`: The status code returned because a backend server error occurs.</p>
+     * <p>*   `403`: You are not authorized to perform this operation.</p>
+     * <p>*   `503`: A backend server error occurs.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -28,13 +28,13 @@ public class DescribeServiceMeshProxyStatusResponseBody extends TeaModel {
     public java.util.List<DescribeServiceMeshProxyStatusResponseBodyProxyStatus> proxyStatus;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      */
     @NameInMap("Success")
     public String success;
@@ -137,7 +137,7 @@ public class DescribeServiceMeshProxyStatusResponseBody extends TeaModel {
         public String proxyId;
 
         /**
-         * <p>The version number of the proxy on the data plane.</p>
+         * <p>The version number of a proxy on the data plane.</p>
          */
         @NameInMap("ProxyVersion")
         public String proxyVersion;

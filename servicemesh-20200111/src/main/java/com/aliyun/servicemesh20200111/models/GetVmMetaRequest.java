@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVmMetaRequest extends TeaModel {
     /**
-     * <p>The namespace. This parameter is valid only after you set the Namespace and the ServiceAccount parameters.</p>
+     * <p>The name of the namespace. This parameter is valid only after you set the Namespace and the ServiceAccount parameters.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -17,7 +17,7 @@ public class GetVmMetaRequest extends TeaModel {
     public String serviceAccount;
 
     /**
-     * <p>The ID of the ASM instance.</p>
+     * <p>The ASM instance ID.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

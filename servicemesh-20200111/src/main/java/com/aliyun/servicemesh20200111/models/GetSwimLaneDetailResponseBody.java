@@ -17,7 +17,7 @@ public class GetSwimLaneDetailResponseBody extends TeaModel {
     public String ingressService;
 
     /**
-     * <p>Fixed value: **ASM_TRAFFIC_TAG**.</p>
+     * <p>The label key of the associated service workload. The value is fixed as **ASM_TRAFFIC_TAG**.</p>
      */
     @NameInMap("LabelSelectorKey")
     public String labelSelectorKey;
@@ -29,7 +29,7 @@ public class GetSwimLaneDetailResponseBody extends TeaModel {
     public String labelSelectorValue;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

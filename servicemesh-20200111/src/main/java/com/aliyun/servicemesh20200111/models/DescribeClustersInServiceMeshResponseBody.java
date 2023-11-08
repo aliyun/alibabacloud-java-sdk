@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
     /**
-     * <p>The clusters in the ASM instance.</p>
+     * <p>The list of the clusters in the ASM instance.</p>
      */
     @NameInMap("Clusters")
     public java.util.List<DescribeClustersInServiceMeshResponseBodyClusters> clusters;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -81,7 +81,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
         public java.util.List<DescribeClustersInServiceMeshResponseBodyClustersAccessLogDashboards> accessLogDashboards;
 
         /**
-         * <p>The domain of the cluster.</p>
+         * <p>The domain name of the cluster.</p>
          */
         @NameInMap("ClusterDomain")
         public String clusterDomain;
@@ -99,13 +99,13 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
         public String clusterType;
 
         /**
-         * <p>The point in time when the cluster was created.</p>
+         * <p>The time when the cluster was created.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The error message that is returned when the call failed.</p>
+         * <p>The error message.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
@@ -117,7 +117,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
          * <br>
          * <p>\-`logtail_uninstalled`: The Logtail component is not installed.</p>
          * <br>
-         * <p>*   `logtail_state_get_error`: The Logtail component fails to be installed.</p>
+         * <p>*   `logtail_state_get_error`: The Logtail component failed to be installed.</p>
          */
         @NameInMap("LogtailInstalledState")
         public String logtailInstalledState;
@@ -147,7 +147,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The point in time when the cluster was last modified.</p>
+         * <p>The time when the cluster was last modified.</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

@@ -11,7 +11,7 @@ public class DescribeMetadataResponseBody extends TeaModel {
     public DescribeMetadataResponseBodyMetaData metaData;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -45,19 +45,19 @@ public class DescribeMetadataResponseBody extends TeaModel {
         public String currentVersion;
 
         /**
-         * <p>The CRDs of the versions.</p>
+         * <p>The CRDs of all ASM versions.</p>
          */
         @NameInMap("VersionCrds")
         public java.util.List<java.util.Map<String, ?>> versionCrds;
 
         /**
-         * <p>The ASM version and the corresponding Istio version.</p>
+         * <p>The Istio versions corresponding to the ASM versions.</p>
          */
         @NameInMap("VersionRegistry")
         public java.util.List<java.util.Map<String, ?>> versionRegistry;
 
         /**
-         * <p>The supported versions.</p>
+         * <p>The list of ASM versions.</p>
          */
         @NameInMap("Versions")
         public java.util.List<String> versions;
@@ -121,19 +121,19 @@ public class DescribeMetadataResponseBody extends TeaModel {
         public java.util.List<String> regions;
 
         /**
-         * <p>The Custom Resource Definitions (CRDs) of the versions.</p>
+         * <p>The custom resource definitions (CRDs) of all ASM versions.</p>
          */
         @NameInMap("VersionCrds")
         public java.util.List<java.util.Map<String, ?>> versionCrds;
 
         /**
-         * <p>The ASM version and the corresponding Istio version.</p>
+         * <p>The Istio versions corresponding to the ASM versions.</p>
          */
         @NameInMap("VersionRegistry")
         public java.util.List<java.util.Map<String, ?>> versionRegistry;
 
         /**
-         * <p>The supported versions.</p>
+         * <p>The list of ASM versions.</p>
          */
         @NameInMap("Versions")
         public java.util.List<String> versions;

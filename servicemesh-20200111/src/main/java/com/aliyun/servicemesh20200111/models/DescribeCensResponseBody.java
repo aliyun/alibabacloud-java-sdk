@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCensResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the queried Kubernetes clusters.</p>
+     * <p>The list of Kubernetes clusters that are added to the same ASM instance but are in different VPCs and are not connected by using a Cloud Enterprise Network (CEN) instance.</p>
      */
     @NameInMap("Clusters")
     public java.util.List<String> clusters;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetVmAppMeshInfoResponseBody extends TeaModel {
     /**
-     * <p>The returned information.</p>
+     * <p>The response parameters.</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

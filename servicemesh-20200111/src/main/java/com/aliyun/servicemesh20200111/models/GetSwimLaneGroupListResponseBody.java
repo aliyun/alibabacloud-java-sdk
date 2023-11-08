@@ -42,7 +42,7 @@ public class GetSwimLaneGroupListResponseBody extends TeaModel {
         public String fallbackTarget;
 
         /**
-         * <p>The name of the lane group.</p>
+         * <p>The name of a lane group.</p>
          */
         @NameInMap("GroupName")
         public String groupName;

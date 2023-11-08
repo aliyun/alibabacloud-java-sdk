@@ -14,7 +14,7 @@ public class UpdateSwimLaneGroupRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The ID of the ASM instance.</p>
+     * <p>The Service Mesh (ASM) instance ID.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

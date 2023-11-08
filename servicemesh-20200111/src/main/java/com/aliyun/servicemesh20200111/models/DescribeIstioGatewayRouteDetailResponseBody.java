@@ -878,7 +878,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         public String host;
 
         /**
-         * <p>The ports.</p>
+         * <p>The ports of the specified hosts from which the traffic is routed.</p>
          */
         @NameInMap("Port")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinationsDestinationPort port;
@@ -1064,7 +1064,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinationsDestination destination;
 
         /**
-         * <p>The request headers to be matched.</p>
+         * <p>The list of the request headers to be matched.</p>
          */
         @NameInMap("Headers")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinationsHeaders headers;
@@ -1116,6 +1116,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("HTTPAdvancedOptions")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptions HTTPAdvancedOptions;
 
+        /**
+         * <p>If the value is true, the original YAML file contains features that are not supported on the current interface.</p>
+         */
         @NameInMap("HasUnsafeFeatures")
         public Boolean hasUnsafeFeatures;
 
@@ -1125,6 +1128,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("MatchRequest")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailMatchRequest matchRequest;
 
+        /**
+         * <p>The original YAML file of the virtual service that is serialized into a JSON string.</p>
+         */
         @NameInMap("RawVSRoute")
         public String rawVSRoute;
 

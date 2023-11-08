@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVersionsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -48,7 +48,7 @@ public class DescribeVersionsResponseBody extends TeaModel {
         public String edition;
 
         /**
-         * <p>The ASM versions available for the ASM instance of the current edition.</p>
+         * <p>The list of ASM versions available for the ASM instance of the current edition.</p>
          */
         @NameInMap("Versions")
         public java.util.List<String> versions;

@@ -11,7 +11,7 @@ public class DeleteSwimLaneRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The ID of the ASM instance.</p>
+     * <p>The ID of the Service Mesh (ASM) instance.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

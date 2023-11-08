@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGuestClusterAccessLogDashboardsResponseBody extends TeaModel {
     /**
-     * <p>The access log reports of a cluster on the data plane.</p>
+     * <p>The access log dashboards of the cluster on the data plane.</p>
      */
     @NameInMap("Dashboards")
     public java.util.List<DescribeGuestClusterAccessLogDashboardsResponseBodyDashboards> dashboards;
@@ -17,7 +17,7 @@ public class DescribeGuestClusterAccessLogDashboardsResponseBody extends TeaMode
     public String k8sClusterId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,13 +53,13 @@ public class DescribeGuestClusterAccessLogDashboardsResponseBody extends TeaMode
 
     public static class DescribeGuestClusterAccessLogDashboardsResponseBodyDashboards extends TeaModel {
         /**
-         * <p>The title of the report.</p>
+         * <p>The title of the dashboard.</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
-         * <p>The URL of the report.</p>
+         * <p>The URL of a dashboard.</p>
          */
         @NameInMap("Url")
         public String url;

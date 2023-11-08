@@ -23,7 +23,7 @@ public class UpdateSwimLaneRequest extends TeaModel {
     public String labelSelectorValue;
 
     /**
-     * <p>The ID of the ASM instance.</p>
+     * <p>The ID of the Service Mesh (ASM) instance.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
