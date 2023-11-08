@@ -10,6 +10,9 @@ public class ImportEnterpriseDocumentRequest extends TeaModel {
     @NameInMap("DocumentList")
     public java.util.List<ImportEnterpriseDocumentRequestDocumentList> documentList;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("StoreId")
     public Long storeId;
 
@@ -35,6 +38,14 @@ public class ImportEnterpriseDocumentRequest extends TeaModel {
     }
     public java.util.List<ImportEnterpriseDocumentRequestDocumentList> getDocumentList() {
         return this.documentList;
+    }
+
+    public ImportEnterpriseDocumentRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ImportEnterpriseDocumentRequest setStoreId(Long storeId) {

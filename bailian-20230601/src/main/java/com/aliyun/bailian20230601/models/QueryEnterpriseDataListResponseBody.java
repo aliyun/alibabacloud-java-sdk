@@ -69,7 +69,7 @@ public class QueryEnterpriseDataListResponseBody extends TeaModel {
         public String dataId;
 
         @NameInMap("DataName")
-        public Boolean dataName;
+        public String dataName;
 
         @NameInMap("DataSize")
         public String dataSize;
@@ -114,11 +114,11 @@ public class QueryEnterpriseDataListResponseBody extends TeaModel {
             return this.dataId;
         }
 
-        public QueryEnterpriseDataListResponseBodyDataList setDataName(Boolean dataName) {
+        public QueryEnterpriseDataListResponseBodyDataList setDataName(String dataName) {
             this.dataName = dataName;
             return this;
         }
-        public Boolean getDataName() {
+        public String getDataName() {
             return this.dataName;
         }
 
