@@ -4,9 +4,15 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class ListZonesResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The zones available in the current region.</p>
+     */
     @NameInMap("Zones")
     public ListZonesResponseBodyZones zones;
 
@@ -32,6 +38,9 @@ public class ListZonesResponseBody extends TeaModel {
     }
 
     public static class ListZonesResponseBodyZonesZone extends TeaModel {
+        /**
+         * <p>The zone ID.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

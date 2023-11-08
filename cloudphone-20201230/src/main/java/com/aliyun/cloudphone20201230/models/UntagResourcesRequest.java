@@ -4,7 +4,9 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
-    // 是否全部删除，只针对TagKey.N为空时有效。 取值范围： true  false True False  默认是 false
+    /**
+     * <p>Specifies whether to delete all tags. This parameter takes effect only when the TagKey.N parameter is not specified. Valid values: true and false. Default value: false.</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
@@ -14,21 +16,32 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // 资源ID，最多50个子项
+    /**
+     * <p>The resource IDs. You can specify up to 50 resources.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    // 资源类型
+    /**
+     * <p>The resource type. Valid value:</p>
+     * <br>
+     * <p>*   instance: Elastic Cloud Phone (ECP) instance</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // 标签键，最多20个子项
+    /**
+     * <p>The tag keys. You can specify up to 20 tag keys.</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

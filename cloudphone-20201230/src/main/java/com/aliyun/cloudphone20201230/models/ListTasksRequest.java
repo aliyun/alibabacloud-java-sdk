@@ -4,12 +4,21 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class ListTasksRequest extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The maximum number of entries to return on each page. Valid values: 1 to 100. Default value: 50.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -19,6 +28,9 @@ public class ListTasksRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -28,12 +40,35 @@ public class ListTasksRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The task IDs. Valid values of N: 1 to 100.</p>
+     */
     @NameInMap("TaskId")
     public java.util.List<String> taskId;
 
+    /**
+     * <p>The task state. Valid values:</p>
+     * <br>
+     * <p>*   Finished</p>
+     * <p>*   Processing</p>
+     * <p>*   Failed</p>
+     * <br>
+     * <p>This parameter is empty by default.</p>
+     * <br>
+     * <p>>  The system only queries tasks that are in the Finished, Processing, and Failed states and ignores other values.</p>
+     */
     @NameInMap("TaskStatus")
     public String taskStatus;
 
+    /**
+     * <p>The name of the operation that you can call to execute the task on the instance. Valid values:</p>
+     * <br>
+     * <p>*   Shell: runs a shell command.</p>
+     * <p>*   InstallApplication: installs an application.</p>
+     * <p>*   UninstallApplication: uninstalls an application.</p>
+     * <p>*   SendFile: uploads a file.</p>
+     * <p>*   ImportImage: imports an image.</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 

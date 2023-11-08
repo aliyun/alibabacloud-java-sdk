@@ -4,10 +4,15 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class ListTagValuesRequest extends TeaModel {
+    /**
+     * <p>The tag key whose values you want to query.</p>
+     */
     @NameInMap("Key")
     public String key;
 
-    // 下一个查询开始Token
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -17,13 +22,20 @@ public class ListTagValuesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    // 资源类型
+    /**
+     * <p>The resource type. Valid value:</p>
+     * <br>
+     * <p>*   instance: Elastic Cloud Phone (ECP) instance</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

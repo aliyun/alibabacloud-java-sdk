@@ -4,6 +4,9 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class ImportKeyPairRequest extends TeaModel {
+    /**
+     * <p>The name of the key pair. The name must be globally unique. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
@@ -13,14 +16,17 @@ public class ImportKeyPairRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The public key of the key pair.</p>
+     */
     @NameInMap("PublicKeyBody")
     public String publicKeyBody;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -71,14 +77,6 @@ public class ImportKeyPairRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public ImportKeyPairRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public ImportKeyPairRequest setResourceOwnerAccount(String resourceOwnerAccount) {

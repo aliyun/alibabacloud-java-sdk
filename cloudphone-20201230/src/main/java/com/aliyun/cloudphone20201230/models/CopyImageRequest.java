@@ -4,18 +4,33 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class CopyImageRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see How to ensure idempotence.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The image description. The description must be 2 to 256 characters in length but cannot start with http:// or https://.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The destination region to which you want to copy the image.</p>
+     */
     @NameInMap("DestinationRegionId")
     public String destinationRegionId;
 
+    /**
+     * <p>The ID of the image that you want to copy.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The image name. The name must be 2 to 128 characters in length. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter but cannot start with http:// or https://.</p>
+     */
     @NameInMap("ImageName")
     public String imageName;
 
@@ -25,11 +40,11 @@ public class CopyImageRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The source region from which you want to copy the image.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -104,14 +119,6 @@ public class CopyImageRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public CopyImageRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public CopyImageRequest setResourceOwnerAccount(String resourceOwnerAccount) {

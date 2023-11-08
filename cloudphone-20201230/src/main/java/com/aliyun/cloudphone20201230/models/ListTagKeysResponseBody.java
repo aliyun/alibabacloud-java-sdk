@@ -4,17 +4,27 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class ListTagKeysResponseBody extends TeaModel {
-    // 资源列表
+    /**
+     * <p>The tag keys.</p>
+     */
     @NameInMap("Keys")
     public ListTagKeysResponseBodyKeys keys;
 
+    /**
+     * <p>The maximum number of entries to return on each page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 下一个查询开始Token，NextToken为空说明没有下一个
+    /**
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,6 +4,9 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class DeleteKeyPairsRequest extends TeaModel {
+    /**
+     * <p>The name of the key pair that the cloud phone uses. The value can be a JSON array that consists of up to 100 SSH key pair names. Separate multiple key pair names with commas (,).</p>
+     */
     @NameInMap("KeyPairName")
     public java.util.List<String> keyPairName;
 
@@ -13,6 +16,9 @@ public class DeleteKeyPairsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the key pair that you want to delete.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

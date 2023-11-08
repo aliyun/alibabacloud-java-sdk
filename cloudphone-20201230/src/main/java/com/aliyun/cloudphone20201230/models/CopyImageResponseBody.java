@@ -4,9 +4,15 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class CopyImageResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the image that is copied to the destination region.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

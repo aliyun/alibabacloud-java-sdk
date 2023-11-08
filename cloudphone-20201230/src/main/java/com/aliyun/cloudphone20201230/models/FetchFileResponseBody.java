@@ -4,9 +4,15 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class FetchFileResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The task ID.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

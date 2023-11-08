@@ -4,18 +4,33 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
+    /**
+     * <p>Details of the instances.</p>
+     */
     @NameInMap("Instances")
     public ListInstancesResponseBodyInstances instances;
 
+    /**
+     * <p>The maximum number of entries returned on each page. Valid values: 1 to 100.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries that is returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,15 +80,27 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesInstanceEipAddress extends TeaModel {
+        /**
+         * <p>The ID of the EIP that is used by the instance.</p>
+         */
         @NameInMap("AllocationId")
         public String allocationId;
 
+        /**
+         * <p>The bandwidth of the EIP.</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        /**
+         * <p>The billing method of the EIP.</p>
+         */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
+        /**
+         * <p>The EIP.</p>
+         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
@@ -117,9 +144,15 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesInstanceTagsTag extends TeaModel {
+        /**
+         * <p>The tag key of the instance.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the instance.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -166,9 +199,15 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesInstanceVpcAttributes extends TeaModel {
+        /**
+         * <p>The private IP address.</p>
+         */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -196,66 +235,135 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesInstance extends TeaModel {
+        /**
+         * <p>Indicates whether auto-renewal is enabled. This parameter takes effect only for subscription instances.</p>
+         */
         @NameInMap("AutoRenew")
         public Boolean autoRenew;
 
+        /**
+         * <p>The billing method of the instance.</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <p>The time when the image was created. The time follows the ISO 8601 standard.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The instance description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The information about the elastic IP address (EIP) of the instance.</p>
+         */
         @NameInMap("EipAddress")
         public ListInstancesResponseBodyInstancesInstanceEipAddress eipAddress;
 
+        /**
+         * <p>The time when the subscription instance expires.</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <p>The image ID.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The instance name.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The instance type.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The name of the key pair for the instance.</p>
+         */
         @NameInMap("KeyPairName")
         public String keyPairName;
 
+        /**
+         * <p>The display name of the OS in Chinese.</p>
+         */
         @NameInMap("OsName")
         public String osName;
 
+        /**
+         * <p>The display name of the OS in English.</p>
+         */
         @NameInMap("OsNameEn")
         public String osNameEn;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The resolution of the instance.</p>
+         */
         @NameInMap("Resolution")
         public String resolution;
 
+        /**
+         * <p>The ID of the security group that the instance uses. The security group is the same as that of the Elastic Compute Service (ECS) instance that you use.</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The instance state. Valid values:</p>
+         * <br>
+         * <p>*   Pending: The instance is being created.</p>
+         * <p>*   Running: The instance is running.</p>
+         * <p>*   Starting: The instance is being started.</p>
+         * <p>*   Stopping: The instance is being stopped.</p>
+         * <p>*   Stopped: The instance is stopped.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags of the instance.</p>
+         */
         @NameInMap("Tags")
         public ListInstancesResponseBodyInstancesInstanceTags tags;
 
+        /**
+         * <p>The information about the virtual private cloud (VPC) in which the instance is deployed.</p>
+         */
         @NameInMap("VpcAttributes")
         public ListInstancesResponseBodyInstancesInstanceVpcAttributes vpcAttributes;
 
+        /**
+         * <p>The information about webRtcToken.</p>
+         */
         @NameInMap("WebRtcToken")
         public String webRtcToken;
 
+        /**
+         * <p>The zone ID.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

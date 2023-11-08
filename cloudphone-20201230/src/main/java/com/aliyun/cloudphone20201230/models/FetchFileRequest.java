@@ -4,12 +4,23 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class FetchFileRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance on which you want to run the command. Valid values of N: 1 to 10.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The OSS bucket to which the file that you want to upload.</p>
+     * <br>
+     * <p>>  Before you import an APK file to the OSS bucket for the first time, add a Resource Access Management (RAM) policy. Otherwise, NoSetRoletoECSServiceAcount appears.</p>
+     */
     @NameInMap("OssBucket")
     public String ossBucket;
 
+    /**
+     * <p>The name that you want to save to OSS.</p>
+     */
     @NameInMap("OssObject")
     public String ossObject;
 
@@ -19,9 +30,15 @@ public class FetchFileRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The path in which you want to store the file in the cloud phone.</p>
+     */
     @NameInMap("Path")
     public String path;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

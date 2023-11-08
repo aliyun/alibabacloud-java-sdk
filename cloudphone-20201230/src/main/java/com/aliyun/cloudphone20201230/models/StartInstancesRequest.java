@@ -4,6 +4,9 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class StartInstancesRequest extends TeaModel {
+    /**
+     * <p>The instance IDs.</p>
+     */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
@@ -13,6 +16,9 @@ public class StartInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

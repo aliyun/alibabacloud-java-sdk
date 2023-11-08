@@ -4,9 +4,15 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class DeleteImagesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to forcefully delete the image. Default value: false</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 
+    /**
+     * <p>The image IDs. You can specify up to 100 images.</p>
+     */
     @NameInMap("ImageId")
     public java.util.List<String> imageId;
 
@@ -16,6 +22,9 @@ public class DeleteImagesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
