@@ -14,19 +14,16 @@ public class GetMseSourceRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The MSE engine type. Valid values:</p>
-     * <br>
-     * <p>*   NACOS</p>
-     * <p>*   ZOOKEEPER</p>
+     * <p>The unique ID of the gateway.</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The MSE engine type. Valid values:</p>
      * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>*   NACOS</p>
+     * <p>*   ZOOKEEPER</p>
      */
     @NameInMap("Type")
     public String type;

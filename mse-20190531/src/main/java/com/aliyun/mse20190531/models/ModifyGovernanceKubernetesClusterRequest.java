@@ -66,26 +66,15 @@ public class ModifyGovernanceKubernetesClusterRequest extends TeaModel {
     }
 
     public static class ModifyGovernanceKubernetesClusterRequestNamespaceInfos extends TeaModel {
-        @NameInMap("labels")
-        public java.util.Map<String, String> labels;
-
-        @NameInMap("mseNamespace")
+        @NameInMap("MseNamespace")
         public String mseNamespace;
 
-        @NameInMap("name")
+        @NameInMap("Name")
         public String name;
 
         public static ModifyGovernanceKubernetesClusterRequestNamespaceInfos build(java.util.Map<String, ?> map) throws Exception {
             ModifyGovernanceKubernetesClusterRequestNamespaceInfos self = new ModifyGovernanceKubernetesClusterRequestNamespaceInfos();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyGovernanceKubernetesClusterRequestNamespaceInfos setLabels(java.util.Map<String, String> labels) {
-            this.labels = labels;
-            return this;
-        }
-        public java.util.Map<String, String> getLabels() {
-            return this.labels;
         }
 
         public ModifyGovernanceKubernetesClusterRequestNamespaceInfos setMseNamespace(String mseNamespace) {

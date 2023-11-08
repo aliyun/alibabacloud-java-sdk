@@ -5,58 +5,58 @@ import com.aliyun.tea.*;
 
 public class ListConfigTrackResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The track data.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
 
     /**
-     * <p>The request was successfully processed.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>httpCode</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
 
     /**
-     * <p>The details of the data.</p>
+     * <p>The track data.</p>
      */
     @NameInMap("Traces")
     public java.util.List<ListConfigTrackResponseBodyTraces> traces;
@@ -140,28 +140,25 @@ public class ListConfigTrackResponseBody extends TeaModel {
 
     public static class ListConfigTrackResponseBodyTraces extends TeaModel {
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>Indicates whether the request is sent from the client. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("Client")
         public Boolean client;
 
         /**
-         * <p>The name of the configuration group.</p>
+         * <p>The ID of the configuration.</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
         /**
-         * <p>The MD5 value.</p>
+         * <p>The response latency. Unit: milliseconds.</p>
          */
         @NameInMap("Delay")
         public String delay;
-
-        /**
-         * <p>The result.</p>
-         */
-        @NameInMap("Event")
-        public String event;
 
         /**
          * <p>The event. Valid values:</p>
@@ -169,29 +166,29 @@ public class ListConfigTrackResponseBody extends TeaModel {
          * <p>*   pull: configuration acquisition events</p>
          * <p>*   persist: persistence events</p>
          */
+        @NameInMap("Event")
+        public String event;
+
+        /**
+         * <p>The name of the configuration group.</p>
+         */
         @NameInMap("Group")
         public String group;
 
         /**
-         * <p>The timestamp that indicates the time when the metric value is collected.</p>
-         * <br>
-         * <p>Unit: seconds.</p>
+         * <p>The logging time.</p>
          */
         @NameInMap("LogDate")
         public String logDate;
 
         /**
-         * <p>The release type. Valid values:</p>
-         * <br>
-         * <p>*   beta: beta release</p>
-         * <p>*   tag: canary release</p>
-         * <p>*   batch: batch release</p>
+         * <p>The MD5 value.</p>
          */
         @NameInMap("Md5")
         public String md5;
 
         /**
-         * <p>Indicates whether the request is sent from the client. Valid values:</p>
+         * <p>Indicates whether messages are pushed by a server. Valid values:</p>
          * <br>
          * <p>*   true</p>
          * <p>*   false</p>
@@ -200,34 +197,37 @@ public class ListConfigTrackResponseBody extends TeaModel {
         public Boolean push;
 
         /**
-         * <p>The response node.</p>
+         * <p>The source IP address of the request.</p>
          */
         @NameInMap("RequestIp")
         public String requestIp;
 
         /**
-         * <p>The ID of the configuration.</p>
+         * <p>The response node.</p>
          */
         @NameInMap("ResponseIp")
         public String responseIp;
 
         /**
-         * <p>The response latency. Unit: milliseconds.</p>
+         * <p>The result.</p>
          */
         @NameInMap("Result")
         public String result;
 
         /**
-         * <p>The source IP address of the request.</p>
+         * <p>The timestamp that indicates the time when the metric value is collected.</p>
+         * <br>
+         * <p>Unit: seconds.</p>
          */
         @NameInMap("Ts")
         public String ts;
 
         /**
-         * <p>Indicates whether messages are pushed by a server. Valid values:</p>
+         * <p>The release type. Valid values:</p>
          * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <p>*   beta: beta release</p>
+         * <p>*   tag: canary release</p>
+         * <p>*   batch: batch release</p>
          */
         @NameInMap("Type")
         public String type;

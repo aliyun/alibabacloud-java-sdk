@@ -14,7 +14,7 @@ public class GetServiceListenersRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the instance to which the service belongs.</p>
+     * <p>The ID of the MSE instance to which the service belongs.</p>
      * <br>
      * <p>> You must specify InstanceId or ClusterId.</p>
      */
@@ -22,68 +22,65 @@ public class GetServiceListenersRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The name of the cluster to which the service belongs.</p>
+     * <br>
+     * <p>> The cluster is a concept for Nacos services and is not equivalent to a Microservices Engine (MSE) instance.</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
-     * <p>The namespace to which the service belongs.</p>
+     * <p>The group to which the service belongs.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>The ID of the MSE instance to which the service belongs.</p>
-     * <br>
-     * <p>> You must specify InstanceId or ClusterId.</p>
+     * <p>A reserved parameter.</p>
      */
     @NameInMap("HasIpCount")
     public String hasIpCount;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The ID of the instance to which the service belongs.</p>
+     * <br>
+     * <p>> You must specify InstanceId or ClusterId.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The name of the cluster to which the service belongs.</p>
-     * <br>
-     * <p>> The cluster is a concept for Nacos services and is not equivalent to a Microservices Engine (MSE) instance.</p>
+     * <p>The namespace to which the service belongs.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The extended request parameters in the JSON format.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>The extended request parameters in the JSON format.</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;
 
     /**
-     * <p>The group to which the service belongs.</p>
+     * <p>The name of the service whose listeners you want to query.</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

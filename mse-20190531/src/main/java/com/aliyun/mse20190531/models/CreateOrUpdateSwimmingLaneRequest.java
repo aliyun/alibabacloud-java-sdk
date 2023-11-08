@@ -26,6 +26,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
      * <p>The JSON string.</p>
      */
     @NameInMap("EntryRule")
+    @Deprecated
     public String entryRule;
 
     @NameInMap("EntryRules")

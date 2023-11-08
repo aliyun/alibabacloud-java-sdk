@@ -25,7 +25,7 @@ public class ListInstanceCountResponseBody extends TeaModel {
     /**
      * <p>The dynamic part in the error message. This parameter is used to replace `%s` in the `ErrMessage` parameter.</p>
      * <br>
-     * <p>> If the return value of the `ErrMessage` parameter is `The Value of Input Parameter %s is not valid` and the return value of the `DynamicMessage` parameter is `DtsJobId`, the specified `DtsJobId` parameter is invalid.</p>
+     * <p>>  If the return value of the `ErrMessage` parameter is `The Value of Input Parameter %s is not valid` and the return value of the `DynamicMessage` parameter is `DtsJobId`, the specified `DtsJobId` parameter is invalid.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
@@ -43,7 +43,7 @@ public class ListInstanceCountResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned. If the request is successful, a success message is returned. If the request fails, an error message is returned.</p>
+     * <p>The returned message. If the request is successful, a success message is returned. If the request fails, an error message is returned.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -55,7 +55,7 @@ public class ListInstanceCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
      * <p>*   `true`: The request was successful.</p>
      * <p>*   `false`: The request failed.</p>

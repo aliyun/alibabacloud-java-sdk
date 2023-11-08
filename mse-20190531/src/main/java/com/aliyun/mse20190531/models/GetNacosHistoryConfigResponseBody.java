@@ -5,34 +5,34 @@ import com.aliyun.tea.*;
 
 public class GetNacosHistoryConfigResponseBody extends TeaModel {
     /**
-     * <p>The name of the application.</p>
+     * <p>The configuration information.</p>
      */
     @NameInMap("Configuration")
     public GetNacosHistoryConfigResponseBodyConfiguration configuration;
+
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    /**
+     * <p>The message returned.</p>
+     */
+    @NameInMap("Message")
+    public String message;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
      * <p>*   `true`: The request was successful.</p>
      * <p>*   `false`: The request failed.</p>
-     */
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    /**
-     * <p>The request was successfully processed.</p>
-     */
-    @NameInMap("Message")
-    public String message;
-
-    /**
-     * <p>The configuration information.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    /**
-     * <p>mse-200-105</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -84,43 +84,43 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
 
     public static class GetNacosHistoryConfigResponseBodyConfiguration extends TeaModel {
         /**
-         * <p>The MD5 value of the configuration.</p>
+         * <p>The name of the application.</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
-         * <p>The name of the configuration group.</p>
+         * <p>The content of the configuration.</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>The content of the configuration.</p>
+         * <p>The ID of the configuration.</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The encryption key.</p>
          */
         @NameInMap("EncryptedDataKey")
         public String encryptedDataKey;
 
         /**
-         * <p>The configuration type.</p>
+         * <p>The name of the configuration group.</p>
          */
         @NameInMap("Group")
         public String group;
 
         /**
-         * <p>The ID of the configuration.</p>
+         * <p>The MD5 value of the configuration.</p>
          */
         @NameInMap("Md5")
         public String md5;
 
         /**
-         * <p>The encryption key.</p>
+         * <p>The configuration type.</p>
          */
         @NameInMap("OpType")
         public String opType;
