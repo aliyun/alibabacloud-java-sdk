@@ -7,14 +7,14 @@ public class ListExchangesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("VirtualHost")
-    public String virtualHost;
+    @NameInMap("MaxResults")
+    public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("MaxResults")
-    public Integer maxResults;
+    @NameInMap("VirtualHost")
+    public String virtualHost;
 
     public static ListExchangesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListExchangesRequest self = new ListExchangesRequest();
@@ -29,12 +29,12 @@ public class ListExchangesRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListExchangesRequest setVirtualHost(String virtualHost) {
-        this.virtualHost = virtualHost;
+    public ListExchangesRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
-    public String getVirtualHost() {
-        return this.virtualHost;
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public ListExchangesRequest setNextToken(String nextToken) {
@@ -45,12 +45,12 @@ public class ListExchangesRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListExchangesRequest setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
+    public ListExchangesRequest setVirtualHost(String virtualHost) {
+        this.virtualHost = virtualHost;
         return this;
     }
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public String getVirtualHost() {
+        return this.virtualHost;
     }
 
 }

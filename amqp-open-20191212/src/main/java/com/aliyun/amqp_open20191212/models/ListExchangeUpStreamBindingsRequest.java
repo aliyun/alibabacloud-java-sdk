@@ -4,40 +4,24 @@ package com.aliyun.amqp_open20191212.models;
 import com.aliyun.tea.*;
 
 public class ListExchangeUpStreamBindingsRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("VirtualHost")
-    public String virtualHost;
-
     @NameInMap("ExchangeName")
     public String exchangeName;
 
-    @NameInMap("NextToken")
-    public String nextToken;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    @NameInMap("VirtualHost")
+    public String virtualHost;
+
     public static ListExchangeUpStreamBindingsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListExchangeUpStreamBindingsRequest self = new ListExchangeUpStreamBindingsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListExchangeUpStreamBindingsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ListExchangeUpStreamBindingsRequest setVirtualHost(String virtualHost) {
-        this.virtualHost = virtualHost;
-        return this;
-    }
-    public String getVirtualHost() {
-        return this.virtualHost;
     }
 
     public ListExchangeUpStreamBindingsRequest setExchangeName(String exchangeName) {
@@ -48,12 +32,12 @@ public class ListExchangeUpStreamBindingsRequest extends TeaModel {
         return this.exchangeName;
     }
 
-    public ListExchangeUpStreamBindingsRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public ListExchangeUpStreamBindingsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public ListExchangeUpStreamBindingsRequest setMaxResults(Integer maxResults) {
@@ -62,6 +46,22 @@ public class ListExchangeUpStreamBindingsRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public ListExchangeUpStreamBindingsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListExchangeUpStreamBindingsRequest setVirtualHost(String virtualHost) {
+        this.virtualHost = virtualHost;
+        return this;
+    }
+    public String getVirtualHost() {
+        return this.virtualHost;
     }
 
 }

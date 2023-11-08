@@ -4,11 +4,11 @@ package com.aliyun.amqp_open20191212.models;
 import com.aliyun.tea.*;
 
 public class CreateExchangeRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("AlternateExchange")
+    public String alternateExchange;
 
-    @NameInMap("VirtualHost")
-    public String virtualHost;
+    @NameInMap("AutoDeleteState")
+    public Boolean autoDeleteState;
 
     @NameInMap("ExchangeName")
     public String exchangeName;
@@ -16,34 +16,34 @@ public class CreateExchangeRequest extends TeaModel {
     @NameInMap("ExchangeType")
     public String exchangeType;
 
-    @NameInMap("AutoDeleteState")
-    public Boolean autoDeleteState;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("Internal")
     public Boolean internal;
 
-    @NameInMap("AlternateExchange")
-    public String alternateExchange;
+    @NameInMap("VirtualHost")
+    public String virtualHost;
 
     public static CreateExchangeRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateExchangeRequest self = new CreateExchangeRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateExchangeRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public CreateExchangeRequest setAlternateExchange(String alternateExchange) {
+        this.alternateExchange = alternateExchange;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getAlternateExchange() {
+        return this.alternateExchange;
     }
 
-    public CreateExchangeRequest setVirtualHost(String virtualHost) {
-        this.virtualHost = virtualHost;
+    public CreateExchangeRequest setAutoDeleteState(Boolean autoDeleteState) {
+        this.autoDeleteState = autoDeleteState;
         return this;
     }
-    public String getVirtualHost() {
-        return this.virtualHost;
+    public Boolean getAutoDeleteState() {
+        return this.autoDeleteState;
     }
 
     public CreateExchangeRequest setExchangeName(String exchangeName) {
@@ -62,12 +62,12 @@ public class CreateExchangeRequest extends TeaModel {
         return this.exchangeType;
     }
 
-    public CreateExchangeRequest setAutoDeleteState(Boolean autoDeleteState) {
-        this.autoDeleteState = autoDeleteState;
+    public CreateExchangeRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public Boolean getAutoDeleteState() {
-        return this.autoDeleteState;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public CreateExchangeRequest setInternal(Boolean internal) {
@@ -78,12 +78,12 @@ public class CreateExchangeRequest extends TeaModel {
         return this.internal;
     }
 
-    public CreateExchangeRequest setAlternateExchange(String alternateExchange) {
-        this.alternateExchange = alternateExchange;
+    public CreateExchangeRequest setVirtualHost(String virtualHost) {
+        this.virtualHost = virtualHost;
         return this;
     }
-    public String getAlternateExchange() {
-        return this.alternateExchange;
+    public String getVirtualHost() {
+        return this.virtualHost;
     }
 
 }

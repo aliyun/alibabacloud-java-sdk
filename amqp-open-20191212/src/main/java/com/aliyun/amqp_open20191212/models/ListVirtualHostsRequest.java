@@ -7,11 +7,11 @@ public class ListVirtualHostsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("NextToken")
-    public String nextToken;
-
     @NameInMap("MaxResults")
     public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
 
     public static ListVirtualHostsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListVirtualHostsRequest self = new ListVirtualHostsRequest();
@@ -26,20 +26,20 @@ public class ListVirtualHostsRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListVirtualHostsRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
     public ListVirtualHostsRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public ListVirtualHostsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
 }

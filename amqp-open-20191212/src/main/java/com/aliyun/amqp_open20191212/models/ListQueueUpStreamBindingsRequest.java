@@ -7,17 +7,17 @@ public class ListQueueUpStreamBindingsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("VirtualHost")
-    public String virtualHost;
-
-    @NameInMap("QueueName")
-    public String queueName;
+    @NameInMap("MaxResults")
+    public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("MaxResults")
-    public Integer maxResults;
+    @NameInMap("QueueName")
+    public String queueName;
+
+    @NameInMap("VirtualHost")
+    public String virtualHost;
 
     public static ListQueueUpStreamBindingsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListQueueUpStreamBindingsRequest self = new ListQueueUpStreamBindingsRequest();
@@ -32,20 +32,12 @@ public class ListQueueUpStreamBindingsRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListQueueUpStreamBindingsRequest setVirtualHost(String virtualHost) {
-        this.virtualHost = virtualHost;
+    public ListQueueUpStreamBindingsRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
-    public String getVirtualHost() {
-        return this.virtualHost;
-    }
-
-    public ListQueueUpStreamBindingsRequest setQueueName(String queueName) {
-        this.queueName = queueName;
-        return this;
-    }
-    public String getQueueName() {
-        return this.queueName;
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public ListQueueUpStreamBindingsRequest setNextToken(String nextToken) {
@@ -56,12 +48,20 @@ public class ListQueueUpStreamBindingsRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListQueueUpStreamBindingsRequest setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
+    public ListQueueUpStreamBindingsRequest setQueueName(String queueName) {
+        this.queueName = queueName;
         return this;
     }
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public String getQueueName() {
+        return this.queueName;
+    }
+
+    public ListQueueUpStreamBindingsRequest setVirtualHost(String virtualHost) {
+        this.virtualHost = virtualHost;
+        return this;
+    }
+    public String getVirtualHost() {
+        return this.virtualHost;
     }
 
 }
