@@ -4,6 +4,18 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class GroupUserSaveShrinkRequest extends TeaModel {
+    @NameInMap("base_city_code")
+    public String baseCityCode;
+
+    @NameInMap("birthday")
+    public String birthday;
+
+    @NameInMap("cert_list")
+    public String certListShrink;
+
+    @NameInMap("gender")
+    public String gender;
+
     @NameInMap("job_no")
     public String jobNo;
 
@@ -25,6 +37,38 @@ public class GroupUserSaveShrinkRequest extends TeaModel {
     public static GroupUserSaveShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         GroupUserSaveShrinkRequest self = new GroupUserSaveShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GroupUserSaveShrinkRequest setBaseCityCode(String baseCityCode) {
+        this.baseCityCode = baseCityCode;
+        return this;
+    }
+    public String getBaseCityCode() {
+        return this.baseCityCode;
+    }
+
+    public GroupUserSaveShrinkRequest setBirthday(String birthday) {
+        this.birthday = birthday;
+        return this;
+    }
+    public String getBirthday() {
+        return this.birthday;
+    }
+
+    public GroupUserSaveShrinkRequest setCertListShrink(String certListShrink) {
+        this.certListShrink = certListShrink;
+        return this;
+    }
+    public String getCertListShrink() {
+        return this.certListShrink;
+    }
+
+    public GroupUserSaveShrinkRequest setGender(String gender) {
+        this.gender = gender;
+        return this;
+    }
+    public String getGender() {
+        return this.gender;
     }
 
     public GroupUserSaveShrinkRequest setJobNo(String jobNo) {
