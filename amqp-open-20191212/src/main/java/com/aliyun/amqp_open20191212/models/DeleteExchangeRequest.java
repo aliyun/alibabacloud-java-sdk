@@ -4,18 +4,26 @@ package com.aliyun.amqp_open20191212.models;
 import com.aliyun.tea.*;
 
 public class DeleteExchangeRequest extends TeaModel {
+    @NameInMap("ExchangeName")
+    public String exchangeName;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("VirtualHost")
     public String virtualHost;
 
-    @NameInMap("ExchangeName")
-    public String exchangeName;
-
     public static DeleteExchangeRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteExchangeRequest self = new DeleteExchangeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteExchangeRequest setExchangeName(String exchangeName) {
+        this.exchangeName = exchangeName;
+        return this;
+    }
+    public String getExchangeName() {
+        return this.exchangeName;
     }
 
     public DeleteExchangeRequest setInstanceId(String instanceId) {
@@ -32,14 +40,6 @@ public class DeleteExchangeRequest extends TeaModel {
     }
     public String getVirtualHost() {
         return this.virtualHost;
-    }
-
-    public DeleteExchangeRequest setExchangeName(String exchangeName) {
-        this.exchangeName = exchangeName;
-        return this;
-    }
-    public String getExchangeName() {
-        return this.exchangeName;
     }
 
 }

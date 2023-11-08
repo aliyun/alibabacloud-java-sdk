@@ -3,7 +3,7 @@ package com.aliyun.amqp_open20191212.models;
 
 import com.aliyun.tea.*;
 
-public class ListBindingsResponse extends TeaModel {
+public class UpdateInstanceNameResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ListBindingsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListBindingsResponseBody body;
+    public UpdateInstanceNameResponseBody body;
 
-    public static ListBindingsResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListBindingsResponse self = new ListBindingsResponse();
+    public static UpdateInstanceNameResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateInstanceNameResponse self = new UpdateInstanceNameResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListBindingsResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateInstanceNameResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ListBindingsResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListBindingsResponse setStatusCode(Integer statusCode) {
+    public UpdateInstanceNameResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ListBindingsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListBindingsResponse setBody(ListBindingsResponseBody body) {
+    public UpdateInstanceNameResponse setBody(UpdateInstanceNameResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListBindingsResponseBody getBody() {
+    public UpdateInstanceNameResponseBody getBody() {
         return this.body;
     }
 

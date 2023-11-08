@@ -7,17 +7,17 @@ public class ListQueueConsumersRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("VirtualHost")
-    public String virtualHost;
-
-    @NameInMap("Queue")
-    public String queue;
-
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("QueryCount")
     public Integer queryCount;
+
+    @NameInMap("Queue")
+    public String queue;
+
+    @NameInMap("VirtualHost")
+    public String virtualHost;
 
     public static ListQueueConsumersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListQueueConsumersRequest self = new ListQueueConsumersRequest();
@@ -30,22 +30,6 @@ public class ListQueueConsumersRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ListQueueConsumersRequest setVirtualHost(String virtualHost) {
-        this.virtualHost = virtualHost;
-        return this;
-    }
-    public String getVirtualHost() {
-        return this.virtualHost;
-    }
-
-    public ListQueueConsumersRequest setQueue(String queue) {
-        this.queue = queue;
-        return this;
-    }
-    public String getQueue() {
-        return this.queue;
     }
 
     public ListQueueConsumersRequest setNextToken(String nextToken) {
@@ -62,6 +46,22 @@ public class ListQueueConsumersRequest extends TeaModel {
     }
     public Integer getQueryCount() {
         return this.queryCount;
+    }
+
+    public ListQueueConsumersRequest setQueue(String queue) {
+        this.queue = queue;
+        return this;
+    }
+    public String getQueue() {
+        return this.queue;
+    }
+
+    public ListQueueConsumersRequest setVirtualHost(String virtualHost) {
+        this.virtualHost = virtualHost;
+        return this;
+    }
+    public String getVirtualHost() {
+        return this.virtualHost;
     }
 
 }

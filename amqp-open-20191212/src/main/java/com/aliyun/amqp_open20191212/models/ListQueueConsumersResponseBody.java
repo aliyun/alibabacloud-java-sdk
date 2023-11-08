@@ -4,23 +4,15 @@ package com.aliyun.amqp_open20191212.models;
 import com.aliyun.tea.*;
 
 public class ListQueueConsumersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ListQueueConsumersResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListQueueConsumersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListQueueConsumersResponseBody self = new ListQueueConsumersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListQueueConsumersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListQueueConsumersResponseBody setData(ListQueueConsumersResponseBodyData data) {
@@ -29,6 +21,14 @@ public class ListQueueConsumersResponseBody extends TeaModel {
     }
     public ListQueueConsumersResponseBodyData getData() {
         return this.data;
+    }
+
+    public ListQueueConsumersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListQueueConsumersResponseBodyDataConsumers extends TeaModel {
@@ -51,26 +51,18 @@ public class ListQueueConsumersResponseBody extends TeaModel {
     }
 
     public static class ListQueueConsumersResponseBodyData extends TeaModel {
-        @NameInMap("NextToken")
-        public String nextToken;
-
         @NameInMap("Consumers")
         public java.util.List<ListQueueConsumersResponseBodyDataConsumers> consumers;
 
         @NameInMap("MaxResults")
         public Integer maxResults;
 
+        @NameInMap("NextToken")
+        public String nextToken;
+
         public static ListQueueConsumersResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListQueueConsumersResponseBodyData self = new ListQueueConsumersResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ListQueueConsumersResponseBodyData setNextToken(String nextToken) {
-            this.nextToken = nextToken;
-            return this;
-        }
-        public String getNextToken() {
-            return this.nextToken;
         }
 
         public ListQueueConsumersResponseBodyData setConsumers(java.util.List<ListQueueConsumersResponseBodyDataConsumers> consumers) {
@@ -87,6 +79,14 @@ public class ListQueueConsumersResponseBody extends TeaModel {
         }
         public Integer getMaxResults() {
             return this.maxResults;
+        }
+
+        public ListQueueConsumersResponseBodyData setNextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+        public String getNextToken() {
+            return this.nextToken;
         }
 
     }

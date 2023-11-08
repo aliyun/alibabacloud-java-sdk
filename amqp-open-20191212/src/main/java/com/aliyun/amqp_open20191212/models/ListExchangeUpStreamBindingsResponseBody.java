@@ -4,17 +4,17 @@ package com.aliyun.amqp_open20191212.models;
 import com.aliyun.tea.*;
 
 public class ListExchangeUpStreamBindingsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public ListExchangeUpStreamBindingsResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public ListExchangeUpStreamBindingsResponseBodyData data;
-
-    @NameInMap("Code")
-    public Integer code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class ListExchangeUpStreamBindingsResponseBody extends TeaModel {
     public static ListExchangeUpStreamBindingsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListExchangeUpStreamBindingsResponseBody self = new ListExchangeUpStreamBindingsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListExchangeUpStreamBindingsResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public ListExchangeUpStreamBindingsResponseBody setData(ListExchangeUpStreamBindingsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListExchangeUpStreamBindingsResponseBodyData getData() {
+        return this.data;
     }
 
     public ListExchangeUpStreamBindingsResponseBody setMessage(String message) {
@@ -40,22 +56,6 @@ public class ListExchangeUpStreamBindingsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListExchangeUpStreamBindingsResponseBody setData(ListExchangeUpStreamBindingsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListExchangeUpStreamBindingsResponseBodyData getData() {
-        return this.data;
-    }
-
-    public ListExchangeUpStreamBindingsResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public ListExchangeUpStreamBindingsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -65,8 +65,8 @@ public class ListExchangeUpStreamBindingsResponseBody extends TeaModel {
     }
 
     public static class ListExchangeUpStreamBindingsResponseBodyDataBindings extends TeaModel {
-        @NameInMap("SourceExchange")
-        public String sourceExchange;
+        @NameInMap("Argument")
+        public String argument;
 
         @NameInMap("BindingKey")
         public String bindingKey;
@@ -74,23 +74,23 @@ public class ListExchangeUpStreamBindingsResponseBody extends TeaModel {
         @NameInMap("BindingType")
         public String bindingType;
 
-        @NameInMap("Argument")
-        public String argument;
-
         @NameInMap("DestinationName")
         public String destinationName;
+
+        @NameInMap("SourceExchange")
+        public String sourceExchange;
 
         public static ListExchangeUpStreamBindingsResponseBodyDataBindings build(java.util.Map<String, ?> map) throws Exception {
             ListExchangeUpStreamBindingsResponseBodyDataBindings self = new ListExchangeUpStreamBindingsResponseBodyDataBindings();
             return TeaModel.build(map, self);
         }
 
-        public ListExchangeUpStreamBindingsResponseBodyDataBindings setSourceExchange(String sourceExchange) {
-            this.sourceExchange = sourceExchange;
+        public ListExchangeUpStreamBindingsResponseBodyDataBindings setArgument(String argument) {
+            this.argument = argument;
             return this;
         }
-        public String getSourceExchange() {
-            return this.sourceExchange;
+        public String getArgument() {
+            return this.argument;
         }
 
         public ListExchangeUpStreamBindingsResponseBodyDataBindings setBindingKey(String bindingKey) {
@@ -109,14 +109,6 @@ public class ListExchangeUpStreamBindingsResponseBody extends TeaModel {
             return this.bindingType;
         }
 
-        public ListExchangeUpStreamBindingsResponseBodyDataBindings setArgument(String argument) {
-            this.argument = argument;
-            return this;
-        }
-        public String getArgument() {
-            return this.argument;
-        }
-
         public ListExchangeUpStreamBindingsResponseBodyDataBindings setDestinationName(String destinationName) {
             this.destinationName = destinationName;
             return this;
@@ -125,29 +117,37 @@ public class ListExchangeUpStreamBindingsResponseBody extends TeaModel {
             return this.destinationName;
         }
 
+        public ListExchangeUpStreamBindingsResponseBodyDataBindings setSourceExchange(String sourceExchange) {
+            this.sourceExchange = sourceExchange;
+            return this;
+        }
+        public String getSourceExchange() {
+            return this.sourceExchange;
+        }
+
     }
 
     public static class ListExchangeUpStreamBindingsResponseBodyData extends TeaModel {
-        @NameInMap("NextToken")
-        public String nextToken;
+        @NameInMap("Bindings")
+        public java.util.List<ListExchangeUpStreamBindingsResponseBodyDataBindings> bindings;
 
         @NameInMap("MaxResults")
         public Integer maxResults;
 
-        @NameInMap("Bindings")
-        public java.util.List<ListExchangeUpStreamBindingsResponseBodyDataBindings> bindings;
+        @NameInMap("NextToken")
+        public String nextToken;
 
         public static ListExchangeUpStreamBindingsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListExchangeUpStreamBindingsResponseBodyData self = new ListExchangeUpStreamBindingsResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public ListExchangeUpStreamBindingsResponseBodyData setNextToken(String nextToken) {
-            this.nextToken = nextToken;
+        public ListExchangeUpStreamBindingsResponseBodyData setBindings(java.util.List<ListExchangeUpStreamBindingsResponseBodyDataBindings> bindings) {
+            this.bindings = bindings;
             return this;
         }
-        public String getNextToken() {
-            return this.nextToken;
+        public java.util.List<ListExchangeUpStreamBindingsResponseBodyDataBindings> getBindings() {
+            return this.bindings;
         }
 
         public ListExchangeUpStreamBindingsResponseBodyData setMaxResults(Integer maxResults) {
@@ -158,12 +158,12 @@ public class ListExchangeUpStreamBindingsResponseBody extends TeaModel {
             return this.maxResults;
         }
 
-        public ListExchangeUpStreamBindingsResponseBodyData setBindings(java.util.List<ListExchangeUpStreamBindingsResponseBodyDataBindings> bindings) {
-            this.bindings = bindings;
+        public ListExchangeUpStreamBindingsResponseBodyData setNextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
-        public java.util.List<ListExchangeUpStreamBindingsResponseBodyDataBindings> getBindings() {
-            return this.bindings;
+        public String getNextToken() {
+            return this.nextToken;
         }
 
     }
