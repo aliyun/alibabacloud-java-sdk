@@ -4,15 +4,27 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceAttributeRequest extends TeaModel {
+    /**
+     * <p>The instance description. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The instance name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The name of the key pair that is used to connect to the instance. To improve the security of an instance, we recommend that you use a key pair to connect to the instance.</p>
+     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
@@ -22,19 +34,30 @@ public class UpdateInstanceAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The instance resolution.</p>
+     */
     @NameInMap("Resolution")
     public String resolution;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    // 标签列表，最多包含20个子项
+    /**
+     * <p>Details of tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<UpdateInstanceAttributeRequestTag> tag;
 
+    /**
+     * <p>The VNC password of the instance. The password must be six characters in length and can contain only uppercase letters, lowercase letters, and digits.</p>
+     */
     @NameInMap("VncPassword")
     public String vncPassword;
 
@@ -132,11 +155,15 @@ public class UpdateInstanceAttributeRequest extends TeaModel {
     }
 
     public static class UpdateInstanceAttributeRequestTag extends TeaModel {
-        // 标签键
+        /**
+         * <p>The tag key of the instance. Valid values of N: 1 to 20.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // 标签值
+        /**
+         * <p>The tag value of the instance. Valid values of N: 1 to 20.</p>
+         */
         @NameInMap("Value")
         public String value;
 

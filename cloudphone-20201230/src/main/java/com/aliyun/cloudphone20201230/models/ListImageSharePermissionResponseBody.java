@@ -4,9 +4,15 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class ListImageSharePermissionResponseBody extends TeaModel {
+    /**
+     * <p>The list of Alibaba Cloud accounts.</p>
+     */
     @NameInMap("Accounts")
     public ListImageSharePermissionResponseBodyAccounts accounts;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class ListImageSharePermissionResponseBody extends TeaModel {
     }
 
     public static class ListImageSharePermissionResponseBodyAccountsAccount extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         */
         @NameInMap("AliyunId")
         public String aliyunId;
 

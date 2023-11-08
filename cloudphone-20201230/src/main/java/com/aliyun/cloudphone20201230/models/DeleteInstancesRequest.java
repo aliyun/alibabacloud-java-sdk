@@ -4,9 +4,18 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstancesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to forcefully release the instance if it is in the Running status. Valid values:</p>
+     * <br>
+     * <p>*   true. If you set the Force parameter to true, temporary data in the memory and storage of the instance is erased and cannot be restored after you call the operation, which is similar to the effect of a power-off action.</p>
+     * <p>*   false (default)</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 
+    /**
+     * <p>The instance IDs. Valid values of N: 1 to 100.</p>
+     */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
@@ -16,6 +25,9 @@ public class DeleteInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

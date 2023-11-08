@@ -4,14 +4,21 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
-    // 下一个查询开始Token，NextToken为空说明没有下一个
+    /**
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // 资源列表
+    /**
+     * <p>The list of resources.</p>
+     */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
 
@@ -45,19 +52,29 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
-        // 资源ID
+        /**
+         * <p>The resource ID.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        // 资源类型
+        /**
+         * <p>The resource type. Valid value:</p>
+         * <br>
+         * <p>*   instance: ECP instance</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        // 标签键
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        // 标签值
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

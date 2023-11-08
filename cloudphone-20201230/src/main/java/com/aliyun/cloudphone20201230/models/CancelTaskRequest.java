@@ -10,6 +10,9 @@ public class CancelTaskRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,6 +22,9 @@ public class CancelTaskRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The task ID.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

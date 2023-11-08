@@ -4,12 +4,23 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class InstallApplicationRequest extends TeaModel {
+    /**
+     * <p>The IDs of the instances on which you want to run the command. Valid values of N: 1 to 10.</p>
+     */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
+    /**
+     * <p>The Object Storage Service (OSS) bucket in which you want to store the application file.</p>
+     * <br>
+     * <p>>  Before you import application files to the OSS bucket for the first time, add a Resource Access Management (RAM) policy. Otherwise, NoSetRoletoECSServiceAcount appears.</p>
+     */
     @NameInMap("OssBucket")
     public String ossBucket;
 
+    /**
+     * <p>The name (key) of the application file that is used as an OSS object.</p>
+     */
     @NameInMap("OssObject")
     public String ossObject;
 
@@ -19,6 +30,9 @@ public class InstallApplicationRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,9 +4,15 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceTypesResponseBody extends TeaModel {
+    /**
+     * <p>The instance types.</p>
+     */
     @NameInMap("InstanceTypes")
     public ListInstanceTypesResponseBodyInstanceTypes instanceTypes;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -51,27 +57,51 @@ public class ListInstanceTypesResponseBody extends TeaModel {
     }
 
     public static class ListInstanceTypesResponseBodyInstanceTypesInstanceType extends TeaModel {
+        /**
+         * <p>The number of vCPUs supported by the instance type.</p>
+         */
         @NameInMap("CpuCoreCount")
         public Integer cpuCoreCount;
 
+        /**
+         * <p>The default resolution supported by the instance type.</p>
+         */
         @NameInMap("DefaultResolution")
         public String defaultResolution;
 
+        /**
+         * <p>The instance type.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The instance type family.</p>
+         */
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
+        /**
+         * <p>The memory size supported by the instance type. Unit: GiB.</p>
+         */
         @NameInMap("MemorySize")
         public String memorySize;
 
+        /**
+         * <p>The name of the instance type in Chinese.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The name of the instance type in English.</p>
+         */
         @NameInMap("NameEn")
         public String nameEn;
 
+        /**
+         * <p>The resolutions supported by the instance type.</p>
+         */
         @NameInMap("Resolutions")
         public ListInstanceTypesResponseBodyInstanceTypesInstanceTypeResolutions resolutions;
 

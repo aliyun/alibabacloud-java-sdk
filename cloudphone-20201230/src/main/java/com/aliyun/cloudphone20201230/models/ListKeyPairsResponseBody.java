@@ -4,18 +4,33 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class ListKeyPairsResponseBody extends TeaModel {
+    /**
+     * <p>The key pairs that are returned.</p>
+     */
     @NameInMap("KeyPairs")
     public ListKeyPairsResponseBodyKeyPairs keyPairs;
 
+    /**
+     * <p>The maximum number of entries per page. Valid values: 1 to 100.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of key pairs.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,17 +80,23 @@ public class ListKeyPairsResponseBody extends TeaModel {
     }
 
     public static class ListKeyPairsResponseBodyKeyPairsKeyPair extends TeaModel {
+        /**
+         * <p>The time when the key pair was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The fingerprint of the key pair.</p>
+         */
         @NameInMap("KeyPairFingerPrint")
         public String keyPairFingerPrint;
 
+        /**
+         * <p>The name of the SSH key pair.</p>
+         */
         @NameInMap("KeyPairName")
         public String keyPairName;
-
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
 
         public static ListKeyPairsResponseBodyKeyPairsKeyPair build(java.util.Map<String, ?> map) throws Exception {
             ListKeyPairsResponseBodyKeyPairsKeyPair self = new ListKeyPairsResponseBodyKeyPairsKeyPair();
@@ -104,14 +125,6 @@ public class ListKeyPairsResponseBody extends TeaModel {
         }
         public String getKeyPairName() {
             return this.keyPairName;
-        }
-
-        public ListKeyPairsResponseBodyKeyPairsKeyPair setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
         }
 
     }

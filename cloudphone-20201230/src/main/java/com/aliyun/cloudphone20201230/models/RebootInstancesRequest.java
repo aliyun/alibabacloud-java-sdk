@@ -4,9 +4,18 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class RebootInstancesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to forcefully restart the instance. Valid values:</p>
+     * <br>
+     * <p>*   true If you set this parameter to true, cache data that is not written to storage in the instance will be lost after you call this operation, which is similar to the effect of a power-off action.</p>
+     * <p>*   false (default)</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 
+    /**
+     * <p>The instance IDs.</p>
+     */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
@@ -16,6 +25,9 @@ public class RebootInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

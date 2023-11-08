@@ -4,7 +4,9 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
-    // 下一个查询开始Token
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -14,21 +16,32 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
-    // 资源ID,最多 50个子项
+    /**
+     * <p>The resource IDs. You can specify up to 50 resources.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    // 资源类型
+    /**
+     * <p>The resource type. Valid value:</p>
+     * <br>
+     * <p>*   instance: Elastic Cloud Phone (ECP) instance</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    // 标签列表，最多包含20个子项
+    /**
+     * <p>The tags. You can specify up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -102,11 +115,15 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
-        // 标签键
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // 标签值
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

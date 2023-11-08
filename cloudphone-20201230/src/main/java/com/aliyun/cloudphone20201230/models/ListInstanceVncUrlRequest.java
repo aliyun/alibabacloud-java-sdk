@@ -4,6 +4,9 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceVncUrlRequest extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,6 +16,9 @@ public class ListInstanceVncUrlRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the instance resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

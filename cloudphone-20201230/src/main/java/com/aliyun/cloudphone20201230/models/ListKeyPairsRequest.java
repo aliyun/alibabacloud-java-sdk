@@ -4,15 +4,27 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class ListKeyPairsRequest extends TeaModel {
+    /**
+     * <p>The fingerprint of the key pair. The message-digest algorithm 5 (MD5) is used based on the public key fingerprint format defined in RFC 4716.</p>
+     */
     @NameInMap("KeyPairFingerPrint")
     public String keyPairFingerPrint;
 
+    /**
+     * <p>The name of the key pair.</p>
+     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
+    /**
+     * <p>The maximum number of entries per page. Valid values: 1 to 100.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -22,11 +34,11 @@ public class ListKeyPairsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the key pair resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -93,14 +105,6 @@ public class ListKeyPairsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public ListKeyPairsRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public ListKeyPairsRequest setResourceOwnerAccount(String resourceOwnerAccount) {

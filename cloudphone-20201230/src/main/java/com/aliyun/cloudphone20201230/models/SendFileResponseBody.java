@@ -4,9 +4,15 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class SendFileResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The task IDs. Valid values of N: 1 to 100.</p>
+     */
     @NameInMap("TaskId")
     public SendFileResponseBodyTaskId taskId;
 

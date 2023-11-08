@@ -4,21 +4,39 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class ListImagesResponseBody extends TeaModel {
+    /**
+     * <p>The list of images.</p>
+     */
     @NameInMap("Images")
     public ListImagesResponseBodyImages images;
 
+    /**
+     * <p>The maximum number of entries that is returned on each page. Valid values: 1 to 100.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of images.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,42 +94,84 @@ public class ListImagesResponseBody extends TeaModel {
     }
 
     public static class ListImagesResponseBodyImagesImage extends TeaModel {
+        /**
+         * <p>The time when the image was created. The time follows the ISO 8601 standard.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The image description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The image type.</p>
+         */
         @NameInMap("ImageCategory")
         public String imageCategory;
 
+        /**
+         * <p>The image ID.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The image name.</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
+        /**
+         * <p>Indicates whether the image is shared with other Alibaba Cloud accounts.</p>
+         */
         @NameInMap("IsSelfShared")
         public Boolean isSelfShared;
 
+        /**
+         * <p>The display name of the OS in Chinese.</p>
+         */
         @NameInMap("OSName")
         public String OSName;
 
+        /**
+         * <p>The display name of the OS in English.</p>
+         */
         @NameInMap("OSNameEn")
         public String OSNameEn;
 
+        /**
+         * <p>The image OS.</p>
+         */
         @NameInMap("OSType")
         public String OSType;
 
+        /**
+         * <p>The OS distribution.</p>
+         */
         @NameInMap("Platform")
         public String platform;
 
+        /**
+         * <p>The progress of image creation.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The image state.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Indicates whether the image is used by instances. Valid values:</p>
+         * <br>
+         * <p>*   none: The image is idle.</p>
+         * <p>*   instance: The image is used by instances.</p>
+         */
         @NameInMap("Usage")
         public String usage;
 

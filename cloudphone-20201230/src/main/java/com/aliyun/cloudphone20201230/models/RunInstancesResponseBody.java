@@ -4,15 +4,27 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class RunInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of the ECP instances.</p>
+     */
     @NameInMap("InstanceIds")
     public RunInstancesResponseBodyInstanceIds instanceIds;
 
+    /**
+     * <p>The ID of the order.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The price of the ECP resource.</p>
+     */
     @NameInMap("TradePrice")
     public Float tradePrice;
 

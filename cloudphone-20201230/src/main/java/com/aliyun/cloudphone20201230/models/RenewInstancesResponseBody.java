@@ -4,12 +4,21 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class RenewInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of the instances that are renewed.</p>
+     */
     @NameInMap("InstanceIds")
     public RenewInstancesResponseBodyInstanceIds instanceIds;
 
+    /**
+     * <p>The order ID.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

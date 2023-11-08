@@ -4,6 +4,9 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class ListImageSharePermissionRequest extends TeaModel {
+    /**
+     * <p>The ID of the image that you want to import to the instance.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
@@ -13,6 +16,9 @@ public class ListImageSharePermissionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,9 +4,15 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceTypesRequest extends TeaModel {
+    /**
+     * <p>The names of the instance types. Valid values of N: 1 to 100.</p>
+     */
     @NameInMap("InstanceType")
     public java.util.List<String> instanceType;
 
+    /**
+     * <p>The instance type family.</p>
+     */
     @NameInMap("InstanceTypeFamily")
     public String instanceTypeFamily;
 
@@ -16,6 +22,9 @@ public class ListInstanceTypesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

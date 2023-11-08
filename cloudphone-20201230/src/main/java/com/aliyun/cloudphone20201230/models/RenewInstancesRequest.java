@@ -4,12 +4,21 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class RenewInstancesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable auto-payment. Default value: true.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see How to ensure idempotence.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The IDs of the instances that you want to renew. You can renew up to 20 instances at a time.</p>
+     */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
@@ -19,12 +28,25 @@ public class RenewInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The renewal period. Default value: 1.</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <p>The unit of the renewal period.</p>
+     * <br>
+     * <p>*   Valid values if you set this parameter to Year: 1, 2, 3, 4, and 5.</p>
+     * <p>*   Valid values if you set this parameter to Month (default): 1, 2, 3, and 6.</p>
+     * <p>*   Valid values if you set this parameter to Hour: 1.</p>
+     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

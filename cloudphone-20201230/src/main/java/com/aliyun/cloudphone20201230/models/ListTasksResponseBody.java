@@ -4,21 +4,39 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class ListTasksResponseBody extends TeaModel {
+    /**
+     * <p>The maximum number of entries that is returned on each page. Valid values: 1 to 200. Default value: 50.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The tasks.</p>
+     */
     @NameInMap("Tasks")
     public ListTasksResponseBodyTasks tasks;
 
+    /**
+     * <p>The total number of tasks.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,27 +94,51 @@ public class ListTasksResponseBody extends TeaModel {
     }
 
     public static class ListTasksResponseBodyTasksTask extends TeaModel {
+        /**
+         * <p>The time when the task was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The content that is returned after the task is executed. The content can be up to 1,024 bytes in length.</p>
+         */
         @NameInMap("ExecuteMsg")
         public String executeMsg;
 
+        /**
+         * <p>The time when the task ended.</p>
+         */
         @NameInMap("FinishedTime")
         public String finishedTime;
 
+        /**
+         * <p>The instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The task progress.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The task ID.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The task state.</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
+        /**
+         * <p>The task type.</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 

@@ -4,15 +4,27 @@ package com.aliyun.cloudphone20201230.models;
 import com.aliyun.tea.*;
 
 public class UpdateImageAttributeRequest extends TeaModel {
+    /**
+     * <p>The IDs of the Alibaba Cloud accounts that are authorized to share images. You can specify up to 10 Alibaba Cloud accounts.</p>
+     */
     @NameInMap("AddAccount")
     public java.util.List<String> addAccount;
 
+    /**
+     * <p>The description of the custom image. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`. By default, this parameter is empty, which indicates that the original description is retained.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The image ID.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The name of the custom image. The name must be 2 to 128 characters in length. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It cannot start with `http://` or `https://`. By default, this parameter is empty, which indicates that the original name is retained.</p>
+     */
     @NameInMap("ImageName")
     public String imageName;
 
@@ -22,9 +34,15 @@ public class UpdateImageAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The IDs of the Alibaba Cloud accounts from which you want to revoke image sharing permissions. You can specify up to 10 Alibaba Cloud accounts.</p>
+     */
     @NameInMap("RemoveAccount")
     public java.util.List<String> removeAccount;
 
