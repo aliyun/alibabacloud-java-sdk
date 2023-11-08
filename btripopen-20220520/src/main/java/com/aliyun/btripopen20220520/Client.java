@@ -4481,11 +4481,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GroupUserSaveShrinkRequest request = new GroupUserSaveShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.certList)) {
+            request.certListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.certList, "cert_list", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.subCorpIdList)) {
             request.subCorpIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.subCorpIdList, "sub_corp_id_list", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseCityCode)) {
+            body.put("base_city_code", request.baseCityCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.birthday)) {
+            body.put("birthday", request.birthday);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certListShrink)) {
+            body.put("cert_list", request.certListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gender)) {
+            body.put("gender", request.gender);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jobNo)) {
             body.put("job_no", request.jobNo);
         }

@@ -4,6 +4,18 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class GroupUserSaveRequest extends TeaModel {
+    @NameInMap("base_city_code")
+    public String baseCityCode;
+
+    @NameInMap("birthday")
+    public String birthday;
+
+    @NameInMap("cert_list")
+    public java.util.List<GroupUserSaveRequestCertList> certList;
+
+    @NameInMap("gender")
+    public String gender;
+
     @NameInMap("job_no")
     public String jobNo;
 
@@ -25,6 +37,38 @@ public class GroupUserSaveRequest extends TeaModel {
     public static GroupUserSaveRequest build(java.util.Map<String, ?> map) throws Exception {
         GroupUserSaveRequest self = new GroupUserSaveRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GroupUserSaveRequest setBaseCityCode(String baseCityCode) {
+        this.baseCityCode = baseCityCode;
+        return this;
+    }
+    public String getBaseCityCode() {
+        return this.baseCityCode;
+    }
+
+    public GroupUserSaveRequest setBirthday(String birthday) {
+        this.birthday = birthday;
+        return this;
+    }
+    public String getBirthday() {
+        return this.birthday;
+    }
+
+    public GroupUserSaveRequest setCertList(java.util.List<GroupUserSaveRequestCertList> certList) {
+        this.certList = certList;
+        return this;
+    }
+    public java.util.List<GroupUserSaveRequestCertList> getCertList() {
+        return this.certList;
+    }
+
+    public GroupUserSaveRequest setGender(String gender) {
+        this.gender = gender;
+        return this;
+    }
+    public String getGender() {
+        return this.gender;
     }
 
     public GroupUserSaveRequest setJobNo(String jobNo) {
@@ -73,6 +117,69 @@ public class GroupUserSaveRequest extends TeaModel {
     }
     public String getUserName() {
         return this.userName;
+    }
+
+    public static class GroupUserSaveRequestCertList extends TeaModel {
+        @NameInMap("cert_expired_time")
+        public String certExpiredTime;
+
+        @NameInMap("cert_nation")
+        public String certNation;
+
+        @NameInMap("cert_no")
+        public String certNo;
+
+        @NameInMap("cert_type")
+        public Integer certType;
+
+        @NameInMap("nationality")
+        public String nationality;
+
+        public static GroupUserSaveRequestCertList build(java.util.Map<String, ?> map) throws Exception {
+            GroupUserSaveRequestCertList self = new GroupUserSaveRequestCertList();
+            return TeaModel.build(map, self);
+        }
+
+        public GroupUserSaveRequestCertList setCertExpiredTime(String certExpiredTime) {
+            this.certExpiredTime = certExpiredTime;
+            return this;
+        }
+        public String getCertExpiredTime() {
+            return this.certExpiredTime;
+        }
+
+        public GroupUserSaveRequestCertList setCertNation(String certNation) {
+            this.certNation = certNation;
+            return this;
+        }
+        public String getCertNation() {
+            return this.certNation;
+        }
+
+        public GroupUserSaveRequestCertList setCertNo(String certNo) {
+            this.certNo = certNo;
+            return this;
+        }
+        public String getCertNo() {
+            return this.certNo;
+        }
+
+        public GroupUserSaveRequestCertList setCertType(Integer certType) {
+            this.certType = certType;
+            return this;
+        }
+        public Integer getCertType() {
+            return this.certType;
+        }
+
+        public GroupUserSaveRequestCertList setNationality(String nationality) {
+            this.nationality = nationality;
+            return this;
+        }
+        public String getNationality() {
+            return this.nationality;
+        }
+
     }
 
     public static class GroupUserSaveRequestSubCorpIdList extends TeaModel {
