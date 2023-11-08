@@ -5,55 +5,55 @@ import com.aliyun.tea.*;
 
 public class GetPluginsResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The returned code.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The data entries returned.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetPluginsResponseBodyData> data;
 
     /**
-     * <p>The dynamic error message.</p>
+     * <p>The dynamic part in the error message.</p>
      */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
     /**
-     * <p>The data entries returned.</p>
+     * <p>The dynamic error message.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The dynamic part in the error message.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The returned code.</p>
+     * <p>Indicates whether the request was successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -141,7 +141,7 @@ public class GetPluginsResponseBody extends TeaModel {
          * <br>
          * <p>0: custom</p>
          * <br>
-         * <p>1: permission authentication</p>
+         * <p>1: permission authorization</p>
          * <br>
          * <p>2: security protection</p>
          * <br>
@@ -166,18 +166,9 @@ public class GetPluginsResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The latest version of the plug-in.</p>
-         */
         @NameInMap("MaxVersion")
         public String maxVersion;
 
-        /**
-         * <p>The plug-in language. Valid values:</p>
-         * <br>
-         * <p>*   0: the WebAssembly plug-in</p>
-         * <p>*   2: the Lua plug-in</p>
-         */
         @NameInMap("Mode")
         public Integer mode;
 
@@ -187,9 +178,6 @@ public class GetPluginsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>Indicates whether the latest version is being released.</p>
-         */
         @NameInMap("NewVersionPublishingFlag")
         public Boolean newVersionPublishingFlag;
 
@@ -217,17 +205,13 @@ public class GetPluginsResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The release state of the plug-in. Valid values:</p>
-         * <br>
-         * <p>*   0: The plug-in was released.</p>
-         * <p>*   1: The plug-in is being released.</p>
-         * <p>*   2: The plug-in failed to be released.</p>
+         * <p>The publish status.</p>
          */
         @NameInMap("PublishState")
         public Integer publishState;
 
         /**
-         * <p>Indicates whether the plug-in is enabled. Valid values:</p>
+         * <p>Indicates whether the plug-in is enabled.</p>
          * <br>
          * <p>*   0: disabled</p>
          * <p>*   1: enabled</p>

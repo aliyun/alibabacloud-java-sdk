@@ -5,49 +5,22 @@ import com.aliyun.tea.*;
 
 public class GetServiceListenersResponseBody extends TeaModel {
     /**
-     * <p>The details of the data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetServiceListenersResponseBodyData> data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>errorCode=500</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
-    @NameInMap("Message")
-    public String message;
-
-    /**
-     * <p>The number of listeners that are queried.</p>
-     */
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
-     */
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    /**
-     * <p>The error code returned if the request failed.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
 
     /**
      * <p>The message returned.</p>
@@ -55,11 +28,38 @@ public class GetServiceListenersResponseBody extends TeaModel {
      * <p>*   If the request is successful, a success message is returned.</p>
      * <p>*   If the request fails, an error message is returned.</p>
      */
+    @NameInMap("Message")
+    public String message;
+
+    /**
+     * <p>The page number of the returned page.</p>
+     */
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of listeners that are queried.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -143,49 +143,49 @@ public class GetServiceListenersResponseBody extends TeaModel {
 
     public static class GetServiceListenersResponseBodyData extends TeaModel {
         /**
-         * <p>The listener client version.</p>
+         * <p>The IP address of the listener.</p>
          */
         @NameInMap("Addr")
         public String addr;
 
         /**
-         * <p>The application name of the listener.</p>
+         * <p>The listener client version.</p>
          */
         @NameInMap("Agent")
         public String agent;
 
         /**
-         * <p>The IP address of the monitored service.</p>
+         * <p>The application name of the listener.</p>
          */
         @NameInMap("App")
         public String app;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The name of the cluster to which the monitored service belongs.</p>
          */
         @NameInMap("Cluster")
         public String cluster;
 
         /**
-         * <p>The port number of the monitored service.</p>
+         * <p>The IP address of the monitored service.</p>
          */
         @NameInMap("IP")
         public String IP;
 
         /**
-         * <p>The name of the monitored service.</p>
+         * <p>The ID of the namespace.</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
         /**
-         * <p>The ID of the namespace.</p>
+         * <p>The port number of the monitored service.</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
-         * <p>The name of the cluster to which the monitored service belongs.</p>
+         * <p>The name of the monitored service.</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;

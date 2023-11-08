@@ -14,7 +14,7 @@ public class ModifyLosslessRuleRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>Specifies whether to align the lifecycle of the application in the Kubernetes cluster with that of the microservice.</p>
      */
     @NameInMap("Aligned")
     public Boolean aligned;
@@ -26,28 +26,28 @@ public class ModifyLosslessRuleRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The microservice namespace to which the rule applies.</p>
+     * <p>The name of the application.</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
-     * <p>Specifies whether to enable graceful start. Valid values:</p>
-     * <br>
-     * <p>*   true: enabled</p>
-     * <p>*   false: disabled</p>
+     * <p>The registration latency.</p>
      */
     @NameInMap("DelayTime")
     public Integer delayTime;
 
     /**
-     * <p>The prefetching duration.</p>
+     * <p>Specifies whether to enable the alert rule. Valid values:</p>
+     * <br>
+     * <p>*   `true`: enables the rule.</p>
+     * <p>*   `false`: disables the rule.</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
 
     /**
-     * <p>The registration latency.</p>
+     * <p>The slope of the prefetching curve.</p>
      */
     @NameInMap("FuncType")
     public Integer funcType;
@@ -71,19 +71,19 @@ public class ModifyLosslessRuleRequest extends TeaModel {
     public Boolean notice;
 
     /**
-     * <p>The slope of the prefetching curve.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Specifies whether to complete service registration before readiness probe.</p>
+     * <p>Specifies whether to associate with service prefetching.</p>
      */
     @NameInMap("Related")
     public Boolean related;
 
     /**
-     * <p>Specifies whether to complete service prefetching before readiness probe.</p>
+     * <p>The prefetching duration.</p>
      */
     @NameInMap("WarmupTime")
     public Integer warmupTime;

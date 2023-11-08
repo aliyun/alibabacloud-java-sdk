@@ -4,9 +4,15 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ModifyLosslessRuleResponseBody extends TeaModel {
+    /**
+     * <p>响应码。</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>返回数据。</p>
+     */
     @NameInMap("Data")
     public Object data;
 
@@ -16,6 +22,9 @@ public class ModifyLosslessRuleResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>HTTP状态码。</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 

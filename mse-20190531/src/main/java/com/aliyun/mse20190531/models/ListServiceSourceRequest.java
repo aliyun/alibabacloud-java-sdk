@@ -19,6 +19,15 @@ public class ListServiceSourceRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    /**
+     * <p>Specifies the type of the returned service source. If this parameter is not specified, service sources of all types are returned. Valid values:</p>
+     * <br>
+     * <p>*   K8S</p>
+     * <p>*   MSE</p>
+     * <p>*   MSE_ZK</p>
+     * <p>*   SAE</p>
+     * <p>*   EDAS</p>
+     */
     @NameInMap("Source")
     public String source;
 
