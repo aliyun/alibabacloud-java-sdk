@@ -4,11 +4,17 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IsvRuleSaveRequest extends TeaModel {
+    @NameInMap("apply_need")
+    public Boolean applyNeed;
+
     @NameInMap("book_type")
     public String bookType;
 
     @NameInMap("bookuser_list")
     public java.util.List<IsvRuleSaveRequestBookuserList> bookuserList;
+
+    @NameInMap("rule_need")
+    public Boolean ruleNeed;
 
     @NameInMap("status")
     public Integer status;
@@ -19,6 +25,14 @@ public class IsvRuleSaveRequest extends TeaModel {
     public static IsvRuleSaveRequest build(java.util.Map<String, ?> map) throws Exception {
         IsvRuleSaveRequest self = new IsvRuleSaveRequest();
         return TeaModel.build(map, self);
+    }
+
+    public IsvRuleSaveRequest setApplyNeed(Boolean applyNeed) {
+        this.applyNeed = applyNeed;
+        return this;
+    }
+    public Boolean getApplyNeed() {
+        return this.applyNeed;
     }
 
     public IsvRuleSaveRequest setBookType(String bookType) {
@@ -35,6 +49,14 @@ public class IsvRuleSaveRequest extends TeaModel {
     }
     public java.util.List<IsvRuleSaveRequestBookuserList> getBookuserList() {
         return this.bookuserList;
+    }
+
+    public IsvRuleSaveRequest setRuleNeed(Boolean ruleNeed) {
+        this.ruleNeed = ruleNeed;
+        return this;
+    }
+    public Boolean getRuleNeed() {
+        return this.ruleNeed;
     }
 
     public IsvRuleSaveRequest setStatus(Integer status) {
