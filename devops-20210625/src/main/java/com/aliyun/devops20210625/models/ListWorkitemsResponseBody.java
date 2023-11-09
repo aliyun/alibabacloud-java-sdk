@@ -110,6 +110,9 @@ public class ListWorkitemsResponseBody extends TeaModel {
         @NameInMap("document")
         public String document;
 
+        @NameInMap("finishTime")
+        public Long finishTime;
+
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
@@ -196,6 +199,14 @@ public class ListWorkitemsResponseBody extends TeaModel {
         }
         public String getDocument() {
             return this.document;
+        }
+
+        public ListWorkitemsResponseBodyWorkitems setFinishTime(Long finishTime) {
+            this.finishTime = finishTime;
+            return this;
+        }
+        public Long getFinishTime() {
+            return this.finishTime;
         }
 
         public ListWorkitemsResponseBodyWorkitems setGmtCreate(Long gmtCreate) {
