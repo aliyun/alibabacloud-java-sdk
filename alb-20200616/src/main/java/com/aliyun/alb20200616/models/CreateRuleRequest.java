@@ -606,6 +606,25 @@ public class CreateRuleRequest extends TeaModel {
 
     }
 
+    public static class CreateRuleRequestRuleActionsRemoveHeaderConfig extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        public static CreateRuleRequestRuleActionsRemoveHeaderConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateRuleRequestRuleActionsRemoveHeaderConfig self = new CreateRuleRequestRuleActionsRemoveHeaderConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRuleRequestRuleActionsRemoveHeaderConfig setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+    }
+
     public static class CreateRuleRequestRuleActionsRewriteConfig extends TeaModel {
         /**
          * <p>The hostname to which requests are redirected. Valid values:</p>
@@ -839,6 +858,9 @@ public class CreateRuleRequest extends TeaModel {
         @NameInMap("RedirectConfig")
         public CreateRuleRequestRuleActionsRedirectConfig redirectConfig;
 
+        @NameInMap("RemoveHeaderConfig")
+        public CreateRuleRequestRuleActionsRemoveHeaderConfig removeHeaderConfig;
+
         /**
          * <p>The rewrite configuration.</p>
          * <br>
@@ -931,6 +953,14 @@ public class CreateRuleRequest extends TeaModel {
         }
         public CreateRuleRequestRuleActionsRedirectConfig getRedirectConfig() {
             return this.redirectConfig;
+        }
+
+        public CreateRuleRequestRuleActions setRemoveHeaderConfig(CreateRuleRequestRuleActionsRemoveHeaderConfig removeHeaderConfig) {
+            this.removeHeaderConfig = removeHeaderConfig;
+            return this;
+        }
+        public CreateRuleRequestRuleActionsRemoveHeaderConfig getRemoveHeaderConfig() {
+            return this.removeHeaderConfig;
         }
 
         public CreateRuleRequestRuleActions setRewriteConfig(CreateRuleRequestRuleActionsRewriteConfig rewriteConfig) {
@@ -1203,6 +1233,55 @@ public class CreateRuleRequest extends TeaModel {
 
     }
 
+    public static class CreateRuleRequestRuleConditionsResponseHeaderConfig extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Values")
+        public java.util.List<String> values;
+
+        public static CreateRuleRequestRuleConditionsResponseHeaderConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateRuleRequestRuleConditionsResponseHeaderConfig self = new CreateRuleRequestRuleConditionsResponseHeaderConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRuleRequestRuleConditionsResponseHeaderConfig setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateRuleRequestRuleConditionsResponseHeaderConfig setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+    }
+
+    public static class CreateRuleRequestRuleConditionsResponseStatusCodeConfig extends TeaModel {
+        @NameInMap("Values")
+        public java.util.List<String> values;
+
+        public static CreateRuleRequestRuleConditionsResponseStatusCodeConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateRuleRequestRuleConditionsResponseStatusCodeConfig self = new CreateRuleRequestRuleConditionsResponseStatusCodeConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRuleRequestRuleConditionsResponseStatusCodeConfig setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+    }
+
     public static class CreateRuleRequestRuleConditionsSourceIpConfig extends TeaModel {
         /**
          * <p>The configuration of the source IP-based forwarding rule.</p>
@@ -1261,6 +1340,12 @@ public class CreateRuleRequest extends TeaModel {
          */
         @NameInMap("QueryStringConfig")
         public CreateRuleRequestRuleConditionsQueryStringConfig queryStringConfig;
+
+        @NameInMap("ResponseHeaderConfig")
+        public CreateRuleRequestRuleConditionsResponseHeaderConfig responseHeaderConfig;
+
+        @NameInMap("ResponseStatusCodeConfig")
+        public CreateRuleRequestRuleConditionsResponseStatusCodeConfig responseStatusCodeConfig;
 
         /**
          * <p>The configuration of the source IP-based forwarding rule. This parameter is required and takes effect only when **Type** is set to **SourceIP**.</p>
@@ -1333,6 +1418,22 @@ public class CreateRuleRequest extends TeaModel {
         }
         public CreateRuleRequestRuleConditionsQueryStringConfig getQueryStringConfig() {
             return this.queryStringConfig;
+        }
+
+        public CreateRuleRequestRuleConditions setResponseHeaderConfig(CreateRuleRequestRuleConditionsResponseHeaderConfig responseHeaderConfig) {
+            this.responseHeaderConfig = responseHeaderConfig;
+            return this;
+        }
+        public CreateRuleRequestRuleConditionsResponseHeaderConfig getResponseHeaderConfig() {
+            return this.responseHeaderConfig;
+        }
+
+        public CreateRuleRequestRuleConditions setResponseStatusCodeConfig(CreateRuleRequestRuleConditionsResponseStatusCodeConfig responseStatusCodeConfig) {
+            this.responseStatusCodeConfig = responseStatusCodeConfig;
+            return this;
+        }
+        public CreateRuleRequestRuleConditionsResponseStatusCodeConfig getResponseStatusCodeConfig() {
+            return this.responseStatusCodeConfig;
         }
 
         public CreateRuleRequestRuleConditions setSourceIpConfig(CreateRuleRequestRuleConditionsSourceIpConfig sourceIpConfig) {

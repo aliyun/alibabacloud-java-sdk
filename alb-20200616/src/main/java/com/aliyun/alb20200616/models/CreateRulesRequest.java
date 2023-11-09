@@ -549,6 +549,25 @@ public class CreateRulesRequest extends TeaModel {
 
     }
 
+    public static class CreateRulesRequestRulesRuleActionsRemoveHeaderConfig extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        public static CreateRulesRequestRulesRuleActionsRemoveHeaderConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateRulesRequestRulesRuleActionsRemoveHeaderConfig self = new CreateRulesRequestRulesRuleActionsRemoveHeaderConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRulesRequestRulesRuleActionsRemoveHeaderConfig setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+    }
+
     public static class CreateRulesRequestRulesRuleActionsRewriteConfig extends TeaModel {
         /**
          * <p>Queries per second (QPS). Valid values: **1 to 100000**.</p>
@@ -750,6 +769,9 @@ public class CreateRulesRequest extends TeaModel {
         @NameInMap("RedirectConfig")
         public CreateRulesRequestRulesRuleActionsRedirectConfig redirectConfig;
 
+        @NameInMap("RemoveHeaderConfig")
+        public CreateRulesRequestRulesRuleActionsRemoveHeaderConfig removeHeaderConfig;
+
         @NameInMap("RewriteConfig")
         public CreateRulesRequestRulesRuleActionsRewriteConfig rewriteConfig;
 
@@ -816,6 +838,14 @@ public class CreateRulesRequest extends TeaModel {
         }
         public CreateRulesRequestRulesRuleActionsRedirectConfig getRedirectConfig() {
             return this.redirectConfig;
+        }
+
+        public CreateRulesRequestRulesRuleActions setRemoveHeaderConfig(CreateRulesRequestRulesRuleActionsRemoveHeaderConfig removeHeaderConfig) {
+            this.removeHeaderConfig = removeHeaderConfig;
+            return this;
+        }
+        public CreateRulesRequestRulesRuleActionsRemoveHeaderConfig getRemoveHeaderConfig() {
+            return this.removeHeaderConfig;
         }
 
         public CreateRulesRequestRulesRuleActions setRewriteConfig(CreateRulesRequestRulesRuleActionsRewriteConfig rewriteConfig) {
@@ -1107,6 +1137,25 @@ public class CreateRulesRequest extends TeaModel {
 
     }
 
+    public static class CreateRulesRequestRulesRuleConditionsResponseStatusCodeConfig extends TeaModel {
+        @NameInMap("Values")
+        public java.util.List<String> values;
+
+        public static CreateRulesRequestRulesRuleConditionsResponseStatusCodeConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateRulesRequestRulesRuleConditionsResponseStatusCodeConfig self = new CreateRulesRequestRulesRuleConditionsResponseStatusCodeConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRulesRequestRulesRuleConditionsResponseStatusCodeConfig setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+    }
+
     public static class CreateRulesRequestRulesRuleConditionsSourceIpConfig extends TeaModel {
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -1147,6 +1196,9 @@ public class CreateRulesRequest extends TeaModel {
 
         @NameInMap("ResponseHeaderConfig")
         public CreateRulesRequestRulesRuleConditionsResponseHeaderConfig responseHeaderConfig;
+
+        @NameInMap("ResponseStatusCodeConfig")
+        public CreateRulesRequestRulesRuleConditionsResponseStatusCodeConfig responseStatusCodeConfig;
 
         @NameInMap("SourceIpConfig")
         public CreateRulesRequestRulesRuleConditionsSourceIpConfig sourceIpConfig;
@@ -1216,6 +1268,14 @@ public class CreateRulesRequest extends TeaModel {
         }
         public CreateRulesRequestRulesRuleConditionsResponseHeaderConfig getResponseHeaderConfig() {
             return this.responseHeaderConfig;
+        }
+
+        public CreateRulesRequestRulesRuleConditions setResponseStatusCodeConfig(CreateRulesRequestRulesRuleConditionsResponseStatusCodeConfig responseStatusCodeConfig) {
+            this.responseStatusCodeConfig = responseStatusCodeConfig;
+            return this;
+        }
+        public CreateRulesRequestRulesRuleConditionsResponseStatusCodeConfig getResponseStatusCodeConfig() {
+            return this.responseStatusCodeConfig;
         }
 
         public CreateRulesRequestRulesRuleConditions setSourceIpConfig(CreateRulesRequestRulesRuleConditionsSourceIpConfig sourceIpConfig) {
