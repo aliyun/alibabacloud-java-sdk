@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the information about the configurations.</p>
+     * <p>The description of the configuration.</p>
      */
     @NameInMap("BaseConfigs")
     public java.util.List<DescribeLoginBaseConfigsResponseBodyBaseConfigs> baseConfigs;
@@ -144,6 +144,9 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>Corresponding configuration remark information.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 

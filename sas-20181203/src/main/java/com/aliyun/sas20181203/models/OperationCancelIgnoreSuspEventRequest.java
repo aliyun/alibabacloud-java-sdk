@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class OperationCancelIgnoreSuspEventRequest extends TeaModel {
+    /**
+     * <p>Note information.</p>
+     */
     @NameInMap("Remark")
     public String remark;
 

@@ -13,7 +13,7 @@ public class DescribeCheckWarningDetailRequest extends TeaModel {
     public Long checkWarningId;
 
     /**
-     * <p>The language of the content within the request and the response. Valid values:</p>
+     * <p>The language of the content within the request and response. Valid values:</p>
      * <br>
      * <p>*   **zh**: Chinese</p>
      * <p>*   **en**: English</p>

@@ -10,9 +10,15 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
     @NameInMap("Advice")
     public String advice;
 
+    /**
+     * <p>List of asset details to check.</p>
+     */
     @NameInMap("CheckDetailAssetInfo")
     public java.util.List<java.util.Map<String, String>> checkDetailAssetInfo;
 
+    /**
+     * <p>Detection content details.</p>
+     */
     @NameInMap("CheckDetailColumns")
     public java.util.List<DescribeCheckWarningDetailResponseBodyCheckDetailColumns> checkDetailColumns;
 
@@ -58,6 +64,14 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
 
     /**
      * <p>The type of the check item. Valid values:</p>
+     * <br>
+     * <p>*   **hc_exploit**: unauthorized access</p>
+     * <p>*   **hc_djbh**: classified protection compliance</p>
+     * <p>*   **hc_best_secruity**: best security practice</p>
+     * <p>*   **hc_container**: container security</p>
+     * <p>*   **hc_custom**: custom baseline</p>
+     * <p>*   **cis**: Center for Internet Security (CIS) compliance</p>
+     * <p>*   **weak_password**: weak password</p>
      */
     @NameInMap("Type")
     public String type;
@@ -148,12 +162,23 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeCheckWarningDetailResponseBodyCheckDetailColumnsGrids extends TeaModel {
+        /**
+         * <p>Key to detect content.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The detection content key corresponds to the display name.</p>
+         */
         @NameInMap("ShowName")
         public String showName;
 
+        /**
+         * <p>Display type. Value:</p>
+         * <p>- **grid**：Detection grid</p>
+         * <p>- **text**：text</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -189,15 +214,29 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeCheckWarningDetailResponseBodyCheckDetailColumns extends TeaModel {
+        /**
+         * <p>Detection content list.</p>
+         */
         @NameInMap("Grids")
         public java.util.List<DescribeCheckWarningDetailResponseBodyCheckDetailColumnsGrids> grids;
 
+        /**
+         * <p>Key to detect content.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The detection content key corresponds to the display name.</p>
+         */
         @NameInMap("ShowName")
         public String showName;
 
+        /**
+         * <p>Display type. Value:</p>
+         * <p>- **grid**：Detection grid</p>
+         * <p>- **text**：text</p>
+         */
         @NameInMap("Type")
         public String type;
 
