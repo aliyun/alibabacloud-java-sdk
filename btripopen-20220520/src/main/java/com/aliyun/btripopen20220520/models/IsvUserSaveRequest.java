@@ -84,6 +84,9 @@ public class IsvUserSaveRequest extends TeaModel {
     }
 
     public static class IsvUserSaveRequestUserList extends TeaModel {
+        @NameInMap("base_city_code")
+        public String baseCityCode;
+
         @NameInMap("birthday")
         public String birthday;
 
@@ -138,6 +141,14 @@ public class IsvUserSaveRequest extends TeaModel {
         public static IsvUserSaveRequestUserList build(java.util.Map<String, ?> map) throws Exception {
             IsvUserSaveRequestUserList self = new IsvUserSaveRequestUserList();
             return TeaModel.build(map, self);
+        }
+
+        public IsvUserSaveRequestUserList setBaseCityCode(String baseCityCode) {
+            this.baseCityCode = baseCityCode;
+            return this;
+        }
+        public String getBaseCityCode() {
+            return this.baseCityCode;
         }
 
         public IsvUserSaveRequestUserList setBirthday(String birthday) {

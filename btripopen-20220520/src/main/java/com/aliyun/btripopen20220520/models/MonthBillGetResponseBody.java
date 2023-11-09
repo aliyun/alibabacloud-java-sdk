@@ -115,6 +115,9 @@ public class MonthBillGetResponseBody extends TeaModel {
         @NameInMap("ieFlightAmount")
         public Double ieFlightAmount;
 
+        @NameInMap("ieHotelAmount")
+        public Double ieHotelAmount;
+
         /**
          * <p>账期日：YYYYMMDD</p>
          */
@@ -192,6 +195,14 @@ public class MonthBillGetResponseBody extends TeaModel {
         }
         public Double getIeFlightAmount() {
             return this.ieFlightAmount;
+        }
+
+        public MonthBillGetResponseBodyModuleMonthAccountBillDetail setIeHotelAmount(Double ieHotelAmount) {
+            this.ieHotelAmount = ieHotelAmount;
+            return this;
+        }
+        public Double getIeHotelAmount() {
+            return this.ieHotelAmount;
         }
 
         public MonthBillGetResponseBodyModuleMonthAccountBillDetail setMailBillDate(Long mailBillDate) {
