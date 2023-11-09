@@ -250,6 +250,9 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         @NameInMap("document")
         public String document;
 
+        @NameInMap("finishTime")
+        public Long finishTime;
+
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
@@ -356,6 +359,14 @@ public class GetWorkItemInfoResponseBody extends TeaModel {
         }
         public String getDocument() {
             return this.document;
+        }
+
+        public GetWorkItemInfoResponseBodyWorkitem setFinishTime(Long finishTime) {
+            this.finishTime = finishTime;
+            return this;
+        }
+        public Long getFinishTime() {
+            return this.finishTime;
         }
 
         public GetWorkItemInfoResponseBodyWorkitem setGmtCreate(Long gmtCreate) {
