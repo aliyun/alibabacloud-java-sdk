@@ -380,6 +380,9 @@ public class UpdateRuleAttributeRequest extends TeaModel {
     }
 
     public static class UpdateRuleAttributeRequestRuleActionsInsertHeaderConfig extends TeaModel {
+        @NameInMap("CoverEnabled")
+        public Boolean coverEnabled;
+
         /**
          * <p>The key of the header. The key must be 1 to 40 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The header key specified by **InsertHeaderConfig** must be unique.</p>
          * <br>
@@ -419,6 +422,14 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         public static UpdateRuleAttributeRequestRuleActionsInsertHeaderConfig build(java.util.Map<String, ?> map) throws Exception {
             UpdateRuleAttributeRequestRuleActionsInsertHeaderConfig self = new UpdateRuleAttributeRequestRuleActionsInsertHeaderConfig();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateRuleAttributeRequestRuleActionsInsertHeaderConfig setCoverEnabled(Boolean coverEnabled) {
+            this.coverEnabled = coverEnabled;
+            return this;
+        }
+        public Boolean getCoverEnabled() {
+            return this.coverEnabled;
         }
 
         public UpdateRuleAttributeRequestRuleActionsInsertHeaderConfig setKey(String key) {
@@ -567,6 +578,25 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         }
         public String getQuery() {
             return this.query;
+        }
+
+    }
+
+    public static class UpdateRuleAttributeRequestRuleActionsRemoveHeaderConfig extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        public static UpdateRuleAttributeRequestRuleActionsRemoveHeaderConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateRuleAttributeRequestRuleActionsRemoveHeaderConfig self = new UpdateRuleAttributeRequestRuleActionsRemoveHeaderConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateRuleAttributeRequestRuleActionsRemoveHeaderConfig setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
         }
 
     }
@@ -802,6 +832,9 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         @NameInMap("RedirectConfig")
         public UpdateRuleAttributeRequestRuleActionsRedirectConfig redirectConfig;
 
+        @NameInMap("RemoveHeaderConfig")
+        public UpdateRuleAttributeRequestRuleActionsRemoveHeaderConfig removeHeaderConfig;
+
         /**
          * <p>The configuration of the rewrite action.</p>
          */
@@ -892,6 +925,14 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         }
         public UpdateRuleAttributeRequestRuleActionsRedirectConfig getRedirectConfig() {
             return this.redirectConfig;
+        }
+
+        public UpdateRuleAttributeRequestRuleActions setRemoveHeaderConfig(UpdateRuleAttributeRequestRuleActionsRemoveHeaderConfig removeHeaderConfig) {
+            this.removeHeaderConfig = removeHeaderConfig;
+            return this;
+        }
+        public UpdateRuleAttributeRequestRuleActionsRemoveHeaderConfig getRemoveHeaderConfig() {
+            return this.removeHeaderConfig;
         }
 
         public UpdateRuleAttributeRequestRuleActions setRewriteConfig(UpdateRuleAttributeRequestRuleActionsRewriteConfig rewriteConfig) {
@@ -1146,6 +1187,55 @@ public class UpdateRuleAttributeRequest extends TeaModel {
 
     }
 
+    public static class UpdateRuleAttributeRequestRuleConditionsResponseHeaderConfig extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Values")
+        public java.util.List<String> values;
+
+        public static UpdateRuleAttributeRequestRuleConditionsResponseHeaderConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateRuleAttributeRequestRuleConditionsResponseHeaderConfig self = new UpdateRuleAttributeRequestRuleConditionsResponseHeaderConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateRuleAttributeRequestRuleConditionsResponseHeaderConfig setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public UpdateRuleAttributeRequestRuleConditionsResponseHeaderConfig setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+    }
+
+    public static class UpdateRuleAttributeRequestRuleConditionsResponseStatusCodeConfig extends TeaModel {
+        @NameInMap("Values")
+        public java.util.List<String> values;
+
+        public static UpdateRuleAttributeRequestRuleConditionsResponseStatusCodeConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateRuleAttributeRequestRuleConditionsResponseStatusCodeConfig self = new UpdateRuleAttributeRequestRuleConditionsResponseStatusCodeConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateRuleAttributeRequestRuleConditionsResponseStatusCodeConfig setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+    }
+
     public static class UpdateRuleAttributeRequestRuleConditionsSourceIpConfig extends TeaModel {
         /**
          * <p>The IP addresses or CIDR blocks.</p>
@@ -1204,6 +1294,12 @@ public class UpdateRuleAttributeRequest extends TeaModel {
          */
         @NameInMap("QueryStringConfig")
         public UpdateRuleAttributeRequestRuleConditionsQueryStringConfig queryStringConfig;
+
+        @NameInMap("ResponseHeaderConfig")
+        public UpdateRuleAttributeRequestRuleConditionsResponseHeaderConfig responseHeaderConfig;
+
+        @NameInMap("ResponseStatusCodeConfig")
+        public UpdateRuleAttributeRequestRuleConditionsResponseStatusCodeConfig responseStatusCodeConfig;
 
         /**
          * <p>The configuration of the source IP-based forwarding rule. You can add at most five source IP-based forwarding rules.</p>
@@ -1276,6 +1372,22 @@ public class UpdateRuleAttributeRequest extends TeaModel {
         }
         public UpdateRuleAttributeRequestRuleConditionsQueryStringConfig getQueryStringConfig() {
             return this.queryStringConfig;
+        }
+
+        public UpdateRuleAttributeRequestRuleConditions setResponseHeaderConfig(UpdateRuleAttributeRequestRuleConditionsResponseHeaderConfig responseHeaderConfig) {
+            this.responseHeaderConfig = responseHeaderConfig;
+            return this;
+        }
+        public UpdateRuleAttributeRequestRuleConditionsResponseHeaderConfig getResponseHeaderConfig() {
+            return this.responseHeaderConfig;
+        }
+
+        public UpdateRuleAttributeRequestRuleConditions setResponseStatusCodeConfig(UpdateRuleAttributeRequestRuleConditionsResponseStatusCodeConfig responseStatusCodeConfig) {
+            this.responseStatusCodeConfig = responseStatusCodeConfig;
+            return this;
+        }
+        public UpdateRuleAttributeRequestRuleConditionsResponseStatusCodeConfig getResponseStatusCodeConfig() {
+            return this.responseStatusCodeConfig;
         }
 
         public UpdateRuleAttributeRequestRuleConditions setSourceIpConfig(UpdateRuleAttributeRequestRuleConditionsSourceIpConfig sourceIpConfig) {
