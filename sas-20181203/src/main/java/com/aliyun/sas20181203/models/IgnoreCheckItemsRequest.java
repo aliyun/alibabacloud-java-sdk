@@ -25,6 +25,12 @@ public class IgnoreCheckItemsRequest extends TeaModel {
     @NameInMap("Reason")
     public String reason;
 
+    /**
+     * <p>Data Sources. Valid values:</p>
+     * <br>
+     * <p>*   **default**: Host baseline</p>
+     * <p>*   **agentless**: Agentless baseline</p>
+     */
     @NameInMap("Source")
     public String source;
 
