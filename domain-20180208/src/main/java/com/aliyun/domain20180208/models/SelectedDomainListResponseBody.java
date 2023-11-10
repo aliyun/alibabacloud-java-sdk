@@ -10,6 +10,9 @@ public class SelectedDomainListResponseBody extends TeaModel {
     @NameInMap("Module")
     public SelectedDomainListResponseBodyModule module;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
