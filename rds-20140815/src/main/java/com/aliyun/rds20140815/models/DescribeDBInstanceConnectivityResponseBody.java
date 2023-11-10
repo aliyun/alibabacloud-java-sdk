@@ -29,13 +29,13 @@ public class DescribeDBInstanceConnectivityResponseBody extends TeaModel {
     public String connCheckResult;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DbInstanceName")
     public String dbInstanceName;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

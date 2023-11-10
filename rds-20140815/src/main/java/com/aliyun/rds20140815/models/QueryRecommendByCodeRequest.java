@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryRecommendByCodeRequest extends TeaModel {
     /**
-     * <p>code</p>
+     * <p>The code.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -14,7 +14,7 @@ public class QueryRecommendByCodeRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

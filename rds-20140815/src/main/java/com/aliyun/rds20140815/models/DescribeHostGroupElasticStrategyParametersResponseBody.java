@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeHostGroupElasticStrategyParametersResponseBody extends TeaModel {
     /**
-     * <p>The current CPU usage rate of the instance.</p>
+     * <p>The CPU utilization of the instance. Unit: percentage.</p>
      */
     @NameInMap("CpuShar")
     public Integer cpuShar;
 
     /**
-     * <p>The CPU usage of the instance.</p>
+     * <p>The number of CPU cores used by the instance. Unit: cores.</p>
      */
     @NameInMap("CpuZoom")
     public Integer cpuZoom;
 
     /**
-     * <p>Number of IO requests.</p>
+     * <p>The number of I/O requests.</p>
      */
     @NameInMap("IopsZoom")
     public Integer iopsZoom;
 
     /**
-     * <p>The maximum number of concurrent connections for instance specifications.</p>
+     * <p>The maximum number of concurrent connections supported by the instance type.</p>
      */
     @NameInMap("MaxConnZoom")
     public Integer maxConnZoom;
 
     /**
-     * <p>The total amount of memory for instances in the current exclusive cluster.</p>
+     * <p>The total memory size of the instance in the dedicated cluster. Unit: MB.</p>
      */
     @NameInMap("MemoryZoom")
     public Integer memoryZoom;

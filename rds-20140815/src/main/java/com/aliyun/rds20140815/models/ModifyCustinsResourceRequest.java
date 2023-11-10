@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyCustinsResourceRequest extends TeaModel {
     /**
-     * <p>AdjustDeadline</p>
+     * <p>The deadline for the modification.</p>
      */
     @NameInMap("AdjustDeadline")
     public String adjustDeadline;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>IncreaseRatio</p>
+     * <p>The increase rate.</p>
      */
     @NameInMap("IncreaseRatio")
     public String increaseRatio;
@@ -26,19 +26,19 @@ public class ModifyCustinsResourceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to **INSTANCE**.</p>
+     * <p>The resource type.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>RestoreOriginalSpecification</p>
+     * <p>The original value. This parameter must be specified when **ResourceType** is set to **instance**.</p>
      */
     @NameInMap("RestoreOriginalSpecification")
     public String restoreOriginalSpecification;
 
     /**
-     * <p>Specifies whether to disable scale-in. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule.</p>
+     * <p>The target value. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. The value must be greater than 0 and can contain up to three decimal places.</p>
      */
     @NameInMap("TargetValue")
     public Integer targetValue;

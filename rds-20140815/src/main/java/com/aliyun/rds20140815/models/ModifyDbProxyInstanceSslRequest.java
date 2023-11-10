@@ -11,7 +11,7 @@ public class ModifyDbProxyInstanceSslRequest extends TeaModel {
     public String DBProxyEngineType;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
@@ -23,7 +23,7 @@ public class ModifyDbProxyInstanceSslRequest extends TeaModel {
     public String dbProxyConnectString;
 
     /**
-     * <p>The ID of the proxy endpoint. You can call the [DescribeDBProxyEndpoint](~~610507~~) operation to query the ID of the proxy endpoint.</p>
+     * <p>The ID of the proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID of the proxy endpoint.</p>
      */
     @NameInMap("DbProxyEndpointId")
     public String dbProxyEndpointId;
@@ -41,7 +41,7 @@ public class ModifyDbProxyInstanceSslRequest extends TeaModel {
     public String dbProxySslEnabled;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EvaluateLocalExtendDiskRequest extends TeaModel {
     /**
-     * <p>The name of the instance.</p>
+     * <p>The instance name.</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
@@ -14,13 +14,13 @@ public class EvaluateLocalExtendDiskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -32,7 +32,7 @@ public class EvaluateLocalExtendDiskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The storage capacity of the instance. This parameter is available only for instances that are created in dedicated clusters. Valid values: **5 to 2000**. Unit: GB. If you do not specify this parameter, the storage capacity of the instance remains unchanged.</p>
+     * <p>The new storage capacity. Unit: GB.</p>
      */
     @NameInMap("Storage")
     public Integer storage;

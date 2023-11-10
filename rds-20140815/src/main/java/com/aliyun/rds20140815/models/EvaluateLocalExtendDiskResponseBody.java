@@ -5,38 +5,31 @@ import com.aliyun.tea.*;
 
 public class EvaluateLocalExtendDiskResponseBody extends TeaModel {
     /**
-     * <p>Specifies whether to query the virtual IP addresses of only healthy CDN POPs. Valid values:</p>
-     * <br>
-     * <p>*   **on**: healthy CDN edge nodes.</p>
-     * <p>*   **off**: all CDN edge nodes.</p>
+     * <p>Indicates whether the instance is available. Valid values: true and false.</p>
      */
     @NameInMap("Available")
     public String available;
 
     /**
-     * <p>The ID of the RDS instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The data migration method of the instance. This parameter is available only for instances that are created in dedicated clusters. Valid values:</p>
-     * <br>
-     * <p>*   **0** (default): The system preferentially upgrades or downgrades the instance without a migration. If the resources on the host on which the instance resides are insufficient, the system migrates the instance to another suitable host.</p>
-     * <p>*   **1**: The system upgrades or downgrades the instance without a migration. If the upgrade or downgrade is not supported, the system reports an error.</p>
-     * <p>*   **2**: The system migrates the data of the instance from the host on which the instance resides to another host. You must also specify **DedicatedHostGroupId**, **TargetDedicatedHostIdForMaster**, and **TargetDedicatedHostIdForSlave**. If you set DBInstanceTransType to 2, you cannot migrate the data of the instance to the host on which the instance resides. If you migrate the data of the instance to the host on which the instance resides, the migration fails.</p>
+     * <p>The data transfer type supported by the instance.</p>
      */
     @NameInMap("DBInstanceTransType")
     public String DBInstanceTransType;
 
     /**
-     * <p>Local Disk Restrictions.</p>
+     * <p>The maximum value of the local disk. Unit: GB.</p>
      */
     @NameInMap("LocalUpgradeDiskLimit")
     public Long localUpgradeDiskLimit;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

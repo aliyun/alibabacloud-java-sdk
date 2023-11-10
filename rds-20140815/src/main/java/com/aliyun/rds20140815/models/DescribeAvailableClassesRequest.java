@@ -7,18 +7,23 @@ public class DescribeAvailableClassesRequest extends TeaModel {
     /**
      * <p>The RDS edition of the instance. Valid values:</p>
      * <br>
-     * <p>*   **Basic**: RDS Basic Edition.</p>
-     * <p>*   **HighAvailability**: RDS High-availability Edition.</p>
-     * <p>*   **AlwaysOn**: RDS Cluster Edition for SQL Server</p>
-     * <p>*   **Finance**: RDS Enterprise Edition</p>
+     * <p>*   Regular instance</p>
      * <br>
-     * <p>**Serverless instances**</p>
+     * <p>    *   **Basic**: RDS Basic Edition</p>
+     * <p>    *   **HighAvailability**: RDS High-availability Edition</p>
+     * <p>    *   **cluster**: RDS Cluster Edition for ApsaraDB RDS for MySQL</p>
+     * <p>    *   **AlwaysOn**: RDS Cluster Edition for ApsaraDB RDS for SQL Server</p>
+     * <p>    *   **Finance**: RDS Enterprise Edition</p>
      * <br>
-     * <p>*   **serverless_basic**: RDS Serverless Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.</p>
-     * <p>*   **serverless_standard**: RDS Serverless High-availability Edition for MySQL.</p>
-     * <p>*   **serverless_ha** RDS Serverless High-availability Edition for SQL Server.</p>
+     * <p>*   Serverless instance</p>
      * <br>
-     * <p>> If you create a serverless instance, you must specify this parameter.</p>
+     * <p>    *   **serverless_basic**: RDS Basic Edition. This edition is available only for serverless instances that run MySQL and PostgreSQL.</p>
+     * <p>    *   **serverless_standard**: RDS High-availability Edition for ApsaraDB RDS for MySQL.</p>
+     * <p>    *   **serverless_ha**: RDS High-availability Edition for ApsaraDB RDS for SQL Server.</p>
+     * <br>
+     * <p>    **</p>
+     * <br>
+     * <p>    **Note** If you create a serverless instance, you must specify this parameter.</p>
      */
     @NameInMap("Category")
     public String category;
@@ -43,7 +48,7 @@ public class DescribeAvailableClassesRequest extends TeaModel {
     public String commodityCode;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -76,18 +81,22 @@ public class DescribeAvailableClassesRequest extends TeaModel {
     /**
      * <p>The database engine version of the instance. Valid values:</p>
      * <br>
-     * <p>*   Valid values if you set Engine to MySQL: **5.5, 5.6, 5.7, and 8.0**</p>
-     * <p>*   Valid values if you set Engine to SQLServer: **2008r2, 08r2\_ent_ha, 2012, 2012\_ent_ha, 2012\_std_ha, 2012\_web, 2014\_std_ha, 2016\_ent_ha, 2016\_std_ha, 2016\_web, 2017\_std_ha, 2017\_ent, 2019\_std_ha, and 2019\_ent**</p>
-     * <p>*   Valid values if you set Engine to PostgreSQL: **10.0, 11.0, 12.0, 13.0, 14.0, and 15.0**</p>
-     * <p>*   Valid value if you set Engine to MariaDB: **10.3**</p>
+     * <p>*   Regular instance</p>
      * <br>
-     * <p>**Serverless instances**</p>
+     * <p>    *   Valid values if you set Engine to MySQL: **5.5, 5.6, 5.7, and 8.0**</p>
+     * <p>    *   Valid values if you set Engine to SQLServer: **2008r2, 08r2\_ent_ha, 2012, 2012\_ent_ha, 2012\_std_ha, 2012\_web, 2014\_std_ha, 2016\_ent_ha, 2016\_std_ha, 2016\_web, 2017\_std_ha, 2017\_ent, 2019\_std_ha, and 2019\_ent**</p>
+     * <p>    *   Valid values if you set Engine to PostgreSQL: **10.0, 11.0, 12.0, 13.0, 14.0, and 15.0**</p>
+     * <p>    *   Valid value when you set Engine to MariaDB: **10.3**</p>
      * <br>
-     * <p>*   Valid values if you set Engine to MySQL: **5.7** and **8.0**</p>
-     * <p>*   Valid values if you set Engine to SQLServer: **SQL Server**, **SQL Server**, and **SQL Server**</p>
-     * <p>*   Valid value if you set Engine to PostgreSQL: **14.0**</p>
+     * <p>*   Serverless instance</p>
      * <br>
-     * <p>> ApsaraDB RDS for MariaDB does not support serverless instances.</p>
+     * <p>    *   Valid values if you set Engine to MySQL: **5.7** and **8.0**</p>
+     * <p>    *   Valid values if you set Engine to SQLServer: **2016\_std_sl**, **2017\_std_sl**, and **2019\_std_sl**</p>
+     * <p>    *   Valid value if you set Engine to PostgreSQL: **14.0**</p>
+     * <br>
+     * <p>    **</p>
+     * <br>
+     * <p>    **Note** ApsaraDB RDS for MariaDB does not support serverless instances.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -111,7 +120,7 @@ public class DescribeAvailableClassesRequest extends TeaModel {
     public String orderType;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of an instance.</p>
+     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the region ID of the instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -120,9 +129,9 @@ public class DescribeAvailableClassesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The zone ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the zone ID of an instance.</p>
+     * <p>The zone ID of the instance. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the zone ID of the instance.</p>
      * <br>
-     * <p>> If the DescribeDBInstanceAttribute operation returns multiple zones, you must specify only one of the returned zones. For example, if the DescribeDBInstanceAttribute operation returns `cn-hangzhou-MAZ9(g,h)`, you can set the ZoneId parameter to `cn-hangzhou-g` or `cn-hangzhou-h`.</p>
+     * <p>>  If the DescribeDBInstanceAttribute operation returns multiple zones, you must specify only one of the returned zones. For example, if the DescribeDBInstanceAttribute operation returns `cn-hangzhou-MAZ9(g,h)`, you can set this parameter to `cn-hangzhou-g` or `cn-hangzhou-h`.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

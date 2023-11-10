@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class DescribeQuickSaleConfigResponseBody extends TeaModel {
     /**
-     * <p>Product code.</p>
+     * <p>The product code. Valid values:</p>
+     * <br>
+     * <p>*   rds: The instance is a subscription instance.</p>
+     * <p>*   bards: The instance is a pay-as-you-go instance.</p>
      */
     @NameInMap("Commodity")
     public String commodity;
 
     /**
-     * <p>Return data.</p>
+     * <p>The configuration details of the product.</p>
      */
     @NameInMap("Items")
     public java.util.Map<String, ?> items;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

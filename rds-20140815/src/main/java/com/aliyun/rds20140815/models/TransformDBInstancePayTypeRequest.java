@@ -41,7 +41,7 @@ public class TransformDBInstancePayTypeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The billing method of the instance. Valid values:</p>
+     * <p>The new billing method of the instance. Valid values:</p>
      * <br>
      * <p>*   **Postpaid**: pay-as-you-go</p>
      * <p>*   **Prepaid**: subscription</p>

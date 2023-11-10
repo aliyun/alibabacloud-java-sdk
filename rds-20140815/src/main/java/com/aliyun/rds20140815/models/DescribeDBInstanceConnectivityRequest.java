@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceConnectivityRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DbInstanceName")
     public String dbInstanceName;
@@ -17,7 +17,7 @@ public class DescribeDBInstanceConnectivityRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -32,7 +32,7 @@ public class DescribeDBInstanceConnectivityRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The private IP address that is used to connect to the self-managed PostgreSQL instance.</p>
+     * <p>The source IP address.</p>
      */
     @NameInMap("SourceIpAddress")
     public String sourceIpAddress;
