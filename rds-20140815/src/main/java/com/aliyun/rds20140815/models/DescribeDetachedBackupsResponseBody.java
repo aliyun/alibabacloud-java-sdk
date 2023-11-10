@@ -159,7 +159,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         /**
          * <p>The point in time at which the data in the backup set is consistent. The return value of this parameter is a timestamp.</p>
          * <br>
-         * <p>> If the instance runs MySQL 5.6, a timestamp is returned. Otherwise, the value 0 is returned.</p>
+         * <p>>  If the instance runs MySQL 5.6, a timestamp is returned. Otherwise, the value 0 is returned.</p>
          */
         @NameInMap("ConsistentTime")
         public Long consistentTime;
@@ -171,7 +171,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         public String DBInstanceComment;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;

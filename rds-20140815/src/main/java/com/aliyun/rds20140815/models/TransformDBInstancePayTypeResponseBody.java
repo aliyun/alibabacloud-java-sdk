@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class TransformDBInstancePayTypeResponseBody extends TeaModel {
     /**
-     * <p>The billing method.</p>
+     * <p>The payment type.</p>
+     * <br>
+     * <p>*   Valid value if the new billing method is pay-as-you-go: POSTPAY</p>
+     * <p>*   Valid value if the new billing method is subscription: PREPAY</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;

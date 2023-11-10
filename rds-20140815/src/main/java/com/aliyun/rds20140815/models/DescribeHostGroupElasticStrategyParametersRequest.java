@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeHostGroupElasticStrategyParametersRequest extends TeaModel {
     /**
-     * <p>Dedicated Host Group Name.</p>
+     * <p>The name of the dedicated cluster.</p>
      */
     @NameInMap("DedicatedHostGroupName")
     public String dedicatedHostGroupName;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

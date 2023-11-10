@@ -13,13 +13,13 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
     public String accountDescription;
 
     /**
-     * <p>The username of the account. You can call the [DescribeAccounts](~~610454~~) operation to query the username of the account.</p>
+     * <p>The username of the account. You can call the DescribeAccounts operation to obtain the username of the account.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

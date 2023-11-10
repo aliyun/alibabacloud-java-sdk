@@ -5,24 +5,27 @@ import com.aliyun.tea.*;
 
 public class DescribeQuickSaleConfigRequest extends TeaModel {
     /**
-     * <p>Product code.</p>
+     * <p>The product code. Valid values:</p>
+     * <br>
+     * <p>*   rds: The instance is a subscription instance.</p>
+     * <p>*   bards: The instance is a pay-as-you-go instance.</p>
      */
     @NameInMap("Commodity")
     public String commodity;
 
     /**
-     * <p>The database engine that is run by the instance. Valid values:</p>
+     * <p>The database engine of the instance. Valid values:</p>
      * <br>
-     * <p>* **MySQL**</p>
-     * <p>* **SQLServer**</p>
-     * <p>* **PostgreSQL**</p>
-     * <p>* **MariaDB**</p>
+     * <p>*   **MySQL**</p>
+     * <p>*   **SQLServer**</p>
+     * <p>*   **PostgreSQL**</p>
+     * <p>*   **MariaDB**</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -162,7 +162,7 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
      * <p>*   If the original instance runs RDS Basic Edition, you must enter the vSwitch ID of the new instance.</p>
      * <p>*   If the original instance runs RDS High-availability Edition, you must enter the vSwitch ID of the new instance and the vSwitch ID of the secondary instance of the new instance. Make sure that you separate the vSwitch IDs with commas (,).</p>
      * <br>
-     * <p>> The vSwitches that you specify must reside in the same zone as the original instance. You can call the [DescribeVSwitches](~~35748~~) operation to query the ID of the vSwitch.</p>
+     * <p>>  The vSwitches that you specify must reside in the same zone as the original instance. You can call the [DescribeVSwitches](~~35748~~) operation to query the ID of the vSwitch.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

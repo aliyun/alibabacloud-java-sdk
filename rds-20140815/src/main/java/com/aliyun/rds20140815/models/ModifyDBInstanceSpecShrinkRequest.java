@@ -22,22 +22,22 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     /**
      * <p>The RDS edition of the instance. Valid values:</p>
      * <br>
-     * <p>*   Regular instance</p>
+     * <p>*   Regular RDS instance</p>
      * <br>
      * <p>    *   **Basic**: RDS Basic Edition</p>
      * <p>    *   **HighAvailability**: RDS High-availability Edition</p>
-     * <p>    *   **AlwaysOn**: RDS Cluster Edition for SQL Server</p>
-     * <p>    *   **AlwaysOn**: RDS Cluster Edition for SQL Server</p>
+     * <p>    *   **AlwaysOn**: RDS Cluster Edition for ApsaraDB RDS for SQL Server</p>
+     * <p>    *   **Cluster**: RDS Cluster Edition for ApsaraDB RDS for MySQL.</p>
      * <br>
      * <p>*   Serverless instance</p>
      * <br>
-     * <p>    *   **serverless_basic**: RDS Serverless Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.</p>
-     * <p>    *   **serverless_standard**: RDS Serverless High-availability Edition for MySQL.</p>
-     * <p>    *   **serverless_ha** RDS Serverless High-availability Edition for SQL Server.</p>
+     * <p>    *   **serverless_basic**: RDS Basic Edition. This edition is available only for serverless instances that run MySQL and PostgreSQL.</p>
+     * <p>    *   **serverless_standard**: RDS High-availability Edition for ApsaraDB RDS for MySQL.</p>
+     * <p>    *   **serverless_ha**: RDS High-availability Edition for ApsaraDB RDS for SQL Server.</p>
      * <br>
      * <p>    **</p>
      * <br>
-     * <p>    **Note**If you set **EngineVersion** to an SQL Server version number, you must also specify this parameter.</p>
+     * <p>    **Note** If you set the **EngineVersion** parameter to an SQL Server version number, you must also specify this parameter.</p>
      */
     @NameInMap("Category")
     public String category;
@@ -94,7 +94,7 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
      * <p>*   **Up** (default): upgrades a subscription instance, or upgrades or downgrades a pay-as-you-go instance.</p>
      * <p>*   **Down**: downgrades a subscription instance.</p>
      * <p>*   **TempUpgrade**: performs auto scaling on a subscription instance that runs SQL Server. This value is required for auto scaling.</p>
-     * <p>*   **Serverless**: modifies the auto scaling settings of a serverless instance This value is required if you want to modify the auto scaling settings of a serverless instance.</p>
+     * <p>*   **Serverless**: modifies the auto scaling settings of a serverless instance. This value is required if you want to modify the auto scaling settings of a serverless instance.</p>
      * <br>
      * <p>>  If you specify only **DBInstanceStorageType**, you can leave Direction empty. For example, if you want to change only the storage type of the instance from standard SSD to ESSD, you do not need to specify Direction.</p>
      */
@@ -102,9 +102,9 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The effective time. Valid values:</p>
+     * <p>The time when you want the change to take effect. Valid values:</p>
      * <br>
-     * <p>*   **Immediately**: This is the default value.</p>
+     * <p>*   **Immediate**: This is the default value.</p>
      * <p>*   **MaintainTime**: The effective time is within the maintenance window. For more information, see [ModifyDBInstanceMaintainTime](~~610402~~).</p>
      */
     @NameInMap("EffectiveTime")

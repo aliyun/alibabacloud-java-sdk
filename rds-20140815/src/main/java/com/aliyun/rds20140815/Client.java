@@ -5243,7 +5243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   MySQL
       * ### [](#)Description
       * *   A full backup file contains the data of a self-managed MySQL instance. You can restore the data of a self-managed MySQL instance from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
-      * *   This operation deletes full backup files only from the ApsaraDB RDS console. This operation does not affect the full backup files that are stored as objects in Object Storage Service (OSS) buckets. After you call this operation to delete a full backup file, you can call the [ImportUserBackupFile](~~260266~~)operation to import the full backup file again.
+      * *   This operation deletes full backup files only from the ApsaraDB RDS console. This operation does not affect the full backup files that are stored as objects in Object Storage Service (OSS) buckets. After you call this operation to delete a full backup file, you can call the [ImportUserBackupFile](~~260266~~) operation to import the full backup file again.
       *
       * @param request DeleteUserBackupFileRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5298,7 +5298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   MySQL
       * ### [](#)Description
       * *   A full backup file contains the data of a self-managed MySQL instance. You can restore the data of a self-managed MySQL instance from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
-      * *   This operation deletes full backup files only from the ApsaraDB RDS console. This operation does not affect the full backup files that are stored as objects in Object Storage Service (OSS) buckets. After you call this operation to delete a full backup file, you can call the [ImportUserBackupFile](~~260266~~)operation to import the full backup file again.
+      * *   This operation deletes full backup files only from the ApsaraDB RDS console. This operation does not affect the full backup files that are stored as objects in Object Storage Service (OSS) buckets. After you call this operation to delete a full backup file, you can call the [ImportUserBackupFile](~~260266~~) operation to import the full backup file again.
       *
       * @param request DeleteUserBackupFileRequest
       * @return DeleteUserBackupFileResponse
@@ -5831,6 +5831,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeAnalyticdbByPrimaryDBInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      *
+      * @param request DescribeAvailableClassesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeAvailableClassesResponse
+     */
     public DescribeAvailableClassesResponse describeAvailableClassesWithOptions(DescribeAvailableClassesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5895,6 +5906,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAvailableClassesResponse());
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      *
+      * @param request DescribeAvailableClassesRequest
+      * @return DescribeAvailableClassesResponse
+     */
     public DescribeAvailableClassesResponse describeAvailableClasses(DescribeAvailableClassesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAvailableClassesWithOptions(request, runtime);
@@ -12135,6 +12156,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeReadDBInstanceDelayWithOptions(request, runtime);
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      *
+      * @param request DescribeRegionInfosRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeRegionInfosResponse
+     */
     public DescribeRegionInfosResponse describeRegionInfosWithOptions(DescribeRegionInfosRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -12175,6 +12207,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRegionInfosResponse());
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      *
+      * @param request DescribeRegionInfosRequest
+      * @return DescribeRegionInfosResponse
+     */
     public DescribeRegionInfosResponse describeRegionInfos(DescribeRegionInfosRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRegionInfosWithOptions(request, runtime);
@@ -14321,14 +14363,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ### [](#)Supported database engine
+      * *   SQL Server
+      * ### [](#)Description
       * We recommend that you use Data Transmission Service (DTS). DTS provides data migration, subscription, and synchronization features that allow you to establish stable, secure transmission links. For more information, see [DTS API overview](~~49456~~).
-      * During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
-      * Before you call this operation, make sure that the following requirements are met:
-      * *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
-      * *   The source and destination instances must be created by using the same user credentials.
-      * *   The instance is in the Running state.
-      * *   The source and destination databases must be in the Running state.
-      * *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
+      * ### [](#)Precautions
+      * *   During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
+      * *   Before you call this operation, make sure that the following requirements are met:
+      *     *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
+      *     *   The source and destination instances must be created by using the same user credentials.
+      *     *   The instance is in the Running state.
+      *     *   The source and destination databases must be in the Running state.
+      *     *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
       * > 
       * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
       * *   You can migrate the data of multiple databases at a time.
@@ -14386,14 +14432,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ### [](#)Supported database engine
+      * *   SQL Server
+      * ### [](#)Description
       * We recommend that you use Data Transmission Service (DTS). DTS provides data migration, subscription, and synchronization features that allow you to establish stable, secure transmission links. For more information, see [DTS API overview](~~49456~~).
-      * During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
-      * Before you call this operation, make sure that the following requirements are met:
-      * *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
-      * *   The source and destination instances must be created by using the same user credentials.
-      * *   The instance is in the Running state.
-      * *   The source and destination databases must be in the Running state.
-      * *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
+      * ### [](#)Precautions
+      * *   During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
+      * *   Before you call this operation, make sure that the following requirements are met:
+      *     *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
+      *     *   The source and destination instances must be created by using the same user credentials.
+      *     *   The instance is in the Running state.
+      *     *   The source and destination databases must be in the Running state.
+      *     *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
       * > 
       * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
       * *   You can migrate the data of multiple databases at a time.
@@ -17384,6 +17434,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyDBInstanceTDEWithOptions(request, runtime);
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * ### [](#)References
+      * > Fees are generated if the call is successful. Before you call this operation, carefully read the following topics:
+      * *   [Change the specifications of an ApsaraDB RDS for MySQL instance](~~96061~~)
+      *
+      * @param tmpReq ModifyDBNodeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDBNodeResponse
+     */
     public ModifyDBNodeResponse modifyDBNodeWithOptions(ModifyDBNodeRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ModifyDBNodeShrinkRequest request = new ModifyDBNodeShrinkRequest();
@@ -17458,6 +17519,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBNodeResponse());
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * ### [](#)References
+      * > Fees are generated if the call is successful. Before you call this operation, carefully read the following topics:
+      * *   [Change the specifications of an ApsaraDB RDS for MySQL instance](~~96061~~)
+      *
+      * @param request ModifyDBNodeRequest
+      * @return ModifyDBNodeResponse
+     */
     public ModifyDBNodeResponse modifyDBNode(ModifyDBNodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDBNodeWithOptions(request, runtime);
@@ -19813,8 +19884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Prerequisites
-      * A disaster recovery instance is created.
+      * The operation is phased out.
       *
       * @param request ReceiveDBInstanceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -19865,8 +19935,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Prerequisites
-      * A disaster recovery instance is created.
+      * The operation is phased out.
       *
       * @param request ReceiveDBInstanceRequest
       * @return ReceiveDBInstanceResponse
@@ -21421,6 +21490,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.switchDBInstanceVpcWithOptions(request, runtime);
     }
 
+    /**
+      * This operation is phased out.
+      *
+      * @param request SwitchGuardToMasterInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SwitchGuardToMasterInstanceResponse
+     */
     public SwitchGuardToMasterInstanceResponse switchGuardToMasterInstanceWithOptions(SwitchGuardToMasterInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -21465,6 +21541,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SwitchGuardToMasterInstanceResponse());
     }
 
+    /**
+      * This operation is phased out.
+      *
+      * @param request SwitchGuardToMasterInstanceRequest
+      * @return SwitchGuardToMasterInstanceResponse
+     */
     public SwitchGuardToMasterInstanceResponse switchGuardToMasterInstance(SwitchGuardToMasterInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.switchGuardToMasterInstanceWithOptions(request, runtime);

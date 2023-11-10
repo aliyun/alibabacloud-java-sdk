@@ -14,13 +14,13 @@ public class DescribeLocalAvailableRecoveryTimeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

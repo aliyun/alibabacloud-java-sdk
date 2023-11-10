@@ -49,7 +49,7 @@ public class CreateAccountRequest extends TeaModel {
     public String accountPassword;
 
     /**
-     * <p>The type of the account. Valid values:</p>
+     * <p>The account type. Valid values:</p>
      * <br>
      * <p>*   **Normal**: standard account</p>
      * <p>*   **Super**: privileged account</p>
@@ -60,7 +60,7 @@ public class CreateAccountRequest extends TeaModel {
     public String accountType;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

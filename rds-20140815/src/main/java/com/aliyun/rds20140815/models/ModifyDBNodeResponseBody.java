@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBNodeResponseBody extends TeaModel {
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -17,16 +17,16 @@ public class ModifyDBNodeResponseBody extends TeaModel {
     public Long orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;

@@ -15,7 +15,7 @@ public class DescribeDBInstanceEndpointsRequest extends TeaModel {
     /**
      * <p>The endpoint ID of the instance.</p>
      * <br>
-     * <p>If this parameter is not specified, the information about all endpoints is returned.</p>
+     * <p>>  If this parameter is not specified, the information about all endpoints is returned.</p>
      */
     @NameInMap("DBInstanceEndpointId")
     public String DBInstanceEndpointId;

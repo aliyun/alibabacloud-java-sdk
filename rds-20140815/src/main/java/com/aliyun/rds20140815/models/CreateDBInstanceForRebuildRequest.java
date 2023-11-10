@@ -69,7 +69,7 @@ public class CreateDBInstanceForRebuildRequest extends TeaModel {
      * <p>*   **Year**</p>
      * <p>*   **Month**</p>
      * <br>
-     * <p>>  This parameter must be specified when the PayType parameter is set to **Prepaid**.</p>
+     * <p>>  If you set the PayType parameter to **Prepaid**, you must specify this parameter.</p>
      */
     @NameInMap("Period")
     public String period;
@@ -148,7 +148,7 @@ public class CreateDBInstanceForRebuildRequest extends TeaModel {
     /**
      * <p>The zone ID of the secondary instance.</p>
      * <br>
-     * <p>> If the instance does not run RDS Basic Edition, you must specify this parameter.</p>
+     * <p>>  If the instance does not run RDS Basic Edition, you must specify this parameter.</p>
      */
     @NameInMap("ZoneIdSlave1")
     public String zoneIdSlave1;
@@ -156,7 +156,7 @@ public class CreateDBInstanceForRebuildRequest extends TeaModel {
     /**
      * <p>The zone ID of the logger instance.</p>
      * <br>
-     * <p>> This parameter is available only when the instance runs RDS Enterprise Edition.</p>
+     * <p>>  This parameter is available only when the instance runs RDS Enterprise Edition.</p>
      */
     @NameInMap("ZoneIdSlave2")
     public String zoneIdSlave2;

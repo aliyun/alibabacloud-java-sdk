@@ -9,17 +9,17 @@ public class DescribeAvailableZonesRequest extends TeaModel {
      * <br>
      * <p>*   Regular instance</p>
      * <br>
-     * <p>    *   **Basic**: RDS Basic Edition</p>
-     * <p>    *   **HighAvailability**: RDS High-availability Edition</p>
-     * <p>    *   **cluster**: RDS Cluster Edition for MySQL</p>
-     * <p>    *   **AlwaysOn**: RDS Cluster Edition for SQL Server</p>
-     * <p>    *   **Finance**: RDS Enterprise Edition</p>
+     * <p>    *   **Basic**: RDS Basic Edition.</p>
+     * <p>    *   **HighAvailability**: RDS High-availability Edition.</p>
+     * <p>    *   **cluster**: RDS Cluster Edition for ApsaraDB RDS for MySQL.</p>
+     * <p>    *   **AlwaysOn**: RDS Cluster Edition for ApsaraDB RDS for SQL Server.</p>
+     * <p>    *   **Finance**: RDS Enterprise Edition.</p>
      * <br>
      * <p>*   Serverless instance</p>
      * <br>
-     * <p>    *   **serverless_basic**: RDS Serverless Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.</p>
-     * <p>    *   **serverless_standard**: RDS Serverless High-availability Edition for MySQL.</p>
-     * <p>    *   **serverless_ha** RDS Serverless High-availability Edition for SQL Server.</p>
+     * <p>    *   **serverless_basic**: RDS Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.</p>
+     * <p>    *   **serverless_standard**: RDS High-availability Edition for ApsaraDB RDS for MySQL.</p>
+     * <p>    *   **serverless_ha**: RDS High-availability Edition for ApsaraDB RDS for SQL Server.</p>
      */
     @NameInMap("Category")
     public String category;
@@ -60,7 +60,7 @@ public class DescribeAvailableZonesRequest extends TeaModel {
      * <p>*   **1** (default): returns the zones.</p>
      * <p>*   **0**: does not return the zones.</p>
      * <br>
-     * <p>> The single-zone deployment method allows you to deploy an instance that runs RDS Enterprise Edition in a single zone.</p>
+     * <p>>  The single-zone deployment method allows you to deploy an instance that runs RDS Enterprise Edition in a single zone.</p>
      */
     @NameInMap("DispenseMode")
     public String dispenseMode;
