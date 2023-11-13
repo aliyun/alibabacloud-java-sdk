@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveAutoScalingPolicyResponseBody extends TeaModel {
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationConfigsResponseBody extends TeaModel {
     /**
-     * <p>操作ID。</p>
+     * <p>The operation ID.</p>
      */
     @NameInMap("OperationId")
     public String operationId;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

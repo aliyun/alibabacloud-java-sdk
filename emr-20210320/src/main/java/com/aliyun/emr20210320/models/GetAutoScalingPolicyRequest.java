@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetAutoScalingPolicyRequest extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>节点组ID。节点组 Id-针对 ACK 集群，此字段为空。</p>
+     * <p>The ID of the node group.</p>
      */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

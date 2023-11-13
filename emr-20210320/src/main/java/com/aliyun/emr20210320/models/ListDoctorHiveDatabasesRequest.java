@@ -5,37 +5,54 @@ import com.aliyun.tea.*;
 
 public class ListDoctorHiveDatabasesRequest extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The database names.</p>
+     */
     @NameInMap("DatabaseNames")
     public java.util.List<String> databaseNames;
 
+    /**
+     * <p>The query date.</p>
+     */
     @NameInMap("DateTime")
     public String dateTime;
 
     /**
-     * <p>一次获取的最大记录数。取值范围：1~100。</p>
+     * <p>The maximum number of entries to return on each page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>标记当前开始读取的位置，置空表示从头开始。</p>
+     * <p>The pagination token that is used in the request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The basis on which you want to sort the query results. Valid values:</p>
+     * <br>
+     * <p>*   tableCount: the number of tables</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
+    /**
+     * <p>The order in which you want to sort the query results. Valid values:</p>
+     * <br>
+     * <p>*   ASC: in ascending order</p>
+     * <p>*   DESC: in descending order</p>
+     */
     @NameInMap("OrderType")
     public String orderType;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetAutoScalingPolicyResponseBody extends TeaModel {
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the auto scaling policy.</p>
+     */
     @NameInMap("ScalingPolicy")
     public ScalingPolicy scalingPolicy;
 
@@ -36,13 +39,13 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
 
     public static class Constraints extends TeaModel {
         /**
-         * <p>最大值</p>
+         * <p>The maximum number of nodes in the node group. Default value: 2000.</p>
          */
         @NameInMap("MaxCapacity")
         public Integer maxCapacity;
 
         /**
-         * <p>最小值</p>
+         * <p>The minimum number of nodes in the node group. Default value: 0.</p>
          */
         @NameInMap("MinCapacity")
         public Integer minCapacity;
@@ -72,47 +75,49 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
 
     public static class ScalingRules extends TeaModel {
         /**
-         * <p>伸缩类型。取值范围：</p>
-         * <p>- SCALE_OUT：扩容</p>
-         * <p>- SCALE_IN：缩容</p>
+         * <p>The type of the scaling activity. Valid values:</p>
+         * <br>
+         * <p>*   SCALE_OUT: scale-out rules</p>
+         * <p>*   SCALE_IN: scale-in rules</p>
          */
         @NameInMap("ActivityType")
         public String activityType;
 
         /**
-         * <p>调整类型。CHANGE_IN_CAPACITY/EXACT_CAPACITY。</p>
+         * <p>The adjustment type.</p>
          */
         @NameInMap("AdjustmentType")
         public String adjustmentType;
 
         /**
-         * <p>调整值。需要为正数，代表需要扩容或者缩容的实例数量。</p>
+         * <p>The adjustment value. The value must be a positive number, which indicates the number of instances to be scaled out or in.</p>
          */
         @NameInMap("AdjustmentValue")
         public Integer adjustmentValue;
 
         /**
-         * <p>按照负载伸缩描述。</p>
+         * <p>The description of scaling by load.</p>
          */
         @NameInMap("MetricsTrigger")
         public MetricsTrigger metricsTrigger;
 
         /**
-         * <p>弹性伸缩规则名称。</p>
+         * <p>The name of the auto scaling rule.</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
-         * <p>按照时间伸缩描述。</p>
+         * <p>The description of scaling by time.</p>
          */
         @NameInMap("TimeTrigger")
         public TimeTrigger timeTrigger;
 
         /**
-         * <p>伸缩规则类型。取值范围：</p>
-         * <p>- TIME_TRIGGER: 按时间伸缩。</p>
-         * <p>- METRICS_TRIGGER: 按负载伸缩。</p>
+         * <p>The type of the scaling rule. Valid values:</p>
+         * <br>
+         * <p>*   TIME_TRIGGER: scaling by time.</p>
+         * <p>*   METRICS_TRIGGER: scaling by load.</p>
          */
         @NameInMap("TriggerType")
         public String triggerType;
@@ -182,31 +187,31 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
 
     public static class ScalingPolicy extends TeaModel {
         /**
-         * <p>集群ID。</p>
+         * <p>The cluster ID.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
-         * <p>最大最小值约束</p>
+         * <p>The maximum and minimum numbers of node groups.</p>
          */
         @NameInMap("Constraints")
         public Constraints constraints;
 
         /**
-         * <p>节点组ID。</p>
+         * <p>The ID of the node group.</p>
          */
         @NameInMap("NodeGroupId")
         public String nodeGroupId;
 
         /**
-         * <p>伸缩策略ID。</p>
+         * <p>The ID of the scaling policy.</p>
          */
         @NameInMap("ScalingPolicyId")
         public String scalingPolicyId;
 
         /**
-         * <p>伸缩规则列表</p>
+         * <p>The scaling rules.</p>
          */
         @NameInMap("ScalingRules")
         public java.util.List<ScalingRules> scalingRules;

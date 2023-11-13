@@ -5,60 +5,62 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationConfigsRequest extends TeaModel {
     /**
-     * <p>应用配置列表。</p>
+     * <p>The list of application configurations.</p>
      */
     @NameInMap("ApplicationConfigs")
     public java.util.List<UpdateApplicationConfig> applicationConfigs;
 
     /**
-     * <p>应用名称。</p>
+     * <p>The application name.</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>配置项操作。取值范围：</p>
-     * <p>- ADD：添加。</p>
-     * <p>- DELETE：删除。</p>
-     * <p>- UPDATE：更新。</p>
+     * <p>The operation performed on configuration items. Valid values:</p>
+     * <br>
+     * <p>*   ADD</p>
+     * <p>*   UPDATE</p>
+     * <p>*   DELETE</p>
      */
     @NameInMap("ConfigAction")
     public String configAction;
 
     /**
-     * <p>配置操作范围。取值范围：</p>
-     * <p>- CLUSTER：集群范围。</p>
-     * <p>- NODE_GROUP：节点组范围。</p>
+     * <p>The operation scope. Valid values:</p>
+     * <br>
+     * <p>*   CLUSTER</p>
+     * <p>*   NODE_GROUP</p>
      */
     @NameInMap("ConfigScope")
     public String configScope;
 
     /**
-     * <p>本次更新操作描述。</p>
+     * <p>The description.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>节点组ID。</p>
+     * <p>The ID of the node group.</p>
      */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
     /**
-     * <p>节点ID。</p>
+     * <p>The node ID.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

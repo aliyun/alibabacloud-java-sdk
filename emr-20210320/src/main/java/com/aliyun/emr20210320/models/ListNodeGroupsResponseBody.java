@@ -5,28 +5,31 @@ import com.aliyun.tea.*;
 
 public class ListNodeGroupsResponseBody extends TeaModel {
     /**
-     * <p>本次请求所返回的最大记录条数。</p>
+     * <p>The maximum number of entries returned.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+     * <p>Returns the location of the data that was read. Empty indicates that the data has been read.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The array of node groups.</p>
+     */
     @NameInMap("NodeGroups")
     public java.util.List<NodeGroup> nodeGroups;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>本次请求条件下的数据总量。</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

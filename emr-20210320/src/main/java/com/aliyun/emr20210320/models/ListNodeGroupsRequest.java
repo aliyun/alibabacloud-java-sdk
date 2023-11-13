@@ -5,49 +5,49 @@ import com.aliyun.tea.*;
 
 public class ListNodeGroupsRequest extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>一次获取的最大记录数。取值范围：1~100。</p>
+     * <p>The number of maximum number of records to obtain at a time. Valid values: 1 to 100.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>标记当前开始读取的位置，置空表示从头开始。</p>
+     * <p>Marks the current position where reading starts. If you set this value to null, you can start from the beginning.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>节点组ID列表。</p>
+     * <p>The IDs of node groups. Valid values of the number of array elements N: 1 to 100.</p>
      */
     @NameInMap("NodeGroupIds")
     public java.util.List<String> nodeGroupIds;
 
     /**
-     * <p>节点组名称列表。</p>
+     * <p>The list of node group names. Valid values of the number of array elements N: 1 to 100.</p>
      */
     @NameInMap("NodeGroupNames")
     public java.util.List<String> nodeGroupNames;
 
     /**
-     * <p>节点组状态。</p>
+     * <p>The status of the node group. Valid values of the number of array elements N: 1 to 100.</p>
      */
     @NameInMap("NodeGroupStates")
     public java.util.List<String> nodeGroupStates;
 
     /**
-     * <p>节点组类型列表。</p>
+     * <p>The list of node group types. Valid values of the number of array elements N: 1 to 100.</p>
      */
     @NameInMap("NodeGroupTypes")
     public java.util.List<String> nodeGroupTypes;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The ID of the region in which you want to create the instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

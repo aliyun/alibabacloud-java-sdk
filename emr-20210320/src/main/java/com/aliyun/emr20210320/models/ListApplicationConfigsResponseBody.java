@@ -4,29 +4,32 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationConfigsResponseBody extends TeaModel {
+    /**
+     * <p>The application configurations.</p>
+     */
     @NameInMap("ApplicationConfigs")
     public java.util.List<ApplicationConfigs> applicationConfigs;
 
     /**
-     * <p>本次请求所返回的最大记录条数。</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+     * <p>The page number of the next page returned.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>本次请求条件下的数据总量。</p>
+     * <p>The total number of pages.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -78,79 +81,79 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
 
     public static class ApplicationConfigs extends TeaModel {
         /**
-         * <p>应用名称。</p>
+         * <p>The name of the application.</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
 
         /**
-         * <p>配置值生效状态。</p>
+         * <p>The status of the configuration value.</p>
          */
         @NameInMap("ConfigEffectState")
         public String configEffectState;
 
         /**
-         * <p>配置文件名称。</p>
+         * <p>The name of the configuration file.</p>
          */
         @NameInMap("ConfigFileName")
         public String configFileName;
 
         /**
-         * <p>配置项键。</p>
+         * <p>The name of the configuration item.</p>
          */
         @NameInMap("ConfigItemKey")
         public String configItemKey;
 
         /**
-         * <p>配置项值。</p>
+         * <p>The value of the configuration item.</p>
          */
         @NameInMap("ConfigItemValue")
         public String configItemValue;
 
         /**
-         * <p>创建时间。</p>
+         * <p>The time when the application was created.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>是否是自定义配置。</p>
+         * <p>Indicates whether the configurations are custom.</p>
          */
         @NameInMap("Custom")
         public Boolean custom;
 
         /**
-         * <p>描述。</p>
+         * <p>The description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>初始值。</p>
+         * <p>The initial value.</p>
          */
         @NameInMap("InitValue")
         public String initValue;
 
         /**
-         * <p>修改人。</p>
+         * <p>The person who modified the configurations.</p>
          */
         @NameInMap("Modifier")
         public String modifier;
 
         /**
-         * <p>节点组ID。</p>
+         * <p>The ID of the node group.</p>
          */
         @NameInMap("NodeGroupId")
         public String nodeGroupId;
 
         /**
-         * <p>节点ID。</p>
+         * <p>The node ID.</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
-         * <p>更新时间。</p>
+         * <p>The time when the application was updated.</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

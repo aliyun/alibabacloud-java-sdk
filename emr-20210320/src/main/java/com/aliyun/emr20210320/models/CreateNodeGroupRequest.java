@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateNodeGroupRequest extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>节点组信息。</p>
+     * <p>The information about a machine group.</p>
      */
     @NameInMap("NodeGroup")
     public NodeGroupConfig nodeGroup;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

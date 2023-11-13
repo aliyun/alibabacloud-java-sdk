@@ -5,28 +5,31 @@ import com.aliyun.tea.*;
 
 public class ListAutoScalingActivitiesResponseBody extends TeaModel {
     /**
-     * <p>本次请求所返回的最大记录条数。</p>
+     * <p>The maximum number of entries returned.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+     * <p>A pagination token.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The scaling activities.</p>
+     */
     @NameInMap("ScalingActivities")
     public java.util.List<ScalingActivities> scalingActivities;
 
     /**
-     * <p>本次请求条件下的数据总量。</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -78,79 +81,81 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
 
     public static class ScalingActivities extends TeaModel {
         /**
-         * <p>伸缩活动ID。</p>
+         * <p>The ID of the scaling activity.</p>
          */
         @NameInMap("ActivityId")
         public String activityId;
 
         /**
-         * <p>伸缩活动状态。取值范围：</p>
-         * <p>- REJECTED：拒绝</p>
-         * <p>- SUCCESSFUL：成功</p>
-         * <p>- FAILED：失败</p>
-         * <p>- IN_PROGRESS：进行中</p>
+         * <p>The status of the scaling activity. Valid values:</p>
+         * <br>
+         * <p>*   REJECTED</p>
+         * <p>*   SUCCESSFUL</p>
+         * <p>*   FAILED</p>
+         * <p>*   IN_PROGRESS</p>
          */
         @NameInMap("ActivityState")
         public String activityState;
 
         /**
-         * <p>伸缩活动类型。取值范围：</p>
-         * <p>- SCALE_IN：缩容</p>
-         * <p>- SCALE_OUT：扩容</p>
+         * <p>The type of the scaling activity. Valid values:</p>
+         * <br>
+         * <p>*   SCALE_OUT</p>
+         * <p>*   SCALE_IN</p>
          */
         @NameInMap("ActivityType")
         public String activityType;
 
         /**
-         * <p>集群ID。</p>
+         * <p>The cluster ID.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
-         * <p>伸缩活动描述。</p>
+         * <p>The description of the scaling activity.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>伸缩结束时间。</p>
+         * <p>The end time of the scaling. Unit: milliseconds.</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
-         * <p>本次扩缩数量。</p>
+         * <p>The number of added or removed instances.</p>
          */
         @NameInMap("ExpectNum")
         public Integer expectNum;
 
         /**
-         * <p>节点组ID。</p>
+         * <p>The ID of the node group.</p>
          */
         @NameInMap("NodeGroupId")
         public String nodeGroupId;
 
         /**
-         * <p>节点组名称。</p>
+         * <p>The name of the node group.</p>
          */
         @NameInMap("NodeGroupName")
         public String nodeGroupName;
 
         /**
-         * <p>操作ID。</p>
+         * <p>The operation ID.</p>
          */
         @NameInMap("OperationId")
         public String operationId;
 
         /**
-         * <p>伸缩规则名称。</p>
+         * <p>The name of the scaling rule.</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
-         * <p>伸缩启动时间。</p>
+         * <p>The start time of the scaling. Unit: milliseconds.</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
