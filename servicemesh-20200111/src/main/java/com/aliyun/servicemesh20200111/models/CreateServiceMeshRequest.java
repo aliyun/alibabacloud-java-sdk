@@ -122,6 +122,9 @@ public class CreateServiceMeshRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    @NameInMap("ClusterDomain")
+    public String clusterDomain;
+
     /**
      * <p>The edition of the ASM instance. Valid values:</p>
      * <br>
@@ -726,6 +729,14 @@ public class CreateServiceMeshRequest extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    public CreateServiceMeshRequest setClusterDomain(String clusterDomain) {
+        this.clusterDomain = clusterDomain;
+        return this;
+    }
+    public String getClusterDomain() {
+        return this.clusterDomain;
     }
 
     public CreateServiceMeshRequest setClusterSpec(String clusterSpec) {
