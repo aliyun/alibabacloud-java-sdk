@@ -7,6 +7,9 @@ public class JobStartParameters extends TeaModel {
     @NameInMap("deploymentId")
     public String deploymentId;
 
+    @NameInMap("resourceQueueName")
+    public String resourceQueueName;
+
     @NameInMap("restoreStrategy")
     public DeploymentRestoreStrategy restoreStrategy;
 
@@ -21,6 +24,14 @@ public class JobStartParameters extends TeaModel {
     }
     public String getDeploymentId() {
         return this.deploymentId;
+    }
+
+    public JobStartParameters setResourceQueueName(String resourceQueueName) {
+        this.resourceQueueName = resourceQueueName;
+        return this;
+    }
+    public String getResourceQueueName() {
+        return this.resourceQueueName;
     }
 
     public JobStartParameters setRestoreStrategy(DeploymentRestoreStrategy restoreStrategy) {
