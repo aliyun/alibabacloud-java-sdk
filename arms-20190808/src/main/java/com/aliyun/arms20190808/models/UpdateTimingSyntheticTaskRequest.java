@@ -955,6 +955,91 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
 
     }
 
+    public static class UpdateTimingSyntheticTaskRequestMonitorConfStream extends TeaModel {
+        @NameInMap("CustomHeaderContent")
+        public java.util.Map<String, String> customHeaderContent;
+
+        @NameInMap("PlayerType")
+        public Integer playerType;
+
+        @NameInMap("StreamAddressType")
+        public Integer streamAddressType;
+
+        @NameInMap("StreamMonitorTimeout")
+        public Integer streamMonitorTimeout;
+
+        @NameInMap("StreamType")
+        public Integer streamType;
+
+        @NameInMap("TargetUrl")
+        public String targetUrl;
+
+        @NameInMap("WhiteList")
+        public String whiteList;
+
+        public static UpdateTimingSyntheticTaskRequestMonitorConfStream build(java.util.Map<String, ?> map) throws Exception {
+            UpdateTimingSyntheticTaskRequestMonitorConfStream self = new UpdateTimingSyntheticTaskRequestMonitorConfStream();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateTimingSyntheticTaskRequestMonitorConfStream setCustomHeaderContent(java.util.Map<String, String> customHeaderContent) {
+            this.customHeaderContent = customHeaderContent;
+            return this;
+        }
+        public java.util.Map<String, String> getCustomHeaderContent() {
+            return this.customHeaderContent;
+        }
+
+        public UpdateTimingSyntheticTaskRequestMonitorConfStream setPlayerType(Integer playerType) {
+            this.playerType = playerType;
+            return this;
+        }
+        public Integer getPlayerType() {
+            return this.playerType;
+        }
+
+        public UpdateTimingSyntheticTaskRequestMonitorConfStream setStreamAddressType(Integer streamAddressType) {
+            this.streamAddressType = streamAddressType;
+            return this;
+        }
+        public Integer getStreamAddressType() {
+            return this.streamAddressType;
+        }
+
+        public UpdateTimingSyntheticTaskRequestMonitorConfStream setStreamMonitorTimeout(Integer streamMonitorTimeout) {
+            this.streamMonitorTimeout = streamMonitorTimeout;
+            return this;
+        }
+        public Integer getStreamMonitorTimeout() {
+            return this.streamMonitorTimeout;
+        }
+
+        public UpdateTimingSyntheticTaskRequestMonitorConfStream setStreamType(Integer streamType) {
+            this.streamType = streamType;
+            return this;
+        }
+        public Integer getStreamType() {
+            return this.streamType;
+        }
+
+        public UpdateTimingSyntheticTaskRequestMonitorConfStream setTargetUrl(String targetUrl) {
+            this.targetUrl = targetUrl;
+            return this;
+        }
+        public String getTargetUrl() {
+            return this.targetUrl;
+        }
+
+        public UpdateTimingSyntheticTaskRequestMonitorConfStream setWhiteList(String whiteList) {
+            this.whiteList = whiteList;
+            return this;
+        }
+        public String getWhiteList() {
+            return this.whiteList;
+        }
+
+    }
+
     public static class UpdateTimingSyntheticTaskRequestMonitorConfWebsite extends TeaModel {
         @NameInMap("AutomaticScrolling")
         public Integer automaticScrolling;
@@ -1188,6 +1273,9 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         @NameInMap("NetTCP")
         public UpdateTimingSyntheticTaskRequestMonitorConfNetTCP netTCP;
 
+        @NameInMap("Stream")
+        public UpdateTimingSyntheticTaskRequestMonitorConfStream stream;
+
         @NameInMap("Website")
         public UpdateTimingSyntheticTaskRequestMonitorConfWebsite website;
 
@@ -1234,6 +1322,14 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         }
         public UpdateTimingSyntheticTaskRequestMonitorConfNetTCP getNetTCP() {
             return this.netTCP;
+        }
+
+        public UpdateTimingSyntheticTaskRequestMonitorConf setStream(UpdateTimingSyntheticTaskRequestMonitorConfStream stream) {
+            this.stream = stream;
+            return this;
+        }
+        public UpdateTimingSyntheticTaskRequestMonitorConfStream getStream() {
+            return this.stream;
         }
 
         public UpdateTimingSyntheticTaskRequestMonitorConf setWebsite(UpdateTimingSyntheticTaskRequestMonitorConfWebsite website) {

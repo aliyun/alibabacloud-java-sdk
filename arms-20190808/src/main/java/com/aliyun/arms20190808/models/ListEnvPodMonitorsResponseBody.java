@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListEnvPodMonitorsResponseBody extends TeaModel {
     /**
-     * <p>The status code. The status code 200 indicates that the request was successful.</p>
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The returned struct.</p>
+     * <p>The result of the operation.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListEnvPodMonitorsResponseBodyData> data;
@@ -23,7 +23,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,31 +67,31 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
 
     public static class ListEnvPodMonitorsResponseBodyDataEndpoints extends TeaModel {
         /**
-         * <p>scrape interval.</p>
+         * <p>The collection interval.</p>
          */
         @NameInMap("Interval")
         public String interval;
 
         /**
-         * <p>The number of targets (pods) matched by PodMonitor.Endpoint.</p>
+         * <p>The number of pods that match the PodMonitor endpoint.</p>
          */
         @NameInMap("MatchedTargetCount")
         public Integer matchedTargetCount;
 
         /**
-         * <p>metric path.</p>
+         * <p>The collection path.</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
-         * <p>External port.</p>
+         * <p>The external port.</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
-         * <p>Destination port.</p>
+         * <p>The destination port.</p>
          */
         @NameInMap("TargetPort")
         public Integer targetPort;
@@ -145,43 +145,43 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
 
     public static class ListEnvPodMonitorsResponseBodyData extends TeaModel {
         /**
-         * <p>addon name.</p>
+         * <p>The name of the component to which the PodMonitor belongs.</p>
          */
         @NameInMap("AddonName")
         public String addonName;
 
         /**
-         * <p>addon release name.</p>
+         * <p>The instance name of the component.</p>
          */
         @NameInMap("AddonReleaseName")
         public String addonReleaseName;
 
         /**
-         * <p>addon version.</p>
+         * <p>The version of the component.</p>
          */
         @NameInMap("AddonVersion")
         public String addonVersion;
 
         /**
-         * <p>yaml configuration string.</p>
+         * <p>The YAML configuration string.</p>
          */
         @NameInMap("ConfigYaml")
         public String configYaml;
 
         /**
-         * <p>Creation time (timestamp).</p>
+         * <p>The time when the PodMonitor was created. The value of this parameter is a timestamp.</p>
          */
         @NameInMap("CreationTimestamp")
         public String creationTimestamp;
 
         /**
-         * <p>List of endpoints for podmonitor.</p>
+         * <p>The endpoints of the PodMonitor.</p>
          */
         @NameInMap("Endpoints")
         public java.util.List<ListEnvPodMonitorsResponseBodyDataEndpoints> endpoints;
 
         /**
-         * <p>Environment ID.</p>
+         * <p>The environment ID.</p>
          */
         @NameInMap("EnvironmentId")
         public String environmentId;
@@ -193,7 +193,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>PodMonitor name.</p>
+         * <p>The name of the PodMonitor.</p>
          */
         @NameInMap("PodMonitorName")
         public String podMonitorName;
@@ -205,7 +205,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>state.</p>
+         * <p>The status of the PodMonitor.</p>
          */
         @NameInMap("Status")
         public String status;

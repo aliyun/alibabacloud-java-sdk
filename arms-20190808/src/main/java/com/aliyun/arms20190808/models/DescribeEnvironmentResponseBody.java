@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEnvironmentResponseBody extends TeaModel {
     /**
-     * <p>The status code or error code.</p>
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -23,7 +23,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -66,9 +66,15 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
     }
 
     public static class DescribeEnvironmentResponseBodyDataTags extends TeaModel {
+        /**
+         * <p>Tag的键。</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>Tag的值</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -97,100 +103,110 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
 
     public static class DescribeEnvironmentResponseBodyData extends TeaModel {
         /**
-         * <p>Resource instance ID bound to the environment, including container instance ID or VpcId.</p>
+         * <p>The ID of the resource associated with the environment, such as the ACK cluster ID or VPC ID.</p>
          */
         @NameInMap("BindResourceId")
         public String bindResourceId;
 
         /**
-         * <p>Profile of bound resources.</p>
+         * <p>The profile of the resource.</p>
          */
         @NameInMap("BindResourceProfile")
         public String bindResourceProfile;
 
         /**
-         * <p>The state of the bound resource.</p>
+         * <p>The status of the resource.</p>
          */
         @NameInMap("BindResourceStatus")
         public String bindResourceStatus;
 
         /**
-         * <p>The storage duration of bound resources (days).</p>
+         * <p>The retention period of the resource. Unit: days.</p>
          */
         @NameInMap("BindResourceStoreDuration")
         public String bindResourceStoreDuration;
 
         /**
-         * <p>The bound resource type.</p>
+         * <p>The resource type.</p>
          */
         @NameInMap("BindResourceType")
         public String bindResourceType;
 
         /**
-         * <p>Bind the network segment of the vpc.</p>
+         * <p>The VPC CIDR block.</p>
          */
         @NameInMap("BindVpcCidr")
         public String bindVpcCidr;
 
         /**
-         * <p>Environment instance ID.</p>
+         * <p>The ID of the environment instance.</p>
          */
         @NameInMap("EnvironmentId")
         public String environmentId;
 
         /**
-         * <p>Environment name.</p>
+         * <p>The environment name.</p>
          */
         @NameInMap("EnvironmentName")
         public String environmentName;
 
         /**
-         * <p>Environment type:</p>
-         * <p>- CS: Container Service.</p>
-         * <p>- ECS.</p>
-         * <p>- Cloud: cloud service.</p>
+         * <p>Environment subtypes:</p>
+         * <p>- CS: Currently supports ACK.</p>
+         * <p>- ECS: ECS is currently supported.</p>
+         * <p>- Cloud: Currently supports Cloud.</p>
+         */
+        @NameInMap("EnvironmentSubType")
+        public String environmentSubType;
+
+        /**
+         * <p>The type of the environment. Valid values:</p>
+         * <br>
+         * <p>*   CS: Container Service for Kubernetes (ACK)</p>
+         * <p>*   ECS: Elastic Compute Service</p>
+         * <p>*   Cloud: cloud service</p>
          */
         @NameInMap("EnvironmentType")
         public String environmentType;
 
         /**
-         * <p>Grafana data source name.</p>
+         * <p>The name of the Grafana data source.</p>
          */
         @NameInMap("GrafaDataSourceName")
         public String grafaDataSourceName;
 
         /**
-         * <p>Grafana data source unique ID.</p>
+         * <p>The unique ID of the Grafana data source.</p>
          */
         @NameInMap("GrafanaDatasourceUid")
         public String grafanaDatasourceUid;
 
         /**
-         * <p>Grafana directory name.</p>
+         * <p>The name of the Grafana directory.</p>
          */
         @NameInMap("GrafanaFolderTitle")
         public String grafanaFolderTitle;
 
         /**
-         * <p>Grafana directory unique ID.</p>
+         * <p>The unique ID of the Grafana directory.</p>
          */
         @NameInMap("GrafanaFolderUid")
         public String grafanaFolderUid;
 
         /**
-         * <p>Grafana directory URL.</p>
+         * <p>The URL of the Grafana directory.</p>
          */
         @NameInMap("GrafanaFolderUrl")
         public String grafanaFolderUrl;
 
         /**
-         * <p>The bound prometheus instance ID.</p>
+         * <p>The ID of the Prometheus instance.</p>
          */
         @NameInMap("PrometheusInstanceId")
         public String prometheusInstanceId;
 
         /**
-         * <p>The name of the bound prometheus instance.</p>
+         * <p>The name of the Prometheus instance.</p>
          */
         @NameInMap("PrometheusInstanceName")
         public String prometheusInstanceName;
@@ -214,11 +230,14 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         public java.util.List<DescribeEnvironmentResponseBodyDataTags> tags;
 
         /**
-         * <p>UserId.</p>
+         * <p>The user ID.</p>
          */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>VPC ID。</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -289,6 +308,14 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         }
         public String getEnvironmentName() {
             return this.environmentName;
+        }
+
+        public DescribeEnvironmentResponseBodyData setEnvironmentSubType(String environmentSubType) {
+            this.environmentSubType = environmentSubType;
+            return this;
+        }
+        public String getEnvironmentSubType() {
+            return this.environmentSubType;
         }
 
         public DescribeEnvironmentResponseBodyData setEnvironmentType(String environmentType) {

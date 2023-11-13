@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeEnvCustomJobRequest extends TeaModel {
     /**
-     * <p>Custom job name.</p>
+     * <p>The name of the custom job.</p>
      */
     @NameInMap("CustomJobName")
     public String customJobName;
 
     /**
-     * <p>Whether to return the encrypted yaml string.</p>
+     * <p>Specifies whether to return the encrypted YAML string.</p>
      */
     @NameInMap("EncryptYaml")
     public Boolean encryptYaml;
 
     /**
-     * <p>Environment instance ID.</p>
+     * <p>The ID of the environment instance.</p>
      */
     @NameInMap("EnvironmentId")
     public String environmentId;

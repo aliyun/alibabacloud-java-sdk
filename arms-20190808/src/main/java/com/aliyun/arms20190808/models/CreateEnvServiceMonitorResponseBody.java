@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEnvServiceMonitorResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -17,13 +17,13 @@ public class CreateEnvServiceMonitorResponseBody extends TeaModel {
     public CreateEnvServiceMonitorResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,7 +67,7 @@ public class CreateEnvServiceMonitorResponseBody extends TeaModel {
 
     public static class CreateEnvServiceMonitorResponseBodyData extends TeaModel {
         /**
-         * <p>target matching prompt information.</p>
+         * <p>Indicates whether targets are matched.</p>
          */
         @NameInMap("MatchedMsg")
         public String matchedMsg;
@@ -85,7 +85,7 @@ public class CreateEnvServiceMonitorResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The name of the serviceMonitor successfully created.</p>
+         * <p>The name of the created ServiceMonitor.</p>
          */
         @NameInMap("ServiceMonitorName")
         public String serviceMonitorName;

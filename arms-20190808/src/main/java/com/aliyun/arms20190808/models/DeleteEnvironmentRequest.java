@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteEnvironmentRequest extends TeaModel {
+    @NameInMap("DeletePromInstance")
+    public Boolean deletePromInstance;
+
     /**
      * <p>Environment instance ID.</p>
      */
@@ -19,6 +22,14 @@ public class DeleteEnvironmentRequest extends TeaModel {
     public static DeleteEnvironmentRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteEnvironmentRequest self = new DeleteEnvironmentRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteEnvironmentRequest setDeletePromInstance(Boolean deletePromInstance) {
+        this.deletePromInstance = deletePromInstance;
+        return this;
+    }
+    public Boolean getDeletePromInstance() {
+        return this.deletePromInstance;
     }
 
     public DeleteEnvironmentRequest setEnvironmentId(String environmentId) {

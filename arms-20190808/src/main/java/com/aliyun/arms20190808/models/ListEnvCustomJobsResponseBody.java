@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListEnvCustomJobsResponseBody extends TeaModel {
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The returned information.</p>
+     * <p>The returned struct.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListEnvCustomJobsResponseBodyData> data;
@@ -23,7 +23,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,25 +67,25 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
 
     public static class ListEnvCustomJobsResponseBodyDataScrapeConfigs extends TeaModel {
         /**
-         * <p>Job name.</p>
+         * <p>The name of the job.</p>
          */
         @NameInMap("JobName")
         public String jobName;
 
         /**
-         * <p>scrape the path of the metric.</p>
+         * <p>The path of the metric.</p>
          */
         @NameInMap("MetricsPath")
         public String metricsPath;
 
         /**
-         * <p>List of service discovery methods.</p>
+         * <p>The service discovery methods.</p>
          */
         @NameInMap("ScrapeDiscoverys")
         public java.util.List<String> scrapeDiscoverys;
 
         /**
-         * <p>scrape interval.</p>
+         * <p>The capture interval.</p>
          */
         @NameInMap("ScrapeInterval")
         public String scrapeInterval;
@@ -131,43 +131,43 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
 
     public static class ListEnvCustomJobsResponseBodyData extends TeaModel {
         /**
-         * <p>The attributed component name.</p>
+         * <p>The name of the component to which the custom job belongs.</p>
          */
         @NameInMap("AddonName")
         public String addonName;
 
         /**
-         * <p>The attributed component instance name.</p>
+         * <p>The instance name of the component.</p>
          */
         @NameInMap("AddonReleaseName")
         public String addonReleaseName;
 
         /**
-         * <p>The attributed component version.</p>
+         * <p>The version of the component.</p>
          */
         @NameInMap("AddonVersion")
         public String addonVersion;
 
         /**
-         * <p>If the request parameter encryptYaml is true, the base64-encoded yaml string is returned. Otherwise, the plaintext yaml string is returned.</p>
+         * <p>If the request parameter EncryptYaml is set to true, a Base64-encoded YAML string is returned. Otherwise, a plaintext YAML string is returned.</p>
          */
         @NameInMap("ConfigYaml")
         public String configYaml;
 
         /**
-         * <p>Creation time (timestamp).</p>
+         * <p>The time when the custom job was created. The value of this parameter is a timestamp.</p>
          */
         @NameInMap("CreationTimestamp")
         public String creationTimestamp;
 
         /**
-         * <p>Custom job name.</p>
+         * <p>The name of the custom job.</p>
          */
         @NameInMap("CustomJobName")
         public String customJobName;
 
         /**
-         * <p>Environment instance ID.</p>
+         * <p>The ID of the environment instance.</p>
          */
         @NameInMap("EnvironmentId")
         public String environmentId;
@@ -179,13 +179,13 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>scrape configuration.</p>
+         * <p>The capture configurations.</p>
          */
         @NameInMap("ScrapeConfigs")
         public java.util.List<ListEnvCustomJobsResponseBodyDataScrapeConfigs> scrapeConfigs;
 
         /**
-         * <p>state.</p>
+         * <p>The status of the custom job.</p>
          */
         @NameInMap("Status")
         public String status;

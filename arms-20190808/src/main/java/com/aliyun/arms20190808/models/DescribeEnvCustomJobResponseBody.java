@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEnvCustomJobResponseBody extends TeaModel {
     /**
-     * <p>The status code. The status code 200 indicates that the request was successful.</p>
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -23,7 +23,7 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,19 +67,19 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
 
     public static class DescribeEnvCustomJobResponseBodyData extends TeaModel {
         /**
-         * <p>If the request parameter encryptYaml is true, the base64-encoded yaml string is returned. Otherwise, the plaintext yaml string is returned.</p>
+         * <p>If the request parameter EncryptYaml is set to true, a Base64-encoded YAML string is returned. Otherwise, a plaintext YAML string is returned.</p>
          */
         @NameInMap("ConfigYaml")
         public String configYaml;
 
         /**
-         * <p>Custom job name.</p>
+         * <p>The name of the custom job.</p>
          */
         @NameInMap("CustomJobName")
         public String customJobName;
 
         /**
-         * <p>Environment instance ID.</p>
+         * <p>The ID of the environment instance.</p>
          */
         @NameInMap("EnvironmentId")
         public String environmentId;
@@ -91,7 +91,7 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Status: run, stop.</p>
+         * <p>The status of the custom job. Valid values: run and stop.</p>
          */
         @NameInMap("Status")
         public String status;

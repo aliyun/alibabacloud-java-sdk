@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeEnvPodMonitorRequest extends TeaModel {
     /**
-     * <p>Environment instance ID.</p>
+     * <p>The ID of the environment instance.</p>
      */
     @NameInMap("EnvironmentId")
     public String environmentId;
 
     /**
-     * <p>The namespace where podMonitor is located.</p>
+     * <p>The namespace where the PodMonitor is located.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>PodMonitor name.</p>
+     * <p>The name of the PodMonitor.</p>
      */
     @NameInMap("PodMonitorName")
     public String podMonitorName;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

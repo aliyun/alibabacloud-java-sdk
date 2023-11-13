@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEnvServiceMonitorsResponseBody extends TeaModel {
     /**
-     * <p>The status code. The status code 200 indicates that the request was successful.</p>
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -23,7 +23,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,31 +67,31 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
 
     public static class ListEnvServiceMonitorsResponseBodyDataEndpoints extends TeaModel {
         /**
-         * <p>scrape interval.</p>
+         * <p>The collection interval.</p>
          */
         @NameInMap("Interval")
         public String interval;
 
         /**
-         * <p>The number of targets matched by servcieMonitor.Endpoint.</p>
+         * <p>The number of pods that match the ServiceMonitor endpoint.</p>
          */
         @NameInMap("MatchedTargetCount")
         public Integer matchedTargetCount;
 
         /**
-         * <p>metric path.</p>
+         * <p>The collection path.</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
-         * <p>External port.</p>
+         * <p>The external port.</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
-         * <p>Destination port.</p>
+         * <p>The destination port.</p>
          */
         @NameInMap("TargetPort")
         public Integer targetPort;
@@ -145,49 +145,49 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
 
     public static class ListEnvServiceMonitorsResponseBodyData extends TeaModel {
         /**
-         * <p>addon name.</p>
+         * <p>The name of the component to which the ServiceMonitor belongs.</p>
          */
         @NameInMap("AddonName")
         public String addonName;
 
         /**
-         * <p>addon release name.</p>
+         * <p>The instance name of the component.</p>
          */
         @NameInMap("AddonReleaseName")
         public String addonReleaseName;
 
         /**
-         * <p>addon version.</p>
+         * <p>The version of the component.</p>
          */
         @NameInMap("AddonVersion")
         public String addonVersion;
 
         /**
-         * <p>yaml configuration string.</p>
+         * <p>The YAML configuration string.</p>
          */
         @NameInMap("ConfigYaml")
         public String configYaml;
 
         /**
-         * <p>Creation time (timestamp).</p>
+         * <p>The time when the ServiceMonitor was created. The value of this parameter is a timestamp.</p>
          */
         @NameInMap("CreationTimestamp")
         public String creationTimestamp;
 
         /**
-         * <p>List of endpoints for ServiceMonitor.</p>
+         * <p>The endpoints of the ServiceMonitor.</p>
          */
         @NameInMap("Endpoints")
         public java.util.List<ListEnvServiceMonitorsResponseBodyDataEndpoints> endpoints;
 
         /**
-         * <p>Environment ID.</p>
+         * <p>The environment ID.</p>
          */
         @NameInMap("EnvironmentId")
         public String environmentId;
 
         /**
-         * <p>The number of matching services.</p>
+         * <p>The number of matched services.</p>
          */
         @NameInMap("MatchedServiceCount")
         public Integer matchedServiceCount;
@@ -205,13 +205,13 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>ServiceMonitor name.</p>
+         * <p>The name of the ServiceMonitor.</p>
          */
         @NameInMap("ServiceMonitorName")
         public String serviceMonitorName;
 
         /**
-         * <p>status.</p>
+         * <p>The status of the ServiceMonitor.</p>
          */
         @NameInMap("Status")
         public String status;
