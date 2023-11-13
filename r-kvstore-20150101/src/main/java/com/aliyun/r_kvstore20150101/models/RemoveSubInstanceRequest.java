@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveSubInstanceRequest extends TeaModel {
     /**
-     * <p>分布式实例中的子实例ID，可调用[DescribeGlobalDistributeCache](~~188699~~)接口获取。</p>
+     * <p>Instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

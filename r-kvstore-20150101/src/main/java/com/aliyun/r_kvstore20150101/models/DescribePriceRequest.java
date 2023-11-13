@@ -11,7 +11,9 @@ public class DescribePriceRequest extends TeaModel {
     public String businessInfo;
 
     /**
-     * <p>The storage capacity of the instance. Unit: MB. You must specify one of the **InstanceClass** and **Capacity** parameters to specify the instance type. We recommend that you use **InstanceClass** to specify the instance type.</p>
+     * <p>The storage capacity of the instance. Unit: MB. This parameter is used only to query ApsaraDB for Redis Community Edition instances that are deployed in classic mode. We recommend that you use the **InstanceClass** parameter to specify an exact instance type.</p>
+     * <br>
+     * <p>>  If you specify the **InstanceClass** parameter, you do not need to specify the Capacity parameter.</p>
      */
     @NameInMap("Capacity")
     public Long capacity;
@@ -19,10 +21,8 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <br>
-     * <p>*   **PostPaid**: pay-as-you-go</p>
-     * <p>*   **PrePaid**: subscription.</p>
-     * <br>
-     * <p>> The default value is **PostPaid**.</p>
+     * <p>*   **PostPaid** (default): pay-as-you-go</p>
+     * <p>*   **PrePaid**: subscription</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
@@ -37,38 +37,47 @@ public class DescribePriceRequest extends TeaModel {
      * <p>Specifies whether to forcefully change the configurations of the instance. Valid values:</p>
      * <br>
      * <p>*   **false**: forcefully changes the configurations.</p>
-     * <p>*   **true**: does not forcefully change the configurations.</p>
-     * <br>
-     * <p>> The default value is **true**.</p>
+     * <p>*   **true** (default): does not forcefully change the configurations.</p>
      */
     @NameInMap("ForceUpgrade")
     public Boolean forceUpgrade;
 
     /**
-     * <p>The instance type of the instance. You must specify one of the InstanceClass and Capacity parameters to specify the instance type. We recommend that you use InstanceClass to specify the instance type.</p>
+     * <p>The instance type.****</p>
      * <br>
-     * <p>To query the instance type, perform the following steps:</p>
+     * <p>**To view the instance type, perform the following steps:**</p>
      * <br>
      * <p>1.  In the [Overview](~~26350~~) topic, click the link in the **Reference** column corresponding to the instance type that you want to view.</p>
      * <p>2.  In the instance type table of the page that appears, find the instance type in the **InstanceClass** column.</p>
+     * <br>
+     * <p>When you query cloud-native cluster instances, you must set this parameter to one of the following values and use the Instances parameter to specify the instance type that you want to query.</p>
+     * <br>
+     * <p>*   ApsaraDB for Redis cluster instances: redis.cluster.sharding.common.ce</p>
+     * <p>*   Tair DRAM-based cluster instances: tair.rdb.cluster.sharding.common</p>
+     * <p>*   Tair persistent memory-based cluster instances: tair.scm.cluster.sharding.common.ce</p>
      */
     @NameInMap("InstanceClass")
     public String instanceClass;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
+     * <br>
+     * <p>>  This parameter is required when the **OrderType** parameter is set to **UPGRADE** or **RENEW**.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>A JSON string that contains multiple instances. For more information, see [Description of the Instances parameter in the DescribePrice API operation](~~161811~~).</p>
+     * <p>A JSON string that contains information about one or more cloud-native cluster instances. For more information, see the "Additional description of the Instances parameter" section of this topic.</p>
      */
     @NameInMap("Instances")
     public String instances;
 
     /**
-     * <p>The node type. Set the value to MASTER_SLAVE. This value indicates that the node type is master-replica.</p>
+     * <p>The node type. Valid values:</p>
+     * <br>
+     * <p>*   **STAND_ALONE**: standalone</p>
+     * <p>*   **MASTER_SLAVE** (default): high availability (master-replica)</p>
      */
     @NameInMap("NodeType")
     public String nodeType;
@@ -76,10 +85,8 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>Specifies whether to return parameters related to the order. Valid values:</p>
      * <br>
-     * <p>*   **false**: does not return parameters related to the order.</p>
-     * <p>*   **true**: returns parameters related to the order.</p>
-     * <br>
-     * <p>> The default value is **false**.</p>
+     * <p>*   **false** (default)</p>
+     * <p>*   **true**</p>
      */
     @NameInMap("OrderParamOut")
     public String orderParamOut;
@@ -108,9 +115,7 @@ public class DescribePriceRequest extends TeaModel {
     public Long period;
 
     /**
-     * <p>The number of instances that you want to purchase. Valid values: **1** to **30**.</p>
-     * <br>
-     * <p>> The default value is **1**.</p>
+     * <p>The number of instances that you want to purchase. Valid values: **1** to **30**. Default value: **1**.</p>
      */
     @NameInMap("Quantity")
     public Long quantity;

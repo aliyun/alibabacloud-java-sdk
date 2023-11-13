@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePriceResponseBody extends TeaModel {
     /**
-     * <p>The order information.</p>
+     * <p>The information about the order.</p>
      */
     @NameInMap("Order")
     public DescribePriceResponseBodyOrder order;
@@ -81,7 +81,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static class DescribePriceResponseBodyOrderCouponsCoupon extends TeaModel {
         /**
-         * <p>The coupon number.</p>
+         * <p>The coupon ID.</p>
          */
         @NameInMap("CouponNo")
         public String couponNo;
@@ -99,7 +99,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public String isSelected;
 
         /**
-         * <p>The name of the coupon.</p>
+         * <p>The coupon name.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -300,7 +300,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static class DescribePriceResponseBodyRulesRule extends TeaModel {
         /**
-         * <p>The name of the rule.</p>
+         * <p>The name of the promotion rule.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -394,25 +394,25 @@ public class DescribePriceResponseBody extends TeaModel {
         public String discountAmount;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The original price of the order.</p>
+         * <p>The list price of the order.</p>
          */
         @NameInMap("OriginalAmount")
         public String originalAmount;
 
         /**
-         * <p>Details about promotion rule IDs.</p>
+         * <p>The ID of the promotion rule.</p>
          */
         @NameInMap("RuleIds")
         public DescribePriceResponseBodySubOrdersSubOrderRuleIds ruleIds;
 
         /**
-         * <p>The transaction price of the order.</p>
+         * <p>The final price of the order.</p>
          */
         @NameInMap("TradeAmount")
         public String tradeAmount;
