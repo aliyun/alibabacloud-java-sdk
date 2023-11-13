@@ -76,6 +76,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
     }
 
     public static class FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList extends TeaModel {
+        @NameInMap("apply_id")
+        public String applyId;
+
         @NameInMap("arr_time")
         public String arrTime;
 
@@ -112,8 +115,17 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         @NameInMap("origin_ticket_no")
         public String originTicketNo;
 
+        @NameInMap("out_apply_id")
+        public String outApplyId;
+
         @NameInMap("ticket_no")
         public String ticketNo;
+
+        @NameInMap("ticket_status")
+        public String ticketStatus;
+
+        @NameInMap("ticket_status_code")
+        public Integer ticketStatusCode;
 
         @NameInMap("upgrade_fee")
         public Double upgradeFee;
@@ -121,6 +133,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         public static FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList build(java.util.Map<String, ?> map) throws Exception {
             FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList self = new FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList();
             return TeaModel.build(map, self);
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList setApplyId(String applyId) {
+            this.applyId = applyId;
+            return this;
+        }
+        public String getApplyId() {
+            return this.applyId;
         }
 
         public FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList setArrTime(String arrTime) {
@@ -219,12 +239,36 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             return this.originTicketNo;
         }
 
+        public FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList setOutApplyId(String outApplyId) {
+            this.outApplyId = outApplyId;
+            return this;
+        }
+        public String getOutApplyId() {
+            return this.outApplyId;
+        }
+
         public FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList setTicketNo(String ticketNo) {
             this.ticketNo = ticketNo;
             return this;
         }
         public String getTicketNo() {
             return this.ticketNo;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList setTicketStatus(String ticketStatus) {
+            this.ticketStatus = ticketStatus;
+            return this;
+        }
+        public String getTicketStatus() {
+            return this.ticketStatus;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList setTicketStatusCode(Integer ticketStatusCode) {
+            this.ticketStatusCode = ticketStatusCode;
+            return this;
+        }
+        public Integer getTicketStatusCode() {
+            return this.ticketStatusCode;
         }
 
         public FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList setUpgradeFee(Double upgradeFee) {
@@ -444,11 +488,17 @@ public class FlightOrderQueryResponseBody extends TeaModel {
     }
 
     public static class FlightOrderQueryResponseBodyModuleFlightRefundTicketInfoList extends TeaModel {
+        @NameInMap("apply_id")
+        public String applyId;
+
         @NameInMap("gmt_create")
         public String gmtCreate;
 
         @NameInMap("gmt_modify")
         public String gmtModify;
+
+        @NameInMap("out_apply_id")
+        public String outApplyId;
 
         @NameInMap("refund_order_id")
         public Long refundOrderId;
@@ -470,6 +520,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public FlightOrderQueryResponseBodyModuleFlightRefundTicketInfoList setApplyId(String applyId) {
+            this.applyId = applyId;
+            return this;
+        }
+        public String getApplyId() {
+            return this.applyId;
+        }
+
         public FlightOrderQueryResponseBodyModuleFlightRefundTicketInfoList setGmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
@@ -484,6 +542,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
         public String getGmtModify() {
             return this.gmtModify;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightRefundTicketInfoList setOutApplyId(String outApplyId) {
+            this.outApplyId = outApplyId;
+            return this;
+        }
+        public String getOutApplyId() {
+            return this.outApplyId;
         }
 
         public FlightOrderQueryResponseBodyModuleFlightRefundTicketInfoList setRefundOrderId(Long refundOrderId) {
@@ -537,6 +603,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
 
         @NameInMap("discount")
         public Integer discount;
+
+        @NameInMap("flight_no")
+        public String flightNo;
 
         @NameInMap("gmt_create")
         public String gmtCreate;
@@ -595,6 +664,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
         public Integer getDiscount() {
             return this.discount;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightTicketInfoList setFlightNo(String flightNo) {
+            this.flightNo = flightNo;
+            return this;
+        }
+        public String getFlightNo() {
+            return this.flightNo;
         }
 
         public FlightOrderQueryResponseBodyModuleFlightTicketInfoList setGmtCreate(String gmtCreate) {
@@ -783,6 +860,12 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         @NameInMap("depart_name")
         public String departName;
 
+        @NameInMap("exceed_apply_id")
+        public String exceedApplyId;
+
+        @NameInMap("exceed_third_part_apply_id")
+        public String exceedThirdPartApplyId;
+
         @NameInMap("gmt_create")
         public String gmtCreate;
 
@@ -872,6 +955,22 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
         public String getDepartName() {
             return this.departName;
+        }
+
+        public FlightOrderQueryResponseBodyModuleOrderBaseInfo setExceedApplyId(String exceedApplyId) {
+            this.exceedApplyId = exceedApplyId;
+            return this;
+        }
+        public String getExceedApplyId() {
+            return this.exceedApplyId;
+        }
+
+        public FlightOrderQueryResponseBodyModuleOrderBaseInfo setExceedThirdPartApplyId(String exceedThirdPartApplyId) {
+            this.exceedThirdPartApplyId = exceedThirdPartApplyId;
+            return this;
+        }
+        public String getExceedThirdPartApplyId() {
+            return this.exceedThirdPartApplyId;
         }
 
         public FlightOrderQueryResponseBodyModuleOrderBaseInfo setGmtCreate(String gmtCreate) {
