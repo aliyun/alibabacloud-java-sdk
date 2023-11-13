@@ -5,10 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
     /**
-     * <p>指定新创建实例的 aof 参数配置。</p>
+     * <p>Specifies whether to enable append-only file (AOF) persistence for the instance. Valid values:</p>
      * <br>
-     * <p>> </p>
-     * <p>> 改参数适用于创建本地盘实例，云盘实例暂不支持指定 aof 参数。</p>
+     * <p>*   **yes** (default): enables AOF persistence.</p>
+     * <p>*   **no**: disables AOF persistence.</p>
+     * <br>
+     * <p>**</p>
+     * <br>
+     * <p>**Description** This parameter is applicable to classic instances, and is unavailable for cloud-native instances.</p>
      */
     @NameInMap("Appendonly")
     public String appendonly;
@@ -70,6 +74,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to **AllocateInstancePublicConnection**.</p>
+     */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
 
@@ -107,9 +114,6 @@ public class CreateInstanceRequest extends TeaModel {
      * <br>
      * <p>*   **true**: uses the new instance as the first child instance.</p>
      * <p>*   **false**: does not use the new instance as the first child instance.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
      * <p>*   If you want to create an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance that runs Redis 5.0, you must set this parameter to **true**.</p>
      * <br>
      * <p>*   This parameter is available only on the China site (aliyun.com).</p>
@@ -130,9 +134,11 @@ public class CreateInstanceRequest extends TeaModel {
     public String globalSecurityGroupIds;
 
     /**
-     * <p>The instance type of the instance. Example: redis.master.small.default. A redis.master.small.default instance is a 1 GB standard master-replica instance of the Community Edition that uses local disks. For more information, see [Overview](~~26350~~).</p>
+     * <p>The instance type. For example, redis.master.small.default indicates a Community Edition standard master-replica instance that has 1 GB of memory. For more information, see [Overview](~~26350~~).</p>
      * <br>
-     * <p>> You must specify at least one of the **Capacity** and **InstanceClass** parameters when you call this operation.</p>
+     * <p>**</p>
+     * <br>
+     * <p>**Description** You must specify at least one of the **Capacity** and **InstanceClass** parameters when you call the CreateInstance operation.</p>
      */
     @NameInMap("InstanceClass")
     public String instanceClass;
@@ -160,6 +166,12 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("NetworkType")
     public String networkType;
 
+    /**
+     * <p>The node type. Valid values:</p>
+     * <br>
+     * <p>*   **STAND_ALONE**: standalone</p>
+     * <p>*   **MASTER_SLAVE** (default): high availability (master-replica)</p>
+     */
     @NameInMap("NodeType")
     public String nodeType;
 
@@ -233,7 +245,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String restoreTime;
 
     /**
-     * <p>The secondary zone ID of the instance. You can call the [DescribeZones](~~94527~~) operation to query the most recent zone list.</p>
+     * <p>The secondary zone ID of the instance. You can call the [DescribeZones](~~472448~~) operation to query the most recent zone list.</p>
      * <br>
      * <p>> If you specify this parameter, the master node and replica node of the instance can be deployed in different zones and disaster recovery is implemented across zones. The instance can withstand failures in data centers.</p>
      */
@@ -244,7 +256,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The number of data shards. This parameter is available only if you create a cluster instance that uses cloud disks. You can use this parameter to specify a custom number of data shards.</p>
+     * <p>The number of data shards. This parameter is available only if you create a cluster instance that uses cloud disks.</p>
      */
     @NameInMap("ShardCount")
     public Integer shardCount;
