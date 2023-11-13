@@ -148,6 +148,47 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
 
     }
 
+    public static class SearchMultiAccountResourcesResponseBodyResourcesIpAddressAttributes extends TeaModel {
+        @NameInMap("IpAddress")
+        public java.util.List<String> ipAddress;
+
+        @NameInMap("NetworkType")
+        public String networkType;
+
+        @NameInMap("Version")
+        public String version;
+
+        public static SearchMultiAccountResourcesResponseBodyResourcesIpAddressAttributes build(java.util.Map<String, ?> map) throws Exception {
+            SearchMultiAccountResourcesResponseBodyResourcesIpAddressAttributes self = new SearchMultiAccountResourcesResponseBodyResourcesIpAddressAttributes();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchMultiAccountResourcesResponseBodyResourcesIpAddressAttributes setIpAddress(java.util.List<String> ipAddress) {
+            this.ipAddress = ipAddress;
+            return this;
+        }
+        public java.util.List<String> getIpAddress() {
+            return this.ipAddress;
+        }
+
+        public SearchMultiAccountResourcesResponseBodyResourcesIpAddressAttributes setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        public SearchMultiAccountResourcesResponseBodyResourcesIpAddressAttributes setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+    }
+
     public static class SearchMultiAccountResourcesResponseBodyResourcesTags extends TeaModel {
         /**
          * <p>The key of the tag.</p>
@@ -198,6 +239,12 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
          */
         @NameInMap("CreateTime")
         public String createTime;
+
+        @NameInMap("ExpireTime")
+        public String expireTime;
+
+        @NameInMap("IpAddressAttributes")
+        public java.util.List<SearchMultiAccountResourcesResponseBodyResourcesIpAddressAttributes> ipAddressAttributes;
 
         /**
          * <p>The IP addresses.</p>
@@ -270,6 +317,22 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public SearchMultiAccountResourcesResponseBodyResources setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public String getExpireTime() {
+            return this.expireTime;
+        }
+
+        public SearchMultiAccountResourcesResponseBodyResources setIpAddressAttributes(java.util.List<SearchMultiAccountResourcesResponseBodyResourcesIpAddressAttributes> ipAddressAttributes) {
+            this.ipAddressAttributes = ipAddressAttributes;
+            return this;
+        }
+        public java.util.List<SearchMultiAccountResourcesResponseBodyResourcesIpAddressAttributes> getIpAddressAttributes() {
+            return this.ipAddressAttributes;
         }
 
         public SearchMultiAccountResourcesResponseBodyResources setIpAddresses(java.util.List<String> ipAddresses) {
