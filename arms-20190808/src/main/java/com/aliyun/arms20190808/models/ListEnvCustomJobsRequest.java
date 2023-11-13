@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListEnvCustomJobsRequest extends TeaModel {
     /**
-     * <p>Whether to return encrypted yaml.</p>
+     * <p>Specifies whether to return the encrypted YAML string.</p>
      */
     @NameInMap("EncryptYaml")
     public Boolean encryptYaml;
 
     /**
-     * <p>Environment instance ID.</p>
+     * <p>The ID of the environment instance.</p>
      */
     @NameInMap("EnvironmentId")
     public String environmentId;

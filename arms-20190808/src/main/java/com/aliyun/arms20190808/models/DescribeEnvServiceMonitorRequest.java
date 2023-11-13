@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeEnvServiceMonitorRequest extends TeaModel {
     /**
-     * <p>Environment instance ID.</p>
+     * <p>The ID of the environment instance.</p>
      */
     @NameInMap("EnvironmentId")
     public String environmentId;
 
     /**
-     * <p>The name of the namespace.</p>
+     * <p>The namespace where the ServiceMonitor is located.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -23,7 +23,7 @@ public class DescribeEnvServiceMonitorRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>ServiceMonitor name.</p>
+     * <p>The name of the ServiceMonitor.</p>
      */
     @NameInMap("ServiceMonitorName")
     public String serviceMonitorName;

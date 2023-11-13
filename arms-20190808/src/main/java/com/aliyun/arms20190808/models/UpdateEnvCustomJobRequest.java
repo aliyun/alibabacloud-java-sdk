@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class UpdateEnvCustomJobRequest extends TeaModel {
     /**
-     * <p>Locale, the default is Chinese zh | en.</p>
+     * <p>The language. Valid values: zh and en. Default value: zh.</p>
      */
     @NameInMap("AliyunLang")
     public String aliyunLang;
 
     /**
-     * <p>yaml configuration string.</p>
+     * <p>The YAML configuration string.</p>
      */
     @NameInMap("ConfigYaml")
     public String configYaml;
 
     /**
-     * <p>Custom job name.</p>
+     * <p>The name of the custom job.</p>
      */
     @NameInMap("CustomJobName")
     public String customJobName;
 
     /**
-     * <p>Environment ID.</p>
+     * <p>The environment ID.</p>
      */
     @NameInMap("EnvironmentId")
     public String environmentId;
@@ -35,7 +35,7 @@ public class UpdateEnvCustomJobRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Custom task status: run or stop.</p>
+     * <p>The status of the custom job. Valid values: run and stop.</p>
      */
     @NameInMap("Status")
     public String status;

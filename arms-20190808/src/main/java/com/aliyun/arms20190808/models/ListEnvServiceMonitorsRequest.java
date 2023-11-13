@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEnvServiceMonitorsRequest extends TeaModel {
     /**
-     * <p>Environment ID.</p>
+     * <p>The environment ID.</p>
      */
     @NameInMap("EnvironmentId")
     public String environmentId;

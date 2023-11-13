@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateEnvPodMonitorResponseBody extends TeaModel {
     /**
-     * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -17,13 +17,13 @@ public class UpdateEnvPodMonitorResponseBody extends TeaModel {
     public UpdateEnvPodMonitorResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,7 +67,7 @@ public class UpdateEnvPodMonitorResponseBody extends TeaModel {
 
     public static class UpdateEnvPodMonitorResponseBodyData extends TeaModel {
         /**
-         * <p>Target matching prompt information.</p>
+         * <p>Indicates whether targets are matched.</p>
          */
         @NameInMap("MatchedMsg")
         public String matchedMsg;

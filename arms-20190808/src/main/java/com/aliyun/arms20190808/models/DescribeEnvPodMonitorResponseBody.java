@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEnvPodMonitorResponseBody extends TeaModel {
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -17,13 +17,13 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
     public DescribeEnvPodMonitorResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,13 +67,13 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
 
     public static class DescribeEnvPodMonitorResponseBodyData extends TeaModel {
         /**
-         * <p>PodMonitor\"s yaml configuration string.</p>
+         * <p>The YAML configuration string of the PodMonitor.</p>
          */
         @NameInMap("ConfigYaml")
         public String configYaml;
 
         /**
-         * <p>Environment instance ID.</p>
+         * <p>The ID of the environment instance.</p>
          */
         @NameInMap("EnvironmentId")
         public String environmentId;
@@ -85,7 +85,7 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>PodMonitor name.</p>
+         * <p>The name of the PodMonitor.</p>
          */
         @NameInMap("PodMonitorName")
         public String podMonitorName;
@@ -97,7 +97,7 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Status: run, stop.</p>
+         * <p>The status of the PodMonitor. Valid values: run and stop.</p>
          */
         @NameInMap("Status")
         public String status;

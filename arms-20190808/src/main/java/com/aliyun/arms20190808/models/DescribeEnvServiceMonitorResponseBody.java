@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
     /**
-     * <p>The status code. The status code 200 indicates that the request was successful.</p>
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -23,7 +23,7 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,13 +67,13 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
 
     public static class DescribeEnvServiceMonitorResponseBodyData extends TeaModel {
         /**
-         * <p>ServiceMonitor\"s yaml configuration string.</p>
+         * <p>The YAML configuration string of the ServiceMonitor.</p>
          */
         @NameInMap("ConfigYaml")
         public String configYaml;
 
         /**
-         * <p>Environment instance ID.</p>
+         * <p>The ID of the environment instance.</p>
          */
         @NameInMap("EnvironmentId")
         public String environmentId;
@@ -91,13 +91,13 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>ServiceMonitor name.</p>
+         * <p>The name of the ServiceMonitor.</p>
          */
         @NameInMap("ServiceMonitorName")
         public String serviceMonitorName;
 
         /**
-         * <p>Status: run, stop.</p>
+         * <p>The status of the ServiceMonitor. Valid values: run and stop.</p>
          */
         @NameInMap("Status")
         public String status;

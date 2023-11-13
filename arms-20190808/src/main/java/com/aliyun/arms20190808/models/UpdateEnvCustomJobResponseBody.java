@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateEnvCustomJobResponseBody extends TeaModel {
     /**
-     * <p>The status code. The status code 200 indicates that the request was successful.</p>
+     * <p>The status code or error code.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>Operation results.</p>
+     * <p>The result of the operation.</p>
      */
     @NameInMap("Data")
     public String data;
@@ -23,7 +23,7 @@ public class UpdateEnvCustomJobResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

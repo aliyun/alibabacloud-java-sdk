@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class UpdateEnvServiceMonitorRequest extends TeaModel {
     /**
-     * <p>Locale, the default is Chinese zh | en.</p>
+     * <p>The language. Valid values: zh and en. Default value: zh.</p>
      */
     @NameInMap("AliyunLang")
     public String aliyunLang;
 
     /**
-     * <p>yaml configuration string.</p>
+     * <p>The YAML configuration string.</p>
      */
     @NameInMap("ConfigYaml")
     public String configYaml;
 
     /**
-     * <p>Trial run: Check whether the format is legal and whether it can match targets.</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>Environment ID.</p>
+     * <p>The environment ID.</p>
      */
     @NameInMap("EnvironmentId")
     public String environmentId;
 
     /**
-     * <p>The namespace where serviceMonitor is located.</p>
+     * <p>The namespace where the ServiceMonitor is located.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -41,7 +41,7 @@ public class UpdateEnvServiceMonitorRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>ServiceMonitor name.</p>
+     * <p>The name of the ServiceMonitor.</p>
      */
     @NameInMap("ServiceMonitorName")
     public String serviceMonitorName;
