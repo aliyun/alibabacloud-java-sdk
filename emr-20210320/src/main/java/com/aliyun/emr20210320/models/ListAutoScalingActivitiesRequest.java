@@ -5,67 +5,64 @@ import com.aliyun.tea.*;
 
 public class ListAutoScalingActivitiesRequest extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>查询伸缩活动创建时间的结束时间戳。单位为毫秒。</p>
+     * <p>The end of the time range to query. Unit: milliseconds.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
-     * <p>一次获取的最大记录数。取值范围：1~100。</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>标记当前开始读取的位置，置空表示从头开始。</p>
+     * <p>The pagination token that is used in the request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>节点组ID。节点组 Id-针对 ACK 集群，此字段为空。</p>
+     * <p>The ID of the node group.</p>
      */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>伸缩活动状态。数组元数个数N的取值范围：1~20。默认取值：</p>
-     * <p>- REJECTED：拒绝。</p>
-     * <p>- SUCCESSFUL：成功。</p>
-     * <p>- FAILED：失败。</p>
-     * <p>- IN_PROGRESS：进行中。</p>
+     * <p>The status of the scaling activity. Number of elements in the array: 1-20.</p>
      */
     @NameInMap("ScalingActivityStates")
     public java.util.List<String> scalingActivityStates;
 
     /**
-     * <p>伸缩活动类型。数组元数个数N的取值范围：1~20。取值范围：</p>
-     * <p>- SCALE_OUT：扩容。</p>
-     * <p>- SCALE_IN：缩容。</p>
+     * <p>The type of the scaling activity. Valid values:</p>
+     * <br>
+     * <p>*   SCALE_OUT</p>
+     * <p>*   SCALE_IN</p>
      */
     @NameInMap("ScalingActivityType")
     public String scalingActivityType;
 
     /**
-     * <p>伸缩规则名称。</p>
+     * <p>The name of the scaling rule.</p>
      */
     @NameInMap("ScalingRuleName")
     public String scalingRuleName;
 
     /**
-     * <p>查询伸缩活动创建时间的时间戳。单位为毫秒。</p>
+     * <p>The beginning of the time range to query. Unit: milliseconds.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

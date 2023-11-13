@@ -5,61 +5,61 @@ import com.aliyun.tea.*;
 
 public class ListApplicationConfigsRequest extends TeaModel {
     /**
-     * <p>应用名称。</p>
+     * <p>The name of the application.</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>配置文件名称。</p>
+     * <p>The name of the configuration file.</p>
      */
     @NameInMap("ConfigFileName")
     public String configFileName;
 
     /**
-     * <p>配置键值，支持模糊查询。</p>
+     * <p>The name of the configuration item.</p>
      */
     @NameInMap("ConfigItemKey")
     public String configItemKey;
 
     /**
-     * <p>配置项值。</p>
+     * <p>The value of the configuration item.</p>
      */
     @NameInMap("ConfigItemValue")
     public String configItemValue;
 
     /**
-     * <p>一次获取的最大记录数。取值范围：1~100。</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>标记当前开始读取的位置，置空表示从头开始。</p>
+     * <p>The page number of the next page returned.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>节点组ID。</p>
+     * <p>The ID of the node group.</p>
      */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
     /**
-     * <p>节点ID。</p>
+     * <p>The node ID.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

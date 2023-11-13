@@ -5,20 +5,26 @@ import com.aliyun.tea.*;
 
 public class GetDoctorHiveTableRequest extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.</p>
+     */
     @NameInMap("DateTime")
     public String dateTime;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The table name. The table name must follow the rule in Hive. A name in the {database name.table identifier} format uniquely identifies a table.</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 

@@ -4,29 +4,32 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationsResponseBody extends TeaModel {
+    /**
+     * <p>The information about applications.</p>
+     */
     @NameInMap("Applications")
     public java.util.List<Applications> applications;
 
     /**
-     * <p>本次请求所返回的最大记录条数。</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+     * <p>The page number of the next page returned.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>本次请求条件下的数据总量。</p>
+     * <p>The total number of pages.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -78,26 +81,26 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     public static class Applications extends TeaModel {
         /**
-         * <p>应用名称。</p>
+         * <p>The application name.</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
 
         /**
-         * <p>应用操作状态</p>
+         * <p>The status of the application operation.</p>
          */
         @NameInMap("ApplicationState")
         public String applicationState;
 
         /**
-         * <p>应用版本。</p>
+         * <p>The version of the application.</p>
          */
         @NameInMap("ApplicationVersion")
         @Deprecated
         public String applicationVersion;
 
         /**
-         * <p>社区版本。</p>
+         * <p>The community edition.</p>
          */
         @NameInMap("CommunityVersion")
         public String communityVersion;

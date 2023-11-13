@@ -5,22 +5,25 @@ import com.aliyun.tea.*;
 
 public class GetDoctorApplicationRequest extends TeaModel {
     /**
-     * <p>app id</p>
+     * <p>The ID of the job that is submitted to YARN.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.</p>
+     */
     @NameInMap("DateTime")
     public String dateTime;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

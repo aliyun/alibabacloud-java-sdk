@@ -11,6 +11,12 @@ public class NodeAttributes extends TeaModel {
     public String keyPairName;
 
     /**
+     * <p>MASTER节点root密码。</p>
+     */
+    @NameInMap("MasterRootPassword")
+    public String masterRootPassword;
+
+    /**
      * <p>ECS访问资源绑定的角色。</p>
      */
     @NameInMap("RamRole")
@@ -45,6 +51,14 @@ public class NodeAttributes extends TeaModel {
     }
     public String getKeyPairName() {
         return this.keyPairName;
+    }
+
+    public NodeAttributes setMasterRootPassword(String masterRootPassword) {
+        this.masterRootPassword = masterRootPassword;
+        return this;
+    }
+    public String getMasterRootPassword() {
+        return this.masterRootPassword;
     }
 
     public NodeAttributes setRamRole(String ramRole) {

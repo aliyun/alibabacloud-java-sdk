@@ -5,60 +5,64 @@ import com.aliyun.tea.*;
 
 public class RunApplicationActionRequest extends TeaModel {
     /**
-     * <p>操作名称。取值范围：</p>
-     * <p>- start：启动。</p>
-     * <p>- stop：停止。</p>
-     * <p>- config: 下发配置。</p>
-     * <p>- refresh_queues: 刷新yarn队列。</p>
-     * <p>等</p>
+     * <p>The name of the action. Valid values:</p>
+     * <br>
+     * <p>*   start</p>
+     * <p>*   stop</p>
+     * <p>*   config</p>
+     * <p>*   restart</p>
+     * <p>*   refresh_queues</p>
      */
     @NameInMap("ActionName")
     public String actionName;
 
     /**
-     * <p>每批数量。</p>
+     * <p>The number of applications in each batch.</p>
      */
     @NameInMap("BatchSize")
     public Integer batchSize;
 
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>组件实例选择器。</p>
+     * <p>The name of the operation.</p>
      */
     @NameInMap("ComponentInstanceSelector")
     public ComponentInstanceSelector componentInstanceSelector;
 
     /**
-     * <p>描述。</p>
+     * <p>The description of the execution.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>运行策略。</p>
+     * <p>The execution policy. Valid values:</p>
+     * <br>
+     * <p>*   FAILED_BLOCK: The system stops the execution if the execution fails.</p>
+     * <p>*   FAILED_CONTINUE: The system continues the execution if the execution fails.</p>
      */
     @NameInMap("ExecuteStrategy")
     public String executeStrategy;
 
     /**
-     * <p>间隔时间。</p>
+     * <p>The interval for rolling execution. Unit: seconds.</p>
      */
     @NameInMap("Interval")
     public Long interval;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>是否滚动执行。</p>
+     * <p>Specifies whether to enable rolling execution.</p>
      */
     @NameInMap("RollingExecute")
     public Boolean rollingExecute;

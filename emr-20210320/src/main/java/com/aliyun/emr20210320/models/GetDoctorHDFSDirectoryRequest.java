@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class GetDoctorHDFSDirectoryRequest extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.</p>
+     */
     @NameInMap("DateTime")
     public String dateTime;
 
+    /**
+     * <p>The directory name. The depth of the directory is not greater than five.</p>
+     */
     @NameInMap("DirPath")
     public String dirPath;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

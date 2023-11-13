@@ -4,11 +4,14 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class CreateNodeGroupResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the machine group.</p>
+     */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

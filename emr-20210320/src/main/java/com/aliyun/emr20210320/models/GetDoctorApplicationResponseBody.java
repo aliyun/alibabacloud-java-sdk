@@ -4,11 +4,14 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class GetDoctorApplicationResponseBody extends TeaModel {
+    /**
+     * <p>The details of the job.</p>
+     */
     @NameInMap("Data")
     public Data data;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,9 +38,15 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
     }
 
     public static class Analysis extends TeaModel {
+        /**
+         * <p>The score of the job.</p>
+         */
         @NameInMap("Score")
         public Integer score;
 
+        /**
+         * <p>The suggestion for running the job.</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -65,15 +74,27 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
     }
 
     public static class MemSeconds extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -117,15 +138,27 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
     }
 
     public static class MemUtilization extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -169,15 +202,27 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
     }
 
     public static class VcoreSeconds extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -221,15 +266,27 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
     }
 
     public static class VcoreUtilization extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -273,15 +330,27 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
     }
 
     public static class Metrics extends TeaModel {
+        /**
+         * <p>The aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running.</p>
+         */
         @NameInMap("MemSeconds")
         public MemSeconds memSeconds;
 
+        /**
+         * <p>The memory usage.</p>
+         */
         @NameInMap("MemUtilization")
         public MemUtilization memUtilization;
 
+        /**
+         * <p>The aggregated number of vCPUs that are allocated to the job multiplied by the number of seconds the job has been running.</p>
+         */
         @NameInMap("VcoreSeconds")
         public VcoreSeconds vcoreSeconds;
 
+        /**
+         * <p>The CPU utilization. The meaning is the same as that of the %CPU command in the output of the Linux top command.</p>
+         */
         @NameInMap("VcoreUtilization")
         public VcoreUtilization vcoreUtilization;
 
@@ -325,33 +394,63 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
     }
 
     public static class Data extends TeaModel {
+        /**
+         * <p>The job analysis result.</p>
+         */
         @NameInMap("Analysis")
         public Analysis analysis;
 
+        /**
+         * <p>The name of the job.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The end time of the job. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The job IDs. Multiple job IDs are separated with commas (,).</p>
+         */
         @NameInMap("Ids")
         public java.util.List<String> ids;
 
+        /**
+         * <p>The metric information.</p>
+         */
         @NameInMap("Metrics")
         public Metrics metrics;
 
+        /**
+         * <p>The SQL statement of the job. This parameter is left empty for non-SQL jobs.</p>
+         */
         @NameInMap("QuerySql")
         public String querySql;
 
+        /**
+         * <p>The YARN queue to which the job was submitted.</p>
+         */
         @NameInMap("Queue")
         public String queue;
 
+        /**
+         * <p>The time when the job was submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The type of the compute engine.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The username that is used to submit the job.</p>
+         */
         @NameInMap("User")
         public String user;
 
