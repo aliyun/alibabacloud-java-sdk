@@ -378,6 +378,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ChargeType", request.chargeType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterDomain)) {
+            body.put("ClusterDomain", request.clusterDomain);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clusterSpec)) {
             body.put("ClusterSpec", request.clusterSpec);
         }
