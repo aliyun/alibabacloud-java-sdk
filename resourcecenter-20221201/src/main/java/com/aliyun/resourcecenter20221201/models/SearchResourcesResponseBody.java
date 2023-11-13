@@ -129,6 +129,47 @@ public class SearchResourcesResponseBody extends TeaModel {
 
     }
 
+    public static class SearchResourcesResponseBodyResourcesIpAddressAttributes extends TeaModel {
+        @NameInMap("IpAddress")
+        public java.util.List<String> ipAddress;
+
+        @NameInMap("NetworkType")
+        public String networkType;
+
+        @NameInMap("Version")
+        public String version;
+
+        public static SearchResourcesResponseBodyResourcesIpAddressAttributes build(java.util.Map<String, ?> map) throws Exception {
+            SearchResourcesResponseBodyResourcesIpAddressAttributes self = new SearchResourcesResponseBodyResourcesIpAddressAttributes();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchResourcesResponseBodyResourcesIpAddressAttributes setIpAddress(java.util.List<String> ipAddress) {
+            this.ipAddress = ipAddress;
+            return this;
+        }
+        public java.util.List<String> getIpAddress() {
+            return this.ipAddress;
+        }
+
+        public SearchResourcesResponseBodyResourcesIpAddressAttributes setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        public SearchResourcesResponseBodyResourcesIpAddressAttributes setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+    }
+
     public static class SearchResourcesResponseBodyResourcesTags extends TeaModel {
         /**
          * <p>The tag key.</p>
@@ -179,6 +220,12 @@ public class SearchResourcesResponseBody extends TeaModel {
          */
         @NameInMap("CreateTime")
         public String createTime;
+
+        @NameInMap("ExpireTime")
+        public String expireTime;
+
+        @NameInMap("IpAddressAttributes")
+        public java.util.List<SearchResourcesResponseBodyResourcesIpAddressAttributes> ipAddressAttributes;
 
         /**
          * <p>The IP addresses.</p>
@@ -251,6 +298,22 @@ public class SearchResourcesResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public SearchResourcesResponseBodyResources setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public String getExpireTime() {
+            return this.expireTime;
+        }
+
+        public SearchResourcesResponseBodyResources setIpAddressAttributes(java.util.List<SearchResourcesResponseBodyResourcesIpAddressAttributes> ipAddressAttributes) {
+            this.ipAddressAttributes = ipAddressAttributes;
+            return this;
+        }
+        public java.util.List<SearchResourcesResponseBodyResourcesIpAddressAttributes> getIpAddressAttributes() {
+            return this.ipAddressAttributes;
         }
 
         public SearchResourcesResponseBodyResources setIpAddresses(java.util.List<String> ipAddresses) {

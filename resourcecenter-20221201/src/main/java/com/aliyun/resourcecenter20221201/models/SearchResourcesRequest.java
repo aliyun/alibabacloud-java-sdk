@@ -11,7 +11,7 @@ public class SearchResourcesRequest extends TeaModel {
     public java.util.List<SearchResourcesRequestFilter> filter;
 
     /**
-     * <p>The maximum number of entries to return on each page.</p>
+     * <p>The maximum number of entries per page.</p>
      * <br>
      * <p>Valid values: 1 to 100.</p>
      * <br>
