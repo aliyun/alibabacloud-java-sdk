@@ -4,9 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class ListUsersResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public ListUsersResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,18 +38,33 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyDataUsers extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 
+        /**
+         * <p>The username of the account.</p>
+         */
         @NameInMap("accountName")
         public String accountName;
 
+        /**
+         * <p>The type of the account.</p>
+         */
         @NameInMap("accountType")
         public String accountType;
 
+        /**
+         * <p>The display name.</p>
+         */
         @NameInMap("displayName")
         public String displayName;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         */
         @NameInMap("tenantId")
         public String tenantId;
 
@@ -95,15 +116,27 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("pageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("pageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("totalCount")
         public Integer totalCount;
 
+        /**
+         * <p>The users.</p>
+         */
         @NameInMap("users")
         public java.util.List<ListUsersResponseBodyDataUsers> users;
 

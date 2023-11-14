@@ -50,6 +50,9 @@ public class ListFunctionsResponseBody extends TeaModel {
         @NameInMap("creationTime")
         public Long creationTime;
 
+        @NameInMap("displayName")
+        public String displayName;
+
         /**
          * <p>The name of the function.</p>
          */
@@ -93,6 +96,14 @@ public class ListFunctionsResponseBody extends TeaModel {
         }
         public Long getCreationTime() {
             return this.creationTime;
+        }
+
+        public ListFunctionsResponseBodyDataFunctions setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
         }
 
         public ListFunctionsResponseBodyDataFunctions setName(String name) {

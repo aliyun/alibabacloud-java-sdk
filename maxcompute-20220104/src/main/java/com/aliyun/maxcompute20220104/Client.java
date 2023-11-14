@@ -721,6 +721,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("prefix", request.prefix);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.schemaName)) {
+            query.put("schemaName", request.schemaName);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -796,6 +800,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListProjectsResponse listProjectsWithOptions(ListProjectsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.listSystemCatalog)) {
+            query.put("listSystemCatalog", request.listSystemCatalog);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.marker)) {
             query.put("marker", request.marker);
         }
@@ -961,6 +969,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.schemaName)) {
+            query.put("schemaName", request.schemaName);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -1022,6 +1034,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.prefix)) {
             query.put("prefix", request.prefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schemaName)) {
+            query.put("schemaName", request.schemaName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {

@@ -22,6 +22,9 @@ public class ListTablesRequest extends TeaModel {
     @NameInMap("prefix")
     public String prefix;
 
+    @NameInMap("schemaName")
+    public String schemaName;
+
     /**
      * <p>The type of the table.</p>
      */
@@ -55,6 +58,14 @@ public class ListTablesRequest extends TeaModel {
     }
     public String getPrefix() {
         return this.prefix;
+    }
+
+    public ListTablesRequest setSchemaName(String schemaName) {
+        this.schemaName = schemaName;
+        return this;
+    }
+    public String getSchemaName() {
+        return this.schemaName;
     }
 
     public ListTablesRequest setType(String type) {
