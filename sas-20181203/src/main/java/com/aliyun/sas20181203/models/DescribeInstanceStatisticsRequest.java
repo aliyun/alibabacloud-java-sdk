@@ -26,7 +26,7 @@ public class DescribeInstanceStatisticsRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The UUIDs of the assets to query. Separate multiple UUIDs with commas (,). You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of assets.</p>
+     * <p>The UUIDs of the assets to query. Separate multiple UUIDs with commas (,). You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of assets.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

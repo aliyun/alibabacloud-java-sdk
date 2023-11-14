@@ -10,6 +10,9 @@ public class DescribeVulListResponseBody extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The value of NextToken that is returned when the NextToken method is used.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -32,7 +35,7 @@ public class DescribeVulListResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>An array that consists of the details about the vulnerability.</p>
+     * <p>The information about the vulnerability.</p>
      */
     @NameInMap("VulRecords")
     public java.util.List<DescribeVulListResponseBodyVulRecords> vulRecords;
@@ -94,9 +97,9 @@ public class DescribeVulListResponseBody extends TeaModel {
         /**
          * <p>The asset importance score. Valid values:</p>
          * <br>
-         * <p>*   **2**: an important asset</p>
-         * <p>*   **1**: a common asset</p>
-         * <p>*   **0**: a test asset</p>
+         * <p>*   **2**: important asset</p>
+         * <p>*   **1**: common asset</p>
+         * <p>*   **0**: test asset</p>
          */
         @NameInMap("Assets_factor")
         public String assetsFactor;
@@ -116,8 +119,8 @@ public class DescribeVulListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the score of urgency to fix a vulnerability is calculated. Valid values:</p>
          * <br>
-         * <p>*   **0**: no</p>
-         * <p>*   **1**: yes</p>
+         * <p>*   **0**: The score is not calculated.</p>
+         * <p>*   **1**: The score is calculated.</p>
          */
         @NameInMap("Is_calc")
         public String isCalc;
@@ -126,7 +129,7 @@ public class DescribeVulListResponseBody extends TeaModel {
          * <p>The status of the score of urgency to fix a vulnerability. Valid values:</p>
          * <br>
          * <p>*   **none**: No score is generated.</p>
-         * <p>*   **pending**: The score is pending calculation.</p>
+         * <p>*   **pending**: The score is to be calculated.</p>
          * <p>*   **normal**: The calculation is normal.</p>
          */
         @NameInMap("Status")
@@ -141,11 +144,11 @@ public class DescribeVulListResponseBody extends TeaModel {
         /**
          * <p>The score of urgency to fix a vulnerability.</p>
          * <br>
-         * <p>The following list describes scores and related fixing suggestions:</p>
+         * <p>The fixing suggestions vary based on the score of urgency of a vulnerability.</p>
          * <br>
-         * <p>*   If the score is from **13.5 to 15**, the vulnerability is a high-risk vulnerability. You must fix the vulnerability at the earliest opportunity.</p>
-         * <p>*   If the score is **greater than or equal to 7 but less than 13.5**, the vulnerability is a medium-risk vulnerability. You can fix the vulnerability at your convenience.</p>
-         * <p>*   If the score is **less than 7**, the vulnerability is a low-risk vulnerability. You can ignore the vulnerability.</p>
+         * <p>*   **\[13.5,15]**: The vulnerability is a high-risk vulnerability. You must fix the vulnerability at the earliest opportunity.</p>
+         * <p>*   **\[7,13.5)**: The vulnerability is a medium-risk vulnerability. You can fix the vulnerability at your convenience.</p>
+         * <p>*   **\[0,7)**: The vulnerability is a low-risk vulnerability. You can ignore the vulnerability.</p>
          */
         @NameInMap("Total_score")
         public String totalScore;
@@ -215,7 +218,7 @@ public class DescribeVulListResponseBody extends TeaModel {
 
     public static class DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList extends TeaModel {
         /**
-         * <p>The name of the init container.</p>
+         * <p>The name of the container.</p>
          */
         @NameInMap("ContainerName")
         public String containerName;
@@ -369,7 +372,7 @@ public class DescribeVulListResponseBody extends TeaModel {
         public String absolutePath;
 
         /**
-         * <p>The alias of the vulnerability.</p>
+         * <p>The name of the vulnerability.</p>
          */
         @NameInMap("AliasName")
         public String aliasName;
@@ -390,7 +393,7 @@ public class DescribeVulListResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The timestamp when the vulnerability was last detected. Unit: milliseconds.</p>
+         * <p>The timestamp that was generated when the vulnerability was last detected. Unit: milliseconds.</p>
          */
         @NameInMap("LastTs")
         public Long lastTs;
@@ -402,25 +405,25 @@ public class DescribeVulListResponseBody extends TeaModel {
         public DescribeVulListResponseBodyVulRecordsExtendContentJsonNecessity necessity;
 
         /**
-         * <p>The name of the operating system for your asset.</p>
+         * <p>The name of the operating system.</p>
          */
         @NameInMap("Os")
         public String os;
 
         /**
-         * <p>The release of the operating system.</p>
+         * <p>The information about the operating system version.</p>
          */
         @NameInMap("OsRelease")
         public String osRelease;
 
         /**
-         * <p>The ID of the vulnerability.</p>
+         * <p>The vulnerability ID.</p>
          */
         @NameInMap("PrimaryId")
         public Long primaryId;
 
         /**
-         * <p>The RPM Package Manager (RPM) packages.</p>
+         * <p>The information about RPM Package Manager (RPM) packages.</p>
          */
         @NameInMap("RpmEntityList")
         public java.util.List<DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList> rpmEntityList;
@@ -428,25 +431,25 @@ public class DescribeVulListResponseBody extends TeaModel {
         /**
          * <p>The status of the vulnerability. Valid values:</p>
          * <br>
-         * <p>*   **1**: unfixed</p>
-         * <p>*   **2**: fix failed</p>
-         * <p>*   3: rollback failed</p>
-         * <p>*   **4**: fixing</p>
-         * <p>*   **5**: being rolled back</p>
-         * <p>*   **6**: being verified</p>
-         * <p>*   **7**: fixed</p>
-         * <p>*   **8**: fixed and to be restarted</p>
-         * <p>*   **9**: rolled back</p>
-         * <p>*   **10**: ignored</p>
-         * <p>*   **11**: rolled back and to be restarted</p>
-         * <p>*   **12**: not found</p>
-         * <p>*   **20**: expired</p>
+         * <p>*   **1**: The vulnerability is unfixed.</p>
+         * <p>*   **2**: The vulnerability failed to be fixed.</p>
+         * <p>*   3: The system failed to be rolled back.</p>
+         * <p>*   **4**: The vulnerability is being fixed.</p>
+         * <p>*   **5**: The system is being rolled back.</p>
+         * <p>*   **6**: The vulnerability is being verified.</p>
+         * <p>*   **7**: The vulnerability is fixed.</p>
+         * <p>*   **8**: The vulnerability is fixed and the system is to be restarted.</p>
+         * <p>*   **9**: The system is rolled back.</p>
+         * <p>*   **10**: The vulnerability is ignored.</p>
+         * <p>*   **11**: The system is rolled back and is to be restarted.</p>
+         * <p>*   **12**: The vulnerability is not found.</p>
+         * <p>*   **20**: The vulnerability expires.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The tag that is added to the vulnerability.</p>
+         * <p>The tag of the vulnerability.</p>
          */
         @NameInMap("Tag")
         public String tag;
@@ -455,7 +458,7 @@ public class DescribeVulListResponseBody extends TeaModel {
         public String target;
 
         /**
-         * <p>The CVE list.</p>
+         * <p>The CVE.</p>
          */
         @NameInMap("cveList")
         public java.util.List<String> cveList;
@@ -589,7 +592,7 @@ public class DescribeVulListResponseBody extends TeaModel {
 
     public static class DescribeVulListResponseBodyVulRecords extends TeaModel {
         /**
-         * <p>The alias of the vulnerability.</p>
+         * <p>The name of the vulnerability.</p>
          */
         @NameInMap("AliasName")
         public String aliasName;
@@ -623,7 +626,7 @@ public class DescribeVulListResponseBody extends TeaModel {
         public DescribeVulListResponseBodyVulRecordsExtendContentJson extendContentJson;
 
         /**
-         * <p>The timestamp when the vulnerability was first detected. Unit: milliseconds.</p>
+         * <p>The timestamp that was generated when the vulnerability was first detected. Unit: milliseconds.</p>
          */
         @NameInMap("FirstTs")
         public Long firstTs;
@@ -659,13 +662,13 @@ public class DescribeVulListResponseBody extends TeaModel {
         public String intranetIp;
 
         /**
-         * <p>The timestamp when the vulnerability was last detected. Unit: milliseconds.</p>
+         * <p>The timestamp that was generated when the vulnerability was last detected. Unit: milliseconds.</p>
          */
         @NameInMap("LastTs")
         public Long lastTs;
 
         /**
-         * <p>The timestamp when the vulnerability status was modified. Unit: milliseconds.</p>
+         * <p>The timestamp that was generated when the vulnerability status was modified. Unit: milliseconds.</p>
          */
         @NameInMap("ModifyTs")
         public Long modifyTs;
@@ -683,13 +686,13 @@ public class DescribeVulListResponseBody extends TeaModel {
          * <p>*   **later**: medium</p>
          * <p>*   **nntf**: low</p>
          * <br>
-         * <p>> We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.</p>
+         * <p>>  We recommend that you fix **high-level** vulnerabilities as soon as possible.</p>
          */
         @NameInMap("Necessity")
         public String necessity;
 
         /**
-         * <p>Indicates whether the Security Center agent on the asset is online. Valid values:</p>
+         * <p>Indicates whether the Security Center agent of the asset is online. Valid values:</p>
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false**</p>
@@ -698,47 +701,47 @@ public class DescribeVulListResponseBody extends TeaModel {
         public Boolean online;
 
         /**
-         * <p>The name of the operating system for your asset.</p>
+         * <p>The name of the operating system of your asset.</p>
          */
         @NameInMap("OsName")
         public String osName;
 
         /**
-         * <p>The name of the operating system for your asset.</p>
+         * <p>The name of the operating system of your asset.</p>
          */
         @NameInMap("OsVersion")
         public String osVersion;
 
         /**
-         * <p>The ID of the vulnerability.</p>
+         * <p>The vulnerability ID.</p>
          */
         @NameInMap("PrimaryId")
         public Long primaryId;
 
         /**
-         * <p>Indicates whether the application protection feature is supported.</p>
+         * <p>Indicates whether the runtime application self-protection (RASP) feature is supported. Valid values:</p>
          * <br>
-         * <p>*   **0**: no</p>
-         * <p>*   **1**: yes</p>
+         * <p>*   **0**: TheRASP feature is not supported.</p>
+         * <p>*   **1**: The RASP feature is supported</p>
          * <br>
-         * <p>> If this parameter is not returned, the application protection feature is not supported.</p>
+         * <p>>  If this parameter is not returned, the RASP is not supported.</p>
          */
         @NameInMap("RaspDefend")
         public Integer raspDefend;
 
         /**
-         * <p>The protection mode of the application protection feature. Valid values:</p>
+         * <p>The protection mode of the RASP feature. Valid values:</p>
          * <br>
-         * <p>*   **0**: unprotected</p>
-         * <p>*   **1**: the Monitor mode</p>
-         * <p>*   **2**: the Block mode</p>
-         * <p>*   **3**: disabled</p>
+         * <p>*   **0**: The RASP feature is not supported.</p>
+         * <p>*   **1**: The RASP feature is in Monitor mode.</p>
+         * <p>*   **2**: The RASP feature is in Block mode.</p>
+         * <p>*   **3**: The RASP feature is disabled.</p>
          */
         @NameInMap("RaspStatus")
         public Integer raspStatus;
 
         /**
-         * <p>The ID of the region in which the server resides.</p>
+         * <p>The ID of the region in which the instance resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -750,19 +753,19 @@ public class DescribeVulListResponseBody extends TeaModel {
         public String related;
 
         /**
-         * <p>The timestamp when the vulnerability was fixed. Unit: milliseconds.</p>
+         * <p>The timestamp that was generated when the vulnerability was fixed. Unit: milliseconds.</p>
          */
         @NameInMap("RepairTs")
         public Long repairTs;
 
         /**
-         * <p>The code that indicates the vulnerability fixing result.</p>
+         * <p>The code that indicates the fixing result of the vulnerability.</p>
          */
         @NameInMap("ResultCode")
         public String resultCode;
 
         /**
-         * <p>The message that indicates the vulnerability fixing result.</p>
+         * <p>The message that indicates the fixing result of the vulnerability.</p>
          */
         @NameInMap("ResultMessage")
         public String resultMessage;
@@ -770,25 +773,25 @@ public class DescribeVulListResponseBody extends TeaModel {
         /**
          * <p>The status of the vulnerability. Valid values:</p>
          * <br>
-         * <p>*   **1**: unfixed</p>
-         * <p>*   **2**: fix failed</p>
-         * <p>*   **3**: rollback failed</p>
-         * <p>*   **4**: fixing</p>
-         * <p>*   **5**: being rolled back</p>
-         * <p>*   **6**: being verified</p>
-         * <p>*   **7**: fixed</p>
-         * <p>*   **8**: fixed and to be restarted</p>
-         * <p>*   **9**: rolled back</p>
-         * <p>*   **10**: ignored</p>
-         * <p>*   **11**: rolled back and to be restarted</p>
-         * <p>*   **12**: not found</p>
-         * <p>*   **20**: expired</p>
+         * <p>*   **1**: The vulnerability is unfixed.</p>
+         * <p>*   **2**: The vulnerability failed to be fixed.</p>
+         * <p>*   **3**: The system failed to be rolled back.</p>
+         * <p>*   **4**: The vulnerability is being fixed.</p>
+         * <p>*   **5**: The system is being rolled back.</p>
+         * <p>*   **6**: The vulnerability is being verified.</p>
+         * <p>*   **7**: The vulnerability is fixed.</p>
+         * <p>*   **8**: The vulnerability is fixed and the system is to be restarted.</p>
+         * <p>*   **9**: The system is rolled back.</p>
+         * <p>*   **10**: The vulnerability is ignored.</p>
+         * <p>*   **11**: The system is rolled back and is to be restarted.</p>
+         * <p>*   **12**: The vulnerability is not found.</p>
+         * <p>*   **20**: The vulnerability expires.</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
-         * <p>The tag that is added to the vulnerability.</p>
+         * <p>The tag of the vulnerability.</p>
          */
         @NameInMap("Tag")
         public String tag;
@@ -801,13 +804,13 @@ public class DescribeVulListResponseBody extends TeaModel {
          * <p>*   **cms**: Web-CMS vulnerability</p>
          * <p>*   **emg**: urgent vulnerability</p>
          * <p>*   **app**: application vulnerability</p>
-         * <p>*   **sca**: application vulnerability that is detected by using software component analysis</p>
+         * <p>*   **sca**: application vulnerability that is detected by using Software Component Analysis (SCA).</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The UUID of the asset.</p>
+         * <p>The instance UUID of the asset.</p>
          */
         @NameInMap("Uuid")
         public String uuid;

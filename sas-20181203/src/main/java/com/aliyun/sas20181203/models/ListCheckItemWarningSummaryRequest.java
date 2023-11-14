@@ -82,6 +82,12 @@ public class ListCheckItemWarningSummaryRequest extends TeaModel {
     @NameInMap("RiskType")
     public String riskType;
 
+    /**
+     * <p>The data source. Default value: **default**. Valid value:</p>
+     * <br>
+     * <p>*   **agentless**: The check items of baselines for agentless detection.</p>
+     * <p>*   **default**: The check items of baselines for hosts.</p>
+     */
     @NameInMap("Source")
     public String source;
 

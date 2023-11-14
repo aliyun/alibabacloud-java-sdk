@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyOperateVulRequest extends TeaModel {
     /**
-     * <p>The ID of the request source. Set the value to **sas**.</p>
+     * <p>The request ID. Set the value to **sas**.</p>
      */
     @NameInMap("From")
     public String from;

@@ -4,18 +4,40 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateHoneypotProbeBindRequest extends TeaModel {
+    /**
+     * <p>The ports that are bound to the probe.</p>
+     */
     @NameInMap("BindPortList")
     public java.util.List<CreateHoneypotProbeBindRequestBindPortList> bindPortList;
 
+    /**
+     * <p>The honeypot ID.</p>
+     * <br>
+     * <p>>  You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.</p>
+     */
     @NameInMap("HoneypotId")
     public String honeypotId;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The probe ID.</p>
+     * <br>
+     * <p>>  You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.</p>
+     */
     @NameInMap("ProbeId")
     public String probeId;
 
+    /**
+     * <p>The IP addresses that are monitored.</p>
+     */
     @NameInMap("ServiceIpList")
     public java.util.List<String> serviceIpList;
 
@@ -65,21 +87,48 @@ public class CreateHoneypotProbeBindRequest extends TeaModel {
     }
 
     public static class CreateHoneypotProbeBindRequestBindPortList extends TeaModel {
+        /**
+         * <p>Specifies whether to bind the port. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("BindPort")
         public Boolean bindPort;
 
+        /**
+         * <p>The end port on which the probe monitors.</p>
+         */
         @NameInMap("EndPort")
         public Integer endPort;
 
+        /**
+         * <p>Specifies whether the port is a fixed port. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Fixed")
         public Boolean fixed;
 
+        /**
+         * <p>The type of the protocol. Valid values:</p>
+         * <br>
+         * <p>*   **tcp**</p>
+         * <p>*   **udp**</p>
+         */
         @NameInMap("Proto")
         public String proto;
 
+        /**
+         * <p>The start port on which the probe monitors.</p>
+         */
         @NameInMap("StartPort")
         public Integer startPort;
 
+        /**
+         * <p>The destination port.</p>
+         */
         @NameInMap("TargetPort")
         public Integer targetPort;
 

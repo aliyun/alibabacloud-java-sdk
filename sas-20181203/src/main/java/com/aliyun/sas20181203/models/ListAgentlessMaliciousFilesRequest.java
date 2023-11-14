@@ -58,6 +58,21 @@ public class ListAgentlessMaliciousFilesRequest extends TeaModel {
     @NameInMap("MaliciousMd5")
     public String maliciousMd5;
 
+    /**
+     * <p>The alert type.</p>
+     * <br>
+     * <p>Valid values when Lang is set to zh:</p>
+     * <br>
+     * <p>*   WebShell</p>
+     * <p>*   Malicious Software</p>
+     * <p>*   Malicious Script</p>
+     * <br>
+     * <p>Valid values when Lang is set to en:</p>
+     * <br>
+     * <p>*   WebShell</p>
+     * <p>*   Malicious Software</p>
+     * <p>*   Malicious Script</p>
+     */
     @NameInMap("MaliciousType")
     public String maliciousType;
 

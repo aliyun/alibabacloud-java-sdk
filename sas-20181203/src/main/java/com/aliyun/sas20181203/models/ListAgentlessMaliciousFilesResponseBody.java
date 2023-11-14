@@ -53,25 +53,25 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
 
     public static class ListAgentlessMaliciousFilesResponseBodyListDetails extends TeaModel {
         /**
-         * <p>The name of the exception.</p>
+         * <p>The name of the detailed item.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The name key of the exception.</p>
+         * <p>The name key of the detailed item.</p>
          */
         @NameInMap("NameKey")
         public String nameKey;
 
         /**
-         * <p>The type of the exception.</p>
+         * <p>The type of the detailed item.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The value of the exception.</p>
+         * <p>The value of the detailed item.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -167,7 +167,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
 
     public static class ListAgentlessMaliciousFilesResponseBodyList extends TeaModel {
         /**
-         * <p>The details of the exception.</p>
+         * <p>The details of the alert event.</p>
          */
         @NameInMap("Details")
         public java.util.List<ListAgentlessMaliciousFilesResponseBodyListDetails> details;
@@ -248,6 +248,9 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
         @NameInMap("MaliciousName")
         public String maliciousName;
 
+        /**
+         * <p>The type of the virus.</p>
+         */
         @NameInMap("MaliciousType")
         public String maliciousType;
 
@@ -258,13 +261,13 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
         public java.util.List<ListAgentlessMaliciousFilesResponseBodyListNotes> notes;
 
         /**
-         * <p>The handling result of the exception.</p>
+         * <p>The handling result of the alert.</p>
          */
         @NameInMap("OperateResult")
         public String operateResult;
 
         /**
-         * <p>The timestamp generated when the exception is handled. Unit: milliseconds.</p>
+         * <p>The timestamp generated when the alert is handled. Unit: milliseconds.</p>
          */
         @NameInMap("OperateTimestamp")
         public String operateTimestamp;

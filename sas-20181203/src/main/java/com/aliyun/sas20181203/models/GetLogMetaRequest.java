@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetLogMetaRequest extends TeaModel {
+    /**
+     * <p>The name of the dedicated Logstore in which logs are stored.</p>
+     * <br>
+     * <p>>  You can call the [DescribeLogMeta](~~DescribeLogMeta~~) operation to query the name of the Logstore.</p>
+     */
     @NameInMap("LogStore")
     public String logStore;
 

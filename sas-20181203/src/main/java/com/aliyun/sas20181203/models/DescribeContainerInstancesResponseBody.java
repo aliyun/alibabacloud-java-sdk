@@ -97,9 +97,15 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <p>The container is exposed.</p>
+         */
         @NameInMap("Exposed")
         public Integer exposed;
 
+        /**
+         * <p>The container exposed details .</p>
+         */
         @NameInMap("ExposedDetail")
         public String exposedDetail;
 

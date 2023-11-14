@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceStatisticsResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the risk information about the asset.</p>
+     * <p>An array that consists of the risk information about assets.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeInstanceStatisticsResponseBodyData> data;
@@ -39,7 +39,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
 
     public static class DescribeInstanceStatisticsResponseBodyData extends TeaModel {
         /**
-         * <p>The number of unusual logons to the asset.</p>
+         * <p>The number of unusual logons by using the account of the asset.</p>
          */
         @NameInMap("Account")
         public Integer account;
@@ -120,7 +120,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         public Integer scaNum;
 
         /**
-         * <p>The number of alerts generated for the asset.</p>
+         * <p>The number of alerts generated on the asset.</p>
          */
         @NameInMap("Suspicious")
         public Integer suspicious;
@@ -138,7 +138,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         public Integer trojan;
 
         /**
-         * <p>The UUID of the asset.</p>
+         * <p>The instance UUID of the asset.</p>
          */
         @NameInMap("Uuid")
         public String uuid;

@@ -88,6 +88,9 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
     }
 
     public static class DescribeImageBaselineStrategyResponseBodyStrategy extends TeaModel {
+        /**
+         * <p>The baseline check policy for agentless detection.</p>
+         */
         @NameInMap("BaselineItem")
         public String baselineItem;
 

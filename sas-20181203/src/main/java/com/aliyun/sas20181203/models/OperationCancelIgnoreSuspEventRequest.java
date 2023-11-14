@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperationCancelIgnoreSuspEventRequest extends TeaModel {
     /**
-     * <p>Note information.</p>
+     * <p>The information about the remarks.</p>
      */
     @NameInMap("Remark")
     public String remark;
