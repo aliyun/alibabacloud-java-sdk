@@ -4,78 +4,211 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCanFixVulListRequest extends TeaModel {
+    /**
+     * <p>The alias of the vulnerability that is specified in Common Vulnerabilities and Exposures (CVE).</p>
+     */
     @NameInMap("AliasName")
     public String aliasName;
 
+    /**
+     * <p>The cluster ID.</p>
+     * <br>
+     * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The name of the cluster.</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <p>The container ID.</p>
+     */
     @NameInMap("ContainerId")
     public String containerId;
 
+    /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Specifies whether the vulnerability is handled. Valid values:</p>
+     * <br>
+     * <p>**y**: The vulnerability is handled. **n**: The vulnerability is not handled.</p>
+     */
     @NameInMap("Dealed")
     public String dealed;
 
+    /**
+     * <p>The unique identifier of the image.</p>
+     */
     @NameInMap("Digest")
     public String digest;
 
+    /**
+     * <p>The name of the image.</p>
+     */
     @NameInMap("Image")
     public String image;
 
+    /**
+     * <p>The ID of the container image.</p>
+     * <br>
+     * <p>>  You can call the [ListRepository](~~451339~~) operation of Container Registry and obtain the ID of the container image from **InstanceId** in the response.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the vulnerability.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The namespace of the cluster.</p>
+     * <br>
+     * <p>>  You can call the [GetOpaClusterNamespaceList](~~GetOpaClusterNamespaceList~~) operation to query the namespaces of clusters.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The priority to fix the vulnerability. Separate multiple priorities with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   **asap**: high</p>
+     * <p>*   **later**: medium</p>
+     * <p>*   **nntf**: low</p>
+     */
     @NameInMap("Necessity")
     public String necessity;
 
+    /**
+     * <p>The number of entries per page. Default value: 20.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The name of the container group.</p>
+     */
     @NameInMap("Pod")
     public String pod;
 
+    /**
+     * <p>The region ID of the image repository. Valid values:</p>
+     * <br>
+     * <p>*   **cn-beijing**: China (Beijing)</p>
+     * <p>*   **cn-zhangjiakou**: China (Zhangjiakou)</p>
+     * <p>*   **cn-hangzhou**: China (Hangzhou)</p>
+     * <p>*   **cn-shanghai**: China (Shanghai)</p>
+     * <p>*   **cn-shenzhen**: China (Shenzhen)</p>
+     * <p>*   **cn-hongkong**: China (Hong Kong)</p>
+     * <p>*   **ap-southeast-1**: Singapore</p>
+     * <p>*   **ap-southeast-5**: Indonesia (Jakarta)</p>
+     * <p>*   **us-east-1**: US (Virginia)</p>
+     * <p>*   **us-west-1**: US (Silicon Valley)</p>
+     * <p>*   **eu-central-1**: Germany (Frankfurt)</p>
+     * <p>*   **eu-west-1**: UK (London)</p>
+     * <p>*   **ap-south-1**: India (Mumbai)</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the image repository.</p>
+     * <br>
+     * <p>>  You can call the [ListRepository](~~145293~~) operation of Container Registry and obtain the ID of the image repository from **RepoId** in the response.</p>
+     */
     @NameInMap("RepoId")
     public String repoId;
 
+    /**
+     * <p>The ID of the container image.</p>
+     * <br>
+     * <p>>  You can call the [ListRepository](~~451339~~) operation of Container Registry and obtain the ID of the container image from **InstanceId** in the response.</p>
+     */
     @NameInMap("RepoInstanceId")
     public String repoInstanceId;
 
+    /**
+     * <p>The name of the image repository.</p>
+     * <br>
+     * <p>>  Fuzzy match is supported.</p>
+     */
     @NameInMap("RepoName")
     public String repoName;
 
+    /**
+     * <p>The namespace to which the image repository belongs.</p>
+     * <br>
+     * <p>>  Fuzzy match is supported.</p>
+     */
     @NameInMap("RepoNamespace")
     public String repoNamespace;
 
+    /**
+     * <p>The region ID of the image repository. Valid values:</p>
+     * <br>
+     * <p>*   **cn-beijing**: China (Beijing)</p>
+     * <p>*   **cn-zhangjiakou**: China (Zhangjiakou)</p>
+     * <p>*   **cn-hangzhou**: China (Hangzhou)</p>
+     * <p>*   **cn-shanghai**: China (Shanghai)</p>
+     * <p>*   **cn-shenzhen**: China (Shenzhen)</p>
+     * <p>*   **cn-hongkong**: China (Hong Kong)</p>
+     * <p>*   **ap-southeast-1**: Singapore</p>
+     * <p>*   **ap-southeast-5**: Indonesia (Jakarta)</p>
+     * <p>*   **us-east-1**: US (Virginia)</p>
+     * <p>*   **us-west-1**: US (Silicon Valley)</p>
+     * <p>*   **eu-central-1**: Germany (Frankfurt)</p>
+     * <p>*   **eu-west-1**: UK (London)</p>
+     * <p>*   **ap-south-1**: India (Mumbai)</p>
+     */
     @NameInMap("RepoRegionId")
     public String repoRegionId;
 
+    /**
+     * <p>The type of the asset that you want to scan. Valid values:</p>
+     * <br>
+     * <p>*   **image**</p>
+     * <p>*   **container**</p>
+     */
     @NameInMap("ScanRange")
     public java.util.List<String> scanRange;
 
+    /**
+     * <p>The status of the vulnerability. Valid values:</p>
+     * <br>
+     * <p>*   **1**: The vulnerability is unfixed.</p>
+     * <p>*   **4**: The vulnerability is being fixed.</p>
+     * <p>*   **7**:The vulnerability is fixed.</p>
+     */
     @NameInMap("StatusList")
     public String statusList;
 
+    /**
+     * <p>The tag to add to the image.</p>
+     */
     @NameInMap("Tag")
     public String tag;
 
+    /**
+     * <p>The type of the vulnerability. Valid values:</p>
+     * <br>
+     * <p>*   **cve**: system vulnerability</p>
+     * <p>*   **sca**: application vulnerability</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The UUID of the image. Separate multiple UUIDs with commas (,).</p>
+     */
     @NameInMap("Uuids")
     public String uuids;
 

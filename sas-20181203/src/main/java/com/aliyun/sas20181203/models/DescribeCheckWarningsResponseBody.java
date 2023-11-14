@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCheckWarningsResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the details about the check item.</p>
+     * <p>The information about the check item.</p>
      */
     @NameInMap("CheckWarnings")
     public java.util.List<DescribeCheckWarningsResponseBodyCheckWarnings> checkWarnings;
@@ -107,16 +107,16 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         public Long checkWarningId;
 
         /**
-         * <p>The error message in check result.</p>
+         * <p>The error message in the check result.</p>
          */
         @NameInMap("ExecErrorMessage")
         public String execErrorMessage;
 
         /**
-         * <p>The fixing status of the check item. Valid values:</p>
+         * <p>Indicates whether the fix is supported. Valid values:</p>
          * <br>
-         * <p>*   **0**: disabled</p>
-         * <p>*   **1**: enabled</p>
+         * <p>*   **0**: The fix is not supported.</p>
+         * <p>*   **1**: The fix is supported.</p>
          */
         @NameInMap("FixStatus")
         public Integer fixStatus;
@@ -128,7 +128,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         public String item;
 
         /**
-         * <p>The risk level of the risk item. Valid values:</p>
+         * <p>The severity level of a risk item. Valid values:</p>
          * <br>
          * <p>*   **high**</p>
          * <p>*   **medium**</p>
@@ -138,7 +138,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>The description of the check item.</p>
+         * <p>The remarks.</p>
          */
         @NameInMap("Reason")
         public String reason;

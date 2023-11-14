@@ -4,12 +4,26 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteHoneypotProbeBindRequest extends TeaModel {
+    /**
+     * <p>The unique ID of the bound service.</p>
+     */
     @NameInMap("BindId")
     public String bindId;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The probe ID.</p>
+     * <br>
+     * <p>>  You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.</p>
+     */
     @NameInMap("ProbeId")
     public String probeId;
 

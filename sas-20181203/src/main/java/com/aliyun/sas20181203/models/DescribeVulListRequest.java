@@ -66,6 +66,9 @@ public class DescribeVulListRequest extends TeaModel {
     @NameInMap("Necessity")
     public String necessity;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken. You do not need to specify this parameter for the first request.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -81,9 +84,31 @@ public class DescribeVulListRequest extends TeaModel {
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <br>
+     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.</p>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
+    /**
+     * <p>The status of the vulnerability. Separate multiple statuses with commas (,). Valid values:</p>
+     * <br>
+     * <p>- 1: unfixed</p>
+     * <p>- 2: fix failed</p>
+     * <p>- 3: rollback failed</p>
+     * <p>- 4: being fixed</p>
+     * <p>- 5: being rolled back</p>
+     * <p>- 6: being verified</p>
+     * <p>- 7: fixed</p>
+     * <p>- 8: fixed and to be restarted</p>
+     * <p>- 9: rolled back</p>
+     * <p>- 10: ignored</p>
+     * <p>- 11: rolled back and to be restarted</p>
+     * <p>- 12: not found</p>
+     * <p>- 20: expired</p>
+     */
     @NameInMap("StatusList")
     public String statusList;
 
@@ -100,6 +125,12 @@ public class DescribeVulListRequest extends TeaModel {
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>Specifies whether to use NextToken to query the data of vulnerabilities. If you set UseNextToken to true, the value of TotalCount is not returned. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("UseNextToken")
     public Boolean useNextToken;
 

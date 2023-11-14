@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListVulGlobalConfigResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The configurations.</p>
+     */
     @NameInMap("VulGlobalConfigList")
     public java.util.List<ListVulGlobalConfigResponseBodyVulGlobalConfigList> vulGlobalConfigList;
 
@@ -32,9 +38,15 @@ public class ListVulGlobalConfigResponseBody extends TeaModel {
     }
 
     public static class ListVulGlobalConfigResponseBodyVulGlobalConfigList extends TeaModel {
+        /**
+         * <p>The key of the configuration item.</p>
+         */
         @NameInMap("ConfigKey")
         public String configKey;
 
+        /**
+         * <p>The value of the configuration item.</p>
+         */
         @NameInMap("ConfigValue")
         public String configValue;
 

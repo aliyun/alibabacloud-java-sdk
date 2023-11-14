@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetLogMetaResponseBody extends TeaModel {
+    /**
+     * <p>The data of a data shipping task.</p>
+     */
     @NameInMap("LogMeta")
     public GetLogMetaResponseBodyLogMeta logMeta;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,24 @@ public class GetLogMetaResponseBody extends TeaModel {
     }
 
     public static class GetLogMetaResponseBodyLogMeta extends TeaModel {
+        /**
+         * <p>The name of the dedicated Logstore in which logs are stored.</p>
+         */
         @NameInMap("LogStore")
         public String logStore;
 
+        /**
+         * <p>The Simple Log Service project.</p>
+         */
         @NameInMap("Project")
         public String project;
 
+        /**
+         * <p>The status of a data shipping task of a log. Valid values:</p>
+         * <br>
+         * <p>*   **enabled**</p>
+         * <p>*   **disabled**</p>
+         */
         @NameInMap("Status")
         public String status;
 

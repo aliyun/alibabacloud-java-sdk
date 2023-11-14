@@ -116,6 +116,9 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The information about the exceptions of check items.</p>
+         */
         @NameInMap("StatusMessage")
         public String statusMessage;
 
@@ -188,7 +191,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         public String showName;
 
         /**
-         * <p>The format of the check results for the instances. Valid values:</p>
+         * <p>The format of the check results for the instance. Valid values:</p>
          * <br>
          * <p>*   **text**</p>
          * <p>*   **link**</p>
@@ -229,7 +232,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
 
     public static class ListCheckInstanceResultResponseBodyColumns extends TeaModel {
         /**
-         * <p>The metadata information about the details of the instances.</p>
+         * <p>The metadata information about the details of the instance.</p>
          */
         @NameInMap("Grids")
         public java.util.List<ListCheckInstanceResultResponseBodyColumnsGrids> grids;
@@ -241,7 +244,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>Indicates whether the search condition is used. Valid values:</p>
+         * <p>Indicates whether the search condition is supported. Valid values:</p>
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false**</p>
@@ -262,7 +265,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         public String showName;
 
         /**
-         * <p>The type of the check result for the instance. Valid values:</p>
+         * <p>The format of the check result for the instance. Valid values:</p>
          * <br>
          * <p>*   **text**</p>
          * <p>*   **link**</p>

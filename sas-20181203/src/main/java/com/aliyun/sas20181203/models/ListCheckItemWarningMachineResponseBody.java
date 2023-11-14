@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCheckItemWarningMachineResponseBody extends TeaModel {
     /**
-     * <p>An array consisting of the servers on which the alerts are generated.</p>
+     * <p>The servers on which the alerts are generated.</p>
      */
     @NameInMap("List")
     public java.util.List<ListCheckItemWarningMachineResponseBodyList> list;
@@ -53,7 +53,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
 
     public static class ListCheckItemWarningMachineResponseBodyListFixList extends TeaModel {
         /**
-         * <p>The ID of the baseline.</p>
+         * <p>The baseline ID.</p>
          */
         @NameInMap("RiskId")
         public Long riskId;
@@ -89,7 +89,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
 
     public static class ListCheckItemWarningMachineResponseBodyListWarningRiskList extends TeaModel {
         /**
-         * <p>The ID of the baseline.</p>
+         * <p>The baseline ID.</p>
          */
         @NameInMap("RiskId")
         public Long riskId;
@@ -127,7 +127,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         /**
          * <p>The edition of Security Center that is authorized to protect the asset. Valid values:</p>
          * <br>
-         * <p>*   **1**: Basic edition (Unauthorized)</p>
+         * <p>*   **1**: Basic edition</p>
          * <p>*   **6**: Anti-virus edition</p>
          * <p>*   **5**: Advanced edition</p>
          * <p>*   **3**: Enterprise edition</p>
@@ -138,16 +138,16 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         public Integer authVersion;
 
         /**
-         * <p>Indicates whether Security Center is authorized to scan the asset. Valid values:</p>
+         * <p>Indicates whether Security Center is authorized to protect the asset. Valid values:</p>
          * <br>
-         * <p>*   **true**: Security Center is authorized to scan the asset.</p>
-         * <p>*   **false**: Security Center is not authorized to scan the asset.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("Bind")
         public Boolean bind;
 
         /**
-         * <p>The ID of the container.</p>
+         * <p>The container ID.</p>
          */
         @NameInMap("ContainerId")
         public String containerId;
@@ -159,13 +159,13 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         public String containerName;
 
         /**
-         * <p>An array consisting of the details about the baselines for which the risk item can be fixed.</p>
+         * <p>The details of the baselines for which the risk item can be fixed.</p>
          */
         @NameInMap("FixList")
         public java.util.List<ListCheckItemWarningMachineResponseBodyListFixList> fixList;
 
         /**
-         * <p>The ID of the server.</p>
+         * <p>The instance ID of the server.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -188,14 +188,17 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The timestamp generated when the last scan was performed. Unit: milliseconds.</p>
+         */
         @NameInMap("LastScanTime")
         public Long lastScanTime;
 
         /**
          * <p>Indicates whether a port on the server is accessible over the Internet. Valid values:</p>
          * <br>
-         * <p>*   **true**: A port on the server is accessible over the Internet.</p>
-         * <p>*   **false**: No ports on the server are accessible over the Internet.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("PortOpen")
         public Boolean portOpen;
@@ -216,24 +219,32 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
          * <p>The status of the check item. Valid values:</p>
          * <br>
          * <p>*   1: failed</p>
-         * <br>
          * <p>*   2: verifying</p>
-         * <br>
          * <p>*   3: passed</p>
-         * <br>
          * <p>*   6: ignored</p>
-         * <br>
          * <p>*   7: fixing</p>
          */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The ID of the asset that is scanned.</p>
+         */
         @NameInMap("TargetId")
         public String targetId;
 
+        /**
+         * <p>The name of the asset that is scanned.</p>
+         */
         @NameInMap("TargetName")
         public String targetName;
 
+        /**
+         * <p>The type of the asset. Valid values:</p>
+         * <br>
+         * <p>*   **ECS_SNAPSHOT**</p>
+         * <p>*   **ECS_IMAGE**</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
@@ -244,7 +255,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         public String uuid;
 
         /**
-         * <p>An array consisting of the details about the baselines based on which the risk item is detected.</p>
+         * <p>The information about the baselines on which the risk item is detected.</p>
          */
         @NameInMap("WarningRiskList")
         public java.util.List<ListCheckItemWarningMachineResponseBodyListWarningRiskList> warningRiskList;

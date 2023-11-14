@@ -19,6 +19,9 @@ public class DescribeRisksRequest extends TeaModel {
     @NameInMap("Limit")
     public Integer limit;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The baseline ID.</p>
      * <br>
@@ -52,6 +55,14 @@ public class DescribeRisksRequest extends TeaModel {
     }
     public Integer getLimit() {
         return this.limit;
+    }
+
+    public DescribeRisksRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribeRisksRequest setRiskId(Long riskId) {

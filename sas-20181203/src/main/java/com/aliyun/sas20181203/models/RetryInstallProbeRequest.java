@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class RetryInstallProbeRequest extends TeaModel {
+    /**
+     * <p>The probe ID.</p>
+     * <br>
+     * <p>>  You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.</p>
+     */
     @NameInMap("ProbeId")
     public String probeId;
 

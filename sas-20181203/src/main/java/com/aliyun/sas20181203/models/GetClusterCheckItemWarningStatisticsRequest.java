@@ -12,6 +12,9 @@ public class GetClusterCheckItemWarningStatisticsRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The UUID of the server.</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

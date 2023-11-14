@@ -13,6 +13,12 @@ public class DescribeImageBaselineStrategyRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The data source. Default value: default. Valid values:</p>
+     * <br>
+     * <p>*   **default**: queries the information about a baseline check policy for images.</p>
+     * <p>*   **agentless**: queries the information about a baseline check policy for agentless detection.</p>
+     */
     @NameInMap("Source")
     public String source;
 

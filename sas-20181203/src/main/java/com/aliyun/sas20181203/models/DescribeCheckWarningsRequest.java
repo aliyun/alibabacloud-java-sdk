@@ -52,10 +52,13 @@ public class DescribeCheckWarningsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
-     * <p>The ID of the baseline risk item.</p>
+     * <p>The ID of the risk item.</p>
      * <br>
-     * <p>> To query specified baseline risk items and the check items of a specified server, you must provide the IDs of the baseline risk items. You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs.</p>
+     * <p>>  To query the information about the risk items and check items of a server, you must provide the IDs of risk items. You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs.</p>
      */
     @NameInMap("RiskId")
     public Long riskId;
@@ -137,6 +140,14 @@ public class DescribeCheckWarningsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeCheckWarningsRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribeCheckWarningsRequest setRiskId(Long riskId) {
