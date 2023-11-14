@@ -10,12 +10,22 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
     @NameInMap("data")
     public java.util.List<GetQuotaScheduleResponseBodyData> data;
 
+    /**
+     * <p>*   If the value of success was false, an error code was returned.</p>
+     * <p>*   If the value of success was true, a null value was returned.</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("errorMsg")
     public String errorMsg;
 
+    /**
+     * <p>Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.</p>
+     */
     @NameInMap("httpCode")
     public Integer httpCode;
 
@@ -131,6 +141,9 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
         @NameInMap("plan")
         public String plan;
 
+        /**
+         * <p>The time zone.</p>
+         */
         @NameInMap("timezone")
         public String timezone;
 

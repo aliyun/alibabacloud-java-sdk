@@ -38,11 +38,26 @@ public class ListResourcesResponseBody extends TeaModel {
     }
 
     public static class ListResourcesResponseBodyDataResources extends TeaModel {
+        @NameInMap("comment")
+        public String comment;
+
+        @NameInMap("contentMD5")
+        public String contentMD5;
+
         /**
          * <p>The time when the resource was created.</p>
          */
         @NameInMap("creationTime")
         public Long creationTime;
+
+        @NameInMap("displayName")
+        public String displayName;
+
+        @NameInMap("lastModifiedTime")
+        public Long lastModifiedTime;
+
+        @NameInMap("lastUpdator")
+        public String lastUpdator;
 
         /**
          * <p>The name of the resource.</p>
@@ -62,6 +77,9 @@ public class ListResourcesResponseBody extends TeaModel {
         @NameInMap("schema")
         public String schema;
 
+        @NameInMap("size")
+        public Long size;
+
         /**
          * <p>The type of the resource.</p>
          */
@@ -73,12 +91,52 @@ public class ListResourcesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListResourcesResponseBodyDataResources setComment(String comment) {
+            this.comment = comment;
+            return this;
+        }
+        public String getComment() {
+            return this.comment;
+        }
+
+        public ListResourcesResponseBodyDataResources setContentMD5(String contentMD5) {
+            this.contentMD5 = contentMD5;
+            return this;
+        }
+        public String getContentMD5() {
+            return this.contentMD5;
+        }
+
         public ListResourcesResponseBodyDataResources setCreationTime(Long creationTime) {
             this.creationTime = creationTime;
             return this;
         }
         public Long getCreationTime() {
             return this.creationTime;
+        }
+
+        public ListResourcesResponseBodyDataResources setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        public ListResourcesResponseBodyDataResources setLastModifiedTime(Long lastModifiedTime) {
+            this.lastModifiedTime = lastModifiedTime;
+            return this;
+        }
+        public Long getLastModifiedTime() {
+            return this.lastModifiedTime;
+        }
+
+        public ListResourcesResponseBodyDataResources setLastUpdator(String lastUpdator) {
+            this.lastUpdator = lastUpdator;
+            return this;
+        }
+        public String getLastUpdator() {
+            return this.lastUpdator;
         }
 
         public ListResourcesResponseBodyDataResources setName(String name) {
@@ -103,6 +161,14 @@ public class ListResourcesResponseBody extends TeaModel {
         }
         public String getSchema() {
             return this.schema;
+        }
+
+        public ListResourcesResponseBodyDataResources setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
         }
 
         public ListResourcesResponseBodyDataResources setType(String type) {

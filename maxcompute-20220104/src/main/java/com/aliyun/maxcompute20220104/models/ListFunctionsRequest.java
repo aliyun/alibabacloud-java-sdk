@@ -22,6 +22,9 @@ public class ListFunctionsRequest extends TeaModel {
     @NameInMap("prefix")
     public String prefix;
 
+    @NameInMap("schemaName")
+    public String schemaName;
+
     public static ListFunctionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFunctionsRequest self = new ListFunctionsRequest();
         return TeaModel.build(map, self);
@@ -49,6 +52,14 @@ public class ListFunctionsRequest extends TeaModel {
     }
     public String getPrefix() {
         return this.prefix;
+    }
+
+    public ListFunctionsRequest setSchemaName(String schemaName) {
+        this.schemaName = schemaName;
+        return this;
+    }
+    public String getSchemaName() {
+        return this.schemaName;
     }
 
 }

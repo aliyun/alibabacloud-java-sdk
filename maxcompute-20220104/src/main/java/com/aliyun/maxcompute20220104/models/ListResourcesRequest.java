@@ -22,6 +22,9 @@ public class ListResourcesRequest extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    @NameInMap("schemaName")
+    public String schemaName;
+
     public static ListResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourcesRequest self = new ListResourcesRequest();
         return TeaModel.build(map, self);
@@ -49,6 +52,14 @@ public class ListResourcesRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public ListResourcesRequest setSchemaName(String schemaName) {
+        this.schemaName = schemaName;
+        return this;
+    }
+    public String getSchemaName() {
+        return this.schemaName;
     }
 
 }
