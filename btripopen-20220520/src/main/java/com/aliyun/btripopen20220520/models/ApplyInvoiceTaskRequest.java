@@ -53,6 +53,9 @@ public class ApplyInvoiceTaskRequest extends TeaModel {
         @NameInMap("international_flight_invoice_fee")
         public String internationalFlightInvoiceFee;
 
+        @NameInMap("international_hotel_invoice_fee")
+        public String internationalHotelInvoiceFee;
+
         @NameInMap("invoice_third_part_id")
         public String invoiceThirdPartId;
 
@@ -145,6 +148,14 @@ public class ApplyInvoiceTaskRequest extends TeaModel {
         }
         public String getInternationalFlightInvoiceFee() {
             return this.internationalFlightInvoiceFee;
+        }
+
+        public ApplyInvoiceTaskRequestInvoiceTaskList setInternationalHotelInvoiceFee(String internationalHotelInvoiceFee) {
+            this.internationalHotelInvoiceFee = internationalHotelInvoiceFee;
+            return this;
+        }
+        public String getInternationalHotelInvoiceFee() {
+            return this.internationalHotelInvoiceFee;
         }
 
         public ApplyInvoiceTaskRequestInvoiceTaskList setInvoiceThirdPartId(String invoiceThirdPartId) {
