@@ -2180,6 +2180,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("RuleType", request.ruleType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.taskSetting)) {
+            body.put("TaskSetting", request.taskSetting);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
             body.put("TemplateId", request.templateId);
         }
@@ -12305,6 +12309,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ruleType)) {
             body.put("RuleType", request.ruleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskSetting)) {
+            body.put("TaskSetting", request.taskSetting);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {

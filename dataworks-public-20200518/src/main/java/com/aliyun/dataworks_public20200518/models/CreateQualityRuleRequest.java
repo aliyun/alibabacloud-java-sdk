@@ -91,6 +91,9 @@ public class CreateQualityRuleRequest extends TeaModel {
     @NameInMap("RuleType")
     public Integer ruleType;
 
+    @NameInMap("TaskSetting")
+    public String taskSetting;
+
     /**
      * <p>The ID of the template that is used to create the monitoring rule.</p>
      */
@@ -242,6 +245,14 @@ public class CreateQualityRuleRequest extends TeaModel {
     }
     public Integer getRuleType() {
         return this.ruleType;
+    }
+
+    public CreateQualityRuleRequest setTaskSetting(String taskSetting) {
+        this.taskSetting = taskSetting;
+        return this;
+    }
+    public String getTaskSetting() {
+        return this.taskSetting;
     }
 
     public CreateQualityRuleRequest setTemplateId(Integer templateId) {
