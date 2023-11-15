@@ -40,6 +40,9 @@ public class CreateDigitalHumanProjectRequest extends TeaModel {
     @NameInMap("ModelId")
     public String modelId;
 
+    @NameInMap("OutputConfig")
+    public String outputConfig;
+
     @NameInMap("Title")
     public String title;
 
@@ -151,6 +154,14 @@ public class CreateDigitalHumanProjectRequest extends TeaModel {
     }
     public String getModelId() {
         return this.modelId;
+    }
+
+    public CreateDigitalHumanProjectRequest setOutputConfig(String outputConfig) {
+        this.outputConfig = outputConfig;
+        return this;
+    }
+    public String getOutputConfig() {
+        return this.outputConfig;
     }
 
     public CreateDigitalHumanProjectRequest setTitle(String title) {

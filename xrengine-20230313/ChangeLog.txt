@@ -1,3 +1,6 @@
+2023-11-15 Version: 1.1.0
+- Generated java 2023-03-13 for xrEngine.
+
 2023-10-11 Version: 1.0.0
 - Generated java 2023-03-13 for xrEngine.
 

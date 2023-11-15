@@ -65,6 +65,9 @@ public class QueryDigitalHumanProjectResponseBody extends TeaModel {
     }
 
     public static class QueryDigitalHumanProjectResponseBodyData extends TeaModel {
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
@@ -101,6 +104,14 @@ public class QueryDigitalHumanProjectResponseBody extends TeaModel {
         public static QueryDigitalHumanProjectResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryDigitalHumanProjectResponseBodyData self = new QueryDigitalHumanProjectResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryDigitalHumanProjectResponseBodyData setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         public QueryDigitalHumanProjectResponseBodyData setErrorMessage(String errorMessage) {

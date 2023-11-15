@@ -10,6 +10,9 @@ public class PopCreateTextToAvatarProjectRequest extends TeaModel {
     @NameInMap("Intro")
     public String intro;
 
+    @NameInMap("JwtToken")
+    public String jwtToken;
+
     @NameInMap("Title")
     public String title;
 
@@ -32,6 +35,14 @@ public class PopCreateTextToAvatarProjectRequest extends TeaModel {
     }
     public String getIntro() {
         return this.intro;
+    }
+
+    public PopCreateTextToAvatarProjectRequest setJwtToken(String jwtToken) {
+        this.jwtToken = jwtToken;
+        return this;
+    }
+    public String getJwtToken() {
+        return this.jwtToken;
     }
 
     public PopCreateTextToAvatarProjectRequest setTitle(String title) {
