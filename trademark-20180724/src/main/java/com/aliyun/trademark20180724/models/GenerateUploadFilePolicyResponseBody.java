@@ -4,9 +4,15 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class GenerateUploadFilePolicyResponseBody extends TeaModel {
+    /**
+     * <p>accessId</p>
+     */
     @NameInMap("AccessId")
     public String accessId;
 
+    /**
+     * <p>osspolicy</p>
+     */
     @NameInMap("EncodedPolicy")
     public String encodedPolicy;
 

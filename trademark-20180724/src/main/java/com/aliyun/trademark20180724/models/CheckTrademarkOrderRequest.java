@@ -4,6 +4,9 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class CheckTrademarkOrderRequest extends TeaModel {
+    @NameInMap("AgreementId")
+    public String agreementId;
+
     @NameInMap("BizId")
     public String bizId;
 
@@ -70,6 +73,14 @@ public class CheckTrademarkOrderRequest extends TeaModel {
     public static CheckTrademarkOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         CheckTrademarkOrderRequest self = new CheckTrademarkOrderRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CheckTrademarkOrderRequest setAgreementId(String agreementId) {
+        this.agreementId = agreementId;
+        return this;
+    }
+    public String getAgreementId() {
+        return this.agreementId;
     }
 
     public CheckTrademarkOrderRequest setBizId(String bizId) {

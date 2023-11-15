@@ -94,6 +94,9 @@ public class QueryTradeIntentionUserListResponseBody extends TeaModel {
         @NameInMap("DocumentUrl")
         public String documentUrl;
 
+        @NameInMap("Grade")
+        public Integer grade;
+
         @NameInMap("Mobile")
         public String mobile;
 
@@ -160,6 +163,14 @@ public class QueryTradeIntentionUserListResponseBody extends TeaModel {
         }
         public String getDocumentUrl() {
             return this.documentUrl;
+        }
+
+        public QueryTradeIntentionUserListResponseBodyDataTrademark setGrade(Integer grade) {
+            this.grade = grade;
+            return this;
+        }
+        public Integer getGrade() {
+            return this.grade;
         }
 
         public QueryTradeIntentionUserListResponseBodyDataTrademark setMobile(String mobile) {

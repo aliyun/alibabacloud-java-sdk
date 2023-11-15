@@ -22,6 +22,9 @@ public class QueryTradeIntentionUserListRequest extends TeaModel {
     @NameInMap("Status")
     public Integer status;
 
+    @NameInMap("Type")
+    public Integer type;
+
     public static QueryTradeIntentionUserListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryTradeIntentionUserListRequest self = new QueryTradeIntentionUserListRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class QueryTradeIntentionUserListRequest extends TeaModel {
     }
     public Integer getStatus() {
         return this.status;
+    }
+
+    public QueryTradeIntentionUserListRequest setType(Integer type) {
+        this.type = type;
+        return this;
+    }
+    public Integer getType() {
+        return this.type;
     }
 
 }

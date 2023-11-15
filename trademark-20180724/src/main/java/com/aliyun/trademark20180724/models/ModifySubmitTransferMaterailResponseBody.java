@@ -10,7 +10,6 @@ public class ModifySubmitTransferMaterailResponseBody extends TeaModel {
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

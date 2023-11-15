@@ -10,6 +10,9 @@ public class SubmitSupplementRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    @NameInMap("OperateType")
+    public String operateType;
+
     @NameInMap("UploadOssKeyList")
     public java.util.Map<String, ?> uploadOssKeyList;
 
@@ -32,6 +35,14 @@ public class SubmitSupplementRequest extends TeaModel {
     }
     public Long getId() {
         return this.id;
+    }
+
+    public SubmitSupplementRequest setOperateType(String operateType) {
+        this.operateType = operateType;
+        return this;
+    }
+    public String getOperateType() {
+        return this.operateType;
     }
 
     public SubmitSupplementRequest setUploadOssKeyList(java.util.Map<String, ?> uploadOssKeyList) {

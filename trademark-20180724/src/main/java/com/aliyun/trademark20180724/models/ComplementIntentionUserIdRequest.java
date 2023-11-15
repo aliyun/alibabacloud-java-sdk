@@ -4,30 +4,24 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class ComplementIntentionUserIdRequest extends TeaModel {
-    // aliyunKp
     @NameInMap("AliyunKp")
     public String aliyunKp;
 
-    // bid
     @NameInMap("Bid")
     public String bid;
 
-    // bizId
     @NameInMap("BizId")
     public String bizId;
 
-    // callerParentId
     @NameInMap("CallerParentId")
     public Long callerParentId;
 
-    // callerType
     @NameInMap("CallerType")
     public String callerType;
 
     @NameInMap("ComplementUserId")
     public String complementUserId;
 
-    // type
     @NameInMap("Type")
     public Integer type;
 

@@ -50,6 +50,9 @@ public class QueryTradeMarkApplicationLogsResponseBody extends TeaModel {
         @NameInMap("OperateType")
         public Integer operateType;
 
+        @NameInMap("ToBizStatus")
+        public Integer toBizStatus;
+
         public static QueryTradeMarkApplicationLogsResponseBodyDataData build(java.util.Map<String, ?> map) throws Exception {
             QueryTradeMarkApplicationLogsResponseBodyDataData self = new QueryTradeMarkApplicationLogsResponseBodyDataData();
             return TeaModel.build(map, self);
@@ -101,6 +104,14 @@ public class QueryTradeMarkApplicationLogsResponseBody extends TeaModel {
         }
         public Integer getOperateType() {
             return this.operateType;
+        }
+
+        public QueryTradeMarkApplicationLogsResponseBodyDataData setToBizStatus(Integer toBizStatus) {
+            this.toBizStatus = toBizStatus;
+            return this;
+        }
+        public Integer getToBizStatus() {
+            return this.toBizStatus;
         }
 
     }

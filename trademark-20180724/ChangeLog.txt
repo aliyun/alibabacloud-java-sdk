@@ -1,3 +1,6 @@
+2023-11-15 Version: 3.2.16
+- Generated java 2018-07-24 for Trademark.
+
 2022-07-12 Version: 3.2.15
 - AddCollection.
 

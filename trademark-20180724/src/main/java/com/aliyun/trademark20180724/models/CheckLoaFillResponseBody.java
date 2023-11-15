@@ -72,6 +72,9 @@ public class CheckLoaFillResponseBody extends TeaModel {
         @NameInMap("TemplateUrl")
         public String templateUrl;
 
+        @NameInMap("Tips")
+        public String tips;
+
         @NameInMap("TradeMarkNameFill")
         public Boolean tradeMarkNameFill;
 
@@ -134,6 +137,14 @@ public class CheckLoaFillResponseBody extends TeaModel {
         }
         public String getTemplateUrl() {
             return this.templateUrl;
+        }
+
+        public CheckLoaFillResponseBodyData setTips(String tips) {
+            this.tips = tips;
+            return this;
+        }
+        public String getTips() {
+            return this.tips;
         }
 
         public CheckLoaFillResponseBodyData setTradeMarkNameFill(Boolean tradeMarkNameFill) {

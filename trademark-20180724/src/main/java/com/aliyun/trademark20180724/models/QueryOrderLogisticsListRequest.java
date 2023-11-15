@@ -4,25 +4,32 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class QueryOrderLogisticsListRequest extends TeaModel {
-    // 起始页
+    @NameInMap("FileType")
+    public String fileType;
+
     @NameInMap("PageNum")
     public Long pageNum;
 
-    // 分页大小
     @NameInMap("PageSize")
     public Long pageSize;
 
-    // 订单号
     @NameInMap("ProduceOrderId")
     public String produceOrderId;
 
-    // 注册号
     @NameInMap("RegisterNumber")
     public String registerNumber;
 
     public static QueryOrderLogisticsListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryOrderLogisticsListRequest self = new QueryOrderLogisticsListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryOrderLogisticsListRequest setFileType(String fileType) {
+        this.fileType = fileType;
+        return this;
+    }
+    public String getFileType() {
+        return this.fileType;
     }
 
     public QueryOrderLogisticsListRequest setPageNum(Long pageNum) {

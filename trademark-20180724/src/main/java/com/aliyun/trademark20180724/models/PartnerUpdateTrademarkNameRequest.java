@@ -4,46 +4,36 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class PartnerUpdateTrademarkNameRequest extends TeaModel {
-    // aliyunKp
     @NameInMap("AliyunKp")
     public String aliyunKp;
 
-    // bid
     @NameInMap("Bid")
     public String bid;
 
-    // bizId
     @NameInMap("BizId")
     public String bizId;
 
-    // callerParentId
     @NameInMap("CallerParentId")
     public Long callerParentId;
 
-    // callerType
     @NameInMap("CallerType")
     public String callerType;
 
     @NameInMap("EventSceneType")
     public Long eventSceneType;
 
-    // bizId
     @NameInMap("IntentionBizId")
     public String intentionBizId;
 
-    // tmComment
     @NameInMap("TmComment")
     public String tmComment;
 
-    // tmIcon
     @NameInMap("TmIcon")
     public String tmIcon;
 
-    // tmName
     @NameInMap("TmName")
     public String tmName;
 
-    // type
     @NameInMap("Type")
     public Integer type;
 

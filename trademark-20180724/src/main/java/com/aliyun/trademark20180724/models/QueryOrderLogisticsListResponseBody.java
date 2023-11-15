@@ -79,26 +79,21 @@ public class QueryOrderLogisticsListResponseBody extends TeaModel {
         @NameInMap("BizId")
         public String bizId;
 
-        // 商标号
         @NameInMap("FileIdentifier")
         public String fileIdentifier;
 
-        // 证书类型
         @NameInMap("FileType")
         public String fileType;
 
-        // 物流单号
         @NameInMap("LogisticsNo")
         public String logisticsNo;
 
-        // 订单号
         @NameInMap("ProduceOrderId")
         public String produceOrderId;
 
         @NameInMap("TmIcon")
         public String tmIcon;
 
-        // 商标名称
         @NameInMap("TmName")
         public String tmName;
 

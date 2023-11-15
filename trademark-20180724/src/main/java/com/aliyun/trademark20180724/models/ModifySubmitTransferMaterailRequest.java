@@ -70,6 +70,9 @@ public class ModifySubmitTransferMaterailRequest extends TeaModel {
     @NameInMap("SellerProxy")
     public String sellerProxy;
 
+    @NameInMap("TradeMaterialFullUpdate")
+    public Boolean tradeMaterialFullUpdate;
+
     public static ModifySubmitTransferMaterailRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySubmitTransferMaterailRequest self = new ModifySubmitTransferMaterailRequest();
         return TeaModel.build(map, self);
@@ -249,6 +252,14 @@ public class ModifySubmitTransferMaterailRequest extends TeaModel {
     }
     public String getSellerProxy() {
         return this.sellerProxy;
+    }
+
+    public ModifySubmitTransferMaterailRequest setTradeMaterialFullUpdate(Boolean tradeMaterialFullUpdate) {
+        this.tradeMaterialFullUpdate = tradeMaterialFullUpdate;
+        return this;
+    }
+    public Boolean getTradeMaterialFullUpdate() {
+        return this.tradeMaterialFullUpdate;
     }
 
 }

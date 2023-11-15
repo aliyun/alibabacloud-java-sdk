@@ -248,6 +248,9 @@ public class QueryTradeMarkApplicationsResponseBody extends TeaModel {
     }
 
     public static class QueryTradeMarkApplicationsResponseBodyDataTmProduces extends TeaModel {
+        @NameInMap("AgreementId")
+        public String agreementId;
+
         @NameInMap("BizId")
         public String bizId;
 
@@ -290,6 +293,12 @@ public class QueryTradeMarkApplicationsResponseBody extends TeaModel {
         @NameInMap("ServicePrice")
         public Float servicePrice;
 
+        @NameInMap("ShowGoToDefendButton")
+        public Boolean showGoToDefendButton;
+
+        @NameInMap("Specification")
+        public Integer specification;
+
         @NameInMap("Status")
         public Integer status;
 
@@ -304,6 +313,9 @@ public class QueryTradeMarkApplicationsResponseBody extends TeaModel {
 
         @NameInMap("SupplementStatus")
         public Integer supplementStatus;
+
+        @NameInMap("SystemVersion")
+        public String systemVersion;
 
         @NameInMap("ThirdClassification")
         public QueryTradeMarkApplicationsResponseBodyDataTmProducesThirdClassification thirdClassification;
@@ -332,6 +344,14 @@ public class QueryTradeMarkApplicationsResponseBody extends TeaModel {
         public static QueryTradeMarkApplicationsResponseBodyDataTmProduces build(java.util.Map<String, ?> map) throws Exception {
             QueryTradeMarkApplicationsResponseBodyDataTmProduces self = new QueryTradeMarkApplicationsResponseBodyDataTmProduces();
             return TeaModel.build(map, self);
+        }
+
+        public QueryTradeMarkApplicationsResponseBodyDataTmProduces setAgreementId(String agreementId) {
+            this.agreementId = agreementId;
+            return this;
+        }
+        public String getAgreementId() {
+            return this.agreementId;
         }
 
         public QueryTradeMarkApplicationsResponseBodyDataTmProduces setBizId(String bizId) {
@@ -446,6 +466,22 @@ public class QueryTradeMarkApplicationsResponseBody extends TeaModel {
             return this.servicePrice;
         }
 
+        public QueryTradeMarkApplicationsResponseBodyDataTmProduces setShowGoToDefendButton(Boolean showGoToDefendButton) {
+            this.showGoToDefendButton = showGoToDefendButton;
+            return this;
+        }
+        public Boolean getShowGoToDefendButton() {
+            return this.showGoToDefendButton;
+        }
+
+        public QueryTradeMarkApplicationsResponseBodyDataTmProduces setSpecification(Integer specification) {
+            this.specification = specification;
+            return this;
+        }
+        public Integer getSpecification() {
+            return this.specification;
+        }
+
         public QueryTradeMarkApplicationsResponseBodyDataTmProduces setStatus(Integer status) {
             this.status = status;
             return this;
@@ -484,6 +520,14 @@ public class QueryTradeMarkApplicationsResponseBody extends TeaModel {
         }
         public Integer getSupplementStatus() {
             return this.supplementStatus;
+        }
+
+        public QueryTradeMarkApplicationsResponseBodyDataTmProduces setSystemVersion(String systemVersion) {
+            this.systemVersion = systemVersion;
+            return this;
+        }
+        public String getSystemVersion() {
+            return this.systemVersion;
         }
 
         public QueryTradeMarkApplicationsResponseBodyDataTmProduces setThirdClassification(QueryTradeMarkApplicationsResponseBodyDataTmProducesThirdClassification thirdClassification) {

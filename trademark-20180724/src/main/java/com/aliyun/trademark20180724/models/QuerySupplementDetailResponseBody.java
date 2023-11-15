@@ -13,6 +13,9 @@ public class QuerySupplementDetailResponseBody extends TeaModel {
     @NameInMap("Content")
     public String content;
 
+    @NameInMap("FileName")
+    public String fileName;
+
     @NameInMap("FileTemplateUrls")
     public QuerySupplementDetailResponseBodyFileTemplateUrls fileTemplateUrls;
 
@@ -21,6 +24,9 @@ public class QuerySupplementDetailResponseBody extends TeaModel {
 
     @NameInMap("OperateTime")
     public Long operateTime;
+
+    @NameInMap("Reason")
+    public String reason;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -75,6 +81,14 @@ public class QuerySupplementDetailResponseBody extends TeaModel {
         return this.content;
     }
 
+    public QuerySupplementDetailResponseBody setFileName(String fileName) {
+        this.fileName = fileName;
+        return this;
+    }
+    public String getFileName() {
+        return this.fileName;
+    }
+
     public QuerySupplementDetailResponseBody setFileTemplateUrls(QuerySupplementDetailResponseBodyFileTemplateUrls fileTemplateUrls) {
         this.fileTemplateUrls = fileTemplateUrls;
         return this;
@@ -97,6 +111,14 @@ public class QuerySupplementDetailResponseBody extends TeaModel {
     }
     public Long getOperateTime() {
         return this.operateTime;
+    }
+
+    public QuerySupplementDetailResponseBody setReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    public String getReason() {
+        return this.reason;
     }
 
     public QuerySupplementDetailResponseBody setRequestId(String requestId) {

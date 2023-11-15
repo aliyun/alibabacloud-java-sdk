@@ -4,26 +4,21 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class UpdateTrademarkNameRequest extends TeaModel {
-    // 业务id
     @NameInMap("BizId")
     public String bizId;
 
-    // 幂等参数
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("TmComment")
     public String tmComment;
 
-    // 商标图片
     @NameInMap("TmIcon")
     public String tmIcon;
 
-    // 商标名称
     @NameInMap("TmName")
     public String tmName;
 
-    // 商标类型
     @NameInMap("Type")
     public Long type;
 

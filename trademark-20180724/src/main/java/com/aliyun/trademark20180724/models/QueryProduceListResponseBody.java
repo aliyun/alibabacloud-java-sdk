@@ -128,6 +128,9 @@ public class QueryProduceListResponseBody extends TeaModel {
     }
 
     public static class QueryProduceListResponseBodyDataTmProduces extends TeaModel {
+        @NameInMap("AgreementId")
+        public String agreementId;
+
         @NameInMap("BizId")
         public String bizId;
 
@@ -185,6 +188,14 @@ public class QueryProduceListResponseBody extends TeaModel {
         public static QueryProduceListResponseBodyDataTmProduces build(java.util.Map<String, ?> map) throws Exception {
             QueryProduceListResponseBodyDataTmProduces self = new QueryProduceListResponseBodyDataTmProduces();
             return TeaModel.build(map, self);
+        }
+
+        public QueryProduceListResponseBodyDataTmProduces setAgreementId(String agreementId) {
+            this.agreementId = agreementId;
+            return this;
+        }
+        public String getAgreementId() {
+            return this.agreementId;
         }
 
         public QueryProduceListResponseBodyDataTmProduces setBizId(String bizId) {
