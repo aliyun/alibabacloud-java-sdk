@@ -25,8 +25,14 @@ public class CreateLivePortraitProjectRequest extends TeaModel {
     @NameInMap("JwtToken")
     public String jwtToken;
 
+    @NameInMap("LightModel")
+    public Boolean lightModel;
+
     @NameInMap("Mode")
     public String mode;
+
+    @NameInMap("OutputConfig")
+    public String outputConfig;
 
     @NameInMap("Title")
     public String title;
@@ -101,12 +107,28 @@ public class CreateLivePortraitProjectRequest extends TeaModel {
         return this.jwtToken;
     }
 
+    public CreateLivePortraitProjectRequest setLightModel(Boolean lightModel) {
+        this.lightModel = lightModel;
+        return this;
+    }
+    public Boolean getLightModel() {
+        return this.lightModel;
+    }
+
     public CreateLivePortraitProjectRequest setMode(String mode) {
         this.mode = mode;
         return this;
     }
     public String getMode() {
         return this.mode;
+    }
+
+    public CreateLivePortraitProjectRequest setOutputConfig(String outputConfig) {
+        this.outputConfig = outputConfig;
+        return this;
+    }
+    public String getOutputConfig() {
+        return this.outputConfig;
     }
 
     public CreateLivePortraitProjectRequest setTitle(String title) {
