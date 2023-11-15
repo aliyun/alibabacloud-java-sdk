@@ -10,6 +10,9 @@ public class SubmitSupplementShrinkRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    @NameInMap("OperateType")
+    public String operateType;
+
     @NameInMap("UploadOssKeyList")
     public String uploadOssKeyListShrink;
 
@@ -32,6 +35,14 @@ public class SubmitSupplementShrinkRequest extends TeaModel {
     }
     public Long getId() {
         return this.id;
+    }
+
+    public SubmitSupplementShrinkRequest setOperateType(String operateType) {
+        this.operateType = operateType;
+        return this;
+    }
+    public String getOperateType() {
+        return this.operateType;
     }
 
     public SubmitSupplementShrinkRequest setUploadOssKeyListShrink(String uploadOssKeyListShrink) {

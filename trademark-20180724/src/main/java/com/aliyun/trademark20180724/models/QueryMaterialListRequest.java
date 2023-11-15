@@ -31,6 +31,9 @@ public class QueryMaterialListRequest extends TeaModel {
     @NameInMap("Status")
     public Integer status;
 
+    @NameInMap("SystemVersion")
+    public String systemVersion;
+
     @NameInMap("Type")
     public Integer type;
 
@@ -109,6 +112,14 @@ public class QueryMaterialListRequest extends TeaModel {
     }
     public Integer getStatus() {
         return this.status;
+    }
+
+    public QueryMaterialListRequest setSystemVersion(String systemVersion) {
+        this.systemVersion = systemVersion;
+        return this;
+    }
+    public String getSystemVersion() {
+        return this.systemVersion;
     }
 
     public QueryMaterialListRequest setType(Integer type) {

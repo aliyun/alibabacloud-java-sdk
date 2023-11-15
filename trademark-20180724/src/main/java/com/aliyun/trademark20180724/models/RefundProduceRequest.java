@@ -7,6 +7,9 @@ public class RefundProduceRequest extends TeaModel {
     @NameInMap("BizId")
     public String bizId;
 
+    @NameInMap("RefundType")
+    public String refundType;
+
     public static RefundProduceRequest build(java.util.Map<String, ?> map) throws Exception {
         RefundProduceRequest self = new RefundProduceRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class RefundProduceRequest extends TeaModel {
     }
     public String getBizId() {
         return this.bizId;
+    }
+
+    public RefundProduceRequest setRefundType(String refundType) {
+        this.refundType = refundType;
+        return this;
+    }
+    public String getRefundType() {
+        return this.refundType;
     }
 
 }

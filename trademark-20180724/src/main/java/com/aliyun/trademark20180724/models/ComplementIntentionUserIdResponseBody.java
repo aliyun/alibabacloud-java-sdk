@@ -4,7 +4,6 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class ComplementIntentionUserIdResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

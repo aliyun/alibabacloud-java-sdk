@@ -28,6 +28,9 @@ public class ConfirmDissentOriginalRequest extends TeaModel {
     @NameInMap("ContactProvince")
     public String contactProvince;
 
+    @NameInMap("OperateType")
+    public String operateType;
+
     public static ConfirmDissentOriginalRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfirmDissentOriginalRequest self = new ConfirmDissentOriginalRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class ConfirmDissentOriginalRequest extends TeaModel {
     }
     public String getContactProvince() {
         return this.contactProvince;
+    }
+
+    public ConfirmDissentOriginalRequest setOperateType(String operateType) {
+        this.operateType = operateType;
+        return this;
+    }
+    public String getOperateType() {
+        return this.operateType;
     }
 
 }

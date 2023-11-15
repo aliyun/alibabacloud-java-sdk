@@ -4,7 +4,6 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class UpdateProduceResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("requestId")
     public String requestId;
 

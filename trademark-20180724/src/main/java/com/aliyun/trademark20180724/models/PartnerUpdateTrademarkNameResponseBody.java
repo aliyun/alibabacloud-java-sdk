@@ -4,39 +4,30 @@ package com.aliyun.trademark20180724.models;
 import com.aliyun.tea.*;
 
 public class PartnerUpdateTrademarkNameResponseBody extends TeaModel {
-    // allowRetry
     @NameInMap("AllowRetry")
     public Boolean allowRetry;
 
-    // appName
     @NameInMap("AppName")
     public String appName;
 
-    // dynamicCode
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
-    // dynamicMessage
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
-    // errorCode
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // errorMsg
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
-    // httpStatusCode
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 

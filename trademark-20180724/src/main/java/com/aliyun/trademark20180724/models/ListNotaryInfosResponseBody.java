@@ -149,6 +149,9 @@ public class ListNotaryInfosResponseBody extends TeaModel {
         @NameInMap("TmRegisterNo")
         public String tmRegisterNo;
 
+        /**
+         * <p>token</p>
+         */
         @NameInMap("Token")
         public String token;
 

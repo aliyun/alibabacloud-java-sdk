@@ -65,11 +65,9 @@ public class QueryIntentionOwnerResponseBody extends TeaModel {
     }
 
     public static class QueryIntentionOwnerResponseBodyModule extends TeaModel {
-        // 归属人id
         @NameInMap("OwnerId")
         public Float ownerId;
 
-        // 归属人名称
         @NameInMap("OwnerName")
         public String ownerName;
 

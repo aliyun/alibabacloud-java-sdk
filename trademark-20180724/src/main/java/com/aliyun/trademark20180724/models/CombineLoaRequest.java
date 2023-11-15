@@ -7,6 +7,18 @@ public class CombineLoaRequest extends TeaModel {
     @NameInMap("Address")
     public String address;
 
+    @NameInMap("ApplicantType")
+    public String applicantType;
+
+    @NameInMap("ContactName")
+    public String contactName;
+
+    @NameInMap("ContactPhone")
+    public String contactPhone;
+
+    @NameInMap("ContactPostcode")
+    public String contactPostcode;
+
     @NameInMap("MaterialId")
     public String materialId;
 
@@ -15,6 +27,9 @@ public class CombineLoaRequest extends TeaModel {
 
     @NameInMap("Nationality")
     public String nationality;
+
+    @NameInMap("PersonalType")
+    public String personalType;
 
     @NameInMap("PrincipalName")
     public Integer principalName;
@@ -41,6 +56,38 @@ public class CombineLoaRequest extends TeaModel {
         return this.address;
     }
 
+    public CombineLoaRequest setApplicantType(String applicantType) {
+        this.applicantType = applicantType;
+        return this;
+    }
+    public String getApplicantType() {
+        return this.applicantType;
+    }
+
+    public CombineLoaRequest setContactName(String contactName) {
+        this.contactName = contactName;
+        return this;
+    }
+    public String getContactName() {
+        return this.contactName;
+    }
+
+    public CombineLoaRequest setContactPhone(String contactPhone) {
+        this.contactPhone = contactPhone;
+        return this;
+    }
+    public String getContactPhone() {
+        return this.contactPhone;
+    }
+
+    public CombineLoaRequest setContactPostcode(String contactPostcode) {
+        this.contactPostcode = contactPostcode;
+        return this;
+    }
+    public String getContactPostcode() {
+        return this.contactPostcode;
+    }
+
     public CombineLoaRequest setMaterialId(String materialId) {
         this.materialId = materialId;
         return this;
@@ -63,6 +110,14 @@ public class CombineLoaRequest extends TeaModel {
     }
     public String getNationality() {
         return this.nationality;
+    }
+
+    public CombineLoaRequest setPersonalType(String personalType) {
+        this.personalType = personalType;
+        return this;
+    }
+    public String getPersonalType() {
+        return this.personalType;
     }
 
     public CombineLoaRequest setPrincipalName(Integer principalName) {

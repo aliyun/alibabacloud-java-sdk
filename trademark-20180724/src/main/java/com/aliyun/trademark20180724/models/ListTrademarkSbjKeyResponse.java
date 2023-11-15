@@ -3,7 +3,7 @@ package com.aliyun.trademark20180724.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateTmMonitorRuleResponse extends TeaModel {
+public class ListTrademarkSbjKeyResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class UpdateTmMonitorRuleResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public UpdateTmMonitorRuleResponseBody body;
+    public ListTrademarkSbjKeyResponseBody body;
 
-    public static UpdateTmMonitorRuleResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateTmMonitorRuleResponse self = new UpdateTmMonitorRuleResponse();
+    public static ListTrademarkSbjKeyResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListTrademarkSbjKeyResponse self = new ListTrademarkSbjKeyResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateTmMonitorRuleResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListTrademarkSbjKeyResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class UpdateTmMonitorRuleResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateTmMonitorRuleResponse setStatusCode(Integer statusCode) {
+    public ListTrademarkSbjKeyResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class UpdateTmMonitorRuleResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdateTmMonitorRuleResponse setBody(UpdateTmMonitorRuleResponseBody body) {
+    public ListTrademarkSbjKeyResponse setBody(ListTrademarkSbjKeyResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdateTmMonitorRuleResponseBody getBody() {
+    public ListTrademarkSbjKeyResponseBody getBody() {
         return this.body;
     }
 

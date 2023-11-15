@@ -40,8 +40,14 @@ public class QueryTradeMarkApplicationsRequest extends TeaModel {
     @NameInMap("SortOrder")
     public String sortOrder;
 
+    @NameInMap("Specification")
+    public Integer specification;
+
     @NameInMap("Status")
     public Integer status;
+
+    @NameInMap("StatusList")
+    public java.util.List<Integer> statusList;
 
     @NameInMap("SupplementStatus")
     public Integer supplementStatus;
@@ -156,12 +162,28 @@ public class QueryTradeMarkApplicationsRequest extends TeaModel {
         return this.sortOrder;
     }
 
+    public QueryTradeMarkApplicationsRequest setSpecification(Integer specification) {
+        this.specification = specification;
+        return this;
+    }
+    public Integer getSpecification() {
+        return this.specification;
+    }
+
     public QueryTradeMarkApplicationsRequest setStatus(Integer status) {
         this.status = status;
         return this;
     }
     public Integer getStatus() {
         return this.status;
+    }
+
+    public QueryTradeMarkApplicationsRequest setStatusList(java.util.List<Integer> statusList) {
+        this.statusList = statusList;
+        return this;
+    }
+    public java.util.List<Integer> getStatusList() {
+        return this.statusList;
     }
 
     public QueryTradeMarkApplicationsRequest setSupplementStatus(Integer supplementStatus) {

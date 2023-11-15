@@ -22,6 +22,9 @@ public class SaveTradeMarkReviewMaterialDetailShrinkRequest extends TeaModel {
     @NameInMap("CardNumber")
     public String cardNumber;
 
+    @NameInMap("ChangeName")
+    public Boolean changeName;
+
     @NameInMap("ContactAddress")
     public String contactAddress;
 
@@ -75,6 +78,9 @@ public class SaveTradeMarkReviewMaterialDetailShrinkRequest extends TeaModel {
 
     @NameInMap("SubmitType")
     public Integer submitType;
+
+    @NameInMap("SupplementFlag")
+    public Boolean supplementFlag;
 
     @NameInMap("Type")
     public Integer type;
@@ -130,6 +136,14 @@ public class SaveTradeMarkReviewMaterialDetailShrinkRequest extends TeaModel {
     }
     public String getCardNumber() {
         return this.cardNumber;
+    }
+
+    public SaveTradeMarkReviewMaterialDetailShrinkRequest setChangeName(Boolean changeName) {
+        this.changeName = changeName;
+        return this;
+    }
+    public Boolean getChangeName() {
+        return this.changeName;
     }
 
     public SaveTradeMarkReviewMaterialDetailShrinkRequest setContactAddress(String contactAddress) {
@@ -274,6 +288,14 @@ public class SaveTradeMarkReviewMaterialDetailShrinkRequest extends TeaModel {
     }
     public Integer getSubmitType() {
         return this.submitType;
+    }
+
+    public SaveTradeMarkReviewMaterialDetailShrinkRequest setSupplementFlag(Boolean supplementFlag) {
+        this.supplementFlag = supplementFlag;
+        return this;
+    }
+    public Boolean getSupplementFlag() {
+        return this.supplementFlag;
     }
 
     public SaveTradeMarkReviewMaterialDetailShrinkRequest setType(Integer type) {

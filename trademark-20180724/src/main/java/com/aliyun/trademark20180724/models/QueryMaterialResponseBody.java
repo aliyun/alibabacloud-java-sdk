@@ -82,6 +82,9 @@ public class QueryMaterialResponseBody extends TeaModel {
     @NameInMap("FileYgPath")
     public String fileYgPath;
 
+    /**
+     * <p>id</p>
+     */
     @NameInMap("Id")
     public Long id;
 
@@ -147,6 +150,18 @@ public class QueryMaterialResponseBody extends TeaModel {
 
     @NameInMap("Status")
     public Integer status;
+
+    @NameInMap("SupplementEvidenceCatalogFile")
+    public String supplementEvidenceCatalogFile;
+
+    @NameInMap("SupplementEvidenceMaterialFile")
+    public String supplementEvidenceMaterialFile;
+
+    @NameInMap("SupplementReasonFile")
+    public String supplementReasonFile;
+
+    @NameInMap("SystemVersion")
+    public String systemVersion;
 
     @NameInMap("Town")
     public String town;
@@ -544,6 +559,38 @@ public class QueryMaterialResponseBody extends TeaModel {
     }
     public Integer getStatus() {
         return this.status;
+    }
+
+    public QueryMaterialResponseBody setSupplementEvidenceCatalogFile(String supplementEvidenceCatalogFile) {
+        this.supplementEvidenceCatalogFile = supplementEvidenceCatalogFile;
+        return this;
+    }
+    public String getSupplementEvidenceCatalogFile() {
+        return this.supplementEvidenceCatalogFile;
+    }
+
+    public QueryMaterialResponseBody setSupplementEvidenceMaterialFile(String supplementEvidenceMaterialFile) {
+        this.supplementEvidenceMaterialFile = supplementEvidenceMaterialFile;
+        return this;
+    }
+    public String getSupplementEvidenceMaterialFile() {
+        return this.supplementEvidenceMaterialFile;
+    }
+
+    public QueryMaterialResponseBody setSupplementReasonFile(String supplementReasonFile) {
+        this.supplementReasonFile = supplementReasonFile;
+        return this;
+    }
+    public String getSupplementReasonFile() {
+        return this.supplementReasonFile;
+    }
+
+    public QueryMaterialResponseBody setSystemVersion(String systemVersion) {
+        this.systemVersion = systemVersion;
+        return this;
+    }
+    public String getSystemVersion() {
+        return this.systemVersion;
     }
 
     public QueryMaterialResponseBody setTown(String town) {

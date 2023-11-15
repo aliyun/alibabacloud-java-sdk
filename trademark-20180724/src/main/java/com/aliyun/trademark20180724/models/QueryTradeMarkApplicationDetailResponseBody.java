@@ -100,6 +100,9 @@ public class QueryTradeMarkApplicationDetailResponseBody extends TeaModel {
     @NameInMap("ServicePrice")
     public Float servicePrice;
 
+    @NameInMap("Specification")
+    public Integer specification;
+
     @NameInMap("Status")
     public Integer status;
 
@@ -111,6 +114,9 @@ public class QueryTradeMarkApplicationDetailResponseBody extends TeaModel {
 
     @NameInMap("Supplements")
     public QueryTradeMarkApplicationDetailResponseBodySupplements supplements;
+
+    @NameInMap("SystemVersion")
+    public String systemVersion;
 
     @NameInMap("ThirdClassification")
     public QueryTradeMarkApplicationDetailResponseBodyThirdClassification thirdClassification;
@@ -397,6 +403,14 @@ public class QueryTradeMarkApplicationDetailResponseBody extends TeaModel {
         return this.servicePrice;
     }
 
+    public QueryTradeMarkApplicationDetailResponseBody setSpecification(Integer specification) {
+        this.specification = specification;
+        return this;
+    }
+    public Integer getSpecification() {
+        return this.specification;
+    }
+
     public QueryTradeMarkApplicationDetailResponseBody setStatus(Integer status) {
         this.status = status;
         return this;
@@ -427,6 +441,14 @@ public class QueryTradeMarkApplicationDetailResponseBody extends TeaModel {
     }
     public QueryTradeMarkApplicationDetailResponseBodySupplements getSupplements() {
         return this.supplements;
+    }
+
+    public QueryTradeMarkApplicationDetailResponseBody setSystemVersion(String systemVersion) {
+        this.systemVersion = systemVersion;
+        return this;
+    }
+    public String getSystemVersion() {
+        return this.systemVersion;
     }
 
     public QueryTradeMarkApplicationDetailResponseBody setThirdClassification(QueryTradeMarkApplicationDetailResponseBodyThirdClassification thirdClassification) {
@@ -650,7 +672,6 @@ public class QueryTradeMarkApplicationDetailResponseBody extends TeaModel {
         @NameInMap("Country")
         public String country;
 
-        // 详细收件地址
         @NameInMap("DetailedContactAddress")
         public String detailedContactAddress;
 
@@ -662,6 +683,9 @@ public class QueryTradeMarkApplicationDetailResponseBody extends TeaModel {
 
         @NameInMap("ExpirationDate")
         public String expirationDate;
+
+        @NameInMap("FactAndReasonPdfPath")
+        public String factAndReasonPdfPath;
 
         @NameInMap("IdCardName")
         public String idCardName;
@@ -707,6 +731,15 @@ public class QueryTradeMarkApplicationDetailResponseBody extends TeaModel {
 
         @NameInMap("Status")
         public Integer status;
+
+        @NameInMap("SupplementEvidenceCatalogFile")
+        public String supplementEvidenceCatalogFile;
+
+        @NameInMap("SupplementEvidenceMaterialFile")
+        public String supplementEvidenceMaterialFile;
+
+        @NameInMap("SupplementReasonFile")
+        public String supplementReasonFile;
 
         @NameInMap("Town")
         public String town;
@@ -855,6 +888,14 @@ public class QueryTradeMarkApplicationDetailResponseBody extends TeaModel {
             return this.expirationDate;
         }
 
+        public QueryTradeMarkApplicationDetailResponseBodyMaterialDetail setFactAndReasonPdfPath(String factAndReasonPdfPath) {
+            this.factAndReasonPdfPath = factAndReasonPdfPath;
+            return this;
+        }
+        public String getFactAndReasonPdfPath() {
+            return this.factAndReasonPdfPath;
+        }
+
         public QueryTradeMarkApplicationDetailResponseBodyMaterialDetail setIdCardName(String idCardName) {
             this.idCardName = idCardName;
             return this;
@@ -973,6 +1014,30 @@ public class QueryTradeMarkApplicationDetailResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public QueryTradeMarkApplicationDetailResponseBodyMaterialDetail setSupplementEvidenceCatalogFile(String supplementEvidenceCatalogFile) {
+            this.supplementEvidenceCatalogFile = supplementEvidenceCatalogFile;
+            return this;
+        }
+        public String getSupplementEvidenceCatalogFile() {
+            return this.supplementEvidenceCatalogFile;
+        }
+
+        public QueryTradeMarkApplicationDetailResponseBodyMaterialDetail setSupplementEvidenceMaterialFile(String supplementEvidenceMaterialFile) {
+            this.supplementEvidenceMaterialFile = supplementEvidenceMaterialFile;
+            return this;
+        }
+        public String getSupplementEvidenceMaterialFile() {
+            return this.supplementEvidenceMaterialFile;
+        }
+
+        public QueryTradeMarkApplicationDetailResponseBodyMaterialDetail setSupplementReasonFile(String supplementReasonFile) {
+            this.supplementReasonFile = supplementReasonFile;
+            return this;
+        }
+        public String getSupplementReasonFile() {
+            return this.supplementReasonFile;
         }
 
         public QueryTradeMarkApplicationDetailResponseBodyMaterialDetail setTown(String town) {
@@ -1203,6 +1268,9 @@ public class QueryTradeMarkApplicationDetailResponseBody extends TeaModel {
         @NameInMap("FileTemplateUrls")
         public QueryTradeMarkApplicationDetailResponseBodySupplementsSupplementsFileTemplateUrls fileTemplateUrls;
 
+        @NameInMap("Filename")
+        public String filename;
+
         @NameInMap("Id")
         public Long id;
 
@@ -1276,6 +1344,14 @@ public class QueryTradeMarkApplicationDetailResponseBody extends TeaModel {
         }
         public QueryTradeMarkApplicationDetailResponseBodySupplementsSupplementsFileTemplateUrls getFileTemplateUrls() {
             return this.fileTemplateUrls;
+        }
+
+        public QueryTradeMarkApplicationDetailResponseBodySupplementsSupplements setFilename(String filename) {
+            this.filename = filename;
+            return this;
+        }
+        public String getFilename() {
+            return this.filename;
         }
 
         public QueryTradeMarkApplicationDetailResponseBodySupplementsSupplements setId(Long id) {
