@@ -584,6 +584,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
 
+        @NameInMap("DBInstanceDiskUsed")
+        public String DBInstanceDiskUsed;
+
         /**
          * <p>The instance ID.</p>
          */
@@ -1100,6 +1103,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getDBInstanceDescription() {
             return this.DBInstanceDescription;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setDBInstanceDiskUsed(String DBInstanceDiskUsed) {
+            this.DBInstanceDiskUsed = DBInstanceDiskUsed;
+            return this;
+        }
+        public String getDBInstanceDiskUsed() {
+            return this.DBInstanceDiskUsed;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setDBInstanceId(String DBInstanceId) {
