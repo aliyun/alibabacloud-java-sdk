@@ -19,6 +19,9 @@ public class ListPrivateAccessTagsRequest extends TeaModel {
     @NameInMap("PolicyId")
     public String policyId;
 
+    @NameInMap("SimpleMode")
+    public Boolean simpleMode;
+
     @NameInMap("TagIds")
     public java.util.List<String> tagIds;
 
@@ -65,6 +68,14 @@ public class ListPrivateAccessTagsRequest extends TeaModel {
     }
     public String getPolicyId() {
         return this.policyId;
+    }
+
+    public ListPrivateAccessTagsRequest setSimpleMode(Boolean simpleMode) {
+        this.simpleMode = simpleMode;
+        return this;
+    }
+    public Boolean getSimpleMode() {
+        return this.simpleMode;
     }
 
     public ListPrivateAccessTagsRequest setTagIds(java.util.List<String> tagIds) {

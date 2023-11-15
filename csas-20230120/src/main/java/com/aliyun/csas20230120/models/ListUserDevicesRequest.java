@@ -52,6 +52,9 @@ public class ListUserDevicesRequest extends TeaModel {
     @NameInMap("SharingStatus")
     public Boolean sharingStatus;
 
+    @NameInMap("SortBy")
+    public String sortBy;
+
     @NameInMap("Username")
     public String username;
 
@@ -186,6 +189,14 @@ public class ListUserDevicesRequest extends TeaModel {
     }
     public Boolean getSharingStatus() {
         return this.sharingStatus;
+    }
+
+    public ListUserDevicesRequest setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    public String getSortBy() {
+        return this.sortBy;
     }
 
     public ListUserDevicesRequest setUsername(String username) {
