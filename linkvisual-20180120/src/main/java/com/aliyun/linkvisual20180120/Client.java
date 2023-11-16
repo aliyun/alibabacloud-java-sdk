@@ -654,6 +654,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createLocalFileUploadJobWithOptions(request, runtime);
     }
 
+    public CreateLocalRecordDownloadByTimeJobResponse createLocalRecordDownloadByTimeJobWithOptions(CreateLocalRecordDownloadByTimeJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.beginTime)) {
+            query.put("BeginTime", request.beginTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceName)) {
+            query.put("DeviceName", request.deviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotId)) {
+            query.put("IotId", request.iotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
+            query.put("ProductKey", request.productKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.speed)) {
+            query.put("Speed", request.speed);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateLocalRecordDownloadByTimeJob"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLocalRecordDownloadByTimeJobResponse());
+    }
+
+    public CreateLocalRecordDownloadByTimeJobResponse createLocalRecordDownloadByTimeJob(CreateLocalRecordDownloadByTimeJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createLocalRecordDownloadByTimeJobWithOptions(request, runtime);
+    }
+
     public CreatePictureSearchAppResponse createPictureSearchAppWithOptions(CreatePictureSearchAppRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
