@@ -71,6 +71,9 @@ public class QueryRecordResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        @NameInMap("EventType")
+        public Integer eventType;
+
         @NameInMap("FileName")
         public String fileName;
 
@@ -108,6 +111,14 @@ public class QueryRecordResponseBody extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
+        }
+
+        public QueryRecordResponseBodyDataList setEventType(Integer eventType) {
+            this.eventType = eventType;
+            return this;
+        }
+        public Integer getEventType() {
+            return this.eventType;
         }
 
         public QueryRecordResponseBodyDataList setFileName(String fileName) {
