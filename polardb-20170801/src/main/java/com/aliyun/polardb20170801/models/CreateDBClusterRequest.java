@@ -282,6 +282,9 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("Period")
     public String period;
 
+    @NameInMap("ProvisionedIops")
+    public Long provisionedIops;
+
     /**
      * <p>标准版数据库代理规格。</p>
      */
@@ -694,6 +697,14 @@ public class CreateDBClusterRequest extends TeaModel {
     }
     public String getPeriod() {
         return this.period;
+    }
+
+    public CreateDBClusterRequest setProvisionedIops(Long provisionedIops) {
+        this.provisionedIops = provisionedIops;
+        return this;
+    }
+    public Long getProvisionedIops() {
+        return this.provisionedIops;
     }
 
     public CreateDBClusterRequest setProxyClass(String proxyClass) {

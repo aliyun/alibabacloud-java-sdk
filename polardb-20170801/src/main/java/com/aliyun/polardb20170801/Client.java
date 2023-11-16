@@ -747,6 +747,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Period", request.period);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.provisionedIops)) {
+            query.put("ProvisionedIops", request.provisionedIops);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.proxyClass)) {
             query.put("ProxyClass", request.proxyClass);
         }
