@@ -58,6 +58,9 @@ public class ListFreeNodesResponseBody extends TeaModel {
         @NameInMap("NodeId")
         public String nodeId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("Sn")
         public String sn;
 
@@ -107,6 +110,14 @@ public class ListFreeNodesResponseBody extends TeaModel {
         }
         public String getNodeId() {
             return this.nodeId;
+        }
+
+        public ListFreeNodesResponseBodyNodes setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListFreeNodesResponseBodyNodes setSn(String sn) {

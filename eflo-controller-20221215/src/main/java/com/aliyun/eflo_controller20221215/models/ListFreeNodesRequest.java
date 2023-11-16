@@ -16,6 +16,9 @@ public class ListFreeNodesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static ListFreeNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFreeNodesRequest self = new ListFreeNodesRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class ListFreeNodesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListFreeNodesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }
