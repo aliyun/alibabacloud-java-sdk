@@ -1696,6 +1696,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("alipay_no", request.alipayNo);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.disable)) {
+            body.put("disable", request.disable);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.number)) {
             body.put("number", request.number);
         }
@@ -1748,6 +1752,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CostCenterQueryResponse costCenterQueryWithOptions(CostCenterQueryRequest request, CostCenterQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.disable)) {
+            query.put("disable", request.disable);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.needOrgEntity)) {
             query.put("need_org_entity", request.needOrgEntity);
         }
@@ -1802,6 +1810,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.alipayNo)) {
             body.put("alipay_no", request.alipayNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disable)) {
+            body.put("disable", request.disable);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.number)) {

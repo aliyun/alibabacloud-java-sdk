@@ -4,6 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CostCenterQueryRequest extends TeaModel {
+    @NameInMap("disable")
+    public Long disable;
+
     @NameInMap("need_org_entity")
     public Boolean needOrgEntity;
 
@@ -19,6 +22,14 @@ public class CostCenterQueryRequest extends TeaModel {
     public static CostCenterQueryRequest build(java.util.Map<String, ?> map) throws Exception {
         CostCenterQueryRequest self = new CostCenterQueryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CostCenterQueryRequest setDisable(Long disable) {
+        this.disable = disable;
+        return this;
+    }
+    public Long getDisable() {
+        return this.disable;
     }
 
     public CostCenterQueryRequest setNeedOrgEntity(Boolean needOrgEntity) {
