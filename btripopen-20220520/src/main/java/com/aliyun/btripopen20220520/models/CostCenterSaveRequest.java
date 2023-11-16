@@ -7,6 +7,9 @@ public class CostCenterSaveRequest extends TeaModel {
     @NameInMap("alipay_no")
     public String alipayNo;
 
+    @NameInMap("disable")
+    public Long disable;
+
     @NameInMap("number")
     public String number;
 
@@ -30,6 +33,14 @@ public class CostCenterSaveRequest extends TeaModel {
     }
     public String getAlipayNo() {
         return this.alipayNo;
+    }
+
+    public CostCenterSaveRequest setDisable(Long disable) {
+        this.disable = disable;
+        return this;
+    }
+    public Long getDisable() {
+        return this.disable;
     }
 
     public CostCenterSaveRequest setNumber(String number) {

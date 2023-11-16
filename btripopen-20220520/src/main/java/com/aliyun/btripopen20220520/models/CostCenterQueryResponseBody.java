@@ -159,6 +159,9 @@ public class CostCenterQueryResponseBody extends TeaModel {
         @NameInMap("corp_id")
         public String corpId;
 
+        @NameInMap("disable")
+        public Long disable;
+
         @NameInMap("entity_d_o_s")
         public java.util.List<CostCenterQueryResponseBodyModuleEntityDOS> entityDOS;
 
@@ -202,6 +205,14 @@ public class CostCenterQueryResponseBody extends TeaModel {
         }
         public String getCorpId() {
             return this.corpId;
+        }
+
+        public CostCenterQueryResponseBodyModule setDisable(Long disable) {
+            this.disable = disable;
+            return this;
+        }
+        public Long getDisable() {
+            return this.disable;
         }
 
         public CostCenterQueryResponseBodyModule setEntityDOS(java.util.List<CostCenterQueryResponseBodyModuleEntityDOS> entityDOS) {
