@@ -67,13 +67,13 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
 
     public static class DescribeEnvironmentResponseBodyDataTags extends TeaModel {
         /**
-         * <p>Tag的键。</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>Tag的值</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -236,7 +236,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>VPC ID.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

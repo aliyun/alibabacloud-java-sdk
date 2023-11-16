@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UninstallPromClusterRequest extends TeaModel {
+    @NameInMap("AliyunLang")
+    public String aliyunLang;
+
     /**
      * <p>The cluster ID.</p>
      */
@@ -19,6 +22,14 @@ public class UninstallPromClusterRequest extends TeaModel {
     public static UninstallPromClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         UninstallPromClusterRequest self = new UninstallPromClusterRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UninstallPromClusterRequest setAliyunLang(String aliyunLang) {
+        this.aliyunLang = aliyunLang;
+        return this;
+    }
+    public String getAliyunLang() {
+        return this.aliyunLang;
     }
 
     public UninstallPromClusterRequest setClusterId(String clusterId) {
