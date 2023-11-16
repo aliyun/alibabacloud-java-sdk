@@ -132,7 +132,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Status of Feature.</p>
+         * <p>Installation status of Feature.</p>
          */
         @NameInMap("Status")
         public String status;
@@ -301,8 +301,8 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
 
         /**
          * <p>Running status.</p>
-         * <p>- Success: Normal operation</p>
-         * <p>- Failed: running exception</p>
+         * <p>- Success: Running normal</p>
+         * <p>- Failed: Running exception</p>
          * <p>- Not Found: Not installed</p>
          */
         @NameInMap("Status")

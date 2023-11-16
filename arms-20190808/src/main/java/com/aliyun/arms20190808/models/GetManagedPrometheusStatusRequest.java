@@ -11,7 +11,7 @@ public class GetManagedPrometheusStatusRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The type of the monitoring object. Valid values: ask and ecs.</p>
+     * <p>The type of the monitoring object. Valid values: ask , acs , one and ecs.</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
