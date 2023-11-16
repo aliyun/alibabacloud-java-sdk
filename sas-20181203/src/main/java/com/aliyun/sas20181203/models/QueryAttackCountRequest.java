@@ -25,6 +25,14 @@ public class QueryAttackCountRequest extends TeaModel {
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <p>The UUID of the asset.</p>
+     * <br>
+     * <p>>  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of assets.</p>
+     */
+    @NameInMap("Uuids")
+    public String uuids;
+
     public static QueryAttackCountRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryAttackCountRequest self = new QueryAttackCountRequest();
         return TeaModel.build(map, self);
@@ -52,6 +60,14 @@ public class QueryAttackCountRequest extends TeaModel {
     }
     public String getSourceIp() {
         return this.sourceIp;
+    }
+
+    public QueryAttackCountRequest setUuids(String uuids) {
+        this.uuids = uuids;
+        return this;
+    }
+    public String getUuids() {
+        return this.uuids;
     }
 
 }
