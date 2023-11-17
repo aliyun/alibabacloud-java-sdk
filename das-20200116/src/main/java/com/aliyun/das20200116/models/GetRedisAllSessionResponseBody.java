@@ -110,7 +110,7 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
         public String clientDesc;
 
         /**
-         * <p>The command that is last executed.</p>
+         * <p>The command that was last run.</p>
          */
         @NameInMap("Cmd")
         public String cmd;
@@ -124,8 +124,8 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
         /**
          * <p>The file descriptor event. Valid values:</p>
          * <br>
-         * <p>* **r**: Client sockets are readable in the event loop.</p>
-         * <p>* **w**: Client sockets are writable in the event loop.</p>
+         * <p>*   **r**: Client sockets are readable in the event loop.</p>
+         * <p>*   **w**: Client sockets are writable in the event loop.</p>
          */
         @NameInMap("Events")
         public String events;
@@ -139,19 +139,19 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
         /**
          * <p>The client flag. Valid values:</p>
          * <br>
-         * <p>* **A**: The connection needs to be closed at the earliest opportunity.</p>
-         * <p>* **b**: The client is waiting for blocked events.</p>
-         * <p>* **c**: The connection is closed after all replies are written.</p>
-         * <p>* **d**: The monitored keys have been modified, and the *`EXEC`* command is about to fail.</p>
-         * <p>* **i**: The client is waiting for VM I/O operations. This value is deprecated.</p>
-         * <p>* **M**: The client is the primary node.</p>
-         * <p>* **N**: Special flags are not configured.</p>
-         * <p>* **O**: The client is in monitor mode.</p>
-         * <p>* **r**: The client is a cluster node in read-only mode.</p>
-         * <p>* **S**: The client is a replica node in normal mode.</p>
-         * <p>* **u**: The client is not blocked.</p>
-         * <p>* **U**: The client is connected by using UNIX domain sockets.</p>
-         * <p>* **x**: The client is executing a transaction.</p>
+         * <p>*   **A**: The connection needs to be closed at the earliest opportunity.</p>
+         * <p>*   **b**: The client is waiting for blocked events.</p>
+         * <p>*   **c**: The connection is closed after all replies are written.</p>
+         * <p>*   **d**: The monitored keys have been modified, and the `EXEC` command is about to fail.</p>
+         * <p>*   **i**: The client is waiting for VM I/O operations. This value is no longer used.</p>
+         * <p>*   **M**: The client is the primary node.</p>
+         * <p>*   **N**: No special flags are configured.</p>
+         * <p>*   **O**: The client is in monitor mode.</p>
+         * <p>*   **r**: The client is a cluster node in read-only mode.</p>
+         * <p>*   **S**: The client is a replica node in normal mode.</p>
+         * <p>*   **u**: The client is not blocked.</p>
+         * <p>*   **U**: The client is connected by using UNIX domain sockets.</p>
+         * <p>*   **x**: The client is executing a transaction.</p>
          */
         @NameInMap("Flags")
         public String flags;
@@ -169,7 +169,7 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
         public Long idle;
 
         /**
-         * <p>The number of commands in *`MULTI`* or *`EXEC`*.</p>
+         * <p>The number of commands in `MULTI` or `EXEC`.</p>
          */
         @NameInMap("Multi")
         public Long multi;
@@ -411,7 +411,7 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
         public String count;
 
         /**
-         * <p>The client ID data.</p>
+         * <p>The client IDs.</p>
          */
         @NameInMap("Ids")
         public java.util.List<Long> ids;

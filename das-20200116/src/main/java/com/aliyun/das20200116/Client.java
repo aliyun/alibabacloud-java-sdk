@@ -892,6 +892,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeAutoScalingConfigWithOptions(request, runtime);
     }
 
+    /**
+      * *   You can query only the history of automatic performance scaling of ApsaraDB RDS for MySQL instances.
+      * *   If you use an Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
+      * *   If you use an SDK to call API operations of DAS, you must set the region to cn-shanghai.
+      *
+      * @param request DescribeAutoScalingHistoryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeAutoScalingHistoryResponse
+     */
     public DescribeAutoScalingHistoryResponse describeAutoScalingHistoryWithOptions(DescribeAutoScalingHistoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -912,6 +921,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAutoScalingHistoryResponse());
     }
 
+    /**
+      * *   You can query only the history of automatic performance scaling of ApsaraDB RDS for MySQL instances.
+      * *   If you use an Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
+      * *   If you use an SDK to call API operations of DAS, you must set the region to cn-shanghai.
+      *
+      * @param request DescribeAutoScalingHistoryRequest
+      * @return DescribeAutoScalingHistoryResponse
+     */
     public DescribeAutoScalingHistoryResponse describeAutoScalingHistory(DescribeAutoScalingHistoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAutoScalingHistoryWithOptions(request, runtime);
@@ -2419,6 +2436,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getAutonomousNotifyEventsInRangeWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, take note of the following items:
+      * *   If you use an Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
+      * *   If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.
+      * *   The database instance that you want to manage is connected to DAS.
+      *
+      * @param request GetDBInstanceConnectivityDiagnosisRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetDBInstanceConnectivityDiagnosisResponse
+     */
     public GetDBInstanceConnectivityDiagnosisResponse getDBInstanceConnectivityDiagnosisWithOptions(GetDBInstanceConnectivityDiagnosisRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2447,6 +2474,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetDBInstanceConnectivityDiagnosisResponse());
     }
 
+    /**
+      * Before you call this operation, take note of the following items:
+      * *   If you use an Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
+      * *   If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.
+      * *   The database instance that you want to manage is connected to DAS.
+      *
+      * @param request GetDBInstanceConnectivityDiagnosisRequest
+      * @return GetDBInstanceConnectivityDiagnosisResponse
+     */
     public GetDBInstanceConnectivityDiagnosisResponse getDBInstanceConnectivityDiagnosis(GetDBInstanceConnectivityDiagnosisRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDBInstanceConnectivityDiagnosisWithOptions(request, runtime);
@@ -3407,6 +3443,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getKillInstanceSessionTaskResultWithOptions(request, runtime);
     }
 
+    /**
+      * *   This operation is applicable only to MongoDB instances.
+      * *   If you use an Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
+      * *   If you use an SDK to call API operations of DAS, you must set the region to cn-shanghai.
+      *
+      * @param request GetMongoDBCurrentOpRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetMongoDBCurrentOpResponse
+     */
     public GetMongoDBCurrentOpResponse getMongoDBCurrentOpWithOptions(GetMongoDBCurrentOpRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3443,15 +3488,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetMongoDBCurrentOpResponse());
     }
 
+    /**
+      * *   This operation is applicable only to MongoDB instances.
+      * *   If you use an Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
+      * *   If you use an SDK to call API operations of DAS, you must set the region to cn-shanghai.
+      *
+      * @param request GetMongoDBCurrentOpRequest
+      * @return GetMongoDBCurrentOpResponse
+     */
     public GetMongoDBCurrentOpResponse getMongoDBCurrentOp(GetMongoDBCurrentOpRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getMongoDBCurrentOpWithOptions(request, runtime);
     }
 
     /**
-      * *   This operation is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
-      * *   If you use an Alibaba Cloud SDK or a Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
-      * *   If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.
+      * >  Asynchronous calls do not immediately return the complete results. You must use the value of **ResultId** returned in the response to re-initiate the call. The complete results are returned only if the value of **IsFinish** is **true**.
+      * *   This operation is applicable only to ApsaraDB RDS for MySQL, PolarDB for MySQL, and PolarDB-X 2.0 instances.
+      * *   If you use an Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
+      * *   If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.
       *
       * @param request GetMySQLAllSessionAsyncRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3490,9 +3544,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   This operation is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
-      * *   If you use an Alibaba Cloud SDK or a Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
-      * *   If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.
+      * >  Asynchronous calls do not immediately return the complete results. You must use the value of **ResultId** returned in the response to re-initiate the call. The complete results are returned only if the value of **IsFinish** is **true**.
+      * *   This operation is applicable only to ApsaraDB RDS for MySQL, PolarDB for MySQL, and PolarDB-X 2.0 instances.
+      * *   If you use an Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
+      * *   If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.
       *
       * @param request GetMySQLAllSessionAsyncRequest
       * @return GetMySQLAllSessionAsyncResponse
@@ -4719,16 +4774,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * You can call this operation to modify the following auto scaling configurations of an instance: **auto scaling for specifications**, **automatic storage expansion**, **automatic bandwidth adjustment**, and **auto scaling for resources**.
       * *   You can modify the configurations of the **auto scaling feature for specifications** for the following types of database instances:
-      *     *   PolarDB for MySQL Cluster Edition instances: For more information about the feature and the billing rules, see [Automatic performance scaling](~~169686~~).
-      *     *   ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or enhanced SSDs (ESSDs): For more information about the feature and the billing rules, see [Automatic performance scaling](~~169686~~).
+      *     *   PolarDB for MySQL Cluster Edition instances. For more information about the feature and the billing rules, see [Automatic performance scaling](~~169686~~).
+      *     *   ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or enhanced SSDs (ESSDs). For more information about the feature and the billing rules, see [Automatic performance scaling](~~169686~~).
       * *   You can modify the configurations of the **automatic storage expansion** feature for the following types of database instances:
-      *     *   ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: For more information about the feature and the billing rules, see [Automatic storage expansion](~~173345~~).
+      *     *   ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs. For more information about the feature and the billing rules, see [Automatic space expansion](~~173345~~).
       * *   You can modify the configurations of the **automatic bandwidth adjustment** feature for the following types of database instances:
-      *     *   ApsaraDB for Redis instances that use local disks: For more information about the feature and the billing rules, see [Automatic bandwidth adjustment](~~216312~~).
+      *     *   ApsaraDB for Redis Classic (Local Disk-based) Edition instances. For more information about the feature and the billing rules, see [Automatic bandwidth adjustment](~~216312~~).
       * *   You can modify the configurations of the **auto scaling feature for resources** for the following types of database instances:
-      *     *   General-purpose ApsaraDB RDS for MySQL Enterprise Edition instances: For more information about the feature and the billing rules, see [Automatic performance scaling](~~169686~~).
-      * *   If you use an Alibaba Cloud SDK or a Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
-      * *   If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.
+      *     *   General-purpose ApsaraDB RDS for MySQL Enterprise Edition instances. For more information about the feature and the billing rules, see [Automatic performance scaling](~~169686~~).
+      * *   If you use an Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
+      * *   If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.
       *
       * @param request ModifyAutoScalingConfigRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4781,16 +4836,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * You can call this operation to modify the following auto scaling configurations of an instance: **auto scaling for specifications**, **automatic storage expansion**, **automatic bandwidth adjustment**, and **auto scaling for resources**.
       * *   You can modify the configurations of the **auto scaling feature for specifications** for the following types of database instances:
-      *     *   PolarDB for MySQL Cluster Edition instances: For more information about the feature and the billing rules, see [Automatic performance scaling](~~169686~~).
-      *     *   ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or enhanced SSDs (ESSDs): For more information about the feature and the billing rules, see [Automatic performance scaling](~~169686~~).
+      *     *   PolarDB for MySQL Cluster Edition instances. For more information about the feature and the billing rules, see [Automatic performance scaling](~~169686~~).
+      *     *   ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or enhanced SSDs (ESSDs). For more information about the feature and the billing rules, see [Automatic performance scaling](~~169686~~).
       * *   You can modify the configurations of the **automatic storage expansion** feature for the following types of database instances:
-      *     *   ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: For more information about the feature and the billing rules, see [Automatic storage expansion](~~173345~~).
+      *     *   ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs. For more information about the feature and the billing rules, see [Automatic space expansion](~~173345~~).
       * *   You can modify the configurations of the **automatic bandwidth adjustment** feature for the following types of database instances:
-      *     *   ApsaraDB for Redis instances that use local disks: For more information about the feature and the billing rules, see [Automatic bandwidth adjustment](~~216312~~).
+      *     *   ApsaraDB for Redis Classic (Local Disk-based) Edition instances. For more information about the feature and the billing rules, see [Automatic bandwidth adjustment](~~216312~~).
       * *   You can modify the configurations of the **auto scaling feature for resources** for the following types of database instances:
-      *     *   General-purpose ApsaraDB RDS for MySQL Enterprise Edition instances: For more information about the feature and the billing rules, see [Automatic performance scaling](~~169686~~).
-      * *   If you use an Alibaba Cloud SDK or a Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
-      * *   If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.
+      *     *   General-purpose ApsaraDB RDS for MySQL Enterprise Edition instances. For more information about the feature and the billing rules, see [Automatic performance scaling](~~169686~~).
+      * *   If you use an Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
+      * *   If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.
       *
       * @param request ModifyAutoScalingConfigRequest
       * @return ModifyAutoScalingConfigResponse

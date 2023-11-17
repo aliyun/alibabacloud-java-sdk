@@ -88,7 +88,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         /**
          * <p>The number of active sessions that belong to the client IP address.</p>
          * <br>
-         * <p>> If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
+         * <p>>  If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
          */
         @NameInMap("ActiveCount")
         public Long activeCount;
@@ -168,13 +168,13 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         /**
          * <p>The number of active sessions of the database.</p>
          * <br>
-         * <p>> If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
+         * <p>>  If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
          */
         @NameInMap("ActiveCount")
         public Long activeCount;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -258,7 +258,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         public String command;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          */
         @NameInMap("DbName")
         public String dbName;
@@ -269,6 +269,11 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         @NameInMap("SessionId")
         public Long sessionId;
 
+        /**
+         * <p>The SQL template ID.</p>
+         * <br>
+         * <p>>  This parameter is returned only when you use a PolarDB-X 2.0 instance.</p>
+         */
         @NameInMap("SqlTemplateId")
         public String sqlTemplateId;
 
@@ -303,7 +308,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         public String trxId;
 
         /**
-         * <p>The username of the database.</p>
+         * <p>The username of the database account.</p>
          */
         @NameInMap("User")
         public String user;
@@ -421,13 +426,13 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         /**
          * <p>The number of active sessions within the account.</p>
          * <br>
-         * <p> > If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
+         * <p>>  If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
          */
         @NameInMap("ActiveCount")
         public Long activeCount;
 
         /**
-         * <p>The account of the database.</p>
+         * <p>The database account.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -523,7 +528,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         public Long maxActiveTime;
 
         /**
-         * <p>The list of sessions.</p>
+         * <p>The sessions.</p>
          */
         @NameInMap("SessionList")
         public java.util.List<GetMySQLAllSessionAsyncResponseBodyDataSessionDataSessionList> sessionList;

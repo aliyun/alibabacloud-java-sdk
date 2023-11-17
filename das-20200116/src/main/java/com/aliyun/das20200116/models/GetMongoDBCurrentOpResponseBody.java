@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetMongoDBCurrentOpResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The details of the sessions.</p>
+     */
     @NameInMap("Data")
     public GetMongoDBCurrentOpResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request was successful, **Successful** is returned. Otherwise, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,57 +85,111 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
     }
 
     public static class GetMongoDBCurrentOpResponseBodyDataSessionList extends TeaModel {
+        /**
+         * <p>Indicates whether the operation is active.</p>
+         */
         @NameInMap("Active")
         public Boolean active;
 
+        /**
+         * <p>The IP address of the client.</p>
+         */
         @NameInMap("Client")
         public String client;
 
+        /**
+         * <p>The document that contains the complete command object associated with the operation.</p>
+         */
         @NameInMap("Command")
         public String command;
 
+        /**
+         * <p>The connection ID.</p>
+         */
         @NameInMap("ConnectionId")
         public Long connectionId;
 
+        /**
+         * <p>The description of the connection.</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
+        /**
+         * <p>The driver.</p>
+         */
         @NameInMap("Driver")
         public String driver;
 
+        /**
+         * <p>The host.</p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>Indicates whether the operation is marked as terminated. If the operation is marked as terminated, true is returned.</p>
+         */
         @NameInMap("KillPending")
         public Boolean killPending;
 
+        /**
+         * <p>The namespace.</p>
+         */
         @NameInMap("Ns")
         public String ns;
 
+        /**
+         * <p>The type of the operation.</p>
+         */
         @NameInMap("Op")
         public String op;
 
+        /**
+         * <p>The operation ID.</p>
+         */
         @NameInMap("OpId")
         public String opId;
 
+        /**
+         * <p>The architecture of the operating system.</p>
+         */
         @NameInMap("OsArch")
         public String osArch;
 
+        /**
+         * <p>The name of the operating system.</p>
+         */
         @NameInMap("OsName")
         public String osName;
 
+        /**
+         * <p>The type of the operating system.</p>
+         */
         @NameInMap("OsType")
         public String osType;
 
+        /**
+         * <p>The description of the execution plan.</p>
+         */
         @NameInMap("PlanSummary")
         public String planSummary;
 
+        /**
+         * <p>The platform.</p>
+         */
         @NameInMap("Platform")
         public String platform;
 
+        /**
+         * <p>The duration of the operation. Unit: seconds.</p>
+         */
         @NameInMap("SecsRunning")
         public Long secsRunning;
 
+        /**
+         * <p>The shard.</p>
+         */
         @NameInMap("Shard")
         public String shard;
 
@@ -271,18 +345,33 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
     }
 
     public static class GetMongoDBCurrentOpResponseBodyDataSessionStat extends TeaModel {
+        /**
+         * <p>The number of active sessions.</p>
+         */
         @NameInMap("ActiveCount")
         public Long activeCount;
 
+        /**
+         * <p>The statistics on the IP addresses of the clients.</p>
+         */
         @NameInMap("ClientStats")
         public java.util.Map<String, DataSessionStatClientStatsValue> clientStats;
 
+        /**
+         * <p>The statistics on the namespaces.</p>
+         */
         @NameInMap("DbStats")
         public java.util.Map<String, DataSessionStatDbStatsValue> dbStats;
 
+        /**
+         * <p>The longest duration of a session. Unit: seconds.</p>
+         */
         @NameInMap("LongestSecsRunning")
         public Long longestSecsRunning;
 
+        /**
+         * <p>The total number of sessions.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
@@ -334,12 +423,21 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
     }
 
     public static class GetMongoDBCurrentOpResponseBodyData extends TeaModel {
+        /**
+         * <p>The sessions.</p>
+         */
         @NameInMap("SessionList")
         public java.util.List<GetMongoDBCurrentOpResponseBodyDataSessionList> sessionList;
 
+        /**
+         * <p>The statistics on the sessions.</p>
+         */
         @NameInMap("SessionStat")
         public GetMongoDBCurrentOpResponseBodyDataSessionStat sessionStat;
 
+        /**
+         * <p>The time when the database sessions were returned. The value is in the UNIX timestamp format. Unit: milliseconds.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 

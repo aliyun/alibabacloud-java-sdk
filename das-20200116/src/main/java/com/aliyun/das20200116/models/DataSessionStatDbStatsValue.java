@@ -4,9 +4,15 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DataSessionStatDbStatsValue extends TeaModel {
+    /**
+     * <p>The number of active namespaces.</p>
+     */
     @NameInMap("ActiveCount")
     public Long activeCount;
 
+    /**
+     * <p>The total number of namespaces.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
