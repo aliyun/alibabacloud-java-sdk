@@ -4,9 +4,15 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetDBInstanceConnectivityDiagnosisRequest extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The source IP address.</p>
+     */
     @NameInMap("SrcIp")
     public String srcIp;
 

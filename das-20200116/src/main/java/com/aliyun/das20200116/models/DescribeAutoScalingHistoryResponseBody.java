@@ -4,21 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned. The status code 200 indicates that the request was successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>AutoScalingInstanceHistory</p>
+     * <p>The history of auto scaling.</p>
      */
     @NameInMap("Data")
     public DescribeAutoScalingHistoryResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>> If the request was successful, **Successful** is returned. Otherwise, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -68,33 +85,74 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoScalingHistoryResponseBodyDataSpecHistory extends TeaModel {
+        /**
+         * <p>The error code returned by the scaling task. Valid values:</p>
+         * <br>
+         * <p>*   **Insufficient_Balance**: The account has insufficient balance or an unpaid order.</p>
+         * <p>*   **REACH_SPEC_UPPERBOUND**: The instance type reaches the upper limit.</p>
+         * <p>*   **Control_Error_Timeout_Msg**: The management task timed out.</p>
+         * <p>*   **Invoke_Rds_Api_Error_Msg**: Failed to call the ApsaraDB RDS API.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The original number of CPU cores of the instance.</p>
+         */
         @NameInMap("OriginCore")
         public Integer originCore;
 
+        /**
+         * <p>The original instance type.</p>
+         */
         @NameInMap("OriginInstanceClass")
         public String originInstanceClass;
 
+        /**
+         * <p>The original memory size of the instance. Unit: GB.</p>
+         */
         @NameInMap("OriginMemory")
         public Double originMemory;
 
+        /**
+         * <p>The type of the automatic performance scaling task. Valid values:</p>
+         * <br>
+         * <p>*   **SCALE_UP**: automatic instance type scale-up task.</p>
+         * <p>*   **SCALE_DOWN**: automatic instance type scale-down task.</p>
+         */
         @NameInMap("ScaleType")
         public String scaleType;
 
+        /**
+         * <p>The destination number of CPU cores of the instance.</p>
+         */
         @NameInMap("TargetCore")
         public Integer targetCore;
 
+        /**
+         * <p>The destination instance type.</p>
+         */
         @NameInMap("TargetInstanceClass")
         public String targetInstanceClass;
 
+        /**
+         * <p>The destination memory size of the instance. Unit: GB.</p>
+         */
         @NameInMap("TargetMemory")
         public Double targetMemory;
 
+        /**
+         * <p>The status of the task. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The task was successful.</p>
+         * <p>*   **false**: The task failed.</p>
+         */
         @NameInMap("TaskExcuteStatus")
         public Boolean taskExcuteStatus;
 
+        /**
+         * <p>The time when the task was run. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("TaskTime")
         public Long taskTime;
 
@@ -186,21 +244,39 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoScalingHistoryResponseBodyData extends TeaModel {
+        /**
+         * <p>The history of automatic bandwidth scaling of ApsaraDB for Redis instances. This feature is not supported.</p>
+         */
         @NameInMap("Bandwidth")
         public java.util.List<java.util.Map<String, ?>> bandwidth;
 
+        /**
+         * <p>The instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The history of resource scale-out of ApsaraDB for Redis instances. This feature is not supported.</p>
+         */
         @NameInMap("Resource")
         public java.util.List<java.util.Map<String, ?>> resource;
 
+        /**
+         * <p>The history of automatic shard scale-out of ApsaraDB for Redis instances. This feature is not supported.</p>
+         */
         @NameInMap("Shard")
         public java.util.List<java.util.Map<String, ?>> shard;
 
+        /**
+         * <p>The history of automatic performance scaling.</p>
+         */
         @NameInMap("SpecHistory")
         public java.util.List<DescribeAutoScalingHistoryResponseBodyDataSpecHistory> specHistory;
 
+        /**
+         * <p>The history of storage expansion. This feature is not supported.</p>
+         */
         @NameInMap("Storage")
         public java.util.List<java.util.Map<String, ?>> storage;
 

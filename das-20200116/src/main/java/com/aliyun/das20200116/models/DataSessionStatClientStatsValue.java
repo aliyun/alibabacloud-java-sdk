@@ -4,9 +4,15 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DataSessionStatClientStatsValue extends TeaModel {
+    /**
+     * <p>The number of clients whose IP addresses are active.</p>
+     */
     @NameInMap("ActiveCount")
     public Long activeCount;
 
+    /**
+     * <p>The total number of IP addresses of clients.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 

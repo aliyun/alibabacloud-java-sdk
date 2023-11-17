@@ -4,15 +4,29 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetMongoDBCurrentOpRequest extends TeaModel {
+    /**
+     * <p>The condition used to filter sessions during the query. For more information, see the currentOp command of MongoDB.</p>
+     */
     @NameInMap("FilterDoc")
     public String filterDoc;
 
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The node ID.</p>
+     * <br>
+     * <p>>  If you do not specify a node ID, the sessions of the primary node are queried by default.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>A reserved parameter. You do not need to specify the parameter.</p>
+     */
     @NameInMap("Role")
     public String role;
 
