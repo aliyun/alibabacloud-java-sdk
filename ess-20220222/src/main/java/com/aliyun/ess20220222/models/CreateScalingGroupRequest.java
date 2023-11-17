@@ -1048,6 +1048,9 @@ public class CreateScalingGroupRequest extends TeaModel {
         @NameInMap("Key")
         public String key;
 
+        @NameInMap("Propagate")
+        public Boolean propagate;
+
         /**
          * <p>The tag value that you want to add to the scaling group.</p>
          */
@@ -1065,6 +1068,14 @@ public class CreateScalingGroupRequest extends TeaModel {
         }
         public String getKey() {
             return this.key;
+        }
+
+        public CreateScalingGroupRequestTags setPropagate(Boolean propagate) {
+            this.propagate = propagate;
+            return this;
+        }
+        public Boolean getPropagate() {
+            return this.propagate;
         }
 
         public CreateScalingGroupRequestTags setValue(String value) {

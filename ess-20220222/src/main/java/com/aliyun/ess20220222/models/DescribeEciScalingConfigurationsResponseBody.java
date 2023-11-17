@@ -1580,6 +1580,12 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("FlexVolumeOptions")
         public String flexVolumeOptions;
 
+        @NameInMap("HostPathVolumePath")
+        public String hostPathVolumePath;
+
+        @NameInMap("HostPathVolumeType")
+        public String hostPathVolumeType;
+
         /**
          * <p>Indicates whether the NFS volume is read-only.</p>
          * <br>
@@ -1697,6 +1703,22 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
             return this.flexVolumeOptions;
         }
 
+        public DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsVolumes setHostPathVolumePath(String hostPathVolumePath) {
+            this.hostPathVolumePath = hostPathVolumePath;
+            return this;
+        }
+        public String getHostPathVolumePath() {
+            return this.hostPathVolumePath;
+        }
+
+        public DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsVolumes setHostPathVolumeType(String hostPathVolumeType) {
+            this.hostPathVolumeType = hostPathVolumeType;
+            return this;
+        }
+        public String getHostPathVolumeType() {
+            return this.hostPathVolumeType;
+        }
+
         public DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsVolumes setNFSVolumePath(String NFSVolumePath) {
             this.NFSVolumePath = NFSVolumePath;
             return this;
@@ -1805,6 +1827,18 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
          */
         @NameInMap("CreationTime")
         public String creationTime;
+
+        @NameInMap("DataCacheBucket")
+        public String dataCacheBucket;
+
+        @NameInMap("DataCacheBurstingEnabled")
+        public Boolean dataCacheBurstingEnabled;
+
+        @NameInMap("DataCachePL")
+        public String dataCachePL;
+
+        @NameInMap("DataCacheProvisionedIops")
+        public Integer dataCacheProvisionedIops;
 
         /**
          * <p>The ID of the image cache snapshot.</p>
@@ -2136,6 +2170,38 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public DescribeEciScalingConfigurationsResponseBodyScalingConfigurations setDataCacheBucket(String dataCacheBucket) {
+            this.dataCacheBucket = dataCacheBucket;
+            return this;
+        }
+        public String getDataCacheBucket() {
+            return this.dataCacheBucket;
+        }
+
+        public DescribeEciScalingConfigurationsResponseBodyScalingConfigurations setDataCacheBurstingEnabled(Boolean dataCacheBurstingEnabled) {
+            this.dataCacheBurstingEnabled = dataCacheBurstingEnabled;
+            return this;
+        }
+        public Boolean getDataCacheBurstingEnabled() {
+            return this.dataCacheBurstingEnabled;
+        }
+
+        public DescribeEciScalingConfigurationsResponseBodyScalingConfigurations setDataCachePL(String dataCachePL) {
+            this.dataCachePL = dataCachePL;
+            return this;
+        }
+        public String getDataCachePL() {
+            return this.dataCachePL;
+        }
+
+        public DescribeEciScalingConfigurationsResponseBodyScalingConfigurations setDataCacheProvisionedIops(Integer dataCacheProvisionedIops) {
+            this.dataCacheProvisionedIops = dataCacheProvisionedIops;
+            return this;
+        }
+        public Integer getDataCacheProvisionedIops() {
+            return this.dataCacheProvisionedIops;
         }
 
         public DescribeEciScalingConfigurationsResponseBodyScalingConfigurations setDescription(String description) {
