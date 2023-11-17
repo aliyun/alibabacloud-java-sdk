@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>linkvisual20230630</artifactId>
-  <version>1.0.2</version>
+  <version>1.1.0</version>
   <packaging>jar</packaging>
   <name>linkvisual20230630</name>
   <description>Alibaba Cloud LinkVisual (20230630) SDK for Java
