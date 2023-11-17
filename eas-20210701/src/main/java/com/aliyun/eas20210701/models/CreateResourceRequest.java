@@ -16,20 +16,11 @@ public class CreateResourceRequest extends TeaModel {
     @NameInMap("EcsInstanceType")
     public String ecsInstanceType;
 
-    @NameInMap("ExternalClusterId")
-    public String externalClusterId;
-
-    @NameInMap("NodeMatchLabels")
-    public java.util.Map<String, String> nodeMatchLabels;
-
-    @NameInMap("NodeTolerations")
-    public java.util.List<CreateResourceRequestNodeTolerations> nodeTolerations;
-
     @NameInMap("ResourceType")
     public String resourceType;
 
-    @NameInMap("RoleName")
-    public String roleName;
+    @NameInMap("SelfManagedResourceOptions")
+    public CreateResourceRequestSelfManagedResourceOptions selfManagedResourceOptions;
 
     @NameInMap("SystemDiskSize")
     public Integer systemDiskSize;
@@ -74,30 +65,6 @@ public class CreateResourceRequest extends TeaModel {
         return this.ecsInstanceType;
     }
 
-    public CreateResourceRequest setExternalClusterId(String externalClusterId) {
-        this.externalClusterId = externalClusterId;
-        return this;
-    }
-    public String getExternalClusterId() {
-        return this.externalClusterId;
-    }
-
-    public CreateResourceRequest setNodeMatchLabels(java.util.Map<String, String> nodeMatchLabels) {
-        this.nodeMatchLabels = nodeMatchLabels;
-        return this;
-    }
-    public java.util.Map<String, String> getNodeMatchLabels() {
-        return this.nodeMatchLabels;
-    }
-
-    public CreateResourceRequest setNodeTolerations(java.util.List<CreateResourceRequestNodeTolerations> nodeTolerations) {
-        this.nodeTolerations = nodeTolerations;
-        return this;
-    }
-    public java.util.List<CreateResourceRequestNodeTolerations> getNodeTolerations() {
-        return this.nodeTolerations;
-    }
-
     public CreateResourceRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -106,12 +73,12 @@ public class CreateResourceRequest extends TeaModel {
         return this.resourceType;
     }
 
-    public CreateResourceRequest setRoleName(String roleName) {
-        this.roleName = roleName;
+    public CreateResourceRequest setSelfManagedResourceOptions(CreateResourceRequestSelfManagedResourceOptions selfManagedResourceOptions) {
+        this.selfManagedResourceOptions = selfManagedResourceOptions;
         return this;
     }
-    public String getRoleName() {
-        return this.roleName;
+    public CreateResourceRequestSelfManagedResourceOptions getSelfManagedResourceOptions() {
+        return this.selfManagedResourceOptions;
     }
 
     public CreateResourceRequest setSystemDiskSize(Integer systemDiskSize) {
@@ -130,7 +97,7 @@ public class CreateResourceRequest extends TeaModel {
         return this.zone;
     }
 
-    public static class CreateResourceRequestNodeTolerations extends TeaModel {
+    public static class CreateResourceRequestSelfManagedResourceOptionsNodeTolerations extends TeaModel {
         @NameInMap("effect")
         public String effect;
 
@@ -143,12 +110,12 @@ public class CreateResourceRequest extends TeaModel {
         @NameInMap("value")
         public String value;
 
-        public static CreateResourceRequestNodeTolerations build(java.util.Map<String, ?> map) throws Exception {
-            CreateResourceRequestNodeTolerations self = new CreateResourceRequestNodeTolerations();
+        public static CreateResourceRequestSelfManagedResourceOptionsNodeTolerations build(java.util.Map<String, ?> map) throws Exception {
+            CreateResourceRequestSelfManagedResourceOptionsNodeTolerations self = new CreateResourceRequestSelfManagedResourceOptionsNodeTolerations();
             return TeaModel.build(map, self);
         }
 
-        public CreateResourceRequestNodeTolerations setEffect(String effect) {
+        public CreateResourceRequestSelfManagedResourceOptionsNodeTolerations setEffect(String effect) {
             this.effect = effect;
             return this;
         }
@@ -156,7 +123,7 @@ public class CreateResourceRequest extends TeaModel {
             return this.effect;
         }
 
-        public CreateResourceRequestNodeTolerations setKey(String key) {
+        public CreateResourceRequestSelfManagedResourceOptionsNodeTolerations setKey(String key) {
             this.key = key;
             return this;
         }
@@ -164,7 +131,7 @@ public class CreateResourceRequest extends TeaModel {
             return this.key;
         }
 
-        public CreateResourceRequestNodeTolerations setOperator(String operator) {
+        public CreateResourceRequestSelfManagedResourceOptionsNodeTolerations setOperator(String operator) {
             this.operator = operator;
             return this;
         }
@@ -172,12 +139,64 @@ public class CreateResourceRequest extends TeaModel {
             return this.operator;
         }
 
-        public CreateResourceRequestNodeTolerations setValue(String value) {
+        public CreateResourceRequestSelfManagedResourceOptionsNodeTolerations setValue(String value) {
             this.value = value;
             return this;
         }
         public String getValue() {
             return this.value;
+        }
+
+    }
+
+    public static class CreateResourceRequestSelfManagedResourceOptions extends TeaModel {
+        @NameInMap("ExternalClusterId")
+        public String externalClusterId;
+
+        @NameInMap("NodeMatchLabels")
+        public java.util.Map<String, String> nodeMatchLabels;
+
+        @NameInMap("NodeTolerations")
+        public java.util.List<CreateResourceRequestSelfManagedResourceOptionsNodeTolerations> nodeTolerations;
+
+        @NameInMap("RoleName")
+        public String roleName;
+
+        public static CreateResourceRequestSelfManagedResourceOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateResourceRequestSelfManagedResourceOptions self = new CreateResourceRequestSelfManagedResourceOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateResourceRequestSelfManagedResourceOptions setExternalClusterId(String externalClusterId) {
+            this.externalClusterId = externalClusterId;
+            return this;
+        }
+        public String getExternalClusterId() {
+            return this.externalClusterId;
+        }
+
+        public CreateResourceRequestSelfManagedResourceOptions setNodeMatchLabels(java.util.Map<String, String> nodeMatchLabels) {
+            this.nodeMatchLabels = nodeMatchLabels;
+            return this;
+        }
+        public java.util.Map<String, String> getNodeMatchLabels() {
+            return this.nodeMatchLabels;
+        }
+
+        public CreateResourceRequestSelfManagedResourceOptions setNodeTolerations(java.util.List<CreateResourceRequestSelfManagedResourceOptionsNodeTolerations> nodeTolerations) {
+            this.nodeTolerations = nodeTolerations;
+            return this;
+        }
+        public java.util.List<CreateResourceRequestSelfManagedResourceOptionsNodeTolerations> getNodeTolerations() {
+            return this.nodeTolerations;
+        }
+
+        public CreateResourceRequestSelfManagedResourceOptions setRoleName(String roleName) {
+            this.roleName = roleName;
+            return this;
+        }
+        public String getRoleName() {
+            return this.roleName;
         }
 
     }

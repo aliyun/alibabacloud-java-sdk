@@ -13,6 +13,9 @@ public class ListGroupsRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
     public static ListGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGroupsRequest self = new ListGroupsRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class ListGroupsRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public ListGroupsRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

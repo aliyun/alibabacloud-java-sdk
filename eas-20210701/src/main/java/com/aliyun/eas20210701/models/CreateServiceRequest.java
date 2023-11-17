@@ -10,6 +10,9 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;
 
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
     @NameInMap("body")
     public String body;
 
@@ -32,6 +35,14 @@ public class CreateServiceRequest extends TeaModel {
     }
     public java.util.Map<String, String> getLabels() {
         return this.labels;
+    }
+
+    public CreateServiceRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
     public CreateServiceRequest setBody(String body) {
