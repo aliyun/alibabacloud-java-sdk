@@ -7,6 +7,18 @@ public class Service extends TeaModel {
     @NameInMap("AccessToken")
     public String accessToken;
 
+    @NameInMap("AppConfig")
+    public String appConfig;
+
+    @NameInMap("AppSpecName")
+    public String appSpecName;
+
+    @NameInMap("AppType")
+    public String appType;
+
+    @NameInMap("AppVersion")
+    public String appVersion;
+
     @NameInMap("CallerUid")
     public String callerUid;
 
@@ -118,6 +130,9 @@ public class Service extends TeaModel {
     @NameInMap("Weight")
     public Integer weight;
 
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
     public static Service build(java.util.Map<String, ?> map) throws Exception {
         Service self = new Service();
         return TeaModel.build(map, self);
@@ -129,6 +144,38 @@ public class Service extends TeaModel {
     }
     public String getAccessToken() {
         return this.accessToken;
+    }
+
+    public Service setAppConfig(String appConfig) {
+        this.appConfig = appConfig;
+        return this;
+    }
+    public String getAppConfig() {
+        return this.appConfig;
+    }
+
+    public Service setAppSpecName(String appSpecName) {
+        this.appSpecName = appSpecName;
+        return this;
+    }
+    public String getAppSpecName() {
+        return this.appSpecName;
+    }
+
+    public Service setAppType(String appType) {
+        this.appType = appType;
+        return this;
+    }
+    public String getAppType() {
+        return this.appType;
+    }
+
+    public Service setAppVersion(String appVersion) {
+        this.appVersion = appVersion;
+        return this;
+    }
+    public String getAppVersion() {
+        return this.appVersion;
     }
 
     public Service setCallerUid(String callerUid) {
@@ -425,6 +472,14 @@ public class Service extends TeaModel {
     }
     public Integer getWeight() {
         return this.weight;
+    }
+
+    public Service setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
     public static class ServiceLabels extends TeaModel {

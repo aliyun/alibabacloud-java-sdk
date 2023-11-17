@@ -118,6 +118,9 @@ public class ListServicesShrinkRequest extends TeaModel {
     @NameInMap("Sort")
     public String sort;
 
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
     public static ListServicesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListServicesShrinkRequest self = new ListServicesShrinkRequest();
         return TeaModel.build(map, self);
@@ -225,6 +228,14 @@ public class ListServicesShrinkRequest extends TeaModel {
     }
     public String getSort() {
         return this.sort;
+    }
+
+    public ListServicesShrinkRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

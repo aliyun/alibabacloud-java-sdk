@@ -25,6 +25,9 @@ public class Instance extends TeaModel {
     @NameInMap("IsSpot")
     public Boolean isSpot;
 
+    @NameInMap("Isolated")
+    public Boolean isolated;
+
     @NameInMap("LastState")
     public java.util.List<java.util.Map<String, ?>> lastState;
 
@@ -123,6 +126,14 @@ public class Instance extends TeaModel {
     }
     public Boolean getIsSpot() {
         return this.isSpot;
+    }
+
+    public Instance setIsolated(Boolean isolated) {
+        this.isolated = isolated;
+        return this;
+    }
+    public Boolean getIsolated() {
+        return this.isolated;
     }
 
     public Instance setLastState(java.util.List<java.util.Map<String, ?>> lastState) {

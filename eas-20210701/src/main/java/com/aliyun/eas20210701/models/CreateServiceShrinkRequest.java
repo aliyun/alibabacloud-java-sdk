@@ -10,6 +10,9 @@ public class CreateServiceShrinkRequest extends TeaModel {
     @NameInMap("Labels")
     public String labelsShrink;
 
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
     @NameInMap("body")
     public String body;
 
@@ -32,6 +35,14 @@ public class CreateServiceShrinkRequest extends TeaModel {
     }
     public String getLabelsShrink() {
         return this.labelsShrink;
+    }
+
+    public CreateServiceShrinkRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
     public CreateServiceShrinkRequest setBody(String body) {

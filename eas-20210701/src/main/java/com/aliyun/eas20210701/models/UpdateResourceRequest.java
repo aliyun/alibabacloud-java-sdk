@@ -4,34 +4,15 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class UpdateResourceRequest extends TeaModel {
-    @NameInMap("NodeMatchLabels")
-    public java.util.Map<String, String> nodeMatchLabels;
-
-    @NameInMap("NodeTolerations")
-    public java.util.List<UpdateResourceRequestNodeTolerations> nodeTolerations;
-
     @NameInMap("ResourceName")
     public String resourceName;
+
+    @NameInMap("SelfManagedResourceOptions")
+    public UpdateResourceRequestSelfManagedResourceOptions selfManagedResourceOptions;
 
     public static UpdateResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateResourceRequest self = new UpdateResourceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateResourceRequest setNodeMatchLabels(java.util.Map<String, String> nodeMatchLabels) {
-        this.nodeMatchLabels = nodeMatchLabels;
-        return this;
-    }
-    public java.util.Map<String, String> getNodeMatchLabels() {
-        return this.nodeMatchLabels;
-    }
-
-    public UpdateResourceRequest setNodeTolerations(java.util.List<UpdateResourceRequestNodeTolerations> nodeTolerations) {
-        this.nodeTolerations = nodeTolerations;
-        return this;
-    }
-    public java.util.List<UpdateResourceRequestNodeTolerations> getNodeTolerations() {
-        return this.nodeTolerations;
     }
 
     public UpdateResourceRequest setResourceName(String resourceName) {
@@ -42,7 +23,15 @@ public class UpdateResourceRequest extends TeaModel {
         return this.resourceName;
     }
 
-    public static class UpdateResourceRequestNodeTolerations extends TeaModel {
+    public UpdateResourceRequest setSelfManagedResourceOptions(UpdateResourceRequestSelfManagedResourceOptions selfManagedResourceOptions) {
+        this.selfManagedResourceOptions = selfManagedResourceOptions;
+        return this;
+    }
+    public UpdateResourceRequestSelfManagedResourceOptions getSelfManagedResourceOptions() {
+        return this.selfManagedResourceOptions;
+    }
+
+    public static class UpdateResourceRequestSelfManagedResourceOptionsNodeTolerations extends TeaModel {
         @NameInMap("effect")
         public String effect;
 
@@ -55,12 +44,12 @@ public class UpdateResourceRequest extends TeaModel {
         @NameInMap("value")
         public String value;
 
-        public static UpdateResourceRequestNodeTolerations build(java.util.Map<String, ?> map) throws Exception {
-            UpdateResourceRequestNodeTolerations self = new UpdateResourceRequestNodeTolerations();
+        public static UpdateResourceRequestSelfManagedResourceOptionsNodeTolerations build(java.util.Map<String, ?> map) throws Exception {
+            UpdateResourceRequestSelfManagedResourceOptionsNodeTolerations self = new UpdateResourceRequestSelfManagedResourceOptionsNodeTolerations();
             return TeaModel.build(map, self);
         }
 
-        public UpdateResourceRequestNodeTolerations setEffect(String effect) {
+        public UpdateResourceRequestSelfManagedResourceOptionsNodeTolerations setEffect(String effect) {
             this.effect = effect;
             return this;
         }
@@ -68,7 +57,7 @@ public class UpdateResourceRequest extends TeaModel {
             return this.effect;
         }
 
-        public UpdateResourceRequestNodeTolerations setKey(String key) {
+        public UpdateResourceRequestSelfManagedResourceOptionsNodeTolerations setKey(String key) {
             this.key = key;
             return this;
         }
@@ -76,7 +65,7 @@ public class UpdateResourceRequest extends TeaModel {
             return this.key;
         }
 
-        public UpdateResourceRequestNodeTolerations setOperator(String operator) {
+        public UpdateResourceRequestSelfManagedResourceOptionsNodeTolerations setOperator(String operator) {
             this.operator = operator;
             return this;
         }
@@ -84,12 +73,42 @@ public class UpdateResourceRequest extends TeaModel {
             return this.operator;
         }
 
-        public UpdateResourceRequestNodeTolerations setValue(String value) {
+        public UpdateResourceRequestSelfManagedResourceOptionsNodeTolerations setValue(String value) {
             this.value = value;
             return this;
         }
         public String getValue() {
             return this.value;
+        }
+
+    }
+
+    public static class UpdateResourceRequestSelfManagedResourceOptions extends TeaModel {
+        @NameInMap("NodeMatchLabels")
+        public java.util.Map<String, String> nodeMatchLabels;
+
+        @NameInMap("NodeTolerations")
+        public java.util.List<UpdateResourceRequestSelfManagedResourceOptionsNodeTolerations> nodeTolerations;
+
+        public static UpdateResourceRequestSelfManagedResourceOptions build(java.util.Map<String, ?> map) throws Exception {
+            UpdateResourceRequestSelfManagedResourceOptions self = new UpdateResourceRequestSelfManagedResourceOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateResourceRequestSelfManagedResourceOptions setNodeMatchLabels(java.util.Map<String, String> nodeMatchLabels) {
+            this.nodeMatchLabels = nodeMatchLabels;
+            return this;
+        }
+        public java.util.Map<String, String> getNodeMatchLabels() {
+            return this.nodeMatchLabels;
+        }
+
+        public UpdateResourceRequestSelfManagedResourceOptions setNodeTolerations(java.util.List<UpdateResourceRequestSelfManagedResourceOptionsNodeTolerations> nodeTolerations) {
+            this.nodeTolerations = nodeTolerations;
+            return this;
+        }
+        public java.util.List<UpdateResourceRequestSelfManagedResourceOptionsNodeTolerations> getNodeTolerations() {
+            return this.nodeTolerations;
         }
 
     }
