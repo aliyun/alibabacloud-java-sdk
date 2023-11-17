@@ -77,6 +77,18 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     @NameInMap("CpuOptionsThreadsPerCore")
     public Integer cpuOptionsThreadsPerCore;
 
+    @NameInMap("DataCacheBucket")
+    public String dataCacheBucket;
+
+    @NameInMap("DataCacheBurstingEnabled")
+    public Boolean dataCacheBurstingEnabled;
+
+    @NameInMap("DataCachePL")
+    public String dataCachePL;
+
+    @NameInMap("DataCacheProvisionedIops")
+    public Integer dataCacheProvisionedIops;
+
     /**
      * <p>> This parameter is unavailable.</p>
      */
@@ -396,6 +408,38 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     }
     public Integer getCpuOptionsThreadsPerCore() {
         return this.cpuOptionsThreadsPerCore;
+    }
+
+    public ModifyEciScalingConfigurationRequest setDataCacheBucket(String dataCacheBucket) {
+        this.dataCacheBucket = dataCacheBucket;
+        return this;
+    }
+    public String getDataCacheBucket() {
+        return this.dataCacheBucket;
+    }
+
+    public ModifyEciScalingConfigurationRequest setDataCacheBurstingEnabled(Boolean dataCacheBurstingEnabled) {
+        this.dataCacheBurstingEnabled = dataCacheBurstingEnabled;
+        return this;
+    }
+    public Boolean getDataCacheBurstingEnabled() {
+        return this.dataCacheBurstingEnabled;
+    }
+
+    public ModifyEciScalingConfigurationRequest setDataCachePL(String dataCachePL) {
+        this.dataCachePL = dataCachePL;
+        return this;
+    }
+    public String getDataCachePL() {
+        return this.dataCachePL;
+    }
+
+    public ModifyEciScalingConfigurationRequest setDataCacheProvisionedIops(Integer dataCacheProvisionedIops) {
+        this.dataCacheProvisionedIops = dataCacheProvisionedIops;
+        return this;
+    }
+    public Integer getDataCacheProvisionedIops() {
+        return this.dataCacheProvisionedIops;
     }
 
     public ModifyEciScalingConfigurationRequest setDescription(String description) {

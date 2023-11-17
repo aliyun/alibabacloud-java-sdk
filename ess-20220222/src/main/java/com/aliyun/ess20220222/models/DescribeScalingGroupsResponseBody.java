@@ -229,6 +229,9 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeScalingGroupsResponseBodyScalingGroupsTags extends TeaModel {
+        @NameInMap("Propagate")
+        public Boolean propagate;
+
         @NameInMap("TagKey")
         public String tagKey;
 
@@ -238,6 +241,14 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         public static DescribeScalingGroupsResponseBodyScalingGroupsTags build(java.util.Map<String, ?> map) throws Exception {
             DescribeScalingGroupsResponseBodyScalingGroupsTags self = new DescribeScalingGroupsResponseBodyScalingGroupsTags();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingGroupsResponseBodyScalingGroupsTags setPropagate(Boolean propagate) {
+            this.propagate = propagate;
+            return this;
+        }
+        public Boolean getPropagate() {
+            return this.propagate;
         }
 
         public DescribeScalingGroupsResponseBodyScalingGroupsTags setTagKey(String tagKey) {

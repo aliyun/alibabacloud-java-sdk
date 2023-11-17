@@ -106,6 +106,9 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         @NameInMap("LoadBalancerWeight")
         public Integer loadBalancerWeight;
 
+        @NameInMap("PrivateIpAddress")
+        public String privateIpAddress;
+
         @NameInMap("ScalingActivityId")
         public String scalingActivityId;
 
@@ -213,6 +216,14 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         }
         public Integer getLoadBalancerWeight() {
             return this.loadBalancerWeight;
+        }
+
+        public DescribeScalingInstancesResponseBodyScalingInstances setPrivateIpAddress(String privateIpAddress) {
+            this.privateIpAddress = privateIpAddress;
+            return this;
+        }
+        public String getPrivateIpAddress() {
+            return this.privateIpAddress;
         }
 
         public DescribeScalingInstancesResponseBodyScalingInstances setScalingActivityId(String scalingActivityId) {

@@ -19,6 +19,9 @@ public class DescribeScalingInstancesRequest extends TeaModel {
     @NameInMap("LifecycleState")
     public String lifecycleState;
 
+    @NameInMap("LifecycleStates")
+    public java.util.List<String> lifecycleStates;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -92,6 +95,14 @@ public class DescribeScalingInstancesRequest extends TeaModel {
     }
     public String getLifecycleState() {
         return this.lifecycleState;
+    }
+
+    public DescribeScalingInstancesRequest setLifecycleStates(java.util.List<String> lifecycleStates) {
+        this.lifecycleStates = lifecycleStates;
+        return this;
+    }
+    public java.util.List<String> getLifecycleStates() {
+        return this.lifecycleStates;
     }
 
     public DescribeScalingInstancesRequest setOwnerAccount(String ownerAccount) {

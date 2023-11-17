@@ -681,6 +681,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CpuOptionsThreadsPerCore", request.cpuOptionsThreadsPerCore);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dataCacheBucket)) {
+            query.put("DataCacheBucket", request.dataCacheBucket);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataCacheBurstingEnabled)) {
+            query.put("DataCacheBurstingEnabled", request.dataCacheBurstingEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataCachePL)) {
+            query.put("DataCachePL", request.dataCachePL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataCacheProvisionedIops)) {
+            query.put("DataCacheProvisionedIops", request.dataCacheProvisionedIops);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
         }
@@ -2837,6 +2853,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("LifecycleState", request.lifecycleState);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.lifecycleStates)) {
+            query.put("LifecycleStates", request.lifecycleStates);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -4105,6 +4125,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.cpuOptionsThreadsPerCore)) {
             query.put("CpuOptionsThreadsPerCore", request.cpuOptionsThreadsPerCore);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataCacheBucket)) {
+            query.put("DataCacheBucket", request.dataCacheBucket);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataCacheBurstingEnabled)) {
+            query.put("DataCacheBurstingEnabled", request.dataCacheBurstingEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataCachePL)) {
+            query.put("DataCachePL", request.dataCachePL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataCacheProvisionedIops)) {
+            query.put("DataCacheProvisionedIops", request.dataCacheProvisionedIops);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
