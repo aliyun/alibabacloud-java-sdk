@@ -1876,4 +1876,99 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.singleSendMailWithOptions(request, runtime);
     }
+
+    public SingleSendMailV2Response singleSendMailV2WithOptions(SingleSendMailV2Request tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SingleSendMailV2ShrinkRequest request = new SingleSendMailV2ShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.htmlBodyPlaceHolders)) {
+            request.htmlBodyPlaceHoldersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.htmlBodyPlaceHolders, "HtmlBodyPlaceHolders", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            query.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addressType)) {
+            query.put("AddressType", request.addressType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clickTrace)) {
+            query.put("ClickTrace", request.clickTrace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fromAlias)) {
+            query.put("FromAlias", request.fromAlias);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.htmlBody)) {
+            query.put("HtmlBody", request.htmlBody);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.htmlBodyPlaceHoldersShrink)) {
+            query.put("HtmlBodyPlaceHolders", request.htmlBodyPlaceHoldersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.replyAddress)) {
+            query.put("ReplyAddress", request.replyAddress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.replyAddressAlias)) {
+            query.put("ReplyAddressAlias", request.replyAddressAlias);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.replyToAddress)) {
+            query.put("ReplyToAddress", request.replyToAddress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subject)) {
+            query.put("Subject", request.subject);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagName)) {
+            query.put("TagName", request.tagName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.textBody)) {
+            query.put("TextBody", request.textBody);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toAddress)) {
+            query.put("ToAddress", request.toAddress);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SingleSendMailV2"),
+            new TeaPair("version", "2017-06-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SingleSendMailV2Response());
+    }
+
+    public SingleSendMailV2Response singleSendMailV2(SingleSendMailV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.singleSendMailV2WithOptions(request, runtime);
+    }
 }
