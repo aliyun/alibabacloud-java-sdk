@@ -4,12 +4,21 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class EdgeClusterAddEdgeMachineRequest extends TeaModel {
+    /**
+     * <p>The timeout period of sessions. Unit: seconds.</p>
+     */
     @NameInMap("expired")
     public Long expired;
 
+    /**
+     * <p>The node pool ID.</p>
+     */
     @NameInMap("nodepool_id")
     public String nodepoolId;
 
+    /**
+     * <p>The options that you want to configure.</p>
+     */
     @NameInMap("options")
     public String options;
 

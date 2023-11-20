@@ -88,6 +88,9 @@ public class ModifyClusterRequest extends TeaModel {
     @NameInMap("resource_group_id")
     public String resourceGroupId;
 
+    @NameInMap("system_events_logging")
+    public ModifyClusterRequestSystemEventsLogging systemEventsLogging;
+
     public static ModifyClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyClusterRequest self = new ModifyClusterRequest();
         return TeaModel.build(map, self);
@@ -179,6 +182,44 @@ public class ModifyClusterRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public ModifyClusterRequest setSystemEventsLogging(ModifyClusterRequestSystemEventsLogging systemEventsLogging) {
+        this.systemEventsLogging = systemEventsLogging;
+        return this;
+    }
+    public ModifyClusterRequestSystemEventsLogging getSystemEventsLogging() {
+        return this.systemEventsLogging;
+    }
+
+    public static class ModifyClusterRequestSystemEventsLogging extends TeaModel {
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        @NameInMap("logging_project")
+        public String loggingProject;
+
+        public static ModifyClusterRequestSystemEventsLogging build(java.util.Map<String, ?> map) throws Exception {
+            ModifyClusterRequestSystemEventsLogging self = new ModifyClusterRequestSystemEventsLogging();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyClusterRequestSystemEventsLogging setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public ModifyClusterRequestSystemEventsLogging setLoggingProject(String loggingProject) {
+            this.loggingProject = loggingProject;
+            return this;
+        }
+        public String getLoggingProject() {
+            return this.loggingProject;
+        }
+
     }
 
 }

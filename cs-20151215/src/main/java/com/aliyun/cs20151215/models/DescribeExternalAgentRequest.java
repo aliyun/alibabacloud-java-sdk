@@ -4,9 +4,20 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeExternalAgentRequest extends TeaModel {
+    /**
+     * <p>The agent mode.</p>
+     */
     @NameInMap("AgentMode")
     public String agentMode;
 
+    /**
+     * <p>Specifies whether to obtain the credentials that are used to access the cluster over the internal network.</p>
+     * <br>
+     * <p>*   `true`: obtains the credentials that are used to access the cluster over the internal network.</p>
+     * <p>*   `false`: obtains the credentials that are used to access the cluster over the Internet.</p>
+     * <br>
+     * <p>Default value: `false`.</p>
+     */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 

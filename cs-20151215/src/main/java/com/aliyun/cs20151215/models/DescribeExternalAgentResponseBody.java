@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeExternalAgentResponseBody extends TeaModel {
     /**
-     * <p>The agent configurations in YAML format.</p>
+     * <p>The agent configurations in the YAML format.</p>
      */
     @NameInMap("config")
     public String config;

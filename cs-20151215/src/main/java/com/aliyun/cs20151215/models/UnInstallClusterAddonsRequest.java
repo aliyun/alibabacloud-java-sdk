@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class UnInstallClusterAddonsRequest extends TeaModel {
+    /**
+     * <p>The list of components that you want to uninstall. The list is an array.</p>
+     */
     @NameInMap("addons")
     public java.util.List<UnInstallClusterAddonsRequestAddons> addons;
 
@@ -21,9 +24,15 @@ public class UnInstallClusterAddonsRequest extends TeaModel {
     }
 
     public static class UnInstallClusterAddonsRequestAddons extends TeaModel {
+        /**
+         * <p>Whether to clean up cloud resources.</p>
+         */
         @NameInMap("cleanup_cloud_resources")
         public Boolean cleanupCloudResources;
 
+        /**
+         * <p>The component name.</p>
+         */
         @NameInMap("name")
         public String name;
 

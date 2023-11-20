@@ -57,9 +57,6 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @NameInMap("docker_version")
     public String dockerVersion;
 
-    /**
-     * <p>The ID of the Server Load Balancer (SLB) instance that is used for the Ingress of the cluster.</p>
-     */
     @NameInMap("external_loadbalancer_id")
     public String externalLoadbalancerId;
 
@@ -95,22 +92,9 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @NameInMap("name")
     public String name;
 
-    /**
-     * <p>The network mode of the cluster. Valid values:</p>
-     * <br>
-     * <p>*   `classic`: classic network</p>
-     * <p>*   `vpc`: virtual private cloud (VPC)</p>
-     * <p>*   `overlay`: overlay network</p>
-     * <p>*   `calico`: network powered by Calico</p>
-     * <br>
-     * <p>Default value: `vpc`.</p>
-     */
     @NameInMap("network_mode")
     public String networkMode;
 
-    /**
-     * <p>The Kubernetes version to which the cluster can be updated.</p>
-     */
     @NameInMap("next_version")
     public String nextVersion;
 
@@ -120,12 +104,6 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @NameInMap("parameters")
     public java.util.Map<String, String> parameters;
 
-    /**
-     * <p>Indicates whether Alibaba Cloud DNS PrivateZone is enabled.</p>
-     * <br>
-     * <p>*   `true`: Alibaba Cloud DNS PrivateZone is enabled.</p>
-     * <p>*   `false`: Alibaba Cloud DNS PrivateZone is disabled.</p>
-     */
     @NameInMap("private_zone")
     public Boolean privateZone;
 
@@ -225,9 +203,6 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @NameInMap("worker_ram_role_name")
     public String workerRamRoleName;
 
-    /**
-     * <p>The ID of the zone where the cluster is deployed.</p>
-     */
     @NameInMap("zone_id")
     public String zoneId;
 

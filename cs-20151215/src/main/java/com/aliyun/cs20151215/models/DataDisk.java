@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DataDisk extends TeaModel {
+    @NameInMap("auto_format")
+    public Boolean autoFormat;
+
     @NameInMap("auto_snapshot_policy_id")
     public String autoSnapshotPolicyId;
 
@@ -15,6 +18,12 @@ public class DataDisk extends TeaModel {
 
     @NameInMap("encrypted")
     public String encrypted;
+
+    @NameInMap("file_system")
+    public String fileSystem;
+
+    @NameInMap("mount_target")
+    public String mountTarget;
 
     @NameInMap("performance_level")
     public String performanceLevel;
@@ -28,6 +37,14 @@ public class DataDisk extends TeaModel {
     public static DataDisk build(java.util.Map<String, ?> map) throws Exception {
         DataDisk self = new DataDisk();
         return TeaModel.build(map, self);
+    }
+
+    public DataDisk setAutoFormat(Boolean autoFormat) {
+        this.autoFormat = autoFormat;
+        return this;
+    }
+    public Boolean getAutoFormat() {
+        return this.autoFormat;
     }
 
     public DataDisk setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
@@ -60,6 +77,22 @@ public class DataDisk extends TeaModel {
     }
     public String getEncrypted() {
         return this.encrypted;
+    }
+
+    public DataDisk setFileSystem(String fileSystem) {
+        this.fileSystem = fileSystem;
+        return this;
+    }
+    public String getFileSystem() {
+        return this.fileSystem;
+    }
+
+    public DataDisk setMountTarget(String mountTarget) {
+        this.mountTarget = mountTarget;
+        return this;
+    }
+    public String getMountTarget() {
+        return this.mountTarget;
     }
 
     public DataDisk setPerformanceLevel(String performanceLevel) {

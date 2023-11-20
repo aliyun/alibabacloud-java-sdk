@@ -45,6 +45,47 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         return this.body;
     }
 
+    public static class DescribeClusterResourcesResponseBodyDependencies extends TeaModel {
+        @NameInMap("cluster_id")
+        public String clusterId;
+
+        @NameInMap("resource_type")
+        public String resourceType;
+
+        @NameInMap("instance_id")
+        public String instanceId;
+
+        public static DescribeClusterResourcesResponseBodyDependencies build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterResourcesResponseBodyDependencies self = new DescribeClusterResourcesResponseBodyDependencies();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterResourcesResponseBodyDependencies setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public DescribeClusterResourcesResponseBodyDependencies setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public DescribeClusterResourcesResponseBodyDependencies setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+    }
+
     public static class DescribeClusterResourcesResponseBody extends TeaModel {
         /**
          * <p>The ID of the cluster.</p>
@@ -99,6 +140,9 @@ public class DescribeClusterResourcesResponse extends TeaModel {
          */
         @NameInMap("auto_create")
         public Long autoCreate;
+
+        @NameInMap("dependencies")
+        public java.util.List<DescribeClusterResourcesResponseBodyDependencies> dependencies;
 
         public static DescribeClusterResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
             DescribeClusterResourcesResponseBody self = new DescribeClusterResourcesResponseBody();
@@ -159,6 +203,14 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         }
         public Long getAutoCreate() {
             return this.autoCreate;
+        }
+
+        public DescribeClusterResourcesResponseBody setDependencies(java.util.List<DescribeClusterResourcesResponseBodyDependencies> dependencies) {
+            this.dependencies = dependencies;
+            return this;
+        }
+        public java.util.List<DescribeClusterResourcesResponseBodyDependencies> getDependencies() {
+            return this.dependencies;
         }
 
     }
