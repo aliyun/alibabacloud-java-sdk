@@ -128,6 +128,9 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         @NameInMap("CveId")
         public String cveId;
 
+        /**
+         * <p>The link of the CVE content.</p>
+         */
         @NameInMap("CveLink")
         public String cveLink;
 
