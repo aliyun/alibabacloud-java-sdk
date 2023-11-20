@@ -6691,6 +6691,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("entities", request.entitiesShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            body.put("scope", request.scope);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.thirdPartId)) {
             body.put("third_part_id", request.thirdPartId);
         }

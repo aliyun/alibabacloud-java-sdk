@@ -10,6 +10,9 @@ public class InvoiceRuleSaveShrinkRequest extends TeaModel {
     @NameInMap("entities")
     public String entitiesShrink;
 
+    @NameInMap("scope")
+    public Integer scope;
+
     @NameInMap("third_part_id")
     public String thirdPartId;
 
@@ -32,6 +35,14 @@ public class InvoiceRuleSaveShrinkRequest extends TeaModel {
     }
     public String getEntitiesShrink() {
         return this.entitiesShrink;
+    }
+
+    public InvoiceRuleSaveShrinkRequest setScope(Integer scope) {
+        this.scope = scope;
+        return this;
+    }
+    public Integer getScope() {
+        return this.scope;
     }
 
     public InvoiceRuleSaveShrinkRequest setThirdPartId(String thirdPartId) {
