@@ -28,9 +28,6 @@ public class FlushInstanceForDBRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static FlushInstanceForDBRequest build(java.util.Map<String, ?> map) throws Exception {
         FlushInstanceForDBRequest self = new FlushInstanceForDBRequest();
         return TeaModel.build(map, self);
@@ -82,14 +79,6 @@ public class FlushInstanceForDBRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public FlushInstanceForDBRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }
