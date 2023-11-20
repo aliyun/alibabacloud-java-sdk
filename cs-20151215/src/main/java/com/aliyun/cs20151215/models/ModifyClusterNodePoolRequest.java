@@ -354,6 +354,74 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
 
     }
 
+    public static class ModifyClusterNodePoolRequestManagementAutoRepairPolicy extends TeaModel {
+        @NameInMap("restart_node")
+        public Boolean restartNode;
+
+        public static ModifyClusterNodePoolRequestManagementAutoRepairPolicy build(java.util.Map<String, ?> map) throws Exception {
+            ModifyClusterNodePoolRequestManagementAutoRepairPolicy self = new ModifyClusterNodePoolRequestManagementAutoRepairPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyClusterNodePoolRequestManagementAutoRepairPolicy setRestartNode(Boolean restartNode) {
+            this.restartNode = restartNode;
+            return this;
+        }
+        public Boolean getRestartNode() {
+            return this.restartNode;
+        }
+
+    }
+
+    public static class ModifyClusterNodePoolRequestManagementAutoUpgradePolicy extends TeaModel {
+        @NameInMap("auto_upgrade_kubelet")
+        public Boolean autoUpgradeKubelet;
+
+        public static ModifyClusterNodePoolRequestManagementAutoUpgradePolicy build(java.util.Map<String, ?> map) throws Exception {
+            ModifyClusterNodePoolRequestManagementAutoUpgradePolicy self = new ModifyClusterNodePoolRequestManagementAutoUpgradePolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyClusterNodePoolRequestManagementAutoUpgradePolicy setAutoUpgradeKubelet(Boolean autoUpgradeKubelet) {
+            this.autoUpgradeKubelet = autoUpgradeKubelet;
+            return this;
+        }
+        public Boolean getAutoUpgradeKubelet() {
+            return this.autoUpgradeKubelet;
+        }
+
+    }
+
+    public static class ModifyClusterNodePoolRequestManagementAutoVulFixPolicy extends TeaModel {
+        @NameInMap("restart_node")
+        public Boolean restartNode;
+
+        @NameInMap("vul_level")
+        public String vulLevel;
+
+        public static ModifyClusterNodePoolRequestManagementAutoVulFixPolicy build(java.util.Map<String, ?> map) throws Exception {
+            ModifyClusterNodePoolRequestManagementAutoVulFixPolicy self = new ModifyClusterNodePoolRequestManagementAutoVulFixPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyClusterNodePoolRequestManagementAutoVulFixPolicy setRestartNode(Boolean restartNode) {
+            this.restartNode = restartNode;
+            return this;
+        }
+        public Boolean getRestartNode() {
+            return this.restartNode;
+        }
+
+        public ModifyClusterNodePoolRequestManagementAutoVulFixPolicy setVulLevel(String vulLevel) {
+            this.vulLevel = vulLevel;
+            return this;
+        }
+        public String getVulLevel() {
+            return this.vulLevel;
+        }
+
+    }
+
     public static class ModifyClusterNodePoolRequestManagementUpgradeConfig extends TeaModel {
         /**
          * <p>Specifies whether to enable auto update.</p>
@@ -441,6 +509,21 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         @NameInMap("auto_repair")
         public Boolean autoRepair;
 
+        @NameInMap("auto_repair_policy")
+        public ModifyClusterNodePoolRequestManagementAutoRepairPolicy autoRepairPolicy;
+
+        @NameInMap("auto_upgrade")
+        public Boolean autoUpgrade;
+
+        @NameInMap("auto_upgrade_policy")
+        public ModifyClusterNodePoolRequestManagementAutoUpgradePolicy autoUpgradePolicy;
+
+        @NameInMap("auto_vul_fix")
+        public Boolean autoVulFix;
+
+        @NameInMap("auto_vul_fix_policy")
+        public ModifyClusterNodePoolRequestManagementAutoVulFixPolicy autoVulFixPolicy;
+
         /**
          * <p>Specifies whether to enable the managed node pool feature. Valid values:</p>
          * <br>
@@ -469,6 +552,46 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         }
         public Boolean getAutoRepair() {
             return this.autoRepair;
+        }
+
+        public ModifyClusterNodePoolRequestManagement setAutoRepairPolicy(ModifyClusterNodePoolRequestManagementAutoRepairPolicy autoRepairPolicy) {
+            this.autoRepairPolicy = autoRepairPolicy;
+            return this;
+        }
+        public ModifyClusterNodePoolRequestManagementAutoRepairPolicy getAutoRepairPolicy() {
+            return this.autoRepairPolicy;
+        }
+
+        public ModifyClusterNodePoolRequestManagement setAutoUpgrade(Boolean autoUpgrade) {
+            this.autoUpgrade = autoUpgrade;
+            return this;
+        }
+        public Boolean getAutoUpgrade() {
+            return this.autoUpgrade;
+        }
+
+        public ModifyClusterNodePoolRequestManagement setAutoUpgradePolicy(ModifyClusterNodePoolRequestManagementAutoUpgradePolicy autoUpgradePolicy) {
+            this.autoUpgradePolicy = autoUpgradePolicy;
+            return this;
+        }
+        public ModifyClusterNodePoolRequestManagementAutoUpgradePolicy getAutoUpgradePolicy() {
+            return this.autoUpgradePolicy;
+        }
+
+        public ModifyClusterNodePoolRequestManagement setAutoVulFix(Boolean autoVulFix) {
+            this.autoVulFix = autoVulFix;
+            return this;
+        }
+        public Boolean getAutoVulFix() {
+            return this.autoVulFix;
+        }
+
+        public ModifyClusterNodePoolRequestManagement setAutoVulFixPolicy(ModifyClusterNodePoolRequestManagementAutoVulFixPolicy autoVulFixPolicy) {
+            this.autoVulFixPolicy = autoVulFixPolicy;
+            return this;
+        }
+        public ModifyClusterNodePoolRequestManagementAutoVulFixPolicy getAutoVulFixPolicy() {
+            return this.autoVulFixPolicy;
         }
 
         public ModifyClusterNodePoolRequestManagement setEnable(Boolean enable) {

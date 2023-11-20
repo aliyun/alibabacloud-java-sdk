@@ -11,7 +11,10 @@ public class StopAlertResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>A value of True indicates that the call succeeds. A value of False indicates that the call failed.</p>
+     * <p>The operation result. Valid values:</p>
+     * <br>
+     * <p>*   True: The operation is successful.</p>
+     * <p>*   False: The operation failed.</p>
      */
     @NameInMap("status")
     public Boolean status;

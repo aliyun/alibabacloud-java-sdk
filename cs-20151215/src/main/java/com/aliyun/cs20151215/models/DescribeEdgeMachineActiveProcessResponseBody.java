@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEdgeMachineActiveProcessResponseBody extends TeaModel {
     /**
-     * <p>The list of details about the activation progress.</p>
+     * <p>The activation progress list.</p>
      */
     @NameInMap("logs")
     public String logs;
@@ -17,19 +17,19 @@ public class DescribeEdgeMachineActiveProcessResponseBody extends TeaModel {
     public Long progress;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("request_id")
     public String requestId;
 
     /**
-     * <p>The status of the cloud-native box.</p>
+     * <p>The activation status.</p>
      */
     @NameInMap("state")
     public String state;
 
     /**
-     * <p>The current step of the activation process.</p>
+     * <p>The activation step.</p>
      */
     @NameInMap("step")
     public String step;

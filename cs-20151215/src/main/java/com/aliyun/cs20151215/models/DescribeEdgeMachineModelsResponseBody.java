@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
     /**
-     * <p>The list of details about the models of cloud-native boxes.</p>
+     * <p>The cloud-native box models.</p>
      */
     @NameInMap("models")
     public java.util.List<DescribeEdgeMachineModelsResponseBodyModels> models;
@@ -25,7 +25,7 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
 
     public static class DescribeEdgeMachineModelsResponseBodyModels extends TeaModel {
         /**
-         * <p>The number of CPU cores.</p>
+         * <p>The number of vCores.</p>
          */
         @NameInMap("cpu")
         public Integer cpu;
@@ -43,19 +43,19 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
         public String created;
 
         /**
-         * <p>The description.</p>
+         * <p>The description of the cloud-native box.</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>Indicates whether the Docker runtime is managed.</p>
+         * <p>Indicates whether the cloud-native box model manages the Docker runtime.</p>
          */
         @NameInMap("manage_runtime")
         public Integer manageRuntime;
 
         /**
-         * <p>The memory size. Unit: GB.</p>
+         * <p>The memory. Unit: GB.</p>
          */
         @NameInMap("memory")
         public Integer memory;

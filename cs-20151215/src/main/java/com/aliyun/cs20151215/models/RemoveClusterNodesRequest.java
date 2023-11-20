@@ -4,12 +4,21 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class RemoveClusterNodesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to evict all pods from the nodes that you want to remove.</p>
+     */
     @NameInMap("drain_node")
     public Boolean drainNode;
 
+    /**
+     * <p>The list of nodes to be removed.</p>
+     */
     @NameInMap("nodes")
     public java.util.List<String> nodes;
 
+    /**
+     * <p>Specifies whether to release the Elastic Compute Service (ECS) instances when they are removed from the cluster.</p>
+     */
     @NameInMap("release_node")
     public Boolean releaseNode;
 

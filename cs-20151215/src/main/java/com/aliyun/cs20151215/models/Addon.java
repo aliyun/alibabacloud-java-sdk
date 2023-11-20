@@ -13,6 +13,9 @@ public class Addon extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    @NameInMap("version")
+    public String version;
+
     public static Addon build(java.util.Map<String, ?> map) throws Exception {
         Addon self = new Addon();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class Addon extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public Addon setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

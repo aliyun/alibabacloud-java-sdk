@@ -11,7 +11,7 @@ public class EdgeClusterAddEdgeMachineResponseBody extends TeaModel {
     public String edgeMachineId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("request_id")
     public String requestId;

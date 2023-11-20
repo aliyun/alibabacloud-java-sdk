@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeWorkflowsResponseBody extends TeaModel {
     /**
-     * <p>The list of the jobs.</p>
+     * <p>The list of jobs.</p>
      */
     @NameInMap("jobs")
     public java.util.List<DescribeWorkflowsResponseBodyJobs> jobs;
@@ -25,7 +25,7 @@ public class DescribeWorkflowsResponseBody extends TeaModel {
 
     public static class DescribeWorkflowsResponseBodyJobs extends TeaModel {
         /**
-         * <p>The ID of the ACK cluster.</p>
+         * <p>The cluster ID.</p>
          */
         @NameInMap("cluster_id")
         public String clusterId;

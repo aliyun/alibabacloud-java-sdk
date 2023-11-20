@@ -12,16 +12,16 @@ public class UpgradeClusterRequest extends TeaModel {
     public String componentName;
 
     /**
-     * <p>Specifies whether to upgrade only master nodes. Valid values:</p>
+     * <p>Specifies whether to update only master nodes. Valid values:</p>
      * <br>
-     * <p>*   true: upgrade only master nodes.</p>
-     * <p>*   false: upgrade master and worker nodes.</p>
+     * <p>*   true: update only master nodes.</p>
+     * <p>*   false: update master and worker nodes.</p>
      */
     @NameInMap("master_only")
     public Boolean masterOnly;
 
     /**
-     * <p>The Kubernetes version to which the cluster can be upgraded.</p>
+     * <p>The Kubernetes version to which the cluster can be updated.</p>
      */
     @NameInMap("next_version")
     public String nextVersion;
