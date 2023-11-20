@@ -10,6 +10,9 @@ public class InvoiceRuleSaveRequest extends TeaModel {
     @NameInMap("entities")
     public java.util.List<InvoiceRuleSaveRequestEntities> entities;
 
+    @NameInMap("scope")
+    public Integer scope;
+
     @NameInMap("third_part_id")
     public String thirdPartId;
 
@@ -32,6 +35,14 @@ public class InvoiceRuleSaveRequest extends TeaModel {
     }
     public java.util.List<InvoiceRuleSaveRequestEntities> getEntities() {
         return this.entities;
+    }
+
+    public InvoiceRuleSaveRequest setScope(Integer scope) {
+        this.scope = scope;
+        return this;
+    }
+    public Integer getScope() {
+        return this.scope;
     }
 
     public InvoiceRuleSaveRequest setThirdPartId(String thirdPartId) {
