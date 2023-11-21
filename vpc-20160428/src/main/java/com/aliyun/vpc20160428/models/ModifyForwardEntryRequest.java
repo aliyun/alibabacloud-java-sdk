@@ -7,9 +7,9 @@ public class ModifyForwardEntryRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -26,7 +26,7 @@ public class ModifyForwardEntryRequest extends TeaModel {
      * <br>
      * <p>    *   Valid values: **1** to **65535**.</p>
      * <p>    *   If you want to modify the port range, separate port numbers with a forward slash (/), such as `10/20`.</p>
-     * <p>    *   If you want to modify **ExternalPort** and **InternalPort** at the same time, and set **ExternalPort** to a port range, you must also set **InternalPort** to a port range. For example, you can set **ExternalPort** to `10/20` and set **InternalPor** to `80/90`.</p>
+     * <p>    *   If you need to modify **ExternalPort** and **InternalPort** at the same time, and **ExternalPort** specifies a port range, make sure that **InternalPort** also specifies a port range, and both ranges specify the same number of ports. For example, you can set **ExternalPort** to `10/20` and **InternalPort** to `80/90`.</p>
      * <br>
      * <p>*   The port that is accessed by external networks when you modify DNAT entries of VPC NAT gateways. Valid values: **1** to **65535**.</p>
      */
@@ -68,11 +68,11 @@ public class ModifyForwardEntryRequest extends TeaModel {
     public String internalPort;
 
     /**
-     * <p>The protocol type. Valid values:</p>
+     * <p>The protocol. Valid values:</p>
      * <br>
-     * <p>*   **TCP**: The NAT gateway forwards TCP packets.</p>
-     * <p>*   **UDP**: The NAT gateway forwards UDP packets.</p>
-     * <p>*   **Any**: The NAT gateway forwards packets of all protocols.</p>
+     * <p>*   **TCP**</p>
+     * <p>*   **UDP**</p>
+     * <p>*   **Any**</p>
      */
     @NameInMap("IpProtocol")
     public String ipProtocol;
@@ -86,8 +86,8 @@ public class ModifyForwardEntryRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove limits on the port range. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no If an SNAT entry and a DNAT entry use the same public IP address, and you want to specify a port number greater than `1024`, set `PortBreak` to `true`.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false** If an SNAT entry and a DNAT entry use the same public IP address, and you want to specify a port number greater than `1024`, set `PortBreak` to `true`.</p>
      */
     @NameInMap("PortBreak")
     public Boolean portBreak;

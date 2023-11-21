@@ -40,6 +40,11 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group to which the customer gateway belongs.</p>
+     * <br>
+     * <p>You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

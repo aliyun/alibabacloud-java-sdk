@@ -126,6 +126,11 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * <br>
+     * <p>For more information about resource group, see [What is Resource Management?](~~94475~~)</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -135,6 +140,9 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tag list.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateVirtualBorderRouterRequestTags> tags;
 
@@ -336,9 +344,19 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
     }
 
     public static class CreateVirtualBorderRouterRequestTags extends TeaModel {
+        /**
+         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The key cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. You can specify at most 20 tag values. It can be an empty string.</p>
+         * <br>
+         * <p>The tag value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

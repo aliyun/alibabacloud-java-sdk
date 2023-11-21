@@ -11,13 +11,16 @@ public class TagResourcesForExpressConnectRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the resource to which you want to create and add tags.</p>
+     * <p>The ID of the region in which the resource is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource IDs. You can specify up to 20 resource IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -28,11 +31,18 @@ public class TagResourcesForExpressConnectRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to **PHYSICALCONNECTION**, which indicates the Express Connect circuit.</p>
+     * <p>The type of the resource. Valid values:</p>
+     * <br>
+     * <p>*   **PHYSICALCONNECTION**: Express Connect circuit.</p>
+     * <p>*   **VIRTUALBORDERROUTER**: virtual border router (VBR).</p>
+     * <p>*   **ROUTERINTERFACE**: router interface.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags to add to the resource.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<TagResourcesForExpressConnectRequestTag> tag;
 
@@ -107,17 +117,17 @@ public class TagResourcesForExpressConnectRequest extends TeaModel {
 
     public static class TagResourcesForExpressConnectRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N that is added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The key of the tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>The key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The value of the tag to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
          * <br>
-         * <p>The value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
     /**
-     * <p>The number of the returned page. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Valid values: **1 to 50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     /**
-     * <p>The information about the queried VBRs.</p>
+     * <p>The information about the queried VBR.</p>
      */
     @NameInMap("VirtualBorderRouterSet")
     public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet virtualBorderRouterSet;
@@ -87,19 +87,19 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         public String cenId;
 
         /**
-         * <p>The user ID (UID) of the Alibaba Cloud account to which the CEN instance belongs.</p>
+         * <p>The ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
          */
         @NameInMap("CenOwnerId")
         public Long cenOwnerId;
 
         /**
-         * <p>The status of the CEN instance. Valid values: </p>
+         * <p>The status of the CEN instance. Valid values:</p>
          * <br>
-         * <p>- **Attached**: The VBR is attached to the CEN instance.</p>
-         * <p>- **Attaching**: The VBR is being attached to the CEN instance.</p>
-         * <p>- **Detached**: The VBR is detached from the CEN instance.</p>
-         * <p>- **Detaching**: The VBR is being detached from the CEN instance.</p>
-         * <p>- If no value is returned, the VBR is not attached to a CEN instance.</p>
+         * <p>*   **Attached**: The VBR is attached to the CEN instance.</p>
+         * <p>*   **Attaching**: The VBR is being attached to the CEN instance.</p>
+         * <p>*   **Detached**: The VBR is detached from the CEN instance.</p>
+         * <p>*   **Detaching**: The VBR is being detached from the CEN instance.</p>
+         * <p>*   If no value is returned, the VBR is not attached to a CEN instance.</p>
          */
         @NameInMap("CenStatus")
         public String cenStatus;
@@ -156,7 +156,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
 
     public static class DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterTypeAssociatedPhysicalConnectionsAssociatedPhysicalConnection extends TeaModel {
         /**
-         * <p>The circuit code of the Express Connect circuit. The circuit code is predefined by the connectivity provider.</p>
+         * <p>The circuit code of the Express Connect circuit. The circuit code is provided by the ISP.</p>
          */
         @NameInMap("CircuitCode")
         public String circuitCode;
@@ -164,8 +164,8 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether IPv6 is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: enabled.</p>
-         * <p>*   **false**: disabled.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("EnableIpv6")
         public Boolean enableIpv6;
@@ -183,13 +183,13 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         public String localIpv6GatewayIp;
 
         /**
-         * <p>The IPv4 address of the VBR on the user side.</p>
+         * <p>The IPv4 address of the gateway device on the user side.</p>
          */
         @NameInMap("PeerGatewayIp")
         public String peerGatewayIp;
 
         /**
-         * <p>The IPv6 address of the gateway device in the data center.</p>
+         * <p>The IPv6 address of the gateway device on the user side.</p>
          */
         @NameInMap("PeerIpv6GatewayIp")
         public String peerIpv6GatewayIp;
@@ -213,8 +213,8 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         /**
          * <p>The business status of the Express Connect circuit.</p>
          * <br>
-         * <p>*   **Normal**: normal</p>
-         * <p>*   **FinancialLocked**: locked due to overdue payments</p>
+         * <p>*   **Normal:** The Express Connect circuit is running as normal.</p>
+         * <p>*   **FinancialLocked:** The Express Connect circuit is locked due to overdue payments.</p>
          */
         @NameInMap("PhysicalConnectionBusinessStatus")
         public String physicalConnectionBusinessStatus;
@@ -226,7 +226,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         public String physicalConnectionId;
 
         /**
-         * <p>The UID of the Alibaba Cloud account to which the Express Connect circuit belongs.</p>
+         * <p>The ID of the Alibaba Cloud account to which the Express Connect circuit belongs.</p>
          */
         @NameInMap("PhysicalConnectionOwnerUid")
         public String physicalConnectionOwnerUid;
@@ -234,16 +234,16 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         /**
          * <p>The status of the Express Connect circuit.</p>
          * <br>
-         * <p>*   **Initial**: The application is under review.</p>
+         * <p>*   **Initial:** The application is under review.</p>
          * <p>*   **Approved**: The application is approved.</p>
          * <p>*   **Allocating**: The system is allocating resources.</p>
          * <p>*   **Allocated**: The Express Connect circuit is under construction.</p>
-         * <p>*   **Confirmed**: The Express Connect circuit is pending for user confirmation.</p>
+         * <p>*   **Confirmed**: The Express Connect circuit is to be confirmed.</p>
          * <p>*   **Enabled**: The Express Connect circuit is enabled.</p>
          * <p>*   **Rejected**: The application is rejected.</p>
          * <p>*   **Canceled**: The application is canceled.</p>
-         * <p>*   **Allocation Failed**: The system failed to allocate resources.</p>
-         * <p>*   **Terminated**: The Express Connect circuit is disabled.</p>
+         * <p>*   **Allocation Failed:** The system failed to allocate resources.</p>
+         * <p>*   **Terminated:** The Express Connect circuit is disabled.</p>
          */
         @NameInMap("PhysicalConnectionStatus")
         public String physicalConnectionStatus;
@@ -251,12 +251,12 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         /**
          * <p>The status of the VBR. Valid values:</p>
          * <br>
-         * <p>*   **unconfirmed**: pending confirmation from other users</p>
-         * <p>*   **active**: normal</p>
-         * <p>*   **terminating**: being disabled</p>
-         * <p>*   **terminated**: disabled</p>
-         * <p>*   **recovering**: being enabled</p>
-         * <p>*   **deleting:** The endpoint is being deleted.</p>
+         * <p>*   **unconfirmed**</p>
+         * <p>*   **active**</p>
+         * <p>*   **terminating**</p>
+         * <p>*   **terminated**</p>
+         * <p>*   **recovering**</p>
+         * <p>*   **deleting**</p>
          */
         @NameInMap("Status")
         public String status;
@@ -420,9 +420,15 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
     }
 
     public static class DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterTypeTagsTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -476,7 +482,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         public String accessPointId;
 
         /**
-         * <p>The first time when the VBR was activated.</p>
+         * <p>The time when the VBR was first activated.</p>
          */
         @NameInMap("ActivationTime")
         public String activationTime;
@@ -500,7 +506,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         public Integer bandwidth;
 
         /**
-         * <p>The circuit code of the Express Connect circuit. The circuit code is predefined by the connectivity provider.</p>
+         * <p>The circuit code of the Express Connect circuit. The circuit code is provided by the Internet service provider (ISP).</p>
          */
         @NameInMap("CircuitCode")
         public String circuitCode;
@@ -542,8 +548,8 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether IPv6 is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: enabled</p>
-         * <p>*   **false**: disabled</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("EnableIpv6")
         public Boolean enableIpv6;
@@ -561,7 +567,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         public String localIpv6GatewayIp;
 
         /**
-         * <p>The time interval to receive Bidirectional Forwarding Detection (BFD) packets. Valid values: **200 to 1000**. Unit: milliseconds.</p>
+         * <p>The time interval to receive BFD packets. Valid values: **200 to 1000**. Unit: milliseconds.</p>
          */
         @NameInMap("MinRxInterval")
         public Long minRxInterval;
@@ -579,9 +585,9 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The billing method of the VBR.</p>
+         * <p>The billing method of the VBR. Valid values:</p>
          * <br>
-         * <p>*   **PrePaid**: subscription If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.</p>
+         * <p>*   **PrePaid**: subscription. If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.</p>
          * <p>*   **PostPaid**: pay-as-you-go</p>
          */
         @NameInMap("PConnVbrChargeType")
@@ -594,7 +600,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         public String PConnVbrExpireTime;
 
         /**
-         * <p>The IPv4 address of the VBR on the user side.</p>
+         * <p>The IPv4 address of the gateway device on the user side.</p>
          */
         @NameInMap("PeerGatewayIp")
         public String peerGatewayIp;
@@ -620,8 +626,8 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         /**
          * <p>The business status of the Express Connect circuit.</p>
          * <br>
-         * <p>*   **Normal**: normal</p>
-         * <p>*   **FinancialLocked**: locked due to overdue payments</p>
+         * <p>*   **Normal:** The Express Connect circuit is running asnormal.</p>
+         * <p>*   **FinancialLocked:** The Express Connect circuit is locked due to overdue payments.</p>
          */
         @NameInMap("PhysicalConnectionBusinessStatus")
         public String physicalConnectionBusinessStatus;
@@ -633,7 +639,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         public String physicalConnectionId;
 
         /**
-         * <p>The UID of the Alibaba Cloud account to which the Express Connect circuit belongs.</p>
+         * <p>The ID of the Alibaba Cloud account to which the Express Connect circuit belongs.</p>
          */
         @NameInMap("PhysicalConnectionOwnerUid")
         public String physicalConnectionOwnerUid;
@@ -641,26 +647,29 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         /**
          * <p>The status of the Express Connect circuit.</p>
          * <br>
-         * <p>*   **Initial**: The application is under review.</p>
+         * <p>*   **Initial:** The application is under review.</p>
          * <p>*   **Approved**: The application is approved.</p>
          * <p>*   **Allocating**: The system is allocating resources.</p>
          * <p>*   **Allocated**: The Express Connect circuit is under construction.</p>
-         * <p>*   **Confirmed**: The Express Connect circuit is pending for user confirmation.</p>
+         * <p>*   **Confirmed**: The Express Connect circuit is to be confirmed.</p>
          * <p>*   **Enabled**: The Express Connect circuit is enabled.</p>
          * <p>*   **Rejected**: The application is rejected.</p>
          * <p>*   **Canceled**: The application is canceled.</p>
-         * <p>*   **Allocation Failed**: The system failed to allocate resources.</p>
-         * <p>*   **Terminated**: The Express Connect circuit is disabled.</p>
+         * <p>*   **Allocation Failed:** The system failed to allocate resources.</p>
+         * <p>*   **Terminated:** The Express Connect circuit is disabled.</p>
          */
         @NameInMap("PhysicalConnectionStatus")
         public String physicalConnectionStatus;
 
         /**
-         * <p>The last time when the status of the VBR changed from **terminated** to **active**.</p>
+         * <p>The time when the status of the VBR last changed from **terminated** to **active**.</p>
          */
         @NameInMap("RecoveryTime")
         public String recoveryTime;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -673,21 +682,24 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         /**
          * <p>The status of the VBR. Valid values:</p>
          * <br>
-         * <p>*   **unconfirmed**: pending confirmation from other users</p>
-         * <p>*   **active**: normal</p>
-         * <p>*   **terminating**: being disabled</p>
-         * <p>*   **terminated**: disabled</p>
-         * <p>*   **recovering**: being enabled</p>
-         * <p>*   **deleting:**: being deleted</p>
+         * <p>*   **unconfirmed**</p>
+         * <p>*   **active**</p>
+         * <p>*   **terminating**</p>
+         * <p>*   **terminated**</p>
+         * <p>*   **recovering**</p>
+         * <p>*   **deleting**</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterTypeTags tags;
 
         /**
-         * <p>The last time when the VBR was disabled.</p>
+         * <p>The time when the VBR was last disabled.</p>
          */
         @NameInMap("TerminationTime")
         public String terminationTime;
@@ -699,7 +711,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The ID of the VBR.</p>
+         * <p>The VBR ID.</p>
          */
         @NameInMap("VbrId")
         public String vbrId;

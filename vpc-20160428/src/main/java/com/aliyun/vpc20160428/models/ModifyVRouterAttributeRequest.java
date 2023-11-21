@@ -7,7 +7,7 @@ public class ModifyVRouterAttributeRequest extends TeaModel {
     /**
      * <p>The description of the vRouter.</p>
      * <br>
-     * <p>The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -19,7 +19,7 @@ public class ModifyVRouterAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the vRouter is deployed.</p>
+     * <p>The region ID of the vRouter.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
@@ -33,7 +33,7 @@ public class ModifyVRouterAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the vRouter.</p>
+     * <p>The vRouter ID.</p>
      */
     @NameInMap("VRouterId")
     public String VRouterId;

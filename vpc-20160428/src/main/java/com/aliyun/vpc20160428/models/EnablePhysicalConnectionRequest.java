@@ -4,6 +4,14 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class EnablePhysicalConnectionRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to skip the order lifecycle. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
+     * <br>
+     * <p>>  To use this feature, you must contact your account manager.</p>
+     */
     @NameInMap("ByPassSp")
     public Boolean byPassSp;
 
@@ -28,9 +36,9 @@ public class EnablePhysicalConnectionRequest extends TeaModel {
     public String physicalConnectionId;
 
     /**
-     * <p>The region ID of the Express Connect circuit.</p>
+     * <p>The region where the Express Connect circuit is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

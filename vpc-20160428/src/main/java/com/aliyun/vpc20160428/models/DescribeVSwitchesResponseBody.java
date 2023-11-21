@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -17,7 +17,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -87,10 +87,10 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         public String routeTableId;
 
         /**
-         * <p>The type of the route table that is associated with the vSwitch. Valid values:</p>
+         * <p>The type of the route table. Valid values:</p>
          * <br>
-         * <p>- **System**: system route table</p>
-         * <p>- **Custom**: custom route table</p>
+         * <p>*   **System**</p>
+         * <p>*   **Custom**</p>
          */
         @NameInMap("RouteTableType")
         public String routeTableType;
@@ -120,13 +120,13 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
 
     public static class DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag extends TeaModel {
         /**
-         * <p>The key of the tag that is added to the vSwitch.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag that is added to the vSwitch.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -193,11 +193,17 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The description of the vSwitches.</p>
+         * <p>The description of the vSwitch.</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates whether IPv6 is enabled for the vSwitch. If you enable IPv6, you must configure an IPv6 CIDR block for the vSwitch. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("EnabledIpv6")
         public Boolean enabledIpv6;
 
@@ -210,8 +216,8 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
          * <br>
-         * <p>*   **true**: The vSwitch is the default vSwitch.</p>
-         * <p>*   **false**: The vSwitch is not the default vSwitch.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("IsDefault")
         public Boolean isDefault;
@@ -240,32 +246,39 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         @NameInMap("RouteTable")
         public DescribeVSwitchesResponseBodyVSwitchesVSwitchRouteTable routeTable;
 
+        /**
+         * <p>Indicates whether the vSwitch is shared.</p>
+         * <br>
+         * <p>*   If no value is returned, the vSwitch is a regular vSwitch.</p>
+         * <p>*   If **Shared** is returned, the vSwitch is shared.</p>
+         * <p>*   If **Sharing** is returned, the vSwitch is being shared.</p>
+         */
         @NameInMap("ShareType")
         public String shareType;
 
         /**
          * <p>The status of the vSwitch. Valid values:</p>
          * <br>
-         * <p>*   **Pending**: The vSwitch is being configured.</p>
-         * <p>*   **Available**: The vSwitch is available.</p>
+         * <p>*   **Pending**</p>
+         * <p>*   **Available**</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The tag information about the vSwitch.</p>
+         * <p>The tags of the vSwitch.</p>
          */
         @NameInMap("Tags")
         public DescribeVSwitchesResponseBodyVSwitchesVSwitchTags tags;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The name of the vSwitch.</p>
+         * <p>The vSwitch name.</p>
          */
         @NameInMap("VSwitchName")
         public String vSwitchName;

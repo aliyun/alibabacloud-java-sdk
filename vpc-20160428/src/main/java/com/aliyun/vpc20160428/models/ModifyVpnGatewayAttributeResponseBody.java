@@ -99,6 +99,11 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>VPN网关实例所属的资源组ID。</p>
+     * <br>
+     * <p>您可以调用[ListResourceGroups](~~158855~~)接口查询资源组信息。</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

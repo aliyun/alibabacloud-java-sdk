@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
+     * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
      * <br>
-     * <p>*   **true**: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false**: sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed. This is the default value.</p>
+     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to query the default vSwitch in the specified region. Valid values:</p>
+     * <p>Specifies whether to query the default vSwitches in the specified region. Valid values:</p>
      * <br>
-     * <p>*   **true**: queries the default vSwitch in the specified region.</p>
-     * <p>*   **false**: does not query the default vSwitch in the specified region.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      * <br>
-     * <p>If you do not specify this parameter, the system queries all vSwitches in the specified region by default.</p>
+     * <p>If you do not set this parameter, the system queries all vSwitches in the specified region by default.</p>
      */
     @NameInMap("IsDefault")
     public Boolean isDefault;
@@ -45,7 +45,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     /**
      * <p>The region ID of the vSwitch. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      * <br>
-     * <p>>  You must set at least one of the **RegionId** and **VpcId** parameters.</p>
+     * <p>>  You must set at least one of **RegionId** and **VpcId**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -68,6 +68,9 @@ public class DescribeVSwitchesRequest extends TeaModel {
     @NameInMap("RouteTableId")
     public String routeTableId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeVSwitchesRequestTag> tag;
 
@@ -78,7 +81,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The name of the vSwitch.</p>
+     * <p>The vSwitch name.</p>
      * <br>
      * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
      */
@@ -86,21 +89,21 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String vSwitchName;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+     * <p>The ID of the Alibaba Cloud account to which the vSwitch belongs.</p>
      */
     @NameInMap("VSwitchOwnerId")
     public Long vSwitchOwnerId;
 
     /**
-     * <p>The ID of the VPC to which the vSwitches belong.</p>
+     * <p>The ID of the virtual private cloud (VPC) to which the vSwitches belong.</p>
      * <br>
-     * <p>>  You must set at least one of the **RegionId** and **VpcId** parameters.</p>
+     * <p>>  You must set at least one of **RegionId** and **VpcId**.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>The ID of the zone to which the vSwitch belongs. You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.</p>
+     * <p>The ID of the zone to which the vSwitches belong. You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -247,9 +250,19 @@ public class DescribeVSwitchesRequest extends TeaModel {
     }
 
     public static class DescribeVSwitchesRequestTag extends TeaModel {
+        /**
+         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -7,16 +7,22 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The information about the outbound rules.</p>
+     */
     @NameInMap("EgressAclEntries")
     public java.util.List<UpdateNetworkAclEntriesRequestEgressAclEntries> egressAclEntries;
 
+    /**
+     * <p>The information about the inbound rule.</p>
+     */
     @NameInMap("IngressAclEntries")
     public java.util.List<UpdateNetworkAclEntriesRequestIngressAclEntries> ingressAclEntries;
 
@@ -46,8 +52,10 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
     /**
      * <p>Specifies whether to update outbound rules. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
+     * <br>
+     * <p>>  This parameter cannot be used to add outbound rules to ACLs. If you want to add more outbound rules to ACLs, specify both the existing rule and the rule that you want to add when you call this API operation. If you specify only the rule that you want to add, it overwrites the existing rule.</p>
      */
     @NameInMap("UpdateEgressAclEntries")
     public Boolean updateEgressAclEntries;
@@ -55,8 +63,10 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
     /**
      * <p>Specifies whether to update inbound rules. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
+     * <br>
+     * <p>>  This parameter cannot be used to add inbound rules to ACLs. If you want to add more inbound rules to ACLs, you must specify both the existing rule and the rule that you want to add when you call this API operation. If you specify only the rule that you want to add, it overwrites the existing rule.</p>
      */
     @NameInMap("UpdateIngressAclEntries")
     public Boolean updateIngressAclEntries;
@@ -170,7 +180,7 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
         /**
          * <p>The ID of the outbound rule.</p>
          * <br>
-         * <p>Valid values of **N**: **0** to **29**. You can update at most 30 outbound rules.</p>
+         * <p>Valid values of **N**: **0** to **99**. You can specify at most 100 outbound rules.</p>
          */
         @NameInMap("NetworkAclEntryId")
         public String networkAclEntryId;
@@ -178,25 +188,25 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
         /**
          * <p>The name of the outbound rule.</p>
          * <br>
-         * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+         * <p>The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.</p>
          */
         @NameInMap("NetworkAclEntryName")
         public String networkAclEntryName;
 
         /**
-         * <p>The action to be performed on network traffic that matches the rule. Valid values:</p>
+         * <p>The rule action that determines whether to allow outbound traffic. Valid values:</p>
          * <br>
-         * <p>*   **accept**: allows the network traffic.</p>
-         * <p>*   **drop**: blocks the network traffic.</p>
+         * <p>*   **accept**</p>
+         * <p>*   **drop**</p>
          */
         @NameInMap("Policy")
         public String policy;
 
         /**
-         * <p>The destination port range of the outbound rule.</p>
+         * <p>The destination port range of the outbound traffic.</p>
          * <br>
-         * <p>*   If **Protocol** of the outbound rule is set to **all**, **icmp**, or **gre**, the port range is **-1/-1**, which specifies all ports.</p>
-         * <p>*   If **Protocol** of the outbound rule is set to **tcp** or **udp**, set the port range in the following format: **1/200** or **80/80**, which specifies port 1 to port 200 or port 80. Valid values for a port: **1** to **65535**.</p>
+         * <p>*   If the **protocol** of the outbound rule is set to **all**, **icmp**, or **gre**, the port range is -1/-1, which specified all ports.</p>
+         * <p>*   If the **protocol** of the outbound rule is set to **tcp** or **udp**, set the port range in the following format: **1/200** or **80/80**, which specifies port 1 to port 200 or port 80. Valid values for a port: **1** to **65535**.</p>
          */
         @NameInMap("Port")
         public String port;
@@ -204,11 +214,11 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
         /**
          * <p>The protocol type. Valid values:</p>
          * <br>
-         * <p>*   **icmp**: ICMP</p>
-         * <p>*   **gre**: GRE</p>
-         * <p>*   **tcp**: TCP</p>
-         * <p>*   **udp**: UDP</p>
-         * <p>*   **all**: all protocols</p>
+         * <p>*   **icmp**</p>
+         * <p>*   **gre**</p>
+         * <p>*   **tcp**</p>
+         * <p>*   **udp**</p>
+         * <p>*   **all**</p>
          */
         @NameInMap("Protocol")
         public String protocol;
@@ -302,7 +312,7 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
         /**
          * <p>The ID of the inbound rule.</p>
          * <br>
-         * <p>Valid values of **N**: **0** to **29**. You can update at most 30 inbound rules.</p>
+         * <p>Valid values of **N**: **0** to **99**. You can specify at most 100 inbound rules.</p>
          */
         @NameInMap("NetworkAclEntryId")
         public String networkAclEntryId;
@@ -310,16 +320,16 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
         /**
          * <p>The name of the inbound rule.</p>
          * <br>
-         * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+         * <p>The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.</p>
          */
         @NameInMap("NetworkAclEntryName")
         public String networkAclEntryName;
 
         /**
-         * <p>The action to be performed on network traffic that matches the rule. Valid values:</p>
+         * <p>The rule action that determines whether to allow inbound requests. Valid values:</p>
          * <br>
-         * <p>*   **accept**: allows the network traffic.</p>
-         * <p>*   **drop**: blocks the network traffic.</p>
+         * <p>*   **accept**</p>
+         * <p>*   **drop**</p>
          */
         @NameInMap("Policy")
         public String policy;
@@ -327,8 +337,8 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
         /**
          * <p>The source port range of the inbound rule.</p>
          * <br>
-         * <p>*   If **Protocol** of the inbound rule is set to **all**, **icmp**, or **gre**, the port range is **-1/-1**, which specifies all ports.</p>
-         * <p>*   If **Protocol** of the inbound rule is set to **tcp** or **udp**, set the port range in the following format: **1/200** or **80/80**, which specifies port 1 to port 200 or port 80. Valid values for a port: **1** to **65535**.</p>
+         * <p>*   If the **protocol** of the inbound rule is set to **all**, **icmp**, or **gre**, the port range is -1/-1, which specifies all ports.</p>
+         * <p>*   If the **protocol** of the inbound rule is set to **tcp** or **udp**, set the port range in the following format: **1/200** or **80/80**, which specifies port 1 to port 200 or port 80. Valid ports: **1** to **65535**.</p>
          */
         @NameInMap("Port")
         public String port;
@@ -336,11 +346,11 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
         /**
          * <p>The protocol type. Valid values:</p>
          * <br>
-         * <p>*   **icmp**: Internet Control Message Protocol (ICMP)</p>
-         * <p>*   **gre**: Generic Routing Encapsulation (GRE)</p>
-         * <p>*   **tcp**: TCP</p>
-         * <p>*   **udp**: UDP</p>
-         * <p>*   **all**: all protocols</p>
+         * <p>*   **icmp**</p>
+         * <p>*   **gre**</p>
+         * <p>*   **tcp**</p>
+         * <p>*   **udp**</p>
+         * <p>*   **all**</p>
          */
         @NameInMap("Protocol")
         public String protocol;

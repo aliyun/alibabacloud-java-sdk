@@ -83,12 +83,12 @@ public class AllocateEipAddressProRequest extends TeaModel {
     /**
      * <p>The metering method of the EIP. Valid values:</p>
      * <br>
-     * <p>*   **PayByBandwidth** (default)</p>
-     * <p>*   **PayByTraffic**</p>
+     * <p>*   **PayByBandwidth** (default): pay-by-bandwidth.</p>
+     * <p>*   **PayByTraffic**: pay-by-data-transfer.</p>
      * <br>
-     * <p>Set the value of **InternetChargeType** to **PayByBandwidth** if **InstanceChargeType** is set to **PrePaid**.</p>
+     * <p>When **InstanceChargeType** is set to **PrePaid**, you must set **InternetChargeType** to **PayByBandwidth**.</p>
      * <br>
-     * <p>Valid values when **InstanceChargeType** is set to **PostPaid**: **PayByBandwidth** or **PayByTraffic**.</p>
+     * <p>When **InstanceChargeType** is set to **PostPaid**, set **InternetChargeType** to **PayByBandwidth** or **PayByTraffic**.</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;

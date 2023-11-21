@@ -11,7 +11,7 @@ public class CreateRouteEntriesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the route table is created.</p>
+     * <p>The region ID of the route table.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
@@ -24,6 +24,9 @@ public class CreateRouteEntriesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The route entries.</p>
+     */
     @NameInMap("RouteEntries")
     public java.util.List<CreateRouteEntriesRequestRouteEntries> routeEntries;
 
@@ -81,6 +84,11 @@ public class CreateRouteEntriesRequest extends TeaModel {
     }
 
     public static class CreateRouteEntriesRequestRouteEntries extends TeaModel {
+        /**
+         * <p>The description of the custom route entry. You can specify up to 50 descriptions.</p>
+         * <br>
+         * <p>The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -94,10 +102,10 @@ public class CreateRouteEntriesRequest extends TeaModel {
         public String dstCidrBlock;
 
         /**
-         * <p>The version of the IP protocol. You can specify up to 50 IP protocol versions. Valid values:</p>
+         * <p>The IP version. You can specify up to 50 IP versions. Valid values:</p>
          * <br>
-         * <p>*   **IPv4**</p>
-         * <p>*   **IPv6**</p>
+         * <p>*   **4**: IPv4</p>
+         * <p>*   **6**: IPv6</p>
          */
         @NameInMap("IpVersion")
         public Integer ipVersion;
@@ -105,13 +113,13 @@ public class CreateRouteEntriesRequest extends TeaModel {
         /**
          * <p>The name of the custom route entry that you want to add. You can specify up to 50 names.</p>
          * <br>
-         * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+         * <p>The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The ID of the next hop of the custom route entry. You can specify up to 50 next hop IDs.</p>
+         * <p>The next hop ID of the custom route entry. You can specify up to 50 next hop IDs.</p>
          */
         @NameInMap("NextHop")
         public String nextHop;
@@ -119,21 +127,21 @@ public class CreateRouteEntriesRequest extends TeaModel {
         /**
          * <p>The type of next hop. You can specify up to 50 next hop types. Valid values:</p>
          * <br>
-         * <p>*   **Instance**: Elastic Compute Service (ECS) instance. This is the default value.</p>
-         * <p>*   **HaVip**: high-availability virtual IP address (HAVIP).</p>
-         * <p>*   **RouterInterface**: router interface.</p>
-         * <p>*   **NetworkInterface**: elastic network interface (ENI).</p>
-         * <p>*   **VpnGateway**: VPN gateway.</p>
-         * <p>*   **IPv6Gateway**: IPv6 gateway.</p>
-         * <p>*   **NatGateway**: NAT gateway.</p>
-         * <p>*   **Attachment**: transit router.</p>
-         * <p>*   **VpcPeer**: VPC peering connection.</p>
+         * <p>*   **Instance** (default): an Elastic Compute Service (ECS) instance</p>
+         * <p>*   **HaVip**: a high-availability virtual IP address (HAVIP).</p>
+         * <p>*   **RouterInterface**: a router interface.</p>
+         * <p>*   **NetworkInterface**: an elastic network interface (ENI).</p>
+         * <p>*   **VpnGateway**: a VPN gateway.</p>
+         * <p>*   **IPv6Gateway**: an IPv6 gateway.</p>
+         * <p>*   **NatGateway**: a NAT gateway.</p>
+         * <p>*   **Attachment**: a transit router.</p>
+         * <p>*   **VpcPeer**: a VPC peering connection.</p>
          */
         @NameInMap("NextHopType")
         public String nextHopType;
 
         /**
-         * <p>The ID of the route table to which you want to add the custom route entry. You can specify up to 50 route table IDs.</p>
+         * <p>The ID of the route table to which you want to add a custom route entry. You can specify up to 50 route table IDs.</p>
          */
         @NameInMap("RouteTableId")
         public String routeTableId;

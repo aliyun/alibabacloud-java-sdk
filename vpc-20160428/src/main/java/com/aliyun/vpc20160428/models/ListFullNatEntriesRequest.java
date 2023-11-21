@@ -7,9 +7,9 @@ public class ListFullNatEntriesRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -21,7 +21,9 @@ public class ListFullNatEntriesRequest extends TeaModel {
     public String fullNatEntryId;
 
     /**
-     * <p>The name of the FULLNAT entry.</p>
+     * <p>The name of the FULLNAT entry that you want to query. You can specify at most 20 names.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
      */
     @NameInMap("FullNatEntryNames")
     public java.util.List<String> fullNatEntryNames;
@@ -29,7 +31,7 @@ public class ListFullNatEntriesRequest extends TeaModel {
     /**
      * <p>The ID of the FULLNAT table to which the FULLNAT entries to be queried belong.</p>
      * <br>
-     * <p>>  You must specify at least one of the **FullNatTableId** and **NatGatewayId** parameters.</p>
+     * <p>>  You must specify at least one of **FullNatTableId** and **NatGatewayId**.</p>
      */
     @NameInMap("FullNatTableId")
     public String fullNatTableId;
@@ -44,7 +46,7 @@ public class ListFullNatEntriesRequest extends TeaModel {
     public String ipProtocol;
 
     /**
-     * <p>The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: **1** to **100**. Default value: **20**.</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
@@ -52,22 +54,22 @@ public class ListFullNatEntriesRequest extends TeaModel {
     /**
      * <p>The ID of the NAT gateway.</p>
      * <br>
-     * <p>>  You must specify at least one of the **FullNatTableId** and **NatGatewayId** parameters.</p>
+     * <p>>  You must specify at least one of **FullNatTableId** and **NatGatewayId**.</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
     /**
-     * <p>The IDs of ENIs.</p>
+     * <p>The ID of the elastic network interface (ENI) that you want to query.</p>
      */
     @NameInMap("NetworkInterfaceIds")
     public java.util.List<String> networkInterfaceIds;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If this is your first query or no next queries are to be sent, ignore this parameter.</p>
-     * <p>*   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.</p>
+     * <p>*   You do not need to specify this parameter for the first request.</p>
+     * <p>*   You must specify the token that is obtained from the previous query as the value of the **NextToken** parameter.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

@@ -13,8 +13,8 @@ public class DescribeBgpGroupsRequest extends TeaModel {
     /**
      * <p>Specifies whether the BGP group is the default one. Valid values:</p>
      * <br>
-     * <p>*   **false**: yes</p>
-     * <p>*   **true**: no</p>
+     * <p>*   **false**</p>
+     * <p>*   **true**</p>
      */
     @NameInMap("IsDefault")
     public Boolean isDefault;
@@ -26,21 +26,21 @@ public class DescribeBgpGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. The maximum value is **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the VBR.</p>
+     * <p>The ID of the region in which the VBR is deployed.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

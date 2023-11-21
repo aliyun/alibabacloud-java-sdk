@@ -15,9 +15,9 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -29,7 +29,7 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
     public String companyName;
 
     /**
-     * <p>The time when construction started. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The time when construction started. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
      */
     @NameInMap("ConstructionTime")
     public String constructionTime;
@@ -41,7 +41,7 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The type of Express Connect circuit. Valid values:</p>
+     * <p>The type of the Express Connect circuit. Valid values:</p>
      * <br>
      * <p>*   **MSTP**: MSTP line</p>
      * <p>*   **MPLSVPN**: MPLSVPN line</p>
@@ -57,11 +57,14 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The information about the construction engineer.</p>
+     */
     @NameInMap("PMInfo")
     public java.util.List<ApplyPhysicalConnectionLOARequestPMInfo> PMInfo;
 
     /**
-     * <p>The geographical location where the Express Connect circuit is deployed.</p>
+     * <p>The geographic location where the Express Connect circuit is deployed.</p>
      */
     @NameInMap("PeerLocation")
     public String peerLocation;
@@ -215,8 +218,8 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
         /**
          * <p>The type of the identity document of the construction engineer. Valid values:</p>
          * <br>
-         * <p>*   **IDCard**: identity card</p>
-         * <p>*   **Passport**: international passport</p>
+         * <p>*   **IDCard**</p>
+         * <p>*   **Passport**</p>
          */
         @NameInMap("PMCertificateType")
         public String PMCertificateType;

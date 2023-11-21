@@ -11,10 +11,10 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
     public java.util.List<ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModels> gatewayRouteEntryModels;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
-     * <p>*   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.</p>
+     * <p>*   If **NextToken** is empty, no next page exists.</p>
+     * <p>*   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -88,7 +88,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
          * <p>The type of the next hop. Valid values:</p>
          * <br>
          * <p>*   **Instance** (default): an ECS instance</p>
-         * <p>*   **HaVip**: a high-availability virtual IP address (HAVIP)</p>
+         * <p>*   **HaVip**: a high-availability virtual IP address (HAVIP).</p>
          * <p>*   **VpnGateway**: a VPN gateway</p>
          * <p>*   **NatGateway**: a NAT gateway</p>
          * <p>*   **NetworkInterface**: a secondary ENI</p>
@@ -146,7 +146,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
 
     public static class ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModels extends TeaModel {
         /**
-         * <p>The name of the route.</p>
+         * <p>The name of the route entry.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -158,9 +158,9 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         public String destinationCidrBlock;
 
         /**
-         * <p>The name of the route.</p>
+         * <p>The name of the route entry.</p>
          * <br>
-         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.</p>
+         * <p>The name must be 2 to 128 characters in length and can contain letter, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -174,9 +174,9 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         /**
          * <p>The type of the next hop. Valid values:</p>
          * <br>
-         * <p>*   **EcsInstance**: an Elastic Compute Service (ECS) instance</p>
-         * <p>*   **NetworkInterface**: an elastic network interface (ENI)</p>
-         * <p>*   **Local**: a local next hop</p>
+         * <p>*   **EcsInstance**: Elastic Compute Service (ECS) instance</p>
+         * <p>*   **NetworkInterface**: elastic network interfaces (ENIs).</p>
+         * <p>*   **Local**: local next hop</p>
          */
         @NameInMap("NextHopType")
         public String nextHopType;
@@ -188,7 +188,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         public java.util.List<ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModelsNextHops> nextHops;
 
         /**
-         * <p>The status of the route. Valid values:</p>
+         * <p>The status of the route entry. Valid values:</p>
          * <br>
          * <p>*   **Pending**</p>
          * <p>*   **Available**</p>

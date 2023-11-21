@@ -19,19 +19,19 @@ public class DescribeVpnAttachmentsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.</p>
+     * <p>The number of entries per page. Default value: **10**. Valid values: **1** to **50**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region to which the IPsec-VPN connection belongs.</p>
+     * <p>The ID of the region where the IPsec-VPN connection is established.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
@@ -47,7 +47,7 @@ public class DescribeVpnAttachmentsRequest extends TeaModel {
     /**
      * <p>The ID of the IPsec-VPN connection.</p>
      * <br>
-     * <p>>  If you do not specify an ID, the system queries all IPsec-VPN connections associated with the transit router in the region.</p>
+     * <p>>  If you do not specify an IPsec-VPN connection ID, all IPsec-VPN connections associated with a transit router in the region are queried.</p>
      */
     @NameInMap("VpnConnectionId")
     public String vpnConnectionId;

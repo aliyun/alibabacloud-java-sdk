@@ -10,6 +10,11 @@ public class DeleteVSwitchCidrReservationRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region where the vSwitch is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -19,6 +24,9 @@ public class DeleteVSwitchCidrReservationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the reserved CIDR block.</p>
+     */
     @NameInMap("VSwitchCidrReservationId")
     public String vSwitchCidrReservationId;
 

@@ -12,9 +12,15 @@ public class ModifyRouteEntryRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the new next hop instance.</p>
+     */
     @NameInMap("NewNextHopId")
     public String newNextHopId;
 
+    /**
+     * <p>The new next hop type of the route.</p>
+     */
     @NameInMap("NewNextHopType")
     public String newNextHopType;
 

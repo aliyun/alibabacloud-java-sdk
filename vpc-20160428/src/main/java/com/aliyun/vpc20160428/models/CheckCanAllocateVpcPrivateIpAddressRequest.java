@@ -7,8 +7,8 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends TeaModel {
     /**
      * <p>The version of the private IP address. Valid values:</p>
      * <br>
-     * <p>*   **ipv4**: IPv4 If you want to query an IPv4 address, this parameter is optional.</p>
-     * <p>*   **ipv6**: IPv6 If you want to query an IPv6 address, this parameter is required.</p>
+     * <p>*   **ipv4** If you want to query an IPv4 address, this parameter is optional.</p>
+     * <p>*   **ipv6** If you want to query an IPv6 address, this parameter is required.</p>
      */
     @NameInMap("IpVersion")
     public String ipVersion;

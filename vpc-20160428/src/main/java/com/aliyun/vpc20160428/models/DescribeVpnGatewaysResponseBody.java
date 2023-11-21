@@ -106,7 +106,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         /**
          * <p>The type of the order that has not taken effect. Valid values:</p>
          * <br>
-         * <p>*   **RENEWCHANGE**: renewal with a specification change</p>
+         * <p>*   **RENEWCHANGE**: renewal with upgrade or downgrade</p>
          * <p>*   **TEMP_UPGRADE**: temporary upgrade</p>
          * <p>*   **RENEW**: renewal</p>
          */
@@ -202,13 +202,13 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
 
     public static class DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayTagsTag extends TeaModel {
         /**
-         * <p>The key of tag N added to the resource.</p>
+         * <p>The key of tag N.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N added to the resource.</p>
+         * <p>The value of tag N.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -283,9 +283,9 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The timestamp when the VPN gateway was created. Unit: milliseconds.</p>
+         * <p>The timestamp when the VPN gateway was created. Unit: millisecond.</p>
          * <br>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
@@ -313,7 +313,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         public String disasterRecoveryVSwitchId;
 
         /**
-         * <p>Indicates whether BGP is enabled for the VPN gateway.</p>
+         * <p>The BGP status of the VPN gateway.</p>
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false**</p>
@@ -322,7 +322,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         public Boolean enableBgp;
 
         /**
-         * <p>The timestamp when the VPN gateway expires. Unit: milliseconds.</p>
+         * <p>The timestamp when the VPN gateway expires. Unit: millisecond.</p>
          * <br>
          * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
@@ -371,6 +371,11 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         @NameInMap("ReservationData")
         public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData reservationData;
 
+        /**
+         * <p>The ID of the resource group to which the VPN gateway belongs.</p>
+         * <br>
+         * <p>You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -438,9 +443,9 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
          * <p>    *   **true**</p>
          * <p>    *   **false**</p>
          * <br>
-         * <p>*   **description**</p>
+         * <p>*   **description**: the description of the VPN gateway. This parameter is for internal system use only.</p>
          * <br>
-         * <p>*   **VpnVersion**</p>
+         * <p>*   **VpnVersion**: the version of the VPN gateway.</p>
          */
         @NameInMap("Tag")
         public String tag;

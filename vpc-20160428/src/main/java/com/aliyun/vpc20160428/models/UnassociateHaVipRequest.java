@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnassociateHaVipRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -13,8 +13,8 @@ public class UnassociateHaVipRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcefully disassociate the HAVIP from the ECS instance or ENI. Valid values:</p>
      * <br>
-     * <p>*   **True**: yes</p>
-     * <p>*   **False** (default): no</p>
+     * <p>*   **True**</p>
+     * <p>*   **False** (default)</p>
      * <br>
      * <p>>  If you set the value to **False**, you cannot disassociate the HAVIP from the primary instance.</p>
      */
@@ -51,7 +51,7 @@ public class UnassociateHaVipRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the HAVIP belongs.</p>
+     * <p>The region ID of the HAVIP.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */

@@ -38,7 +38,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -146,7 +146,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         /**
          * <p>The name of the FULLNAT entry.</p>
          * <br>
-         * <p>The name must be 2 to 128 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
          */
         @NameInMap("FullNatEntryName")
         public String fullNatEntryName;
@@ -154,10 +154,10 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         /**
          * <p>The status of the FULLNAT entry. Valid values:</p>
          * <br>
-         * <p>*   **Pending**: The FULLNAT entry is being configured.</p>
-         * <p>*   **Available**: The FULLNAT entry is available.</p>
-         * <p>*   **Deleting**: The FULLNAT entry is being deleted.</p>
-         * <p>*   **Deleted**: The FULLNAT entry is deleted.</p>
+         * <p>*   **Pending**</p>
+         * <p>*   **Available**</p>
+         * <p>*   **Deleting**</p>
+         * <p>*   **Deleted**</p>
          */
         @NameInMap("FullNatEntryStatus")
         public String fullNatEntryStatus;
@@ -190,7 +190,7 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         public String natIpPort;
 
         /**
-         * <p>The ID of the ENI.</p>
+         * <p>The ID of the elastic network interface (ENI).</p>
          */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;

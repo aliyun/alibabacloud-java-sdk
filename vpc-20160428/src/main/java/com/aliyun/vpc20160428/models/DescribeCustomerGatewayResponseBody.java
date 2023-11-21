@@ -11,7 +11,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
     public Long asn;
 
     /**
-     * <p>The authentication key of the BGP routing protocol for the gateway device in the data center.</p>
+     * <p>The authentication key of the Border Gateway Protocol (BGP) routing protocol for the gateway device in the data center.</p>
      */
     @NameInMap("AuthKey")
     public String authKey;
@@ -49,11 +49,16 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group to which the customer gateway belongs.</p>
+     * <br>
+     * <p>You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

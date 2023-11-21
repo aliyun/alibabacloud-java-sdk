@@ -14,6 +14,12 @@ public class CompletePhysicalConnectionLOARequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether the construction is completed. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("FinishWork")
     public Boolean finishWork;
 
@@ -35,9 +41,20 @@ public class CompletePhysicalConnectionLOARequest extends TeaModel {
     @NameInMap("LineLabel")
     public String lineLabel;
 
+    /**
+     * <p>The contact information about line O\&M.</p>
+     */
     @NameInMap("LineSPContactInfo")
     public String lineSPContactInfo;
 
+    /**
+     * <p>The ISP. Valid values:</p>
+     * <br>
+     * <p>*   **China Telecom**</p>
+     * <p>*   **China Unicom**</p>
+     * <p>*   **China Mobile**</p>
+     * <p>*   **Other ISPs in China**</p>
+     */
     @NameInMap("LineServiceProvider")
     public String lineServiceProvider;
 

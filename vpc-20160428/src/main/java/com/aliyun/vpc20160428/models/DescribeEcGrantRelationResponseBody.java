@@ -17,19 +17,19 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
     public java.util.List<DescribeEcGrantRelationResponseBodyEcGrantRelations> ecGrantRelations;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("Page")
     public Integer page;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

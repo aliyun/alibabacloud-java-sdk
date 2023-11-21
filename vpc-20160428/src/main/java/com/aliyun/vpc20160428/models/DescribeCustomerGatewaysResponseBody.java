@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomerGatewaysResponseBody extends TeaModel {
     /**
-     * <p>The tag value.</p>
+     * <p>The information about customer gateways.</p>
      */
     @NameInMap("CustomerGateways")
     public DescribeCustomerGatewaysResponseBodyCustomerGateways customerGateways;
@@ -81,13 +81,13 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
 
     public static class DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTagsTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of tag N.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of tag N.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -142,13 +142,13 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         public Long asn;
 
         /**
-         * <p>The authentication key of the BGP routing protocol for the gateway device in the data center.</p>
+         * <p>The authentication key of the Border Gateway Protocol (BGP) routing protocol for the gateway device in the data center.</p>
          */
         @NameInMap("AuthKey")
         public String authKey;
 
         /**
-         * <p>The timestamp generated when the customer gateway was created. Unit: milliseconds.</p>
+         * <p>The timestamp generated when the customer gateway was created. Unit: millisecond.</p>
          * <br>
          * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          */
@@ -179,6 +179,11 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the resource group to which the customer gateway belongs.</p>
+         * <br>
+         * <p>You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 

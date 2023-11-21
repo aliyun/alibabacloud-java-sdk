@@ -4,14 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVirtualBorderRoutersRequest extends TeaModel {
+    /**
+     * <p>The information about the filter.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<DescribeVirtualBorderRoutersRequestFilter> filter;
 
     /**
      * <p>Specifies whether cross-account VBRs are included.</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no. This is the default value.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
      */
     @NameInMap("IncludeCrossAccountVbr")
     public Boolean includeCrossAccountVbr;
@@ -20,23 +23,28 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Valid values: **1 to 50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the VBRs are deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region in which the VBR is deployed. You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     * <br>
+     * <p>For more information about resource groups, see [What is a resource group?](~~94475~~)</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -46,6 +54,9 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<DescribeVirtualBorderRoutersRequestTags> tags;
 
@@ -136,19 +147,22 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
 
     public static class DescribeVirtualBorderRoutersRequestFilter extends TeaModel {
         /**
-         * <p>The filter conditions. You can specify at most five filter conditions. The following filter conditions are supported:</p>
+         * <p>The filter conditions. You can specify up to five filter conditions. Valid values:</p>
          * <br>
          * <p>*   **PhysicalConnectionId**: Filter by Express Connect circuit ID.</p>
          * <p>*   **VbrId**: Filter by VBR ID.</p>
          * <p>*   **Status**: Filter by VBR status.</p>
          * <p>*   **Name**: Filter by VBR name.</p>
          * <p>*   **AccessPointId**: Filter by access point ID.</p>
-         * <p>*   **eccId**: Filter by Express Cloud Connect (ECC) instance ID.</p>
+         * <p>*   **eccId:** Filter by Express Cloud Connect (ECC) instance ID.</p>
          * <p>*   **type**: Filter by Express Connect circuit type.</p>
          */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The filter values for keys. You can specify multiple filter values for one key. The logical operator between filter values is OR. If one filter value is matched, the filter condition is matched.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 
@@ -176,9 +190,19 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     }
 
     public static class DescribeVirtualBorderRoutersRequestTags extends TeaModel {
+        /**
+         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The key cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -100,9 +100,9 @@ public class AllocateEipAddressRequest extends TeaModel {
      * <p>*   **PayByBandwidth** (default): pay-by-bandwidth</p>
      * <p>*   **PayByTraffic**: pay-by-data-transfer</p>
      * <br>
-     * <p>If **InstanceChargeType** is set to **PrePaid**, set **InternetChargeType** to **PayByBandwidth**.</p>
+     * <p>When **InstanceChargeType** is set to **PrePaid**, set **InternetChargeType** to **PayByBandwidth**.</p>
      * <br>
-     * <p>If **InstanceChargeType** is set to **PostPaid**, set **InternetChargeType** to **PayByBandwidth** or **PayByTraffic**.</p>
+     * <p>When **InstanceChargeType** is set to **PostPaid**, set **InternetChargeType** to **PayByBandwidth** or **PayByTraffic**.</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;

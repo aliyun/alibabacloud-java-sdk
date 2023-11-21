@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesForExpressConnectRequest extends TeaModel {
     /**
-     * <p>The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: **1** to **100**. Default value: **20**.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      * <br>
-     * <p>*   If this is your first query or no next query is to be sent, ignore this parameter.</p>
-     * <p>*   If a next query is to be sent, set the value to the value of **NextToken** that is returned in the last call.</p>
+     * <p>*   You do not need to specify this parameter for the first request.</p>
+     * <p>*   You must specify the token that is obtained from the previous query as the value of **NextToken**.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -26,13 +26,16 @@ public class ListTagResourcesForExpressConnectRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the resource.</p>
+     * <p>The ID of the region to which the resource resides.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -43,11 +46,18 @@ public class ListTagResourcesForExpressConnectRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to **PHYSICALCONNECTION**, which specifies the Express Connect circuit.</p>
+     * <p>The type of the resource. Valid values:</p>
+     * <br>
+     * <p>*   **PHYSICALCONNECTION**: Express Connect circuit.</p>
+     * <p>*   **VIRTUALBORDERROUTER**: virtual border router (VBR).</p>
+     * <p>*   **ROUTERINTERFACE**: router interface.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesForExpressConnectRequestTag> tag;
 
@@ -138,17 +148,17 @@ public class ListTagResourcesForExpressConnectRequest extends TeaModel {
 
     public static class ListTagResourcesForExpressConnectRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N that is added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The key of the tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The value of the tag to add to the resource. You can specify up to 20 tag values The tag value can be an empty string.</p>
          * <br>
-         * <p>The value cannot exceed 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -66,8 +66,6 @@ public class CreateVpnGatewayRequest extends TeaModel {
 
     /**
      * <p>The billing method of the VPN gateway. Set the value to **POSTPAY**, which specifies the pay-as-you-go billing method.</p>
-     * <br>
-     * <p>> This parameter is required when you create a VPN gateway.</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
@@ -107,6 +105,15 @@ public class CreateVpnGatewayRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the VPN gateway belongs.</p>
+     * <br>
+     * <p>- You can call the [ListResourceGroups](~~158855~~) operation to query the resource group list.</p>
+     * <p>- If you do not specify a resource group, the VPN gateway will belong to the default resource group after being created.</p>
+     * <p>- After the VPN gateway is created, if you create an SSL server, SSL client certificate, IPsec server, or IPsec-VPN connection under the VPN gateway (when the IPsec-VPN connection is bound to the VPN gateway), these resources directly belong to the resource group to which the VPN gateway belongs and cannot be modified.</p>
+     * <br>
+     * <p>    If you change the resource group to which the VPN gateway belongs, the resource group to which the resource belongs will also be changed.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

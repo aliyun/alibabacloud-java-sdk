@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeBgpNetworksResponseBody extends TeaModel {
     /**
-     * <p>BGP networks.</p>
+     * <p>The BGP network.</p>
      */
     @NameInMap("BgpNetworks")
     public DescribeBgpNetworksResponseBodyBgpNetworks bgpNetworks;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -99,7 +99,7 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The ID of the virtual private cloud (VPC) in which the master instance resides.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

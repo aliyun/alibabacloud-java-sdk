@@ -7,9 +7,9 @@ public class UnassociateNetworkAclRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * <br>
-     * <p>>  If you do not set this parameter, the system uses the value of **RequestId** as **ClientToken**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -24,11 +24,16 @@ public class UnassociateNetworkAclRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the network ACL. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the network ACL.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The information about the associated resource.</p>
+     */
     @NameInMap("Resource")
     public java.util.List<UnassociateNetworkAclRequestResource> resource;
 

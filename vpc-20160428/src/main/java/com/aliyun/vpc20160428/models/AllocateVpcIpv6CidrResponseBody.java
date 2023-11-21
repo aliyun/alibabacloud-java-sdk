@@ -11,7 +11,7 @@ public class AllocateVpcIpv6CidrResponseBody extends TeaModel {
     public String ipv6CidrBlock;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
