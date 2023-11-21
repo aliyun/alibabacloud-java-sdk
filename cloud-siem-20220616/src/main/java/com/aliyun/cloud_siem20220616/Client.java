@@ -290,6 +290,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeAggregateFunctionWithOptions(request, runtime);
     }
 
+    public DescribeAlertSceneResponse describeAlertSceneWithOptions(DescribeAlertSceneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAlertScene"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAlertSceneResponse());
+    }
+
+    public DescribeAlertSceneResponse describeAlertScene(DescribeAlertSceneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAlertSceneWithOptions(request, runtime);
+    }
+
     public DescribeAlertSceneByEventResponse describeAlertSceneByEventWithOptions(DescribeAlertSceneByEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1578,6 +1607,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeWafScopeResponse describeWafScope(DescribeWafScopeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeWafScopeWithOptions(request, runtime);
+    }
+
+    public DescribeWhiteRuleListResponse describeWhiteRuleListWithOptions(DescribeWhiteRuleListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alertName)) {
+            body.put("AlertName", request.alertName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alertType)) {
+            body.put("AlertType", request.alertType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            body.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.incidentUuid)) {
+            body.put("IncidentUuid", request.incidentUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeWhiteRuleList"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeWhiteRuleListResponse());
+    }
+
+    public DescribeWhiteRuleListResponse describeWhiteRuleList(DescribeWhiteRuleListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeWhiteRuleListWithOptions(request, runtime);
     }
 
     public DoQuickFieldResponse doQuickFieldWithOptions(DoQuickFieldRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
