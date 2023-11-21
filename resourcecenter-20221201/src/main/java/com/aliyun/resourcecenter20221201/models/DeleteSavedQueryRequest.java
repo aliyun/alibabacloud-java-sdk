@@ -4,6 +4,11 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class DeleteSavedQueryRequest extends TeaModel {
+    /**
+     * <p>The ID of the template.</p>
+     * <br>
+     * <p>You can call the [ListSavedQueries](~~ListSavedQueries~~) operation to obtain the template ID.</p>
+     */
     @NameInMap("QueryId")
     public String queryId;
 

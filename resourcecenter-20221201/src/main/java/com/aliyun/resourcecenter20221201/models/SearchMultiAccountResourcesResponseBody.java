@@ -149,12 +149,24 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
     }
 
     public static class SearchMultiAccountResourcesResponseBodyResourcesIpAddressAttributes extends TeaModel {
+        /**
+         * <p>The IP address.</p>
+         */
         @NameInMap("IpAddress")
-        public java.util.List<String> ipAddress;
+        public String ipAddress;
 
+        /**
+         * <p>The network type. Valid values:</p>
+         * <br>
+         * <p>*   **Public**: the Internet</p>
+         * <p>*   **Private**: internal network</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <p>The version.</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -163,11 +175,11 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public SearchMultiAccountResourcesResponseBodyResourcesIpAddressAttributes setIpAddress(java.util.List<String> ipAddress) {
+        public SearchMultiAccountResourcesResponseBodyResourcesIpAddressAttributes setIpAddress(String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-        public java.util.List<String> getIpAddress() {
+        public String getIpAddress() {
             return this.ipAddress;
         }
 
@@ -191,13 +203,13 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
 
     public static class SearchMultiAccountResourcesResponseBodyResourcesTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The key of tag N.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The value of tag N.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -235,65 +247,71 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         /**
          * <p>The time when the resource was created.</p>
          * <br>
-         * <p>> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         * <p>>  Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The time when the resource expires.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The attributes of the IP address.</p>
+         */
         @NameInMap("IpAddressAttributes")
         public java.util.List<SearchMultiAccountResourcesResponseBodyResourcesIpAddressAttributes> ipAddressAttributes;
 
         /**
          * <p>The IP addresses.</p>
          * <br>
-         * <p>> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         * <p>>  Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
          */
         @NameInMap("IpAddresses")
         public java.util.List<String> ipAddresses;
 
         /**
-         * <p>The region ID of the resource.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the resource group to which the resource belongs.</p>
+         * <p>The resource group ID.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The name of the resource.</p>
+         * <p>The resource name.</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The resource type.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The tags of the resource.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<SearchMultiAccountResourcesResponseBodyResourcesTags> tags;
 
         /**
-         * <p>The zone ID of the resource.</p>
+         * <p>The zone ID.</p>
          * <br>
-         * <p>> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         * <p>>  Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

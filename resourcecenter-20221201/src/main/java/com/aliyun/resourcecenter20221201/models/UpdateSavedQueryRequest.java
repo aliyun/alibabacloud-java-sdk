@@ -4,15 +4,33 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class UpdateSavedQueryRequest extends TeaModel {
+    /**
+     * <p>The description of the template.</p>
+     * <br>
+     * <p>The description must be 1 to 256 characters in length.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The query statement in the template.</p>
+     */
     @NameInMap("Expression")
     public String expression;
 
+    /**
+     * <p>The name of the template.</p>
+     * <br>
+     * <p>*   The name must be 1 to 64 characters in length.</p>
+     * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-).</p>
+     * <p>*   The name must be unique.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the template.</p>
+     */
     @NameInMap("QueryId")
     public String queryId;
 

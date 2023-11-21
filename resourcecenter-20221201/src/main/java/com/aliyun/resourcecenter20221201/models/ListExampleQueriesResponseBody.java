@@ -4,15 +4,27 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class ListExampleQueriesResponseBody extends TeaModel {
+    /**
+     * <p>The information about the sample query templates.</p>
+     */
     @NameInMap("ExampleQueries")
     public java.util.List<ListExampleQueriesResponseBodyExampleQueries> exampleQueries;
 
+    /**
+     * <p>The maximum number of entries per page.</p>
+     */
     @NameInMap("MaxResults")
     public String maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,12 +66,21 @@ public class ListExampleQueriesResponseBody extends TeaModel {
     }
 
     public static class ListExampleQueriesResponseBodyExampleQueries extends TeaModel {
+        /**
+         * <p>The description of the template.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the template.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the template.</p>
+         */
         @NameInMap("QueryId")
         public String queryId;
 
