@@ -5,36 +5,31 @@ import com.aliyun.tea.*;
 
 public class QueryAccountBillResponseBody extends TeaModel {
     /**
-     * <p>The granularity at which bills are queried. Valid values:</p>
-     * <br>
-     * <p>*   MONTHLY: queries bills by month. The data queried is consistent with the data that is displayed for the specified billing cycle on the Billing Details tab of the Bill Details page in User Center.</p>
-     * <p>*   DAILY: queries bills by day. The data queried is consistent with the data that is displayed for the specified day on the Billing Details tab of the Bill Details page in User Center.</p>
-     * <br>
-     * <p>You must set the BillingDate parameter before you can set the Granularity parameter to DAILY.</p>
+     * <p>The status code returned.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public QueryAccountBillResponseBodyData data;
 
     /**
-     * <p>The billing date. This parameter is required only if the Granularity parameter is set to DAILY. Format: YYYY-MM-DD.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The status code returned.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The message returned.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -86,141 +81,46 @@ public class QueryAccountBillResponseBody extends TeaModel {
 
     public static class QueryAccountBillResponseBodyDataItemsItem extends TeaModel {
         /**
-         * <p>The billing date.</p>
+         * <p>The amount deducted by using credit refunds.</p>
          */
         @NameInMap("AdjustAmount")
         public Float adjustAmount;
 
         /**
-         * <p>The amount deducted by using prepaid cards.</p>
+         * <p>The ID of the account to which the bill belongs.</p>
          */
         @NameInMap("BillAccountID")
         public String billAccountID;
 
         /**
-         * <p>The name of the member.</p>
+         * <p>The name of the account to which the bill belongs.</p>
          */
         @NameInMap("BillAccountName")
         public String billAccountName;
 
         /**
-         * <p>The code of the service. The service code is consistent with that displayed in User Center.</p>
+         * <p>The billing date.</p>
          */
         @NameInMap("BillingDate")
         public String billingDate;
 
         /**
-         * <p>The billing method. Valid values:</p>
-         * <br>
-         * <p>*   Subscription: the subscription billing method</p>
-         * <p>*   PayAsYouGo: the pay-as-you-go billing method</p>
-         * <br>
-         * <p>**</p>
-         * <br>
-         * <p>****A value is returned only if the IsGroupByProduct parameter is set to true.</p>
+         * <p>The business type.</p>
          */
         @NameInMap("BizType")
         public String bizType;
 
         /**
-         * <p>Not allocated</p>
+         * <p>The amount paid in cash. The amount that was deducted by using credit refunds is not included.</p>
          */
         @NameInMap("CashAmount")
         public Float cashAmount;
 
         /**
-         * <p>The discount amount.</p>
+         * <p>The cost center.</p>
          */
         @NameInMap("CostUnit")
         public String costUnit;
-
-        /**
-         * <p>The amount deducted by using credit refunds.</p>
-         */
-        @NameInMap("Currency")
-        public String currency;
-
-        /**
-         * <p>The name of the account to which the bill belongs.</p>
-         */
-        @NameInMap("DeductedByCashCoupons")
-        public Float deductedByCashCoupons;
-
-        /**
-         * <p>The ID of the member.</p>
-         */
-        @NameInMap("DeductedByCoupons")
-        public Float deductedByCoupons;
-
-        /**
-         * <p>The business type.</p>
-         */
-        @NameInMap("DeductedByPrepaidCard")
-        public Float deductedByPrepaidCard;
-
-        /**
-         * <p>The ID of the account to which the bill belongs.</p>
-         */
-        @NameInMap("InvoiceDiscount")
-        public Float invoiceDiscount;
-
-        /**
-         * <p>The amount paid in cash. The amount that was deducted by using credit refunds is included.</p>
-         */
-        @NameInMap("OutstandingAmount")
-        public Float outstandingAmount;
-
-        /**
-         * <p>The amount deducted by using vouchers.</p>
-         */
-        @NameInMap("OwnerID")
-        public String ownerID;
-
-        /**
-         * <p>The name of the service.</p>
-         * <br>
-         * <p>**</p>
-         * <br>
-         * <p>****A value is returned only if the **IsGroupByProduct **parameter is set to true.</p>
-         */
-        @NameInMap("OwnerName")
-        public String ownerName;
-
-        /**
-         * <p>The amount deducted by using coupons.</p>
-         */
-        @NameInMap("PaymentAmount")
-        public Float paymentAmount;
-
-        /**
-         * <p>The name of the Alibaba Cloud account.</p>
-         */
-        @NameInMap("PipCode")
-        public String pipCode;
-
-        /**
-         * <p>The details of the bills.</p>
-         */
-        @NameInMap("PretaxAmount")
-        public Float pretaxAmount;
-
-        /**
-         * <p>The cost center.</p>
-         */
-        @NameInMap("PretaxGrossAmount")
-        public Float pretaxGrossAmount;
-
-        /**
-         * <p>The pretax gross amount.</p>
-         */
-        @NameInMap("ProductCode")
-        public String productCode;
-
-        /**
-         * <p>The pretax amount.</p>
-         */
-        @NameInMap("ProductName")
-        public String productName;
 
         /**
          * <p>The type of the currency. Valid values:</p>
@@ -228,6 +128,99 @@ public class QueryAccountBillResponseBody extends TeaModel {
          * <p>*   CNY</p>
          * <p>*   USD</p>
          * <p>*   JPY</p>
+         */
+        @NameInMap("Currency")
+        public String currency;
+
+        /**
+         * <p>The amount deducted by using vouchers.</p>
+         */
+        @NameInMap("DeductedByCashCoupons")
+        public Float deductedByCashCoupons;
+
+        /**
+         * <p>The amount deducted by using coupons.</p>
+         */
+        @NameInMap("DeductedByCoupons")
+        public Float deductedByCoupons;
+
+        /**
+         * <p>The amount deducted by using prepaid cards.</p>
+         */
+        @NameInMap("DeductedByPrepaidCard")
+        public Float deductedByPrepaidCard;
+
+        /**
+         * <p>The discount amount.</p>
+         */
+        @NameInMap("InvoiceDiscount")
+        public Float invoiceDiscount;
+
+        /**
+         * <p>The unsettled amount or the amount settled with credits.</p>
+         */
+        @NameInMap("OutstandingAmount")
+        public Float outstandingAmount;
+
+        /**
+         * <p>The ID of the member.</p>
+         */
+        @NameInMap("OwnerID")
+        public String ownerID;
+
+        /**
+         * <p>The name of the member.</p>
+         */
+        @NameInMap("OwnerName")
+        public String ownerName;
+
+        /**
+         * <p>The amount paid in cash. The amount that was deducted by using credit refunds is included.</p>
+         */
+        @NameInMap("PaymentAmount")
+        public Float paymentAmount;
+
+        /**
+         * <p>The code of the service. The service code is consistent with that displayed in User Center.</p>
+         */
+        @NameInMap("PipCode")
+        public String pipCode;
+
+        /**
+         * <p>The pretax amount.</p>
+         */
+        @NameInMap("PretaxAmount")
+        public Float pretaxAmount;
+
+        /**
+         * <p>The pretax gross amount.</p>
+         */
+        @NameInMap("PretaxGrossAmount")
+        public Float pretaxGrossAmount;
+
+        /**
+         * <p>The code of the service.</p>
+         * <br>
+         * <p>>A value is returned only if the **IsGroupByProduct** parameter is set to true.</p>
+         */
+        @NameInMap("ProductCode")
+        public String productCode;
+
+        /**
+         * <p>The name of the service.</p>
+         * <br>
+         * <p>> A value is returned only if the **IsGroupByProduct** parameter is set to true.</p>
+         */
+        @NameInMap("ProductName")
+        public String productName;
+
+        /**
+         * <p>The billing method. Valid values:</p>
+         * <br>
+         * <p>*   Subscription: the subscription billing method</p>
+         * <p>*   PayAsYouGo: the pay-as-you-go billing method</p>
+         * <br>
+         * <p>> A value is returned only if the IsGroupByProduct parameter is set to true.</p>
          */
         @NameInMap("SubscriptionType")
         public String subscriptionType;
@@ -436,43 +429,43 @@ public class QueryAccountBillResponseBody extends TeaModel {
 
     public static class QueryAccountBillResponseBodyData extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The ID of your Alibaba Cloud account.</p>
          */
         @NameInMap("AccountID")
         public String accountID;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The name of the Alibaba Cloud account.</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
-         * <p>The data returned.</p>
+         * <p>The billing cycle. Format: YYYY-MM.</p>
          */
         @NameInMap("BillingCycle")
         public String billingCycle;
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The details of the bills.</p>
          */
         @NameInMap("Items")
         public QueryAccountBillResponseBodyDataItems items;
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>The page number of the returned page.</p>
          */
         @NameInMap("PageNum")
         public Integer pageNum;
 
         /**
-         * <p>The billing cycle. Format: YYYY-MM.</p>
+         * <p>The number of entries returned per page.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The ID of your Alibaba Cloud account.</p>
+         * <p>The total number of returned entries.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

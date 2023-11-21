@@ -39,6 +39,9 @@ public class DescribeSplitItemBillRequest extends TeaModel {
     @NameInMap("InstanceID")
     public String instanceID;
 
+    @NameInMap("IsHideZeroCharge")
+    public Boolean isHideZeroCharge;
+
     /**
      * <p>The maximum number of entries to query. Default value: 20. Maximum value: 300.</p>
      */
@@ -127,6 +130,14 @@ public class DescribeSplitItemBillRequest extends TeaModel {
     }
     public String getInstanceID() {
         return this.instanceID;
+    }
+
+    public DescribeSplitItemBillRequest setIsHideZeroCharge(Boolean isHideZeroCharge) {
+        this.isHideZeroCharge = isHideZeroCharge;
+        return this;
+    }
+    public Boolean getIsHideZeroCharge() {
+        return this.isHideZeroCharge;
     }
 
     public DescribeSplitItemBillRequest setMaxResults(Integer maxResults) {
