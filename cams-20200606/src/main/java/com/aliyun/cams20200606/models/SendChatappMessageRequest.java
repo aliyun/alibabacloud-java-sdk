@@ -81,6 +81,9 @@ public class SendChatappMessageRequest extends TeaModel {
     @NameInMap("FallBackRule")
     public String fallBackRule;
 
+    @NameInMap("FlowAction")
+    public SendChatappMessageRequestFlowAction flowAction;
+
     /**
      * <p>The phone number of the message sender.</p>
      * <br>
@@ -280,6 +283,14 @@ public class SendChatappMessageRequest extends TeaModel {
         return this.fallBackRule;
     }
 
+    public SendChatappMessageRequest setFlowAction(SendChatappMessageRequestFlowAction flowAction) {
+        this.flowAction = flowAction;
+        return this;
+    }
+    public SendChatappMessageRequestFlowAction getFlowAction() {
+        return this.flowAction;
+    }
+
     public SendChatappMessageRequest setFrom(String from) {
         this.from = from;
         return this;
@@ -398,6 +409,36 @@ public class SendChatappMessageRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public static class SendChatappMessageRequestFlowAction extends TeaModel {
+        @NameInMap("FlowActionData")
+        public java.util.Map<String, String> flowActionData;
+
+        @NameInMap("FlowToken")
+        public String flowToken;
+
+        public static SendChatappMessageRequestFlowAction build(java.util.Map<String, ?> map) throws Exception {
+            SendChatappMessageRequestFlowAction self = new SendChatappMessageRequestFlowAction();
+            return TeaModel.build(map, self);
+        }
+
+        public SendChatappMessageRequestFlowAction setFlowActionData(java.util.Map<String, String> flowActionData) {
+            this.flowActionData = flowActionData;
+            return this;
+        }
+        public java.util.Map<String, String> getFlowActionData() {
+            return this.flowActionData;
+        }
+
+        public SendChatappMessageRequestFlowAction setFlowToken(String flowToken) {
+            this.flowToken = flowToken;
+            return this;
+        }
+        public String getFlowToken() {
+            return this.flowToken;
+        }
+
     }
 
     public static class SendChatappMessageRequestProductActionSectionsProductItems extends TeaModel {

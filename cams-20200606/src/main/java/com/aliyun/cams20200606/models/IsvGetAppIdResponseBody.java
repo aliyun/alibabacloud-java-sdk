@@ -22,6 +22,9 @@ public class IsvGetAppIdResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("ConfigId")
+    public String configId;
+
     /**
      * <p>The error message returned.</p>
      */
@@ -61,6 +64,14 @@ public class IsvGetAppIdResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public IsvGetAppIdResponseBody setConfigId(String configId) {
+        this.configId = configId;
+        return this;
+    }
+    public String getConfigId() {
+        return this.configId;
     }
 
     public IsvGetAppIdResponseBody setMessage(String message) {

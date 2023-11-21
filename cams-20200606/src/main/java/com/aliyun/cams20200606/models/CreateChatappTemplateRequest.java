@@ -200,6 +200,12 @@ public class CreateChatappTemplateRequest extends TeaModel {
         @NameInMap("CouponCode")
         public String couponCode;
 
+        @NameInMap("FlowAction")
+        public String flowAction;
+
+        @NameInMap("FlowId")
+        public String flowId;
+
         /**
          * <p>The unsubscribe button. This parameter is valid if Category is set to MARKETING and the Type sub-parameter of the Buttons parameter is set to QUICK_REPLY in a WhatsApp message template. After you configure message sending in the ChatApp Message Service console, marketing messages will not be sent to customers if they click this button.</p>
          */
@@ -267,6 +273,9 @@ public class CreateChatappTemplateRequest extends TeaModel {
         @NameInMap("UrlType")
         public String urlType;
 
+        @NameInMap("navigateScreen")
+        public String navigateScreen;
+
         public static CreateChatappTemplateRequestComponentsButtons build(java.util.Map<String, ?> map) throws Exception {
             CreateChatappTemplateRequestComponentsButtons self = new CreateChatappTemplateRequestComponentsButtons();
             return TeaModel.build(map, self);
@@ -286,6 +295,22 @@ public class CreateChatappTemplateRequest extends TeaModel {
         }
         public String getCouponCode() {
             return this.couponCode;
+        }
+
+        public CreateChatappTemplateRequestComponentsButtons setFlowAction(String flowAction) {
+            this.flowAction = flowAction;
+            return this;
+        }
+        public String getFlowAction() {
+            return this.flowAction;
+        }
+
+        public CreateChatappTemplateRequestComponentsButtons setFlowId(String flowId) {
+            this.flowId = flowId;
+            return this;
+        }
+        public String getFlowId() {
+            return this.flowId;
         }
 
         public CreateChatappTemplateRequestComponentsButtons setIsOptOut(Boolean isOptOut) {
@@ -350,6 +375,14 @@ public class CreateChatappTemplateRequest extends TeaModel {
         }
         public String getUrlType() {
             return this.urlType;
+        }
+
+        public CreateChatappTemplateRequestComponentsButtons setNavigateScreen(String navigateScreen) {
+            this.navigateScreen = navigateScreen;
+            return this;
+        }
+        public String getNavigateScreen() {
+            return this.navigateScreen;
         }
 
     }

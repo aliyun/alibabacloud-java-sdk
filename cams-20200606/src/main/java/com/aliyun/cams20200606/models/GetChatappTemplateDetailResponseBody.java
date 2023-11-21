@@ -173,11 +173,20 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         @NameInMap("ExtendAttrs")
         public GetChatappTemplateDetailResponseBodyDataComponentsButtonsExtendAttrs extendAttrs;
 
+        @NameInMap("FlowAction")
+        public String flowAction;
+
+        @NameInMap("FlowId")
+        public String flowId;
+
         /**
          * <p>Whatsapp模板，在Category为Marketing,并且Button type为QUICK_REPLY时有效，表示按钮为营销退订按钮，客户如果点击了此按钮，并且在chatapp平台上配置了发送控制操作，则后续Marketing消息则不会发送到客户</p>
          */
         @NameInMap("IsOptOut")
         public Boolean isOptOut;
+
+        @NameInMap("NavigateScreen")
+        public String navigateScreen;
 
         /**
          * <p>Whatsapp模板，Category为Authentication，并且Button Type为ONE_TAP时必填，表示Whatsapp调起应用的包名</p>
@@ -265,12 +274,36 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             return this.extendAttrs;
         }
 
+        public GetChatappTemplateDetailResponseBodyDataComponentsButtons setFlowAction(String flowAction) {
+            this.flowAction = flowAction;
+            return this;
+        }
+        public String getFlowAction() {
+            return this.flowAction;
+        }
+
+        public GetChatappTemplateDetailResponseBodyDataComponentsButtons setFlowId(String flowId) {
+            this.flowId = flowId;
+            return this;
+        }
+        public String getFlowId() {
+            return this.flowId;
+        }
+
         public GetChatappTemplateDetailResponseBodyDataComponentsButtons setIsOptOut(Boolean isOptOut) {
             this.isOptOut = isOptOut;
             return this;
         }
         public Boolean getIsOptOut() {
             return this.isOptOut;
+        }
+
+        public GetChatappTemplateDetailResponseBodyDataComponentsButtons setNavigateScreen(String navigateScreen) {
+            this.navigateScreen = navigateScreen;
+            return this;
+        }
+        public String getNavigateScreen() {
+            return this.navigateScreen;
         }
 
         public GetChatappTemplateDetailResponseBodyDataComponentsButtons setPackageName(String packageName) {
