@@ -108,6 +108,13 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group to which the IPsec-VPN connection belongs.</p>
+     * <br>
+     * <p>The IPsec-VPN connection has the same resource group as its associated VPN gateway instance. </p>
+     * <br>
+     * <p>You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

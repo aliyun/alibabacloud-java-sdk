@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      * <br>
-     * <p>*   If the return value of **NextToken** is empty, no next query is to be sent.</p>
-     * <p>*   If a value is returned for **NextToken**, the value is the token that is used for the next query.</p>
+     * <p>*   If **NextToken** is empty, no next page exists.</p>
+     * <p>*   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The details about the tag.</p>
+     * <p>The tags that are added to the resource.</p>
      */
     @NameInMap("TagResources")
     public ListTagResourcesForExpressConnectResponseBodyTagResources tagResources;
@@ -56,13 +56,17 @@ public class ListTagResourcesForExpressConnectResponseBody extends TeaModel {
 
     public static class ListTagResourcesForExpressConnectResponseBodyTagResourcesTagResource extends TeaModel {
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The type of the resource. The value is set to **PHYSICALCONNECTION**, which indicates the Express Connect circuit.</p>
+         * <p>The type of the resource. Valid values:</p>
+         * <br>
+         * <p>*   **PHYSICALCONNECTION**: Express Connect circuit.</p>
+         * <p>*   **VIRTUALBORDERROUTER**: VBR.</p>
+         * <p>*   **ROUTERINTERFACE**: router interface.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

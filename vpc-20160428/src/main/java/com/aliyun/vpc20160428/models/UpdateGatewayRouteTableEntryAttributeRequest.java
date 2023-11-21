@@ -7,9 +7,9 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate a value, and you must make sure that each request has a unique token value. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The **request ID** may be different for each request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -67,11 +67,11 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends TeaModel {
     public String nextHopId;
 
     /**
-     * <p>The new next hop type of the route entry. Valid values:</p>
+     * <p>The new next hop type of the route. Valid values:</p>
      * <br>
-     * <p>*   **EcsInstance**: an Elastic Compute Service (ECS) instance.</p>
-     * <p>*   **NetworkInterface**: an elastic network interface (ENI).</p>
-     * <p>*   **Local**: a local next hop.</p>
+     * <p>*   **Instance**: Elastic Compute Service (ECS) instance</p>
+     * <p>*   **NetworkInterface**: elastic network interface (ENI)</p>
+     * <p>*   **Local**: local next hop</p>
      */
     @NameInMap("NextHopType")
     public String nextHopType;

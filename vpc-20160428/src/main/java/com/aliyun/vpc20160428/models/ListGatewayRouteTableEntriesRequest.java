@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGatewayRouteTableEntriesRequest extends TeaModel {
     /**
-     * <p>The destination CIDR block of the route in the gateway route table.</p>
+     * <p>The destination CIDR block of the route entry in the gateway route table.</p>
      */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
@@ -23,10 +23,10 @@ public class ListGatewayRouteTableEntriesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If this is your first query and no next queries are to be sent, ignore this parameter.</p>
-     * <p>*   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     * <p>*   You do not need to specify this parameter for the first request.</p>
+     * <p>*   If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -40,7 +40,7 @@ public class ListGatewayRouteTableEntriesRequest extends TeaModel {
     /**
      * <p>The region ID of the gateway route table.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

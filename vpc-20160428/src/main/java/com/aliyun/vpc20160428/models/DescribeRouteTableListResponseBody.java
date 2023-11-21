@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeRouteTableListResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -29,7 +29,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
     public DescribeRouteTableListResponseBodyRouterTableList routerTableList;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -100,13 +100,13 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
 
     public static class DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTagsTag extends TeaModel {
         /**
-         * <p>The key of the tag that is added to the route table.</p>
+         * <p>The key of tag N added to the resource.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag that is added to the route table.</p>
+         * <p>The value of tag N added to the resource.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -227,8 +227,8 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         /**
          * <p>The type of the route table. Valid values:</p>
          * <br>
-         * <p>*   **Custom**: a custom route table</p>
-         * <p>*   **System**: a system route table</p>
+         * <p>*   **Custom**</p>
+         * <p>*   **System**</p>
          */
         @NameInMap("RouteTableType")
         public String routeTableType;
@@ -242,8 +242,8 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         /**
          * <p>The type of the router to which the route table belongs. Valid values:</p>
          * <br>
-         * <p>*   **VRouter**: a vRouter</p>
-         * <p>*   **VBR**: a VBR</p>
+         * <p>*   **VRouter**</p>
+         * <p>*   **VBR**</p>
          */
         @NameInMap("RouterType")
         public String routerType;
@@ -251,9 +251,9 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         /**
          * <p>The status of the route table. Valid values:</p>
          * <br>
-         * <p>*   **Pending**: being created</p>
-         * <p>*   **Available**: available</p>
-         * <p>*   **Deleting**: being deleted</p>
+         * <p>*   **Pending**</p>
+         * <p>*   **Available**</p>
+         * <p>*   **Deleting**</p>
          */
         @NameInMap("Status")
         public String status;
@@ -265,7 +265,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTags tags;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The information about the vSwitches.</p>
          */
         @NameInMap("VSwitchIds")
         public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeVSwitchIds vSwitchIds;

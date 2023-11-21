@@ -7,9 +7,9 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     /**
      * <p>The ID of the access point to which the VBR belongs.</p>
      * <br>
-     * <p>You can call the [DescribeAccessPoints](~~36062~~) operation to query the most recent access point list.</p>
+     * <p>You can call the [DescribeAccessPoints](~~36062~~) operation to obtain the IDs of access points.</p>
      * <br>
-     * <p>>  This parameter is required if an Express Connect circuit is used.</p>
+     * <p>>  This parameter is required if the VBR is connected to an Express Connect circuit.</p>
      */
     @NameInMap("AccessPointId")
     public String accessPointId;
@@ -17,23 +17,29 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <br>
-     * <p>*   **false** (default): disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</p>
-     * <p>*   **true**: enables automatic payment. Payments are automatically completed.</p>
+     * <p>*   **false** (default): The automatic payment is disabled. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</p>
+     * <p>*   **true**: The automatic payment is enabled. Payments are automatically complete after an order is generated.</p>
      * <br>
      * <p>>  This parameter is required if **InstanceChargeType** is set to **PrePaid**.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+     * <br>
+     * <p>*   **false** (default)</p>
+     * <p>*   **true**</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
      * <br>
-     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -41,20 +47,22 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     /**
      * <p>The description of the router interface.</p>
      * <br>
-     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>Indicates whether the VBR that is created in the Fast Link mode is uplinked to the router interface. The Fast Link mode helps automatically connect router interfaces that are created for the VBR and its peer VPC. Valid values:</p>
+     * <p>Specifies whether the VBR that is created in the Fast Link mode is uplinked to the router interface. The Fast Link mode helps automatically connect router interfaces that are created for the VBR and its peer VPC. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      * <br>
      * <p>> </p>
+     * <br>
      * <p>*   This parameter takes effect only if **RouterType** is set to **VBR** and **OppositeRouterType** is set to **VRouter**.</p>
-     * <p>*   If **FastLinkMode** is set to **true**, **Role** must be set to **InitiatingSide**. **AccessPointId**, **OppositeRouterType**, **OpppsiteRouterId**, and **OppositeInterfaceOwnerId** are required.</p>
+     * <br>
+     * <p>*   If **FastLinkMode** is set to **true**, **Role** must be set to **InitiatingSide**. In this case, **AccessPointId**, **OppositeRouterType**, **OpppsiteRouterId**, and **OppositeInterfaceOwnerId** are required.</p>
      */
     @NameInMap("FastLinkMode")
     public Boolean fastLinkMode;
@@ -62,7 +70,7 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     /**
      * <p>The source IP address that is used to perform health checks. The source IP address must be an idle IP address of the local virtual private cloud (VPC).</p>
      * <br>
-     * <p>>  You can set this parameter if an Express Connect circuit is used.</p>
+     * <p>>  You can set this parameter when an Express Connect circuit is used.</p>
      */
     @NameInMap("HealthCheckSourceIp")
     public String healthCheckSourceIp;
@@ -70,7 +78,7 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     /**
      * <p>The destination IP address that is used to perform health checks.</p>
      * <br>
-     * <p>>  This parameter is required if the **HealthCheckSourceIp** parameter is set.</p>
+     * <p>>  This parameter is required if you specify **HealthCheckSourceIp**</p>
      */
     @NameInMap("HealthCheckTargetIp")
     public String healthCheckTargetIp;
@@ -87,7 +95,7 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     /**
      * <p>The name of the router interface.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("Name")
     public String name;
@@ -113,7 +121,7 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     public String oppositeInterfaceOwnerId;
 
     /**
-     * <p>The ID of the region where the acceptor is deployed.</p>
+     * <p>The ID of the region in which the acceptor is deployed.</p>
      */
     @NameInMap("OppositeRegionId")
     public String oppositeRegionId;
@@ -142,8 +150,8 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     /**
      * <p>The subscription duration. Valid values:</p>
      * <br>
-     * <p>*   Valid values if the PricingCycle parameter is set to Month: **1 to 9**.</p>
-     * <p>*   Valid values if the PricingCycle parameter is set to Year: **1 to 3**.</p>
+     * <p>*   Valid values when PricingCycle is set to Month: **1 to 9**.</p>
+     * <p>*   Valid values when PricingCycle is set to Year: **1 to 3**.</p>
      * <br>
      * <p>>  This parameter is required if **InstanceChargeType** is set to **PrePaid**.</p>
      */
@@ -153,8 +161,8 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     /**
      * <p>The billing cycle of the subscription. Valid values:</p>
      * <br>
-     * <p>*   **Month** (default): monthly subscription</p>
-     * <p>*   **Year**: annual subscription</p>
+     * <p>*   **Month** (default)</p>
+     * <p>*   **Year**</p>
      * <br>
      * <p>>  This parameter is required if **InstanceChargeType** is set to **PrePaid**.</p>
      */
@@ -164,11 +172,16 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     /**
      * <p>The ID of the region to which the router interface belongs.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * <br>
+     * <p>For more information about resource group, see [What is Resource Management?](~~94475~~)</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -194,7 +207,7 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     public String routerId;
 
     /**
-     * <p>The type of router associated with the router interface. Valid values:</p>
+     * <p>The type of router that is associated with the router interface. Valid values:</p>
      * <br>
      * <p>*   **VRouter**</p>
      * <p>*   **VBR**</p>
@@ -203,7 +216,7 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     public String routerType;
 
     /**
-     * <p>The specification of the router interface. Valid specifications and bandwidth values:</p>
+     * <p>The specification of the router interface and the corresponding bandwidth. Valid values:</p>
      * <br>
      * <p>*   **Mini.2**: 2 Mbit/s</p>
      * <p>*   **Mini.5**: 5 Mbit/s</p>
@@ -218,11 +231,14 @@ public class CreateRouterInterfaceRequest extends TeaModel {
      * <p>*   **Large.5**: 5,000 Mbit/s</p>
      * <p>*   **Xlarge.1**: 10,000 Mbit/s</p>
      * <br>
-     * <p>>  If **Role** is set to **AcceptingSide** (acceptor), set **Spec** to **Negative**. You do not need to specify specifications when you create an acceptor router interface.</p>
+     * <p>>  If **Role** is set to **AcceptingSide**, set **Spec** to **Negative**. This indicates that you do not need to specify the specification when you create an acceptor router interface.</p>
      */
     @NameInMap("Spec")
     public String spec;
 
+    /**
+     * <p>The tag to add to the resource.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateRouterInterfaceRequestTags> tags;
 
@@ -464,9 +480,19 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     }
 
     public static class CreateRouterInterfaceRequestTags extends TeaModel {
+        /**
+         * <p>The tag key to add to the resource. You must enter at least one tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>A tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

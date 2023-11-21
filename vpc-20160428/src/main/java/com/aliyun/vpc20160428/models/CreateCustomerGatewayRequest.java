@@ -68,6 +68,13 @@ public class CreateCustomerGatewayRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the customer gateway belongs.</p>
+     * <br>
+     * <p>- You can call the [ListResourceGroups](~~158855~~) operation to query the resource group list.</p>
+     * <br>
+     * <p>- If you do not specify a resource group, the customer gateway will belong to the default resource group after being created.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

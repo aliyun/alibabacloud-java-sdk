@@ -11,13 +11,13 @@ public class DescribeRouteTableListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries returned per page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -63,19 +63,22 @@ public class DescribeRouteTableListRequest extends TeaModel {
     /**
      * <p>The type of the router to which the route table belongs. Valid values:</p>
      * <br>
-     * <p>*   **VRouter** (default): a vRouter</p>
-     * <p>*   **VBR**: a virtual border router (VBR)</p>
+     * <p>*   **VRouter** (default)</p>
+     * <p>*   **VBR**</p>
      */
     @NameInMap("RouterType")
     public String routerType;
 
+    /**
+     * <p>The tags of the resource.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeRouteTableListRequestTag> tag;
 
     /**
      * <p>The ID of the virtual private cloud (VPC) to which the route table belongs.</p>
      * <br>
-     * <p>After this parameter is set, the value of the **RouterType** parameter is automatically set to **VRouter**.</p>
+     * <p>After this parameter is specified, the value of the **RouterType** parameter is automatically set to **VRouter**.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -198,9 +201,19 @@ public class DescribeRouteTableListRequest extends TeaModel {
     }
 
     public static class DescribeRouteTableListRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

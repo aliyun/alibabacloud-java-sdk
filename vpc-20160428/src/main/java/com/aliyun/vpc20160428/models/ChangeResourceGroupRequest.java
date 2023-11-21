@@ -7,27 +7,31 @@ public class ChangeResourceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the new resource group.</p>
      * <br>
-     * <p>>  You can use resource groups to manage resources owned by your Alibaba Cloud account. Resource groups simplify the resource and permission management of your Alibaba Cloud account. For more information, see [What is resource management?](~~94475~~).</p>
+     * <p>>  You can use resource groups to manage resources within your Alibaba Cloud account by group. This helps you resolve issues such as resource grouping and permission management for your Alibaba Cloud account. For more information, see [What is Resource Management?](~~94475~~)</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
     /**
-     * <p>The region ID of the resource group.</p>
+     * <p>The ID of the region to which the new resource group belongs.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query available regions.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the Express Connect circuit.</p>
+     * <p>The ID of the Express Connect circuit whose resource group you want to modify.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
-     * <p>The type of the resource. Set the value to **PHYSICALCONNECTION**, which specifies an Express Connect circuit.</p>
+     * <p>The type of the resource. Valid values:</p>
+     * <br>
+     * <p>*   **PHYSICALCONNECTION**: Express Connect circuit.</p>
+     * <p>*   **VIRTUALBORDERROUTER**: virtual border router (VBR).</p>
+     * <p>*   **ROUTERINTERFACE**: router interface.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

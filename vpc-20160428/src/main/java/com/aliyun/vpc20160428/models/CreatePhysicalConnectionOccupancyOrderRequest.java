@@ -16,13 +16,13 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The billing method of the Express Connect circuit. Set the value to</p>
+     * <p>The billing method. Set the value to</p>
      * <br>
      * <p>**PrePaid**, which specifies the subscription billing method. If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.</p>
      */
@@ -53,8 +53,8 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends TeaModel {
     /**
      * <p>The billing cycle of the subscription. Valid values:</p>
      * <br>
-     * <p>*   **Month**: Bills are paid on a monthly basis. This is the default value.</p>
-     * <p>*   **Year**: Bills are paid on an annual basis.</p>
+     * <p>*   **Month** (default)</p>
+     * <p>*   **Year**</p>
      */
     @NameInMap("PricingCycle")
     public String pricingCycle;

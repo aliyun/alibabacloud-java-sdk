@@ -19,7 +19,7 @@ public class ModifyRouteTableAttributesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the virtual private cloud (VPC) to which the route table belongs.</p>
+     * <p>The region ID of the virtual private cloud (VPC) to which the custom route table belongs.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
@@ -41,7 +41,7 @@ public class ModifyRouteTableAttributesRequest extends TeaModel {
     /**
      * <p>The name of the route table.</p>
      * <br>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("RouteTableName")
     public String routeTableName;

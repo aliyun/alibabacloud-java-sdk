@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeRouteEntryListRequest extends TeaModel {
+    /**
+     * <p>The destination CIDR blocks of the routes.</p>
+     */
     @NameInMap("DestCidrBlockList")
     public java.util.List<String> destCidrBlockList;
 
@@ -23,7 +26,7 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     public String ipVersion;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **10**.</p>
+     * <p>The number of entries per page. Valid values: **1** to **100**. Default value: **10**.</p>
      */
     @NameInMap("MaxResult")
     public Integer maxResult;
@@ -38,7 +41,7 @@ public class DescribeRouteEntryListRequest extends TeaModel {
      * <p>The type of the next hop. Valid values:</p>
      * <br>
      * <p>*   **Instance** (default): an Elastic Compute Service (ECS) instance</p>
-     * <p>*   **HaVip**: a high-availability virtual IP address (HAVIP)</p>
+     * <p>*   **HaVip**: a high-availability virtual IP address (HAVIP).</p>
      * <p>*   **VpnGateway**: a VPN gateway</p>
      * <p>*   **NatGateway**: a NAT gateway</p>
      * <p>*   **NetworkInterface**: a secondary elastic network interface (ENI)</p>
@@ -50,10 +53,10 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     public String nextHopType;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If this is your first query and no next queries are to be sent, ignore this parameter.</p>
-     * <p>*   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     * <p>*   You do not need to specify this parameter for the first request.</p>
+     * <p>*   You must specify the token that is obtained from the previous query as the value of NextToken.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -85,26 +88,26 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     public String routeEntryId;
 
     /**
-     * <p>The name of the route.</p>
+     * <p>The name of the route entry.</p>
      * <br>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("RouteEntryName")
     public String routeEntryName;
 
     /**
-     * <p>The type of the route. Valid values:</p>
+     * <p>The route type. Valid values:</p>
      * <br>
-     * <p>*   **Custom**: a custom route</p>
-     * <p>*   **System**: a system route</p>
-     * <p>*   **BGP**: a BGP route</p>
-     * <p>*   **CEN**: a Cloud Enterprise Network (CEN) route</p>
+     * <p>*   **Custom**</p>
+     * <p>*   **System**</p>
+     * <p>*   **BGP**</p>
+     * <p>*   **CEN**</p>
      */
     @NameInMap("RouteEntryType")
     public String routeEntryType;
 
     /**
-     * <p>The ID of the route table.</p>
+     * <p>The ID of the route table that you want to query.</p>
      */
     @NameInMap("RouteTableId")
     public String routeTableId;
@@ -112,7 +115,7 @@ public class DescribeRouteEntryListRequest extends TeaModel {
     /**
      * <p>Specifies whether to host the route. If the parameter is empty, the route is not hosted.</p>
      * <br>
-     * <p>If you set the value to **TR**, the route is hosted by a transit router.</p>
+     * <p>Set the value to **TR**, which specifies that the route is hosted by a transit router.</p>
      */
     @NameInMap("ServiceType")
     public String serviceType;

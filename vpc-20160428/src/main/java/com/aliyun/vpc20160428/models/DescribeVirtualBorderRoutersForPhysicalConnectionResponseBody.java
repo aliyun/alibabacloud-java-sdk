@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -81,13 +81,13 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
 
     public static class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBodyVirtualBorderRouterForPhysicalConnectionSetVirtualBorderRouterForPhysicalConnectionType extends TeaModel {
         /**
-         * <p>The first time when the VBR was activated.</p>
+         * <p>The time when the VBR was first activated.</p>
          */
         @NameInMap("ActivationTime")
         public String activationTime;
 
         /**
-         * <p>The bandwidth of the VBR associated with the Express Connect circuit. Unit: Mbit/s.</p>
+         * <p>The bandwidth of the VBR that is associated with the Express Connect circuit. Unit: Mbit/s.</p>
          */
         @NameInMap("Bandwidth")
         public String bandwidth;
@@ -95,14 +95,14 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         /**
          * <p>The status of the bandwidth. Valid values:</p>
          * <br>
-         * <p>*   **Active**: normal</p>
-         * <p>*   **Inactive**: abnormal</p>
+         * <p>*   **Active**</p>
+         * <p>*   **Inactive**</p>
          */
         @NameInMap("BandwidthStatus")
         public String bandwidthStatus;
 
         /**
-         * <p>The circuit code of the Express Connect circuit. The circuit code is predefined by the connectivity provider.</p>
+         * <p>The circuit code of the Express Connect circuit. The circuit code is provided by the Internet service provider (ISP).</p>
          */
         @NameInMap("CircuitCode")
         public String circuitCode;
@@ -122,29 +122,29 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         /**
          * <p>Indicates whether IPv6 is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("EnableIpv6")
         public Boolean enableIpv6;
 
         /**
-         * <p>The IPv4 address of the VBR.</p>
+         * <p>The IPv4 address of the gateway device on the Alibaba Cloud side.</p>
          */
         @NameInMap("LocalGatewayIp")
         public String localGatewayIp;
 
         /**
-         * <p>The IPv6 address of the VBR.</p>
+         * <p>The IPv6 address of the gateway device on the Alibaba Cloud side.</p>
          */
         @NameInMap("LocalIpv6GatewayIp")
         public String localIpv6GatewayIp;
 
         /**
-         * <p>The status of the VBR associated with the Express Connect circuit. Valid values:</p>
+         * <p>The status of the VBR that is associated with the Express Connect circuit. Valid values:</p>
          * <br>
-         * <p>*   **Normal**: normal</p>
-         * <p>*   **FinancialLocked**: locked due to overdue payments</p>
+         * <p>*   **Normal**: The VBR is running as expected.</p>
+         * <p>*   **FinancialLocked**: The VBR is locked due to overdue payments.</p>
          */
         @NameInMap("PConnVbrBussinessStatus")
         public String PConnVbrBussinessStatus;
@@ -152,34 +152,34 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         /**
          * <p>The billing method of the VBR that is associated with the Express Connect circuit. Valid values:</p>
          * <br>
-         * <p>*   **PrePaid**: subscription If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.</p>
-         * <p>*   **PostPaid**: pay-as-you-go</p>
+         * <p>*   **PrePaid**: subscription. If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.</p>
+         * <p>*   **PostPaid**: pay-as-you-go.</p>
          */
         @NameInMap("PConnVbrChargeType")
         public String PConnVbrChargeType;
 
         /**
-         * <p>The time when the VBR associated with the Express Connect circuit expires.</p>
+         * <p>The time when the VBR that is associated with the Express Connect circuit expires.</p>
          */
         @NameInMap("PConnVbrExpireTime")
         public String PConnVbrExpireTime;
 
         /**
-         * <p>The IPv4 address of the gateway device in the data center.</p>
+         * <p>The IPv4 address of the gateway device on the user side.</p>
          */
         @NameInMap("PeerGatewayIp")
         public String peerGatewayIp;
 
         /**
-         * <p>The IPv6 address of the gateway device in the data center.</p>
+         * <p>The IPv6 address of the gateway device on the user side.</p>
          * <br>
-         * <p>This parameter is required when you create a VBR for the owner of the Express Connect circuit. You can ignore this parameter when you create a VBR for another Alibaba Cloud account.</p>
+         * <p>This parameter is required if you create a VBR for the owner of the Express Connect circuit. You can leave this parameter empty if you create a VBR for other Alibaba Cloud accounts.</p>
          */
         @NameInMap("PeerIpv6GatewayIp")
         public String peerIpv6GatewayIp;
 
         /**
-         * <p>The subnet mask for the IPv6 addresses of the gateway devices in the data center and the VBRs.</p>
+         * <p>The subnet mask for the IPv6 addresses of the gateway devices on the Alibaba Cloud side and on the user side.</p>
          * <br>
          * <p>The two IPv6 addresses must fall within the same subnet.</p>
          */
@@ -187,7 +187,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         public String peeringIpv6SubnetMask;
 
         /**
-         * <p>The subnet mask for the IPv4 addresses of the gateway device in the data center and the VBR.</p>
+         * <p>The subnet mask for the IPv4 addresses of the gateway devices on the Alibaba Cloud side and on the user side.</p>
          * <br>
          * <p>The two IPv4 addresses must fall within the same subnet.</p>
          */
@@ -195,26 +195,26 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         public String peeringSubnetMask;
 
         /**
-         * <p>The last time when the status of the VBR changed from Terminated to Active.</p>
+         * <p>The time when the status of the VBR last changed from Terminated to Active.</p>
          */
         @NameInMap("RecoveryTime")
         public String recoveryTime;
 
         /**
-         * <p>The status of the VBR. Valid values: Valid values:</p>
+         * <p>The status of the VBR. Valid values:</p>
          * <br>
-         * <p>*   **Unconfirmed**: pending confirmation from other users</p>
-         * <p>*   **Active**: normal</p>
-         * <p>*   **Terminating**: being disabled</p>
-         * <p>*   **Terminated**: disabled</p>
-         * <p>*   **Recovering**: being enabled</p>
-         * <p>*   **Deleting**: being deleted</p>
+         * <p>*   **Unconfirmed**: The VBR is pending confirmation from other users.</p>
+         * <p>*   **Active**: The VBR is normal.</p>
+         * <p>*   **Terminating**: The VBR is being disabled.</p>
+         * <p>*   **Terminated**: The VBR is disabled.</p>
+         * <p>*   **Recovering**: The VBR is being recovered.</p>
+         * <p>*   **Deleting**: The VBR is being deleted.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The last time when the VBR was disabled.</p>
+         * <p>The time when the VBR was last disabled.</p>
          */
         @NameInMap("TerminationTime")
         public String terminationTime;
@@ -226,7 +226,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         public String type;
 
         /**
-         * <p>The ID of the VBR.</p>
+         * <p>The VBR ID.</p>
          */
         @NameInMap("VbrId")
         public String vbrId;
@@ -234,13 +234,13 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         /**
          * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
          * <br>
-         * <p>If the owner of the VBR is the same as that of the Express Connect circuit, this parameter is empty.</p>
+         * <p>If the owner of the VBR is the same as that of the Express Connect circuit, this parameter is left empty.</p>
          */
         @NameInMap("VbrOwnerUid")
         public Long vbrOwnerUid;
 
         /**
-         * <p>The VLAN ID of the VBR.</p>
+         * <p>The virtual local area network (VLAN) ID of the VBR.</p>
          */
         @NameInMap("VlanId")
         public Integer vlanId;

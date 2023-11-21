@@ -11,19 +11,19 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
     public DescribeBgpGroupsResponseBodyBgpGroups bgpGroups;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -118,8 +118,8 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the ASN is fake. Valid values:</p>
          * <br>
-         * <p>*   **false**: no</p>
-         * <p>*   **true**: yes</p>
+         * <p>*   **false**</p>
+         * <p>*   **true**</p>
          */
         @NameInMap("IsFake")
         public String isFake;
@@ -131,7 +131,7 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
         public String keepalive;
 
         /**
-         * <p>The ASN of the VBR.</p>
+         * <p>The ASN of the device on the Alibaba Cloud side.</p>
          */
         @NameInMap("LocalAsn")
         public String localAsn;
@@ -143,7 +143,7 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The autonomous system number (ASN) of the gateway device in the data center.</p>
+         * <p>The autonomous system number (ASN) of the on-premises device in the data center.</p>
          */
         @NameInMap("PeerAsn")
         public String peerAsn;

@@ -13,8 +13,8 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the IPv4 gateway is activated. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("Enabled")
     public Boolean enabled;
@@ -44,7 +44,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
     public String ipv4GatewayRouteTableId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -75,7 +75,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
     public java.util.List<GetIpv4GatewayAttributeResponseBodyTags> tags;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) with which the IPv4 gateway is associated.</p>
+     * <p>The ID of the VPC with which the IPv4 gateway is associated.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -175,13 +175,13 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
 
     public static class GetIpv4GatewayAttributeResponseBodyTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of tag N added to the resource.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of tag N added to the resource.</p>
          */
         @NameInMap("Value")
         public String value;

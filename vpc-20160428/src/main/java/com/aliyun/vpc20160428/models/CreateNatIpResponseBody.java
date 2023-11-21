@@ -17,7 +17,7 @@ public class CreateNatIpResponseBody extends TeaModel {
     public String natIpId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

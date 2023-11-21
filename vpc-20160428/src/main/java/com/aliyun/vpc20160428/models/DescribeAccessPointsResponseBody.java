@@ -11,25 +11,25 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
     public DescribeAccessPointsResponseBodyAccessPointSet accessPointSet;
 
     /**
-     * <p>The number of the returned page. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries returned per page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -160,7 +160,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The colocation provider of the access point.</p>
+         * <p>The Internet service provider (ISP) of the access point. Valid values:</p>
          */
         @NameInMap("HostOperator")
         public String hostOperator;
@@ -180,7 +180,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         /**
          * <p>The status of the access point. Valid values:</p>
          * <br>
-         * <p>*   **Recommended**: The access point is ready for use.</p>
+         * <p>*   **recommended**: The access point is ready for use.</p>
          * <p>*   **hot**: A large number of Express Connect circuits are connected to the access point.</p>
          * <p>*   **full**: The number of Express Connect circuits connected to the access point has reached the upper limit.</p>
          * <p>*   **disabled**: The access point is unavailable.</p>

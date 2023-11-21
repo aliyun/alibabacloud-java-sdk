@@ -11,13 +11,13 @@ public class CreateIpv6GatewayResponseBody extends TeaModel {
     public String ipv6GatewayId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the resource group to which the IPv6 gateway belongs.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

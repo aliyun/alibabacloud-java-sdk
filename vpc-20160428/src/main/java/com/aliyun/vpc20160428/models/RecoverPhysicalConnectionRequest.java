@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class RecoverPhysicalConnectionRequest extends TeaModel {
     /**
-     * <p>Specifies whether to precheck the request only. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <br>
-     * <p>*   **true**: only prechecks the request but does not resume the Express Connect circuit. The system prechecks the request syntax, instance status, and whether the required parameters are specified. An error message is returned if the request fails to pass the precheck. If the request passes the precheck, the system returns the ID of the request.</p>
-     * <p>*   **false** (default): sends the request. If the request passes the precheck, the Express Connect circuit is resumed.</p>
+     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, the request ID is returned.</p>
+     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -16,7 +16,7 @@ public class RecoverPhysicalConnectionRequest extends TeaModel {
     /**
      * <p>The ID of the Express Connect circuit.</p>
      * <br>
-     * <p>>  You can resume only shared Express Connect circuits.</p>
+     * <p>>  You can resume only shared Express Connect circuits by calling this API operation.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -32,7 +32,7 @@ public class RecoverPhysicalConnectionRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate a token, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("Token")
     public String token;

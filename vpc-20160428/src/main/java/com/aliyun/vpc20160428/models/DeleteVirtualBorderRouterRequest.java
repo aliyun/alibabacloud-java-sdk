@@ -19,7 +19,7 @@ public class DeleteVirtualBorderRouterRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the VBR is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the VBR. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

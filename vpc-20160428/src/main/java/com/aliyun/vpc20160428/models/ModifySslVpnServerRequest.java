@@ -24,9 +24,9 @@ public class ModifySslVpnServerRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** is different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -41,10 +41,13 @@ public class ModifySslVpnServerRequest extends TeaModel {
     public Boolean compress;
 
     /**
-     * <p>Specifies whether to enable two-factor authentication.</p>
+     * <p>Specifies whether to enable two-factor authentication. If you enable two-factor authentication, you must also specify an IDaaS instance ID. Valid values:</p>
      * <br>
      * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
+     * <p>*   **false**</p>
+     * <br>
+     * <p>> *   Two-factor authentication supports only IDaaS instances of earlier versions. If you do not have and cannot create IDaaS instances of earlier versions, you cannot enable two-factor authentication.</p>
+     * <p>> *   For existing SSL servers, if two-factor authentication is already enabled, you can continue to use two-factor authentication.</p>
      */
     @NameInMap("EnableMultiFactorAuth")
     public Boolean enableMultiFactorAuth;
@@ -82,9 +85,9 @@ public class ModifySslVpnServerRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The port used by the SSL server. Default value: **1194**. The following ports are not supported:</p>
+     * <p>The port that is used by the SSL server. Valid values of port numbers: **1** to **65535**. Default value: **1194**.</p>
      * <br>
-     * <p>**22, 2222, 22222, 9000, 9001, 9002, 7505, 80, 443, 53, 68, 123, 4510, 4560, 500, and 4500**.</p>
+     * <p>The following ports are not supported: **22**, **2222**, **22222**, **9000**, **9001**, **9002**, **7505**, **80**, **443**, **53**, **68**, **123**, **4510**, **4560**, **500**, and **4500**.</p>
      */
     @NameInMap("Port")
     public Integer port;
@@ -92,8 +95,8 @@ public class ModifySslVpnServerRequest extends TeaModel {
     /**
      * <p>The protocol that is used by the SSL server. Valid values:</p>
      * <br>
-     * <p>*   **TCP**</p>
-     * <p>*   **UDP** (default)</p>
+     * <p>*   **TCP** (default)</p>
+     * <p>*   **UDP**</p>
      */
     @NameInMap("Proto")
     public String proto;

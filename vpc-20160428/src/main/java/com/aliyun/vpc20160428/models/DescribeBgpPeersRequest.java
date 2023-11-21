@@ -17,10 +17,10 @@ public class DescribeBgpPeersRequest extends TeaModel {
     public String bgpPeerId;
 
     /**
-     * <p>Specifies whether the BGP group is the default BGP group. Valid values:</p>
+     * <p>Specifies whether the BGP group is the default group. Valid values:</p>
      * <br>
-     * <p>*   **true**: The BGP group is the default BGP group.</p>
-     * <p>*   **false**: The BGP group is not the default BGP group.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("IsDefault")
     public Boolean isDefault;
@@ -32,13 +32,13 @@ public class DescribeBgpPeersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Valid values: **1 to 50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -46,7 +46,7 @@ public class DescribeBgpPeersRequest extends TeaModel {
     /**
      * <p>The region ID of the BGP group to which the BGP peer that you want to query belongs.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

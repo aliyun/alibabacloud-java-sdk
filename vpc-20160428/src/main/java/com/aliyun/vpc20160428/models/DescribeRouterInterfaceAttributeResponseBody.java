@@ -19,9 +19,9 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     /**
      * <p>The status of the router interface. Valid values:</p>
      * <br>
-     * <p>*   **Normal**: normal</p>
-     * <p>*   **FinancialLocked**: locked due to overdue payments</p>
-     * <p>*   **SecurityLocked**: locked due to security reasons</p>
+     * <p>*   **Normal**</p>
+     * <p>*   **FinancialLocked**</p>
+     * <p>*   **SecurityLocked**</p>
      */
     @NameInMap("BusinessStatus")
     public String businessStatus;
@@ -36,13 +36,13 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The time when the connection is established.</p>
+     * <p>The time when the connection was established.</p>
      */
     @NameInMap("ConnectedTime")
     public String connectedTime;
@@ -56,8 +56,8 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the connection is a cross-border connection. Valid values:</p>
      * <br>
-     * <p>*   **false**: no</p>
-     * <p>*   **true**: yes</p>
+     * <p>*   **false**</p>
+     * <p>*   **true**</p>
      */
     @NameInMap("CrossBorder")
     public Boolean crossBorder;
@@ -69,11 +69,23 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The end of the time range queried.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>Indicates whether the VBR that is created in the Fast Link mode is uplinked to the router interface. The Fast Link mode helps automatically connect router interfaces that are created for the VBR and its peer VPC. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   This parameter takes effect only when **RouterType** is set to **VBR** and **OppositeRouterType** is set to **VRouter**.</p>
+     * <br>
+     * <p>*   When **FastLinkMode** is set to **true**, **Role** must be set to **InitiatingSide**. **AccessPointId**, **OppositeRouterType**, **OpppsiteRouterId**, and **OppositeInterfaceOwnerId** are required.</p>
+     */
     @NameInMap("FastLinkMode")
     public String fastLinkMode;
 
@@ -86,8 +98,8 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether renewal data is included. Valid values:</p>
      * <br>
-     * <p>*   **false**: no</p>
-     * <p>*   **true**: yes</p>
+     * <p>*   **false**</p>
+     * <p>*   **true**</p>
      */
     @NameInMap("HasReservationData")
     public String hasReservationData;
@@ -99,36 +111,36 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public Integer hcRate;
 
     /**
-     * <p>The health check threshold, which is the number of probe packets that are sent during a health check. Unit: packets.</p>
+     * <p>The healthy threshold. This value indicates the number of probe packets that are sent during a health check. Unit: packets.</p>
      */
     @NameInMap("HcThreshold")
     public Integer hcThreshold;
 
     /**
-     * <p>The source IP address that is used for health checks.</p>
+     * <p>The source IP address that is used for the health check.</p>
      */
     @NameInMap("HealthCheckSourceIp")
     public String healthCheckSourceIp;
 
     /**
-     * <p>The health check status. Valid values:</p>
+     * <p>The status of the health check. Valid values:</p>
      * <br>
-     * <p>*   **Abnormal**: abnormal.</p>
-     * <p>*   **Normal**: normal.</p>
-     * <p>*   **NoRedundantRoute**: No redundant route is configured.</p>
-     * <p>*   **NoHealthCheckConfig**: No health check is configured.</p>
+     * <p>*   **Abnormal**</p>
+     * <p>*   **Normal**</p>
+     * <p>*   **NoRedundantRoute**</p>
+     * <p>*   **NoHealthCheckConfig**</p>
      */
     @NameInMap("HealthCheckStatus")
     public String healthCheckStatus;
 
     /**
-     * <p>The destination IP address that is used for health checks.</p>
+     * <p>The destination IP address that is used for the health check.</p>
      */
     @NameInMap("HealthCheckTargetIp")
     public String healthCheckTargetIp;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The response parameters.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -146,7 +158,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String oppositeAccessPointId;
 
     /**
-     * <p>The bandwidth of the peer router interface. Unit: Mbit/s.</p>
+     * <p>The maximum bandwidth of the peer router interface. Unit: Mbit/s.</p>
      */
     @NameInMap("OppositeBandwidth")
     public Integer oppositeBandwidth;
@@ -154,9 +166,9 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     /**
      * <p>The service status of the peer router interface. Valid values:</p>
      * <br>
-     * <p>*   **Normal**: normal</p>
-     * <p>*   **FinancialLocked**: locked due to overdue payments</p>
-     * <p>*   **SecurityLocked**: locked due to security reasons</p>
+     * <p>*   **Normal**</p>
+     * <p>*   **FinancialLocked**</p>
+     * <p>*   **SecurityLocked**</p>
      */
     @NameInMap("OppositeInterfaceBusinessStatus")
     public String oppositeInterfaceBusinessStatus;
@@ -196,16 +208,16 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     /**
      * <p>The status of the peer router interface. Valid values:</p>
      * <br>
-     * <p>*   **Idle**: not connected</p>
-     * <p>*   **AcceptingConnecting**: accepting a connection</p>
-     * <p>*   **Connecting**: connecting</p>
-     * <p>*   **Activating**: being activated</p>
-     * <p>*   **Active**: activated</p>
-     * <p>*   **Modifying**: being modified</p>
-     * <p>*   **Deactivating**: being disabled</p>
-     * <p>*   **Inactive**: disabled</p>
-     * <p>*   **Deleting**: being deleted</p>
-     * <p>*   **Deleted**: deleted</p>
+     * <p>*   **Idle**</p>
+     * <p>*   **AcceptingConnecting**</p>
+     * <p>*   **Connecting**</p>
+     * <p>*   **Activating**</p>
+     * <p>*   **Active**</p>
+     * <p>*   **Modifying**</p>
+     * <p>*   **Deactivating**</p>
+     * <p>*   **Inactive**</p>
+     * <p>*   **Deleting**</p>
+     * <p>*   **Deleted**</p>
      */
     @NameInMap("OppositeInterfaceStatus")
     public String oppositeInterfaceStatus;
@@ -225,8 +237,8 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     /**
      * <p>The type of the router to which the peer router interface belongs. Valid values:</p>
      * <br>
-     * <p>*   **VRouter**: a vRouter</p>
-     * <p>*   **VBR**: a virtual border router (VBR)</p>
+     * <p>*   **VRouter**</p>
+     * <p>*   **VBR**</p>
      */
     @NameInMap("OppositeRouterType")
     public String oppositeRouterType;
@@ -238,7 +250,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String oppositeVpcInstanceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -250,28 +262,33 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     public String reservationActiveTime;
 
     /**
-     * <p>The bandwidth after the renewal takes effect. Unit: Mbit/s.</p>
+     * <p>The maximum bandwidth after the renewal takes effect. Unit: Mbit/s.</p>
      */
     @NameInMap("ReservationBandwidth")
     public String reservationBandwidth;
 
     /**
-     * <p>The metering method that is used after the renewal takes effect. The value is set to **PayByBandwidth**, which indicates the pay-by-bandwidth metering method.</p>
+     * <p>The metering method that is used after the renewal takes effect. Valid values: If **PayByBandwidth** is returned, it indicates that the Express Connect circuit is billed on a pay-by-bandwidth basis.</p>
      */
     @NameInMap("ReservationInternetChargeType")
     public String reservationInternetChargeType;
 
     /**
-     * <p>The type of the renewal order. The value is set to **RENEW**, which indicates that the order is placed for service renewal.</p>
+     * <p>The type of the renewal order. Only **RENEW** may be returned, which indicates that the order is placed for service renewal.</p>
      */
     @NameInMap("ReservationOrderType")
     public String reservationOrderType;
 
+    /**
+     * <p>The resource group ID.</p>
+     * <br>
+     * <p>For more information about resource groups, see [What is a resource group?](~~94475~~)</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>Indicates whether the router interface is the requester or the acceptor of the peering connection.</p>
+     * <p>The role of the router interface in the peering connection.</p>
      */
     @NameInMap("Role")
     public String role;
@@ -291,8 +308,8 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     /**
      * <p>The type of the router to which the route table belongs. Valid values:</p>
      * <br>
-     * <p>*   **VRouter**: a vRouter</p>
-     * <p>*   **VBR**: a VBR</p>
+     * <p>*   **VRouter**</p>
+     * <p>*   **VBR**</p>
      */
     @NameInMap("RouterType")
     public String routerType;
@@ -319,25 +336,28 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     /**
      * <p>The status of the router interface. Valid values:</p>
      * <br>
-     * <p>*   **Idle**: not connected</p>
-     * <p>*   **AcceptingConnecting**: accepting a connection</p>
-     * <p>*   **Connecting**: connecting</p>
-     * <p>*   **Activating**: being activated</p>
-     * <p>*   **Active**: activated</p>
-     * <p>*   **Modifying**: being modified</p>
-     * <p>*   **Deactivating**: being disabled</p>
-     * <p>*   **Inactive**: disabled</p>
-     * <p>*   **Deleting**: being deleted</p>
+     * <p>*   **Idle**</p>
+     * <p>*   **AcceptingConnecting**</p>
+     * <p>*   **Connecting**</p>
+     * <p>*   **Activating**</p>
+     * <p>*   **Active**</p>
+     * <p>*   **Modifying**</p>
+     * <p>*   **Deactivating**</p>
+     * <p>*   **Inactive**</p>
+     * <p>*   **Deleting**</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>Indicates whether the operation is successful.</p>
+     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The tag of the resource.</p>
+     */
     @NameInMap("Tags")
     public DescribeRouterInterfaceAttributeResponseBodyTags tags;
 
@@ -721,9 +741,19 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeRouterInterfaceAttributeResponseBodyTagsTags extends TeaModel {
+        /**
+         * <p>The key of tag N added to the resource. You must enter at least one tag key and at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>It can be up to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

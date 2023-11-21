@@ -14,19 +14,21 @@ public class CreateVpnConnectionRequest extends TeaModel {
     public Boolean autoConfigRoute;
 
     /**
+     * <p>This parameter is available if you create an IPsec-VPN connection in single-tunnel mode.</p>
+     * <br>
      * <p>The Border Gateway Protocol (BGP) configurations:</p>
      * <br>
      * <p>*   **BgpConfig.EnableBgp**: specifies whether to enable BGP. Valid values: **true** and **false**. Default value: false.</p>
      * <br>
      * <p>*   **BgpConfig.LocalAsn**: the autonomous system number (ASN) on the Alibaba Cloud side. Valid values: **1** to **4294967295**. Default value: **45104**.</p>
      * <br>
-     * <p>*   **BgpConfig.TunnelCidr**: the CIDR block of the IPsec tunnel. The CIDR block must fall within the 169.254.0.0/16 range. The subnet mask of the CIDR block must be 30 bits in length.</p>
+     * <p>*   **BgpConfig.TunnelCidr**: the CIDR block of the IPsec tunnel. The CIDR block must belong to 169.254.0.0/16. The subnet mask of the CIDR block must be 30 bits in length.</p>
      * <br>
-     * <p>    The CIDR block of an IPsec tunnel associated with a VPN gateway must be unique.</p>
+     * <p>    > The CIDR block of an IPsec tunnel associated with a VPN gateway must be unique.</p>
      * <br>
      * <p>*   **LocalBgpIp**: the BGP address on the Alibaba Cloud side. This IP address must fall within the CIDR block range of the IPsec tunnel.</p>
      * <br>
-     * <p>> *   Before you configure BGP, we recommend that you learn about how BGP works and its limits. For more information, see [VPN Gateway supports BGP dynamic routing](~~170235~~).</p>
+     * <p>>*   Before you configure BGP, we recommend that you learn about how BGP works and its limits. For more information, see [VPN Gateway supports BGP dynamic routing](~~170235~~).</p>
      * <p>>*   We recommend that you use a private ASN to establish a connection with Alibaba Cloud over BGP. For information about the range of private ASNs, see the relevant documentation.</p>
      */
     @NameInMap("BgpConfig")
@@ -43,9 +45,9 @@ public class CreateVpnConnectionRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the customer gateway.</p>
+     * <p>When you create an IPsec-VPN connection in single-tunnel mode, this parameter is required.</p>
      * <br>
-     * <p>>  If the VPN gateway supports only the single-tunnel mode, this parameter is required.</p>
+     * <p>The ID of the customer gateway.</p>
      */
     @NameInMap("CustomerGatewayId")
     public String customerGatewayId;
@@ -60,15 +62,19 @@ public class CreateVpnConnectionRequest extends TeaModel {
     public Boolean effectImmediately;
 
     /**
+     * <p>This parameter is available if you create an IPsec-VPN connection in single-tunnel mode.</p>
+     * <br>
      * <p>Specifies whether to enable the dead peer detection (DPD) feature. Valid values:</p>
      * <br>
-     * <p>*   **true** (default) The initiator of the IPsec-VPN connection sends DPD packets to verify the existence and availability of the peer. If no response is received from the peer within a specified period of time, the connection fails. ISAKMP SAs and IPsec SAs are deleted. The IPsec tunnel is also deleted.</p>
-     * <p>*   **false**: disables DPD. The IPsec initiator does not send DPD packets.</p>
+     * <p>*   **true** (default) The initiator of the IPsec-VPN connection sends DPD packets to verify the existence and availability of the peer. If no feedback is received from the peer within a specified period of time, the connection fails. ISAKMP SAs and IPsec SAs are deleted. The IPsec tunnel is also deleted.</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("EnableDpd")
     public Boolean enableDpd;
 
     /**
+     * <p>This parameter is available if you create an IPsec-VPN connection in single-tunnel mode.</p>
+     * <br>
      * <p>Specifies whether to enable NAT traversal. Valid values:</p>
      * <br>
      * <p>*   **true** (default) After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the VPN tunnel.</p>
@@ -78,12 +84,16 @@ public class CreateVpnConnectionRequest extends TeaModel {
     public Boolean enableNatTraversal;
 
     /**
+     * <p>This parameter is available if you create an IPsec-VPN connection in dual-tunnel mode.</p>
+     * <br>
      * <p>Specifies whether to enable the BGP feature for the tunnel. Valid values: **true** and **false**. Default value: false.</p>
      */
     @NameInMap("EnableTunnelsBgp")
     public Boolean enableTunnelsBgp;
 
     /**
+     * <p>This parameter is available if you create an IPsec-VPN connection in single-tunnel mode.</p>
+     * <br>
      * <p>The health check configuration:</p>
      * <br>
      * <p>*   **HealthCheckConfig.enable**: specifies whether to enable health checks. Valid values: **true** and **false**. Default value: false.</p>
@@ -96,14 +106,17 @@ public class CreateVpnConnectionRequest extends TeaModel {
     public String healthCheckConfig;
 
     /**
+     * <p>This parameter is available if you create an IPsec-VPN connection in single-tunnel mode.</p>
+     * <br>
      * <p>The configurations of Phase 1 negotiations:</p>
      * <br>
      * <p>*   **IkeConfig.Psk**: The pre-shared key that is used for authentication between the VPN gateway and the on-premises database.</p>
      * <br>
      * <p>    *   The key must be 1 to 100 characters in length and can contain digits, letters, and the following characters: ``~!\`@#$%^&*()_-+={}[]|;:\",.<>/?``</p>
      * <br>
-     * <p>    *   If you do not specify a pre-shared key, the system generates a random 16-character string as the pre-shared key. You can call the [DescribeVpnConnection](~~120374~~) operation to query the pre-shared key that is generated by the system.</p>
-     * <p>       >The pre-shared key of the IPsec-VPN connection must be the same as the authentication key of the on-premises database. Otherwise, the on-premises database and the VPN gateway cannot establish a connection.</p>
+     * <p>    *   If you do not specify a pre-shared key, the system generates a random 16-character string as the pre-shared key. You can call the [DescribeVpnConnection](~~448847~~) operation to query the pre-shared key that is generated by the system.</p>
+     * <br>
+     * <p>         >The pre-shared key of the IPsec-VPN connection must be the same as the authentication key of the on-premises database. Otherwise, the on-premises database and the VPN gateway cannot establish a connection.</p>
      * <br>
      * <p>*   **IkeConfig.IkeVersion**: the version of the Internet Key Exchange (IKE) protocol. Valid values: **ikev1** and **ikev2**. Default value: **ikev1**.</p>
      * <br>
@@ -134,6 +147,8 @@ public class CreateVpnConnectionRequest extends TeaModel {
     public String ikeConfig;
 
     /**
+     * <p>This parameter is available if you create an IPsec-VPN connection in single-tunnel mode.</p>
+     * <br>
      * <p>The configurations of Phase 2 negotiations:</p>
      * <br>
      * <p>*   **IpsecConfig.IpsecEncAlg**: the encryption algorithm that is used in Phase 2 negotiations.</p>
@@ -185,6 +200,8 @@ public class CreateVpnConnectionRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>This parameter is available if you create an IPsec-VPN connection in single-tunnel mode.</p>
+     * <br>
      * <p>The certificate authority (CA) certificate. If the VPN gateway is of the ShangMi (SM) type, you need to configure a CA certificate for the peer gateway device.</p>
      * <br>
      * <p>*   If an SM VPN gateway is used to create the IPsec-VPN connection, this parameter is required.</p>
@@ -225,7 +242,8 @@ public class CreateVpnConnectionRequest extends TeaModel {
     /**
      * <p>The tunnel configurations.</p>
      * <br>
-     * <p>If the VPN gateway supports the dual-tunnel mode, you must configure the active tunnel and standby tunnel by specifying **TunnelOptionsSpecification**. Each IPsec-VPN connection supports only one active tunnel and one standby tunnel.</p>
+     * <p>*   You can specify the parameters in the **TunnelOptionsSpecification** array if you create an IPsec-VPN connection in dual-tunnel mode.</p>
+     * <p>*   If you create an IPsec-VPN connection in dual-tunnel mode, you need to configure an active tunnel and a standby tunnel. Each IPsec-VPN connection supports only one active tunnel and one standby tunnel.</p>
      */
     @NameInMap("TunnelOptionsSpecification")
     public java.util.List<CreateVpnConnectionRequestTunnelOptionsSpecification> tunnelOptionsSpecification;
@@ -474,8 +492,8 @@ public class CreateVpnConnectionRequest extends TeaModel {
          * <p>The ASN on the Alibaba Cloud side. Valid values: **1** to **4294967295**. Default value: **45104**.</p>
          * <br>
          * <p>> *   If you set **EnableTunnelsBgp** to **true**, this parameter is required.</p>
-         * <p>> *   Before you configure BGP, we recommend that you learn about how BGP works and its limits. For more information, see [VPN Gateway supports BGP dynamic routing](~~170235~~).</p>
-         * <p>> *   We recommend that you use a private ASN to establish a connection with Alibaba Cloud over BGP. For information about the range of private ASNs, see the relevant documentation.</p>
+         * <p>>*   Before you configure BGP, we recommend that you learn about how BGP works and its limits. For more information, see [VPN Gateway supports BGP dynamic routing](~~170235~~).</p>
+         * <p>>*   We recommend that you use a private ASN to establish a connection with Alibaba Cloud over BGP. For information about the range of private ASNs, see the relevant documentation.</p>
          */
         @NameInMap("LocalAsn")
         public Long localAsn;
@@ -487,7 +505,7 @@ public class CreateVpnConnectionRequest extends TeaModel {
         public String localBgpIp;
 
         /**
-         * <p>The BGP CIDR block of the tunnel. The CIDR block must fall within the 169.254.0.0/16 range. The subnet mask of the CIDR block must be 30 bits in length.</p>
+         * <p>The BGP CIDR block of the tunnel. The CIDR block must belong to 169.254.0.0/16. The subnet mask of the CIDR block must be 30 bits in length.</p>
          * <br>
          * <p>>  The BGP CIDR block of a tunnel associated with a VPN gateway must be unique.</p>
          */
@@ -585,10 +603,10 @@ public class CreateVpnConnectionRequest extends TeaModel {
         /**
          * <p>The pre-shared key, which is used for identity authentication between the tunnel and the tunnel peer.</p>
          * <br>
-         * <p>   - The key must be 1 to 100 characters in length and can contain digits, letters, and the following characters: ```~!\`@#$%^&*()_-+={}[]|;:\",.<>/?```</p>
-         * <p>   - If you do not specify a pre-shared key, the system generates a random 16-character string as the pre-shared key. You can call the DescribeVpnConnection (~~120374~~) operation to query the pre-shared key that is generated by the system.      </p>
+         * <p>*   The key must be 1 to 100 characters in length and can contain digits, letters, and the following characters: ``~!\`@#$%^&*()_-+={}[]|;:\",.<>/?``</p>
+         * <p>*   If you do not specify a pre-shared key, the system generates a random 16-character string as the pre-shared key. You can call the [DescribeVpnConnection](~~448847~~) operation to query the pre-shared key that is generated by the system.</p>
          * <br>
-         * <p>   > The pre-shared key of the tunnel and that of the tunnel peer must be the same. Otherwise, the system cannot establish the tunnel.</p>
+         * <p>>  The tunnel and the tunnel peer must use the same pre-shared key. Otherwise, the tunnel cannot be established.</p>
          */
         @NameInMap("Psk")
         public String psk;
@@ -756,19 +774,18 @@ public class CreateVpnConnectionRequest extends TeaModel {
         /**
          * <p>The ID of the customer gateway associated with the tunnel.</p>
          * <br>
-         * <br>
-         * <br>
          * <p>> *   This parameter is required if the VPN gateway supports the dual-tunnel mode.</p>
-         * <p>> *   If the VPN gateway supports the dual-tunnel mode, you must configure the active tunnel and standby tunnel by specifying **TunnelOptionsSpecification**. Each IPsec-VPN connection supports only one active tunnel and one standby tunnel.</p>
+         * <p>>*   You can specify the parameters in the **TunnelOptionsSpecification** array if you create an IPsec-VPN connection in dual-tunnel mode.</p>
+         * <p>>*   If you create an IPsec-VPN connection in dual-tunnel mode, you need to configure an active tunnel and a standby tunnel. Each IPsec-VPN connection supports only one active tunnel and one standby tunnel.</p>
          */
         @NameInMap("CustomerGatewayId")
         public String customerGatewayId;
 
         /**
-         * <p>Specifies whether to enable the Dead Peer Detection (DPD) feature for the tunnel. Valid values:</p>
+         * <p>Specifies whether to enable DPD for the tunnel. Valid values:</p>
          * <br>
-         * <p>*   **true** (default): The DPD feature is enabled. The initiator of the IPsec-VPN connection sends DPD packets to verify the existence and availability of the peer. If no feedback is received from the peer within a specified period of time, the connection fails. ISAKMP SAs and IPsec SAs are deleted. The IPsec tunnel is also deleted.</p>
-         * <p>*   **false**: The DPD feature is disabled. The initiator of the IPsec-VPN connection does not send DPD packets.</p>
+         * <p>*   **true** (default) The initiator of the IPsec-VPN connection sends DPD packets to verify the existence and availability of the peer. If no feedback is received from the peer within a specified period of time, the connection fails. ISAKMP SAs and IPsec SAs are deleted. The IPsec tunnel is also deleted.</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("EnableDpd")
         public Boolean enableDpd;
@@ -776,8 +793,8 @@ public class CreateVpnConnectionRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable NAT traversal for the tunnel. Valid values:</p>
          * <br>
-         * <p>*   **true** (default): NAT traversal is enabled. After NAT traversal is enabled, the verification process for the peer UDP port is deleted from IKE negotiations. In addition, the NAT gateway in the tunnel can be found.</p>
-         * <p>*   **false**: NAT traversal is disabled.</p>
+         * <p>*   **true** (default) After NAT traversal is enabled, the verification process for the peer UDP port is deleted from IKE negotiations. In addition, the NAT gateway in the tunnel can be found.</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("EnableNatTraversal")
         public Boolean enableNatTraversal;

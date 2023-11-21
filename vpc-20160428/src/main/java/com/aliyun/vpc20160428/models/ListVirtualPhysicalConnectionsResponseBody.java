@@ -11,16 +11,16 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If **NextToken** was not returned, it indicates that no additional results exist.</p>
-     * <p>*   If **NextToken** is not empty, the value indicates the token that is used for the next query.</p>
+     * <p>*   If the value of **NextToken** is not returned, it indicates that no next query is to be sent.</p>
+     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -83,9 +83,19 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
     }
 
     public static class ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnectionsTags extends TeaModel {
+        /**
+         * <p>The key of tag N that is added to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>It can be up to 64 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N that is added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>It can be up to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -138,11 +148,11 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         public Long bandwidth;
 
         /**
-         * <p>The business status of the Express Connect circuit. Valid values:</p>
+         * <p>The status of the Express Connect circuit. Valid values:</p>
          * <br>
-         * <p>*   **Normal**: enabled</p>
-         * <p>*   **FinancialLocked**: locked due to overdue payments</p>
-         * <p>*   **SecurityLocked**: locked for security reasons</p>
+         * <p>*   **Normal**</p>
+         * <p>*   **FinancialLocked**</p>
+         * <p>*   **SecurityLocked**</p>
          */
         @NameInMap("BusinessStatus")
         public String businessStatus;
@@ -150,7 +160,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         /**
          * <p>The billing method of the Express Connect circuit.</p>
          * <br>
-         * <p>The value is set to **Prepaid**, which indicates the subscription billing method.</p>
+         * <p>If **Prepaid** is returned, it indicates that the Express Connect circuit is billed on a subscription basis.</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
@@ -174,7 +184,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The time when the Express Connect circuit was enabled.</p>
+         * <p>The time when the Express Connect circuit is enabled.</p>
          */
         @NameInMap("EnabledTime")
         public String enabledTime;
@@ -188,7 +198,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The estimated bandwidth value of the hosted connection. The estimated bandwidth takes effect after you complete the payment.</p>
+         * <p>The estimated maximum bandwidth of the shared Express Connect circuit. The estimated bandwidth takes effect after you complete the payment.</p>
          * <br>
          * <p>**M** indicates Mbit/s and **G** indicates Gbit/s.</p>
          */
@@ -198,26 +208,26 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         /**
          * <p>The connectivity provider of the Express Connect circuit. Valid values:</p>
          * <br>
-         * <p>*   **CT**: China Telecom</p>
-         * <p>*   **CU**: China Unicom</p>
-         * <p>*   **CM**: China Mobile</p>
-         * <p>*   **CO**: other connectivity providers in the Chinese mainland</p>
-         * <p>*   **Equinix**: Equinix</p>
-         * <p>*   **Other**: other connectivity providers outside the Chinese mainland</p>
+         * <p>*   **CT**: China Telecom.</p>
+         * <p>*   **CU**: China Unicom.</p>
+         * <p>*   **CM**: China Mobile.</p>
+         * <p>*   **CO**: other connectivity providers in the Chinese mainland.</p>
+         * <p>*   **Equinix**: Equinix.</p>
+         * <p>*   **Other**: other connectivity providers outside the Chinese mainland.</p>
          */
         @NameInMap("LineOperator")
         public String lineOperator;
 
         /**
-         * <p>The status of the LOA. Valid values:</p>
+         * <p>The status of the letter of authorization (LOA). Valid values:</p>
          * <br>
-         * <p>*   **Applying**: The LOA is pending approval.</p>
-         * <p>*   **Accept**: The LOA is approved.</p>
-         * <p>*   **Available**: The LOA is available.</p>
-         * <p>*   **Rejected**: The LOA is rejected.</p>
-         * <p>*   **Completing**: The Express Connect circuit is under construction.</p>
-         * <p>*   **Complete**: The Express Connect circuit is installed.</p>
-         * <p>*   **Deleted**: The LOA is deleted.</p>
+         * <p>*   **Applying**</p>
+         * <p>*   **Accept**</p>
+         * <p>*   **Available**</p>
+         * <p>*   **Rejected**</p>
+         * <p>*   **Completing**</p>
+         * <p>*   **Complete**</p>
+         * <p>*   **Deleted**</p>
          */
         @NameInMap("LoaStatus")
         public String loaStatus;
@@ -229,7 +239,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The payer of the hosted connection. Valid values:</p>
+         * <p>The payer for the shared Express Connect circuit. Valid values:</p>
          * <br>
          * <p>*   **PayByPhysicalConnectionOwner**: the owner of the shared Express Connect circuit</p>
          * <p>*   **PayByVirtualPhysicalConnectionOwner**: the owner of the hosted connection</p>
@@ -262,7 +272,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         public String physicalConnectionId;
 
         /**
-         * <p>The port number of the access device.</p>
+         * <p>The ID of the port on the access device.</p>
          */
         @NameInMap("PortNumber")
         public String portNumber;
@@ -272,9 +282,9 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
          * <br>
          * <p>*   **100Base-T**: 100 Mbit/s copper Ethernet port</p>
          * <p>*   **1000Base-T**: 1,000 Mbit/s copper Ethernet port</p>
-         * <p>*   **1000Base-LX**: 1,000 Mbit/s single-mode optical port (10 kilometers)</p>
+         * <p>*   **1000Base-LX**: 1,000 Mbit/s single-mode optical port (10 km)</p>
          * <p>*   **10GBase-T**: 10,000 Mbit/s copper Ethernet port</p>
-         * <p>*   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 kilometers)</p>
+         * <p>*   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 km)</p>
          * <p>*   **40GBase-LR**: 40,000 Mbit/s single-mode optical port</p>
          * <p>*   **100GBase-LR**: 100,000 Mbit/s single-mode optical port</p>
          */
@@ -282,10 +292,10 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         public String portType;
 
         /**
-         * <p>The type of connection over the Express Connect circuit. Valid values:</p>
+         * <p>The type of the Express Connect circuit. Valid values:</p>
          * <br>
-         * <p>*   **VirtualPhysicalConnection**: a hosted connection</p>
-         * <p>*   **PhysicalConnection**: a dedicated connection</p>
+         * <p>*   **VirtualPhysicalConnection**: shared Express Connect circuit</p>
+         * <p>*   **PhysicalConnection**: dedicated Express Connect circuit</p>
          */
         @NameInMap("ProductType")
         public String productType;
@@ -296,6 +306,9 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         @NameInMap("RedundantPhysicalConnectionId")
         public String redundantPhysicalConnectionId;
 
+        /**
+         * <p>The ID of the resource group to which the hosted connection belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -314,7 +327,7 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
          * <p>*   **Approved**: The application is approved.</p>
          * <p>*   **Allocating**: The system is allocating resources.</p>
          * <p>*   **Allocated**: The Express Connect circuit is under construction.</p>
-         * <p>*   **Confirmed**: The Express Connect circuit is pending user confirmation.</p>
+         * <p>*   **Confirmed**: The Express Connect circuit is pending for user confirmation.</p>
          * <p>*   **Enabled**: The Express Connect circuit is enabled.</p>
          * <p>*   **Rejected**: The application is rejected.</p>
          * <p>*   **Canceled**: The application is canceled.</p>
@@ -324,6 +337,9 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tag list.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnectionsTags> tags;
 
@@ -334,11 +350,11 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The service status of the hosted connection. Valid values:</p>
+         * <p>The status of the hosted connection. Valid values:</p>
          * <br>
-         * <p>*   **Confirmed**: accepted</p>
-         * <p>*   **UnConfirmed**: pending acceptance</p>
-         * <p>*   **Deleted**: deleted</p>
+         * <p>*   **Confirmed**</p>
+         * <p>*   **UnConfirmed**</p>
+         * <p>*   **Deleted**</p>
          */
         @NameInMap("VirtualPhysicalConnectionStatus")
         public String virtualPhysicalConnectionStatus;

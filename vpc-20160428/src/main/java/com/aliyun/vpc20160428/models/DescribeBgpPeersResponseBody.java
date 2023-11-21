@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeBgpPeersResponseBody extends TeaModel {
     /**
-     * <p>The detailed information about the BGP peers.</p>
+     * <p>The information about the BGP peer.</p>
      */
     @NameInMap("BgpPeers")
     public DescribeBgpPeersResponseBodyBgpPeers bgpPeers;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -113,11 +113,11 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         /**
          * <p>The status of the BGP connection. Valid values:</p>
          * <br>
-         * <p>*   **Idle**: not connected</p>
-         * <p>*   **Connect**: in use</p>
-         * <p>*   **Active**: available</p>
-         * <p>*   **Established**: established</p>
-         * <p>*   **Down**: unavailable</p>
+         * <p>*   **Idle**: The BGP connection is not used.</p>
+         * <p>*   **Connect**: The BGP connection is used.</p>
+         * <p>*   **Active**: The BGP connection is available.</p>
+         * <p>*   **Established**: The BGP connection is established.</p>
+         * <p>*   **Down**: The BGP connection is unavailable.</p>
          */
         @NameInMap("BgpStatus")
         public String bgpStatus;
@@ -131,8 +131,8 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether BFD is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: enabled</p>
-         * <p>*   **false**: disabled</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("EnableBfd")
         public Boolean enableBfd;
@@ -156,10 +156,10 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         public String ipVersion;
 
         /**
-         * <p>Indicates whether a fake ASN is used. Valid values:</p>
+         * <p>Indicates whether a fake autonomous system number (ASN) is used. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("IsFake")
         public Boolean isFake;
@@ -171,7 +171,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         public String keepalive;
 
         /**
-         * <p>The AS number of the device on the Alibaba Cloud side.</p>
+         * <p>The ASN of the device on the Alibaba Cloud side.</p>
          */
         @NameInMap("LocalAsn")
         public String localAsn;
@@ -183,7 +183,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The autonomous system (AS) number of the BGP peer.</p>
+         * <p>The autonomous system number (ASN)of the BGP peer.</p>
          */
         @NameInMap("PeerAsn")
         public String peerAsn;
@@ -207,13 +207,13 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The limit on routes.</p>
+         * <p>The maximum number of routes.</p>
          */
         @NameInMap("RouteLimit")
         public String routeLimit;
 
         /**
-         * <p>The ID of the router.</p>
+         * <p>The Router ID.</p>
          */
         @NameInMap("RouterId")
         public String routerId;

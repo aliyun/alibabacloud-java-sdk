@@ -7,19 +7,22 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The filter keys.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<DescribePhysicalConnectionsRequestFilter> filter;
 
     /**
      * <p>Specifies whether to return the data about pending orders. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
      */
     @NameInMap("IncludeReservationData")
     public Boolean includeReservationData;
@@ -31,13 +34,13 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.</p>
+     * <p>The number of entries per page. Default value: **10**. Valid values: **1** to **50**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -50,6 +53,9 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the Express Connect circuit belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -59,6 +65,9 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tag list.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<DescribePhysicalConnectionsRequestTags> tags;
 
@@ -171,7 +180,7 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
          * <br>
          * <p>*   **AccessPointId**: the ID of the access point.</p>
          * <br>
-         * <p>*   **Type**: the type of the Express Connect circuit. You can set Type only to **VPC**.</p>
+         * <p>*   **Type**: the type of resource to which the Express Connect circuit is connected. You can set Type only to **VPC**.</p>
          * <br>
          * <p>*   **LineOperator**: the connectivity provider of the Express Connect circuit. Valid values:</p>
          * <br>
@@ -185,14 +194,11 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
          * <p>*   **Spec**: the specification of the Express Connect circuit. Valid values:</p>
          * <br>
          * <p>    *   **1G and below**</p>
-         * <br>
          * <p>    *   **10G**</p>
-         * <br>
          * <p>    *   **40G**</p>
-         * <br>
          * <p>    *   **100G**</p>
          * <br>
-         * <p>> By default, you cannot set Spec to **40G** or **100G**. To query 40 Gbit/s or 100 Gbit/s Express Connect circuits, you must first submit an application to acquire the permissions.</p>
+         * <p>>  By default, you cannot set the value to **40G** or **100G**. To use these values, you must first contact your account manager.</p>
          * <br>
          * <p>*   **Status**: the status of the Express Connect circuit. Valid values:</p>
          * <br>
@@ -200,7 +206,7 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
          * <p>    *   **Approved**: The application is approved.</p>
          * <p>    *   **Allocating**: The system is allocating resources.</p>
          * <p>    *   **Allocated**: The Express Connect circuit is under construction.</p>
-         * <p>    *   **Confirmed**: The Express Connect circuit is pending user confirmation.</p>
+         * <p>    *   **Confirmed**: The Express Connect circuit is pending for user confirmation.</p>
          * <p>    *   **Enabled**: The Express Connect circuit is enabled.</p>
          * <p>    *   **Rejected**: The application is rejected.</p>
          * <p>    *   **Canceled**: The application is canceled.</p>
@@ -210,11 +216,19 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
          * <br>
          * <p>*   **Name**: the name of the Express Connect circuit.</p>
          * <br>
-         * <p>You can specify at most five filter conditions in each call. The logical relation among the filter conditions is **AND**. Therefore, an Express Connect circuit is returned only when all specified filter conditions are matched.</p>
+         * <p>*   **ProductType**: the type of the Express Connect circuit. Valid values:</p>
+         * <br>
+         * <p>    *   **VirtualPhysicalConnection**: shared Express Connect circuit</p>
+         * <p>    *   **PhysicalConnection**: dedicated Express Connect circuit.</p>
+         * <br>
+         * <p>You can specify at most five filter conditions in each request. The logical relation among the filter conditions is **AND**. Therefore, an Express Connect circuit is returned only when all specified filter conditions are matched.</p>
          */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The filter values.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 
@@ -243,17 +257,17 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
 
     public static class DescribePhysicalConnectionsRequestTags extends TeaModel {
         /**
-         * <p>The key of the tag that is added to the resource. You can specify at most 20 tag keys. The tag value cannot be an empty string.</p>
+         * <p>The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         * <p>It can be up to 64 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag that is added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+         * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
          * <br>
-         * <p>The value cannot exceed 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.</p>
+         * <p>It can be up to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

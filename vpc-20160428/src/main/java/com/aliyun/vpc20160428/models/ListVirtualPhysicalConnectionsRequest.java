@@ -7,29 +7,29 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
     /**
      * <p>Specifies whether the hosted connection is accepted by the tenant. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("IsConfirmed")
     public Boolean isConfirmed;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: **1** to **100**. Default value: **20**.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
-     * <p>*   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     * <p>*   You do not need to specify this parameter for the first request.</p>
+     * <p>*   You must specify the token that is obtained from the previous query as the value of NextToken.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the Express Connect circuit over which the hosted connection is created.</p>
+     * <p>The ID of the Express Connect circuit over which the hosted connections are created.</p>
      * <br>
      * <p>Express Connect circuits in this topic refer to Express Connect circuits over which hosted connections are created.</p>
      */
@@ -44,31 +44,49 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the hosted connection belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tag list.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListVirtualPhysicalConnectionsRequestTags> tags;
 
+    /**
+     * <p>The information about the Alibaba Cloud account that owns the hosted connection.</p>
+     */
     @NameInMap("VirtualPhysicalConnectionAliUids")
     public java.util.List<String> virtualPhysicalConnectionAliUids;
 
     /**
      * <p>The business status of the hosted connection. Valid values:</p>
      * <br>
-     * <p>*   **Normal**: normal</p>
-     * <p>*   **FinancialLocked**: locked due to overdue payments</p>
-     * <p>*   **SecurityLocked**: locked for security reasons</p>
+     * <p>*   **Normal**</p>
+     * <p>*   **FinancialLocked**</p>
+     * <p>*   **SecurityLocked**</p>
      */
     @NameInMap("VirtualPhysicalConnectionBusinessStatus")
     public String virtualPhysicalConnectionBusinessStatus;
 
+    /**
+     * <p>The information about the hosted connection.</p>
+     */
     @NameInMap("VirtualPhysicalConnectionIds")
     public java.util.List<String> virtualPhysicalConnectionIds;
 
+    /**
+     * <p>The business status of the hosted connection.</p>
+     */
     @NameInMap("VirtualPhysicalConnectionStatuses")
     public java.util.List<String> virtualPhysicalConnectionStatuses;
 
+    /**
+     * <p>The VLAN ID of the hosted connection.</p>
+     */
     @NameInMap("VlanIds")
     public java.util.List<String> vlanIds;
 
@@ -175,17 +193,17 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
 
     public static class ListVirtualPhysicalConnectionsRequestTags extends TeaModel {
         /**
-         * <p>The key of the tag that is added to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         * <p>It can be up to 64 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag that is added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+         * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
          * <br>
-         * <p>The value cannot exceed 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.</p>
+         * <p>It can be up to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

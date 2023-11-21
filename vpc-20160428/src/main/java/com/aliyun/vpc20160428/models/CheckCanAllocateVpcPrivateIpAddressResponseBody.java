@@ -7,14 +7,14 @@ public class CheckCanAllocateVpcPrivateIpAddressResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the private IP address is available. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("CanAllocate")
     public Boolean canAllocate;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

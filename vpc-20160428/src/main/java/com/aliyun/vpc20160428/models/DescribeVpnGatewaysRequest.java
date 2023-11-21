@@ -29,13 +29,13 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Valid values: **1** to **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -48,6 +48,11 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the VPN gateway belongs.</p>
+     * <br>
+     * <p> You can call the [ListResourceGroups](~~158855~~) operation to query the resource group list.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

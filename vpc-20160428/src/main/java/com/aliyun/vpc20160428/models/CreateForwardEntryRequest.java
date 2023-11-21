@@ -7,9 +7,9 @@ public class CreateForwardEntryRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. The value of **RequestId** in each API request may be different.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -68,9 +68,9 @@ public class CreateForwardEntryRequest extends TeaModel {
     /**
      * <p>The protocol. Valid values:</p>
      * <br>
-     * <p>*   **TCP**: The NAT gateway forwards TCP packets.</p>
-     * <p>*   **UDP**: The NAT gateway forwards UDP packets.</p>
-     * <p>*   **Any**: The NAT gateway forwards packets of all protocols. If you set **IpProtocol** to **Any**, you must also set **ExternalPort** and **InternalPort** to **Any** to implement DNAT IP mapping.</p>
+     * <p>*   **TCP**</p>
+     * <p>*   **UDP**</p>
+     * <p>*   **Any** If you set **IpProtocol** to **Any**, you must also set **ExternalPort** and **InternalPort** to **Any** to implement DNAT IP mapping.</p>
      */
     @NameInMap("IpProtocol")
     public String ipProtocol;
@@ -84,10 +84,10 @@ public class CreateForwardEntryRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove limits on the port range. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
      * <br>
-     * <p>>  If an SNAT entry and a DNAT entry use the same public IP address, and you want to specify a port number greater than 1024, set **Portbreak** to **true**.</p>
+     * <p>>  If a DNAT entry and an SNAT entry have the same public IP address, ou must specify a port that is larger that 1024, and set **PortBreak** to **true**.</p>
      */
     @NameInMap("PortBreak")
     public Boolean portBreak;
@@ -95,7 +95,7 @@ public class CreateForwardEntryRequest extends TeaModel {
     /**
      * <p>The region ID of the NAT gateway.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

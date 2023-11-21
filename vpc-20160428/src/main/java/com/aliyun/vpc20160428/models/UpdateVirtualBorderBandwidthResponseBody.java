@@ -11,25 +11,25 @@ public class UpdateVirtualBorderBandwidthResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The HTTP status code</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the maximum bandwidth is updated. Valid values:</p>
+     * <p>Indicates whether the maximum bandwidth value is updated.</p>
      * <br>
      * <p>*   **true**</p>
      * <p>*   **false**</p>

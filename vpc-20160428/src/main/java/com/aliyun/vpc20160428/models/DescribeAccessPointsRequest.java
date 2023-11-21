@@ -4,6 +4,12 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessPointsRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   **zh-CN**: Chinese</p>
+     * <p>*   **en-US** (default): English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 

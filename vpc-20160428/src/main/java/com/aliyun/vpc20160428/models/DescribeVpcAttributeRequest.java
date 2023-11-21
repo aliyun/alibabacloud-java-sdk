@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcAttributeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <br>
-     * <p>*   **true**: checks the request without performing the operation. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether the required parameters are set. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false**: sends the request. After the request passes the check, a 2xx HTTP status code is returned and the operation is performed. This is the default value.</p>
+     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -16,8 +16,8 @@ public class DescribeVpcAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether the VPC is the default VPC. Valid values:</p>
      * <br>
-     * <p>*   **false** (default): no</p>
-     * <p>*   **true**: yes</p>
+     * <p>*   **false** (default)</p>
+     * <p>*   **true**</p>
      */
     @NameInMap("IsDefault")
     public Boolean isDefault;
@@ -29,7 +29,7 @@ public class DescribeVpcAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the VPC.</p>
+     * <p>The ID of the region where the VPC is deployed.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */

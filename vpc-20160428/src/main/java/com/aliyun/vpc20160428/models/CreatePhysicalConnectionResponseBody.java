@@ -11,7 +11,7 @@ public class CreatePhysicalConnectionResponseBody extends TeaModel {
     public String physicalConnectionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

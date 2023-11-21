@@ -45,11 +45,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag value of the resource. You must enter at least one tag value and at most 20 tag values. It can be an empty string.</p>
-     * <br>
-     * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
-     * <br>
-     * <p>>  When you call this operation, **Tag.N.Value** is required.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -125,17 +121,21 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag that is added to the resource. You can specify at most 20 tag keys. The tag value cannot be an empty string.</p>
+         * <p>The key of the tag that is added to the resource. You can specify at most 20 tag keys. </p>
          * <br>
-         * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         * <p>The key cannot exceed 128 characters in length. The key cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>> When you call this operation, the **Tag.N.Key** parameter is required and cannot be an empty string.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag that is added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+         * <p>The value of the tag that is added to the resource. You can specify at most 20 tag values. </p>
          * <br>
-         * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         * <p>The tag value cannot exceed 128 characters in length. The key cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>> When you call this operation, the **Tag.N.Value** parameter is required and can be an empty string.</p>
          */
         @NameInMap("Value")
         public String value;

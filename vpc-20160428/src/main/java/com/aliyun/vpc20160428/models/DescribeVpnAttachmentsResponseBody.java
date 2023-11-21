@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeVpnAttachmentsResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The number of returned entries.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -89,8 +89,8 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the IPsec-VPN connection is associated with a transit router that belongs to another Alibaba Cloud account. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("CrossAccountAuthorized")
         public Boolean crossAccountAuthorized;

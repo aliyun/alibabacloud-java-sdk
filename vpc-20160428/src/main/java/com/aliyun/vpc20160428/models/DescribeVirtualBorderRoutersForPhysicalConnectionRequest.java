@@ -14,13 +14,13 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -32,7 +32,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
     public String physicalConnectionId;
 
     /**
-     * <p>The region where the Express Connect circuit is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The region in which the Express Connect circuit is deployed. You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -114,19 +114,22 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
 
     public static class DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter extends TeaModel {
         /**
-         * <p>The filter conditions. You can specify at most five filter conditions. The following filter conditions are supported:</p>
+         * <p>The filter conditions. You can specify up to five filter conditions. The following filter conditions are supported:</p>
          * <br>
-         * <p>*   **PhysicalConnectionId**: Filter by Express Connect circuit ID.</p>
-         * <p>*   **VbrId**: Filter by VBR ID.</p>
-         * <p>*   **Status**: Filter by VBR status.</p>
-         * <p>*   **Name**: Filter by VBR name.</p>
-         * <p>*   **AccessPointId**: Filter by access point ID.</p>
-         * <p>*   **eccId**: Filter by Express Cloud Connect (ECC) instance ID.</p>
-         * <p>*   **type**: Filter by VBR type.</p>
+         * <p>*   **PhysicalConnectionId**: filter VBRs by the Express Connect circuit ID.</p>
+         * <p>*   **VbrId**: filter VBRs by ID.</p>
+         * <p>*   **Status**: filter VBRs by status.</p>
+         * <p>*   **Name**: filter VBRs by name.</p>
+         * <p>*   **AccessPointId**: filter VBRs by access point ID.</p>
+         * <p>*   **eccId**: filter VBRs by ID of Express Cloud Connect (ECC) instance.</p>
+         * <p>*   **type**: filter VBRs by type.</p>
          */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The filter values for keys. You can specify multiple filter values for a key. The logical operator between filter values is OR. If one filter value is matched, the filter condition is matched.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 

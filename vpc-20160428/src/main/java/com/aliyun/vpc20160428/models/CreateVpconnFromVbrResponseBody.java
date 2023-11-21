@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateVpconnFromVbrResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the shared Express Connect circuit.</p>
+     * <p>The ID of the hosted connection.</p>
      */
     @NameInMap("VirtualPhysicalConnection")
     public String virtualPhysicalConnection;

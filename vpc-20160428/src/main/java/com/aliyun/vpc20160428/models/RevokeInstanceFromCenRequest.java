@@ -11,7 +11,7 @@ public class RevokeInstanceFromCenRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The user ID (UID) of the Alibaba Cloud account to which the CEN instance belongs.</p>
+     * <p>The user ID (UID) of the Apsara Stack tenant account to which the CEN instance belongs.</p>
      */
     @NameInMap("CenOwnerId")
     public Long cenOwnerId;
@@ -19,9 +19,9 @@ public class RevokeInstanceFromCenRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. The value of **RequestId** for each API request may be different.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -35,9 +35,9 @@ public class RevokeInstanceFromCenRequest extends TeaModel {
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <br>
-     * <p>*   **VPC**: a VPC</p>
-     * <p>*   **VBR**: a VBR</p>
-     * <p>*   **CCN**: a CCN instance</p>
+     * <p>*   **VPC**</p>
+     * <p>*   **VBR**</p>
+     * <p>*   **CCN**</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;

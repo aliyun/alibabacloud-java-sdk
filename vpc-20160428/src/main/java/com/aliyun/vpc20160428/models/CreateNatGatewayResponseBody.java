@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateNatGatewayResponseBody extends TeaModel {
     /**
-     * <p>The list of DNAT entries.</p>
+     * <p>A list of DNAT entries.</p>
      */
     @NameInMap("ForwardTableIds")
     public CreateNatGatewayResponseBodyForwardTableIds forwardTableIds;
 
     /**
-     * <p>The list of FULLNAT entries.</p>
+     * <p>A list of FULLNAT entries.</p>
      */
     @NameInMap("FullNatTableIds")
     public CreateNatGatewayResponseBodyFullNatTableIds fullNatTableIds;
@@ -23,13 +23,13 @@ public class CreateNatGatewayResponseBody extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of SNAT entries.</p>
+     * <p>A list of SNAT entries.</p>
      */
     @NameInMap("SnatTableIds")
     public CreateNatGatewayResponseBodySnatTableIds snatTableIds;

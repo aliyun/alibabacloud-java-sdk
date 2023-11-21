@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class DescribeRouteEntryListResponseBody extends TeaModel {
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If **NextToken** is empty, it indicates that no next query is to be sent.</p>
-     * <p>*   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.</p>
+     * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
+     * <p>*   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information about the routes.</p>
+     * <p>The information about the route.</p>
      */
     @NameInMap("RouteEntrys")
     public DescribeRouteEntryListResponseBodyRouteEntrys routeEntrys;
@@ -64,7 +64,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         /**
          * <p>The type of the instance associated with the next hop. Valid values:</p>
          * <br>
-         * <p>*   **VPC**: a virtual private cloud (VPC)</p>
+         * <p>*   **VPC**: a VPC</p>
          * <p>*   **VBR**: a VBR</p>
          * <p>*   **PCONN**: an Express Connect circuit</p>
          */
@@ -245,13 +245,13 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The destination CIDR blocks of the route.</p>
+         * <p>The destination CIDR block of the route.</p>
          */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
         /**
-         * <p>The time when the route was modified. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format in UTC.</p>
+         * <p>The time when the route was modified. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format in UTC.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
@@ -266,7 +266,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         public String ipVersion;
 
         /**
-         * <p>The information about the next hops.</p>
+         * <p>The information about the next hop.</p>
          */
         @NameInMap("NextHops")
         public DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHops nextHops;
@@ -278,7 +278,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         public String routeEntryId;
 
         /**
-         * <p>The name of the route.</p>
+         * <p>The route name.</p>
          */
         @NameInMap("RouteEntryName")
         public String routeEntryName;
@@ -290,9 +290,9 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         public String routeTableId;
 
         /**
-         * <p>Indicates whether the route is hosted. If the parameter is empty, the route is not hosted. </p>
+         * <p>Indicates whether the route is hosted. If the parameter is empty, the route is not hosted.</p>
          * <br>
-         * <p>If the value is set to **TR**, the route is hosted by a transit router.</p>
+         * <p>If **TR** is returned, the route is hosted by a transit router.</p>
          */
         @NameInMap("ServiceType")
         public String serviceType;
@@ -300,20 +300,20 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         /**
          * <p>The status of the route. Valid values:</p>
          * <br>
-         * <p>*   **Pending**: The route is being configured.</p>
-         * <p>*   **Available**: The route is available.</p>
-         * <p>*   **Modifying**: The route is being modified.</p>
+         * <p>*   **Pending**</p>
+         * <p>*   **Available**</p>
+         * <p>*   **Modifying**</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The type of the route. Valid values:</p>
+         * <p>The route type. Valid values:</p>
          * <br>
-         * <p>*   **Custom**: a custom route</p>
-         * <p>*   **System**: a system route</p>
-         * <p>*   **BGP**: a BGP route</p>
-         * <p>*   **CEN**: a CEN route</p>
+         * <p>*   **Custom**</p>
+         * <p>*   **System**</p>
+         * <p>*   **BGP**</p>
+         * <p>*   **CEN**</p>
          */
         @NameInMap("Type")
         public String type;

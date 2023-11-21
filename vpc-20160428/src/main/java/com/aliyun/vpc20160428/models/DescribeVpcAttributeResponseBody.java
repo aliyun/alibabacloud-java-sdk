@@ -21,8 +21,8 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the ClassicLink feature is enabled. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
      */
     @NameInMap("ClassicLinkEnabled")
     public Boolean classicLinkEnabled;
@@ -54,10 +54,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     /**
      * <p>The status of the DHCP options set. Valid values:</p>
      * <br>
-     * <p>*   **Available**: available</p>
-     * <p>*   **InUse**: in use</p>
-     * <p>*   **Deleted**: deleted</p>
-     * <p>*   **Pending**: being configured</p>
+     * <p>*   **Available**</p>
+     * <p>*   **InUse**</p>
+     * <p>*   **Deleted**</p>
+     * <p>*   **Pending**</p>
      */
     @NameInMap("DhcpOptionsSetStatus")
     public String dhcpOptionsSetStatus;
@@ -75,7 +75,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     public String ipv6CidrBlock;
 
     /**
-     * <p>The information about the IPv6 CIDR blocks of the VPC.</p>
+     * <p>The IPv6 CIDR block of the VPC.</p>
      */
     @NameInMap("Ipv6CidrBlocks")
     public DescribeVpcAttributeResponseBodyIpv6CidrBlocks ipv6CidrBlocks;
@@ -83,8 +83,8 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the VPC is the default VPC. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
      */
     @NameInMap("IsDefault")
     public Boolean isDefault;
@@ -96,13 +96,13 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the VPC.</p>
+     * <p>The ID of the region to which the VPC belongs.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -122,21 +122,24 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     /**
      * <p>The status of the VPC. Valid values:</p>
      * <br>
-     * <p>*   **Available**: available</p>
-     * <p>*   **Pending**: being configured</p>
+     * <p>*   **Available**</p>
+     * <p>*   **Pending**</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>Indicates whether the VPC supports IPv4 gateways. </p>
+     * <p>Indicates whether the VPC supports IPv4 gateways.</p>
      * <br>
-     * <p>- **true**: yes</p>
-     * <p>- **false**: no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("SupportIpv4Gateway")
     public Boolean supportIpv4Gateway;
 
+    /**
+     * <p>The information about the tags.</p>
+     */
     @NameInMap("Tags")
     public DescribeVpcAttributeResponseBodyTags tags;
 
@@ -456,9 +459,9 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         /**
          * <p>The type of resources deployed in the VPC. Valid values:</p>
          * <br>
-         * <p>- **VSwitch**: vSwitches</p>
-         * <p>- **VRouter**: vRouters</p>
-         * <p>- **RouteTable**: route tables</p>
+         * <p>*   **VSwitch**</p>
+         * <p>*   **VRouter**</p>
+         * <p>*   **RouteTable**</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -515,12 +518,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         /**
          * <p>The type of the IPv6 CIDR block. Valid values:</p>
          * <br>
-         * <p>- **BGP** (default): an IPv6 CIDR block provided by Alibaba Cloud over Border Gateway Protocol (BGP)</p>
-         * <p>- **ChinaMobile**: an IPv6 CIDR block provided by China Mobile (single ISP)</p>
-         * <p>- **ChinaUnicom**: an IPv6 CIDR block provided by China Unicom (single ISP)</p>
-         * <p>- **ChinaTelecom**: an IPv6 CIDR block provided by China Telecom (single ISP)</p>
+         * <p>*   **BGP** (default)</p>
+         * <p>*   **ChinaMobile**</p>
+         * <p>*   **ChinaUnicom**</p>
+         * <p>*   **ChinaTelecom**</p>
          * <br>
-         * <p>>  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, valid values are: **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**.</p>
+         * <p>>  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to **ChinaTelecom**, **ChinaUnicom**, or **ChinaMobile**.</p>
          */
         @NameInMap("Ipv6Isp")
         public String ipv6Isp;
@@ -587,9 +590,15 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcAttributeResponseBodyTagsTag extends TeaModel {
+        /**
+         * <p>The key of tag N added to the resource.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N added to the resource.</p>
+         */
         @NameInMap("Value")
         public String value;
 

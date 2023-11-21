@@ -13,9 +13,9 @@ public class CreateBgpGroupRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -40,10 +40,10 @@ public class CreateBgpGroupRequest extends TeaModel {
     /**
      * <p>Specifies whether to use a fake ASN. Valid values:</p>
      * <br>
-     * <p>*   **false** (default): no</p>
-     * <p>*   **true**: yes</p>
+     * <p>*   **false** (default)</p>
+     * <p>*   **true**</p>
      * <br>
-     * <p>>  In most cases, a router that runs BGP belongs to only one AS. If you want to use a different ASN to communicate with the peer but you cannot modify the BGP configuration because it may cause service downtime, you can use a fake ASN. For example, you can use a fake ASN to communicate with the peer when you migrate or merge ASs. This prevents service interruptions.</p>
+     * <p>>  A router that runs BGP typically belongs to only one AS. If you need to replace an existing AS with a new AS and you cannot immediately modify BGP configurations, you can use fake ASNs to ensure service continuity.</p>
      */
     @NameInMap("IsFakeAsn")
     public Boolean isFakeAsn;
@@ -55,7 +55,7 @@ public class CreateBgpGroupRequest extends TeaModel {
      * <p>*   **64512~65534**</p>
      * <p>*   **4200000000~4294967294**</p>
      * <br>
-     * <p>>  **65025** is reserved by Alibaba Cloud. By default, Alibaba Cloud uses **45104** as **LocalAsn**. If you use a custom **LocalAsn** in scenarios where multiple connections are used, BGP loops may occur. Proceed with caution.</p>
+     * <p>>  **65025** is reserved by Alibaba Cloud. By default, Alibaba Cloud uses **45104** as **LocalAsn**. If you use custom **LocalAsn** in multi-line access scenarios, loops in BGP may occur.</p>
      */
     @NameInMap("LocalAsn")
     public Long localAsn;

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class AttachVbrToVpconnRequest extends TeaModel {
     /**
-     * <p>Specifies whether to precheck the request only. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <br>
-     * <p>*   **true**: only prechecks the request but does not associate the VBR with the hosted connection. The system prechecks the request syntax, instance status, and whether the required parameters are specified. An error message is returned if the request fails to pass the precheck. If the request passes the precheck, the system returns the ID of the request.</p>
-     * <p>*   **false** (default): sends the request. If the request passes the precheck, the VBR is associated with the hosted connection.</p>
+     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including required parameters, request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, the request ID is returned.</p>
+     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -24,7 +24,7 @@ public class AttachVbrToVpconnRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>The client token must be unique among different requests. It can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("Token")
     public String token;

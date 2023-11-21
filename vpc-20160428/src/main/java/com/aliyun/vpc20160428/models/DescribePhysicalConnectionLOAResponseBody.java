@@ -47,9 +47,9 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         /**
          * <p>The identity document type of the construction worker. Valid values:</p>
          * <br>
-         * <p>*   **IDCard**: identity card</p>
-         * <p>*   **Passport**: passport</p>
-         * <p>*   **Other**: other identity documents</p>
+         * <p>*   **IDCard**</p>
+         * <p>*   **Passport**</p>
+         * <p>*   **Other**</p>
          */
         @NameInMap("PMCertificateType")
         public String PMCertificateType;
@@ -63,8 +63,8 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         /**
          * <p>The gender of the construction worker. Valid values:</p>
          * <br>
-         * <p>*   **Male**: male</p>
-         * <p>*   **Female**: female</p>
+         * <p>*   **Male**</p>
+         * <p>*   **Female**</p>
          */
         @NameInMap("PMGender")
         public String PMGender;
@@ -178,9 +178,20 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         @NameInMap("LineLabel")
         public String lineLabel;
 
+        /**
+         * <p>The contact information about line O\&M.</p>
+         */
         @NameInMap("LineSPContactInfo")
         public String lineSPContactInfo;
 
+        /**
+         * <p>The ISP. Valid values:</p>
+         * <br>
+         * <p>*   **China Telecom**</p>
+         * <p>*   **China Unicom**</p>
+         * <p>*   **China Mobile**</p>
+         * <p>*   **Other ISPs in China**</p>
+         */
         @NameInMap("LineServiceProvider")
         public String lineServiceProvider;
 

@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class CreateVpconnFromVbrRequest extends TeaModel {
     /**
-     * <p>Specifies whether to only precheck the request. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <br>
-     * <p>*   **true**: checks the API request. If the request passes the precheck, the operation is not performed. Check items include the request format, instance status, and whether the required parameters are specified. If the request fails the precheck, the system returns an error. If the request passes the precheck, the system returns the ID of the request.</p>
-     * <p>*   **false** (default): sends the API request. If the request passes the precheck, the operation is performed.</p>
+     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</p>
+     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>Specifies the party that must pay for the shared Express Connect circuit. Valid values:</p>
+     * <p>The payer for the shared Express Connect circuit. Valid values:</p>
      * <br>
-     * <p>*   **PayByPhysicalConnectionOwner**: If you set the value to PayByPhysicalConnectionOwner, the Express Connect partner must pay for the shared Express Connect circuit.</p>
-     * <p>*   **PayByVirtualPhysicalConnectionOwner**: If you set the value to PayByVirtualPhysicalConnectionOwner, the tenant must pay for the shared Express Connect circuit.</p>
+     * <p>*   **PayByPhysicalConnectionOwner**: the owner of the shared Express Connect circuit</p>
+     * <p>*   **PayByVirtualPhysicalConnectionOwner**: the owner of the hosted connection</p>
      */
     @NameInMap("OrderMode")
     public String orderMode;
 
     /**
-     * <p>The region ID of the shared Express Connect circuit.</p>
+     * <p>The region ID of the hosted connection.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */

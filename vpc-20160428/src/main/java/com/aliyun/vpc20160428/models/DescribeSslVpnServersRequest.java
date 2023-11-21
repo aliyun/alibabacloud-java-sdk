@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSslVpnServersRequest extends TeaModel {
     /**
-     * <p>The name of the SSL-VPN server.</p>
+     * <p>The SSL server name.</p>
      * <br>
      * <p>The name must be 1 to 100 characters in length and cannot start with `http://` or `https://`.</p>
      */
@@ -19,25 +19,32 @@ public class DescribeSslVpnServersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the returned page. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the SSL servers are created.</p>
+     * <p>The region ID of the SSL server.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the SSL server belongs.</p>
+     * <br>
+     * <p>The SSL server has the same resource group as its associated VPN gateway instance.</p>
+     * <br>
+     * <p>You can call the [DescribeVpnGateway](~~2526915~~) operation to query the ID of the resource group to which the VPN gateway instance belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -48,7 +55,7 @@ public class DescribeSslVpnServersRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the SSL-VPN server.</p>
+     * <p>The ID of the SSL server.</p>
      */
     @NameInMap("SslVpnServerId")
     public String sslVpnServerId;

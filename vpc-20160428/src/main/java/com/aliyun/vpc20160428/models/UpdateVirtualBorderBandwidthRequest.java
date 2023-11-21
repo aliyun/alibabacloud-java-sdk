@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateVirtualBorderBandwidthRequest extends TeaModel {
     /**
-     * <p>The new maximum bandwidth of the VBR. Unit: Mbit/s.</p>
+     * <p>The new maximum bandwidth value for the VBR. Unit: Mbit/s.</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
@@ -13,9 +13,7 @@ public class UpdateVirtualBorderBandwidthRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;

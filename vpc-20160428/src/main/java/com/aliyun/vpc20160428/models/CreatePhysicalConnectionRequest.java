@@ -19,9 +19,9 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must ensure that the value is unique among all requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** might be different for each API request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -34,18 +34,21 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The advanced features of the device.</p>
+     */
     @NameInMap("DeviceAdvancedCapacity")
     public java.util.List<String> deviceAdvancedCapacity;
 
     /**
      * <p>The connectivity provider of the Express Connect circuit. Valid values:</p>
      * <br>
-     * <p>*   **CT**: China Telecom</p>
-     * <p>*   **CU**: China Unicom</p>
-     * <p>*   **CM**: China Mobile</p>
-     * <p>*   **CO**: other connectivity providers in the Chinese mainland</p>
-     * <p>*   **Equinix**: Equinix</p>
-     * <p>*   **Other**: other connectivity providers outside the Chinese mainland</p>
+     * <p>*   **CT**: China Telecom.</p>
+     * <p>*   **CU**: China Unicom.</p>
+     * <p>*   **CM**: China Mobile.</p>
+     * <p>*   **CO**: other connectivity providers in the Chinese mainland.</p>
+     * <p>*   **Equinix**: Equinix.</p>
+     * <p>*   **Other**: other connectivity providers outside the Chinese mainland.</p>
      */
     @NameInMap("LineOperator")
     public String lineOperator;
@@ -71,17 +74,17 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
     public String peerLocation;
 
     /**
-     * <p>The port type of the Express Connect circuit. Valid values:</p>
+     * <p>The port type. Valid values:</p>
      * <br>
      * <p>*   **100Base-T**: 100 Mbit/s copper Ethernet port</p>
      * <p>*   **1000Base-T**: 1,000 Mbit/s copper Ethernet port</p>
      * <p>*   **1000Base-LX**: 1,000 Mbit/s single-mode optical port (10 km)</p>
      * <p>*   **10GBase-T**: 10,000 Mbit/s copper Ethernet port</p>
-     * <p>*   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 kilometers)</p>
+     * <p>*   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 km)</p>
      * <p>*   **40GBase-LR**: 40,000 Mbit/s single-mode optical port</p>
      * <p>*   **100GBase-LR**: 100,000 Mbit/s single-mode optical port</p>
      * <br>
-     * <p>>  If you want to use the 40GBase-LR or 100GBase-LR port for an Express Connect circuit, you must first contact your account manager to obtain information about resource supplies.</p>
+     * <p>>  To use ports 40GBase-LR and 100GBase-LR, you must first contact your account manager.</p>
      */
     @NameInMap("PortType")
     public String portType;
@@ -112,11 +115,14 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tag list.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreatePhysicalConnectionRequestTag> tag;
 
     /**
-     * <p>The type of the Express Connect circuit. Default value: **VPC**.</p>
+     * <p>The type of Express Connect circuit. Default value: **VPC**.</p>
      */
     @NameInMap("Type")
     public String type;
@@ -287,9 +293,19 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
     }
 
     public static class CreatePhysicalConnectionRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value to add to the resource. You can specify up to 20 tag values The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

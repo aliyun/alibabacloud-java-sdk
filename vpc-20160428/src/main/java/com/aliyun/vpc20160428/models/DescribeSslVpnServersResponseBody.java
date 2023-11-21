@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeSslVpnServersResponseBody extends TeaModel {
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -29,7 +29,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
     public DescribeSslVpnServersResponseBodySslVpnServers sslVpnServers;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -95,8 +95,8 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether data compression is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false** (default): no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false** (default)</p>
          */
         @NameInMap("Compress")
         public Boolean compress;
@@ -114,16 +114,16 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>Indicates whether two-factor authentication is enabled. Valid values:</p>
+         * <p>Indicates whether two-factor authentication is enabled.</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false** (default): no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false** (default)</p>
          */
         @NameInMap("EnableMultiFactorAuth")
         public Boolean enableMultiFactorAuth;
 
         /**
-         * <p>The ID of the Identity as a Service (IDaaS) instance.</p>
+         * <p>The ID of the IDaaS instance.</p>
          */
         @NameInMap("IDaaSInstanceId")
         public String IDaaSInstanceId;
@@ -176,6 +176,11 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group to which the SSL server belongs.</p>
+         * <br>
+         * <p>You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 

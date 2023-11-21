@@ -28,6 +28,12 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Indicates whether IPv6 is enabled for the vSwitch. If you enable IPv6, you must configure the IPv6 CIDR block of the vSwitch. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("EnabledIpv6")
     public Boolean enabledIpv6;
 
@@ -40,8 +46,8 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("IsDefault")
     public Boolean isDefault;
@@ -53,19 +59,19 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public String networkAclId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the vSwitch belongs.</p>
+     * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
      */
     @NameInMap("OwnerId")
     public Long ownerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the resource group to which the ACL belongs.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -76,6 +82,13 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     @NameInMap("RouteTable")
     public DescribeVSwitchAttributesResponseBodyRouteTable routeTable;
 
+    /**
+     * <p>Indicates whether the vSwitch is shared.</p>
+     * <br>
+     * <p>*   If no value is returned, the vSwitch is a regular vSwitch.</p>
+     * <p>*   If **Shared** is returned, the vSwitch is shared.</p>
+     * <p>*   If **Sharing** is returned, the vSwitch is being shared.</p>
+     */
     @NameInMap("ShareType")
     public String shareType;
 
@@ -89,19 +102,19 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The tag list.</p>
+     * <p>The information about the tags.</p>
      */
     @NameInMap("Tags")
     public DescribeVSwitchAttributesResponseBodyTags tags;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The vSwitch ID.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>The name of the vSwitch.</p>
+     * <p>The vSwitch name.</p>
      */
     @NameInMap("VSwitchName")
     public String vSwitchName;
@@ -285,8 +298,8 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         /**
          * <p>The type of the route table. Valid values:</p>
          * <br>
-         * <p>*   **System**: system route table</p>
-         * <p>*   **Custom**: custom route table</p>
+         * <p>*   **System**</p>
+         * <p>*   **Custom**</p>
          */
         @NameInMap("RouteTableType")
         public String routeTableType;
@@ -316,13 +329,13 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
 
     public static class DescribeVSwitchAttributesResponseBodyTagsTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of tag N added to the resource.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of tag N added to the resource.</p>
          */
         @NameInMap("Value")
         public String value;

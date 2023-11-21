@@ -11,7 +11,7 @@ public class CreateRouterInterfaceResponseBody extends TeaModel {
     public Long orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
