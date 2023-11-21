@@ -10,6 +10,12 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    @NameInMap("AutoRenew")
+    public String autoRenew;
+
+    @NameInMap("AutoRenewPeriod")
+    public Long autoRenewPeriod;
+
     /**
      * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
      * <br>
@@ -59,6 +65,22 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
     }
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    public TransformInstanceChargeTypeRequest setAutoRenew(String autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public String getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    public TransformInstanceChargeTypeRequest setAutoRenewPeriod(Long autoRenewPeriod) {
+        this.autoRenewPeriod = autoRenewPeriod;
+        return this;
+    }
+    public Long getAutoRenewPeriod() {
+        return this.autoRenewPeriod;
     }
 
     public TransformInstanceChargeTypeRequest setChargeType(String chargeType) {
