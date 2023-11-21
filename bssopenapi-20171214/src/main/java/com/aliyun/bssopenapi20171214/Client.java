@@ -1931,6 +1931,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceID", request.instanceID);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isHideZeroCharge)) {
+            query.put("IsHideZeroCharge", request.isHideZeroCharge);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
         }

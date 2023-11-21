@@ -81,7 +81,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
 
     public static class GetOrderDetailResponseBodyDataOrderListOrder extends TeaModel {
         /**
-         * <p>The aftertaxt amount of the order.</p>
+         * <p>The after-tax amount of the order.</p>
          */
         @NameInMap("AfterTaxAmount")
         public String afterTaxAmount;
