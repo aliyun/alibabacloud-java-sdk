@@ -11,7 +11,7 @@ public class ReleaseInstanceConnectionRequest extends TeaModel {
     public String currentConnectionString;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -19,8 +19,8 @@ public class ReleaseInstanceConnectionRequest extends TeaModel {
     /**
      * <p>The network type of the instance. Valid values:</p>
      * <br>
-     * <p>*   **VPC**</p>
-     * <p>*   **Classic**</p>
+     * <p>*   **0**: virtual private cloud (VPC)</p>
+     * <p>*   **1**: classic network</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;

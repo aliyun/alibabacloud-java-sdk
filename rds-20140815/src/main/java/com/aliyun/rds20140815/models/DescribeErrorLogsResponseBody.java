@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeErrorLogsResponseBody extends TeaModel {
     /**
-     * <p>The list of items in an error log.</p>
+     * <p>Details about the log entries returned.</p>
      */
     @NameInMap("Items")
     public DescribeErrorLogsResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -23,13 +23,13 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of error logs.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -81,7 +81,7 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
 
     public static class DescribeErrorLogsResponseBodyItemsErrorLog extends TeaModel {
         /**
-         * <p>The time when the error log was generated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the error log entry was generated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;

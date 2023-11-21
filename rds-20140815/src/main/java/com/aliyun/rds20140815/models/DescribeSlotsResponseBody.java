@@ -11,7 +11,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details about the replication slot.</p>
+     * <p>The information about the replication slot.</p>
      */
     @NameInMap("Slots")
     public java.util.List<DescribeSlotsResponseBodySlots> slots;
@@ -46,86 +46,30 @@ public class DescribeSlotsResponseBody extends TeaModel {
 
         /**
          * <p>The extension used by the replication slot.</p>
-         * <br>
-         * <p>Valid values:</p>
-         * <br>
-         * <p>*   test_decoding</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   pgoutput</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   wal2json</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
          */
         @NameInMap("Plugin")
         public String plugin;
 
         /**
-         * <p>The name of the replication slot.</p>
+         * <p>The replication slot name.</p>
          */
         @NameInMap("SlotName")
         public String slotName;
 
         /**
-         * <p>The status of the replication slot.</p>
-         * <br>
-         * <p>Valid values:</p>
+         * <p>The replication slot status. Valid values:</p>
          * <br>
          * <p>*   ACTIVE</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   INACTIVE</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
          */
         @NameInMap("SlotStatus")
         public String slotStatus;
 
         /**
-         * <p>The type of the replication slot.</p>
-         * <br>
-         * <p>Valid values:</p>
+         * <p>The replication slot type. Valid values:</p>
          * <br>
          * <p>*   physical</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   logical</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
          */
         @NameInMap("SlotType")
         public String slotType;
@@ -137,25 +81,10 @@ public class DescribeSlotsResponseBody extends TeaModel {
         public String subReplayLag;
 
         /**
-         * <p>Indicates whether the replication slot is a temporary replication slot.</p>
-         * <br>
-         * <p>Valid values:</p>
+         * <p>Indicates whether the replication slot is a temporary replication slot. Valid values:</p>
          * <br>
          * <p>*   true</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
          * <p>*   false</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
          */
         @NameInMap("Temporary")
         public String temporary;

@@ -63,7 +63,7 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The information about the node.</p>
      * <br>
-     * <p>> This parameter is suitable for RDS instances that run MySQL on RDS Cluster Edition.</p>
+     * <p>>  This parameter is supported for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.</p>
      */
     @NameInMap("DBNode")
     public java.util.List<DescribePriceRequestDBNode> DBNode;
@@ -133,7 +133,7 @@ public class DescribePriceRequest extends TeaModel {
     public Integer quantity;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -173,9 +173,9 @@ public class DescribePriceRequest extends TeaModel {
     public Integer usedTime;
 
     /**
-     * <p>The zone ID of the primary instance. You can call the [DescribeRegions](~~610399~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID of the primary instance. You can call the DescribeRegions operation to query the most recent zone list.</p>
      * <br>
-     * <p>> If you specify a virtual private cloud (VPC) and a vSwitch, you must specify this parameter to identify the zone for the vSwitch.</p>
+     * <p>>  If you specify a virtual private cloud (VPC) and a vSwitch, this parameter is required to identify the zone for the vSwitch.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -363,7 +363,7 @@ public class DescribePriceRequest extends TeaModel {
 
     public static class DescribePriceRequestDBNode extends TeaModel {
         /**
-         * <p>The specification of the node.</p>
+         * <p>The instance type of the node.</p>
          */
         @NameInMap("ClassCode")
         public String classCode;

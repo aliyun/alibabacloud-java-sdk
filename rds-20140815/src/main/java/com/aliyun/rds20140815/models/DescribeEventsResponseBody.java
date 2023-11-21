@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeEventsResponseBody extends TeaModel {
     /**
-     * <p>The details of the events.</p>
+     * <p>The events.</p>
      */
     @NameInMap("EventItems")
     public DescribeEventsResponseBodyEventItems eventItems;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -87,13 +87,13 @@ public class DescribeEventsResponseBody extends TeaModel {
         public Long callerUid;
 
         /**
-         * <p>The ID of the event.</p>
+         * <p>The event ID.</p>
          */
         @NameInMap("EventId")
         public Integer eventId;
 
         /**
-         * <p>The name of the event. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).</p>
+         * <p>The event name.</p>
          */
         @NameInMap("EventName")
         public String eventName;
@@ -105,7 +105,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String eventPayload;
 
         /**
-         * <p>The source of the event. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).</p>
+         * <p>The source of the event.</p>
          */
         @NameInMap("EventReason")
         public String eventReason;
@@ -123,7 +123,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String eventTime;
 
         /**
-         * <p>The type of the event. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).</p>
+         * <p>The event type.</p>
          */
         @NameInMap("EventType")
         public String eventType;
@@ -135,7 +135,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String eventUserType;
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

@@ -128,12 +128,12 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public String switchTime;
 
     /**
-     * <p>The cutover time. This parameter is used together with SwitchOver. This parameter is available only when **SwitchOver** is set to **true**.</p>
+     * <p>The switchover time. This parameter is used together with SwitchOver. This parameter is available only when **SwitchOver** is set to **true**.</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
      * <p>*   Immediate: The settings immediately take effect.</p>
-     * <p>*   MaintainTime: The settings take effect during the maintenance window of the instance. You can call the [ModifyDBInstanceMaintainTime](~~610402~~) operation to change the maintenance window of an instance.</p>
+     * <p>*   MaintainTime: The settings take effect during the maintenance window of the instance. You can call the ModifyDBInstanceMaintainTime operation to change the maintenance window of an instance.</p>
      */
     @NameInMap("SwitchTimeMode")
     public String switchTimeMode;
@@ -141,7 +141,7 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     /**
      * <p>The major engine version of the new instance. The value of this parameter must be the major engine version on which an upgrade check is performed.</p>
      * <br>
-     * <p>> You can call the [UpgradeDBInstanceMajorVersionPrecheck](~~610417~~) operation to perform an upgrade check.</p>
+     * <p>>  You can call the UpgradeDBInstanceMajorVersionPrecheck operation to perform an upgrade check.</p>
      */
     @NameInMap("TargetMajorVersion")
     public String targetMajorVersion;
@@ -153,24 +153,24 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public String usedTime;
 
     /**
-     * <p>The VPC ID. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the VPC ID of the original instance.</p>
+     * <p>The VPC ID. You can call the DescribeDBInstanceAttribute operation to query the VPC ID.</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
 
     /**
      * <p>*   If the original instance runs RDS Basic Edition, you must enter the vSwitch ID of the new instance.</p>
-     * <p>*   If the original instance runs RDS High-availability Edition, you must enter the vSwitch ID of the new instance and the vSwitch ID of the secondary instance of the new instance. Make sure that you separate the vSwitch IDs with commas (,).</p>
+     * <p>*   If the original instance runs RDS High-availability Edition, you must enter the vSwitch ID of the new instance and the vSwitch ID of the secondary instance of the new instance. Separate the vSwitch IDs with commas (,).</p>
      * <br>
-     * <p>>  The vSwitches that you specify must reside in the same zone as the original instance. You can call the [DescribeVSwitches](~~35748~~) operation to query the ID of the vSwitch.</p>
+     * <p>>  The vSwitches that you specify must reside in the same zone as the original instance. You can call the DescribeVSwitches operation to query the vSwitch IDs.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>The zone ID of the new instance. You can call the [DescribeRegions](~~610399~~) operation to query the zone ID.</p>
+     * <p>The zone ID of the new instance. You can call the DescribeRegions operation to query the zone ID.</p>
      * <br>
-     * <p>You can select a zone that belongs to the region in which the original instance resides. The zone can be different from the zone of the original instance.</p>
+     * <p>You can select a zone that is different from the zone of the original instance but belongs to the region in which the original instance resides.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -178,9 +178,9 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     /**
      * <p>The zone ID of the secondary instance for the new instance. You can specify this parameter only when the original instance runs RDS High-availability Edition.</p>
      * <br>
-     * <p>You can select a zone that belongs to the region in which the original instance resides. The zone can be different from the zone of the original instance.</p>
+     * <p>You can select a zone that is different from the zone of the original instance but belongs to the region in which the original instance resides.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~610399~~) operation to query the zone ID.</p>
+     * <p>You can call the DescribeRegions operation to query the zone ID.</p>
      */
     @NameInMap("ZoneIdSlave1")
     public String zoneIdSlave1;

@@ -117,7 +117,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         /**
          * <p>The ID of the instance to which the log file belongs. This parameter helps determine whether the log file is generated on the primary instance or the secondary instance.</p>
          * <br>
-         * <p>> You can log on to the ApsaraDB RDS console and go to the instance details page. In the left-side navigation pane, click **Service Availability** to view the values of **Primary Instance No.** and **Secondary Instance No.**.</p>
+         * <p>>  You can log on to the ApsaraDB RDS console and go to the instance details page. In the left-side navigation pane, click **Service Availability** to view the values of **Primary Instance No.** and **Secondary Instance No.**.</p>
          */
         @NameInMap("HostInstanceID")
         public String hostInstanceID;
@@ -137,7 +137,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         public String linkExpiredTime;
 
         /**
-         * <p>The start time of the log file.</p>
+         * <p>The beginning of the time range to query.</p>
          * <br>
          * <p>The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
@@ -145,7 +145,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         public String logBeginTime;
 
         /**
-         * <p>The end time of the log file.</p>
+         * <p>The end of the time range to query.</p>
          * <br>
          * <p>The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */

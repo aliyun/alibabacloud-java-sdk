@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserBackupFilesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the information about the full backup files that are returned.</p>
+     * <p>The information about the full backup files.</p>
      */
     @NameInMap("Records")
     public java.util.List<ListUserBackupFilesResponseBodyRecords> records;
@@ -69,7 +69,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The database engine version of the instance.</p>
+         * <p>The database engine version.</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;

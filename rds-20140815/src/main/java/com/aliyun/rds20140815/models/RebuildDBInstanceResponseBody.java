@@ -11,13 +11,13 @@ public class RebuildDBInstanceResponseBody extends TeaModel {
     public Integer migrationId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      */
     @NameInMap("TaskId")
     public Integer taskId;

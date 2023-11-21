@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
     /**
-     * <p>The network information about the instance.</p>
+     * <p>The information about the instance connection.</p>
      */
     @NameInMap("DBInstanceNetInfos")
     public DescribeDBInstanceNetInfoForChannelResponseBodyDBInstanceNetInfos DBInstanceNetInfos;
@@ -65,13 +65,13 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
         public String availability;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
-         * <p>The type of the instance. Valid values:</p>
+         * <p>The instance type. Valid values:</p>
          * <br>
          * <p>*   **Master**: primary instance</p>
          * <p>*   **Readonly**: read-only instance</p>
@@ -151,7 +151,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
         public String securityIPGroupName;
 
         /**
-         * <p>The IP addresses contained in the IP address whitelist.</p>
+         * <p>The IP addresses that is contained in the IP address whitelist.</p>
          */
         @NameInMap("SecurityIPs")
         public String securityIPs;
@@ -224,7 +224,7 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
         public String connectionStringType;
 
         /**
-         * <p>An array that consists of the information about read weights to implement read/write splitting after the shared proxy feature is enabled.</p>
+         * <p>The information about read weights to implement read/write splitting after the shared proxy feature is enabled.</p>
          */
         @NameInMap("DBInstanceWeights")
         public DescribeDBInstanceNetInfoForChannelResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeights DBInstanceWeights;
@@ -233,13 +233,13 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
          * <p>The policy that is used to assign read weights. This parameter is returned only for a read/write splitting endpoint that is assigned after the shared proxy feature is enabled. Valid values:</p>
          * <br>
          * <p>*   **Standard**: The system automatically allocates read weights to the instance and its read-only instances based on the specifications of the instances.</p>
-         * <p>*   **Custom**: You must manually assign read weights to the instance and its read-only instances.</p>
+         * <p>*   **Custom**: You must manually allocate read weights to the instance and its read-only instances.</p>
          */
         @NameInMap("DistributionType")
         public String distributionType;
 
         /**
-         * <p>The IP address.</p>
+         * <p>The IP address of the instance.</p>
          */
         @NameInMap("IPAddress")
         public String IPAddress;
@@ -249,45 +249,45 @@ public class DescribeDBInstanceNetInfoForChannelResponseBody extends TeaModel {
          * <br>
          * <p>*   **Public**: the Internet</p>
          * <p>*   **Inner**: the classic network</p>
-         * <p>*   **Private**: a VPC</p>
+         * <p>*   **Private**: a virtual private cloud (VPC)</p>
          */
         @NameInMap("IPType")
         public String IPType;
 
         /**
-         * <p>The latency threshold that is allowed for read/write splitting of the shared proxy feature. Unit: seconds</p>
+         * <p>The latency threshold that is allowed for read/write splitting of the shared proxy feature. Unit: seconds.</p>
          * <br>
-         * <p>> This parameter is returned only when the **ConnectionStringType** parameter is set to **ReadWriteSplitting**.</p>
+         * <p>>  This parameter is returned only when **ConnectionStringType** is set to **ReadWriteSplitting**.</p>
          */
         @NameInMap("MaxDelayTime")
         public String maxDelayTime;
 
         /**
-         * <p>The service port number.</p>
+         * <p>The port number of the instance.</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
-         * <p>An array that consists of the details about the IP address whitelist.</p>
+         * <p>The details of the IP address whitelist.</p>
          */
         @NameInMap("SecurityIPGroups")
         public DescribeDBInstanceNetInfoForChannelResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroups securityIPGroups;
 
         /**
-         * <p>An internal parameter. This operation does not return a value for this parameter.</p>
+         * <p>An internal parameter. You do not need to specify this parameter.</p>
          */
         @NameInMap("Upgradeable")
         public String upgradeable;
 
         /**
-         * <p>The ID of the VPC in which the instance is deployed.</p>
+         * <p>The VPC ID of the instance.</p>
          */
         @NameInMap("VPCId")
         public String VPCId;
 
         /**
-         * <p>The ID of the vSwitch to which the instance belongs.</p>
+         * <p>The vSwitch ID of the instance.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;

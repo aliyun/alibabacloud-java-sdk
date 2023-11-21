@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartDBInstanceRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -21,7 +21,7 @@ public class StartDBInstanceRequest extends TeaModel {
     public Integer DBInstanceTransType;
 
     /**
-     * <p>The ID of the dedicated cluster. This parameter is required when you want to resume an instance in a dedicated cluster. You can call the [DescribeDedicatedHostGroups](~~610640~~) operation to query the ID of the dedicated cluster.</p>
+     * <p>The dedicated cluster ID. This parameter is supported if you call this operation to suspend an RDS instance in the dedicated cluster. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.</p>
      */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
@@ -30,8 +30,8 @@ public class StartDBInstanceRequest extends TeaModel {
      * <p>The effective time. This parameter is available only for instances that are created in dedicated clusters.</p>
      * <br>
      * <p>*   **Immediate**</p>
-     * <p>*   **MaintainTime**: The effective time is within the maintenance window. For more information, see [ModifyDBInstanceMaintainTime](~~26249~~).</p>
-     * <p>*   **SpecificTime**: The effective time is specified.</p>
+     * <p>*   **MaintainTime**: The change takes effect during the planned maintenance window. For more information, see ModifyDBInstanceMaintainTime.</p>
+     * <p>*   **SpecificTime**: The change takes effect at a specified point in time.</p>
      * <br>
      * <p>Default value: MaintainTime.</p>
      */
@@ -48,7 +48,7 @@ public class StartDBInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

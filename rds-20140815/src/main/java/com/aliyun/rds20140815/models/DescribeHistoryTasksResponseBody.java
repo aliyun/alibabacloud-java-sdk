@@ -205,7 +205,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
          * <p>*   Waiting</p>
          */
         @NameInMap("Status")
-        public Integer status;
+        public String status;
 
         /**
          * <p>The task details provided in the form of a JSON string. The JSON string can be customized and extended to include additional information about the task. The details vary based on the task type.</p>
@@ -356,11 +356,11 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public DescribeHistoryTasksResponseBodyItems setStatus(Integer status) {
+        public DescribeHistoryTasksResponseBodyItems setStatus(String status) {
             this.status = status;
             return this;
         }
-        public Integer getStatus() {
+        public String getStatus() {
             return this.status;
         }
 

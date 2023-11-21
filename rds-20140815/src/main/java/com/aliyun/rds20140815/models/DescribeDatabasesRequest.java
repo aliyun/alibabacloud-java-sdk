@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDatabasesRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -33,7 +33,7 @@ public class DescribeDatabasesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Valid values: any non-zero positive integer.</p>
+     * <p>The page number. Pages start from page 1.</p>
      * <br>
      * <p>Default value: **1**.</p>
      */
@@ -41,7 +41,7 @@ public class DescribeDatabasesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <br>
      * <p>*   **30**</p>
      * <p>*   **50**</p>

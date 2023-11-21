@@ -25,7 +25,7 @@ public class DescribeSlotsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the resource group. You can leave this parameter empty.</p>
+     * <p>The resource group ID. You can leave this parameter empty.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

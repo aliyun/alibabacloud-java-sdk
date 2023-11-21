@@ -17,7 +17,7 @@ public class ModifyCustinsResourceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The increase rate.</p>
+     * <p>The increase rate in percentage.</p>
      */
     @NameInMap("IncreaseRatio")
     public String increaseRatio;
@@ -32,7 +32,7 @@ public class ModifyCustinsResourceRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The original value. This parameter must be specified when **ResourceType** is set to **instance**.</p>
+     * <p>The original value. This parameter must be specified when the **ResourceType** parameter is set to **instance**.</p>
      */
     @NameInMap("RestoreOriginalSpecification")
     public String restoreOriginalSpecification;

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchesRequest extends TeaModel {
     /**
-     * <p>The ID of the dedicated cluster. You can call the [DescribeDedicatedHostGroups](~~610640~~) operation to query the ID of the dedicated cluster. If you configure this parameter, the details of all vSwitches in the VPC to which the dedicated cluster belongs are returned.</p>
+     * <p>The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID. If you specify this parameter, the details of all vSwitches in the VPC to which the dedicated cluster belongs are returned.</p>
      * <br>
-     * <p>> You must configure this parameter or **VpcId**.</p>
+     * <p>>  You must specify this parameter or the **VpcId** parameter.</p>
      */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
@@ -31,7 +31,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the vSwitch. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the vSwitch. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -60,7 +60,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the zone to which the vSwitch belongs. You can call the [DescribeAvailableZones](~~610392~~) operation to query the ID of the zone. If you specify this parameter, the query results are filtered based on the value of this parameter and only the details of the vSwitch that is deployed in the specified zone is returned.</p>
+     * <p>The zone ID of the vSwitch. You can call the DescribeAvailableZones operation to query the zone ID. If you specify this parameter, the query results are filtered based on the value of this parameter and only the details of the vSwitch that is deployed in the specified zone is returned.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

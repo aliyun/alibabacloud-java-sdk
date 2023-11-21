@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeErrorLogsRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -23,7 +23,7 @@ public class DescribeErrorLogsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Valid values: a non-zero positive integer.</p>
+     * <p>The page number. Pages start from page 1.</p>
      * <br>
      * <p>Default value: **1**.</p>
      */
@@ -31,7 +31,7 @@ public class DescribeErrorLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **30** to **100**. Default value: **30**.</p>
+     * <p>The number of entries per page. Valid values: **30** to **100**. Default value: **30**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -43,7 +43,7 @@ public class DescribeErrorLogsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

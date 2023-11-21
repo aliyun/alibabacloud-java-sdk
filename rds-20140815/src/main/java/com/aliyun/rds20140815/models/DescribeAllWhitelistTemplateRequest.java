@@ -38,7 +38,7 @@ public class DescribeAllWhitelistTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the IP whitelist template. If you specify this parameter when you perform a fuzzy search, you can call the [DescribeWhitelistTemplate](~~2412074~~) operation.</p>
+     * <p>The name of the IP whitelist template. If you specify this parameter when you perform a fuzzy search, you can call the DescribeWhitelistTemplate operation to query the name of the whitelist template during the fuzzy search.</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

@@ -34,7 +34,7 @@ public class ListUserBackupFilesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the ID of the resource group.</p>
+     * <p>The resource group ID. You can call the [DescribeDBInstanceAttribute](~~610394~~) to query the resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

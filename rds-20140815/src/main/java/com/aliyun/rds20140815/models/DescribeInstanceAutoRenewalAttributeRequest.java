@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -23,15 +23,15 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <br>
-     * <p>*   **30**(Default)</p>
+     * <p>*   **30 (default value)**</p>
      * <p>*   **50**</p>
      * <p>*   **100**</p>
      */
@@ -39,7 +39,7 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -51,7 +51,7 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the proxy mode.</p>
+     * <p>This parameter is reserved. You do not need to specify this parameter.</p>
      */
     @NameInMap("proxyId")
     public String proxyId;

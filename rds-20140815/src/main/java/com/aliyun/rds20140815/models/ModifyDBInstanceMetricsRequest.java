@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceMetricsRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
@@ -13,7 +13,7 @@ public class ModifyDBInstanceMetricsRequest extends TeaModel {
     /**
      * <p>The keys of the Enhanced Monitoring metrics that you want to display for the instance. You can enter a maximum of 30 metric keys. If you enter multiple metric keys, you must separate the metric keys with commas (,).</p>
      * <br>
-     * <p>You can call the [DescribeAvailableMetrics](~~314326~~) operation to query the keys of metrics.</p>
+     * <p>You can call the DescribeAvailableMetrics operation to query the keys of metrics.</p>
      */
     @NameInMap("MetricsConfig")
     public String metricsConfig;

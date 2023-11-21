@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstancePayTypeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;

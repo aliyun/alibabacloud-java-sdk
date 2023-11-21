@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSQLCollectorPolicyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -20,7 +20,7 @@ public class DescribeSQLCollectorPolicyResponseBody extends TeaModel {
     public String SQLCollectorStatus;
 
     /**
-     * <p>None</p>
+     * <p>A reserved parameter.</p>
      */
     @NameInMap("StoragePeriod")
     public Integer storagePeriod;

@@ -26,7 +26,7 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
     public String crossBackupType;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

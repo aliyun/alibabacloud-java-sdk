@@ -8,15 +8,15 @@ public class CheckServiceLinkedRoleRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The region ID.</p>
      * <br>
-     * <p>>  The configuration of the RegionId parameter does not affect your query results. You can configure any region for this parameter. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>>  You can specify any region for this parameter, which does not affect your query results. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -28,7 +28,7 @@ public class CheckServiceLinkedRoleRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the SLR.</p>
+     * <p>The SLR name.</p>
      * <br>
      * <p>>  For more information about the SLRs supported by ApsaraDB RDS, see [Service-linked roles](~~342840~~).</p>
      */
