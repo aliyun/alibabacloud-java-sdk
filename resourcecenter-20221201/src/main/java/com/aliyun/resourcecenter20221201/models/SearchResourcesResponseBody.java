@@ -130,12 +130,24 @@ public class SearchResourcesResponseBody extends TeaModel {
     }
 
     public static class SearchResourcesResponseBodyResourcesIpAddressAttributes extends TeaModel {
+        /**
+         * <p>The IP address.</p>
+         */
         @NameInMap("IpAddress")
-        public java.util.List<String> ipAddress;
+        public String ipAddress;
 
+        /**
+         * <p>The network type. Valid values:</p>
+         * <br>
+         * <p>*   **Public**: the Internet</p>
+         * <p>*   **Private**: internal network</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <p>The version.</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -144,11 +156,11 @@ public class SearchResourcesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public SearchResourcesResponseBodyResourcesIpAddressAttributes setIpAddress(java.util.List<String> ipAddress) {
+        public SearchResourcesResponseBodyResourcesIpAddressAttributes setIpAddress(String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
-        public java.util.List<String> getIpAddress() {
+        public String getIpAddress() {
             return this.ipAddress;
         }
 
@@ -172,13 +184,13 @@ public class SearchResourcesResponseBody extends TeaModel {
 
     public static class SearchResourcesResponseBodyResourcesTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of tag N.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of tag N.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -208,7 +220,7 @@ public class SearchResourcesResponseBody extends TeaModel {
 
     public static class SearchResourcesResponseBodyResources extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          */
         @NameInMap("AccountId")
         public String accountId;
@@ -216,65 +228,71 @@ public class SearchResourcesResponseBody extends TeaModel {
         /**
          * <p>The time when the resource was created.</p>
          * <br>
-         * <p>> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         * <p>>  Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The time when the resource expires.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The attributes of the IP address.</p>
+         */
         @NameInMap("IpAddressAttributes")
         public java.util.List<SearchResourcesResponseBodyResourcesIpAddressAttributes> ipAddressAttributes;
 
         /**
          * <p>The IP addresses.</p>
          * <br>
-         * <p>> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         * <p>>  Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
          */
         @NameInMap("IpAddresses")
         public java.util.List<String> ipAddresses;
 
         /**
-         * <p>The region ID of the resource.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the resource group to which the resource belongs.</p>
+         * <p>The resource group ID.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The name of the resource.</p>
+         * <p>The resource name.</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The resource type.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The tags of the resource.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<SearchResourcesResponseBodyResourcesTags> tags;
 
         /**
-         * <p>The zone ID of the resource.</p>
+         * <p>The zone ID.</p>
          * <br>
-         * <p>> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         * <p>>  Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

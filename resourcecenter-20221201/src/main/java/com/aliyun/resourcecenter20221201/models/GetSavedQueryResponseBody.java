@@ -4,9 +4,15 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class GetSavedQueryResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the custom query template.</p>
+     */
     @NameInMap("SavedQuery")
     public GetSavedQueryResponseBodySavedQuery savedQuery;
 
@@ -32,21 +38,39 @@ public class GetSavedQueryResponseBody extends TeaModel {
     }
 
     public static class GetSavedQueryResponseBodySavedQuery extends TeaModel {
+        /**
+         * <p>The time when the template was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the template.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The query statement in the template.</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
+        /**
+         * <p>The name of the template.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the template.</p>
+         */
         @NameInMap("QueryId")
         public String queryId;
 
+        /**
+         * <p>The time when the template was last updated.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

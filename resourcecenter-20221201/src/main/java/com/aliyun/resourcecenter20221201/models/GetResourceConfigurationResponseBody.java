@@ -22,6 +22,12 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    @NameInMap("ExpireTime")
+    public String expireTime;
+
+    @NameInMap("IpAddressAttributes")
+    public java.util.List<GetResourceConfigurationResponseBodyIpAddressAttributes> ipAddressAttributes;
+
     /**
      * <p>The IP addresses.</p>
      * <br>
@@ -107,6 +113,22 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         return this.createTime;
     }
 
+    public GetResourceConfigurationResponseBody setExpireTime(String expireTime) {
+        this.expireTime = expireTime;
+        return this;
+    }
+    public String getExpireTime() {
+        return this.expireTime;
+    }
+
+    public GetResourceConfigurationResponseBody setIpAddressAttributes(java.util.List<GetResourceConfigurationResponseBodyIpAddressAttributes> ipAddressAttributes) {
+        this.ipAddressAttributes = ipAddressAttributes;
+        return this;
+    }
+    public java.util.List<GetResourceConfigurationResponseBodyIpAddressAttributes> getIpAddressAttributes() {
+        return this.ipAddressAttributes;
+    }
+
     public GetResourceConfigurationResponseBody setIpAddresses(java.util.List<String> ipAddresses) {
         this.ipAddresses = ipAddresses;
         return this;
@@ -177,6 +199,47 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class GetResourceConfigurationResponseBodyIpAddressAttributes extends TeaModel {
+        @NameInMap("IpAddress")
+        public String ipAddress;
+
+        @NameInMap("NetworkType")
+        public String networkType;
+
+        @NameInMap("Version")
+        public String version;
+
+        public static GetResourceConfigurationResponseBodyIpAddressAttributes build(java.util.Map<String, ?> map) throws Exception {
+            GetResourceConfigurationResponseBodyIpAddressAttributes self = new GetResourceConfigurationResponseBodyIpAddressAttributes();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResourceConfigurationResponseBodyIpAddressAttributes setIpAddress(String ipAddress) {
+            this.ipAddress = ipAddress;
+            return this;
+        }
+        public String getIpAddress() {
+            return this.ipAddress;
+        }
+
+        public GetResourceConfigurationResponseBodyIpAddressAttributes setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        public GetResourceConfigurationResponseBodyIpAddressAttributes setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
     }
 
     public static class GetResourceConfigurationResponseBodyTags extends TeaModel {

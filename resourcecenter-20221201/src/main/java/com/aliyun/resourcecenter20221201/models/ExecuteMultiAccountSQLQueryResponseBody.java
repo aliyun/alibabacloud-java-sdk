@@ -4,12 +4,21 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class ExecuteMultiAccountSQLQueryResponseBody extends TeaModel {
+    /**
+     * <p>The columns.</p>
+     */
     @NameInMap("Columns")
     public java.util.List<ExecuteMultiAccountSQLQueryResponseBodyColumns> columns;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array of search results.</p>
+     */
     @NameInMap("Rows")
     public java.util.List<?> rows;
 
@@ -43,9 +52,15 @@ public class ExecuteMultiAccountSQLQueryResponseBody extends TeaModel {
     }
 
     public static class ExecuteMultiAccountSQLQueryResponseBodyColumns extends TeaModel {
+        /**
+         * <p>The name of the column.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The type of the column.</p>
+         */
         @NameInMap("Type")
         public String type;
 

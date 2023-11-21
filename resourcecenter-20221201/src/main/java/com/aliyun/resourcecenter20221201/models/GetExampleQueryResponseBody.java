@@ -4,9 +4,15 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class GetExampleQueryResponseBody extends TeaModel {
+    /**
+     * <p>The information about the sample query template.</p>
+     */
     @NameInMap("ExampleQuery")
     public GetExampleQueryResponseBodyExampleQuery exampleQuery;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,27 @@ public class GetExampleQueryResponseBody extends TeaModel {
     }
 
     public static class GetExampleQueryResponseBodyExampleQuery extends TeaModel {
+        /**
+         * <p>The description of the template.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The query statement in the template.</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
+        /**
+         * <p>The name of the template.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the template.</p>
+         */
         @NameInMap("QueryId")
         public String queryId;
 

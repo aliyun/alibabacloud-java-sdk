@@ -4,9 +4,15 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class CreateSavedQueryResponseBody extends TeaModel {
+    /**
+     * <p>The query ID.</p>
+     */
     @NameInMap("QueryId")
     public String queryId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
