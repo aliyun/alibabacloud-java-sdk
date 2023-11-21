@@ -1317,6 +1317,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public IsvGetAppIdResponse isvGetAppIdWithOptions(IsvGetAppIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.permissions)) {
+            body.put("Permissions", request.permissions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             body.put("Type", request.type);
         }
@@ -2048,6 +2052,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SendChatappMessageShrinkRequest request = new SendChatappMessageShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.flowAction)) {
+            request.flowActionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.flowAction, "FlowAction", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.payload)) {
             request.payloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.payload, "Payload", "json");
         }
@@ -2100,6 +2108,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fallBackRule)) {
             body.put("FallBackRule", request.fallBackRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowActionShrink)) {
+            body.put("FlowAction", request.flowActionShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.from)) {

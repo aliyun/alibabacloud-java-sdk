@@ -231,6 +231,36 @@ public class SendChatappMassMessageRequest extends TeaModel {
         return this.ttl;
     }
 
+    public static class SendChatappMassMessageRequestSenderListFlowAction extends TeaModel {
+        @NameInMap("FlowActionData")
+        public java.util.Map<String, String> flowActionData;
+
+        @NameInMap("FlowToken")
+        public String flowToken;
+
+        public static SendChatappMassMessageRequestSenderListFlowAction build(java.util.Map<String, ?> map) throws Exception {
+            SendChatappMassMessageRequestSenderListFlowAction self = new SendChatappMassMessageRequestSenderListFlowAction();
+            return TeaModel.build(map, self);
+        }
+
+        public SendChatappMassMessageRequestSenderListFlowAction setFlowActionData(java.util.Map<String, String> flowActionData) {
+            this.flowActionData = flowActionData;
+            return this;
+        }
+        public java.util.Map<String, String> getFlowActionData() {
+            return this.flowActionData;
+        }
+
+        public SendChatappMassMessageRequestSenderListFlowAction setFlowToken(String flowToken) {
+            this.flowToken = flowToken;
+            return this;
+        }
+        public String getFlowToken() {
+            return this.flowToken;
+        }
+
+    }
+
     public static class SendChatappMassMessageRequestSenderListProductActionSectionsProductItems extends TeaModel {
         @NameInMap("ProductRetailerId")
         public String productRetailerId;
@@ -311,6 +341,9 @@ public class SendChatappMassMessageRequest extends TeaModel {
     }
 
     public static class SendChatappMassMessageRequestSenderList extends TeaModel {
+        @NameInMap("FlowAction")
+        public SendChatappMassMessageRequestSenderListFlowAction flowAction;
+
         /**
          * <p>payload</p>
          */
@@ -335,6 +368,14 @@ public class SendChatappMassMessageRequest extends TeaModel {
         public static SendChatappMassMessageRequestSenderList build(java.util.Map<String, ?> map) throws Exception {
             SendChatappMassMessageRequestSenderList self = new SendChatappMassMessageRequestSenderList();
             return TeaModel.build(map, self);
+        }
+
+        public SendChatappMassMessageRequestSenderList setFlowAction(SendChatappMassMessageRequestSenderListFlowAction flowAction) {
+            this.flowAction = flowAction;
+            return this;
+        }
+        public SendChatappMassMessageRequestSenderListFlowAction getFlowAction() {
+            return this.flowAction;
         }
 
         public SendChatappMassMessageRequestSenderList setPayload(java.util.List<String> payload) {

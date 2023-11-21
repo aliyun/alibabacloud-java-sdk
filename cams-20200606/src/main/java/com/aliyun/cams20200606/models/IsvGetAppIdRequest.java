@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class IsvGetAppIdRequest extends TeaModel {
+    @NameInMap("Permissions")
+    public String permissions;
+
     /**
      * <p>The type of the application. Set the value to WHATSAPP.</p>
      */
@@ -13,6 +16,14 @@ public class IsvGetAppIdRequest extends TeaModel {
     public static IsvGetAppIdRequest build(java.util.Map<String, ?> map) throws Exception {
         IsvGetAppIdRequest self = new IsvGetAppIdRequest();
         return TeaModel.build(map, self);
+    }
+
+    public IsvGetAppIdRequest setPermissions(String permissions) {
+        this.permissions = permissions;
+        return this;
+    }
+    public String getPermissions() {
+        return this.permissions;
     }
 
     public IsvGetAppIdRequest setType(String type) {

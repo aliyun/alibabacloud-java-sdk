@@ -81,6 +81,9 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     @NameInMap("FallBackRule")
     public String fallBackRule;
 
+    @NameInMap("FlowAction")
+    public String flowActionShrink;
+
     /**
      * <p>The phone number of the message sender.</p>
      * <br>
@@ -278,6 +281,14 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     }
     public String getFallBackRule() {
         return this.fallBackRule;
+    }
+
+    public SendChatappMessageShrinkRequest setFlowActionShrink(String flowActionShrink) {
+        this.flowActionShrink = flowActionShrink;
+        return this;
+    }
+    public String getFlowActionShrink() {
+        return this.flowActionShrink;
     }
 
     public SendChatappMessageShrinkRequest setFrom(String from) {
