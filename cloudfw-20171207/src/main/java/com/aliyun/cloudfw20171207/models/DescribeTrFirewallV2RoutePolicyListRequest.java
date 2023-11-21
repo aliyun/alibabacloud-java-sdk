@@ -4,18 +4,36 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeTrFirewallV2RoutePolicyListRequest extends TeaModel {
+    /**
+     * <p>The page number. Default value: 1.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The instance ID of the VPC firewall.</p>
+     */
     @NameInMap("FirewallId")
     public String firewallId;
 
+    /**
+     * <p>The language of the content within the response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the routing policy.</p>
+     */
     @NameInMap("PolicyId")
     public String policyId;
 

@@ -4,12 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeInternetOpenIpResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeInternetOpenIpResponseBodyDataList> dataList;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public DescribeInternetOpenIpResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,48 +52,106 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
     }
 
     public static class DescribeInternetOpenIpResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The reason why recommended intelligent policies are unavailable. Valid values:</p>
+         * <br>
+         * <p>*   No recommended intelligent policies are available.</p>
+         * <p>*   This feature is available only to some users.</p>
+         * <p>*   The policy configuration has been modified. No recommended intelligent policies are available.</p>
+         * <p>*   The recommended intelligent policies have been configured. No new recommended intelligent policies are available.</p>
+         */
         @NameInMap("AclRecommendDetail")
         public String aclRecommendDetail;
 
+        /**
+         * <p>The instance ID.</p>
+         */
         @NameInMap("AssetsInstanceId")
         public String assetsInstanceId;
 
+        /**
+         * <p>The instance name.</p>
+         */
         @NameInMap("AssetsName")
         public String assetsName;
 
+        /**
+         * <p>The asset type of the instance.</p>
+         */
         @NameInMap("AssetsType")
         public String assetsType;
 
+        /**
+         * <p>The total number of ports.</p>
+         */
         @NameInMap("DetailNum")
         public Integer detailNum;
 
+        /**
+         * <p>Specifies whether an access control policy is recommended. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("HasAclRecommend")
         public Boolean hasAclRecommend;
 
+        /**
+         * <p>The list of ports.</p>
+         */
         @NameInMap("PortList")
         public java.util.List<String> portList;
 
+        /**
+         * <p>The public IP address of the instance.</p>
+         */
         @NameInMap("PublicIp")
         public String publicIp;
 
+        /**
+         * <p>The region ID of the instance.</p>
+         */
         @NameInMap("RegionNo")
         public String regionNo;
 
+        /**
+         * <p>The risk level. Valid values:</p>
+         * <br>
+         * <p>*   **3**: high risk</p>
+         * <p>*   **2**: medium risk</p>
+         * <p>*   **1**: low risk</p>
+         * <p>*   **0**: no risk</p>
+         */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
+        /**
+         * <p>The reason for the risk.</p>
+         */
         @NameInMap("RiskReason")
         public String riskReason;
 
+        /**
+         * <p>The list of applications.</p>
+         */
         @NameInMap("ServiceNameList")
         public java.util.List<String> serviceNameList;
 
+        /**
+         * <p>The percentage of traffic of a day. Unit: percent (%).</p>
+         */
         @NameInMap("TrafficPercent1Day")
         public String trafficPercent1Day;
 
+        /**
+         * <p>The percentage of traffic of 30 days. Unit: percent (%).</p>
+         */
         @NameInMap("TrafficPercent30Day")
         public String trafficPercent30Day;
 
+        /**
+         * <p>The percentage of traffic of seven days. Unit: percent (%).</p>
+         */
         @NameInMap("TrafficPercent7Day")
         public String trafficPercent7Day;
 
@@ -216,12 +283,21 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
     }
 
     public static class DescribeInternetOpenIpResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

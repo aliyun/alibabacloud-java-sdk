@@ -4,42 +4,89 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeInternetOpenIpRequest extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("AssetsInstanceId")
     public String assetsInstanceId;
 
+    /**
+     * <p>The instance name.</p>
+     */
     @NameInMap("AssetsInstanceName")
     public String assetsInstanceName;
 
+    /**
+     * <p>The asset type of the instance.</p>
+     */
     @NameInMap("AssetsType")
     public String assetsType;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("CurrentPage")
     public String currentPage;
 
+    /**
+     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The language of the content within the response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The port number.</p>
+     */
     @NameInMap("Port")
     public String port;
 
+    /**
+     * <p>The public IP address of the instance.</p>
+     */
     @NameInMap("PublicIp")
     public String publicIp;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("RegionNo")
     public String regionNo;
 
+    /**
+     * <p>The risk level. If you leave this parameter empty, all risk levels are queried. Valid values:</p>
+     * <br>
+     * <p>*   **3**: high risk</p>
+     * <p>*   **2**: medium risk</p>
+     * <p>*   **1**: low risk</p>
+     * <p>*   **0**: no risk</p>
+     */
     @NameInMap("RiskLevel")
     public String riskLevel;
 
+    /**
+     * <p>The application.</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
