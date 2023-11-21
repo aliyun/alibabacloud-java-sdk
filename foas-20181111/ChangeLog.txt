@@ -1,3 +1,6 @@
+2023-11-21 Version: 1.0.2
+- Generated java 2018-11-11 for foas.
+
 2023-09-14 Version: 1.0.1
 - Generated java 2018-11-11 for foas.
 

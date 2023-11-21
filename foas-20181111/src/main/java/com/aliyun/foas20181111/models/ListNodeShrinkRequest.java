@@ -16,6 +16,9 @@ public class ListNodeShrinkRequest extends TeaModel {
     @NameInMap("folderId")
     public Long folderId;
 
+    @NameInMap("isFuzzyQuery")
+    public Boolean isFuzzyQuery;
+
     @NameInMap("jobType")
     public String jobType;
 
@@ -66,6 +69,14 @@ public class ListNodeShrinkRequest extends TeaModel {
     }
     public Long getFolderId() {
         return this.folderId;
+    }
+
+    public ListNodeShrinkRequest setIsFuzzyQuery(Boolean isFuzzyQuery) {
+        this.isFuzzyQuery = isFuzzyQuery;
+        return this;
+    }
+    public Boolean getIsFuzzyQuery() {
+        return this.isFuzzyQuery;
     }
 
     public ListNodeShrinkRequest setJobType(String jobType) {

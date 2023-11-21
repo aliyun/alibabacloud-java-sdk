@@ -2405,6 +2405,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("folderId", request.folderId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isFuzzyQuery)) {
+            query.put("isFuzzyQuery", request.isFuzzyQuery);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jobType)) {
             query.put("jobType", request.jobType);
         }
