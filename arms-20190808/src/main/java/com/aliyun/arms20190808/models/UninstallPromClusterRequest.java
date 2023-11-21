@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UninstallPromClusterRequest extends TeaModel {
+    /**
+     * <p>语言环境, 默认为中文 zh | en</p>
+     */
     @NameInMap("AliyunLang")
     public String aliyunLang;
 
