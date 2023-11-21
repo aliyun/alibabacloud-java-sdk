@@ -23,7 +23,7 @@ public class DescribeNatFirewallPolicyPriorUsedRequest extends TeaModel {
     public String ipVersion;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the content within the request and the response. Valid values:</p>
      * <br>
      * <p>*   **zh**: Chinese (default)</p>
      * <p>*   **en**: English</p>

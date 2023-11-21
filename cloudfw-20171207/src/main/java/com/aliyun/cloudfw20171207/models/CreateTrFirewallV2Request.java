@@ -76,11 +76,17 @@ public class CreateTrFirewallV2Request extends TeaModel {
     @NameInMap("TrAttachmentMasterCidr")
     public String trAttachmentMasterCidr;
 
+    @NameInMap("TrAttachmentMasterZone")
+    public String trAttachmentMasterZone;
+
     /**
      * <p>The secondary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.</p>
      */
     @NameInMap("TrAttachmentSlaveCidr")
     public String trAttachmentSlaveCidr;
+
+    @NameInMap("TrAttachmentSlaveZone")
+    public String trAttachmentSlaveZone;
 
     /**
      * <p>The ID of the transit router.</p>
@@ -181,12 +187,28 @@ public class CreateTrFirewallV2Request extends TeaModel {
         return this.trAttachmentMasterCidr;
     }
 
+    public CreateTrFirewallV2Request setTrAttachmentMasterZone(String trAttachmentMasterZone) {
+        this.trAttachmentMasterZone = trAttachmentMasterZone;
+        return this;
+    }
+    public String getTrAttachmentMasterZone() {
+        return this.trAttachmentMasterZone;
+    }
+
     public CreateTrFirewallV2Request setTrAttachmentSlaveCidr(String trAttachmentSlaveCidr) {
         this.trAttachmentSlaveCidr = trAttachmentSlaveCidr;
         return this;
     }
     public String getTrAttachmentSlaveCidr() {
         return this.trAttachmentSlaveCidr;
+    }
+
+    public CreateTrFirewallV2Request setTrAttachmentSlaveZone(String trAttachmentSlaveZone) {
+        this.trAttachmentSlaveZone = trAttachmentSlaveZone;
+        return this;
+    }
+    public String getTrAttachmentSlaveZone() {
+        return this.trAttachmentSlaveZone;
     }
 
     public CreateTrFirewallV2Request setTransitRouterId(String transitRouterId) {

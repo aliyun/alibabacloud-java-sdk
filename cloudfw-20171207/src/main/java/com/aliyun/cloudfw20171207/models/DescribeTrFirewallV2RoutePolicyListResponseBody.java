@@ -4,12 +4,21 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
+    /**
+     * <p>The routing policies.</p>
+     */
     @NameInMap("TrFirewallRoutePolicies")
     public java.util.List<DescribeTrFirewallV2RoutePolicyListResponseBodyTrFirewallRoutePolicies> trFirewallRoutePolicies;
 
@@ -43,9 +52,15 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
     }
 
     public static class DescribeTrFirewallV2RoutePolicyListResponseBodyTrFirewallRoutePoliciesDestCandidateList extends TeaModel {
+        /**
+         * <p>The ID of the secondary traffic redirection instance.</p>
+         */
         @NameInMap("CandidateId")
         public String candidateId;
 
+        /**
+         * <p>The type of the secondary traffic redirection instance.</p>
+         */
         @NameInMap("CandidateType")
         public String candidateType;
 
@@ -73,9 +88,15 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
     }
 
     public static class DescribeTrFirewallV2RoutePolicyListResponseBodyTrFirewallRoutePoliciesSrcCandidateList extends TeaModel {
+        /**
+         * <p>The ID of the primary traffic redirection instance.</p>
+         */
         @NameInMap("CandidateId")
         public String candidateId;
 
+        /**
+         * <p>The type of the primary traffic redirection instance.</p>
+         */
         @NameInMap("CandidateType")
         public String candidateType;
 
@@ -103,24 +124,56 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
     }
 
     public static class DescribeTrFirewallV2RoutePolicyListResponseBodyTrFirewallRoutePolicies extends TeaModel {
+        /**
+         * <p>The secondary traffic redirection instances.</p>
+         */
         @NameInMap("DestCandidateList")
         public java.util.List<DescribeTrFirewallV2RoutePolicyListResponseBodyTrFirewallRoutePoliciesDestCandidateList> destCandidateList;
 
+        /**
+         * <p>The description of the routing policy.</p>
+         */
         @NameInMap("PolicyDescription")
         public String policyDescription;
 
+        /**
+         * <p>The name of the routing policy.</p>
+         */
         @NameInMap("PolicyName")
         public String policyName;
 
+        /**
+         * <p>The status of the routing policy. Valid values:</p>
+         * <br>
+         * <p>*   creating: The policy is being created.</p>
+         * <p>*   deleting: The policy is being deleted.</p>
+         * <p>*   opening: The policy is being enabled.</p>
+         * <p>*   opened: The policy is enabled.</p>
+         * <p>*   closing: The policy is being disabled.</p>
+         * <p>*   closed: The policy is disabled.</p>
+         */
         @NameInMap("PolicyStatus")
         public String policyStatus;
 
+        /**
+         * <p>The type of the traffic redirection scenario of the VPC firewall. Valid values:</p>
+         * <br>
+         * <p>*   **fullmesh**: interconnected instances</p>
+         * <p>*   **one_to_one**: instance to instance</p>
+         * <p>*   **end_to_end**: instance to instances</p>
+         */
         @NameInMap("PolicyType")
         public String policyType;
 
+        /**
+         * <p>The primary traffic redirection instances.</p>
+         */
         @NameInMap("SrcCandidateList")
         public java.util.List<DescribeTrFirewallV2RoutePolicyListResponseBodyTrFirewallRoutePoliciesSrcCandidateList> srcCandidateList;
 
+        /**
+         * <p>The ID of the routing policy.</p>
+         */
         @NameInMap("TrFirewallRoutePolicyId")
         public String trFirewallRoutePolicyId;
 

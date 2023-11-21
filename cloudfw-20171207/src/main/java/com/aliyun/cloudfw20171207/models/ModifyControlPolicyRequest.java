@@ -15,9 +15,9 @@ public class ModifyControlPolicyRequest extends TeaModel {
     public String aclAction;
 
     /**
-     * <p>The ID of the access control policy.</p>
+     * <p>The UUID of the access control policy.</p>
      * <br>
-     * <p>>  If you want to modify the configurations of an access control policy, you must provide the ID of the policy. You can call the [DescribeControlPolicy](~~138866~~) operation to query the ID.</p>
+     * <p>>  To modify an access control policy, you must specify the UUID of the policy. You can call the [DescribeControlPolicy](~~138866~~) interface to query the UUID.</p>
      */
     @NameInMap("AclUuid")
     public String aclUuid;
@@ -40,13 +40,13 @@ public class ModifyControlPolicyRequest extends TeaModel {
      * <p>*   **Memcache**</p>
      * <p>*   **SSL**</p>
      * <br>
-     * <p>>  The value **ANY** indicates all types of applications.</p>
+     * <p>>  The value ANY** indicates all types of applications.</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
     /**
-     * <p>The application names. You can specify multiple application names.</p>
+     * <p>The application names.</p>
      */
     @NameInMap("ApplicationNameList")
     public java.util.List<String> applicationNameList;
@@ -81,10 +81,10 @@ public class ModifyControlPolicyRequest extends TeaModel {
     /**
      * <p>The destination address in the access control policy.</p>
      * <br>
-     * <p>*   If **DestinationType** is set to net, the value of **Destination** is a CIDR block. Example: 1.2.XX.XX/24</p>
-     * <p>*   If **DestinationType** is set to group, the value of **Destination** is an address book. Example: db_group</p>
-     * <p>*   If **DestinationType** is set to domain, the value of **Destination** is a domain name. Example: \*.aliyuncs.com</p>
-     * <p>*   If **DestinationType** is set to location, the value of **Destination** is a location. For more information about the location codes, see the "AddControlPolicy" topic. Example: \["BJ11", "ZB"]</p>
+     * <p>*   If **DestinationType** is set to net, the value of **Destination** is a CIDR block. Example: 1.2.XX.XX/24.</p>
+     * <p>*   If **DestinationType** is set to group, the value of **Destination** is an address book. Example: db_group.</p>
+     * <p>*   If **DestinationType** is set to domain, the value of **Destination** is a domain name. Example: \*.aliyuncs.com.</p>
+     * <p>*   If **DestinationType** is set to location, the value of **Destination** is a location. For more information about the location codes, see the "AddControlPolicy" topic. Example: \["BJ11", "ZB"].</p>
      */
     @NameInMap("Destination")
     public String destination;
@@ -92,10 +92,10 @@ public class ModifyControlPolicyRequest extends TeaModel {
     /**
      * <p>The type of the destination address in the access control policy. Valid values:</p>
      * <br>
-     * <p>*   **net**: destination CIDR block</p>
-     * <p>*   **group**: destination address book</p>
-     * <p>*   **domain**: destination domain name</p>
-     * <p>*   **location**: destination location</p>
+     * <p>*   **net**: CIDR block</p>
+     * <p>*   **group**: address book</p>
+     * <p>*   **domain**: domain name</p>
+     * <p>*   **location**: location</p>
      */
     @NameInMap("DestinationType")
     public String destinationType;
@@ -113,7 +113,7 @@ public class ModifyControlPolicyRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the content within the request and the response. Valid values:</p>
      * <br>
      * <p>*   **zh**: Chinese (default)</p>
      * <p>*   **en**: English</p>
@@ -122,14 +122,14 @@ public class ModifyControlPolicyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The type of the protocol in the access control policy. Valid values:</p>
+     * <p>The protocol type supported by the access control policy. Valid values:</p>
      * <br>
      * <p>*   **ANY**</p>
      * <p>*   **TCP**</p>
      * <p>*   **UDP**</p>
      * <p>*   **ICMP**</p>
      * <br>
-     * <p>>  The value **ANY** indicates all types of protocols.</p>
+     * <p>>  The value ANY** indicates all types of applications.</p>
      */
     @NameInMap("Proto")
     public String proto;
@@ -158,8 +158,8 @@ public class ModifyControlPolicyRequest extends TeaModel {
     /**
      * <p>The source address in the access control policy.</p>
      * <br>
-     * <p>*   If **SourceType** is set to net, the value of **Source** is a CIDR block. Example: 1.2.XX.XX/24</p>
-     * <p>*   If **SourceType** is set to group, the value of **Source** is an address book. Example: db_group</p>
+     * <p>*   If **SourceType** is set to net, the value of **Source** is a CIDR block. Example: 1.2.XX.XX/24.</p>
+     * <p>*   If **SourceType** is set to group, the value of **Source** is an address book. Example: db_group.</p>
      * <p>*   If **SourceType** is set to location, the value of **Source** is a location. For more information about the location codes, see the "AddControlPolicy" topic. Example: \["BJ11", "ZB"]</p>
      */
     @NameInMap("Source")
@@ -168,9 +168,9 @@ public class ModifyControlPolicyRequest extends TeaModel {
     /**
      * <p>The type of the source address in the access control policy. Valid values:</p>
      * <br>
-     * <p>*   **net**: source CIDR block</p>
-     * <p>*   **group**: source address book</p>
-     * <p>*   **location**: source location</p>
+     * <p>*   **net**: CIDR block</p>
+     * <p>*   **group**: address book</p>
+     * <p>*   **location**: location</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
