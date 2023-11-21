@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUserBackupFileRequest extends TeaModel {
     /**
-     * <p>The ID of the backup file. You can call the [ListUserBackupFiles](~~610600~~) operation to query the ID of the file.</p>
+     * <p>The backup ID. You can call the ListUserBackupFiles operation to query the backup ID.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
@@ -20,13 +20,13 @@ public class UpdateUserBackupFileRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The resource group ID. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the resource group ID.</p>
+     * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

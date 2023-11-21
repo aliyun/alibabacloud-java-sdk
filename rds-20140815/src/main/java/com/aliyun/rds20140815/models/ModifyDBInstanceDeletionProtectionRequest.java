@@ -11,17 +11,7 @@ public class ModifyDBInstanceDeletionProtectionRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   Before you call the DescribeDBInstances operation, make sure that your instance is one of the following instances:</p>
-     * <br>
-     * <p>    *   The instance runs MySQL.</p>
-     * <p>    *   The instance runs PostgreSQL.</p>
-     * <p>    *   The instance runs MariaDB.</p>
-     * <br>
-     * <p>*   The instance is a pay-as-you-go instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

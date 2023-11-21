@@ -22,9 +22,9 @@ public class ListClassesRequest extends TeaModel {
     public String commodityCode;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <br>
-     * <p>> If you use **CommodityCode** to query the instance types that are available to read-only instances, you must specify DBInstanceId.</p>
+     * <p>>  If you set the **CommodityCode** parameter to the commodity code of read-only instances, you must specify this parameter.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -44,9 +44,9 @@ public class ListClassesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      * <br>
-     * <p>> If you are using an Alibaba Cloud account on the International site (alibabacloud.com), you must specify RegionId.</p>
+     * <p>>  If you are using an Alibaba Cloud account on the International site (alibabacloud.com), you must specify this parameter.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -88,7 +88,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>VPC ID。</p>
+     * <p>VPC ID.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

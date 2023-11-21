@@ -5,13 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateGADInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the primary instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of instance. The primary instance serves as the central node of the global active database cluster.</p>
+     * <p>The ID of the primary instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID. The primary instance serves as the central node of the global active database cluster.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   A primary instance can serve as the central node only of a single global active database cluster.</p>
-     * <br>
-     * <p>*   Only a primary instance that is created in one of the following regions can serve as the central node of a global active database cluster: China (Hangzhou), China (Shanghai), China (Qingdao), China (Beijing), China (Zhangjiakou), China (Shenzhen), and China (Chengdu).</p>
+     * <p>> *   A primary instance can serve as the central node only of a single global active database cluster.</p>
+     * <p>> *   Only a primary instance that is created in one of the following regions can serve as the central node of a global active database cluster: China (Hangzhou), China (Shanghai), China (Qingdao), China (Beijing), China (Zhangjiakou), China (Shenzhen), and China (Chengdu).</p>
      */
     @NameInMap("CentralDBInstanceId")
     public String centralDBInstanceId;
@@ -53,7 +50,7 @@ public class CreateGADInstanceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -65,7 +62,7 @@ public class CreateGADInstanceRequest extends TeaModel {
     public java.util.List<CreateGADInstanceRequestTag> tag;
 
     /**
-     * <p>An array that consists of the details about the unit node.</p>
+     * <p>The information about the unit node.</p>
      */
     @NameInMap("UnitNode")
     public java.util.List<CreateGADInstanceRequestUnitNode> unitNode;
@@ -189,7 +186,7 @@ public class CreateGADInstanceRequest extends TeaModel {
          * <br>
          * <p>*   The name must be **2 to 255** characters in length.</p>
          * <p>*   The name can contain letters, digits, underscores (\_), and hyphens (-) and must start with a letter.</p>
-         * <p>*   It cannot start with `http://` or `https://`.</p>
+         * <p>*   The name cannot start with `http://` or `https://`.</p>
          * <br>
          * <p>**N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.</p>
          */
@@ -197,7 +194,7 @@ public class CreateGADInstanceRequest extends TeaModel {
         public String DBInstanceDescription;
 
         /**
-         * <p>The storage capacity of the unit node that you want to create. Unit: GB. The storage capacity increases in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the [DescribeAvailableResource](~~134039~~) operation to query the storage capacity range that is supported for a specified instance type in a region.</p>
+         * <p>The storage capacity of the unit node that you want to create. Unit: GB. The storage capacity increases at a step size of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the [DescribeAvailableResource](~~134039~~) operation to query the storage capacity range that is supported for a specified instance type in a region.</p>
          * <br>
          * <p>**N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.</p>
          */
@@ -205,17 +202,17 @@ public class CreateGADInstanceRequest extends TeaModel {
         public Long DBInstanceStorage;
 
         /**
-         * <p>The storage type that is used by the instance. Valid values:</p>
+         * <p>The storage type of the instance. Valid values:</p>
          * <br>
-         * <p>*   **local_ssd**: local SSD (recommended).</p>
+         * <p>*   **local_ssd**: local SSD. This is the recommended storage type.</p>
          * <p>*   **cloud_ssd**: standard SSD. This storage type is not recommended. Standard SSDs are no longer available for purchase in some Alibaba Cloud regions.</p>
-         * <p>*   **cloud_essd**: ESSD of performance level 1 (PL1).</p>
-         * <p>*   **cloud_essd2**: ESSD of PL2.</p>
-         * <p>*   **cloud_essd3**: ESSDs of PL3.</p>
+         * <p>*   **cloud_essd**: enhanced SSD (ESSD) of performance level 1 (PL1).</p>
+         * <p>*   **cloud_essd2**: ESSD of PL2</p>
+         * <p>*   **cloud_essd3**: ESSD of PL3.</p>
          * <br>
          * <p>The default value of this parameter is determined by the instance type specified by the **DBInstanceClass** parameter.</p>
          * <br>
-         * <p>*   If the instance type specifies the local disk storage type, the default value of this parameter is **local_ssd**.</p>
+         * <p>*   If the instance type specifies the local SSD storage type, the default value of this parameter is **local_ssd**.</p>
          * <p>*   If the instance type specifies the cloud disk storage type, the default value of this parameter is **cloud_essd**.</p>
          */
         @NameInMap("DBInstanceStorageType")
@@ -249,7 +246,7 @@ public class CreateGADInstanceRequest extends TeaModel {
          * <p>*   **large**</p>
          * <p>*   **micro**</p>
          * <br>
-         * <p>> For more information, see [Specifications of data synchronization tasks](~~26605~~).</p>
+         * <p>>  For more information, see [Specifications of data synchronization tasks](~~26605~~).</p>
          * <br>
          * <p>**N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.</p>
          */
@@ -280,10 +277,10 @@ public class CreateGADInstanceRequest extends TeaModel {
         /**
          * <p>The billing method of the unit node that you want to create. Valid values:</p>
          * <br>
-         * <p>*   **Postpaid**: pay-as-you-go.</p>
-         * <p>*   **Prepaid**: subscription.</p>
+         * <p>*   **Postpaid**: pay-as-you-go</p>
+         * <p>*   **Prepaid**: subscription</p>
          * <br>
-         * <p>> The system automatically generates a purchase order and completes the payment.</p>
+         * <p>>  The system automatically generates a purchase order and completes the payment. You do not need to manually confirm the purchase order or complete the payment.</p>
          * <br>
          * <p>**N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.</p>
          */
@@ -302,7 +299,7 @@ public class CreateGADInstanceRequest extends TeaModel {
          * <p>The IP address whitelist of the unit node that you want to create. For more information, see [IP address whitelist](~~43185~~). If you want to add more than one entry to the IP address whitelist, separate the entries with commas (,). Each entry must be unique. The IP address whitelist can contain up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:</p>
          * <br>
          * <p>*   IP addresses, such as `10.10.10.10`.</p>
-         * <p>*   CIDR blocks, such as `10.10.10.10/24`. In this example, **24** indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of **1 to 32**.</p>
+         * <p>*   CIDR blocks, such as `10.10.10.10/24`. In this example, **24** indicates that the prefix of the IP address is 24 bits in length. You can replace 24 with a value within the range of **1 to 32**.</p>
          * <br>
          * <p>**N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.</p>
          */

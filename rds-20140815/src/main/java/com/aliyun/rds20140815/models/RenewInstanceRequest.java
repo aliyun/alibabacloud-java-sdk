@@ -5,10 +5,20 @@ import com.aliyun.tea.*;
 
 public class RenewInstanceRequest extends TeaModel {
     /**
-     * <p>Specifies whether payment is automatically made during renewal. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment during the renewal. Valid values:</p>
      * <br>
      * <p>*   **True**: enables automatic payment. Make sure that your Alibaba Cloud account has adequate balance.</p>
-     * <p>*   **False** (default): disables automatic payment. You have to manually pay the order in the console. Log on to the ApsaraDB RDS console. In the upper-right corner, choose **Expenses > User Center**. In the left-side navigation pane, click **Orders**. On the page that appears, find your order and complete the payment.</p>
+     * <p>*   **False** (default): disables automatic payment. You have to manually pay the order in the console.</p>
+     * <br>
+     * <p>>  For more information about manual renewal in the console, see the following topics:</p>
+     * <br>
+     * <p>*   [Manually renew an ApsaraDB RDS for MySQL instance](~~96050~~)</p>
+     * <br>
+     * <p>*   [Manually renew an ApsaraDB RDS for PostgreSQL instance](~~96741~~)</p>
+     * <br>
+     * <p>*   [Manually renew an ApsaraDB RDS for SQL Server instance](~~95637~~)</p>
+     * <br>
+     * <p>*   [Manually renew an ApsaraDB RDS for MariaDB instance](~~97122~~)</p>
      */
     @NameInMap("AutoPay")
     public String autoPay;
@@ -29,7 +39,7 @@ public class RenewInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

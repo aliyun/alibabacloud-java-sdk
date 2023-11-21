@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SwitchDBInstanceHARequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -33,7 +33,7 @@ public class SwitchDBInstanceHARequest extends TeaModel {
     public String force;
 
     /**
-     * <p>The globally unique identifier (GUID) of the secondary instance. You can call the [DescribeDBInstanceHAConfig](~~610434~~) operation to query the GUID of the secondary instance.</p>
+     * <p>The secondary instance ID. You can call the DescribeDBInstanceHAConfig operation to query the secondary instance ID.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;

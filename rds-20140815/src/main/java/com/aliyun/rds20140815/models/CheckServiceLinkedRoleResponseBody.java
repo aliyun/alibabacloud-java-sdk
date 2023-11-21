@@ -11,7 +11,7 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
     public String hasServiceLinkedRole;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

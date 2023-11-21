@@ -584,6 +584,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
 
+        /**
+         * <p>The disk usage of the instance.</p>
+         */
         @NameInMap("DBInstanceDiskUsed")
         public String DBInstanceDiskUsed;
 

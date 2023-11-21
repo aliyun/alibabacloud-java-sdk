@@ -11,7 +11,7 @@ public class CreateSecretResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ARN of the credential for the created Data API account.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account.</p>
      */
     @NameInMap("SecretArn")
     public String secretArn;

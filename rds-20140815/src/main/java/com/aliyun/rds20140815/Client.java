@@ -688,6 +688,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.checkAccountNameAvailableWithOptions(request, runtime);
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      *
+      * @param request CheckCloudResourceAuthorizedRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CheckCloudResourceAuthorizedResponse
+     */
     public CheckCloudResourceAuthorizedResponse checkCloudResourceAuthorizedWithOptions(CheckCloudResourceAuthorizedRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -744,6 +755,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CheckCloudResourceAuthorizedResponse());
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      *
+      * @param request CheckCloudResourceAuthorizedRequest
+      * @return CheckCloudResourceAuthorizedResponse
+     */
     public CheckCloudResourceAuthorizedResponse checkCloudResourceAuthorized(CheckCloudResourceAuthorizedRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.checkCloudResourceAuthorizedWithOptions(request, runtime);
@@ -966,6 +987,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.checkInstanceExistWithOptions(request, runtime);
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   PostgreSQL
+      *
+      * @param request CheckServiceLinkedRoleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CheckServiceLinkedRoleResponse
+     */
     public CheckServiceLinkedRoleResponse checkServiceLinkedRoleWithOptions(CheckServiceLinkedRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1010,6 +1039,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CheckServiceLinkedRoleResponse());
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   PostgreSQL
+      *
+      * @param request CheckServiceLinkedRoleRequest
+      * @return CheckServiceLinkedRoleResponse
+     */
     public CheckServiceLinkedRoleResponse checkServiceLinkedRole(CheckServiceLinkedRoleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.checkServiceLinkedRoleWithOptions(request, runtime);
@@ -2914,12 +2950,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### Prerequisites
-      * *   Your Alibaba Cloud account is used.
-      * *   The balance in your Alibaba Cloud account is greater than or equal to USD 100.
-      * *   A primary ApsaraDB RDS for MySQL instance is created, and the instance is not running as a node in a global active database cluster. You can call the [CreateDBInstance](~~26228~~) operation to create an instance.
-      * > You must create a primary ApsaraDB RDS for MySQL instance in one of the following regions: China (Hangzhou), China (Shanghai), China (Qingdao), China (Beijing), China (Zhangjiakou), China (Shenzhen), and China (Chengdu).
-      * For more information, see [Create and release an ApsaraDB RDS global active database cluster](~~328592~~).
+      * ### [](#)Supported database engine
+      * *   MySQL
+      * ### [](#)References
+      * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * [Create and release an ApsaraDB RDS global active database cluster](~~328592~~)
       *
       * @param request CreateGADInstanceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2982,12 +3017,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### Prerequisites
-      * *   Your Alibaba Cloud account is used.
-      * *   The balance in your Alibaba Cloud account is greater than or equal to USD 100.
-      * *   A primary ApsaraDB RDS for MySQL instance is created, and the instance is not running as a node in a global active database cluster. You can call the [CreateDBInstance](~~26228~~) operation to create an instance.
-      * > You must create a primary ApsaraDB RDS for MySQL instance in one of the following regions: China (Hangzhou), China (Shanghai), China (Qingdao), China (Beijing), China (Zhangjiakou), China (Shenzhen), and China (Chengdu).
-      * For more information, see [Create and release an ApsaraDB RDS global active database cluster](~~328592~~).
+      * ### [](#)Supported database engine
+      * *   MySQL
+      * ### [](#)References
+      * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * [Create and release an ApsaraDB RDS global active database cluster](~~328592~~)
       *
       * @param request CreateGADInstanceRequest
       * @return CreateGADInstanceResponse
@@ -3855,6 +3889,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createReadOnlyDBInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      *
+      * @param request CreateSecretRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateSecretResponse
+     */
     public CreateSecretResponse createSecretWithOptions(CreateSecretRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3927,6 +3969,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSecretResponse());
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      *
+      * @param request CreateSecretRequest
+      * @return CreateSecretResponse
+     */
     public CreateSecretResponse createSecret(CreateSecretRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSecretWithOptions(request, runtime);
@@ -5310,9 +5359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ### [](#)Supported database engines
-      * MySQL
-      * ### [](#)References
-      * [Migrate data between ApsaraDB RDS for MySQL instances](~~96154~~)
+      * *   MySQL
       *
       * @param request DescibeImportsFromDatabaseRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5392,9 +5439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ### [](#)Supported database engines
-      * MySQL
-      * ### [](#)References
-      * [Migrate data between ApsaraDB RDS for MySQL instances](~~96154~~)
+      * *   MySQL
       *
       * @param request DescibeImportsFromDatabaseRequest
       * @return DescibeImportsFromDatabaseResponse
@@ -5786,6 +5831,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeAllWhitelistTemplateWithOptions(request, runtime);
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * MySQL
+      * ### [](#)References
+      * [Create and view an analytic instance](~~155180~~)
+      *
+      * @param request DescribeAnalyticdbByPrimaryDBInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeAnalyticdbByPrimaryDBInstanceResponse
+     */
     public DescribeAnalyticdbByPrimaryDBInstanceResponse describeAnalyticdbByPrimaryDBInstanceWithOptions(DescribeAnalyticdbByPrimaryDBInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5826,6 +5881,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAnalyticdbByPrimaryDBInstanceResponse());
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * MySQL
+      * ### [](#)References
+      * [Create and view an analytic instance](~~155180~~)
+      *
+      * @param request DescribeAnalyticdbByPrimaryDBInstanceRequest
+      * @return DescribeAnalyticdbByPrimaryDBInstanceResponse
+     */
     public DescribeAnalyticdbByPrimaryDBInstanceResponse describeAnalyticdbByPrimaryDBInstance(DescribeAnalyticdbByPrimaryDBInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAnalyticdbByPrimaryDBInstanceWithOptions(request, runtime);
@@ -8178,6 +8242,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDBInstanceNetInfoWithOptions(request, runtime);
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      *
+      * @param request DescribeDBInstanceNetInfoForChannelRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDBInstanceNetInfoForChannelResponse
+     */
     public DescribeDBInstanceNetInfoForChannelResponse describeDBInstanceNetInfoForChannelWithOptions(DescribeDBInstanceNetInfoForChannelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8230,6 +8305,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBInstanceNetInfoForChannelResponse());
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      *
+      * @param request DescribeDBInstanceNetInfoForChannelRequest
+      * @return DescribeDBInstanceNetInfoForChannelResponse
+     */
     public DescribeDBInstanceNetInfoForChannelResponse describeDBInstanceNetInfoForChannel(DescribeDBInstanceNetInfoForChannelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDBInstanceNetInfoForChannelWithOptions(request, runtime);
@@ -9918,7 +10003,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Error logs contain the time when they were generated and the error messages.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
       *
       * @param request DescribeErrorLogsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9981,7 +10070,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Error logs contain the time when they were generated and the error messages.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
       *
       * @param request DescribeErrorLogsRequest
       * @return DescribeErrorLogsResponse
@@ -9992,8 +10085,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The event history feature enables you to view the events that occurred within a region over a specific time range. Historical events include instance creation and parameter modification. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
-      * Before you call this operation, make sure that the event history feature is enabled. Otherwise, this operation fails.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### [](#)References
+      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Historical events of an ApsaraDB RDS for MySQL instance](~~129759~~)
+      * *   [Historical events of an ApsaraDB RDS for PostgreSQL instance](~~131008~~)
+      * *   [Historical events of an ApsaraDB RDS for SQL Server instance](~~131013~~)
+      * *   [Historical events of an ApsaraDB RDS for MariaDB instance](~~131010~~)
       *
       * @param request DescribeEventsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -10052,8 +10154,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The event history feature enables you to view the events that occurred within a region over a specific time range. Historical events include instance creation and parameter modification. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).
-      * Before you call this operation, make sure that the event history feature is enabled. Otherwise, this operation fails.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### [](#)References
+      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Historical events of an ApsaraDB RDS for MySQL instance](~~129759~~)
+      * *   [Historical events of an ApsaraDB RDS for PostgreSQL instance](~~131008~~)
+      * *   [Historical events of an ApsaraDB RDS for SQL Server instance](~~131013~~)
+      * *   [Historical events of an ApsaraDB RDS for MariaDB instance](~~131010~~)
       *
       * @param request DescribeEventsRequest
       * @return DescribeEventsResponse
@@ -10116,7 +10227,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * By default, Alibaba Cloud uses persistent connections to check the availability of an instance. For more information, see [What is availability detection?](~~207467~~)
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### [](#)References
+      * [What is availability detection?](~~207467~~)
       *
       * @param request DescribeHADiagnoseConfigRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -10163,7 +10280,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * By default, Alibaba Cloud uses persistent connections to check the availability of an instance. For more information, see [What is availability detection?](~~207467~~)
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### [](#)References
+      * [What is availability detection?](~~207467~~)
       *
       * @param request DescribeHADiagnoseConfigRequest
       * @return DescribeHADiagnoseConfigResponse
@@ -10174,8 +10297,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After a primary/secondary switchover is complete, the primary instance is demoted to the secondary instance and the secondary instance is promoted to primary. For more information, see [Switch workloads over between primary and secondary ApsaraDB RDS instances](~~96054~~).
-      * When you call this operation, you must make sure that the instance runs RDS High-availability Edition, RDS Enterprise Edition, and RDS Cluster Edition. RDS Cluster Edition is supported for ApsaraDB RDS for MySQL and ApsaraDB RDS for SQL Server.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
       *
       * @param request DescribeHASwitchConfigRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -10222,8 +10348,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After a primary/secondary switchover is complete, the primary instance is demoted to the secondary instance and the secondary instance is promoted to primary. For more information, see [Switch workloads over between primary and secondary ApsaraDB RDS instances](~~96054~~).
-      * When you call this operation, you must make sure that the instance runs RDS High-availability Edition, RDS Enterprise Edition, and RDS Cluster Edition. RDS Cluster Edition is supported for ApsaraDB RDS for MySQL and ApsaraDB RDS for SQL Server.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
       *
       * @param request DescribeHASwitchConfigRequest
       * @return DescribeHASwitchConfigResponse
@@ -10482,6 +10611,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeHostWebShellWithOptions(request, runtime);
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      *
+      * @param request DescribeInstanceAutoRenewalAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeInstanceAutoRenewalAttributeResponse
+     */
     public DescribeInstanceAutoRenewalAttributeResponse describeInstanceAutoRenewalAttributeWithOptions(DescribeInstanceAutoRenewalAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10542,6 +10682,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceAutoRenewalAttributeResponse());
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      *
+      * @param request DescribeInstanceAutoRenewalAttributeRequest
+      * @return DescribeInstanceAutoRenewalAttributeResponse
+     */
     public DescribeInstanceAutoRenewalAttributeResponse describeInstanceAutoRenewalAttribute(DescribeInstanceAutoRenewalAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInstanceAutoRenewalAttributeWithOptions(request, runtime);
@@ -10553,7 +10703,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   PostgreSQL
       * *   SQL Server
       * ### [](#)References
-      * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](~~120824~~)
+      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * *   [Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance](~~120824~~)
       * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
       * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
       *
@@ -10607,7 +10758,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   PostgreSQL
       * *   SQL Server
       * ### [](#)References
-      * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](~~120824~~)
+      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * *   [Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance](~~120824~~)
       * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
       * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
       *
@@ -12500,10 +12652,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is applicable to the following database engine versions:
+      * ### [](#)Supported database engines
       * *   MySQL
-      * *   SQL Server 2008 R2
       * *   PostgreSQL
+      * *   SQL Server
       *
       * @param request DescribeSQLCollectorPolicyRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -12558,10 +12710,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is applicable to the following database engine versions:
+      * ### [](#)Supported database engines
       * *   MySQL
-      * *   SQL Server 2008 R2
       * *   PostgreSQL
+      * *   SQL Server
       *
       * @param request DescribeSQLCollectorPolicyRequest
       * @return DescribeSQLCollectorPolicyResponse
@@ -13033,7 +13185,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is available only for ApsaraDB RDS for PostgreSQL instances.
+      * ### [](#)Supported database engines
+      * *   PostgreSQL
       *
       * @param request DescribeSlotsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -13088,7 +13241,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is available only for ApsaraDB RDS for PostgreSQL instances.
+      * ### [](#)Supported database engines
+      * *   PostgreSQL
       *
       * @param request DescribeSlotsRequest
       * @return DescribeSlotsResponse
@@ -13594,6 +13748,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeUpgradeMajorVersionPrecheckTaskWithOptions(request, runtime);
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * PostgreSQL
+      *
+      * @param request DescribeUpgradeMajorVersionTasksRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeUpgradeMajorVersionTasksResponse
+     */
     public DescribeUpgradeMajorVersionTasksResponse describeUpgradeMajorVersionTasksWithOptions(DescribeUpgradeMajorVersionTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -13650,6 +13812,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUpgradeMajorVersionTasksResponse());
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * PostgreSQL
+      *
+      * @param request DescribeUpgradeMajorVersionTasksRequest
+      * @return DescribeUpgradeMajorVersionTasksResponse
+     */
     public DescribeUpgradeMajorVersionTasksResponse describeUpgradeMajorVersionTasks(DescribeUpgradeMajorVersionTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeUpgradeMajorVersionTasksWithOptions(request, runtime);
@@ -14715,7 +14884,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * ### [](#)Feature description
       * *   A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
       * *   Before you call the [CreateDBInstance](~~26228~~) operation to create an ApsaraDB RDS for MySQL instance into which you want to import full backup files, you can call this operation to query the IDs of full backup files.
       * *   You can call the [ImportUserBackupFile](~~260266~~) operation to import a full backup file into an ApsaraDB RDS for MySQL instance.
@@ -14785,7 +14956,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * ### [](#)Feature description
       * *   A full backup file contains the data of a self-managed MySQL database. You can restore the data of a self-managed MySQL database from a full backup file to an ApsaraDB RDS for MySQL instance. For more information, see [Migrate the data of a self-managed MySQL 5.7 instance to the cloud](~~251779~~).
       * *   Before you call the [CreateDBInstance](~~26228~~) operation to create an ApsaraDB RDS for MySQL instance into which you want to import full backup files, you can call this operation to query the IDs of full backup files.
       * *   You can call the [ImportUserBackupFile](~~260266~~) operation to import a full backup file into an ApsaraDB RDS for MySQL instance.
@@ -15860,7 +16033,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is supported only for instances that run MySQL.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * ### [](#)References
+      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Modify automatic update settings for an ApsaraDB RDS for MySQL instance](~~96059~~)
+      * *   [Modify automatic update settings for an ApsaraDB RDS for PostgreSQL instance](~~146895~~)
       *
       * @param request ModifyDBInstanceAutoUpgradeMinorVersionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -15911,7 +16090,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is supported only for instances that run MySQL.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * ### [](#)References
+      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Modify automatic update settings for an ApsaraDB RDS for MySQL instance](~~96059~~)
+      * *   [Modify automatic update settings for an ApsaraDB RDS for PostgreSQL instance](~~146895~~)
       *
       * @param request ModifyDBInstanceAutoUpgradeMinorVersionRequest
       * @return ModifyDBInstanceAutoUpgradeMinorVersionResponse
@@ -15922,12 +16107,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### Supported database engines
-      * *   RDS MySQL
-      * *   RDS PostgreSQL
-      * *   RDS SQL Server
-      * *   RDS MariaDB
-      * > : The configuration item that is supported is [PgBouncer](~~2398301~~) of ApsaraDB RDS for PostgreSQL instances.
+      * ### [](#)Supported database engines
+      * *   PostgreSQL
+      * >  The configuration item that is supported is [PgBouncer](~~2398301~~) of ApsaraDB RDS for PostgreSQL instances.
       *
       * @param request ModifyDBInstanceConfigRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -15990,12 +16172,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### Supported database engines
-      * *   RDS MySQL
-      * *   RDS PostgreSQL
-      * *   RDS SQL Server
-      * *   RDS MariaDB
-      * > : The configuration item that is supported is [PgBouncer](~~2398301~~) of ApsaraDB RDS for PostgreSQL instances.
+      * ### [](#)Supported database engines
+      * *   PostgreSQL
+      * >  The configuration item that is supported is [PgBouncer](~~2398301~~) of ApsaraDB RDS for PostgreSQL instances.
       *
       * @param request ModifyDBInstanceConfigRequest
       * @return ModifyDBInstanceConfigResponse
@@ -16169,6 +16348,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyDBInstanceConnectionStringWithOptions(request, runtime);
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * ### [](#)References
+      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * *   [Configure a data replication latency for a read-only ApsaraDB RDS for MySQL instance](~~96056~~)
+      *
+      * @param request ModifyDBInstanceDelayedReplicationTimeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDBInstanceDelayedReplicationTimeResponse
+     */
     public ModifyDBInstanceDelayedReplicationTimeResponse modifyDBInstanceDelayedReplicationTimeWithOptions(ModifyDBInstanceDelayedReplicationTimeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -16209,13 +16399,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBInstanceDelayedReplicationTimeResponse());
     }
 
+    /**
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * ### [](#)References
+      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * *   [Configure a data replication latency for a read-only ApsaraDB RDS for MySQL instance](~~96056~~)
+      *
+      * @param request ModifyDBInstanceDelayedReplicationTimeRequest
+      * @return ModifyDBInstanceDelayedReplicationTimeResponse
+     */
     public ModifyDBInstanceDelayedReplicationTimeResponse modifyDBInstanceDelayedReplicationTime(ModifyDBInstanceDelayedReplicationTimeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDBInstanceDelayedReplicationTimeWithOptions(request, runtime);
     }
 
     /**
-      * For more information, see [Enable or disable the release protection feature for an ApsaraDB RDS for MySQL instance](~~414512~~).
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### [](#)References
+      * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * *   [Enable and disable instance release protection for an ApsaraDB RDS for MySQL instance](~~414512~~)
+      * *   [Enable and disable instance release protection for an ApsaraDB RDS for PostgreSQL instance](~~471512~~)
+      * *   [Enable and disable instance release protection for an ApsaraDB RDS for SQL Server instance](~~416209~~)
+      * *   [Enable and disable release protection for an ApsaraDB RDS for MariaDB instance](~~414512~~)
       *
       * @param request ModifyDBInstanceDeletionProtectionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -16270,7 +16480,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information, see [Enable or disable the release protection feature for an ApsaraDB RDS for MySQL instance](~~414512~~).
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### [](#)References
+      * > : Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * *   [Enable and disable instance release protection for an ApsaraDB RDS for MySQL instance](~~414512~~)
+      * *   [Enable and disable instance release protection for an ApsaraDB RDS for PostgreSQL instance](~~471512~~)
+      * *   [Enable and disable instance release protection for an ApsaraDB RDS for SQL Server instance](~~416209~~)
+      * *   [Enable and disable release protection for an ApsaraDB RDS for MariaDB instance](~~414512~~)
       *
       * @param request ModifyDBInstanceDeletionProtectionRequest
       * @return ModifyDBInstanceDeletionProtectionResponse
@@ -16539,7 +16759,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can set the maintenance time to a period of time during off-peak hours. Alibaba Cloud performs routine maintenance within the maintenance time to minimize impacts on your business.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### [](#)References
+      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Set a maintenance window for an ApsaraDB RDS for MySQL instance](~~96052~~)
+      * *   [Set a maintenance window for an ApsaraDB RDS for PostgreSQL instance](~~96799~~)
+      * *   [Set a maintenance window for an ApsaraDB RDS for SQL Sever instance](~~95657~~)
+      * *   [Set a maintenance window for an ApsaraDB RDS for MariaDB instance](~~97473~~)
       *
       * @param request ModifyDBInstanceMaintainTimeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -16594,7 +16824,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can set the maintenance time to a period of time during off-peak hours. Alibaba Cloud performs routine maintenance within the maintenance time to minimize impacts on your business.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### [](#)References
+      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Set a maintenance window for an ApsaraDB RDS for MySQL instance](~~96052~~)
+      * *   [Set a maintenance window for an ApsaraDB RDS for PostgreSQL instance](~~96799~~)
+      * *   [Set a maintenance window for an ApsaraDB RDS for SQL Sever instance](~~95657~~)
+      * *   [Set a maintenance window for an ApsaraDB RDS for MariaDB instance](~~97473~~)
       *
       * @param request ModifyDBInstanceMaintainTimeRequest
       * @return ModifyDBInstanceMaintainTimeResponse
@@ -16749,7 +16989,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When an ApsaraDB for RDS instance is in the hybrid access mode, which uses both a VPC endpoint and a classic network endpoint, this operation is used to extend the expiration time of the classic network endpoint.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   SQL Server
+      * ### [](#)References
+      * *   [Configure the hybrid access solution for an ApsaraDB RDS for MySQL instance](~~96110~~)
+      * *   [Configure the hybrid access solution for an ApsaraDB RDS for SQL Server instance](~~95708~~)
       *
       * @param request ModifyDBInstanceNetworkExpireTimeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -16804,7 +17049,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When an ApsaraDB for RDS instance is in the hybrid access mode, which uses both a VPC endpoint and a classic network endpoint, this operation is used to extend the expiration time of the classic network endpoint.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   SQL Server
+      * ### [](#)References
+      * *   [Configure the hybrid access solution for an ApsaraDB RDS for MySQL instance](~~96110~~)
+      * *   [Configure the hybrid access solution for an ApsaraDB RDS for SQL Server instance](~~95708~~)
       *
       * @param request ModifyDBInstanceNetworkExpireTimeRequest
       * @return ModifyDBInstanceNetworkExpireTimeResponse
@@ -16921,14 +17171,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is used to change only the billing method of an instance from pay-as-you-go to subscription.
-      * The following requirements must be met:
-      * *   The instance belongs to the current account.
-      * *   The instance uses one of the most recent instance types. For more information, see [Instance types](~~26312~~).
-      *     **
-      *     **Note**You cannot change the billing method of an instance that uses a phased-out instance type from pay-as-you-go to subscription. If you want to change the billing method of an instance that uses a phased-out instance type from pay-as-you-go to subscription, you must change the instance type of the instance to one of the most recent instance types. Then, you can change the billing method of the instance from pay-as-you-go to subscription. To change the instance type of an instance, you can change the instance specifications of the instance. For more information, see [Change the specifications of an ApsaraDB RDS instance](~~96061~~).
-      * *   The instance uses the pay-as-you-go billing method and is in the Running state.
-      * *   Your Alibaba Cloud account has no unpaid orders for the instance for which you want to change the billing method.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### [](#)References
+      * >  Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the following topics:
+      * *   [Change the billing method of an ApsaraDB RDS for MySQL instance from pay-as-you-go to subscription](~~96048~~)
+      * *   [Change the billing method of an ApsaraDB RDS for PostgreSQL instance from pay-as-you-go to subscription](~~96743~~)
+      * *   [Change the billing method of an ApsaraDB RDS for SQL Server instance from pay-as-you-go to subscription](~~95631~~)
+      * *   [Change the billing method of an ApsaraDB RDS for MariaDB instance from pay-as-you-go to subscription](~~97120~~)
       *
       * @param request ModifyDBInstancePayTypeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -16975,14 +17228,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is used to change only the billing method of an instance from pay-as-you-go to subscription.
-      * The following requirements must be met:
-      * *   The instance belongs to the current account.
-      * *   The instance uses one of the most recent instance types. For more information, see [Instance types](~~26312~~).
-      *     **
-      *     **Note**You cannot change the billing method of an instance that uses a phased-out instance type from pay-as-you-go to subscription. If you want to change the billing method of an instance that uses a phased-out instance type from pay-as-you-go to subscription, you must change the instance type of the instance to one of the most recent instance types. Then, you can change the billing method of the instance from pay-as-you-go to subscription. To change the instance type of an instance, you can change the instance specifications of the instance. For more information, see [Change the specifications of an ApsaraDB RDS instance](~~96061~~).
-      * *   The instance uses the pay-as-you-go billing method and is in the Running state.
-      * *   Your Alibaba Cloud account has no unpaid orders for the instance for which you want to change the billing method.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### [](#)References
+      * >  Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the following topics:
+      * *   [Change the billing method of an ApsaraDB RDS for MySQL instance from pay-as-you-go to subscription](~~96048~~)
+      * *   [Change the billing method of an ApsaraDB RDS for PostgreSQL instance from pay-as-you-go to subscription](~~96743~~)
+      * *   [Change the billing method of an ApsaraDB RDS for SQL Server instance from pay-as-you-go to subscription](~~95631~~)
+      * *   [Change the billing method of an ApsaraDB RDS for MariaDB instance from pay-as-you-go to subscription](~~97120~~)
       *
       * @param request ModifyDBInstancePayTypeRequest
       * @return ModifyDBInstancePayTypeResponse
@@ -18233,7 +18489,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * By default, Alibaba Cloud uses persistent connections to check the availability of an instance. For more information, see [What is availability detection?](~~207467~~)
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### [](#)References
+      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * [What is availability check?](~~207467~~)
       *
       * @param request ModifyHADiagnoseConfigRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -18284,7 +18547,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * By default, Alibaba Cloud uses persistent connections to check the availability of an instance. For more information, see [What is availability detection?](~~207467~~)
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### [](#)References
+      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * [What is availability check?](~~207467~~)
       *
       * @param request ModifyHADiagnoseConfigRequest
       * @return ModifyHADiagnoseConfigResponse
@@ -18460,6 +18730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   PostgreSQL
       * *   SQL Server
       * ### [](#)References
+      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
       * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](~~120824~~)
       * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
       * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
@@ -18538,6 +18809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   PostgreSQL
       * *   SQL Server
       * ### [](#)References
+      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
       * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](~~120824~~)
       * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
       * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
@@ -20380,12 +20652,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB RDS. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
-      * Before you call this operation, make sure that the following requirements are met:
-      * *   The instance is a subscription instance.
-      * *   Your account supports credit card payments or balance payments.
-      *     **
-      *     **Note**By default, coupons available for your account are preferentially used for payment.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### [](#)References
+      * >  Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the following topics:
+      * *   [Manually renew an ApsaraDB RDS for MySQL instance](~~96050~~)
+      * *   [Manually renew an ApsaraDB RDS for PostgreSQL instance](~~96741~~)
+      * *   [Manually renew an ApsaraDB RDS for SQL Server instance](~~95637~~)
+      * *   [Manually renew an ApsaraDB RDS for MariaDB instance](~~97122~~)
       *
       * @param request RenewInstanceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -20444,12 +20721,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB RDS. For more information, see [Billable items, billing methods, and pricing](~~45020~~).
-      * Before you call this operation, make sure that the following requirements are met:
-      * *   The instance is a subscription instance.
-      * *   Your account supports credit card payments or balance payments.
-      *     **
-      *     **Note**By default, coupons available for your account are preferentially used for payment.
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### [](#)References
+      * >  Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the following topics:
+      * *   [Manually renew an ApsaraDB RDS for MySQL instance](~~96050~~)
+      * *   [Manually renew an ApsaraDB RDS for PostgreSQL instance](~~96741~~)
+      * *   [Manually renew an ApsaraDB RDS for SQL Server instance](~~95637~~)
+      * *   [Manually renew an ApsaraDB RDS for MariaDB instance](~~97122~~)
       *
       * @param request RenewInstanceRequest
       * @return RenewInstanceResponse

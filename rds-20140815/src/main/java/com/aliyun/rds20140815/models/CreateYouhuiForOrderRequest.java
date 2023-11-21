@@ -14,13 +14,13 @@ public class CreateYouhuiForOrderRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The promotion ID. You can call the [GetResourcePrice](~~428503~~) operation to query the promotion ID.</p>
+     * <p>The promotion ID. You can call the GetResourcePrice operation to query the promotion ID.</p>
      */
     @NameInMap("PromotionId")
     public Long promotionId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

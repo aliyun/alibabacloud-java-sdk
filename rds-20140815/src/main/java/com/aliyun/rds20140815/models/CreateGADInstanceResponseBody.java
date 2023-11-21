@@ -11,7 +11,7 @@ public class CreateGADInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of the information returned.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Result")
     public CreateGADInstanceResponseBodyResult result;
@@ -51,7 +51,7 @@ public class CreateGADInstanceResponseBody extends TeaModel {
         public String gadInstanceName;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          */
         @NameInMap("TaskID")
         public String taskID;

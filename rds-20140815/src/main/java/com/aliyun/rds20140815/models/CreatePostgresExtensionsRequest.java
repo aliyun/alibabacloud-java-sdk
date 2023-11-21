@@ -17,13 +17,13 @@ public class CreatePostgresExtensionsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The name of the database. You can call the [DescribeDatabases](~~610471~~) to obtain the name of the database.</p>
+     * <p>The database name. You can call the DescribeDatabases operation to query the database name.</p>
      */
     @NameInMap("DBNames")
     public String DBNames;

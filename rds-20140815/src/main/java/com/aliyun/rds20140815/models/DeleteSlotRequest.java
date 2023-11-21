@@ -13,7 +13,7 @@ public class DeleteSlotRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.</p>
+     * <p>The ID of the instance. You can call the DescribeDBInstances operation to query the IDs of instances.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -37,13 +37,13 @@ public class DeleteSlotRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the replication slot. You can call the [DescribeSlots](~~613399~~) operation to query the name of the replication slot.</p>
+     * <p>The name of the replication slot. You can call the DescribeSlots operation to query the name of the replication slot.</p>
      */
     @NameInMap("SlotName")
     public String slotName;
 
     /**
-     * <p>The status of the replication slot. You can call the [DescribeSlots](~~613399~~) operation to query the status of the replication slot. Valid values:</p>
+     * <p>The status of the replication slot. You can call the DescribeSlots operation to query the status of the replication slot. Valid values:</p>
      * <br>
      * <p>*   ACTIVE</p>
      * <p>*   INACTIVE</p>

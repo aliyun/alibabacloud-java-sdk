@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set by which you want to restore databases of the source instance. When you replicate databases by backup set, you can call the [DescribeBackups](~~610544~~) operation to obtain the ID of the backup set.</p>
+     * <p>The ID of the backup set by which you want to restore databases of the source instance. When you replicate databases by backup set, you can call the DescribeBackups operation to obtain the ID of the backup set.</p>
      * <br>
      * <p>> : You must specify one of the **BackupId** and **RestoreTime** parameters.</p>
      */
@@ -13,13 +13,13 @@ public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
     public String backupId;
 
     /**
-     * <p>The ID of the source instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The source instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The names of the databases. Format: `{"Original database name 1":"New database name 1","Original database name 2":"New database name 2"}`.</p>
+     * <p>The names of the databases that you want to copy. Format: `Source database name 1,Source database name 2`.</p>
      */
     @NameInMap("DbNames")
     public String dbNames;
@@ -47,7 +47,7 @@ public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
     public String syncUserPrivilege;
 
     /**
-     * <p>The ID of the destination instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The destination instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("TargetDBInstanceId")
     public String targetDBInstanceId;

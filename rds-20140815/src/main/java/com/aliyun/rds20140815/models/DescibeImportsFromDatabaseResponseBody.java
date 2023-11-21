@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of migration tasks.</p>
+     * <p>The migration tasks.</p>
      */
     @NameInMap("Items")
     public DescibeImportsFromDatabaseResponseBodyItems items;
@@ -87,7 +87,7 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
          * <p>*   **FullExporting**: The migration task is exporting full data.</p>
          * <p>*   **FullImporting**: The migration task is importing full data.</p>
          * <p>*   **Success**: The migration task is successful.</p>
-         * <p>*   **Failed**: The migration task fails.</p>
+         * <p>*   **Failed**: The migration task failed.</p>
          * <p>*   **Canceled**: The migration task is canceled.</p>
          * <p>*   **Canceling**: The migration task is being canceled.</p>
          * <p>*   **IncrementalWaiting**: The migration task is waiting to synchronize incremental data.</p>
@@ -107,7 +107,7 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
          * <p>The type of the migration task. Valid values:</p>
          * <br>
          * <p>*   **Full**: full migration</p>
-         * <p>*   **Incremental**: incremental migration</p>
+         * <p>*   **Incremental:**: incremental migration</p>
          */
         @NameInMap("ImportDataType")
         public String importDataType;

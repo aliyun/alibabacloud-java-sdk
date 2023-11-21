@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTempDBInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set. You can call the [DescribeBackups](~~610544~~) operation to query backup set IDs.</p>
+     * <p>The ID of the backup set. You can call the DescribeBackups operation to query backup set IDs.</p>
      * <br>
      * <p>>  You must specify at least one of the **BackupId** or **RestoreTime** parameters.</p>
      */

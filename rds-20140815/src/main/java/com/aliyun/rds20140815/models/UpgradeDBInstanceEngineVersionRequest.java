@@ -11,7 +11,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -20,7 +20,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
      * <p>The effective time. Valid values:</p>
      * <br>
      * <p>*   **Immediate**: This is the default value.</p>
-     * <p>*   **MaintainTime**: The effective time is within the maintenance window. For more information, see [ModifyDBInstanceMaintainTime](~~610402~~).</p>
+     * <p>*   **MaintainTime**: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</p>
      */
     @NameInMap("EffectiveTime")
     public String effectiveTime;

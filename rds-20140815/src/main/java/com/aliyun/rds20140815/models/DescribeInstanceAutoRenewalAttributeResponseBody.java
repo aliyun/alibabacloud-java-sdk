@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
     /**
-     * <p>The renewal information of the instance.</p>
+     * <p>The renewal information about the instance.</p>
      */
     @NameInMap("Items")
     public DescribeInstanceAutoRenewalAttributeResponseBodyItems items;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -81,31 +81,31 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
 
     public static class DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem extends TeaModel {
         /**
-         * <p>Indicates whether auto-renewal is enabled.</p>
+         * <p>Indicates whether to enable auto-renewal for the instance.</p>
          */
         @NameInMap("AutoRenew")
         public String autoRenew;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
-         * <p>The billing cycle of renewal.</p>
+         * <p>The renewal period.</p>
          */
         @NameInMap("Duration")
         public Integer duration;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The status of the instance.</p>
+         * <p>The instance status.</p>
          */
         @NameInMap("Status")
         public String status;

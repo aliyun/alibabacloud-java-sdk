@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the information about the tasks that are returned.</p>
+     * <p>The tasks for major engine version upgrades.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeUpgradeMajorVersionTasksResponseBodyItems> items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -81,12 +81,12 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
 
     public static class DescribeUpgradeMajorVersionTasksResponseBodyItems extends TeaModel {
         /**
-         * <p>The time at which ApsaraDB RDS collects the statistics of the new RDS instance.</p>
+         * <p>The time when the system collects the statistics.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   **After**: ApsaraDB RDS collects the statistics of the new instance after a switchover.</p>
-         * <p>*   **Before**: ApsaraDB RDS collects the statistics of the new instance before a switchover.</p>
+         * <p>*   **After**: The system collects the statistics after a switchover.</p>
+         * <p>*   **Before**: The system collects the statistics before a switchover.</p>
          */
         @NameInMap("CollectStatMode")
         public String collectStatMode;
@@ -98,9 +98,9 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         public String detail;
 
         /**
-         * <p>The time at which the task ended.</p>
+         * <p>The end time of the task.</p>
          * <br>
-         * <p>The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.</p>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
@@ -128,9 +128,9 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         public String sourceMajorVersion;
 
         /**
-         * <p>The time at which the task started.</p>
+         * <p>The start time of the task.</p>
          * <br>
-         * <p>The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.</p>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -138,7 +138,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         /**
          * <p>The time at which your workloads are switched over from the original instance to the new instance.</p>
          * <br>
-         * <p>The value of this parameter is a timestamp that follows the UNIX time format. Unit: milliseconds.</p>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
          */
         @NameInMap("SwitchTime")
         public String switchTime;
@@ -156,23 +156,25 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
          * <p>*   **11.0**</p>
          * <p>*   **12.0**</p>
          * <p>*   **13.0**</p>
+         * <p>*   **14.0**</p>
+         * <p>*   **15.0**</p>
          */
         @NameInMap("TargetMajorVersion")
         public String targetMajorVersion;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          */
         @NameInMap("TaskId")
         public Integer taskId;
 
         /**
-         * <p>Indicates whether ApsaraDB RDS migrates data to the new instance and switches your workloads over to the new instance.</p>
+         * <p>The upgrade mode.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   **clone**: ApsaraDB RDS does not migrate data to the new instance and does not switch your workloads over to the new instance.</p>
-         * <p>*   **switch**: ApsaraDB RDS migrates data to the new instance and switches your workloads over to the new instance.</p>
+         * <p>*   **clone**: The system does not migrate data to the new instance and does not switch your workloads over to the new instance.</p>
+         * <p>*   **switch**: The system migrates data to the new instance and switches your workloads over to the new instance.</p>
          */
         @NameInMap("UpgradeMode")
         public String upgradeMode;

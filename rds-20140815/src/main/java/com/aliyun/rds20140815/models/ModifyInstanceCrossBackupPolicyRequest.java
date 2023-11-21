@@ -28,7 +28,7 @@ public class ModifyInstanceCrossBackupPolicyRequest extends TeaModel {
     public String crossBackupType;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -48,7 +48,7 @@ public class ModifyInstanceCrossBackupPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the source instance belongs. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the source instance. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

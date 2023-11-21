@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class RebuildDBInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the primary instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The ID of the dedicated cluster. You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the IDs of dedicated clusters.</p>
+     * <p>The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.</p>
      */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
@@ -19,7 +19,7 @@ public class RebuildDBInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the host on which the system rebuilds the secondary instance.</p>
      * <br>
-     * <p>>  If you do not specify this parameter, the system preferentially rebuilds the secondary instance on the original host on which the secondary instance resides. If the remaining storage space of the original host is insufficient, the system rebuilds the secondary instance on a host on which the primary instance does not reside. If no suitable hosts are found, the system reports an error that indicates insufficient storage space.</p>
+     * <p>>  If you do not specify this parameter, the system preferentially rebuilds the secondary instance on the original host on which the secondary instance resides. If the remaining storage of the original host is insufficient, the system rebuilds the secondary instance on a host on which the primary instance does not reside. If no suitable hosts are found, the system reports an error that indicates insufficient storage.</p>
      */
     @NameInMap("DedicatedHostId")
     public String dedicatedHostId;
@@ -37,7 +37,7 @@ public class RebuildDBInstanceRequest extends TeaModel {
     public String rebuildNodeType;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

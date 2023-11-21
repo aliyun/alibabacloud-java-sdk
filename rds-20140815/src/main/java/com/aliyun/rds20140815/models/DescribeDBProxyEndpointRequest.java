@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDBProxyEndpointRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The proxy endpoint that you want to query. You can call the [DescribeDBProxy](~~610506~~) operation to query the proxy endpoint.</p>
+     * <p>The proxy endpoint that you want to query. You can call the DescribeDBProxy interface to query the proxy endpoint.</p>
      */
     @NameInMap("DBProxyConnectString")
     public String DBProxyConnectString;
 
     /**
-     * <p>The name of the proxy terminal to which the proxy endpoint belongs. You can call the [DescribeDBProxy](~~610506~~) operation to query the name of the proxy terminal.</p>
+     * <p>The name of the proxy terminal. You can call the DescribeDBProxy interface to query the name of the proxy terminal.</p>
      */
     @NameInMap("DBProxyEndpointId")
     public String DBProxyEndpointId;
@@ -32,7 +32,7 @@ public class DescribeDBProxyEndpointRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
