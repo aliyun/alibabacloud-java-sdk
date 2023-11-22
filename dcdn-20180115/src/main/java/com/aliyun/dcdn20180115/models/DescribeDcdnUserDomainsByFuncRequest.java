@@ -25,6 +25,12 @@ public class DescribeDcdnUserDomainsByFuncRequest extends TeaModel {
     @NameInMap("FuncId")
     public Integer funcId;
 
+    /**
+     * <p>The type of the search. Default value: exact_match. Valid values:</p>
+     * <br>
+     * <p>*   fuzzy_match: fuzzy search.</p>
+     * <p>*   exact_match: exact search.</p>
+     */
     @NameInMap("MatchType")
     public String matchType;
 

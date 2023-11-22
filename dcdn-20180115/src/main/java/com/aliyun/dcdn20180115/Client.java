@@ -347,7 +347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request.
+      * >  You can call this operation up to 20 times per second per account.
       *
       * @param request BatchCreateDcdnWafRulesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -382,7 +382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request.
+      * >  You can call this operation up to 20 times per second per account.
       *
       * @param request BatchCreateDcdnWafRulesRequest
       * @return BatchCreateDcdnWafRulesResponse
@@ -453,7 +453,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * # Usage notes
       * *   You can call this operation up to 20 times per second per account.
       * *   Alibaba Cloud Dynamic Content Delivery Network (DCDN) supports POST requests.
       *
@@ -486,7 +485,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * # Usage notes
       * *   You can call this operation up to 20 times per second per account.
       * *   Alibaba Cloud Dynamic Content Delivery Network (DCDN) supports POST requests.
       *
@@ -658,9 +656,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
-      * *   You can specify up to 50 domain names in each request.
-      * *   You can call this operation up to 30 times per second per account.
+      * > *   You can specify up to 50 domain names in each request.
+      * >*   You can call this operation up to 30 times per second per account.
       *
       * @param request BatchSetDcdnDomainConfigsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -707,9 +704,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
-      * *   You can specify up to 50 domain names in each request.
-      * *   You can call this operation up to 30 times per second per account.
+      * > *   You can specify up to 50 domain names in each request.
+      * >*   You can call this operation up to 30 times per second per account.
       *
       * @param request BatchSetDcdnDomainConfigsRequest
       * @return BatchSetDcdnDomainConfigsResponse
@@ -5922,6 +5918,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDcdnL2VipsWithOptions(request, runtime);
     }
 
+    public DescribeDcdnOriginSiteHealthStatusResponse describeDcdnOriginSiteHealthStatusWithOptions(DescribeDcdnOriginSiteHealthStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDcdnOriginSiteHealthStatus"),
+            new TeaPair("version", "2018-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnOriginSiteHealthStatusResponse());
+    }
+
+    public DescribeDcdnOriginSiteHealthStatusResponse describeDcdnOriginSiteHealthStatus(DescribeDcdnOriginSiteHealthStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDcdnOriginSiteHealthStatusWithOptions(request, runtime);
+    }
+
     /**
       * >  You can call this API operation up to 100 times per second per account.
       *
@@ -9823,16 +9848,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * #
       * *   DCDN supports POST requests in which parameters are sent as a form.
       * *   You can call the [RefreshDcdnObjectCaches](~~130620~~) operation to refresh content and call the [PreloadDcdnObjectCaches](~~130636~~) operation to prefetch content.
       * *   By default, each Alibaba Cloud account can refresh content from a maximum of 10,000 URLs and 100 directories per day, including subdirectories. If the daily peak bandwidth value exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to request a quota increase. DCDN evaluates your application based on your workloads.
       * *   You can specify up to 1,000 URLs or 100 directories that you want to refresh in each request.
-      * *   You can refresh up to 1,000 URLs per minute for each domain name.
+      * *   You can refresh a maximum of 1,000 URLs per minute for each domain name.
       * *   You can call this operation up to 30 times per second per account.
-      * # Precautions
-      * *   After a refresh task is submitted and completed, your resources that are stored on DCDN POPs are removed. When a POP receives a request to your resources, the request is redirected to the origin server to retrieve the resources. Then, the resources are returned to the client and cached on the POP. If you frequently run refresh tasks, more requests will be redirected back to the origin server for resources, which result in high bandwidth costs and undue pressure on the origin server.
-      * *   A refresh task takes effect 5 to 6 minutes after being submitted. This means that if the resource you want to refresh has a TTL of less than five minutes, you wait for it to expire instead of manually running a refresh task.
+      * #### [](#)Precautions
+      * *   After a refresh task is submitted and completed, your resources that are stored on DCDN POPs are removed. When a POP receives a request to your resources, the request is redirected to the origin server to retrieve the resources. Then, the resources are returned to the client and cached on the POP. If you frequently run refresh tasks, more requests will be redirected to the origin server for resources, which result in high bandwidth costs and undue pressure on the origin server.
+      * *   A refresh task takes effect 5 to 6 minutes after being submitted. This means that if the resource you want to refresh has a TTL of less than 5 minutes, you wait for it to expire instead of manually running a refresh task.
       * *   If you want to use RAM users to refresh or prefetch resources, you need to obtain the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~445051~~).
       *
       * @param request RefreshDcdnObjectCachesRequest
@@ -9880,16 +9904,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * #
       * *   DCDN supports POST requests in which parameters are sent as a form.
       * *   You can call the [RefreshDcdnObjectCaches](~~130620~~) operation to refresh content and call the [PreloadDcdnObjectCaches](~~130636~~) operation to prefetch content.
       * *   By default, each Alibaba Cloud account can refresh content from a maximum of 10,000 URLs and 100 directories per day, including subdirectories. If the daily peak bandwidth value exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to request a quota increase. DCDN evaluates your application based on your workloads.
       * *   You can specify up to 1,000 URLs or 100 directories that you want to refresh in each request.
-      * *   You can refresh up to 1,000 URLs per minute for each domain name.
+      * *   You can refresh a maximum of 1,000 URLs per minute for each domain name.
       * *   You can call this operation up to 30 times per second per account.
-      * # Precautions
-      * *   After a refresh task is submitted and completed, your resources that are stored on DCDN POPs are removed. When a POP receives a request to your resources, the request is redirected to the origin server to retrieve the resources. Then, the resources are returned to the client and cached on the POP. If you frequently run refresh tasks, more requests will be redirected back to the origin server for resources, which result in high bandwidth costs and undue pressure on the origin server.
-      * *   A refresh task takes effect 5 to 6 minutes after being submitted. This means that if the resource you want to refresh has a TTL of less than five minutes, you wait for it to expire instead of manually running a refresh task.
+      * #### [](#)Precautions
+      * *   After a refresh task is submitted and completed, your resources that are stored on DCDN POPs are removed. When a POP receives a request to your resources, the request is redirected to the origin server to retrieve the resources. Then, the resources are returned to the client and cached on the POP. If you frequently run refresh tasks, more requests will be redirected to the origin server for resources, which result in high bandwidth costs and undue pressure on the origin server.
+      * *   A refresh task takes effect 5 to 6 minutes after being submitted. This means that if the resource you want to refresh has a TTL of less than 5 minutes, you wait for it to expire instead of manually running a refresh task.
       * *   If you want to use RAM users to refresh or prefetch resources, you need to obtain the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~445051~~).
       *
       * @param request RefreshDcdnObjectCachesRequest
@@ -10994,7 +11017,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public UpdateDcdnUserRealTimeDeliveryFieldResponse updateDcdnUserRealTimeDeliveryFieldWithOptions(UpdateDcdnUserRealTimeDeliveryFieldRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessType)) {
+            query.put("BusinessType", request.businessType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fields)) {
+            query.put("Fields", request.fields);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -11003,7 +11034,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2018-01-15"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),

@@ -16,8 +16,13 @@ public class RefreshDcdnObjectCachesRequest extends TeaModel {
     /**
      * <p>The refresh type. Valid values:</p>
      * <br>
-     * <p>*   **File**: URL</p>
-     * <p>*   **Directory**: directory</p>
+     * <p>*   **File** (default): refreshres resources based on URLs.</p>
+     * <p>*   **Directory**: refreshes resources based on directories.</p>
+     * <p>*   **Regex**: refreshes content based on regular expressions.</p>
+     * <p>*   **IgnoreParams**: removes the question mark (`?`) and parameters after `?` in a request URL and refreshes content. After you call this operation with the request URL submitted, the system compares the submitted URL with the URL of the cached resource without specific parameters. If the URLs match, the DCDN POPs refresh the cached resource.</p>
+     * <br>
+     * <p>>*   For more information about features of URL refresh and directory refresh, see [Refresh and prefetch resources](~~64936~~).</p>
+     * <p>>*   If you set ObjectType to Directory, the resources in the directory that you want to refresh are marked as expired. You cannot delete the directory. If clients request resources after the resources on POPs are marked as expired, DCDN checks whether the resources on your origin server are updated with a later version. If a later version exists, DCDN retrieves the resources of the later version and returns the resources to the clients. Otherwise, DCDN retrieves the 304 status code from the origin server.</p>
      */
     @NameInMap("ObjectType")
     public String objectType;

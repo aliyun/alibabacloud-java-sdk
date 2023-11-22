@@ -7,12 +7,24 @@ public class DescribeDdosAllEventListRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The type of the DDoS attack event that was queried. Valid values:</p>
+     * <br>
+     * <p>*   *   **web-cc**: web resource exhaustion attacks</p>
+     * <p>*   *   **cc**: connection flood attacks</p>
+     * <p>*   *   **traffic**: volumetric attacks</p>
+     * <br>
+     * <p>If you do not configure this parameter, DDoS attack events of all types are queried.</p>
+     */
     @NameInMap("EventType")
     public String eventType;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **10**. Valid values: 5, 10, and 20.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

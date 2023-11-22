@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class BatchCreateDcdnWafRulesRequest extends TeaModel {
     /**
-     * <p>The configurations of the protection rule.</p>
+     * <p>The ID of the protection policy.</p>
      */
     @NameInMap("PolicyId")
     public Long policyId;
 
     /**
-     * <p>The configurations of the RuleConfigs.</p>
+     * <p>The configuration of the protection rule.</p>
      */
     @NameInMap("RuleConfigs")
     public String ruleConfigs;
