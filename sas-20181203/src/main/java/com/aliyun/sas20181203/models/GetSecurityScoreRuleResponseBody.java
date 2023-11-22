@@ -20,7 +20,7 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of deducted modules that are supported by the security score feature.</p>
+     * <p>The list of deduction modules that are supported by the security score feature.</p>
      */
     @NameInMap("SecurityScoreRuleList")
     public java.util.List<GetSecurityScoreRuleResponseBodySecurityScoreRuleList> securityScoreRuleList;
@@ -161,7 +161,7 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
 
     public static class GetSecurityScoreRuleResponseBodySecurityScoreRuleList extends TeaModel {
         /**
-         * <p>The deducted module that is supported by the security score feature. Valid values:</p>
+         * <p>The deduction module that is supported by the security score feature. Valid values:</p>
          * <br>
          * <p>*   SS_REINFORCE: issue in key feature configuration</p>
          * <p>*   SS_ALARM: unhandled alert</p>

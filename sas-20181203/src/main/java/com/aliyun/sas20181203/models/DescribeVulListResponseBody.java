@@ -661,6 +661,21 @@ public class DescribeVulListResponseBody extends TeaModel {
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        @NameInMap("K8sClusterId")
+        public String k8sClusterId;
+
+        @NameInMap("K8sNamespace")
+        public String k8sNamespace;
+
+        @NameInMap("K8sNodeId")
+        public String k8sNodeId;
+
+        @NameInMap("K8sNodeName")
+        public String k8sNodeName;
+
+        @NameInMap("K8sPodName")
+        public String k8sPodName;
+
         /**
          * <p>The timestamp that was generated when the vulnerability was last detected. Unit: milliseconds.</p>
          */
@@ -898,6 +913,46 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
         public String getIntranetIp() {
             return this.intranetIp;
+        }
+
+        public DescribeVulListResponseBodyVulRecords setK8sClusterId(String k8sClusterId) {
+            this.k8sClusterId = k8sClusterId;
+            return this;
+        }
+        public String getK8sClusterId() {
+            return this.k8sClusterId;
+        }
+
+        public DescribeVulListResponseBodyVulRecords setK8sNamespace(String k8sNamespace) {
+            this.k8sNamespace = k8sNamespace;
+            return this;
+        }
+        public String getK8sNamespace() {
+            return this.k8sNamespace;
+        }
+
+        public DescribeVulListResponseBodyVulRecords setK8sNodeId(String k8sNodeId) {
+            this.k8sNodeId = k8sNodeId;
+            return this;
+        }
+        public String getK8sNodeId() {
+            return this.k8sNodeId;
+        }
+
+        public DescribeVulListResponseBodyVulRecords setK8sNodeName(String k8sNodeName) {
+            this.k8sNodeName = k8sNodeName;
+            return this;
+        }
+        public String getK8sNodeName() {
+            return this.k8sNodeName;
+        }
+
+        public DescribeVulListResponseBodyVulRecords setK8sPodName(String k8sPodName) {
+            this.k8sPodName = k8sPodName;
+            return this;
+        }
+        public String getK8sPodName() {
+            return this.k8sPodName;
         }
 
         public DescribeVulListResponseBodyVulRecords setLastTs(Long lastTs) {

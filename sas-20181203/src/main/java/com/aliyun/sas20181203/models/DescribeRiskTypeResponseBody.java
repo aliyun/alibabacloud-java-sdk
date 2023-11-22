@@ -284,11 +284,17 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         @NameInMap("Alias")
         public String alias;
 
+        @NameInMap("AuthFlag")
+        public Boolean authFlag;
+
         /**
          * <p>An array that consists of the check details about the baseline subtype.</p>
          */
         @NameInMap("CheckDetails")
         public java.util.List<DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetails> checkDetails;
+
+        @NameInMap("SupportedOs")
+        public String supportedOs;
 
         /**
          * <p>The name of the baseline subtype.</p>
@@ -309,12 +315,28 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
             return this.alias;
         }
 
+        public DescribeRiskTypeResponseBodyRiskTypesSubTypes setAuthFlag(Boolean authFlag) {
+            this.authFlag = authFlag;
+            return this;
+        }
+        public Boolean getAuthFlag() {
+            return this.authFlag;
+        }
+
         public DescribeRiskTypeResponseBodyRiskTypesSubTypes setCheckDetails(java.util.List<DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetails> checkDetails) {
             this.checkDetails = checkDetails;
             return this;
         }
         public java.util.List<DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetails> getCheckDetails() {
             return this.checkDetails;
+        }
+
+        public DescribeRiskTypeResponseBodyRiskTypesSubTypes setSupportedOs(String supportedOs) {
+            this.supportedOs = supportedOs;
+            return this;
+        }
+        public String getSupportedOs() {
+            return this.supportedOs;
         }
 
         public DescribeRiskTypeResponseBodyRiskTypesSubTypes setTypeName(String typeName) {
@@ -333,6 +355,9 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
          */
         @NameInMap("Alias")
         public String alias;
+
+        @NameInMap("AuthFlag")
+        public Boolean authFlag;
 
         /**
          * <p>An array that consists of the information about baseline subtypes.</p>
@@ -357,6 +382,14 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         }
         public String getAlias() {
             return this.alias;
+        }
+
+        public DescribeRiskTypeResponseBodyRiskTypes setAuthFlag(Boolean authFlag) {
+            this.authFlag = authFlag;
+            return this;
+        }
+        public Boolean getAuthFlag() {
+            return this.authFlag;
         }
 
         public DescribeRiskTypeResponseBodyRiskTypes setSubTypes(java.util.List<DescribeRiskTypeResponseBodyRiskTypesSubTypes> subTypes) {
