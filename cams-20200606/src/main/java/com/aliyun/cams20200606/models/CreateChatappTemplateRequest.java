@@ -212,6 +212,9 @@ public class CreateChatappTemplateRequest extends TeaModel {
         @NameInMap("IsOptOut")
         public Boolean isOptOut;
 
+        @NameInMap("NavigateScreen")
+        public String navigateScreen;
+
         /**
          * <p>The app package name that WhatsApp uses to load your app. This parameter is required if Category is set to AUTHENTICATION and the Type sub-parameter of the Buttons parameter is set to ONE_TAP in a WhatsApp message template.</p>
          */
@@ -273,9 +276,6 @@ public class CreateChatappTemplateRequest extends TeaModel {
         @NameInMap("UrlType")
         public String urlType;
 
-        @NameInMap("navigateScreen")
-        public String navigateScreen;
-
         public static CreateChatappTemplateRequestComponentsButtons build(java.util.Map<String, ?> map) throws Exception {
             CreateChatappTemplateRequestComponentsButtons self = new CreateChatappTemplateRequestComponentsButtons();
             return TeaModel.build(map, self);
@@ -319,6 +319,14 @@ public class CreateChatappTemplateRequest extends TeaModel {
         }
         public Boolean getIsOptOut() {
             return this.isOptOut;
+        }
+
+        public CreateChatappTemplateRequestComponentsButtons setNavigateScreen(String navigateScreen) {
+            this.navigateScreen = navigateScreen;
+            return this;
+        }
+        public String getNavigateScreen() {
+            return this.navigateScreen;
         }
 
         public CreateChatappTemplateRequestComponentsButtons setPackageName(String packageName) {
@@ -375,14 +383,6 @@ public class CreateChatappTemplateRequest extends TeaModel {
         }
         public String getUrlType() {
             return this.urlType;
-        }
-
-        public CreateChatappTemplateRequestComponentsButtons setNavigateScreen(String navigateScreen) {
-            this.navigateScreen = navigateScreen;
-            return this;
-        }
-        public String getNavigateScreen() {
-            return this.navigateScreen;
         }
 
     }
