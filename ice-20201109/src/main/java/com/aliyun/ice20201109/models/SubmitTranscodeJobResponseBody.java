@@ -3098,9 +3098,6 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         @NameInMap("MuxConfig")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsMuxConfig muxConfig;
 
-        @NameInMap("Tags")
-        public java.util.Map<String, ?> tags;
-
         @NameInMap("TransConfig")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsTransConfig transConfig;
 
@@ -3134,14 +3131,6 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         }
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsMuxConfig getMuxConfig() {
             return this.muxConfig;
-        }
-
-        public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParams setTags(java.util.Map<String, ?> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.Map<String, ?> getTags() {
-            return this.tags;
         }
 
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParams setTransConfig(SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsTransConfig transConfig) {
@@ -3202,9 +3191,6 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         @NameInMap("ImageWatermarks")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarks> imageWatermarks;
 
-        @NameInMap("IsInheritTags")
-        public String isInheritTags;
-
         @NameInMap("Subtitles")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigSubtitles> subtitles;
 
@@ -3241,14 +3227,6 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         }
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarks> getImageWatermarks() {
             return this.imageWatermarks;
-        }
-
-        public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfig setIsInheritTags(String isInheritTags) {
-            this.isInheritTags = isInheritTags;
-            return this;
-        }
-        public String getIsInheritTags() {
-            return this.isInheritTags;
         }
 
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfig setSubtitles(java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigSubtitles> subtitles) {

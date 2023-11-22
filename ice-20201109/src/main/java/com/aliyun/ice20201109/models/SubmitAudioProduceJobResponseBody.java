@@ -7,6 +7,9 @@ public class SubmitAudioProduceJobResponseBody extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
+    @NameInMap("MediaId")
+    public String mediaId;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -24,6 +27,14 @@ public class SubmitAudioProduceJobResponseBody extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public SubmitAudioProduceJobResponseBody setMediaId(String mediaId) {
+        this.mediaId = mediaId;
+        return this;
+    }
+    public String getMediaId() {
+        return this.mediaId;
     }
 
     public SubmitAudioProduceJobResponseBody setRequestId(String requestId) {

@@ -13,6 +13,9 @@ public class DescribePlayListResponseBody extends TeaModel {
     @NameInMap("PlayList")
     public java.util.List<DescribePlayListResponseBodyPlayList> playList;
 
+    /**
+     * <p>Id</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
