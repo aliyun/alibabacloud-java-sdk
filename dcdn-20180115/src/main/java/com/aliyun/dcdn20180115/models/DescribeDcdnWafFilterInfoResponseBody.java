@@ -74,6 +74,9 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafFilterInfoResponseBodyContentFieldsLogicalSymbol extends TeaModel {
+        @NameInMap("Attributes")
+        public Integer attributes;
+
         /**
          * <p>The logical symbol that is displayed in the Dynamic Content Delivery Network (DCDN) console.</p>
          */
@@ -121,6 +124,14 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
         public static DescribeDcdnWafFilterInfoResponseBodyContentFieldsLogicalSymbol build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnWafFilterInfoResponseBodyContentFieldsLogicalSymbol self = new DescribeDcdnWafFilterInfoResponseBodyContentFieldsLogicalSymbol();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDcdnWafFilterInfoResponseBodyContentFieldsLogicalSymbol setAttributes(Integer attributes) {
+            this.attributes = attributes;
+            return this;
+        }
+        public Integer getAttributes() {
+            return this.attributes;
         }
 
         public DescribeDcdnWafFilterInfoResponseBodyContentFieldsLogicalSymbol setDescription(String description) {

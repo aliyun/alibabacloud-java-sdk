@@ -4,6 +4,9 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
+    /**
+     * <p>The list of domain configurations.</p>
+     */
     @NameInMap("DomainConfigList")
     public BatchSetDcdnDomainConfigsResponseBodyDomainConfigList domainConfigList;
 
@@ -35,12 +38,21 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
     }
 
     public static class BatchSetDcdnDomainConfigsResponseBodyDomainConfigListDomainConfigModel extends TeaModel {
+        /**
+         * <p>The ID of the configuration. If 0 is returned, the configuration failed and you need reconfigure this configuration.</p>
+         */
         @NameInMap("ConfigId")
         public Long configId;
 
+        /**
+         * <p>The domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The feature name.</p>
+         */
         @NameInMap("FunctionName")
         public String functionName;
 

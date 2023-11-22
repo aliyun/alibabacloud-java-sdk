@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class BatchCreateDcdnWafRulesResponseBody extends TeaModel {
     /**
-     * <p>Creates Web Application Firewall (WAF) protection rules.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The IDs of created rules.</p>
+     */
     @NameInMap("RuleIds")
     public BatchCreateDcdnWafRulesResponseBodyRuleIds ruleIds;
 
