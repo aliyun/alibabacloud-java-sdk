@@ -19,6 +19,9 @@ public class SearchMediaClipByFaceRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SearchLibName")
+    public String searchLibName;
+
     public static SearchMediaClipByFaceRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchMediaClipByFaceRequest self = new SearchMediaClipByFaceRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class SearchMediaClipByFaceRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public SearchMediaClipByFaceRequest setSearchLibName(String searchLibName) {
+        this.searchLibName = searchLibName;
+        return this;
+    }
+    public String getSearchLibName() {
+        return this.searchLibName;
     }
 
 }

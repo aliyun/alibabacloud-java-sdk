@@ -10,6 +10,9 @@ public class SearchMediaByFaceRequest extends TeaModel {
     @NameInMap("FaceSearchToken")
     public String faceSearchToken;
 
+    @NameInMap("MediaType")
+    public String mediaType;
+
     @NameInMap("PageNo")
     public Integer pageNo;
 
@@ -18,6 +21,9 @@ public class SearchMediaByFaceRequest extends TeaModel {
 
     @NameInMap("PersonImageUrl")
     public String personImageUrl;
+
+    @NameInMap("SearchLibName")
+    public String searchLibName;
 
     public static SearchMediaByFaceRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchMediaByFaceRequest self = new SearchMediaByFaceRequest();
@@ -38,6 +44,14 @@ public class SearchMediaByFaceRequest extends TeaModel {
     }
     public String getFaceSearchToken() {
         return this.faceSearchToken;
+    }
+
+    public SearchMediaByFaceRequest setMediaType(String mediaType) {
+        this.mediaType = mediaType;
+        return this;
+    }
+    public String getMediaType() {
+        return this.mediaType;
     }
 
     public SearchMediaByFaceRequest setPageNo(Integer pageNo) {
@@ -62,6 +76,14 @@ public class SearchMediaByFaceRequest extends TeaModel {
     }
     public String getPersonImageUrl() {
         return this.personImageUrl;
+    }
+
+    public SearchMediaByFaceRequest setSearchLibName(String searchLibName) {
+        this.searchLibName = searchLibName;
+        return this;
+    }
+    public String getSearchLibName() {
+        return this.searchLibName;
     }
 
 }

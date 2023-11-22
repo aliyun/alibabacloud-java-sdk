@@ -1202,9 +1202,6 @@ public class SubmitTranscodeJobRequest extends TeaModel {
         @NameInMap("MuxConfig")
         public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsMuxConfig muxConfig;
 
-        @NameInMap("Tags")
-        public java.util.Map<String, String> tags;
-
         @NameInMap("TransConfig")
         public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig transConfig;
 
@@ -1238,14 +1235,6 @@ public class SubmitTranscodeJobRequest extends TeaModel {
         }
         public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsMuxConfig getMuxConfig() {
             return this.muxConfig;
-        }
-
-        public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParams setTags(java.util.Map<String, String> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.Map<String, String> getTags() {
-            return this.tags;
         }
 
         public SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParams setTransConfig(SubmitTranscodeJobRequestOutputGroupProcessConfigTranscodeOverwriteParamsTransConfig transConfig) {
@@ -1306,9 +1295,6 @@ public class SubmitTranscodeJobRequest extends TeaModel {
         @NameInMap("ImageWatermarks")
         public java.util.List<SubmitTranscodeJobRequestOutputGroupProcessConfigImageWatermarks> imageWatermarks;
 
-        @NameInMap("IsInheritTags")
-        public Boolean isInheritTags;
-
         @NameInMap("Subtitles")
         public java.util.List<SubmitTranscodeJobRequestOutputGroupProcessConfigSubtitles> subtitles;
 
@@ -1345,14 +1331,6 @@ public class SubmitTranscodeJobRequest extends TeaModel {
         }
         public java.util.List<SubmitTranscodeJobRequestOutputGroupProcessConfigImageWatermarks> getImageWatermarks() {
             return this.imageWatermarks;
-        }
-
-        public SubmitTranscodeJobRequestOutputGroupProcessConfig setIsInheritTags(Boolean isInheritTags) {
-            this.isInheritTags = isInheritTags;
-            return this;
-        }
-        public Boolean getIsInheritTags() {
-            return this.isInheritTags;
         }
 
         public SubmitTranscodeJobRequestOutputGroupProcessConfig setSubtitles(java.util.List<SubmitTranscodeJobRequestOutputGroupProcessConfigSubtitles> subtitles) {
