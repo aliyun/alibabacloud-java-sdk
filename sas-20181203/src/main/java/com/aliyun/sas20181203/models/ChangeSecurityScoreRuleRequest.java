@@ -14,7 +14,7 @@ public class ChangeSecurityScoreRuleRequest extends TeaModel {
     public Boolean resetSecurityScoreRule;
 
     /**
-     * <p>The list of deducted modules that are supported by the security score feature.</p>
+     * <p>The list of deduction modules that are supported by the security score feature.</p>
      */
     @NameInMap("SecurityScoreRuleList")
     public java.util.List<ChangeSecurityScoreRuleRequestSecurityScoreRuleList> securityScoreRuleList;
@@ -133,7 +133,7 @@ public class ChangeSecurityScoreRuleRequest extends TeaModel {
 
     public static class ChangeSecurityScoreRuleRequestSecurityScoreRuleList extends TeaModel {
         /**
-         * <p>The deducted module that is supported by the security score feature. Valid values:</p>
+         * <p>The deduction module that is supported by the security score feature. Valid values:</p>
          * <br>
          * <p>*   SS_REINFORCE: issue in key feature configuration</p>
          * <p>*   SS_ALARM: unhandled alert</p>
