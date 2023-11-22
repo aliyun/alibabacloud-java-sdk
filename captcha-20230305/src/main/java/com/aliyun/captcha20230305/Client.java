@@ -62,6 +62,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CaptchaVerifyParam", request.captchaVerifyParam);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            body.put("SceneId", request.sceneId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
