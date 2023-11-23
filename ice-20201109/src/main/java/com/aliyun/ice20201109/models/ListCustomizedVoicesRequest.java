@@ -10,6 +10,9 @@ public class ListCustomizedVoicesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Type")
+    public String type;
+
     public static ListCustomizedVoicesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCustomizedVoicesRequest self = new ListCustomizedVoicesRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class ListCustomizedVoicesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListCustomizedVoicesRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

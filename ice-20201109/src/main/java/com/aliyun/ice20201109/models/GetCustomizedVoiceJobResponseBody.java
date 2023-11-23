@@ -43,21 +43,55 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
     }
 
     public static class GetCustomizedVoiceJobResponseBodyDataCustomizedVoiceJob extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("Gender")
+        public String gender;
+
         @NameInMap("JobId")
         public String jobId;
 
         @NameInMap("Message")
         public String message;
 
+        @NameInMap("Scenario")
+        public String scenario;
+
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("VoiceDesc")
+        public String voiceDesc;
 
         @NameInMap("VoiceId")
         public String voiceId;
 
+        @NameInMap("VoiceName")
+        public String voiceName;
+
         public static GetCustomizedVoiceJobResponseBodyDataCustomizedVoiceJob build(java.util.Map<String, ?> map) throws Exception {
             GetCustomizedVoiceJobResponseBodyDataCustomizedVoiceJob self = new GetCustomizedVoiceJobResponseBodyDataCustomizedVoiceJob();
             return TeaModel.build(map, self);
+        }
+
+        public GetCustomizedVoiceJobResponseBodyDataCustomizedVoiceJob setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public GetCustomizedVoiceJobResponseBodyDataCustomizedVoiceJob setGender(String gender) {
+            this.gender = gender;
+            return this;
+        }
+        public String getGender() {
+            return this.gender;
         }
 
         public GetCustomizedVoiceJobResponseBodyDataCustomizedVoiceJob setJobId(String jobId) {
@@ -76,6 +110,14 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
             return this.message;
         }
 
+        public GetCustomizedVoiceJobResponseBodyDataCustomizedVoiceJob setScenario(String scenario) {
+            this.scenario = scenario;
+            return this;
+        }
+        public String getScenario() {
+            return this.scenario;
+        }
+
         public GetCustomizedVoiceJobResponseBodyDataCustomizedVoiceJob setStatus(String status) {
             this.status = status;
             return this;
@@ -84,12 +126,36 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
             return this.status;
         }
 
+        public GetCustomizedVoiceJobResponseBodyDataCustomizedVoiceJob setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public GetCustomizedVoiceJobResponseBodyDataCustomizedVoiceJob setVoiceDesc(String voiceDesc) {
+            this.voiceDesc = voiceDesc;
+            return this;
+        }
+        public String getVoiceDesc() {
+            return this.voiceDesc;
+        }
+
         public GetCustomizedVoiceJobResponseBodyDataCustomizedVoiceJob setVoiceId(String voiceId) {
             this.voiceId = voiceId;
             return this;
         }
         public String getVoiceId() {
             return this.voiceId;
+        }
+
+        public GetCustomizedVoiceJobResponseBodyDataCustomizedVoiceJob setVoiceName(String voiceName) {
+            this.voiceName = voiceName;
+            return this;
+        }
+        public String getVoiceName() {
+            return this.voiceName;
         }
 
     }
