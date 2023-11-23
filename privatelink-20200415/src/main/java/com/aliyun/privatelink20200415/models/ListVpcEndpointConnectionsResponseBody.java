@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
     /**
-     * <p>The endpoint connections.</p>
+     * <p>The information about the endpoint connections.</p>
      */
     @NameInMap("Connections")
     public java.util.List<ListVpcEndpointConnectionsResponseBodyConnections> connections;
@@ -31,6 +31,9 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -81,19 +84,19 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
 
     public static class ListVpcEndpointConnectionsResponseBodyConnectionsZones extends TeaModel {
         /**
-         * <p>The endpoint ENI ID.</p>
+         * <p>The ID of the endpoint elastic network interface (ENI).</p>
          */
         @NameInMap("EniId")
         public String eniId;
 
         /**
-         * <p>The ID of the replaced endpoint ENI in smooth migration scenarios.</p>
+         * <p>The ID of the endpoint ENI replaced in smooth migration scenarios.</p>
          */
         @NameInMap("ReplacedEniId")
         public String replacedEniId;
 
         /**
-         * <p>The ID of the replaced service resource in smooth migration scenarios.</p>
+         * <p>The ID of the service resource replaced in smooth migration scenarios.</p>
          */
         @NameInMap("ReplacedResourceId")
         public String replacedResourceId;
@@ -219,13 +222,13 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         /**
          * <p>The state of the endpoint connection. Valid values:</p>
          * <br>
-         * <p>*   **Pending**: The connection is being modified.</p>
-         * <p>*   **Connecting**: The connection is being established.</p>
-         * <p>*   **Connected**: The connection is established.</p>
+         * <p>*   **Pending**: The endpoint connection is being modified.</p>
+         * <p>*   **Connecting**: The endpoint connection is being established.</p>
+         * <p>*   **Connected**: The endpoint connection is established.</p>
          * <p>*   **Disconnecting**: The endpoint is being disconnected from the endpoint service.</p>
          * <p>*   **Disconnected**: The endpoint is disconnected from the endpoint service.</p>
-         * <p>*   **Deleting**: The connection is being deleted.</p>
-         * <p>*   **ServiceDeleted**: The corresponding endpoint service has been deleted.</p>
+         * <p>*   **Deleting**: The endpoint connection is being deleted.</p>
+         * <p>*   **ServiceDeleted**: The corresponding endpoint service is deleted.</p>
          */
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
@@ -249,7 +252,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         public String endpointVpcId;
 
         /**
-         * <p>The time when the endpoint connection was modified.</p>
+         * <p>The time when the endpoint connection was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
@@ -276,7 +279,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         public String serviceId;
 
         /**
-         * <p>The zones.</p>
+         * <p>The information about the zones.</p>
          */
         @NameInMap("Zones")
         public java.util.List<ListVpcEndpointConnectionsResponseBodyConnectionsZones> zones;

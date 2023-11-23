@@ -38,8 +38,9 @@ public class AttachResourceToVpcEndpointServiceRequest extends TeaModel {
     /**
      * <p>The type of the service resource. Valid values:</p>
      * <br>
-     * <p>*   **slb**: a Classic Load Balancer (CLB) instance that supports PrivateLink. In addition, the CLB instance is deployed in a virtual private cloud (VPC).</p>
-     * <p>*   **alb**: an Application Load Balancer (ALB) instance that supports PrivateLink. In addition, the ALB instance is deployed in a VPC.</p>
+     * <p>*   **slb**: a Classic Load Balancer (CLB) instance</p>
+     * <p>*   **alb**: an Application Load Balancer (ALB) instance</p>
+     * <p>*   **nlb**: a Network Load Balancer (NLB) instance</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -50,6 +51,9 @@ public class AttachResourceToVpcEndpointServiceRequest extends TeaModel {
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <p>The zone ID of the service resource.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
