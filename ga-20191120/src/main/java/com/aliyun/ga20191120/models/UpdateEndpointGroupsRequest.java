@@ -24,7 +24,7 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The configurations of the endpoint group.</p>
+     * <p>The configuration of the endpoint group.</p>
      */
     @NameInMap("EndpointGroupConfigurations")
     public java.util.List<UpdateEndpointGroupsRequestEndpointGroupConfigurations> endpointGroupConfigurations;
@@ -88,7 +88,7 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
 
     public static class UpdateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations extends TeaModel {
         /**
-         * <p>The IP address or domain name of the endpoint.</p>
+         * <p>The IP address, domain name, or instance ID based on the value of Type.</p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
@@ -96,7 +96,7 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
         /**
          * <p>The private IP address of the ENI.</p>
          * <br>
-         * <p>> - When the Endpoint type is ENI, this parameter can be configured. If not configured, it defaults to the primary private IP address of ENI.</p>
+         * <p>> When the Endpoint type is ENI, this parameter can be configured. If not configured, it defaults to the primary private IP address of ENI.</p>
          */
         @NameInMap("SubAddress")
         public String subAddress;
@@ -104,22 +104,17 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
         /**
          * <p>The type of the endpoint. Valid values:</p>
          * <br>
-         * <p>*   **Domain:** a custom domain name.</p>
-         * <p>*   **Ip:** a custom IP address.</p>
-         * <p>*   **PublicIp:** a public IP address provided by Alibaba Cloud.</p>
-         * <p>*   **ECS:** Elastic Compute Service (ECS) instance.</p>
-         * <p>*   **SLB:** Server Load Balancer (SLB) instance.</p>
-         * <p>*   **ALB:** Application Load Balancer (ALB) instance.</p>
-         * <p>*   **OSS:** Object Storage Service (OSS) bucket.</p>
-         * <p>*   **ENI:** Elastic Network interface (ENI).</p>
-         * <p>*   **NLB:** Network Load Balancer (NLB) instance.</p>
+         * <p>*   **Domain**: a custom domain name</p>
+         * <p>*   **Ip**: a custom IP address</p>
+         * <p>*   **PublicIp**: a public IP address provided by Alibaba Cloud</p>
+         * <p>*   **ECS**: an Elastic Compute Service (ECS) instance</p>
+         * <p>*   **SLB**: a Server Load Balancer (SLB) instance</p>
+         * <p>*   **ALB**: an Application Load Balancer (ALB) instance</p>
+         * <p>*   **OSS**: an Object Storage Service (OSS) bucket</p>
          * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.</p>
-         * <br>
-         * <p>*   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system creates the service-linked role.</p>
-         * <p>*   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system creates the service-linked role.</p>
+         * <p>>- If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role. </p>
+         * <p>>- If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.</p>
+         * <p>>- If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.</p>
          * <br>
          * <p>For more information, see [Service-linked roles](~~178360~~).</p>
          */
@@ -131,7 +126,7 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
          * <br>
          * <p>Valid values: **0** to **255**.</p>
          * <br>
-         * <p>> If you set the weight of an endpoint to 0, GA does not route network traffic to the endpoint. Make sure that you are aware of the impact on your business before you set the endpoint weight to 0.</p>
+         * <p>>  If you set the weight of an endpoint to 0, the GA instance stops distributing traffic to the endpoint.</p>
          */
         @NameInMap("Weight")
         public Long weight;
@@ -185,15 +180,12 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
         public Long endpointPort;
 
         /**
-         * <p>The listener port of the instance.</p>
+         * <p>The listener port.</p>
          * <br>
          * <p>Valid values: **1** to **65499**.</p>
          * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   Only HTTP and HTTPS listeners support port mappings.</p>
-         * <br>
-         * <p>*   The listener port in a port mapping must be the one used by the current listener.</p>
+         * <p>> * Only HTTP and HTTPS listeners support port mappings.</p>
+         * <p>> * The listener port in a port mapping must be the one used by the current listener.</p>
          */
         @NameInMap("ListenerPort")
         public Long listenerPort;
@@ -241,7 +233,7 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
         public Boolean enableClientIPPreservationToa;
 
         /**
-         * <p>The configurations of endpoints in the endpoint group.</p>
+         * <p>The configurations of the endpoints in the endpoint group.</p>
          */
         @NameInMap("EndpointConfigurations")
         public java.util.List<UpdateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations> endpointConfigurations;
@@ -274,11 +266,8 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
          * <p>*   **HTTP**</p>
          * <p>*   **HTTPS**</p>
          * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   You can set this parameter only when the listener that is associated with the endpoint group uses the HTTP or HTTPS protocol.</p>
-         * <br>
-         * <p>*   For an HTTP listener, the backend service protocol must be HTTP.</p>
+         * <p>> * You can specify this parameter only if the listener that is associated with the endpoint group uses HTTP or HTTPS.</p>
+         * <p>> * For an HTTP listener, the backend service protocol must be HTTP.</p>
          */
         @NameInMap("EndpointRequestProtocol")
         public String endpointRequestProtocol;
@@ -315,9 +304,9 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
         /**
          * <p>The protocol over which health check requests are sent. Valid values:</p>
          * <br>
-         * <p>*   **tcp:** TCP</p>
-         * <p>*   **http:** HTTP</p>
-         * <p>*   **https:** HTTPS</p>
+         * <p>*   **tcp**</p>
+         * <p>*   **http**</p>
+         * <p>*   **https**</p>
          */
         @NameInMap("HealthCheckProtocol")
         public String healthCheckProtocol;
@@ -337,7 +326,7 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
         public Long thresholdCount;
 
         /**
-         * <p>The traffic ratio for the endpoint group when the specified listener is associated with multiple endpoint groups.</p>
+         * <p>The traffic ratio of the endpoint group when the specified listener is associated with multiple endpoint groups.</p>
          * <br>
          * <p>Valid values: **1** to **100**.</p>
          */

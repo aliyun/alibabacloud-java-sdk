@@ -17,7 +17,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
     public Integer pageSize;
 
     /**
-     * <p>The list of traffic policies.</p>
+     * <p>A list of traffic policies.</p>
      */
     @NameInMap("Policies")
     public java.util.List<ListCustomRoutingEndpointTrafficPoliciesResponseBodyPolicies> policies;
@@ -117,45 +117,39 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
 
     public static class ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesServiceManagedInfos extends TeaModel {
         /**
-         * <p>托管策略动作名称，取值：</p>
-         * <p>- **Create**：创建实例。</p>
-         * <p>- **Update**：更新当前实例。</p>
-         * <p>- **Delete**：删除当前实例。</p>
-         * <p>- **Associate**：引用/被引用当前实例。</p>
-         * <p>- **UserUnmanaged**：用户解托管实例。</p>
-         * <p>- **CreateChild**：在当前实例下创建子资源。</p>
+         * <p>The name of the action on the managed instance. Valid values:</p>
+         * <br>
+         * <p>*   **Create**: Create an instance.</p>
+         * <p>*   **Update**: Update the current instance.</p>
+         * <p>*   **Delete**: Delete the current instance.</p>
+         * <p>*   **Associate**: Reference the current instance.</p>
+         * <p>*   **UserUnmanaged**: Unmanage the instance.</p>
+         * <p>*   **CreateChild**: Create a child resource in the current instance.</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
-         * <p>子资源类型，取值：</p>
+         * <p>The type of the child resource. Valid values:</p>
          * <br>
-         * <p>- **Listener**：监听资源。</p>
+         * <p>*   **Listener**: listener.</p>
+         * <p>*   **IpSet**: acceleration region.</p>
+         * <p>*   **EndpointGroup**: endpoint group.</p>
+         * <p>*   **ForwardingRule**: forwarding rule.</p>
+         * <p>*   **Endpoint**: endpoint.</p>
+         * <p>*   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener.</p>
+         * <p>*   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener.</p>
          * <br>
-         * <p>- **IpSet**：加速地域资源。</p>
-         * <br>
-         * <p>- **EndpointGroup**：终端节点组资源。</p>
-         * <br>
-         * <p>- **ForwardingRule**：转发策略资源。</p>
-         * <br>
-         * <p>- **Endpoint**：终端节点资源。</p>
-         * <br>
-         * <p>- **EndpointGroupDestination**：自定义路由监听下的终端节点组协议映射资源。</p>
-         * <br>
-         * <p>- **EndpointPolicy**：自定义路由监听下的终端节点通行策略资源。</p>
-         * <br>
-         * <p>> 仅在**Action**参数为**CreateChild**时有效。</p>
+         * <p>>  This parameter takes effect only if **Action** is set to **CreateChild**.</p>
          */
         @NameInMap("ChildType")
         public String childType;
 
         /**
-         * <p>托管策略动作是否被托管，取值：</p>
+         * <p>Indicates whether the specified actions are managed. Valid values:</p>
          * <br>
-         * <p>- **true**：托管策略动作被托管，用户无权在托管实例下执行Action指定的操作。</p>
-         * <br>
-         * <p>- **false**：托管策略动作未被托管，用户可在托管实例下执行Action指定的操作。</p>
+         * <p>*   **true**: The specified actions are managed, and you cannot perform the specified actions on the managed instance.</p>
+         * <p>*   **false**: The specified actions are not managed, and you can perform the specified actions on the managed instance.</p>
          */
         @NameInMap("IsManaged")
         public Boolean isManaged;
@@ -235,27 +229,28 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
         public java.util.List<ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesPortRanges> portRanges;
 
         /**
-         * <p>托管实例所属的服务方ID。</p>
-         * <p>> 仅在**ServiceManaged**参数为**True**时有效。</p>
+         * <p>The ID of the service that manages the GA instance.</p>
+         * <br>
+         * <p>>  This parameter takes effect only if **ServiceManaged** is set to **True**.</p>
          */
         @NameInMap("ServiceId")
         public String serviceId;
 
         /**
-         * <p>是否为托管实例。取值：  </p>
+         * <p>Indicates whether the GA instance is managed. Valid values:</p>
          * <br>
-         * <p>- true：是托管资实例。  </p>
-         * <br>
-         * <p>- false：不是托管实例。</p>
+         * <p>*   **true**: The GA instance is managed.</p>
+         * <p>*   **false**: The GA instance is not managed.</p>
          */
         @NameInMap("ServiceManaged")
         public Boolean serviceManaged;
 
         /**
-         * <p>用户在此托管实例下可执行的动作策略列表。</p>
+         * <p>The actions that you can perform on the managed instance.</p>
          * <br>
-         * <p>> 仅在**ServiceManaged**参数为**True**时有效。</p>
-         * <p>> - 当实例处于托管状态时，用户对实例的操作会受到限制，某些操作行为会被禁止。</p>
+         * <p>>  This parameter takes effect only if **ServiceManaged** is set to **True**.</p>
+         * <br>
+         * <p>*   You can perform only specific actions on a managed instance.</p>
          */
         @NameInMap("ServiceManagedInfos")
         public java.util.List<ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesServiceManagedInfos> serviceManagedInfos;

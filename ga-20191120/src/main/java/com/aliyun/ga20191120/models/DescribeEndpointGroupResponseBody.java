@@ -30,14 +30,14 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the access log feature is enabled. Valid values:</p>
      * <br>
-     * <p>*   **true**: enabled</p>
-     * <p>*   **false**: disabled</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("EnableAccessLog")
     public Boolean enableAccessLog;
 
     /**
-     * <p>The configurations of endpoints in the endpoint group.</p>
+     * <p>The configurations of the endpoints in the endpoint group.</p>
      */
     @NameInMap("EndpointConfigurations")
     public java.util.List<DescribeEndpointGroupResponseBodyEndpointConfigurations> endpointConfigurations;
@@ -152,27 +152,28 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The service ID to which the managed instance belongs.</p>
+     * <p>The ID of the service that manages the GA instance.</p>
      * <br>
-     * <p>>  Valid only when the ServiceManaged parameter is True.</p>
+     * <p>>  This parameter takes effect only if **ServiceManaged** is set to **True**.</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
     /**
-     * <p>Is it a managed instance. Value:</p>
+     * <p>Indicates whether the GA instance is managed. Valid values:</p>
      * <br>
-     * <p>- true</p>
-     * <p>- false</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
 
     /**
-     * <p>A list of action policies that users can execute on this managed instance.</p>
+     * <p>The actions that users can perform on the managed instance.</p>
      * <br>
-     * <p>> Valid only when the ServiceManaged parameter is True.</p>
-     * <p>>* When an instance is hosted, user operations on the instance are restricted and some operations are prohibited.</p>
+     * <p>>  This parameter takes effect only if **ServiceManaged** is set to **True**.</p>
+     * <br>
+     * <p>*   Users can perform only specific actions on a managed instance.</p>
      */
     @NameInMap("ServiceManagedInfos")
     public java.util.List<DescribeEndpointGroupResponseBodyServiceManagedInfos> serviceManagedInfos;
@@ -481,8 +482,8 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the client IP address preservation feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true:** The client IP address preservation feature is enabled.</p>
-         * <p>*   **false:** The client IP address preservation feature is disabled.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("EnableClientIPPreservation")
         public Boolean enableClientIPPreservation;
@@ -508,8 +509,8 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         /**
          * <p>The protocol that is used to monitor latency. Valid values:</p>
          * <br>
-         * <p>*   **tcp:** TCP.</p>
-         * <p>*   **icmp:** ICMP.</p>
+         * <p>*   **tcp**</p>
+         * <p>*   **icmp**</p>
          */
         @NameInMap("ProbeProtocol")
         public String probeProtocol;
@@ -523,15 +524,13 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         /**
          * <p>The type of the endpoint. Valid values:</p>
          * <br>
-         * <p>*   **Domain:** a custom domain name.</p>
-         * <p>*   **Ip:** a custom IP address.</p>
-         * <p>*   **PublicIp:** a public IP address provided by Alibaba Cloud.</p>
-         * <p>*   **ECS:** Elastic Compute Service (ECS) instance.</p>
-         * <p>*   **SLB:** Server Load Balancer (SLB) instance.</p>
-         * <p>*   **ALB:** Application Load Balancer (ALB) instance.</p>
-         * <p>*   **OSS:** Object Storage Service (OSS) bucket.</p>
-         * <p>*   **ENI:** Elastic Network interface (ENI).</p>
-         * <p>*   **NLB:** Network Load Balancer (NLB) instance.</p>
+         * <p>*   **Domain**: a custom domain name</p>
+         * <p>*   **Ip**: a custom IP address</p>
+         * <p>*   **PublicIp**: a public IP address provided by Alibaba Cloud</p>
+         * <p>*   **ECS**: an Elastic Compute Service (ECS) instance</p>
+         * <p>*   **SLB**: a Server Load Balancer (SLB) instance</p>
+         * <p>*   **ALB**: an Application Load Balancer (ALB) instance</p>
+         * <p>*   **OSS**: an Object Storage Service (OSS) bucket</p>
          */
         @NameInMap("Type")
         public String type;
@@ -621,7 +620,7 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         public Integer endpointPort;
 
         /**
-         * <p>The listening port.</p>
+         * <p>The listener port.</p>
          */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
@@ -651,40 +650,39 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
 
     public static class DescribeEndpointGroupResponseBodyServiceManagedInfos extends TeaModel {
         /**
-         * <p>Managed policy action name, Valid values:</p>
+         * <p>The name of the action on the managed instance. Valid values:</p>
          * <br>
-         * <p>- Create</p>
-         * <p>- Update</p>
-         * <p>- Delete</p>
-         * <p>- Associate</p>
-         * <p>- UserUnmanaged</p>
-         * <p>- CreateChild</p>
+         * <p>*   **Create**</p>
+         * <p>*   **Update**</p>
+         * <p>*   **Delete**</p>
+         * <p>*   **Associate**</p>
+         * <p>*   **UserUnmanaged**</p>
+         * <p>*   **CreateChild**</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
-         * <p>Sub resource type, Valid values:</p>
+         * <p>The type of the child resource. Valid values:</p>
          * <br>
-         * <p>- Listener</p>
-         * <p>- IpSet</p>
-         * <p>- EndpointGroup</p>
-         * <p>- ForwardingRule</p>
-         * <p>- Endpoint</p>
-         * <p>- EndpointGroupDestination</p>
-         * <p>- EndpointPolicy</p>
+         * <p>*   **Listener**: listener</p>
+         * <p>*   **IpSet**: acceleration region</p>
+         * <p>*   **EndpointGroup**: endpoint group</p>
+         * <p>*   **ForwardingRule**: forwarding rule</p>
+         * <p>*   **Endpoint**: endpoint</p>
+         * <p>*   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener</p>
+         * <p>*   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener</p>
          * <br>
-         * <p>>Only valid when the Action parameter is CreateChild.</p>
+         * <p>>  This parameter takes effect only if **Action** is set to **CreateChild**.</p>
          */
         @NameInMap("ChildType")
         public String childType;
 
         /**
-         * <p>Is the managed policy action managed, Valid values:</p>
+         * <p>Indicates whether the specified actions are managed. Valid values:</p>
          * <br>
-         * <p>- true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.</p>
-         * <br>
-         * <p>- false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.</p>
+         * <p>*   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed instance.</p>
+         * <p>*   **false**: The specified actions are not managed, and users can perform the specified actions on the managed instance.</p>
          */
         @NameInMap("IsManaged")
         public Boolean isManaged;
@@ -722,13 +720,13 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
 
     public static class DescribeEndpointGroupResponseBodyTags extends TeaModel {
         /**
-         * <p>The key of tag N that is added to the endpoint group.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N that is added to the endpoint group.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;
