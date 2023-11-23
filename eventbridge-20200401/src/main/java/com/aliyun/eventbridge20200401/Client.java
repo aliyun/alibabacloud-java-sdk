@@ -327,6 +327,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.sourceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.source, "Source", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.transforms)) {
+            request.transformsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.transforms, "Transforms", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
@@ -350,6 +354,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceShrink)) {
             body.put("Source", request.sourceShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transformsShrink)) {
+            body.put("Transforms", request.transformsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2209,6 +2217,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.sourceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.source, "Source", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.transforms)) {
+            request.transformsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.transforms, "Transforms", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
@@ -2232,6 +2244,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceShrink)) {
             body.put("Source", request.sourceShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transformsShrink)) {
+            body.put("Transforms", request.transformsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

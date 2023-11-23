@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetEventStreamingResponseBody extends TeaModel {
     /**
-     * <p>The error code. The value Success indicates that the request is successful.</p>
+     * <p>The response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For a list of error codes, see Error codes.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The response parameters.</p>
      */
     @NameInMap("Data")
     public GetEventStreamingResponseBodyData data;
@@ -29,7 +29,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     * <p>Indicates whether the operation is successful. The value true indicates that the operation is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -81,13 +81,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataRunOptionsBatchWindow extends TeaModel {
         /**
-         * <p>The maximum number of events that are allowed in the batch window. If the value specified by this parameter is reached, the data in the batch window is pushed to the downstream application. If multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.</p>
+         * <p>The maximum number of events that are allowed in the batch window. If this threshold is reached, data in the window is pushed downstream. When multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.</p>
          */
         @NameInMap("CountBasedWindow")
         public Integer countBasedWindow;
 
         /**
-         * <p>The maximum period of time during which events are allowed in the batch window. Unit: seconds. If the value specified by this parameter is reached, the data in the batch window is pushed to the downstream application. If multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.</p>
+         * <p>The maximum period of time during which events are allowed in the batch window. Unit: seconds. If this threshold is reached, data in the window is pushed downstream. When multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.</p>
          */
         @NameInMap("TimeBasedWindow")
         public Integer timeBasedWindow;
@@ -189,13 +189,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataRunOptions extends TeaModel {
         /**
-         * <p>The information about the batch window.</p>
+         * <p>The batch window.</p>
          */
         @NameInMap("BatchWindow")
         public GetEventStreamingResponseBodyDataRunOptionsBatchWindow batchWindow;
 
         /**
-         * <p>Specifies whether to enable dead-letter queues. By default, dead-letter queues are disabled. Messages that fail to be pushed after allowed retries as specified by the retry policy are discarded.</p>
+         * <p>Indicates whether dead-letter queues are enabled. By default, dead-letter queues are disabled. Messages that fail to be pushed after allowed retries as specified by the retry policy are discarded.</p>
          */
         @NameInMap("DeadLetterQueue")
         public GetEventStreamingResponseBodyDataRunOptionsDeadLetterQueue deadLetterQueue;
@@ -323,7 +323,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String form;
 
         /**
-         * <p>None</p>
+         * <p>The template style.</p>
          */
         @NameInMap("Template")
         public String template;
@@ -373,7 +373,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String form;
 
         /**
-         * <p>None</p>
+         * <p>The template style.</p>
          */
         @NameInMap("Template")
         public String template;
@@ -423,7 +423,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String form;
 
         /**
-         * <p>None</p>
+         * <p>The template style.</p>
          */
         @NameInMap("Template")
         public String template;
@@ -473,7 +473,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String form;
 
         /**
-         * <p>None</p>
+         * <p>The template style.</p>
          */
         @NameInMap("Template")
         public String template;
@@ -523,7 +523,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String form;
 
         /**
-         * <p>None</p>
+         * <p>The template style.</p>
          */
         @NameInMap("Template")
         public String template;
@@ -579,13 +579,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkFcParametersConcurrency concurrency;
 
         /**
-         * <p>The name of the Function Compute function.</p>
+         * <p>The function name.</p>
          */
         @NameInMap("FunctionName")
         public GetEventStreamingResponseBodyDataSinkSinkFcParametersFunctionName functionName;
 
         /**
-         * <p>The invocation type. Valid values: Sync Async</p>
+         * <p>The invocation type. Valid values: Sync: synchronous Async: asynchronous</p>
          */
         @NameInMap("InvocationType")
         public GetEventStreamingResponseBodyDataSinkSinkFcParametersInvocationType invocationType;
@@ -597,7 +597,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkFcParametersQualifier qualifier;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The service name.</p>
          */
         @NameInMap("ServiceName")
         public GetEventStreamingResponseBodyDataSinkSinkFcParametersServiceName serviceName;
@@ -658,12 +658,21 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkFnfParametersExecutionName extends TeaModel {
+        /**
+         * <p>The method that is used to transform events. Default value: CONSTANT.</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>The template style.</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The execution name.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -699,12 +708,21 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkFnfParametersFlowName extends TeaModel {
+        /**
+         * <p>The method that is used to transform events. Default value: CONSTANT.</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>The template style.</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The flow name.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -740,12 +758,21 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkFnfParametersInput extends TeaModel {
+        /**
+         * <p>The method that is used to transform events. Default value: CONSTANT.</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>The template style.</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The execution input information.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -781,12 +808,21 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkFnfParametersRoleName extends TeaModel {
+        /**
+         * <p>The method that is used to transform events. Default value: CONSTANT.</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>The template style.</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The role configuration.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -822,15 +858,27 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkFnfParameters extends TeaModel {
+        /**
+         * <p>The execution name.</p>
+         */
         @NameInMap("ExecutionName")
         public GetEventStreamingResponseBodyDataSinkSinkFnfParametersExecutionName executionName;
 
+        /**
+         * <p>The flow name.</p>
+         */
         @NameInMap("FlowName")
         public GetEventStreamingResponseBodyDataSinkSinkFnfParametersFlowName flowName;
 
+        /**
+         * <p>The execution input information.</p>
+         */
         @NameInMap("Input")
         public GetEventStreamingResponseBodyDataSinkSinkFnfParametersInput input;
 
+        /**
+         * <p>The role name.</p>
+         */
         @NameInMap("RoleName")
         public GetEventStreamingResponseBodyDataSinkSinkFnfParametersRoleName roleName;
 
@@ -881,7 +929,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String form;
 
         /**
-         * <p>None</p>
+         * <p>The template style.</p>
          */
         @NameInMap("Template")
         public String template;
@@ -931,7 +979,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String form;
 
         /**
-         * <p>None</p>
+         * <p>The template style.</p>
          */
         @NameInMap("Template")
         public String template;
@@ -981,7 +1029,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String form;
 
         /**
-         * <p>None</p>
+         * <p>The template style.</p>
          */
         @NameInMap("Template")
         public String template;
@@ -1031,7 +1079,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String form;
 
         /**
-         * <p>None</p>
+         * <p>The template style.</p>
          */
         @NameInMap("Template")
         public String template;
@@ -1131,7 +1179,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkKafkaParametersAcks acks;
 
         /**
-         * <p>The information about the Message Queue for Apache Kafka instance.</p>
+         * <p>The target service type is Message Queue for Apache Kafka.</p>
          */
         @NameInMap("InstanceId")
         public GetEventStreamingResponseBodyDataSinkSinkKafkaParametersInstanceId instanceId;
@@ -1259,7 +1307,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String form;
 
         /**
-         * <p>None</p>
+         * <p>The template style.</p>
          */
         @NameInMap("Template")
         public String template;
@@ -1309,7 +1357,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String form;
 
         /**
-         * <p>None</p>
+         * <p>The template style.</p>
          */
         @NameInMap("Template")
         public String template;
@@ -1359,13 +1407,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkMNSParametersBody body;
 
         /**
-         * <p>Specifies whether to enable Base64 encoding.</p>
+         * <p>Indicates whether Base64 encoding is enabled.</p>
          */
         @NameInMap("IsBase64Encode")
         public GetEventStreamingResponseBodyDataSinkSinkMNSParametersIsBase64Encode isBase64Encode;
 
         /**
-         * <p>The information about the MNS queue.</p>
+         * <p>The target service type is MNS.</p>
          */
         @NameInMap("QueueName")
         public GetEventStreamingResponseBodyDataSinkSinkMNSParametersQueueName queueName;
@@ -1459,7 +1507,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String form;
 
         /**
-         * <p>None</p>
+         * <p>The template style.</p>
          */
         @NameInMap("Template")
         public String template;
@@ -1509,7 +1557,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String form;
 
         /**
-         * <p>None</p>
+         * <p>The template style.</p>
          */
         @NameInMap("Template")
         public String template;
@@ -1659,7 +1707,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String form;
 
         /**
-         * <p>None</p>
+         * <p>The template style.</p>
          */
         @NameInMap("Template")
         public String template;
@@ -1709,7 +1757,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String form;
 
         /**
-         * <p>None</p>
+         * <p>The template style.</p>
          */
         @NameInMap("Template")
         public String template;
@@ -1759,7 +1807,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String form;
 
         /**
-         * <p>None</p>
+         * <p>The template style.</p>
          */
         @NameInMap("Template")
         public String template;
@@ -1809,7 +1857,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String form;
 
         /**
-         * <p>None</p>
+         * <p>The template style.</p>
          */
         @NameInMap("Template")
         public String template;
@@ -1859,13 +1907,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkRabbitMQParametersBody body;
 
         /**
-         * <p>The exchange mode. This parameter is available only if you set TargetType to Exchange.</p>
+         * <p>The exchange mode. This parameter is available only if TargetType is set to Exchange.</p>
          */
         @NameInMap("Exchange")
         public GetEventStreamingResponseBodyDataSinkSinkRabbitMQParametersExchange exchange;
 
         /**
-         * <p>The information about the Message Queue for RabbitMQ instance.</p>
+         * <p>The target service type is Message Queue for RabbitMQ instance.</p>
          */
         @NameInMap("InstanceId")
         public GetEventStreamingResponseBodyDataSinkSinkRabbitMQParametersInstanceId instanceId;
@@ -1883,25 +1931,25 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkRabbitMQParametersProperties properties;
 
         /**
-         * <p>The queue mode. This parameter is available only if you set TargetType to Queue.</p>
+         * <p>The queue mode. This parameter is available only if TargetType is set to Queue.</p>
          */
         @NameInMap("QueueName")
         public GetEventStreamingResponseBodyDataSinkSinkRabbitMQParametersQueueName queueName;
 
         /**
-         * <p>The routing rule for the message. This parameter is available only if you set TargetType to Exchange.</p>
+         * <p>The routing rule for the message. This parameter is available only if TargetType is set to Exchange.</p>
          */
         @NameInMap("RoutingKey")
         public GetEventStreamingResponseBodyDataSinkSinkRabbitMQParametersRoutingKey routingKey;
 
         /**
-         * <p>The type of the resource to which the event is delivered.</p>
+         * <p>The target type.</p>
          */
         @NameInMap("TargetType")
         public GetEventStreamingResponseBodyDataSinkSinkRabbitMQParametersTargetType targetType;
 
         /**
-         * <p>The vhost name of the Message Queue for RabbitMQ instance.</p>
+         * <p>The name of the vhost of the Message Queue for RabbitMQ instance.</p>
          */
         @NameInMap("VirtualHostName")
         public GetEventStreamingResponseBodyDataSinkSinkRabbitMQParametersVirtualHostName virtualHostName;
@@ -2043,7 +2091,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String form;
 
         /**
-         * <p>None</p>
+         * <p>The template style.</p>
          */
         @NameInMap("Template")
         public String template;
@@ -2243,7 +2291,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String form;
 
         /**
-         * <p>None</p>
+         * <p>The template style.</p>
          */
         @NameInMap("Template")
         public String template;
@@ -2293,7 +2341,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersBody body;
 
         /**
-         * <p>The parameters that are configured if the event target is Message Queue for Apache RocketMQ.</p>
+         * <p>The target service type is Message Queue for Apache RocketMQ.</p>
          */
         @NameInMap("InstanceId")
         public GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersInstanceId instanceId;
@@ -2435,7 +2483,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String form;
 
         /**
-         * <p>None</p>
+         * <p>The template style.</p>
          */
         @NameInMap("Template")
         public String template;
@@ -2485,7 +2533,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String form;
 
         /**
-         * <p>None</p>
+         * <p>The template style.</p>
          */
         @NameInMap("Template")
         public String template;
@@ -2535,7 +2583,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String form;
 
         /**
-         * <p>None</p>
+         * <p>The template style.</p>
          */
         @NameInMap("Template")
         public String template;
@@ -2585,7 +2633,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String form;
 
         /**
-         * <p>None</p>
+         * <p>The template style.</p>
          */
         @NameInMap("Template")
         public String template;
@@ -2635,25 +2683,25 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSinkSinkSLSParametersBody body;
 
         /**
-         * <p>The Log Service Logstore.</p>
+         * <p>The Simple Log Service Logstore.</p>
          */
         @NameInMap("LogStore")
         public GetEventStreamingResponseBodyDataSinkSinkSLSParametersLogStore logStore;
 
         /**
-         * <p>The Log Service project.</p>
+         * <p>The Simple Log Service project.</p>
          */
         @NameInMap("Project")
         public GetEventStreamingResponseBodyDataSinkSinkSLSParametersProject project;
 
         /**
-         * <p>The role name. If you want to authorize EventBridge to use this role to read logs in Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the RAM console.</p>
+         * <p>The role name. If you want to authorize EventBridge to use this role to read logs in Simple Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the Resource Access Management (RAM) console.</p>
          */
         @NameInMap("RoleName")
         public GetEventStreamingResponseBodyDataSinkSinkSLSParametersRoleName roleName;
 
         /**
-         * <p>The name of the topic in which logs are stored. The topic corresponds to the topic reserved field in Log Service.</p>
+         * <p>The name of the topic in which logs are stored. The topic corresponds to the topic reserved field in Simple Log Service.</p>
          */
         @NameInMap("Topic")
         public GetEventStreamingResponseBodyDataSinkSinkSLSParametersTopic topic;
@@ -2707,28 +2755,31 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataSink extends TeaModel {
         /**
-         * <p>The parameters that are configured if the event target is Function Compute.</p>
+         * <p>The parameters that are returned if the event target is Function Compute.</p>
          */
         @NameInMap("SinkFcParameters")
         public GetEventStreamingResponseBodyDataSinkSinkFcParameters sinkFcParameters;
 
+        /**
+         * <p>The Sink Fnf parameters.</p>
+         */
         @NameInMap("SinkFnfParameters")
         public GetEventStreamingResponseBodyDataSinkSinkFnfParameters sinkFnfParameters;
 
         /**
-         * <p>The parameters that are configured if the event target is Message Queue for Apache Kafka.</p>
+         * <p>The parameters that are returned if the event target is Message Queue for Apache Kafka.</p>
          */
         @NameInMap("SinkKafkaParameters")
         public GetEventStreamingResponseBodyDataSinkSinkKafkaParameters sinkKafkaParameters;
 
         /**
-         * <p>The parameters that are configured if the event target is MNS.</p>
+         * <p>The parameters that are returned if the event target is Message Service (MNS).</p>
          */
         @NameInMap("SinkMNSParameters")
         public GetEventStreamingResponseBodyDataSinkSinkMNSParameters sinkMNSParameters;
 
         /**
-         * <p>The parameters that are configured if the event target is Message Queue for RabbitMQ.</p>
+         * <p>The parameters that are returned if the event target is Message Queue for RabbitMQ.</p>
          */
         @NameInMap("SinkRabbitMQParameters")
         public GetEventStreamingResponseBodyDataSinkSinkRabbitMQParameters sinkRabbitMQParameters;
@@ -2964,7 +3015,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String vSwitchIds;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -3425,7 +3476,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public String consumePosition;
 
         /**
-         * <p>None</p>
+         * <p>The consumer group.</p>
          */
         @NameInMap("ConsumerGroup")
         public String consumerGroup;
@@ -3497,7 +3548,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     public static class GetEventStreamingResponseBodyDataSource extends TeaModel {
         /**
-         * <p>The parameters that are configured if the event source is Data Transmission Service (DTS).</p>
+         * <p>The parameters that are returned if the event source is Data Transmission Service (DTS).</p>
          */
         @NameInMap("SourceDTSParameters")
         public GetEventStreamingResponseBodyDataSourceSourceDTSParameters sourceDTSParameters;
@@ -3515,7 +3566,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSourceSourceMNSParameters sourceMNSParameters;
 
         /**
-         * <p>The parameters that are configured if the event source is Message Queue for MQTT.</p>
+         * <p>The parameters that are returned if the event source is Message Queue for MQTT.</p>
          */
         @NameInMap("SourceMQTTParameters")
         public GetEventStreamingResponseBodyDataSourceSourceMQTTParameters sourceMQTTParameters;
@@ -3533,7 +3584,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSourceSourceRocketMQParameters sourceRocketMQParameters;
 
         /**
-         * <p>The parameters that are configured if the event source is Log Service.</p>
+         * <p>The parameters that are returned if the event provider is Simple Log Service.</p>
          */
         @NameInMap("SourceSLSParameters")
         public GetEventStreamingResponseBodyDataSourceSourceSLSParameters sourceSLSParameters;
@@ -3601,6 +3652,25 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     }
 
+    public static class GetEventStreamingResponseBodyDataTransforms extends TeaModel {
+        @NameInMap("Arn")
+        public String arn;
+
+        public static GetEventStreamingResponseBodyDataTransforms build(java.util.Map<String, ?> map) throws Exception {
+            GetEventStreamingResponseBodyDataTransforms self = new GetEventStreamingResponseBodyDataTransforms();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEventStreamingResponseBodyDataTransforms setArn(String arn) {
+            this.arn = arn;
+            return this;
+        }
+        public String getArn() {
+            return this.arn;
+        }
+
+    }
+
     public static class GetEventStreamingResponseBodyData extends TeaModel {
         /**
          * <p>The description of the event stream that is returned.</p>
@@ -3643,6 +3713,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Transforms")
+        public java.util.List<GetEventStreamingResponseBodyDataTransforms> transforms;
 
         public static GetEventStreamingResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetEventStreamingResponseBodyData self = new GetEventStreamingResponseBodyData();
@@ -3703,6 +3776,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetEventStreamingResponseBodyData setTransforms(java.util.List<GetEventStreamingResponseBodyDataTransforms> transforms) {
+            this.transforms = transforms;
+            return this;
+        }
+        public java.util.List<GetEventStreamingResponseBodyDataTransforms> getTransforms() {
+            return this.transforms;
         }
 
     }

@@ -90,7 +90,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public java.util.List<String> ip;
 
         /**
-         * <p>The HTTP request method supported by the generated webhook URL. You can select multiple values. Valid values:</p>
+         * <p>The HTTP request method that is supported by the generated webhook URL. You can select multiple values. Valid values:</p>
          * <br>
          * <p>*   GET</p>
          * <p>*   POST</p>
@@ -238,13 +238,13 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public String offsetReset;
 
         /**
-         * <p>The ID of the region where the Message Queue for Apache Kafka instance resides.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the security group to which the Message Queue for Apache Kafka instance belongs.</p>
+         * <p>The security group ID.</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
@@ -256,13 +256,13 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public String topic;
 
         /**
-         * <p>The ID of the vSwitch with which the Message Queue for Apache Kafka instance is associated.</p>
+         * <p>The vSwitch ID.</p>
          */
         @NameInMap("VSwitchIds")
         public String vSwitchIds;
 
         /**
-         * <p>The ID of the VPC to which the Message Queue for Apache Kafka instance belongs.</p>
+         * <p>The VPC ID.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -482,7 +482,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The endpoint that is used to access the Message Queue for Apache RocketMQ instance.</p>
+         * <p>The instance endpoint.</p>
          */
         @NameInMap("InstanceEndpoint")
         public String instanceEndpoint;
@@ -500,13 +500,13 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public String instanceNetwork;
 
         /**
-         * <p>The password that is used to access the Message Queue for Apache RocketMQ instance.</p>
+         * <p>The instance password.</p>
          */
         @NameInMap("InstancePassword")
         public String instancePassword;
 
         /**
-         * <p>The ID of the security group to which the Message Queue for Apache RocketMQ instance belongs.</p>
+         * <p>The security group ID.</p>
          */
         @NameInMap("InstanceSecurityGroupId")
         public String instanceSecurityGroupId;
@@ -518,19 +518,19 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The username that is used to access the Message Queue for Apache RocketMQ instance.</p>
+         * <p>The instance username.</p>
          */
         @NameInMap("InstanceUsername")
         public String instanceUsername;
 
         /**
-         * <p>The ID of the vSwitch with which the Message Queue for Apache RocketMQ instance is associated.</p>
+         * <p>The vSwitch ID.</p>
          */
         @NameInMap("InstanceVSwitchIds")
         public String instanceVSwitchIds;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) to which the Message Queue for Apache RocketMQ instance belongs.</p>
+         * <p>The virtual private cloud (VPC) ID.</p>
          */
         @NameInMap("InstanceVpcId")
         public String instanceVpcId;
@@ -831,13 +831,13 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public Float ctime;
 
         /**
-         * <p>The name of the queried event bus.</p>
+         * <p>The name of the event bus.</p>
          */
         @NameInMap("EventBusName")
         public String eventBusName;
 
         /**
-         * <p>The type of the event resource.</p>
+         * <p>The type of the event source.</p>
          */
         @NameInMap("ExternalSourceType")
         public String externalSourceType;
@@ -849,43 +849,43 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The parameters that are returned if the event source is HTTP events.</p>
+         * <p>The parameters that are returned if HTTP events are specified as the event source.</p>
          */
         @NameInMap("SourceHttpEventParameters")
         public ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceHttpEventParameters sourceHttpEventParameters;
 
         /**
-         * <p>The parameters that are returned if the event source is Message Queue for Apache Kafka.</p>
+         * <p>The parameters that are returned if Message Queue for Apache Kafka is specified as the event source.</p>
          */
         @NameInMap("SourceKafkaParameters")
         public ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceKafkaParameters sourceKafkaParameters;
 
         /**
-         * <p>The parameters that are returned if the event source is Message Service (MNS).</p>
+         * <p>The parameters that are returned if Message Service (MNS) is specified as the event source.</p>
          */
         @NameInMap("SourceMNSParameters")
         public ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceMNSParameters sourceMNSParameters;
 
         /**
-         * <p>The parameters that are returned if the event source is Message Queue for RabbitMQ.</p>
+         * <p>The parameters that are returned if Message Queue for RabbitMQ is specified as the event source.</p>
          */
         @NameInMap("SourceRabbitMQParameters")
         public ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceRabbitMQParameters sourceRabbitMQParameters;
 
         /**
-         * <p>The parameters that are returned if the event source is Message Queue for Apache RocketMQ.</p>
+         * <p>The parameters that are returned if Message Queue for Apache RocketMQ is specified as the event source.</p>
          */
         @NameInMap("SourceRocketMQParameters")
         public ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceRocketMQParameters sourceRocketMQParameters;
 
         /**
-         * <p>The parameters that are returned if the event source is Simple Log Service.</p>
+         * <p>The parameters that are returned if Simple Log Service is specified as the event source.</p>
          */
         @NameInMap("SourceSLSParameters")
         public ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceSLSParameters sourceSLSParameters;
 
         /**
-         * <p>The parameters that are returned if the event source is scheduled events.</p>
+         * <p>The parameters that are returned if scheduled events are specified as the event source.</p>
          */
         @NameInMap("SourceScheduledEventParameters")
         public ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceScheduledEventParameters sourceScheduledEventParameters;
@@ -897,7 +897,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the queried event source. The returned value UserDefined indicates the event source is a custom event source.</p>
+         * <p>The type of the queried event source. The returned value UserDefined indicates that the event source is a custom event source.</p>
          */
         @NameInMap("Type")
         public String type;

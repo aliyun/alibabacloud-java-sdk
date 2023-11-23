@@ -40,6 +40,9 @@ public class UpdateEventStreamingShrinkRequest extends TeaModel {
     @NameInMap("Source")
     public String sourceShrink;
 
+    @NameInMap("Transforms")
+    public String transformsShrink;
+
     public static UpdateEventStreamingShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEventStreamingShrinkRequest self = new UpdateEventStreamingShrinkRequest();
         return TeaModel.build(map, self);
@@ -91,6 +94,14 @@ public class UpdateEventStreamingShrinkRequest extends TeaModel {
     }
     public String getSourceShrink() {
         return this.sourceShrink;
+    }
+
+    public UpdateEventStreamingShrinkRequest setTransformsShrink(String transformsShrink) {
+        this.transformsShrink = transformsShrink;
+        return this;
+    }
+    public String getTransformsShrink() {
+        return this.transformsShrink;
     }
 
 }

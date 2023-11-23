@@ -40,6 +40,9 @@ public class CreateEventStreamingRequest extends TeaModel {
     @NameInMap("Source")
     public CreateEventStreamingRequestSource source;
 
+    @NameInMap("Transforms")
+    public java.util.List<CreateEventStreamingRequestTransforms> transforms;
+
     public static CreateEventStreamingRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEventStreamingRequest self = new CreateEventStreamingRequest();
         return TeaModel.build(map, self);
@@ -91,6 +94,14 @@ public class CreateEventStreamingRequest extends TeaModel {
     }
     public CreateEventStreamingRequestSource getSource() {
         return this.source;
+    }
+
+    public CreateEventStreamingRequest setTransforms(java.util.List<CreateEventStreamingRequestTransforms> transforms) {
+        this.transforms = transforms;
+        return this;
+    }
+    public java.util.List<CreateEventStreamingRequestTransforms> getTransforms() {
+        return this.transforms;
     }
 
     public static class CreateEventStreamingRequestRunOptionsBatchWindow extends TeaModel {
@@ -4715,6 +4726,25 @@ public class CreateEventStreamingRequest extends TeaModel {
         }
         public CreateEventStreamingRequestSourceSourceSLSParameters getSourceSLSParameters() {
             return this.sourceSLSParameters;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestTransforms extends TeaModel {
+        @NameInMap("Arn")
+        public String arn;
+
+        public static CreateEventStreamingRequestTransforms build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestTransforms self = new CreateEventStreamingRequestTransforms();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestTransforms setArn(String arn) {
+            this.arn = arn;
+            return this;
+        }
+        public String getArn() {
+            return this.arn;
         }
 
     }
