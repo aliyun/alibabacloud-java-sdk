@@ -3,16 +3,10 @@ package com.aliyun.cloudauth_device20200120;
 
 import com.aliyun.tea.*;
 import com.aliyun.cloudauth_device20200120.models.*;
-import com.aliyun.teautil.*;
-import com.aliyun.teautil.models.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.openapiutil.*;
-import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "";
         this.checkConfig(config);
@@ -32,7 +26,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public ExecuteDeviceRiskResponse executeDeviceRiskWithOptions(ExecuteDeviceRiskRequest tmpReq, RuntimeOptions runtime) throws Exception {
+    public ExecuteDeviceRiskResponse executeDeviceRiskWithOptions(ExecuteDeviceRiskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ExecuteDeviceRiskShrinkRequest request = new ExecuteDeviceRiskShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
@@ -40,40 +34,112 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.dataShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.data, "Data", "json");
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataShrink)) {
+            body.put("Data", request.dataShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doRPCRequest("ExecuteDeviceRisk", "2020-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new ExecuteDeviceRiskResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExecuteDeviceRisk"),
+            new TeaPair("version", "2020-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteDeviceRiskResponse());
     }
 
     public ExecuteDeviceRiskResponse executeDeviceRisk(ExecuteDeviceRiskRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.executeDeviceRiskWithOptions(request, runtime);
     }
 
-    public UploadDeviceInfoResponse uploadDeviceInfoWithOptions(UploadDeviceInfoRequest request, RuntimeOptions runtime) throws Exception {
+    public UploadDeviceInfoResponse uploadDeviceInfoWithOptions(UploadDeviceInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appVersion)) {
+            query.put("AppVersion", request.appVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flag)) {
+            query.put("Flag", request.flag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadInfos)) {
+            query.put("UploadInfos", request.uploadInfos);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doRPCRequest("UploadDeviceInfo", "2020-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new UploadDeviceInfoResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UploadDeviceInfo"),
+            new TeaPair("version", "2020-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UploadDeviceInfoResponse());
     }
 
     public UploadDeviceInfoResponse uploadDeviceInfo(UploadDeviceInfoRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.uploadDeviceInfoWithOptions(request, runtime);
     }
 
-    public UploadDeviceInfosResponse uploadDeviceInfosWithOptions(UploadDeviceInfosRequest request, RuntimeOptions runtime) throws Exception {
+    public UploadDeviceInfosResponse uploadDeviceInfosWithOptions(UploadDeviceInfosRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appVersion)) {
+            body.put("AppVersion", request.appVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            body.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flag)) {
+            body.put("Flag", request.flag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadInfos)) {
+            body.put("UploadInfos", request.uploadInfos);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doRPCRequest("UploadDeviceInfos", "2020-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new UploadDeviceInfosResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UploadDeviceInfos"),
+            new TeaPair("version", "2020-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UploadDeviceInfosResponse());
     }
 
     public UploadDeviceInfosResponse uploadDeviceInfos(UploadDeviceInfosRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.uploadDeviceInfosWithOptions(request, runtime);
     }
 }

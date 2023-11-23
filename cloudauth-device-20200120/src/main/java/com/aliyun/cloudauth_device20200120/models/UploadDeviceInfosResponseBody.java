@@ -4,8 +4,8 @@ package com.aliyun.cloudauth_device20200120.models;
 import com.aliyun.tea.*;
 
 public class UploadDeviceInfosResponseBody extends TeaModel {
-    @NameInMap("ResultObject")
-    public Boolean resultObject;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
@@ -13,20 +13,20 @@ public class UploadDeviceInfosResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("ResultObject")
+    public Boolean resultObject;
 
     public static UploadDeviceInfosResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UploadDeviceInfosResponseBody self = new UploadDeviceInfosResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UploadDeviceInfosResponseBody setResultObject(Boolean resultObject) {
-        this.resultObject = resultObject;
+    public UploadDeviceInfosResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public Boolean getResultObject() {
-        return this.resultObject;
+    public String getCode() {
+        return this.code;
     }
 
     public UploadDeviceInfosResponseBody setMessage(String message) {
@@ -45,12 +45,12 @@ public class UploadDeviceInfosResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UploadDeviceInfosResponseBody setCode(String code) {
-        this.code = code;
+    public UploadDeviceInfosResponseBody setResultObject(Boolean resultObject) {
+        this.resultObject = resultObject;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public Boolean getResultObject() {
+        return this.resultObject;
     }
 
 }
