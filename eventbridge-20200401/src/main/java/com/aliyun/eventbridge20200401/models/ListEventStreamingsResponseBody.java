@@ -3029,6 +3029,25 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
 
+    public static class ListEventStreamingsResponseBodyDataEventStreamingsTransforms extends TeaModel {
+        @NameInMap("Arn")
+        public String arn;
+
+        public static ListEventStreamingsResponseBodyDataEventStreamingsTransforms build(java.util.Map<String, ?> map) throws Exception {
+            ListEventStreamingsResponseBodyDataEventStreamingsTransforms self = new ListEventStreamingsResponseBodyDataEventStreamingsTransforms();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsTransforms setArn(String arn) {
+            this.arn = arn;
+            return this;
+        }
+        public String getArn() {
+            return this.arn;
+        }
+
+    }
+
     public static class ListEventStreamingsResponseBodyDataEventStreamings extends TeaModel {
         @NameInMap("Description")
         public String description;
@@ -3050,6 +3069,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Transforms")
+        public java.util.List<ListEventStreamingsResponseBodyDataEventStreamingsTransforms> transforms;
 
         public static ListEventStreamingsResponseBodyDataEventStreamings build(java.util.Map<String, ?> map) throws Exception {
             ListEventStreamingsResponseBodyDataEventStreamings self = new ListEventStreamingsResponseBodyDataEventStreamings();
@@ -3110,6 +3132,14 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamings setTransforms(java.util.List<ListEventStreamingsResponseBodyDataEventStreamingsTransforms> transforms) {
+            this.transforms = transforms;
+            return this;
+        }
+        public java.util.List<ListEventStreamingsResponseBodyDataEventStreamingsTransforms> getTransforms() {
+            return this.transforms;
         }
 
     }

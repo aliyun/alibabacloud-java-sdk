@@ -40,6 +40,9 @@ public class UpdateEventStreamingRequest extends TeaModel {
     @NameInMap("Source")
     public UpdateEventStreamingRequestSource source;
 
+    @NameInMap("Transforms")
+    public java.util.List<UpdateEventStreamingRequestTransforms> transforms;
+
     public static UpdateEventStreamingRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEventStreamingRequest self = new UpdateEventStreamingRequest();
         return TeaModel.build(map, self);
@@ -91,6 +94,14 @@ public class UpdateEventStreamingRequest extends TeaModel {
     }
     public UpdateEventStreamingRequestSource getSource() {
         return this.source;
+    }
+
+    public UpdateEventStreamingRequest setTransforms(java.util.List<UpdateEventStreamingRequestTransforms> transforms) {
+        this.transforms = transforms;
+        return this;
+    }
+    public java.util.List<UpdateEventStreamingRequestTransforms> getTransforms() {
+        return this.transforms;
     }
 
     public static class UpdateEventStreamingRequestRunOptionsBatchWindow extends TeaModel {
@@ -3555,6 +3566,25 @@ public class UpdateEventStreamingRequest extends TeaModel {
         }
         public UpdateEventStreamingRequestSourceSourceSLSParameters getSourceSLSParameters() {
             return this.sourceSLSParameters;
+        }
+
+    }
+
+    public static class UpdateEventStreamingRequestTransforms extends TeaModel {
+        @NameInMap("Arn")
+        public String arn;
+
+        public static UpdateEventStreamingRequestTransforms build(java.util.Map<String, ?> map) throws Exception {
+            UpdateEventStreamingRequestTransforms self = new UpdateEventStreamingRequestTransforms();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateEventStreamingRequestTransforms setArn(String arn) {
+            this.arn = arn;
+            return this;
+        }
+        public String getArn() {
+            return this.arn;
         }
 
     }
