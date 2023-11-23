@@ -31,7 +31,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.address))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.address)) {
             bodyFlat.put("Address", request.address);
         }
 
@@ -55,7 +55,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CurrencyCode", request.currencyCode);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.customer))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.customer)) {
             bodyFlat.put("Customer", request.customer);
         }
 
@@ -1658,7 +1658,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.customer))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.customer)) {
             bodyFlat.put("Customer", request.customer);
         }
 
@@ -3641,6 +3641,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryPoolInfoListResponse queryPoolInfoListWithOptions(QueryPoolInfoListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.isFuzzyQuery)) {
+            query.put("IsFuzzyQuery", request.isFuzzyQuery);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
         }
