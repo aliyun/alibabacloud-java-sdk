@@ -4,8 +4,8 @@ package com.aliyun.cloudauth_device20200120.models;
 import com.aliyun.tea.*;
 
 public class UploadDeviceInfoResponseBody extends TeaModel {
-    @NameInMap("ResultObject")
-    public Boolean resultObject;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
@@ -13,20 +13,20 @@ public class UploadDeviceInfoResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("ResultObject")
+    public Boolean resultObject;
 
     public static UploadDeviceInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UploadDeviceInfoResponseBody self = new UploadDeviceInfoResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UploadDeviceInfoResponseBody setResultObject(Boolean resultObject) {
-        this.resultObject = resultObject;
+    public UploadDeviceInfoResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public Boolean getResultObject() {
-        return this.resultObject;
+    public String getCode() {
+        return this.code;
     }
 
     public UploadDeviceInfoResponseBody setMessage(String message) {
@@ -45,12 +45,12 @@ public class UploadDeviceInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UploadDeviceInfoResponseBody setCode(String code) {
-        this.code = code;
+    public UploadDeviceInfoResponseBody setResultObject(Boolean resultObject) {
+        this.resultObject = resultObject;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public Boolean getResultObject() {
+        return this.resultObject;
     }
 
 }
