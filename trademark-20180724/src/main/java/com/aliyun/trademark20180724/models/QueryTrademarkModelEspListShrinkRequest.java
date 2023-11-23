@@ -3,7 +3,7 @@ package com.aliyun.trademark20180724.models;
 
 import com.aliyun.tea.*;
 
-public class QueryTrademarkModelEspListRequest extends TeaModel {
+public class QueryTrademarkModelEspListShrinkRequest extends TeaModel {
     @NameInMap("AdditionalSubmitStatus")
     public String additionalSubmitStatus;
 
@@ -20,7 +20,7 @@ public class QueryTrademarkModelEspListRequest extends TeaModel {
     public String env;
 
     @NameInMap("ExistStatus")
-    public java.util.List<String> existStatus;
+    public String existStatusShrink;
 
     @NameInMap("OrderId")
     public String orderId;
@@ -52,12 +52,12 @@ public class QueryTrademarkModelEspListRequest extends TeaModel {
     @NameInMap("SubmitTime")
     public String submitTime;
 
-    public static QueryTrademarkModelEspListRequest build(java.util.Map<String, ?> map) throws Exception {
-        QueryTrademarkModelEspListRequest self = new QueryTrademarkModelEspListRequest();
+    public static QueryTrademarkModelEspListShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        QueryTrademarkModelEspListShrinkRequest self = new QueryTrademarkModelEspListShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryTrademarkModelEspListRequest setAdditionalSubmitStatus(String additionalSubmitStatus) {
+    public QueryTrademarkModelEspListShrinkRequest setAdditionalSubmitStatus(String additionalSubmitStatus) {
         this.additionalSubmitStatus = additionalSubmitStatus;
         return this;
     }
@@ -65,7 +65,7 @@ public class QueryTrademarkModelEspListRequest extends TeaModel {
         return this.additionalSubmitStatus;
     }
 
-    public QueryTrademarkModelEspListRequest setAdditionalSubmitTime(String additionalSubmitTime) {
+    public QueryTrademarkModelEspListShrinkRequest setAdditionalSubmitTime(String additionalSubmitTime) {
         this.additionalSubmitTime = additionalSubmitTime;
         return this;
     }
@@ -73,7 +73,7 @@ public class QueryTrademarkModelEspListRequest extends TeaModel {
         return this.additionalSubmitTime;
     }
 
-    public QueryTrademarkModelEspListRequest setBizId(String bizId) {
+    public QueryTrademarkModelEspListShrinkRequest setBizId(String bizId) {
         this.bizId = bizId;
         return this;
     }
@@ -81,7 +81,7 @@ public class QueryTrademarkModelEspListRequest extends TeaModel {
         return this.bizId;
     }
 
-    public QueryTrademarkModelEspListRequest setBizType(String bizType) {
+    public QueryTrademarkModelEspListShrinkRequest setBizType(String bizType) {
         this.bizType = bizType;
         return this;
     }
@@ -89,7 +89,7 @@ public class QueryTrademarkModelEspListRequest extends TeaModel {
         return this.bizType;
     }
 
-    public QueryTrademarkModelEspListRequest setEnv(String env) {
+    public QueryTrademarkModelEspListShrinkRequest setEnv(String env) {
         this.env = env;
         return this;
     }
@@ -97,15 +97,15 @@ public class QueryTrademarkModelEspListRequest extends TeaModel {
         return this.env;
     }
 
-    public QueryTrademarkModelEspListRequest setExistStatus(java.util.List<String> existStatus) {
-        this.existStatus = existStatus;
+    public QueryTrademarkModelEspListShrinkRequest setExistStatusShrink(String existStatusShrink) {
+        this.existStatusShrink = existStatusShrink;
         return this;
     }
-    public java.util.List<String> getExistStatus() {
-        return this.existStatus;
+    public String getExistStatusShrink() {
+        return this.existStatusShrink;
     }
 
-    public QueryTrademarkModelEspListRequest setOrderId(String orderId) {
+    public QueryTrademarkModelEspListShrinkRequest setOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
@@ -113,7 +113,7 @@ public class QueryTrademarkModelEspListRequest extends TeaModel {
         return this.orderId;
     }
 
-    public QueryTrademarkModelEspListRequest setOrderIdsStr(String orderIdsStr) {
+    public QueryTrademarkModelEspListShrinkRequest setOrderIdsStr(String orderIdsStr) {
         this.orderIdsStr = orderIdsStr;
         return this;
     }
@@ -121,7 +121,7 @@ public class QueryTrademarkModelEspListRequest extends TeaModel {
         return this.orderIdsStr;
     }
 
-    public QueryTrademarkModelEspListRequest setOrderInstanceId(String orderInstanceId) {
+    public QueryTrademarkModelEspListShrinkRequest setOrderInstanceId(String orderInstanceId) {
         this.orderInstanceId = orderInstanceId;
         return this;
     }
@@ -129,7 +129,7 @@ public class QueryTrademarkModelEspListRequest extends TeaModel {
         return this.orderInstanceId;
     }
 
-    public QueryTrademarkModelEspListRequest setPageNum(Integer pageNum) {
+    public QueryTrademarkModelEspListShrinkRequest setPageNum(Integer pageNum) {
         this.pageNum = pageNum;
         return this;
     }
@@ -137,7 +137,7 @@ public class QueryTrademarkModelEspListRequest extends TeaModel {
         return this.pageNum;
     }
 
-    public QueryTrademarkModelEspListRequest setPageSize(Integer pageSize) {
+    public QueryTrademarkModelEspListShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -145,7 +145,7 @@ public class QueryTrademarkModelEspListRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryTrademarkModelEspListRequest setPrincipalKey(String principalKey) {
+    public QueryTrademarkModelEspListShrinkRequest setPrincipalKey(String principalKey) {
         this.principalKey = principalKey;
         return this;
     }
@@ -153,7 +153,7 @@ public class QueryTrademarkModelEspListRequest extends TeaModel {
         return this.principalKey;
     }
 
-    public QueryTrademarkModelEspListRequest setPrincipalName(String principalName) {
+    public QueryTrademarkModelEspListShrinkRequest setPrincipalName(String principalName) {
         this.principalName = principalName;
         return this;
     }
@@ -161,7 +161,7 @@ public class QueryTrademarkModelEspListRequest extends TeaModel {
         return this.principalName;
     }
 
-    public QueryTrademarkModelEspListRequest setStatus(String status) {
+    public QueryTrademarkModelEspListShrinkRequest setStatus(String status) {
         this.status = status;
         return this;
     }
@@ -169,7 +169,7 @@ public class QueryTrademarkModelEspListRequest extends TeaModel {
         return this.status;
     }
 
-    public QueryTrademarkModelEspListRequest setSubmitStatus(String submitStatus) {
+    public QueryTrademarkModelEspListShrinkRequest setSubmitStatus(String submitStatus) {
         this.submitStatus = submitStatus;
         return this;
     }
@@ -177,7 +177,7 @@ public class QueryTrademarkModelEspListRequest extends TeaModel {
         return this.submitStatus;
     }
 
-    public QueryTrademarkModelEspListRequest setSubmitTime(String submitTime) {
+    public QueryTrademarkModelEspListShrinkRequest setSubmitTime(String submitTime) {
         this.submitTime = submitTime;
         return this;
     }

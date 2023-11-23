@@ -3632,9 +3632,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryTrademarkModelEspDetailWithOptions(request, runtime);
     }
 
-    public QueryTrademarkModelEspListResponse queryTrademarkModelEspListWithOptions(QueryTrademarkModelEspListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public QueryTrademarkModelEspListResponse queryTrademarkModelEspListWithOptions(QueryTrademarkModelEspListRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryTrademarkModelEspListShrinkRequest request = new QueryTrademarkModelEspListShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.existStatus)) {
+            request.existStatusShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.existStatus, "ExistStatus", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.additionalSubmitStatus)) {
+            query.put("AdditionalSubmitStatus", request.additionalSubmitStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.additionalSubmitTime)) {
+            query.put("AdditionalSubmitTime", request.additionalSubmitTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
             query.put("BizId", request.bizId);
         }
@@ -3645,6 +3659,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.env)) {
             query.put("Env", request.env);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.existStatusShrink)) {
+            query.put("ExistStatus", request.existStatusShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
@@ -5465,6 +5483,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.extMap)) {
             query.put("ExtMap", request.extMap);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operateType)) {
+            query.put("OperateType", request.operateType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

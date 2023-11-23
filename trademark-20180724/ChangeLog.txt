@@ -1,3 +1,6 @@
+2023-11-23 Version: 3.2.17
+- Generated java 2018-07-24 for Trademark.
+
 2023-11-15 Version: 3.2.16
 - Generated java 2018-07-24 for Trademark.
 
