@@ -4,12 +4,21 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class RenewLindormInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the order. You can obtain an order ID on the Orders page in Alibaba Cloud User Center.</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

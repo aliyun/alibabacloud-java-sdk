@@ -4,9 +4,15 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class UpgradeLindormInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the order.</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

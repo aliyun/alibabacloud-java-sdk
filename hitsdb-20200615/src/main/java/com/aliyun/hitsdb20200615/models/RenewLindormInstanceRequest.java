@@ -4,9 +4,18 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class RenewLindormInstanceRequest extends TeaModel {
+    /**
+     * <p>The subscription duration of the instance. The valid values of this parameter depend on the value of the PricingCycle parameter.</p>
+     * <br>
+     * <p>*   If PricingCycle is set to **Month**, set this parameter to an integer that ranges from **1** to **9**.</p>
+     * <p>*   If PricingCycle is set to **Year**, set this parameter to an integer that ranges from **1** to **3**.</p>
+     */
     @NameInMap("Duration")
     public Integer duration;
 
+    /**
+     * <p>The ID of the instance that you want to renew. You can call the [GetLindormInstanceList](~~426069~~) operation to obtain the instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,9 +25,18 @@ public class RenewLindormInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The period based on which you are charged for the instance. Valid values:</p>
+     * <br>
+     * <p>*   **Month**: You are charged for the instance based on months.</p>
+     * <p>*   **Year**: You are charged for the instance based on years.</p>
+     */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
+    /**
+     * <p>The ID of the region in which the instance that you want to renew is located. You can call the [DescribeRegions](~~426062~~) operation to query the region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

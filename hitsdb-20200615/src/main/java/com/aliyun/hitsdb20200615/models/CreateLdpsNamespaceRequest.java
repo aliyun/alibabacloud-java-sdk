@@ -3,18 +3,21 @@ package com.aliyun.hitsdb20200615.models;
 
 import com.aliyun.tea.*;
 
-public class GetInstanceIpWhiteListRequest extends TeaModel {
-    /**
-     * <p>The ID of the instance whose whitelist you want to query. You can call the [GetLindormInstanceList](~~426068~~) operation to query the instance ID.</p>
-     */
+public class CreateLdpsNamespaceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("Namespace")
+    public String namespace;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -25,12 +28,12 @@ public class GetInstanceIpWhiteListRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    public static GetInstanceIpWhiteListRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetInstanceIpWhiteListRequest self = new GetInstanceIpWhiteListRequest();
+    public static CreateLdpsNamespaceRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateLdpsNamespaceRequest self = new CreateLdpsNamespaceRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetInstanceIpWhiteListRequest setInstanceId(String instanceId) {
+    public CreateLdpsNamespaceRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -38,7 +41,15 @@ public class GetInstanceIpWhiteListRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public GetInstanceIpWhiteListRequest setOwnerAccount(String ownerAccount) {
+    public CreateLdpsNamespaceRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    public CreateLdpsNamespaceRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -46,7 +57,7 @@ public class GetInstanceIpWhiteListRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public GetInstanceIpWhiteListRequest setOwnerId(Long ownerId) {
+    public CreateLdpsNamespaceRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -54,7 +65,15 @@ public class GetInstanceIpWhiteListRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public GetInstanceIpWhiteListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public CreateLdpsNamespaceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateLdpsNamespaceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -62,7 +81,7 @@ public class GetInstanceIpWhiteListRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public GetInstanceIpWhiteListRequest setResourceOwnerId(Long resourceOwnerId) {
+    public CreateLdpsNamespaceRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -70,7 +89,7 @@ public class GetInstanceIpWhiteListRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public GetInstanceIpWhiteListRequest setSecurityToken(String securityToken) {
+    public CreateLdpsNamespaceRequest setSecurityToken(String securityToken) {
         this.securityToken = securityToken;
         return this;
     }

@@ -70,6 +70,9 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("EnableLTS")
     public Boolean enableLTS;
 
+    @NameInMap("EnableLsqlVersionV3")
+    public Boolean enableLsqlVersionV3;
+
     @NameInMap("EnableMLCtrl")
     public Boolean enableMLCtrl;
 
@@ -346,6 +349,14 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     }
     public Boolean getEnableLTS() {
         return this.enableLTS;
+    }
+
+    public GetLindormInstanceResponseBody setEnableLsqlVersionV3(Boolean enableLsqlVersionV3) {
+        this.enableLsqlVersionV3 = enableLsqlVersionV3;
+        return this;
+    }
+    public Boolean getEnableLsqlVersionV3() {
+        return this.enableLsqlVersionV3;
     }
 
     public GetLindormInstanceResponseBody setEnableMLCtrl(Boolean enableMLCtrl) {
