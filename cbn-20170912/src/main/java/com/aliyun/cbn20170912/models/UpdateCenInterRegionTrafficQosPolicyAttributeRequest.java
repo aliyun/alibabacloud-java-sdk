@@ -5,13 +5,18 @@ import com.aliyun.tea.*;
 
 public class UpdateCenInterRegionTrafficQosPolicyAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **UpdateCenInterRegionTrafficQosPolicyAttribute**.</p>
+     * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
+     * <br>
+     * <p>*   **true**: checks the request but does not modify the name and description of the QoS policy. The system checks whether the required parameters are set, whether the formats of the values are valid, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): checks the request. If the request passes the check, the name and description of the QoS policy are modified.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -28,17 +33,25 @@ public class UpdateCenInterRegionTrafficQosPolicyAttributeRequest extends TeaMod
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("TrafficQosPolicyDescription")
-    public String trafficQosPolicyDescription;
-
     /**
      * <p>The new description of the QoS policy.</p>
      * <br>
      * <p>The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.</p>
      */
+    @NameInMap("TrafficQosPolicyDescription")
+    public String trafficQosPolicyDescription;
+
+    /**
+     * <p>The ID of the QoS policy.</p>
+     */
     @NameInMap("TrafficQosPolicyId")
     public String trafficQosPolicyId;
 
+    /**
+     * <p>The new name of the QoS policy.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     */
     @NameInMap("TrafficQosPolicyName")
     public String trafficQosPolicyName;
 

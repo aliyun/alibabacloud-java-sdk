@@ -32,7 +32,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The queried VPC connections.</p>
+     * <p>The information about the VPC connection.</p>
      */
     @NameInMap("TransitRouterAttachments")
     public java.util.List<ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments> transitRouterAttachments;
@@ -126,13 +126,13 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public String networkInterfaceId;
 
         /**
-         * <p>The vSwitch ID of the node.</p>
+         * <p>The vSwitch ID.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The zone ID of the instance.</p>
+         * <p>The zone ID.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -170,16 +170,16 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
 
     public static class ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments extends TeaModel {
         /**
-         * <p>企业版转发路由器是否自动发布路由到VPC实例。</p>
+         * <p>Indicates whether the Enterprise Edition transit router automatically advertises routes to VPCs. Valid values:</p>
          * <br>
-         * <p>- **false**（默认值）：否。</p>
-         * <p>- **true**：是。</p>
+         * <p>*   **false:** (default)</p>
+         * <p>*   **true**</p>
          */
         @NameInMap("AutoPublishRouteEnabled")
         public Boolean autoPublishRouteEnabled;
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The CEN instance ID.</p>
          */
         @NameInMap("CenId")
         public String cenId;
@@ -187,13 +187,13 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         /**
          * <p>The billing method of the VPC connection.</p>
          * <br>
-         * <p>The value is **POSTPAY**, which is the default value and specifies the pay-as-you-go billing method.</p>
+         * <p>Only **POSTPAY** may be returned, which is the default value and specifies the pay-as-you-go billing method.</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
-         * <p>The time when the VPC connection is created.</p>
+         * <p>The time when the VPC connection was created.</p>
          * <br>
          * <p>The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</p>
          */
@@ -212,7 +212,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         /**
          * <p>The type of resource to which the transit router is connected.</p>
          * <br>
-         * <p>The value is set to **VPC**.</p>
+         * <p>Only **VPC** may be returned, which indicates VPCs.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -220,10 +220,10 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         /**
          * <p>The status of the VPC connection. Valid values:</p>
          * <br>
-         * <p>*   **Attached**: The VPC connection is created on the transit router.</p>
-         * <p>*   **Attaching**: The VPC connection is being created on the transit router.</p>
-         * <p>*   **Detaching**: The VPC connection is being deleted from the transit router.</p>
-         * <p>*   **Detached**: The VPC connection is deleted from the transit router.</p>
+         * <p>*   **Attached**</p>
+         * <p>*   **Attaching**</p>
+         * <p>*   **Detaching**</p>
+         * <p>*   **Detached**</p>
          */
         @NameInMap("Status")
         public String status;
@@ -259,7 +259,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public String transitRouterId;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -271,7 +271,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         public Long vpcOwnerId;
 
         /**
-         * <p>The ID of the region where the VPC is deployed.</p>
+         * <p>The region ID of the VPC.</p>
          */
         @NameInMap("VpcRegionId")
         public String vpcRegionId;

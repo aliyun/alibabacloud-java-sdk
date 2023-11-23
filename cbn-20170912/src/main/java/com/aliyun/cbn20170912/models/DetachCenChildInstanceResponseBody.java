@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachCenChildInstanceResponseBody extends TeaModel {
     /**
-     * <p>The AccessKeyId is unauthorized.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCenRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The CEN instance ID.</p>
      */
     @NameInMap("CenId")
     public String cenId;

@@ -11,22 +11,20 @@ public class DescribeGrantRulesToCenRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>要查询的网络实例ID。</p>
+     * <p>The ID of the network instance that you want to query.</p>
      */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
 
     /**
-     * <p>网络实例所属阿里云账号（主账号）ID。</p>
+     * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
      */
     @NameInMap("ChildInstanceOwnerId")
     public Long childInstanceOwnerId;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **100**.</p>
-     * <br>
-     * <p>*   If you do not set **MaxResults**, it indicates that you do not need to query results in batches. The value of **MaxResults** in the response indicates the total number of entries.</p>
-     * <p>*   If a value is specified for **MaxResults**, it indicates that you need to query results in batches. The value of **MaxResults** in the response indicates the number of entries in the current batch. We recommend that you set **MaxResults** to **20**.</p>
+     * <p>*   If you do not set **MaxResults**, it indicates that you do not need to query results in batches. The value of **MaxResults** in the response indicates the total number of entries returned.</p>
+     * <p>*   If you specify a value for **MaxResults**, it indicates that you need to query results in batches. The value of **MaxResults** indicates the number of entries to return in each batch. Valid values: **1** to **100**. The value of **MaxResults** in the response indicates the number of entries in the current batch. We recommend that you set **MaxResults** to **20**.</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;

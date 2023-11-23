@@ -5,25 +5,30 @@ import com.aliyun.tea.*;
 
 public class DeregisterTransitRouterMulticastGroupSourcesRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <br>
+     * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and sends the request.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether only to check the request. Valid values:</p>
-     * <br>
-     * <p>*   **true**: only prechecks the API request. The multicast source is not deleted. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): sends the request. After the request passes the precheck, the multicast source is deleted.</p>
+     * <p>The IP address of the multicast group to which the multicast source belongs.</p>
      */
     @NameInMap("GroupIpAddress")
     public String groupIpAddress;
 
     /**
-     * <p>Deletes a multicast source.</p>
+     * <p>The IDs of the multicast sources that you want to delete.</p>
      */
     @NameInMap("NetworkInterfaceIds")
     public java.util.List<String> networkInterfaceIds;
@@ -41,7 +46,7 @@ public class DeregisterTransitRouterMulticastGroupSourcesRequest extends TeaMode
     public Long resourceOwnerId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DeregisterTransitRouterMulticastGroupSources**.</p>
+     * <p>The ID of the multicast domain to which the multicast source belongs.</p>
      */
     @NameInMap("TransitRouterMulticastDomainId")
     public String transitRouterMulticastDomainId;

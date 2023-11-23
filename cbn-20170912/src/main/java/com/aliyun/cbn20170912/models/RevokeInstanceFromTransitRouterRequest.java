@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokeInstanceFromTransitRouterRequest extends TeaModel {
     /**
-     * <p>Enter the ID of the Cloud Enterprise Network (CEN) instance to which the transit router belongs.</p>
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance to which the transit router belongs.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -17,17 +17,17 @@ public class RevokeInstanceFromTransitRouterRequest extends TeaModel {
     public Long cenOwnerId;
 
     /**
-     * <p>The ID of the network instance.</p>
+     * <p>The network instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The type of the network instance. Valid values:</p>
+     * <p>The type of the network instance. Default values:</p>
      * <br>
      * <p>*   **VPC**: VPC</p>
      * <p>*   **ExpressConnect**: VBR</p>
-     * <p>*   **VPN**: IPsec-VPN connection</p>
+     * <p>*   **VPN**: IPsec connection</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -39,7 +39,7 @@ public class RevokeInstanceFromTransitRouterRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the network instance is deployed.</p>
+     * <p>The region ID of the network instance.</p>
      * <br>
      * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
      */

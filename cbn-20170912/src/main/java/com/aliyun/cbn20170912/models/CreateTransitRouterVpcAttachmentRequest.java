@@ -95,7 +95,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     public String transitRouterId;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The VPC ID.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

@@ -4,18 +4,25 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DeleteFlowlogRequest extends TeaModel {
+    /**
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the flow log.</p>
+     */
     @NameInMap("FlowLogId")
     public String flowLogId;
 
@@ -26,7 +33,9 @@ public class DeleteFlowlogRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the region where the flow log is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
