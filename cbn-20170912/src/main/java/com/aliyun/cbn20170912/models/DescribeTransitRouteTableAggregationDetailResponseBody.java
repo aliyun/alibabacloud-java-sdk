@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("Count")
     public Integer count;

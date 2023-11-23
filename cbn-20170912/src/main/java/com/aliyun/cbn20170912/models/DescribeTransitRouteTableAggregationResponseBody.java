@@ -17,10 +17,10 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
     public java.util.List<DescribeTransitRouteTableAggregationResponseBodyData> data;
 
     /**
-     * <p>The token that determines the start point of the next query. Valid values:</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If **NextToken** is not returned, it indicates that no additional results exist.</p>
-     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     * <p>*   If **NextToken** is empty, no next page exists.</p>
+     * <p>*   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -104,7 +104,7 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         public String routeType;
 
         /**
-         * <p>The cope of networks to which the aggregate route is advertised.</p>
+         * <p>The scope of networks that you want to advertise the aggregate route.</p>
          * <br>
          * <p>The valid value is **VPC**, which indicates that the aggregate route is advertised to all virtual private clouds (VPCs) that are in associated forwarding correlation with the Enterprise Edition transit router and have route synchronization enabled.</p>
          */

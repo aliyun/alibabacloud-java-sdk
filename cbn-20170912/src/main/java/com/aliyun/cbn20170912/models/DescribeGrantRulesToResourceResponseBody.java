@@ -5,37 +5,35 @@ import com.aliyun.tea.*;
 
 public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The permissions that are granted to the CEN instance.</p>
      */
     @NameInMap("GrantRules")
     public java.util.List<DescribeGrantRulesToResourceResponseBodyGrantRules> grantRules;
 
     /**
-     * <p>The entity that pays the fees of the network instance. Valid values:</p>
-     * <br>
-     * <p>*   **PayByCenOwner**: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the CEN instance belongs.</p>
-     * <p>*   **PayByResourceOwner**: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the network instance belongs.</p>
+     * <p>*   If no value is specified for **MaxResults**, query results are returned in one batch. The value of **MaxResults** indicates the total number of entries.</p>
+     * <p>*   If a value is specified for **MaxResults**, query results are returned in batches. The value of **MaxResults** in the response indicates the number of entries in the current batch.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <br>
+     * <p>*   If the **NextToken** parameter is empty, no next page exists.</p>
+     * <p>*   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the region where the network instance is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>*   If you do not set **MaxResults**, it indicates that you do not need to query results in batches. The value of **MaxResults** indicates the total number of entries.</p>
-     * <p>*   If you specify a value for **MaxResults**, it indicates that you need to query results in batches. The value of **MaxResults** indicates the number of entries to return in each batch. Valid values: **1** to **100**. The value of **MaxResults** in the response indicates the number of entries in the current batch. We recommend that you set **MaxResults** to **20**.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -86,12 +84,24 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeGrantRulesToResourceResponseBodyGrantRules extends TeaModel {
+        /**
+         * <p>The CEN instance ID.</p>
+         */
         @NameInMap("CenId")
         public String cenId;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
+         */
         @NameInMap("CenOwnerId")
         public Long cenOwnerId;
 
+        /**
+         * <p>The entity that pays the fees of the network instance. Valid values: Valid values:</p>
+         * <br>
+         * <p>*   **PayByCenOwner**: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the CEN instance belongs.</p>
+         * <p>*   **PayByResourceOwner**: The fees of the connections and data forwarding on the transit router are paid by the Alibaba Cloud account to which the network instance belongs.</p>
+         */
         @NameInMap("OrderType")
         public String orderType;
 

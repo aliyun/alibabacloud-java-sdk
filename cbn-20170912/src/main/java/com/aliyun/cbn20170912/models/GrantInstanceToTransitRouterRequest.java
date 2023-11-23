@@ -5,28 +5,39 @@ import com.aliyun.tea.*;
 
 public class GrantInstanceToTransitRouterRequest extends TeaModel {
     /**
-     * <p>The ID of the region where the network instance is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>Enter the ID of the Cloud Enterprise Network (CEN) instance to which the transit router belongs.</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
+     */
     @NameInMap("CenOwnerId")
     public Long cenOwnerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the network instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **GrantInstanceToTransitRouter**.</p>
+     * <p>The type of the network instance. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**: VPC</p>
+     * <p>*   **ExpressConnect**: VBR</p>
+     * <p>*   **VPN**: IPsec connection</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>The entity that pays the fees of the network instance. Valid values:</p>
+     * <br>
+     * <p>*   **PayByCenOwner**: the Alibaba Cloud account that owns the CEN instance.</p>
+     * <p>*   **PayByResourceOwner**: the Alibaba Cloud account that owns the network instance.</p>
+     */
     @NameInMap("OrderType")
     public String orderType;
 
@@ -37,7 +48,9 @@ public class GrantInstanceToTransitRouterRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
+     * <p>The ID of the region where the network instance is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

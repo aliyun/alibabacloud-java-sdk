@@ -5,37 +5,43 @@ import com.aliyun.tea.*;
 
 public class DetachCenChildInstanceRequest extends TeaModel {
     /**
-     * <p>InvalidParameter</p>
+     * <p>The ID of the CEN instance.</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
-     * <p>Unauthorized</p>
+     * <p>The ID of the Alibaba Cloud account to which the CEN instance belongs.</p>
      */
     @NameInMap("CenOwnerId")
     public Long cenOwnerId;
 
     /**
-     * <p>InvalidParameter</p>
+     * <p>The ID of the network instance that you want to detach from the CEN instance.</p>
      */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
 
     /**
-     * <p>Unauthorized</p>
+     * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
      */
     @NameInMap("ChildInstanceOwnerId")
     public Long childInstanceOwnerId;
 
     /**
-     * <p>参数不合法。</p>
+     * <p>The ID of the region where the network instance is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
 
     /**
-     * <p>Invalid parameter.</p>
+     * <p>The type of the network instance. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**: virtual private cloud (VPC)</p>
+     * <p>*   **VBR**: virtual border router (VBR)</p>
+     * <p>*   **CCN**: Cloud Connect Network (CCN) instance</p>
      */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;

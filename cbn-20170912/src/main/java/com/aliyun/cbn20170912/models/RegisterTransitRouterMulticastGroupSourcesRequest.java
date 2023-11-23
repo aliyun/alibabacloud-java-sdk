@@ -5,20 +5,39 @@ import com.aliyun.tea.*;
 
 public class RegisterTransitRouterMulticastGroupSourcesRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
      * <p>Specifies whether only to check the request. Valid values:</p>
      * <br>
      * <p>*   **true**: prechecks the request but does not create the multicast source. The system checks the required parameters, the request format, and the service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
      * <p>*   **false** (default): sends the request. After the request passes the precheck, the multicast source is created.</p>
      */
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>The IP address of the multicast group to which the multicast source belongs. Valid values: **224.0.0.1** to **239.255.255.254**.</p>
+     * <br>
+     * <p>If the multicast group does not exist in the multicast domain, the system automatically creates the multicast group in the multicast domain.</p>
+     */
     @NameInMap("GroupIpAddress")
     public String groupIpAddress;
 
+    /**
+     * <p>The IDs of the ENIs.</p>
+     * <br>
+     * <p>You can create only one multicast source in a multicast group.</p>
+     * <br>
+     * <p>>  This parameter is required.</p>
+     */
     @NameInMap("NetworkInterfaceIds")
     public java.util.List<String> networkInterfaceIds;
 
@@ -35,11 +54,17 @@ public class RegisterTransitRouterMulticastGroupSourcesRequest extends TeaModel 
     public Long resourceOwnerId;
 
     /**
-     * <p>Creates a multicast source.</p>
+     * <p>The ID of the multicast domain to which the multicast source belongs.</p>
      */
     @NameInMap("TransitRouterMulticastDomainId")
     public String transitRouterMulticastDomainId;
 
+    /**
+     * <p>The ID of the VPC to which the ENI belongs.</p>
+     * <br>
+     * <p>*   If the ENI belongs to the current Alibaba Cloud account, ignore this parameter.</p>
+     * <p>*   If the ENI belongs to a different Alibaba Cloud account, you must set this parameter.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

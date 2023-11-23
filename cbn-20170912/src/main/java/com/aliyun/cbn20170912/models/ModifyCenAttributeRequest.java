@@ -5,19 +5,23 @@ import com.aliyun.tea.*;
 
 public class ModifyCenAttributeRequest extends TeaModel {
     /**
-     * <p>Modifies the name and description of a Cloud Enterprise Network (CEN) instance.</p>
+     * <p>The ID of the CEN instance.</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
-     * <p>WB656982</p>
+     * <p>The description of the CEN instance.</p>
+     * <br>
+     * <p>The description must be 2 to 256 characters in length. It must start with a letter or Chinese character and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>ModifyCenAttribute</p>
+     * <p>The name of the CEN instance.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -28,6 +32,11 @@ public class ModifyCenAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The level of CIDR block overlapping.</p>
+     * <br>
+     * <p>Set the value to **REDUCED** (default). This value specifies that CIDR blocks can overlap but cannot be the same.</p>
+     */
     @NameInMap("ProtectionLevel")
     public String protectionLevel;
 

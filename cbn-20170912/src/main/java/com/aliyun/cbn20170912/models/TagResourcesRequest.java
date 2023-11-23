@@ -10,11 +10,14 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Creates tags and adds them to a resource.</p>
+     * <p>The IDs of the resources. You can enter most at 20 resource IDs.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -26,13 +29,13 @@ public class TagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>$.parameters[2].schema.example</p>
+     * <p>The type of the resource. Set the value to **cen**, which specifies a CEN instance.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>79517</p>
+     * <p>The list of tags that you want to associate with the resources.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -107,9 +110,23 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class TagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * <br>
+         * <p>You can enter multiple tag keys. Valid values of **N**: **1** to **20**.</p>
+         * <br>
+         * <p>The key cannot exceed 64 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * <br>
+         * <p>Each tag key corresponds to a tag value. Valid values of **N**: **1** to **20**.</p>
+         * <br>
+         * <p>The value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 
