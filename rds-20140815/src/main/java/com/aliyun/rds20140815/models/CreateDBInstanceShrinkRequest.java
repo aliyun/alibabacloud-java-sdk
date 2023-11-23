@@ -10,7 +10,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      * <p>Valid values: **1** to **20**. Default value: **1**.</p>
      * <br>
      * <p>> *   If you want to create multiple ApsaraDB RDS for MySQL instances at a time by using a single request, you can add tags to all the instances by using the **Tag.Key** parameter and the **Tag.Value** parameter. After the instances are created, you can manage the instances based on the tags.</p>
-     * <p>> *   After you submit a request to create multiple ApsaraDB RDS for MySQL instances, this operation returns **TaskId**, **RequestId**, and **Message**. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the details of an instance.</p>
+     * <p>> *   After you submit a request to create multiple ApsaraDB RDS for MySQL instances, this operation returns **TaskId**, **RequestId**, and **Message**. You can call the DescribeDBInstanceAttribute operation to query the details of an instance.</p>
      * <p>> *   If the value of the **Engine** parameter is not **MySQL** and the value of the Amount parameter is greater than **1**, this operation fails and returns an error code `InvalidParam.Engine`.</p>
      */
     @NameInMap("Amount")
@@ -195,9 +195,9 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String DBIsIgnoreCase;
 
     /**
-     * <p>The ID of the parameter template. You can call the [DescribeParameterGroups](~~610588~~) operation to query the ID of the parameter template.</p>
+     * <p>The ID of the parameter template. You can call the DescribeParameterGroups operation to query the ID of the parameter template.</p>
      * <br>
-     * <p>> : This parameter is available if you want to create an instance that runs MySQL or PostgreSQL . If you do not configure this parameter, the default parameter template is used. If you want to use a custom parameter template, you can customize a parameter template and set this parameter to the ID of the custom template. For more information, see [Create a parameter template](~~610585~~).</p>
+     * <p>> : This parameter is available if you want to create an instance that runs MySQL or PostgreSQL . If you do not configure this parameter, the default parameter template is used. If you want to use a custom parameter template, you can customize a parameter template and set this parameter to the ID of the custom template.</p>
      */
     @NameInMap("DBParamGroupId")
     public String DBParamGroupId;
@@ -226,8 +226,8 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      * <br>
      * <p>If you create the instance in a dedicated cluster, you must specify this parameter.</p>
      * <br>
-     * <p>*   You can call the [DescribeDedicatedHostGroups](~~610640~~) operation to query the details of a dedicated cluster.</p>
-     * <p>*   If no dedicated clusters are created, you can call the [CreateDedicatedHostGroup](~~209828~~) operation to create a dedicated cluster.</p>
+     * <p>*   You can call the DescribeDedicatedHostGroups operation to query the details of a dedicated cluster.</p>
+     * <p>*   If no dedicated clusters are created, you can call the CreateDedicatedHostGroup operation to create a dedicated cluster.</p>
      */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
@@ -359,7 +359,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -374,7 +374,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) that is provided by your Alibaba Cloud account for RAM users. RAM users can use the ARN to connect ApsaraDB RDS to KMS. You can call the [CheckCloudResourceAuthorized](~~610408~~) operation to query the ARN.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) that is provided by your Alibaba Cloud account for RAM users. RAM users can use the ARN to connect ApsaraDB RDS to KMS. You can call the CheckCloudResourceAuthorized operation to query the ARN.</p>
      */
     @NameInMap("RoleARN")
     public String roleARN;
@@ -402,7 +402,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      * <p>*   **Enable**</p>
      * <p>*   **Disable** (default)</p>
      * <br>
-     * <p>>  After the instance is created, you can call the [ModifyDasInstanceConfig](~~610391~~) operation to adjust the settings of automatic storage expansion for the instance. For more information, see [Configure automatic storage expansion for an ApsaraDB RDS for MySQL instance](~~173826~~).</p>
+     * <p>>  After the instance is created, you can call the ModifyDasInstanceConfig operation to adjust the settings of automatic storage expansion for the instance. For more information, see [Configure automatic storage expansion for an ApsaraDB RDS for MySQL instance](~~173826~~).</p>
      */
     @NameInMap("StorageAutoScale")
     public String storageAutoScale;
@@ -447,8 +447,8 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      * <br>
      * <p>If you want to create an instance that runs RDS Enterprise Edition in a dedicated cluster, you must specify this parameter. If you do not specify this parameter, the system automatically assigns a host.</p>
      * <br>
-     * <p>*   You can call the [DescribeDedicatedHosts](~~610641~~) operation to query the details of the hosts in a dedicated cluster.</p>
-     * <p>*   If no hosts are created, you can call the [CreateDedicatedHost](~~210864~~) operation to create a host.</p>
+     * <p>*   You can call the DescribeDedicatedHosts operation to query the details of the hosts in a dedicated cluster.</p>
+     * <p>*   If no hosts are created, you can call the CreateDedicatedHost operation to create a host.</p>
      */
     @NameInMap("TargetDedicatedHostIdForLog")
     public String targetDedicatedHostIdForLog;
@@ -458,8 +458,8 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      * <br>
      * <p>If you create the instance in a dedicated cluster, you must specify this parameter. If you do not specify this parameter, the system automatically assigns a host.</p>
      * <br>
-     * <p>*   You can call the [DescribeDedicatedHost](~~610641~~) operation to query the details about the hosts in a dedicated cluster.</p>
-     * <p>*   If no hosts are created, you can call the [CreateDedicatedHost](~~210864~~) operation to create a host.</p>
+     * <p>*   You can call the DescribeDedicatedHost operation to query the details about the hosts in a dedicated cluster.</p>
+     * <p>*   If no hosts are created, you can call the CreateDedicatedHost operation to create a host.</p>
      */
     @NameInMap("TargetDedicatedHostIdForMaster")
     public String targetDedicatedHostIdForMaster;
@@ -469,8 +469,8 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      * <br>
      * <p>If you want to create an instance that runs RDS High-availability Edition or RDS Enterprise Edition in a dedicated cluster, you must specify this parameter. If you do not specify this parameter, the system automatically assigns a host.</p>
      * <br>
-     * <p>*   You can call the [DescribeDedicatedHosts](~~610641~~) operation to query the details of the hosts in a dedicated cluster.</p>
-     * <p>*   If no hosts are created, you can call the [CreateDedicatedHost](~~210864~~) operation to create a host.</p>
+     * <p>*   You can call the DescribeDedicatedHosts operation to query the details of the hosts in a dedicated cluster.</p>
+     * <p>*   If no hosts are created, you can call the CreateDedicatedHost operation to create a host.</p>
      */
     @NameInMap("TargetDedicatedHostIdForSlave")
     public String targetDedicatedHostIdForSlave;
@@ -486,12 +486,12 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      * <br>
      * <p>    **</p>
      * <br>
-     * <p>    **Note** You can call the [DescribeDBMiniEngineVersions](~~610643~~) operation to query the minor engine version. For more information about minor engine versions, see [Release notes of minor AliSQL versions](~~96060~~).</p>
+     * <p>    **Note** You can call the DescribeDBMiniEngineVersions operation to query the minor engine version. For more information about minor engine versions, see [Release notes of minor AliSQL versions](~~96060~~).</p>
      * <br>
      * <p>*   If you create an instance that runs PostgreSQL, the value is in the following format: `rds_postgres_<Major engine version>00_<Minor engine version>`. Example: `rds_postgres_1400_20220830`. The following list describes the fields in the example values:</p>
      * <br>
      * <p>    *   1400: The major engine version is PostgreSQL 14.</p>
-     * <p>    *   20220830: the AliPG version. You can call the [DescribeDBMiniEngineVersions](~~610643~~) operation to query the AliPG version. For more information about minor engine versions, see [Release notes for AliPG](~~126002~~).</p>
+     * <p>    *   20220830: the AliPG version. You can call the DescribeDBMiniEngineVersions operation to query the AliPG version. For more information about minor engine versions, see [Release notes for AliPG](~~126002~~).</p>
      * <br>
      * <p>    **</p>
      * <br>
@@ -512,7 +512,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String usedTime;
 
     /**
-     * <p>The ID of the backup file. You can call the [ListUserBackupFiles](~~610600~~) operation to query backup files. If you want to create an instance by using the data of a backup file, you must specify this parameter.</p>
+     * <p>The ID of the backup file. You can call the ListUserBackupFiles operation to query backup files. If you want to create an instance by using the data of a backup file, you must specify this parameter.</p>
      * <br>
      * <p>This parameter is supported only when the following requirements are met:</p>
      * <br>
@@ -1001,7 +1001,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
         /**
          * <p>The key of the tag that you want to add to the instance. You can use this parameter to add tags to the instance.</p>
          * <br>
-         * <p>*   If the specified tag key is an existing key, the system directly adds the tag key to the instance. You can call the [ListTagResources](~~610627~~) operation to query the details of the existing tags.</p>
+         * <p>*   If the specified tag key is an existing key, the system directly adds the tag key to the instance. You can call the ListTagResources operation to query the details of the existing tags.</p>
          * <p>*   If the specified tag key is not an existing key, the system creates the tag key and adds the tag key to the instance.</p>
          * <p>*   A tag key cannot be an empty string.</p>
          * <p>*   This parameter must be used together with the **Tag.Value** parameter.</p>
@@ -1012,7 +1012,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
         /**
          * <p>The tag value that is associated with the specified tag key. You can use this parameter to add tags to the instance.</p>
          * <br>
-         * <p>*   If the specified tag value is found in the specified tag key, the system directly adds the tag value to the instance. You can call the [ListTagResources](~~610627~~) operation to query the details of the existing tags.</p>
+         * <p>*   If the specified tag value is found in the specified tag key, the system directly adds the tag value to the instance. You can call the ListTagResources operation to query the details of the existing tags.</p>
          * <p>*   If the specified tag value is not found in the specified tag key, the system creates the tag value and adds the tag value to the instance.</p>
          * <p>*   This parameter must be used together with the **Tag.Key** parameter.</p>
          */

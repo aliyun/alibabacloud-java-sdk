@@ -60,6 +60,9 @@ public class ModifyDBNodeShrinkRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("EffectiveTime")
+    public String effectiveTime;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -142,6 +145,14 @@ public class ModifyDBNodeShrinkRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public ModifyDBNodeShrinkRequest setEffectiveTime(String effectiveTime) {
+        this.effectiveTime = effectiveTime;
+        return this;
+    }
+    public String getEffectiveTime() {
+        return this.effectiveTime;
     }
 
     public ModifyDBNodeShrinkRequest setOwnerAccount(String ownerAccount) {

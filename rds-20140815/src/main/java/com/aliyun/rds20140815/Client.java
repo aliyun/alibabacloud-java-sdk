@@ -10946,8 +10946,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ### [](#)Supported database engines
-      * RDS SQL Server
-      * >  You can call the [DescribeBinlogFiles](~~610550~~) operation to query the log files of other database engines.
+      * SQL Server
+      * >  You can call the DescribeBinlogFiles operation to query the log files of instances that run different database engines.
       *
       * @param request DescribeLogBackupFilesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -11011,8 +11011,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ### [](#)Supported database engines
-      * RDS SQL Server
-      * >  You can call the [DescribeBinlogFiles](~~610550~~) operation to query the log files of other database engines.
+      * SQL Server
+      * >  You can call the DescribeBinlogFiles operation to query the log files of instances that run different database engines.
       *
       * @param request DescribeLogBackupFilesRequest
       * @return DescribeLogBackupFilesResponse
@@ -17736,6 +17736,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveTime)) {
+            query.put("EffectiveTime", request.effectiveTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
