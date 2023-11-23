@@ -4,6 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class CreateSearchLibResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     /**
      * <p>Id of the request</p>
      */
@@ -13,9 +16,20 @@ public class CreateSearchLibResponseBody extends TeaModel {
     @NameInMap("SearchLibName")
     public String searchLibName;
 
+    @NameInMap("Success")
+    public String success;
+
     public static CreateSearchLibResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateSearchLibResponseBody self = new CreateSearchLibResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSearchLibResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public CreateSearchLibResponseBody setRequestId(String requestId) {
@@ -32,6 +46,14 @@ public class CreateSearchLibResponseBody extends TeaModel {
     }
     public String getSearchLibName() {
         return this.searchLibName;
+    }
+
+    public CreateSearchLibResponseBody setSuccess(String success) {
+        this.success = success;
+        return this;
+    }
+    public String getSuccess() {
+        return this.success;
     }
 
 }

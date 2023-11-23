@@ -4,11 +4,17 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class QuerySearchIndexResponseBody extends TeaModel {
-    @NameInMap("IndexConfig")
-    public String indexConfig;
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("IndexStatus")
+    public String indexStatus;
 
     @NameInMap("IndexType")
     public String indexType;
+
+    @NameInMap("MediaTotal")
+    public String mediaTotal;
 
     /**
      * <p>Id of the request</p>
@@ -19,17 +25,28 @@ public class QuerySearchIndexResponseBody extends TeaModel {
     @NameInMap("SearchLibName")
     public String searchLibName;
 
+    @NameInMap("Success")
+    public String success;
+
     public static QuerySearchIndexResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QuerySearchIndexResponseBody self = new QuerySearchIndexResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public QuerySearchIndexResponseBody setIndexConfig(String indexConfig) {
-        this.indexConfig = indexConfig;
+    public QuerySearchIndexResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getIndexConfig() {
-        return this.indexConfig;
+    public String getCode() {
+        return this.code;
+    }
+
+    public QuerySearchIndexResponseBody setIndexStatus(String indexStatus) {
+        this.indexStatus = indexStatus;
+        return this;
+    }
+    public String getIndexStatus() {
+        return this.indexStatus;
     }
 
     public QuerySearchIndexResponseBody setIndexType(String indexType) {
@@ -38,6 +55,14 @@ public class QuerySearchIndexResponseBody extends TeaModel {
     }
     public String getIndexType() {
         return this.indexType;
+    }
+
+    public QuerySearchIndexResponseBody setMediaTotal(String mediaTotal) {
+        this.mediaTotal = mediaTotal;
+        return this;
+    }
+    public String getMediaTotal() {
+        return this.mediaTotal;
     }
 
     public QuerySearchIndexResponseBody setRequestId(String requestId) {
@@ -54,6 +79,14 @@ public class QuerySearchIndexResponseBody extends TeaModel {
     }
     public String getSearchLibName() {
         return this.searchLibName;
+    }
+
+    public QuerySearchIndexResponseBody setSuccess(String success) {
+        this.success = success;
+        return this;
+    }
+    public String getSuccess() {
+        return this.success;
     }
 
 }

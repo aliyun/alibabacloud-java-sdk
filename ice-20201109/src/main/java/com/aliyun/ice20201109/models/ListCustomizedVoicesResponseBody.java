@@ -52,6 +52,9 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         @NameInMap("Scenario")
         public String scenario;
 
+        @NameInMap("Type")
+        public String type;
+
         @NameInMap("VoiceDesc")
         public String voiceDesc;
 
@@ -88,6 +91,14 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         }
         public String getScenario() {
             return this.scenario;
+        }
+
+        public ListCustomizedVoicesResponseBodyDataCustomizedVoiceList setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public ListCustomizedVoicesResponseBodyDataCustomizedVoiceList setVoiceDesc(String voiceDesc) {

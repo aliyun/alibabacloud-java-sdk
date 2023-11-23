@@ -43,6 +43,9 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
     }
 
     public static class ListCustomizedVoiceJobsResponseBodyDataCustomizedVoiceJobList extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
+
         @NameInMap("Gender")
         public String gender;
 
@@ -61,6 +64,9 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Type")
+        public String type;
+
         @NameInMap("VoiceDesc")
         public String voiceDesc;
 
@@ -73,6 +79,14 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         public static ListCustomizedVoiceJobsResponseBodyDataCustomizedVoiceJobList build(java.util.Map<String, ?> map) throws Exception {
             ListCustomizedVoiceJobsResponseBodyDataCustomizedVoiceJobList self = new ListCustomizedVoiceJobsResponseBodyDataCustomizedVoiceJobList();
             return TeaModel.build(map, self);
+        }
+
+        public ListCustomizedVoiceJobsResponseBodyDataCustomizedVoiceJobList setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public ListCustomizedVoiceJobsResponseBodyDataCustomizedVoiceJobList setGender(String gender) {
@@ -121,6 +135,14 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListCustomizedVoiceJobsResponseBodyDataCustomizedVoiceJobList setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public ListCustomizedVoiceJobsResponseBodyDataCustomizedVoiceJobList setVoiceDesc(String voiceDesc) {

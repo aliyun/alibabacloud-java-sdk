@@ -7,6 +7,9 @@ public class AlterSearchIndexRequest extends TeaModel {
     @NameInMap("IndexConfig")
     public String indexConfig;
 
+    @NameInMap("IndexStatus")
+    public String indexStatus;
+
     @NameInMap("IndexType")
     public String indexType;
 
@@ -24,6 +27,14 @@ public class AlterSearchIndexRequest extends TeaModel {
     }
     public String getIndexConfig() {
         return this.indexConfig;
+    }
+
+    public AlterSearchIndexRequest setIndexStatus(String indexStatus) {
+        this.indexStatus = indexStatus;
+        return this;
+    }
+    public String getIndexStatus() {
+        return this.indexStatus;
     }
 
     public AlterSearchIndexRequest setIndexType(String indexType) {
