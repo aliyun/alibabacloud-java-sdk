@@ -4,6 +4,9 @@ package com.aliyun.dypls20170830.models;
 import com.aliyun.tea.*;
 
 public class QueryPoolInfoListRequest extends TeaModel {
+    @NameInMap("IsFuzzyQuery")
+    public Boolean isFuzzyQuery;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -34,6 +37,14 @@ public class QueryPoolInfoListRequest extends TeaModel {
     public static QueryPoolInfoListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryPoolInfoListRequest self = new QueryPoolInfoListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryPoolInfoListRequest setIsFuzzyQuery(Boolean isFuzzyQuery) {
+        this.isFuzzyQuery = isFuzzyQuery;
+        return this;
+    }
+    public Boolean getIsFuzzyQuery() {
+        return this.isFuzzyQuery;
     }
 
     public QueryPoolInfoListRequest setOwnerId(Long ownerId) {
