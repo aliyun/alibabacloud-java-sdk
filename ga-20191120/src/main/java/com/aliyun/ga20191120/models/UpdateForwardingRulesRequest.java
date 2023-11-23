@@ -21,7 +21,7 @@ public class UpdateForwardingRulesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The configurations of the forwarding rule.</p>
+     * <p>The configurations of the forwarding rules.</p>
      */
     @NameInMap("ForwardingRules")
     public java.util.List<UpdateForwardingRulesRequestForwardingRules> forwardingRules;
@@ -109,7 +109,7 @@ public class UpdateForwardingRulesRequest extends TeaModel {
 
     public static class UpdateForwardingRulesRequestForwardingRulesRuleActionsForwardGroupConfig extends TeaModel {
         /**
-         * <p>The configurations of an endpoint group.</p>
+         * <p>The configuration of an endpoint group.</p>
          * <br>
          * <p>>  We recommend that you use **RuleActionType** and **RuleActionValue** rather than this parameter to configure forwarding actions.</p>
          */
@@ -133,7 +133,7 @@ public class UpdateForwardingRulesRequest extends TeaModel {
 
     public static class UpdateForwardingRulesRequestForwardingRulesRuleActions extends TeaModel {
         /**
-         * <p>The forwarding configurations.</p>
+         * <p>The forwarding configuration.</p>
          * <br>
          * <p>>  We recommend that you use **RuleActionType** and **RuleActionValue** rather than this parameter to configure forwarding actions.</p>
          */
@@ -151,56 +151,56 @@ public class UpdateForwardingRulesRequest extends TeaModel {
         /**
          * <p>The type of the forwarding action. Valid values:</p>
          * <br>
-         * <p>*   **ForwardGroup:** forwards a request.</p>
-         * <p>*   **Redirect:** redirects a request.</p>
-         * <p>*   **FixResponse:** returns a fixed response.</p>
-         * <p>*   **Rewrite:** rewrites a request.</p>
-         * <p>*   **AddHeader:** adds a header to a request.</p>
-         * <p>*   **RemoveHeaderConfig:** deletes the header of a request.</p>
+         * <p>*   **ForwardGroup**: forwards a request.</p>
+         * <p>*   **Redirect**: redirects a request.</p>
+         * <p>*   **FixResponse**: returns a fixed response.</p>
+         * <p>*   **Rewrite**: rewrites a request.</p>
+         * <p>*   **AddHeader**: adds a header to a request.</p>
+         * <p>*   **RemoveHeader**: deletes the header of a request.</p>
          */
         @NameInMap("RuleActionType")
         public String ruleActionType;
 
         /**
-         * <p>The value of the forwarding action type.</p>
+         * <p>The value of the forwarding action.</p>
          * <br>
-         * <p>You must specify different JSON strings based on the value of the **RuleActionType** parameter.</p>
+         * <p>You must specify different JSON strings based on the value of **RuleActionType**.</p>
          * <br>
          * <p>A forwarding rule can contain only one forwarding action whose type is **ForwardGroup**, **Redirect**, or **FixResponse**. You must specify a forwarding action whose type is **Rewrite**, **AddHeader**, or **RemoveHeader** before a forwarding action whose type is **ForwardGroup**.</p>
          * <br>
          * <p>*   If you set **RuleActionType** to **ForwardGroup**, this parameter specifies the information of a virtual endpoint group. You can forward requests to only one virtual endpoint group. Example: `{"type":"endpointgroup", "value":"epg-bp1enpdcrqhl78g6r****"}`.</p>
          * <br>
-         * <p>    *   `type:` set this parameter to `endpointgroup`.</p>
-         * <p>    *   `value:` set this parameter to the ID of a virtual endpoint group.</p>
+         * <p>    *   `type`: Set this parameter to `endpointgroup`.</p>
+         * <p>    *   `value`: Set this parameter to the ID of a virtual endpoint group.</p>
          * <br>
-         * <p>*   If you set **RuleActionType** to **Redirect**, this parameter specifies redirecting configurations. You cannot leave all of the following parameters empty or configure all of these parameters to use the default values for a forwarding action whose type is **Redirect**: `protocol`, `domain`, `port`, `path`, and `query`. Example: `{"protocol":"HTTP", "domain":"www.example.com", "port":"80", "path":"/a","query":"value1", "code":"301" }`.</p>
+         * <p>*   If you set **RuleActionType** to **Redirect**, this parameter specifies the redirect configuration. You cannot leave all the following parameters empty or use the default values for all the following parameters for a forwarding action whose type is **Redirect**: `protocol`, `domain`, `port`, `path`, and `query`. Example: `{"protocol":"HTTP", "domain":"www.example.com", "port":"80", "path":"/a","query":"value1", "code":"301" }`.</p>
          * <br>
-         * <p>    *   `protocol:` the protocol of requests after the requests are redirected. Valid values: `${protocol}` (default), `HTTP`, and `HTTPS`.</p>
-         * <p>    *   `domain:` the domain name to which requests are redirected. Default value: `${host}`. You can also enter a domain name. The domain name must be 3 to 128 characters in length, and can contain only letters, digits, and the following special characters: `. - ? = ~ _ - + / ^ * ! $ & | ( ) [ ]`.</p>
-         * <p>    *   `port:` the port to which requests are redirected. Default value: `${port}`. You can enter a port number that ranges from 1 to 63335.</p>
-         * <p>    *   `path:` the path to which requests are redirected. Default value: `${path}`. The path must be 1 to 128 characters in length. To use a regular expression, the path can contain letters, digits, and the following special characters: `. - _ / = ? ~ ^ * $ : ( ) [ ] + |`. The path must start with a tilde (~). If you do not want to use a regular expression, the path can contain letters, digits, and the following special characters: `. - _ / = ? :`. The path must start with a forward slash (/).</p>
-         * <p>    *   `query:` the query string of the requests to be redirected. Default value: `${query}`. You can also specify a query string. The query string must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and smaller than 127`. The query string cannot contain uppercase letters, space characters, or the following special characters: `[ ] { } < > # | &`.</p>
-         * <p>    *   `code:` the redirecting code. Valid values: `301`, `302`, `303`, `307`, and `308`.</p>
+         * <p>    *   `protocol`: the protocol of requests after the requests are redirected. Valid values: `${protocol}` (default), `HTTP`, and `HTTPS`.</p>
+         * <p>    *   `domain`: the domain name to which requests are redirected. Default value: `${host}`. You can also enter a domain name. The domain name must be 3 to 128 characters in length, and can contain only letters, digits, and the following special characters: `. - ? = ~ _ - + / ^ * ! $ & | ( ) [ ]`.</p>
+         * <p>    *   `port`: the port to which requests are redirected. Default value: `${port}`. You can enter a port number that ranges from 1 to 63335.</p>
+         * <p>    *   `path`: the path to which requests are redirected. Default value: `${path}`. The path must be 1 to 128 characters in length. To use a regular expression, the path can contain letters, digits, and the following special characters: `. - _ / = ? ~ ^ * $ : ( ) [ ] + |`. The path must start with a tilde (~). If you do not want to use a regular expression, the path can contain letters, digits, and the following special characters: `. - _ / = ? :`. The path must start with a forward slash (/).</p>
+         * <p>    *   `query`: the query string to which requests are redirected. Default value: `${query}`. You can also specify a query string. The query string must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and smaller than 127`. The query string cannot contain uppercase letters, space characters, or the following special characters: `[ ] { } < > # | &`.</p>
+         * <p>    *   `code`: the redirect code. Valid values: `301`, `302`, `303`, `307`, and `308`.</p>
          * <br>
          * <p>*   If you set **RuleActionType** to **FixResponse**, this parameter specifies a fixed response. Example: `{"code":"200", "type":"text/plain", "content":"dssacav" }`.</p>
          * <br>
-         * <p>    *   `code:` the HTTP response status code. The response status code must be one of the following numeric strings: `2xx`, `4xx`, and `5xx`. The letter `x` indicates a number from 0 to 9.</p>
-         * <p>    *   `type:` the type of the response content. Valid values: **text/plain**, **text/css**, **text/html**, **application/javascript**, and **application/json**.</p>
-         * <p>    *   `content:` the response content. The response content cannot exceed 1,000 characters in length and does not support Chinese characters.</p>
+         * <p>    *   `code`: the HTTP response status code. The response status code must be one of the following numeric strings: `2xx`, `4xx`, and `5xx`. The letter `x` is a digit.</p>
+         * <p>    *   `type`: the type of the response content. Valid values: **text/plain**, **text/css**, **text/html**, **application/javascript**, and **application/json**.</p>
+         * <p>    *   `content`: the response content. The response content cannot exceed 1,000 characters in length and does not support Chinese characters.</p>
          * <br>
          * <p>*   If you set **RuleActionType** to **AddHeader**, this parameter specifies an HTTP header to be added. If a forwarding rule contains a forwarding action whose type is **AddHeader**, you must specify another forwarding action whose type is **ForwardGroup**. Example: `[{"name":"header1","type":"userdefined", "value":"value"}]`.</p>
          * <br>
-         * <p>    *   `name:` the name of the HTTP header. The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). The name of the HTTP header specified by **AddHeader** must be unique and cannot be the same as the name of the HTTP header specified by **RemoveHeader**.</p>
-         * <p>    *   `type:` the content type of the HTTP header. Valid values: `user-defined`, `ref`, and `system-defined`.</p>
-         * <p>    *   `value:` the content of the HTTP header. You cannot leave this parameter empty. If you set `type` to `user-defined`, the content must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and smaller than 127`. The content can contain letters, digits, hyphens (-), and underscores (\_). The content cannot start or end with a space character. If you set `type` to `ref`, the content must be 1 to 128 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). The content cannot start or end with a space character. If you set `type` to `system-defined`, only `ClientSrcIp` is supported.**</p>
+         * <p>    *   `name`: the name of the HTTP header. The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). The name of the HTTP header specified by **AddHeader** must be unique and cannot be the same as the name of the HTTP header specified by **RemoveHeader**.</p>
+         * <p>    *   `type`: the content type of the HTTP header. Valid values: `user-defined`, `ref`, and `system-defined`.</p>
+         * <p>    *   `value`: the content of the HTTP header. You cannot leave this parameter empty. If you set `type` to `user-defined`, the content must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and smaller than 127`. The content can contain letters, digits, hyphens (-), and underscores (\_). The content cannot start or end with a space character. If you set `type` to `ref`, the content must be 1 to 128 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). The content cannot start or end with a space character. If you set `type` to `system-defined`, only `ClientSrcIp` is supported.**</p>
          * <br>
          * <p>*   If you set **RuleActionType** to **RemoveHeader**, this parameter specifies an HTTP header to be removed. If a forwarding rule contains a forwarding action whose type is **RemoveHeader**, you must specify another forwarding action whose type is **ForwardGroup**. The header must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). Example: `["header1"]`.</p>
          * <br>
          * <p>*   If you set **RuleActionType** to **Rewrite**, this parameter specifies the rewriting configuration. If a forwarding rule contains a forwarding action whose type is **Rewrite**, you must specify another forwarding action whose type is **ForwardGroup**. Example: `{"domain":"value1", "path":"value2", "query":"value3"}`.</p>
          * <br>
-         * <p>    *   `domain:` the domain name to which requests are redirected. Default value: `${host}`. You can also enter a domain name. The domain name must be 3 to 128 characters in length, and can contain only lowercase letters, digits, and the following special characters: `. - ? = ~ _ - + / ^ * ! $ & | ( ) [ ]`.</p>
-         * <p>    *   `path:` the path to which requests are redirected. Default value: `${path}`. The path must be 1 to 128 characters in length. To use a regular expression, the path can contain letters, digits, and the following special characters: `. - _ / = ? ~ ^ * $ : ( ) [ ] + |`. The path must start with a tilde (~). If you do not want to use a regular expression, the path can contain letters, digits, and the following special characters: `. - _ / = ? :`. The path must start with a forward slash (/).</p>
-         * <p>    *   `query:` the query string of the requests to be redirected. Default value: `${query}`. You can also specify a query string. The query string must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and smaller than 127`. The query string cannot contain uppercase letters, space characters, or the following special characters: `[ ] { } < > # | &`.</p>
+         * <p>    *   `domain`: the domain name to which requests are redirected. Default value: `${host}`. You can also enter a domain name. The domain name must be 3 to 128 characters in length, and can contain only lowercase letters, digits, and the following special characters: `. - ? = ~ _ - + / ^ * ! $ & | ( ) [ ]`.</p>
+         * <p>    *   `path`: the path to which requests are redirected. Default value: `${path}`. The path must be 1 to 128 characters in length. To use a regular expression, the path can contain letters, digits, and the following special characters: `. - _ / = ? ~ ^ * $ : ( ) [ ] + |`. The path must start with a tilde (~). If you do not want to use a regular expression, the path can contain letters, digits, and the following special characters: `. - _ / = ? :`. The path must start with a forward slash (/).</p>
+         * <p>    *   `query`: the query string to which requests are redirected. Default value: `${query}`. You can also specify a query string. The query string must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and smaller than 127`. The query string cannot contain uppercase letters, space characters, or the following special characters: `[ ] { } < > # | &`.</p>
          */
         @NameInMap("RuleActionValue")
         public String ruleActionValue;
@@ -294,7 +294,7 @@ public class UpdateForwardingRulesRequest extends TeaModel {
 
     public static class UpdateForwardingRulesRequestForwardingRulesRuleConditions extends TeaModel {
         /**
-         * <p>The configurations of the domain name.</p>
+         * <p>The domain name configuration.</p>
          * <br>
          * <p>>  We recommend that you use **RuleConditionType** and **RuleConditionValue** rather than this parameter to configure forwarding conditions.</p>
          */
@@ -302,7 +302,7 @@ public class UpdateForwardingRulesRequest extends TeaModel {
         public UpdateForwardingRulesRequestForwardingRulesRuleConditionsHostConfig hostConfig;
 
         /**
-         * <p>The configurations of the path.</p>
+         * <p>The path configuration.</p>
          * <br>
          * <p>>  We recommend that you use **RuleConditionType** and **RuleConditionValue** rather than this parameter to configure forwarding conditions.</p>
          */
@@ -312,42 +312,42 @@ public class UpdateForwardingRulesRequest extends TeaModel {
         /**
          * <p>The type of the forwarding condition. Valid values:</p>
          * <br>
-         * <p>*   **Host:** Requests are forwarded based on domain names.</p>
-         * <p>*   **Path:** Requests are forwarded based on paths.</p>
-         * <p>*   **RequestHeader:** Requests are forwarded based on HTTP headers.</p>
-         * <p>*   **Query:** Requests are forwarded based on query strings.</p>
-         * <p>*   **Method:** Requests are forwarded based on HTTP methods.</p>
-         * <p>*   **Cookie:** Requests are forwarded based on cookies.</p>
-         * <p>*   **SourceIP:** Requests are forwarded based on source IP address.</p>
+         * <p>*   **Host**: Requests are forwarded based on domain names.</p>
+         * <p>*   **Path**: Requests are forwarded based on paths.</p>
+         * <p>*   **RequestHeader**: Requests are forwarded based on HTTP headers.</p>
+         * <p>*   **Query**: Requests are forwarded based on query strings.</p>
+         * <p>*   **Method**: Requests are forwarded based on HTTP request methods.</p>
+         * <p>*   **Cookie**: Requests are forwarded based on cookies.</p>
+         * <p>*   **SourceIP**: Requests are forwarded based on source IP addresses.</p>
          */
         @NameInMap("RuleConditionType")
         public String ruleConditionType;
 
         /**
-         * <p>The value of the forwarding condition type. You must specify different JSON strings based on the value of the **RuleConditionType** parameter.</p>
+         * <p>The value of the forwarding condition. You must specify different JSON strings based on the value of **RuleConditionType**.</p>
          * <br>
-         * <p>*   If you set **RuleConditionType** to **Host**, this parameter specifies a domain name condition. A forwarding rule can contain only one forwarding condition of the host type. You can specify multiple domain names in a forwarding condition. The relationship between multiple domain names is OR. The domain name must be 3 to 128 characters in length and can contain letters, digits, hyphens (-), and periods (.). Supported wildcard characters are asterisks (\*) and question marks (?). Example: `["www.example.com", "www.aliyun.com"]`.</p>
+         * <p>*   If you set **RuleConditionType** to **Host**, this parameter specifies a domain name condition. A forwarding rule can contain only one forwarding condition of the Host type. You can specify multiple domain names in a forwarding condition. The relationship between multiple domain names is OR. The domain name must be 3 to 128 characters in length and can contain letters, digits, hyphens (-), and periods (.). Supported wildcard characters are asterisks (\*) and question marks (?). Example: `["www.example.com", "www.aliyun.com"]`.</p>
          * <br>
-         * <p>*   If **RuleConditionType** is set to **Path**, this parameter specifies a path condition. A forwarding rule can contain multiple forwarding conditions of the path type. The relationship between multiple path conditions is OR. You can specify multiple paths in a forwarding condition. The relationship between multiple paths is OR. The path must be 1 to 128 characters in length, and must start with a forward slash (/). The path can contain letters, digits, and the following special characters: $ - \_ . + / & ~ @ : \". Supported wildcard characters are asterisks (\*) and question marks (?). Example: `["/a", "/b/"]`.</p>
+         * <p>*   If **RuleConditionType** is set to **Path**, this parameter specifies a path condition. A forwarding rule can contain multiple forwarding conditions of the Path type. The relationship between multiple path conditions is OR. You can specify multiple paths in a forwarding condition. The relationship between multiple paths is OR. The path must be 1 to 128 characters in length, and must start with a forward slash (/). The path can contain letters, digits, and the following special characters: $ - \_ . + / & ~ @ : \". Supported wildcard characters are asterisks (\*) and question marks (?). Example: `["/a", "/b/"]`.</p>
          * <br>
          * <p>*   If you set **RuleConditionType** to **RequestHeader**, this parameter specifies an HTTP header condition that consists of key-value pairs. The header values in a forwarding condition must be unique. Example: `[{"header1":["value1","value2"]}]`.</p>
          * <br>
          * <p>    *   Key: The key of an HTTP header must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).</p>
-         * <p>    *   Value: The value of an HTTP header must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and smaller than 127`. The value cannot start or end with a space character.</p>
+         * <p>    *   Value: The value of an HTTP header must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and less than 127`. The value cannot start or end with a space character.</p>
          * <br>
          * <p>*   If you set **RuleConditionType** to **Query**, this parameter specifies a query string condition that consists of key-value pairs. Example: `[{"query1":["value1"]}, {"query2":["value2"]}]`.</p>
          * <br>
-         * <p>    *   Key: The key of an HTTP header must be 1 to 100 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and smaller than 127`. The key cannot contain uppercase letters, space characters, or the following special characters: `[ ] { } < > \ ; / ? : @ & = + , $ % | " ^ ~`.</p>
-         * <p>    *   Value: The value of an HTTP header must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and smaller than 127`. The value cannot contain uppercase letters, space characters, or the following special characters: `[ ] { } < > \ ; / ? : @ & = + , $ % | " ^ ~`.</p>
+         * <p>    *   Key: The key of an HTTP header must be 1 to 100 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and less than 127`. The key cannot contain uppercase letters, space characters, or the following special characters: `[ ] { } < > \ ; / ? : @ & = + , $ % | " ^ ~`.</p>
+         * <p>    *   Value: The value of an HTTP header must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and less than 127`. The value cannot contain uppercase letters, space characters, or the following special characters: `[ ] { } < > \ ; / ? : @ & = + , $ % | " ^ ~`.</p>
          * <br>
-         * <p>*   If you set **RuleConditionType** to **Method**, this parameter specifies an HTTP method condition. Valid values: **HEAD**, **GET**, **POST**, **OPTIONS**, **PUT**, **PATCH**, and **DELETE**. Example: `["GET", "OPTIONS", "POST"]`.</p>
+         * <p>*   If you set **RuleConditionType** to **Method**, this parameter specifies an HTTP request method condition. Valid values: **HEAD**, **GET**, **POST**, **OPTIONS**, **PUT**, **PATCH**, and **DELETE**. Example: `["GET", "OPTIONS", "POST"]`.</p>
          * <br>
          * <p>*   If you set **RuleConditionType** to **Cookie**, this parameter specifies a cookie condition that consists of key-value pairs. Example: `[{"cookie1":["value1"]}, {"cookie2":["value2"]}]`.</p>
          * <br>
-         * <p>    *   Key: The key of a cookie must be 1 to 100 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and smaller than 127`. The key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.</p>
-         * <p>    *   Value: The value of a cookie must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and lower than 127`. The value cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.</p>
+         * <p>    *   Key: The key of a cookie must be 1 to 100 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and less than 127`. The key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.</p>
+         * <p>    *   Value: The value of a cookie must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and less than 127`. The value cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.</p>
          * <br>
-         * <p>*   If you set **RuleConditionType** to **SourceIP**, this parameter specifies a source IP address condition. You can specify IP addresses, such as 1.1.XX.XX/32. You can also specify CIDR blocks, such as 2.2.XX.XX/24. A forwarding rule can contain only one forwarding condition whose type is source IP address. You can specify multiple source IP addresses in a forwarding condition. The relationship between multiple source IP addresses is OR. Example: `["1.1.XX.XX/32", "2.2.XX.XX/24"]`.</p>
+         * <p>*   If you set **RuleConditionType** to **SourceIP**, this parameter specifies a source IP address condition. You can specify IP addresses, such as 1.1.XX.XX/32. You can also specify CIDR blocks, such as 2.2.XX.XX/24. A forwarding rule can contain only one forwarding condition whose type is SourceIP. You can specify multiple source IP addresses in a forwarding condition. The relationship between multiple source IP addresses is OR. Example: `["1.1.XX.XX/32", "2.2.XX.XX/24"]`.</p>
          */
         @NameInMap("RuleConditionValue")
         public String ruleConditionValue;
@@ -407,19 +407,19 @@ public class UpdateForwardingRulesRequest extends TeaModel {
         public String forwardingRuleName;
 
         /**
-         * <p>The priority of the forwarding rule. Valid values: **1** to **10000**. A smaller value indicates a higher priority.</p>
+         * <p>The priority of the forwarding rule. Valid values: **1** to **10000**. A smaller value specifies a higher priority.</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
-         * <p>The configurations of the forwarding action.</p>
+         * <p>The configurations of the forwarding actions.</p>
          */
         @NameInMap("RuleActions")
         public java.util.List<UpdateForwardingRulesRequestForwardingRulesRuleActions> ruleActions;
 
         /**
-         * <p>The conditions that trigger the forwarding rule.</p>
+         * <p>The forwarding conditions.</p>
          */
         @NameInMap("RuleConditions")
         public java.util.List<UpdateForwardingRulesRequestForwardingRulesRuleConditions> ruleConditions;
@@ -427,7 +427,7 @@ public class UpdateForwardingRulesRequest extends TeaModel {
         /**
          * <p>The direction in which the rule takes effect. You do not need to configure this parameter.</p>
          * <br>
-         * <p>By default, this parameter is set to **request**, which indicates that the rule takes effect on requests.</p>
+         * <p>By default, this parameter is set to **request**, which specifies that the rule takes effect on requests.</p>
          */
         @NameInMap("RuleDirection")
         public String ruleDirection;
