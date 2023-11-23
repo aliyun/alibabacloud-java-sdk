@@ -4,42 +4,101 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class UpgradeLindormInstanceRequest extends TeaModel {
+    /**
+     * <p>The storage capacity of the instance after it is upgraded. Unit: GB. Valid values: **480** to **1017600**.</p>
+     */
     @NameInMap("ClusterStorage")
     public Integer clusterStorage;
 
+    /**
+     * <p>The cold storage capacity of the instance after it is upgraded. Unit: GB. Valid values: **800** to **1000000**.</p>
+     */
     @NameInMap("ColdStorage")
     public Integer coldStorage;
 
+    /**
+     * <p>The storage capacity of a single core node in the instance after the instance upgraded. This parameter is available only if the instance you want to upgrade is a multi-zone instance. Unit: GB. Valid values: 400 to 64000. **This parameter is optional**.</p>
+     */
     @NameInMap("CoreSingleStorage")
     public Integer coreSingleStorage;
 
+    /**
+     * <p>The number of LindormDFS nodes in the instance after the instance is upgraded. Valid values: integers from **0** to **60**.</p>
+     */
     @NameInMap("FilestoreNum")
     public Integer filestoreNum;
 
+    /**
+     * <p>The specification of LindormDFS nodes in the instance after the instance is upgraded. Valid values:</p>
+     * <br>
+     * <p>*   **lindorm.g.xlarge**: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</p>
+     * <p>*   **lindorm.g.2xlarge**: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</p>
+     * <p>*   **lindorm.g.4xlarge**: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</p>
+     * <p>*   **lindorm.g.8xlarge**: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.</p>
+     */
     @NameInMap("FilestoreSpec")
     public String filestoreSpec;
 
+    /**
+     * <p>The ID of the instance that you want to upgrade, scale up, or enable cold storage. You can call the [GetLindormInstanceList](~~426069~~) operation to query the instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The number of LindormTable nodes in the instance after the instance is upgraded. Valid values: integers from **0** to **90**.</p>
+     * <br>
+     * <p>> This parameter must be specified together with the LindormSpec parameter.</p>
+     */
     @NameInMap("LindormNum")
     public Integer lindormNum;
 
+    /**
+     * <p>The specification of LindormTable nodes in the instance after the instance is upgraded. Valid values:</p>
+     * <br>
+     * <p>*   **lindorm.c.xlarge**: Each node has 4 dedicated CPU cores and 8 GB of dedicated memory.</p>
+     * <p>*   **lindorm.c.2xlarge**: Each node has 8 dedicated CPU cores and 16 GB of dedicated memory.</p>
+     * <p>*   **lindorm.c.4xlarge**: Each node has 16 dedicated CPU cores and 32 GB of dedicated memory.</p>
+     * <p>*   **lindorm.c.8xlarge**: Each node has 32 dedicated CPU cores and 64 GB of dedicated memory.</p>
+     */
     @NameInMap("LindormSpec")
     public String lindormSpec;
 
+    /**
+     * <p>The number of log nodes in the instance after the instance is upgraded. This parameter is available only if the instance you want to upgrade is a multi-zone instance. **This parameter is optional**.</p>
+     */
     @NameInMap("LogNum")
     public Integer logNum;
 
+    /**
+     * <p>The storage capacity of a single log node in the instance after the instance upgraded. This parameter is available only if the instance you want to upgrade is a multi-zone instance. **This parameter is optional**.</p>
+     */
     @NameInMap("LogSingleStorage")
     public Integer logSingleStorage;
 
+    /**
+     * <p>The specification of log nodes in the instance after the instance is upgraded. This parameter is available only if the instance you want to upgrade is a multi-zone instance. Valid values:</p>
+     * <br>
+     * <p>*   **lindorm.sn1.large**: Each node has 4 dedicated CPU cores and 8 GB of dedicated memory.</p>
+     * <p>*   **lindorm.sn1.2xlarge**: Each node has 8 dedicated CPU cores and 16 GB of dedicated memory.</p>
+     * <br>
+     * <p>**This parameter is optional**.</p>
+     */
     @NameInMap("LogSpec")
     public String logSpec;
 
+    /**
+     * <p>The number of LTS nodes in the instance after the instance is upgraded. Valid values: integers from **0** to **50**.</p>
+     */
     @NameInMap("LtsCoreNum")
     public Integer ltsCoreNum;
 
+    /**
+     * <p>The specification of Lindorm Tunnel Service (LTS) nodes in the instance after the instance is upgraded. Valid values:</p>
+     * <br>
+     * <p>*   **lindorm.g.xlarge**: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</p>
+     * <p>*   **lindorm.g.2xlarge**: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</p>
+     */
     @NameInMap("LtsCoreSpec")
     public String ltsCoreSpec;
 
@@ -49,12 +108,9 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("PhoenixCoreNum")
-    public Integer phoenixCoreNum;
-
-    @NameInMap("PhoenixCoreSpec")
-    public String phoenixCoreSpec;
-
+    /**
+     * <p>The ID of the region in which the instance that you want to upgrade, scale up, or enable cold storage is located. You can call the [DescribeRegions](~~426062~~) operation to query the region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -67,37 +123,66 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The number of LindormSearch nodes in the instance after the instance is upgraded. Valid values: integers from **0** to **60**.</p>
+     */
     @NameInMap("SolrNum")
     public Integer solrNum;
 
+    /**
+     * <p>The specification of LindormSearch nodes in the instance after the instance is upgraded. Valid values:</p>
+     * <br>
+     * <p>*   **lindorm.g.xlarge**: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</p>
+     * <p>*   **lindorm.g.2xlarge**: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</p>
+     * <p>*   **lindorm.g.4xlarge**: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</p>
+     * <p>*   **lindorm.g.8xlarge**: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.</p>
+     */
     @NameInMap("SolrSpec")
     public String solrSpec;
 
     /**
-     * <p>变配后实例的流引擎节点数量，取值：**0**~**90**。</p>
+     * <p>The number of LindormStream nodes in the instance after the instance is upgraded. Valid values: integers from **0** to **60**.</p>
      */
     @NameInMap("StreamNum")
     public Integer streamNum;
 
     /**
-     * <p>变配后实例的流引擎节点规格，取值：</p>
+     * <p>The specification of LindormStream nodes in the instance after the instance is upgraded. Valid values:</p>
      * <br>
-     * <p>- **lindorm.c.2xlarge**：表示8核16GB（独享规格）。</p>
-     * <p>- **lindorm.c.4xlarge**：表示16核32GB（独享规格）。</p>
-     * <p>- **lindorm.c.8xlarge**：表示32核64GB（独享规格）。</p>
+     * <p>*   **lindorm.g.xlarge**: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</p>
+     * <p>*   **lindorm.g.2xlarge**: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</p>
+     * <p>*   **lindorm.g.4xlarge**: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</p>
+     * <p>*   **lindorm.g.8xlarge**: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.</p>
      */
     @NameInMap("StreamSpec")
     public String streamSpec;
 
+    /**
+     * <p>The number of LindormTSDB nodes in the instance after the instance is upgraded. Valid values: integers from **0** to **24**.</p>
+     */
     @NameInMap("TsdbNum")
     public Integer tsdbNum;
 
+    /**
+     * <p>The specification of LindormTSDB nodes in the instance after the instance is upgraded. Valid values:</p>
+     * <br>
+     * <p>*   **lindorm.g.xlarge**: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</p>
+     * <p>*   **lindorm.g.2xlarge**: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</p>
+     * <p>*   **lindorm.g.4xlarge**: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</p>
+     * <p>*   **lindorm.g.8xlarge**: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.</p>
+     */
     @NameInMap("TsdbSpec")
     public String tsdbSpec;
 
+    /**
+     * <p>The upgrade type of the operation. For more information about upgrade types, see the UpgradeType parameters section.</p>
+     */
     @NameInMap("UpgradeType")
     public String upgradeType;
 
+    /**
+     * <p>The ID of the zone in which the instance that you want to upgrade, scale up, or enable cold storage is located. You can call the [GetLindormInstance](~~426067~~) operation to query the zone ID.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -224,22 +309,6 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public UpgradeLindormInstanceRequest setPhoenixCoreNum(Integer phoenixCoreNum) {
-        this.phoenixCoreNum = phoenixCoreNum;
-        return this;
-    }
-    public Integer getPhoenixCoreNum() {
-        return this.phoenixCoreNum;
-    }
-
-    public UpgradeLindormInstanceRequest setPhoenixCoreSpec(String phoenixCoreSpec) {
-        this.phoenixCoreSpec = phoenixCoreSpec;
-        return this;
-    }
-    public String getPhoenixCoreSpec() {
-        return this.phoenixCoreSpec;
     }
 
     public UpgradeLindormInstanceRequest setRegionId(String regionId) {

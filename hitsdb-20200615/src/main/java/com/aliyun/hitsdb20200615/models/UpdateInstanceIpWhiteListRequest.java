@@ -4,11 +4,8 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceIpWhiteListRequest extends TeaModel {
-    /**
-     * <p>The name of the group to which the instance belongs. The group name can contain only letters, digits, and underscores (\_).</p>
-     */
-    @NameInMap("GroupName")
-    public String groupName;
+    @NameInMap("Delete")
+    public Boolean delete;
 
     /**
      * <p>The ID of the instance for which you want to configure a whitelist. You can call the [GetLindormInstanceList](~~426069~~) operation to obtain the ID.</p>
@@ -44,12 +41,12 @@ public class UpdateInstanceIpWhiteListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateInstanceIpWhiteListRequest setGroupName(String groupName) {
-        this.groupName = groupName;
+    public UpdateInstanceIpWhiteListRequest setDelete(Boolean delete) {
+        this.delete = delete;
         return this;
     }
-    public String getGroupName() {
-        return this.groupName;
+    public Boolean getDelete() {
+        return this.delete;
     }
 
     public UpdateInstanceIpWhiteListRequest setInstanceId(String instanceId) {
