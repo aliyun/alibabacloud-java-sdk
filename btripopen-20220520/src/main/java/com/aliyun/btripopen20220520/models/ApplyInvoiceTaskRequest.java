@@ -59,6 +59,9 @@ public class ApplyInvoiceTaskRequest extends TeaModel {
         @NameInMap("invoice_third_part_id")
         public String invoiceThirdPartId;
 
+        @NameInMap("invoice_type")
+        public Integer invoiceType;
+
         @NameInMap("mail_address")
         public String mailAddress;
 
@@ -164,6 +167,14 @@ public class ApplyInvoiceTaskRequest extends TeaModel {
         }
         public String getInvoiceThirdPartId() {
             return this.invoiceThirdPartId;
+        }
+
+        public ApplyInvoiceTaskRequestInvoiceTaskList setInvoiceType(Integer invoiceType) {
+            this.invoiceType = invoiceType;
+            return this;
+        }
+        public Integer getInvoiceType() {
+            return this.invoiceType;
         }
 
         public ApplyInvoiceTaskRequestInvoiceTaskList setMailAddress(String mailAddress) {
