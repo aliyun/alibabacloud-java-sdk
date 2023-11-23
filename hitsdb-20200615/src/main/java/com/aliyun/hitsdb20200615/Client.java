@@ -1083,6 +1083,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Delete", request.delete);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            query.put("GroupName", request.groupName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }

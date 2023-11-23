@@ -8,6 +8,12 @@ public class UpdateInstanceIpWhiteListRequest extends TeaModel {
     public Boolean delete;
 
     /**
+     * <p>The name of the group to which the instance belongs. The group name can contain only letters, digits, and underscores (\_).</p>
+     */
+    @NameInMap("GroupName")
+    public String groupName;
+
+    /**
      * <p>The ID of the instance for which you want to configure a whitelist. You can call the [GetLindormInstanceList](~~426069~~) operation to obtain the ID.</p>
      */
     @NameInMap("InstanceId")
@@ -47,6 +53,14 @@ public class UpdateInstanceIpWhiteListRequest extends TeaModel {
     }
     public Boolean getDelete() {
         return this.delete;
+    }
+
+    public UpdateInstanceIpWhiteListRequest setGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    public String getGroupName() {
+        return this.groupName;
     }
 
     public UpdateInstanceIpWhiteListRequest setInstanceId(String instanceId) {
