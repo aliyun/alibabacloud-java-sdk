@@ -60,6 +60,9 @@ public class ModifyDBNodeRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("EffectiveTime")
+    public String effectiveTime;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -142,6 +145,14 @@ public class ModifyDBNodeRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public ModifyDBNodeRequest setEffectiveTime(String effectiveTime) {
+        this.effectiveTime = effectiveTime;
+        return this;
+    }
+    public String getEffectiveTime() {
+        return this.effectiveTime;
     }
 
     public ModifyDBNodeRequest setOwnerAccount(String ownerAccount) {
