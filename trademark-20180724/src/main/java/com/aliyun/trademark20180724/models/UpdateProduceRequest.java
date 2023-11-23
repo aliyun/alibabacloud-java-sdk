@@ -13,6 +13,9 @@ public class UpdateProduceRequest extends TeaModel {
     @NameInMap("ExtMap")
     public String extMap;
 
+    @NameInMap("OperateType")
+    public String operateType;
+
     public static UpdateProduceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateProduceRequest self = new UpdateProduceRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class UpdateProduceRequest extends TeaModel {
     }
     public String getExtMap() {
         return this.extMap;
+    }
+
+    public UpdateProduceRequest setOperateType(String operateType) {
+        this.operateType = operateType;
+        return this;
+    }
+    public String getOperateType() {
+        return this.operateType;
     }
 
 }
