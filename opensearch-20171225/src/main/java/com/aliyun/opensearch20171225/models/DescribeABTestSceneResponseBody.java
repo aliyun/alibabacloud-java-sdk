@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeABTestSceneResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -59,20 +59,20 @@ public class DescribeABTestSceneResponseBody extends TeaModel {
         /**
          * <p>The status of the test scenario. Valid values:</p>
          * <br>
-         * <p>*   0: not in effect</p>
-         * <p>*   1: in effect</p>
+         * <p>*   0: The test is stopped.</p>
+         * <p>*   1: The test is started.</p>
          */
         @NameInMap("status")
         public Integer status;
 
         /**
-         * <p>The time when the test scenario was last modified.</p>
+         * <p>The time when the test was last modified.</p>
          */
         @NameInMap("updated")
         public Integer updated;
 
         /**
-         * <p>The tag of the test scenario.</p>
+         * <p>The indicators of the test scenarios.</p>
          */
         @NameInMap("values")
         public java.util.List<String> values;

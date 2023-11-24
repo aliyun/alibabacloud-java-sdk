@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateAppResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The result that was returned.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class RenewAppGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The return result.</p>
+     * <p>Indicates whether the application was renewed.</p>
      */
     @NameInMap("result")
     public Boolean result;

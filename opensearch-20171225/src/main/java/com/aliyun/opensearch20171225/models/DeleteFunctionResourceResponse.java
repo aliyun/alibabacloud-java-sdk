@@ -3,7 +3,7 @@ package com.aliyun.opensearch20171225.models;
 
 import com.aliyun.tea.*;
 
-public class ListModelsResponse extends TeaModel {
+public class DeleteFunctionResourceResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ListModelsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListModelsResponseBody body;
+    public DeleteFunctionResourceResponseBody body;
 
-    public static ListModelsResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListModelsResponse self = new ListModelsResponse();
+    public static DeleteFunctionResourceResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteFunctionResourceResponse self = new DeleteFunctionResourceResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListModelsResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeleteFunctionResourceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ListModelsResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListModelsResponse setStatusCode(Integer statusCode) {
+    public DeleteFunctionResourceResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ListModelsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListModelsResponse setBody(ListModelsResponseBody body) {
+    public DeleteFunctionResourceResponse setBody(DeleteFunctionResourceResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListModelsResponseBody getBody() {
+    public DeleteFunctionResourceResponseBody getBody() {
         return this.body;
     }
 

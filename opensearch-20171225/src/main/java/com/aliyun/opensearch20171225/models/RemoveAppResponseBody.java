@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveAppResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("requestId")
     public String requestId;

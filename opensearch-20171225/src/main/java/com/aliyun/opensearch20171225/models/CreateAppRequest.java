@@ -4,11 +4,14 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class CreateAppRequest extends TeaModel {
+    /**
+     * <p>The request body.</p>
+     */
     @NameInMap("body")
     public App body;
 
     /**
-     * <p>true</p>
+     * <p>Specifies whether to perform a dry run. This parameter is only used to check whether the data source is valid. Valid values: true and false.</p>
      */
     @NameInMap("dryRun")
     public Boolean dryRun;

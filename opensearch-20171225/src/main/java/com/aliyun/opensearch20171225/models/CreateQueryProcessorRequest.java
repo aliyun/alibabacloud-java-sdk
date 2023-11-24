@@ -4,11 +4,14 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class CreateQueryProcessorRequest extends TeaModel {
+    /**
+     * <p>The request body.</p>
+     */
     @NameInMap("body")
     public Object body;
 
     /**
-     * <p>true</p>
+     * <p>Specifies whether to perform a dry run.</p>
      */
     @NameInMap("dryRun")
     public Boolean dryRun;

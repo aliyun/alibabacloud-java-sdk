@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateQueryProcessorResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -51,17 +51,17 @@ public class CreateQueryProcessorResponseBody extends TeaModel {
         public Integer created;
 
         /**
-         * <p>The type of the industry. Valid values:</p>
+         * <p>The type of the industry to which the query analysis rule was applied. Valid values:</p>
          * <br>
-         * <p>*   GENERAL</p>
-         * <p>*   ECOMMERCE</p>
-         * <p>*   IT_CONTENT</p>
+         * <p>*   GENERAL: general.</p>
+         * <p>*   ECOMMERCE: e-commerce.</p>
+         * <p>*   IT_CONTENT: IT content.</p>
          */
         @NameInMap("domain")
         public String domain;
 
         /**
-         * <p>The indexes to which the query analysis rule applies.</p>
+         * <p>The indexes to which the query analysis rule was applied.</p>
          */
         @NameInMap("indexes")
         public java.util.List<String> indexes;
@@ -74,12 +74,14 @@ public class CreateQueryProcessorResponseBody extends TeaModel {
 
         /**
          * <p>The features that are used in the query analysis rule.</p>
+         * <br>
+         * <p>For more information, see [QueryProcessor](~~170014~~).</p>
          */
         @NameInMap("processors")
         public java.util.List<java.util.Map<String, ?>> processors;
 
         /**
-         * <p>The time when the query analysis rule was last updated.</p>
+         * <p>The time when the query analysis rule was last modified.</p>
          */
         @NameInMap("updated")
         public Integer updated;

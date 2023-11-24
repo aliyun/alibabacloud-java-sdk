@@ -5,15 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListUserAnalyzerEntriesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The entries of the custom analyzer.</p>
-     * <br>
-     * <p>For more information, see [UserAnalyzerEntry](~~178932~~).</p>
+     * <p>The entries of the custom analyzer. For more information, see UserAnalyzerEntry.</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

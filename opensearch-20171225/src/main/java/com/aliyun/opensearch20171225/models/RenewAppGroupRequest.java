@@ -4,11 +4,14 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class RenewAppGroupRequest extends TeaModel {
+    /**
+     * <p>The renewal request body.</p>
+     */
     @NameInMap("body")
     public PrepayOrderInfo body;
 
     /**
-     * <p>Guaranteed request idempotence</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      */
     @NameInMap("clientToken")
     public String clientToken;

@@ -4,30 +4,18 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class CreateUserAnalyzerRequest extends TeaModel {
-    /**
-     * <p>基础分词器</p>
-     */
     @NameInMap("business")
     public String business;
 
     @NameInMap("businessAppGroupId")
     public String businessAppGroupId;
 
-    /**
-     * <p>基础分词器类型 (AUTO, MODEL, SYSTEM, USER)</p>
-     */
     @NameInMap("businessType")
     public String businessType;
 
-    /**
-     * <p>名称</p>
-     */
     @NameInMap("name")
     public String name;
 
-    /**
-     * <p>引擎类型 (HA3, ES)</p>
-     */
     @NameInMap("type")
     public String type;
 

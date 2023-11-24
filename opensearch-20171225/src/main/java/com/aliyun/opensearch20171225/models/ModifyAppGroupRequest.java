@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyAppGroupRequest extends TeaModel {
     /**
-     * <p>currentVersion</p>
+     * <p>The online version of the application.</p>
      */
     @NameInMap("currentVersion")
     public String currentVersion;
 
     /**
-     * <p>The description of the instance.</p>
+     * <p>The description of the application.</p>
      */
     @NameInMap("description")
     public String description;
@@ -19,21 +19,23 @@ public class ModifyAppGroupRequest extends TeaModel {
     /**
      * <p>The type of the industry. Valid values:</p>
      * <br>
-     * <p>*   GENERAL</p>
-     * <p>*   ECOMMERCE</p>
-     * <p>*   IT_CONTENT</p>
+     * <p>*   general: general.</p>
+     * <p>*   ecommerce: e-commerce.</p>
+     * <p>*   education: education.</p>
+     * <p>*   esports: electronic sports.</p>
+     * <p>*   community: content community.</p>
      */
     @NameInMap("domain")
     public String domain;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the resource group to which the instance belongs.</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>true</p>
+     * <p>Specifies whether to verify the application before modification. Valid values: true and false.</p>
      */
     @NameInMap("dryRun")
     public Boolean dryRun;

@@ -4,6 +4,9 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class CreateScheduledTaskRequest extends TeaModel {
+    /**
+     * <p>请求体</p>
+     */
     @NameInMap("body")
     public ScheduledTask body;
 

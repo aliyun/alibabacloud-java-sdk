@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFirstRankResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -45,15 +45,13 @@ public class CreateFirstRankResponseBody extends TeaModel {
         public String arg;
 
         /**
-         * <p>The attribute, feature function, or field to be searched for.</p>
+         * <p>The attribute, feature functions, or field to be searched for.</p>
          */
         @NameInMap("attribute")
         public String attribute;
 
         /**
-         * <p>The weight.</p>
-         * <br>
-         * <p>Valid values: \[-100000,100000] (excluding 0).</p>
+         * <p>The weight. Valid values: \[-100000,100000]. The value cannot be 0.</p>
          */
         @NameInMap("weight")
         public Float weight;
