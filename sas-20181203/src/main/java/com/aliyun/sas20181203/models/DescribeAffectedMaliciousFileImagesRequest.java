@@ -64,7 +64,7 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The severity. Separate multiple severities with commas (,). Valid values:</p>
+     * <p>The severity level of the malicious image sample. Separate multiple severity levels with commas (,). Valid values:</p>
      * <br>
      * <p>*   **serious**</p>
      * <p>*   **suspicious**</p>
@@ -158,11 +158,12 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     public java.util.List<String> scanRange;
 
     /**
-     * <p>镜像恶意样本处理状态。取值：</p>
-     * <p>- **0**：未处理</p>
-     * <p>- **1**：已处理</p>
-     * <p>- **2**：验证中</p>
-     * <p>- **3**：已加白</p>
+     * <p>The status of the malicious image sample. Valid values:</p>
+     * <br>
+     * <p>*   **0**: The malicious image sample is not handled.</p>
+     * <p>*   **1**: The malicious image sample is handled.</p>
+     * <p>*   **2**: The malicious image sample is being verified.</p>
+     * <p>*   **3**: The malicious image sample is added to the whitelist.</p>
      */
     @NameInMap("Status")
     public String status;

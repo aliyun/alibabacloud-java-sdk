@@ -4,18 +4,36 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class UpdateImageEventOperationResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public UpdateImageEventOperationResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +83,9 @@ public class UpdateImageEventOperationResponseBody extends TeaModel {
     }
 
     public static class UpdateImageEventOperationResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the alert handling rule.</p>
+         */
         @NameInMap("Id")
         public Long id;
 

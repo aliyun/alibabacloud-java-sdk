@@ -4,18 +4,36 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DescribeImageEventOperationConditionResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +83,24 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
     }
 
     public static class DescribeImageEventOperationConditionResponseBodyDataOperationsConditions extends TeaModel {
+        /**
+         * <p>The keyword of the condition. Valid values:</p>
+         * <br>
+         * <p>*   **MD5**</p>
+         * <p>*   **PATH**</p>
+         */
         @NameInMap("ConditionKey")
         public String conditionKey;
 
+        /**
+         * <p>The name of the condition.</p>
+         */
         @NameInMap("ConditionName")
         public String conditionName;
 
+        /**
+         * <p>The matching types.</p>
+         */
         @NameInMap("SupportedMisType")
         public java.util.List<String> supportedMisType;
 
@@ -106,12 +136,23 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
     }
 
     public static class DescribeImageEventOperationConditionResponseBodyDataOperations extends TeaModel {
+        /**
+         * <p>The rule conditions.</p>
+         */
         @NameInMap("Conditions")
         public java.util.List<DescribeImageEventOperationConditionResponseBodyDataOperationsConditions> conditions;
 
+        /**
+         * <p>The operation code.</p>
+         * <br>
+         * <p>*   Only **whitelist** may be returned, which indicates that the alert event is added to the whitelist.</p>
+         */
         @NameInMap("OperationCode")
         public String operationCode;
 
+        /**
+         * <p>The name of the operation.</p>
+         */
         @NameInMap("OperationName")
         public String operationName;
 
@@ -147,12 +188,23 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
     }
 
     public static class DescribeImageEventOperationConditionResponseBodyData extends TeaModel {
+        /**
+         * <p>The alert type.</p>
+         * <br>
+         * <p>*   Only **sensitiveFile** may be returned.</p>
+         */
         @NameInMap("EventType")
         public String eventType;
 
+        /**
+         * <p>The operations.</p>
+         */
         @NameInMap("Operations")
         public java.util.List<DescribeImageEventOperationConditionResponseBodyDataOperations> operations;
 
+        /**
+         * <p>The application scopes of the rules.</p>
+         */
         @NameInMap("Scenarios")
         public java.util.List<String> scenarios;
 

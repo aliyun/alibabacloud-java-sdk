@@ -4,21 +4,50 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class AddImageEventOperationRequest extends TeaModel {
+    /**
+     * <p>The rule conditions. The value is in the JSON format. Valid values of keys:</p>
+     * <br>
+     * <p>*   **condition**: the matching condition.</p>
+     * <p>*   **type**: the matching type.</p>
+     * <p>*   **value**: the matching value.</p>
+     */
     @NameInMap("Conditions")
     public String conditions;
 
+    /**
+     * <p>The keyword of the alert item.</p>
+     */
     @NameInMap("EventKey")
     public String eventKey;
 
+    /**
+     * <p>The name of the alert item.</p>
+     */
     @NameInMap("EventName")
     public String eventName;
 
+    /**
+     * <p>The alert type.</p>
+     * <br>
+     * <p>*   Set the value to **sensitiveFile**.</p>
+     */
     @NameInMap("EventType")
     public String eventType;
 
+    /**
+     * <p>The operation code.</p>
+     * <br>
+     * <p>*   Set the value to **whitelist** to add the alert item to the whitelist.</p>
+     */
     @NameInMap("OperationCode")
     public String operationCode;
 
+    /**
+     * <p>The application scope of the rule. The value is in the JSON format. Valid values of keys:</p>
+     * <br>
+     * <p>*   **type**</p>
+     * <p>*   **value**</p>
+     */
     @NameInMap("Scenarios")
     public String scenarios;
 
