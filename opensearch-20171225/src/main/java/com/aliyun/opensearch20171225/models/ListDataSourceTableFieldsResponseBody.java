@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDataSourceTableFieldsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The return result.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

@@ -5,7 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListDataSourceTableFieldsRequest extends TeaModel {
     /**
-     * <p>{}</p>
+     * <p>The parameters of the data source. The value of the params parameter is a JSON string. The value must be URL-encoded.</p>
+     * <br>
+     * <p>Different types of data sources use different parameters. For more information, see the following sections of the "DataSource" topic:</p>
+     * <br>
+     * <p>*   [rds](~~170005~~)</p>
+     * <p>*   [polardb](~~170005~~)</p>
+     * <p>*   [odps](~~170005~~)</p>
+     * <p>*   [mysql](~~173627~~)</p>
+     * <p>*   [drds](~~173627~~)</p>
      */
     @NameInMap("params")
     public String params;

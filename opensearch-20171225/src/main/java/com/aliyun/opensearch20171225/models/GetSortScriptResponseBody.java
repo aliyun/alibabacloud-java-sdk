@@ -56,6 +56,9 @@ public class GetSortScriptResponseBody extends TeaModel {
         @NameInMap("scope")
         public String scope;
 
+        @NameInMap("scriptName")
+        public String scriptName;
+
         /**
          * <p>The status of the script. For more information, see the Script status table.</p>
          */
@@ -95,6 +98,14 @@ public class GetSortScriptResponseBody extends TeaModel {
         }
         public String getScope() {
             return this.scope;
+        }
+
+        public GetSortScriptResponseBodyResult setScriptName(String scriptName) {
+            this.scriptName = scriptName;
+            return this;
+        }
+        public String getScriptName() {
+            return this.scriptName;
         }
 
         public GetSortScriptResponseBodyResult setStatus(String status) {

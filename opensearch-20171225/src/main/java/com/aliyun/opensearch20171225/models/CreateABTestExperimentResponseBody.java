@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateABTestExperimentResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The details of the test.</p>
+     * <p>The experiment details.</p>
      */
     @NameInMap("result")
     public CreateABTestExperimentResponseBodyResult result;
@@ -39,46 +39,46 @@ public class CreateABTestExperimentResponseBody extends TeaModel {
 
     public static class CreateABTestExperimentResponseBodyResult extends TeaModel {
         /**
-         * <p>The time when the test was created.</p>
+         * <p>The time when the experiment was created.</p>
          */
         @NameInMap("created")
         public Integer created;
 
         /**
-         * <p>The ID of the test.</p>
+         * <p>The experiment ID.</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
-         * <p>The name of the test.</p>
+         * <p>The experiment alias.</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The status of the test. Valid values:</p>
+         * <p>Indicates whether the experiment is in effect. Valid values:</p>
          * <br>
-         * <p>*   true: in effect</p>
-         * <p>*   false: not in effect</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("online")
         public Boolean online;
 
         /**
-         * <p>The parameters of the test.</p>
+         * <p>The experiment parameters.</p>
          */
         @NameInMap("params")
         public java.util.Map<String, ?> params;
 
         /**
-         * <p>The percentage of traffic that is routed to the test.</p>
+         * <p>The percentage of traffic that is routed to the experiment.</p>
          */
         @NameInMap("traffic")
         public Integer traffic;
 
         /**
-         * <p>The time when the test was last modified.</p>
+         * <p>The time when the experiment was last modified.</p>
          */
         @NameInMap("updated")
         public Integer updated;

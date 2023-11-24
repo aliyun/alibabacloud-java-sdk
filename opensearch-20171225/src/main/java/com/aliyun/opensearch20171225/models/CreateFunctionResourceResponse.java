@@ -3,7 +3,7 @@ package com.aliyun.opensearch20171225.models;
 
 import com.aliyun.tea.*;
 
-public class PreviewModelResponse extends TeaModel {
+public class CreateFunctionResourceResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class PreviewModelResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public PreviewModelResponseBody body;
+    public CreateFunctionResourceResponseBody body;
 
-    public static PreviewModelResponse build(java.util.Map<String, ?> map) throws Exception {
-        PreviewModelResponse self = new PreviewModelResponse();
+    public static CreateFunctionResourceResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateFunctionResourceResponse self = new CreateFunctionResourceResponse();
         return TeaModel.build(map, self);
     }
 
-    public PreviewModelResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateFunctionResourceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class PreviewModelResponse extends TeaModel {
         return this.headers;
     }
 
-    public PreviewModelResponse setStatusCode(Integer statusCode) {
+    public CreateFunctionResourceResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class PreviewModelResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public PreviewModelResponse setBody(PreviewModelResponseBody body) {
+    public CreateFunctionResourceResponse setBody(CreateFunctionResourceResponseBody body) {
         this.body = body;
         return this;
     }
-    public PreviewModelResponseBody getBody() {
+    public CreateFunctionResourceResponseBody getBody() {
         return this.body;
     }
 

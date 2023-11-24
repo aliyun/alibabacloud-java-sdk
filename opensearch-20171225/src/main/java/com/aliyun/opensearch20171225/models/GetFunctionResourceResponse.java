@@ -3,7 +3,7 @@ package com.aliyun.opensearch20171225.models;
 
 import com.aliyun.tea.*;
 
-public class GetModelReportResponse extends TeaModel {
+public class GetFunctionResourceResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class GetModelReportResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetModelReportResponseBody body;
+    public GetFunctionResourceResponseBody body;
 
-    public static GetModelReportResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetModelReportResponse self = new GetModelReportResponse();
+    public static GetFunctionResourceResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetFunctionResourceResponse self = new GetFunctionResourceResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetModelReportResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetFunctionResourceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetModelReportResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetModelReportResponse setStatusCode(Integer statusCode) {
+    public GetFunctionResourceResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class GetModelReportResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetModelReportResponse setBody(GetModelReportResponseBody body) {
+    public GetFunctionResourceResponse setBody(GetFunctionResourceResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetModelReportResponseBody getBody() {
+    public GetFunctionResourceResponseBody getBody() {
         return this.body;
     }
 

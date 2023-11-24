@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The result that was returned.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("result")
     public ReplaceAppGroupCommodityCodeResponseBodyResult result;
@@ -39,27 +39,19 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
 
     public static class ReplaceAppGroupCommodityCodeResponseBodyResultQuota extends TeaModel {
         /**
-         * <p>The computing resources. Unit: logical computing units (LCUs).</p>
+         * <p>The number of computing resources configured.</p>
          */
         @NameInMap("computeResource")
         public Integer computeResource;
 
         /**
-         * <p>The storage capacity. Unit: GB.</p>
+         * <p>The storage capacity.</p>
          */
         @NameInMap("docSize")
         public Integer docSize;
 
         /**
-         * <p>The specifications of the application. Valid values:</p>
-         * <br>
-         * <p>*   opensearch.share.junior: basic</p>
-         * <p>*   opensearch.share.common: shared general-purpose</p>
-         * <p>*   opensearch.share.compute: shared computing</p>
-         * <p>*   opensearch.share.storage: shared storage</p>
-         * <p>*   opensearch.private.common: exclusive general-purpose</p>
-         * <p>*   opensearch.private.compute: exclusive computing</p>
-         * <p>*   opensearch.private.storage: exclusive storage</p>
+         * <p>The specifications configured.</p>
          */
         @NameInMap("spec")
         public String spec;
@@ -97,19 +89,19 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
 
     public static class ReplaceAppGroupCommodityCodeResponseBodyResult extends TeaModel {
         /**
-         * <p>The billing method of the application. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <br>
-         * <p>*   POSTPAY: pay-as-you-go</p>
-         * <p>*   PREPAY: subscription</p>
+         * <p>*   POSTPAY: pay-as-you-go.</p>
+         * <p>*   PREPAY: subscription.</p>
          */
         @NameInMap("chargeType")
         public String chargeType;
 
         /**
-         * <p>The billing model. Valid values:</p>
+         * <p>The billing type. Valid values:</p>
          * <br>
-         * <p>*   1: computing resources</p>
-         * <p>*   2: queries per second (QPS)</p>
+         * <p>*   1: computing resources.</p>
+         * <p>*   2: queries per second (QPS).</p>
          */
         @NameInMap("chargingWay")
         public Integer chargingWay;
@@ -145,36 +137,36 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
         public String expireOn;
 
         /**
-         * <p>The ID of the created rough sort expression.</p>
+         * <p>The ID of the rough sort expression.</p>
          */
         @NameInMap("firstRankAlgoDeploymentId")
         public Integer firstRankAlgoDeploymentId;
 
         /**
-         * <p>The approval status of the quotas. Valid values:</p>
+         * <p>The approval state of the quotas. Valid values:</p>
          * <br>
-         * <p>*   0: The quotas are approved.</p>
+         * <p>*   0: The approval status is normal.</p>
          * <p>*   1: The quotas are being approved.</p>
          */
         @NameInMap("hasPendingQuotaReviewTask")
         public Integer hasPendingQuotaReviewTask;
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
-         * <p>The lock mode of the instance. Valid values:</p>
+         * <p>The lock state. Valid values:</p>
          * <br>
-         * <p>*   Unlock: The instance is not locked.</p>
+         * <p>*   Unlock: The instance is unlocked.</p>
          * <p>*   LockByExpiration: The instance is automatically locked after it expires.</p>
          * <p>*   ManualLock: The instance is manually locked.</p>
          */
@@ -182,13 +174,16 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
         public String lockMode;
 
         /**
-         * <p>Indicates whether the instance is automatically locked after it expires.</p>
+         * <p>Indicates whether the instance is automatically locked after it expires. Valid values:</p>
+         * <br>
+         * <p>*   0: The instance is not automatically locked after it expires.</p>
+         * <p>*   1: The instance is automatically locked after it expires.</p>
          */
         @NameInMap("lockedByExpiration")
         public Integer lockedByExpiration;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The name of the order.</p>
          */
         @NameInMap("name")
         public String name;
@@ -200,16 +195,13 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
         public Integer pendingSecondRankAlgoDeploymentId;
 
         /**
-         * <p>The ID of the order that is not complete for the instance. For example, an order is one that is initiated to create the instance or change the quotas or billing method.</p>
+         * <p>The ID of the order that is in progress.</p>
          */
         @NameInMap("processingOrderId")
         public String processingOrderId;
 
         /**
-         * <p>Indicates whether the order is complete. Valid values:</p>
-         * <br>
-         * <p>*   0: The order is in progress.</p>
-         * <p>*   1: The order is complete.</p>
+         * <p>Indicates whether the order is produced.</p>
          */
         @NameInMap("produced")
         public Integer produced;
@@ -221,25 +213,19 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
         public String projectId;
 
         /**
-         * <p>The quota information.</p>
+         * <p>The configuration information.</p>
          */
         @NameInMap("quota")
         public ReplaceAppGroupCommodityCodeResponseBodyResultQuota quota;
 
         /**
-         * <p>The ID of the created fine sort expression.</p>
+         * <p>The ID of the fine sort expression.</p>
          */
         @NameInMap("secondRankAlgoDeploymentId")
         public Integer secondRankAlgoDeploymentId;
 
         /**
-         * <p>The status of the application. Valid values:</p>
-         * <br>
-         * <p>*   producing</p>
-         * <p>*   review_pending</p>
-         * <p>*   config_pending</p>
-         * <p>*   normal</p>
-         * <p>*   frozen</p>
+         * <p>The status of the application.</p>
          */
         @NameInMap("status")
         public String status;
@@ -251,23 +237,19 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
         public Integer switchedTime;
 
         /**
-         * <p>The type of the application. Valid values:</p>
-         * <br>
-         * <p>*   standard: a standard application.</p>
-         * <p>*   advance: an advanced application which is of an old application type. New applications cannot be of this type.</p>
-         * <p>*   enhanced: an advanced application which is of a new application type.</p>
+         * <p>The type of the application.</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
-         * <p>The time when the test group was last modified.</p>
+         * <p>The timestamp when the application was updated.</p>
          */
         @NameInMap("updated")
         public Integer updated;
 
         /**
-         * <p>The status information.</p>
+         * <p>The versions.</p>
          */
         @NameInMap("versions")
         public java.util.List<String> versions;

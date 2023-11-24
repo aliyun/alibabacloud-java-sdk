@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateABTestSceneResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The details of the test scenario. For more information, see [ABTestScene](https://www.alibabacloud.com/help/en/opensearch/latest/abtestscene).</p>
+     * <p>The details of the test scenario. For more information, see [ABTestScene](~~173618~~).</p>
      */
     @NameInMap("result")
     public UpdateABTestSceneResponseBodyResult result;
@@ -58,8 +58,9 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
 
         /**
          * <p>The status of the test. Valid values:</p>
-         * <p>- true: enabled</p>
-         * <p>- false: stopped</p>
+         * <br>
+         * <p>*   true: The test is started.</p>
+         * <p>*   false: The test is stopped.</p>
          */
         @NameInMap("online")
         public Boolean online;
@@ -71,7 +72,7 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
         public java.util.Map<String, ?> params;
 
         /**
-         * <p>The percentage of traffic that is allocated to the A/B test. Valid values: [0,100].</p>
+         * <p>The percentage of traffic that is allocated to the A/B test. Valid values: 0 to 100.</p>
          */
         @NameInMap("traffic")
         public Integer traffic;
