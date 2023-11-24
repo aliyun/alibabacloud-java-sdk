@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteImageEventOperationRequest extends TeaModel {
+    /**
+     * <p>The primary key of the alert handling rule.</p>
+     */
     @NameInMap("Id")
     public Long id;
 

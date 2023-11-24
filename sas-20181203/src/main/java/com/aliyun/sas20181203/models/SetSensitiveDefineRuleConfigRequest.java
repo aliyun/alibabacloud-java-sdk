@@ -4,6 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class SetSensitiveDefineRuleConfigRequest extends TeaModel {
+    /**
+     * <p>The configurations of the custom check rule. The value is in the JSON format. Valid values of keys:</p>
+     * <br>
+     * <p>*   **classKey**: the category keyword of the check rule.</p>
+     * <p>*   **ruleList**: the keyword of the check rule.</p>
+     */
     @NameInMap("Config")
     public String config;
 

@@ -4,18 +4,36 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteImageEventOperationResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DeleteImageEventOperationResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +83,9 @@ public class DeleteImageEventOperationResponseBody extends TeaModel {
     }
 
     public static class DeleteImageEventOperationResponseBodyData extends TeaModel {
+        /**
+         * <p>The primary key of the alert handling rule.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
