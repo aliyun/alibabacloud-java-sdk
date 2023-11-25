@@ -14,6 +14,9 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The information about the outbound rules.</p>
      */
@@ -31,6 +34,9 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
      */
     @NameInMap("NetworkAclId")
     public String networkAclId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -84,6 +90,14 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public UpdateNetworkAclEntriesRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public UpdateNetworkAclEntriesRequest setEgressAclEntries(java.util.List<UpdateNetworkAclEntriesRequestEgressAclEntries> egressAclEntries) {
         this.egressAclEntries = egressAclEntries;
         return this;
@@ -106,6 +120,14 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
     }
     public String getNetworkAclId() {
         return this.networkAclId;
+    }
+
+    public UpdateNetworkAclEntriesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public UpdateNetworkAclEntriesRequest setOwnerId(Long ownerId) {
@@ -176,6 +198,9 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
          */
         @NameInMap("EntryType")
         public String entryType;
+
+        @NameInMap("IpVersion")
+        public String ipVersion;
 
         /**
          * <p>The ID of the outbound rule.</p>
@@ -252,6 +277,14 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
             return this.entryType;
         }
 
+        public UpdateNetworkAclEntriesRequestEgressAclEntries setIpVersion(String ipVersion) {
+            this.ipVersion = ipVersion;
+            return this;
+        }
+        public String getIpVersion() {
+            return this.ipVersion;
+        }
+
         public UpdateNetworkAclEntriesRequestEgressAclEntries setNetworkAclEntryId(String networkAclEntryId) {
             this.networkAclEntryId = networkAclEntryId;
             return this;
@@ -308,6 +341,9 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
          */
         @NameInMap("EntryType")
         public String entryType;
+
+        @NameInMap("IpVersion")
+        public String ipVersion;
 
         /**
          * <p>The ID of the inbound rule.</p>
@@ -380,6 +416,14 @@ public class UpdateNetworkAclEntriesRequest extends TeaModel {
         }
         public String getEntryType() {
             return this.entryType;
+        }
+
+        public UpdateNetworkAclEntriesRequestIngressAclEntries setIpVersion(String ipVersion) {
+            this.ipVersion = ipVersion;
+            return this;
+        }
+        public String getIpVersion() {
+            return this.ipVersion;
         }
 
         public UpdateNetworkAclEntriesRequestIngressAclEntries setNetworkAclEntryId(String networkAclEntryId) {

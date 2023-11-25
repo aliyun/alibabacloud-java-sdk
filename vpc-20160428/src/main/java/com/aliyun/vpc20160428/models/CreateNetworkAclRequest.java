@@ -22,6 +22,9 @@ public class CreateNetworkAclRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The name of the network ACL.</p>
      * <br>
@@ -29,6 +32,9 @@ public class CreateNetworkAclRequest extends TeaModel {
      */
     @NameInMap("NetworkAclName")
     public String networkAclName;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -86,12 +92,28 @@ public class CreateNetworkAclRequest extends TeaModel {
         return this.description;
     }
 
+    public CreateNetworkAclRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public CreateNetworkAclRequest setNetworkAclName(String networkAclName) {
         this.networkAclName = networkAclName;
         return this;
     }
     public String getNetworkAclName() {
         return this.networkAclName;
+    }
+
+    public CreateNetworkAclRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateNetworkAclRequest setOwnerId(Long ownerId) {

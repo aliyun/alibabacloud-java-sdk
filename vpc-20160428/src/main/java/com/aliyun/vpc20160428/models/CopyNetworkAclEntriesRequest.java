@@ -14,11 +14,17 @@ public class CopyNetworkAclEntriesRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The ID of the network ACL.</p>
      */
     @NameInMap("NetworkAclId")
     public String networkAclId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -54,12 +60,28 @@ public class CopyNetworkAclEntriesRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public CopyNetworkAclEntriesRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public CopyNetworkAclEntriesRequest setNetworkAclId(String networkAclId) {
         this.networkAclId = networkAclId;
         return this;
     }
     public String getNetworkAclId() {
         return this.networkAclId;
+    }
+
+    public CopyNetworkAclEntriesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CopyNetworkAclEntriesRequest setOwnerId(Long ownerId) {

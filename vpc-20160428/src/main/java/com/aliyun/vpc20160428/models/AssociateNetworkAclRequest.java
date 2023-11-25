@@ -14,11 +14,17 @@ public class AssociateNetworkAclRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The ID of the network ACL.</p>
      */
     @NameInMap("NetworkAclId")
     public String networkAclId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -54,12 +60,28 @@ public class AssociateNetworkAclRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public AssociateNetworkAclRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public AssociateNetworkAclRequest setNetworkAclId(String networkAclId) {
         this.networkAclId = networkAclId;
         return this;
     }
     public String getNetworkAclId() {
         return this.networkAclId;
+    }
+
+    public AssociateNetworkAclRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public AssociateNetworkAclRequest setOwnerId(Long ownerId) {

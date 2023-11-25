@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -81,7 +81,7 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
 
     public static class DescribeSslVpnClientCertsResponseBodySslVpnClientCertKeysSslVpnClientCertKey extends TeaModel {
         /**
-         * <p>The timestamp that indicates when the SSL client certificate was created. Unit: milliseconds.</p>
+         * <p>The timestamp that indicates when the SSL client certificate was created. Unit: millisecond.</p>
          * <br>
          * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          */
@@ -89,7 +89,7 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The timestamp that indicates when the SSL client certificate expires. Unit: milliseconds.</p>
+         * <p>The timestamp that indicates when the SSL client certificate expires. Unit: millisecond.</p>
          * <br>
          * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          */
@@ -126,9 +126,9 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
         /**
          * <p>The status of the SSL client certificate. Valid values:</p>
          * <br>
-         * <p>*   **expiring-soon**: The certificate expires in one week.</p>
-         * <p>*   **normal**: The certificate is active.</p>
-         * <p>*   **expired**: The certificate has expired.</p>
+         * <p>*   **expiring-soon**</p>
+         * <p>*   **normal**</p>
+         * <p>*   **expired**</p>
          */
         @NameInMap("Status")
         public String status;
