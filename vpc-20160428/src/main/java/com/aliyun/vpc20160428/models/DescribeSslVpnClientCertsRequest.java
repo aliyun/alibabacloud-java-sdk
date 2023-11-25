@@ -17,19 +17,19 @@ public class DescribeSslVpnClientCertsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.</p>
+     * <p>The number of entries per page. Default value: **10**. Valid values: **1** to **50**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the SSL client certificates to be queried.</p>
+     * <p>The region ID of the SSL client certificate.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */

@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,9 +81,9 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
 
     public static class DescribeVpnPbrRouteEntriesResponseBodyVpnPbrRouteEntriesVpnPbrRouteEntry extends TeaModel {
         /**
-         * <p>The timestamp generated when the policy-based route was created. Unit: milliseconds.</p>
+         * <p>The time when the policy-based route was created. Unit: milliseconds.</p>
          * <br>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
@@ -132,7 +132,7 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The ID of the VPN gateway.</p>
+         * <p>The VPN gateway ID.</p>
          */
         @NameInMap("VpnInstanceId")
         public String vpnInstanceId;
@@ -140,10 +140,12 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         /**
          * <p>The weight of the policy-based route. Valid values:</p>
          * <br>
-         * <p>- For a VPN gateway that supports the dual-tunnel mode, the default weight is **100**.</p>
-         * <p>- For a VPN gateway that supports the single-tunnel mode, the weight specifies the priority of the policy-based route.</p>
-         * <p>   - **100**: a high priority. If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the active connection.</p>
-         * <p>   - **0**: a low priority. If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the standby connection.</p>
+         * <p>*   For a VPN gateway that supports the dual-tunnel mode, the default value is **100**.</p>
+         * <br>
+         * <p>*   For a VPN gateway that supports the single-tunnel mode, the weight specifies the priority of the policy-based route.</p>
+         * <br>
+         * <p>    *   **100**: a high priority If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the active connection.</p>
+         * <p>    *   **0**: a low priority If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the standby connection.</p>
          */
         @NameInMap("Weight")
         public Integer weight;

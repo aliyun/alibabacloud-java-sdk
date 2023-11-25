@@ -14,11 +14,17 @@ public class UnassociateNetworkAclRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The ID of the network ACL that you want to disassociate from a resource.</p>
      */
     @NameInMap("NetworkAclId")
     public String networkAclId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -56,12 +62,28 @@ public class UnassociateNetworkAclRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public UnassociateNetworkAclRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public UnassociateNetworkAclRequest setNetworkAclId(String networkAclId) {
         this.networkAclId = networkAclId;
         return this;
     }
     public String getNetworkAclId() {
         return this.networkAclId;
+    }
+
+    public UnassociateNetworkAclRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public UnassociateNetworkAclRequest setOwnerId(Long ownerId) {

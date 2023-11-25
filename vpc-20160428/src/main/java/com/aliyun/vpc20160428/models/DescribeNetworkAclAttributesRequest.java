@@ -20,6 +20,9 @@ public class DescribeNetworkAclAttributesRequest extends TeaModel {
     @NameInMap("NetworkAclId")
     public String networkAclId;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -56,6 +59,14 @@ public class DescribeNetworkAclAttributesRequest extends TeaModel {
     }
     public String getNetworkAclId() {
         return this.networkAclId;
+    }
+
+    public DescribeNetworkAclAttributesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeNetworkAclAttributesRequest setOwnerId(Long ownerId) {

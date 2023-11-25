@@ -92,6 +92,12 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         @NameInMap("DestinationCidrIp")
         public String destinationCidrIp;
 
+        @NameInMap("EntryType")
+        public String entryType;
+
+        @NameInMap("IpVersion")
+        public String ipVersion;
+
         /**
          * <p>The ID of the outbound rule.</p>
          */
@@ -153,6 +159,22 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         }
         public String getDestinationCidrIp() {
             return this.destinationCidrIp;
+        }
+
+        public DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclEgressAclEntriesEgressAclEntry setEntryType(String entryType) {
+            this.entryType = entryType;
+            return this;
+        }
+        public String getEntryType() {
+            return this.entryType;
+        }
+
+        public DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclEgressAclEntriesEgressAclEntry setIpVersion(String ipVersion) {
+            this.ipVersion = ipVersion;
+            return this;
+        }
+        public String getIpVersion() {
+            return this.ipVersion;
         }
 
         public DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclEgressAclEntriesEgressAclEntry setNetworkAclEntryId(String networkAclEntryId) {
@@ -223,6 +245,12 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("EntryType")
+        public String entryType;
+
+        @NameInMap("IpVersion")
+        public String ipVersion;
+
         /**
          * <p>The ID of the inbound rule.</p>
          */
@@ -282,6 +310,22 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclIngressAclEntriesIngressAclEntry setEntryType(String entryType) {
+            this.entryType = entryType;
+            return this;
+        }
+        public String getEntryType() {
+            return this.entryType;
+        }
+
+        public DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclIngressAclEntriesIngressAclEntry setIpVersion(String ipVersion) {
+            this.ipVersion = ipVersion;
+            return this;
+        }
+        public String getIpVersion() {
+            return this.ipVersion;
         }
 
         public DescribeNetworkAclsResponseBodyNetworkAclsNetworkAclIngressAclEntriesIngressAclEntry setNetworkAclEntryId(String networkAclEntryId) {

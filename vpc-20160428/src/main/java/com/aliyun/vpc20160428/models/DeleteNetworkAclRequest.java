@@ -14,11 +14,17 @@ public class DeleteNetworkAclRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The ID of the network ACL.</p>
      */
     @NameInMap("NetworkAclId")
     public String networkAclId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -50,12 +56,28 @@ public class DeleteNetworkAclRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public DeleteNetworkAclRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public DeleteNetworkAclRequest setNetworkAclId(String networkAclId) {
         this.networkAclId = networkAclId;
         return this;
     }
     public String getNetworkAclId() {
         return this.networkAclId;
+    }
+
+    public DeleteNetworkAclRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteNetworkAclRequest setOwnerId(Long ownerId) {
