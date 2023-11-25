@@ -156,6 +156,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("CnNodeCount")
         public Integer cnNodeCount;
 
+        @NameInMap("ColumnarInstanceName")
+        public String columnarInstanceName;
+
+        @NameInMap("ColumnarReadDBInstances")
+        public java.util.List<String> columnarReadDBInstances;
+
         @NameInMap("CommodityCode")
         public String commodityCode;
 
@@ -219,6 +225,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <p>主可用区。</p>
+         */
+        @NameInMap("PrimaryZone")
+        public String primaryZone;
+
         @NameInMap("ReadDBInstances")
         public java.util.List<String> readDBInstances;
 
@@ -227,6 +239,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        /**
+         * <p>次可用区。</p>
+         */
+        @NameInMap("SecondaryZone")
+        public String secondaryZone;
 
         @NameInMap("Series")
         public String series;
@@ -242,6 +260,21 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
         @NameInMap("TagSet")
         public java.util.List<DescribeDBInstancesResponseBodyDBInstancesTagSet> tagSet;
+
+        /**
+         * <p>第三可用区。</p>
+         */
+        @NameInMap("TertiaryZone")
+        public String tertiaryZone;
+
+        /**
+         * <p>拓扑类型：</p>
+         * <br>
+         * <p>- **3azones**：三可用区；</p>
+         * <p>- **1azone**：单可用区。</p>
+         */
+        @NameInMap("TopologyType")
+        public String topologyType;
 
         @NameInMap("Type")
         public String type;
@@ -282,6 +315,22 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public Integer getCnNodeCount() {
             return this.cnNodeCount;
+        }
+
+        public DescribeDBInstancesResponseBodyDBInstances setColumnarInstanceName(String columnarInstanceName) {
+            this.columnarInstanceName = columnarInstanceName;
+            return this;
+        }
+        public String getColumnarInstanceName() {
+            return this.columnarInstanceName;
+        }
+
+        public DescribeDBInstancesResponseBodyDBInstances setColumnarReadDBInstances(java.util.List<String> columnarReadDBInstances) {
+            this.columnarReadDBInstances = columnarReadDBInstances;
+            return this;
+        }
+        public java.util.List<String> getColumnarReadDBInstances() {
+            return this.columnarReadDBInstances;
         }
 
         public DescribeDBInstancesResponseBodyDBInstances setCommodityCode(String commodityCode) {
@@ -452,6 +501,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             return this.payType;
         }
 
+        public DescribeDBInstancesResponseBodyDBInstances setPrimaryZone(String primaryZone) {
+            this.primaryZone = primaryZone;
+            return this;
+        }
+        public String getPrimaryZone() {
+            return this.primaryZone;
+        }
+
         public DescribeDBInstancesResponseBodyDBInstances setReadDBInstances(java.util.List<String> readDBInstances) {
             this.readDBInstances = readDBInstances;
             return this;
@@ -474,6 +531,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeDBInstancesResponseBodyDBInstances setSecondaryZone(String secondaryZone) {
+            this.secondaryZone = secondaryZone;
+            return this;
+        }
+        public String getSecondaryZone() {
+            return this.secondaryZone;
         }
 
         public DescribeDBInstancesResponseBodyDBInstances setSeries(String series) {
@@ -514,6 +579,22 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public java.util.List<DescribeDBInstancesResponseBodyDBInstancesTagSet> getTagSet() {
             return this.tagSet;
+        }
+
+        public DescribeDBInstancesResponseBodyDBInstances setTertiaryZone(String tertiaryZone) {
+            this.tertiaryZone = tertiaryZone;
+            return this;
+        }
+        public String getTertiaryZone() {
+            return this.tertiaryZone;
+        }
+
+        public DescribeDBInstancesResponseBodyDBInstances setTopologyType(String topologyType) {
+            this.topologyType = topologyType;
+            return this;
+        }
+        public String getTopologyType() {
+            return this.topologyType;
         }
 
         public DescribeDBInstancesResponseBodyDBInstances setType(String type) {
