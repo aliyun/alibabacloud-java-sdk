@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClustersV1Request extends TeaModel {
+    @NameInMap("cluster_id")
+    public String clusterId;
+
     /**
      * <p>The cluster type, which is available only when the cluster type is set to `ManagedKubernetes`. Valid values:</p>
      * <br>
@@ -69,6 +72,14 @@ public class DescribeClustersV1Request extends TeaModel {
     public static DescribeClustersV1Request build(java.util.Map<String, ?> map) throws Exception {
         DescribeClustersV1Request self = new DescribeClustersV1Request();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeClustersV1Request setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     public DescribeClustersV1Request setClusterSpec(String clusterSpec) {
