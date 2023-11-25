@@ -824,6 +824,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.advanceSecurityEventOperationsWithOptions(request, runtime);
     }
 
+    public BatchDeleteMaliciousFileWhitelistConfigResponse batchDeleteMaliciousFileWhitelistConfigWithOptions(BatchDeleteMaliciousFileWhitelistConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configIdList)) {
+            query.put("ConfigIdList", request.configIdList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchDeleteMaliciousFileWhitelistConfig"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchDeleteMaliciousFileWhitelistConfigResponse());
+    }
+
+    public BatchDeleteMaliciousFileWhitelistConfigResponse batchDeleteMaliciousFileWhitelistConfig(BatchDeleteMaliciousFileWhitelistConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchDeleteMaliciousFileWhitelistConfigWithOptions(request, runtime);
+    }
+
     public BatchOperateCommonOverallConfigResponse batchOperateCommonOverallConfigWithOptions(BatchOperateCommonOverallConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -855,6 +884,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public BatchOperateCommonOverallConfigResponse batchOperateCommonOverallConfig(BatchOperateCommonOverallConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchOperateCommonOverallConfigWithOptions(request, runtime);
+    }
+
+    public BatchUpdateMaliciousFileWhitelistConfigResponse batchUpdateMaliciousFileWhitelistConfigWithOptions(BatchUpdateMaliciousFileWhitelistConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configList)) {
+            query.put("ConfigList", request.configList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchUpdateMaliciousFileWhitelistConfig"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchUpdateMaliciousFileWhitelistConfigResponse());
+    }
+
+    public BatchUpdateMaliciousFileWhitelistConfigResponse batchUpdateMaliciousFileWhitelistConfig(BatchUpdateMaliciousFileWhitelistConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchUpdateMaliciousFileWhitelistConfigWithOptions(request, runtime);
     }
 
     public BindAuthToMachineResponse bindAuthToMachineWithOptions(BindAuthToMachineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2361,6 +2419,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateJenkinsImageRegistryResponse createJenkinsImageRegistry(CreateJenkinsImageRegistryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createJenkinsImageRegistryWithOptions(request, runtime);
+    }
+
+    public CreateMaliciousFileWhitelistConfigResponse createMaliciousFileWhitelistConfigWithOptions(CreateMaliciousFileWhitelistConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventName)) {
+            query.put("EventName", request.eventName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.field)) {
+            query.put("Field", request.field);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fieldValue)) {
+            query.put("FieldValue", request.fieldValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operator)) {
+            query.put("Operator", request.operator);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetType)) {
+            query.put("TargetType", request.targetType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetValue)) {
+            query.put("TargetValue", request.targetValue);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMaliciousFileWhitelistConfig"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMaliciousFileWhitelistConfigResponse());
+    }
+
+    public CreateMaliciousFileWhitelistConfigResponse createMaliciousFileWhitelistConfig(CreateMaliciousFileWhitelistConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createMaliciousFileWhitelistConfigWithOptions(request, runtime);
     }
 
     public CreateMaliciousNoteResponse createMaliciousNoteWithOptions(CreateMaliciousNoteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3883,6 +3994,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteLoginBaseConfigResponse deleteLoginBaseConfig(DeleteLoginBaseConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteLoginBaseConfigWithOptions(request, runtime);
+    }
+
+    public DeleteMaliciousFileWhitelistConfigResponse deleteMaliciousFileWhitelistConfigWithOptions(DeleteMaliciousFileWhitelistConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMaliciousFileWhitelistConfig"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMaliciousFileWhitelistConfigResponse());
+    }
+
+    public DeleteMaliciousFileWhitelistConfigResponse deleteMaliciousFileWhitelistConfig(DeleteMaliciousFileWhitelistConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteMaliciousFileWhitelistConfigWithOptions(request, runtime);
     }
 
     public DeleteMaliciousNoteResponse deleteMaliciousNoteWithOptions(DeleteMaliciousNoteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -16675,6 +16815,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getLogMetaWithOptions(request, runtime);
     }
 
+    public GetMaliciousFileWhitelistConfigResponse getMaliciousFileWhitelistConfigWithOptions(GetMaliciousFileWhitelistConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMaliciousFileWhitelistConfig"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMaliciousFileWhitelistConfigResponse());
+    }
+
+    public GetMaliciousFileWhitelistConfigResponse getMaliciousFileWhitelistConfig(GetMaliciousFileWhitelistConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getMaliciousFileWhitelistConfigWithOptions(request, runtime);
+    }
+
     public GetModuleConfigResponse getModuleConfigWithOptions(GetModuleConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -20221,6 +20390,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListK8sAccessInfoResponse listK8sAccessInfo(ListK8sAccessInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listK8sAccessInfoWithOptions(request, runtime);
+    }
+
+    public ListMaliciousFileWhitelistConfigsResponse listMaliciousFileWhitelistConfigsWithOptions(ListMaliciousFileWhitelistConfigsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventName)) {
+            query.put("EventName", request.eventName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMaliciousFileWhitelistConfigs"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMaliciousFileWhitelistConfigsResponse());
+    }
+
+    public ListMaliciousFileWhitelistConfigsResponse listMaliciousFileWhitelistConfigs(ListMaliciousFileWhitelistConfigsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listMaliciousFileWhitelistConfigsWithOptions(request, runtime);
     }
 
     public ListObjectScanEventResponse listObjectScanEventWithOptions(ListObjectScanEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -26982,6 +27196,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateJenkinsImageRegistryPersistenceDayResponse updateJenkinsImageRegistryPersistenceDay(UpdateJenkinsImageRegistryPersistenceDayRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateJenkinsImageRegistryPersistenceDayWithOptions(request, runtime);
+    }
+
+    public UpdateMaliciousFileWhitelistConfigResponse updateMaliciousFileWhitelistConfigWithOptions(UpdateMaliciousFileWhitelistConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventName)) {
+            query.put("EventName", request.eventName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.field)) {
+            query.put("Field", request.field);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fieldValue)) {
+            query.put("FieldValue", request.fieldValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operator)) {
+            query.put("Operator", request.operator);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetType)) {
+            query.put("TargetType", request.targetType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetValue)) {
+            query.put("TargetValue", request.targetValue);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMaliciousFileWhitelistConfig"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMaliciousFileWhitelistConfigResponse());
+    }
+
+    public UpdateMaliciousFileWhitelistConfigResponse updateMaliciousFileWhitelistConfig(UpdateMaliciousFileWhitelistConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateMaliciousFileWhitelistConfigWithOptions(request, runtime);
     }
 
     public UpdateOpaStrategyNewResponse updateOpaStrategyNewWithOptions(UpdateOpaStrategyNewRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

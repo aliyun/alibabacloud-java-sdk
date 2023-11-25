@@ -106,6 +106,12 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         @NameInMap("CheckWarningId")
         public Long checkWarningId;
 
+        @NameInMap("ContainerId")
+        public String containerId;
+
+        @NameInMap("ContainerName")
+        public String containerName;
+
         /**
          * <p>The error message in the check result.</p>
          */
@@ -186,6 +192,22 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         }
         public Long getCheckWarningId() {
             return this.checkWarningId;
+        }
+
+        public DescribeCheckWarningsResponseBodyCheckWarnings setContainerId(String containerId) {
+            this.containerId = containerId;
+            return this;
+        }
+        public String getContainerId() {
+            return this.containerId;
+        }
+
+        public DescribeCheckWarningsResponseBodyCheckWarnings setContainerName(String containerName) {
+            this.containerName = containerName;
+            return this;
+        }
+        public String getContainerName() {
+            return this.containerName;
         }
 
         public DescribeCheckWarningsResponseBodyCheckWarnings setExecErrorMessage(String execErrorMessage) {
