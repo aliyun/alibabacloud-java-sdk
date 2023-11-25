@@ -113,7 +113,7 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The namespaces.</p>
+         * <p>An array that consists of queried namespaces.</p>
          */
         @NameInMap("Namespaces")
         public java.util.List<String> namespaces;
@@ -158,6 +158,9 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
         @NameInMap("Hash")
         public java.util.List<String> hash;
 
+        /**
+         * <p>An array consisting of images that are added to the whitelist.</p>
+         */
         @NameInMap("Image")
         public java.util.List<String> image;
 

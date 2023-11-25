@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetContainerDefenseRuleDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The rule ID.</p>
      * <br>
-     * <p>>  You can call the [ListContainerDefenseRule](~~xx~~) operation to obtain the IDs of rules.</p>
+     * <p>>  You can call the [ListContainerDefenseRule](~~2590599~~) operation to query the rule ID.</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;

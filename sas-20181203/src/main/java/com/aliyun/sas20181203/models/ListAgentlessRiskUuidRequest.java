@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentlessRiskUuidRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -29,7 +29,7 @@ public class ListAgentlessRiskUuidRequest extends TeaModel {
     public String machineName;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

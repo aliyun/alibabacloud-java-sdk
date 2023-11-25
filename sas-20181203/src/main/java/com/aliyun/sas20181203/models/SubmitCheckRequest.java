@@ -8,7 +8,7 @@ public class SubmitCheckRequest extends TeaModel {
      * <p>The check items that are scanned. Valid values:</p>
      * <br>
      * <p>*   **FULL**: All check items are scanned.</p>
-     * <p>*   **POLICY**: Only the check items that are configured are scanned.</p>
+     * <p>*   **FULL**: Only the check items that are configured are scanned.</p>
      */
     @NameInMap("ScanRange")
     public String scanRange;
