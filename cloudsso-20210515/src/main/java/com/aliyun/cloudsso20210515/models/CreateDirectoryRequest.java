@@ -7,7 +7,7 @@ public class CreateDirectoryRequest extends TeaModel {
     /**
      * <p>The name of the directory. The name must be globally unique.</p>
      * <br>
-     * <p>The name can contain lowercase letters, digits, and hyphens (-). The name cannot start or end with a hyphen (-) and cannot contain two consecutive hyphens (-). The name cannot start with d-.</p>
+     * <p>The name can contain lowercase letters, digits, or hyphens (-). The name cannot start or end with a hyphen (-) and cannot contain two consecutive hyphens (-). The name cannot start with d-.</p>
      * <br>
      * <p>The name must be 2 to 64 characters in length.</p>
      * <br>

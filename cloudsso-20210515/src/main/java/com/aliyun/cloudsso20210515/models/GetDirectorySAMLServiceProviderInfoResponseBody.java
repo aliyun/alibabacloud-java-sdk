@@ -44,6 +44,12 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
         @NameInMap("AcsUrl")
         public String acsUrl;
 
+        @NameInMap("AuthnSignAlgo")
+        public String authnSignAlgo;
+
+        @NameInMap("CertificateType")
+        public String certificateType;
+
         /**
          * <p>The ID of the directory.</p>
          */
@@ -62,6 +68,9 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
         @NameInMap("EntityId")
         public String entityId;
 
+        @NameInMap("SupportEncryptedAssertion")
+        public Boolean supportEncryptedAssertion;
+
         public static GetDirectorySAMLServiceProviderInfoResponseBodySAMLServiceProvider build(java.util.Map<String, ?> map) throws Exception {
             GetDirectorySAMLServiceProviderInfoResponseBodySAMLServiceProvider self = new GetDirectorySAMLServiceProviderInfoResponseBodySAMLServiceProvider();
             return TeaModel.build(map, self);
@@ -73,6 +82,22 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
         }
         public String getAcsUrl() {
             return this.acsUrl;
+        }
+
+        public GetDirectorySAMLServiceProviderInfoResponseBodySAMLServiceProvider setAuthnSignAlgo(String authnSignAlgo) {
+            this.authnSignAlgo = authnSignAlgo;
+            return this;
+        }
+        public String getAuthnSignAlgo() {
+            return this.authnSignAlgo;
+        }
+
+        public GetDirectorySAMLServiceProviderInfoResponseBodySAMLServiceProvider setCertificateType(String certificateType) {
+            this.certificateType = certificateType;
+            return this;
+        }
+        public String getCertificateType() {
+            return this.certificateType;
         }
 
         public GetDirectorySAMLServiceProviderInfoResponseBodySAMLServiceProvider setDirectoryId(String directoryId) {
@@ -97,6 +122,14 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
         }
         public String getEntityId() {
             return this.entityId;
+        }
+
+        public GetDirectorySAMLServiceProviderInfoResponseBodySAMLServiceProvider setSupportEncryptedAssertion(Boolean supportEncryptedAssertion) {
+            this.supportEncryptedAssertion = supportEncryptedAssertion;
+            return this;
+        }
+        public Boolean getSupportEncryptedAssertion() {
+            return this.supportEncryptedAssertion;
         }
 
     }
