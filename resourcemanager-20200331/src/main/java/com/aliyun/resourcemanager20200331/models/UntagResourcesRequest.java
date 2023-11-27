@@ -13,6 +13,11 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("All")
     public Boolean all;
 
+    /**
+     * <p>The ID of a resource group or member.</p>
+     * <br>
+     * <p>You can specify a maximum of 50 IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -27,6 +32,13 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>A tag key.</p>
+     * <br>
+     * <p>You can specify a maximum of 20 tag keys.</p>
+     * <br>
+     * <p>>  If you set the `All` parameter to `true`, you do not need to configure this parameter.</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

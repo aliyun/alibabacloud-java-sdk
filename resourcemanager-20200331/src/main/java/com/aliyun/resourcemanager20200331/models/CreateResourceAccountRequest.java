@@ -53,6 +53,9 @@ public class CreateResourceAccountRequest extends TeaModel {
     @NameInMap("ResellAccountType")
     public String resellAccountType;
 
+    /**
+     * <p>The tag key and value.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateResourceAccountRequestTag> tag;
 

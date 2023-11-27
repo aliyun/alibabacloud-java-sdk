@@ -44,6 +44,9 @@ public class ListAccountsForParentRequest extends TeaModel {
     @NameInMap("QueryKeyword")
     public String queryKeyword;
 
+    /**
+     * <p>The tag key and value.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListAccountsForParentRequestTag> tag;
 

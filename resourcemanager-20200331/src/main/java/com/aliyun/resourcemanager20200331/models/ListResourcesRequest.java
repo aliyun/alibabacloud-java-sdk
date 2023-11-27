@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListResourcesRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
      */
@@ -13,7 +13,7 @@ public class ListResourcesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <br>
      * <p>Valid values: 1 to 100. Default value: 10.</p>
      */
@@ -41,18 +41,23 @@ public class ListResourcesRequest extends TeaModel {
     /**
      * <p>The resource type.</p>
      * <br>
-     * <p>For more information about the supported resource types, see the **Resource type** column in [Alibaba Cloud services that support resource groups](~~94479~~).</p>
+     * <p>For more information about the supported resource types, see the **Resource type** column in [Services that work with Resource Group](~~94479~~).</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The resource types. A maximum of 50 resource types are supported.</p>
+     * <br>
+     * <p>>  If you configure `ResourceTypes`, you must configure both `Service` and `ResourceType`. Otherwise, the configured Service or ResourceType does not take effect.</p>
+     */
     @NameInMap("ResourceTypes")
     public java.util.List<ListResourcesRequestResourceTypes> resourceTypes;
 
     /**
      * <p>The ID of the Alibaba Cloud service.</p>
      * <br>
-     * <p>You can obtain the ID from the **Service code** column in [Alibaba Cloud services that support resource groups](~~94479~~).</p>
+     * <p>You can obtain the ID from the **Service code** column in [Services that work with Resource Group](~~94479~~).</p>
      */
     @NameInMap("Service")
     public String service;
@@ -127,9 +132,27 @@ public class ListResourcesRequest extends TeaModel {
     }
 
     public static class ListResourcesRequestResourceTypes extends TeaModel {
+        /**
+         * <p>The resource type.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 50.</p>
+         * <br>
+         * <p>For more information about the supported resource types, see the **Resource type** column in [Services that work with Resource Group](~~94479~~).</p>
+         * <br>
+         * <p>>  You must configure both `Service` and `ResourceType` in `ResourceTypes`. Otherwise, the two parameters do not take effect.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The ID of the Alibaba Cloud service.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 50.</p>
+         * <br>
+         * <p>You can obtain the ID from the **Service code** column in [Services that work with Resource Group](~~94479~~).</p>
+         * <br>
+         * <p>>  You must configure both `Service` and `ResourceType` in `ResourceTypes`. Otherwise, the two parameters do not take effect.</p>
+         */
         @NameInMap("Service")
         public String service;
 
