@@ -42,12 +42,84 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         return this.trainingJobs;
     }
 
+    public static class ListTrainingJobsResponseBodyTrainingJobsComputeResourceInstanceSpec extends TeaModel {
+        @NameInMap("CPU")
+        public String CPU;
+
+        @NameInMap("GPU")
+        public String GPU;
+
+        @NameInMap("GPUType")
+        public String GPUType;
+
+        @NameInMap("Memory")
+        public String memory;
+
+        @NameInMap("SharedMemory")
+        public String sharedMemory;
+
+        public static ListTrainingJobsResponseBodyTrainingJobsComputeResourceInstanceSpec build(java.util.Map<String, ?> map) throws Exception {
+            ListTrainingJobsResponseBodyTrainingJobsComputeResourceInstanceSpec self = new ListTrainingJobsResponseBodyTrainingJobsComputeResourceInstanceSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTrainingJobsResponseBodyTrainingJobsComputeResourceInstanceSpec setCPU(String CPU) {
+            this.CPU = CPU;
+            return this;
+        }
+        public String getCPU() {
+            return this.CPU;
+        }
+
+        public ListTrainingJobsResponseBodyTrainingJobsComputeResourceInstanceSpec setGPU(String GPU) {
+            this.GPU = GPU;
+            return this;
+        }
+        public String getGPU() {
+            return this.GPU;
+        }
+
+        public ListTrainingJobsResponseBodyTrainingJobsComputeResourceInstanceSpec setGPUType(String GPUType) {
+            this.GPUType = GPUType;
+            return this;
+        }
+        public String getGPUType() {
+            return this.GPUType;
+        }
+
+        public ListTrainingJobsResponseBodyTrainingJobsComputeResourceInstanceSpec setMemory(String memory) {
+            this.memory = memory;
+            return this;
+        }
+        public String getMemory() {
+            return this.memory;
+        }
+
+        public ListTrainingJobsResponseBodyTrainingJobsComputeResourceInstanceSpec setSharedMemory(String sharedMemory) {
+            this.sharedMemory = sharedMemory;
+            return this;
+        }
+        public String getSharedMemory() {
+            return this.sharedMemory;
+        }
+
+    }
+
     public static class ListTrainingJobsResponseBodyTrainingJobsComputeResource extends TeaModel {
         @NameInMap("EcsCount")
         public Long ecsCount;
 
         @NameInMap("EcsSpec")
         public String ecsSpec;
+
+        @NameInMap("InstanceCount")
+        public Long instanceCount;
+
+        @NameInMap("InstanceSpec")
+        public ListTrainingJobsResponseBodyTrainingJobsComputeResourceInstanceSpec instanceSpec;
+
+        @NameInMap("ResourceId")
+        public String resourceId;
 
         public static ListTrainingJobsResponseBodyTrainingJobsComputeResource build(java.util.Map<String, ?> map) throws Exception {
             ListTrainingJobsResponseBodyTrainingJobsComputeResource self = new ListTrainingJobsResponseBodyTrainingJobsComputeResource();
@@ -68,6 +140,30 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         }
         public String getEcsSpec() {
             return this.ecsSpec;
+        }
+
+        public ListTrainingJobsResponseBodyTrainingJobsComputeResource setInstanceCount(Long instanceCount) {
+            this.instanceCount = instanceCount;
+            return this;
+        }
+        public Long getInstanceCount() {
+            return this.instanceCount;
+        }
+
+        public ListTrainingJobsResponseBodyTrainingJobsComputeResource setInstanceSpec(ListTrainingJobsResponseBodyTrainingJobsComputeResourceInstanceSpec instanceSpec) {
+            this.instanceSpec = instanceSpec;
+            return this;
+        }
+        public ListTrainingJobsResponseBodyTrainingJobsComputeResourceInstanceSpec getInstanceSpec() {
+            return this.instanceSpec;
+        }
+
+        public ListTrainingJobsResponseBodyTrainingJobsComputeResource setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
         }
 
     }

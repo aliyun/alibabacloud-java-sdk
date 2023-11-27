@@ -261,8 +261,8 @@ public class CreateTrainingJobRequest extends TeaModel {
         @NameInMap("InstanceSpec")
         public CreateTrainingJobRequestComputeResourceInstanceSpec instanceSpec;
 
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
+        @NameInMap("ResourceId")
+        public String resourceId;
 
         public static CreateTrainingJobRequestComputeResource build(java.util.Map<String, ?> map) throws Exception {
             CreateTrainingJobRequestComputeResource self = new CreateTrainingJobRequestComputeResource();
@@ -301,12 +301,12 @@ public class CreateTrainingJobRequest extends TeaModel {
             return this.instanceSpec;
         }
 
-        public CreateTrainingJobRequestComputeResource setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
+        public CreateTrainingJobRequestComputeResource setResourceId(String resourceId) {
+            this.resourceId = resourceId;
             return this;
         }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
+        public String getResourceId() {
+            return this.resourceId;
         }
 
     }
