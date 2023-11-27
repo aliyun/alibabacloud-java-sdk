@@ -4,7 +4,6 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class UpdateGroupIconRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
@@ -33,17 +32,14 @@ public class UpdateGroupIconRequest extends TeaModel {
     }
 
     public static class UpdateGroupIconRequestRequestParams extends TeaModel {
-        // 会话ID
         @NameInMap("AppCid")
         public String appCid;
 
-        // 操作者用户ID
-        @NameInMap("OperatorAppUid")
-        public String operatorAppUid;
-
-        // 群聊头像文件MediaID
         @NameInMap("IconMediaId")
         public String iconMediaId;
+
+        @NameInMap("OperatorAppUid")
+        public String operatorAppUid;
 
         public static UpdateGroupIconRequestRequestParams build(java.util.Map<String, ?> map) throws Exception {
             UpdateGroupIconRequestRequestParams self = new UpdateGroupIconRequestRequestParams();
@@ -58,20 +54,20 @@ public class UpdateGroupIconRequest extends TeaModel {
             return this.appCid;
         }
 
-        public UpdateGroupIconRequestRequestParams setOperatorAppUid(String operatorAppUid) {
-            this.operatorAppUid = operatorAppUid;
-            return this;
-        }
-        public String getOperatorAppUid() {
-            return this.operatorAppUid;
-        }
-
         public UpdateGroupIconRequestRequestParams setIconMediaId(String iconMediaId) {
             this.iconMediaId = iconMediaId;
             return this;
         }
         public String getIconMediaId() {
             return this.iconMediaId;
+        }
+
+        public UpdateGroupIconRequestRequestParams setOperatorAppUid(String operatorAppUid) {
+            this.operatorAppUid = operatorAppUid;
+            return this;
+        }
+        public String getOperatorAppUid() {
+            return this.operatorAppUid;
         }
 
     }

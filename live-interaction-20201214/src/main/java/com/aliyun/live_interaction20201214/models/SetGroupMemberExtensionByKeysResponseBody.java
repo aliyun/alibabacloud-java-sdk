@@ -4,29 +4,18 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class SetGroupMemberExtensionByKeysResponseBody extends TeaModel {
-    // 请求ID
-    @NameInMap("RequestId")
-    public String requestId;
-
-    // 错误码
     @NameInMap("Code")
     public String code;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static SetGroupMemberExtensionByKeysResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SetGroupMemberExtensionByKeysResponseBody self = new SetGroupMemberExtensionByKeysResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SetGroupMemberExtensionByKeysResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SetGroupMemberExtensionByKeysResponseBody setCode(String code) {
@@ -43,6 +32,14 @@ public class SetGroupMemberExtensionByKeysResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public SetGroupMemberExtensionByKeysResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -7,7 +7,6 @@ public class RemoveUserConversationExtensionByKeysShrinkRequest extends TeaModel
     @NameInMap("AppId")
     public String appId;
 
-    // 移除用户拓展字段请求实体
     @NameInMap("RequestParams")
     public String requestParamsShrink;
 

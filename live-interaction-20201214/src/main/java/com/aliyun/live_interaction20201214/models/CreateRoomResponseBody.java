@@ -4,26 +4,32 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class CreateRoomResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("ResponseSuccess")
     public Boolean responseSuccess;
-
-    // 错误码
-    @NameInMap("errorCode")
-    public String errorCode;
-
-    // 错误信息
-    @NameInMap("errorMsg")
-    public String errorMsg;
 
     @NameInMap("Result")
     public CreateRoomResponseBodyResult result;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("errorCode")
+    public String errorCode;
+
+    @NameInMap("errorMsg")
+    public String errorMsg;
 
     public static CreateRoomResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateRoomResponseBody self = new CreateRoomResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateRoomResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateRoomResponseBody setResponseSuccess(Boolean responseSuccess) {
@@ -32,6 +38,14 @@ public class CreateRoomResponseBody extends TeaModel {
     }
     public Boolean getResponseSuccess() {
         return this.responseSuccess;
+    }
+
+    public CreateRoomResponseBody setResult(CreateRoomResponseBodyResult result) {
+        this.result = result;
+        return this;
+    }
+    public CreateRoomResponseBodyResult getResult() {
+        return this.result;
     }
 
     public CreateRoomResponseBody setErrorCode(String errorCode) {
@@ -50,24 +64,7 @@ public class CreateRoomResponseBody extends TeaModel {
         return this.errorMsg;
     }
 
-    public CreateRoomResponseBody setResult(CreateRoomResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public CreateRoomResponseBodyResult getResult() {
-        return this.result;
-    }
-
-    public CreateRoomResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public static class CreateRoomResponseBodyResult extends TeaModel {
-        // 房间id
         @NameInMap("roomId")
         public String roomId;
 

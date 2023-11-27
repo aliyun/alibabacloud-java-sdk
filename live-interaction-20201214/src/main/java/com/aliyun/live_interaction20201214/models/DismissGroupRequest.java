@@ -7,7 +7,6 @@ public class DismissGroupRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    // 解散群聊请求实体
     @NameInMap("RequestParams")
     public DismissGroupRequestRequestParams requestParams;
 
@@ -33,25 +32,15 @@ public class DismissGroupRequest extends TeaModel {
     }
 
     public static class DismissGroupRequestRequestParams extends TeaModel {
-        // 操作用户
-        @NameInMap("OperatorAppUid")
-        public String operatorAppUid;
-
-        // 会话id
         @NameInMap("AppCid")
         public String appCid;
+
+        @NameInMap("OperatorAppUid")
+        public String operatorAppUid;
 
         public static DismissGroupRequestRequestParams build(java.util.Map<String, ?> map) throws Exception {
             DismissGroupRequestRequestParams self = new DismissGroupRequestRequestParams();
             return TeaModel.build(map, self);
-        }
-
-        public DismissGroupRequestRequestParams setOperatorAppUid(String operatorAppUid) {
-            this.operatorAppUid = operatorAppUid;
-            return this;
-        }
-        public String getOperatorAppUid() {
-            return this.operatorAppUid;
         }
 
         public DismissGroupRequestRequestParams setAppCid(String appCid) {
@@ -60,6 +49,14 @@ public class DismissGroupRequest extends TeaModel {
         }
         public String getAppCid() {
             return this.appCid;
+        }
+
+        public DismissGroupRequestRequestParams setOperatorAppUid(String operatorAppUid) {
+            this.operatorAppUid = operatorAppUid;
+            return this;
+        }
+        public String getOperatorAppUid() {
+            return this.operatorAppUid;
         }
 
     }

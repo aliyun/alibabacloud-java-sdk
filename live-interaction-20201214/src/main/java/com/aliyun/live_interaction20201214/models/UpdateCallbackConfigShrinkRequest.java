@@ -4,7 +4,6 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class UpdateCallbackConfigShrinkRequest extends TeaModel {
-    // 应用Id
     @NameInMap("AppId")
     public String appId;
 

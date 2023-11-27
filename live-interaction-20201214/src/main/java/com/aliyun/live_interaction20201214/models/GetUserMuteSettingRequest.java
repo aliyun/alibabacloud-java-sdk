@@ -4,7 +4,6 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class GetUserMuteSettingRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
@@ -33,7 +32,6 @@ public class GetUserMuteSettingRequest extends TeaModel {
     }
 
     public static class GetUserMuteSettingRequestRequestParams extends TeaModel {
-        // 用户列表
         @NameInMap("AppUids")
         public java.util.List<String> appUids;
 

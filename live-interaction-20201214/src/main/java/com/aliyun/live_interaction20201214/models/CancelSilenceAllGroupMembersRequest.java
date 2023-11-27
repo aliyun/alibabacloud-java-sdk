@@ -4,7 +4,6 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class CancelSilenceAllGroupMembersRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
@@ -33,11 +32,9 @@ public class CancelSilenceAllGroupMembersRequest extends TeaModel {
     }
 
     public static class CancelSilenceAllGroupMembersRequestRequestParams extends TeaModel {
-        // 会话ID
         @NameInMap("AppCid")
         public String appCid;
 
-        // 操作者uid
         @NameInMap("OperatorAppUid")
         public String operatorAppUid;
 

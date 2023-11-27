@@ -4,7 +4,6 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class SetMessageExtensionByKeysRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
@@ -33,17 +32,14 @@ public class SetMessageExtensionByKeysRequest extends TeaModel {
     }
 
     public static class SetMessageExtensionByKeysRequestRequestParams extends TeaModel {
-        // 会话ID
         @NameInMap("AppCid")
         public String appCid;
 
-        // 消息ID
-        @NameInMap("MsgId")
-        public String msgId;
-
-        // 需设置的K-V对
         @NameInMap("Extensions")
         public java.util.Map<String, String> extensions;
+
+        @NameInMap("MsgId")
+        public String msgId;
 
         public static SetMessageExtensionByKeysRequestRequestParams build(java.util.Map<String, ?> map) throws Exception {
             SetMessageExtensionByKeysRequestRequestParams self = new SetMessageExtensionByKeysRequestRequestParams();
@@ -58,20 +54,20 @@ public class SetMessageExtensionByKeysRequest extends TeaModel {
             return this.appCid;
         }
 
-        public SetMessageExtensionByKeysRequestRequestParams setMsgId(String msgId) {
-            this.msgId = msgId;
-            return this;
-        }
-        public String getMsgId() {
-            return this.msgId;
-        }
-
         public SetMessageExtensionByKeysRequestRequestParams setExtensions(java.util.Map<String, String> extensions) {
             this.extensions = extensions;
             return this;
         }
         public java.util.Map<String, String> getExtensions() {
             return this.extensions;
+        }
+
+        public SetMessageExtensionByKeysRequestRequestParams setMsgId(String msgId) {
+            this.msgId = msgId;
+            return this;
+        }
+        public String getMsgId() {
+            return this.msgId;
         }
 
     }

@@ -4,7 +4,6 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class GetLoginTokenRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
@@ -33,15 +32,12 @@ public class GetLoginTokenRequest extends TeaModel {
     }
 
     public static class GetLoginTokenRequestRequestParams extends TeaModel {
-        // 用户ID
-        @NameInMap("AppUid")
-        public String appUid;
-
-        // AppKey
         @NameInMap("AppKey")
         public String appKey;
 
-        // 设备ID
+        @NameInMap("AppUid")
+        public String appUid;
+
         @NameInMap("DeviceId")
         public String deviceId;
 
@@ -50,20 +46,20 @@ public class GetLoginTokenRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetLoginTokenRequestRequestParams setAppUid(String appUid) {
-            this.appUid = appUid;
-            return this;
-        }
-        public String getAppUid() {
-            return this.appUid;
-        }
-
         public GetLoginTokenRequestRequestParams setAppKey(String appKey) {
             this.appKey = appKey;
             return this;
         }
         public String getAppKey() {
             return this.appKey;
+        }
+
+        public GetLoginTokenRequestRequestParams setAppUid(String appUid) {
+            this.appUid = appUid;
+            return this;
+        }
+        public String getAppUid() {
+            return this.appUid;
         }
 
         public GetLoginTokenRequestRequestParams setDeviceId(String deviceId) {

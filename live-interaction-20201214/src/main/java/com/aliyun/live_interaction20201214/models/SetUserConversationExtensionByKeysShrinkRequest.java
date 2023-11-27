@@ -7,7 +7,6 @@ public class SetUserConversationExtensionByKeysShrinkRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    // 设置用户拓展字段请求实体
     @NameInMap("RequestParams")
     public String requestParamsShrink;
 

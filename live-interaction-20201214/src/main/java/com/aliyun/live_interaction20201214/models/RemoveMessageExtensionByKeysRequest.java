@@ -4,7 +4,6 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class RemoveMessageExtensionByKeysRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
@@ -33,17 +32,14 @@ public class RemoveMessageExtensionByKeysRequest extends TeaModel {
     }
 
     public static class RemoveMessageExtensionByKeysRequestRequestParams extends TeaModel {
-        // 会话ID
         @NameInMap("AppCid")
         public String appCid;
 
-        // 消息ID
-        @NameInMap("MsgId")
-        public String msgId;
-
-        // 需删除的Key
         @NameInMap("Keys")
         public java.util.List<String> keys;
+
+        @NameInMap("MsgId")
+        public String msgId;
 
         public static RemoveMessageExtensionByKeysRequestRequestParams build(java.util.Map<String, ?> map) throws Exception {
             RemoveMessageExtensionByKeysRequestRequestParams self = new RemoveMessageExtensionByKeysRequestRequestParams();
@@ -58,20 +54,20 @@ public class RemoveMessageExtensionByKeysRequest extends TeaModel {
             return this.appCid;
         }
 
-        public RemoveMessageExtensionByKeysRequestRequestParams setMsgId(String msgId) {
-            this.msgId = msgId;
-            return this;
-        }
-        public String getMsgId() {
-            return this.msgId;
-        }
-
         public RemoveMessageExtensionByKeysRequestRequestParams setKeys(java.util.List<String> keys) {
             this.keys = keys;
             return this;
         }
         public java.util.List<String> getKeys() {
             return this.keys;
+        }
+
+        public RemoveMessageExtensionByKeysRequestRequestParams setMsgId(String msgId) {
+            this.msgId = msgId;
+            return this;
+        }
+        public String getMsgId() {
+            return this.msgId;
         }
 
     }

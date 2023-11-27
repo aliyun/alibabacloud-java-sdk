@@ -4,11 +4,9 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class AddGroupMembersRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
-    // 群加人请求实体
     @NameInMap("RequestParams")
     public AddGroupMembersRequestRequestParams requestParams;
 
@@ -37,19 +35,17 @@ public class AddGroupMembersRequest extends TeaModel {
         @NameInMap("AppUid")
         public String appUid;
 
-        // 1群主，2管理员，3普通
-        @NameInMap("Role")
-        public Integer role;
+        @NameInMap("Extensions")
+        public java.util.Map<String, String> extensions;
+
+        @NameInMap("JoinTime")
+        public Long joinTime;
 
         @NameInMap("Nick")
         public String nick;
 
-        // unix毫秒数
-        @NameInMap("JoinTime")
-        public Long joinTime;
-
-        @NameInMap("Extensions")
-        public java.util.Map<String, String> extensions;
+        @NameInMap("Role")
+        public Integer role;
 
         public static AddGroupMembersRequestRequestParamsInitMembers build(java.util.Map<String, ?> map) throws Exception {
             AddGroupMembersRequestRequestParamsInitMembers self = new AddGroupMembersRequestRequestParamsInitMembers();
@@ -64,20 +60,12 @@ public class AddGroupMembersRequest extends TeaModel {
             return this.appUid;
         }
 
-        public AddGroupMembersRequestRequestParamsInitMembers setRole(Integer role) {
-            this.role = role;
+        public AddGroupMembersRequestRequestParamsInitMembers setExtensions(java.util.Map<String, String> extensions) {
+            this.extensions = extensions;
             return this;
         }
-        public Integer getRole() {
-            return this.role;
-        }
-
-        public AddGroupMembersRequestRequestParamsInitMembers setNick(String nick) {
-            this.nick = nick;
-            return this;
-        }
-        public String getNick() {
-            return this.nick;
+        public java.util.Map<String, String> getExtensions() {
+            return this.extensions;
         }
 
         public AddGroupMembersRequestRequestParamsInitMembers setJoinTime(Long joinTime) {
@@ -88,40 +76,37 @@ public class AddGroupMembersRequest extends TeaModel {
             return this.joinTime;
         }
 
-        public AddGroupMembersRequestRequestParamsInitMembers setExtensions(java.util.Map<String, String> extensions) {
-            this.extensions = extensions;
+        public AddGroupMembersRequestRequestParamsInitMembers setNick(String nick) {
+            this.nick = nick;
             return this;
         }
-        public java.util.Map<String, String> getExtensions() {
-            return this.extensions;
+        public String getNick() {
+            return this.nick;
+        }
+
+        public AddGroupMembersRequestRequestParamsInitMembers setRole(Integer role) {
+            this.role = role;
+            return this;
+        }
+        public Integer getRole() {
+            return this.role;
         }
 
     }
 
     public static class AddGroupMembersRequestRequestParams extends TeaModel {
-        // 操作者
-        @NameInMap("OperatorAppUid")
-        public String operatorAppUid;
-
-        // 会话id
         @NameInMap("AppCid")
         public String appCid;
 
-        // 初始化成员
         @NameInMap("InitMembers")
         public java.util.List<AddGroupMembersRequestRequestParamsInitMembers> initMembers;
+
+        @NameInMap("OperatorAppUid")
+        public String operatorAppUid;
 
         public static AddGroupMembersRequestRequestParams build(java.util.Map<String, ?> map) throws Exception {
             AddGroupMembersRequestRequestParams self = new AddGroupMembersRequestRequestParams();
             return TeaModel.build(map, self);
-        }
-
-        public AddGroupMembersRequestRequestParams setOperatorAppUid(String operatorAppUid) {
-            this.operatorAppUid = operatorAppUid;
-            return this;
-        }
-        public String getOperatorAppUid() {
-            return this.operatorAppUid;
         }
 
         public AddGroupMembersRequestRequestParams setAppCid(String appCid) {
@@ -138,6 +123,14 @@ public class AddGroupMembersRequest extends TeaModel {
         }
         public java.util.List<AddGroupMembersRequestRequestParamsInitMembers> getInitMembers() {
             return this.initMembers;
+        }
+
+        public AddGroupMembersRequestRequestParams setOperatorAppUid(String operatorAppUid) {
+            this.operatorAppUid = operatorAppUid;
+            return this;
+        }
+        public String getOperatorAppUid() {
+            return this.operatorAppUid;
         }
 
     }

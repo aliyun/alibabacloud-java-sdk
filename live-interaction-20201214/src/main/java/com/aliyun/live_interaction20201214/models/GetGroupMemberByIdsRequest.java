@@ -4,11 +4,9 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class GetGroupMemberByIdsRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
-    // 群聊设置扩展字段请求实体
     @NameInMap("RequestParams")
     public GetGroupMemberByIdsRequestRequestParams requestParams;
 
@@ -34,11 +32,9 @@ public class GetGroupMemberByIdsRequest extends TeaModel {
     }
 
     public static class GetGroupMemberByIdsRequestRequestParams extends TeaModel {
-        // 会话id
         @NameInMap("AppCid")
         public String appCid;
 
-        // appUid
         @NameInMap("AppUids")
         public java.util.List<String> appUids;
 

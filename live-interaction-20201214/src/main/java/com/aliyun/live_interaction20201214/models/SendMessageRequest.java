@@ -4,11 +4,9 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class SendMessageRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
-    // 消息发送请求体
     @NameInMap("RequestParams")
     public SendMessageRequestRequestParams requestParams;
 
@@ -34,29 +32,18 @@ public class SendMessageRequest extends TeaModel {
     }
 
     public static class SendMessageRequestRequestParamsOptionsReceiveScopeOption extends TeaModel {
-        // 接受者列表
-        @NameInMap("ReceiverIds")
-        public java.util.List<String> receiverIds;
-
-        // 不接收者列表
         @NameInMap("ExcludeReceiverIds")
         public java.util.List<String> excludeReceiverIds;
 
-        // 消息获取控制。0: 会话内除指定ExcludeReceivers均可获取；1: 会话内仅指定ReceiverIds可获取
         @NameInMap("ReceiveScope")
         public Integer receiveScope;
+
+        @NameInMap("ReceiverIds")
+        public java.util.List<String> receiverIds;
 
         public static SendMessageRequestRequestParamsOptionsReceiveScopeOption build(java.util.Map<String, ?> map) throws Exception {
             SendMessageRequestRequestParamsOptionsReceiveScopeOption self = new SendMessageRequestRequestParamsOptionsReceiveScopeOption();
             return TeaModel.build(map, self);
-        }
-
-        public SendMessageRequestRequestParamsOptionsReceiveScopeOption setReceiverIds(java.util.List<String> receiverIds) {
-            this.receiverIds = receiverIds;
-            return this;
-        }
-        public java.util.List<String> getReceiverIds() {
-            return this.receiverIds;
         }
 
         public SendMessageRequestRequestParamsOptionsReceiveScopeOption setExcludeReceiverIds(java.util.List<String> excludeReceiverIds) {
@@ -75,22 +62,26 @@ public class SendMessageRequest extends TeaModel {
             return this.receiveScope;
         }
 
+        public SendMessageRequestRequestParamsOptionsReceiveScopeOption setReceiverIds(java.util.List<String> receiverIds) {
+            this.receiverIds = receiverIds;
+            return this;
+        }
+        public java.util.List<String> getReceiverIds() {
+            return this.receiverIds;
+        }
+
     }
 
     public static class SendMessageRequestRequestParamsOptionsSingleChatCreateRequest extends TeaModel {
-        // 单聊会话ID
         @NameInMap("AppCid")
         public String appCid;
 
-        // 用户ID列表
         @NameInMap("AppUids")
         public java.util.List<String> appUids;
 
-        // 扩展信息
         @NameInMap("Extensions")
         public java.util.Map<String, String> extensions;
 
-        // 用户会话视图信息
         @NameInMap("UserConversation")
         public java.util.Map<String, RequestParamsOptionsSingleChatCreateRequestUserConversationValue> userConversation;
 
@@ -134,15 +125,12 @@ public class SendMessageRequest extends TeaModel {
     }
 
     public static class SendMessageRequestRequestParamsOptions extends TeaModel {
-        // 未读消息小红点控制。0:增加小红点; 1:不增加小红点
-        @NameInMap("RedPointPolicy")
-        public Integer redPointPolicy;
-
-        // 接受相关设置
         @NameInMap("ReceiveScopeOption")
         public SendMessageRequestRequestParamsOptionsReceiveScopeOption receiveScopeOption;
 
-        // 单聊会话不存在时新建自定义单聊请求体
+        @NameInMap("RedPointPolicy")
+        public Integer redPointPolicy;
+
         @NameInMap("SingleChatCreateRequest")
         public SendMessageRequestRequestParamsOptionsSingleChatCreateRequest singleChatCreateRequest;
 
@@ -151,20 +139,20 @@ public class SendMessageRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public SendMessageRequestRequestParamsOptions setRedPointPolicy(Integer redPointPolicy) {
-            this.redPointPolicy = redPointPolicy;
-            return this;
-        }
-        public Integer getRedPointPolicy() {
-            return this.redPointPolicy;
-        }
-
         public SendMessageRequestRequestParamsOptions setReceiveScopeOption(SendMessageRequestRequestParamsOptionsReceiveScopeOption receiveScopeOption) {
             this.receiveScopeOption = receiveScopeOption;
             return this;
         }
         public SendMessageRequestRequestParamsOptionsReceiveScopeOption getReceiveScopeOption() {
             return this.receiveScopeOption;
+        }
+
+        public SendMessageRequestRequestParamsOptions setRedPointPolicy(Integer redPointPolicy) {
+            this.redPointPolicy = redPointPolicy;
+            return this;
+        }
+        public Integer getRedPointPolicy() {
+            return this.redPointPolicy;
         }
 
         public SendMessageRequestRequestParamsOptions setSingleChatCreateRequest(SendMessageRequestRequestParamsOptionsSingleChatCreateRequest singleChatCreateRequest) {
@@ -178,49 +166,33 @@ public class SendMessageRequest extends TeaModel {
     }
 
     public static class SendMessageRequestRequestParams extends TeaModel {
-        // 消息UUID
-        @NameInMap("Uuid")
-        public String uuid;
-
-        // 会话ID
         @NameInMap("AppCid")
         public String appCid;
 
-        // 会话类型
-        @NameInMap("ConversationType")
-        public Integer conversationType;
-
-        // 发送者UID
-        @NameInMap("SenderId")
-        public String senderId;
-
-        // 消息内容类型
-        @NameInMap("ContentType")
-        public Integer contentType;
-
-        // 消息内容Json
         @NameInMap("Content")
         public String content;
 
-        // 消息扩展字段
+        @NameInMap("ContentType")
+        public Integer contentType;
+
+        @NameInMap("ConversationType")
+        public Integer conversationType;
+
         @NameInMap("Extensions")
         public java.util.Map<String, String> extensions;
 
-        // 消息设置
         @NameInMap("Options")
         public SendMessageRequestRequestParamsOptions options;
+
+        @NameInMap("SenderId")
+        public String senderId;
+
+        @NameInMap("Uuid")
+        public String uuid;
 
         public static SendMessageRequestRequestParams build(java.util.Map<String, ?> map) throws Exception {
             SendMessageRequestRequestParams self = new SendMessageRequestRequestParams();
             return TeaModel.build(map, self);
-        }
-
-        public SendMessageRequestRequestParams setUuid(String uuid) {
-            this.uuid = uuid;
-            return this;
-        }
-        public String getUuid() {
-            return this.uuid;
         }
 
         public SendMessageRequestRequestParams setAppCid(String appCid) {
@@ -231,20 +203,12 @@ public class SendMessageRequest extends TeaModel {
             return this.appCid;
         }
 
-        public SendMessageRequestRequestParams setConversationType(Integer conversationType) {
-            this.conversationType = conversationType;
+        public SendMessageRequestRequestParams setContent(String content) {
+            this.content = content;
             return this;
         }
-        public Integer getConversationType() {
-            return this.conversationType;
-        }
-
-        public SendMessageRequestRequestParams setSenderId(String senderId) {
-            this.senderId = senderId;
-            return this;
-        }
-        public String getSenderId() {
-            return this.senderId;
+        public String getContent() {
+            return this.content;
         }
 
         public SendMessageRequestRequestParams setContentType(Integer contentType) {
@@ -255,12 +219,12 @@ public class SendMessageRequest extends TeaModel {
             return this.contentType;
         }
 
-        public SendMessageRequestRequestParams setContent(String content) {
-            this.content = content;
+        public SendMessageRequestRequestParams setConversationType(Integer conversationType) {
+            this.conversationType = conversationType;
             return this;
         }
-        public String getContent() {
-            return this.content;
+        public Integer getConversationType() {
+            return this.conversationType;
         }
 
         public SendMessageRequestRequestParams setExtensions(java.util.Map<String, String> extensions) {
@@ -277,6 +241,22 @@ public class SendMessageRequest extends TeaModel {
         }
         public SendMessageRequestRequestParamsOptions getOptions() {
             return this.options;
+        }
+
+        public SendMessageRequestRequestParams setSenderId(String senderId) {
+            this.senderId = senderId;
+            return this;
+        }
+        public String getSenderId() {
+            return this.senderId;
+        }
+
+        public SendMessageRequestRequestParams setUuid(String uuid) {
+            this.uuid = uuid;
+            return this;
+        }
+        public String getUuid() {
+            return this.uuid;
         }
 
     }

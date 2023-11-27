@@ -4,25 +4,15 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class SendCustomMessageToRoomUsersRequest extends TeaModel {
-    // 请求参数的结构体。
-    @NameInMap("Request")
-    public SendCustomMessageToRoomUsersRequestRequest request;
-
-    // 指定的消息接受者的用户ID列表，大小不得超过100。
     @NameInMap("Receivers")
     public java.util.List<String> receivers;
+
+    @NameInMap("Request")
+    public SendCustomMessageToRoomUsersRequestRequest request;
 
     public static SendCustomMessageToRoomUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         SendCustomMessageToRoomUsersRequest self = new SendCustomMessageToRoomUsersRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SendCustomMessageToRoomUsersRequest setRequest(SendCustomMessageToRoomUsersRequestRequest request) {
-        this.request = request;
-        return this;
-    }
-    public SendCustomMessageToRoomUsersRequestRequest getRequest() {
-        return this.request;
     }
 
     public SendCustomMessageToRoomUsersRequest setReceivers(java.util.List<String> receivers) {
@@ -33,30 +23,41 @@ public class SendCustomMessageToRoomUsersRequest extends TeaModel {
         return this.receivers;
     }
 
+    public SendCustomMessageToRoomUsersRequest setRequest(SendCustomMessageToRoomUsersRequestRequest request) {
+        this.request = request;
+        return this;
+    }
+    public SendCustomMessageToRoomUsersRequestRequest getRequest() {
+        return this.request;
+    }
+
     public static class SendCustomMessageToRoomUsersRequestRequest extends TeaModel {
-        // 应用的appKey。
+        @NameInMap("Body")
+        public String body;
+
         @NameInMap("Domain")
         public String domain;
 
-        // 房间ID，由调用CreateRoom时返回。
         @NameInMap("RoomId")
         public String roomId;
 
-        // 消息的发送者ID。
         @NameInMap("SenderId")
         public String senderId;
 
-        // 消息的类型，由业务自定义，请传递100000以上。
         @NameInMap("SubType")
         public Integer subType;
-
-        // 消息体。
-        @NameInMap("Body")
-        public String body;
 
         public static SendCustomMessageToRoomUsersRequestRequest build(java.util.Map<String, ?> map) throws Exception {
             SendCustomMessageToRoomUsersRequestRequest self = new SendCustomMessageToRoomUsersRequestRequest();
             return TeaModel.build(map, self);
+        }
+
+        public SendCustomMessageToRoomUsersRequestRequest setBody(String body) {
+            this.body = body;
+            return this;
+        }
+        public String getBody() {
+            return this.body;
         }
 
         public SendCustomMessageToRoomUsersRequestRequest setDomain(String domain) {
@@ -89,14 +90,6 @@ public class SendCustomMessageToRoomUsersRequest extends TeaModel {
         }
         public Integer getSubType() {
             return this.subType;
-        }
-
-        public SendCustomMessageToRoomUsersRequestRequest setBody(String body) {
-            this.body = body;
-            return this;
-        }
-        public String getBody() {
-            return this.body;
         }
 
     }

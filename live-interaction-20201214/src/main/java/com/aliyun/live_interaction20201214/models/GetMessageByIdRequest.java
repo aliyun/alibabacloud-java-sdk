@@ -4,11 +4,9 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class GetMessageByIdRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
-    // 请求实体
     @NameInMap("RequestParams")
     public GetMessageByIdRequestRequestParams requestParams;
 
@@ -34,7 +32,6 @@ public class GetMessageByIdRequest extends TeaModel {
     }
 
     public static class GetMessageByIdRequestRequestParams extends TeaModel {
-        // 消息Id
         @NameInMap("MsgId")
         public String msgId;
 

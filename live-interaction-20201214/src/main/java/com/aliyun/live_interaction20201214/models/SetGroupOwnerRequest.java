@@ -4,11 +4,9 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class SetGroupOwnerRequest extends TeaModel {
-    // App ID，IMPaaS租户的ID
     @NameInMap("AppId")
     public String appId;
 
-    // 群主转让的请求体
     @NameInMap("RequestParams")
     public SetGroupOwnerRequestRequestParams requestParams;
 
@@ -34,11 +32,9 @@ public class SetGroupOwnerRequest extends TeaModel {
     }
 
     public static class SetGroupOwnerRequestRequestParams extends TeaModel {
-        // 会话ID
         @NameInMap("AppCid")
         public String appCid;
 
-        // 新群主
         @NameInMap("NewOwnerAppUid")
         public String newOwnerAppUid;
 

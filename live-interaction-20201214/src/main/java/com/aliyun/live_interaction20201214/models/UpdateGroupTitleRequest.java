@@ -4,7 +4,6 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class UpdateGroupTitleRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
@@ -33,15 +32,12 @@ public class UpdateGroupTitleRequest extends TeaModel {
     }
 
     public static class UpdateGroupTitleRequestRequestParams extends TeaModel {
-        // 会话ID
         @NameInMap("AppCid")
         public String appCid;
 
-        // 操作者用户ID
         @NameInMap("OperatorAppUid")
         public String operatorAppUid;
 
-        // 群聊标题
         @NameInMap("Title")
         public String title;
 

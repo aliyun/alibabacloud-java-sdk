@@ -4,14 +4,14 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class SendMessageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public SendMessageResponseBodyResult result;
@@ -19,14 +19,6 @@ public class SendMessageResponseBody extends TeaModel {
     public static SendMessageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SendMessageResponseBody self = new SendMessageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SendMessageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SendMessageResponseBody setCode(String code) {
@@ -45,6 +37,14 @@ public class SendMessageResponseBody extends TeaModel {
         return this.message;
     }
 
+    public SendMessageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public SendMessageResponseBody setResult(SendMessageResponseBodyResult result) {
         this.result = result;
         return this;
@@ -54,25 +54,15 @@ public class SendMessageResponseBody extends TeaModel {
     }
 
     public static class SendMessageResponseBodyResult extends TeaModel {
-        // 消息ID
-        @NameInMap("MsgId")
-        public String msgId;
-
-        // 消息创建时间戳(毫秒)
         @NameInMap("CreateTime")
         public Long createTime;
+
+        @NameInMap("MsgId")
+        public String msgId;
 
         public static SendMessageResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             SendMessageResponseBodyResult self = new SendMessageResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public SendMessageResponseBodyResult setMsgId(String msgId) {
-            this.msgId = msgId;
-            return this;
-        }
-        public String getMsgId() {
-            return this.msgId;
         }
 
         public SendMessageResponseBodyResult setCreateTime(Long createTime) {
@@ -81,6 +71,14 @@ public class SendMessageResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public SendMessageResponseBodyResult setMsgId(String msgId) {
+            this.msgId = msgId;
+            return this;
+        }
+        public String getMsgId() {
+            return this.msgId;
         }
 
     }

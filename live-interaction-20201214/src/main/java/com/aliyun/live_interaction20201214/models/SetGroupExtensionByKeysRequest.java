@@ -4,11 +4,9 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class SetGroupExtensionByKeysRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
-    // 群聊设置扩展字段请求实体
     @NameInMap("RequestParams")
     public SetGroupExtensionByKeysRequestRequestParams requestParams;
 
@@ -37,7 +35,6 @@ public class SetGroupExtensionByKeysRequest extends TeaModel {
         @NameInMap("AppCid")
         public String appCid;
 
-        // 扩展字段
         @NameInMap("Extensions")
         public java.util.Map<String, String> extensions;
 

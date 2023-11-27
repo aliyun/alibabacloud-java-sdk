@@ -4,7 +4,6 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class SilenceAllGroupMembersRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
@@ -33,11 +32,9 @@ public class SilenceAllGroupMembersRequest extends TeaModel {
     }
 
     public static class SilenceAllGroupMembersRequestRequestParams extends TeaModel {
-        // 会话ID
         @NameInMap("AppCid")
         public String appCid;
 
-        // 操作者uid
         @NameInMap("OperatorAppUid")
         public String operatorAppUid;
 
@@ -55,38 +52,6 @@ public class SilenceAllGroupMembersRequest extends TeaModel {
         }
 
         public SilenceAllGroupMembersRequestRequestParams setOperatorAppUid(String operatorAppUid) {
-            this.operatorAppUid = operatorAppUid;
-            return this;
-        }
-        public String getOperatorAppUid() {
-            return this.operatorAppUid;
-        }
-
-    }
-
-    public static class CancelSilenceAllGroupMembersRequestRequestParams extends TeaModel {
-        // 会话ID
-        @NameInMap("AppCid")
-        public String appCid;
-
-        // 操作者uid
-        @NameInMap("OperatorAppUid")
-        public String operatorAppUid;
-
-        public static CancelSilenceAllGroupMembersRequestRequestParams build(java.util.Map<String, ?> map) throws Exception {
-            CancelSilenceAllGroupMembersRequestRequestParams self = new CancelSilenceAllGroupMembersRequestRequestParams();
-            return TeaModel.build(map, self);
-        }
-
-        public CancelSilenceAllGroupMembersRequestRequestParams setAppCid(String appCid) {
-            this.appCid = appCid;
-            return this;
-        }
-        public String getAppCid() {
-            return this.appCid;
-        }
-
-        public CancelSilenceAllGroupMembersRequestRequestParams setOperatorAppUid(String operatorAppUid) {
             this.operatorAppUid = operatorAppUid;
             return this;
         }

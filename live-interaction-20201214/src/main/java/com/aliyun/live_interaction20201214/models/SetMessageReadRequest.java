@@ -4,7 +4,6 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class SetMessageReadRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
@@ -33,11 +32,9 @@ public class SetMessageReadRequest extends TeaModel {
     }
 
     public static class SetMessageReadRequestRequestParams extends TeaModel {
-        // 操作者ID
         @NameInMap("AppUid")
         public String appUid;
 
-        // 消息ID
         @NameInMap("MsgId")
         public String msgId;
 

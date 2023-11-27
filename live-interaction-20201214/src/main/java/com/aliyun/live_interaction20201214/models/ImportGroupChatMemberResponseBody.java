@@ -4,26 +4,18 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class ImportGroupChatMemberResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static ImportGroupChatMemberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ImportGroupChatMemberResponseBody self = new ImportGroupChatMemberResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ImportGroupChatMemberResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ImportGroupChatMemberResponseBody setCode(String code) {
@@ -40,6 +32,14 @@ public class ImportGroupChatMemberResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public ImportGroupChatMemberResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

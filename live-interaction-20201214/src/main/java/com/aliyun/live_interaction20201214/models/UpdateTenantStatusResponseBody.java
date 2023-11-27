@@ -4,28 +4,32 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class UpdateTenantStatusResponseBody extends TeaModel {
-    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("ResponseSuccess")
     public Boolean responseSuccess;
 
-    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    // 是否更新成功
     @NameInMap("result")
     public Boolean result;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     public static UpdateTenantStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateTenantStatusResponseBody self = new UpdateTenantStatusResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateTenantStatusResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public UpdateTenantStatusResponseBody setResponseSuccess(Boolean responseSuccess) {
@@ -58,14 +62,6 @@ public class UpdateTenantStatusResponseBody extends TeaModel {
     }
     public Boolean getResult() {
         return this.result;
-    }
-
-    public UpdateTenantStatusResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
 }

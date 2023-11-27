@@ -4,26 +4,18 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class BindInterconnectionCidResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static BindInterconnectionCidResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BindInterconnectionCidResponseBody self = new BindInterconnectionCidResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public BindInterconnectionCidResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public BindInterconnectionCidResponseBody setCode(String code) {
@@ -40,6 +32,14 @@ public class BindInterconnectionCidResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public BindInterconnectionCidResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

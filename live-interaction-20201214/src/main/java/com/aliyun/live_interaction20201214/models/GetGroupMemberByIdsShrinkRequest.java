@@ -4,11 +4,9 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class GetGroupMemberByIdsShrinkRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
-    // 群聊设置扩展字段请求实体
     @NameInMap("RequestParams")
     public String requestParamsShrink;
 

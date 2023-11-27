@@ -4,7 +4,6 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class RequestParamsOptionsSingleChatCreateRequestUserConversationValue extends TeaModel {
-    // 扩展信息
     @NameInMap("UserExtensions")
     public java.util.Map<String, String> userExtensions;
 

@@ -4,25 +4,40 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class DeleteAppResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
-    // 是否成功
-    @NameInMap("Success")
-    public Boolean success;
-
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // 错误码
-    @NameInMap("Code")
-    public String code;
+    /**
+     * <p>Id of the request</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static DeleteAppResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteAppResponseBody self = new DeleteAppResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteAppResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public DeleteAppResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public DeleteAppResponseBody setRequestId(String requestId) {
@@ -39,22 +54,6 @@ public class DeleteAppResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public DeleteAppResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public DeleteAppResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

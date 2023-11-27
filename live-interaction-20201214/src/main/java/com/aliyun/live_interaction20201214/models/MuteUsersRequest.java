@@ -4,7 +4,6 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class MuteUsersRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
@@ -33,17 +32,14 @@ public class MuteUsersRequest extends TeaModel {
     }
 
     public static class MuteUsersRequestRequestParams extends TeaModel {
-        // 需要禁言的用户
         @NameInMap("AppUids")
         public java.util.List<String> appUids;
 
-        // 单位秒
-        @NameInMap("MuteDuration")
-        public Long muteDuration;
-
-        // true: 禁言, false: 解除禁言
         @NameInMap("Mute")
         public Boolean mute;
+
+        @NameInMap("MuteDuration")
+        public Long muteDuration;
 
         public static MuteUsersRequestRequestParams build(java.util.Map<String, ?> map) throws Exception {
             MuteUsersRequestRequestParams self = new MuteUsersRequestRequestParams();
@@ -58,20 +54,20 @@ public class MuteUsersRequest extends TeaModel {
             return this.appUids;
         }
 
-        public MuteUsersRequestRequestParams setMuteDuration(Long muteDuration) {
-            this.muteDuration = muteDuration;
-            return this;
-        }
-        public Long getMuteDuration() {
-            return this.muteDuration;
-        }
-
         public MuteUsersRequestRequestParams setMute(Boolean mute) {
             this.mute = mute;
             return this;
         }
         public Boolean getMute() {
             return this.mute;
+        }
+
+        public MuteUsersRequestRequestParams setMuteDuration(Long muteDuration) {
+            this.muteDuration = muteDuration;
+            return this;
+        }
+        public Long getMuteDuration() {
+            return this.muteDuration;
         }
 
     }

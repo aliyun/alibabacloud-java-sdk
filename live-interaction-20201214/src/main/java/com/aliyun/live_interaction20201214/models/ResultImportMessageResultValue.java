@@ -4,11 +4,9 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class ResultImportMessageResultValue extends TeaModel {
-    // 0 成功
     @NameInMap("result")
     public Long result;
 
-    // 消息ID
     @NameInMap("msgId")
     public String msgId;
 

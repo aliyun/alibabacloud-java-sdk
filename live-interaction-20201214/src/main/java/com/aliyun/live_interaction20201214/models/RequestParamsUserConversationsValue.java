@@ -4,31 +4,24 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class RequestParamsUserConversationsValue extends TeaModel {
-    // 是否置顶
     @NameInMap("Top")
     public Boolean top;
 
-    // 未读数
     @NameInMap("RedPoint")
     public Long redPoint;
 
-    // 是否免打扰
     @NameInMap("Mute")
     public Boolean mute;
 
-    // 是否可见
     @NameInMap("Visible")
     public Boolean visible;
 
-    // 创建时间戳
     @NameInMap("CreateTime")
     public Long createTime;
 
-    // 修改时间戳
     @NameInMap("ModifyTime")
     public Long modifyTime;
 
-    // 自定义信息
     @NameInMap("UserExtensions")
     public java.util.Map<String, String> userExtensions;
 

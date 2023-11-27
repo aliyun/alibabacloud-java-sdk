@@ -4,11 +4,9 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class AddGroupSilenceWhitelistRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
-    // 群禁言添加白名单请求体
     @NameInMap("RequestParams")
     public AddGroupSilenceWhitelistRequestRequestParams requestParams;
 
@@ -34,29 +32,18 @@ public class AddGroupSilenceWhitelistRequest extends TeaModel {
     }
 
     public static class AddGroupSilenceWhitelistRequestRequestParams extends TeaModel {
-        // 操作者
-        @NameInMap("OperatorAppUid")
-        public String operatorAppUid;
-
-        // 群会话id
         @NameInMap("AppCid")
         public String appCid;
 
-        // 禁言用户列表
         @NameInMap("Members")
         public java.util.List<String> members;
+
+        @NameInMap("OperatorAppUid")
+        public String operatorAppUid;
 
         public static AddGroupSilenceWhitelistRequestRequestParams build(java.util.Map<String, ?> map) throws Exception {
             AddGroupSilenceWhitelistRequestRequestParams self = new AddGroupSilenceWhitelistRequestRequestParams();
             return TeaModel.build(map, self);
-        }
-
-        public AddGroupSilenceWhitelistRequestRequestParams setOperatorAppUid(String operatorAppUid) {
-            this.operatorAppUid = operatorAppUid;
-            return this;
-        }
-        public String getOperatorAppUid() {
-            return this.operatorAppUid;
         }
 
         public AddGroupSilenceWhitelistRequestRequestParams setAppCid(String appCid) {
@@ -73,6 +60,14 @@ public class AddGroupSilenceWhitelistRequest extends TeaModel {
         }
         public java.util.List<String> getMembers() {
             return this.members;
+        }
+
+        public AddGroupSilenceWhitelistRequestRequestParams setOperatorAppUid(String operatorAppUid) {
+            this.operatorAppUid = operatorAppUid;
+            return this;
+        }
+        public String getOperatorAppUid() {
+            return this.operatorAppUid;
         }
 
     }

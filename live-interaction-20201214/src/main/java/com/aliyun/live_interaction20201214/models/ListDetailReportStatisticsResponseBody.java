@@ -4,33 +4,61 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class ListDetailReportStatisticsResponseBody extends TeaModel {
-    // desc
-    @NameInMap("Message")
-    public String message;
-
-    // requestId
-    @NameInMap("RequestId")
-    public String requestId;
-
-    // httpStatusCode
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    // code
+    /**
+     * <p>code</p>
+     */
     @NameInMap("Code")
     public String code;
 
-    // success
-    @NameInMap("Success")
-    public Boolean success;
+    /**
+     * <p>httpStatusCode</p>
+     */
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
-    // result
+    /**
+     * <p>desc</p>
+     */
+    @NameInMap("Message")
+    public String message;
+
+    /**
+     * <p>requestId</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>result</p>
+     */
     @NameInMap("Result")
     public ListDetailReportStatisticsResponseBodyResult result;
+
+    /**
+     * <p>success</p>
+     */
+    @NameInMap("Success")
+    public Boolean success;
 
     public static ListDetailReportStatisticsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDetailReportStatisticsResponseBody self = new ListDetailReportStatisticsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListDetailReportStatisticsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListDetailReportStatisticsResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ListDetailReportStatisticsResponseBody setMessage(String message) {
@@ -49,20 +77,12 @@ public class ListDetailReportStatisticsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListDetailReportStatisticsResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
+    public ListDetailReportStatisticsResponseBody setResult(ListDetailReportStatisticsResponseBodyResult result) {
+        this.result = result;
         return this;
     }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public ListDetailReportStatisticsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public ListDetailReportStatisticsResponseBodyResult getResult() {
+        return this.result;
     }
 
     public ListDetailReportStatisticsResponseBody setSuccess(Boolean success) {
@@ -73,16 +93,7 @@ public class ListDetailReportStatisticsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListDetailReportStatisticsResponseBody setResult(ListDetailReportStatisticsResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public ListDetailReportStatisticsResponseBodyResult getResult() {
-        return this.result;
-    }
-
     public static class ListDetailReportStatisticsResponseBodyResult extends TeaModel {
-        // 数据
         @NameInMap("Data")
         public java.util.List<java.util.Map<String, ?>> data;
 

@@ -7,7 +7,6 @@ public class SetUserConversationExtensionByKeysRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    // 设置用户拓展字段请求实体
     @NameInMap("RequestParams")
     public SetUserConversationExtensionByKeysRequestRequestParams requestParams;
 
@@ -33,15 +32,12 @@ public class SetUserConversationExtensionByKeysRequest extends TeaModel {
     }
 
     public static class SetUserConversationExtensionByKeysRequestRequestParams extends TeaModel {
-        // 用户id
-        @NameInMap("AppUid")
-        public String appUid;
-
-        // 会话id
         @NameInMap("AppCid")
         public String appCid;
 
-        // 拓展字段
+        @NameInMap("AppUid")
+        public String appUid;
+
         @NameInMap("Extensions")
         public java.util.Map<String, String> extensions;
 
@@ -50,20 +46,20 @@ public class SetUserConversationExtensionByKeysRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public SetUserConversationExtensionByKeysRequestRequestParams setAppUid(String appUid) {
-            this.appUid = appUid;
-            return this;
-        }
-        public String getAppUid() {
-            return this.appUid;
-        }
-
         public SetUserConversationExtensionByKeysRequestRequestParams setAppCid(String appCid) {
             this.appCid = appCid;
             return this;
         }
         public String getAppCid() {
             return this.appCid;
+        }
+
+        public SetUserConversationExtensionByKeysRequestRequestParams setAppUid(String appUid) {
+            this.appUid = appUid;
+            return this;
+        }
+        public String getAppUid() {
+            return this.appUid;
         }
 
         public SetUserConversationExtensionByKeysRequestRequestParams setExtensions(java.util.Map<String, String> extensions) {

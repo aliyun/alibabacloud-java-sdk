@@ -7,7 +7,6 @@ public class RemoveSingleChatExtensionByKeysShrinkRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    // 单聊移除拓展字段请求实体
     @NameInMap("RequestParams")
     public String requestParamsShrink;
 
