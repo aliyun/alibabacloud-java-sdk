@@ -3,7 +3,7 @@ package com.aliyun.nlb20220430.models;
 
 import com.aliyun.tea.*;
 
-public class CreateListenerRequest extends TeaModel {
+public class CreateListenerShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable Application-Layer Protocol Negotiation (ALPN). Valid values:</p>
      * <br>
@@ -136,7 +136,7 @@ public class CreateListenerRequest extends TeaModel {
     public Boolean proxyProtocolEnabled;
 
     @NameInMap("ProxyProtocolV2Config")
-    public CreateListenerRequestProxyProtocolV2Config proxyProtocolV2Config;
+    public String proxyProtocolV2ConfigShrink;
 
     /**
      * <p>The region ID of the NLB instance.</p>
@@ -183,14 +183,14 @@ public class CreateListenerRequest extends TeaModel {
      * <p>The tags.</p>
      */
     @NameInMap("Tag")
-    public java.util.List<CreateListenerRequestTag> tag;
+    public java.util.List<CreateListenerShrinkRequestTag> tag;
 
-    public static CreateListenerRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateListenerRequest self = new CreateListenerRequest();
+    public static CreateListenerShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateListenerShrinkRequest self = new CreateListenerShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateListenerRequest setAlpnEnabled(Boolean alpnEnabled) {
+    public CreateListenerShrinkRequest setAlpnEnabled(Boolean alpnEnabled) {
         this.alpnEnabled = alpnEnabled;
         return this;
     }
@@ -198,7 +198,7 @@ public class CreateListenerRequest extends TeaModel {
         return this.alpnEnabled;
     }
 
-    public CreateListenerRequest setAlpnPolicy(String alpnPolicy) {
+    public CreateListenerShrinkRequest setAlpnPolicy(String alpnPolicy) {
         this.alpnPolicy = alpnPolicy;
         return this;
     }
@@ -206,7 +206,7 @@ public class CreateListenerRequest extends TeaModel {
         return this.alpnPolicy;
     }
 
-    public CreateListenerRequest setCaCertificateIds(java.util.List<String> caCertificateIds) {
+    public CreateListenerShrinkRequest setCaCertificateIds(java.util.List<String> caCertificateIds) {
         this.caCertificateIds = caCertificateIds;
         return this;
     }
@@ -214,7 +214,7 @@ public class CreateListenerRequest extends TeaModel {
         return this.caCertificateIds;
     }
 
-    public CreateListenerRequest setCaEnabled(Boolean caEnabled) {
+    public CreateListenerShrinkRequest setCaEnabled(Boolean caEnabled) {
         this.caEnabled = caEnabled;
         return this;
     }
@@ -222,7 +222,7 @@ public class CreateListenerRequest extends TeaModel {
         return this.caEnabled;
     }
 
-    public CreateListenerRequest setCertificateIds(java.util.List<String> certificateIds) {
+    public CreateListenerShrinkRequest setCertificateIds(java.util.List<String> certificateIds) {
         this.certificateIds = certificateIds;
         return this;
     }
@@ -230,7 +230,7 @@ public class CreateListenerRequest extends TeaModel {
         return this.certificateIds;
     }
 
-    public CreateListenerRequest setClientToken(String clientToken) {
+    public CreateListenerShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -238,7 +238,7 @@ public class CreateListenerRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateListenerRequest setCps(Integer cps) {
+    public CreateListenerShrinkRequest setCps(Integer cps) {
         this.cps = cps;
         return this;
     }
@@ -246,7 +246,7 @@ public class CreateListenerRequest extends TeaModel {
         return this.cps;
     }
 
-    public CreateListenerRequest setDryRun(Boolean dryRun) {
+    public CreateListenerShrinkRequest setDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
@@ -254,7 +254,7 @@ public class CreateListenerRequest extends TeaModel {
         return this.dryRun;
     }
 
-    public CreateListenerRequest setEndPort(Integer endPort) {
+    public CreateListenerShrinkRequest setEndPort(Integer endPort) {
         this.endPort = endPort;
         return this;
     }
@@ -262,7 +262,7 @@ public class CreateListenerRequest extends TeaModel {
         return this.endPort;
     }
 
-    public CreateListenerRequest setIdleTimeout(Integer idleTimeout) {
+    public CreateListenerShrinkRequest setIdleTimeout(Integer idleTimeout) {
         this.idleTimeout = idleTimeout;
         return this;
     }
@@ -270,7 +270,7 @@ public class CreateListenerRequest extends TeaModel {
         return this.idleTimeout;
     }
 
-    public CreateListenerRequest setListenerDescription(String listenerDescription) {
+    public CreateListenerShrinkRequest setListenerDescription(String listenerDescription) {
         this.listenerDescription = listenerDescription;
         return this;
     }
@@ -278,7 +278,7 @@ public class CreateListenerRequest extends TeaModel {
         return this.listenerDescription;
     }
 
-    public CreateListenerRequest setListenerPort(Integer listenerPort) {
+    public CreateListenerShrinkRequest setListenerPort(Integer listenerPort) {
         this.listenerPort = listenerPort;
         return this;
     }
@@ -286,7 +286,7 @@ public class CreateListenerRequest extends TeaModel {
         return this.listenerPort;
     }
 
-    public CreateListenerRequest setListenerProtocol(String listenerProtocol) {
+    public CreateListenerShrinkRequest setListenerProtocol(String listenerProtocol) {
         this.listenerProtocol = listenerProtocol;
         return this;
     }
@@ -294,7 +294,7 @@ public class CreateListenerRequest extends TeaModel {
         return this.listenerProtocol;
     }
 
-    public CreateListenerRequest setLoadBalancerId(String loadBalancerId) {
+    public CreateListenerShrinkRequest setLoadBalancerId(String loadBalancerId) {
         this.loadBalancerId = loadBalancerId;
         return this;
     }
@@ -302,7 +302,7 @@ public class CreateListenerRequest extends TeaModel {
         return this.loadBalancerId;
     }
 
-    public CreateListenerRequest setMss(Integer mss) {
+    public CreateListenerShrinkRequest setMss(Integer mss) {
         this.mss = mss;
         return this;
     }
@@ -310,7 +310,7 @@ public class CreateListenerRequest extends TeaModel {
         return this.mss;
     }
 
-    public CreateListenerRequest setProxyProtocolEnabled(Boolean proxyProtocolEnabled) {
+    public CreateListenerShrinkRequest setProxyProtocolEnabled(Boolean proxyProtocolEnabled) {
         this.proxyProtocolEnabled = proxyProtocolEnabled;
         return this;
     }
@@ -318,15 +318,15 @@ public class CreateListenerRequest extends TeaModel {
         return this.proxyProtocolEnabled;
     }
 
-    public CreateListenerRequest setProxyProtocolV2Config(CreateListenerRequestProxyProtocolV2Config proxyProtocolV2Config) {
-        this.proxyProtocolV2Config = proxyProtocolV2Config;
+    public CreateListenerShrinkRequest setProxyProtocolV2ConfigShrink(String proxyProtocolV2ConfigShrink) {
+        this.proxyProtocolV2ConfigShrink = proxyProtocolV2ConfigShrink;
         return this;
     }
-    public CreateListenerRequestProxyProtocolV2Config getProxyProtocolV2Config() {
-        return this.proxyProtocolV2Config;
+    public String getProxyProtocolV2ConfigShrink() {
+        return this.proxyProtocolV2ConfigShrink;
     }
 
-    public CreateListenerRequest setRegionId(String regionId) {
+    public CreateListenerShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -334,7 +334,7 @@ public class CreateListenerRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateListenerRequest setSecSensorEnabled(Boolean secSensorEnabled) {
+    public CreateListenerShrinkRequest setSecSensorEnabled(Boolean secSensorEnabled) {
         this.secSensorEnabled = secSensorEnabled;
         return this;
     }
@@ -342,7 +342,7 @@ public class CreateListenerRequest extends TeaModel {
         return this.secSensorEnabled;
     }
 
-    public CreateListenerRequest setSecurityPolicyId(String securityPolicyId) {
+    public CreateListenerShrinkRequest setSecurityPolicyId(String securityPolicyId) {
         this.securityPolicyId = securityPolicyId;
         return this;
     }
@@ -350,7 +350,7 @@ public class CreateListenerRequest extends TeaModel {
         return this.securityPolicyId;
     }
 
-    public CreateListenerRequest setServerGroupId(String serverGroupId) {
+    public CreateListenerShrinkRequest setServerGroupId(String serverGroupId) {
         this.serverGroupId = serverGroupId;
         return this;
     }
@@ -358,7 +358,7 @@ public class CreateListenerRequest extends TeaModel {
         return this.serverGroupId;
     }
 
-    public CreateListenerRequest setStartPort(Integer startPort) {
+    public CreateListenerShrinkRequest setStartPort(Integer startPort) {
         this.startPort = startPort;
         return this;
     }
@@ -366,56 +366,15 @@ public class CreateListenerRequest extends TeaModel {
         return this.startPort;
     }
 
-    public CreateListenerRequest setTag(java.util.List<CreateListenerRequestTag> tag) {
+    public CreateListenerShrinkRequest setTag(java.util.List<CreateListenerShrinkRequestTag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<CreateListenerRequestTag> getTag() {
+    public java.util.List<CreateListenerShrinkRequestTag> getTag() {
         return this.tag;
     }
 
-    public static class CreateListenerRequestProxyProtocolV2Config extends TeaModel {
-        @NameInMap("Ppv2PrivateLinkEpIdEnabled")
-        public Boolean ppv2PrivateLinkEpIdEnabled;
-
-        @NameInMap("Ppv2PrivateLinkEpsIdEnabled")
-        public Boolean ppv2PrivateLinkEpsIdEnabled;
-
-        @NameInMap("Ppv2VpcIdEnabled")
-        public Boolean ppv2VpcIdEnabled;
-
-        public static CreateListenerRequestProxyProtocolV2Config build(java.util.Map<String, ?> map) throws Exception {
-            CreateListenerRequestProxyProtocolV2Config self = new CreateListenerRequestProxyProtocolV2Config();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateListenerRequestProxyProtocolV2Config setPpv2PrivateLinkEpIdEnabled(Boolean ppv2PrivateLinkEpIdEnabled) {
-            this.ppv2PrivateLinkEpIdEnabled = ppv2PrivateLinkEpIdEnabled;
-            return this;
-        }
-        public Boolean getPpv2PrivateLinkEpIdEnabled() {
-            return this.ppv2PrivateLinkEpIdEnabled;
-        }
-
-        public CreateListenerRequestProxyProtocolV2Config setPpv2PrivateLinkEpsIdEnabled(Boolean ppv2PrivateLinkEpsIdEnabled) {
-            this.ppv2PrivateLinkEpsIdEnabled = ppv2PrivateLinkEpsIdEnabled;
-            return this;
-        }
-        public Boolean getPpv2PrivateLinkEpsIdEnabled() {
-            return this.ppv2PrivateLinkEpsIdEnabled;
-        }
-
-        public CreateListenerRequestProxyProtocolV2Config setPpv2VpcIdEnabled(Boolean ppv2VpcIdEnabled) {
-            this.ppv2VpcIdEnabled = ppv2VpcIdEnabled;
-            return this;
-        }
-        public Boolean getPpv2VpcIdEnabled() {
-            return this.ppv2VpcIdEnabled;
-        }
-
-    }
-
-    public static class CreateListenerRequestTag extends TeaModel {
+    public static class CreateListenerShrinkRequestTag extends TeaModel {
         /**
          * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
          * <br>
@@ -432,12 +391,12 @@ public class CreateListenerRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CreateListenerRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            CreateListenerRequestTag self = new CreateListenerRequestTag();
+        public static CreateListenerShrinkRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateListenerShrinkRequestTag self = new CreateListenerShrinkRequestTag();
             return TeaModel.build(map, self);
         }
 
-        public CreateListenerRequestTag setKey(String key) {
+        public CreateListenerShrinkRequestTag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -445,7 +404,7 @@ public class CreateListenerRequest extends TeaModel {
             return this.key;
         }
 
-        public CreateListenerRequestTag setValue(String value) {
+        public CreateListenerShrinkRequestTag setValue(String value) {
             this.value = value;
             return this;
         }

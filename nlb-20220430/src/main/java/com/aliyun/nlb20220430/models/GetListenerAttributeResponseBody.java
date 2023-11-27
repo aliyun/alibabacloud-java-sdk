@@ -131,6 +131,9 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     @NameInMap("ProxyProtocolEnabled")
     public Boolean proxyProtocolEnabled;
 
+    @NameInMap("ProxyProtocolV2Config")
+    public GetListenerAttributeResponseBodyProxyProtocolV2Config proxyProtocolV2Config;
+
     /**
      * <p>The ID of the region where the NLB instance is deployed.</p>
      */
@@ -313,6 +316,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         return this.proxyProtocolEnabled;
     }
 
+    public GetListenerAttributeResponseBody setProxyProtocolV2Config(GetListenerAttributeResponseBodyProxyProtocolV2Config proxyProtocolV2Config) {
+        this.proxyProtocolV2Config = proxyProtocolV2Config;
+        return this;
+    }
+    public GetListenerAttributeResponseBodyProxyProtocolV2Config getProxyProtocolV2Config() {
+        return this.proxyProtocolV2Config;
+    }
+
     public GetListenerAttributeResponseBody setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -367,6 +378,47 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     }
     public java.util.List<GetListenerAttributeResponseBodyTags> getTags() {
         return this.tags;
+    }
+
+    public static class GetListenerAttributeResponseBodyProxyProtocolV2Config extends TeaModel {
+        @NameInMap("Ppv2PrivateLinkEpIdEnabled")
+        public String ppv2PrivateLinkEpIdEnabled;
+
+        @NameInMap("Ppv2PrivateLinkEpsIdEnabled")
+        public String ppv2PrivateLinkEpsIdEnabled;
+
+        @NameInMap("Ppv2VpcIdEnabled")
+        public String ppv2VpcIdEnabled;
+
+        public static GetListenerAttributeResponseBodyProxyProtocolV2Config build(java.util.Map<String, ?> map) throws Exception {
+            GetListenerAttributeResponseBodyProxyProtocolV2Config self = new GetListenerAttributeResponseBodyProxyProtocolV2Config();
+            return TeaModel.build(map, self);
+        }
+
+        public GetListenerAttributeResponseBodyProxyProtocolV2Config setPpv2PrivateLinkEpIdEnabled(String ppv2PrivateLinkEpIdEnabled) {
+            this.ppv2PrivateLinkEpIdEnabled = ppv2PrivateLinkEpIdEnabled;
+            return this;
+        }
+        public String getPpv2PrivateLinkEpIdEnabled() {
+            return this.ppv2PrivateLinkEpIdEnabled;
+        }
+
+        public GetListenerAttributeResponseBodyProxyProtocolV2Config setPpv2PrivateLinkEpsIdEnabled(String ppv2PrivateLinkEpsIdEnabled) {
+            this.ppv2PrivateLinkEpsIdEnabled = ppv2PrivateLinkEpsIdEnabled;
+            return this;
+        }
+        public String getPpv2PrivateLinkEpsIdEnabled() {
+            return this.ppv2PrivateLinkEpsIdEnabled;
+        }
+
+        public GetListenerAttributeResponseBodyProxyProtocolV2Config setPpv2VpcIdEnabled(String ppv2VpcIdEnabled) {
+            this.ppv2VpcIdEnabled = ppv2VpcIdEnabled;
+            return this;
+        }
+        public String getPpv2VpcIdEnabled() {
+            return this.ppv2VpcIdEnabled;
+        }
+
     }
 
     public static class GetListenerAttributeResponseBodyTags extends TeaModel {

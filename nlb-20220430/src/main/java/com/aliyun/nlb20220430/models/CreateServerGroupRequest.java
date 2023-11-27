@@ -42,7 +42,7 @@ public class CreateServerGroupRequest extends TeaModel {
     public Boolean connectionDrainEnabled;
 
     /**
-     * <p>The timeout period of connection draining. Unit: seconds. Valid values: **10** to **900**.</p>
+     * <p>The timeout period of connection draining. Unit: seconds. Valid values: **0** to **900**.</p>
      */
     @NameInMap("ConnectionDrainTimeout")
     public Integer connectionDrainTimeout;
