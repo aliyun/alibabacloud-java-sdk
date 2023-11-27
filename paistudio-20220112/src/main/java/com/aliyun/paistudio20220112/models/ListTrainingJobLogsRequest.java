@@ -7,6 +7,9 @@ public class ListTrainingJobLogsRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("PageNumber")
     public Long pageNumber;
 
@@ -30,6 +33,14 @@ public class ListTrainingJobLogsRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public ListTrainingJobLogsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public ListTrainingJobLogsRequest setPageNumber(Long pageNumber) {
