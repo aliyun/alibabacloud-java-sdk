@@ -1407,6 +1407,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.detachPolicyWithOptions(request, runtime);
     }
 
+    public DisableAssociatedTransferResponse disableAssociatedTransferWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableAssociatedTransfer"),
+            new TeaPair("version", "2020-03-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableAssociatedTransferResponse());
+    }
+
+    public DisableAssociatedTransferResponse disableAssociatedTransfer() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disableAssociatedTransferWithOptions(runtime);
+    }
+
     /**
       * After you disable the Control Policy feature, the system automatically detaches all control policies that are attached to folders and member accounts. The system does not delete these control policies, but you cannot attach them to folders or member accounts again.
       * >  If you disable the Control Policy feature, the permissions of all folders and member accounts in a resource directory are affected. You must proceed with caution.
@@ -1440,6 +1461,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DisableControlPolicyResponse disableControlPolicy() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disableControlPolicyWithOptions(runtime);
+    }
+
+    public EnableAssociatedTransferResponse enableAssociatedTransferWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableAssociatedTransfer"),
+            new TeaPair("version", "2020-03-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableAssociatedTransferResponse());
+    }
+
+    public EnableAssociatedTransferResponse enableAssociatedTransfer() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableAssociatedTransferWithOptions(runtime);
     }
 
     /**
@@ -1621,6 +1663,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getAccountDeletionCheckResultWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to call the API operation to query the deletion status of the member whose Alibaba Cloud account ID is `169946124551****`. The response shows that the member is deleted.
+      *
+      * @param request GetAccountDeletionStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetAccountDeletionStatusResponse
+     */
     public GetAccountDeletionStatusResponse getAccountDeletionStatusWithOptions(GetAccountDeletionStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1645,6 +1694,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAccountDeletionStatusResponse());
     }
 
+    /**
+      * This topic provides an example on how to call the API operation to query the deletion status of the member whose Alibaba Cloud account ID is `169946124551****`. The response shows that the member is deleted.
+      *
+      * @param request GetAccountDeletionStatusRequest
+      * @return GetAccountDeletionStatusResponse
+     */
     public GetAccountDeletionStatusResponse getAccountDeletionStatus(GetAccountDeletionStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAccountDeletionStatusWithOptions(request, runtime);
@@ -2821,7 +2876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * >  You can use a RAM role that is not associated with a session policy to call this API operation.
-      * This topic provides an example on how to call the API operation to query the resources that can be accessed by the current account in resource groups. The response shows that the current account can access only the Elastic Compute Service (ECS) instance `i-23v38****` in the resource group `rg-uPJpP****`.
+      * This topic provides an example on how to call the API operation to query resources that can be accessed by the current account in resource groups. The response shows that the current account can access only the Elastic Compute Service (ECS) instance `i-23v38****` in the resource group `rg-uPJpP****`.
       *
       * @param request ListResourcesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2881,7 +2936,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * >  You can use a RAM role that is not associated with a session policy to call this API operation.
-      * This topic provides an example on how to call the API operation to query the resources that can be accessed by the current account in resource groups. The response shows that the current account can access only the Elastic Compute Service (ECS) instance `i-23v38****` in the resource group `rg-uPJpP****`.
+      * This topic provides an example on how to call the API operation to query resources that can be accessed by the current account in resource groups. The response shows that the current account can access only the Elastic Compute Service (ECS) instance `i-23v38****` in the resource group `rg-uPJpP****`.
       *
       * @param request ListResourcesRequest
       * @return ListResourcesResponse

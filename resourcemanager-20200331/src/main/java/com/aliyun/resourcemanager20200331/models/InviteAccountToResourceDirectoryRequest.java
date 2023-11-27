@@ -12,6 +12,9 @@ public class InviteAccountToResourceDirectoryRequest extends TeaModel {
     @NameInMap("Note")
     public String note;
 
+    /**
+     * <p>The tag key and value.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<InviteAccountToResourceDirectoryRequestTag> tag;
 

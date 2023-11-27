@@ -29,6 +29,9 @@ public class ListAccountsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The tag key and value.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListAccountsRequestTag> tag;
 
