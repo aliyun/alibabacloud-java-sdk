@@ -14899,6 +14899,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RouteTableName", request.routeTableName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.routeTableType)) {
+            query.put("RouteTableType", request.routeTableType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.routerId)) {
             query.put("RouterId", request.routerId);
         }

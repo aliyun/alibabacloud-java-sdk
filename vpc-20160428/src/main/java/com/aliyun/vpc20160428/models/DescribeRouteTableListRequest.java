@@ -54,6 +54,9 @@ public class DescribeRouteTableListRequest extends TeaModel {
     @NameInMap("RouteTableName")
     public String routeTableName;
 
+    @NameInMap("RouteTableType")
+    public String routeTableType;
+
     /**
      * <p>The ID of the router to which the route table belongs.</p>
      */
@@ -166,6 +169,14 @@ public class DescribeRouteTableListRequest extends TeaModel {
     }
     public String getRouteTableName() {
         return this.routeTableName;
+    }
+
+    public DescribeRouteTableListRequest setRouteTableType(String routeTableType) {
+        this.routeTableType = routeTableType;
+        return this;
+    }
+    public String getRouteTableType() {
+        return this.routeTableType;
     }
 
     public DescribeRouteTableListRequest setRouterId(String routerId) {
