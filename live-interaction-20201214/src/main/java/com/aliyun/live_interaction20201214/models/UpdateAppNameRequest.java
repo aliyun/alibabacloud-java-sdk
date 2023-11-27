@@ -4,11 +4,9 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class UpdateAppNameRequest extends TeaModel {
-    // 应用Id
     @NameInMap("AppId")
     public String appId;
 
-    // 请求
     @NameInMap("RequestParams")
     public UpdateAppNameRequestRequestParams requestParams;
 
@@ -34,7 +32,6 @@ public class UpdateAppNameRequest extends TeaModel {
     }
 
     public static class UpdateAppNameRequestRequestParams extends TeaModel {
-        // 应用名
         @NameInMap("AppName")
         public String appName;
 

@@ -4,7 +4,6 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class GetMediaUrlRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
@@ -33,11 +32,9 @@ public class GetMediaUrlRequest extends TeaModel {
     }
 
     public static class GetMediaUrlRequestRequestParams extends TeaModel {
-        // 多媒体资源ID
         @NameInMap("MediaId")
         public String mediaId;
 
-        // URL过期时间(秒，最大86400)
         @NameInMap("UrlExpireTime")
         public Long urlExpireTime;
 

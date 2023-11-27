@@ -4,11 +4,9 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class RemoveGroupMembersRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
-    // 群踢人请求实体
     @NameInMap("RequestParams")
     public RemoveGroupMembersRequestRequestParams requestParams;
 
@@ -34,26 +32,18 @@ public class RemoveGroupMembersRequest extends TeaModel {
     }
 
     public static class RemoveGroupMembersRequestRequestParams extends TeaModel {
-        @NameInMap("OperatorAppUid")
-        public String operatorAppUid;
-
         @NameInMap("AppCid")
         public String appCid;
 
         @NameInMap("AppUidsRemoved")
         public java.util.List<String> appUidsRemoved;
 
+        @NameInMap("OperatorAppUid")
+        public String operatorAppUid;
+
         public static RemoveGroupMembersRequestRequestParams build(java.util.Map<String, ?> map) throws Exception {
             RemoveGroupMembersRequestRequestParams self = new RemoveGroupMembersRequestRequestParams();
             return TeaModel.build(map, self);
-        }
-
-        public RemoveGroupMembersRequestRequestParams setOperatorAppUid(String operatorAppUid) {
-            this.operatorAppUid = operatorAppUid;
-            return this;
-        }
-        public String getOperatorAppUid() {
-            return this.operatorAppUid;
         }
 
         public RemoveGroupMembersRequestRequestParams setAppCid(String appCid) {
@@ -70,6 +60,14 @@ public class RemoveGroupMembersRequest extends TeaModel {
         }
         public java.util.List<String> getAppUidsRemoved() {
             return this.appUidsRemoved;
+        }
+
+        public RemoveGroupMembersRequestRequestParams setOperatorAppUid(String operatorAppUid) {
+            this.operatorAppUid = operatorAppUid;
+            return this;
+        }
+        public String getOperatorAppUid() {
+            return this.operatorAppUid;
         }
 
     }

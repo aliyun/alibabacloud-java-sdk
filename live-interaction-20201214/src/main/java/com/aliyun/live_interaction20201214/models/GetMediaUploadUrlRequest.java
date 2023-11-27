@@ -4,7 +4,6 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class GetMediaUploadUrlRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
@@ -33,7 +32,6 @@ public class GetMediaUploadUrlRequest extends TeaModel {
     }
 
     public static class GetMediaUploadUrlRequestRequestParams extends TeaModel {
-        // 多媒体资源类型(文件后缀名)
         @NameInMap("MimeType")
         public String mimeType;
 

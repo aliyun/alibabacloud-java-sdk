@@ -4,7 +4,6 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class GetRoomStatisticsRequest extends TeaModel {
-    // 请求参数的结构体。
     @NameInMap("Request")
     public GetRoomStatisticsRequestRequest request;
 
@@ -22,11 +21,9 @@ public class GetRoomStatisticsRequest extends TeaModel {
     }
 
     public static class GetRoomStatisticsRequestRequest extends TeaModel {
-        // 应用的appKey。
         @NameInMap("Domain")
         public String domain;
 
-        // 房间ID，由调用CreateRoom时返回。
         @NameInMap("RoomId")
         public String roomId;
 

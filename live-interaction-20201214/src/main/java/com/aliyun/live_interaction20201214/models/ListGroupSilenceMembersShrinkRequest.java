@@ -4,11 +4,9 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class ListGroupSilenceMembersShrinkRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
-    // 群禁言添加白名单请求体
     @NameInMap("RequestParams")
     public String requestParamsShrink;
 

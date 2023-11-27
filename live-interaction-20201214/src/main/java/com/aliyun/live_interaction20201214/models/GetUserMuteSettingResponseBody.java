@@ -4,31 +4,21 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class GetUserMuteSettingResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Message")
     public String message;
 
-    // 返回值
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Result")
     public GetUserMuteSettingResponseBodyResult result;
 
     public static GetUserMuteSettingResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetUserMuteSettingResponseBody self = new GetUserMuteSettingResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetUserMuteSettingResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetUserMuteSettingResponseBody setCode(String code) {
@@ -45,6 +35,14 @@ public class GetUserMuteSettingResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public GetUserMuteSettingResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetUserMuteSettingResponseBody setResult(GetUserMuteSettingResponseBodyResult result) {

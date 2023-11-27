@@ -4,11 +4,9 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class GetGroupByIdRequest extends TeaModel {
-    // APP ID, IMPaaS租户的ID
     @NameInMap("AppId")
     public String appId;
 
-    // 群会话信息获取的请求体
     @NameInMap("RequestParams")
     public GetGroupByIdRequestRequestParams requestParams;
 
@@ -34,7 +32,6 @@ public class GetGroupByIdRequest extends TeaModel {
     }
 
     public static class GetGroupByIdRequestRequestParams extends TeaModel {
-        // 群会话ID
         @NameInMap("AppCid")
         public String appCid;
 

@@ -4,7 +4,6 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class KickOffRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
@@ -33,15 +32,12 @@ public class KickOffRequest extends TeaModel {
     }
 
     public static class KickOffRequestRequestParams extends TeaModel {
-        // 用户ID
-        @NameInMap("AppUid")
-        public String appUid;
-
-        // 被踢下线的App的AppKey列表，为空时全部踢下线
         @NameInMap("AppKeys")
         public java.util.List<String> appKeys;
 
-        // 下线文案
+        @NameInMap("AppUid")
+        public String appUid;
+
         @NameInMap("Information")
         public String information;
 
@@ -50,20 +46,20 @@ public class KickOffRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public KickOffRequestRequestParams setAppUid(String appUid) {
-            this.appUid = appUid;
-            return this;
-        }
-        public String getAppUid() {
-            return this.appUid;
-        }
-
         public KickOffRequestRequestParams setAppKeys(java.util.List<String> appKeys) {
             this.appKeys = appKeys;
             return this;
         }
         public java.util.List<String> getAppKeys() {
             return this.appKeys;
+        }
+
+        public KickOffRequestRequestParams setAppUid(String appUid) {
+            this.appUid = appUid;
+            return this;
+        }
+        public String getAppUid() {
+            return this.appUid;
         }
 
         public KickOffRequestRequestParams setInformation(String information) {

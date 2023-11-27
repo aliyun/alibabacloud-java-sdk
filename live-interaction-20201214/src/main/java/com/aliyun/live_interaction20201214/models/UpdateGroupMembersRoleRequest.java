@@ -4,11 +4,9 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class UpdateGroupMembersRoleRequest extends TeaModel {
-    // App ID。IMPaaS租户的ID。
     @NameInMap("AppId")
     public String appId;
 
-    // 更新群成员角色请求体。
     @NameInMap("RequestParams")
     public UpdateGroupMembersRoleRequestRequestParams requestParams;
 
@@ -34,21 +32,17 @@ public class UpdateGroupMembersRoleRequest extends TeaModel {
     }
 
     public static class UpdateGroupMembersRoleRequestRequestParams extends TeaModel {
-        // 会话ID
         @NameInMap("AppCid")
         public String appCid;
 
-        // 操作用户ID。
+        @NameInMap("AppUids")
+        public java.util.List<String> appUids;
+
         @NameInMap("OperatorAppUid")
         public String operatorAppUid;
 
-        // 更新后的成员角色。取值： 2：管理员。 3：普通。 100~127：自定义。 不能为1。
         @NameInMap("Role")
         public Integer role;
-
-        // 需要更改的uids
-        @NameInMap("AppUids")
-        public java.util.List<String> appUids;
 
         public static UpdateGroupMembersRoleRequestRequestParams build(java.util.Map<String, ?> map) throws Exception {
             UpdateGroupMembersRoleRequestRequestParams self = new UpdateGroupMembersRoleRequestRequestParams();
@@ -61,6 +55,14 @@ public class UpdateGroupMembersRoleRequest extends TeaModel {
         }
         public String getAppCid() {
             return this.appCid;
+        }
+
+        public UpdateGroupMembersRoleRequestRequestParams setAppUids(java.util.List<String> appUids) {
+            this.appUids = appUids;
+            return this;
+        }
+        public java.util.List<String> getAppUids() {
+            return this.appUids;
         }
 
         public UpdateGroupMembersRoleRequestRequestParams setOperatorAppUid(String operatorAppUid) {
@@ -77,14 +79,6 @@ public class UpdateGroupMembersRoleRequest extends TeaModel {
         }
         public Integer getRole() {
             return this.role;
-        }
-
-        public UpdateGroupMembersRoleRequestRequestParams setAppUids(java.util.List<String> appUids) {
-            this.appUids = appUids;
-            return this;
-        }
-        public java.util.List<String> getAppUids() {
-            return this.appUids;
         }
 
     }

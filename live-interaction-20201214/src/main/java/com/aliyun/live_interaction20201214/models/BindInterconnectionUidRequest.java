@@ -4,11 +4,12 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class BindInterconnectionUidRequest extends TeaModel {
-    // AppId
+    /**
+     * <p>AppId</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
-    // 绑定用户请求体
     @NameInMap("RequestParams")
     public BindInterconnectionUidRequestRequestParams requestParams;
 
@@ -34,11 +35,9 @@ public class BindInterconnectionUidRequest extends TeaModel {
     }
 
     public static class BindInterconnectionUidRequestRequestParams extends TeaModel {
-        // AIM用户ID
         @NameInMap("AppUid")
         public String appUid;
 
-        // 钉钉用户ID
         @NameInMap("DingTalkUid")
         public String dingTalkUid;
 

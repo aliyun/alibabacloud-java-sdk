@@ -4,11 +4,9 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class RemoveGroupMemberExtensionByKeysRequest extends TeaModel {
-    // App ID, IMPaaS租户的ID
     @NameInMap("AppId")
     public String appId;
 
-    // 删除群成员扩展信息的请求体
     @NameInMap("RequestParams")
     public RemoveGroupMemberExtensionByKeysRequestRequestParams requestParams;
 
@@ -34,15 +32,12 @@ public class RemoveGroupMemberExtensionByKeysRequest extends TeaModel {
     }
 
     public static class RemoveGroupMemberExtensionByKeysRequestRequestParams extends TeaModel {
-        // 会话ID
         @NameInMap("AppCid")
         public String appCid;
 
-        // 用户ID
         @NameInMap("AppUid")
         public String appUid;
 
-        // 扩展信息中需要删除的key列表
         @NameInMap("Keys")
         public java.util.List<String> keys;
 

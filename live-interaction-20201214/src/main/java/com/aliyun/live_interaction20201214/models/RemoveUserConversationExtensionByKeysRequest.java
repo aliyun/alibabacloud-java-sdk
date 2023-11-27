@@ -7,7 +7,6 @@ public class RemoveUserConversationExtensionByKeysRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    // 移除用户拓展字段请求实体
     @NameInMap("RequestParams")
     public RemoveUserConversationExtensionByKeysRequestRequestParams requestParams;
 
@@ -33,13 +32,11 @@ public class RemoveUserConversationExtensionByKeysRequest extends TeaModel {
     }
 
     public static class RemoveUserConversationExtensionByKeysRequestRequestParams extends TeaModel {
-        // 用户id
-        @NameInMap("AppUid")
-        public String appUid;
-
-        // 会话id
         @NameInMap("AppCid")
         public String appCid;
+
+        @NameInMap("AppUid")
+        public String appUid;
 
         @NameInMap("Keys")
         public java.util.List<String> keys;
@@ -49,20 +46,20 @@ public class RemoveUserConversationExtensionByKeysRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public RemoveUserConversationExtensionByKeysRequestRequestParams setAppUid(String appUid) {
-            this.appUid = appUid;
-            return this;
-        }
-        public String getAppUid() {
-            return this.appUid;
-        }
-
         public RemoveUserConversationExtensionByKeysRequestRequestParams setAppCid(String appCid) {
             this.appCid = appCid;
             return this;
         }
         public String getAppCid() {
             return this.appCid;
+        }
+
+        public RemoveUserConversationExtensionByKeysRequestRequestParams setAppUid(String appUid) {
+            this.appUid = appUid;
+            return this;
+        }
+        public String getAppUid() {
+            return this.appUid;
         }
 
         public RemoveUserConversationExtensionByKeysRequestRequestParams setKeys(java.util.List<String> keys) {

@@ -21,17 +21,14 @@ public class DestroyRoomRequest extends TeaModel {
     }
 
     public static class DestroyRoomRequestRequest extends TeaModel {
-        // 应用appKey
         @NameInMap("domain")
         public String domain;
 
-        // 房间id
-        @NameInMap("roomId")
-        public String roomId;
-
-        // 操作人id
         @NameInMap("openId")
         public String openId;
+
+        @NameInMap("roomId")
+        public String roomId;
 
         public static DestroyRoomRequestRequest build(java.util.Map<String, ?> map) throws Exception {
             DestroyRoomRequestRequest self = new DestroyRoomRequestRequest();
@@ -46,20 +43,20 @@ public class DestroyRoomRequest extends TeaModel {
             return this.domain;
         }
 
-        public DestroyRoomRequestRequest setRoomId(String roomId) {
-            this.roomId = roomId;
-            return this;
-        }
-        public String getRoomId() {
-            return this.roomId;
-        }
-
         public DestroyRoomRequestRequest setOpenId(String openId) {
             this.openId = openId;
             return this;
         }
         public String getOpenId() {
             return this.openId;
+        }
+
+        public DestroyRoomRequestRequest setRoomId(String roomId) {
+            this.roomId = roomId;
+            return this;
+        }
+        public String getRoomId() {
+            return this.roomId;
         }
 
     }

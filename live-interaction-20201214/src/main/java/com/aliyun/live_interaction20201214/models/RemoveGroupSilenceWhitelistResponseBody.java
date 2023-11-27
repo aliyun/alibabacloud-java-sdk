@@ -4,26 +4,18 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class RemoveGroupSilenceWhitelistResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static RemoveGroupSilenceWhitelistResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RemoveGroupSilenceWhitelistResponseBody self = new RemoveGroupSilenceWhitelistResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RemoveGroupSilenceWhitelistResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RemoveGroupSilenceWhitelistResponseBody setCode(String code) {
@@ -40,6 +32,14 @@ public class RemoveGroupSilenceWhitelistResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public RemoveGroupSilenceWhitelistResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

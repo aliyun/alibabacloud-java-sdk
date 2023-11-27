@@ -4,11 +4,9 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class ListDetailReportStatisticsRequest extends TeaModel {
-    // 应用Id
     @NameInMap("AppId")
     public String appId;
 
-    // 请求
     @NameInMap("RequestParams")
     public ListDetailReportStatisticsRequestRequestParams requestParams;
 
@@ -34,29 +32,18 @@ public class ListDetailReportStatisticsRequest extends TeaModel {
     }
 
     public static class ListDetailReportStatisticsRequestRequestParams extends TeaModel {
-        // 开始时间，utc
-        @NameInMap("StartTime")
-        public String startTime;
-
-        // 结束时间，utc
         @NameInMap("EndTime")
         public String endTime;
 
-        // 报表类型  user、groupChat、message
         @NameInMap("ReportStatisticsType")
         public String reportStatisticsType;
+
+        @NameInMap("StartTime")
+        public String startTime;
 
         public static ListDetailReportStatisticsRequestRequestParams build(java.util.Map<String, ?> map) throws Exception {
             ListDetailReportStatisticsRequestRequestParams self = new ListDetailReportStatisticsRequestRequestParams();
             return TeaModel.build(map, self);
-        }
-
-        public ListDetailReportStatisticsRequestRequestParams setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
         }
 
         public ListDetailReportStatisticsRequestRequestParams setEndTime(String endTime) {
@@ -73,6 +60,14 @@ public class ListDetailReportStatisticsRequest extends TeaModel {
         }
         public String getReportStatisticsType() {
             return this.reportStatisticsType;
+        }
+
+        public ListDetailReportStatisticsRequestRequestParams setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
         }
 
     }

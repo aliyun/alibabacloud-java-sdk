@@ -4,11 +4,12 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class QueryInterconnectionCidMappingRequest extends TeaModel {
-    // AppId
+    /**
+     * <p>AppId</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
-    // 查询请求体
     @NameInMap("RequestParams")
     public QueryInterconnectionCidMappingRequestRequestParams requestParams;
 
@@ -34,11 +35,9 @@ public class QueryInterconnectionCidMappingRequest extends TeaModel {
     }
 
     public static class QueryInterconnectionCidMappingRequestRequestParams extends TeaModel {
-        // 会话ID
         @NameInMap("SrcCid")
         public String srcCid;
 
-        // 会话ID类型; 1: AIM会话ID 2: 钉钉会话ID
         @NameInMap("Type")
         public Long type;
 

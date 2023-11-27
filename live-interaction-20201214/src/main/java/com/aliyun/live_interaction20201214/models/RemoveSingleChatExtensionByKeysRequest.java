@@ -7,7 +7,6 @@ public class RemoveSingleChatExtensionByKeysRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    // 单聊移除拓展字段请求实体
     @NameInMap("RequestParams")
     public RemoveSingleChatExtensionByKeysRequestRequestParams requestParams;
 
@@ -33,13 +32,11 @@ public class RemoveSingleChatExtensionByKeysRequest extends TeaModel {
     }
 
     public static class RemoveSingleChatExtensionByKeysRequestRequestParams extends TeaModel {
-        // 用户id
-        @NameInMap("AppUid")
-        public String appUid;
-
-        // 会话id
         @NameInMap("AppCid")
         public String appCid;
+
+        @NameInMap("AppUid")
+        public String appUid;
 
         @NameInMap("Keys")
         public java.util.List<String> keys;
@@ -49,20 +46,20 @@ public class RemoveSingleChatExtensionByKeysRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public RemoveSingleChatExtensionByKeysRequestRequestParams setAppUid(String appUid) {
-            this.appUid = appUid;
-            return this;
-        }
-        public String getAppUid() {
-            return this.appUid;
-        }
-
         public RemoveSingleChatExtensionByKeysRequestRequestParams setAppCid(String appCid) {
             this.appCid = appCid;
             return this;
         }
         public String getAppCid() {
             return this.appCid;
+        }
+
+        public RemoveSingleChatExtensionByKeysRequestRequestParams setAppUid(String appUid) {
+            this.appUid = appUid;
+            return this;
+        }
+        public String getAppUid() {
+            return this.appUid;
         }
 
         public RemoveSingleChatExtensionByKeysRequestRequestParams setKeys(java.util.List<String> keys) {

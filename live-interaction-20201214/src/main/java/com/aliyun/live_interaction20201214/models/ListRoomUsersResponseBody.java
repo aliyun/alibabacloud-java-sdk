@@ -4,45 +4,24 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class ListRoomUsersResponseBody extends TeaModel {
-    // 请求ID。
-    @NameInMap("RequestId")
-    public String requestId;
-
-    // 请求是否成功。
-    @NameInMap("ResponseSuccess")
-    public Boolean responseSuccess;
-
-    // 错误码，请求异常时返回。
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // 错误信息，请求异常时返回。
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // 请求的返回结果。
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("ResponseSuccess")
+    public Boolean responseSuccess;
+
     @NameInMap("Result")
     public ListRoomUsersResponseBodyResult result;
 
     public static ListRoomUsersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRoomUsersResponseBody self = new ListRoomUsersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListRoomUsersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListRoomUsersResponseBody setResponseSuccess(Boolean responseSuccess) {
-        this.responseSuccess = responseSuccess;
-        return this;
-    }
-    public Boolean getResponseSuccess() {
-        return this.responseSuccess;
     }
 
     public ListRoomUsersResponseBody setErrorCode(String errorCode) {
@@ -61,6 +40,22 @@ public class ListRoomUsersResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public ListRoomUsersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListRoomUsersResponseBody setResponseSuccess(Boolean responseSuccess) {
+        this.responseSuccess = responseSuccess;
+        return this;
+    }
+    public Boolean getResponseSuccess() {
+        return this.responseSuccess;
+    }
+
     public ListRoomUsersResponseBody setResult(ListRoomUsersResponseBodyResult result) {
         this.result = result;
         return this;
@@ -70,21 +65,26 @@ public class ListRoomUsersResponseBody extends TeaModel {
     }
 
     public static class ListRoomUsersResponseBodyResultRoomUserVOList extends TeaModel {
-        // 房间ID。
+        @NameInMap("Nick")
+        public String nick;
+
         @NameInMap("RoomId")
         public String roomId;
 
-        // 用户ID。
         @NameInMap("UserId")
         public String userId;
-
-        // 用户的昵称。
-        @NameInMap("Nick")
-        public String nick;
 
         public static ListRoomUsersResponseBodyResultRoomUserVOList build(java.util.Map<String, ?> map) throws Exception {
             ListRoomUsersResponseBodyResultRoomUserVOList self = new ListRoomUsersResponseBodyResultRoomUserVOList();
             return TeaModel.build(map, self);
+        }
+
+        public ListRoomUsersResponseBodyResultRoomUserVOList setNick(String nick) {
+            this.nick = nick;
+            return this;
+        }
+        public String getNick() {
+            return this.nick;
         }
 
         public ListRoomUsersResponseBodyResultRoomUserVOList setRoomId(String roomId) {
@@ -103,40 +103,29 @@ public class ListRoomUsersResponseBody extends TeaModel {
             return this.userId;
         }
 
-        public ListRoomUsersResponseBodyResultRoomUserVOList setNick(String nick) {
-            this.nick = nick;
-            return this;
-        }
-        public String getNick() {
-            return this.nick;
-        }
-
     }
 
     public static class ListRoomUsersResponseBodyResult extends TeaModel {
-        // 房间的历史观看成员总数。
-        @NameInMap("TotalCount")
-        public Integer totalCount;
+        @NameInMap("HasMore")
+        public Boolean hasMore;
 
-        // 返回的观众列表。
         @NameInMap("RoomUserVOList")
         public java.util.List<ListRoomUsersResponseBodyResultRoomUserVOList> roomUserVOList;
 
-        // 是否还有下一页查询的数据。
-        @NameInMap("HasMore")
-        public Boolean hasMore;
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static ListRoomUsersResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListRoomUsersResponseBodyResult self = new ListRoomUsersResponseBodyResult();
             return TeaModel.build(map, self);
         }
 
-        public ListRoomUsersResponseBodyResult setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public ListRoomUsersResponseBodyResult setHasMore(Boolean hasMore) {
+            this.hasMore = hasMore;
             return this;
         }
-        public Integer getTotalCount() {
-            return this.totalCount;
+        public Boolean getHasMore() {
+            return this.hasMore;
         }
 
         public ListRoomUsersResponseBodyResult setRoomUserVOList(java.util.List<ListRoomUsersResponseBodyResultRoomUserVOList> roomUserVOList) {
@@ -147,12 +136,12 @@ public class ListRoomUsersResponseBody extends TeaModel {
             return this.roomUserVOList;
         }
 
-        public ListRoomUsersResponseBodyResult setHasMore(Boolean hasMore) {
-            this.hasMore = hasMore;
+        public ListRoomUsersResponseBodyResult setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
-        public Boolean getHasMore() {
-            return this.hasMore;
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

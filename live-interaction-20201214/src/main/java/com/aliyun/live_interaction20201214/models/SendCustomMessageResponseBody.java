@@ -4,45 +4,24 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class SendCustomMessageResponseBody extends TeaModel {
-    // 请求ID。
-    @NameInMap("RequestId")
-    public String requestId;
-
-    // 请求是否成功。
-    @NameInMap("ResponseSuccess")
-    public Boolean responseSuccess;
-
-    // 错误码，请求异常时返回。
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // 错误信息，请求异常时返回。
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // 请求的返回结果。
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("ResponseSuccess")
+    public Boolean responseSuccess;
+
     @NameInMap("Result")
     public SendCustomMessageResponseBodyResult result;
 
     public static SendCustomMessageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SendCustomMessageResponseBody self = new SendCustomMessageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SendCustomMessageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public SendCustomMessageResponseBody setResponseSuccess(Boolean responseSuccess) {
-        this.responseSuccess = responseSuccess;
-        return this;
-    }
-    public Boolean getResponseSuccess() {
-        return this.responseSuccess;
     }
 
     public SendCustomMessageResponseBody setErrorCode(String errorCode) {
@@ -61,6 +40,22 @@ public class SendCustomMessageResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public SendCustomMessageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public SendCustomMessageResponseBody setResponseSuccess(Boolean responseSuccess) {
+        this.responseSuccess = responseSuccess;
+        return this;
+    }
+    public Boolean getResponseSuccess() {
+        return this.responseSuccess;
+    }
+
     public SendCustomMessageResponseBody setResult(SendCustomMessageResponseBodyResult result) {
         this.result = result;
         return this;
@@ -70,7 +65,6 @@ public class SendCustomMessageResponseBody extends TeaModel {
     }
 
     public static class SendCustomMessageResponseBodyResult extends TeaModel {
-        // 消息的唯一ID标识。由数字、大小写字母组成，长度不超过20。
         @NameInMap("MessageId")
         public String messageId;
 

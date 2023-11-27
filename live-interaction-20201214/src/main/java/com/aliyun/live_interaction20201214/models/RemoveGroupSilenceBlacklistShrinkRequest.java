@@ -4,11 +4,9 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class RemoveGroupSilenceBlacklistShrinkRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
-    // 群禁言删除黑名单请求体
     @NameInMap("RequestParams")
     public String requestParamsShrink;
 

@@ -4,45 +4,27 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class GetCommonConfigResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
-    // 是否成功
-    @NameInMap("Success")
-    public Boolean success;
-
-    // 错误码
     @NameInMap("Code")
     public String code;
 
-    // 错误信息
     @NameInMap("Message")
     public String message;
 
-    // 返回值
+    /**
+     * <p>Id of the request</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Result")
     public GetCommonConfigResponseBodyResult result;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static GetCommonConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCommonConfigResponseBody self = new GetCommonConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetCommonConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetCommonConfigResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public GetCommonConfigResponseBody setCode(String code) {
@@ -61,6 +43,14 @@ public class GetCommonConfigResponseBody extends TeaModel {
         return this.message;
     }
 
+    public GetCommonConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public GetCommonConfigResponseBody setResult(GetCommonConfigResponseBodyResult result) {
         this.result = result;
         return this;
@@ -69,32 +59,21 @@ public class GetCommonConfigResponseBody extends TeaModel {
         return this.result;
     }
 
-    public static class GetCommonConfigResponseBodyResultCommonConfigLoginConfig extends TeaModel {
-        // 登录类型
-        @NameInMap("LoginType")
-        public Integer loginType;
-
-        public static GetCommonConfigResponseBodyResultCommonConfigLoginConfig build(java.util.Map<String, ?> map) throws Exception {
-            GetCommonConfigResponseBodyResultCommonConfigLoginConfig self = new GetCommonConfigResponseBodyResultCommonConfigLoginConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public GetCommonConfigResponseBodyResultCommonConfigLoginConfig setLoginType(Integer loginType) {
-            this.loginType = loginType;
-            return this;
-        }
-        public Integer getLoginType() {
-            return this.loginType;
-        }
-
+    public GetCommonConfigResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class GetCommonConfigResponseBodyResultCommonConfigAppConfigs extends TeaModel {
-        // appKey
+        /**
+         * <p>appKey</p>
+         */
         @NameInMap("AppKey")
         public String appKey;
 
-        // 平台
         @NameInMap("Platform")
         public String platform;
 
@@ -121,26 +100,35 @@ public class GetCommonConfigResponseBody extends TeaModel {
 
     }
 
-    public static class GetCommonConfigResponseBodyResultCommonConfig extends TeaModel {
-        // 登录配置
-        @NameInMap("LoginConfig")
-        public GetCommonConfigResponseBodyResultCommonConfigLoginConfig loginConfig;
+    public static class GetCommonConfigResponseBodyResultCommonConfigLoginConfig extends TeaModel {
+        @NameInMap("LoginType")
+        public Integer loginType;
 
-        // app配置
+        public static GetCommonConfigResponseBodyResultCommonConfigLoginConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetCommonConfigResponseBodyResultCommonConfigLoginConfig self = new GetCommonConfigResponseBodyResultCommonConfigLoginConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCommonConfigResponseBodyResultCommonConfigLoginConfig setLoginType(Integer loginType) {
+            this.loginType = loginType;
+            return this;
+        }
+        public Integer getLoginType() {
+            return this.loginType;
+        }
+
+    }
+
+    public static class GetCommonConfigResponseBodyResultCommonConfig extends TeaModel {
         @NameInMap("AppConfigs")
         public java.util.List<GetCommonConfigResponseBodyResultCommonConfigAppConfigs> appConfigs;
+
+        @NameInMap("LoginConfig")
+        public GetCommonConfigResponseBodyResultCommonConfigLoginConfig loginConfig;
 
         public static GetCommonConfigResponseBodyResultCommonConfig build(java.util.Map<String, ?> map) throws Exception {
             GetCommonConfigResponseBodyResultCommonConfig self = new GetCommonConfigResponseBodyResultCommonConfig();
             return TeaModel.build(map, self);
-        }
-
-        public GetCommonConfigResponseBodyResultCommonConfig setLoginConfig(GetCommonConfigResponseBodyResultCommonConfigLoginConfig loginConfig) {
-            this.loginConfig = loginConfig;
-            return this;
-        }
-        public GetCommonConfigResponseBodyResultCommonConfigLoginConfig getLoginConfig() {
-            return this.loginConfig;
         }
 
         public GetCommonConfigResponseBodyResultCommonConfig setAppConfigs(java.util.List<GetCommonConfigResponseBodyResultCommonConfigAppConfigs> appConfigs) {
@@ -151,10 +139,17 @@ public class GetCommonConfigResponseBody extends TeaModel {
             return this.appConfigs;
         }
 
+        public GetCommonConfigResponseBodyResultCommonConfig setLoginConfig(GetCommonConfigResponseBodyResultCommonConfigLoginConfig loginConfig) {
+            this.loginConfig = loginConfig;
+            return this;
+        }
+        public GetCommonConfigResponseBodyResultCommonConfigLoginConfig getLoginConfig() {
+            return this.loginConfig;
+        }
+
     }
 
     public static class GetCommonConfigResponseBodyResult extends TeaModel {
-        // 通用配置
         @NameInMap("CommonConfig")
         public GetCommonConfigResponseBodyResultCommonConfig commonConfig;
 

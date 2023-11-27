@@ -4,33 +4,61 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class UpdateCallbackConfigResponseBody extends TeaModel {
-    // desc
-    @NameInMap("Message")
-    public String message;
-
-    // requestId
-    @NameInMap("RequestId")
-    public String requestId;
-
-    // httpStatusCode
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    // code
+    /**
+     * <p>code</p>
+     */
     @NameInMap("Code")
     public String code;
 
-    // success
-    @NameInMap("Success")
-    public Boolean success;
+    /**
+     * <p>httpStatusCode</p>
+     */
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
-    // result
+    /**
+     * <p>desc</p>
+     */
+    @NameInMap("Message")
+    public String message;
+
+    /**
+     * <p>requestId</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>result</p>
+     */
     @NameInMap("Result")
     public UpdateCallbackConfigResponseBodyResult result;
+
+    /**
+     * <p>success</p>
+     */
+    @NameInMap("Success")
+    public Boolean success;
 
     public static UpdateCallbackConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateCallbackConfigResponseBody self = new UpdateCallbackConfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateCallbackConfigResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public UpdateCallbackConfigResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public UpdateCallbackConfigResponseBody setMessage(String message) {
@@ -49,20 +77,12 @@ public class UpdateCallbackConfigResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateCallbackConfigResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
+    public UpdateCallbackConfigResponseBody setResult(UpdateCallbackConfigResponseBodyResult result) {
+        this.result = result;
         return this;
     }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public UpdateCallbackConfigResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public UpdateCallbackConfigResponseBodyResult getResult() {
+        return this.result;
     }
 
     public UpdateCallbackConfigResponseBody setSuccess(Boolean success) {
@@ -73,54 +93,30 @@ public class UpdateCallbackConfigResponseBody extends TeaModel {
         return this.success;
     }
 
-    public UpdateCallbackConfigResponseBody setResult(UpdateCallbackConfigResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public UpdateCallbackConfigResponseBodyResult getResult() {
-        return this.result;
-    }
-
-    public static class UpdateCallbackConfigResponseBodyResultImConfigMsgConfig extends TeaModel {
-        // 消息撤回时间间隔，毫秒
-        @NameInMap("MsgRecallTimeInterval")
-        public Long msgRecallTimeInterval;
-
-        public static UpdateCallbackConfigResponseBodyResultImConfigMsgConfig build(java.util.Map<String, ?> map) throws Exception {
-            UpdateCallbackConfigResponseBodyResultImConfigMsgConfig self = new UpdateCallbackConfigResponseBodyResultImConfigMsgConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateCallbackConfigResponseBodyResultImConfigMsgConfig setMsgRecallTimeInterval(Long msgRecallTimeInterval) {
-            this.msgRecallTimeInterval = msgRecallTimeInterval;
-            return this;
-        }
-        public Long getMsgRecallTimeInterval() {
-            return this.msgRecallTimeInterval;
-        }
-
-    }
-
     public static class UpdateCallbackConfigResponseBodyResultImConfigCallbackConfig extends TeaModel {
-        // 回调url
+        @NameInMap("ApiIds")
+        public java.util.List<String> apiIds;
+
         @NameInMap("BackendUrl")
         public String backendUrl;
 
-        // 加签密钥-key
         @NameInMap("SignatureKey")
         public String signatureKey;
 
-        // 加签密钥-value
         @NameInMap("SignatureValue")
         public String signatureValue;
-
-        // 回调方法列表
-        @NameInMap("ApiIds")
-        public java.util.List<String> apiIds;
 
         public static UpdateCallbackConfigResponseBodyResultImConfigCallbackConfig build(java.util.Map<String, ?> map) throws Exception {
             UpdateCallbackConfigResponseBodyResultImConfigCallbackConfig self = new UpdateCallbackConfigResponseBodyResultImConfigCallbackConfig();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateCallbackConfigResponseBodyResultImConfigCallbackConfig setApiIds(java.util.List<String> apiIds) {
+            this.apiIds = apiIds;
+            return this;
+        }
+        public java.util.List<String> getApiIds() {
+            return this.apiIds;
         }
 
         public UpdateCallbackConfigResponseBodyResultImConfigCallbackConfig setBackendUrl(String backendUrl) {
@@ -147,36 +143,37 @@ public class UpdateCallbackConfigResponseBody extends TeaModel {
             return this.signatureValue;
         }
 
-        public UpdateCallbackConfigResponseBodyResultImConfigCallbackConfig setApiIds(java.util.List<String> apiIds) {
-            this.apiIds = apiIds;
+    }
+
+    public static class UpdateCallbackConfigResponseBodyResultImConfigMsgConfig extends TeaModel {
+        @NameInMap("MsgRecallTimeInterval")
+        public Long msgRecallTimeInterval;
+
+        public static UpdateCallbackConfigResponseBodyResultImConfigMsgConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateCallbackConfigResponseBodyResultImConfigMsgConfig self = new UpdateCallbackConfigResponseBodyResultImConfigMsgConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateCallbackConfigResponseBodyResultImConfigMsgConfig setMsgRecallTimeInterval(Long msgRecallTimeInterval) {
+            this.msgRecallTimeInterval = msgRecallTimeInterval;
             return this;
         }
-        public java.util.List<String> getApiIds() {
-            return this.apiIds;
+        public Long getMsgRecallTimeInterval() {
+            return this.msgRecallTimeInterval;
         }
 
     }
 
     public static class UpdateCallbackConfigResponseBodyResultImConfig extends TeaModel {
-        // 消息配置
-        @NameInMap("MsgConfig")
-        public UpdateCallbackConfigResponseBodyResultImConfigMsgConfig msgConfig;
-
-        // 回调配置
         @NameInMap("CallbackConfig")
         public UpdateCallbackConfigResponseBodyResultImConfigCallbackConfig callbackConfig;
+
+        @NameInMap("MsgConfig")
+        public UpdateCallbackConfigResponseBodyResultImConfigMsgConfig msgConfig;
 
         public static UpdateCallbackConfigResponseBodyResultImConfig build(java.util.Map<String, ?> map) throws Exception {
             UpdateCallbackConfigResponseBodyResultImConfig self = new UpdateCallbackConfigResponseBodyResultImConfig();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateCallbackConfigResponseBodyResultImConfig setMsgConfig(UpdateCallbackConfigResponseBodyResultImConfigMsgConfig msgConfig) {
-            this.msgConfig = msgConfig;
-            return this;
-        }
-        public UpdateCallbackConfigResponseBodyResultImConfigMsgConfig getMsgConfig() {
-            return this.msgConfig;
         }
 
         public UpdateCallbackConfigResponseBodyResultImConfig setCallbackConfig(UpdateCallbackConfigResponseBodyResultImConfigCallbackConfig callbackConfig) {
@@ -187,10 +184,17 @@ public class UpdateCallbackConfigResponseBody extends TeaModel {
             return this.callbackConfig;
         }
 
+        public UpdateCallbackConfigResponseBodyResultImConfig setMsgConfig(UpdateCallbackConfigResponseBodyResultImConfigMsgConfig msgConfig) {
+            this.msgConfig = msgConfig;
+            return this;
+        }
+        public UpdateCallbackConfigResponseBodyResultImConfigMsgConfig getMsgConfig() {
+            return this.msgConfig;
+        }
+
     }
 
     public static class UpdateCallbackConfigResponseBodyResult extends TeaModel {
-        // im相关配置
         @NameInMap("ImConfig")
         public UpdateCallbackConfigResponseBodyResultImConfig imConfig;
 

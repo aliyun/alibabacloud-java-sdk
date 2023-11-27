@@ -4,11 +4,9 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class UpdateAppStatusRequest extends TeaModel {
-    // 应用Id
     @NameInMap("AppId")
     public String appId;
 
-    // 请求
     @NameInMap("RequestParams")
     public UpdateAppStatusRequestRequestParams requestParams;
 
@@ -34,7 +32,6 @@ public class UpdateAppStatusRequest extends TeaModel {
     }
 
     public static class UpdateAppStatusRequestRequestParams extends TeaModel {
-        // 是否开启
         @NameInMap("Enable")
         public Boolean enable;
 

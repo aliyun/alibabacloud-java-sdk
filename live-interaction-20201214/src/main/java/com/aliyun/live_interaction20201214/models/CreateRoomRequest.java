@@ -21,19 +21,15 @@ public class CreateRoomRequest extends TeaModel {
     }
 
     public static class CreateRoomRequestRequest extends TeaModel {
-        // 应用appKey
         @NameInMap("domain")
         public String domain;
 
-        // 创建者id
         @NameInMap("ownerId")
         public String ownerId;
 
-        // 创建者昵称
         @NameInMap("ownerNick")
         public String ownerNick;
 
-        // 创建房间的标题
         @NameInMap("title")
         public String title;
 

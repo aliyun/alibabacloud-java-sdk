@@ -4,14 +4,14 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class GetLoginTokenResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public GetLoginTokenResponseBodyResult result;
@@ -19,14 +19,6 @@ public class GetLoginTokenResponseBody extends TeaModel {
     public static GetLoginTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetLoginTokenResponseBody self = new GetLoginTokenResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetLoginTokenResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetLoginTokenResponseBody setCode(String code) {
@@ -45,6 +37,14 @@ public class GetLoginTokenResponseBody extends TeaModel {
         return this.message;
     }
 
+    public GetLoginTokenResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public GetLoginTokenResponseBody setResult(GetLoginTokenResponseBodyResult result) {
         this.result = result;
         return this;
@@ -54,17 +54,14 @@ public class GetLoginTokenResponseBody extends TeaModel {
     }
 
     public static class GetLoginTokenResponseBodyResult extends TeaModel {
-        // 登录Tokon
         @NameInMap("AccessToken")
         public String accessToken;
 
-        // 更新Token
-        @NameInMap("RefreshToken")
-        public String refreshToken;
-
-        // 登录Token过期时间
         @NameInMap("AccessTokenExpiredTime")
         public Long accessTokenExpiredTime;
+
+        @NameInMap("RefreshToken")
+        public String refreshToken;
 
         public static GetLoginTokenResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetLoginTokenResponseBodyResult self = new GetLoginTokenResponseBodyResult();
@@ -79,20 +76,20 @@ public class GetLoginTokenResponseBody extends TeaModel {
             return this.accessToken;
         }
 
-        public GetLoginTokenResponseBodyResult setRefreshToken(String refreshToken) {
-            this.refreshToken = refreshToken;
-            return this;
-        }
-        public String getRefreshToken() {
-            return this.refreshToken;
-        }
-
         public GetLoginTokenResponseBodyResult setAccessTokenExpiredTime(Long accessTokenExpiredTime) {
             this.accessTokenExpiredTime = accessTokenExpiredTime;
             return this;
         }
         public Long getAccessTokenExpiredTime() {
             return this.accessTokenExpiredTime;
+        }
+
+        public GetLoginTokenResponseBodyResult setRefreshToken(String refreshToken) {
+            this.refreshToken = refreshToken;
+            return this;
+        }
+        public String getRefreshToken() {
+            return this.refreshToken;
         }
 
     }

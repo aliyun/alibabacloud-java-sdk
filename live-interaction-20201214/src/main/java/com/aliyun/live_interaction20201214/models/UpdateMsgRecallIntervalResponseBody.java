@@ -4,33 +4,61 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class UpdateMsgRecallIntervalResponseBody extends TeaModel {
-    // desc
-    @NameInMap("Message")
-    public String message;
-
-    // requestId
-    @NameInMap("RequestId")
-    public String requestId;
-
-    // httpStatusCode
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    // code
+    /**
+     * <p>code</p>
+     */
     @NameInMap("Code")
     public String code;
 
-    // success
-    @NameInMap("Success")
-    public Boolean success;
+    /**
+     * <p>httpStatusCode</p>
+     */
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
-    // result
+    /**
+     * <p>desc</p>
+     */
+    @NameInMap("Message")
+    public String message;
+
+    /**
+     * <p>requestId</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>result</p>
+     */
     @NameInMap("Result")
     public String result;
+
+    /**
+     * <p>success</p>
+     */
+    @NameInMap("Success")
+    public Boolean success;
 
     public static UpdateMsgRecallIntervalResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateMsgRecallIntervalResponseBody self = new UpdateMsgRecallIntervalResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateMsgRecallIntervalResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public UpdateMsgRecallIntervalResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public UpdateMsgRecallIntervalResponseBody setMessage(String message) {
@@ -49,20 +77,12 @@ public class UpdateMsgRecallIntervalResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateMsgRecallIntervalResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
+    public UpdateMsgRecallIntervalResponseBody setResult(String result) {
+        this.result = result;
         return this;
     }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public UpdateMsgRecallIntervalResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public String getResult() {
+        return this.result;
     }
 
     public UpdateMsgRecallIntervalResponseBody setSuccess(Boolean success) {
@@ -71,14 +91,6 @@ public class UpdateMsgRecallIntervalResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public UpdateMsgRecallIntervalResponseBody setResult(String result) {
-        this.result = result;
-        return this;
-    }
-    public String getResult() {
-        return this.result;
     }
 
 }

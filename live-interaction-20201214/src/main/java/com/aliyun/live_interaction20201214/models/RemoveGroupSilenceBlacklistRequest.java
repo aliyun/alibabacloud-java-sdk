@@ -4,11 +4,9 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class RemoveGroupSilenceBlacklistRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
-    // 群禁言删除黑名单请求体
     @NameInMap("RequestParams")
     public RemoveGroupSilenceBlacklistRequestRequestParams requestParams;
 
@@ -34,29 +32,18 @@ public class RemoveGroupSilenceBlacklistRequest extends TeaModel {
     }
 
     public static class RemoveGroupSilenceBlacklistRequestRequestParams extends TeaModel {
-        // 操作者
-        @NameInMap("OperatorAppUid")
-        public String operatorAppUid;
-
-        // 群会话id
         @NameInMap("AppCid")
         public String appCid;
 
-        // 禁言用户列表
         @NameInMap("Members")
         public java.util.List<String> members;
+
+        @NameInMap("OperatorAppUid")
+        public String operatorAppUid;
 
         public static RemoveGroupSilenceBlacklistRequestRequestParams build(java.util.Map<String, ?> map) throws Exception {
             RemoveGroupSilenceBlacklistRequestRequestParams self = new RemoveGroupSilenceBlacklistRequestRequestParams();
             return TeaModel.build(map, self);
-        }
-
-        public RemoveGroupSilenceBlacklistRequestRequestParams setOperatorAppUid(String operatorAppUid) {
-            this.operatorAppUid = operatorAppUid;
-            return this;
-        }
-        public String getOperatorAppUid() {
-            return this.operatorAppUid;
         }
 
         public RemoveGroupSilenceBlacklistRequestRequestParams setAppCid(String appCid) {
@@ -73,6 +60,14 @@ public class RemoveGroupSilenceBlacklistRequest extends TeaModel {
         }
         public java.util.List<String> getMembers() {
             return this.members;
+        }
+
+        public RemoveGroupSilenceBlacklistRequestRequestParams setOperatorAppUid(String operatorAppUid) {
+            this.operatorAppUid = operatorAppUid;
+            return this;
+        }
+        public String getOperatorAppUid() {
+            return this.operatorAppUid;
         }
 
     }

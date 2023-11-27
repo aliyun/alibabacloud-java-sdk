@@ -4,11 +4,9 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class SetSingleChatExtensionByKeysRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
-    // 创建群聊请求实体
     @NameInMap("RequestParams")
     public SetSingleChatExtensionByKeysRequestRequestParams requestParams;
 
@@ -34,15 +32,12 @@ public class SetSingleChatExtensionByKeysRequest extends TeaModel {
     }
 
     public static class SetSingleChatExtensionByKeysRequestRequestParams extends TeaModel {
-        // 用户id
-        @NameInMap("AppUid")
-        public String appUid;
-
-        // 会话id
         @NameInMap("AppCid")
         public String appCid;
 
-        // 拓展字段
+        @NameInMap("AppUid")
+        public String appUid;
+
         @NameInMap("Extensions")
         public java.util.Map<String, String> extensions;
 
@@ -51,20 +46,20 @@ public class SetSingleChatExtensionByKeysRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public SetSingleChatExtensionByKeysRequestRequestParams setAppUid(String appUid) {
-            this.appUid = appUid;
-            return this;
-        }
-        public String getAppUid() {
-            return this.appUid;
-        }
-
         public SetSingleChatExtensionByKeysRequestRequestParams setAppCid(String appCid) {
             this.appCid = appCid;
             return this;
         }
         public String getAppCid() {
             return this.appCid;
+        }
+
+        public SetSingleChatExtensionByKeysRequestRequestParams setAppUid(String appUid) {
+            this.appUid = appUid;
+            return this;
+        }
+        public String getAppUid() {
+            return this.appUid;
         }
 
         public SetSingleChatExtensionByKeysRequestRequestParams setExtensions(java.util.Map<String, String> extensions) {

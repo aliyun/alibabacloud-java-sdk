@@ -4,11 +4,9 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class ListGroupSilenceMembersRequest extends TeaModel {
-    // AppId
     @NameInMap("AppId")
     public String appId;
 
-    // 群禁言添加白名单请求体
     @NameInMap("RequestParams")
     public ListGroupSilenceMembersRequestRequestParams requestParams;
 
@@ -34,25 +32,15 @@ public class ListGroupSilenceMembersRequest extends TeaModel {
     }
 
     public static class ListGroupSilenceMembersRequestRequestParams extends TeaModel {
-        // 操作者
-        @NameInMap("OperatorAppUid")
-        public String operatorAppUid;
-
-        // 群会话id
         @NameInMap("AppCid")
         public String appCid;
+
+        @NameInMap("OperatorAppUid")
+        public String operatorAppUid;
 
         public static ListGroupSilenceMembersRequestRequestParams build(java.util.Map<String, ?> map) throws Exception {
             ListGroupSilenceMembersRequestRequestParams self = new ListGroupSilenceMembersRequestRequestParams();
             return TeaModel.build(map, self);
-        }
-
-        public ListGroupSilenceMembersRequestRequestParams setOperatorAppUid(String operatorAppUid) {
-            this.operatorAppUid = operatorAppUid;
-            return this;
-        }
-        public String getOperatorAppUid() {
-            return this.operatorAppUid;
         }
 
         public ListGroupSilenceMembersRequestRequestParams setAppCid(String appCid) {
@@ -61,6 +49,14 @@ public class ListGroupSilenceMembersRequest extends TeaModel {
         }
         public String getAppCid() {
             return this.appCid;
+        }
+
+        public ListGroupSilenceMembersRequestRequestParams setOperatorAppUid(String operatorAppUid) {
+            this.operatorAppUid = operatorAppUid;
+            return this;
+        }
+        public String getOperatorAppUid() {
+            return this.operatorAppUid;
         }
 
     }

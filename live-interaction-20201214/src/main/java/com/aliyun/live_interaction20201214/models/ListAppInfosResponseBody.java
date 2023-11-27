@@ -4,33 +4,61 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class ListAppInfosResponseBody extends TeaModel {
-    // desc
-    @NameInMap("Message")
-    public String message;
-
-    // requestId
-    @NameInMap("RequestId")
-    public String requestId;
-
-    // httpStatusCode
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    // code
+    /**
+     * <p>code</p>
+     */
     @NameInMap("Code")
     public String code;
 
-    // success
-    @NameInMap("Success")
-    public Boolean success;
+    /**
+     * <p>httpStatusCode</p>
+     */
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
-    // result
+    /**
+     * <p>desc</p>
+     */
+    @NameInMap("Message")
+    public String message;
+
+    /**
+     * <p>requestId</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>result</p>
+     */
     @NameInMap("Result")
     public ListAppInfosResponseBodyResult result;
+
+    /**
+     * <p>success</p>
+     */
+    @NameInMap("Success")
+    public Boolean success;
 
     public static ListAppInfosResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAppInfosResponseBody self = new ListAppInfosResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListAppInfosResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListAppInfosResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ListAppInfosResponseBody setMessage(String message) {
@@ -49,20 +77,12 @@ public class ListAppInfosResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListAppInfosResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
+    public ListAppInfosResponseBody setResult(ListAppInfosResponseBodyResult result) {
+        this.result = result;
         return this;
     }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public ListAppInfosResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public ListAppInfosResponseBodyResult getResult() {
+        return this.result;
     }
 
     public ListAppInfosResponseBody setSuccess(Boolean success) {
@@ -73,38 +93,24 @@ public class ListAppInfosResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListAppInfosResponseBody setResult(ListAppInfosResponseBodyResult result) {
-        this.result = result;
-        return this;
-    }
-    public ListAppInfosResponseBodyResult getResult() {
-        return this.result;
-    }
-
     public static class ListAppInfosResponseBodyResultAppInfos extends TeaModel {
-        // 应用Id
         @NameInMap("AppId")
         public String appId;
 
-        // 应用名
         @NameInMap("AppName")
         public String appName;
 
-        // 创建时间
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        // 应用状态
         @NameInMap("AppStatus")
         public Integer appStatus;
 
-        // 产品版本
-        @NameInMap("ProdVersion")
-        public String prodVersion;
+        @NameInMap("CreateTime")
+        public String createTime;
 
-        // 实例Id
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("ProdVersion")
+        public String prodVersion;
 
         public static ListAppInfosResponseBodyResultAppInfos build(java.util.Map<String, ?> map) throws Exception {
             ListAppInfosResponseBodyResultAppInfos self = new ListAppInfosResponseBodyResultAppInfos();
@@ -127,14 +133,6 @@ public class ListAppInfosResponseBody extends TeaModel {
             return this.appName;
         }
 
-        public ListAppInfosResponseBodyResultAppInfos setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
         public ListAppInfosResponseBodyResultAppInfos setAppStatus(Integer appStatus) {
             this.appStatus = appStatus;
             return this;
@@ -143,12 +141,12 @@ public class ListAppInfosResponseBody extends TeaModel {
             return this.appStatus;
         }
 
-        public ListAppInfosResponseBodyResultAppInfos setProdVersion(String prodVersion) {
-            this.prodVersion = prodVersion;
+        public ListAppInfosResponseBodyResultAppInfos setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getProdVersion() {
-            return this.prodVersion;
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public ListAppInfosResponseBodyResultAppInfos setInstanceId(String instanceId) {
@@ -159,28 +157,26 @@ public class ListAppInfosResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public ListAppInfosResponseBodyResultAppInfos setProdVersion(String prodVersion) {
+            this.prodVersion = prodVersion;
+            return this;
+        }
+        public String getProdVersion() {
+            return this.prodVersion;
+        }
+
     }
 
     public static class ListAppInfosResponseBodyResult extends TeaModel {
-        // 总数，用于分页
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
-        // 应用信息列表
         @NameInMap("AppInfos")
         public java.util.List<ListAppInfosResponseBodyResultAppInfos> appInfos;
+
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static ListAppInfosResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListAppInfosResponseBodyResult self = new ListAppInfosResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public ListAppInfosResponseBodyResult setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
         }
 
         public ListAppInfosResponseBodyResult setAppInfos(java.util.List<ListAppInfosResponseBodyResultAppInfos> appInfos) {
@@ -189,6 +185,14 @@ public class ListAppInfosResponseBody extends TeaModel {
         }
         public java.util.List<ListAppInfosResponseBodyResultAppInfos> getAppInfos() {
             return this.appInfos;
+        }
+
+        public ListAppInfosResponseBodyResult setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

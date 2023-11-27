@@ -4,7 +4,6 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class UpdateCallbackConfigRequest extends TeaModel {
-    // 应用Id
     @NameInMap("AppId")
     public String appId;
 
@@ -33,33 +32,35 @@ public class UpdateCallbackConfigRequest extends TeaModel {
     }
 
     public static class UpdateCallbackConfigRequestRequestParams extends TeaModel {
-        // 回调url
-        @NameInMap("CallbackUrl")
-        public String callbackUrl;
-
-        // 加签密钥-key
-        @NameInMap("SignatureKey")
-        public String signatureKey;
-
-        // 加签密钥-value
-        @NameInMap("SignatureValue")
-        public String signatureValue;
-
-        // 回调api列表
         @NameInMap("Apis")
         public java.util.Map<String, Boolean> apis;
 
-        // 回调列表
-        @NameInMap("Spis")
-        public java.util.Map<String, Boolean> spis;
+        @NameInMap("CallbackUrl")
+        public String callbackUrl;
 
-        // 事件输出列表
         @NameInMap("Events")
         public java.util.Map<String, Boolean> events;
+
+        @NameInMap("SignatureKey")
+        public String signatureKey;
+
+        @NameInMap("SignatureValue")
+        public String signatureValue;
+
+        @NameInMap("Spis")
+        public java.util.Map<String, Boolean> spis;
 
         public static UpdateCallbackConfigRequestRequestParams build(java.util.Map<String, ?> map) throws Exception {
             UpdateCallbackConfigRequestRequestParams self = new UpdateCallbackConfigRequestRequestParams();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateCallbackConfigRequestRequestParams setApis(java.util.Map<String, Boolean> apis) {
+            this.apis = apis;
+            return this;
+        }
+        public java.util.Map<String, Boolean> getApis() {
+            return this.apis;
         }
 
         public UpdateCallbackConfigRequestRequestParams setCallbackUrl(String callbackUrl) {
@@ -68,6 +69,14 @@ public class UpdateCallbackConfigRequest extends TeaModel {
         }
         public String getCallbackUrl() {
             return this.callbackUrl;
+        }
+
+        public UpdateCallbackConfigRequestRequestParams setEvents(java.util.Map<String, Boolean> events) {
+            this.events = events;
+            return this;
+        }
+        public java.util.Map<String, Boolean> getEvents() {
+            return this.events;
         }
 
         public UpdateCallbackConfigRequestRequestParams setSignatureKey(String signatureKey) {
@@ -86,28 +95,12 @@ public class UpdateCallbackConfigRequest extends TeaModel {
             return this.signatureValue;
         }
 
-        public UpdateCallbackConfigRequestRequestParams setApis(java.util.Map<String, Boolean> apis) {
-            this.apis = apis;
-            return this;
-        }
-        public java.util.Map<String, Boolean> getApis() {
-            return this.apis;
-        }
-
         public UpdateCallbackConfigRequestRequestParams setSpis(java.util.Map<String, Boolean> spis) {
             this.spis = spis;
             return this;
         }
         public java.util.Map<String, Boolean> getSpis() {
             return this.spis;
-        }
-
-        public UpdateCallbackConfigRequestRequestParams setEvents(java.util.Map<String, Boolean> events) {
-            this.events = events;
-            return this;
-        }
-        public java.util.Map<String, Boolean> getEvents() {
-            return this.events;
         }
 
     }

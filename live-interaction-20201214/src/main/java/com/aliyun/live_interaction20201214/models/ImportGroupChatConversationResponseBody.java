@@ -4,14 +4,14 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class ImportGroupChatConversationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public ImportGroupChatConversationResponseBodyResult result;
@@ -19,14 +19,6 @@ public class ImportGroupChatConversationResponseBody extends TeaModel {
     public static ImportGroupChatConversationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ImportGroupChatConversationResponseBody self = new ImportGroupChatConversationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ImportGroupChatConversationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ImportGroupChatConversationResponseBody setCode(String code) {
@@ -45,6 +37,14 @@ public class ImportGroupChatConversationResponseBody extends TeaModel {
         return this.message;
     }
 
+    public ImportGroupChatConversationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public ImportGroupChatConversationResponseBody setResult(ImportGroupChatConversationResponseBodyResult result) {
         this.result = result;
         return this;
@@ -54,7 +54,6 @@ public class ImportGroupChatConversationResponseBody extends TeaModel {
     }
 
     public static class ImportGroupChatConversationResponseBodyResult extends TeaModel {
-        // 群ID
         @NameInMap("AppCid")
         public String appCid;
 

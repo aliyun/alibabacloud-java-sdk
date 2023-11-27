@@ -7,7 +7,6 @@ public class DismissGroupShrinkRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    // 解散群聊请求实体
     @NameInMap("RequestParams")
     public String requestParamsShrink;
 
