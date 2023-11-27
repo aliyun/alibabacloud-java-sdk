@@ -11,7 +11,7 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
     public GetDirectoryStatisticsResponseBodyDirectoryStatistics directoryStatistics;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -69,13 +69,13 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
         public String directoryName;
 
         /**
-         * <p>The number of groups.</p>
+         * <p>The number of user groups.</p>
          */
         @NameInMap("GroupCount")
         public Integer groupCount;
 
         /**
-         * <p>The quota for groups.</p>
+         * <p>The quota for user groups.</p>
          */
         @NameInMap("GroupQuota")
         public Integer groupQuota;
@@ -101,21 +101,24 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether SCIM synchronization is enabled. Valid values:</p>
          * <br>
-         * <p>*   true: SCIM synchronization is enabled.</p>
-         * <p>*   false: SCIM synchronization is disabled.</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("SCIMSyncEnabled")
         public Boolean SCIMSyncEnabled;
 
         /**
-         * <p>Indicates whether SSO logon is enabled. Valid values:</p>
+         * <p>Indicates whether SSO is enabled. Valid values:</p>
          * <br>
-         * <p>*   true: SSO logon is enabled.</p>
-         * <p>*   false: SSO logon is disabled.</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("SSOEnabled")
         public Boolean SSOEnabled;
 
+        /**
+         * <p>The quota for system policies that can be configured for an access configuration.</p>
+         */
         @NameInMap("SystemPolicyPerAccessConfigurationQuota")
         public Integer systemPolicyPerAccessConfigurationQuota;
 

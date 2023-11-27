@@ -29,8 +29,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * You can add up to two SAML signing certificates.
       * This topic provides an example on how to add a SAML signing certificate to the directory `d-00fc2p61****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request AddExternalSAMLIdPCertificateRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -67,8 +65,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * You can add up to two SAML signing certificates.
       * This topic provides an example on how to add a SAML signing certificate to the directory `d-00fc2p61****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request AddExternalSAMLIdPCertificateRequest
       * @return AddExternalSAMLIdPCertificateResponse
@@ -80,8 +76,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to add the system policy `AliyunECSFullAccess` to the access configuration `ac-00jhtfl8thteu6uj****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request AddPermissionPolicyToAccessConfigurationRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -129,8 +123,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to add the system policy `AliyunECSFullAccess` to the access configuration `ac-00jhtfl8thteu6uj****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request AddPermissionPolicyToAccessConfigurationRequest
       * @return AddPermissionPolicyToAccessConfigurationResponse
@@ -143,8 +135,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot add a user to a group that is synchronized by using SCIM.
       * This topic provides an example of how to add the user `u-00q8wbq42wiltcrk****` to the group `g-00jqzghi2n3o5hkh****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request AddUserToGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -185,8 +175,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot add a user to a group that is synchronized by using SCIM.
       * This topic provides an example of how to add the user `u-00q8wbq42wiltcrk****` to the group `g-00jqzghi2n3o5hkh****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request AddUserToGroupRequest
       * @return AddUserToGroupResponse
@@ -199,8 +187,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * If single sign-on (SSO) logon is disabled, you can clear the configurations of a SAML IdP. If SSO logon is enabled, you cannot clear the configurations.
       * This topic provides an example on how to clear the configurations of the SAML IdP within the directory `d-00fc2p61****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request ClearExternalSAMLIdentityProviderRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -233,8 +219,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * If single sign-on (SSO) logon is disabled, you can clear the configurations of a SAML IdP. If SSO logon is enabled, you cannot clear the configurations.
       * This topic provides an example on how to clear the configurations of the SAML IdP within the directory `d-00fc2p61****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request ClearExternalSAMLIdentityProviderRequest
       * @return ClearExternalSAMLIdentityProviderResponse
@@ -248,8 +232,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * When you call this operation, an asynchronous task is created. You can call the [GetTask](~~340670~~) operation to query the progress of task execution by using the value of the `TaskId` response parameter.
       * For more information about how to assign permissions on an account in your resource directory, see [Overview of multi-account authorization](~~266726~~).
       * This topic provides an example on how to assign access permissions on the account `114240524784****` in your resource directory to the CloudSSO user `u-00q8wbq42wiltcrk****` by using the access configuration `ac-00jhtfl8thteu6uj****`. After the call is successful, the CloudSSO user can access resources within the account in the resource directory.
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request CreateAccessAssignmentRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -303,8 +285,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * When you call this operation, an asynchronous task is created. You can call the [GetTask](~~340670~~) operation to query the progress of task execution by using the value of the `TaskId` response parameter.
       * For more information about how to assign permissions on an account in your resource directory, see [Overview of multi-account authorization](~~266726~~).
       * This topic provides an example on how to assign access permissions on the account `114240524784****` in your resource directory to the CloudSSO user `u-00q8wbq42wiltcrk****` by using the access configuration `ac-00jhtfl8thteu6uj****`. After the call is successful, the CloudSSO user can access resources within the account in the resource directory.
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request CreateAccessAssignmentRequest
       * @return CreateAccessAssignmentResponse
@@ -317,8 +297,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * For more information about access configurations, see [Overview of access configurations](~~266737~~).
       * This topic provides an example on how to create an access configuration named `ECS-Admin`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request CreateAccessConfigurationRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -367,8 +345,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * For more information about access configurations, see [Overview of access configurations](~~266737~~).
       * This topic provides an example on how to create an access configuration named `ECS-Admin`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request CreateAccessConfigurationRequest
       * @return CreateAccessConfigurationResponse
@@ -385,8 +361,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * ## Limits
       * - You can create only one directory for a management account.
       * - If you want to change the region of a directory, you must delete the directory and then create a directory in a different region.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request CreateDirectoryRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -423,8 +397,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * ## Limits
       * - You can create only one directory for a management account.
       * - If you want to change the region of a directory, you must delete the directory and then create a directory in a different region.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request CreateDirectoryRequest
       * @return CreateDirectoryResponse
@@ -436,8 +408,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to create a group named `TestGroup`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request CreateGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -477,8 +447,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to create a group named `TestGroup`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request CreateGroupRequest
       * @return CreateGroupResponse
@@ -491,8 +459,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * SCIM credentials are required for SCIM synchronization. You can create up to two SCIM credentials.
       * This topic provides an example on how to create a SCIM credential within the directory `d-00fc2p61****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request CreateSCIMServerCredentialRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -525,8 +491,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * SCIM credentials are required for SCIM synchronization. You can create up to two SCIM credentials.
       * This topic provides an example on how to create a SCIM credential within the directory `d-00fc2p61****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request CreateSCIMServerCredentialRequest
       * @return CreateSCIMServerCredentialResponse
@@ -537,9 +501,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to create a user named `Alice`.  
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+      * This topic provides an example on how to create a user named `Alice`.
       *
       * @param request CreateUserRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -598,9 +560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to create a user named `Alice`.  
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+      * This topic provides an example on how to create a user named `Alice`.
       *
       * @param request CreateUserRequest
       * @return CreateUserResponse
@@ -610,11 +570,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createUserWithOptions(request, runtime);
     }
 
+    public CreateUserProvisioningResponse createUserProvisioningWithOptions(CreateUserProvisioningRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deletionStrategy)) {
+            query.put("DeletionStrategy", request.deletionStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.duplicationStrategy)) {
+            query.put("DuplicationStrategy", request.duplicationStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalId)) {
+            query.put("PrincipalId", request.principalId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalType)) {
+            query.put("PrincipalType", request.principalType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetId)) {
+            query.put("TargetId", request.targetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetType)) {
+            query.put("TargetType", request.targetType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateUserProvisioning"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateUserProvisioningResponse());
+    }
+
+    public CreateUserProvisioningResponse createUserProvisioning(CreateUserProvisioningRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createUserProvisioningWithOptions(request, runtime);
+    }
+
     /**
       * When you call this operation, an asynchronous task is created. You can call the [GetTask](~~340670~~) operation to query the progress of the task based on the value of the `TaskId` response parameter.
       * This topic provides an example on how to remove the access permissions on the account `114240524784****` in the resource directory from the CloudSSO user `u-00q8wbq42wiltcrk****`. The access permissions are assigned by using the access configuration `ac-00jhtfl8thteu6uj****`.
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request DeleteAccessAssignmentRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -671,8 +686,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * When you call this operation, an asynchronous task is created. You can call the [GetTask](~~340670~~) operation to query the progress of the task based on the value of the `TaskId` response parameter.
       * This topic provides an example on how to remove the access permissions on the account `114240524784****` in the resource directory from the CloudSSO user `u-00q8wbq42wiltcrk****`. The access permissions are assigned by using the access configuration `ac-00jhtfl8thteu6uj****`.
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request DeleteAccessAssignmentRequest
       * @return DeleteAccessAssignmentResponse
@@ -686,8 +699,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * This topic provides an example on how to delete the access configuration whose ID is `ac-001j9mcm3k7335bc****`.
       * ## Prerequisites
       * The access configuration that you want to delete is de-provisioned from the accounts in your resource directory. For more information, see [DeprovisionAccessConfiguration](~~338352~~).
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request DeleteAccessConfigurationRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -729,8 +740,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * This topic provides an example on how to delete the access configuration whose ID is `ac-001j9mcm3k7335bc****`.
       * ## Prerequisites
       * The access configuration that you want to delete is de-provisioned from the accounts in your resource directory. For more information, see [DeprovisionAccessConfiguration](~~338352~~).
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request DeleteAccessConfigurationRequest
       * @return DeleteAccessConfigurationResponse
@@ -750,8 +759,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   Access configurations are deleted. For more information, see [DeleteAccessConfiguration](~~336907~~).
       * *   System for Cross-domain Identity Management (SCIM) credentials are deleted. For more information, see [DeleteSCIMServerCredential](~~341842~~).
       * *   SSO logon configurations are deleted. For more information, see [ClearExternalSAMLIdentityProvider](~~341573~~).
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request DeleteDirectoryRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -791,8 +798,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   Access configurations are deleted. For more information, see [DeleteAccessConfiguration](~~336907~~).
       * *   System for Cross-domain Identity Management (SCIM) credentials are deleted. For more information, see [DeleteSCIMServerCredential](~~341842~~).
       * *   SSO logon configurations are deleted. For more information, see [ClearExternalSAMLIdentityProvider](~~341573~~).
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request DeleteDirectoryRequest
       * @return DeleteDirectoryResponse
@@ -808,8 +813,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * The group that you want to delete is not associated with the following resources. If the group is associated with the resources, the deletion fails.
       * *   Users: You must remove users from the group. For more information, see [RemoveUserFromGroup](~~335116~~).
       * *   Access permissions: You must remove the access permissions on the accounts in your resource directory from the group. For more information, see [DeleteAccessAssignment](~~338350~~).
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request DeleteGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -849,8 +852,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * The group that you want to delete is not associated with the following resources. If the group is associated with the resources, the deletion fails.
       * *   Users: You must remove users from the group. For more information, see [RemoveUserFromGroup](~~335116~~).
       * *   Access permissions: You must remove the access permissions on the accounts in your resource directory from the group. For more information, see [DeleteAccessAssignment](~~338350~~).
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request DeleteGroupRequest
       * @return DeleteGroupResponse
@@ -862,8 +863,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to unbind the MFA device `mfa-00ujhet8pycljj7j****` from the user `u-00q8wbq42wiltcrk****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request DeleteMFADeviceForUserRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -903,8 +902,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to unbind the MFA device `mfa-00ujhet8pycljj7j****` from the user `u-00q8wbq42wiltcrk****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request DeleteMFADeviceForUserRequest
       * @return DeleteMFADeviceForUserResponse
@@ -917,8 +914,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * After a SCIM credential is deleted, the synchronization task that uses the SCIM credential fails.
       * This topic provides an example on how to delete the SCIM credential whose ID is `scimcred-004whl0kvfwcypbi****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request DeleteSCIMServerCredentialRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -955,8 +950,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * After a SCIM credential is deleted, the synchronization task that uses the SCIM credential fails.
       * This topic provides an example on how to delete the SCIM credential whose ID is `scimcred-004whl0kvfwcypbi****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request DeleteSCIMServerCredentialRequest
       * @return DeleteSCIMServerCredentialResponse
@@ -973,8 +966,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   Multi-factor authentication (MFA) devices: You must unbind the MFA devices from the user. For more information, see [DeleteMFADeviceForUser](~~341675~~).
       * *   Access permissions: You must remove the access permissions on the accounts in your resource directory from the user. For more information, see [DeleteAccessAssignment](~~338350~~).
       * *   Groups: You must remove the user from groups. For more information, see [RemoveUserFromGroup](~~335116~~).
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request DeleteUserRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1015,8 +1006,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   Multi-factor authentication (MFA) devices: You must unbind the MFA devices from the user. For more information, see [DeleteMFADeviceForUser](~~341675~~).
       * *   Access permissions: You must remove the access permissions on the accounts in your resource directory from the user. For more information, see [DeleteAccessAssignment](~~338350~~).
       * *   Groups: You must remove the user from groups. For more information, see [RemoveUserFromGroup](~~335116~~).
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request DeleteUserRequest
       * @return DeleteUserResponse
@@ -1026,11 +1015,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteUserWithOptions(request, runtime);
     }
 
+    public DeleteUserProvisioningResponse deleteUserProvisioningWithOptions(DeleteUserProvisioningRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deletionStrategy)) {
+            query.put("DeletionStrategy", request.deletionStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userProvisioningId)) {
+            query.put("UserProvisioningId", request.userProvisioningId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteUserProvisioning"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteUserProvisioningResponse());
+    }
+
+    public DeleteUserProvisioningResponse deleteUserProvisioning(DeleteUserProvisioningRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteUserProvisioningWithOptions(request, runtime);
+    }
+
+    public DeleteUserProvisioningEventResponse deleteUserProvisioningEventWithOptions(DeleteUserProvisioningEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("EventId", request.eventId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userProvisioningId)) {
+            query.put("UserProvisioningId", request.userProvisioningId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteUserProvisioningEvent"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteUserProvisioningEventResponse());
+    }
+
+    public DeleteUserProvisioningEventResponse deleteUserProvisioningEvent(DeleteUserProvisioningEventRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteUserProvisioningEventWithOptions(request, runtime);
+    }
+
     /**
       * When you call this operation, an asynchronous task is automatically created. You can call the [GetTask](~~340670~~) operation to query the progress of the task based on the value of the `TaskId` response parameter.
       * This topic provides an example on how to de-provision the access configuration `ac-00jhtfl8thteu6uj****` from the account `114240524784****` in your resource directory.
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request DeprovisionAccessConfigurationRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1075,8 +1136,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * When you call this operation, an asynchronous task is automatically created. You can call the [GetTask](~~340670~~) operation to query the progress of the task based on the value of the `TaskId` response parameter.
       * This topic provides an example on how to de-provision the access configuration `ac-00jhtfl8thteu6uj****` from the account `114240524784****` in your resource directory.
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request DeprovisionAccessConfigurationRequest
       * @return DeprovisionAccessConfigurationResponse
@@ -1088,8 +1147,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * If your CloudSSO has no directory, you can disable CloudSSO based on your business requirements. After you disable CloudSSO, you can enable it at any time.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request DisableServiceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1113,8 +1170,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * If your CloudSSO has no directory, you can disable CloudSSO based on your business requirements. After you disable CloudSSO, you can enable it at any time.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @return DisableServiceResponse
      */
@@ -1126,8 +1181,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * You can call this operation only if your account belongs to the management account that is used to enable a resource directory and has permissions to enable CloudSSO. For more information, see [Enable CloudSSO](~~262819~~).
       * If you call this operation, you agree to the [Alibaba Cloud International Website Product Terms of Service](https://www.alibabacloud.com/help/doc-detail/42416.htm).
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request EnableServiceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1152,8 +1205,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * You can call this operation only if your account belongs to the management account that is used to enable a resource directory and has permissions to enable CloudSSO. For more information, see [Enable CloudSSO](~~262819~~).
       * If you call this operation, you agree to the [Alibaba Cloud International Website Product Terms of Service](https://www.alibabacloud.com/help/doc-detail/42416.htm).
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @return EnableServiceResponse
      */
@@ -1163,7 +1214,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
       * This topic provides an example on how to query the information about the access configuration whose ID is `ac-00ccule7tadaijxc****`.
       *
       * @param request GetAccessConfigurationRequest
@@ -1199,7 +1249,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
       * This topic provides an example on how to query the information about the access configuration whose ID is `ac-00ccule7tadaijxc****`.
       *
       * @param request GetAccessConfigurationRequest
@@ -1211,9 +1260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query information about the directory whose ID is `d-00fc2p61****`.  
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+      * This topic provides an example on how to query information about the directory whose ID is `d-00fc2p61****`.
       *
       * @param request GetDirectoryRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1244,9 +1291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query information about the directory whose ID is `d-00fc2p61****`.  
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+      * This topic provides an example on how to query information about the directory whose ID is `d-00fc2p61****`.
       *
       * @param request GetDirectoryRequest
       * @return GetDirectoryResponse
@@ -1259,8 +1304,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * During SAML 2.0-based single sign-on (SSO) logon, CloudSSO is an SP, and the identity management system of an enterprise is an identity provider (IdP).
       * This topic provides an example on how to query the information about the SP within the directory `d-00fc2p61****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request GetDirectorySAMLServiceProviderInfoRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1293,8 +1336,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * During SAML 2.0-based single sign-on (SSO) logon, CloudSSO is an SP, and the identity management system of an enterprise is an identity provider (IdP).
       * This topic provides an example on how to query the information about the SP within the directory `d-00fc2p61****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request GetDirectorySAMLServiceProviderInfoRequest
       * @return GetDirectorySAMLServiceProviderInfoResponse
@@ -1305,8 +1346,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the statistics of a directory whose ID is `d-00fc2p61****`. The statistics include the number of users, quota for users, number of groups, quota for groups, number of access configurations, quota for access configurations, number of access permissions that are assigned, number of System for Cross-domain Identity Management (SCIM) credentials, number of asynchronous tasks, status of single sign-on (SSO) logon, and status of SCIM synchronization.
-      * ## Limits
+      * ### [](#)
+      * This topic provides an example on how to query the statistics of a directory whose ID is `d-00fc2p61****`. The statistics include the number of users, quota for users, number of groups, quota for groups, number of access configurations, quota for access configurations, quota for system policies that can be configured for an access configuration, number of access permissions that are assigned, number of System for Cross-domain Identity Management (SCIM) credentials, number of asynchronous tasks, status of single sign-on (SSO), and status of SCIM synchronization.
+      * ### [](#qps)Limit
       * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request GetDirectoryStatisticsRequest
@@ -1338,8 +1380,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the statistics of a directory whose ID is `d-00fc2p61****`. The statistics include the number of users, quota for users, number of groups, quota for groups, number of access configurations, quota for access configurations, number of access permissions that are assigned, number of System for Cross-domain Identity Management (SCIM) credentials, number of asynchronous tasks, status of single sign-on (SSO) logon, and status of SCIM synchronization.
-      * ## Limits
+      * ### [](#)
+      * This topic provides an example on how to query the statistics of a directory whose ID is `d-00fc2p61****`. The statistics include the number of users, quota for users, number of groups, quota for groups, number of access configurations, quota for access configurations, quota for system policies that can be configured for an access configuration, number of access permissions that are assigned, number of System for Cross-domain Identity Management (SCIM) credentials, number of asynchronous tasks, status of single sign-on (SSO), and status of SCIM synchronization.
+      * ### [](#qps)Limit
       * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request GetDirectoryStatisticsRequest
@@ -1352,8 +1395,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to query the configurations of the SAML IdP within the directory `d-00fc2p61****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request GetExternalSAMLIdentityProviderRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1385,8 +1426,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to query the configurations of the SAML IdP within the directory `d-00fc2p61****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request GetExternalSAMLIdentityProviderRequest
       * @return GetExternalSAMLIdentityProviderResponse
@@ -1398,8 +1437,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to query the information about the group `g-00jqzghi2n3o5hkh****` in the directory `d-00fc2p61****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request GetGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1435,8 +1472,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to query the information about the group `g-00jqzghi2n3o5hkh****` in the directory `d-00fc2p61****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request GetGroupRequest
       * @return GetGroupResponse
@@ -1536,8 +1571,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to check whether MFA is enabled for users in the directory whose ID is `00fc2p61****`. The returned result shows that MFA is in the Enabled state.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request GetMFAAuthenticationStatusRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1569,8 +1602,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to check whether MFA is enabled for users in the directory whose ID is `00fc2p61****`. The returned result shows that MFA is in the Enabled state.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request GetMFAAuthenticationStatusRequest
       * @return GetMFAAuthenticationStatusResponse
@@ -1582,8 +1613,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to query the status of SCIM synchronization within the directory `d-00fc2p61****`. The returned result shows that SCIM synchronization is in the Enabled state.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request GetSCIMSynchronizationStatusRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1615,8 +1644,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to query the status of SCIM synchronization within the directory `d-00fc2p61****`. The returned result shows that SCIM synchronization is in the Enabled state.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request GetSCIMSynchronizationStatusRequest
       * @return GetSCIMSynchronizationStatusResponse
@@ -1626,14 +1653,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getSCIMSynchronizationStatusWithOptions(request, runtime);
     }
 
-    /**
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-      *
-      * @param request GetServiceStatusRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetServiceStatusResponse
-     */
     public GetServiceStatusResponse getServiceStatusWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -1650,12 +1669,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceStatusResponse());
     }
 
-    /**
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
-      *
-      * @return GetServiceStatusResponse
-     */
     public GetServiceStatusResponse getServiceStatus() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getServiceStatusWithOptions(runtime);
@@ -1663,8 +1676,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to query the information about the task whose ID is `t-shfqw1u1edszvxw5****`.
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request GetTaskRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1700,8 +1711,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to query the information about the task whose ID is `t-shfqw1u1edszvxw5****`.
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request GetTaskRequest
       * @return GetTaskResponse
@@ -1714,8 +1723,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * You can call the GetTaskStatus operation to query the status of an asynchronous task. If you want to query more information about an asynchronous task, you can call the [GetTask](~~340670~~) operation.
       * This topic provides an example on how to query the information about the task whose ID is `t-shfqw1u1edszvxw5****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request GetTaskStatusRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1752,8 +1759,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * You can call the GetTaskStatus operation to query the status of an asynchronous task. If you want to query more information about an asynchronous task, you can call the [GetTask](~~340670~~) operation.
       * This topic provides an example on how to query the information about the task whose ID is `t-shfqw1u1edszvxw5****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request GetTaskStatusRequest
       * @return GetTaskStatusResponse
@@ -1765,8 +1770,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to query information about the user whose ID is `u-00q8wbq42wiltcrk****` in the `d-00fc2p61****` directory.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request GetUserRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1802,8 +1805,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to query information about the user whose ID is `u-00q8wbq42wiltcrk****` in the `d-00fc2p61****` directory.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request GetUserRequest
       * @return GetUserResponse
@@ -1859,10 +1860,169 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getUserMFAAuthenticationSettingsWithOptions(request, runtime);
     }
 
+    public GetUserProvisioningResponse getUserProvisioningWithOptions(GetUserProvisioningRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userProvisioningId)) {
+            query.put("UserProvisioningId", request.userProvisioningId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUserProvisioning"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserProvisioningResponse());
+    }
+
+    public GetUserProvisioningResponse getUserProvisioning(GetUserProvisioningRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getUserProvisioningWithOptions(request, runtime);
+    }
+
+    public GetUserProvisioningConfigurationResponse getUserProvisioningConfigurationWithOptions(GetUserProvisioningConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUserProvisioningConfiguration"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserProvisioningConfigurationResponse());
+    }
+
+    public GetUserProvisioningConfigurationResponse getUserProvisioningConfiguration(GetUserProvisioningConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getUserProvisioningConfigurationWithOptions(request, runtime);
+    }
+
+    public GetUserProvisioningEventResponse getUserProvisioningEventWithOptions(GetUserProvisioningEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("EventId", request.eventId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUserProvisioningEvent"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserProvisioningEventResponse());
+    }
+
+    public GetUserProvisioningEventResponse getUserProvisioningEvent(GetUserProvisioningEventRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getUserProvisioningEventWithOptions(request, runtime);
+    }
+
+    public GetUserProvisioningRdAccountStatisticsResponse getUserProvisioningRdAccountStatisticsWithOptions(GetUserProvisioningRdAccountStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rdMemberId)) {
+            query.put("RdMemberId", request.rdMemberId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUserProvisioningRdAccountStatistics"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserProvisioningRdAccountStatisticsResponse());
+    }
+
+    public GetUserProvisioningRdAccountStatisticsResponse getUserProvisioningRdAccountStatistics(GetUserProvisioningRdAccountStatisticsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getUserProvisioningRdAccountStatisticsWithOptions(request, runtime);
+    }
+
+    public GetUserProvisioningStatisticsResponse getUserProvisioningStatisticsWithOptions(GetUserProvisioningStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userProvisioningId)) {
+            query.put("UserProvisioningId", request.userProvisioningId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUserProvisioningStatistics"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserProvisioningStatisticsResponse());
+    }
+
+    public GetUserProvisioningStatisticsResponse getUserProvisioningStatistics(GetUserProvisioningStatisticsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getUserProvisioningStatisticsWithOptions(request, runtime);
+    }
+
     /**
-      * This topic provides an example on how to query the assigned access permissions on the account `114240524784****` in your resource directory. The returned result shows that access permissions on the account in your resource directory is assigned to one user.
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+      * This topic provides an example on how to query the assigned access permissions on the account `114240524784****` in your resource directory. The returned result shows that access permissions on the account in your resource directory are assigned to one user.
       *
       * @param request ListAccessAssignmentsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1921,9 +2081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the assigned access permissions on the account `114240524784****` in your resource directory. The returned result shows that access permissions on the account in your resource directory is assigned to one user.
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+      * This topic provides an example on how to query the assigned access permissions on the account `114240524784****` in your resource directory. The returned result shows that access permissions on the account in your resource directory are assigned to one user.
       *
       * @param request ListAccessAssignmentsRequest
       * @return ListAccessAssignmentsResponse
@@ -1934,7 +2092,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
       * This topic provides an example on how to query the accounts for which the access permission `ac-00ccule7tadaijxc****` is provisioned. The returned result shows that the access configuration is provisioned for two accounts in your resource directory.
       *
       * @param request ListAccessConfigurationProvisioningsRequest
@@ -1990,7 +2147,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
       * This topic provides an example on how to query the accounts for which the access permission `ac-00ccule7tadaijxc****` is provisioned. The returned result shows that the access configuration is provisioned for two accounts in your resource directory.
       *
       * @param request ListAccessConfigurationProvisioningsRequest
@@ -2002,7 +2158,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
       * This topic provides an example on how to query the access configurations within the directory `d-00fc2p61****`. The returned result shows that the directory contains the `VPC-Admin` and `ECS-Admin` access configurations.
       *
       * @param request ListAccessConfigurationsRequest
@@ -2050,7 +2205,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
       * This topic provides an example on how to query the access configurations within the directory `d-00fc2p61****`. The returned result shows that the directory contains the `VPC-Admin` and `ECS-Admin` access configurations.
       *
       * @param request ListAccessConfigurationsRequest
@@ -2062,9 +2216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the directories within your Alibaba Cloud account. The returned result shows that only one directory with the ID `d-00fc2p61****` is created within your Alibaba Cloud account.  
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+      * This topic provides an example on how to query the directories within your Alibaba Cloud account. The returned result shows that only one directory with the ID `d-00fc2p61****` is created within your Alibaba Cloud account.
       *
       * @param request ListDirectoriesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2087,9 +2239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the directories within your Alibaba Cloud account. The returned result shows that only one directory with the ID `d-00fc2p61****` is created within your Alibaba Cloud account.  
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+      * This topic provides an example on how to query the directories within your Alibaba Cloud account. The returned result shows that only one directory with the ID `d-00fc2p61****` is created within your Alibaba Cloud account.
       *
       * @return ListDirectoriesResponse
      */
@@ -2100,8 +2250,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to query the SAML signing certificates within the directory `d-00fc2p61****`. The returned result shows that the directory contains one SAML signing certificate.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request ListExternalSAMLIdPCertificatesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2133,8 +2281,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to query the SAML signing certificates within the directory `d-00fc2p61****`. The returned result shows that the directory contains one SAML signing certificate.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request ListExternalSAMLIdPCertificatesRequest
       * @return ListExternalSAMLIdPCertificatesResponse
@@ -2146,8 +2292,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to query the users in the group `g-00jqzghi2n3o5hkh****`. The returned result shows that the group contains the user `Alice` and the user `user1`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request ListGroupMembersRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2191,8 +2335,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to query the users in the group `g-00jqzghi2n3o5hkh****`. The returned result shows that the group contains the user `Alice` and the user `user1`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request ListGroupMembersRequest
       * @return ListGroupMembersResponse
@@ -2204,8 +2346,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to query the groups in the directory `d-00fc2p61****`. The returned result shows that the directory contains three groups. The groups `group1` and `group2` are synchronized from an external identity provider (IdP). The group `TestGroup` is manually created in CloudSSO.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request ListGroupsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2253,8 +2393,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to query the groups in the directory `d-00fc2p61****`. The returned result shows that the directory contains three groups. The groups `group1` and `group2` are synchronized from an external identity provider (IdP). The group `TestGroup` is manually created in CloudSSO.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request ListGroupsRequest
       * @return ListGroupsResponse
@@ -2266,8 +2404,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to query the groups to which the user `u-00q8wbq42wiltcrk****` is added. The returned result shows that the user is added to both the `TestGroup` and the `group1` groups.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request ListJoinedGroupsForUserRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2311,8 +2447,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to query the groups to which the user `u-00q8wbq42wiltcrk****` is added. The returned result shows that the user is added to both the `TestGroup` and the `group1` groups.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request ListJoinedGroupsForUserRequest
       * @return ListJoinedGroupsForUserResponse
@@ -2323,9 +2457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the MFA devices that are bound to the user `u-00q8wbq42wiltcrk****`. The returned result shows that the MFA device named `Alice-MFA1` is bound to the user.  
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+      * This topic provides an example on how to query the MFA devices that are bound to the user `u-00q8wbq42wiltcrk****`. The returned result shows that the MFA device named `Alice-MFA1` is bound to the user.
       *
       * @param request ListMFADevicesForUserRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2360,9 +2492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the MFA devices that are bound to the user `u-00q8wbq42wiltcrk****`. The returned result shows that the MFA device named `Alice-MFA1` is bound to the user.  
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+      * This topic provides an example on how to query the MFA devices that are bound to the user `u-00q8wbq42wiltcrk****`. The returned result shows that the MFA device named `Alice-MFA1` is bound to the user.
       *
       * @param request ListMFADevicesForUserRequest
       * @return ListMFADevicesForUserResponse
@@ -2373,9 +2503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the policies that are created for the access configuration `ac-00jhtfl8thteu6uj****`. The returned result shows that the access configuration contains one system policy and one inline policy.  
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+      * This topic provides an example on how to query the policies that are created for the access configuration `ac-00jhtfl8thteu6uj****`. The returned result shows that the access configuration contains one system policy and one inline policy.
       *
       * @param request ListPermissionPoliciesInAccessConfigurationRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2414,9 +2542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the policies that are created for the access configuration `ac-00jhtfl8thteu6uj****`. The returned result shows that the access configuration contains one system policy and one inline policy.  
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+      * This topic provides an example on how to query the policies that are created for the access configuration `ac-00jhtfl8thteu6uj****`. The returned result shows that the access configuration contains one system policy and one inline policy.
       *
       * @param request ListPermissionPoliciesInAccessConfigurationRequest
       * @return ListPermissionPoliciesInAccessConfigurationResponse
@@ -2428,8 +2554,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to query the SCIM credentials within the `d-00fc2p61****` directory.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request ListSCIMServerCredentialsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2461,8 +2585,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to query the SCIM credentials within the `d-00fc2p61****` directory.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request ListSCIMServerCredentialsRequest
       * @return ListSCIMServerCredentialsResponse
@@ -2475,8 +2597,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * By default, this operation queries the tasks within the previous 24 hours. This operation allows you to query the tasks within a maximum of 7 days. You can specify the start time of the query by using `Filter`.
       * This topic provides an example on how to query the tasks within the previous 24 hours.
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request ListTasksRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2549,8 +2669,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * By default, this operation queries the tasks within the previous 24 hours. This operation allows you to query the tasks within a maximum of 7 days. You can specify the start time of the query by using `Filter`.
       * This topic provides an example on how to query the tasks within the previous 24 hours.
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request ListTasksRequest
       * @return ListTasksResponse
@@ -2560,10 +2678,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listTasksWithOptions(request, runtime);
     }
 
+    public ListUserProvisioningEventsResponse listUserProvisioningEventsWithOptions(ListUserProvisioningEventsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userProvisioningId)) {
+            query.put("UserProvisioningId", request.userProvisioningId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListUserProvisioningEvents"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserProvisioningEventsResponse());
+    }
+
+    public ListUserProvisioningEventsResponse listUserProvisioningEvents(ListUserProvisioningEventsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listUserProvisioningEventsWithOptions(request, runtime);
+    }
+
+    public ListUserProvisioningsResponse listUserProvisioningsWithOptions(ListUserProvisioningsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalId)) {
+            query.put("PrincipalId", request.principalId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.principalType)) {
+            query.put("PrincipalType", request.principalType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetId)) {
+            query.put("TargetId", request.targetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetType)) {
+            query.put("TargetType", request.targetType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListUserProvisionings"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserProvisioningsResponse());
+    }
+
+    public ListUserProvisioningsResponse listUserProvisionings(ListUserProvisioningsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listUserProvisioningsWithOptions(request, runtime);
+    }
+
     /**
       * This topic provides an example on how to query users in the `d-00fc2p61****` directory. The returned result shows that the directory contains two users. The user `AliceLee` is synchronized from an external identity provider (IdP). The user `user1` is manually created within CloudSSO.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request ListUsersRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2615,8 +2825,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to query users in the `d-00fc2p61****` directory. The returned result shows that the directory contains two users. The user `AliceLee` is synchronized from an external identity provider (IdP). The user `user1` is manually created within CloudSSO.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request ListUsersRequest
       * @return ListUsersResponse
@@ -2629,8 +2837,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * When you call this operation, an asynchronous task is automatically created. You can call the [GetTask](~~340670~~) operation to query the progress of the task based on the value of the `TaskId` response parameter.
       * This topic provides an example on how to provision the access configuration `ac-00jhtfl8thteu6uj****` for the account `114240524784****` in your resource directory.
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request ProvisionAccessConfigurationRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2675,8 +2881,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * When you call this operation, an asynchronous task is automatically created. You can call the [GetTask](~~340670~~) operation to query the progress of the task based on the value of the `TaskId` response parameter.
       * This topic provides an example on how to provision the access configuration `ac-00jhtfl8thteu6uj****` for the account `114240524784****` in your resource directory.
-      * ## Limits
-      * You can call this operation up to 20 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request ProvisionAccessConfigurationRequest
       * @return ProvisionAccessConfigurationResponse
@@ -2688,8 +2892,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to remove the SAML signing certificate whose ID is `idp-c-00dt9gnl7fmjaw9c****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request RemoveExternalSAMLIdPCertificateRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2725,8 +2927,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to remove the SAML signing certificate whose ID is `idp-c-00dt9gnl7fmjaw9c****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request RemoveExternalSAMLIdPCertificateRequest
       * @return RemoveExternalSAMLIdPCertificateResponse
@@ -2739,8 +2939,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * After you remove an inline policy from an access configuration, the policy cannot be restored.
       * This topic provides an example on how to remove the system policy `AliyunECSFullAccess` from the access configuration `ac-00jhtfl8thteu6uj****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request RemovePermissionPolicyFromAccessConfigurationRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2785,8 +2983,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * After you remove an inline policy from an access configuration, the policy cannot be restored.
       * This topic provides an example on how to remove the system policy `AliyunECSFullAccess` from the access configuration `ac-00jhtfl8thteu6uj****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request RemovePermissionPolicyFromAccessConfigurationRequest
       * @return RemovePermissionPolicyFromAccessConfigurationResponse
@@ -2798,9 +2994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot remove a user from a group that is synchronized by using SCIM.  
-      * This topic provides an example on how to remove the user `u-00q8wbq42wiltcrk****` from the group `g-00jqzghi2n3o5hkh****`.  
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+      * This topic provides an example on how to remove the user `u-00q8wbq42wiltcrk****` from the group `g-00jqzghi2n3o5hkh****`.
       *
       * @param request RemoveUserFromGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2840,9 +3034,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot remove a user from a group that is synchronized by using SCIM.  
-      * This topic provides an example on how to remove the user `u-00q8wbq42wiltcrk****` from the group `g-00jqzghi2n3o5hkh****`.  
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+      * This topic provides an example on how to remove the user `u-00q8wbq42wiltcrk****` from the group `g-00jqzghi2n3o5hkh****`.
       *
       * @param request RemoveUserFromGroupRequest
       * @return RemoveUserFromGroupResponse
@@ -2856,8 +3048,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * If you forget your password or your password expires or is at risk, you must contact a CloudSSO administrator to reset your password.
       * >  After you enable SSO logon, your password cannot be reset.
       * This topic provides an example on how to reset the password of the user `u-00q8wbq42wiltcrk****`. The new password is automatically generated by the system.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request ResetUserPasswordRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2907,8 +3097,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * If you forget your password or your password expires or is at risk, you must contact a CloudSSO administrator to reset your password.
       * >  After you enable SSO logon, your password cannot be reset.
       * This topic provides an example on how to reset the password of the user `u-00q8wbq42wiltcrk****`. The new password is automatically generated by the system.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request ResetUserPasswordRequest
       * @return ResetUserPasswordResponse
@@ -2918,12 +3106,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.resetUserPasswordWithOptions(request, runtime);
     }
 
+    public RetryUserProvisioningEventResponse retryUserProvisioningEventWithOptions(RetryUserProvisioningEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.duplicationStrategy)) {
+            query.put("DuplicationStrategy", request.duplicationStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("EventId", request.eventId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RetryUserProvisioningEvent"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RetryUserProvisioningEventResponse());
+    }
+
+    public RetryUserProvisioningEventResponse retryUserProvisioningEvent(RetryUserProvisioningEventRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.retryUserProvisioningEventWithOptions(request, runtime);
+    }
+
     /**
-      * ## Usage notes
       * During SAML 2.0-based single sign-on (SSO) logon, CloudSSO is an SP, and the identity management system of an enterprise is an IdP.
       * You can use one of the following methods to configure a SAML IdP. You can obtain the required metadata file or parameter values from your IdP.
       * *   Use the metadata file. You can specify the `EncodedMetadataDocument` parameter to upload the metadata file.
-      * *   Manually configure the IdP. You can manually specifythe following parameters for your IdP: `EntityId`, `LoginUrl`, `WantRequestSigned`, and `X509Certificate`.
+      * *   Manually configure the IdP. You can manually specify the following parameters for your IdP: `EntityId`, `LoginUrl`, `WantRequestSigned`, and `X509Certificate`.
       * If you have configured a SAML IdP, the existing configurations are replaced after you call this operation.
       * *   If the IdP is configured by using the metadata file, all existing configurations are replaced with new configurations.
       * *   If the IdP is manually configured, the original parameter values that are different from the new parameter values are replaced.
@@ -2983,11 +3207,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
       * During SAML 2.0-based single sign-on (SSO) logon, CloudSSO is an SP, and the identity management system of an enterprise is an IdP.
       * You can use one of the following methods to configure a SAML IdP. You can obtain the required metadata file or parameter values from your IdP.
       * *   Use the metadata file. You can specify the `EncodedMetadataDocument` parameter to upload the metadata file.
-      * *   Manually configure the IdP. You can manually specifythe following parameters for your IdP: `EntityId`, `LoginUrl`, `WantRequestSigned`, and `X509Certificate`.
+      * *   Manually configure the IdP. You can manually specify the following parameters for your IdP: `EntityId`, `LoginUrl`, `WantRequestSigned`, and `X509Certificate`.
       * If you have configured a SAML IdP, the existing configurations are replaced after you call this operation.
       * *   If the IdP is configured by using the metadata file, all existing configurations are replaced with new configurations.
       * *   If the IdP is manually configured, the original parameter values that are different from the new parameter values are replaced.
@@ -3005,8 +3228,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * If a CloudSSO administrator enables username-password logon for users, CloudSSO automatically enables MFA to improve security. The administrator can call this operation to enable or disable MFA based on the business requirements.
       * This topic provides an example on how to enable MFA for users.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request SetMFAAuthenticationStatusRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3043,8 +3264,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * If a CloudSSO administrator enables username-password logon for users, CloudSSO automatically enables MFA to improve security. The administrator can call this operation to enable or disable MFA based on the business requirements.
       * This topic provides an example on how to enable MFA for users.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request SetMFAAuthenticationStatusRequest
       * @return SetMFAAuthenticationStatusResponse
@@ -3059,8 +3278,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   After you enable SCIM synchronization, you cannot modify or delete the users or groups that are synchronized to CloudSSO by using SCIM. In addition, you cannot add users to or remove users from the groups. However, you can change the passwords of the users and enable or disable the logon of the users.
       * *   After you disable SCIM synchronization, you can modify and delete the users and groups that are synchronized to CloudSSO by using SCIM. You can also add users to or remove users from the groups.
       * This topic provides an example on how to enable SCIM synchronization within the directory `d-00fc2p61****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request SetSCIMSynchronizationStatusRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3099,8 +3316,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   After you enable SCIM synchronization, you cannot modify or delete the users or groups that are synchronized to CloudSSO by using SCIM. In addition, you cannot add users to or remove users from the groups. However, you can change the passwords of the users and enable or disable the logon of the users.
       * *   After you disable SCIM synchronization, you can modify and delete the users and groups that are synchronized to CloudSSO by using SCIM. You can also add users to or remove users from the groups.
       * This topic provides an example on how to enable SCIM synchronization within the directory `d-00fc2p61****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request SetSCIMSynchronizationStatusRequest
       * @return SetSCIMSynchronizationStatusResponse
@@ -3113,8 +3328,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * You can modify the `Description`, `SessionDuration`, and `RelayState` parameters for an access configuration.
       * This topic provides an example on how to change the initial web page in the access configuration `ac-00jhtfl8thteu6uj****` to `https://cloudsso.console.aliyun.com`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request UpdateAccessConfigurationRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3163,8 +3376,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * You can modify the `Description`, `SessionDuration`, and `RelayState` parameters for an access configuration.
       * This topic provides an example on how to change the initial web page in the access configuration `ac-00jhtfl8thteu6uj****` to `https://cloudsso.console.aliyun.com`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request UpdateAccessConfigurationRequest
       * @return UpdateAccessConfigurationResponse
@@ -3176,9 +3387,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * After you change the name of a directory, the URL that is used to log on to the Cloud SSO user portal is changed. You must notify the Cloud SSO users of the correct URL. 
-      * This topic provides an example on how to change the name of a directory to `new-example`.  
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+      * This topic provides an example on how to change the name of a directory to `new-example`.
       *
       * @param request UpdateDirectoryRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3214,9 +3423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * After you change the name of a directory, the URL that is used to log on to the Cloud SSO user portal is changed. You must notify the Cloud SSO users of the correct URL. 
-      * This topic provides an example on how to change the name of a directory to `new-example`.  
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+      * This topic provides an example on how to change the name of a directory to `new-example`.
       *
       * @param request UpdateDirectoryRequest
       * @return UpdateDirectoryResponse
@@ -3230,8 +3437,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * You can modify `GroupName` and `Description` for a group.
       * >  If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify the information about a group that is synchronized by using SCIM.
       * This topic provides an example on how to change the name of the group `g-00jqzghi2n3o5hkh****` to `NewTestGroup`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request UpdateGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3277,8 +3482,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * You can modify `GroupName` and `Description` for a group.
       * >  If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify the information about a group that is synchronized by using SCIM.
       * This topic provides an example on how to change the name of the group `g-00jqzghi2n3o5hkh****` to `NewTestGroup`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request UpdateGroupRequest
       * @return UpdateGroupResponse
@@ -3290,8 +3493,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to modify an inline policy that is created for the access configuration `ac-00jhtfl8thteu6uj****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request UpdateInlinePolicyForAccessConfigurationRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3335,8 +3536,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to modify an inline policy that is created for the access configuration `ac-00jhtfl8thteu6uj****`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request UpdateInlinePolicyForAccessConfigurationRequest
       * @return UpdateInlinePolicyForAccessConfigurationResponse
@@ -3400,8 +3599,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to disable the SCIM credential whose ID is `scimcred-004whl0kvfwcypbi****`. After the SCIM credential is disabled, the synchronization task that uses the SCIM credential fails. You can call this operation again to enable the SCIM credential.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request UpdateSCIMServerCredentialStatusRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3441,8 +3638,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * This topic provides an example on how to disable the SCIM credential whose ID is `scimcred-004whl0kvfwcypbi****`. After the SCIM credential is disabled, the synchronization task that uses the SCIM credential fails. You can call this operation again to enable the SCIM credential.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request UpdateSCIMServerCredentialStatusRequest
       * @return UpdateSCIMServerCredentialStatusResponse
@@ -3456,8 +3651,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * You can modify `FirstName`, `LastName`, `DisplayName`, `Email`, and `Description` for a user. You cannot modify `UserName` for a user.
       * >  If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify the information about a user that is synchronized by using SCIM.
       * This topic provides an example on how to change the email address of the user whose ID is `u-00q8wbq42wiltcrk****` to `AliceLee@example.com`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request UpdateUserRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3515,8 +3708,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * You can modify `FirstName`, `LastName`, `DisplayName`, `Email`, and `Description` for a user. You cannot modify `UserName` for a user.
       * >  If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify the information about a user that is synchronized by using SCIM.
       * This topic provides an example on how to change the email address of the user whose ID is `u-00q8wbq42wiltcrk****` to `AliceLee@example.com`.
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
       * @param request UpdateUserRequest
       * @return UpdateUserResponse
@@ -3580,10 +3771,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateUserMFAAuthenticationSettingsWithOptions(request, runtime);
     }
 
+    public UpdateUserProvisioningResponse updateUserProvisioningWithOptions(UpdateUserProvisioningRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newDeletionStrategy)) {
+            query.put("NewDeletionStrategy", request.newDeletionStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newDescription)) {
+            query.put("NewDescription", request.newDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newDuplicationStrategy)) {
+            query.put("NewDuplicationStrategy", request.newDuplicationStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userProvisioningId)) {
+            query.put("UserProvisioningId", request.userProvisioningId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateUserProvisioning"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateUserProvisioningResponse());
+    }
+
+    public UpdateUserProvisioningResponse updateUserProvisioning(UpdateUserProvisioningRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateUserProvisioningWithOptions(request, runtime);
+    }
+
+    public UpdateUserProvisioningConfigurationResponse updateUserProvisioningConfigurationWithOptions(UpdateUserProvisioningConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newDefaultLandingPage)) {
+            query.put("NewDefaultLandingPage", request.newDefaultLandingPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newSessionDuration)) {
+            query.put("NewSessionDuration", request.newSessionDuration);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateUserProvisioningConfiguration"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateUserProvisioningConfigurationResponse());
+    }
+
+    public UpdateUserProvisioningConfigurationResponse updateUserProvisioningConfiguration(UpdateUserProvisioningConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateUserProvisioningConfigurationWithOptions(request, runtime);
+    }
+
     /**
-      * This topic provides an example on how to change the status of the user whose ID is `u-00q8wbq42wiltcrk****` to Disabled. Users in the Disabled state cannot log on to the CloudSSO user portal. 
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+      * This topic provides an example on how to change the status of the user whose ID is `u-00q8wbq42wiltcrk****` to Disabled. Users in the Disabled state cannot log on to the CloudSSO user portal.
       *
       * @param request UpdateUserStatusRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3622,9 +3893,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to change the status of the user whose ID is `u-00q8wbq42wiltcrk****` to Disabled. Users in the Disabled state cannot log on to the CloudSSO user portal. 
-      * ## Limits
-      * You can call this operation up to 100 times per second per account. This operation is globally limited to 100 times per second across all accounts. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+      * This topic provides an example on how to change the status of the user whose ID is `u-00q8wbq42wiltcrk****` to Disabled. Users in the Disabled state cannot log on to the CloudSSO user portal.
       *
       * @param request UpdateUserStatusRequest
       * @return UpdateUserStatusResponse

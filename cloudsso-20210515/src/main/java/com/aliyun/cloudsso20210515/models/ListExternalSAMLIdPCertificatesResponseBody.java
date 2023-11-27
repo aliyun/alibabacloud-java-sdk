@@ -77,7 +77,7 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
         public String notBefore;
 
         /**
-         * <p>The public key of the certificate. The value of this paremeter is in the PEM format and is Base64-encoded.</p>
+         * <p>The public key of the certificate. The value of this parameter is in the PEM format and is Base64-encoded.</p>
          */
         @NameInMap("PublicKey")
         public String publicKey;
