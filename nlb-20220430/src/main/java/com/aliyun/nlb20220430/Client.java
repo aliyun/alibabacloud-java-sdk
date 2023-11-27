@@ -241,8 +241,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.cancelShiftLoadBalancerZonesWithOptions(request, runtime);
     }
 
-    public CreateListenerResponse createListenerWithOptions(CreateListenerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateListenerResponse createListenerWithOptions(CreateListenerRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateListenerShrinkRequest request = new CreateListenerShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.proxyProtocolV2Config)) {
+            request.proxyProtocolV2ConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.proxyProtocolV2Config, "ProxyProtocolV2Config", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.alpnEnabled)) {
             body.put("AlpnEnabled", request.alpnEnabled);
@@ -306,6 +312,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.proxyProtocolEnabled)) {
             body.put("ProxyProtocolEnabled", request.proxyProtocolEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.proxyProtocolV2ConfigShrink)) {
+            body.put("ProxyProtocolV2Config", request.proxyProtocolV2ConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -2142,8 +2152,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.untagResourcesWithOptions(request, runtime);
     }
 
-    public UpdateListenerAttributeResponse updateListenerAttributeWithOptions(UpdateListenerAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateListenerAttributeResponse updateListenerAttributeWithOptions(UpdateListenerAttributeRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateListenerAttributeShrinkRequest request = new UpdateListenerAttributeShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.proxyProtocolV2Config)) {
+            request.proxyProtocolV2ConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.proxyProtocolV2Config, "ProxyProtocolV2Config", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.alpnEnabled)) {
             body.put("AlpnEnabled", request.alpnEnabled);
@@ -2195,6 +2211,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.proxyProtocolEnabled)) {
             body.put("ProxyProtocolEnabled", request.proxyProtocolEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.proxyProtocolV2ConfigShrink)) {
+            body.put("ProxyProtocolV2Config", request.proxyProtocolV2ConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {

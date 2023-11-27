@@ -3,7 +3,7 @@ package com.aliyun.nlb20220430.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateListenerAttributeRequest extends TeaModel {
+public class UpdateListenerAttributeShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable Application-Layer Protocol Negotiation (ALPN). Valid values:</p>
      * <br>
@@ -110,7 +110,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
     public Boolean proxyProtocolEnabled;
 
     @NameInMap("ProxyProtocolV2Config")
-    public UpdateListenerAttributeRequestProxyProtocolV2Config proxyProtocolV2Config;
+    public String proxyProtocolV2ConfigShrink;
 
     /**
      * <p>The ID of the region where the NLB instance is deployed.</p>
@@ -143,12 +143,12 @@ public class UpdateListenerAttributeRequest extends TeaModel {
     @NameInMap("ServerGroupId")
     public String serverGroupId;
 
-    public static UpdateListenerAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateListenerAttributeRequest self = new UpdateListenerAttributeRequest();
+    public static UpdateListenerAttributeShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateListenerAttributeShrinkRequest self = new UpdateListenerAttributeShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateListenerAttributeRequest setAlpnEnabled(Boolean alpnEnabled) {
+    public UpdateListenerAttributeShrinkRequest setAlpnEnabled(Boolean alpnEnabled) {
         this.alpnEnabled = alpnEnabled;
         return this;
     }
@@ -156,7 +156,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
         return this.alpnEnabled;
     }
 
-    public UpdateListenerAttributeRequest setAlpnPolicy(String alpnPolicy) {
+    public UpdateListenerAttributeShrinkRequest setAlpnPolicy(String alpnPolicy) {
         this.alpnPolicy = alpnPolicy;
         return this;
     }
@@ -164,7 +164,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
         return this.alpnPolicy;
     }
 
-    public UpdateListenerAttributeRequest setCaCertificateIds(java.util.List<String> caCertificateIds) {
+    public UpdateListenerAttributeShrinkRequest setCaCertificateIds(java.util.List<String> caCertificateIds) {
         this.caCertificateIds = caCertificateIds;
         return this;
     }
@@ -172,7 +172,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
         return this.caCertificateIds;
     }
 
-    public UpdateListenerAttributeRequest setCaEnabled(Boolean caEnabled) {
+    public UpdateListenerAttributeShrinkRequest setCaEnabled(Boolean caEnabled) {
         this.caEnabled = caEnabled;
         return this;
     }
@@ -180,7 +180,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
         return this.caEnabled;
     }
 
-    public UpdateListenerAttributeRequest setCertificateIds(java.util.List<String> certificateIds) {
+    public UpdateListenerAttributeShrinkRequest setCertificateIds(java.util.List<String> certificateIds) {
         this.certificateIds = certificateIds;
         return this;
     }
@@ -188,7 +188,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
         return this.certificateIds;
     }
 
-    public UpdateListenerAttributeRequest setClientToken(String clientToken) {
+    public UpdateListenerAttributeShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -196,7 +196,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public UpdateListenerAttributeRequest setCps(Integer cps) {
+    public UpdateListenerAttributeShrinkRequest setCps(Integer cps) {
         this.cps = cps;
         return this;
     }
@@ -204,7 +204,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
         return this.cps;
     }
 
-    public UpdateListenerAttributeRequest setDryRun(Boolean dryRun) {
+    public UpdateListenerAttributeShrinkRequest setDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
@@ -212,7 +212,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
         return this.dryRun;
     }
 
-    public UpdateListenerAttributeRequest setIdleTimeout(Integer idleTimeout) {
+    public UpdateListenerAttributeShrinkRequest setIdleTimeout(Integer idleTimeout) {
         this.idleTimeout = idleTimeout;
         return this;
     }
@@ -220,7 +220,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
         return this.idleTimeout;
     }
 
-    public UpdateListenerAttributeRequest setListenerDescription(String listenerDescription) {
+    public UpdateListenerAttributeShrinkRequest setListenerDescription(String listenerDescription) {
         this.listenerDescription = listenerDescription;
         return this;
     }
@@ -228,7 +228,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
         return this.listenerDescription;
     }
 
-    public UpdateListenerAttributeRequest setListenerId(String listenerId) {
+    public UpdateListenerAttributeShrinkRequest setListenerId(String listenerId) {
         this.listenerId = listenerId;
         return this;
     }
@@ -236,7 +236,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
         return this.listenerId;
     }
 
-    public UpdateListenerAttributeRequest setMss(Integer mss) {
+    public UpdateListenerAttributeShrinkRequest setMss(Integer mss) {
         this.mss = mss;
         return this;
     }
@@ -244,7 +244,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
         return this.mss;
     }
 
-    public UpdateListenerAttributeRequest setProxyProtocolEnabled(Boolean proxyProtocolEnabled) {
+    public UpdateListenerAttributeShrinkRequest setProxyProtocolEnabled(Boolean proxyProtocolEnabled) {
         this.proxyProtocolEnabled = proxyProtocolEnabled;
         return this;
     }
@@ -252,15 +252,15 @@ public class UpdateListenerAttributeRequest extends TeaModel {
         return this.proxyProtocolEnabled;
     }
 
-    public UpdateListenerAttributeRequest setProxyProtocolV2Config(UpdateListenerAttributeRequestProxyProtocolV2Config proxyProtocolV2Config) {
-        this.proxyProtocolV2Config = proxyProtocolV2Config;
+    public UpdateListenerAttributeShrinkRequest setProxyProtocolV2ConfigShrink(String proxyProtocolV2ConfigShrink) {
+        this.proxyProtocolV2ConfigShrink = proxyProtocolV2ConfigShrink;
         return this;
     }
-    public UpdateListenerAttributeRequestProxyProtocolV2Config getProxyProtocolV2Config() {
-        return this.proxyProtocolV2Config;
+    public String getProxyProtocolV2ConfigShrink() {
+        return this.proxyProtocolV2ConfigShrink;
     }
 
-    public UpdateListenerAttributeRequest setRegionId(String regionId) {
+    public UpdateListenerAttributeShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -268,7 +268,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
         return this.regionId;
     }
 
-    public UpdateListenerAttributeRequest setSecSensorEnabled(Boolean secSensorEnabled) {
+    public UpdateListenerAttributeShrinkRequest setSecSensorEnabled(Boolean secSensorEnabled) {
         this.secSensorEnabled = secSensorEnabled;
         return this;
     }
@@ -276,7 +276,7 @@ public class UpdateListenerAttributeRequest extends TeaModel {
         return this.secSensorEnabled;
     }
 
-    public UpdateListenerAttributeRequest setSecurityPolicyId(String securityPolicyId) {
+    public UpdateListenerAttributeShrinkRequest setSecurityPolicyId(String securityPolicyId) {
         this.securityPolicyId = securityPolicyId;
         return this;
     }
@@ -284,53 +284,12 @@ public class UpdateListenerAttributeRequest extends TeaModel {
         return this.securityPolicyId;
     }
 
-    public UpdateListenerAttributeRequest setServerGroupId(String serverGroupId) {
+    public UpdateListenerAttributeShrinkRequest setServerGroupId(String serverGroupId) {
         this.serverGroupId = serverGroupId;
         return this;
     }
     public String getServerGroupId() {
         return this.serverGroupId;
-    }
-
-    public static class UpdateListenerAttributeRequestProxyProtocolV2Config extends TeaModel {
-        @NameInMap("Ppv2PrivateLinkEpIdEnabled")
-        public Boolean ppv2PrivateLinkEpIdEnabled;
-
-        @NameInMap("Ppv2PrivateLinkEpsIdEnabled")
-        public Boolean ppv2PrivateLinkEpsIdEnabled;
-
-        @NameInMap("Ppv2VpcIdEnabled")
-        public Boolean ppv2VpcIdEnabled;
-
-        public static UpdateListenerAttributeRequestProxyProtocolV2Config build(java.util.Map<String, ?> map) throws Exception {
-            UpdateListenerAttributeRequestProxyProtocolV2Config self = new UpdateListenerAttributeRequestProxyProtocolV2Config();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateListenerAttributeRequestProxyProtocolV2Config setPpv2PrivateLinkEpIdEnabled(Boolean ppv2PrivateLinkEpIdEnabled) {
-            this.ppv2PrivateLinkEpIdEnabled = ppv2PrivateLinkEpIdEnabled;
-            return this;
-        }
-        public Boolean getPpv2PrivateLinkEpIdEnabled() {
-            return this.ppv2PrivateLinkEpIdEnabled;
-        }
-
-        public UpdateListenerAttributeRequestProxyProtocolV2Config setPpv2PrivateLinkEpsIdEnabled(Boolean ppv2PrivateLinkEpsIdEnabled) {
-            this.ppv2PrivateLinkEpsIdEnabled = ppv2PrivateLinkEpsIdEnabled;
-            return this;
-        }
-        public Boolean getPpv2PrivateLinkEpsIdEnabled() {
-            return this.ppv2PrivateLinkEpsIdEnabled;
-        }
-
-        public UpdateListenerAttributeRequestProxyProtocolV2Config setPpv2VpcIdEnabled(Boolean ppv2VpcIdEnabled) {
-            this.ppv2VpcIdEnabled = ppv2VpcIdEnabled;
-            return this;
-        }
-        public Boolean getPpv2VpcIdEnabled() {
-            return this.ppv2VpcIdEnabled;
-        }
-
     }
 
 }

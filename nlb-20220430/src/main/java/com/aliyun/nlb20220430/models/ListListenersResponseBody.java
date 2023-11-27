@@ -82,6 +82,47 @@ public class ListListenersResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListListenersResponseBodyListenersProxyProtocolV2Config extends TeaModel {
+        @NameInMap("Ppv2PrivateLinkEpIdEnabled")
+        public String ppv2PrivateLinkEpIdEnabled;
+
+        @NameInMap("Ppv2PrivateLinkEpsIdEnabled")
+        public String ppv2PrivateLinkEpsIdEnabled;
+
+        @NameInMap("Ppv2VpcIdEnabled")
+        public String ppv2VpcIdEnabled;
+
+        public static ListListenersResponseBodyListenersProxyProtocolV2Config build(java.util.Map<String, ?> map) throws Exception {
+            ListListenersResponseBodyListenersProxyProtocolV2Config self = new ListListenersResponseBodyListenersProxyProtocolV2Config();
+            return TeaModel.build(map, self);
+        }
+
+        public ListListenersResponseBodyListenersProxyProtocolV2Config setPpv2PrivateLinkEpIdEnabled(String ppv2PrivateLinkEpIdEnabled) {
+            this.ppv2PrivateLinkEpIdEnabled = ppv2PrivateLinkEpIdEnabled;
+            return this;
+        }
+        public String getPpv2PrivateLinkEpIdEnabled() {
+            return this.ppv2PrivateLinkEpIdEnabled;
+        }
+
+        public ListListenersResponseBodyListenersProxyProtocolV2Config setPpv2PrivateLinkEpsIdEnabled(String ppv2PrivateLinkEpsIdEnabled) {
+            this.ppv2PrivateLinkEpsIdEnabled = ppv2PrivateLinkEpsIdEnabled;
+            return this;
+        }
+        public String getPpv2PrivateLinkEpsIdEnabled() {
+            return this.ppv2PrivateLinkEpsIdEnabled;
+        }
+
+        public ListListenersResponseBodyListenersProxyProtocolV2Config setPpv2VpcIdEnabled(String ppv2VpcIdEnabled) {
+            this.ppv2VpcIdEnabled = ppv2VpcIdEnabled;
+            return this;
+        }
+        public String getPpv2VpcIdEnabled() {
+            return this.ppv2VpcIdEnabled;
+        }
+
+    }
+
     public static class ListListenersResponseBodyListenersTags extends TeaModel {
         /**
          * <p>The key of the tag.</p>
@@ -247,6 +288,9 @@ public class ListListenersResponseBody extends TeaModel {
          */
         @NameInMap("ProxyProtocolEnabled")
         public Boolean proxyProtocolEnabled;
+
+        @NameInMap("ProxyProtocolV2Config")
+        public ListListenersResponseBodyListenersProxyProtocolV2Config proxyProtocolV2Config;
 
         /**
          * <p>The ID of the region where the NLB instance is deployed.</p>
@@ -420,6 +464,14 @@ public class ListListenersResponseBody extends TeaModel {
         }
         public Boolean getProxyProtocolEnabled() {
             return this.proxyProtocolEnabled;
+        }
+
+        public ListListenersResponseBodyListeners setProxyProtocolV2Config(ListListenersResponseBodyListenersProxyProtocolV2Config proxyProtocolV2Config) {
+            this.proxyProtocolV2Config = proxyProtocolV2Config;
+            return this;
+        }
+        public ListListenersResponseBodyListenersProxyProtocolV2Config getProxyProtocolV2Config() {
+            return this.proxyProtocolV2Config;
         }
 
         public ListListenersResponseBodyListeners setRegionId(String regionId) {
