@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class EnableInstancePublicAccessRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **EnableInstancePublicAccess**.</p>
+     * <p>The ID of the bastion host.</p>
+     * <br>
+     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the bastion host whose Internet access is enabled.</p>
+     * <p>The region ID of the bastion host.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

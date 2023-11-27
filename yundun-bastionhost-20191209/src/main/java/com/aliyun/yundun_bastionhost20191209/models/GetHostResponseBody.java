@@ -132,6 +132,9 @@ public class GetHostResponseBody extends TeaModel {
         @NameInMap("HostPublicAddress")
         public String hostPublicAddress;
 
+        @NameInMap("NetworkDomainId")
+        public String networkDomainId;
+
         /**
          * <p>The operating system of the host. Valid values:</p>
          * <br>
@@ -218,6 +221,14 @@ public class GetHostResponseBody extends TeaModel {
         }
         public String getHostPublicAddress() {
             return this.hostPublicAddress;
+        }
+
+        public GetHostResponseBodyHost setNetworkDomainId(String networkDomainId) {
+            this.networkDomainId = networkDomainId;
+            return this;
+        }
+        public String getNetworkDomainId() {
+            return this.networkDomainId;
         }
 
         public GetHostResponseBodyHost setOSType(String OSType) {

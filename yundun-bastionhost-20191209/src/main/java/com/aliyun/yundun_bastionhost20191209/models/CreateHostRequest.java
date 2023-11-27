@@ -57,6 +57,9 @@ public class CreateHostRequest extends TeaModel {
     @NameInMap("InstanceRegionId")
     public String instanceRegionId;
 
+    @NameInMap("NetworkDomainId")
+    public String networkDomainId;
+
     /**
      * <p>The operating system of the host that you want to create. Valid values:</p>
      * <br>
@@ -151,6 +154,14 @@ public class CreateHostRequest extends TeaModel {
     }
     public String getInstanceRegionId() {
         return this.instanceRegionId;
+    }
+
+    public CreateHostRequest setNetworkDomainId(String networkDomainId) {
+        this.networkDomainId = networkDomainId;
+        return this;
+    }
+    public String getNetworkDomainId() {
+        return this.networkDomainId;
     }
 
     public CreateHostRequest setOSType(String OSType) {

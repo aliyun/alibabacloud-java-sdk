@@ -4,6 +4,9 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The attribute information about the bastion host.</p>
+     */
     @NameInMap("InstanceAttribute")
     public DescribeInstanceAttributeResponseBodyInstanceAttribute instanceAttribute;
 
@@ -32,9 +35,21 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAttributeResponseBodyInstanceAttributePorts extends TeaModel {
+        /**
+         * <p>The custom port.</p>
+         * <br>
+         * <p>>  You can change only the SSH and RDP ports. If O\&M ports are not specified, the value of the StandardPort parameter is returned.</p>
+         */
         @NameInMap("CustomPort")
         public Integer customPort;
 
+        /**
+         * <p>The standard port of the bastion host. Valid values:</p>
+         * <br>
+         * <p>*   **SSH**: 60022</p>
+         * <p>*   **RDP**: 63389</p>
+         * <p>*   **HTTPS**: 443</p>
+         */
         @NameInMap("StandardPort")
         public Integer standardPort;
 
@@ -65,9 +80,15 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("AuthorizedSecurityGroups")
         public java.util.List<String> authorizedSecurityGroups;
 
+        /**
+         * <p>The total bandwidth of the bastion host.</p>
+         */
         @NameInMap("Bandwidth")
         public String bandwidth;
 
+        /**
+         * <p>The extra bandwidth plan of the bastion host.</p>
+         */
         @NameInMap("BandwidthPackage")
         public String bandwidthPackage;
 

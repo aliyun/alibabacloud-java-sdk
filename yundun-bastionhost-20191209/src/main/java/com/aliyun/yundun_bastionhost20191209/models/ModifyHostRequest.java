@@ -46,6 +46,9 @@ public class ModifyHostRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("NetworkDomainId")
+    public String networkDomainId;
+
     /**
      * <p>The ID of the host.</p>
      * <br>
@@ -114,6 +117,14 @@ public class ModifyHostRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ModifyHostRequest setNetworkDomainId(String networkDomainId) {
+        this.networkDomainId = networkDomainId;
+        return this;
+    }
+    public String getNetworkDomainId() {
+        return this.networkDomainId;
     }
 
     public ModifyHostRequest setOSType(String OSType) {
