@@ -31,6 +31,9 @@ public class CreateVpcPeerConnectionRequest extends TeaModel {
     @NameInMap("AcceptingVpcId")
     public String acceptingVpcId;
 
+    @NameInMap("Bandwidth")
+    public Integer bandwidth;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
@@ -115,6 +118,14 @@ public class CreateVpcPeerConnectionRequest extends TeaModel {
     }
     public String getAcceptingVpcId() {
         return this.acceptingVpcId;
+    }
+
+    public CreateVpcPeerConnectionRequest setBandwidth(Integer bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Integer getBandwidth() {
+        return this.bandwidth;
     }
 
     public CreateVpcPeerConnectionRequest setClientToken(String clientToken) {

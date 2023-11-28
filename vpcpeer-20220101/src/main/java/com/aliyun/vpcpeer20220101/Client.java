@@ -120,6 +120,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AcceptingVpcId", request.acceptingVpcId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.bandwidth)) {
+            body.put("Bandwidth", request.bandwidth);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             body.put("ClientToken", request.clientToken);
         }
