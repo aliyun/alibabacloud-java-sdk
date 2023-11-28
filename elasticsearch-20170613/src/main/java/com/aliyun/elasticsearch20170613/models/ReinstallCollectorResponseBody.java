@@ -7,6 +7,9 @@ public class ReinstallCollectorResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

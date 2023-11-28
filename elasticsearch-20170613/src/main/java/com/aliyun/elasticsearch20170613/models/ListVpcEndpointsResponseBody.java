@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListVpcEndpointsResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the endpoints.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListVpcEndpointsResponseBodyResult> result;
 
@@ -32,30 +38,73 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
     }
 
     public static class ListVpcEndpointsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The status of the endpoint connection. Valid values:</p>
+         * <br>
+         * <p>*   Pending</p>
+         * <p>*   Connecting</p>
+         * <p>*   Connected</p>
+         * <p>*   Disconnecting</p>
+         * <p>*   Disconnected</p>
+         * <p>*   Deleting</p>
+         * <p>*   ServiceDeleted</p>
+         */
         @NameInMap("connectionStatus")
         public String connectionStatus;
 
+        /**
+         * <p>The time when the endpoint was created.</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <p>The business status of the endpoint. Valid values:</p>
+         * <br>
+         * <p>*   Normal</p>
+         * <p>*   FinancialLocked</p>
+         */
         @NameInMap("endpointBusinessStatus")
         public String endpointBusinessStatus;
 
+        /**
+         * <p>The domain name of the endpoint. The domain name is used for connection configuration.</p>
+         */
         @NameInMap("endpointDomain")
         public String endpointDomain;
 
+        /**
+         * <p>The ID of the endpoint.</p>
+         */
         @NameInMap("endpointId")
         public String endpointId;
 
+        /**
+         * <p>The name of the endpoint.</p>
+         */
         @NameInMap("endpointName")
         public String endpointName;
 
+        /**
+         * <p>The status of the endpoint. Valid values:</p>
+         * <br>
+         * <p>*   Creating</p>
+         * <p>*   Active</p>
+         * <p>*   Pending</p>
+         * <p>*   Deleting</p>
+         */
         @NameInMap("endpointStatus")
         public String endpointStatus;
 
+        /**
+         * <p>The ID of the endpoint service with which the endpoint is associated.</p>
+         */
         @NameInMap("serviceId")
         public String serviceId;
 
+        /**
+         * <p>The name of the endpoint service with which the endpoint is associated.</p>
+         */
         @NameInMap("serviceName")
         public String serviceName;
 

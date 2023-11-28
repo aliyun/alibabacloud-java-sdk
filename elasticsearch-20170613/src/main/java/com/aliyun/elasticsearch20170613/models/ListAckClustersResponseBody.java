@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListAckClustersResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListAckClustersResponseBodyResult> result;
 
@@ -32,15 +38,27 @@ public class ListAckClustersResponseBody extends TeaModel {
     }
 
     public static class ListAckClustersResponseBodyResult extends TeaModel {
+        /**
+         * <p>The ID of cluster.</p>
+         */
         @NameInMap("clusterId")
         public String clusterId;
 
+        /**
+         * <p>The type of the cluster. The value is fixed as ManagedKubernetes.</p>
+         */
         @NameInMap("clusterType")
         public String clusterType;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The ID of the VPC to which the cluster belongs.</p>
+         */
         @NameInMap("vpcId")
         public String vpcId;
 

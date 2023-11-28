@@ -13,6 +13,9 @@ public class UninstallPluginRequest extends TeaModel {
     @NameInMap("clientToken")
     public String clientToken;
 
+    @NameInMap("force")
+    public Boolean force;
+
     public static UninstallPluginRequest build(java.util.Map<String, ?> map) throws Exception {
         UninstallPluginRequest self = new UninstallPluginRequest();
         return TeaModel.build(map, self);
@@ -32,6 +35,14 @@ public class UninstallPluginRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UninstallPluginRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
     }
 
 }

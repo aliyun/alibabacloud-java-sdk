@@ -4,12 +4,21 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListAckClustersRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("page")
     public Integer page;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("size")
     public Integer size;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC) to which the ACK clusters belong.</p>
+     */
     @NameInMap("vpcId")
     public String vpcId;
 

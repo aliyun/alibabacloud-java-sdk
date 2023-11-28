@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListLogstashLogResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The details of the log.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The timestamp of log generation. Unit: ms.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListLogstashLogResponseBodyResult> result;
@@ -39,32 +39,23 @@ public class ListLogstashLogResponseBody extends TeaModel {
 
     public static class ListLogstashLogResponseBodyResult extends TeaModel {
         /**
-         * <p>The details of the log.</p>
+         * <p>The IP address of the node that generates the log.</p>
          */
         @NameInMap("content")
         public String content;
 
-        /**
-         * <p>The IP address of the node that generates the log.</p>
-         */
         @NameInMap("host")
         public String host;
 
-        /**
-         * <p>The ID of the instance.</p>
-         */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
-         * <p>The severity level of the log entry. Including trace, debug, info, warn, error, etc. (GC logs have no level).</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("level")
         public String level;
 
-        /**
-         * <p>The timestamp of log generation. Unit: ms.</p>
-         */
         @NameInMap("timestamp")
         public Long timestamp;
 

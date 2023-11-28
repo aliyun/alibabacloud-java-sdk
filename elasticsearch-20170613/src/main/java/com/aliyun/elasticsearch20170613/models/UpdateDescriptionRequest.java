@@ -7,6 +7,9 @@ public class UpdateDescriptionRequest extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The new name of the instance.</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 

@@ -7,27 +7,15 @@ public class ShrinkNodeRequest extends TeaModel {
     @NameInMap("body")
     public java.util.List<ShrinkNodeRequestBody> body;
 
-    /**
-     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*</p>
-     */
     @NameInMap("clientToken")
     public String clientToken;
 
-    /**
-     * <p>2</p>
-     */
     @NameInMap("count")
     public Integer count;
 
-    /**
-     * <p>false</p>
-     */
     @NameInMap("ignoreStatus")
     public Boolean ignoreStatus;
 
-    /**
-     * <p>WORKER</p>
-     */
     @NameInMap("nodeType")
     public String nodeType;
 

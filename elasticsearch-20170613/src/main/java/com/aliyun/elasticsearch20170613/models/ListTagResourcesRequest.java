@@ -5,39 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>1d2db86sca4384811e0b5e8707e\*\*\*\*\*\*</p>
+     * <p>The number of the returned page.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>1</p>
+     * <p>1d2db86sca4384811e0b5e8707e\*\*\*\*\*\*</p>
      */
     @NameInMap("Page")
     @Deprecated
     public Integer page;
 
     /**
-     * <p>\["es-cn-aaa","es-cn-bbb"]</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ResourceIds")
     public String resourceIds;
 
     /**
-     * <p>INSTANCE</p>
+     * <p>\[{"key":"env","value","dev"},{"key":"dev", "value":"IT"}]</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>10</p>
+     * <p>\["es-cn-aaa","es-cn-bbb"]</p>
      */
     @NameInMap("Size")
     @Deprecated
     public Integer size;
 
     /**
-     * <p>\[{"key":"env","value","dev"},{"key":"dev", "value":"IT"}]</p>
+     * <p>The header of the response. This parameter is empty and is for reference only. You cannot force this parameter to be relied on in the program.</p>
+     * <br>
+     * <p>>  The return examples does not contain this parameter.</p>
      */
     @NameInMap("Tags")
     public String tags;

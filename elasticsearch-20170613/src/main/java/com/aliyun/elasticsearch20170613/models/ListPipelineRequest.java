@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListPipelineRequest extends TeaModel {
     /**
-     * <p>1</p>
+     * <p>The header of the response.</p>
      */
     @NameInMap("page")
     public Integer page;
 
     /**
-     * <p>pipeline_test</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("pipelineId")
     public String pipelineId;
 
     /**
-     * <p>15</p>
+     * <p>The total number of returned entries.</p>
      */
     @NameInMap("size")
     public Integer size;

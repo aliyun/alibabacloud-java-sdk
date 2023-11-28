@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class ListSearchLogRequest extends TeaModel {
     /**
-     * <p>1531910852074</p>
+     * <p>20</p>
      */
     @NameInMap("beginTime")
     public Long beginTime;
 
     /**
-     * <p>1531910852074</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("endTime")
     public Long endTime;
 
     /**
-     * <p>1</p>
+     * <p>The header of the response.</p>
      */
     @NameInMap("page")
     public Integer page;
 
     /**
-     * <p>host:172.16.\*\*.\*\* AND content:netty</p>
+     * <p>1</p>
      */
     @NameInMap("query")
     public String query;
 
     /**
-     * <p>20</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("size")
     public Integer size;
 
     /**
-     * <p>INSTANCELOG</p>
+     * <p>1531910852074</p>
      */
     @NameInMap("type")
     public String type;

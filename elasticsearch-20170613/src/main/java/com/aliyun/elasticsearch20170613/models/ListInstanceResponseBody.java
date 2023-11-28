@@ -5,19 +5,24 @@ import com.aliyun.tea.*;
 
 public class ListInstanceResponseBody extends TeaModel {
     /**
-     * <p>The header of the response.</p>
+     * <p>The status of the instance. Valid values:</p>
+     * <br>
+     * <p>*   active: normal</p>
+     * <p>*   activating: taking effect</p>
+     * <p>*   inactive: frozen</p>
+     * <p>*   invalid: invalid</p>
      */
     @NameInMap("Headers")
     public ListInstanceResponseBodyHeaders headers;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The time when the node is created.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The returned data.</p>
+     * <p>Indicates whether it is a service VPC.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListInstanceResponseBodyResult> result;
@@ -53,7 +58,10 @@ public class ListInstanceResponseBody extends TeaModel {
 
     public static class ListInstanceResponseBodyHeaders extends TeaModel {
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>Specifies whether to include dedicated master nodes (obsolete). Valid values:</p>
+         * <br>
+         * <p>*   true: The files contain data that is dumped to the IA storage medium.</p>
+         * <p>*   false: The files do not contain data that is dumped to the IA storage medium.</p>
          */
         @NameInMap("X-Total-Count")
         public Integer xTotalCount;
@@ -75,25 +83,32 @@ public class ListInstanceResponseBody extends TeaModel {
 
     public static class ListInstanceResponseBodyResultClientNodeConfiguration extends TeaModel {
         /**
-         * <p>The number of nodes.</p>
+         * <p>The size of the node storage space. Unit: GB.</p>
          */
         @NameInMap("amount")
         public Integer amount;
 
         /**
-         * <p>The size of the node storage space. Unit: GB.</p>
+         * <p>Specifies whether to enable disk encryption for the node. Valid values:</p>
+         * <br>
+         * <p>*   true: enables instant image cache.</p>
+         * <p>*   false: disables reuse of image cache layers.</p>
          */
         @NameInMap("disk")
         public Integer disk;
 
         /**
-         * <p>The storage type of the node. Only ultra disks (cloud_efficiency) are supported.</p>
+         * <p>The storage type of the node. Valid values:</p>
+         * <br>
+         * <p>*   cloud_ssd: SSD.</p>
+         * <p>*   cloud_essd: ESSD.</p>
+         * <p>*   cloud_efficiency: ultra disk</p>
          */
         @NameInMap("diskType")
         public String diskType;
 
         /**
-         * <p>The instance type of the node. For more information, see [Specifications](~~271718~~).</p>
+         * <p>The number of nodes.</p>
          */
         @NameInMap("spec")
         public String spec;
@@ -151,20 +166,13 @@ public class ListInstanceResponseBody extends TeaModel {
         public Integer disk;
 
         /**
-         * <p>Specifies whether to enable disk encryption for the node. Valid values:</p>
-         * <br>
-         * <p>*   true: enables instant image cache.</p>
-         * <p>*   false: disables reuse of image cache layers.</p>
+         * <p>The storage type of the node.</p>
          */
         @NameInMap("diskEncryption")
         public Boolean diskEncryption;
 
         /**
-         * <p>The storage type of the node. Valid values:</p>
-         * <br>
-         * <p>*   cloud_ssd: SSD.</p>
-         * <p>*   cloud_essd: ESSD.</p>
-         * <p>*   cloud_efficiency: ultra disk</p>
+         * <p>The configuration of dedicated master nodes.</p>
          */
         @NameInMap("diskType")
         public String diskType;
@@ -224,25 +232,25 @@ public class ListInstanceResponseBody extends TeaModel {
 
     public static class ListInstanceResponseBodyResultKibanaConfiguration extends TeaModel {
         /**
-         * <p>The number of nodes.</p>
+         * <p>The size of the node storage space. Unit: GB.</p>
          */
         @NameInMap("amount")
         public Integer amount;
 
         /**
-         * <p>The size of the node storage space. Unit: GB.</p>
+         * <p>The storage type of the node. Only cloud_ssd(SSD cloud disk) is supported.</p>
          */
         @NameInMap("disk")
         public Integer disk;
 
         /**
-         * <p>The storage type of the node.</p>
+         * <p>The network configurations.</p>
          */
         @NameInMap("diskType")
         public String diskType;
 
         /**
-         * <p>The instance type of the node. For more information, see [Specifications](~~271718~~).</p>
+         * <p>The number of nodes.</p>
          */
         @NameInMap("spec")
         public String spec;
@@ -288,25 +296,25 @@ public class ListInstanceResponseBody extends TeaModel {
 
     public static class ListInstanceResponseBodyResultMasterConfiguration extends TeaModel {
         /**
-         * <p>The number of nodes.</p>
+         * <p>The network type. Only Virtual Private Cloud (VPC) is supported.</p>
          */
         @NameInMap("amount")
         public Integer amount;
 
         /**
-         * <p>The size of the node storage space. Unit: GB.</p>
+         * <p>The vSwitch ID of the cluster.</p>
          */
         @NameInMap("disk")
         public Integer disk;
 
         /**
-         * <p>The storage type of the node. Only cloud_ssd(SSD cloud disk) is supported.</p>
+         * <p>The configuration of data nodes.</p>
          */
         @NameInMap("diskType")
         public String diskType;
 
         /**
-         * <p>The instance type of the node. For more information, see [Specifications](~~271718~~).</p>
+         * <p>The zone where the cluster resides.</p>
          */
         @NameInMap("spec")
         public String spec;
@@ -393,25 +401,31 @@ public class ListInstanceResponseBody extends TeaModel {
 
     public static class ListInstanceResponseBodyResultNetworkConfig extends TeaModel {
         /**
-         * <p>The network type. Only Virtual Private Cloud (VPC) is supported.</p>
+         * <p>The storage type of the node. Valid values:</p>
+         * <br>
+         * <p>*   cloud_ssd: standard SSD</p>
+         * <p>*   cloud_efficiency: ultra disk</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
-         * <p>The VPC ID of the cluster.</p>
+         * <p>The storage space of the node. Unit: GB.</p>
          */
         @NameInMap("vpcId")
         public String vpcId;
 
         /**
-         * <p>The zone where the cluster resides.</p>
+         * <p>Specifies whether to use disk encryption. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("vsArea")
         public String vsArea;
 
         /**
-         * <p>The vSwitch ID of the cluster.</p>
+         * <p>The performance level of the ESSD. This parameter is required when the diskType parameter is set to cloud_essd. Valid values: PL1, PL2, and PL3.</p>
          */
         @NameInMap("vswitchId")
         public String vswitchId;
@@ -467,39 +481,18 @@ public class ListInstanceResponseBody extends TeaModel {
     }
 
     public static class ListInstanceResponseBodyResultNodeSpec extends TeaModel {
-        /**
-         * <p>The storage space of the node. Unit: GB.</p>
-         */
         @NameInMap("disk")
         public Integer disk;
 
-        /**
-         * <p>Specifies whether to use disk encryption. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
-         */
         @NameInMap("diskEncryption")
         public Boolean diskEncryption;
 
-        /**
-         * <p>The storage type of the node. Valid values:</p>
-         * <br>
-         * <p>*   cloud_ssd: standard SSD</p>
-         * <p>*   cloud_efficiency: ultra disk</p>
-         */
         @NameInMap("diskType")
         public String diskType;
 
-        /**
-         * <p>The performance level of the ESSD. This parameter is required when the diskType parameter is set to cloud_essd. Valid values: PL1, PL2, and PL3.</p>
-         */
         @NameInMap("performanceLevel")
         public String performanceLevel;
 
-        /**
-         * <p>The instance type of the node. For more information, see [Specifications](~~271718~~).</p>
-         */
         @NameInMap("spec")
         public String spec;
 
@@ -552,13 +545,13 @@ public class ListInstanceResponseBody extends TeaModel {
 
     public static class ListInstanceResponseBodyResultTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The size of the node storage space. Unit: GB.</p>
          */
         @NameInMap("tagKey")
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The storage type of the node. Only ultra disks (cloud_efficiency) are supported.</p>
          */
         @NameInMap("tagValue")
         public String tagValue;
@@ -588,73 +581,74 @@ public class ListInstanceResponseBody extends TeaModel {
 
     public static class ListInstanceResponseBodyResult extends TeaModel {
         /**
-         * <p>Specifies whether to include dedicated master nodes. Valid values:</p>
+         * <p>The billing method of the instance. Valid values:</p>
          * <br>
-         * <p>*   true: The files contain data that is dumped to the IA storage medium.</p>
-         * <p>*   false: The files do not contain data that is dumped to the IA storage medium.</p>
+         * <p>*   **prepaid**: subscription</p>
+         * <p>*   **postpaid**: pay-as-you-go</p>
          */
         @NameInMap("advancedDedicateMaster")
         public Boolean advancedDedicateMaster;
 
         /**
-         * <p>Coordination node configuration.</p>
+         * <p>The instance type of the node. For more information, see [Specifications](~~271718~~).</p>
          */
         @NameInMap("clientNodeConfiguration")
         public ListInstanceResponseBodyResultClientNodeConfiguration clientNodeConfiguration;
 
         /**
-         * <p>The time when the node is created.</p>
+         * <p>The status of the pay-as-you-go service that is overlaid on a subscription instance. Valid values:</p>
+         * <br>
+         * <p>*   **active**: normal</p>
+         * <p>*   **closed**: Close</p>
+         * <p>*   **indebt**: Overdue payments are frozen</p>
          */
         @NameInMap("createdAt")
         public String createdAt;
 
         /**
-         * <p>Specifies whether to include dedicated master nodes (obsolete). Valid values:</p>
-         * <br>
-         * <p>*   true: The files contain data that is dumped to the IA storage medium.</p>
-         * <p>*   false: The files do not contain data that is dumped to the IA storage medium.</p>
+         * <p>The edition of the dedicated KMS instance.</p>
          */
         @NameInMap("dedicateMaster")
         public Boolean dedicateMaster;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The configurations of elastic data nodes.</p>
+         * <p>The configuration of Kibana nodes.</p>
          */
         @NameInMap("elasticDataNodeConfiguration")
         public ListInstanceResponseBodyResultElasticDataNodeConfiguration elasticDataNodeConfiguration;
 
         /**
-         * <p>The edition of the dedicated KMS instance.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("esVersion")
         public String esVersion;
 
         /**
-         * <p>The configuration of cluster extension parameters.</p>
+         * <p>The configurations of elastic data nodes.</p>
          */
         @NameInMap("extendConfigs")
         public java.util.List<java.util.Map<String, ?>> extendConfigs;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance type of the node. For more information, see [Specifications](~~271718~~).</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
-         * <p>Specifies whether to deploy the new architecture.</p>
+         * <p>The configuration of cluster extension parameters.</p>
          */
         @NameInMap("isNewDeployment")
         public String isNewDeployment;
 
         /**
-         * <p>The configuration of Kibana nodes.</p>
+         * <p>The instance type of the node. For more information, see [Specifications](~~271718~~).</p>
          */
         @NameInMap("kibanaConfiguration")
         public ListInstanceResponseBodyResultKibanaConfiguration kibanaConfiguration;
@@ -666,44 +660,37 @@ public class ListInstanceResponseBody extends TeaModel {
         public java.util.List<String> kibanaPrivateIPWhitelist;
 
         /**
-         * <p>The configuration of dedicated master nodes.</p>
+         * <p>The VPC ID of the cluster.</p>
          */
         @NameInMap("masterConfiguration")
         public ListInstanceResponseBodyResultMasterConfiguration masterConfiguration;
 
         /**
-         * <p>The network configurations.</p>
+         * <p>The instance type of the node. For more information, see [Specifications](~~271718~~).</p>
          */
         @NameInMap("networkConfig")
         public ListInstanceResponseBodyResultNetworkConfig networkConfig;
 
         /**
-         * <p>The number of data nodes.</p>
+         * <p>The ID of the resource group.</p>
          */
         @NameInMap("nodeAmount")
         public Integer nodeAmount;
 
         /**
-         * <p>The configuration of data nodes.</p>
+         * <p>The VPC ID of the cluster.</p>
          */
         @NameInMap("nodeSpec")
         public ListInstanceResponseBodyResultNodeSpec nodeSpec;
 
         /**
-         * <p>The billing method of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **prepaid**: subscription</p>
-         * <p>*   **postpaid**: pay-as-you-go</p>
+         * <p>The time when the instance was last updated.</p>
          */
         @NameInMap("paymentType")
         public String paymentType;
 
         /**
-         * <p>The status of the pay-as-you-go service that is overlaid on a subscription instance. Valid values:</p>
-         * <br>
-         * <p>*   **active**: normal</p>
-         * <p>*   **closed**: Close</p>
-         * <p>*   **indebt**: Overdue payments are frozen</p>
+         * <p>The tags of the instance. Each tag is a key-value pair.</p>
          */
         @NameInMap("postpaidServiceStatus")
         public String postpaidServiceStatus;
@@ -715,43 +702,35 @@ public class ListInstanceResponseBody extends TeaModel {
         public java.util.List<String> publicIpWhitelist;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>Indicates whether it is a service VPC.</p>
+         * <p>Specifies whether to deploy the new architecture.</p>
          */
         @NameInMap("serviceVpc")
         public Boolean serviceVpc;
 
         /**
-         * <p>The status of the instance. Valid values:</p>
-         * <br>
-         * <p>*   active: normal</p>
-         * <p>*   activating: taking effect</p>
-         * <p>*   inactive: frozen</p>
-         * <p>*   invalid: invalid</p>
+         * <p>The name of the instance.</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
-         * <p>The tags of the instance. Each tag is a key-value pair.</p>
+         * <p>The number of nodes.</p>
          */
         @NameInMap("tags")
         public java.util.List<ListInstanceResponseBodyResultTags> tags;
 
         /**
-         * <p>The time when the instance was last updated.</p>
+         * <p>Coordination node configuration.</p>
          */
         @NameInMap("updatedAt")
         public String updatedAt;
 
-        /**
-         * <p>The VPC ID of the cluster.</p>
-         */
         @NameInMap("vpcInstanceId")
         public String vpcInstanceId;
 

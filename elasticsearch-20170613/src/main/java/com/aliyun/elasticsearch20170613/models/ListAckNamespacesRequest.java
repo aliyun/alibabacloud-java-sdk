@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListAckNamespacesRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("page")
     public Integer page;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("size")
     public Integer size;
 

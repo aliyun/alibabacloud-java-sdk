@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateAliwsDictResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public java.util.List<UpdateAliwsDictResponseBodyResult> result;
 
@@ -32,15 +38,30 @@ public class UpdateAliwsDictResponseBody extends TeaModel {
     }
 
     public static class UpdateAliwsDictResponseBodyResult extends TeaModel {
+        /**
+         * <p>The size of the dictionary file. Unit: bytes.</p>
+         */
         @NameInMap("fileSize")
         public Long fileSize;
 
+        /**
+         * <p>The name of the uploaded dictionary file.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The source type of the dictionary file. Valid values:</p>
+         * <br>
+         * <p>*   OSS</p>
+         * <p>*   ORIGIN</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <p>The dictionary type. The value is fixed as ALI_WS.</p>
+         */
         @NameInMap("type")
         public String type;
 

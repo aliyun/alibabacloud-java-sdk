@@ -487,6 +487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * @deprecated
       * Before you call this operation, note that:
       * *   Currently, the one-click index migration feature only supports the China (Beijing) region.
       * *   The source and destination Elasticsearch clusters must meet the following requirements: a user-created or Alibaba Cloud Elasticsearch Elasticsearch cluster with a source of version 6.7.0 and a Alibaba Cloud Elasticsearch Elasticsearch cluster with a destination of version 6.3.2 or 6.7.0.
@@ -496,6 +497,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return CreateDataTasksResponse
      */
+    // Deprecated
     public CreateDataTasksResponse createDataTasksWithOptions(String InstanceId, CreateDataTasksRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -523,6 +525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * @deprecated
       * Before you call this operation, note that:
       * *   Currently, the one-click index migration feature only supports the China (Beijing) region.
       * *   The source and destination Elasticsearch clusters must meet the following requirements: a user-created or Alibaba Cloud Elasticsearch Elasticsearch cluster with a source of version 6.7.0 and a Alibaba Cloud Elasticsearch Elasticsearch cluster with a destination of version 6.3.2 or 6.7.0.
@@ -530,6 +533,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param request CreateDataTasksRequest
       * @return CreateDataTasksResponse
      */
+    // Deprecated
     public CreateDataTasksResponse createDataTasks(String InstanceId, CreateDataTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -625,16 +629,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createIndexTemplateWithOptions(InstanceId, request, headers, runtime);
     }
 
-    /**
-      * Before you call the API operation, note that:
-      * *   Before you call this operation, make sure that you have fully understood the payment method and price of Logstash.
-      * *   Before you create an instance, you must complete real-name verification.
-      *
-      * @param request CreateLogstashRequest
-      * @param headers map
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateLogstashResponse
-     */
     public CreateLogstashResponse createLogstashWithOptions(CreateLogstashRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -694,14 +688,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLogstashResponse());
     }
 
-    /**
-      * Before you call the API operation, note that:
-      * *   Before you call this operation, make sure that you have fully understood the payment method and price of Logstash.
-      * *   Before you create an instance, you must complete real-name verification.
-      *
-      * @param request CreateLogstashRequest
-      * @return CreateLogstashResponse
-     */
     public CreateLogstashResponse createLogstash(CreateLogstashRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -777,7 +763,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about this API operation, see [Configure a private connection to an instance](~~279559~~).
+      * 5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D\\*\\*\\*
       *
       * @param request CreateVpcEndpointRequest
       * @param headers map
@@ -824,7 +810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about this API operation, see [Configure a private connection to an instance](~~279559~~).
+      * 5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D\\*\\*\\*
       *
       * @param request CreateVpcEndpointRequest
       * @return CreateVpcEndpointResponse
@@ -1131,8 +1117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call an interface, note the following:
-      * After an instance is released, the physical resources used by the instance are recycled. All related data is lost and cannot be recovered. The Cloud disks attached to the instance nodes are also released. The corresponding snapshots are deleted.
+      * Before you call this operation, take note of the following information: After the cluster is released, the physical resources used by the cluster are reclaimed. The data stored in the cluster is deleted and cannot be recovered. The disks attached to the nodes in the cluster and the snapshots created for the cluster are released.
       *
       * @param request DeleteLogstashRequest
       * @param headers map
@@ -1169,8 +1154,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call an interface, note the following:
-      * After an instance is released, the physical resources used by the instance are recycled. All related data is lost and cannot be recovered. The Cloud disks attached to the instance nodes are also released. The corresponding snapshots are deleted.
+      * Before you call this operation, take note of the following information: After the cluster is released, the physical resources used by the cluster are reclaimed. The data stored in the cluster is deleted and cannot be recovered. The disks attached to the nodes in the cluster and the snapshots created for the cluster are released.
       *
       * @param request DeleteLogstashRequest
       * @return DeleteLogstashResponse
@@ -1283,7 +1267,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  Before installing the collector on the ACK cluster, you can call this interface to view the installation status of the Elasticsearch Operator on the target cluster.
+      * > Before you install a shipper on an ACK cluster, you can call this operation to query the installation status of ES-operator for the ACK cluster.
       *
       * @param headers map
       * @param runtime runtime options for this request RuntimeOptions
@@ -1308,7 +1292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  Before installing the collector on the ACK cluster, you can call this interface to view the installation status of the Elasticsearch Operator on the target cluster.
+      * > Before you install a shipper on an ACK cluster, you can call this operation to query the installation status of ES-operator for the ACK cluster.
       *
       * @return DescribeAckOperatorResponse
      */
@@ -1532,10 +1516,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The instance health condition supports the following three states:
-      * *   GREEN: The distribution of primary and secondary shards is normal.
-      * *   YELLOW: The primary shard is normally allocated, but the replica is not normally allocated.
-      * *   RED: The primary shard is not normally allocated.
+      * An Elasticsearch cluster can be in a health state indicated by one of the following colors:
+      * *   GREEN: Primary shards and replica shards for the primary shards are normally allocated.
+      * *   YELLOW: Primary shards are normally allocated, but replica shards for the primary shards are not normally allocated.
+      * *   RED: Primary shards are not normally allocated.
       *
       * @param headers map
       * @param runtime runtime options for this request RuntimeOptions
@@ -1560,10 +1544,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The instance health condition supports the following three states:
-      * *   GREEN: The distribution of primary and secondary shards is normal.
-      * *   YELLOW: The primary shard is normally allocated, but the replica is not normally allocated.
-      * *   RED: The primary shard is not normally allocated.
+      * An Elasticsearch cluster can be in a health state indicated by one of the following colors:
+      * *   GREEN: Primary shards and replica shards for the primary shards are normally allocated.
+      * *   YELLOW: Primary shards are normally allocated, but replica shards for the primary shards are not normally allocated.
+      * *   RED: Primary shards are not normally allocated.
       *
       * @return DescribeElasticsearchHealthResponse
      */
@@ -2215,7 +2199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  When using a collector to collect logs from different data sources or performing elastic cluster scaling tasks (for the China site), you must first grant permissions to create service linked roles.
+      * > Before you perform auto scaling for a cluster at the China site (aliyun.com) or you use shippers to collect logs, you must create a service-linked role.
       *
       * @param request InitializeOperationRoleRequest
       * @param headers map
@@ -2249,7 +2233,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  When using a collector to collect logs from different data sources or performing elastic cluster scaling tasks (for the China site), you must first grant permissions to create service linked roles.
+      * > Before you perform auto scaling for a cluster at the China site (aliyun.com) or you use shippers to collect logs, you must create a service-linked role.
       *
       * @param request InitializeOperationRoleRequest
       * @return InitializeOperationRoleResponse
@@ -2261,7 +2245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  Before installing the collector on the ACK cluster, you need to call this interface and install the Elasticsearch Operator. on the target cluster.
+      * > Before you install a shipper for an ACK cluster, you must call this operation to install ES-operator for the cluster.
       *
       * @param request InstallAckOperatorRequest
       * @param headers map
@@ -2295,7 +2279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  Before installing the collector on the ACK cluster, you need to call this interface and install the Elasticsearch Operator. on the target cluster.
+      * > Before you install a shipper for an ACK cluster, you must call this operation to install ES-operator for the cluster.
       *
       * @param request InstallAckOperatorRequest
       * @return InstallAckOperatorResponse
@@ -2339,8 +2323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, note that:
-      * The plug-ins to be installed must be included in the [System Default Plug-ins](~~139626~~) list of Alibaba Cloud Logstash. External open-source plug-ins are not supported.
+      * ls-cn-oew1qbgl\\*\\*\\*\\*
       *
       * @param request InstallLogstashSystemPluginRequest
       * @param headers map
@@ -2374,8 +2357,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, note that:
-      * The plug-ins to be installed must be included in the [System Default Plug-ins](~~139626~~) list of Alibaba Cloud Logstash. External open-source plug-ins are not supported.
+      * ls-cn-oew1qbgl\\*\\*\\*\\*
       *
       * @param request InstallLogstashSystemPluginRequest
       * @return InstallLogstashSystemPluginResponse
@@ -2546,7 +2528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  When you create an ACK cluster-based collector, you need to specify the namespace of the cluster. You can call this interface to view all namespaces of the cluster and select the appropriate namespace based on this.
+      * > When you install a shipper on an ACK cluster, you must specify a namespace. You can call this operation to query all namespaces in the ACK cluster, and select a namespace based on your business requirements.
       *
       * @param request ListAckNamespacesRequest
       * @param headers map
@@ -2583,7 +2565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  When you create an ACK cluster-based collector, you need to specify the namespace of the cluster. You can call this interface to view all namespaces of the cluster and select the appropriate namespace based on this.
+      * > When you install a shipper on an ACK cluster, you must specify a namespace. You can call this operation to query all namespaces in the ACK cluster, and select a namespace based on your business requirements.
       *
       * @param request ListAckNamespacesRequest
       * @return ListAckNamespacesResponse
@@ -3924,14 +3906,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listPipelineWithOptions(InstanceId, request, headers, runtime);
     }
 
-    /**
-      * >  Pipeline management is divided into configuration file management and Kibana pipeline management. Kibana pipeline management is not open in some regional consoles.
-      *
-      * @param request ListPipelineIdsRequest
-      * @param headers map
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListPipelineIdsResponse
-     */
     public ListPipelineIdsResponse listPipelineIdsWithOptions(String InstanceId, ListPipelineIdsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3952,12 +3926,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListPipelineIdsResponse());
     }
 
-    /**
-      * >  Pipeline management is divided into configuration file management and Kibana pipeline management. Kibana pipeline management is not open in some regional consoles.
-      *
-      * @param request ListPipelineIdsRequest
-      * @return ListPipelineIdsResponse
-     */
     public ListPipelineIdsResponse listPipelineIds(String InstanceId, ListPipelineIdsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -4059,7 +4027,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  Shard recovery is the process of synchronizing from primary to secondary shards. After the restoration is complete, the secondary parts are available for searching.
+      * > The restoration of a shard is a process of synchronizing data from a primary shard to a replica shard. After the restoration is complete, the replica shard is available for data searches.
       *
       * @param request ListShardRecoveriesRequest
       * @param headers map
@@ -4092,7 +4060,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  Shard recovery is the process of synchronizing from primary to secondary shards. After the restoration is complete, the secondary parts are available for searching.
+      * > The restoration of a shard is a process of synchronizing data from a primary shard to a replica shard. After the restoration is complete, the replica shard is available for data searches.
       *
       * @param request ListShardRecoveriesRequest
       * @return ListShardRecoveriesResponse
@@ -4361,10 +4329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, note that:
-      * *   Before maintenance is performed, the system sends SMS messages and emails to the contacts listed in your Alibaba Cloud account.
-      * *   On the day of instance maintenance, to ensure the stability of the entire maintenance process, the instance enters the Active state before it can be maintenance window. In this case, you can still access the cluster and perform query operations such as performance monitoring. However, you cannot perform modification operations such as restart and configuration upgrades for the cluster.
-      * *   The instance connection may be disconnected within the available maintenance window. Make sure that the application has a reconnection mechanism.
+      * es-cn-n6w1o1x0w001c\\*\\*\\*\\*
       *
       * @param request ModifyInstanceMaintainTimeRequest
       * @param headers map
@@ -4398,10 +4363,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, note that:
-      * *   Before maintenance is performed, the system sends SMS messages and emails to the contacts listed in your Alibaba Cloud account.
-      * *   On the day of instance maintenance, to ensure the stability of the entire maintenance process, the instance enters the Active state before it can be maintenance window. In this case, you can still access the cluster and perform query operations such as performance monitoring. However, you cannot perform modification operations such as restart and configuration upgrades for the cluster.
-      * *   The instance connection may be disconnected within the available maintenance window. Make sure that the application has a reconnection mechanism.
+      * es-cn-n6w1o1x0w001c\\*\\*\\*\\*
       *
       * @param request ModifyInstanceMaintainTimeRequest
       * @return ModifyInstanceMaintainTimeResponse
@@ -4413,11 +4375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The instance is in the Active (activating), Invalid (invalid), and Inactive (inactive) state and cannot be updated.
-      * *   You can update the whitelist in two ways: IP address whitelist list and IP address whitelist group. The two methods cannot be used at the same time. In addition to InstanceId and clientToken, the two methods support different parameters, as follows:
-      *     *   IP address whitelist: whiteIpList, nodeType, and networkType
-      *     *   IP address whitelist groups: modifyMode and whiteIpGroup
-      * *   Public network access whitelists do not support configuring private IP addresses. Private network access whitelists do not support configuring public IP addresses.
+      * The ID of the cluster.
       *
       * @param request ModifyWhiteIpsRequest
       * @param headers map
@@ -4472,11 +4430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The instance is in the Active (activating), Invalid (invalid), and Inactive (inactive) state and cannot be updated.
-      * *   You can update the whitelist in two ways: IP address whitelist list and IP address whitelist group. The two methods cannot be used at the same time. In addition to InstanceId and clientToken, the two methods support different parameters, as follows:
-      *     *   IP address whitelist: whiteIpList, nodeType, and networkType
-      *     *   IP address whitelist groups: modifyMode and whiteIpGroup
-      * *   Public network access whitelists do not support configuring private IP addresses. Private network access whitelists do not support configuring public IP addresses.
+      * The ID of the cluster.
       *
       * @param request ModifyWhiteIpsRequest
       * @return ModifyWhiteIpsResponse
@@ -5039,15 +4993,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.runPipelinesWithOptions(InstanceId, request, headers, runtime);
     }
 
-    /**
-      * When you call this operation, take note of the following items:
-      * Before you remove data nodes, you must migrate the data stored on them to other nodes.
-      *
-      * @param request ShrinkNodeRequest
-      * @param headers map
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ShrinkNodeResponse
-     */
     public ShrinkNodeResponse shrinkNodeWithOptions(String InstanceId, ShrinkNodeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5086,13 +5031,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ShrinkNodeResponse());
     }
 
-    /**
-      * When you call this operation, take note of the following items:
-      * Before you remove data nodes, you must migrate the data stored on them to other nodes.
-      *
-      * @param request ShrinkNodeRequest
-      * @return ShrinkNodeResponse
-     */
     public ShrinkNodeResponse shrinkNode(String InstanceId, ShrinkNodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -5432,6 +5370,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("clientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("force", request.force);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
@@ -5522,8 +5464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, take note of the following limits:
-      * If the instance is in the Activating, Invalid, or Inactive state, the information cannot be updated.
+      * 5A2CFF0E-5718-45B5-9D4D-70B3FF\\*\\*\\*\\*
       *
       * @param request UpdateAdminPasswordRequest
       * @param headers map
@@ -5562,8 +5503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, take note of the following limits:
-      * If the instance is in the Activating, Invalid, or Inactive state, the information cannot be updated.
+      * 5A2CFF0E-5718-45B5-9D4D-70B3FF\\*\\*\\*\\*
       *
       * @param request UpdateAdminPasswordRequest
       * @return UpdateAdminPasswordResponse
@@ -5607,10 +5547,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Note the following when calling this interface:
-      * *   Alibaba Cloud Elasticsearch V5.0 clusters do not support the analysis-aliws plug-in.
-      * *   If the dictionary file is obtained from OSS, make sure that the OSS bucket is public-readable.
-      * *   If the ORIGIN configuration is not added to an uploaded dictionary file, the dictionary file is deleted after you call this operation.
+      * Before you call this operation, take note of the following items:
+      * *   Elasticsearch V5.X clusters do not support the analysis-aliws plug-in.
+      * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
+      * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
       *
       * @param request UpdateAliwsDictRequest
       * @param headers map
@@ -5644,10 +5584,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Note the following when calling this interface:
-      * *   Alibaba Cloud Elasticsearch V5.0 clusters do not support the analysis-aliws plug-in.
-      * *   If the dictionary file is obtained from OSS, make sure that the OSS bucket is public-readable.
-      * *   If the ORIGIN configuration is not added to an uploaded dictionary file, the dictionary file is deleted after you call this operation.
+      * Before you call this operation, take note of the following items:
+      * *   Elasticsearch V5.X clusters do not support the analysis-aliws plug-in.
+      * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
+      * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
       *
       * @param request UpdateAliwsDictRequest
       * @return UpdateAliwsDictResponse
@@ -5924,6 +5864,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateDiagnosisSettingsWithOptions(InstanceId, request, headers, runtime);
     }
 
+    /**
+      * Before you call this operation, take note of the following items:
+      * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
+      * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
+      *
+      * @param request UpdateDictRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateDictResponse
+     */
     public UpdateDictResponse updateDictWithOptions(String InstanceId, UpdateDictRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5950,6 +5900,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDictResponse());
     }
 
+    /**
+      * Before you call this operation, take note of the following items:
+      * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
+      * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
+      *
+      * @param request UpdateDictRequest
+      * @return UpdateDictResponse
+     */
     public UpdateDictResponse updateDict(String InstanceId, UpdateDictRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -6029,8 +5987,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Note the following when calling this interface:
-      * Currently, this operation only allows you to delete Logstash extension files that have been uploaded in the console. If you want to add or modify an identifier, perform the operations in the console.
+      * When you call this operation, take note of the following items: You can call this operation only to delete the driver files that are uploaded to a Logstash cluster in the Alibaba Cloud Management Console. You can add or modify driver files only in the Alibaba Cloud Management Console.
       *
       * @param request UpdateExtendfilesRequest
       * @param headers map
@@ -6064,8 +6021,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Note the following when calling this interface:
-      * Currently, this operation only allows you to delete Logstash extension files that have been uploaded in the console. If you want to add or modify an identifier, perform the operations in the console.
+      * When you call this operation, take note of the following items: You can call this operation only to delete the driver files that are uploaded to a Logstash cluster in the Alibaba Cloud Management Console. You can add or modify driver files only in the Alibaba Cloud Management Console.
       *
       * @param request UpdateExtendfilesRequest
       * @return UpdateExtendfilesResponse
@@ -6077,9 +6033,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Note the following when calling this interface:
-      * *   If the dictionary file is obtained from OSS, make sure that the OSS bucket is public-readable.
-      * *   If the ORIGIN configuration is not added to an uploaded dictionary file, the dictionary file is deleted after you call this operation.
+      * Before you call this operation, take note of the following items:
+      * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
+      * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
       *
       * @param request UpdateHotIkDictsRequest
       * @param headers map
@@ -6113,9 +6069,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Note the following when calling this interface:
-      * *   If the dictionary file is obtained from OSS, make sure that the OSS bucket is public-readable.
-      * *   If the ORIGIN configuration is not added to an uploaded dictionary file, the dictionary file is deleted after you call this operation.
+      * Before you call this operation, take note of the following items:
+      * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
+      * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
       *
       * @param request UpdateHotIkDictsRequest
       * @return UpdateHotIkDictsResponse
@@ -6191,14 +6147,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, take note of the following items:
-      * *   If the instance is in the Activating, Invalid, or Inactive state, you cannot change the configurations.
-      * *   If the indexes of your cluster do not have replica shards, the load of the cluster is excessively high, and large amounts of data are written to or queried in your cluster, access to the cluster may time out during a cluster configuration upgrade or downgrade. We recommend that you configure an access retry mechanism for your client before you upgrade the configuration of your cluster. This reduces the impact on your business.
-      * *   You can change the configurations of only one type of node at a time (data node, dedicated master node, cold data node, coordinator node, Kibana node, and elastic node).
-      * *   Due to the health and stability of your cluster, Alibaba Cloud Elasticsearch does not support the purchase of 1-core 2 GB instances, 2-core 2 GB instances for dedicated master nodes, and 7.4 instances since May 2021. If you have confirmed that the purchased specifications are no longer available for sale, you must perform the following operations:
-      *     *   For the 1-core 2 GB and 2-core 2 GB specifications, we recommend that you upgrade to the stable sales specifications that are available on the buy page in advance. For more information about the sales specifications available on the buy page, see [Purchase page parameters](~~163243~~).
-      *     *   If your cluster is of V7.4, purchase a V7.10 cluster and migrate data from the original cluster to the V7.10 cluster.
-      * For more information, see [Upgrade a cluster](~~96650~~) and [Downgrade a cluster](~~198887~~).
+      * es-cn-n6w1ptcb30009\\*\\*\\*\\*
       *
       * @param request UpdateInstanceRequest
       * @param headers map
@@ -6273,14 +6222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, take note of the following items:
-      * *   If the instance is in the Activating, Invalid, or Inactive state, you cannot change the configurations.
-      * *   If the indexes of your cluster do not have replica shards, the load of the cluster is excessively high, and large amounts of data are written to or queried in your cluster, access to the cluster may time out during a cluster configuration upgrade or downgrade. We recommend that you configure an access retry mechanism for your client before you upgrade the configuration of your cluster. This reduces the impact on your business.
-      * *   You can change the configurations of only one type of node at a time (data node, dedicated master node, cold data node, coordinator node, Kibana node, and elastic node).
-      * *   Due to the health and stability of your cluster, Alibaba Cloud Elasticsearch does not support the purchase of 1-core 2 GB instances, 2-core 2 GB instances for dedicated master nodes, and 7.4 instances since May 2021. If you have confirmed that the purchased specifications are no longer available for sale, you must perform the following operations:
-      *     *   For the 1-core 2 GB and 2-core 2 GB specifications, we recommend that you upgrade to the stable sales specifications that are available on the buy page in advance. For more information about the sales specifications available on the buy page, see [Purchase page parameters](~~163243~~).
-      *     *   If your cluster is of V7.4, purchase a V7.10 cluster and migrate data from the original cluster to the V7.10 cluster.
-      * For more information, see [Upgrade a cluster](~~96650~~) and [Downgrade a cluster](~~198887~~).
+      * es-cn-n6w1ptcb30009\\*\\*\\*\\*
       *
       * @param request UpdateInstanceRequest
       * @return UpdateInstanceResponse
@@ -6403,6 +6345,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateKibanaSettingsWithOptions(InstanceId, request, headers, runtime);
     }
 
+    /**
+      * *   Before you call this operation, you must make sure that the cluster is not in the activating, invalid, or inactive state.
+      * *   You can update an IP address whitelist by using the following parameters:
+      *     *   kibanaIPWhitelist
+      *     *   modifyMode and whiteIpGroup
+      * *   You cannot specify private IP addresses for public IP address whitelists and cannot specify public IP addresses for private IP address whitelists.
+      *
+      * @param request UpdateKibanaWhiteIpsRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateKibanaWhiteIpsResponse
+     */
     public UpdateKibanaWhiteIpsResponse updateKibanaWhiteIpsWithOptions(String InstanceId, UpdateKibanaWhiteIpsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6442,21 +6396,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateKibanaWhiteIpsResponse());
     }
 
+    /**
+      * *   Before you call this operation, you must make sure that the cluster is not in the activating, invalid, or inactive state.
+      * *   You can update an IP address whitelist by using the following parameters:
+      *     *   kibanaIPWhitelist
+      *     *   modifyMode and whiteIpGroup
+      * *   You cannot specify private IP addresses for public IP address whitelists and cannot specify public IP addresses for private IP address whitelists.
+      *
+      * @param request UpdateKibanaWhiteIpsRequest
+      * @return UpdateKibanaWhiteIpsResponse
+     */
     public UpdateKibanaWhiteIpsResponse updateKibanaWhiteIps(String InstanceId, UpdateKibanaWhiteIpsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateKibanaWhiteIpsWithOptions(InstanceId, request, headers, runtime);
     }
 
-    /**
-      * When you call this operation, take note of the following limits:
-      * If the instance is in the Activating, Invalid, or Inactive state, you cannot modify the instance information.
-      *
-      * @param request UpdateLogstashRequest
-      * @param headers map
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateLogstashResponse
-     */
     public UpdateLogstashResponse updateLogstashWithOptions(String InstanceId, UpdateLogstashRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6492,13 +6447,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLogstashResponse());
     }
 
-    /**
-      * When you call this operation, take note of the following limits:
-      * If the instance is in the Activating, Invalid, or Inactive state, you cannot modify the instance information.
-      *
-      * @param request UpdateLogstashRequest
-      * @return UpdateLogstashResponse
-     */
     public UpdateLogstashResponse updateLogstash(String InstanceId, UpdateLogstashRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -6537,6 +6485,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateLogstashChargeTypeWithOptions(InstanceId, request, headers, runtime);
     }
 
+    /**
+      * When you call this operation, take note of the following items: You cannot change the name of a cluster that is in the activating, invalid, or inactive state.
+      *
+      * @param request UpdateLogstashDescriptionRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateLogstashDescriptionResponse
+     */
     public UpdateLogstashDescriptionResponse updateLogstashDescriptionWithOptions(String InstanceId, UpdateLogstashDescriptionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6568,6 +6524,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLogstashDescriptionResponse());
     }
 
+    /**
+      * When you call this operation, take note of the following items: You cannot change the name of a cluster that is in the activating, invalid, or inactive state.
+      *
+      * @param request UpdateLogstashDescriptionRequest
+      * @return UpdateLogstashDescriptionResponse
+     */
     public UpdateLogstashDescriptionResponse updateLogstashDescription(String InstanceId, UpdateLogstashDescriptionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -6711,6 +6673,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updatePipelinesWithOptions(InstanceId, request, headers, runtime);
     }
 
+    /**
+      * >  In the following returned example, only the parameters in the returned data list are guaranteed to be included, and the parameters not mentioned are for reference only. For more information about the parameters, see [ListInstance](~~142230~~). You cannot force a dependency in a program to get these parameters.
+      *
+      * @param request UpdatePrivateNetworkWhiteIpsRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdatePrivateNetworkWhiteIpsResponse
+     */
     public UpdatePrivateNetworkWhiteIpsResponse updatePrivateNetworkWhiteIpsWithOptions(String InstanceId, UpdatePrivateNetworkWhiteIpsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6741,12 +6711,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePrivateNetworkWhiteIpsResponse());
     }
 
+    /**
+      * >  In the following returned example, only the parameters in the returned data list are guaranteed to be included, and the parameters not mentioned are for reference only. For more information about the parameters, see [ListInstance](~~142230~~). You cannot force a dependency in a program to get these parameters.
+      *
+      * @param request UpdatePrivateNetworkWhiteIpsRequest
+      * @return UpdatePrivateNetworkWhiteIpsResponse
+     */
     public UpdatePrivateNetworkWhiteIpsResponse updatePrivateNetworkWhiteIps(String InstanceId, UpdatePrivateNetworkWhiteIpsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updatePrivateNetworkWhiteIpsWithOptions(InstanceId, request, headers, runtime);
     }
 
+    /**
+      * When you call this operation, take note of the following items:
+      * When the instance is in the activating, invalid, or inactive state, its configuration cannot be updated.
+      *
+      * @param request UpdatePublicNetworkRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdatePublicNetworkResponse
+     */
     public UpdatePublicNetworkResponse updatePublicNetworkWithOptions(String InstanceId, UpdatePublicNetworkRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6773,12 +6758,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePublicNetworkResponse());
     }
 
+    /**
+      * When you call this operation, take note of the following items:
+      * When the instance is in the activating, invalid, or inactive state, its configuration cannot be updated.
+      *
+      * @param request UpdatePublicNetworkRequest
+      * @return UpdatePublicNetworkResponse
+     */
     public UpdatePublicNetworkResponse updatePublicNetwork(String InstanceId, UpdatePublicNetworkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updatePublicNetworkWithOptions(InstanceId, request, headers, runtime);
     }
 
+    /**
+      * >  In the following example, only the parameters in the returned data list are guaranteed to be included. The parameters that are not mentioned are for reference only. For more information about the parameters, see [ListInstance](~~142230~~). You cannot force a dependency in a program to get these parameters.
+      *
+      * @param request UpdatePublicWhiteIpsRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdatePublicWhiteIpsResponse
+     */
     public UpdatePublicWhiteIpsResponse updatePublicWhiteIpsWithOptions(String InstanceId, UpdatePublicWhiteIpsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6809,6 +6809,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePublicWhiteIpsResponse());
     }
 
+    /**
+      * >  In the following example, only the parameters in the returned data list are guaranteed to be included. The parameters that are not mentioned are for reference only. For more information about the parameters, see [ListInstance](~~142230~~). You cannot force a dependency in a program to get these parameters.
+      *
+      * @param request UpdatePublicWhiteIpsRequest
+      * @return UpdatePublicWhiteIpsResponse
+     */
     public UpdatePublicWhiteIpsResponse updatePublicWhiteIps(String InstanceId, UpdatePublicWhiteIpsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -6874,9 +6880,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Note the following when calling this interface:
-      * *   If the dictionary file is obtained from OSS, make sure that the OSS bucket is public-readable.
-      * *   If the ORIGIN configuration is not added to an uploaded dictionary file, the dictionary file is deleted after you call this operation.
+      * Before you call this operation, take note of the following items:
+      * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
+      * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
       *
       * @param request UpdateSynonymsDictsRequest
       * @param headers map
@@ -6910,9 +6916,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Note the following when calling this interface:
-      * *   If the dictionary file is obtained from OSS, make sure that the OSS bucket is public-readable.
-      * *   If the ORIGIN configuration is not added to an uploaded dictionary file, the dictionary file is deleted after you call this operation.
+      * Before you call this operation, take note of the following items:
+      * *   If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.
+      * *   If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.
       *
       * @param request UpdateSynonymsDictsRequest
       * @return UpdateSynonymsDictsResponse
@@ -6955,6 +6961,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateTemplateWithOptions(InstanceId, TemplateName, request, headers, runtime);
     }
 
+    /**
+      * > For more information about the parameters displayed in the following sample code but not provided in the preceding tables, see [ListInstance](~~142230~~). You cannot force your program to obtain these parameters.
+      *
+      * @param request UpdateWhiteIpsRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateWhiteIpsResponse
+     */
     public UpdateWhiteIpsResponse updateWhiteIpsWithOptions(String InstanceId, UpdateWhiteIpsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6994,6 +7008,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateWhiteIpsResponse());
     }
 
+    /**
+      * > For more information about the parameters displayed in the following sample code but not provided in the preceding tables, see [ListInstance](~~142230~~). You cannot force your program to obtain these parameters.
+      *
+      * @param request UpdateWhiteIpsRequest
+      * @return UpdateWhiteIpsResponse
+     */
     public UpdateWhiteIpsResponse updateWhiteIps(String InstanceId, UpdateWhiteIpsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -7050,7 +7070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  You can upgrade an instance version only from version 5.5.3 to version 5.6.16, version 5.6.16 to version 6.3.2, and version 6.3.2 to version 6.7.0. For more information, see [Upgrade version](~~148786~~).
+      * 5A2CFF0E-5718-45B5-9D4D-70B3FF\\*\\*\\*\\*
       *
       * @param request UpgradeEngineVersionRequest
       * @param headers map
@@ -7097,7 +7117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  You can upgrade an instance version only from version 5.5.3 to version 5.6.16, version 5.6.16 to version 6.3.2, and version 6.3.2 to version 6.7.0. For more information, see [Upgrade version](~~148786~~).
+      * 5A2CFF0E-5718-45B5-9D4D-70B3FF\\*\\*\\*\\*
       *
       * @param request UpgradeEngineVersionRequest
       * @return UpgradeEngineVersionResponse
@@ -7108,6 +7128,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.upgradeEngineVersionWithOptions(InstanceId, request, headers, runtime);
     }
 
+    /**
+      * > Before you enable the X-Pack Monitoring feature for a Logstash cluster, you must associate the Logstash cluster with an Elasticsearch cluster. This way, you can view the monitoring data of the Logstash cluster in the Kibana console of the Elasticsearch cluster.
+      *
+      * @param request ValidateConnectionRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ValidateConnectionResponse
+     */
     public ValidateConnectionResponse validateConnectionWithOptions(String InstanceId, ValidateConnectionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7134,6 +7162,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ValidateConnectionResponse());
     }
 
+    /**
+      * > Before you enable the X-Pack Monitoring feature for a Logstash cluster, you must associate the Logstash cluster with an Elasticsearch cluster. This way, you can view the monitoring data of the Logstash cluster in the Kibana console of the Elasticsearch cluster.
+      *
+      * @param request ValidateConnectionRequest
+      * @return ValidateConnectionResponse
+     */
     public ValidateConnectionResponse validateConnection(String InstanceId, ValidateConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -7180,14 +7214,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.validateShrinkNodesWithOptions(InstanceId, request, headers, runtime);
     }
 
-    /**
-      * >  Before you use the collector tool to collect logs from different data sources, you must be authorized to create service linked roles. You can call this operation to verify that it has been created.
-      *
-      * @param request ValidateSlrPermissionRequest
-      * @param headers map
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ValidateSlrPermissionResponse
-     */
     public ValidateSlrPermissionResponse validateSlrPermissionWithOptions(ValidateSlrPermissionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7217,12 +7243,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ValidateSlrPermissionResponse());
     }
 
-    /**
-      * >  Before you use the collector tool to collect logs from different data sources, you must be authorized to create service linked roles. You can call this operation to verify that it has been created.
-      *
-      * @param request ValidateSlrPermissionRequest
-      * @return ValidateSlrPermissionResponse
-     */
     public ValidateSlrPermissionResponse validateSlrPermission(ValidateSlrPermissionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -7261,6 +7281,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.validateTransferableNodesWithOptions(InstanceId, request, headers, runtime);
     }
 
+    /**
+      * The configurations of warm nodes.
+      *
+      * @param request CreateInstanceRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateInstanceResponse
+     */
     public CreateInstanceResponse createInstanceWithOptions(CreateInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7325,6 +7353,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("resourceGroupId", request.resourceGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            body.put("tags", request.tags);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.warmNodeConfiguration)) {
             body.put("warmNodeConfiguration", request.warmNodeConfiguration);
         }
@@ -7352,6 +7384,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInstanceResponse());
     }
 
+    /**
+      * The configurations of warm nodes.
+      *
+      * @param request CreateInstanceRequest
+      * @return CreateInstanceResponse
+     */
     public CreateInstanceResponse createInstance(CreateInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();

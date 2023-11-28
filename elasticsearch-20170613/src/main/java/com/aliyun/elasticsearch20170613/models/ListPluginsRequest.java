@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListPluginsRequest extends TeaModel {
     /**
-     * <p>analysis-ik</p>
+     * <p>SYSTEM</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>1</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("page")
     public String page;
 
     /**
-     * <p>10</p>
+     * <p>The header of the response.</p>
      */
     @NameInMap("size")
     public Integer size;
 
     /**
-     * <p>SYSTEM</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("source")
     public String source;

@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class UpgradeEngineVersionResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The verification information.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The moderation results.</p>
+     * <p>The type of the error. Valid values:</p>
+     * <br>
+     * <p>*   clusterStatus: the health status of the cluster.</p>
+     * <p>*   clusterConfigYml: Cluster YML File</p>
+     * <p>*   clusterConfigPlugins: Cluster Configuration File</p>
+     * <p>*   clusterResource: cluster resources</p>
+     * <p>*   clusterSnapshot: cluster snapshot</p>
      */
     @NameInMap("Result")
     public java.util.List<UpgradeEngineVersionResponseBodyResult> result;
@@ -38,26 +44,17 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
     }
 
     public static class UpgradeEngineVersionResponseBodyResultValidateResult extends TeaModel {
-        /**
-         * <p>The error code returned if the request failed.</p>
-         */
         @NameInMap("errorCode")
         public String errorCode;
 
-        /**
-         * <p>The error message returned.</p>
-         */
         @NameInMap("errorMsg")
         public String errorMsg;
 
         /**
-         * <p>The type of the error. Valid values:</p>
+         * <p>The verification is passed. Valid values:</p>
          * <br>
-         * <p>*   clusterStatus: the health status of the cluster.</p>
-         * <p>*   clusterConfigYml: Cluster YML File</p>
-         * <p>*   clusterConfigPlugins: Cluster Configuration File</p>
-         * <p>*   clusterResource: cluster resources</p>
-         * <p>*   clusterSnapshot: cluster snapshot</p>
+         * <p>*   success: through</p>
+         * <p>*   failed: failed</p>
          */
         @NameInMap("errorType")
         public String errorType;
@@ -94,28 +91,17 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
     }
 
     public static class UpgradeEngineVersionResponseBodyResult extends TeaModel {
-        /**
-         * <p>The verification is passed. Valid values:</p>
-         * <br>
-         * <p>*   success: through</p>
-         * <p>*   failed: failed</p>
-         */
         @NameInMap("status")
         public String status;
 
         /**
-         * <p>The verification information.</p>
+         * <p>The error message returned.</p>
          */
         @NameInMap("validateResult")
         public java.util.List<UpgradeEngineVersionResponseBodyResultValidateResult> validateResult;
 
         /**
-         * <p>The monitoring type. Valid values:</p>
-         * <br>
-         * <p>*   checkClusterHealth: Cluster Health Status</p>
-         * <p>*   checkConfigCompatible: Configuration Compatibility Status</p>
-         * <p>*   checkClusterResource: resource space status</p>
-         * <p>*   checkClusterSnapshot: Whether a snapshot exists</p>
+         * <p>The error code returned if the request failed.</p>
          */
         @NameInMap("validateType")
         public String validateType;

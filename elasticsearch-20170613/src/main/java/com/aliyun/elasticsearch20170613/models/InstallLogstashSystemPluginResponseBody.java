@@ -4,15 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class InstallLogstashSystemPluginResponseBody extends TeaModel {
-    /**
-     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("Result")
     public java.util.List<String> result;
 

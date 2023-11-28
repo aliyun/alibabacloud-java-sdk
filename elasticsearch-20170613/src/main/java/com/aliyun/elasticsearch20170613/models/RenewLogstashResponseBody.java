@@ -4,9 +4,18 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class RenewLogstashResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result. Valid values:</p>
+     * <br>
+     * <p>*   true: The cluster is renewed.</p>
+     * <p>*   false: The cluster fails to be renewed.</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

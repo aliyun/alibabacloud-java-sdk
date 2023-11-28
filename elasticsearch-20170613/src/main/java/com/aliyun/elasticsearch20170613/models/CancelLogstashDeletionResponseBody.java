@@ -4,9 +4,18 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class CancelLogstashDeletionResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the cluster is restored. Valid values:</p>
+     * <br>
+     * <p>*   true: The cluster is restored.</p>
+     * <p>*   false: The cluster is not restored.</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

@@ -4,9 +4,18 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class StopPipelinesResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result. Valid values:</p>
+     * <br>
+     * <p>*   true: The pipelines are stopped.</p>
+     * <p>*   false: The pipelines fail to be stopped.</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

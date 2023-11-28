@@ -5,43 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListLogstashRequest extends TeaModel {
     /**
-     * <p>ls-cn-abc</p>
+     * <p>rg-acfm2h5vbzd\*\*\*\*</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>ls-cn-n6w1o5jq\*\*\*\*</p>
+     * <p>\[{"tagKey":"key1","tagValue":"value1"}]</p>
      */
     @NameInMap("instanceId")
     public String instanceId;
 
     /**
-     * <p>1</p>
+     * <p>ls-cn-n6w1o5jq\*\*\*\*</p>
      */
     @NameInMap("page")
     public Integer page;
 
     /**
-     * <p>rg-acfm2h5vbzd\*\*\*\*</p>
+     * <p>Details of the request header.</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>10</p>
+     * <p>5.5.3\_with_X-Pack</p>
      */
     @NameInMap("size")
     public Integer size;
 
     /**
-     * <p>\[{"tagKey":"key1","tagValue":"value1"}]</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("tags")
     public String tags;
 
     /**
-     * <p>5.5.3\_with_X-Pack</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("version")
     public String version;

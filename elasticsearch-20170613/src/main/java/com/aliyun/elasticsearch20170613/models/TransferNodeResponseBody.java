@@ -4,18 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class TransferNodeResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Output:</p>
-     * <br>
-     * <p>*   true: The task is successfully executed.</p>
-     * <p>*   false: The task failed to be executed.</p>
-     */
     @NameInMap("Result")
     public Boolean result;
 

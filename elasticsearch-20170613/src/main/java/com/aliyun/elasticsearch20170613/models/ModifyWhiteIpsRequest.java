@@ -4,23 +4,45 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ModifyWhiteIpsRequest extends TeaModel {
+    /**
+     * <p>The information about the IP address whitelist that you want to update. You can specify only one whitelist.</p>
+     * <br>
+     * <p>> You cannot configure both the whiteIpList and whiteIpGroup parameters.</p>
+     */
     @NameInMap("modifyMode")
     public String modifyMode;
 
+    /**
+     * <p>The IP addresses in the whitelist. This parameter is available if the whiteIpGroup parameter is left empty. The default IP address whitelist is updated based on the value of this parameter.</p>
+     * <br>
+     * <p>> You cannot configure both the whiteIpList and whiteIpGroup parameters.</p>
+     */
     @NameInMap("networkType")
     public String networkType;
 
+    /**
+     * <p>The IP addresses in the whitelist. This parameter is available if the whiteIpGroup parameter is left empty. The default IP address whitelist is updated based on the value of this parameter.</p>
+     */
     @NameInMap("nodeType")
     public String nodeType;
 
+    /**
+     * <p>The IP addresses in the whitelist. This parameter is required if you configure the whiteIpGroup parameter.</p>
+     */
     @NameInMap("whiteIpGroup")
     public ModifyWhiteIpsRequestWhiteIpGroup whiteIpGroup;
 
+    /**
+     * <p>The name of the whitelist. This parameter is required if you configure the whiteIpGroup parameter.</p>
+     */
     @NameInMap("whiteIpList")
     public java.util.List<String> whiteIpList;
 
     /**
-     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*</p>
+     * <p>The network type. This parameter is required if you configure the whiteIpList parameter. Valid values:</p>
+     * <br>
+     * <p>*   PRIVATE</p>
+     * <p>*   PUBLIC</p>
      */
     @NameInMap("clientToken")
     public String clientToken;
@@ -79,12 +101,26 @@ public class ModifyWhiteIpsRequest extends TeaModel {
     }
 
     public static class ModifyWhiteIpsRequestWhiteIpGroup extends TeaModel {
+        /**
+         * <p>The type of the IP address whitelist. Valid values:</p>
+         * <br>
+         * <p>*   PRIVATE_KIBANA</p>
+         * <p>*   PRIVATE_ES</p>
+         * <p>*   PUBLIC_ES</p>
+         * <p>*   PUBLIC_KIBANA</p>
+         */
         @NameInMap("groupName")
         public String groupName;
 
+        /**
+         * <p>The returned result.</p>
+         */
         @NameInMap("ips")
         public java.util.List<String> ips;
 
+        /**
+         * <p>The request ID.</p>
+         */
         @NameInMap("whiteIpType")
         public String whiteIpType;
 

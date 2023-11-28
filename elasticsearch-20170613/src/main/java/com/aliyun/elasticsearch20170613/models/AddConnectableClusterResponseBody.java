@@ -4,18 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class AddConnectableClusterResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The following information is returned:</p>
-     * <br>
-     * <p>*   true: The configuration is successful.</p>
-     * <p>*   false: The configuration failed.</p>
-     */
     @NameInMap("Result")
     public Boolean result;
 

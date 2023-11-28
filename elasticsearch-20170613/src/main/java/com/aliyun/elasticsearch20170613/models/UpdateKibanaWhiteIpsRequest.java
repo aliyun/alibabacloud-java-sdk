@@ -4,15 +4,33 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateKibanaWhiteIpsRequest extends TeaModel {
+    /**
+     * <p>The IP address whitelists. This parameter is available if the whiteIpGroup parameter is left empty. The default IP address whitelist is updated based on the value of this parameter.</p>
+     * <br>
+     * <p>You cannot configure both the kibanaIPWhitelist and whiteIpGroup parameters.</p>
+     */
     @NameInMap("kibanaIPWhitelist")
     public java.util.List<String> kibanaIPWhitelist;
 
+    /**
+     * <p>The name of the whitelist. This parameter is required if you configure the whiteIpGroup parameter.</p>
+     */
     @NameInMap("whiteIpGroup")
     public UpdateKibanaWhiteIpsRequestWhiteIpGroup whiteIpGroup;
 
+    /**
+     * <p>The update mode. Valid values:</p>
+     * <br>
+     * <p>*   Cover: overwrites the IP addresses in the specified IP address whitelist with the IP addresses specified by using the ips parameter. This is the default value.</p>
+     * <p>*   Append: adds the IP addresses specified by using the ips parameter to the specified IP address whitelist.</p>
+     * <p>*   Delete: deletes the IP addresses specified by using the ips parameter from the specified IP address whitelist. At least one IP address must be retained for the whitelist.</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <p>The body of the request.</p>
+     */
     @NameInMap("modifyMode")
     public String modifyMode;
 
@@ -54,12 +72,21 @@ public class UpdateKibanaWhiteIpsRequest extends TeaModel {
     }
 
     public static class UpdateKibanaWhiteIpsRequestWhiteIpGroup extends TeaModel {
+        /**
+         * <p>The type of the whitelist. Set the value to PUBLIC_KIBANA. This value indicates a public IP address whitelist.</p>
+         */
         @NameInMap("groupName")
         public String groupName;
 
+        /**
+         * <p>The IP addresses in the whitelist. This parameter is required if you configure the whiteIpGroup parameter.</p>
+         */
         @NameInMap("ips")
         public java.util.List<String> ips;
 
+        /**
+         * <p>The IP addresses in the whitelist.</p>
+         */
         @NameInMap("whiteIpType")
         public String whiteIpType;
 

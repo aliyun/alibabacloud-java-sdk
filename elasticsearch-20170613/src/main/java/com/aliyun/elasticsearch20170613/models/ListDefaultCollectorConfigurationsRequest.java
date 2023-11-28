@@ -4,12 +4,32 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDefaultCollectorConfigurationsRequest extends TeaModel {
+    /**
+     * <p>The shipper type. Valid values:</p>
+     * <br>
+     * <p>*   fileBeat</p>
+     * <p>*   metricBeat</p>
+     * <p>*   heartBeat</p>
+     * <p>*   auditBeat</p>
+     */
     @NameInMap("resType")
     public String resType;
 
+    /**
+     * <p>The shipper version. The shipper version varies based on the type of the machine on which the shipper is deployed. Valid values:</p>
+     * <br>
+     * <p>*   ECS: 6.8.5\_with_community</p>
+     * <p>*   ACK: 6.8.13\_with_community</p>
+     */
     @NameInMap("resVersion")
     public String resVersion;
 
+    /**
+     * <p>The type of the machine on which the shipper is deployed. If you do not configure this parameter, the default configuration files of shippers deployed on all types of machines are returned. Valid values:</p>
+     * <br>
+     * <p>*   ECS: ECS instance</p>
+     * <p>*   ACK: ACK cluster</p>
+     */
     @NameInMap("sourceType")
     public String sourceType;
 

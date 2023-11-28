@@ -4,12 +4,21 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
+    /**
+     * <p>A tag.</p>
+     */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The value of the tag.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<TagResourcesRequestTags> tags;
 
@@ -43,9 +52,18 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class TagResourcesRequestTags extends TeaModel {
+        /**
+         * <p>The returned object.</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>Indicates whether tags are added to the clusters. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("value")
         public String value;
 

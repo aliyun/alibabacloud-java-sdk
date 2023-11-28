@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class ListEcsInstancesRequest extends TeaModel {
     /**
-     * <p>\["i-bp13y63575oypr9d\*\*\*\*","i-bp1gyhphjaj73jsr\*\*\*\*"]</p>
+     * <p>test</p>
      */
     @NameInMap("ecsInstanceIds")
     public String ecsInstanceIds;
 
     /**
-     * <p>test</p>
+     * <p>\[{ "tagKey":"a","tagValue":"b"}]</p>
      */
     @NameInMap("ecsInstanceName")
     public String ecsInstanceName;
 
     /**
-     * <p>1</p>
+     * <p>10</p>
      */
     @NameInMap("page")
     public Integer page;
 
     /**
-     * <p>10</p>
+     * <p>\["i-bp13y63575oypr9d\*\*\*\*","i-bp1gyhphjaj73jsr\*\*\*\*"]</p>
      */
     @NameInMap("size")
     public Integer size;
 
     /**
-     * <p>\[{ "tagKey":"a","tagValue":"b"}]</p>
+     * <p>vpc-bp16k1dvzxtmagcva\*\*\*\*</p>
      */
     @NameInMap("tags")
     public String tags;
 
     /**
-     * <p>vpc-bp16k1dvzxtmagcva\*\*\*\*</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("vpcId")
     public String vpcId;

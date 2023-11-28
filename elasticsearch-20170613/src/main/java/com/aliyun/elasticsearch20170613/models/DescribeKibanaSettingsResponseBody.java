@@ -4,15 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DescribeKibanaSettingsResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Some configurable Kibana settings information. For more information, see [Kibana settings](https://www.elastic.co/guide/cn/kibana/current/settings.html).</p>
-     */
     @NameInMap("Result")
     public java.util.Map<String, ?> result;
 

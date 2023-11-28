@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class EstimatedLogstashRestartTimeResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public EstimatedLogstashRestartTimeResponseBodyResult result;
 
@@ -32,9 +38,15 @@ public class EstimatedLogstashRestartTimeResponseBody extends TeaModel {
     }
 
     public static class EstimatedLogstashRestartTimeResponseBodyResult extends TeaModel {
+        /**
+         * <p>The unit.</p>
+         */
         @NameInMap("unit")
         public String unit;
 
+        /**
+         * <p>The estimated restart time.</p>
+         */
         @NameInMap("value")
         public Long value;
 

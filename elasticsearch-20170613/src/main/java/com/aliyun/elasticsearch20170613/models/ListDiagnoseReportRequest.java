@@ -5,43 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListDiagnoseReportRequest extends TeaModel {
     /**
-     * <p>true</p>
+     * <p>SYSTEM</p>
      */
     @NameInMap("detail")
     public Boolean detail;
 
     /**
-     * <p>1595174399999</p>
+     * <p>1</p>
      */
     @NameInMap("endTime")
     public Long endTime;
 
     /**
-     * <p>spanish</p>
+     * <p>1594569600000</p>
      */
     @NameInMap("lang")
     public String lang;
 
     /**
-     * <p>1</p>
+     * <p>20</p>
      */
     @NameInMap("page")
     public Integer page;
 
     /**
-     * <p>20</p>
+     * <p>true</p>
      */
     @NameInMap("size")
     public Integer size;
 
     /**
-     * <p>1594569600000</p>
+     * <p>1595174399999</p>
      */
     @NameInMap("startTime")
     public Long startTime;
 
     /**
-     * <p>SYSTEM</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("trigger")
     public String trigger;

@@ -5,67 +5,70 @@ import com.aliyun.tea.*;
 
 public class ListInstanceRequest extends TeaModel {
     /**
-     * <p>aliyunes_test1</p>
+     * <p>cn-hangzhou-i</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>6.7\_with_X-Pack</p>
+     * <p>advanced</p>
      */
     @NameInMap("esVersion")
     public String esVersion;
 
     /**
-     * <p>advanced</p>
+     * <p>The number of data nodes.</p>
      */
     @NameInMap("instanceCategory")
     public String instanceCategory;
 
     /**
-     * <p>es-cn-v641a0ta3000g\*\*\*\*</p>
+     * <p>postpaid</p>
      */
     @NameInMap("instanceId")
     public String instanceId;
 
     /**
-     * <p>1</p>
+     * <p>\[{"tagKey":"key1","tagValue":"value1"}]</p>
      */
     @NameInMap("page")
     public Integer page;
 
     /**
-     * <p>postpaid</p>
+     * <p>Specifies whether to include dedicated master nodes. Valid values:</p>
+     * <br>
+     * <p>*   true: The files contain data that is dumped to the IA storage medium.</p>
+     * <p>*   false: The files do not contain data that is dumped to the IA storage medium.</p>
      */
     @NameInMap("paymentType")
     public String paymentType;
 
     /**
-     * <p>rg-aekzvowej3i\*\*\*\*</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>10</p>
+     * <p>vpc-bp16k1dvzxtmagcva\*\*\*\*</p>
      */
     @NameInMap("size")
     public Integer size;
 
     /**
-     * <p>\[{"tagKey":"key1","tagValue":"value1"}]</p>
+     * <p>The header of the response.</p>
      */
     @NameInMap("tags")
     public String tags;
 
     /**
-     * <p>vpc-bp16k1dvzxtmagcva\*\*\*\*</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("vpcId")
     public String vpcId;
 
     /**
-     * <p>cn-hangzhou-i</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("zoneId")
     public String zoneId;

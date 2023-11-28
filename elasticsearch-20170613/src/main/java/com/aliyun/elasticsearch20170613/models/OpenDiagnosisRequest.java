@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class OpenDiagnosisRequest extends TeaModel {
     /**
-     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>en</p>
-     */
     @NameInMap("lang")
     public String lang;
 

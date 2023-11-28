@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListLogstashPluginsRequest extends TeaModel {
     /**
-     * <p>logstash-filter-clone</p>
+     * <p>USER</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>10</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("page")
     public Integer page;
 
     /**
-     * <p>3</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("size")
     public Integer size;
 
     /**
-     * <p>USER</p>
+     * <p>The description of the plug-in.</p>
      */
     @NameInMap("source")
     public String source;

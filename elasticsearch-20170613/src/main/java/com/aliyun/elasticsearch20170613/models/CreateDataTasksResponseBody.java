@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateDataTasksResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The result of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The result of the request.</p>
+     * <p>The information about the source cluster.</p>
      */
     @NameInMap("Result")
     public java.util.List<CreateDataTasksResponseBodyResult> result;
@@ -38,68 +38,65 @@ public class CreateDataTasksResponseBody extends TeaModel {
     }
 
     public static class CreateDataTasksResponseBodyResultSinkCluster extends TeaModel {
-        /**
-         * <p>The type of the target cluster.</p>
-         */
         @NameInMap("dataSourceType")
         public String dataSourceType;
 
         /**
-         * <p>The name of the target index.</p>
+         * <p>The settings configuration.</p>
          */
         @NameInMap("index")
         public String index;
 
         /**
-         * <p>Mapping configuration.</p>
+         * <p>The type of the target index.</p>
          */
         @NameInMap("mapping")
         public String mapping;
 
         /**
-         * <p>The access password of the target cluster.</p>
+         * <p>The name of the target index.</p>
          */
         @NameInMap("password")
         public String password;
 
         /**
-         * <p>The routing field. The primary key field is used by default.</p>
+         * <p>The username of the destination cluster.</p>
          */
         @NameInMap("routing")
         public String routing;
 
         /**
-         * <p>The settings configuration.</p>
+         * <p>Mapping configuration.</p>
          */
         @NameInMap("settings")
         public String settings;
 
         /**
-         * <p>The type of the target index.</p>
+         * <p>The routing field. The primary key field is used by default.</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
-         * <p>The username of the destination cluster.</p>
+         * <p>The ID of the Virtual Private Cloud to which the cluster belongs. If the cluster access address is a public domain name, you can not specify the private endpoint.</p>
          */
         @NameInMap("username")
         public String username;
 
         /**
-         * <p>The ID of the Virtual Private Cloud to which the cluster belongs. If the cluster access address is a public domain name, you can not specify the private endpoint.</p>
+         * <p>The access port number of the cluster.</p>
          */
         @NameInMap("vpcId")
         public String vpcId;
 
         /**
-         * <p>The instance ID of the cluster under the Virtual Private Cloud, or the ID of the SLB instance.</p>
+         * <p>The type of the target cluster.</p>
          */
         @NameInMap("vpcInstanceId")
         public String vpcInstanceId;
 
         /**
-         * <p>The access port number of the cluster.</p>
+         * <p>The instance ID of the cluster under the Virtual Private Cloud, or the ID of the SLB instance.</p>
          */
         @NameInMap("vpcInstancePort")
         public String vpcInstancePort;
@@ -201,55 +198,55 @@ public class CreateDataTasksResponseBody extends TeaModel {
 
     public static class CreateDataTasksResponseBodyResultSourceCluster extends TeaModel {
         /**
-         * <p>The type of the source cluster. Default value: Elasticsearch.</p>
+         * <p>The information about the target cluster.</p>
          */
         @NameInMap("dataSourceType")
         public String dataSourceType;
 
         /**
-         * <p>The public domain name of the cluster.</p>
+         * <p>The username of the source cluster.</p>
          */
         @NameInMap("endpoint")
         public String endpoint;
 
         /**
-         * <p>Specifies the indexes to be migrated.</p>
+         * <p>The type of the specified index.</p>
          */
         @NameInMap("index")
         public String index;
 
         /**
-         * <p>The access password of the source cluster.</p>
+         * <p>Specifies the indexes to be migrated.</p>
          */
         @NameInMap("password")
         public String password;
 
         /**
-         * <p>The type of the specified index.</p>
+         * <p>The public domain name of the cluster.</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
-         * <p>The username of the source cluster.</p>
+         * <p>The ID of the Virtual Private Cloud where the source cluster resides. If the cluster access address is a public domain name, you can not specify the private endpoint.</p>
          */
         @NameInMap("username")
         public String username;
 
         /**
-         * <p>The ID of the Virtual Private Cloud where the source cluster resides. If the cluster access address is a public domain name, you can not specify the private endpoint.</p>
+         * <p>The instance ID of the cluster under the Virtual Private Cloud, or the ID of the SLB instance.</p>
          */
         @NameInMap("vpcId")
         public String vpcId;
 
         /**
-         * <p>The instance ID of the cluster under the Virtual Private Cloud, or the ID of the SLB instance.</p>
+         * <p>The access port number of the source cluster.</p>
          */
         @NameInMap("vpcInstanceId")
         public String vpcInstanceId;
 
         /**
-         * <p>The access port number of the source cluster.</p>
+         * <p>The type of the source cluster. Default value: Elasticsearch.</p>
          */
         @NameInMap("vpcInstancePort")
         public Integer vpcInstancePort;
@@ -335,13 +332,13 @@ public class CreateDataTasksResponseBody extends TeaModel {
 
     public static class CreateDataTasksResponseBodyResult extends TeaModel {
         /**
-         * <p>The information about the target cluster.</p>
+         * <p>The access password of the target cluster.</p>
          */
         @NameInMap("sinkCluster")
         public CreateDataTasksResponseBodyResultSinkCluster sinkCluster;
 
         /**
-         * <p>The information about the source cluster.</p>
+         * <p>The access password of the source cluster.</p>
          */
         @NameInMap("sourceCluster")
         public CreateDataTasksResponseBodyResultSourceCluster sourceCluster;

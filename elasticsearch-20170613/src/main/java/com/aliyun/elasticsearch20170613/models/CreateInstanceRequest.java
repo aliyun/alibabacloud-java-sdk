@@ -46,6 +46,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("tags")
+    public java.util.List<CreateInstanceRequestTags> tags;
+
     @NameInMap("warmNodeConfiguration")
     public WarmNodeConfiguration warmNodeConfiguration;
 
@@ -172,6 +175,14 @@ public class CreateInstanceRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public CreateInstanceRequest setTags(java.util.List<CreateInstanceRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateInstanceRequestTags> getTags() {
+        return this.tags;
+    }
+
     public CreateInstanceRequest setWarmNodeConfiguration(WarmNodeConfiguration warmNodeConfiguration) {
         this.warmNodeConfiguration = warmNodeConfiguration;
         return this;
@@ -194,6 +205,36 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public static class CreateInstanceRequestTags extends TeaModel {
+        @NameInMap("tagKey")
+        public String tagKey;
+
+        @NameInMap("tagValue")
+        public String tagValue;
+
+        public static CreateInstanceRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestTags self = new CreateInstanceRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public CreateInstanceRequestTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
     }
 
 }

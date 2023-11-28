@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class ListEcsInstancesResponseBody extends TeaModel {
     /**
-     * <p>The header of the response.</p>
+     * <p>The number of returned records.</p>
      */
     @NameInMap("Headers")
     public ListEcsInstancesResponseBodyHeaders headers;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The header of the response.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The returned data.</p>
+     * <p>Cloud Assistant the installation status, support:</p>
+     * <br>
+     * <p>*   true: The Prometheus agent was installed.</p>
+     * <p>*   false: The Prometheus agent was not installed.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListEcsInstancesResponseBodyResult> result;
@@ -53,7 +56,7 @@ public class ListEcsInstancesResponseBody extends TeaModel {
 
     public static class ListEcsInstancesResponseBodyHeaders extends TeaModel {
         /**
-         * <p>The number of returned records.</p>
+         * <p>The returned data.</p>
          */
         @NameInMap("X-Total-Count")
         public Integer xTotalCount;
@@ -75,13 +78,13 @@ public class ListEcsInstancesResponseBody extends TeaModel {
 
     public static class ListEcsInstancesResponseBodyResultCollectorsConfigs extends TeaModel {
         /**
-         * <p>The content of the file.</p>
+         * <p>The name of the file.</p>
          */
         @NameInMap("content")
         public String content;
 
         /**
-         * <p>The name of the file.</p>
+         * <p>The information about the extended parameter.</p>
          */
         @NameInMap("fileName")
         public String fileName;
@@ -111,18 +114,13 @@ public class ListEcsInstancesResponseBody extends TeaModel {
 
     public static class ListEcsInstancesResponseBodyResultCollectorsExtendConfigsMachines extends TeaModel {
         /**
-         * <p>The status of each crawl on the ECS instance. Valid values:</p>
-         * <br>
-         * <p>*   heartOk: The heartbeat is normal.</p>
-         * <p>*   heartLost: The heartbeat is abnormal.</p>
-         * <p>*   uninstalled</p>
-         * <p>*   failed: The installation failed.</p>
+         * <p>The IDs of ECS instances.</p>
          */
         @NameInMap("agentStatus")
         public String agentStatus;
 
         /**
-         * <p>The IDs of ECS instances.</p>
+         * <p>The list of access addresses of the specified instance for the output of the collector. Displayed when the **configType** is **collectorTargetInstance**.</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
@@ -152,71 +150,73 @@ public class ListEcsInstancesResponseBody extends TeaModel {
 
     public static class ListEcsInstancesResponseBodyResultCollectorsExtendConfigs extends TeaModel {
         /**
+         * <p>The instance type specified by Collector Output. Supports Elasticsearch and Logstash. Displayed when the **configType** is **collectorTargetInstance**.</p>
+         */
+        @NameInMap("configType")
+        public String configType;
+
+        /**
+         * <p>The ID of the host group. Displayed when the **configType** is **collectorDeployMachine**.</p>
+         */
+        @NameInMap("enableMonitoring")
+        public Boolean enableMonitoring;
+
+        /**
          * <p>The configuration type. Valid values:</p>
          * <br>
          * <p>*   collectorTargetInstance: Collector Output</p>
          * <p>*   collectorDeployMachine: Collector Deployment Machine</p>
          * <p>*   Collector Elasticsearch ForKibana: Elasticsearch instance information that supports the Kibana dashboard</p>
          */
-        @NameInMap("configType")
-        public String configType;
-
-        /**
-         * <p>Whether Monitoring is enabled. This field is displayed when the **configType** is **collectorTargetInstance** and the **instanceType** is **Elasticsearch**. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
-         */
-        @NameInMap("enableMonitoring")
-        public Boolean enableMonitoring;
-
-        /**
-         * <p>The ID of the host group. Displayed when the **configType** is **collectorDeployMachine**.</p>
-         */
         @NameInMap("groupId")
         public String groupId;
 
         /**
-         * <p>The list of access addresses of the specified instance for the output of the collector. Displayed when the **configType** is **collectorTargetInstance**.</p>
+         * <p>The path in which Filebeat is collected.</p>
          */
         @NameInMap("hosts")
         public java.util.List<String> hosts;
 
         /**
-         * <p>The ID of the instance that is associated with the crawker. If the **configType** parameter is set to **collectorTargetInstance**, the value of this parameter is the ID of the output collector. If the **configType** parameter is set to **collectorDeployMachines** and the **type** parameter is set to **ACKCluster**, the value of this parameter is the ID of the ACK cluster.</p>
+         * <p>The list of ECS instances on which the collector is deployed. Displayed when the **configType** is **collectorDeployMachines** and the **type** is **ECSInstanceId**.</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
-         * <p>The instance type specified by Collector Output. Supports Elasticsearch and Logstash. Displayed when the **configType** is **collectorTargetInstance**.</p>
+         * <p>The transmission protocol, which must be the same as the access protocol of the instance specified by Output. HTTP and HTTPS. Displayed when the **configType** is **collectorTargetInstance**.</p>
          */
         @NameInMap("instanceType")
         public String instanceType;
 
         /**
-         * <p>The list of ECS instances on which the collector is deployed. Displayed when the **configType** is **collectorDeployMachines** and the **type** is **ECSInstanceId**.</p>
+         * <p>The status of each crawl on the ECS instance. Valid values:</p>
+         * <br>
+         * <p>*   heartOk: The heartbeat is normal.</p>
+         * <p>*   heartLost: The heartbeat is abnormal.</p>
+         * <p>*   uninstalled</p>
+         * <p>*   failed: The installation failed.</p>
          */
         @NameInMap("machines")
         public java.util.List<ListEcsInstancesResponseBodyResultCollectorsExtendConfigsMachines> machines;
 
         /**
-         * <p>The transmission protocol, which must be the same as the access protocol of the instance specified by Output. HTTP and HTTPS. Displayed when the **configType** is **collectorTargetInstance**.</p>
+         * <p>The username that is used to access the instance. The default value is elastic. Displayed when the **configType** is **collectorTargetInstance** or **collectorElasticsearchForKibana**.</p>
          */
         @NameInMap("protocol")
         public String protocol;
+
+        /**
+         * <p>The ID of the instance that is associated with the crawker. If the **configType** parameter is set to **collectorTargetInstance**, the value of this parameter is the ID of the output collector. If the **configType** parameter is set to **collectorDeployMachines** and the **type** parameter is set to **ACKCluster**, the value of this parameter is the ID of the ACK cluster.</p>
+         */
+        @NameInMap("type")
+        public String type;
 
         /**
          * <p>The type of the machine on which the Collector is deployed. This parameter is displayed when the **configType** is **collectorDeployMachine**. Valid values:</p>
          * <br>
          * <p>*   ECSInstanceId:ECS</p>
          * <p>*   ACKCluster: Container Kubernetes</p>
-         */
-        @NameInMap("type")
-        public String type;
-
-        /**
-         * <p>The username that is used to access the instance. The default value is elastic. Displayed when the **configType** is **collectorTargetInstance** or **collectorElasticsearchForKibana**.</p>
          */
         @NameInMap("userName")
         public String userName;
@@ -309,74 +309,29 @@ public class ListEcsInstancesResponseBody extends TeaModel {
     }
 
     public static class ListEcsInstancesResponseBodyResultCollectors extends TeaModel {
-        /**
-         * <p>The path in which Filebeat is collected.</p>
-         */
         @NameInMap("collectorPaths")
         public java.util.List<String> collectorPaths;
 
         /**
-         * <p>The configuration file information of the collector.</p>
+         * <p>The content of the file.</p>
          */
         @NameInMap("configs")
         public java.util.List<ListEcsInstancesResponseBodyResultCollectorsConfigs> configs;
 
         /**
-         * <p>Specifies whether to verify and create a crawer. Valid values:</p>
-         * <br>
-         * <p>*   true: only verifies and does not create a</p>
-         * <p>*   false: verifies and creates a</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          */
         @NameInMap("dryRun")
         public Boolean dryRun;
 
         /**
-         * <p>The information about the extended parameter.</p>
+         * <p>Whether Monitoring is enabled. This field is displayed when the **configType** is **collectorTargetInstance** and the **instanceType** is **Elasticsearch**. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("extendConfigs")
         public java.util.List<ListEcsInstancesResponseBodyResultCollectorsExtendConfigs> extendConfigs;
-
-        /**
-         * <p>The time when the crawl collector was created.</p>
-         */
-        @NameInMap("gmtCreatedTime")
-        public String gmtCreatedTime;
-
-        /**
-         * <p>The time when the collector was updated.</p>
-         */
-        @NameInMap("gmtUpdateTime")
-        public String gmtUpdateTime;
-
-        /**
-         * <p>The name of the collector.</p>
-         */
-        @NameInMap("name")
-        public String name;
-
-        /**
-         * <p>The ID of the Alibaba Cloud account.</p>
-         */
-        @NameInMap("ownerId")
-        public String ownerId;
-
-        /**
-         * <p>The ID of the collector instance.</p>
-         */
-        @NameInMap("resId")
-        public String resId;
-
-        /**
-         * <p>The type of the collector. FileBeat, metricBeat, heartBeat, and auditBeat are supported.</p>
-         */
-        @NameInMap("resType")
-        public String resType;
-
-        /**
-         * <p>The version of the collector. If the machine type of the collector is ECS, only **6.8.5\_with_community** is supported.</p>
-         */
-        @NameInMap("resVersion")
-        public String resVersion;
 
         /**
          * <p>The status of the collector. Valid values:</p>
@@ -384,11 +339,56 @@ public class ListEcsInstancesResponseBody extends TeaModel {
          * <p>*   activating: The project is taking effect.</p>
          * <p>*   active: The instance has taken effect.</p>
          */
+        @NameInMap("gmtCreatedTime")
+        public String gmtCreatedTime;
+
+        /**
+         * <p>Specifies whether to verify and create a crawer. Valid values:</p>
+         * <br>
+         * <p>*   true: only verifies and does not create a</p>
+         * <p>*   false: verifies and creates a</p>
+         */
+        @NameInMap("gmtUpdateTime")
+        public String gmtUpdateTime;
+
+        /**
+         * <p>The configuration file information of the collector.</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <p>The ID of the Virtual Private Cloud to which the collector belongs.</p>
+         */
+        @NameInMap("ownerId")
+        public String ownerId;
+
+        /**
+         * <p>The time when the collector was updated.</p>
+         */
+        @NameInMap("resId")
+        public String resId;
+
+        /**
+         * <p>The version of the collector. If the machine type of the collector is ECS, only **6.8.5\_with_community** is supported.</p>
+         */
+        @NameInMap("resType")
+        public String resType;
+
+        /**
+         * <p>The time when the crawl collector was created.</p>
+         */
+        @NameInMap("resVersion")
+        public String resVersion;
+
+        /**
+         * <p>The name of the collector.</p>
+         */
         @NameInMap("status")
         public String status;
 
         /**
-         * <p>The ID of the Virtual Private Cloud to which the collector belongs.</p>
+         * <p>The type of the collector. FileBeat, metricBeat, heartBeat, and auditBeat are supported.</p>
          */
         @NameInMap("vpcId")
         public String vpcId;
@@ -506,16 +506,13 @@ public class ListEcsInstancesResponseBody extends TeaModel {
 
     public static class ListEcsInstancesResponseBodyResultIpAddress extends TeaModel {
         /**
-         * <p>The IP address of the endpoint.</p>
+         * <p>The information about the collectors on the ECS instance.</p>
          */
         @NameInMap("host")
         public String host;
 
         /**
-         * <p>The type of the IP address that is used by the instance. Valid values:</p>
-         * <br>
-         * <p>*   public: public endpoint</p>
-         * <p>*   private: private network address</p>
+         * <p>The IP address of the endpoint.</p>
          */
         @NameInMap("ipType")
         public String ipType;
@@ -545,46 +542,37 @@ public class ListEcsInstancesResponseBody extends TeaModel {
 
     public static class ListEcsInstancesResponseBodyResult extends TeaModel {
         /**
-         * <p>Cloud Assistant the installation status, support:</p>
-         * <br>
-         * <p>*   true: The Prometheus agent was installed.</p>
-         * <p>*   false: The Prometheus agent was not installed.</p>
+         * <p>The name of the ECS instance.</p>
          */
         @NameInMap("cloudAssistantStatus")
         public String cloudAssistantStatus;
 
         /**
-         * <p>The information about the collectors on the ECS instance.</p>
+         * <p>The ID of the collector instance.</p>
          */
         @NameInMap("collectors")
         public java.util.List<ListEcsInstancesResponseBodyResultCollectors> collectors;
 
         /**
-         * <p>The ID of the ECS instance.</p>
+         * <p>The tags of the ECS instance.</p>
          */
         @NameInMap("ecsInstanceId")
         public String ecsInstanceId;
 
         /**
-         * <p>The name of the ECS instance.</p>
+         * <p>The ID of the ECS instance.</p>
          */
         @NameInMap("ecsInstanceName")
         public String ecsInstanceName;
 
         /**
-         * <p>The IP address of the ECS instance.</p>
+         * <p>The type of the IP address that is used by the instance. Valid values:</p>
+         * <br>
+         * <p>*   public: public endpoint</p>
+         * <p>*   private: private network address</p>
          */
         @NameInMap("ipAddress")
         public java.util.List<ListEcsInstancesResponseBodyResultIpAddress> ipAddress;
-
-        /**
-         * <p>The operating system type of the ECS instance. Valid values:</p>
-         * <br>
-         * <p>*   windows:Windows operating system</p>
-         * <p>*   linux:Linux operating system</p>
-         */
-        @NameInMap("osType")
-        public String osType;
 
         /**
          * <p>The status of the ECS instance. Valid values:</p>
@@ -594,11 +582,20 @@ public class ListEcsInstancesResponseBody extends TeaModel {
          * <p>*   stopping: The task is being stopped.</p>
          * <p>*   stopped: The node is stopped.</p>
          */
+        @NameInMap("osType")
+        public String osType;
+
+        /**
+         * <p>The IP address of the ECS instance.</p>
+         */
         @NameInMap("status")
         public String status;
 
         /**
-         * <p>The tags of the ECS instance.</p>
+         * <p>The operating system type of the ECS instance. Valid values:</p>
+         * <br>
+         * <p>*   windows:Windows operating system</p>
+         * <p>*   linux:Linux operating system</p>
          */
         @NameInMap("tags")
         public String tags;

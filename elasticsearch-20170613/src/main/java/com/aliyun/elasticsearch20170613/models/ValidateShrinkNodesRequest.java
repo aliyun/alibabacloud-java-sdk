@@ -7,20 +7,20 @@ public class ValidateShrinkNodesRequest extends TeaModel {
     @NameInMap("body")
     public java.util.List<ValidateShrinkNodesRequestBody> body;
 
-    /**
-     * <p>2</p>
-     */
     @NameInMap("count")
     public Integer count;
 
     /**
-     * <p>false</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ignoreStatus")
     public Boolean ignoreStatus;
 
     /**
-     * <p>WORKER</p>
+     * <p>Returned results:</p>
+     * <br>
+     * <p>*   true: can be scaled in</p>
+     * <p>*   false: cannot be scaled in.</p>
      */
     @NameInMap("nodeType")
     public String nodeType;

@@ -4,12 +4,21 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListKibanaPluginsResponseBody extends TeaModel {
+    /**
+     * <p>The request header.</p>
+     */
     @NameInMap("Headers")
     public ListKibanaPluginsResponseBodyHeaders headers;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the plug-ins.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListKibanaPluginsResponseBodyResult> result;
 
@@ -43,6 +52,9 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
     }
 
     public static class ListKibanaPluginsResponseBodyHeaders extends TeaModel {
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("X-Total-Count")
         public Integer xTotalCount;
 
@@ -62,18 +74,33 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
     }
 
     public static class ListKibanaPluginsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The description of the plug-in.</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The name of the plug-in.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The source of the plug-in.</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <p>The URL of the introduction to the plug-in. The value null is supported.</p>
+         */
         @NameInMap("specificationUrl")
         public String specificationUrl;
 
+        /**
+         * <p>The installation status of the plug-in.</p>
+         */
         @NameInMap("state")
         public String state;
 

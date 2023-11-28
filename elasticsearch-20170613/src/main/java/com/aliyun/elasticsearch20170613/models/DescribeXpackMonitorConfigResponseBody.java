@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public DescribeXpackMonitorConfigResponseBodyResult result;
 
@@ -32,18 +38,30 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeXpackMonitorConfigResponseBodyResult extends TeaModel {
+        /**
+         * <p>Indicates whether the X-Pack Monitoring feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true: enabled</p>
+         * <p>*   false: disabled</p>
+         */
         @NameInMap("enable")
         public Boolean enable;
 
         @NameInMap("endpoints")
         public java.util.List<String> endpoints;
 
+        /**
+         * <p>The ID of the associated Elasticsearch cluster.</p>
+         */
         @NameInMap("esInstanceId")
         public String esInstanceId;
 
         @NameInMap("pipelineIds")
         public java.util.List<String> pipelineIds;
 
+        /**
+         * <p>The username that is used to access the associated Elasticsearch cluster.</p>
+         */
         @NameInMap("userName")
         public String userName;
 

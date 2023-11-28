@@ -4,9 +4,6 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateXpackMonitorConfigRequest extends TeaModel {
-    /**
-     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 

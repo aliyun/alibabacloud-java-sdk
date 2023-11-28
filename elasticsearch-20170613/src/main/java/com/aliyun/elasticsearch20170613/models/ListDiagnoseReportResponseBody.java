@@ -5,19 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListDiagnoseReportResponseBody extends TeaModel {
     /**
-     * <p>The header of the response.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("Headers")
     public ListDiagnoseReportResponseBodyHeaders headers;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The header of the response.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The returned results.</p>
+     * <p>The trigger mode of health diagnostics. Valid values:</p>
+     * <br>
+     * <p>*   SYSTEM: The system is automatically triggered.</p>
+     * <p>*   INNER: internal trigger</p>
+     * <p>*   USER: manually triggered by the user</p>
      */
     @NameInMap("Result")
     public java.util.List<ListDiagnoseReportResponseBodyResult> result;
@@ -53,7 +57,7 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
 
     public static class ListDiagnoseReportResponseBodyHeaders extends TeaModel {
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The returned results.</p>
          */
         @NameInMap("X-Total-Count")
         public Integer xTotalCount;
@@ -75,35 +79,28 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
 
     public static class ListDiagnoseReportResponseBodyResultDiagnoseItemsDetail extends TeaModel {
         /**
-         * <p>The description of the diagnostic item.</p>
+         * <p>The diagnosis.</p>
          */
         @NameInMap("desc")
         public String desc;
 
         /**
-         * <p>The full name of the diagnostic item.</p>
+         * <p>The description of the diagnostic item.</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The diagnosis.</p>
+         * <p>The suggestion for the diagnosis.</p>
          */
         @NameInMap("result")
         public String result;
 
-        /**
-         * <p>The suggestion for the diagnosis.</p>
-         */
         @NameInMap("suggest")
         public String suggest;
 
         /**
-         * <p>The type of the diagnostic result. Valid values:</p>
-         * <br>
-         * <p>*   TEXT: text description</p>
-         * <p>*   CONSOLE_API: console-triggered</p>
-         * <p>*   ES_API: API triggered</p>
+         * <p>The full name of the diagnostic item.</p>
          */
         @NameInMap("type")
         public String type;
@@ -157,19 +154,23 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
 
     public static class ListDiagnoseReportResponseBodyResultDiagnoseItems extends TeaModel {
         /**
-         * <p>The details of the diagnostic item.</p>
+         * <p>The type of the diagnostic result. Valid values:</p>
+         * <br>
+         * <p>*   TEXT: text description</p>
+         * <p>*   CONSOLE_API: console-triggered</p>
+         * <p>*   ES_API: API triggered</p>
          */
         @NameInMap("detail")
         public ListDiagnoseReportResponseBodyResultDiagnoseItemsDetail detail;
 
         /**
-         * <p>The health of the diagnostic item. Supported: GREEN, YELLOW, RED, and UNKNOWN.</p>
+         * <p>The details of the diagnostic item.</p>
          */
         @NameInMap("health")
         public String health;
 
         /**
-         * <p>The name of the item.</p>
+         * <p>The health of the diagnostic item. Supported: GREEN, YELLOW, RED, and UNKNOWN.</p>
          */
         @NameInMap("item")
         public String item;
@@ -207,47 +208,43 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
 
     public static class ListDiagnoseReportResponseBodyResult extends TeaModel {
         /**
-         * <p>The timestamp when the report was created.</p>
+         * <p>The ID of the report.</p>
          */
         @NameInMap("createTime")
         public Long createTime;
 
         /**
-         * <p>Reports the list of diagnostic item information.</p>
+         * <p>The name of the item.</p>
          */
         @NameInMap("diagnoseItems")
         public java.util.List<ListDiagnoseReportResponseBodyResultDiagnoseItems> diagnoseItems;
 
         /**
-         * <p>The overall health of the cluster in the report. Supported: GREEN, YELLOW, RED, and UNKNOWN.</p>
+         * <p>Reports the list of diagnostic item information.</p>
          */
         @NameInMap("health")
         public String health;
 
         /**
-         * <p>The ID of the instance for diagnosis.</p>
+         * <p>The overall health of the cluster in the report. Supported: GREEN, YELLOW, RED, and UNKNOWN.</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
-         * <p>The ID of the report.</p>
+         * <p>The diagnosis status. Valid values: Supported: SUCCESS, FAILED, and RUNNING.</p>
          */
         @NameInMap("reportId")
         public String reportId;
 
         /**
-         * <p>The diagnosis status. Valid values: Supported: SUCCESS, FAILED, and RUNNING.</p>
+         * <p>The ID of the instance for diagnosis.</p>
          */
         @NameInMap("state")
         public String state;
 
         /**
-         * <p>The trigger mode of health diagnostics. Valid values:</p>
-         * <br>
-         * <p>*   SYSTEM: The system is automatically triggered.</p>
-         * <p>*   INNER: internal trigger</p>
-         * <p>*   USER: manually triggered by the user</p>
+         * <p>The timestamp when the report was created.</p>
          */
         @NameInMap("trigger")
         public String trigger;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataTasksRequest extends TeaModel {
     /**
-     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*</p>
+     * <p>es-cn-n6w1o1x0w001c\*\*\*\*</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
