@@ -45,7 +45,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     public Integer assetLevel;
 
     /**
-     * <p>The quota for configuration assessment. Unit: times/month.</p>
+     * <p>The purchased quota for configuration assessment. Unit: times/month.</p>
      */
     @NameInMap("CspmCapacity")
     public Long cspmCapacity;
@@ -66,13 +66,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     public Integer highestVersion;
 
     /**
-     * <p>The number of honeypots.</p>
+     * <p>The purchased quota for the cloud honeypot feature.</p>
      */
     @NameInMap("HoneypotCapacity")
     public Long honeypotCapacity;
 
     /**
-     * <p>The quota for the container image scan feature.</p>
+     * <p>The purchased quota for the container image scan feature.</p>
      */
     @NameInMap("ImageScanCapacity")
     public Long imageScanCapacity;
@@ -110,6 +110,12 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("IsOverBalance")
     public Boolean isOverBalance;
 
+    /**
+     * <p>Indicates whether the pay-as-you-go billing method is used. Valid values:</p>
+     * <br>
+     * <p>*   **false**</p>
+     * <p>*   **true**</p>
+     */
     @NameInMap("IsPostpay")
     public Boolean isPostpay;
 
@@ -123,7 +129,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     public Integer isTrialVersion;
 
     /**
-     * <p>The timestamp when the last trial ends. Unit: milliseconds.</p>
+     * <p>The timestamp when the last trial of Security Center ends. Unit: milliseconds.</p>
      */
     @NameInMap("LastTrailEndTime")
     public Long lastTrailEndTime;
@@ -146,28 +152,45 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("OpenTime")
     public Long openTime;
 
+    /**
+     * <p>The instance ID of Security Center that uses the pay-as-you-go billing method.</p>
+     */
     @NameInMap("PostPayInstanceId")
     public String postPayInstanceId;
 
+    /**
+     * <p>The configuration of the pay-as-you-go module. Valid values:</p>
+     * <br>
+     * <p>*   **VUL**: vulnerability fixing module</p>
+     */
     @NameInMap("PostPayModuleSwitch")
     public String postPayModuleSwitch;
 
+    /**
+     * <p>The creation time of Security Center that uses the pay-as-you-go billing method.</p>
+     */
     @NameInMap("PostPayOpenTime")
     public Long postPayOpenTime;
 
+    /**
+     * <p>The status of Security Center that uses the pay-as-you-go billing method. Valid values:</p>
+     * <br>
+     * <p>*   **1**: The instance runs as expected.</p>
+     * <p>*   **2**: The instance is stopped due to overdue payments.</p>
+     */
     @NameInMap("PostPayStatus")
     public Integer postPayStatus;
 
     /**
-     * <p>The quota for application protection. Unit: process/month.</p>
+     * <p>The purchased quota for application protection. Unit: process/month.</p>
      */
     @NameInMap("RaspCapacity")
     public Long raspCapacity;
 
     /**
-     * <p>The timestamp when Security Center is released. Unit: milliseconds. The value of this parameter is seven days after Security Center expires.</p>
+     * <p>The timestamp when Security Center was released. Unit: milliseconds. The value of this parameter is seven days after Security Center expires.</p>
      * <br>
-     * <p>> If you do not renew the subscription within seven days after the expiration date, the Value-added Plan, Basic Anti-Virus, Advanced, or Enterprise edition is downgraded to the Basic edition. In this case, you can no longer view the existing configurations or statistics such as DDoS alerts. You must purchase the Anti-virus, Advanced, or Enterprise edition to continue using relevant features. For more information, see [Purchase Security Center](~~42308~~).</p>
+     * <p>>  If you do not renew the subscription within seven days after the expiration date, Security Center of a paid edition is automatically downgraded to Security Center Basic. In this case, you can no longer use the features of the paid edition or view the existing configurations or statistics such as DDoS alerts in Security Center. You must purchase Security Center of a paid edition to use relevant features. For more information, see [Purchase Security Center](~~42308~~).</p>
      */
     @NameInMap("ReleaseTime")
     public Long releaseTime;
@@ -195,6 +218,12 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      */
     @NameInMap("SasScreen")
     public Integer sasScreen;
+
+    /**
+     * <p>The purchased quota for malicious file detection SDK. Unit: process/month.</p>
+     */
+    @NameInMap("SdkCapacity")
+    public Long sdkCapacity;
 
     /**
      * <p>The log storage capacity that you purchase. Unit: GB. Valid values: 0 to 200000.</p>
@@ -238,7 +267,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     public Integer vmCores;
 
     /**
-     * <p>The quota for vulnerability fixing. Unit: times/month.</p>
+     * <p>The purchased quota for vulnerability fixing. Unit: times/month.</p>
      */
     @NameInMap("VulFixCapacity")
     public Long vulFixCapacity;
@@ -487,6 +516,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
     public Integer getSasScreen() {
         return this.sasScreen;
+    }
+
+    public DescribeVersionConfigResponseBody setSdkCapacity(Long sdkCapacity) {
+        this.sdkCapacity = sdkCapacity;
+        return this;
+    }
+    public Long getSdkCapacity() {
+        return this.sdkCapacity;
     }
 
     public DescribeVersionConfigResponseBody setSlsCapacity(Long slsCapacity) {
