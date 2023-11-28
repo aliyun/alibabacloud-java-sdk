@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
     /**
-     * <p>The severity of the malicious image sample. Valid values:</p>
-     * <br>
-     * <p>*   **serious**</p>
-     * <p>*   **suspicious**</p>
-     * <p>*   **remind**</p>
+     * <p>The details of the malicious image sample.</p>
      */
     @NameInMap("GroupedMaliciousFileResponse")
     public java.util.List<DescribeGroupedMaliciousFilesResponseBodyGroupedMaliciousFileResponse> groupedMaliciousFileResponse;
@@ -57,7 +53,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
 
     public static class DescribeGroupedMaliciousFilesResponseBodyGroupedMaliciousFileResponse extends TeaModel {
         /**
-         * <p>The timestamp when the first scan was performed. Unit: milliseconds.</p>
+         * <p>The timestamp generated when the first scan was performed. Unit: milliseconds.</p>
          */
         @NameInMap("FirstScanTimestamp")
         public Long firstScanTimestamp;
@@ -69,7 +65,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
         public Long imageCount;
 
         /**
-         * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
+         * <p>The timestamp generated when the last scan was performed. Unit: milliseconds.</p>
          */
         @NameInMap("LatestScanTimestamp")
         public Long latestScanTimestamp;
@@ -84,6 +80,9 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <p>The keyword of the malicious image sample.</p>
+         */
         @NameInMap("MaliciousKey")
         public String maliciousKey;
 
@@ -105,7 +104,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
          * <p>*   **0**: unhandled</p>
          * <p>*   **1**: handled</p>
          * <p>*   **2**: verifying</p>
-         * <p>*   **3**: added to the whitelist</p>
+         * <p>*   **3**: whitelisted</p>
          */
         @NameInMap("Status")
         public Integer status;
