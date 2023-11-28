@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListLogstashResponseBody extends TeaModel {
     /**
-     * <p>Details of the request header.</p>
+     * <p>The billing method of the instance. Supported: prepaid (subscription) and postpaid (pay-as-you-go).</p>
      */
     @NameInMap("Headers")
     public ListLogstashResponseBodyHeaders headers;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Detailed information about the matching instances.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Detailed information about the matching instances.</p>
+     * <p>The name of the VPC.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListLogstashResponseBodyResult> result;
@@ -53,7 +53,7 @@ public class ListLogstashResponseBody extends TeaModel {
 
     public static class ListLogstashResponseBodyHeaders extends TeaModel {
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of data nodes.</p>
          */
         @NameInMap("X-Total-Count")
         public Integer xTotalCount;
@@ -75,13 +75,13 @@ public class ListLogstashResponseBody extends TeaModel {
 
     public static class ListLogstashResponseBodyResultTags extends TeaModel {
         /**
-         * <p>The tag key of the cloud disk.</p>
+         * <p>The disk size of the node.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value of the cloud disk.</p>
+         * <p>The instance type of the ECS instance.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -110,27 +110,18 @@ public class ListLogstashResponseBody extends TeaModel {
     }
 
     public static class ListLogstashResponseBodyResultNetworkConfig extends TeaModel {
-        /**
-         * <p>The network type. Currently, only Virtual Private Cloud (VPC) is supported.</p>
-         */
         @NameInMap("type")
         public String type;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The ID of the vSwitch.</p>
          */
         @NameInMap("vpcId")
         public String vpcId;
 
-        /**
-         * <p>The zone where the cluster resides.</p>
-         */
         @NameInMap("vsArea")
         public String vsArea;
 
-        /**
-         * <p>The ID of the vSwitch.</p>
-         */
         @NameInMap("vswitchId")
         public String vswitchId;
 
@@ -175,28 +166,25 @@ public class ListLogstashResponseBody extends TeaModel {
 
     public static class ListLogstashResponseBodyResultNodeSpec extends TeaModel {
         /**
-         * <p>The disk size of the node.</p>
+         * <p>The network configurations.</p>
          */
         @NameInMap("disk")
         public Integer disk;
 
         /**
-         * <p>Specifies whether to use disk encryption. Valid values:</p>
-         * <br>
-         * <p>*   true: Enables the concurrent query feature for queries other than aggregate queries.</p>
-         * <p>*   false: Disables the concurrent query feature for queries other than aggregate queries.</p>
+         * <p>The ID of the VPC.</p>
          */
         @NameInMap("diskEncryption")
         public Boolean diskEncryption;
 
         /**
-         * <p>The type of the disk.</p>
+         * <p>The zone where the cluster resides.</p>
          */
         @NameInMap("diskType")
         public String diskType;
 
         /**
-         * <p>The instance type of the ECS instance.</p>
+         * <p>The type of the disk.</p>
          */
         @NameInMap("spec")
         public String spec;
@@ -242,49 +230,52 @@ public class ListLogstashResponseBody extends TeaModel {
 
     public static class ListLogstashResponseBodyResult extends TeaModel {
         /**
-         * <p>The tag of the instance. Valid values:</p>
+         * <p>The configuration information of the data node.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListLogstashResponseBodyResultTags> tags;
 
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("createdAt")
         public String createdAt;
 
         /**
-         * <p>The name of the VPC.</p>
+         * <p>The time when the instance was last updated.</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The tag value of the cloud disk.</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
-         * <p>The network configurations.</p>
+         * <p>The network type. Currently, only Virtual Private Cloud (VPC) is supported.</p>
          */
         @NameInMap("networkConfig")
         public ListLogstashResponseBodyResultNetworkConfig networkConfig;
 
         /**
-         * <p>The number of data nodes.</p>
+         * <p>The state of the instance. Valid values: Normal, Active, Inactive, and Invalid.</p>
          */
         @NameInMap("nodeAmount")
         public Integer nodeAmount;
 
         /**
-         * <p>The configuration information of the data node.</p>
+         * <p>Specifies whether to use disk encryption. Valid values:</p>
+         * <br>
+         * <p>*   true: Enables the concurrent query feature for queries other than aggregate queries.</p>
+         * <p>*   false: Disables the concurrent query feature for queries other than aggregate queries.</p>
          */
         @NameInMap("nodeSpec")
         public ListLogstashResponseBodyResultNodeSpec nodeSpec;
 
         /**
-         * <p>The billing method of the instance. Supported: prepaid (subscription) and postpaid (pay-as-you-go).</p>
+         * <p>The time when the instance was created.</p>
          */
         @NameInMap("paymentType")
         public String paymentType;
@@ -293,19 +284,19 @@ public class ListLogstashResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The state of the instance. Valid values: Normal, Active, Inactive, and Invalid.</p>
+         * <p>The version of the instance. Currently, only 6.7.0\_with_X-Pack and 7.4.0\_with_X-Pack are supported.</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
-         * <p>The time when the instance was last updated.</p>
+         * <p>The tag of the instance. Valid values:</p>
          */
         @NameInMap("updatedAt")
         public String updatedAt;
 
         /**
-         * <p>The version of the instance. Currently, only 6.7.0\_with_X-Pack and 7.4.0\_with_X-Pack are supported.</p>
+         * <p>The tag key of the cloud disk.</p>
          */
         @NameInMap("version")
         public String version;

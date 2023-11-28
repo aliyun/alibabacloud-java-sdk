@@ -4,18 +4,33 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListNodesRequest extends TeaModel {
+    /**
+     * <p>The IDs of the ECS instances.</p>
+     */
     @NameInMap("ecsInstanceIds")
     public String ecsInstanceIds;
 
+    /**
+     * <p>The name of the ECS instance.</p>
+     */
     @NameInMap("ecsInstanceName")
     public String ecsInstanceName;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("page")
     public Integer page;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("size")
     public Integer size;
 
+    /**
+     * <p>The tags of the ECS instance. You must configure tagKey and tagValue.</p>
+     */
     @NameInMap("tags")
     public String tags;
 

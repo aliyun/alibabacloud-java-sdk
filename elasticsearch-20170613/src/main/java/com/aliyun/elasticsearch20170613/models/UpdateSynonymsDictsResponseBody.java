@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateSynonymsDictsResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public java.util.List<UpdateSynonymsDictsResponseBodyResult> result;
 
@@ -32,15 +38,30 @@ public class UpdateSynonymsDictsResponseBody extends TeaModel {
     }
 
     public static class UpdateSynonymsDictsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The size of the dictionary file. Unit: bytes.</p>
+         */
         @NameInMap("fileSize")
         public Long fileSize;
 
+        /**
+         * <p>The name of the dictionary file.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The source type of the dictionary file. Valid values:</p>
+         * <br>
+         * <p>*   OSS</p>
+         * <p>*   ORIGIN</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <p>The dictionary type. The value is fixed as SYNONYMS.</p>
+         */
         @NameInMap("type")
         public String type;
 

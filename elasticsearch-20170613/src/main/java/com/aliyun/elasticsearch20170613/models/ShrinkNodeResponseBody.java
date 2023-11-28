@@ -4,18 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ShrinkNodeResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the region.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Command output:</p>
-     * <br>
-     * <p>*   true: The scale-in is successful.</p>
-     * <p>*   false: The scale-in failed.</p>
-     */
     @NameInMap("Result")
     public Boolean result;
 

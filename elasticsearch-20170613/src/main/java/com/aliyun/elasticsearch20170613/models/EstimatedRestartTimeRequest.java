@@ -7,6 +7,9 @@ public class EstimatedRestartTimeRequest extends TeaModel {
     @NameInMap("body")
     public String body;
 
+    /**
+     * <p>Specifies whether to forcibly restart the cluster. Default value: false.</p>
+     */
     @NameInMap("force")
     public Boolean force;
 

@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDiagnoseIndicesRequest extends TeaModel {
+    /**
+     * <p>The language. Multiple languages are supported.</p>
+     */
     @NameInMap("lang")
     public String lang;
 

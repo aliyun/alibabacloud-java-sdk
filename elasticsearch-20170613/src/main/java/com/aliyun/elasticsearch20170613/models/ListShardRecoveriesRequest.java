@@ -4,6 +4,12 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListShardRecoveriesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to return information about data restoration of shards. Valid values:</p>
+     * <br>
+     * <p>*   true: returns information about data restoration of shards that are being restored.</p>
+     * <p>*   false: returns information about data restoration of all shards.</p>
+     */
     @NameInMap("activeOnly")
     public Boolean activeOnly;
 

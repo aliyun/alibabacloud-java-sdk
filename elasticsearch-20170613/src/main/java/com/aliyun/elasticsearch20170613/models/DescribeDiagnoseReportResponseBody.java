@@ -4,15 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnoseReportResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The result of the request.</p>
-     */
     @NameInMap("Result")
     public DescribeDiagnoseReportResponseBodyResult result;
 
@@ -38,33 +32,18 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnoseReportResponseBodyResultDiagnoseItemsDetail extends TeaModel {
-        /**
-         * <p>The description of the diagnostic item.</p>
-         */
         @NameInMap("desc")
         public String desc;
 
-        /**
-         * <p>The full name of the diagnostic item.</p>
-         */
         @NameInMap("name")
         public String name;
 
-        /**
-         * <p>The diagnosis.</p>
-         */
         @NameInMap("result")
         public String result;
 
-        /**
-         * <p>The suggestion for the diagnosis.</p>
-         */
         @NameInMap("suggest")
         public String suggest;
 
-        /**
-         * <p>The type of the diagnostic result. Supported: TEXT (text description), CONSOLE_API (console trigger), ES_API(API trigger).</p>
-         */
         @NameInMap("type")
         public String type;
 
@@ -116,21 +95,12 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnoseReportResponseBodyResultDiagnoseItems extends TeaModel {
-        /**
-         * <p>The details of the diagnostic item.</p>
-         */
         @NameInMap("detail")
         public DescribeDiagnoseReportResponseBodyResultDiagnoseItemsDetail detail;
 
-        /**
-         * <p>The health of the diagnostic item. Supported: GREEN, YELLOW, RED, and UNKNOWN.</p>
-         */
         @NameInMap("health")
         public String health;
 
-        /**
-         * <p>The name of the item.</p>
-         */
         @NameInMap("item")
         public String item;
 
@@ -166,45 +136,24 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnoseReportResponseBodyResult extends TeaModel {
-        /**
-         * <p>The timestamp when the report was created. Unit: ms.</p>
-         */
         @NameInMap("createTime")
         public Long createTime;
 
-        /**
-         * <p>Reports the list of diagnostic item information.</p>
-         */
         @NameInMap("diagnoseItems")
         public java.util.List<DescribeDiagnoseReportResponseBodyResultDiagnoseItems> diagnoseItems;
 
-        /**
-         * <p>The overall health of the cluster in the report. Supported: GREEN, YELLOW, RED, and UNKNOWN.</p>
-         */
         @NameInMap("health")
         public String health;
 
-        /**
-         * <p>The ID of the instance for diagnosis.</p>
-         */
         @NameInMap("instanceId")
         public String instanceId;
 
-        /**
-         * <p>The ID of the report.</p>
-         */
         @NameInMap("reportId")
         public String reportId;
 
-        /**
-         * <p>The diagnosis status. Valid values: Supported: SUCCESS, FAILED, and RUNNING.</p>
-         */
         @NameInMap("state")
         public String state;
 
-        /**
-         * <p>The trigger mode of health diagnostics. Supported: SYSTEM (automatic system trigger), INNER (internal trigger), and USER (manual user trigger).</p>
-         */
         @NameInMap("trigger")
         public String trigger;
 

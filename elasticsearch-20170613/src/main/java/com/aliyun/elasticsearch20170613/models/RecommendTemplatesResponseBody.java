@@ -35,6 +35,16 @@ public class RecommendTemplatesResponseBody extends TeaModel {
         @NameInMap("content")
         public String content;
 
+        /**
+         * <p>*</p>
+         * <p>*</p>
+         * <p>*</p>
+         * <p>*</p>
+         * <br>
+         * <p>**</p>
+         * <br>
+         * <p>****</p>
+         */
         @NameInMap("templateName")
         public String templateName;
 

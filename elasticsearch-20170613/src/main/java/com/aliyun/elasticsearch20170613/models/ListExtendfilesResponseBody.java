@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListExtendfilesResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListExtendfilesResponseBodyResult> result;
 
@@ -32,15 +38,27 @@ public class ListExtendfilesResponseBody extends TeaModel {
     }
 
     public static class ListExtendfilesResponseBodyResult extends TeaModel {
+        /**
+         * <p>The path of the driver file.</p>
+         */
         @NameInMap("filePath")
         public String filePath;
 
+        /**
+         * <p>The size of the driver file.</p>
+         */
         @NameInMap("fileSize")
         public Long fileSize;
 
+        /**
+         * <p>The name of the driver file.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The source type.</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 

@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDefaultCollectorConfigurationsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListDefaultCollectorConfigurationsResponseBodyResult> result;
 
@@ -32,9 +38,15 @@ public class ListDefaultCollectorConfigurationsResponseBody extends TeaModel {
     }
 
     public static class ListDefaultCollectorConfigurationsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The content of the configuration file.</p>
+         */
         @NameInMap("content")
         public String content;
 
+        /**
+         * <p>The name of the configuration file.</p>
+         */
         @NameInMap("fileName")
         public String fileName;
 

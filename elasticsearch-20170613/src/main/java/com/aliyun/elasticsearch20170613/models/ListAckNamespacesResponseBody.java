@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListAckNamespacesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListAckNamespacesResponseBodyResult> result;
 
@@ -32,9 +38,15 @@ public class ListAckNamespacesResponseBody extends TeaModel {
     }
 
     public static class ListAckNamespacesResponseBodyResult extends TeaModel {
+        /**
+         * <p>The namespace of the cluster.</p>
+         */
         @NameInMap("namespace")
         public String namespace;
 
+        /**
+         * <p>The status of the namespace.</p>
+         */
         @NameInMap("status")
         public String status;
 

@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class MoveResourceGroupResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public MoveResourceGroupResponseBodyResult result;
 
@@ -32,15 +38,35 @@ public class MoveResourceGroupResponseBody extends TeaModel {
     }
 
     public static class MoveResourceGroupResponseBodyResultDictList extends TeaModel {
+        /**
+         * <p>The size of the dictionary file. Unit: bytes.</p>
+         */
         @NameInMap("fileSize")
         public Long fileSize;
 
+        /**
+         * <p>The name of the dictionary file.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The type of the source of the dictionary file. Valid values:</p>
+         * <br>
+         * <p>*   OSS: Object Storage Service (OSS). You must make sure that the access control list (ACL) of the related OSS bucket is public read.</p>
+         * <p>*   ORIGIN: previously uploaded dictionary.</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <p>The type of the dictionary. Valid values:</p>
+         * <br>
+         * <p>*   STOP: stopword list</p>
+         * <p>*   MAIN: main dictionary</p>
+         * <p>*   SYNONYMS: synonym dictionary</p>
+         * <p>*   ALI_WS: Alibaba Cloud dictionary</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -84,15 +110,27 @@ public class MoveResourceGroupResponseBody extends TeaModel {
     }
 
     public static class MoveResourceGroupResponseBodyResultKibanaConfiguration extends TeaModel {
+        /**
+         * <p>The number of nodes.</p>
+         */
         @NameInMap("amount")
         public Integer amount;
 
+        /**
+         * <p>The storage capacity. Unit: GB.</p>
+         */
         @NameInMap("disk")
         public Integer disk;
 
+        /**
+         * <p>The storage type.</p>
+         */
         @NameInMap("diskType")
         public String diskType;
 
+        /**
+         * <p>The specification category.</p>
+         */
         @NameInMap("spec")
         public String spec;
 
@@ -136,15 +174,27 @@ public class MoveResourceGroupResponseBody extends TeaModel {
     }
 
     public static class MoveResourceGroupResponseBodyResultMasterConfiguration extends TeaModel {
+        /**
+         * <p>The number of nodes.</p>
+         */
         @NameInMap("amount")
         public Integer amount;
 
+        /**
+         * <p>The storage capacity. Unit: GB.</p>
+         */
         @NameInMap("disk")
         public Integer disk;
 
+        /**
+         * <p>The storage type.</p>
+         */
         @NameInMap("diskType")
         public String diskType;
 
+        /**
+         * <p>The specification category.</p>
+         */
         @NameInMap("spec")
         public String spec;
 
@@ -188,15 +238,27 @@ public class MoveResourceGroupResponseBody extends TeaModel {
     }
 
     public static class MoveResourceGroupResponseBodyResultNetworkConfig extends TeaModel {
+        /**
+         * <p>The network type. Only the VPC is supported.</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         */
         @NameInMap("vpcId")
         public String vpcId;
 
+        /**
+         * <p>The zone where the cluster resides.</p>
+         */
         @NameInMap("vsArea")
         public String vsArea;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("vswitchId")
         public String vswitchId;
 
@@ -240,12 +302,21 @@ public class MoveResourceGroupResponseBody extends TeaModel {
     }
 
     public static class MoveResourceGroupResponseBodyResultNodeSpec extends TeaModel {
+        /**
+         * <p>The storage capacity. Unit: GB.</p>
+         */
         @NameInMap("disk")
         public Integer disk;
 
+        /**
+         * <p>The storage type.</p>
+         */
         @NameInMap("diskType")
         public String diskType;
 
+        /**
+         * <p>The specification category.</p>
+         */
         @NameInMap("spec")
         public String spec;
 
@@ -281,15 +352,35 @@ public class MoveResourceGroupResponseBody extends TeaModel {
     }
 
     public static class MoveResourceGroupResponseBodyResultSynonymsDicts extends TeaModel {
+        /**
+         * <p>The size of the dictionary file. Unit: bytes.</p>
+         */
         @NameInMap("fileSize")
         public Long fileSize;
 
+        /**
+         * <p>The name of the dictionary file.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The type of the source of the dictionary file. Valid values:</p>
+         * <br>
+         * <p>*   OSS: Object Storage Service (OSS). You must make sure that the ACL of the related OSS bucket is public read.</p>
+         * <p>*   ORIGIN: previously uploaded dictionary.</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <p>The type of the dictionary. Valid values:</p>
+         * <br>
+         * <p>*   STOP: stopword list</p>
+         * <p>*   MAIN: main dictionary</p>
+         * <p>*   SYNONYMS: synonym dictionary</p>
+         * <p>*   ALI_WS: Alibaba Cloud dictionary</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -333,60 +424,125 @@ public class MoveResourceGroupResponseBody extends TeaModel {
     }
 
     public static class MoveResourceGroupResponseBodyResult extends TeaModel {
+        /**
+         * <p>The time when the cluster was created.</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The configurations of IK dictionaries.</p>
+         */
         @NameInMap("dictList")
         public java.util.List<MoveResourceGroupResponseBodyResultDictList> dictList;
 
+        /**
+         * <p>The internal endpoint of the cluster.</p>
+         */
         @NameInMap("domain")
         public String domain;
 
+        /**
+         * <p>The version of the cluster.</p>
+         */
         @NameInMap("esVersion")
         public String esVersion;
 
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>The configurations of Kibana nodes.</p>
+         */
         @NameInMap("kibanaConfiguration")
         public MoveResourceGroupResponseBodyResultKibanaConfiguration kibanaConfiguration;
 
+        /**
+         * <p>The public endpoint of the Kibana console of the cluster.</p>
+         */
         @NameInMap("kibanaDomain")
         public String kibanaDomain;
 
+        /**
+         * <p>The port number that is used to access the Kibana console of the cluster over the Internet.</p>
+         */
         @NameInMap("kibanaPort")
         public Integer kibanaPort;
 
+        /**
+         * <p>The configurations of dedicated master nodes.</p>
+         */
         @NameInMap("masterConfiguration")
         public MoveResourceGroupResponseBodyResultMasterConfiguration masterConfiguration;
 
+        /**
+         * <p>The network configurations.</p>
+         */
         @NameInMap("networkConfig")
         public MoveResourceGroupResponseBodyResultNetworkConfig networkConfig;
 
+        /**
+         * <p>The number of data nodes in the cluster.</p>
+         */
         @NameInMap("nodeAmount")
         public Integer nodeAmount;
 
+        /**
+         * <p>The configurations of data nodes.</p>
+         */
         @NameInMap("nodeSpec")
         public MoveResourceGroupResponseBodyResultNodeSpec nodeSpec;
 
+        /**
+         * <p>The billing method of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   prepaid: subscription</p>
+         * <p>*   postpaid: pay-as-you-go</p>
+         */
         @NameInMap("paymentType")
         public String paymentType;
 
+        /**
+         * <p>The public endpoint of the cluster.</p>
+         */
         @NameInMap("publicDomain")
         public String publicDomain;
 
+        /**
+         * <p>The port number that is used to access the cluster over the Internet.</p>
+         */
         @NameInMap("publicPort")
         public Integer publicPort;
 
+        /**
+         * <p>The status of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   active: The cluster is normal.</p>
+         * <p>*   activating: The cluster is being activated.</p>
+         * <p>*   Inactive: The cluster is frozen.</p>
+         * <p>*   invalid: The cluster is valid.</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The configurations of synonym dictionaries.</p>
+         */
         @NameInMap("synonymsDicts")
         public java.util.List<MoveResourceGroupResponseBodyResultSynonymsDicts> synonymsDicts;
 
+        /**
+         * <p>The time when the cluster was last updated.</p>
+         */
         @NameInMap("updatedAt")
         public String updatedAt;
 

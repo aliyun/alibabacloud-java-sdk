@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DescribePipelineManagementConfigResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public DescribePipelineManagementConfigResponseBodyResult result;
 
@@ -32,18 +38,30 @@ public class DescribePipelineManagementConfigResponseBody extends TeaModel {
     }
 
     public static class DescribePipelineManagementConfigResponseBodyResult extends TeaModel {
+        /**
+         * <p>The access addresses of the Elasticsearch cluster. Specify each address in the `http://Endpoint of the Elasticsearch cluster:Port number` format.</p>
+         */
         @NameInMap("endpoints")
         public String endpoints;
 
+        /**
+         * <p>The ID of the Elasticsearch cluster.</p>
+         */
         @NameInMap("esInstanceId")
         public String esInstanceId;
 
         @NameInMap("pipelineIds")
         public java.util.List<String> pipelineIds;
 
+        /**
+         * <p>The pipeline management method. Valid values: Kibana and MULTIPLE_PIPELINE.</p>
+         */
         @NameInMap("pipelineManagementType")
         public String pipelineManagementType;
 
+        /**
+         * <p>The username that is used to access the Elasticsearch cluster.</p>
+         */
         @NameInMap("userName")
         public String userName;
 

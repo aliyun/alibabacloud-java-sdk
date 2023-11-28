@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
+    /**
+     * <p>The details of the Elasticsearch cluster.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The private IP address whitelists for access to the Kibana console of the cluster.</p>
+     */
     @NameInMap("Result")
     public UpdateKibanaWhiteIpsResponseBodyResult result;
 
@@ -32,9 +38,15 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
     }
 
     public static class UpdateKibanaWhiteIpsResponseBodyResultNetworkConfigWhiteIpGroupList extends TeaModel {
+        /**
+         * <p>The IP addresses in the whitelist.</p>
+         */
         @NameInMap("groupName")
         public String groupName;
 
+        /**
+         * <p>The IP addresses in the whitelist.</p>
+         */
         @NameInMap("ips")
         public java.util.List<String> ips;
 
@@ -73,18 +85,33 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
     }
 
     public static class UpdateKibanaWhiteIpsResponseBodyResultNetworkConfig extends TeaModel {
+        /**
+         * <p>The IP address whitelists.</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("vpcId")
         public String vpcId;
 
+        /**
+         * <p>The network type.</p>
+         */
         @NameInMap("vsArea")
         public String vsArea;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("vswitchId")
         public String vswitchId;
 
+        /**
+         * <p>The IP address whitelists.</p>
+         */
         @NameInMap("whiteIpGroupList")
         public java.util.List<UpdateKibanaWhiteIpsResponseBodyResultNetworkConfigWhiteIpGroupList> whiteIpGroupList;
 
@@ -136,12 +163,21 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
     }
 
     public static class UpdateKibanaWhiteIpsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The public IP address whitelists for access to the Kibana console of the cluster.</p>
+         */
         @NameInMap("kibanaIPWhitelist")
         public java.util.List<String> kibanaIPWhitelist;
 
+        /**
+         * <p>The private IP address whitelists for access to the Kibana console of the cluster.</p>
+         */
         @NameInMap("kibanaPrivateIPWhitelist")
         public java.util.List<String> kibanaPrivateIPWhitelist;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         */
         @NameInMap("networkConfig")
         public UpdateKibanaWhiteIpsResponseBodyResultNetworkConfig networkConfig;
 

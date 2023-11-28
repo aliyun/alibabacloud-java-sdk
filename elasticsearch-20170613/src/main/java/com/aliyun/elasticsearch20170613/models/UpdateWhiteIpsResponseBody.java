@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateWhiteIpsResponseBody extends TeaModel {
+    /**
+     * <p>The updated whitelist.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The network configurations.</p>
+     */
     @NameInMap("Result")
     public UpdateWhiteIpsResponseBodyResult result;
 
@@ -32,6 +38,9 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
     }
 
     public static class UpdateWhiteIpsResponseBodyResultNetworkConfigWhiteIpGroupList extends TeaModel {
+        /**
+         * <p>The type of the whitelist. The value of this parameter is fixed as PRIVATE_ES, which indicates a private IP address whitelist.</p>
+         */
         @NameInMap("groupName")
         public String groupName;
 
@@ -73,6 +82,9 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
     }
 
     public static class UpdateWhiteIpsResponseBodyResultNetworkConfig extends TeaModel {
+        /**
+         * <p>The IP addresses in the whitelist.</p>
+         */
         @NameInMap("whiteIpGroupList")
         public java.util.List<UpdateWhiteIpsResponseBodyResultNetworkConfigWhiteIpGroupList> whiteIpGroupList;
 
@@ -92,9 +104,15 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
     }
 
     public static class UpdateWhiteIpsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The list of whitelists.</p>
+         */
         @NameInMap("esIPWhitelist")
         public java.util.List<String> esIPWhitelist;
 
+        /**
+         * <p>The name of the whitelist. By default, the default whitelist is included.</p>
+         */
         @NameInMap("networkConfig")
         public UpdateWhiteIpsResponseBodyResultNetworkConfig networkConfig;
 

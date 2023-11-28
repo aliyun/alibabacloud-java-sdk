@@ -4,18 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Returned results:</p>
-     * <br>
-     * <p>*   true: The tag resource relationship is created.</p>
-     * <p>*   false: The tag resource relationship fails to be created.</p>
-     */
     @NameInMap("Result")
     public Boolean result;
 

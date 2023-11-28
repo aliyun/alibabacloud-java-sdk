@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListShardRecoveriesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListShardRecoveriesResponseBodyResult> result;
 
@@ -32,39 +38,82 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
     }
 
     public static class ListShardRecoveriesResponseBodyResult extends TeaModel {
+        /**
+         * <p>The data restoration progress.</p>
+         */
         @NameInMap("bytesPercent")
         public String bytesPercent;
 
+        /**
+         * <p>The total amount of data that is restored.</p>
+         */
         @NameInMap("bytesTotal")
         public Long bytesTotal;
 
+        /**
+         * <p>The file execution progress.</p>
+         */
         @NameInMap("filesPercent")
         public String filesPercent;
 
+        /**
+         * <p>The total number of files.</p>
+         */
         @NameInMap("filesTotal")
         public Long filesTotal;
 
+        /**
+         * <p>The name of the index.</p>
+         */
         @NameInMap("index")
         public String index;
 
+        /**
+         * <p>The IP address of the source node.</p>
+         */
         @NameInMap("sourceHost")
         public String sourceHost;
 
+        /**
+         * <p>The name of the source node.</p>
+         */
         @NameInMap("sourceNode")
         public String sourceNode;
 
+        /**
+         * <p>The data restoration status. Valid values:</p>
+         * <br>
+         * <p>*   done: Data restoration is complete.</p>
+         * <p>*   finalize: Data is being cleared.</p>
+         * <p>*   index: Index metadata is being read, and bytes are being copied from source to destination.</p>
+         * <p>*   init: Data restoration is not started.</p>
+         * <p>*   start: Data restoration is started.</p>
+         * <p>*   translog: Translogs are being redone.</p>
+         */
         @NameInMap("stage")
         public String stage;
 
+        /**
+         * <p>The IP address of the destination node.</p>
+         */
         @NameInMap("targetHost")
         public String targetHost;
 
+        /**
+         * <p>The name of the destination node.</p>
+         */
         @NameInMap("targetNode")
         public String targetNode;
 
+        /**
+         * <p>The number of translog operations to be restored.</p>
+         */
         @NameInMap("translogOps")
         public Long translogOps;
 
+        /**
+         * <p>The restoration progress of translog operations.</p>
+         */
         @NameInMap("translogOpsPercent")
         public String translogOpsPercent;
 

@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListAvailableEsInstanceIdsResponseBodyResult> result;
 
@@ -32,15 +38,27 @@ public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
     }
 
     public static class ListAvailableEsInstanceIdsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The name of the Elasticsearch cluster.</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The address that is used to access the Elasticsearch cluster over the Internet.</p>
+         */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <p>The ID of the Elasticsearch cluster.</p>
+         */
         @NameInMap("esInstanceId")
         public String esInstanceId;
 
+        /**
+         * <p>The address that is used to access the Kibana console of the Elasticsearch cluster over the Internet.</p>
+         */
         @NameInMap("kibanaEndpoint")
         public String kibanaEndpoint;
 

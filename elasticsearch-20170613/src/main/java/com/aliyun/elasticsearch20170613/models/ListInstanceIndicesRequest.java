@@ -11,31 +11,31 @@ public class ListInstanceIndicesRequest extends TeaModel {
     public Boolean all;
 
     /**
-     * <p>false</p>
+     * <p>15</p>
      */
     @NameInMap("isManaged")
     public Boolean isManaged;
 
     /**
-     * <p>false</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("isOpenstore")
     public Boolean isOpenstore;
 
     /**
-     * <p>log-0001</p>
+     * <p>1</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>1</p>
+     * <p>The header of the response.</p>
      */
     @NameInMap("page")
     public Integer page;
 
     /**
-     * <p>15</p>
+     * <p>The total size of the index in Cloud Hosting. Unit: bytes.</p>
      */
     @NameInMap("size")
     public Integer size;

@@ -5,27 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The header of the response. This parameter is empty and is for reference only. You cannot force this parameter to be relied on in the program.</p>
-     * <br>
-     * <p>>  The return examples does not contain this parameter.</p>
+     * <p>The labels of the resource.</p>
      */
     @NameInMap("Headers")
     public ListTagResourcesResponseBodyHeaders headers;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The number of resources to query.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>A list of resources that have tags.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>A list of resources that have tags.</p>
+     * <p>The type of the resource. Fixed to `ALIYUN::ELASTICSEARCH::INSTANCE`.</p>
      */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
@@ -69,7 +67,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyHeaders extends TeaModel {
         /**
-         * <p>The number of resources to query.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("X-Total-Count")
         public Integer xTotalCount;
@@ -90,26 +88,17 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
-        /**
-         * <p>Indicates the ID of a resource.</p>
-         */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The type of the resource. Fixed to `ALIYUN::ELASTICSEARCH::INSTANCE`.</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 
-        /**
-         * <p>The tag key.</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -155,7 +144,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
-         * <p>The labels of the resource.</p>
+         * <p>Indicates the ID of a resource.</p>
          */
         @NameInMap("TagResource")
         public java.util.List<ListTagResourcesResponseBodyTagResourcesTagResource> tagResource;

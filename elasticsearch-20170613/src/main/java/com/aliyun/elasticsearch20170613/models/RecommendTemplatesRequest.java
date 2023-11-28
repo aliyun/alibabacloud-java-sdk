@@ -4,6 +4,17 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class RecommendTemplatesRequest extends TeaModel {
+    /**
+     * <p>*</p>
+     * <p>*</p>
+     * <p>*</p>
+     * <p>*</p>
+     * <p>*</p>
+     * <br>
+     * <p>**</p>
+     * <br>
+     * <p>****</p>
+     */
     @NameInMap("usageScenario")
     public String usageScenario;
 

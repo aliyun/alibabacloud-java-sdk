@@ -4,18 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ValidateShrinkNodesResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Returned results:</p>
-     * <br>
-     * <p>*   true: can be scaled in</p>
-     * <p>*   false: cannot be scaled in.</p>
-     */
     @NameInMap("Result")
     public Boolean result;
 

@@ -4,15 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class CreateCollectorResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The returned result.</p>
-     */
     @NameInMap("Result")
     public CreateCollectorResponseBodyResult result;
 
@@ -38,9 +32,6 @@ public class CreateCollectorResponseBody extends TeaModel {
     }
 
     public static class CreateCollectorResponseBodyResult extends TeaModel {
-        /**
-         * <p>The ID of the created crawer.</p>
-         */
         @NameInMap("resId")
         public String resId;
 

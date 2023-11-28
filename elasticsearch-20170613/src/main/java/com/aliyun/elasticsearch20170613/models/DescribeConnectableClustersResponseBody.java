@@ -4,15 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DescribeConnectableClustersResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The returned data.</p>
-     */
     @NameInMap("Result")
     public java.util.List<DescribeConnectableClustersResponseBodyResult> result;
 
@@ -38,15 +32,9 @@ public class DescribeConnectableClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeConnectableClustersResponseBodyResult extends TeaModel {
-        /**
-         * <p>The ID of the instance that can communicate with each other.</p>
-         */
         @NameInMap("instances")
         public String instances;
 
-        /**
-         * <p>The network type of the instance.</p>
-         */
         @NameInMap("networkType")
         public String networkType;
 

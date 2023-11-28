@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAllNodeRequest extends TeaModel {
     /**
-     * <p>false</p>
+     * <p>The Java Virtual Machine (JVM) heap memory usage of the node.</p>
      */
     @NameInMap("extended")
     public Boolean extended;

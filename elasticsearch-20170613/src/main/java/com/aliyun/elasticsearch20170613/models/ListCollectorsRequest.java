@@ -4,21 +4,42 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListCollectorsRequest extends TeaModel {
+    /**
+     * <p>The ID of the resource with which the shipper is associated.</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the shipper.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The number of the page to return. Valid values: 1 to 200. Default value: 1.</p>
+     */
     @NameInMap("page")
     public Integer page;
 
+    /**
+     * <p>The ID of the shipper.</p>
+     */
     @NameInMap("resId")
     public String resId;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: 1 to 500. Default value: 20.</p>
+     */
     @NameInMap("size")
     public Integer size;
 
+    /**
+     * <p>The type of the machine on which the shipper is deployed. If you leave this parameter empty, shippers deployed on all types of machines are returned. Valid values:</p>
+     * <br>
+     * <p>*   ECS</p>
+     * <p>*   ACK</p>
+     */
     @NameInMap("sourceType")
     public String sourceType;
 

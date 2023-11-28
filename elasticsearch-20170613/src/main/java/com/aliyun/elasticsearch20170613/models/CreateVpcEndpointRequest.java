@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateVpcEndpointRequest extends TeaModel {
     /**
-     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D\*\*\*</p>
+     * <p>The returned result details.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -17,7 +17,7 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public String zoneId;
 
     /**
-     * <p>false</p>
+     * <p>The ID of the user endpoint service associated with the endpoint.</p>
      */
     @NameInMap("dryRun")
     public Boolean dryRun;

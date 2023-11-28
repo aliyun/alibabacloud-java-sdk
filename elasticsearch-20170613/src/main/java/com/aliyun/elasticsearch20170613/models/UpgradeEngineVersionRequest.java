@@ -11,13 +11,18 @@ public class UpgradeEngineVersionRequest extends TeaModel {
     public String version;
 
     /**
-     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*</p>
+     * <p>The moderation results.</p>
      */
     @NameInMap("clientToken")
     public String clientToken;
 
     /**
-     * <p>false</p>
+     * <p>The monitoring type. Valid values:</p>
+     * <br>
+     * <p>*   checkClusterHealth: Cluster Health Status</p>
+     * <p>*   checkConfigCompatible: Configuration Compatibility Status</p>
+     * <p>*   checkClusterResource: resource space status</p>
+     * <p>*   checkClusterSnapshot: Whether a snapshot exists</p>
      */
     @NameInMap("dryRun")
     public Boolean dryRun;

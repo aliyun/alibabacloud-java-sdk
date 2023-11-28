@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateLogstashDescriptionResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result returned.</p>
+     */
     @NameInMap("Result")
     public UpdateLogstashDescriptionResponseBodyResult result;
 
@@ -32,6 +38,9 @@ public class UpdateLogstashDescriptionResponseBody extends TeaModel {
     }
 
     public static class UpdateLogstashDescriptionResponseBodyResult extends TeaModel {
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("description")
         public String description;
 

@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateCollectorNameResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public UpdateCollectorNameResponseBodyResult result;
 
@@ -32,9 +38,15 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
     }
 
     public static class UpdateCollectorNameResponseBodyResultConfigs extends TeaModel {
+        /**
+         * <p>The content of the file.</p>
+         */
         @NameInMap("content")
         public String content;
 
+        /**
+         * <p>The name of the file.</p>
+         */
         @NameInMap("fileName")
         public String fileName;
 
@@ -62,9 +74,15 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
     }
 
     public static class UpdateCollectorNameResponseBodyResultExtendConfigsMachines extends TeaModel {
+        /**
+         * <p>The status of the shipper on the ECS instance. Valid values: **heartOk**, **heartLost**, **uninstalled**, and **failed**.</p>
+         */
         @NameInMap("agentStatus")
         public String agentStatus;
 
+        /**
+         * <p>The IDs of the ECS instances.</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
@@ -92,45 +110,94 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
     }
 
     public static class UpdateCollectorNameResponseBodyResultExtendConfigs extends TeaModel {
+        /**
+         * <p>The configuration type. Valid values:</p>
+         * <br>
+         * <p>*   collectorTargetInstance</p>
+         * <p>*   collectorDeployMachine</p>
+         * <p>*   collectorElasticsearchForKibana</p>
+         */
         @NameInMap("configType")
         public String configType;
 
+        /**
+         * <p>Indicates whether monitoring is enabled. This parameter is returned if the value of **configType** is **collectorTargetInstance** and the value of **instanceType** is **elasticsearch**. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("enableMonitoring")
         public Boolean enableMonitoring;
 
+        /**
+         * <p>The ID of the machine group. This parameter is returned if the value of **configType** is **collectorDeployMachine**.</p>
+         */
         @NameInMap("groupId")
         public String groupId;
 
+        /**
+         * <p>The private endpoint of Kibana after you enable the Kibana dashboard. This parameter is returned if the value of **configType** is **collectorElasticsearchForKibana**.</p>
+         */
         @NameInMap("host")
         public String host;
 
         @NameInMap("hosts")
         public java.util.List<String> hosts;
 
+        /**
+         * <p>The ID of the resource that is associated with the shipper. If the value of **configType** is **collectorTargetInstance**, the value of this parameter is the ID of the resource specified in the output configuration part of the shipper. If the value of **configType** is **collectorDeployMachine** and the value of **type** is **ACKCluster**, the value of this parameter is the ID of the ACK cluster.</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>The type of the cluster specified in the output configuration part of the shipper. Valid values: elasticsearch and logstash. This parameter is returned if the value of **configType** is **collectorTargetInstance**.</p>
+         */
         @NameInMap("instanceType")
         public String instanceType;
 
+        /**
+         * <p>The public endpoint of Kibana after you enable the Kibana dashboard. This parameter is returned if the value of **configType** is **collectorElasticsearchForKibana**.</p>
+         */
         @NameInMap("kibanaHost")
         public String kibanaHost;
 
+        /**
+         * <p>The information about the ECS instances on which the shipper is deployed. This parameter is returned if the value of **configType** is **collectorDeployMachine** and the value of **type** is **ECSInstanceId**.</p>
+         */
         @NameInMap("machines")
         public java.util.List<UpdateCollectorNameResponseBodyResultExtendConfigsMachines> machines;
 
+        /**
+         * <p>The transmission protocol. Valid values: **HTTP** and **HTTPS**.</p>
+         */
         @NameInMap("protocol")
         public String protocol;
 
+        /**
+         * <p>The number of pods from which data is successfully collected in the ACK cluster. This parameter is returned if the value of **configType** is **collectorDeployMachine** and the value of **type** is **ACKCluster**.</p>
+         */
         @NameInMap("successPodsCount")
         public String successPodsCount;
 
+        /**
+         * <p>The total number of pods from which data is collected in the ACK cluster. This parameter is returned if the value of **configType** is **collectorDeployMachine** and the value of **type** is **ACKCluster**.</p>
+         */
         @NameInMap("totalPodsCount")
         public String totalPodsCount;
 
+        /**
+         * <p>The type of the machine on which the shipper is deployed. This parameter is returned if the value of **configType** is **collectorDeployMachine**. Valid values:</p>
+         * <br>
+         * <p>*   ECSInstanceId</p>
+         * <p>*   ACKCluster</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The username that is used to access the resource specified in the output configuration part of the shipper. The default value is elastic. This parameter is returned if the value of **configType** is **collectorTargetInstance** or **collectorElasticsearchForKibana**.</p>
+         */
         @NameInMap("userName")
         public String userName;
 
@@ -257,39 +324,81 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
         @NameInMap("collectorPaths")
         public java.util.List<String> collectorPaths;
 
+        /**
+         * <p>The information about the configuration file of the shipper.</p>
+         */
         @NameInMap("configs")
         public java.util.List<UpdateCollectorNameResponseBodyResultConfigs> configs;
 
+        /**
+         * <p>Indicates whether a dry run is performed. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("dryRun")
         public Boolean dryRun;
 
+        /**
+         * <p>The extended configurations of the shipper.</p>
+         */
         @NameInMap("extendConfigs")
         public java.util.List<UpdateCollectorNameResponseBodyResultExtendConfigs> extendConfigs;
 
+        /**
+         * <p>The time when the shipper was created.</p>
+         */
         @NameInMap("gmtCreatedTime")
         public String gmtCreatedTime;
 
+        /**
+         * <p>The time when the shipper was updated.</p>
+         */
         @NameInMap("gmtUpdateTime")
         public String gmtUpdateTime;
 
+        /**
+         * <p>The name of the shipper.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The account ID.</p>
+         */
         @NameInMap("ownerId")
         public String ownerId;
 
+        /**
+         * <p>The ID of the shipper.</p>
+         */
         @NameInMap("resId")
         public String resId;
 
+        /**
+         * <p>The type of the shipper. Valid values: fileBeat, metricBeat, heartBeat, and audiBeat.</p>
+         */
         @NameInMap("resType")
         public String resType;
 
+        /**
+         * <p>The version of the shipper. The version of a shipper depends on the type of the machine on which the shipper is deployed.</p>
+         * <br>
+         * <p>*   Elastic Compute Service (ECS) instance: 6.8.5\_with_community</p>
+         * <p>*   Container Service for Kubernetes (ACK) cluster: 6.8.13\_with_community</p>
+         */
         @NameInMap("resVersion")
         public String resVersion;
 
+        /**
+         * <p>The status of the shipper. Valid values: activating and active.</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC) where the shipper resides.</p>
+         */
         @NameInMap("vpcId")
         public String vpcId;
 

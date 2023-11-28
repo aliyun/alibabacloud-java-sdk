@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DescribeAckOperatorResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public DescribeAckOperatorResponseBodyResult result;
 
@@ -32,9 +38,20 @@ public class DescribeAckOperatorResponseBody extends TeaModel {
     }
 
     public static class DescribeAckOperatorResponseBodyResult extends TeaModel {
+        /**
+         * <p>The installation status of ES-operator. Valid values:</p>
+         * <br>
+         * <p>*   deployed: ES-operator is installed.</p>
+         * <p>*   not-deploy: ES-operator is not installed.</p>
+         * <p>*   failed: ES-operator fails to be installed.</p>
+         * <p>*   unknown: The installation status of ES-operator is unknown.</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The version of ES-operator.</p>
+         */
         @NameInMap("version")
         public String version;
 

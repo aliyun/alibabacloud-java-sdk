@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListPluginsResponseBody extends TeaModel {
     /**
-     * <p>The header of the response.</p>
+     * <p>The description of the plug-in.</p>
      */
     @NameInMap("Headers")
     public ListPluginsResponseBodyHeaders headers;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The return results.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The return results.</p>
+     * <p>The status of the plug-in.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListPluginsResponseBodyResult> result;
@@ -53,7 +53,7 @@ public class ListPluginsResponseBody extends TeaModel {
 
     public static class ListPluginsResponseBodyHeaders extends TeaModel {
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The address of the plug-in description document.</p>
          */
         @NameInMap("X-Total-Count")
         public Integer xTotalCount;
@@ -75,32 +75,23 @@ public class ListPluginsResponseBody extends TeaModel {
 
     public static class ListPluginsResponseBodyResult extends TeaModel {
         /**
-         * <p>The description of the plug-in.</p>
+         * <p>The source type of the plug-in.</p>
          */
         @NameInMap("description")
         public String description;
 
-        /**
-         * <p>The name of the plug-in.</p>
-         */
         @NameInMap("name")
         public String name;
 
-        /**
-         * <p>The source type of the plug-in.</p>
-         */
         @NameInMap("source")
         public String source;
 
         /**
-         * <p>The address of the plug-in description document.</p>
+         * <p>The name of the plug-in.</p>
          */
         @NameInMap("specificationUrl")
         public String specificationUrl;
 
-        /**
-         * <p>The status of the plug-in.</p>
-         */
         @NameInMap("state")
         public String state;
 

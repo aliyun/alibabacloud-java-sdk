@@ -5,19 +5,27 @@ import com.aliyun.tea.*;
 
 public class ListSearchLogResponseBody extends TeaModel {
     /**
-     * <p>The header of the response.</p>
+     * <p>The level of the log. Valid values:</p>
+     * <br>
+     * <p>*   warn: warning log</p>
+     * <p>*   info: information log</p>
+     * <p>*   error: error log</p>
+     * <p>*   trace: trace logs</p>
+     * <p>*   debug: debug logs</p>
+     * <br>
+     * <p>The level information has been migrated to the contentCollection field.</p>
      */
     @NameInMap("Headers")
     public ListSearchLogResponseBodyHeaders headers;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The list of logs returned by the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of logs returned by the request.</p>
+     * <p>The content of the log entry. Migrated to the contentCollection field.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListSearchLogResponseBodyResult> result;
@@ -53,7 +61,7 @@ public class ListSearchLogResponseBody extends TeaModel {
 
     public static class ListSearchLogResponseBodyHeaders extends TeaModel {
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The IP address of the node that generates the log.</p>
          */
         @NameInMap("X-Total-Count")
         public Integer xTotalCount;
@@ -75,46 +83,29 @@ public class ListSearchLogResponseBody extends TeaModel {
 
     public static class ListSearchLogResponseBodyResult extends TeaModel {
         /**
-         * <p>The content of the log entry. Migrated to the contentCollection field.</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("content")
         public String content;
 
-        /**
-         * <p>Details of the log entry. Different content fields are returned for different log types.</p>
-         */
         @NameInMap("contentCollection")
         public java.util.Map<String, ?> contentCollection;
 
         /**
-         * <p>The IP address of the node that generates the log.</p>
+         * <p>Details of the log entry. Different content fields are returned for different log types.</p>
          */
         @NameInMap("host")
         public String host;
 
-        /**
-         * <p>The ID of the instance.</p>
-         */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
-         * <p>The level of the log. Valid values:</p>
-         * <br>
-         * <p>*   warn: warning log</p>
-         * <p>*   info: information log</p>
-         * <p>*   error: error log</p>
-         * <p>*   trace: trace logs</p>
-         * <p>*   debug: debug logs</p>
-         * <br>
-         * <p>The level information has been migrated to the contentCollection field.</p>
+         * <p>The timestamp when the log is generated. Unit: ms.</p>
          */
         @NameInMap("level")
         public String level;
 
-        /**
-         * <p>The timestamp when the log is generated. Unit: ms.</p>
-         */
         @NameInMap("timestamp")
         public Long timestamp;
 

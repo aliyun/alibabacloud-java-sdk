@@ -4,18 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class CreatePipelinesResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the pipeline is created. Valor:</p>
-     * <br>
-     * <p>*   true: The task is created.</p>
-     * <p>*   false: The instance failed to be created.</p>
-     */
     @NameInMap("Result")
     public Boolean result;
 

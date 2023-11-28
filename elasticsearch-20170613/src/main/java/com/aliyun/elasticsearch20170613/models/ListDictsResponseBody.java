@@ -4,12 +4,21 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDictsResponseBody extends TeaModel {
+    /**
+     * <p>The header of the response.</p>
+     */
     @NameInMap("Headers")
     public ListDictsResponseBodyHeaders headers;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListDictsResponseBodyResult> result;
 
@@ -43,6 +52,9 @@ public class ListDictsResponseBody extends TeaModel {
     }
 
     public static class ListDictsResponseBodyHeaders extends TeaModel {
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("X-Total-Count")
         public Integer xTotalCount;
 
@@ -62,18 +74,36 @@ public class ListDictsResponseBody extends TeaModel {
     }
 
     public static class ListDictsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The link that is used to download the dictionary over the Internet. The link is valid for 90s.</p>
+         */
         @NameInMap("downloadUrl")
         public String downloadUrl;
 
+        /**
+         * <p>The size of the dictionary file. Unit: byte.</p>
+         */
         @NameInMap("fileSize")
         public Long fileSize;
 
+        /**
+         * <p>The name of the dictionary file.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The source type.</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <p>The type of the IK dictionary. Valid values:</p>
+         * <br>
+         * <p>*   MAIN: main dictionary</p>
+         * <p>*   STOP: stopword list</p>
+         */
         @NameInMap("type")
         public String type;
 

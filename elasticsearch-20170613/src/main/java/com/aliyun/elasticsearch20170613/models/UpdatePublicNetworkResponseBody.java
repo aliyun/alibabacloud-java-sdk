@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdatePublicNetworkResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The return results.</p>
+     */
     @NameInMap("Result")
     public UpdatePublicNetworkResponseBodyResult result;
 
@@ -32,6 +38,9 @@ public class UpdatePublicNetworkResponseBody extends TeaModel {
     }
 
     public static class UpdatePublicNetworkResponseBodyResult extends TeaModel {
+        /**
+         * <p>The status of the public network access switch.</p>
+         */
         @NameInMap("enablePublic")
         public Boolean enablePublic;
 

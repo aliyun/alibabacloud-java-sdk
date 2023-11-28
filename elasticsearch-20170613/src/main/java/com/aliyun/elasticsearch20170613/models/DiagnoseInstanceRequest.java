@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DiagnoseInstanceRequest extends TeaModel {
     /**
-     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*</p>
+     * <p>The timestamp when the diagnostic report was generated.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -20,7 +20,7 @@ public class DiagnoseInstanceRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>en</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("lang")
     public String lang;

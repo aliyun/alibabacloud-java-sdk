@@ -4,9 +4,18 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateKibanaSettingsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return results:</p>
+     * <br>
+     * <p>*   true: The Kibana language modified successfully</p>
+     * <p>*   false: The Kibana language modified failed</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

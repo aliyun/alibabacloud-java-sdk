@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListAllNodeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The zone ID of the node.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The return results.</p>
+     * <p>The CPU utilization.</p>
+     * <br>
+     * <p>>  If the **extended** request parameter is set to **true** and the monitoring information of the nodes in the cluster is being synchronized, the value of the cpuPercent parameter is null. In this case, you need to send a request again after 10 seconds to obtain the value of the cpuPercent parameter.</p>
      */
     @NameInMap("Result")
     public java.util.List<ListAllNodeResponseBodyResult> result;
@@ -39,42 +41,43 @@ public class ListAllNodeResponseBody extends TeaModel {
 
     public static class ListAllNodeResponseBodyResult extends TeaModel {
         /**
-         * <p>The CPU utilization.</p>
-         * <br>
-         * <p>>  If the **extended** request parameter is set to **true** and the monitoring information of the nodes in the cluster is being synchronized, the value of the cpuPercent parameter is null. In this case, you need to send a request again after 10 seconds to obtain the value of the cpuPercent parameter.</p>
+         * <p>The disk usage.</p>
          */
         @NameInMap("cpuPercent")
         public String cpuPercent;
 
         /**
-         * <p>The disk usage.</p>
+         * <p>The health status of the node. Valid values: GREEN, YELLOW, RED, and GRAY.</p>
          */
         @NameInMap("diskUsedPercent")
         public String diskUsedPercent;
 
-        /**
-         * <p>The health status of the node. Valid values: GREEN, YELLOW, RED, and GRAY.</p>
-         */
         @NameInMap("health")
         public String health;
 
         /**
-         * <p>The Java Virtual Machine (JVM) heap memory usage of the node.</p>
+         * <p>The IP address of the node.</p>
          */
         @NameInMap("heapPercent")
         public String heapPercent;
 
         /**
-         * <p>The IP address of the node.</p>
+         * <p>The port that is used to connect to the node.</p>
          */
         @NameInMap("host")
         public String host;
 
+        @NameInMap("loadOneM")
+        public String loadOneM;
+
         /**
          * <p>The 1-minute load of the node.</p>
          */
-        @NameInMap("loadOneM")
-        public String loadOneM;
+        @NameInMap("nodeType")
+        public String nodeType;
+
+        @NameInMap("port")
+        public Integer port;
 
         /**
          * <p>The type of the nodes. Valid values:</p>
@@ -84,18 +87,6 @@ public class ListAllNodeResponseBody extends TeaModel {
          * <p>*   WORKER_WARM: warm node</p>
          * <p>*   COORDINATING: client node</p>
          * <p>*   KIBANA: Kibana node</p>
-         */
-        @NameInMap("nodeType")
-        public String nodeType;
-
-        /**
-         * <p>The port that is used to connect to the node.</p>
-         */
-        @NameInMap("port")
-        public Integer port;
-
-        /**
-         * <p>The zone ID of the node.</p>
          */
         @NameInMap("zoneId")
         public String zoneId;

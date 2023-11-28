@@ -4,9 +4,18 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class RestartCollectorResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the shipper is restarted. Valid values:</p>
+     * <br>
+     * <p>*   true: The shipper is restarted.</p>
+     * <p>*   false: The shipper fails to be restarted.</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

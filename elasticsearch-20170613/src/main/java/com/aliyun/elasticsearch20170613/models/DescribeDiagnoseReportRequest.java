@@ -4,9 +4,6 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnoseReportRequest extends TeaModel {
-    /**
-     * <p>en</p>
-     */
     @NameInMap("lang")
     public String lang;
 

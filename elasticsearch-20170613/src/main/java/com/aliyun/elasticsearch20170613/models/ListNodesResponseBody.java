@@ -4,12 +4,21 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListNodesResponseBody extends TeaModel {
+    /**
+     * <p>The header of the response.</p>
+     */
     @NameInMap("Headers")
     public ListNodesResponseBodyHeaders headers;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListNodesResponseBodyResult> result;
 
@@ -43,6 +52,9 @@ public class ListNodesResponseBody extends TeaModel {
     }
 
     public static class ListNodesResponseBodyHeaders extends TeaModel {
+        /**
+         * <p>The number of entries returned.</p>
+         */
         @NameInMap("X-Total-Count")
         public Integer xTotalCount;
 
@@ -62,9 +74,18 @@ public class ListNodesResponseBody extends TeaModel {
     }
 
     public static class ListNodesResponseBodyResultIpAddress extends TeaModel {
+        /**
+         * <p>The IP address.</p>
+         */
         @NameInMap("host")
         public String host;
 
+        /**
+         * <p>The type of the IP address. Valid values:</p>
+         * <br>
+         * <p>*   public: public IP address</p>
+         * <p>*   private: private IP address</p>
+         */
         @NameInMap("ipType")
         public String ipType;
 
@@ -92,9 +113,15 @@ public class ListNodesResponseBody extends TeaModel {
     }
 
     public static class ListNodesResponseBodyResultTags extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("tagKey")
         public String tagKey;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("tagValue")
         public String tagValue;
 
@@ -122,27 +149,67 @@ public class ListNodesResponseBody extends TeaModel {
     }
 
     public static class ListNodesResponseBodyResult extends TeaModel {
+        /**
+         * <p>The status of the shipper on the ECS instance. Valid values:</p>
+         * <br>
+         * <p>*   heartOk: The heartbeat is normal.</p>
+         * <p>*   heartLost: The heartbeat is abnormal.</p>
+         * <p>*   uninstalled: The shipper is not installed.</p>
+         * <p>*   failed: The shipper fails to be installed.</p>
+         */
         @NameInMap("agentStatus")
         public String agentStatus;
 
+        /**
+         * <p>Indicates whether the Cloud Assistant client is installed. Valid values:</p>
+         * <br>
+         * <p>*   true: installed</p>
+         * <p>*   false: not installed</p>
+         */
         @NameInMap("cloudAssistantStatus")
         public String cloudAssistantStatus;
 
+        /**
+         * <p>The ID of the ECS instance.</p>
+         */
         @NameInMap("ecsInstanceId")
         public String ecsInstanceId;
 
+        /**
+         * <p>The name of the ECS instance.</p>
+         */
         @NameInMap("ecsInstanceName")
         public String ecsInstanceName;
 
+        /**
+         * <p>The IP addresses of the ECS instance.</p>
+         */
         @NameInMap("ipAddress")
         public java.util.List<ListNodesResponseBodyResultIpAddress> ipAddress;
 
+        /**
+         * <p>The operating system type of the ECS instance. Valid values:</p>
+         * <br>
+         * <p>*   windows: Windows Server</p>
+         * <p>*   linux: Linux</p>
+         */
         @NameInMap("osType")
         public String osType;
 
+        /**
+         * <p>The status of the ECS instance. Valid values:</p>
+         * <br>
+         * <p>*   running: The instance is running.</p>
+         * <p>*   starting: The instance is being started.</p>
+         * <p>*   stopping: The instance is being stopped.</p>
+         * <p>*   stopped: The instance is stopped.</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The tags of the ECS instance.</p>
+         */
         @NameInMap("tags")
         public java.util.List<ListNodesResponseBodyResultTags> tags;
 

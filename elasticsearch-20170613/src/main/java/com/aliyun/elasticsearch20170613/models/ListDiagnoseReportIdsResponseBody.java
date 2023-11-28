@@ -4,9 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDiagnoseReportIdsResponseBody extends TeaModel {
+    /**
+     * <p>The header of the response.</p>
+     */
     @NameInMap("Headers")
     public ListDiagnoseReportIdsResponseBodyHeaders headers;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,6 +49,9 @@ public class ListDiagnoseReportIdsResponseBody extends TeaModel {
     }
 
     public static class ListDiagnoseReportIdsResponseBodyHeaders extends TeaModel {
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("X-Total-Count")
         public Integer xTotalCount;
 

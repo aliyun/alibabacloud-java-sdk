@@ -8,7 +8,10 @@ public class UpdateAdminPasswordRequest extends TeaModel {
     public String esAdminPassword;
 
     /**
-     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF\*\*\*\*</p>
+     * <p>Indicates whether the password was updated. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
      */
     @NameInMap("clientToken")
     public String clientToken;

@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class ListLogstashLogRequest extends TeaModel {
     /**
-     * <p>1531910852074</p>
+     * <p>20</p>
      */
     @NameInMap("beginTime")
     public Long beginTime;
 
     /**
-     * <p>1531910852074</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("endTime")
     public Long endTime;
 
     /**
-     * <p>1</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("page")
     public Integer page;
 
     /**
-     * <p>host:10.7.xx.xx AND level:info AND content:opening</p>
+     * <p>1</p>
      */
     @NameInMap("query")
     public String query;
 
     /**
-     * <p>20</p>
+     * <p>The severity level of the log entry. Including trace, debug, info, warn, error, etc. (GC logs have no level).</p>
      */
     @NameInMap("size")
     public Integer size;
 
     /**
-     * <p>LOGSTASH_INSTANCE_LOG</p>
+     * <p>1531910852074</p>
      */
     @NameInMap("type")
     public String type;

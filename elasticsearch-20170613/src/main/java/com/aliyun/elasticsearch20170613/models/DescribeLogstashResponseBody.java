@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeLogstashResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Detailed information about the instance.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Detailed information about the instance.</p>
+     * <p>The configurations of the instance.</p>
      */
     @NameInMap("Result")
     public DescribeLogstashResponseBodyResult result;
@@ -39,13 +39,13 @@ public class DescribeLogstashResponseBody extends TeaModel {
 
     public static class DescribeLogstashResponseBodyResultTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("tagKey")
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The information about the zones.</p>
          */
         @NameInMap("tagValue")
         public String tagValue;
@@ -75,16 +75,13 @@ public class DescribeLogstashResponseBody extends TeaModel {
 
     public static class DescribeLogstashResponseBodyResultZoneInfos extends TeaModel {
         /**
-         * <p>The status of the zone. Valid values:</p>
-         * <br>
-         * <p>*   ISOLATION: offline</p>
-         * <p>*   NORMAL</p>
+         * <p>The zone ID of the new instance.</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
-         * <p>The zone ID of the new instance.</p>
+         * <p>The configuration of cluster extension parameters.</p>
          */
         @NameInMap("zoneId")
         public String zoneId;
@@ -114,19 +111,19 @@ public class DescribeLogstashResponseBody extends TeaModel {
 
     public static class DescribeLogstashResponseBodyResultEndpointList extends TeaModel {
         /**
-         * <p>The IP address of the node.</p>
+         * <p>The tags added to the ALB instance.</p>
          */
         @NameInMap("host")
         public String host;
 
         /**
-         * <p>The port number.</p>
+         * <p>The IP address of the node.</p>
          */
         @NameInMap("port")
         public String port;
 
         /**
-         * <p>The ID of the zone where the node resides.</p>
+         * <p>The port number.</p>
          */
         @NameInMap("zoneId")
         public String zoneId;
@@ -164,26 +161,23 @@ public class DescribeLogstashResponseBody extends TeaModel {
 
     public static class DescribeLogstashResponseBodyResultNetworkConfig extends TeaModel {
         /**
-         * <p>The network type of the instance. Valid values: Currently, only Virtual Private Cloud (VPC) are supported.</p>
+         * <p>The ID of the vSwitch to which the instance is connected.</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The zone where the cluster resides.</p>
          */
         @NameInMap("vpcId")
         public String vpcId;
 
         /**
-         * <p>The zone where the cluster resides.</p>
+         * <p>The network type of the instance. Valid values: Currently, only Virtual Private Cloud (VPC) are supported.</p>
          */
         @NameInMap("vsArea")
         public String vsArea;
 
-        /**
-         * <p>The ID of the vSwitch to which the instance is connected.</p>
-         */
         @NameInMap("vswitchId")
         public String vswitchId;
 
@@ -228,28 +222,28 @@ public class DescribeLogstashResponseBody extends TeaModel {
 
     public static class DescribeLogstashResponseBodyResultNodeSpec extends TeaModel {
         /**
-         * <p>The disk size of the node.</p>
-         */
-        @NameInMap("disk")
-        public Integer disk;
-
-        /**
          * <p>Whether to use disk encryption:</p>
          * <br>
          * <p>*   true</p>
          * <p>*   false</p>
          */
+        @NameInMap("disk")
+        public Integer disk;
+
+        /**
+         * <p>The disk type of the node.</p>
+         */
         @NameInMap("diskEncryption")
         public Boolean diskEncryption;
 
         /**
-         * <p>The disk type of the node.</p>
+         * <p>The network configurations.</p>
          */
         @NameInMap("diskType")
         public String diskType;
 
         /**
-         * <p>The specifications of the node.</p>
+         * <p>The disk size of the node.</p>
          */
         @NameInMap("spec")
         public String spec;
@@ -295,76 +289,31 @@ public class DescribeLogstashResponseBody extends TeaModel {
 
     public static class DescribeLogstashResponseBodyResult extends TeaModel {
         /**
-         * <p>The configuration of cluster extension parameters.</p>
+         * <p>The configuration information of the node.</p>
          */
         @NameInMap("ExtendConfigs")
         public java.util.List<java.util.Map<String, ?>> extendConfigs;
 
         /**
-         * <p>The ID of the resource group to which the instance belongs.</p>
+         * <p>The number of data nodes.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The tags added to the ALB instance.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeLogstashResponseBodyResultTags> tags;
 
         /**
-         * <p>The information about the zones.</p>
+         * <p>The status of the zone. Valid values:</p>
+         * <br>
+         * <p>*   ISOLATION: offline</p>
+         * <p>*   NORMAL</p>
          */
         @NameInMap("ZoneInfos")
         public java.util.List<DescribeLogstashResponseBodyResultZoneInfos> zoneInfos;
-
-        /**
-         * <p>The configurations of the instance.</p>
-         */
-        @NameInMap("config")
-        public java.util.Map<String, ?> config;
-
-        /**
-         * <p>The time when the instance was created.</p>
-         */
-        @NameInMap("createdAt")
-        public String createdAt;
-
-        /**
-         * <p>The name of the instance.</p>
-         */
-        @NameInMap("description")
-        public String description;
-
-        /**
-         * <p>The access information of the node.</p>
-         */
-        @NameInMap("endpointList")
-        public java.util.List<DescribeLogstashResponseBodyResultEndpointList> endpointList;
-
-        /**
-         * <p>The ID of the instance.</p>
-         */
-        @NameInMap("instanceId")
-        public String instanceId;
-
-        /**
-         * <p>The network configurations.</p>
-         */
-        @NameInMap("networkConfig")
-        public DescribeLogstashResponseBodyResultNetworkConfig networkConfig;
-
-        /**
-         * <p>The number of data nodes.</p>
-         */
-        @NameInMap("nodeAmount")
-        public Integer nodeAmount;
-
-        /**
-         * <p>The configuration information of the node.</p>
-         */
-        @NameInMap("nodeSpec")
-        public DescribeLogstashResponseBodyResultNodeSpec nodeSpec;
 
         /**
          * <p>The billing method of the instance. Valid values:</p>
@@ -372,8 +321,8 @@ public class DescribeLogstashResponseBody extends TeaModel {
          * <p>*   prepaid: subscription</p>
          * <p>*   postpaid: pay-as-you-go</p>
          */
-        @NameInMap("paymentType")
-        public String paymentType;
+        @NameInMap("config")
+        public java.util.Map<String, ?> config;
 
         /**
          * <p>The state of the instance. Four states are supported:</p>
@@ -383,23 +332,71 @@ public class DescribeLogstashResponseBody extends TeaModel {
          * <p>*   Freeze: inactive</p>
          * <p>*   Invalid: invalid</p>
          */
+        @NameInMap("createdAt")
+        public String createdAt;
+
+        /**
+         * <p>The time when the instance was created.</p>
+         */
+        @NameInMap("description")
+        public String description;
+
+        /**
+         * <p>The ID of the zone where the node resides.</p>
+         */
+        @NameInMap("endpointList")
+        public java.util.List<DescribeLogstashResponseBodyResultEndpointList> endpointList;
+
+        /**
+         * <p>The access information of the node.</p>
+         */
+        @NameInMap("instanceId")
+        public String instanceId;
+
+        /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         */
+        @NameInMap("networkConfig")
+        public DescribeLogstashResponseBodyResultNetworkConfig networkConfig;
+
+        /**
+         * <p>The name of the instance.</p>
+         */
+        @NameInMap("nodeAmount")
+        public Integer nodeAmount;
+
+        /**
+         * <p>The specifications of the node.</p>
+         */
+        @NameInMap("nodeSpec")
+        public DescribeLogstashResponseBodyResultNodeSpec nodeSpec;
+
+        /**
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         */
+        @NameInMap("paymentType")
+        public String paymentType;
+
+        /**
+         * <p>The ID of the virtual private cloud (VPC) to which the elastic container instances belong.</p>
+         */
         @NameInMap("status")
         public String status;
 
         /**
-         * <p>The time when the instance was last updated.</p>
+         * <p>The edition of the dedicated KMS instance.</p>
          */
         @NameInMap("updatedAt")
         public String updatedAt;
 
         /**
-         * <p>The edition of the dedicated KMS instance.</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("version")
         public String version;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) to which the elastic container instances belong.</p>
+         * <p>The time when the instance was last updated.</p>
          */
         @NameInMap("vpcInstanceId")
         public String vpcInstanceId;
