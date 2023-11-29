@@ -4,12 +4,21 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListShipperResponseBody extends TeaModel {
+    /**
+     * <p>The number of log shipping jobs returned.</p>
+     */
     @NameInMap("count")
     public Long count;
 
+    /**
+     * <p>The names of the log shipping jobs.</p>
+     */
     @NameInMap("shipper")
     public java.util.List<String> shipper;
 
+    /**
+     * <p>The total number of log shipping jobs.</p>
+     */
     @NameInMap("total")
     public Long total;
 

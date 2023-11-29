@@ -4,15 +4,27 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetShipperStatusResponseBody extends TeaModel {
+    /**
+     * <p>The number of log shipping jobs returned on the current page.</p>
+     */
     @NameInMap("count")
     public Long count;
 
+    /**
+     * <p>The statistics about log shipping jobs.</p>
+     */
     @NameInMap("statistics")
     public GetShipperStatusResponseBodyStatistics statistics;
 
+    /**
+     * <p>The details of log shipping jobs.</p>
+     */
     @NameInMap("tasks")
     public GetShipperStatusResponseBodyTasks tasks;
 
+    /**
+     * <p>The total number of log shipping jobs.</p>
+     */
     @NameInMap("total")
     public Long total;
 
@@ -54,12 +66,21 @@ public class GetShipperStatusResponseBody extends TeaModel {
     }
 
     public static class GetShipperStatusResponseBodyStatistics extends TeaModel {
+        /**
+         * <p>The number of log shipping jobs that are in the fail state.</p>
+         */
         @NameInMap("fail")
         public Long fail;
 
+        /**
+         * <p>The number of log shipping jobs that are in the running state.</p>
+         */
         @NameInMap("running")
         public Long running;
 
+        /**
+         * <p>The number of log shipping jobs that are in the success state.</p>
+         */
         @NameInMap("success")
         public Long success;
 
@@ -95,27 +116,51 @@ public class GetShipperStatusResponseBody extends TeaModel {
     }
 
     public static class GetShipperStatusResponseBodyTasks extends TeaModel {
+        /**
+         * <p>The ID of the log shipping job.</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The error code of the log shipping job.</p>
+         */
         @NameInMap("taskCode")
         public String taskCode;
 
+        /**
+         * <p>The start time of the log shipping job. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("taskCreateTime")
         public Long taskCreateTime;
 
+        /**
+         * <p>The number of logs that are shipped in the log shipping job.</p>
+         */
         @NameInMap("taskDataLines")
         public Integer taskDataLines;
 
+        /**
+         * <p>The end time of the log shipping job. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("taskFinishTime")
         public Long taskFinishTime;
 
+        /**
+         * <p>The time when Simple Log Service receives the most recent log of the log shipping job. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("taskLastDataReceiveTime")
         public Long taskLastDataReceiveTime;
 
+        /**
+         * <p>The error message of the log shipping job.</p>
+         */
         @NameInMap("taskMessage")
         public String taskMessage;
 
+        /**
+         * <p>The status of the log shipping job. Valid values: running, success, and fail.</p>
+         */
         @NameInMap("taskStatus")
         public String taskStatus;
 

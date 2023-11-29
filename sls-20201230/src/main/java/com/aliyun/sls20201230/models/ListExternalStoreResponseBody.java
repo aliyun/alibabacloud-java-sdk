@@ -4,12 +4,21 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListExternalStoreResponseBody extends TeaModel {
+    /**
+     * <p>The number of external stores returned on the current page.</p>
+     */
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <p>The names of the external stores.</p>
+     */
     @NameInMap("externalstores")
     public java.util.List<ExternalStore> externalstores;
 
+    /**
+     * <p>The number of external stores that meet the query conditions.</p>
+     */
     @NameInMap("total")
     public Integer total;
 

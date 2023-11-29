@@ -4,9 +4,15 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetLogsV2ResponseBody extends TeaModel {
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("data")
     public java.util.List<java.util.Map<String, String>> data;
 
+    /**
+     * <p>The metadata that is returned.</p>
+     */
     @NameInMap("meta")
     public GetLogsV2ResponseBodyMeta meta;
 
@@ -32,39 +38,78 @@ public class GetLogsV2ResponseBody extends TeaModel {
     }
 
     public static class GetLogsV2ResponseBodyMeta extends TeaModel {
+        /**
+         * <p>The SQL statement after | in the query statement.</p>
+         */
         @NameInMap("aggQuery")
         public String aggQuery;
 
+        /**
+         * <p>The number of rows that are returned.</p>
+         */
         @NameInMap("count")
         public Integer count;
 
+        /**
+         * <p>The amount of time that is consumed by the request. Unit: milliseconds.</p>
+         */
         @NameInMap("elapsedMillisecond")
         public Long elapsedMillisecond;
 
+        /**
+         * <p>Indicates whether the query is an SQL query.</p>
+         */
         @NameInMap("hasSQL")
         public Boolean hasSQL;
 
+        /**
+         * <p>Indicates whether the returned result is accurate.</p>
+         */
         @NameInMap("isAccurate")
         public Boolean isAccurate;
 
+        /**
+         * <p>All keys in the query result.</p>
+         */
         @NameInMap("keys")
         public java.util.List<String> keys;
 
+        /**
+         * <p>The number of logs that are processed in the request.</p>
+         */
         @NameInMap("processedBytes")
         public Long processedBytes;
 
+        /**
+         * <p>The number of rows that are processed in the request.</p>
+         */
         @NameInMap("processedRows")
         public Integer processedRows;
 
+        /**
+         * <p>Indicates whether the query result is complete. Valid values:</p>
+         * <br>
+         * <p>*   Complete: The query was successful, and the complete result is returned.</p>
+         * <p>*   Incomplete: The query was successful, but the query result is incomplete. To obtain the complete result, you must call the operation again.</p>
+         */
         @NameInMap("progress")
         public String progress;
 
+        /**
+         * <p>The type of observable data.</p>
+         */
         @NameInMap("telementryType")
         public String telementryType;
 
+        /**
+         * <p>All terms in the query statement.</p>
+         */
         @NameInMap("terms")
         public java.util.List<java.util.Map<String, ?>> terms;
 
+        /**
+         * <p>The part before | in the query statement.</p>
+         */
         @NameInMap("whereQuery")
         public String whereQuery;
 

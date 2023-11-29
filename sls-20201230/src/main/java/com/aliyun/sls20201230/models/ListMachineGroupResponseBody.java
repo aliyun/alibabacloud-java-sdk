@@ -4,12 +4,21 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListMachineGroupResponseBody extends TeaModel {
+    /**
+     * <p>The number of machine groups that are returned on the current page.</p>
+     */
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <p>The machine groups that meet the query conditions.</p>
+     */
     @NameInMap("machinegroups")
     public java.util.List<String> machinegroups;
 
+    /**
+     * <p>The total number of machine groups that meet the query conditions.</p>
+     */
     @NameInMap("total")
     public Integer total;
 

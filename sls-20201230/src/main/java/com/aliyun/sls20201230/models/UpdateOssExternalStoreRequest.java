@@ -4,12 +4,21 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class UpdateOssExternalStoreRequest extends TeaModel {
+    /**
+     * <p>The name of the external store.</p>
+     */
     @NameInMap("externalStoreName")
     public String externalStoreName;
 
+    /**
+     * <p>The parameters that are configured for the external store.</p>
+     */
     @NameInMap("parameter")
     public UpdateOssExternalStoreRequestParameter parameter;
 
+    /**
+     * <p>The type of the external store. Set the value to oss.</p>
+     */
     @NameInMap("storeType")
     public String storeType;
 
@@ -43,9 +52,15 @@ public class UpdateOssExternalStoreRequest extends TeaModel {
     }
 
     public static class UpdateOssExternalStoreRequestParameterColumns extends TeaModel {
+        /**
+         * <p>The key of the field.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The type of the field.</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -73,21 +88,39 @@ public class UpdateOssExternalStoreRequest extends TeaModel {
     }
 
     public static class UpdateOssExternalStoreRequestParameter extends TeaModel {
+        /**
+         * <p>The AccessKey ID of your account.</p>
+         */
         @NameInMap("accessid")
         public String accessid;
 
+        /**
+         * <p>The AccessKey secret of your account.</p>
+         */
         @NameInMap("accesskey")
         public String accesskey;
 
+        /**
+         * <p>The name of the OSS bucket.</p>
+         */
         @NameInMap("bucket")
         public String bucket;
 
+        /**
+         * <p>The associated fields.</p>
+         */
         @NameInMap("columns")
         public java.util.List<UpdateOssExternalStoreRequestParameterColumns> columns;
 
+        /**
+         * <p>The OSS endpoint.</p>
+         */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <p>The associated objects.</p>
+         */
         @NameInMap("objects")
         public java.util.List<String> objects;
 

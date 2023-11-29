@@ -7,6 +7,9 @@ public class GetLogsV2Headers extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    /**
+     * <p>The compression method.</p>
+     */
     @NameInMap("Accept-Encoding")
     public String acceptEncoding;
 

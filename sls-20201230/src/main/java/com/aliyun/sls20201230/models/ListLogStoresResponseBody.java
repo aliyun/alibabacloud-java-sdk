@@ -4,12 +4,21 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListLogStoresResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries that are returned on the current page.</p>
+     */
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <p>The Logstores that meet the query conditions.</p>
+     */
     @NameInMap("logstores")
     public java.util.List<String> logstores;
 
+    /**
+     * <p>The number of the Logstores that meet the query conditions.</p>
+     */
     @NameInMap("total")
     public Integer total;
 

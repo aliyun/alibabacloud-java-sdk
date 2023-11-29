@@ -4,12 +4,21 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class UpdateRdsExternalStoreRequest extends TeaModel {
+    /**
+     * <p>The name of the external store.</p>
+     */
     @NameInMap("externalStoreName")
     public String externalStoreName;
 
+    /**
+     * <p>The parameter struct.</p>
+     */
     @NameInMap("parameter")
     public UpdateRdsExternalStoreRequestParameter parameter;
 
+    /**
+     * <p>The storage type. Set the value to rds-vpc, which indicates an ApsaraDB RDS for MySQL database in a virtual private cloud (VPC).</p>
+     */
     @NameInMap("storeType")
     public String storeType;
 
@@ -43,30 +52,57 @@ public class UpdateRdsExternalStoreRequest extends TeaModel {
     }
 
     public static class UpdateRdsExternalStoreRequestParameter extends TeaModel {
+        /**
+         * <p>The name of the database in the ApsaraDB RDS for MySQL instance.</p>
+         */
         @NameInMap("db")
         public String db;
 
+        /**
+         * <p>The internal or public endpoint of the ApsaraDB RDS for MySQL instance.</p>
+         */
         @NameInMap("host")
         public String host;
 
+        /**
+         * <p>The ID of the ApsaraDB RDS for MySQL instance.</p>
+         */
         @NameInMap("instance-id")
         public String instanceId;
 
+        /**
+         * <p>The password that is used to log on to the ApsaraDB RDS for MySQL instance.</p>
+         */
         @NameInMap("password")
         public String password;
 
+        /**
+         * <p>The internal or public port of the ApsaraDB RDS for MySQL instance.</p>
+         */
         @NameInMap("port")
         public String port;
 
+        /**
+         * <p>The region where the ApsaraDB RDS for MySQL instance resides. Valid values: cn-qingdao, cn-beijing, and cn-hangzhou.</p>
+         */
         @NameInMap("region")
         public String region;
 
+        /**
+         * <p>The name of the database table in the ApsaraDB RDS for MySQL instance.</p>
+         */
         @NameInMap("table")
         public String table;
 
+        /**
+         * <p>The username that is used to log on to the ApsaraDB RDS for MySQL instance.</p>
+         */
         @NameInMap("username")
         public String username;
 
+        /**
+         * <p>The ID of the VPC to which the ApsaraDB RDS for MySQL instance belongs.</p>
+         */
         @NameInMap("vpc-id")
         public String vpcId;
 

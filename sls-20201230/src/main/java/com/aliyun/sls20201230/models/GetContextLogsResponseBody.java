@@ -4,18 +4,36 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetContextLogsResponseBody extends TeaModel {
+    /**
+     * <p>The number of logs that are generated before the generation time of the start log.</p>
+     */
     @NameInMap("back_lines")
     public Long backLines;
 
+    /**
+     * <p>The number of logs that are generated after the generation time of the start log.</p>
+     */
     @NameInMap("forward_lines")
     public Long forwardLines;
 
+    /**
+     * <p>The logs that are returned.</p>
+     */
     @NameInMap("logs")
     public java.util.List<java.util.Map<String, ?>> logs;
 
+    /**
+     * <p>Indicates whether the query and analysis results are complete. Valid values:</p>
+     * <br>
+     * <p>*   Complete: The query is successful, and the complete query and analysis results are returned.</p>
+     * <p>*   Incomplete: The query is successful, but the query and analysis results are incomplete. To obtain the complete results, you must repeat the request.</p>
+     */
     @NameInMap("progress")
     public String progress;
 
+    /**
+     * <p>The total number of logs that are returned. The logs include the start log that is specified in the request.</p>
+     */
     @NameInMap("total_lines")
     public Long totalLines;
 

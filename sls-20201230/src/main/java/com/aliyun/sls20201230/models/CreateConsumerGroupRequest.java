@@ -4,12 +4,29 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class CreateConsumerGroupRequest extends TeaModel {
+    /**
+     * <p>The name of the consumer group. The name must be unique in a project.</p>
+     */
     @NameInMap("consumerGroup")
     public String consumerGroup;
 
+    /**
+     * <p>Specifies whether to consume data in sequence. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <br>
+     * <p>    *   In a shard, data is consumed in ascending order based on the value of the \*\*\__tag\_\_:\__receive_time\_\_\*\* field.</p>
+     * <p>    *   If a shard is split, data in the original shard is consumed first. Then, data in the new shards is consumed at the same time.</p>
+     * <p>    *   If shards are merged, data in the original shards is consumed first. Then, data in the new shard is consumed.</p>
+     * <br>
+     * <p>*   false Data in all shards is consumed at the same time. If a new shard is generated after a shard is split or after shards are merged, data in the new shard is immediately consumed.</p>
+     */
     @NameInMap("order")
     public Boolean order;
 
+    /**
+     * <p>The timeout period. If the server does not receive heartbeats from a consumer within the timeout period, the server deletes the consumer. Unit: seconds.</p>
+     */
     @NameInMap("timeout")
     public Integer timeout;
 

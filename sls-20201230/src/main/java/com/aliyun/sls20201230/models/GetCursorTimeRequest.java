@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetCursorTimeRequest extends TeaModel {
+    /**
+     * <p>The cursor.</p>
+     */
     @NameInMap("cursor")
     public String cursor;
 
