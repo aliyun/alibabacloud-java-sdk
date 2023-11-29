@@ -7,6 +7,9 @@ public class DeleteInstancesRequest extends TeaModel {
     @NameInMap("BackupRetainMode")
     public String backupRetainMode;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     @NameInMap("InstanceIds")
     public String instanceIds;
 
@@ -21,6 +24,14 @@ public class DeleteInstancesRequest extends TeaModel {
     }
     public String getBackupRetainMode() {
         return this.backupRetainMode;
+    }
+
+    public DeleteInstancesRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public DeleteInstancesRequest setInstanceIds(String instanceIds) {

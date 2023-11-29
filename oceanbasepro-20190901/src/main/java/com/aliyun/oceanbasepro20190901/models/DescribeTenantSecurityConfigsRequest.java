@@ -4,6 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeTenantSecurityConfigsRequest extends TeaModel {
+    @NameInMap("CheckId")
+    public String checkId;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,6 +16,14 @@ public class DescribeTenantSecurityConfigsRequest extends TeaModel {
     public static DescribeTenantSecurityConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTenantSecurityConfigsRequest self = new DescribeTenantSecurityConfigsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeTenantSecurityConfigsRequest setCheckId(String checkId) {
+        this.checkId = checkId;
+        return this;
+    }
+    public String getCheckId() {
+        return this.checkId;
     }
 
     public DescribeTenantSecurityConfigsRequest setInstanceId(String instanceId) {

@@ -95,6 +95,15 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceSecurityConfigsResponseBodyInstanceSecurityConfigs extends TeaModel {
+        @NameInMap("CheckId")
+        public String checkId;
+
+        @NameInMap("CheckTime")
+        public String checkTime;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
         @NameInMap("SecurityConfigs")
         public java.util.List<DescribeInstanceSecurityConfigsResponseBodyInstanceSecurityConfigsSecurityConfigs> securityConfigs;
 
@@ -107,6 +116,30 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
         public static DescribeInstanceSecurityConfigsResponseBodyInstanceSecurityConfigs build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceSecurityConfigsResponseBodyInstanceSecurityConfigs self = new DescribeInstanceSecurityConfigsResponseBodyInstanceSecurityConfigs();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceSecurityConfigsResponseBodyInstanceSecurityConfigs setCheckId(String checkId) {
+            this.checkId = checkId;
+            return this;
+        }
+        public String getCheckId() {
+            return this.checkId;
+        }
+
+        public DescribeInstanceSecurityConfigsResponseBodyInstanceSecurityConfigs setCheckTime(String checkTime) {
+            this.checkTime = checkTime;
+            return this;
+        }
+        public String getCheckTime() {
+            return this.checkTime;
+        }
+
+        public DescribeInstanceSecurityConfigsResponseBodyInstanceSecurityConfigs setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public DescribeInstanceSecurityConfigsResponseBodyInstanceSecurityConfigs setSecurityConfigs(java.util.List<DescribeInstanceSecurityConfigsResponseBodyInstanceSecurityConfigsSecurityConfigs> securityConfigs) {

@@ -7,6 +7,9 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     @NameInMap("DiskSize")
     public Long diskSize;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     @NameInMap("InstanceClass")
     public String instanceClass;
 
@@ -24,6 +27,14 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     }
     public Long getDiskSize() {
         return this.diskSize;
+    }
+
+    public ModifyInstanceSpecRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifyInstanceSpecRequest setInstanceClass(String instanceClass) {

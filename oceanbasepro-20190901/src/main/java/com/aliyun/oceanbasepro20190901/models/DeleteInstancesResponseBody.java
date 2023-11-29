@@ -4,6 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstancesResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public DeleteInstancesResponseBodyData data;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -12,12 +15,39 @@ public class DeleteInstancesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteInstancesResponseBody setData(DeleteInstancesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DeleteInstancesResponseBodyData getData() {
+        return this.data;
+    }
+
     public DeleteInstancesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class DeleteInstancesResponseBodyData extends TeaModel {
+        @NameInMap("DryRunResult")
+        public Boolean dryRunResult;
+
+        public static DeleteInstancesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            DeleteInstancesResponseBodyData self = new DeleteInstancesResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public DeleteInstancesResponseBodyData setDryRunResult(Boolean dryRunResult) {
+            this.dryRunResult = dryRunResult;
+            return this;
+        }
+        public Boolean getDryRunResult() {
+            return this.dryRunResult;
+        }
+
     }
 
 }

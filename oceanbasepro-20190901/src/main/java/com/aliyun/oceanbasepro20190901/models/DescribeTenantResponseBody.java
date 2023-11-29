@@ -104,6 +104,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("IntranetPort")
         public Integer intranetPort;
 
+        @NameInMap("MaxConnectionNum")
+        public Long maxConnectionNum;
+
         @NameInMap("ParallelQueryDegree")
         public Long parallelQueryDegree;
 
@@ -222,6 +225,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
         public Integer getIntranetPort() {
             return this.intranetPort;
+        }
+
+        public DescribeTenantResponseBodyTenantTenantConnections setMaxConnectionNum(Long maxConnectionNum) {
+            this.maxConnectionNum = maxConnectionNum;
+            return this;
+        }
+        public Long getMaxConnectionNum() {
+            return this.maxConnectionNum;
         }
 
         public DescribeTenantResponseBodyTenantTenantConnections setParallelQueryDegree(Long parallelQueryDegree) {
@@ -387,6 +398,36 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeTenantResponseBodyTenantTenantResourceLogDiskSize extends TeaModel {
+        @NameInMap("TotalLogDisk")
+        public Integer totalLogDisk;
+
+        @NameInMap("UnitLogDisk")
+        public Integer unitLogDisk;
+
+        public static DescribeTenantResponseBodyTenantTenantResourceLogDiskSize build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTenantResponseBodyTenantTenantResourceLogDiskSize self = new DescribeTenantResponseBodyTenantTenantResourceLogDiskSize();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeTenantResponseBodyTenantTenantResourceLogDiskSize setTotalLogDisk(Integer totalLogDisk) {
+            this.totalLogDisk = totalLogDisk;
+            return this;
+        }
+        public Integer getTotalLogDisk() {
+            return this.totalLogDisk;
+        }
+
+        public DescribeTenantResponseBodyTenantTenantResourceLogDiskSize setUnitLogDisk(Integer unitLogDisk) {
+            this.unitLogDisk = unitLogDisk;
+            return this;
+        }
+        public Integer getUnitLogDisk() {
+            return this.unitLogDisk;
+        }
+
+    }
+
     public static class DescribeTenantResponseBodyTenantTenantResourceMemory extends TeaModel {
         /**
          * <p>The information about the memory resources of the tenant.</p>
@@ -460,6 +501,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("DiskSize")
         public DescribeTenantResponseBodyTenantTenantResourceDiskSize diskSize;
 
+        @NameInMap("LogDiskSize")
+        public DescribeTenantResponseBodyTenantTenantResourceLogDiskSize logDiskSize;
+
         /**
          * <p>The description of the tenant.</p>
          */
@@ -499,6 +543,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
         public DescribeTenantResponseBodyTenantTenantResourceDiskSize getDiskSize() {
             return this.diskSize;
+        }
+
+        public DescribeTenantResponseBodyTenantTenantResource setLogDiskSize(DescribeTenantResponseBodyTenantTenantResourceLogDiskSize logDiskSize) {
+            this.logDiskSize = logDiskSize;
+            return this;
+        }
+        public DescribeTenantResponseBodyTenantTenantResourceLogDiskSize getLogDiskSize() {
+            return this.logDiskSize;
         }
 
         public DescribeTenantResponseBodyTenantTenantResource setMemory(DescribeTenantResponseBodyTenantTenantResourceMemory memory) {

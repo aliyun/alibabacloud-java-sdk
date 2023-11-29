@@ -47,6 +47,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("DiskType")
     public String diskType;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The specifications of the cluster.     </p>
      * <p>You can specify one of the following four plans:   </p>
@@ -65,6 +68,9 @@ public class CreateInstanceRequest extends TeaModel {
      */
     @NameInMap("InstanceName")
     public String instanceName;
+
+    @NameInMap("IsolationOptimization")
+    public String isolationOptimization;
 
     /**
      * <p>OceanBase Server version number.</p>
@@ -89,6 +95,9 @@ public class CreateInstanceRequest extends TeaModel {
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
+
+    @NameInMap("ReplicaMode")
+    public String replicaMode;
 
     /**
      * <p>The ID of the resource group to which the instance belongs.</p>
@@ -157,6 +166,14 @@ public class CreateInstanceRequest extends TeaModel {
         return this.diskType;
     }
 
+    public CreateInstanceRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public CreateInstanceRequest setInstanceClass(String instanceClass) {
         this.instanceClass = instanceClass;
         return this;
@@ -171,6 +188,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public CreateInstanceRequest setIsolationOptimization(String isolationOptimization) {
+        this.isolationOptimization = isolationOptimization;
+        return this;
+    }
+    public String getIsolationOptimization() {
+        return this.isolationOptimization;
     }
 
     public CreateInstanceRequest setObVersion(String obVersion) {
@@ -195,6 +220,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getPeriodUnit() {
         return this.periodUnit;
+    }
+
+    public CreateInstanceRequest setReplicaMode(String replicaMode) {
+        this.replicaMode = replicaMode;
+        return this;
+    }
+    public String getReplicaMode() {
+        return this.replicaMode;
     }
 
     public CreateInstanceRequest setResourceGroupId(String resourceGroupId) {

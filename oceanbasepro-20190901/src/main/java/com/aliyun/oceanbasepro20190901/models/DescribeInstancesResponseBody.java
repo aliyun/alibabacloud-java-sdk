@@ -469,6 +469,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("Cpu")
         public Integer cpu;
 
+        @NameInMap("CpuArchitecture")
+        public String cpuArchitecture;
+
         /**
          * <p>The number of OceanBase clusters queried.</p>
          */
@@ -640,6 +643,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Integer getCpu() {
             return this.cpu;
+        }
+
+        public DescribeInstancesResponseBodyInstances setCpuArchitecture(String cpuArchitecture) {
+            this.cpuArchitecture = cpuArchitecture;
+            return this;
+        }
+        public String getCpuArchitecture() {
+            return this.cpuArchitecture;
         }
 
         public DescribeInstancesResponseBodyInstances setCreateTime(String createTime) {

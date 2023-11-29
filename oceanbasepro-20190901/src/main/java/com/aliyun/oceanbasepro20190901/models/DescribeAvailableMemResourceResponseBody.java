@@ -54,6 +54,9 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
         @NameInMap("MinMem")
         public Long minMem;
 
+        @NameInMap("SafeMem")
+        public String safeMem;
+
         @NameInMap("UsedMem")
         public Long usedMem;
 
@@ -76,6 +79,14 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
         }
         public Long getMinMem() {
             return this.minMem;
+        }
+
+        public DescribeAvailableMemResourceResponseBodyData setSafeMem(String safeMem) {
+            this.safeMem = safeMem;
+            return this;
+        }
+        public String getSafeMem() {
+            return this.safeMem;
         }
 
         public DescribeAvailableMemResourceResponseBodyData setUsedMem(Long usedMem) {

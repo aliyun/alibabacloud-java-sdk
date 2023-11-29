@@ -4,6 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceNodeNumRequest extends TeaModel {
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,6 +16,14 @@ public class ModifyInstanceNodeNumRequest extends TeaModel {
     public static ModifyInstanceNodeNumRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceNodeNumRequest self = new ModifyInstanceNodeNumRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyInstanceNodeNumRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifyInstanceNodeNumRequest setInstanceId(String instanceId) {
