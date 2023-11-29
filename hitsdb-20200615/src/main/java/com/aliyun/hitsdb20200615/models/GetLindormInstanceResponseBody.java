@@ -13,15 +13,32 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("ArbiterZoneId")
     public String arbiterZoneId;
 
+    /**
+     * <p>部署架构，取值：</p>
+     * <br>
+     * <p>- **1.0**：单可用区。</p>
+     * <p>- **2.0**：多可用区。</p>
+     */
     @NameInMap("ArchVersion")
     public String archVersion;
 
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <p>The Capacity storage size of the instance.</p>
+     */
     @NameInMap("ColdStorage")
     public Integer coldStorage;
 
+    /**
+     * <p>The disk type of the core nodes. This parameter is returned only for multi-zone instances. Valid values:</p>
+     * <br>
+     * <p>*   **cloud_efficiency**: This instance uses the Standard type of storage.</p>
+     * <p>*   **cloud_ssd**: This instance uses the Performance type of storage.</p>
+     * <p>*   **cloud_essd**: This instance uses ESSDs for storage.</p>
+     * <p>*   **cloud_essd_pl0**: This instance uses PL0 ESSDs for storage.</p>
+     */
     @NameInMap("CoreDiskCategory")
     public String coreDiskCategory;
 
@@ -46,6 +63,17 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("DeletionProtection")
     public String deletionProtection;
 
+    /**
+     * <p>The storage type of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **cloud_efficiency**: This instance uses the Standard type of storage.</p>
+     * <p>*   **cloud_ssd**: This instance uses the Performance type of storage.</p>
+     * <p>*   **cloud_essd**: This instance uses ESSDs for storage.</p>
+     * <p>*   **cloud_essd_pl0**: This instance uses PL0 ESSDs for storage.</p>
+     * <p>*   **capacity_cloud_storage**: This instance uses the Capacity type of storage.</p>
+     * <p>*   **local_ssd_pro**: This instance uses local SSDs for storage.</p>
+     * <p>*   **local_hdd_pro**: This instance uses local HDDs for storage.</p>
+     */
     @NameInMap("DiskCategory")
     public String diskCategory;
 
@@ -67,6 +95,12 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("EnableKms")
     public Boolean enableKms;
 
+    /**
+     * <p>实例是否开通LTS引擎，返回值：</p>
+     * <br>
+     * <p>- **true**：开通LTS引擎。</p>
+     * <p>- **false**：未开通LTS引擎。</p>
+     */
     @NameInMap("EnableLTS")
     public Boolean enableLTS;
 
@@ -85,6 +119,9 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("EnableStream")
     public Boolean enableStream;
 
+    /**
+     * <p>The latest version number of the engine.</p>
+     */
     @NameInMap("EngineList")
     public java.util.List<GetLindormInstanceResponseBodyEngineList> engineList;
 
@@ -103,6 +140,31 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The status of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **CREATING**: The instance is being created.</p>
+     * <p>*   **ACTIVATION**: The instance is running.</p>
+     * <p>*   **COLD_EXPANDING**: The Capacity storage of the instance is being scaled up.</p>
+     * <p>*   **MINOR_VERSION_TRANSING**: The minor version of the instance is being updated.</p>
+     * <p>*   **RESIZING**: The nodes in the instance are being scaled up.</p>
+     * <p>*   **SHRINKING**: The nodes in the instance are being scaled down.</p>
+     * <p>*   **CLASS_CHANGING**: The specification of the instance is being changed.</p>
+     * <p>*   **SSL_SWITCHING: SSL**: The SSL configurations of the instance are being changed.</p>
+     * <p>*   **CDC_OPENING**: Data subscription is being enabled for the instance.</p>
+     * <p>*   **TRANSFER**: The data of the instance is being transferred.</p>
+     * <p>*   **DATABASE_TRANSFER**: The data of the instance is being transferred to databases.</p>
+     * <p>*   **GUARD_CREATING**: A disaster recovery instance is being created.</p>
+     * <p>*   **BACKUP_RECOVERING**: The data of the instance is being restored from a backup.</p>
+     * <p>*   **DATABASE_IMPORTING**: Data is being imported to the instance.</p>
+     * <p>*   **NET_MODIFYING**: The network configurations of the instance are being changed.</p>
+     * <p>*   **NET_SWITCHING**: The network of the instance is being switched between a virtual private cloud (VPC) and the Internet.</p>
+     * <p>*   **NET_CREATING**: The connection to the instance is being created.</p>
+     * <p>*   **NET_DELETING**: The connection to the instance is being deleted.</p>
+     * <p>*   **DELETING**: The instance is being deleted.</p>
+     * <p>*   **RESTARTING**: The instance is restarting.</p>
+     * <p>*   **LOCKED**: The instance is locked because it expires.</p>
+     */
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
@@ -115,6 +177,9 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("LogNum")
     public Integer logNum;
 
+    /**
+     * <p>The storage capacity of the disk of a single log node. This parameter is returned only for multi-zone instances.</p>
+     */
     @NameInMap("LogSingleStorage")
     public Integer logSingleStorage;
 

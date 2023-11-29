@@ -216,9 +216,6 @@ public class CreateLindormInstanceRequest extends TeaModel {
     @NameInMap("PrimaryVSwitchId")
     public String primaryVSwitchId;
 
-    /**
-     * <p>多可用区实例，主可用区的可用区ID。**如果需要创建多可用区实例，该参数必填。**</p>
-     */
     @NameInMap("PrimaryZoneId")
     public String primaryZoneId;
 
