@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class PutProjectPolicyRequest extends TeaModel {
+    /**
+     * <p>The project policy.</p>
+     */
     @NameInMap("body")
     public String body;
 

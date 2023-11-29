@@ -4,9 +4,15 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetAppliedConfigsResponseBody extends TeaModel {
+    /**
+     * <p>The names of the Logtail configurations.</p>
+     */
     @NameInMap("configs")
     public java.util.List<String> configs;
 
+    /**
+     * <p>The number of Logtail configurations.</p>
+     */
     @NameInMap("count")
     public Integer count;
 

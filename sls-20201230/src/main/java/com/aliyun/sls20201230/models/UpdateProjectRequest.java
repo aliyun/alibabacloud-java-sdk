@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class UpdateProjectRequest extends TeaModel {
+    /**
+     * <p>The description of the project. The default value is an empty string.</p>
+     */
     @NameInMap("description")
     public String description;
 

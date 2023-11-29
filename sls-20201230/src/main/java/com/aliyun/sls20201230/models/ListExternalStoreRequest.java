@@ -4,12 +4,21 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListExternalStoreRequest extends TeaModel {
+    /**
+     * <p>The name of the external store. You can query external stores that contain a specified string.</p>
+     */
     @NameInMap("externalStoreName")
     public String externalStoreName;
 
+    /**
+     * <p>The line from which the query starts. Default value: 0.</p>
+     */
     @NameInMap("offset")
     public Integer offset;
 
+    /**
+     * <p>The number of entries per page. Maximum value: 500.</p>
+     */
     @NameInMap("sizs")
     public Integer sizs;
 

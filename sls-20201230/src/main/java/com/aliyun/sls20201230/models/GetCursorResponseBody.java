@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetCursorResponseBody extends TeaModel {
+    /**
+     * <p>The value of the cursor.</p>
+     */
     @NameInMap("cursor")
     public String cursor;
 

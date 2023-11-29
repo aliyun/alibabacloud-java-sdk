@@ -15,6 +15,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ApplyConfigToMachineGroupResponse
+     */
     public ApplyConfigToMachineGroupResponse applyConfigToMachineGroupWithOptions(String project, String machineGroup, String configName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -36,6 +43,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ApplyConfigToMachineGroupResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @return ApplyConfigToMachineGroupResponse
+     */
     public ApplyConfigToMachineGroupResponse applyConfigToMachineGroup(String project, String machineGroup, String configName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -206,6 +218,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createConfigWithOptions(project, request, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   You can create up to 30 consumer groups for a Logstore.
+      * *   Simple Log Service provides examples of both regular log consumption and consumer group-based log consumption by using Simple Log Service SDKs for Java. For more information, see [Consume log data](~~120035~~) and [Use consumer groups to consume data](~~28998~~).
+      *
+      * @param request CreateConsumerGroupRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateConsumerGroupResponse
+     */
     public CreateConsumerGroupResponse createConsumerGroupWithOptions(String project, String logstore, CreateConsumerGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -242,6 +265,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateConsumerGroupResponse());
     }
 
+    /**
+      * ### Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   You can create up to 30 consumer groups for a Logstore.
+      * *   Simple Log Service provides examples of both regular log consumption and consumer group-based log consumption by using Simple Log Service SDKs for Java. For more information, see [Consume log data](~~120035~~) and [Use consumer groups to consume data](~~28998~~).
+      *
+      * @param request CreateConsumerGroupRequest
+      * @return CreateConsumerGroupResponse
+     */
     public CreateConsumerGroupResponse createConsumerGroup(String project, String logstore, CreateConsumerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -277,6 +309,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createDashboardWithOptions(project, request, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request CreateDomainRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDomainResponse
+     */
     public CreateDomainResponse createDomainWithOptions(String project, CreateDomainRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -305,12 +345,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateDomainResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request CreateDomainRequest
+      * @return CreateDomainResponse
+     */
     public CreateDomainResponse createDomain(String project, CreateDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createDomainWithOptions(project, request, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request CreateIndexRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateIndexResponse
+     */
     public CreateIndexResponse createIndexWithOptions(String project, String logstore, CreateIndexRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -363,12 +417,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateIndexResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request CreateIndexRequest
+      * @return CreateIndexResponse
+     */
     public CreateIndexResponse createIndex(String project, String logstore, CreateIndexRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createIndexWithOptions(project, logstore, request, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request CreateLogStoreRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateLogStoreResponse
+     */
     public CreateLogStoreResponse createLogStoreWithOptions(String project, CreateLogStoreRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -437,12 +506,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateLogStoreResponse());
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request CreateLogStoreRequest
+      * @return CreateLogStoreResponse
+     */
     public CreateLogStoreResponse createLogStore(String project, CreateLogStoreRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createLogStoreWithOptions(project, request, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request CreateLoggingRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateLoggingResponse
+     */
     public CreateLoggingResponse createLoggingWithOptions(String project, CreateLoggingRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -475,6 +559,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateLoggingResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request CreateLoggingRequest
+      * @return CreateLoggingResponse
+     */
     public CreateLoggingResponse createLogging(String project, CreateLoggingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -539,6 +629,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createLogtailPipelineConfigWithOptions(project, request, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request CreateMachineGroupRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateMachineGroupResponse
+     */
     public CreateMachineGroupResponse createMachineGroupWithOptions(String project, CreateMachineGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -583,12 +682,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateMachineGroupResponse());
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request CreateMachineGroupRequest
+      * @return CreateMachineGroupResponse
+     */
     public CreateMachineGroupResponse createMachineGroup(String project, CreateMachineGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createMachineGroupWithOptions(project, request, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request CreateOssExternalStoreRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateOssExternalStoreResponse
+     */
     public CreateOssExternalStoreResponse createOssExternalStoreWithOptions(String project, CreateOssExternalStoreRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -625,6 +739,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateOssExternalStoreResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request CreateOssExternalStoreRequest
+      * @return CreateOssExternalStoreResponse
+     */
     public CreateOssExternalStoreResponse createOssExternalStore(String project, CreateOssExternalStoreRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -674,6 +794,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createProjectWithOptions(request, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request CreateRdsExternalStoreRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateRdsExternalStoreResponse
+     */
     public CreateRdsExternalStoreResponse createRdsExternalStoreWithOptions(String project, CreateRdsExternalStoreRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -710,12 +838,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateRdsExternalStoreResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request CreateRdsExternalStoreRequest
+      * @return CreateRdsExternalStoreResponse
+     */
     public CreateRdsExternalStoreResponse createRdsExternalStore(String project, CreateRdsExternalStoreRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createRdsExternalStoreWithOptions(project, request, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request CreateSavedSearchRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateSavedSearchResponse
+     */
     public CreateSavedSearchResponse createSavedSearchWithOptions(String project, CreateSavedSearchRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -760,6 +903,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateSavedSearchResponse());
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request CreateSavedSearchRequest
+      * @return CreateSavedSearchResponse
+     */
     public CreateSavedSearchResponse createSavedSearch(String project, CreateSavedSearchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -900,6 +1050,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteConfigWithOptions(project, configName, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteConsumerGroupResponse
+     */
     public DeleteConsumerGroupResponse deleteConsumerGroupWithOptions(String project, String logstore, String consumerGroup, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -921,6 +1078,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteConsumerGroupResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @return DeleteConsumerGroupResponse
+     */
     public DeleteConsumerGroupResponse deleteConsumerGroup(String project, String logstore, String consumerGroup) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -954,6 +1116,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteDashboardWithOptions(project, dashboardName, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDomainResponse
+     */
     public DeleteDomainResponse deleteDomainWithOptions(String project, String domainName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -975,12 +1144,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteDomainResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @return DeleteDomainResponse
+     */
     public DeleteDomainResponse deleteDomain(String project, String domainName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteDomainWithOptions(project, domainName, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteExternalStoreResponse
+     */
     public DeleteExternalStoreResponse deleteExternalStoreWithOptions(String project, String externalStoreName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -1002,12 +1183,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteExternalStoreResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @return DeleteExternalStoreResponse
+     */
     public DeleteExternalStoreResponse deleteExternalStore(String project, String externalStoreName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteExternalStoreWithOptions(project, externalStoreName, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteIndexResponse
+     */
     public DeleteIndexResponse deleteIndexWithOptions(String project, String logstore, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -1029,12 +1223,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteIndexResponse());
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @return DeleteIndexResponse
+     */
     public DeleteIndexResponse deleteIndex(String project, String logstore) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteIndexWithOptions(project, logstore, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteLogStoreResponse
+     */
     public DeleteLogStoreResponse deleteLogStoreWithOptions(String project, String logstore, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -1056,6 +1264,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteLogStoreResponse());
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      *
+      * @return DeleteLogStoreResponse
+     */
     public DeleteLogStoreResponse deleteLogStore(String project, String logstore) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1116,6 +1330,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteLogtailPipelineConfigWithOptions(project, configName, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteMachineGroupResponse
+     */
     public DeleteMachineGroupResponse deleteMachineGroupWithOptions(String project, String machineGroup, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -1137,6 +1359,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteMachineGroupResponse());
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @return DeleteMachineGroupResponse
+     */
     public DeleteMachineGroupResponse deleteMachineGroup(String project, String machineGroup) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1170,6 +1398,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteProjectWithOptions(project, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteProjectPolicyResponse
+     */
     public DeleteProjectPolicyResponse deleteProjectPolicyWithOptions(String project, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -1191,12 +1427,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteProjectPolicyResponse());
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @return DeleteProjectPolicyResponse
+     */
     public DeleteProjectPolicyResponse deleteProjectPolicy(String project) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteProjectPolicyWithOptions(project, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteSavedSearchResponse
+     */
     public DeleteSavedSearchResponse deleteSavedSearchWithOptions(String project, String savedsearchName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -1218,12 +1468,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteSavedSearchResponse());
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @return DeleteSavedSearchResponse
+     */
     public DeleteSavedSearchResponse deleteSavedSearch(String project, String savedsearchName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteSavedSearchWithOptions(project, savedsearchName, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteShipperResponse
+     */
     public DeleteShipperResponse deleteShipperWithOptions(String project, String logstore, String shipperName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -1245,6 +1508,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteShipperResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @return DeleteShipperResponse
+     */
     public DeleteShipperResponse deleteShipper(String project, String logstore, String shipperName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1323,6 +1591,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getAnnotationLabelWithOptions(labelId, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetAppliedConfigsResponse
+     */
     public GetAppliedConfigsResponse getAppliedConfigsWithOptions(String project, String machineGroup, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -1344,12 +1619,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetAppliedConfigsResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @return GetAppliedConfigsResponse
+     */
     public GetAppliedConfigsResponse getAppliedConfigs(String project, String machineGroup) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getAppliedConfigsWithOptions(project, machineGroup, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetAppliedMachineGroupsResponse
+     */
     public GetAppliedMachineGroupsResponse getAppliedMachineGroupsWithOptions(String project, String configName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -1371,12 +1658,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetAppliedMachineGroupsResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @return GetAppliedMachineGroupsResponse
+     */
     public GetAppliedMachineGroupsResponse getAppliedMachineGroups(String project, String configName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getAppliedMachineGroupsWithOptions(project, configName, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request GetCheckPointRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetCheckPointResponse
+     */
     public GetCheckPointResponse getCheckPointWithOptions(String project, String logstore, String consumerGroup, GetCheckPointRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -1405,6 +1705,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetCheckPointResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request GetCheckPointRequest
+      * @return GetCheckPointResponse
+     */
     public GetCheckPointResponse getCheckPoint(String project, String logstore, String consumerGroup, GetCheckPointRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1473,6 +1779,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getConfigWithOptions(project, configName, headers, runtime);
     }
 
+    /**
+      * *   You can specify a log as the start log. The time range of a contextual query is one day before and one day after the generation time of the start log.
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request GetContextLogsRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetContextLogsResponse
+     */
     public GetContextLogsResponse getContextLogsWithOptions(String project, String logstore, GetContextLogsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -1517,12 +1832,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetContextLogsResponse());
     }
 
+    /**
+      * *   You can specify a log as the start log. The time range of a contextual query is one day before and one day after the generation time of the start log.
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request GetContextLogsRequest
+      * @return GetContextLogsResponse
+     */
     public GetContextLogsResponse getContextLogs(String project, String logstore, GetContextLogsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getContextLogsWithOptions(project, logstore, request, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   The following content describes the relationships among a cursor, project, Logstore, and shard:
+      *     *   A project can have multiple Logstores.
+      *     *   A Logstore can have multiple shards.
+      *     *   You can use a cursor to obtain a log in a shard.
+      *
+      * @param request GetCursorRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetCursorResponse
+     */
     public GetCursorResponse getCursorWithOptions(String project, String logstore, String shardId, GetCursorRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -1551,6 +1886,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetCursorResponse());
     }
 
+    /**
+      * ### Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   The following content describes the relationships among a cursor, project, Logstore, and shard:
+      *     *   A project can have multiple Logstores.
+      *     *   A Logstore can have multiple shards.
+      *     *   You can use a cursor to obtain a log in a shard.
+      *
+      * @param request GetCursorRequest
+      * @return GetCursorResponse
+     */
     public GetCursorResponse getCursor(String project, String logstore, String shardId, GetCursorRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1618,6 +1964,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getDashboardWithOptions(project, dashboardName, headers, runtime);
     }
 
+    /**
+      * *   The supported data sources of external stores include Object Storage Service (OSS) buckets and ApsaraDB RDS for MySQL databases in a virtual private cloud (VPC).
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetExternalStoreResponse
+     */
     public GetExternalStoreResponse getExternalStoreWithOptions(String project, String externalStoreName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -1639,12 +1993,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetExternalStoreResponse());
     }
 
+    /**
+      * *   The supported data sources of external stores include Object Storage Service (OSS) buckets and ApsaraDB RDS for MySQL databases in a virtual private cloud (VPC).
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @return GetExternalStoreResponse
+     */
     public GetExternalStoreResponse getExternalStore(String project, String externalStoreName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getExternalStoreWithOptions(project, externalStoreName, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   The time range is evenly divided into subintervals in the responses. If the time range that is specified in the request remains unchanged, the subintervals in the responses also remain unchanged.
+      * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot predict the number of times that you must call this operation to obtain the complete result. In this case, you must check the value of the progress parameter in the response of each request and determine whether to call this operation one more time to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
+      * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log after a short latency. The latency of a query varies based on the type of the log. Simple Log Service classifies logs into the following types based on the log time:
+      *     *   Real-time data: The difference between the time record in a log and the current time on Simple Log Service is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as real-time data. After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds.
+      *     *   Historical data: The difference between the time record in a log and the current time on Simple Log Service is within the interval \\[-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as historical data. This type of log is usually generated in data backfill scenarios.
+      *     After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
+      * > Simple Log Service calculates the difference between the log time that is specified by the \\__time\\_\\_ field and the receiving time that is specified by the \\__tag\\_\\_:\\__receive_time\\_\\_ field for each log. The receiving time indicates the time at which Simple Log Service receives the log. If the difference is within the interval (-180 seconds,900 seconds], Simple Log Service processes the log as real-time data. If the difference is within the interval \\[-604,800 seconds,-180 seconds), Simple Log Service processes the log as historical data.
+      * *   Simple Log Service provides examples on how to call the GetHistograms operation by using Simple Log Service SDK for Java. For more information, see [Use GetHistograms to query the distribution of logs](~~462234~~).
+      *
+      * @param request GetHistogramsRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetHistogramsResponse
+     */
     public GetHistogramsResponse getHistogramsWithOptions(String project, String logstore, GetHistogramsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -1685,12 +2062,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetHistogramsResponse());
     }
 
+    /**
+      * ### Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   The time range is evenly divided into subintervals in the responses. If the time range that is specified in the request remains unchanged, the subintervals in the responses also remain unchanged.
+      * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot predict the number of times that you must call this operation to obtain the complete result. In this case, you must check the value of the progress parameter in the response of each request and determine whether to call this operation one more time to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
+      * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log after a short latency. The latency of a query varies based on the type of the log. Simple Log Service classifies logs into the following types based on the log time:
+      *     *   Real-time data: The difference between the time record in a log and the current time on Simple Log Service is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as real-time data. After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds.
+      *     *   Historical data: The difference between the time record in a log and the current time on Simple Log Service is within the interval \\[-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as historical data. This type of log is usually generated in data backfill scenarios.
+      *     After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
+      * > Simple Log Service calculates the difference between the log time that is specified by the \\__time\\_\\_ field and the receiving time that is specified by the \\__tag\\_\\_:\\__receive_time\\_\\_ field for each log. The receiving time indicates the time at which Simple Log Service receives the log. If the difference is within the interval (-180 seconds,900 seconds], Simple Log Service processes the log as real-time data. If the difference is within the interval \\[-604,800 seconds,-180 seconds), Simple Log Service processes the log as historical data.
+      * *   Simple Log Service provides examples on how to call the GetHistograms operation by using Simple Log Service SDK for Java. For more information, see [Use GetHistograms to query the distribution of logs](~~462234~~).
+      *
+      * @param request GetHistogramsRequest
+      * @return GetHistogramsResponse
+     */
     public GetHistogramsResponse getHistograms(String project, String logstore, GetHistogramsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getHistogramsWithOptions(project, logstore, request, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetIndexResponse
+     */
     public GetIndexResponse getIndexWithOptions(String project, String logstore, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -1712,12 +2112,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetIndexResponse());
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @return GetIndexResponse
+     */
     public GetIndexResponse getIndex(String project, String logstore) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getIndexWithOptions(project, logstore, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetLogStoreResponse
+     */
     public GetLogStoreResponse getLogStoreWithOptions(String project, String logstore, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -1739,6 +2153,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetLogStoreResponse());
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @return GetLogStoreResponse
+     */
     public GetLogStoreResponse getLogStore(String project, String logstore) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1772,6 +2192,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getLogStoreMeteringModeWithOptions(project, logstore, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetLoggingResponse
+     */
     public GetLoggingResponse getLoggingWithOptions(String project, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -1793,12 +2220,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetLoggingResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @return GetLoggingResponse
+     */
     public GetLoggingResponse getLogging(String project) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getLoggingWithOptions(project, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * > Simple Log Service allows you to create a Scheduled SQL job. For more information, see [Create a Scheduled SQL job](~~286457~~).
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot forecast the number of times that you must call this operation to obtain the complete result. In this case, you must check the value of the x-log-progress parameter in the response of each request and determine whether to call this operation one more time to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
+      * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log after a short latency. The latency of a query varies based on the type of the log. Simple Log Service classifies logs into the following types based on the log time:
+      *         Real-time data: The difference between the time record in a log and the current time on Simple Log Service is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as real-time data. This type of log is usually generated in common scenarios. 
+      *     *   Historical data: The difference between the time record in a log and the current time on Simple Log Service is within the interval \\[-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as historical data. This type of log is usually generated in data backfill scenarios.
+      *     After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
+      * > Simple Log Service calculates the difference between the log time that is specified by the \\__time\\_\\_ field and the receiving time that is specified by the \\__tag\\_\\_:**receive_time** field for each log. The receiving time indicates the time at which Simple Log Service receives the log. If the difference is within the interval (-180 seconds,900 seconds], Simple Log Service processes the log as real-time data. If the difference is within the interval \\[-604,800 seconds,-180 seconds), Simple Log Service processes the log as historical data.
+      * *   Simple Log Service provides examples on how to call the GetLogs operation by using Simple Log Service SDK for Java and Simple Log Service SDK for Python. For more information, see [Examples of calling the GetLogs operation by using Simple Log Service SDK for Java](~~407683~~) and [Examples of calling the GetLogs operation by using Simple Log Service SDK for Python](~~407684~~).
+      *
+      * @param request GetLogsRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetLogsResponse
+     */
     public GetLogsResponse getLogsWithOptions(String project, String logstore, GetLogsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -1855,12 +2304,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetLogsResponse());
     }
 
+    /**
+      * ### Usage notes
+      * > Simple Log Service allows you to create a Scheduled SQL job. For more information, see [Create a Scheduled SQL job](~~286457~~).
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot forecast the number of times that you must call this operation to obtain the complete result. In this case, you must check the value of the x-log-progress parameter in the response of each request and determine whether to call this operation one more time to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
+      * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log after a short latency. The latency of a query varies based on the type of the log. Simple Log Service classifies logs into the following types based on the log time:
+      *         Real-time data: The difference between the time record in a log and the current time on Simple Log Service is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as real-time data. This type of log is usually generated in common scenarios. 
+      *     *   Historical data: The difference between the time record in a log and the current time on Simple Log Service is within the interval \\[-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as historical data. This type of log is usually generated in data backfill scenarios.
+      *     After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
+      * > Simple Log Service calculates the difference between the log time that is specified by the \\__time\\_\\_ field and the receiving time that is specified by the \\__tag\\_\\_:**receive_time** field for each log. The receiving time indicates the time at which Simple Log Service receives the log. If the difference is within the interval (-180 seconds,900 seconds], Simple Log Service processes the log as real-time data. If the difference is within the interval \\[-604,800 seconds,-180 seconds), Simple Log Service processes the log as historical data.
+      * *   Simple Log Service provides examples on how to call the GetLogs operation by using Simple Log Service SDK for Java and Simple Log Service SDK for Python. For more information, see [Examples of calling the GetLogs operation by using Simple Log Service SDK for Java](~~407683~~) and [Examples of calling the GetLogs operation by using Simple Log Service SDK for Python](~~407684~~).
+      *
+      * @param request GetLogsRequest
+      * @return GetLogsResponse
+     */
     public GetLogsResponse getLogs(String project, String logstore, GetLogsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getLogsWithOptions(project, logstore, request, headers, runtime);
     }
 
+    /**
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot predict the number of times you must call this API operation to obtain a complete result. In this case, you must check the value of the progress parameter in the response of each request and determine whether to call this operation again to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
+      * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log. The latency of the query varies based on the type of the log. Simple Log Service classifies logs into the following types based on log timestamps:
+      * 1.  1.  Real-time data: The difference between the time record in the log and the current server time is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and the server received the log at 12:05:00, September 25, 2014 (UTC), the server processes the log as real-time data. This type of log is usually generated in common scenarios.
+      * 2.  2.  Historical data: The difference between the time record in the log and the current server time is within the interval \\[-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and the server received the log at 12:05:00, September 25, 2014 (UTC), the server processes the log as historical data. This type of log is usually generated in data backfill scenarios. After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
+      *
+      * @param request GetLogsV2Request
+      * @param headers GetLogsV2Headers
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetLogsV2Response
+     */
     public GetLogsV2Response getLogsV2WithOptions(String project, String logstore, GetLogsV2Request request, GetLogsV2Headers headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -1938,6 +2414,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetLogsV2Response());
     }
 
+    /**
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot predict the number of times you must call this API operation to obtain a complete result. In this case, you must check the value of the progress parameter in the response of each request and determine whether to call this operation again to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
+      * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log. The latency of the query varies based on the type of the log. Simple Log Service classifies logs into the following types based on log timestamps:
+      * 1.  1.  Real-time data: The difference between the time record in the log and the current server time is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and the server received the log at 12:05:00, September 25, 2014 (UTC), the server processes the log as real-time data. This type of log is usually generated in common scenarios.
+      * 2.  2.  Historical data: The difference between the time record in the log and the current server time is within the interval \\[-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and the server received the log at 12:05:00, September 25, 2014 (UTC), the server processes the log as historical data. This type of log is usually generated in data backfill scenarios. After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
+      *
+      * @param request GetLogsV2Request
+      * @return GetLogsV2Response
+     */
     public GetLogsV2Response getLogsV2(String project, String logstore, GetLogsV2Request request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         GetLogsV2Headers headers = new GetLogsV2Headers();
@@ -1971,6 +2457,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getLogtailPipelineConfigWithOptions(project, configName, headers, runtime);
     }
 
+    public GetMLServiceResultsResponse getMLServiceResultsWithOptions(String serviceName, GetMLServiceResultsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowBuiltin)) {
+            query.put("allowBuiltin", request.allowBuiltin);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMLServiceResults"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ml/service/" + serviceName + "/analysis"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetMLServiceResultsResponse());
+    }
+
+    public GetMLServiceResultsResponse getMLServiceResults(String serviceName, GetMLServiceResultsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMLServiceResultsWithOptions(serviceName, request, headers, runtime);
+    }
+
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetMachineGroupResponse
+     */
     public GetMachineGroupResponse getMachineGroupWithOptions(String project, String machineGroup, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -1992,12 +2517,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetMachineGroupResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @return GetMachineGroupResponse
+     */
     public GetMachineGroupResponse getMachineGroup(String project, String machineGroup) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getMachineGroupWithOptions(project, machineGroup, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetProjectResponse
+     */
     public GetProjectResponse getProjectWithOptions(String project, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -2019,12 +2557,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetProjectResponse());
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @return GetProjectResponse
+     */
     public GetProjectResponse getProject(String project) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getProjectWithOptions(project, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * *   You can use the query parameter to specify a standard SQL statement.
+      * *   You must specify a project in the domain name of the request.
+      * *   You must specify a Logstore in the FROM clause of the SQL statement. A Logstore can be used as an SQL table.
+      * *   You must specify a time range in the SQL statement by using the \\__date\\_\\_ parameter or \\__time\\_\\_ parameter. The value of the \\__date\\_\\_ parameter is a timestamp, and the value of the \\__time\\_\\_ parameter is an integer. The unit of the \\__time\\_\\_ parameter is seconds.
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request GetProjectLogsRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetProjectLogsResponse
+     */
     public GetProjectLogsResponse getProjectLogsWithOptions(String project, GetProjectLogsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -2057,12 +2614,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetProjectLogsResponse());
     }
 
+    /**
+      * ### Usage notes
+      * *   You can use the query parameter to specify a standard SQL statement.
+      * *   You must specify a project in the domain name of the request.
+      * *   You must specify a Logstore in the FROM clause of the SQL statement. A Logstore can be used as an SQL table.
+      * *   You must specify a time range in the SQL statement by using the \\__date\\_\\_ parameter or \\__time\\_\\_ parameter. The value of the \\__date\\_\\_ parameter is a timestamp, and the value of the \\__time\\_\\_ parameter is an integer. The unit of the \\__time\\_\\_ parameter is seconds.
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request GetProjectLogsRequest
+      * @return GetProjectLogsResponse
+     */
     public GetProjectLogsResponse getProjectLogs(String project, GetProjectLogsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getProjectLogsWithOptions(project, request, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetProjectPolicyResponse
+     */
     public GetProjectPolicyResponse getProjectPolicyWithOptions(String project, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -2084,12 +2660,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetProjectPolicyResponse());
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @return GetProjectPolicyResponse
+     */
     public GetProjectPolicyResponse getProjectPolicy(String project) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getProjectPolicyWithOptions(project, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetSavedSearchResponse
+     */
     public GetSavedSearchResponse getSavedSearchWithOptions(String project, String savedsearchName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -2111,12 +2701,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetSavedSearchResponse());
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @return GetSavedSearchResponse
+     */
     public GetSavedSearchResponse getSavedSearch(String project, String savedsearchName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getSavedSearchWithOptions(project, savedsearchName, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request GetShipperStatusRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetShipperStatusResponse
+     */
     public GetShipperStatusResponse getShipperStatusWithOptions(String project, String logstore, String shipperName, GetShipperStatusRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -2161,6 +2765,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetShipperStatusResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request GetShipperStatusRequest
+      * @return GetShipperStatusResponse
+     */
     public GetShipperStatusResponse getShipperStatus(String project, String logstore, String shipperName, GetShipperStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -2379,6 +2989,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listConfigWithOptions(project, request, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListConsumerGroupResponse
+     */
     public ListConsumerGroupResponse listConsumerGroupWithOptions(String project, String logstore, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -2400,6 +3018,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListConsumerGroupResponse());
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @return ListConsumerGroupResponse
+     */
     public ListConsumerGroupResponse listConsumerGroup(String project, String logstore) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -2444,6 +3068,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listDashboardWithOptions(project, request, headers, runtime);
     }
 
+    /**
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   Only one custom domain name can be bound to each project.
+      *
+      * @param request ListDomainsRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListDomainsResponse
+     */
     public ListDomainsResponse listDomainsWithOptions(String project, ListDomainsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -2480,12 +3113,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListDomainsResponse());
     }
 
+    /**
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   Only one custom domain name can be bound to each project.
+      *
+      * @param request ListDomainsRequest
+      * @return ListDomainsResponse
+     */
     public ListDomainsResponse listDomains(String project, ListDomainsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listDomainsWithOptions(project, request, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request ListExternalStoreRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListExternalStoreResponse
+     */
     public ListExternalStoreResponse listExternalStoreWithOptions(String project, ListExternalStoreRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -2522,12 +3170,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListExternalStoreResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request ListExternalStoreRequest
+      * @return ListExternalStoreResponse
+     */
     public ListExternalStoreResponse listExternalStore(String project, ListExternalStoreRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listExternalStoreWithOptions(project, request, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request ListLogStoresRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListLogStoresResponse
+     */
     public ListLogStoresResponse listLogStoresWithOptions(String project, ListLogStoresRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -2572,6 +3235,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListLogStoresResponse());
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request ListLogStoresRequest
+      * @return ListLogStoresResponse
+     */
     public ListLogStoresResponse listLogStores(String project, ListLogStoresRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -2624,6 +3294,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listLogtailPipelineConfigWithOptions(project, request, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request ListMachineGroupRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListMachineGroupResponse
+     */
     public ListMachineGroupResponse listMachineGroupWithOptions(String project, ListMachineGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -2660,12 +3338,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListMachineGroupResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request ListMachineGroupRequest
+      * @return ListMachineGroupResponse
+     */
     public ListMachineGroupResponse listMachineGroup(String project, ListMachineGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listMachineGroupWithOptions(project, request, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request ListMachinesRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListMachinesResponse
+     */
     public ListMachinesResponse listMachinesWithOptions(String project, String machineGroup, ListMachinesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -2698,13 +3390,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListMachinesResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request ListMachinesRequest
+      * @return ListMachinesResponse
+     */
     public ListMachinesResponse listMachines(String project, String machineGroup, ListMachinesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listMachinesWithOptions(project, machineGroup, request, headers, runtime);
     }
 
-    public ListProjectResponse listProjectWithOptions(String resourceGroupId, ListProjectRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request ListProjectRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListProjectResponse
+     */
+    public ListProjectResponse listProjectWithOptions(ListProjectRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
@@ -2713,6 +3420,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
             query.put("projectName", request.projectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("resourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.size)) {
@@ -2737,12 +3448,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListProjectResponse());
     }
 
-    public ListProjectResponse listProject(String resourceGroupId, ListProjectRequest request) throws Exception {
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request ListProjectRequest
+      * @return ListProjectResponse
+     */
+    public ListProjectResponse listProject(ListProjectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listProjectWithOptions(resourceGroupId, request, headers, runtime);
+        return this.listProjectWithOptions(request, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request ListSavedSearchRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListSavedSearchResponse
+     */
     public ListSavedSearchResponse listSavedSearchWithOptions(String project, ListSavedSearchRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -2775,6 +3502,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListSavedSearchResponse());
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request ListSavedSearchRequest
+      * @return ListSavedSearchResponse
+     */
     public ListSavedSearchResponse listSavedSearch(String project, ListSavedSearchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -2808,6 +3542,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listShardsWithOptions(project, logstore, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListShipperResponse
+     */
     public ListShipperResponse listShipperWithOptions(String project, String logstore, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -2829,12 +3570,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListShipperResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @return ListShipperResponse
+     */
     public ListShipperResponse listShipper(String project, String logstore) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listShipperWithOptions(project, logstore, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param tmpReq ListTagResourcesRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListTagResourcesResponse
+     */
     public ListTagResourcesResponse listTagResourcesWithOptions(ListTagResourcesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListTagResourcesShrinkRequest request = new ListTagResourcesShrinkRequest();
@@ -2878,6 +3633,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListTagResourcesResponse());
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request ListTagResourcesRequest
+      * @return ListTagResourcesResponse
+     */
     public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -2925,6 +3687,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.putAnnotationDataWithOptions(datasetId, request, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   Alibaba Cloud Simple Log Service allows you to configure a project policy to authorize other users to access the specified Log Service resources.
+      *     *   You must configure a project policy based on policy syntax. Before you configure a project policy, you must be familiar with the Action, Resource, and Condition parameters. For more information, see [RAM](~~128139~~).
+      *     *   If you set the Principal element to an asterisk (\\*) and do not configure the Condition element when you configure a project policy, the policy applies to all users except for the project owner. If you set the Principal element to an asterisk (\\*) and configure the Condition element when you configure a project policy, the policy applies to all users including the project owner.
+      *     *   You can configure multiple project policies for a project. The total size of the policies cannot exceed 16 KB.
+      *
+      * @param request PutProjectPolicyRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return PutProjectPolicyResponse
+     */
     public PutProjectPolicyResponse putProjectPolicyWithOptions(String project, PutProjectPolicyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -2948,6 +3723,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PutProjectPolicyResponse());
     }
 
+    /**
+      * ### Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   Alibaba Cloud Simple Log Service allows you to configure a project policy to authorize other users to access the specified Log Service resources.
+      *     *   You must configure a project policy based on policy syntax. Before you configure a project policy, you must be familiar with the Action, Resource, and Condition parameters. For more information, see [RAM](~~128139~~).
+      *     *   If you set the Principal element to an asterisk (\\*) and do not configure the Condition element when you configure a project policy, the policy applies to all users except for the project owner. If you set the Principal element to an asterisk (\\*) and configure the Condition element when you configure a project policy, the policy applies to all users including the project owner.
+      *     *   You can configure multiple project policies for a project. The total size of the policies cannot exceed 16 KB.
+      *
+      * @param request PutProjectPolicyRequest
+      * @return PutProjectPolicyResponse
+     */
     public PutProjectPolicyResponse putProjectPolicy(String project, PutProjectPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3000,6 +3786,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.putWebtrackingWithOptions(project, logstoreName, request, headers, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request QueryMLServiceResultsRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return QueryMLServiceResultsResponse
+     */
+    // Deprecated
     public QueryMLServiceResultsResponse queryMLServiceResultsWithOptions(String serviceName, QueryMLServiceResultsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3026,12 +3821,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new QueryMLServiceResultsResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request QueryMLServiceResultsRequest
+      * @return QueryMLServiceResultsResponse
+     */
+    // Deprecated
     public QueryMLServiceResultsResponse queryMLServiceResults(String serviceName, QueryMLServiceResultsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.queryMLServiceResultsWithOptions(serviceName, request, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RemoveConfigFromMachineGroupResponse
+     */
     public RemoveConfigFromMachineGroupResponse removeConfigFromMachineGroupWithOptions(String project, String machineGroup, String configName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -3053,12 +3862,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new RemoveConfigFromMachineGroupResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @return RemoveConfigFromMachineGroupResponse
+     */
     public RemoveConfigFromMachineGroupResponse removeConfigFromMachineGroup(String project, String machineGroup, String configName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.removeConfigFromMachineGroupWithOptions(project, machineGroup, configName, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   Each shard has an MD5 hash range, and each range is a left-closed, right-open interval. The interval is in the `[BeginKey,EndKey)` format. A shard can be in the readwrite or readonly state. You can split a shard and merge shards. For more information, see [Shard](~~28976~~).
+      *
+      * @param request SplitShardRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SplitShardResponse
+     */
     public SplitShardResponse splitShardWithOptions(String project, String logstore, String shard, SplitShardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -3091,12 +3915,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new SplitShardResponse());
     }
 
+    /**
+      * ### Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   Each shard has an MD5 hash range, and each range is a left-closed, right-open interval. The interval is in the `[BeginKey,EndKey)` format. A shard can be in the readwrite or readonly state. You can split a shard and merge shards. For more information, see [Shard](~~28976~~).
+      *
+      * @param request SplitShardRequest
+      * @return SplitShardResponse
+     */
     public SplitShardResponse splitShard(String project, String logstore, String shard, SplitShardRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.splitShardWithOptions(project, logstore, shard, request, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request TagResourcesRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return TagResourcesResponse
+     */
     public TagResourcesResponse tagResourcesWithOptions(TagResourcesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -3130,12 +3971,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new TagResourcesResponse());
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request TagResourcesRequest
+      * @return TagResourcesResponse
+     */
     public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.tagResourcesWithOptions(request, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request UntagResourcesRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UntagResourcesResponse
+     */
     public UntagResourcesResponse untagResourcesWithOptions(UntagResourcesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -3173,6 +4030,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new UntagResourcesResponse());
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request UntagResourcesRequest
+      * @return UntagResourcesResponse
+     */
     public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3260,6 +4124,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateConfigWithOptions(project, configName, request, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request UpdateConsumerGroupRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateConsumerGroupResponse
+     */
     public UpdateConsumerGroupResponse updateConsumerGroupWithOptions(String project, String logstore, String consumerGroup, UpdateConsumerGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -3292,6 +4165,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateConsumerGroupResponse());
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request UpdateConsumerGroupRequest
+      * @return UpdateConsumerGroupResponse
+     */
     public UpdateConsumerGroupResponse updateConsumerGroup(String project, String logstore, String consumerGroup, UpdateConsumerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3348,6 +4228,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateDashboardWithOptions(project, dashboardName, request, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request UpdateIndexRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateIndexResponse
+     */
     public UpdateIndexResponse updateIndexWithOptions(String project, String logstore, UpdateIndexRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -3400,12 +4289,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateIndexResponse());
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request UpdateIndexRequest
+      * @return UpdateIndexResponse
+     */
     public UpdateIndexResponse updateIndex(String project, String logstore, UpdateIndexRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateIndexWithOptions(project, logstore, request, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * *   Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      * *   You can call the UpdateLogStore operation to change only the time-to-live (TTL) attribute.
+      *
+      * @param request UpdateLogStoreRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateLogStoreResponse
+     */
     public UpdateLogStoreResponse updateLogStoreWithOptions(String project, String logstore, UpdateLogStoreRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -3474,6 +4380,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateLogStoreResponse());
     }
 
+    /**
+      * ### Usage notes
+      * *   Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      * *   You can call the UpdateLogStore operation to change only the time-to-live (TTL) attribute.
+      *
+      * @param request UpdateLogStoreRequest
+      * @return UpdateLogStoreResponse
+     */
     public UpdateLogStoreResponse updateLogStore(String project, String logstore, UpdateLogStoreRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3514,6 +4428,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateLogStoreMeteringModeWithOptions(project, logstore, request, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request UpdateLoggingRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateLoggingResponse
+     */
     public UpdateLoggingResponse updateLoggingWithOptions(String project, UpdateLoggingRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -3546,6 +4468,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateLoggingResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request UpdateLoggingRequest
+      * @return UpdateLoggingResponse
+     */
     public UpdateLoggingResponse updateLogging(String project, UpdateLoggingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3610,6 +4538,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateLogtailPipelineConfigWithOptions(project, configName, request, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request UpdateMachineGroupRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateMachineGroupResponse
+     */
     public UpdateMachineGroupResponse updateMachineGroupWithOptions(String project, String groupName, UpdateMachineGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -3654,12 +4590,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateMachineGroupResponse());
     }
 
+    /**
+      * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request UpdateMachineGroupRequest
+      * @return UpdateMachineGroupResponse
+     */
     public UpdateMachineGroupResponse updateMachineGroup(String project, String groupName, UpdateMachineGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateMachineGroupWithOptions(project, groupName, request, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request UpdateMachineGroupMachineRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateMachineGroupMachineResponse
+     */
     public UpdateMachineGroupMachineResponse updateMachineGroupMachineWithOptions(String project, String machineGroup, UpdateMachineGroupMachineRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -3689,12 +4639,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateMachineGroupMachineResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request UpdateMachineGroupMachineRequest
+      * @return UpdateMachineGroupMachineResponse
+     */
     public UpdateMachineGroupMachineResponse updateMachineGroupMachine(String project, String machineGroup, UpdateMachineGroupMachineRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateMachineGroupMachineWithOptions(project, machineGroup, request, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request UpdateOssExternalStoreRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateOssExternalStoreResponse
+     */
     public UpdateOssExternalStoreResponse updateOssExternalStoreWithOptions(String project, String externalStoreName, UpdateOssExternalStoreRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -3731,12 +4695,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateOssExternalStoreResponse());
     }
 
+    /**
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request UpdateOssExternalStoreRequest
+      * @return UpdateOssExternalStoreResponse
+     */
     public UpdateOssExternalStoreResponse updateOssExternalStore(String project, String externalStoreName, UpdateOssExternalStoreRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateOssExternalStoreWithOptions(project, externalStoreName, request, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request UpdateProjectRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateProjectResponse
+     */
     public UpdateProjectResponse updateProjectWithOptions(String project, UpdateProjectRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -3765,12 +4744,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateProjectResponse());
     }
 
+    /**
+      * ### Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request UpdateProjectRequest
+      * @return UpdateProjectResponse
+     */
     public UpdateProjectResponse updateProject(String project, UpdateProjectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateProjectWithOptions(project, request, headers, runtime);
     }
 
+    /**
+      * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request UpdateRdsExternalStoreRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateRdsExternalStoreResponse
+     */
     public UpdateRdsExternalStoreResponse updateRdsExternalStoreWithOptions(String project, String externalStoreName, UpdateRdsExternalStoreRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -3807,6 +4801,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateRdsExternalStoreResponse());
     }
 
+    /**
+      * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request UpdateRdsExternalStoreRequest
+      * @return UpdateRdsExternalStoreResponse
+     */
     public UpdateRdsExternalStoreResponse updateRdsExternalStore(String project, String externalStoreName, UpdateRdsExternalStoreRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();

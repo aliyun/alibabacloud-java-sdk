@@ -4,12 +4,21 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListMachinesResponseBody extends TeaModel {
+    /**
+     * <p>The number of machines that are returned on the current page.</p>
+     */
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <p>The machines that are returned.</p>
+     */
     @NameInMap("machines")
     public java.util.List<Machine> machines;
 
+    /**
+     * <p>The total number of machines.</p>
+     */
     @NameInMap("total")
     public Integer total;
 

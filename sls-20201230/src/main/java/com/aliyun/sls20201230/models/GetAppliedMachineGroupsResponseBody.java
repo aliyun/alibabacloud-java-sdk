@@ -4,9 +4,15 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetAppliedMachineGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The number of returned machine groups.</p>
+     */
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <p>The names of the returned machine groups.</p>
+     */
     @NameInMap("machinegroups")
     public java.util.List<String> machinegroups;
 

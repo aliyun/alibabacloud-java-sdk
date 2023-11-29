@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetCursorRequest extends TeaModel {
+    /**
+     * <p>The point in time that you want to use to query a cursor. Set the value to a UNIX timestamp or a string such as `begin` and `end`.</p>
+     */
     @NameInMap("from")
     public String from;
 

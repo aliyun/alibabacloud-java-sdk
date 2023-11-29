@@ -4,9 +4,15 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The returned tags.</p>
+     */
     @NameInMap("tagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
 
@@ -32,15 +38,27 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("resourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("resourceType")
         public String resourceType;
 
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("tagKey")
         public String tagKey;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("tagValue")
         public String tagValue;
 

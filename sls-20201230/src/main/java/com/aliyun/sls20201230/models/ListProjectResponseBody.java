@@ -4,12 +4,21 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListProjectResponseBody extends TeaModel {
+    /**
+     * <p>The number of returned projects on the current page.</p>
+     */
     @NameInMap("count")
     public Long count;
 
+    /**
+     * <p>The projects that meet the query conditions.</p>
+     */
     @NameInMap("projects")
     public java.util.List<Project> projects;
 
+    /**
+     * <p>The total number of projects that meet the query conditions.</p>
+     */
     @NameInMap("total")
     public Long total;
 

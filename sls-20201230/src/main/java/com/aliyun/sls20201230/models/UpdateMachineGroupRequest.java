@@ -4,18 +4,39 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class UpdateMachineGroupRequest extends TeaModel {
+    /**
+     * <p>The attribute of the machine group. This parameter is empty by default.</p>
+     */
     @NameInMap("groupAttribute")
     public UpdateMachineGroupRequestGroupAttribute groupAttribute;
 
+    /**
+     * <p>The name of the machine group.</p>
+     */
     @NameInMap("groupName")
     public String groupName;
 
+    /**
+     * <p>The type of the machine group. Set the value to an empty string.</p>
+     */
     @NameInMap("groupType")
     public String groupType;
 
+    /**
+     * <p>The identifier type of the machine group. Valid values:</p>
+     * <br>
+     * <p>*   ip: The machine group uses IP addresses as identifiers.</p>
+     * <p>*   userdefined: The machine group uses custom identifiers.</p>
+     */
     @NameInMap("machineIdentifyType")
     public String machineIdentifyType;
 
+    /**
+     * <p>The identifiers of the machines in the machine group.</p>
+     * <br>
+     * <p>*   If you set machineIdentifyType to ip, enter the IP addresses of the machines.</p>
+     * <p>*   If you set machineIdentifyType to userdefined, enter a custom identifier.</p>
+     */
     @NameInMap("machineList")
     public java.util.List<String> machineList;
 
@@ -65,9 +86,15 @@ public class UpdateMachineGroupRequest extends TeaModel {
     }
 
     public static class UpdateMachineGroupRequestGroupAttribute extends TeaModel {
+        /**
+         * <p>The identifier of the external management system on which the machine group depends. This parameter is empty by default.</p>
+         */
         @NameInMap("externalName")
         public String externalName;
 
+        /**
+         * <p>The topic of the machine group. This parameter is empty by default.</p>
+         */
         @NameInMap("groupTopic")
         public String groupTopic;
 

@@ -4,12 +4,21 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListDomainsResponseBody extends TeaModel {
+    /**
+     * <p>The number of domain names that are returned on the current page.</p>
+     */
     @NameInMap("count")
     public Long count;
 
+    /**
+     * <p>The domain names.</p>
+     */
     @NameInMap("domains")
     public java.util.List<String> domains;
 
+    /**
+     * <p>The total number of domain names that are returned.</p>
+     */
     @NameInMap("total")
     public Long total;
 

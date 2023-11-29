@@ -4,18 +4,33 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class CreateSavedSearchRequest extends TeaModel {
+    /**
+     * <p>The display name.</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <p>The name of the Logstore to which the saved search belongs.</p>
+     */
     @NameInMap("logstore")
     public String logstore;
 
+    /**
+     * <p>The name of the saved search. The name must be 3 to 63 characters in length.</p>
+     */
     @NameInMap("savedsearchName")
     public String savedsearchName;
 
+    /**
+     * <p>The query statement of the saved search. A query statement consists of a search statement and an analytic statement in the `Search statement|Analytic statement` format. For more information about search statements and analytic statements, see [Log search overview](~~43772~~) and [Log analysis overview](~~53608~~).</p>
+     */
     @NameInMap("searchQuery")
     public String searchQuery;
 
+    /**
+     * <p>The topic of the log.</p>
+     */
     @NameInMap("topic")
     public String topic;
 
