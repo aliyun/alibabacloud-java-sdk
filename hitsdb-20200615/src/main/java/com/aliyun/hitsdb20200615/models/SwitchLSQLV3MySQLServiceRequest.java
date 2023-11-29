@@ -3,10 +3,10 @@ package com.aliyun.hitsdb20200615.models;
 
 import com.aliyun.tea.*;
 
-public class GetInstanceIpWhiteListRequest extends TeaModel {
-    /**
-     * <p>The ID of the instance whose whitelists you want to query. You can call the [GetLindormInstanceList](~~426068~~) operation to obtain the instance ID.</p>
-     */
+public class SwitchLSQLV3MySQLServiceRequest extends TeaModel {
+    @NameInMap("ActionType")
+    public Integer actionType;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -25,12 +25,20 @@ public class GetInstanceIpWhiteListRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    public static GetInstanceIpWhiteListRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetInstanceIpWhiteListRequest self = new GetInstanceIpWhiteListRequest();
+    public static SwitchLSQLV3MySQLServiceRequest build(java.util.Map<String, ?> map) throws Exception {
+        SwitchLSQLV3MySQLServiceRequest self = new SwitchLSQLV3MySQLServiceRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetInstanceIpWhiteListRequest setInstanceId(String instanceId) {
+    public SwitchLSQLV3MySQLServiceRequest setActionType(Integer actionType) {
+        this.actionType = actionType;
+        return this;
+    }
+    public Integer getActionType() {
+        return this.actionType;
+    }
+
+    public SwitchLSQLV3MySQLServiceRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -38,7 +46,7 @@ public class GetInstanceIpWhiteListRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public GetInstanceIpWhiteListRequest setOwnerAccount(String ownerAccount) {
+    public SwitchLSQLV3MySQLServiceRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -46,7 +54,7 @@ public class GetInstanceIpWhiteListRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public GetInstanceIpWhiteListRequest setOwnerId(Long ownerId) {
+    public SwitchLSQLV3MySQLServiceRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -54,7 +62,7 @@ public class GetInstanceIpWhiteListRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public GetInstanceIpWhiteListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public SwitchLSQLV3MySQLServiceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -62,7 +70,7 @@ public class GetInstanceIpWhiteListRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public GetInstanceIpWhiteListRequest setResourceOwnerId(Long resourceOwnerId) {
+    public SwitchLSQLV3MySQLServiceRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -70,7 +78,7 @@ public class GetInstanceIpWhiteListRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public GetInstanceIpWhiteListRequest setSecurityToken(String securityToken) {
+    public SwitchLSQLV3MySQLServiceRequest setSecurityToken(String securityToken) {
         this.securityToken = securityToken;
         return this;
     }
