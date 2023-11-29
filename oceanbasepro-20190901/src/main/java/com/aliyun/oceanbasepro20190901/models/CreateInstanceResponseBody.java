@@ -38,6 +38,9 @@ public class CreateInstanceResponseBody extends TeaModel {
     }
 
     public static class CreateInstanceResponseBodyData extends TeaModel {
+        @NameInMap("DryRunResult")
+        public Boolean dryRunResult;
+
         /**
          * <p>订单ID。该参数只有创建包年包月ECS实例（请求参数InstanceChargeType=PrePaid）时有返回值。</p>
          */
@@ -56,6 +59,14 @@ public class CreateInstanceResponseBody extends TeaModel {
         public static CreateInstanceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateInstanceResponseBodyData self = new CreateInstanceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceResponseBodyData setDryRunResult(Boolean dryRunResult) {
+            this.dryRunResult = dryRunResult;
+            return this;
+        }
+        public Boolean getDryRunResult() {
+            return this.dryRunResult;
         }
 
         public CreateInstanceResponseBodyData setInstanceId(String instanceId) {

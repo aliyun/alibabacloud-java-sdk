@@ -352,6 +352,15 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyInstanceResourceLogDiskSize extends TeaModel {
+        @NameInMap("LogAssignedSize")
+        public String logAssignedSize;
+
+        @NameInMap("MaxLogAssignedObServer")
+        public java.util.List<String> maxLogAssignedObServer;
+
+        @NameInMap("MaxLogAssignedPercent")
+        public String maxLogAssignedPercent;
+
         /**
          * <p>The ID of the region.</p>
          */
@@ -367,6 +376,30 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public static DescribeInstanceResponseBodyInstanceResourceLogDiskSize build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceResponseBodyInstanceResourceLogDiskSize self = new DescribeInstanceResponseBodyInstanceResourceLogDiskSize();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceResponseBodyInstanceResourceLogDiskSize setLogAssignedSize(String logAssignedSize) {
+            this.logAssignedSize = logAssignedSize;
+            return this;
+        }
+        public String getLogAssignedSize() {
+            return this.logAssignedSize;
+        }
+
+        public DescribeInstanceResponseBodyInstanceResourceLogDiskSize setMaxLogAssignedObServer(java.util.List<String> maxLogAssignedObServer) {
+            this.maxLogAssignedObServer = maxLogAssignedObServer;
+            return this;
+        }
+        public java.util.List<String> getMaxLogAssignedObServer() {
+            return this.maxLogAssignedObServer;
+        }
+
+        public DescribeInstanceResponseBodyInstanceResourceLogDiskSize setMaxLogAssignedPercent(String maxLogAssignedPercent) {
+            this.maxLogAssignedPercent = maxLogAssignedPercent;
+            return this;
+        }
+        public String getMaxLogAssignedPercent() {
+            return this.maxLogAssignedPercent;
         }
 
         public DescribeInstanceResponseBodyInstanceResourceLogDiskSize setTotalDiskSize(Long totalDiskSize) {
@@ -585,6 +618,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("AvailableZones")
         public java.util.List<String> availableZones;
 
+        @NameInMap("CpuArchitecture")
+        public String cpuArchitecture;
+
         /**
          * <p>Indicates whether the log disk specifications can be upgraded.</p>
          */
@@ -623,6 +659,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         @NameInMap("EnableIsolationOptimization")
         public Boolean enableIsolationOptimization;
+
+        @NameInMap("EnableProxyService")
+        public Boolean enableProxyService;
 
         @NameInMap("EnableUpgradeLogDisk")
         public Boolean enableUpgradeLogDisk;
@@ -687,6 +726,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("PayType")
         public String payType;
 
+        @NameInMap("ProxyClusterId")
+        public String proxyClusterId;
+
+        @NameInMap("ProxyServiceStatus")
+        public String proxyServiceStatus;
+
         @NameInMap("ReplicaMode")
         public String replicaMode;
 
@@ -747,6 +792,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public java.util.List<String> getAvailableZones() {
             return this.availableZones;
+        }
+
+        public DescribeInstanceResponseBodyInstance setCpuArchitecture(String cpuArchitecture) {
+            this.cpuArchitecture = cpuArchitecture;
+            return this;
+        }
+        public String getCpuArchitecture() {
+            return this.cpuArchitecture;
         }
 
         public DescribeInstanceResponseBodyInstance setCreateTime(String createTime) {
@@ -811,6 +864,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public Boolean getEnableIsolationOptimization() {
             return this.enableIsolationOptimization;
+        }
+
+        public DescribeInstanceResponseBodyInstance setEnableProxyService(Boolean enableProxyService) {
+            this.enableProxyService = enableProxyService;
+            return this;
+        }
+        public Boolean getEnableProxyService() {
+            return this.enableProxyService;
         }
 
         public DescribeInstanceResponseBodyInstance setEnableUpgradeLogDisk(Boolean enableUpgradeLogDisk) {
@@ -923,6 +984,22 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public String getPayType() {
             return this.payType;
+        }
+
+        public DescribeInstanceResponseBodyInstance setProxyClusterId(String proxyClusterId) {
+            this.proxyClusterId = proxyClusterId;
+            return this;
+        }
+        public String getProxyClusterId() {
+            return this.proxyClusterId;
+        }
+
+        public DescribeInstanceResponseBodyInstance setProxyServiceStatus(String proxyServiceStatus) {
+            this.proxyServiceStatus = proxyServiceStatus;
+            return this;
+        }
+        public String getProxyServiceStatus() {
+            return this.proxyServiceStatus;
         }
 
         public DescribeInstanceResponseBodyInstance setReplicaMode(String replicaMode) {

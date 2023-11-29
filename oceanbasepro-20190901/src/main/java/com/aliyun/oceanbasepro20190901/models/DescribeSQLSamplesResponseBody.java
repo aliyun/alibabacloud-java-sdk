@@ -140,6 +140,9 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         @NameInMap("ExpectedWorkerCount")
         public Double expectedWorkerCount;
 
+        @NameInMap("FullSqlText")
+        public String fullSqlText;
+
         /**
          * <p>Plan generation time (in milliseconds).</p>
          */
@@ -483,6 +486,14 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         }
         public Double getExpectedWorkerCount() {
             return this.expectedWorkerCount;
+        }
+
+        public DescribeSQLSamplesResponseBodyData setFullSqlText(String fullSqlText) {
+            this.fullSqlText = fullSqlText;
+            return this;
+        }
+        public String getFullSqlText() {
+            return this.fullSqlText;
         }
 
         public DescribeSQLSamplesResponseBodyData setGetPlanTime(Double getPlanTime) {

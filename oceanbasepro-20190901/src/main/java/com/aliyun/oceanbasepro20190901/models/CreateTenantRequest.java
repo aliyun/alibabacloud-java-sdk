@@ -31,6 +31,9 @@ public class CreateTenantRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("LogDisk")
+    public Long logDisk;
+
     /**
      * <p>The memory size of the tenant, in GB.   </p>
      * <br>
@@ -45,6 +48,9 @@ public class CreateTenantRequest extends TeaModel {
      */
     @NameInMap("PrimaryZone")
     public String primaryZone;
+
+    @NameInMap("ReadOnlyZoneList")
+    public String readOnlyZoneList;
 
     /**
      * <p>The tenant mode.    </p>
@@ -127,6 +133,14 @@ public class CreateTenantRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public CreateTenantRequest setLogDisk(Long logDisk) {
+        this.logDisk = logDisk;
+        return this;
+    }
+    public Long getLogDisk() {
+        return this.logDisk;
+    }
+
     public CreateTenantRequest setMemory(Integer memory) {
         this.memory = memory;
         return this;
@@ -141,6 +155,14 @@ public class CreateTenantRequest extends TeaModel {
     }
     public String getPrimaryZone() {
         return this.primaryZone;
+    }
+
+    public CreateTenantRequest setReadOnlyZoneList(String readOnlyZoneList) {
+        this.readOnlyZoneList = readOnlyZoneList;
+        return this;
+    }
+    public String getReadOnlyZoneList() {
+        return this.readOnlyZoneList;
     }
 
     public CreateTenantRequest setTenantMode(String tenantMode) {

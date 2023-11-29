@@ -17,11 +17,17 @@ public class ModifyTenantResourceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("LogDisk")
+    public Long logDisk;
+
     /**
      * <p>The ID of the tenant.</p>
      */
     @NameInMap("Memory")
     public Integer memory;
+
+    @NameInMap("ReadOnlyZoneList")
+    public String readOnlyZoneList;
 
     /**
      * <p>The information about the CPU resources of the tenant.</p>
@@ -50,12 +56,28 @@ public class ModifyTenantResourceRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public ModifyTenantResourceRequest setLogDisk(Long logDisk) {
+        this.logDisk = logDisk;
+        return this;
+    }
+    public Long getLogDisk() {
+        return this.logDisk;
+    }
+
     public ModifyTenantResourceRequest setMemory(Integer memory) {
         this.memory = memory;
         return this;
     }
     public Integer getMemory() {
         return this.memory;
+    }
+
+    public ModifyTenantResourceRequest setReadOnlyZoneList(String readOnlyZoneList) {
+        this.readOnlyZoneList = readOnlyZoneList;
+        return this;
+    }
+    public String getReadOnlyZoneList() {
+        return this.readOnlyZoneList;
     }
 
     public ModifyTenantResourceRequest setTenantId(String tenantId) {

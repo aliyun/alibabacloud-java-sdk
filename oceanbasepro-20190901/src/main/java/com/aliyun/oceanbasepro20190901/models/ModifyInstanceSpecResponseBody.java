@@ -32,12 +32,23 @@ public class ModifyInstanceSpecResponseBody extends TeaModel {
     }
 
     public static class ModifyInstanceSpecResponseBodyData extends TeaModel {
+        @NameInMap("DryRunResult")
+        public Boolean dryRunResult;
+
         @NameInMap("OrderId")
         public String orderId;
 
         public static ModifyInstanceSpecResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ModifyInstanceSpecResponseBodyData self = new ModifyInstanceSpecResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyInstanceSpecResponseBodyData setDryRunResult(Boolean dryRunResult) {
+            this.dryRunResult = dryRunResult;
+            return this;
+        }
+        public Boolean getDryRunResult() {
+            return this.dryRunResult;
         }
 
         public ModifyInstanceSpecResponseBodyData setOrderId(String orderId) {

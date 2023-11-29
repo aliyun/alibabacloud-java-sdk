@@ -10,6 +10,9 @@ public class DescribeDatabasesRequest extends TeaModel {
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     /**
      * <p>The return result of the request.</p>
      */
@@ -56,6 +59,14 @@ public class DescribeDatabasesRequest extends TeaModel {
     }
     public String getDatabaseName() {
         return this.databaseName;
+    }
+
+    public DescribeDatabasesRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public DescribeDatabasesRequest setPageNumber(Integer pageNumber) {

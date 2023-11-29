@@ -147,6 +147,15 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantSecurityConfigsResponseBodyConfigs extends TeaModel {
+        @NameInMap("CheckId")
+        public String checkId;
+
+        @NameInMap("CheckTime")
+        public String checkTime;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
         @NameInMap("TenantSecurityConfigs")
         public java.util.List<DescribeTenantSecurityConfigsResponseBodyConfigsTenantSecurityConfigs> tenantSecurityConfigs;
 
@@ -159,6 +168,30 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
         public static DescribeTenantSecurityConfigsResponseBodyConfigs build(java.util.Map<String, ?> map) throws Exception {
             DescribeTenantSecurityConfigsResponseBodyConfigs self = new DescribeTenantSecurityConfigsResponseBodyConfigs();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeTenantSecurityConfigsResponseBodyConfigs setCheckId(String checkId) {
+            this.checkId = checkId;
+            return this;
+        }
+        public String getCheckId() {
+            return this.checkId;
+        }
+
+        public DescribeTenantSecurityConfigsResponseBodyConfigs setCheckTime(String checkTime) {
+            this.checkTime = checkTime;
+            return this;
+        }
+        public String getCheckTime() {
+            return this.checkTime;
+        }
+
+        public DescribeTenantSecurityConfigsResponseBodyConfigs setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public DescribeTenantSecurityConfigsResponseBodyConfigs setTenantSecurityConfigs(java.util.List<DescribeTenantSecurityConfigsResponseBodyConfigsTenantSecurityConfigs> tenantSecurityConfigs) {

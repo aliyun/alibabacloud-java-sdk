@@ -188,6 +188,9 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         @NameInMap("TenantId")
         public String tenantId;
 
+        @NameInMap("TenantName")
+        public String tenantName;
+
         /**
          * <p>The name of the database table.</p>
          */
@@ -293,6 +296,14 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
         public String getTenantId() {
             return this.tenantId;
+        }
+
+        public DescribeDatabasesResponseBodyDatabases setTenantName(String tenantName) {
+            this.tenantName = tenantName;
+            return this;
+        }
+        public String getTenantName() {
+            return this.tenantName;
         }
 
         public DescribeDatabasesResponseBodyDatabases setUsers(java.util.List<DescribeDatabasesResponseBodyDatabasesUsers> users) {
