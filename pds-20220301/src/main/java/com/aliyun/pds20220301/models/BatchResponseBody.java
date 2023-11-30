@@ -4,6 +4,9 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class BatchResponseBody extends TeaModel {
+    /**
+     * <p>All responses of the child requests.</p>
+     */
     @NameInMap("responses")
     public java.util.List<BatchResponseBodyResponses> responses;
 
@@ -21,12 +24,21 @@ public class BatchResponseBody extends TeaModel {
     }
 
     public static class BatchResponseBodyResponses extends TeaModel {
+        /**
+         * <p>The response parameters of a child request. For more information, see the topic of the corresponding child request.</p>
+         */
         @NameInMap("body")
         public java.util.Map<String, String> body;
 
+        /**
+         * <p>The ID of the child request. The ID is used to associate a child request with a response.</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The returned HTTP status code of a child request. For more information, see the topic of the corresponding child request.</p>
+         */
         @NameInMap("status")
         public Integer status;
 

@@ -4,18 +4,33 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class ListUploadedPartsResponseBody extends TeaModel {
+    /**
+     * <p>The file ID.</p>
+     */
     @NameInMap("file_id")
     public String fileId;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.</p>
+     */
     @NameInMap("next_part_number_marker")
     public String nextPartNumberMarker;
 
+    /**
+     * <p>Indicates whether the parallel upload feature is enabled.</p>
+     */
     @NameInMap("parallel_upload")
     public Boolean parallelUpload;
 
+    /**
+     * <p>The ID of the upload task.</p>
+     */
     @NameInMap("upload_id")
     public String uploadId;
 
+    /**
+     * <p>The information about the file parts.</p>
+     */
     @NameInMap("uploaded_parts")
     public java.util.List<UploadPartInfo> uploadedParts;
 

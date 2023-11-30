@@ -4,12 +4,21 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class ListDeltaResponseBody extends TeaModel {
+    /**
+     * <p>The cursor of the incremental information.</p>
+     */
     @NameInMap("cursor")
     public String cursor;
 
+    /**
+     * <p>Indicates whether more information is returned.</p>
+     */
     @NameInMap("has_more")
     public Boolean hasMore;
 
+    /**
+     * <p>The incremental information returned.</p>
+     */
     @NameInMap("items")
     public java.util.List<ListDeltaResponseBodyItems> items;
 
@@ -43,12 +52,30 @@ public class ListDeltaResponseBody extends TeaModel {
     }
 
     public static class ListDeltaResponseBodyItems extends TeaModel {
+        /**
+         * <p>The information about the file.</p>
+         */
         @NameInMap("file")
         public File file;
 
+        /**
+         * <p>The file ID.</p>
+         */
         @NameInMap("file_id")
         public String fileId;
 
+        /**
+         * <p>The operation that is performed. Valid values: Valid values:</p>
+         * <br>
+         * <p>*   create</p>
+         * <p>*   overwrite</p>
+         * <p>*   delete</p>
+         * <p>*   update</p>
+         * <p>*   move</p>
+         * <p>*   trash</p>
+         * <p>*   restore</p>
+         * <p>*   rename</p>
+         */
         @NameInMap("op")
         public String op;
 

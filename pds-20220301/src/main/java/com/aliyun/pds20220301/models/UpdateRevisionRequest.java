@@ -4,18 +4,37 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class UpdateRevisionRequest extends TeaModel {
+    /**
+     * <p>The drive ID.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The file ID.</p>
+     */
     @NameInMap("file_id")
     public String fileId;
 
+    /**
+     * <p>Specifies whether to permanently retain a version.</p>
+     * <br>
+     * <p>By default, this parameter is not specified, which indicates that you do not modify the permanent retention configuration of the version.</p>
+     */
     @NameInMap("keep_forever")
     public Boolean keepForever;
 
+    /**
+     * <p>The description of the version. The description can be up to 1,024 characters in length.</p>
+     * <br>
+     * <p>By default, this parameter is not specified, which indicates that you do not modify the description of the version.</p>
+     */
     @NameInMap("revision_description")
     public String revisionDescription;
 
+    /**
+     * <p>The version ID.</p>
+     */
     @NameInMap("revision_id")
     public String revisionId;
 

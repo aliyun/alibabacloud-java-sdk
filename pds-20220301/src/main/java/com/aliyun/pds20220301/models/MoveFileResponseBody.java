@@ -4,18 +4,37 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class MoveFileResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the asynchronous task.</p>
+     * <br>
+     * <p>If an empty string is returned, the file is moved.</p>
+     * <br>
+     * <p>If a non-empty string is returned, an asynchronous task is required. You can call the GetAsyncTask operation to obtain the information about an asynchronous task based on the task ID.</p>
+     */
     @NameInMap("async_task_id")
     public String asyncTaskId;
 
+    /**
+     * <p>The domain ID.</p>
+     */
     @NameInMap("domain_id")
     public String domainId;
 
+    /**
+     * <p>The drive ID.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>Indicates whether the file already exists in the destination directory.</p>
+     */
     @NameInMap("exist")
     public Boolean exist;
 
+    /**
+     * <p>The file ID.</p>
+     */
     @NameInMap("file_id")
     public String fileId;
 

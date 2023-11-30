@@ -4,6 +4,9 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class DeleteUserRequest extends TeaModel {
+    /**
+     * <p>The user ID.</p>
+     */
     @NameInMap("user_id")
     public String userId;
 

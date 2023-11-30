@@ -4,21 +4,39 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class GetUploadUrlResponseBody extends TeaModel {
+    /**
+     * <p>The time when the upload task was created.</p>
+     */
     @NameInMap("create_at")
     public String createAt;
 
+    /**
+     * <p>The domain ID.</p>
+     */
     @NameInMap("domain_id")
     public String domainId;
 
+    /**
+     * <p>The drive ID.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The file ID.</p>
+     */
     @NameInMap("file_id")
     public String fileId;
 
+    /**
+     * <p>The information about the file parts.</p>
+     */
     @NameInMap("part_info_list")
     public java.util.List<UploadPartInfo> partInfoList;
 
+    /**
+     * <p>The ID of the upload task.</p>
+     */
     @NameInMap("upload_id")
     public String uploadId;
 

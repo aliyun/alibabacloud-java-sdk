@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class FileRemovePermissionRequest extends TeaModel {
     /**
-     * <p>空间id</p>
+     * <p>The drive ID.</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
-     * <p>文件id</p>
+     * <p>The file ID.</p>
      */
     @NameInMap("file_id")
     public String fileId;
 
     /**
-     * <p>共享的用户对象集合</p>
+     * <p>The identities with whom the file is shared.</p>
      */
     @NameInMap("member_list")
     public java.util.List<FileRemovePermissionRequestMemberList> memberList;
@@ -53,39 +53,39 @@ public class FileRemovePermissionRequest extends TeaModel {
 
     public static class FileRemovePermissionRequestMemberList extends TeaModel {
         /**
-         * <p>可授权对象，表示一个用户或者一个群组</p>
+         * <p>The identity to whom the permissions are granted, which is a user or a group.</p>
          */
         @NameInMap("identity")
         public Identity identity;
 
         /**
-         * <p>目前支持两种方式设置权限，一种是通过指定角色设置权限，另一种是自定义操作权限，此字段用于指定角色设置权限，与action\_list互斥，当两个字段同时设置时，以此字段为准</p>
+         * <p>The role ID. You can grant permissions by assigning roles to identities, or you can customize the permissions. To grant permissions by assigning roles to identities, specify role_id. role_id and action_list are mutually exclusive. If both parameters are specified, role_id has a higher priority.</p>
          * <br>
-         * <p>目前支持：</p>
+         * <p>Valid values:</p>
          * <br>
-         * <p>SystemFileOwner（文件协同）</p>
+         * <p>SystemFileOwner: collaborator.</p>
          * <br>
-         * <p>SystemFileDownloader（下载者）</p>
+         * <p>SystemFileDownloader: downloader.</p>
          * <br>
-         * <p>SystemFileEditor（编辑者）</p>
+         * <p>SystemFileEditor: editor.</p>
          * <br>
-         * <p>SystemFileEditorWithoutDelete（无删除编辑者）</p>
+         * <p>SystemFileEditorWithoutDelete: editor without permissions to delete the file.</p>
          * <br>
-         * <p>SystemFileEditorWithoutShareLink（无分享编辑者）</p>
+         * <p>SystemFileEditorWithoutShareLink: editor without permissions to share the file.</p>
          * <br>
-         * <p>SystemFileMetaViewer（可见列表）</p>
+         * <p>SystemFileMetaViewer: viewer of lists.</p>
          * <br>
-         * <p>SystemFileUploader（上传者）、SystemFileUploaderAndDownloader（上传/下载者）</p>
+         * <p>SystemFileUploader: uploader. SystemFileUploaderAndDownloader: uploader and downloader.</p>
          * <br>
-         * <p>SystemFileDownloaderWithShareLink（下载/分享者）</p>
+         * <p>SystemFileDownloaderWithShareLink: downloader and sharer.</p>
          * <br>
-         * <p>SystemFileUploaderAndDownloaderWithShareLink（上传/下载/分享者）</p>
+         * <p>SystemFileUploaderAndDownloaderWithShareLink: uploader, downloader, and sharer.</p>
          * <br>
-         * <p>SystemFileUploaderAndViewer（预览/上传者）</p>
+         * <p>SystemFileUploaderAndViewer: viewer and uploader.</p>
          * <br>
-         * <p>SystemFileUploaderWithShareLink（上传/分享者）</p>
+         * <p>SystemFileUploaderWithShareLink: uploader and sharer.</p>
          * <br>
-         * <p>SystemFileViewer（预览者）</p>
+         * <p>SystemFileViewer: viewer.</p>
          */
         @NameInMap("role_id")
         public String roleId;

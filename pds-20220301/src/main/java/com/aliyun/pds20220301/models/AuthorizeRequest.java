@@ -4,24 +4,52 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class AuthorizeRequest extends TeaModel {
+    /**
+     * <p>The application ID returned when the application was created.</p>
+     */
     @NameInMap("client_id")
     public String clientId;
 
+    /**
+     * <p>Specifies whether to hide the consent page.</p>
+     */
     @NameInMap("hide_consent")
     public Boolean hideConsent;
 
+    /**
+     * <p>The authentication method. Valid values:</p>
+     * <br>
+     * <p>*   default: all logon methods that are integrated on the default logon page provided by Drive and Photo Service.</p>
+     * <p>*   ding: logs on by scanning a DingTalk QR code.</p>
+     * <p>*   ding_sns: logs on by entering a DingTalk account and its password.</p>
+     * <p>*   ram: logs on as an Alibaba Cloud Resource Access Management (RAM) user.</p>
+     * <p>*   wechat: logs on by scanning a WeCom QR code.</p>
+     * <p>*   wechat_app: logs on without authentication in WeCom.</p>
+     */
     @NameInMap("login_type")
     public String loginType;
 
+    /**
+     * <p>The callback URL specified when the application was created.</p>
+     */
     @NameInMap("redirect_uri")
     public String redirectUri;
 
+    /**
+     * <p>The format in which to return the response. Set the value to code.</p>
+     */
     @NameInMap("response_type")
     public String responseType;
 
+    /**
+     * <p>The requested permissions. By default, all permissions are requested.</p>
+     */
     @NameInMap("scope")
     public java.util.List<String> scope;
 
+    /**
+     * <p>The user-defined parameter to return in the callback URL after the requested permissions are granted.</p>
+     */
     @NameInMap("state")
     public String state;
 

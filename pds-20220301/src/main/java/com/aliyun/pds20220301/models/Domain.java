@@ -28,6 +28,9 @@ public class Domain extends TeaModel {
     @NameInMap("published_app_access_strategy")
     public AppAccessStrategy publishedAppAccessStrategy;
 
+    @NameInMap("sharable")
+    public Boolean sharable;
+
     @NameInMap("size_quota")
     public Long sizeQuota;
 
@@ -113,6 +116,14 @@ public class Domain extends TeaModel {
     }
     public AppAccessStrategy getPublishedAppAccessStrategy() {
         return this.publishedAppAccessStrategy;
+    }
+
+    public Domain setSharable(Boolean sharable) {
+        this.sharable = sharable;
+        return this;
+    }
+    public Boolean getSharable() {
+        return this.sharable;
     }
 
     public Domain setSizeQuota(Long sizeQuota) {

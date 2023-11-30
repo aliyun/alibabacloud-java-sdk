@@ -4,6 +4,9 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class FilePutUserTagsResponseBody extends TeaModel {
+    /**
+     * <p>The file ID.</p>
+     */
     @NameInMap("file_id")
     public String fileId;
 

@@ -4,6 +4,9 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class GetShareLinkByAnonymousRequest extends TeaModel {
+    /**
+     * <p>The share ID.</p>
+     */
     @NameInMap("share_id")
     public String shareId;
 

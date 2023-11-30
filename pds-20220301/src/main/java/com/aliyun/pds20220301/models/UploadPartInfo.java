@@ -13,6 +13,9 @@ public class UploadPartInfo extends TeaModel {
     @NameInMap("parallel_sha1_ctx")
     public UploadPartInfoParallelSha1Ctx parallelSha1Ctx;
 
+    @NameInMap("parallel_sha256_ctx")
+    public UploadPartInfoParallelSha256Ctx parallelSha256Ctx;
+
     @NameInMap("part_number")
     public Integer partNumber;
 
@@ -49,6 +52,14 @@ public class UploadPartInfo extends TeaModel {
     }
     public UploadPartInfoParallelSha1Ctx getParallelSha1Ctx() {
         return this.parallelSha1Ctx;
+    }
+
+    public UploadPartInfo setParallelSha256Ctx(UploadPartInfoParallelSha256Ctx parallelSha256Ctx) {
+        this.parallelSha256Ctx = parallelSha256Ctx;
+        return this;
+    }
+    public UploadPartInfoParallelSha256Ctx getParallelSha256Ctx() {
+        return this.parallelSha256Ctx;
     }
 
     public UploadPartInfo setPartNumber(Integer partNumber) {
@@ -96,6 +107,36 @@ public class UploadPartInfo extends TeaModel {
         }
 
         public UploadPartInfoParallelSha1Ctx setPartOffset(Long partOffset) {
+            this.partOffset = partOffset;
+            return this;
+        }
+        public Long getPartOffset() {
+            return this.partOffset;
+        }
+
+    }
+
+    public static class UploadPartInfoParallelSha256Ctx extends TeaModel {
+        @NameInMap("h")
+        public java.util.List<Long> h;
+
+        @NameInMap("part_offset")
+        public Long partOffset;
+
+        public static UploadPartInfoParallelSha256Ctx build(java.util.Map<String, ?> map) throws Exception {
+            UploadPartInfoParallelSha256Ctx self = new UploadPartInfoParallelSha256Ctx();
+            return TeaModel.build(map, self);
+        }
+
+        public UploadPartInfoParallelSha256Ctx setH(java.util.List<Long> h) {
+            this.h = h;
+            return this;
+        }
+        public java.util.List<Long> getH() {
+            return this.h;
+        }
+
+        public UploadPartInfoParallelSha256Ctx setPartOffset(Long partOffset) {
             this.partOffset = partOffset;
             return this;
         }

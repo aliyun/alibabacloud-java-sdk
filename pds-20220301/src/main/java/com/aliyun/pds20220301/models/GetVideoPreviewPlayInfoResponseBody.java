@@ -7,21 +7,39 @@ public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The domain ID.</p>
+     */
     @NameInMap("domain_id")
     public String domainId;
 
+    /**
+     * <p>The drive ID.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The file ID.</p>
+     */
     @NameInMap("file_id")
     public String fileId;
+
+    @NameInMap("master_url")
+    public String masterUrl;
 
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The share ID.</p>
+     */
     @NameInMap("share_id")
     public String shareId;
 
+    /**
+     * <p>The information about video playback.</p>
+     */
     @NameInMap("video_preview_play_info")
     public VideoPreviewPlayInfo videoPreviewPlayInfo;
 
@@ -60,6 +78,14 @@ public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
     }
     public String getFileId() {
         return this.fileId;
+    }
+
+    public GetVideoPreviewPlayInfoResponseBody setMasterUrl(String masterUrl) {
+        this.masterUrl = masterUrl;
+        return this;
+    }
+    public String getMasterUrl() {
+        return this.masterUrl;
     }
 
     public GetVideoPreviewPlayInfoResponseBody setMessage(String message) {

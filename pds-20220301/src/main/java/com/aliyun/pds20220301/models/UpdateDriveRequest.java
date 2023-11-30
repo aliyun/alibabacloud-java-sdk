@@ -4,25 +4,41 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class UpdateDriveRequest extends TeaModel {
+    /**
+     * <p>The description of the drive. The description can be up to 1,024 characters in length.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The drive ID.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The name of the drive. The name can be up to 128 characters in length.</p>
+     */
     @NameInMap("drive_name")
     public String driveName;
 
     /**
-     * <p>归属者</p>
-     * <p>注意，当前只允许通过 ak 来修改个人 drive 的所有者。</p>
+     * <p>The owner of the drive. Note: You can modify the owner of a personal drive only by using an AccessKey pair.</p>
      */
     @NameInMap("owner")
     public String owner;
 
+    /**
+     * <p>The state of the drive. Valid values:</p>
+     * <br>
+     * <p>enabled and disabled.</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The total size of the drive. Unit: bytes. A value of -1 specifies that the size is unlimited.</p>
+     */
     @NameInMap("total_size")
     public Long totalSize;
 

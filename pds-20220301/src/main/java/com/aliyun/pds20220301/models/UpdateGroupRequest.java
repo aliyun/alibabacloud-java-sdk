@@ -4,12 +4,21 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class UpdateGroupRequest extends TeaModel {
+    /**
+     * <p>The description of the group after modification.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The ID of the group that you want to modify.</p>
+     */
     @NameInMap("group_id")
     public String groupId;
 
+    /**
+     * <p>The name of the group after modification.</p>
+     */
     @NameInMap("group_name")
     public String groupName;
 

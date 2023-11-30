@@ -4,21 +4,39 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class DownloadFileRequest extends TeaModel {
+    /**
+     * <p>The drive ID.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The file ID.</p>
+     */
     @NameInMap("file_id")
     public String fileId;
 
+    /**
+     * <p>The method used to generate the thumbnail of an image. If this parameter is specified, you are redirected to the URL of the generated thumbnail.</p>
+     */
     @NameInMap("image_thumbnail_process")
     public String imageThumbnailProcess;
 
+    /**
+     * <p>The method used to generate the thumbnail of a document. If this parameter is specified, you are redirected to the URL of the generated thumbnail.</p>
+     */
     @NameInMap("office_thumbnail_process")
     public String officeThumbnailProcess;
 
+    /**
+     * <p>The share ID. If you want to manage a file by using a share link, carry the `x-share-token` header for authentication in the request and specify share_id. In this case, `drive_id` is invalid. Otherwise, use an `AccessKey pair` or `access token` for authentication and specify `drive_id`. You must specify one of `share_id` and `drive_id`.</p>
+     */
     @NameInMap("share_id")
     public String shareId;
 
+    /**
+     * <p>The method used to generate the thumbnail of a video. If this parameter is specified, you are redirected to the URL of the generated thumbnail.</p>
+     */
     @NameInMap("video_thumbnail_process")
     public String videoThumbnailProcess;
 

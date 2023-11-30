@@ -4,36 +4,69 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class CreateFileResponseBody extends TeaModel {
+    /**
+     * <p>The domain ID.</p>
+     */
     @NameInMap("domain_id")
     public String domainId;
 
+    /**
+     * <p>The drive ID.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>Indicates whether the file exists.</p>
+     */
     @NameInMap("exist")
     public Boolean exist;
 
+    /**
+     * <p>The file ID.</p>
+     */
     @NameInMap("file_id")
     public String fileId;
 
+    /**
+     * <p>The file name.</p>
+     */
     @NameInMap("file_name")
     public String fileName;
 
+    /**
+     * <p>The ID of the parent directory.</p>
+     */
     @NameInMap("parent_file_id")
     public String parentFileId;
 
+    /**
+     * <p>The information about the file parts.</p>
+     */
     @NameInMap("part_info_list")
     public java.util.List<UploadPartInfo> partInfoList;
 
+    /**
+     * <p>Indicates whether the file is instantly uploaded.</p>
+     */
     @NameInMap("rapid_upload")
     public Boolean rapidUpload;
 
+    /**
+     * <p>The state of the file.</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The type of the file.</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <p>The ID of the upload task.</p>
+     */
     @NameInMap("upload_id")
     public String uploadId;
 

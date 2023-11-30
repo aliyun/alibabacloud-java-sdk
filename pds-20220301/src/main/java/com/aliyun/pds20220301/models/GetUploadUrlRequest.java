@@ -4,18 +4,33 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class GetUploadUrlRequest extends TeaModel {
+    /**
+     * <p>The drive ID.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The file ID.</p>
+     */
     @NameInMap("file_id")
     public String fileId;
 
+    /**
+     * <p>The information about the file parts.</p>
+     */
     @NameInMap("part_info_list")
     public java.util.List<GetUploadUrlRequestPartInfoList> partInfoList;
 
+    /**
+     * <p>The share ID.</p>
+     */
     @NameInMap("share_id")
     public String shareId;
 
+    /**
+     * <p>The ID of the upload task.</p>
+     */
     @NameInMap("upload_id")
     public String uploadId;
 
@@ -65,9 +80,15 @@ public class GetUploadUrlRequest extends TeaModel {
     }
 
     public static class GetUploadUrlRequestPartInfoListParallelSha1Ctx extends TeaModel {
+        /**
+         * <p>The first to fifth 32-bit variables of the SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.</p>
+         */
         @NameInMap("h")
         public java.util.List<Long> h;
 
+        /**
+         * <p>The size of the file part. Unit: bytes. The value must be a multiple of 64. This parameter takes effect only if the parallel upload feature is enabled.</p>
+         */
         @NameInMap("part_offset")
         public Long partOffset;
 
@@ -101,9 +122,15 @@ public class GetUploadUrlRequest extends TeaModel {
         @NameInMap("content_type")
         public String contentType;
 
+        /**
+         * <p>The SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.</p>
+         */
         @NameInMap("parallel_sha1_ctx")
         public GetUploadUrlRequestPartInfoListParallelSha1Ctx parallelSha1Ctx;
 
+        /**
+         * <p>The serial number of a part.</p>
+         */
         @NameInMap("part_number")
         public Integer partNumber;
 

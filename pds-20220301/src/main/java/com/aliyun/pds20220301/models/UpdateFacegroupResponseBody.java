@@ -4,9 +4,15 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class UpdateFacegroupResponseBody extends TeaModel {
+    /**
+     * <p>The drive ID.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The group ID.</p>
+     */
     @NameInMap("group_id")
     public String groupId;
 

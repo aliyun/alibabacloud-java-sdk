@@ -4,9 +4,15 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class TrashFileRequest extends TeaModel {
+    /**
+     * <p>The drive ID.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The ID of the file or folder.</p>
+     */
     @NameInMap("file_id")
     public String fileId;
 

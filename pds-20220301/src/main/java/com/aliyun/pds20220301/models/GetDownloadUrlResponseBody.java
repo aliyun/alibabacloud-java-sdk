@@ -4,27 +4,51 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class GetDownloadUrlResponseBody extends TeaModel {
+    /**
+     * <p>The download URL of a file that is downloaded by using Alibaba Cloud CDN.</p>
+     */
     @NameInMap("cdn_url")
     public String cdnUrl;
 
+    /**
+     * <p>The hash value of the file content.</p>
+     */
     @NameInMap("content_hash")
     public String contentHash;
 
+    /**
+     * <p>The name of the algorithm that is used to calculate the hash value of the file content.</p>
+     */
     @NameInMap("content_hash_name")
     public String contentHashName;
 
+    /**
+     * <p>The hash value calculated by using 64-bit cyclic redundancy check (CRC-64).</p>
+     */
     @NameInMap("crc64_hash")
     public String crc64Hash;
 
+    /**
+     * <p>The time when the download URL expires.</p>
+     */
     @NameInMap("expiration")
     public String expiration;
 
+    /**
+     * <p>The download URL of a file that is downloaded over a virtual private cloud (VPC).</p>
+     */
     @NameInMap("internal_url")
     public String internalUrl;
 
+    /**
+     * <p>The size of the file. Unit: bytes.</p>
+     */
     @NameInMap("size")
     public Long size;
 
+    /**
+     * <p>The download URL of a file that is downloaded over the Internet.</p>
+     */
     @NameInMap("url")
     public String url;
 

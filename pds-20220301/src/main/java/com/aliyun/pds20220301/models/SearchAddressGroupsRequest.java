@@ -4,24 +4,87 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class SearchAddressGroupsRequest extends TeaModel {
+    /**
+     * <p>The level of the location.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   country</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   province</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   city</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   district</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   township</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     */
     @NameInMap("address_level")
     public String addressLevel;
 
+    /**
+     * <p>The locations.</p>
+     */
     @NameInMap("address_names")
     public java.util.List<String> addressNames;
 
+    /**
+     * <p>The coordinates of the bottom right vertex of the rectangle. Set the value in the format of latitude,longitude.</p>
+     */
     @NameInMap("br_geo_point")
     public String brGeoPoint;
 
+    /**
+     * <p>The drive ID.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The method used to generate the thumbnail of an image.</p>
+     */
     @NameInMap("image_thumbnail_process")
     public String imageThumbnailProcess;
 
+    /**
+     * <p>The coordinates of the top left vertex of the rectangle. Set the value in the format of latitude,longitude.</p>
+     */
     @NameInMap("tl_geo_point")
     public String tlGeoPoint;
 
+    /**
+     * <p>The method used to generate the thumbnail of a video.</p>
+     */
     @NameInMap("video_thumbnail_process")
     public String videoThumbnailProcess;
 

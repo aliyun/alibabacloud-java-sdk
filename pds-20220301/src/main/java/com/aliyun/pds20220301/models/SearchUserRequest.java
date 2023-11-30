@@ -4,30 +4,65 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class SearchUserRequest extends TeaModel {
+    /**
+     * <p>The email address of the user.</p>
+     */
     @NameInMap("email")
     public String email;
 
+    /**
+     * <p>The maximum number of results to return. Valid values: 1 to 100. Default value: 100.</p>
+     */
     @NameInMap("limit")
     public Integer limit;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\</p>
+     * <p>By default, this parameter is left empty.</p>
+     */
     @NameInMap("marker")
     public String marker;
 
+    /**
+     * <p>The nickname of the user. The nickname can be up to 128 characters in length.</p>
+     */
     @NameInMap("nick_name")
     public String nickName;
 
+    /**
+     * <p>The nickname used for fuzzy searches. The nickname can be up to 128 characters in length.</p>
+     */
     @NameInMap("nick_name_for_fuzzy")
     public String nickNameForFuzzy;
 
+    /**
+     * <p>The mobile number of the user.</p>
+     */
     @NameInMap("phone")
     public String phone;
 
+    /**
+     * <p>The role of the user. Valid values:</p>
+     * <br>
+     * <p>*   superadmin</p>
+     * <p>*   admin</p>
+     * <p>*   user</p>
+     */
     @NameInMap("role")
     public String role;
 
+    /**
+     * <p>The state of the user. Valid values:</p>
+     * <br>
+     * <p>*   disabled: The user is prohibited from logon.</p>
+     * <p>*   enabled: The user is in a normal state.</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The name of the user. The name can be up to 128 characters in length.</p>
+     */
     @NameInMap("user_name")
     public String userName;
 

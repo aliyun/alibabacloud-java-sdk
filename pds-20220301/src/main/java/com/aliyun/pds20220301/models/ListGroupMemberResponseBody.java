@@ -4,12 +4,21 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class ListGroupMemberResponseBody extends TeaModel {
+    /**
+     * <p>The information about the groups.</p>
+     */
     @NameInMap("group_items")
     public java.util.List<Group> groupItems;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.</p>
+     */
     @NameInMap("next_marker")
     public String nextMarker;
 
+    /**
+     * <p>The information about the users.</p>
+     */
     @NameInMap("user_items")
     public java.util.List<User> userItems;
 

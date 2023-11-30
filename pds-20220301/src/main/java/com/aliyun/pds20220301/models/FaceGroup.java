@@ -131,16 +131,16 @@ public class FaceGroup extends TeaModel {
     }
 
     public static class FaceGroupGroupCoverFaceBoundary extends TeaModel {
-        @NameInMap("height")
+        @NameInMap("Height")
         public Integer height;
 
-        @NameInMap("left")
+        @NameInMap("Left")
         public Integer left;
 
-        @NameInMap("top")
+        @NameInMap("Top")
         public Integer top;
 
-        @NameInMap("width")
+        @NameInMap("Width")
         public Integer width;
 
         public static FaceGroupGroupCoverFaceBoundary build(java.util.Map<String, ?> map) throws Exception {

@@ -4,12 +4,21 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class CompleteFileRequest extends TeaModel {
+    /**
+     * <p>The drive ID.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The file ID.</p>
+     */
     @NameInMap("file_id")
     public String fileId;
 
+    /**
+     * <p>The upload ID.</p>
+     */
     @NameInMap("upload_id")
     public String uploadId;
 

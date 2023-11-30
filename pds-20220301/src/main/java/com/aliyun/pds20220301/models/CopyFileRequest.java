@@ -4,21 +4,39 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class CopyFileRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to automatically rename the file if the file name already exists in the destination folder. Default value: false.</p>
+     */
     @NameInMap("auto_rename")
     public Boolean autoRename;
 
+    /**
+     * <p>The drive ID.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The file ID or folder ID.</p>
+     */
     @NameInMap("file_id")
     public String fileId;
 
+    /**
+     * <p>The share ID. If you want to manage a file by using a share link, carry the `x-share-token` header for authentication in the request and specify share_id. In this case, `drive_id` is invalid. Otherwise, use an `AccessKey pair` or `access token` for authentication and specify `drive_id`. You must specify one of `share_id` and `drive_id`.</p>
+     */
     @NameInMap("share_id")
     public String shareId;
 
+    /**
+     * <p>The ID of the drive to which you want to copy the file or folder. Default value: the value of drive_id.</p>
+     */
     @NameInMap("to_drive_id")
     public String toDriveId;
 
+    /**
+     * <p>The ID of the destination parent folder. If you want to copy the file or folder to a root directory, set this parameter to root.</p>
+     */
     @NameInMap("to_parent_file_id")
     public String toParentFileId;
 

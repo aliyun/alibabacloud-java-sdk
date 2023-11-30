@@ -4,12 +4,21 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class GetShareLinkTokenRequest extends TeaModel {
+    /**
+     * <p>The validity period of the token. Valid values: (0,7200]. Default value: 7200. Unit: seconds.</p>
+     */
     @NameInMap("expire_sec")
     public Integer expireSec;
 
+    /**
+     * <p>The share ID.</p>
+     */
     @NameInMap("share_id")
     public String shareId;
 
+    /**
+     * <p>The access code.</p>
+     */
     @NameInMap("share_pwd")
     public String sharePwd;
 
