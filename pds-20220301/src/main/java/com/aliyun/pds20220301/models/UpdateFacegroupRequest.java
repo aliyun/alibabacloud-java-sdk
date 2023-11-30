@@ -4,18 +4,33 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class UpdateFacegroupRequest extends TeaModel {
+    /**
+     * <p>The drive ID.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The face ID of the thumbnail of the face-based group. You can obtain the face ID from the **image_media_metadata** parameter in the returned results of the GetFile, ListFile, or SearchFile operation.</p>
+     */
     @NameInMap("group_cover_face_id")
     public String groupCoverFaceId;
 
+    /**
+     * <p>The ID of the face-based group. You can call the ListFacegroups operation to query the group ID.</p>
+     */
     @NameInMap("group_id")
     public String groupId;
 
+    /**
+     * <p>The name of the face-based group. The name can be up to 128 characters in length.</p>
+     */
     @NameInMap("group_name")
     public String groupName;
 
+    /**
+     * <p>The remarks. The remarks can be up to 128 characters in length.</p>
+     */
     @NameInMap("remarks")
     public String remarks;
 

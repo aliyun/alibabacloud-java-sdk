@@ -4,9 +4,15 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class ListAssignmentResponseBody extends TeaModel {
+    /**
+     * <p>The assigned roles.</p>
+     */
     @NameInMap("assignment_list")
     public java.util.List<ListAssignmentResponseBodyAssignmentList> assignmentList;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.</p>
+     */
     @NameInMap("next_marker")
     public String nextMarker;
 
@@ -32,24 +38,45 @@ public class ListAssignmentResponseBody extends TeaModel {
     }
 
     public static class ListAssignmentResponseBodyAssignmentList extends TeaModel {
+        /**
+         * <p>The time when the role was assigned. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("created_at")
         public Long createdAt;
 
+        /**
+         * <p>The ID of the user who assigned the role.</p>
+         */
         @NameInMap("creator")
         public String creator;
 
+        /**
+         * <p>The domain ID.</p>
+         */
         @NameInMap("domain_id")
         public String domainId;
 
+        /**
+         * <p>The identity to whom the role is assigned, which is a user or a group.</p>
+         */
         @NameInMap("identity")
         public Identity identity;
 
+        /**
+         * <p>The ID of the managed resource, such as a group ID.</p>
+         */
         @NameInMap("manage_resource_id")
         public String manageResourceId;
 
+        /**
+         * <p>The type of the managed resource. For example, a value of RT_Group indicates group.</p>
+         */
         @NameInMap("manage_resource_type")
         public String manageResourceType;
 
+        /**
+         * <p>The ID of the role assigned to the identity.</p>
+         */
         @NameInMap("role_id")
         public String roleId;
 

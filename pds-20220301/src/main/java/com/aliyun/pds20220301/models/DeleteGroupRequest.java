@@ -4,6 +4,9 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class DeleteGroupRequest extends TeaModel {
+    /**
+     * <p>The group ID.</p>
+     */
     @NameInMap("group_id")
     public String groupId;
 

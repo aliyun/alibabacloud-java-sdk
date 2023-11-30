@@ -19,10 +19,6 @@ public class ImageMediaMetadata extends TeaModel {
     @NameInMap("exif")
     public String exif;
 
-    @NameInMap("faces")
-    @Deprecated
-    public String faces;
-
     @NameInMap("faces_thumbnail")
     public java.util.List<FaceThumbnail> facesThumbnail;
 
@@ -93,14 +89,6 @@ public class ImageMediaMetadata extends TeaModel {
     }
     public String getExif() {
         return this.exif;
-    }
-
-    public ImageMediaMetadata setFaces(String faces) {
-        this.faces = faces;
-        return this;
-    }
-    public String getFaces() {
-        return this.faces;
     }
 
     public ImageMediaMetadata setFacesThumbnail(java.util.List<FaceThumbnail> facesThumbnail) {

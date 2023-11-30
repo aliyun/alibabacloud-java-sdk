@@ -4,15 +4,29 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class ListDeltaRequest extends TeaModel {
+    /**
+     * <p>The cursor of the incremental information.</p>
+     */
     @NameInMap("cursor")
     public String cursor;
 
+    /**
+     * <p>The drive ID.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The maximum number of results to return. Valid values: 0 to 100. Default value: 100.</p>
+     * <br>
+     * <p>The number of returned results must be less than or equal to the specified number.</p>
+     */
     @NameInMap("limit")
     public Integer limit;
 
+    /**
+     * <p>The ID of the root file of the synced folder.</p>
+     */
     @NameInMap("sync_root_id")
     public String syncRootId;
 

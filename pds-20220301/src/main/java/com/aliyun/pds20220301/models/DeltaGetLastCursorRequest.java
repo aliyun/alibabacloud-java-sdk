@@ -4,9 +4,15 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class DeltaGetLastCursorRequest extends TeaModel {
+    /**
+     * <p>The drive ID.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The ID of the root file of the synced folder.</p>
+     */
     @NameInMap("sync_root_id")
     public String syncRootId;
 

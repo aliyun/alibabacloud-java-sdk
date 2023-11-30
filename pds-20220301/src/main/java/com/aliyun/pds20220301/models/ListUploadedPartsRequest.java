@@ -4,21 +4,39 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class ListUploadedPartsRequest extends TeaModel {
+    /**
+     * <p>The drive ID. This parameter is required if the file is not uploaded by using the share URL of the file.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The file ID.</p>
+     */
     @NameInMap("file_id")
     public String fileId;
 
+    /**
+     * <p>The maximum number of results to return. Valid values: 1 to 100. Default value: 100.</p>
+     */
     @NameInMap("limit")
     public Integer limit;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is left empty.</p>
+     */
     @NameInMap("part_number_marker")
     public Integer partNumberMarker;
 
+    /**
+     * <p>The share ID. This parameter is required if the file is uploaded by using the share URL of the file.</p>
+     */
     @NameInMap("share_id")
     public String shareId;
 
+    /**
+     * <p>The ID of the upload task.</p>
+     */
     @NameInMap("upload_id")
     public String uploadId;
 

@@ -4,18 +4,36 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class SearchDriveRequest extends TeaModel {
+    /**
+     * <p>The drive name.</p>
+     */
     @NameInMap("drive_name")
     public String driveName;
 
+    /**
+     * <p>The maximum number of asynchronous tasks to return. Valid values: 1 to 100. Default value: 100.</p>
+     */
     @NameInMap("limit")
     public Integer limit;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\</p>
+     * <p>By default, this parameter is left empty.</p>
+     */
     @NameInMap("marker")
     public String marker;
 
+    /**
+     * <p>The owner of the drive.</p>
+     */
     @NameInMap("owner")
     public String owner;
 
+    /**
+     * <p>The type of the owner. Valid values:</p>
+     * <br>
+     * <p>user group</p>
+     */
     @NameInMap("owner_type")
     public String ownerType;
 

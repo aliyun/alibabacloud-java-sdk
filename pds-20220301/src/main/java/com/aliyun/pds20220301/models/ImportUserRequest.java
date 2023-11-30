@@ -4,27 +4,61 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class ImportUserRequest extends TeaModel {
+    /**
+     * <p>The display name of the authentication type.</p>
+     */
     @NameInMap("authentication_display_name")
     public String authenticationDisplayName;
 
+    /**
+     * <p>The authentication type. Valid values:</p>
+     * <br>
+     * <p>*   mobile: mobile number.</p>
+     * <p>*   email: email address.</p>
+     * <p>*   ding: DingTalk account.</p>
+     * <p>*   ram: Alibaba Cloud Resource Access Management (RAM) user.</p>
+     * <p>*   wechat: WeCom account.</p>
+     * <p>*   ldap: Lightweight Directory Access Protocol (LDAP) account.</p>
+     * <p>*   custom: custom account.</p>
+     */
     @NameInMap("authentication_type")
     public String authenticationType;
 
+    /**
+     * <p>Specifies whether to automatically create a drive.</p>
+     */
     @NameInMap("auto_create_drive")
     public Boolean autoCreateDrive;
 
+    /**
+     * <p>The size of the drive. The value cannot be smaller than -1. A value of -1 specifies that the size is unlimited.</p>
+     */
     @NameInMap("drive_total_size")
     public Long driveTotalSize;
 
+    /**
+     * <p>The additional information.</p>
+     * <br>
+     * <p>If authentication_type is set to mobile, set this parameter to a country code. If you do not specify this parameter, 86 is used by default.</p>
+     */
     @NameInMap("extra")
     public String extra;
 
+    /**
+     * <p>The unique identifier.</p>
+     */
     @NameInMap("identity")
     public String identity;
 
+    /**
+     * <p>The nickname of the user.</p>
+     */
     @NameInMap("nick_name")
     public String nickName;
 
+    /**
+     * <p>The ID of the group to which the user is added.</p>
+     */
     @NameInMap("parent_group_id")
     public String parentGroupId;
 

@@ -4,6 +4,9 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class GetAsyncTaskRequest extends TeaModel {
+    /**
+     * <p>The ID of the asynchronous task.</p>
+     */
     @NameInMap("async_task_id")
     public String asyncTaskId;
 

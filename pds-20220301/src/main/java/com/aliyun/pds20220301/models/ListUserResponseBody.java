@@ -4,9 +4,15 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class ListUserResponseBody extends TeaModel {
+    /**
+     * <p>The information about the users.</p>
+     */
     @NameInMap("items")
     public java.util.List<User> items;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.</p>
+     */
     @NameInMap("next_marker")
     public String nextMarker;
 

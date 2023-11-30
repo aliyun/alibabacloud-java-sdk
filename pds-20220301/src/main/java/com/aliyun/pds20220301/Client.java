@@ -94,6 +94,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addStoryFilesWithOptions(request, headers, runtime);
     }
 
+    /**
+      * You can call this operation to assign a group administrator role to a user.
+      *
+      * @param request AssignRoleRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AssignRoleResponse
+     */
     public AssignRoleResponse assignRoleWithOptions(AssignRoleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -131,12 +139,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new AssignRoleResponse());
     }
 
+    /**
+      * You can call this operation to assign a group administrator role to a user.
+      *
+      * @param request AssignRoleRequest
+      * @return AssignRoleResponse
+     */
     public AssignRoleResponse assignRole(AssignRoleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.assignRoleWithOptions(request, headers, runtime);
     }
 
+    /**
+      * For more information, see "OAuth 2.0 For Web Server Applications" at [OAuth 2.0 For Web Server Applications](https://www.alibabacloud.com/help/en/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications) in User Guide.
+      *
+      * @param tmpReq AuthorizeRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AuthorizeResponse
+     */
     public AuthorizeResponse authorizeWithOptions(AuthorizeRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         AuthorizeShrinkRequest request = new AuthorizeShrinkRequest();
@@ -187,11 +209,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "Anonymous"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
+            new TeaPair("bodyType", "binary")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new AuthorizeResponse());
     }
 
+    /**
+      * For more information, see "OAuth 2.0 For Web Server Applications" at [OAuth 2.0 For Web Server Applications](https://www.alibabacloud.com/help/en/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications) in User Guide.
+      *
+      * @param request AuthorizeRequest
+      * @return AuthorizeResponse
+     */
     public AuthorizeResponse authorize(AuthorizeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -233,6 +261,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.batchWithOptions(request, headers, runtime);
     }
 
+    /**
+      * You can cancel only the group administrator role.
+      *
+      * @param request CancelAssignRoleRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CancelAssignRoleResponse
+     */
     public CancelAssignRoleResponse cancelAssignRoleWithOptions(CancelAssignRoleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -270,6 +306,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CancelAssignRoleResponse());
     }
 
+    /**
+      * You can cancel only the group administrator role.
+      *
+      * @param request CancelAssignRoleRequest
+      * @return CancelAssignRoleResponse
+     */
     public CancelAssignRoleResponse cancelAssignRole(CancelAssignRoleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -483,6 +525,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createCustomizedStoryWithOptions(request, headers, runtime);
     }
 
+    /**
+      * If you want to perform secondary operations based on Drive and Photo Service and perform fine-grained control on your tenants, you can use the parent-child domain feature of Drive and Photo Service. For more information, join the DingTalk group whose ID is 23146118.
+      *
+      * @param request CreateDomainRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDomainResponse
+     */
     public CreateDomainResponse createDomainWithOptions(CreateDomainRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -532,6 +582,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateDomainResponse());
     }
 
+    /**
+      * If you want to perform secondary operations based on Drive and Photo Service and perform fine-grained control on your tenants, you can use the parent-child domain feature of Drive and Photo Service. For more information, join the DingTalk group whose ID is 23146118.
+      *
+      * @param request CreateDomainRequest
+      * @return CreateDomainResponse
+     */
     public CreateDomainResponse createDomain(CreateDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -751,6 +807,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createGroupWithOptions(request, headers, runtime);
     }
 
+    /**
+      * If you need to manage a large number of users based on Drive and Photo Service, you can control the features and quotas that users can use based on the benefits to which they are entitled. For more information, join the DingTalk group (ID 23146118).
+      *
+      * @param request CreateIdentityToBenefitPkgMappingRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateIdentityToBenefitPkgMappingResponse
+     */
     public CreateIdentityToBenefitPkgMappingResponse createIdentityToBenefitPkgMappingWithOptions(CreateIdentityToBenefitPkgMappingRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -792,6 +856,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateIdentityToBenefitPkgMappingResponse());
     }
 
+    /**
+      * If you need to manage a large number of users based on Drive and Photo Service, you can control the features and quotas that users can use based on the benefits to which they are entitled. For more information, join the DingTalk group (ID 23146118).
+      *
+      * @param request CreateIdentityToBenefitPkgMappingRequest
+      * @return CreateIdentityToBenefitPkgMappingResponse
+     */
     public CreateIdentityToBenefitPkgMappingResponse createIdentityToBenefitPkgMapping(CreateIdentityToBenefitPkgMappingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -865,6 +935,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createOrderWithOptions(request, headers, runtime);
     }
 
+    /**
+      * A share is a file view container. You can grant anonymous users the permissions to access files in the user drive by using the share URL. Anonymous users can access the files based on the granted permissions.
+      *
+      * @param request CreateShareLinkRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateShareLinkResponse
+     */
     public CreateShareLinkResponse createShareLinkWithOptions(CreateShareLinkRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -946,6 +1024,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateShareLinkResponse());
     }
 
+    /**
+      * A share is a file view container. You can grant anonymous users the permissions to access files in the user drive by using the share URL. Anonymous users can access the files based on the granted permissions.
+      *
+      * @param request CreateShareLinkRequest
+      * @return CreateShareLinkResponse
+     */
     public CreateShareLinkResponse createShareLink(CreateShareLinkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1432,6 +1516,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deltaGetLastCursorWithOptions(request, headers, runtime);
     }
 
+    /**
+      * For information about best practices for downloading a file.
+      *
+      * @param request DownloadFileRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DownloadFileResponse
+     */
     public DownloadFileResponse downloadFileWithOptions(DownloadFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1477,6 +1569,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DownloadFileResponse());
     }
 
+    /**
+      * For information about best practices for downloading a file.
+      *
+      * @param request DownloadFileRequest
+      * @return DownloadFileResponse
+     */
     public DownloadFileResponse downloadFile(DownloadFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1596,6 +1694,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.fileListPermissionWithOptions(request, headers, runtime);
     }
 
+    /**
+      * This operation is an incremental update operation. Take note of the following items:
+      * *   If a tag name specified in the request is the same as an existing tag name, the existing tag is overwritten.
+      * *   If a tag name specified in the request is different from the existing tag names, the specified tag is added.
+      * *   The existing tags with unique names are not affected.
+      *
+      * @param request FilePutUserTagsRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return FilePutUserTagsResponse
+     */
     public FilePutUserTagsResponse filePutUserTagsWithOptions(FilePutUserTagsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1629,6 +1738,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new FilePutUserTagsResponse());
     }
 
+    /**
+      * This operation is an incremental update operation. Take note of the following items:
+      * *   If a tag name specified in the request is the same as an existing tag name, the existing tag is overwritten.
+      * *   If a tag name specified in the request is different from the existing tag names, the specified tag is added.
+      * *   The existing tags with unique names are not affected.
+      *
+      * @param request FilePutUserTagsRequest
+      * @return FilePutUserTagsResponse
+     */
     public FilePutUserTagsResponse filePutUserTags(FilePutUserTagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1769,6 +1887,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getDomainWithOptions(request, headers, runtime);
+    }
+
+    public GetDomainQuotaResponse getDomainQuotaWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDomainQuota"),
+            new TeaPair("version", "2022-03-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/domain/get_quota"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetDomainQuotaResponse());
+    }
+
+    public GetDomainQuotaResponse getDomainQuota() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getDomainQuotaWithOptions(headers, runtime);
     }
 
     public GetDownloadUrlResponse getDownloadUrlWithOptions(GetDownloadUrlRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2149,6 +2291,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getShareLinkByAnonymousWithOptions(request, headers, runtime);
     }
 
+    /**
+      * To access a file by using a share link, you must first obtain a share token, even if the value of share_pwd of this share is an empty string, which specifies that the share is not private.
+      *
+      * @param request GetShareLinkTokenRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetShareLinkTokenResponse
+     */
     public GetShareLinkTokenResponse getShareLinkTokenWithOptions(GetShareLinkTokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2182,6 +2332,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetShareLinkTokenResponse());
     }
 
+    /**
+      * To access a file by using a share link, you must first obtain a share token, even if the value of share_pwd of this share is an empty string, which specifies that the share is not private.
+      *
+      * @param request GetShareLinkTokenRequest
+      * @return GetShareLinkTokenResponse
+     */
     public GetShareLinkTokenResponse getShareLinkToken(GetShareLinkTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -2247,6 +2403,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getStoryWithOptions(request, headers, runtime);
     }
 
+    /**
+      * **Before you call this operation, make sure that you are familiar with the [billing](~~425220~~) of Drive and Photo Service**.
+      * To call this operation, make sure that the value-added image processing feature is enabled.
+      * Before you call this operation, a value-added asynchronous task must be created. For example, you can call the CreateSimilarImageClusterTask operation to create an asynchronous task. Then, you can call this operation to query the execution status of the asynchronous task based on the task ID.
+      *
+      * @param request GetTaskStatusRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetTaskStatusResponse
+     */
     public GetTaskStatusResponse getTaskStatusWithOptions(GetTaskStatusRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2276,6 +2442,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetTaskStatusResponse());
     }
 
+    /**
+      * **Before you call this operation, make sure that you are familiar with the [billing](~~425220~~) of Drive and Photo Service**.
+      * To call this operation, make sure that the value-added image processing feature is enabled.
+      * Before you call this operation, a value-added asynchronous task must be created. For example, you can call the CreateSimilarImageClusterTask operation to create an asynchronous task. Then, you can call this operation to query the execution status of the asynchronous task based on the task ID.
+      *
+      * @param request GetTaskStatusRequest
+      * @return GetTaskStatusResponse
+     */
     public GetTaskStatusResponse getTaskStatus(GetTaskStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -2360,6 +2534,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getUserWithOptions(request, headers, runtime);
     }
 
+    /**
+      * For more information about best practices, see [Preview videos online](~~427477~~).
+      *
+      * @param request GetVideoPreviewPlayInfoRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetVideoPreviewPlayInfoResponse
+     */
     public GetVideoPreviewPlayInfoResponse getVideoPreviewPlayInfoWithOptions(GetVideoPreviewPlayInfoRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2373,6 +2555,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileId)) {
             body.put("file_id", request.fileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.getMasterUrl)) {
+            body.put("get_master_url", request.getMasterUrl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.getWithoutUrl)) {
@@ -2409,12 +2595,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetVideoPreviewPlayInfoResponse());
     }
 
+    /**
+      * For more information about best practices, see [Preview videos online](~~427477~~).
+      *
+      * @param request GetVideoPreviewPlayInfoRequest
+      * @return GetVideoPreviewPlayInfoResponse
+     */
     public GetVideoPreviewPlayInfoResponse getVideoPreviewPlayInfo(GetVideoPreviewPlayInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getVideoPreviewPlayInfoWithOptions(request, headers, runtime);
     }
 
+    /**
+      * For more information about best practices, see [Preview videos online](~~427477~~).
+      *
+      * @param request GetVideoPreviewPlayMetaRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetVideoPreviewPlayMetaResponse
+     */
     public GetVideoPreviewPlayMetaResponse getVideoPreviewPlayMetaWithOptions(GetVideoPreviewPlayMetaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2452,10 +2652,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetVideoPreviewPlayMetaResponse());
     }
 
+    /**
+      * For more information about best practices, see [Preview videos online](~~427477~~).
+      *
+      * @param request GetVideoPreviewPlayMetaRequest
+      * @return GetVideoPreviewPlayMetaResponse
+     */
     public GetVideoPreviewPlayMetaResponse getVideoPreviewPlayMeta(GetVideoPreviewPlayMetaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getVideoPreviewPlayMetaWithOptions(request, headers, runtime);
+    }
+
+    public GroupUpdateNameResponse groupUpdateNameWithOptions(GroupUpdateNameRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            body.put("group_id", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GroupUpdateName"),
+            new TeaPair("version", "2022-03-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/group/update_name"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GroupUpdateNameResponse());
+    }
+
+    public GroupUpdateNameResponse groupUpdateName(GroupUpdateNameRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.groupUpdateNameWithOptions(request, headers, runtime);
     }
 
     public ImportUserResponse importUserWithOptions(ImportUserRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3006,6 +3247,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listGroupMemberWithOptions(request, headers, runtime);
     }
 
+    public ListIdentityRoleResponse listIdentityRoleWithOptions(ListIdentityRoleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.identity)) {
+            body.put("identity", request.identity);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListIdentityRole"),
+            new TeaPair("version", "2022-03-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/role/list_identity_role"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListIdentityRoleResponse());
+    }
+
+    public ListIdentityRoleResponse listIdentityRole(ListIdentityRoleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listIdentityRoleWithOptions(request, headers, runtime);
+    }
+
     public ListIdentityToBenefitPkgMappingResponse listIdentityToBenefitPkgMappingWithOptions(ListIdentityToBenefitPkgMappingRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -3240,6 +3512,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listRevisionWithOptions(request, headers, runtime);
     }
 
+    /**
+      * This operation is discontinued. To query shares, you can call the SearchShareLink operation.
+      *
+      * @param request ListShareLinkRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListShareLinkResponse
+     */
     public ListShareLinkResponse listShareLinkWithOptions(ListShareLinkRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -3285,12 +3565,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListShareLinkResponse());
     }
 
+    /**
+      * This operation is discontinued. To query shares, you can call the SearchShareLink operation.
+      *
+      * @param request ListShareLinkRequest
+      * @return ListShareLinkResponse
+     */
     public ListShareLinkResponse listShareLink(ListShareLinkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listShareLinkWithOptions(request, headers, runtime);
     }
 
+    /**
+      * You can call this operation to query the tags within the specified drive at a time. The top 2,000 tags of the images are returned.
+      *
+      * @param request ListTagsRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListTagsResponse
+     */
     public ListTagsResponse listTagsWithOptions(ListTagsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -3324,6 +3618,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListTagsResponse());
     }
 
+    /**
+      * You can call this operation to query the tags within the specified drive at a time. The top 2,000 tags of the images are returned.
+      *
+      * @param request ListTagsRequest
+      * @return ListTagsResponse
+     */
     public ListTagsResponse listTags(ListTagsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -4216,6 +4516,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.searchUserWithOptions(request, headers, runtime);
     }
 
+    /**
+      * For more information about how to access Drive and Photo Service from a web server application by using OAuth 2.0, visit [OAuth 2.0 For Web Server Applications](https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications).<props="intl">只发布国际站</props>
+      * For more information about how to access Drive and Photo Service by using a JSON Web Token (JWT) application, visit [Access process for JWT applications](https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/access-process-for-jwt-applications).<props="intl">只发布国际站</props>
+      *
+      * @param request TokenRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return TokenResponse
+     */
     public TokenResponse tokenWithOptions(TokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -4265,6 +4574,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new TokenResponse());
     }
 
+    /**
+      * For more information about how to access Drive and Photo Service from a web server application by using OAuth 2.0, visit [OAuth 2.0 For Web Server Applications](https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications).<props="intl">只发布国际站</props>
+      * For more information about how to access Drive and Photo Service by using a JSON Web Token (JWT) application, visit [Access process for JWT applications](https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/access-process-for-jwt-applications).<props="intl">只发布国际站</props>
+      *
+      * @param request TokenRequest
+      * @return TokenResponse
+     */
     public TokenResponse token(TokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -4306,7 +4622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.trashFileWithOptions(request, headers, runtime);
     }
 
-    public UnLinkAcountResponse unLinkAcountWithOptions(UnLinkAcountRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UnLinkAccountResponse unLinkAccountWithOptions(UnLinkAccountRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.extra)) {
@@ -4330,7 +4646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UnLinkAcount"),
+            new TeaPair("action", "UnLinkAccount"),
             new TeaPair("version", "2022-03-01"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/v2/account/unlink"),
@@ -4340,13 +4656,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new UnLinkAcountResponse());
+        return TeaModel.toModel(this.execute(params, req, runtime), new UnLinkAccountResponse());
     }
 
-    public UnLinkAcountResponse unLinkAcount(UnLinkAcountRequest request) throws Exception {
+    public UnLinkAccountResponse unLinkAccount(UnLinkAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.unLinkAcountWithOptions(request, headers, runtime);
+        return this.unLinkAccountWithOptions(request, headers, runtime);
     }
 
     public UpdateDomainResponse updateDomainWithOptions(UpdateDomainRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

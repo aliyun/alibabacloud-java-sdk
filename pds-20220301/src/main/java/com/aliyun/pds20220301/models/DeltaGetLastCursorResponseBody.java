@@ -4,6 +4,9 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class DeltaGetLastCursorResponseBody extends TeaModel {
+    /**
+     * <p>The latest cursor of incremental information in the specified drive or synced folder.</p>
+     */
     @NameInMap("cursor")
     public String cursor;
 

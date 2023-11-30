@@ -4,15 +4,29 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class CopyFileResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the asynchronous task.</p>
+     * <br>
+     * <p>If a file is copied, this parameter is not returned. If a folder is copied, the folder is asynchronously copied in the background and this parameter is returned. You can call the GetAsyncTask operation to query the information about the asynchronous task based on the task ID.</p>
+     */
     @NameInMap("async_task_id")
     public String asyncTaskId;
 
+    /**
+     * <p>The domain ID.</p>
+     */
     @NameInMap("domain_id")
     public String domainId;
 
+    /**
+     * <p>The drive ID.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The ID of the copied file or folder.</p>
+     */
     @NameInMap("file_id")
     public String fileId;
 

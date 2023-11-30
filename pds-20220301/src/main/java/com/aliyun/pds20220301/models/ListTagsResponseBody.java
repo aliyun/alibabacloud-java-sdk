@@ -4,6 +4,9 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class ListTagsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the tags.</p>
+     */
     @NameInMap("tags")
     public java.util.List<ImageTag> tags;
 

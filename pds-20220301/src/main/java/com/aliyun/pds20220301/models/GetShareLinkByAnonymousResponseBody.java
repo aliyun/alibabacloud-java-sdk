@@ -4,63 +4,123 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class GetShareLinkByAnonymousResponseBody extends TeaModel {
+    /**
+     * <p>The number of times that the shared files are visited.</p>
+     */
     @NameInMap("access_count")
     public Long accessCount;
 
+    /**
+     * <p>The profile picture of the user who created the share link.</p>
+     */
     @NameInMap("avatar")
     public String avatar;
 
+    /**
+     * <p>The ID of the user who created the share link.</p>
+     */
     @NameInMap("creator_id")
     public String creatorId;
 
+    /**
+     * <p>The name of the user who created the share link. The value is masked.</p>
+     */
     @NameInMap("creator_name")
     public String creatorName;
 
+    /**
+     * <p>The mobile number of the user who created the share link. The value is masked.</p>
+     */
     @NameInMap("creator_phone")
     public String creatorPhone;
 
+    /**
+     * <p>Indicates whether the downloads of the shared files are prohibited.</p>
+     */
     @NameInMap("disable_download")
     public Boolean disableDownload;
 
+    /**
+     * <p>Indicates whether the previews of the shared files are prohibited.</p>
+     */
     @NameInMap("disable_preview")
     public Boolean disablePreview;
 
+    /**
+     * <p>Indicates whether the saves of the shared files are prohibited.</p>
+     */
     @NameInMap("disable_save")
     public Boolean disableSave;
 
+    /**
+     * <p>The number of times that the shared files are downloaded.</p>
+     */
     @NameInMap("download_count")
     public Long downloadCount;
 
+    /**
+     * <p>The maximum number of times that the shared files can be downloaded.</p>
+     */
     @NameInMap("download_limit")
     public Long downloadLimit;
 
+    /**
+     * <p>The time when the share link expires.</p>
+     */
     @NameInMap("expiration")
     public String expiration;
 
+    /**
+     * <p>The number of times that the shared files are previewed.</p>
+     */
     @NameInMap("preview_count")
     public Long previewCount;
 
+    /**
+     * <p>The maximum number of times that the shared files can be previewed.</p>
+     */
     @NameInMap("preview_limit")
     public Long previewLimit;
 
+    /**
+     * <p>The number of times that the shared files are reported.</p>
+     */
     @NameInMap("report_count")
     public Long reportCount;
 
+    /**
+     * <p>The number of times that the shared files are saved.</p>
+     */
     @NameInMap("save_count")
     public Long saveCount;
 
+    /**
+     * <p>The maximum number of times that the shared files can be saved and downloaded.</p>
+     */
     @NameInMap("save_download_limit")
     public Long saveDownloadLimit;
 
+    /**
+     * <p>The maximum number of times that the shared files can be saved.</p>
+     */
     @NameInMap("save_limit")
     public Long saveLimit;
 
+    /**
+     * <p>The name of the share link.</p>
+     */
     @NameInMap("share_name")
     public String shareName;
 
+    /**
+     * <p>The time when the share link was last modified.</p>
+     */
     @NameInMap("updated_at")
     public String updatedAt;
 
+    /**
+     * <p>The number of times that the videos are previewed in the shared files.</p>
+     */
     @NameInMap("video_preview_count")
     public Long videoPreviewCount;
 

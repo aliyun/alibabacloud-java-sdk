@@ -4,12 +4,23 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class ClearRecyclebinResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the asynchronous task.</p>
+     * <br>
+     * <p>You can call the GetAsyncTask operation to query the information about the asynchronous task based on the task ID.</p>
+     */
     @NameInMap("async_task_id")
     public String asyncTaskId;
 
+    /**
+     * <p>The domain ID.</p>
+     */
     @NameInMap("domain_id")
     public String domainId;
 
+    /**
+     * <p>The drive ID.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 

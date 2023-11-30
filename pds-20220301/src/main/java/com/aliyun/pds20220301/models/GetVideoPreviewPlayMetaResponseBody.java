@@ -4,18 +4,33 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class GetVideoPreviewPlayMetaResponseBody extends TeaModel {
+    /**
+     * <p>The domain ID.</p>
+     */
     @NameInMap("domain_id")
     public String domainId;
 
+    /**
+     * <p>The drive ID.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The file ID.</p>
+     */
     @NameInMap("file_id")
     public String fileId;
 
+    /**
+     * <p>The share ID.</p>
+     */
     @NameInMap("share_id")
     public String shareId;
 
+    /**
+     * <p>The preview metadata of the video.</p>
+     */
     @NameInMap("video_preview_play_meta")
     public VideoPreviewPlayMeta videoPreviewPlayMeta;
 

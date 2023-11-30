@@ -4,18 +4,39 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class UpdateIdentityToBenefitPkgMappingRequest extends TeaModel {
+    /**
+     * <p>The number of benefit packages.</p>
+     * <br>
+     * <p>This parameter specifies the number of benefit packages of the resource type. Default value: 1.</p>
+     */
     @NameInMap("amount")
     public Long amount;
 
+    /**
+     * <p>The unique identifier of the benefit package.</p>
+     */
     @NameInMap("benefit_pkg_id")
     public String benefitPkgId;
 
+    /**
+     * <p>The expiration time of the benefit package. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <br>
+     * <p>By default, the benefit package never expires.</p>
+     */
     @NameInMap("expire_time")
     public Long expireTime;
 
+    /**
+     * <p>The unique identifier of the entity.</p>
+     * <br>
+     * <p>If you call this operation to manage the benefits of a user, set this parameter to the ID of the user.</p>
+     */
     @NameInMap("identity_id")
     public String identityId;
 
+    /**
+     * <p>The type of the entity. If you call this operation to manage the benefits of a user, set this parameter to user.</p>
+     */
     @NameInMap("identity_type")
     public String identityType;
 

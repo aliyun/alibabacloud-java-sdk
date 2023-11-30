@@ -4,6 +4,9 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class GetDefaultDriveRequest extends TeaModel {
+    /**
+     * <p>The user ID. If you use an AccessKey pair for authentication, you must specify this parameter. If you use an access token for authentication, this parameter is optional. By default, the user ID associated with the access token is used.</p>
+     */
     @NameInMap("user_id")
     public String userId;
 

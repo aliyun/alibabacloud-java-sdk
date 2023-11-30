@@ -3,7 +3,7 @@ package com.aliyun.pds20220301.models;
 
 import com.aliyun.tea.*;
 
-public class UnLinkAcountResponse extends TeaModel {
+public class GroupUpdateNameResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -12,12 +12,12 @@ public class UnLinkAcountResponse extends TeaModel {
     @Validation(required = true)
     public Integer statusCode;
 
-    public static UnLinkAcountResponse build(java.util.Map<String, ?> map) throws Exception {
-        UnLinkAcountResponse self = new UnLinkAcountResponse();
+    public static GroupUpdateNameResponse build(java.util.Map<String, ?> map) throws Exception {
+        GroupUpdateNameResponse self = new GroupUpdateNameResponse();
         return TeaModel.build(map, self);
     }
 
-    public UnLinkAcountResponse setHeaders(java.util.Map<String, String> headers) {
+    public GroupUpdateNameResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,7 +25,7 @@ public class UnLinkAcountResponse extends TeaModel {
         return this.headers;
     }
 
-    public UnLinkAcountResponse setStatusCode(Integer statusCode) {
+    public GroupUpdateNameResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }

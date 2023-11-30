@@ -4,36 +4,124 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class CreateUserRequest extends TeaModel {
+    /**
+     * <p>The URL of the profile picture.</p>
+     * <br>
+     * <p>If you specify the parameter in the HTTP URL format, the URL must start with http:// or https:// and can be up to 4 KB in size.</p>
+     * <br>
+     * <p>If you specify the parameter in the data URL format, the URL must start with data:// and be encoded in Base64. The URL can be up to 300 KB in size.</p>
+     */
     @NameInMap("avatar")
     public String avatar;
 
+    /**
+     * <p>The description of the user. The description can be up to 1,024 characters in length.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The email address.</p>
+     */
     @NameInMap("email")
     public String email;
 
+    /**
+     * <p>The information about the group.</p>
+     */
     @NameInMap("group_info_list")
     public java.util.List<CreateUserRequestGroupInfoList> groupInfoList;
 
+    /**
+     * <p>The nickname of the user. The nickname can be up to 128 characters in length.</p>
+     */
     @NameInMap("nick_name")
     public String nickName;
 
+    /**
+     * <p>The phone number.</p>
+     */
     @NameInMap("phone")
     public String phone;
 
+    /**
+     * <p>The role of the user. Default value: user. Valid values:</p>
+     * <br>
+     * <p>*   superadmin</p>
+     * <p>*   admin</p>
+     * <p>*   user</p>
+     * <br>
+     * <p>If the domain can be divided into subdomains, the subdomain_super_admin and subdomain_admin roles are also supported.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   subdomain_super_admin</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   subdomain_admin</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   superadmin</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   admin</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   user</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     */
     @NameInMap("role")
     public String role;
 
+    /**
+     * <p>The state of the user. Default value: enabled. Valid values:</p>
+     * <br>
+     * <p>*   enabled: The user is in a normal state.</p>
+     * <p>*   disabled: The user is prohibited from logon.</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The custom data. The data can be up to 1,024 characters in length.</p>
+     */
     @NameInMap("user_data")
     public java.util.Map<String, ?> userData;
 
+    /**
+     * <p>The user ID. The ID can be up to 64 characters in length and cannot contain number signs (#).</p>
+     */
     @NameInMap("user_id")
     public String userId;
 
+    /**
+     * <p>The username. The username can be up to 128 characters in length.</p>
+     */
     @NameInMap("user_name")
     public String userName;
 
@@ -131,6 +219,9 @@ public class CreateUserRequest extends TeaModel {
     }
 
     public static class CreateUserRequestGroupInfoList extends TeaModel {
+        /**
+         * <p>The group ID.</p>
+         */
         @NameInMap("group_id")
         public String groupId;
 

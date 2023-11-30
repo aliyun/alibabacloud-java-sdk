@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDomainRequest extends TeaModel {
     /**
-     * <p>domain id</p>
+     * <p>The domain ID.</p>
      */
     @NameInMap("domain_id")
     public String domainId;

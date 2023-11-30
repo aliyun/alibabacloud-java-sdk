@@ -4,18 +4,37 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class GetRevisionRequest extends TeaModel {
+    /**
+     * <p>The drive ID.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>Specifies the returned fields.</p>
+     * <br>
+     * <p>By default, this parameter is left empty. If you set this parameter to \*, all fields are returned. If you leave this parameter empty, the creator of the file is not returned.</p>
+     */
     @NameInMap("fields")
     public String fields;
 
+    /**
+     * <p>The file ID.</p>
+     */
     @NameInMap("file_id")
     public String fileId;
 
+    /**
+     * <p>The version ID.</p>
+     */
     @NameInMap("revision_id")
     public String revisionId;
 
+    /**
+     * <p>The validity period of the file download or preview. Valid values: 10 to 86400.</p>
+     * <br>
+     * <p>Default value: 900. Unit: seconds.</p>
+     */
     @NameInMap("url_expire_sec")
     public Long urlExpireSec;
 

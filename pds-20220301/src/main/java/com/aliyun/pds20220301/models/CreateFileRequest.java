@@ -4,66 +4,139 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class CreateFileRequest extends TeaModel {
+    /**
+     * <p>The processing method that is used if the file that you want to create has the same name as an existing file on the cloud. Valid values:</p>
+     * <br>
+     * <p>ignore: allows you to create the file by using the same name as an existing file on the cloud.</p>
+     * <br>
+     * <p>auto_rename: automatically renames the file that has the same name on the cloud. By default, the current point in time is added to the end of the file name. Example: xxx\_20060102\_150405.</p>
+     * <br>
+     * <p>refuse: does not create the file that you want to create but returns the information about the file that has the same name on the cloud.</p>
+     * <br>
+     * <p>Default value: ignore.</p>
+     */
     @NameInMap("check_name_mode")
     public String checkNameMode;
 
+    /**
+     * <p>The hash value of the file content. The value is calculated based on the algorithm specified by content_hash_name.</p>
+     */
     @NameInMap("content_hash")
     public String contentHash;
 
+    /**
+     * <p>The name of the algorithm that is used to calculate the hash value of the file content. Only SHA1 is supported.</p>
+     */
     @NameInMap("content_hash_name")
     public String contentHashName;
 
+    /**
+     * <p>The type of the file content. Default value: application/oct-stream. For more information about common content types, see [How do I configure the Content-Type header?](https://help.aliyun.com/document_detail/39522.htm?spm=a2c4g.11186623.0.0.5a0b7dbb1TPnWF#concept-5041)</p>
+     */
     @NameInMap("content_type")
     public String contentType;
 
+    /**
+     * <p>The description of the file. The description can be up to 1,024 characters in length. By default, this parameter is left empty.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The drive ID. This parameter is required if the file is not uploaded by using the share URL of the file.</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <p>The file ID. This parameter is required if check_name_mode is set to ignore.</p>
+     */
     @NameInMap("file_id")
     public String fileId;
 
+    /**
+     * <p>Specifies whether to hide the file or folder. By default, the file or folder is not hidden.</p>
+     */
     @NameInMap("hidden")
     public Boolean hidden;
 
+    /**
+     * <p>The information about the image specified by the client.</p>
+     */
     @NameInMap("image_media_metadata")
     public ImageMediaMetadata imageMediaMetadata;
 
+    /**
+     * <p>The local time when the file was created. By default, this parameter is left empty. The time is specified in the yyyy-MM-ddTHH:mm:ssZ format based on the UTC+0 time zone.</p>
+     */
     @NameInMap("local_created_at")
     public String localCreatedAt;
 
+    /**
+     * <p>The local time when the file was modified. By default, this parameter is left empty. The time is specified in the yyyy-MM-ddTHH:mm:ssZ format based on the UTC+0 time zone.</p>
+     */
     @NameInMap("local_modified_at")
     public String localModifiedAt;
 
+    /**
+     * <p>The name of the file. The name can be up to 1,024 bytes in length based on the UTF-8 encoding rule and cannot end with a forward slash (/).</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>Specifies whether to enable the parallel upload feature.</p>
+     */
     @NameInMap("parallel_upload")
     public Boolean parallelUpload;
 
+    /**
+     * <p>The ID of the parent directory. If you want to create a file or folder in the root directory, set this parameter to root.</p>
+     */
     @NameInMap("parent_file_id")
     public String parentFileId;
 
+    /**
+     * <p>The information about the file parts. You can specify up to 10,000 parts. By default, if you do not specify this parameter, only one part is returned.</p>
+     */
     @NameInMap("part_info_list")
     public java.util.List<CreateFileRequestPartInfoList> partInfoList;
 
+    /**
+     * <p>The SHA-1 hash value of the first 1 KB data of the file. This parameter is required if you perform instant file upload by using the pre-hashing feature. If the SHA-1 hash value is not matched on the cloud, the client does not need to calculate the SHA-1 hash value of the entire file.</p>
+     */
     @NameInMap("pre_hash")
     public String preHash;
 
+    /**
+     * <p>The share ID. This parameter is required if the file is uploaded by using the share URL of the file.</p>
+     */
     @NameInMap("share_id")
     public String shareId;
 
+    /**
+     * <p>The file size. Unit: bytes.</p>
+     */
     @NameInMap("size")
     public Long size;
 
+    /**
+     * <p>The type of the file. Valid values:</p>
+     * <br>
+     * <p>file folder</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <p>The custom tags. You can specify up to 1,000 tags.</p>
+     */
     @NameInMap("user_tags")
     public java.util.List<UserTag> userTags;
 
+    /**
+     * <p>The information about the video specified by the client.</p>
+     */
     @NameInMap("video_media_metadata")
     public VideoMediaMetadata videoMediaMetadata;
 
@@ -241,9 +314,15 @@ public class CreateFileRequest extends TeaModel {
     }
 
     public static class CreateFileRequestPartInfoListParallelSha1Ctx extends TeaModel {
+        /**
+         * <p>该分片前所有数据的SHA1上下文的第1-5个32位变量，该字段只在多分片并发上传的模式下有效</p>
+         */
         @NameInMap("h")
         public java.util.List<Long> h;
 
+        /**
+         * <p>到上一个数据块为止的总长度，字节，需要为64的倍数，该字段只在多分片并发上传的模式下有效</p>
+         */
         @NameInMap("part_offset")
         public Long partOffset;
 
@@ -274,9 +353,15 @@ public class CreateFileRequest extends TeaModel {
         @NameInMap("content_md5")
         public String contentMd5;
 
+        /**
+         * <p>该分片前所有数据的SHA1上下文，该字段只在多分片并发上传的模式下有效</p>
+         */
         @NameInMap("parallel_sha1_ctx")
         public CreateFileRequestPartInfoListParallelSha1Ctx parallelSha1Ctx;
 
+        /**
+         * <p>The serial number of a part. The number starts from 1.</p>
+         */
         @NameInMap("part_number")
         public Integer partNumber;
 
