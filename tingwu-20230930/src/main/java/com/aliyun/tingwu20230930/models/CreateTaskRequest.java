@@ -71,11 +71,17 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("Format")
         public String format;
 
+        @NameInMap("ProgressiveCallbacksEnabled")
+        public Boolean progressiveCallbacksEnabled;
+
         @NameInMap("SampleRate")
         public Integer sampleRate;
 
         @NameInMap("SourceLanguage")
         public String sourceLanguage;
+
+        @NameInMap("TaskId")
+        public String taskId;
 
         @NameInMap("TaskKey")
         public String taskKey;
@@ -101,6 +107,14 @@ public class CreateTaskRequest extends TeaModel {
             return this.format;
         }
 
+        public CreateTaskRequestInput setProgressiveCallbacksEnabled(Boolean progressiveCallbacksEnabled) {
+            this.progressiveCallbacksEnabled = progressiveCallbacksEnabled;
+            return this;
+        }
+        public Boolean getProgressiveCallbacksEnabled() {
+            return this.progressiveCallbacksEnabled;
+        }
+
         public CreateTaskRequestInput setSampleRate(Integer sampleRate) {
             this.sampleRate = sampleRate;
             return this;
@@ -115,6 +129,14 @@ public class CreateTaskRequest extends TeaModel {
         }
         public String getSourceLanguage() {
             return this.sourceLanguage;
+        }
+
+        public CreateTaskRequestInput setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
         }
 
         public CreateTaskRequestInput setTaskKey(String taskKey) {
@@ -227,6 +249,9 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("DiarizationEnabled")
         public Boolean diarizationEnabled;
 
+        @NameInMap("OutputLevel")
+        public Integer outputLevel;
+
         public static CreateTaskRequestParametersTranscription build(java.util.Map<String, ?> map) throws Exception {
             CreateTaskRequestParametersTranscription self = new CreateTaskRequestParametersTranscription();
             return TeaModel.build(map, self);
@@ -256,15 +281,34 @@ public class CreateTaskRequest extends TeaModel {
             return this.diarizationEnabled;
         }
 
+        public CreateTaskRequestParametersTranscription setOutputLevel(Integer outputLevel) {
+            this.outputLevel = outputLevel;
+            return this;
+        }
+        public Integer getOutputLevel() {
+            return this.outputLevel;
+        }
+
     }
 
     public static class CreateTaskRequestParametersTranslation extends TeaModel {
+        @NameInMap("OutputLevel")
+        public Integer outputLevel;
+
         @NameInMap("TargetLanguages")
         public java.util.Map<String, ?> targetLanguages;
 
         public static CreateTaskRequestParametersTranslation build(java.util.Map<String, ?> map) throws Exception {
             CreateTaskRequestParametersTranslation self = new CreateTaskRequestParametersTranslation();
             return TeaModel.build(map, self);
+        }
+
+        public CreateTaskRequestParametersTranslation setOutputLevel(Integer outputLevel) {
+            this.outputLevel = outputLevel;
+            return this;
+        }
+        public Integer getOutputLevel() {
+            return this.outputLevel;
         }
 
         public CreateTaskRequestParametersTranslation setTargetLanguages(java.util.Map<String, ?> targetLanguages) {
@@ -283,6 +327,9 @@ public class CreateTaskRequest extends TeaModel {
 
         @NameInMap("MeetingAssistanceEnabled")
         public Boolean meetingAssistanceEnabled;
+
+        @NameInMap("PptExtractionEnabled")
+        public Boolean pptExtractionEnabled;
 
         @NameInMap("Summarization")
         public CreateTaskRequestParametersSummarization summarization;
@@ -321,6 +368,14 @@ public class CreateTaskRequest extends TeaModel {
         }
         public Boolean getMeetingAssistanceEnabled() {
             return this.meetingAssistanceEnabled;
+        }
+
+        public CreateTaskRequestParameters setPptExtractionEnabled(Boolean pptExtractionEnabled) {
+            this.pptExtractionEnabled = pptExtractionEnabled;
+            return this;
+        }
+        public Boolean getPptExtractionEnabled() {
+            return this.pptExtractionEnabled;
         }
 
         public CreateTaskRequestParameters setSummarization(CreateTaskRequestParametersSummarization summarization) {
