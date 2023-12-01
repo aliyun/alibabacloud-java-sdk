@@ -3,7 +3,7 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class SemanticQueryRequest extends TeaModel {
+public class SemanticQueryShrinkRequest extends TeaModel {
     @NameInMap("DatasetName")
     public String datasetName;
 
@@ -11,7 +11,7 @@ public class SemanticQueryRequest extends TeaModel {
     public Integer maxResults;
 
     @NameInMap("MediaTypes")
-    public java.util.List<String> mediaTypes;
+    public String mediaTypesShrink;
 
     @NameInMap("NextToken")
     public String nextToken;
@@ -23,14 +23,14 @@ public class SemanticQueryRequest extends TeaModel {
     public String query;
 
     @NameInMap("WithFields")
-    public java.util.List<String> withFields;
+    public String withFieldsShrink;
 
-    public static SemanticQueryRequest build(java.util.Map<String, ?> map) throws Exception {
-        SemanticQueryRequest self = new SemanticQueryRequest();
+    public static SemanticQueryShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        SemanticQueryShrinkRequest self = new SemanticQueryShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public SemanticQueryRequest setDatasetName(String datasetName) {
+    public SemanticQueryShrinkRequest setDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
     }
@@ -38,7 +38,7 @@ public class SemanticQueryRequest extends TeaModel {
         return this.datasetName;
     }
 
-    public SemanticQueryRequest setMaxResults(Integer maxResults) {
+    public SemanticQueryShrinkRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -46,15 +46,15 @@ public class SemanticQueryRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public SemanticQueryRequest setMediaTypes(java.util.List<String> mediaTypes) {
-        this.mediaTypes = mediaTypes;
+    public SemanticQueryShrinkRequest setMediaTypesShrink(String mediaTypesShrink) {
+        this.mediaTypesShrink = mediaTypesShrink;
         return this;
     }
-    public java.util.List<String> getMediaTypes() {
-        return this.mediaTypes;
+    public String getMediaTypesShrink() {
+        return this.mediaTypesShrink;
     }
 
-    public SemanticQueryRequest setNextToken(String nextToken) {
+    public SemanticQueryShrinkRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -62,7 +62,7 @@ public class SemanticQueryRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public SemanticQueryRequest setProjectName(String projectName) {
+    public SemanticQueryShrinkRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
@@ -70,7 +70,7 @@ public class SemanticQueryRequest extends TeaModel {
         return this.projectName;
     }
 
-    public SemanticQueryRequest setQuery(String query) {
+    public SemanticQueryShrinkRequest setQuery(String query) {
         this.query = query;
         return this;
     }
@@ -78,12 +78,12 @@ public class SemanticQueryRequest extends TeaModel {
         return this.query;
     }
 
-    public SemanticQueryRequest setWithFields(java.util.List<String> withFields) {
-        this.withFields = withFields;
+    public SemanticQueryShrinkRequest setWithFieldsShrink(String withFieldsShrink) {
+        this.withFieldsShrink = withFieldsShrink;
         return this;
     }
-    public java.util.List<String> getWithFields() {
-        return this.withFields;
+    public String getWithFieldsShrink() {
+        return this.withFieldsShrink;
     }
 
 }

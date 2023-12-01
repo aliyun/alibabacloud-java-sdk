@@ -76,6 +76,9 @@ public class CreateTriggerRequest extends TeaModel {
     }
 
     public static class CreateTriggerRequestActions extends TeaModel {
+        @NameInMap("FastFailPolicy")
+        public FastFailPolicy fastFailPolicy;
+
         @NameInMap("Name")
         public String name;
 
@@ -85,6 +88,14 @@ public class CreateTriggerRequest extends TeaModel {
         public static CreateTriggerRequestActions build(java.util.Map<String, ?> map) throws Exception {
             CreateTriggerRequestActions self = new CreateTriggerRequestActions();
             return TeaModel.build(map, self);
+        }
+
+        public CreateTriggerRequestActions setFastFailPolicy(FastFailPolicy fastFailPolicy) {
+            this.fastFailPolicy = fastFailPolicy;
+            return this;
+        }
+        public FastFailPolicy getFastFailPolicy() {
+            return this.fastFailPolicy;
         }
 
         public CreateTriggerRequestActions setName(String name) {

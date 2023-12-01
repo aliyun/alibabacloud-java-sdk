@@ -76,6 +76,9 @@ public class CreateBatchRequest extends TeaModel {
     }
 
     public static class CreateBatchRequestActions extends TeaModel {
+        @NameInMap("FastFailPolicy")
+        public FastFailPolicy fastFailPolicy;
+
         @NameInMap("Name")
         public String name;
 
@@ -85,6 +88,14 @@ public class CreateBatchRequest extends TeaModel {
         public static CreateBatchRequestActions build(java.util.Map<String, ?> map) throws Exception {
             CreateBatchRequestActions self = new CreateBatchRequestActions();
             return TeaModel.build(map, self);
+        }
+
+        public CreateBatchRequestActions setFastFailPolicy(FastFailPolicy fastFailPolicy) {
+            this.fastFailPolicy = fastFailPolicy;
+            return this;
+        }
+        public FastFailPolicy getFastFailPolicy() {
+            return this.fastFailPolicy;
         }
 
         public CreateBatchRequestActions setName(String name) {

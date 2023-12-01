@@ -3,7 +3,7 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class FuzzyQueryRequest extends TeaModel {
+public class FuzzyQueryShrinkRequest extends TeaModel {
     @NameInMap("DatasetName")
     public String datasetName;
 
@@ -26,14 +26,14 @@ public class FuzzyQueryRequest extends TeaModel {
     public String sort;
 
     @NameInMap("WithFields")
-    public java.util.List<String> withFields;
+    public String withFieldsShrink;
 
-    public static FuzzyQueryRequest build(java.util.Map<String, ?> map) throws Exception {
-        FuzzyQueryRequest self = new FuzzyQueryRequest();
+    public static FuzzyQueryShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        FuzzyQueryShrinkRequest self = new FuzzyQueryShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public FuzzyQueryRequest setDatasetName(String datasetName) {
+    public FuzzyQueryShrinkRequest setDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
     }
@@ -41,7 +41,7 @@ public class FuzzyQueryRequest extends TeaModel {
         return this.datasetName;
     }
 
-    public FuzzyQueryRequest setMaxResults(Long maxResults) {
+    public FuzzyQueryShrinkRequest setMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -49,7 +49,7 @@ public class FuzzyQueryRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public FuzzyQueryRequest setNextToken(String nextToken) {
+    public FuzzyQueryShrinkRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -57,7 +57,7 @@ public class FuzzyQueryRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public FuzzyQueryRequest setOrder(String order) {
+    public FuzzyQueryShrinkRequest setOrder(String order) {
         this.order = order;
         return this;
     }
@@ -65,7 +65,7 @@ public class FuzzyQueryRequest extends TeaModel {
         return this.order;
     }
 
-    public FuzzyQueryRequest setProjectName(String projectName) {
+    public FuzzyQueryShrinkRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
@@ -73,7 +73,7 @@ public class FuzzyQueryRequest extends TeaModel {
         return this.projectName;
     }
 
-    public FuzzyQueryRequest setQuery(String query) {
+    public FuzzyQueryShrinkRequest setQuery(String query) {
         this.query = query;
         return this;
     }
@@ -81,7 +81,7 @@ public class FuzzyQueryRequest extends TeaModel {
         return this.query;
     }
 
-    public FuzzyQueryRequest setSort(String sort) {
+    public FuzzyQueryShrinkRequest setSort(String sort) {
         this.sort = sort;
         return this;
     }
@@ -89,12 +89,12 @@ public class FuzzyQueryRequest extends TeaModel {
         return this.sort;
     }
 
-    public FuzzyQueryRequest setWithFields(java.util.List<String> withFields) {
-        this.withFields = withFields;
+    public FuzzyQueryShrinkRequest setWithFieldsShrink(String withFieldsShrink) {
+        this.withFieldsShrink = withFieldsShrink;
         return this;
     }
-    public java.util.List<String> getWithFields() {
-        return this.withFields;
+    public String getWithFieldsShrink() {
+        return this.withFieldsShrink;
     }
 
 }

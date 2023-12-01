@@ -101,6 +101,9 @@ public class CreateFileCompressionTaskRequest extends TeaModel {
         @NameInMap("Alias")
         public String alias;
 
+        @NameInMap("Mode")
+        public String mode;
+
         @NameInMap("URI")
         public String URI;
 
@@ -115,6 +118,14 @@ public class CreateFileCompressionTaskRequest extends TeaModel {
         }
         public String getAlias() {
             return this.alias;
+        }
+
+        public CreateFileCompressionTaskRequestSources setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
         }
 
         public CreateFileCompressionTaskRequestSources setURI(String URI) {
