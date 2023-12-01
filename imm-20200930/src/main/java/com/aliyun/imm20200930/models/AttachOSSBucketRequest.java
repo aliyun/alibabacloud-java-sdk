@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class AttachOSSBucketRequest extends TeaModel {
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("OSSBucket")
     public String OSSBucket;
 
@@ -13,6 +16,14 @@ public class AttachOSSBucketRequest extends TeaModel {
     public static AttachOSSBucketRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachOSSBucketRequest self = new AttachOSSBucketRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AttachOSSBucketRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public AttachOSSBucketRequest setOSSBucket(String OSSBucket) {

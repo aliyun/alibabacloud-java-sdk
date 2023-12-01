@@ -142,6 +142,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AttachOSSBucketResponse attachOSSBucketWithOptions(AttachOSSBucketRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.OSSBucket)) {
             query.put("OSSBucket", request.OSSBucket);
         }
@@ -2914,8 +2918,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.extractDocumentTextWithOptions(request, runtime);
     }
 
-    public FuzzyQueryResponse fuzzyQueryWithOptions(FuzzyQueryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public FuzzyQueryResponse fuzzyQueryWithOptions(FuzzyQueryRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        FuzzyQueryShrinkRequest request = new FuzzyQueryShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.withFields)) {
+            request.withFieldsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.withFields, "WithFields", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.datasetName)) {
             query.put("DatasetName", request.datasetName);
@@ -2943,6 +2953,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sort)) {
             query.put("Sort", request.sort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withFieldsShrink)) {
+            query.put("WithFields", request.withFieldsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4484,8 +4498,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.searchImageFigureClusterWithOptions(request, runtime);
     }
 
-    public SemanticQueryResponse semanticQueryWithOptions(SemanticQueryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public SemanticQueryResponse semanticQueryWithOptions(SemanticQueryRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SemanticQueryShrinkRequest request = new SemanticQueryShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.mediaTypes)) {
+            request.mediaTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.mediaTypes, "MediaTypes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.withFields)) {
+            request.withFieldsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.withFields, "WithFields", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.datasetName)) {
             query.put("DatasetName", request.datasetName);
@@ -4493,6 +4517,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaTypesShrink)) {
+            query.put("MediaTypes", request.mediaTypesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
@@ -4505,6 +4533,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.query)) {
             query.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withFieldsShrink)) {
+            query.put("WithFields", request.withFieldsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4580,6 +4612,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.withFieldsShrink)) {
             query.put("WithFields", request.withFieldsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withoutTotalHits)) {
+            query.put("WithoutTotalHits", request.withoutTotalHits);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

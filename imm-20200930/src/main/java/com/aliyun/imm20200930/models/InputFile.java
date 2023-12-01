@@ -19,11 +19,17 @@ public class InputFile extends TeaModel {
     @NameInMap("FileHash")
     public String fileHash;
 
+    @NameInMap("LatLong")
+    public String latLong;
+
     @NameInMap("MediaType")
     public String mediaType;
 
     @NameInMap("OSSURI")
     public String OSSURI;
+
+    @NameInMap("ProduceTime")
+    public String produceTime;
 
     @NameInMap("URI")
     public String URI;
@@ -73,6 +79,14 @@ public class InputFile extends TeaModel {
         return this.fileHash;
     }
 
+    public InputFile setLatLong(String latLong) {
+        this.latLong = latLong;
+        return this;
+    }
+    public String getLatLong() {
+        return this.latLong;
+    }
+
     public InputFile setMediaType(String mediaType) {
         this.mediaType = mediaType;
         return this;
@@ -87,6 +101,14 @@ public class InputFile extends TeaModel {
     }
     public String getOSSURI() {
         return this.OSSURI;
+    }
+
+    public InputFile setProduceTime(String produceTime) {
+        this.produceTime = produceTime;
+        return this;
+    }
+    public String getProduceTime() {
+        return this.produceTime;
     }
 
     public InputFile setURI(String URI) {

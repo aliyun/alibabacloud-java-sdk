@@ -25,6 +25,9 @@ public class DataIngestion extends TeaModel {
     @NameInMap("Notification")
     public DataIngestionNotification notification;
 
+    @NameInMap("Phase")
+    public String phase;
+
     @NameInMap("State")
     public String state;
 
@@ -98,6 +101,14 @@ public class DataIngestion extends TeaModel {
         return this.notification;
     }
 
+    public DataIngestion setPhase(String phase) {
+        this.phase = phase;
+        return this;
+    }
+    public String getPhase() {
+        return this.phase;
+    }
+
     public DataIngestion setState(String state) {
         this.state = state;
         return this;
@@ -131,6 +142,9 @@ public class DataIngestion extends TeaModel {
     }
 
     public static class DataIngestionActions extends TeaModel {
+        @NameInMap("FastFailPolicy")
+        public FastFailPolicy fastFailPolicy;
+
         @NameInMap("Name")
         public String name;
 
@@ -140,6 +154,14 @@ public class DataIngestion extends TeaModel {
         public static DataIngestionActions build(java.util.Map<String, ?> map) throws Exception {
             DataIngestionActions self = new DataIngestionActions();
             return TeaModel.build(map, self);
+        }
+
+        public DataIngestionActions setFastFailPolicy(FastFailPolicy fastFailPolicy) {
+            this.fastFailPolicy = fastFailPolicy;
+            return this;
+        }
+        public FastFailPolicy getFastFailPolicy() {
+            return this.fastFailPolicy;
         }
 
         public DataIngestionActions setName(String name) {

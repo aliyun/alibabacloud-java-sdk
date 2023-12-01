@@ -31,6 +31,9 @@ public class SimpleQueryShrinkRequest extends TeaModel {
     @NameInMap("WithFields")
     public String withFieldsShrink;
 
+    @NameInMap("WithoutTotalHits")
+    public Boolean withoutTotalHits;
+
     public static SimpleQueryShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SimpleQueryShrinkRequest self = new SimpleQueryShrinkRequest();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class SimpleQueryShrinkRequest extends TeaModel {
     }
     public String getWithFieldsShrink() {
         return this.withFieldsShrink;
+    }
+
+    public SimpleQueryShrinkRequest setWithoutTotalHits(Boolean withoutTotalHits) {
+        this.withoutTotalHits = withoutTotalHits;
+        return this;
+    }
+    public Boolean getWithoutTotalHits() {
+        return this.withoutTotalHits;
     }
 
 }

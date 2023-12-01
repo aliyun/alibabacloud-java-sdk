@@ -31,6 +31,9 @@ public class SimpleQueryRequest extends TeaModel {
     @NameInMap("WithFields")
     public java.util.List<String> withFields;
 
+    @NameInMap("WithoutTotalHits")
+    public Boolean withoutTotalHits;
+
     public static SimpleQueryRequest build(java.util.Map<String, ?> map) throws Exception {
         SimpleQueryRequest self = new SimpleQueryRequest();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class SimpleQueryRequest extends TeaModel {
     }
     public java.util.List<String> getWithFields() {
         return this.withFields;
+    }
+
+    public SimpleQueryRequest setWithoutTotalHits(Boolean withoutTotalHits) {
+        this.withoutTotalHits = withoutTotalHits;
+        return this;
+    }
+    public Boolean getWithoutTotalHits() {
+        return this.withoutTotalHits;
     }
 
     public static class SimpleQueryRequestAggregations extends TeaModel {
