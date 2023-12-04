@@ -1,3 +1,6 @@
+2023-12-04 Version: 1.9.0
+- Generated java 2022-05-20 for btripOpen.
+
 2023-11-23 Version: 1.8.5
 - Generated java 2022-05-20 for btripOpen.
 
