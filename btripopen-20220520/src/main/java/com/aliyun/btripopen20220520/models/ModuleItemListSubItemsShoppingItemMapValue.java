@@ -4,6 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ModuleItemListSubItemsShoppingItemMapValue extends TeaModel {
+    @NameInMap("search_price")
+    public ModuleItemListSubItemsShoppingItemMapValueSearchPrice searchPrice;
+
     /**
      * <p>id</p>
      */
@@ -13,15 +16,20 @@ public class ModuleItemListSubItemsShoppingItemMapValue extends TeaModel {
     @NameInMap("cabin_quantity")
     public java.util.Map<String, ModuleItemListSubItemsShoppingItemMapValueCabinQuantityValue> cabinQuantity;
 
-    @NameInMap("search_price")
-    public ModuleItemListSubItemsShoppingItemMapValueSearchPrice searchPrice;
-
     @NameInMap("segment_price")
     public java.util.Map<String, ModuleItemListSubItemsShoppingItemMapValueSegmentPriceValue> segmentPrice;
 
     public static ModuleItemListSubItemsShoppingItemMapValue build(java.util.Map<String, ?> map) throws Exception {
         ModuleItemListSubItemsShoppingItemMapValue self = new ModuleItemListSubItemsShoppingItemMapValue();
         return TeaModel.build(map, self);
+    }
+
+    public ModuleItemListSubItemsShoppingItemMapValue setSearchPrice(ModuleItemListSubItemsShoppingItemMapValueSearchPrice searchPrice) {
+        this.searchPrice = searchPrice;
+        return this;
+    }
+    public ModuleItemListSubItemsShoppingItemMapValueSearchPrice getSearchPrice() {
+        return this.searchPrice;
     }
 
     public ModuleItemListSubItemsShoppingItemMapValue setId(String id) {
@@ -38,14 +46,6 @@ public class ModuleItemListSubItemsShoppingItemMapValue extends TeaModel {
     }
     public java.util.Map<String, ModuleItemListSubItemsShoppingItemMapValueCabinQuantityValue> getCabinQuantity() {
         return this.cabinQuantity;
-    }
-
-    public ModuleItemListSubItemsShoppingItemMapValue setSearchPrice(ModuleItemListSubItemsShoppingItemMapValueSearchPrice searchPrice) {
-        this.searchPrice = searchPrice;
-        return this;
-    }
-    public ModuleItemListSubItemsShoppingItemMapValueSearchPrice getSearchPrice() {
-        return this.searchPrice;
     }
 
     public ModuleItemListSubItemsShoppingItemMapValue setSegmentPrice(java.util.Map<String, ModuleItemListSubItemsShoppingItemMapValueSegmentPriceValue> segmentPrice) {

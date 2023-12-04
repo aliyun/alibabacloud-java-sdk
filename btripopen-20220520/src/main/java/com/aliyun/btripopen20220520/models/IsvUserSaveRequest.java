@@ -138,6 +138,9 @@ public class IsvUserSaveRequest extends TeaModel {
         @NameInMap("user_name")
         public String userName;
 
+        @NameInMap("user_nick")
+        public String userNick;
+
         public static IsvUserSaveRequestUserList build(java.util.Map<String, ?> map) throws Exception {
             IsvUserSaveRequestUserList self = new IsvUserSaveRequestUserList();
             return TeaModel.build(map, self);
@@ -285,6 +288,14 @@ public class IsvUserSaveRequest extends TeaModel {
         }
         public String getUserName() {
             return this.userName;
+        }
+
+        public IsvUserSaveRequestUserList setUserNick(String userNick) {
+            this.userNick = userNick;
+            return this;
+        }
+        public String getUserNick() {
+            return this.userNick;
         }
 
     }
