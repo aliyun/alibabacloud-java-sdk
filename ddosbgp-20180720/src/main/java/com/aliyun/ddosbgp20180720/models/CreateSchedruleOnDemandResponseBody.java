@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSchedruleOnDemandResponseBody extends TeaModel {
     /**
-     * <p>Creates a scheduling rule for an on-demand instance.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

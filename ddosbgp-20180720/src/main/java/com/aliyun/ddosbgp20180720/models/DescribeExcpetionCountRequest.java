@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeExcpetionCountRequest extends TeaModel {
     /**
-     * <p>DescribeExcpetionCount</p>
+     * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Queries the number of assets that are in an abnormal state and the number of Anti-DDoS Origin instances that are about to expire in a specific region.</p>
+     * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
+     * <br>
+     * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

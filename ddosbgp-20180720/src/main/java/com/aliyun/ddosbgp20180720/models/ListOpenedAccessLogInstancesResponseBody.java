@@ -5,22 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the Anti-DDoS Origin instance.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether log analysis was enabled for the Anti-DDoS Origin instance. Valid values:</p>
-     * <br>
-     * <p>*   **true**: Log analysis was enabled.</p>
-     * <p>*   **false**: Log analysis was disabled.</p>
+     * <p>The configuration of log analysis for the Anti-DDoS Origin instance.</p>
      */
     @NameInMap("SlsConfigStatus")
     public java.util.List<ListOpenedAccessLogInstancesResponseBodySlsConfigStatus> slsConfigStatus;
 
     /**
-     * <p>The configuration of log analysis for the Anti-DDoS Origin instance.</p>
+     * <p>The number of the Anti-DDoS Origin instances for which log analysis was enabled.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -55,13 +52,17 @@ public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
     }
 
     public static class ListOpenedAccessLogInstancesResponseBodySlsConfigStatus extends TeaModel {
+        /**
+         * <p>Indicates whether log analysis was enabled for the Anti-DDoS Origin instance. Valid values:</p>
+         * <br>
+         * <p>*   **true**: Log analysis was enabled.</p>
+         * <p>*   **false**: Log analysis was disabled.</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
         /**
-         * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).</p>
-         * <br>
-         * <p>For more information about sample requests, see the **"Examples"** section of this topic.</p>
+         * <p>The ID of the Anti-DDoS Origin instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

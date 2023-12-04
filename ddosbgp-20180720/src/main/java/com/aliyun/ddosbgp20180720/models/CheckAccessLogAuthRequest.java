@@ -5,16 +5,17 @@ import com.aliyun.tea.*;
 
 public class CheckAccessLogAuthRequest extends TeaModel {
     /**
-     * <p>Indicates whether Anti-DDoS Origin was authorized to access Log Service. Valid values:</p>
+     * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
      * <br>
-     * <p>*   **true**: Anti-DDoS Origin was authorized.</p>
-     * <p>*   **false**: Anti-DDoS Origin was not authorized.</p>
+     * <p>For more information about the valid values of this parameter, see [Regions and zones](~~188196~~).</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. This parameter is empty by default, which indicates that the Anti-DDoS Origin instance belongs to the default resource group.</p>
+     * <br>
+     * <p>For more information about resource groups, see [Create a resource group](~~94485~~).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

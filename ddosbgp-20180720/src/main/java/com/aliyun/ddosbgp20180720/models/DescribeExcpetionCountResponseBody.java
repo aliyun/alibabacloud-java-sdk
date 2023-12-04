@@ -5,14 +5,20 @@ import com.aliyun.tea.*;
 
 public class DescribeExcpetionCountResponseBody extends TeaModel {
     /**
-     * <p>WB269094</p>
+     * <p>The number of assets that are in an abnormal state.</p>
      */
     @NameInMap("ExceptionIpCount")
     public Integer exceptionIpCount;
 
+    /**
+     * <p>The number of Anti-DDoS Origin instances that are about to expire.</p>
+     */
     @NameInMap("ExpireTimeCount")
     public Integer expireTimeCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -5,27 +5,36 @@ import com.aliyun.tea.*;
 
 public class DescribePackIpListRequest extends TeaModel {
     /**
-     * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
+     * <p>The ID of the Anti-DDoS Origin instance to query.</p>
      * <br>
-     * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
+     * <p>>  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The protected IP address to query.</p>
      */
     @NameInMap("Ip")
     public String ip;
 
+    /**
+     * <p>The ID of the member.</p>
+     */
     @NameInMap("MemberUid")
     public String memberUid;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribePackIpList**.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
+
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     /**
      * <p>The type of the cloud asset to which the protected IP address to query belongs. Valid values:</p>
@@ -35,28 +44,21 @@ public class DescribePackIpListRequest extends TeaModel {
      * <p>*   **EIP**: an elastic IP address (EIP). An Internet-facing Application Load Balancer (ALB) instance uses an EIP. If the IP address belongs to the Internet-facing ALB instance, set this parameter to EIP.</p>
      * <p>*   **WAF**: a Web Application Firewall (WAF) instance.</p>
      */
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    /**
-     * <p>The protected IP address to query.</p>
-     */
     @NameInMap("ProductName")
     public String productName;
 
     /**
-     * <p>The list of IP addresses that are protected by the Anti-DDoS Origin instance.</p>
+     * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The type of the cloud asset to which the IP address belongs. Valid values:</p>
+     * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
      * <br>
-     * <p>*   **ECS**: an ECS instance.</p>
-     * <p>*   **SLB**: an CLB instance.</p>
-     * <p>*   **EIP**: an EIP. If the IP address belongs to an ALB instance, the value EIP is returned.</p>
-     * <p>*   **WAF**: a WAF instance.</p>
+     * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

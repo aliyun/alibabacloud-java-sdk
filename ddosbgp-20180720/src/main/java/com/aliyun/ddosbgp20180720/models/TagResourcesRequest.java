@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).</p>
+     * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
      * <br>
-     * <p>For more information about sample requests, see the **"Examples"** section of this topic.</p>
+     * <p>>  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **TagResources**.</p>
+     * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
+     * <br>
+     * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -22,7 +24,7 @@ public class TagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>Adds tags to Anti-DDoS Origin instances.</p>
+     * <p>The type of the resource to which you want to add tags. Set the value to **INSTANCE**, which indicates instances.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -77,11 +79,18 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>WB269094</p>
+         * <p>The key of the tag to add.</p>
+         * <br>
+         * <p>>  If the specified key does not exist, a key is created.</p>
          */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag to add.</p>
+         * <br>
+         * <p>>  If the specified value does not exist, a value is created.</p>
+         */
         @NameInMap("Value")
         public String value;
 

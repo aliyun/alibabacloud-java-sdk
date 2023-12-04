@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDdosEventResponseBody extends TeaModel {
     /**
-     * <p>The number of packets at the start of the DDoS attack. Unit: packets per second (PPS).</p>
+     * <p>The details about the DDoS attack event.</p>
      */
     @NameInMap("Events")
     public java.util.List<DescribeDdosEventResponseBodyEvents> events;
@@ -17,7 +17,7 @@ public class DescribeDdosEventResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The time when the DDoS attack started. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The total number of DDoS attack events.</p>
      */
     @NameInMap("Total")
     public Long total;
@@ -53,33 +53,42 @@ public class DescribeDdosEventResponseBody extends TeaModel {
 
     public static class DescribeDdosEventResponseBodyEvents extends TeaModel {
         /**
-         * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).</p>
-         * <br>
-         * <p>For more information about sample requests, see the **"Examples"** section of this topic.</p>
+         * <p>The time when the DDoS attack stopped. This value is a UNIX timestamp. Unit: seconds.</p>
          */
         @NameInMap("EndTime")
         public Integer endTime;
 
+        /**
+         * <p>The attacked IP address.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
         /**
-         * <p>WB269094</p>
+         * <p>The volume of the request traffic at the start of the DDoS attack. Unit: Mbit/s.</p>
          */
         @NameInMap("Mbps")
         public Integer mbps;
 
+        /**
+         * <p>The number of packets at the start of the DDoS attack. Unit: packets per second (PPS).</p>
+         */
         @NameInMap("Pps")
         public Integer pps;
 
         /**
-         * <p>DescribeDdosEvent</p>
+         * <p>The time when the DDoS attack started. This value is a UNIX timestamp. Unit: seconds.</p>
          */
         @NameInMap("StartTime")
         public Integer startTime;
 
         /**
-         * <p>Queries the details about the DDoS attack events that occurred on a specific Anti-DDoS Origin instance.</p>
+         * <p>The status of the DDoS attack event. Valid values:</p>
+         * <br>
+         * <p>*   **hole_begin**: indicates that blackhole filtering is triggered for the attacked IP address.</p>
+         * <p>*   **hole_end**: indicates that blackhole filtering is deactivated for the attacked IP address.</p>
+         * <p>*   **defense_begin**: indicates that attack traffic is being scrubbed.</p>
+         * <p>*   **defense_end**: indicates that attack traffic is scrubbed.</p>
          */
         @NameInMap("Status")
         public String status;

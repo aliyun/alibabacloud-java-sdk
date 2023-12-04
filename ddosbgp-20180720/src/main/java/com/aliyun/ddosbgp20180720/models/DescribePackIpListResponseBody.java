@@ -5,33 +5,36 @@ import com.aliyun.tea.*;
 
 public class DescribePackIpListResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The HTTP status code of the request.</p>
+     * <br>
+     * <p>For more information about status codes, see [Common parameters](~~118841~~).</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>WB269094</p>
+     * <p>The IP addresses that are protected by the instance.</p>
      */
     @NameInMap("IpList")
     public java.util.List<DescribePackIpListResponseBodyIpList> ipList;
 
     /**
-     * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).</p>
-     * <br>
-     * <p>For more information about sample requests, see the **"Examples"** section of this topic.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>DescribePackIpList</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The call is successful.</p>
+     * <p>*   **false**: The call fails.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>Queries the IP addresses that are protected by a specific Anti-DDoS Origin instance.</p>
+     * <p>The number of protected IP addresses.</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -82,21 +85,51 @@ public class DescribePackIpListResponseBody extends TeaModel {
     }
 
     public static class DescribePackIpListResponseBodyIpList extends TeaModel {
+        /**
+         * <p>The IP address.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The ID of the member.</p>
+         */
         @NameInMap("MemberUid")
         public String memberUid;
 
+        /**
+         * <p>The type of the cloud asset to which the IP address belongs. Valid values:</p>
+         * <br>
+         * <p>*   **ECS**: an ECS instance.</p>
+         * <p>*   **SLB**: a CLB instance, originally called an SLB instance.</p>
+         * <p>*   **EIP**: an EIP. If the IP address belongs to an ALB instance, the value EIP is returned.</p>
+         * <p>*   **WAF**: a WAF instance.</p>
+         */
         @NameInMap("Product")
         public String product;
 
+        /**
+         * <p>The region to which the protected IP address belongs.</p>
+         * <br>
+         * <p>>  If the protected IP address is in the same region as the instance, this parameter is not returned.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The description of the cloud asset to which the IP address belongs. The asset can be an ECS instance or an SLB instance.</p>
+         * <br>
+         * <p>>  If no descriptions are provided for the asset, this parameter is not returned.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The status of the IP address. Valid values:</p>
+         * <br>
+         * <p>*   **normal**: The IP address is in the normal state, which indicates that the IP address is not under attack.</p>
+         * <p>*   **hole_begin**: Blackhole filtering is triggered for the IP address.</p>
+         */
         @NameInMap("Status")
         public String status;
 

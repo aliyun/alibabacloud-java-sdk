@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceSpecsResponseBody extends TeaModel {
     /**
-     * <p>The number of IP addresses that are protected by the Anti-DDoS Origin Enterprise instance.</p>
+     * <p>The specifications of the Anti-DDoS Origin Enterprise instance, including whether the unlimited protection feature is enabled, and the numbers of times that the unlimited protection feature can be enabled and has been enabled.</p>
      */
     @NameInMap("InstanceSpecs")
     public java.util.List<DescribeInstanceSpecsResponseBodyInstanceSpecs> instanceSpecs;
 
     /**
-     * <p>The number of times that the unlimited protection feature can be enabled.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,46 +38,50 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceSpecsResponseBodyInstanceSpecsPackConfig extends TeaModel {
+        /**
+         * <p>The bandwidth of the package configuration.</p>
+         */
         @NameInMap("Bandwidth")
         public Long bandwidth;
 
         /**
-         * <p>The ID of the Anti-DDoS Origin Enterprise instance.</p>
+         * <p>The number of IP addresses that are protected by the Anti-DDoS Origin Enterprise instance.</p>
          */
         @NameInMap("BindIpCount")
         public Integer bindIpCount;
 
         /**
-         * <p>DescribeInstanceSpecs</p>
+         * <p>The burstable bandwidth of each protected IP address. Unit: Gbit/s.</p>
          */
         @NameInMap("IpAdvanceThre")
         public Integer ipAdvanceThre;
 
         /**
-         * <p>WB269094</p>
+         * <p>The basic bandwidth of each protected IP address. Unit: Gbit/s.</p>
          */
         @NameInMap("IpBasicThre")
         public Integer ipBasicThre;
 
+        /**
+         * <p>The number of IP addresses that can be protected by the Anti-DDoS Origin Enterprise instance.</p>
+         */
         @NameInMap("IpSpec")
         public Integer ipSpec;
 
         /**
-         * <p>DescribeInstanceSpecs</p>
+         * <p>The normal clean bandwidth. Unit: Mbit/s.</p>
          */
         @NameInMap("NormalBandwidth")
         public Integer normalBandwidth;
 
         /**
-         * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).</p>
-         * <br>
-         * <p>For more information about sample requests, see the **"Examples"** section of this topic.</p>
+         * <p>The burstable protection bandwidth of the Anti-DDoS Origin Enterprise instance. Unit: Gbit/s.</p>
          */
         @NameInMap("PackAdvThre")
         public Integer packAdvThre;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The basic protection bandwidth of the Anti-DDoS Origin Enterprise instance. Unit: Gbit/s.</p>
          */
         @NameInMap("PackBasicThre")
         public Integer packBasicThre;
@@ -155,41 +159,45 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
 
     public static class DescribeInstanceSpecsResponseBodyInstanceSpecs extends TeaModel {
         /**
-         * <p>The ID of the Anti-DDoS Origin Enterprise instance. This parameter value is a string consisting of JSON arrays. Each element in a JSON array indicates an instance ID. If you want to query more than one instance, separate instance IDs with commas (,).</p>
-         * <br>
-         * <p>>  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin Enterprise instances in a specific region.</p>
+         * <p>The number of times that the unlimited protection feature can be enabled.</p>
          */
         @NameInMap("AvailableDefenseTimes")
         public Integer availableDefenseTimes;
 
         /**
-         * <p>The basic protection bandwidth of the Anti-DDoS Origin Enterprise instance. Unit: Gbit/s.</p>
+         * <p>The number of times that blackhole filtering can be deactivated.</p>
          */
         @NameInMap("AvailableDeleteBlackholeCount")
         public String availableDeleteBlackholeCount;
 
+        @NameInMap("DefenseTimesPercent")
+        public Integer defenseTimesPercent;
+
         /**
-         * <p>The number of IP addresses that can be protected by the Anti-DDoS Origin Enterprise instance.</p>
+         * <p>The ID of the Anti-DDoS Origin Enterprise instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The region ID of the Anti-DDoS Origin Enterprise instance.</p>
+         * <p>Indicates whether the unlimited protection feature is enabled. Valid values:</p>
          * <br>
-         * <p>>  You can call the [DescribeRegions](~~118703~~) operation to query the name of the region.</p>
+         * <p>*   **0**: The unlimited protection feature is disabled.</p>
+         * <p>*   **1**: The unlimited protection feature is enabled.</p>
          */
         @NameInMap("IsFullDefenseMode")
         public Integer isFullDefenseMode;
 
         /**
-         * <p>The specifications of the Anti-DDoS Origin Enterprise instance, including whether the unlimited protection feature is enabled, and the numbers of times that the unlimited protection feature can be enabled and has been enabled.</p>
+         * <p>The configurations of the Anti-DDoS Origin Enterprise instance, including the number of protected IP addresses and protection bandwidth.</p>
          */
         @NameInMap("PackConfig")
         public DescribeInstanceSpecsResponseBodyInstanceSpecsPackConfig packConfig;
 
         /**
-         * <p>The number of times that blackhole filtering can be deactivated.</p>
+         * <p>The region ID of the Anti-DDoS Origin Enterprise instance.</p>
+         * <br>
+         * <p>>  You can call the [DescribeRegions](~~118703~~) operation to query the name of the region.</p>
          */
         @NameInMap("Region")
         public String region;
@@ -219,6 +227,14 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         }
         public String getAvailableDeleteBlackholeCount() {
             return this.availableDeleteBlackholeCount;
+        }
+
+        public DescribeInstanceSpecsResponseBodyInstanceSpecs setDefenseTimesPercent(Integer defenseTimesPercent) {
+            this.defenseTimesPercent = defenseTimesPercent;
+            return this;
+        }
+        public Integer getDefenseTimesPercent() {
+            return this.defenseTimesPercent;
         }
 
         public DescribeInstanceSpecsResponseBodyInstanceSpecs setInstanceId(String instanceId) {
