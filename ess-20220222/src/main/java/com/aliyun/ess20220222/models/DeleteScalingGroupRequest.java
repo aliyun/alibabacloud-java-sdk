@@ -4,6 +4,17 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DeleteScalingGroupRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to forcefully delete the VPC. Valid values:</p>
+     * <br>
+     * <p>- **true**: yes</p>
+     * <p>- **false** (default): no</p>
+     * <br>
+     * <p>You can forcefully delete a VPC in the following scenarios:</p>
+     * <br>
+     * <p>- Only an IPv4 gateway and routes that point to the IPv4 gateway exist in the VPC.</p>
+     * <p>- Only an IPv6 gateway and routes that point to the IPv6 gateway exist in the VPC.</p>
+     */
     @NameInMap("ForceDelete")
     public Boolean forceDelete;
 
@@ -13,12 +24,18 @@ public class DeleteScalingGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The ID of the scaling group.</p>
+     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 

@@ -338,6 +338,12 @@ public class CreateScalingConfigurationRequest extends TeaModel {
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
+    @NameInMap("StorageSetId")
+    public String storageSetId;
+
+    @NameInMap("StorageSetPartitionNumber")
+    public Integer storageSetPartitionNumber;
+
     /**
      * <p>The categories of the system disks. If Auto Scaling cannot create instances by using the disk category that has the highest priority, Auto Scaling creates instances by using the disk category that has the next highest priority. Valid values:</p>
      * <br>
@@ -762,6 +768,22 @@ public class CreateScalingConfigurationRequest extends TeaModel {
     }
     public String getSpotStrategy() {
         return this.spotStrategy;
+    }
+
+    public CreateScalingConfigurationRequest setStorageSetId(String storageSetId) {
+        this.storageSetId = storageSetId;
+        return this;
+    }
+    public String getStorageSetId() {
+        return this.storageSetId;
+    }
+
+    public CreateScalingConfigurationRequest setStorageSetPartitionNumber(Integer storageSetPartitionNumber) {
+        this.storageSetPartitionNumber = storageSetPartitionNumber;
+        return this;
+    }
+    public Integer getStorageSetPartitionNumber() {
+        return this.storageSetPartitionNumber;
     }
 
     public CreateScalingConfigurationRequest setSystemDiskCategories(java.util.List<String> systemDiskCategories) {

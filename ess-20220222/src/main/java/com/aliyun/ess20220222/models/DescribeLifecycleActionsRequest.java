@@ -4,24 +4,47 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeLifecycleActionsRequest extends TeaModel {
+    /**
+     * <p>The status of the lifecycle action. Valid values:</p>
+     * <br>
+     * <p>*   If a lifecycle action is in the Pending state, Elastic Compute Service (ECS) instances are waiting to be added to a scaling group or waiting to be removed from a scaling group.</p>
+     * <p>*   If a lifecycle action is in the Timeout state, the lifecycle hook that triggers the lifecycle action ends, and ECS instances are added to or removed from the scaling group.</p>
+     * <p>*   If a lifecycle action is in the Completed state, you manually end the lifecycle hook that triggers the lifecycle action ahead of schedule.</p>
+     */
     @NameInMap("LifecycleActionStatus")
     public String lifecycleActionStatus;
 
+    /**
+     * <p>The maximum number of entries to return on each page. Valid values: 1 to 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used to specify the lifecycle action from which the query starts.</p>
+     * <br>
+     * <p>For example, after the first 10 lifecycle actions are queried, the query starts from the 11th lifecycle action. Set this parameter to the NextToken value that is returned in the previous API call. If you do not specify this parameter, the query starts from the beginning.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the scaling group.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The ID of the scaling activity.</p>
+     */
     @NameInMap("ScalingActivityId")
     public String scalingActivityId;
 

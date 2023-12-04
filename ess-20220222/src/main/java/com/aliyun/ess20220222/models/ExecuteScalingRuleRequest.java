@@ -4,12 +4,21 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class ExecuteScalingRuleRequest extends TeaModel {
+    /**
+     * <p>The threshold specified when the step scaling rule is executed. Valid values: -9.999999E18 to 9.999999E18.</p>
+     */
     @NameInMap("BreachThreshold")
     public Float breachThreshold;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The metric value specified when the step scaling rule is executed. Valid values: -9.999999E18 to 9.999999E18.</p>
+     */
     @NameInMap("MetricValue")
     public Float metricValue;
 
@@ -19,6 +28,9 @@ public class ExecuteScalingRuleRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the scaling group.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -28,6 +40,11 @@ public class ExecuteScalingRuleRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The unique identifier of the scaling rule.</p>
+     * <br>
+     * <p>> You can call the ExecuteScalingRule operation to execute only simple scaling rules and step scaling rules. To execute a step scaling rule, you must specify the BreachThreshold and MetricValue parameters.</p>
+     */
     @NameInMap("ScalingRuleAri")
     public String scalingRuleAri;
 

@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The total number of scaling configurations.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>Details of the scaling configurations.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The time when the scaling configuration was created.</p>
+     * <p>Details of the scaling configurations.</p>
      */
     @NameInMap("ScalingConfigurations")
     public java.util.List<DescribeEciScalingConfigurationsResponseBodyScalingConfigurations> scalingConfigurations;
 
     /**
-     * <p>Details of the scaling configurations.</p>
+     * <p>The total number of scaling configurations.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,25 +81,25 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsAcrRegistryInfos extends TeaModel {
         /**
-         * <p>The IP addresses of the DNS servers.</p>
+         * <p>The domain name of the Container Registry Enterprise Edition instance. By default, all domain names of the Container Registry Enterprise Edition instance are displayed. You can specify one or more domain names. Separate multiple domain names with commas (,).</p>
          */
         @NameInMap("Domains")
         public java.util.List<String> domains;
 
         /**
-         * <p>The region ID of the Container Registry Enterprise Edition instance.</p>
+         * <p>The ID of the Container Registry Enterprise Edition instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The domain name of the Container Registry Enterprise Edition instance. By default, all domain names of the Container Registry Enterprise Edition instance are displayed. You can specify one or more domain names. Separate multiple domain names with commas (,).</p>
+         * <p>The name of the Container Registry Enterprise Edition instance.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The domain name of the Container Registry Enterprise Edition instance. By default, all domain names of the Container Registry Enterprise Edition instance are displayed. You can specify one or more domain names. Separate multiple domain names with commas (,).</p>
+         * <p>The region ID of the Container Registry Enterprise Edition instance.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -145,19 +145,19 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainersEnvironmentVars extends TeaModel {
         /**
-         * <p>The container startup commands. You can specify up to 20 commands. Each command can contain up to 256 characters.</p>
+         * <p>> This parameter is unavailable.</p>
          */
         @NameInMap("FieldRefFieldPath")
         public String fieldRefFieldPath;
 
         /**
-         * <p>> This parameter is unavailable.</p>
+         * <p>The name of the environment variable.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The container startup commands. You can specify up to 20 commands. Each command can contain up to 256 characters.</p>
+         * <p>The value of the environment variable.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -195,13 +195,16 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainersPorts extends TeaModel {
         /**
-         * <p>The volumes that are mounted on the container.</p>
+         * <p>The port number. Valid values: 1 to 65535.</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
-         * <p>The volumes that are mounted on the container.</p>
+         * <p>The protocol. Valid values:</p>
+         * <br>
+         * <p>*   TCP</p>
+         * <p>*   UDP</p>
          */
         @NameInMap("Protocol")
         public String protocol;
@@ -231,30 +234,12 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainersVolumeMounts extends TeaModel {
         /**
-         * <p>Details of the environment variables.</p>
-         */
-        @NameInMap("MountPath")
-        public String mountPath;
-
-        /**
-         * <p>Details of the environment variables.</p>
-         */
-        @NameInMap("MountPropagation")
-        public String mountPropagation;
-
-        /**
          * <p>The directory in which the container mounts the volume.</p>
          * <br>
          * <p>> Data in this directory is overwritten by the data on the volume.</p>
          */
-        @NameInMap("Name")
-        public String name;
-
-        /**
-         * <p>The name of the volume. The value of this parameter is the same as the value of the Volumes.Name parameter.</p>
-         */
-        @NameInMap("ReadOnly")
-        public Boolean readOnly;
+        @NameInMap("MountPath")
+        public String mountPath;
 
         /**
          * <p>The mount propagation setting of the volume. Mount propagation allows the sharing of volumes that are mounted on one container with other containers in the same pod, or even with other pods on the same node. Valid values:</p>
@@ -264,6 +249,26 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
          * <p>*   Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories. In addition, all volume mounts that are created by the container are propagated back to the instance and to all containers of all pods that use the same volume.</p>
          * <br>
          * <p>Default value: None.</p>
+         */
+        @NameInMap("MountPropagation")
+        public String mountPropagation;
+
+        /**
+         * <p>The name of the volume. The value of this parameter is the same as the value of the Volumes.Name parameter.</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <p>Indicates whether the volume is read-only.</p>
+         * <br>
+         * <p>Default value: false.</p>
+         */
+        @NameInMap("ReadOnly")
+        public Boolean readOnly;
+
+        /**
+         * <p>The subdirectory of the volume.</p>
          */
         @NameInMap("SubPath")
         public String subPath;
@@ -317,36 +322,76 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainers extends TeaModel {
         /**
-         * <p>The commands that are run in the container when you use the CLI to perform probes.</p>
+         * <p>The arguments that are passed to the container startup commands. You can specify up to 10 arguments.</p>
          */
         @NameInMap("Args")
         public java.util.List<String> args;
 
         /**
-         * <p>The commands that are run in the container when you use the CLI to perform probes.</p>
+         * <p>The container startup commands. You can specify up to 20 commands. Each command can contain up to 256 characters.</p>
          */
         @NameInMap("Commands")
         public java.util.List<String> commands;
+
+        /**
+         * <p>The number of vCPUs that are allocated to the container.</p>
+         */
+        @NameInMap("Cpu")
+        public Float cpu;
+
+        /**
+         * <p>Details of the environment variables.</p>
+         */
+        @NameInMap("EnvironmentVars")
+        public java.util.List<DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainersEnvironmentVars> environmentVars;
+
+        /**
+         * <p>The number of GPUs.</p>
+         */
+        @NameInMap("Gpu")
+        public Integer gpu;
+
+        /**
+         * <p>The image of the container.</p>
+         */
+        @NameInMap("Image")
+        public String image;
+
+        /**
+         * <p>The image pulling policy. Valid values:</p>
+         * <br>
+         * <p>*   Always: Image pulling is performed each time.</p>
+         * <p>*   IfNotPresent: Image pulling is performed only if on-premises images are unavailable. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.</p>
+         * <p>*   Never: On-premises images are always used. Image pulling is not performed.</p>
+         */
+        @NameInMap("ImagePullPolicy")
+        public String imagePullPolicy;
+
+        /**
+         * <p>The commands that are run in the container when you use the CLI to perform probes.</p>
+         */
+        @NameInMap("LivenessProbeExecCommands")
+        public java.util.List<String> livenessProbeExecCommands;
 
         /**
          * <p>The minimum number of consecutive failures for a probe to be considered failed after having been successful.</p>
          * <br>
          * <p>Default value: 3.</p>
          */
-        @NameInMap("Cpu")
-        public Float cpu;
+        @NameInMap("LivenessProbeFailureThreshold")
+        public Integer livenessProbeFailureThreshold;
 
         /**
-         * <p>The name of the environment variable.</p>
+         * <p>The path to which the system sends an HTTP GET request for a probe.</p>
          */
-        @NameInMap("EnvironmentVars")
-        public java.util.List<DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainersEnvironmentVars> environmentVars;
+        @NameInMap("LivenessProbeHttpGetPath")
+        public String livenessProbeHttpGetPath;
 
         /**
-         * <p>Indicates whether the container allocates buffer resources to standard input streams when the container runs. If you do not specify this parameter, an end-of-file (EOF) error may occur. Default value: false.</p>
+         * <p>The port to which HTTP GET requests were sent.</p>
          */
-        @NameInMap("Gpu")
-        public Integer gpu;
+        @NameInMap("LivenessProbeHttpGetPort")
+        public Integer livenessProbeHttpGetPort;
 
         /**
          * <p>The protocol type of HTTP GET requests when you use HTTP requests to perform probes. Valid values:</p>
@@ -354,38 +399,155 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
          * <p>*   HTTP</p>
          * <p>*   HTTPS</p>
          */
-        @NameInMap("Image")
-        public String image;
-
-        /**
-         * <p>The number of vCPUs that are allocated to the container.</p>
-         */
-        @NameInMap("ImagePullPolicy")
-        public String imagePullPolicy;
-
-        /**
-         * <p>The arguments that are passed to the container startup commands. You can specify up to 10 arguments.</p>
-         */
-        @NameInMap("LivenessProbeExecCommands")
-        public java.util.List<String> livenessProbeExecCommands;
-
-        /**
-         * <p>The exposed ports and protocols of the container.</p>
-         */
-        @NameInMap("LivenessProbeFailureThreshold")
-        public Integer livenessProbeFailureThreshold;
-
-        /**
-         * <p>The port number of TcpSocket.</p>
-         */
-        @NameInMap("LivenessProbeHttpGetPath")
-        public String livenessProbeHttpGetPath;
+        @NameInMap("LivenessProbeHttpGetScheme")
+        public String livenessProbeHttpGetScheme;
 
         /**
          * <p>The number of seconds between the time when the startup of the container ends and the time when the probe starts.</p>
          */
-        @NameInMap("LivenessProbeHttpGetPort")
-        public Integer livenessProbeHttpGetPort;
+        @NameInMap("LivenessProbeInitialDelaySeconds")
+        public Integer livenessProbeInitialDelaySeconds;
+
+        /**
+         * <p>The interval at which probes are performed. Default value: 10. Minimum value: 1. Unit: seconds.</p>
+         */
+        @NameInMap("LivenessProbePeriodSeconds")
+        public Integer livenessProbePeriodSeconds;
+
+        /**
+         * <p>The minimum number of consecutive successes for a probe to be considered successful after having failed. Default value: 1. Valid value: 1.</p>
+         */
+        @NameInMap("LivenessProbeSuccessThreshold")
+        public Integer livenessProbeSuccessThreshold;
+
+        /**
+         * <p>The port number of TcpSocket.</p>
+         */
+        @NameInMap("LivenessProbeTcpSocketPort")
+        public Integer livenessProbeTcpSocketPort;
+
+        /**
+         * <p>The timeout period of a probe. Default value: 1. Minimum value: 1. Unit: seconds.</p>
+         */
+        @NameInMap("LivenessProbeTimeoutSeconds")
+        public Integer livenessProbeTimeoutSeconds;
+
+        /**
+         * <p>The memory size of the container.</p>
+         */
+        @NameInMap("Memory")
+        public Float memory;
+
+        /**
+         * <p>The name of the container.</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <p>The exposed ports and protocols of the container.</p>
+         */
+        @NameInMap("Ports")
+        public java.util.List<DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainersPorts> ports;
+
+        /**
+         * <p>The commands that are run in the container when you use the CLI to perform probes.</p>
+         */
+        @NameInMap("ReadinessProbeExecCommands")
+        public java.util.List<String> readinessProbeExecCommands;
+
+        /**
+         * <p>The minimum number of consecutive failures for a probe to be considered failed after having been successful.</p>
+         * <br>
+         * <p>Default value: 3.</p>
+         */
+        @NameInMap("ReadinessProbeFailureThreshold")
+        public Integer readinessProbeFailureThreshold;
+
+        /**
+         * <p>The path to which the system sends an HTTP GET request for a probe.</p>
+         */
+        @NameInMap("ReadinessProbeHttpGetPath")
+        public String readinessProbeHttpGetPath;
+
+        /**
+         * <p>The path to which the system sends an HTTP GET request for a probe.</p>
+         */
+        @NameInMap("ReadinessProbeHttpGetPort")
+        public Integer readinessProbeHttpGetPort;
+
+        /**
+         * <p>The protocol type of HTTP GET requests when you use HTTP requests to perform probes. Valid values:</p>
+         * <br>
+         * <p>*   HTTP</p>
+         * <p>*   HTTPS</p>
+         */
+        @NameInMap("ReadinessProbeHttpGetScheme")
+        public String readinessProbeHttpGetScheme;
+
+        /**
+         * <p>The number of seconds between the time when the startup of the container ends and the time when the probe starts.</p>
+         */
+        @NameInMap("ReadinessProbeInitialDelaySeconds")
+        public Integer readinessProbeInitialDelaySeconds;
+
+        /**
+         * <p>The interval at which probes are performed. Default value: 10. Minimum value: 1. Unit: seconds.</p>
+         */
+        @NameInMap("ReadinessProbePeriodSeconds")
+        public Integer readinessProbePeriodSeconds;
+
+        /**
+         * <p>The minimum number of consecutive successes for a probe to be considered successful after having failed. Default value: 1. Valid value: 1.</p>
+         */
+        @NameInMap("ReadinessProbeSuccessThreshold")
+        public Integer readinessProbeSuccessThreshold;
+
+        /**
+         * <p>The port number of TcpSocket.</p>
+         */
+        @NameInMap("ReadinessProbeTcpSocketPort")
+        public Integer readinessProbeTcpSocketPort;
+
+        /**
+         * <p>The timeout period of a probe. Default value: 1. Minimum value: 1. Unit: seconds.</p>
+         */
+        @NameInMap("ReadinessProbeTimeoutSeconds")
+        public Integer readinessProbeTimeoutSeconds;
+
+        /**
+         * <p>The permissions granted to processes in the container. Valid values: NET_ADMIN and NET_RAW.</p>
+         * <br>
+         * <p>> To use NET_RAW, you need to submit a ticket.</p>
+         */
+        @NameInMap("SecurityContextCapabilityAdds")
+        public java.util.List<String> securityContextCapabilityAdds;
+
+        /**
+         * <p>Indicates whether the root file system is set to the read-only mode. The only valid value is true.</p>
+         */
+        @NameInMap("SecurityContextReadOnlyRootFilesystem")
+        public Boolean securityContextReadOnlyRootFilesystem;
+
+        /**
+         * <p>The user ID (UID) that is used to run the entry point of the container process.</p>
+         */
+        @NameInMap("SecurityContextRunAsUser")
+        public Long securityContextRunAsUser;
+
+        /**
+         * <p>Indicates whether the container allocates buffer resources to standard input streams when the container runs. If you do not specify this parameter, an end-of-file (EOF) error may occur. Default value: false.</p>
+         */
+        @NameInMap("Stdin")
+        public Boolean stdin;
+
+        /**
+         * <p>Indicates whether standard input streams are disconnected after a client is disconnected. If Stdin is set to true, standard input streams remain connected during multiple sessions.</p>
+         * <br>
+         * <p>If StdinOnce is set to true, standard input streams are connected after the container is started and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected and remain in the disconnected state until the container is started again.</p>
+         */
+        @NameInMap("StdinOnce")
+        public Boolean stdinOnce;
 
         /**
          * <p>Indicates whether interaction is enabled. Valid values:</p>
@@ -397,176 +559,17 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
          * <br>
          * <p>Default value: false.</p>
          */
-        @NameInMap("LivenessProbeHttpGetScheme")
-        public String livenessProbeHttpGetScheme;
-
-        /**
-         * <p>The image pulling policy. Valid values:</p>
-         * <br>
-         * <p>*   Always: Image pulling is performed each time.</p>
-         * <p>*   IfNotPresent: Image pulling is performed only if on-premises images are unavailable. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.</p>
-         * <p>*   Never: On-premises images are always used. Image pulling is not performed.</p>
-         */
-        @NameInMap("LivenessProbeInitialDelaySeconds")
-        public Integer livenessProbeInitialDelaySeconds;
-
-        /**
-         * <p>The protocol type of HTTP GET requests when you use HTTP requests to perform probes. Valid values:</p>
-         * <br>
-         * <p>*   HTTP</p>
-         * <p>*   HTTPS</p>
-         */
-        @NameInMap("LivenessProbePeriodSeconds")
-        public Integer livenessProbePeriodSeconds;
-
-        /**
-         * <p>The user ID (UID) that is used to run the entry point of the container process.</p>
-         */
-        @NameInMap("LivenessProbeSuccessThreshold")
-        public Integer livenessProbeSuccessThreshold;
-
-        /**
-         * <p>The working directory of the container.</p>
-         */
-        @NameInMap("LivenessProbeTcpSocketPort")
-        public Integer livenessProbeTcpSocketPort;
-
-        /**
-         * <p>The minimum number of consecutive failures for a probe to be considered failed after having been successful.</p>
-         * <br>
-         * <p>Default value: 3.</p>
-         */
-        @NameInMap("LivenessProbeTimeoutSeconds")
-        public Integer livenessProbeTimeoutSeconds;
-
-        /**
-         * <p>Indicates whether the root file system is set to the read-only mode. The only valid value is true.</p>
-         */
-        @NameInMap("Memory")
-        public Float memory;
-
-        /**
-         * <p>The path to which the system sends an HTTP GET request for a probe.</p>
-         */
-        @NameInMap("Name")
-        public String name;
-
-        /**
-         * <p>The port number. Valid values: 1 to 65535.</p>
-         */
-        @NameInMap("Ports")
-        public java.util.List<DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainersPorts> ports;
-
-        /**
-         * <p>The permissions granted to processes in the container. Valid values: NET_ADMIN and NET_RAW.</p>
-         * <br>
-         * <p>> To use NET_RAW, you need to submit a ticket.</p>
-         */
-        @NameInMap("ReadinessProbeExecCommands")
-        public java.util.List<String> readinessProbeExecCommands;
-
-        /**
-         * <p>The exposed ports and protocols of the container.</p>
-         */
-        @NameInMap("ReadinessProbeFailureThreshold")
-        public Integer readinessProbeFailureThreshold;
-
-        /**
-         * <p>The interval at which probes are performed. Default value: 10. Minimum value: 1. Unit: seconds.</p>
-         */
-        @NameInMap("ReadinessProbeHttpGetPath")
-        public String readinessProbeHttpGetPath;
-
-        /**
-         * <p>The timeout period of a probe. Default value: 1. Minimum value: 1. Unit: seconds.</p>
-         */
-        @NameInMap("ReadinessProbeHttpGetPort")
-        public Integer readinessProbeHttpGetPort;
-
-        /**
-         * <p>The minimum number of consecutive successes for a probe to be considered successful after having failed. Default value: 1. Valid value: 1.</p>
-         */
-        @NameInMap("ReadinessProbeHttpGetScheme")
-        public String readinessProbeHttpGetScheme;
-
-        /**
-         * <p>The memory size of the container.</p>
-         */
-        @NameInMap("ReadinessProbeInitialDelaySeconds")
-        public Integer readinessProbeInitialDelaySeconds;
-
-        /**
-         * <p>Indicates whether standard input streams are disconnected after a client is disconnected. If Stdin is set to true, standard input streams remain connected during multiple sessions.</p>
-         * <br>
-         * <p>If StdinOnce is set to true, standard input streams are connected after the container is started and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected and remain in the disconnected state until the container is started again.</p>
-         */
-        @NameInMap("ReadinessProbePeriodSeconds")
-        public Integer readinessProbePeriodSeconds;
-
-        /**
-         * <p>The port number of TcpSocket.</p>
-         */
-        @NameInMap("ReadinessProbeSuccessThreshold")
-        public Integer readinessProbeSuccessThreshold;
-
-        /**
-         * <p>The path to which the system sends an HTTP GET request for a probe.</p>
-         */
-        @NameInMap("ReadinessProbeTcpSocketPort")
-        public Integer readinessProbeTcpSocketPort;
-
-        /**
-         * <p>The number of seconds between the time when the startup of the container ends and the time when the probe starts.</p>
-         */
-        @NameInMap("ReadinessProbeTimeoutSeconds")
-        public Integer readinessProbeTimeoutSeconds;
-
-        /**
-         * <p>The init containers.</p>
-         */
-        @NameInMap("SecurityContextCapabilityAdds")
-        public java.util.List<String> securityContextCapabilityAdds;
-
-        /**
-         * <p>The image of the container.</p>
-         */
-        @NameInMap("SecurityContextReadOnlyRootFilesystem")
-        public Boolean securityContextReadOnlyRootFilesystem;
-
-        /**
-         * <p>The interval at which probes are performed. Default value: 10. Minimum value: 1. Unit: seconds.</p>
-         */
-        @NameInMap("SecurityContextRunAsUser")
-        public Long securityContextRunAsUser;
-
-        /**
-         * <p>The name of the container.</p>
-         */
-        @NameInMap("Stdin")
-        public Boolean stdin;
-
-        /**
-         * <p>The timeout period of a probe. Default value: 1. Minimum value: 1. Unit: seconds.</p>
-         */
-        @NameInMap("StdinOnce")
-        public Boolean stdinOnce;
-
-        /**
-         * <p>The number of GPUs.</p>
-         */
         @NameInMap("Tty")
         public Boolean tty;
 
         /**
-         * <p>Indicates whether the volume is read-only.</p>
-         * <br>
-         * <p>Default value: false.</p>
+         * <p>The volumes that are mounted on the container.</p>
          */
         @NameInMap("VolumeMounts")
         public java.util.List<DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainersVolumeMounts> volumeMounts;
 
         /**
-         * <p>The port to which HTTP GET requests were sent.</p>
+         * <p>The working directory of the container.</p>
          */
         @NameInMap("WorkingDir")
         public String workingDir;
@@ -884,13 +887,13 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsDnsConfigOptions extends TeaModel {
         /**
-         * <p>The hostname aliases of a container.</p>
+         * <p>The variable name of the option.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The hostname aliases of a container.</p>
+         * <p>The variable value of the option.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -920,13 +923,13 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsHostAliases extends TeaModel {
         /**
-         * <p>The system information of the security context in which the elastic container instance runs.</p>
+         * <p>The hostnames that are added.</p>
          */
         @NameInMap("Hostnames")
         public java.util.List<String> hostnames;
 
         /**
-         * <p>The hostnames that are added.</p>
+         * <p>The IP address that is added.</p>
          */
         @NameInMap("Ip")
         public String ip;
@@ -956,19 +959,19 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsImageRegistryCredentials extends TeaModel {
         /**
-         * <p>The username that is used to access the image repository.</p>
+         * <p>The password that is used to access the image repository.</p>
          */
         @NameInMap("Password")
         public String password;
 
         /**
-         * <p>The options. Each option is a name-value pair. The value in the name-value pair is optional.</p>
+         * <p>The domain name of the image repository.</p>
          */
         @NameInMap("Server")
         public String server;
 
         /**
-         * <p>The options. Each option is a name-value pair. The value in the name-value pair is optional.</p>
+         * <p>The username that is used to access the image repository.</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -1006,19 +1009,19 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsInitContainersInitContainerEnvironmentVars extends TeaModel {
         /**
-         * <p>Details of the init container ports.</p>
+         * <p>> This parameter is unavailable.</p>
          */
         @NameInMap("FieldRefFieldPath")
         public String fieldRefFieldPath;
 
         /**
-         * <p>> This parameter is unavailable.</p>
+         * <p>The name of the environment variable.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>Details of the init container ports.</p>
+         * <p>The value of the environment variable.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -1056,13 +1059,16 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsInitContainersInitContainerPorts extends TeaModel {
         /**
-         * <p>The volumes that are mounted on the container.</p>
+         * <p>The port number. Valid values: 1 to 65535.</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
-         * <p>The volumes that are mounted on the container.</p>
+         * <p>The protocol. Valid values:</p>
+         * <br>
+         * <p>*   TCP</p>
+         * <p>*   UDP</p>
          */
         @NameInMap("Protocol")
         public String protocol;
@@ -1092,32 +1098,10 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsInitContainersInitContainerVolumeMounts extends TeaModel {
         /**
-         * <p>The permissions that are granted to the processes in the container. Valid values: NET_ADMIN and NET_RAW.</p>
-         * <br>
-         * <p>> To use NET_RAW, you need to submit a ticket.</p>
+         * <p>The directory to which the volume is mounted. Data under this directory is overwritten by the data on the volume.</p>
          */
         @NameInMap("MountPath")
         public String mountPath;
-
-        /**
-         * <p>The permissions that are granted to the processes in the container. Valid values: NET_ADMIN and NET_RAW.</p>
-         * <br>
-         * <p>> To use NET_RAW, you need to submit a ticket.</p>
-         */
-        @NameInMap("MountPropagation")
-        public String mountPropagation;
-
-        /**
-         * <p>The directory to which the volume is mounted. Data under this directory is overwritten by the data on the volume.</p>
-         */
-        @NameInMap("Name")
-        public String name;
-
-        /**
-         * <p>The name of the volume.</p>
-         */
-        @NameInMap("ReadOnly")
-        public Boolean readOnly;
 
         /**
          * <p>The mount propagation setting of the volume. Mount propagation allows the sharing of volumes that are mounted on one container with other containers in the same pod, or even with other pods on the same node. Valid values:</p>
@@ -1127,6 +1111,26 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
          * <p>*   Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories. In addition, all volume mounts that are created by the container are propagated back to the instance and to all containers of all pods that use the same volume.</p>
          * <br>
          * <p>Default value: None.</p>
+         */
+        @NameInMap("MountPropagation")
+        public String mountPropagation;
+
+        /**
+         * <p>The name of the volume.</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <p>Indicates whether the mount path is read-only.</p>
+         * <br>
+         * <p>Default value: false.</p>
+         */
+        @NameInMap("ReadOnly")
+        public Boolean readOnly;
+
+        /**
+         * <p>The subdirectory of the volume. The elastic container instance can mount different directories of the same volume to different subdirectories of containers.</p>
          */
         @NameInMap("SubPath")
         public String subPath;
@@ -1180,93 +1184,93 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsInitContainers extends TeaModel {
         /**
-         * <p>The number of GPUs that are allocated to the container.</p>
+         * <p>The number of vCPUs.</p>
          */
         @NameInMap("Cpu")
         public Float cpu;
 
         /**
-         * <p>The size of the memory.</p>
+         * <p>The number of GPUs that are allocated to the container.</p>
          */
         @NameInMap("Gpu")
         public Integer gpu;
 
         /**
-         * <p>The ID of the user that runs the container.</p>
+         * <p>The container image.</p>
          */
         @NameInMap("Image")
         public String image;
 
         /**
-         * <p>The number of vCPUs.</p>
+         * <p>The image pulling policy.</p>
          */
         @NameInMap("ImagePullPolicy")
         public String imagePullPolicy;
 
         /**
-         * <p>The tags of the elastic container instance. The tags are specified in the key-value pair format.</p>
+         * <p>The container startup arguments.</p>
          */
         @NameInMap("InitContainerArgs")
         public java.util.List<String> initContainerArgs;
 
         /**
-         * <p>The container startup arguments.</p>
+         * <p>The container startup commands.</p>
          */
         @NameInMap("InitContainerCommands")
         public java.util.List<String> initContainerCommands;
 
         /**
-         * <p>The name of the environment variable.</p>
+         * <p>Details of the environment variables.</p>
          */
         @NameInMap("InitContainerEnvironmentVars")
         public java.util.List<DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsInitContainersInitContainerEnvironmentVars> initContainerEnvironmentVars;
 
         /**
-         * <p>The port number. Valid values: 1 to 65535.</p>
+         * <p>Details of the init container ports.</p>
          */
         @NameInMap("InitContainerPorts")
         public java.util.List<DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsInitContainersInitContainerPorts> initContainerPorts;
 
         /**
-         * <p>Indicates whether the mount path is read-only.</p>
-         * <br>
-         * <p>Default value: false.</p>
+         * <p>The volumes that are mounted on the container.</p>
          */
         @NameInMap("InitContainerVolumeMounts")
         public java.util.List<DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsInitContainersInitContainerVolumeMounts> initContainerVolumeMounts;
 
         /**
-         * <p>Details of the environment variables.</p>
+         * <p>The size of the memory.</p>
          */
         @NameInMap("Memory")
         public Float memory;
 
         /**
-         * <p>Details of the environment variables.</p>
+         * <p>The name of the container.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The container startup commands.</p>
+         * <p>The permissions that are granted to the processes in the container. Valid values: NET_ADMIN and NET_RAW.</p>
+         * <br>
+         * <p>> To use NET_RAW, you need to submit a ticket.</p>
          */
         @NameInMap("SecurityContextCapabilityAdds")
         public java.util.List<String> securityContextCapabilityAdds;
 
         /**
-         * <p>The working directory.</p>
+         * <p>Indicates whether the root file system is read-only. The only valid value is true.</p>
          */
         @NameInMap("SecurityContextReadOnlyRootFilesystem")
         public Boolean securityContextReadOnlyRootFilesystem;
 
         /**
-         * <p>The name of the container.</p>
+         * <p>The ID of the user that runs the container.</p>
          */
         @NameInMap("SecurityContextRunAsUser")
         public String securityContextRunAsUser;
 
         /**
-         * <p>The container image.</p>
+         * <p>The working directory.</p>
          */
         @NameInMap("WorkingDir")
         public String workingDir;
@@ -1400,13 +1404,13 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsSecurityContextSysCtls extends TeaModel {
         /**
-         * <p>Details of the Container Registry Enterprise Edition instances.</p>
+         * <p>The name of the security context in which the elastic container instance runs.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Details of the Container Registry Enterprise Edition instances.</p>
+         * <p>The variable value of the security context in which the elastic container instance runs.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -1436,13 +1440,13 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsTags extends TeaModel {
         /**
-         * <p>Details of the volumes.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>Details of the volumes.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -1472,19 +1476,19 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsVolumesConfigFileVolumeConfigFileToPaths extends TeaModel {
         /**
-         * <p>The information about the image repository.</p>
+         * <p>The content of the configuration file (32 KB).</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>The information about the image repository.</p>
+         * <p>The permissions on the ConfigFile volume.</p>
          */
         @NameInMap("Mode")
         public Integer mode;
 
         /**
-         * <p>The content of the configuration file (32 KB).</p>
+         * <p>The relative path to the configuration file.</p>
          */
         @NameInMap("Path")
         public String path;
@@ -1522,98 +1526,112 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsVolumes extends TeaModel {
         /**
-         * <p>The relative path to the configuration file.</p>
+         * <p>The paths to configuration files.</p>
          */
         @NameInMap("ConfigFileVolumeConfigFileToPaths")
         public java.util.List<DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsVolumesConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths;
+
+        /**
+         * <p>The default permissions on the ConfigFile volume.</p>
+         */
+        @NameInMap("ConfigFileVolumeDefaultMode")
+        public Integer configFileVolumeDefaultMode;
+
+        /**
+         * <p>The storage size of a disk volume. Unit: GiB.</p>
+         */
+        @NameInMap("DiskVolumeDiskId")
+        public String diskVolumeDiskId;
+
+        /**
+         * <p>The storage size of a disk volume. Unit: GiB.</p>
+         */
+        @NameInMap("DiskVolumeDiskSize")
+        public Integer diskVolumeDiskSize;
+
+        /**
+         * <p>The file system type of a disk volume.</p>
+         */
+        @NameInMap("DiskVolumeFsType")
+        public String diskVolumeFsType;
+
+        /**
+         * <p>The storage medium of EmptyDirVolume. If this parameter is left empty, the file system that backs the node is used as the storage medium. If this parameter is set to memory, the memory is used as the storage medium.</p>
+         */
+        @NameInMap("EmptyDirVolumeMedium")
+        public String emptyDirVolumeMedium;
+
+        /**
+         * <p>EmptyDir数据卷的大小。</p>
+         */
+        @NameInMap("EmptyDirVolumeSizeLimit")
+        public String emptyDirVolumeSizeLimit;
+
+        /**
+         * <p>The FlexVolume driver name of the volume.</p>
+         */
+        @NameInMap("FlexVolumeDriver")
+        public String flexVolumeDriver;
+
+        /**
+         * <p>The file system type of the volume. The default value is determined by the script of FlexVolume.</p>
+         */
+        @NameInMap("FlexVolumeFsType")
+        public String flexVolumeFsType;
 
         /**
          * <p>The FlexVolume options. Each option is a key-value pair in a JSON string.</p>
          * <br>
          * <p>For example, when you use FlexVolume to mount a disk, the format of options is `{"volumeId":"d-2zehdahrwoa7srg****","performanceLevel": "PL2"}`.</p>
          */
-        @NameInMap("ConfigFileVolumeDefaultMode")
-        public Integer configFileVolumeDefaultMode;
+        @NameInMap("FlexVolumeOptions")
+        public String flexVolumeOptions;
 
         /**
-         * <p>The storage medium of EmptyDirVolume. If this parameter is left empty, the file system that backs the node is used as the storage medium. If this parameter is set to memory, the memory is used as the storage medium.</p>
+         * <p>HostPath Volume在主机上的目录路径。</p>
          */
-        @NameInMap("DiskVolumeDiskId")
-        public String diskVolumeDiskId;
+        @NameInMap("HostPathVolumePath")
+        public String hostPathVolumePath;
 
         /**
-         * <p>The file system type of the volume. The default value is determined by the script of FlexVolume.</p>
+         * <p>HostPath Volume的类型。</p>
          */
-        @NameInMap("DiskVolumeDiskSize")
-        public Integer diskVolumeDiskSize;
+        @NameInMap("HostPathVolumeType")
+        public String hostPathVolumeType;
 
         /**
          * <p>The path to the Network File System (NFS) volume.</p>
          */
-        @NameInMap("DiskVolumeFsType")
-        public String diskVolumeFsType;
-
-        /**
-         * <p>The storage size of a disk volume. Unit: GiB.</p>
-         */
-        @NameInMap("EmptyDirVolumeMedium")
-        public String emptyDirVolumeMedium;
-
-        @NameInMap("EmptyDirVolumeSizeLimit")
-        public String emptyDirVolumeSizeLimit;
-
-        /**
-         * <p>The endpoint of the NFS server.</p>
-         */
-        @NameInMap("FlexVolumeDriver")
-        public String flexVolumeDriver;
-
-        /**
-         * <p>The FlexVolume driver name of the volume.</p>
-         */
-        @NameInMap("FlexVolumeFsType")
-        public String flexVolumeFsType;
-
-        /**
-         * <p>The name of the volume.</p>
-         */
-        @NameInMap("FlexVolumeOptions")
-        public String flexVolumeOptions;
-
-        @NameInMap("HostPathVolumePath")
-        public String hostPathVolumePath;
-
-        @NameInMap("HostPathVolumeType")
-        public String hostPathVolumeType;
+        @NameInMap("NFSVolumePath")
+        public String NFSVolumePath;
 
         /**
          * <p>Indicates whether the NFS volume is read-only.</p>
          * <br>
          * <p>Default value: false.</p>
          */
-        @NameInMap("NFSVolumePath")
-        public String NFSVolumePath;
-
-        /**
-         * <p>The default permissions on the ConfigFile volume.</p>
-         */
         @NameInMap("NFSVolumeReadOnly")
         public Boolean NFSVolumeReadOnly;
 
         /**
-         * <p>The paths to configuration files.</p>
+         * <p>The endpoint of the NFS server.</p>
          */
         @NameInMap("NFSVolumeServer")
         public String NFSVolumeServer;
 
         /**
-         * <p>The paths to configuration files.</p>
+         * <p>The name of the volume.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The file system type of a disk volume.</p>
+         * <p>The type of the volume. Valid values:</p>
+         * <br>
+         * <p>*   EmptyDirVolume</p>
+         * <p>*   NFSVolume</p>
+         * <p>*   ConfigFileVolume</p>
+         * <p>*   FlexVolume</p>
          */
         @NameInMap("Type")
         public String type;
@@ -1763,189 +1781,194 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
 
     public static class DescribeEciScalingConfigurationsResponseBodyScalingConfigurations extends TeaModel {
         /**
-         * <p>The ID of the Container Registry Enterprise Edition instance.</p>
+         * <p>Details of the Container Registry Enterprise Edition instances.</p>
          */
         @NameInMap("AcrRegistryInfos")
         public java.util.List<DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsAcrRegistryInfos> acrRegistryInfos;
 
         /**
-         * <p>Indicates whether an elastic IP address (EIP) is automatically created, and then bound to the elastic container instance.</p>
+         * <p>The validity period. Unit: seconds.</p>
          */
         @NameInMap("ActiveDeadlineSeconds")
         public Integer activeDeadlineSeconds;
 
         /**
-         * <p>The size of the temporary storage space. Unit: GiB.</p>
+         * <p>Indicates whether an elastic IP address (EIP) is automatically created, and then bound to the elastic container instance.</p>
          */
         @NameInMap("AutoCreateEip")
         public Boolean autoCreateEip;
 
         /**
-         * <p>The name of the elastic container instance.</p>
+         * <p>Indicates whether the image cache is automatically matched. Default value: false.</p>
          */
         @NameInMap("AutoMatchImageCache")
         public Boolean autoMatchImageCache;
 
         /**
-         * <p>The number of physical CPU cores. This parameter can be specified for only some instance types. For more information, see [Specify custom CPU options](~~197781~~).</p>
+         * <p>The name of the elastic container instance.</p>
          */
         @NameInMap("ContainerGroupName")
         public String containerGroupName;
 
         /**
-         * <p>The path to which the system sends an HTTP GET request for a probe.</p>
+         * <p>The containers in the elastic container instance.</p>
          */
         @NameInMap("Containers")
         public java.util.List<DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainers> containers;
 
         /**
-         * <p>auditing</p>
+         * <p>Indicates whether the cost optimization feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("CostOptimization")
         public Boolean costOptimization;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The number of vCPUs of the elastic container instance.</p>
          */
         @NameInMap("Cpu")
         public Float cpu;
 
         /**
-         * <p>The containers in the elastic container instance.</p>
+         * <p>The number of physical CPU cores. This parameter can be specified for only some instance types. For more information, see [Specify custom CPU options](~~197781~~).</p>
          */
         @NameInMap("CpuOptionsCore")
         public Integer cpuOptionsCore;
 
         /**
-         * <p>The weight of the elastic container instance as a backend server. Valid values: 1 to 100.</p>
+         * <p>The number of threads per core. This parameter can be specified for only some instance types. If you set this parameter to 1, Hyper-Threading is disabled. For more information, see [Specify custom CPU options](~~197781~~).</p>
          */
         @NameInMap("CpuOptionsThreadsPerCore")
         public Integer cpuOptionsThreadsPerCore;
 
         /**
-         * <p>The ID of the security group with which the elastic container instance is associated. Elastic container instances that are associated with the same security group can access each other.</p>
+         * <p>The time when the scaling configuration was created.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>数据缓存Bucket。</p>
+         */
         @NameInMap("DataCacheBucket")
         public String dataCacheBucket;
 
+        /**
+         * <p>数据缓存使用ESSD AutoPL云盘时，是否开启Burst（性能突发）。可能值：</p>
+         * <br>
+         * <p>- true：开启。</p>
+         * <p>- false：未开启。</p>
+         * <p>>关于ESSD AutoPL云盘的更多信息，请参见[ESSD AutoPL云盘](~~368372~~)。</p>
+         */
         @NameInMap("DataCacheBurstingEnabled")
         public Boolean dataCacheBurstingEnabled;
 
+        /**
+         * <p>数据缓存使用的云盘的性能等级。建议优先使用ESSD云盘，该云盘的性能等级的可能值：</p>
+         * <br>
+         * <p>- PL0：单盘最高随机读写IOPS 1万。</p>
+         * <p>- PL1：单盘最高随机读写IOPS 5万。</p>
+         * <p>- PL2：单盘最高随机读写IOPS 10万。</p>
+         * <p>- PL3：单盘最高随机读写IOPS 100万。</p>
+         * <br>
+         * <p>>关于ESSD云盘的更多信息，请参见[ESSD云盘](~~122389~~)。</p>
+         */
         @NameInMap("DataCachePL")
         public String dataCachePL;
 
+        /**
+         * <p>数据缓存使用ESSD AutoPL云盘时，ESSD AutoPL云盘预配置的读写IOPS。可能值：0~min{50000, 1000*容量-基准性能}，其中，基准性能=min{1800+50*容量, 50000}。</p>
+         * <br>
+         * <p>>关于ESSD AutoPL云盘的更多信息，请参见[ESSD AutoPL云盘](~~368372~~)。</p>
+         */
         @NameInMap("DataCacheProvisionedIops")
         public Integer dataCacheProvisionedIops;
 
         /**
-         * <p>The ID of the image cache snapshot.</p>
+         * <p>> This parameter is unavailable.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The DNS lookup domains.</p>
+         * <p>The IP addresses of the DNS servers.</p>
          */
         @NameInMap("DnsConfigNameServers")
         public java.util.List<String> dnsConfigNameServers;
 
         /**
-         * <p>The variable name of the option.</p>
+         * <p>The options. Each option is a name-value pair. The value in the name-value pair is optional.</p>
          */
         @NameInMap("DnsConfigOptions")
         public java.util.List<DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsDnsConfigOptions> dnsConfigOptions;
 
         /**
-         * <p>The domain names of the Network Time Protocol (NTP) servers.</p>
+         * <p>The DNS lookup domains.</p>
          */
         @NameInMap("DnsConfigSearches")
         public java.util.List<String> dnsConfigSearches;
 
         /**
-         * <p>The maximum outbound bandwidth. Unit: bytes.</p>
+         * <p>The Domain Name System (DNS) policy.</p>
          */
         @NameInMap("DnsPolicy")
         public String dnsPolicy;
 
         /**
-         * <p>The name of the instance RAM role. You can use an instance RAM role to access both elastic container instances and Elastic Compute Service (ECS) instances. For more information, see [Use the instance RAM role by calling APIs](~~61178~~).</p>
+         * <p>The maximum outbound bandwidth. Unit: bytes.</p>
          */
         @NameInMap("EgressBandwidth")
         public Long egressBandwidth;
 
         /**
-         * <p>The size of the memory.</p>
-         * <br>
-         * <p>You can specify the number of vCPUs and the memory size to determine the range of instance types. For example, you can set the Cpu parameter to 2 and the Memory parameter to 16 to specify the instance types that have 2 vCPUs and 16 GiB of memory. If you specify the Cpu and Memory parameters, Auto Scaling determines available instance types based on factors such as I/O optimization requirements and zones. Then, Auto Scaling preferentially creates instances of the instance type that is provided at the lowest price.</p>
-         * <br>
-         * <p>> You can specify CPU and memory specifications to determine the range of instance types only if the Scaling Policy parameter is set to Cost Optimization Policy and no instance type is specified in the scaling configuration.</p>
+         * <p>The bandwidth of the EIP. Default value: 5 Mbit/s.</p>
          */
         @NameInMap("EipBandwidth")
         public Integer eipBandwidth;
 
         /**
-         * <p>> This parameter is unavailable.</p>
+         * <p>The size of the temporary storage space. Unit: GiB.</p>
          */
         @NameInMap("EphemeralStorage")
         public Integer ephemeralStorage;
 
         /**
-         * <p>The IP address that is added.</p>
+         * <p>The hostname aliases of a container.</p>
          */
         @NameInMap("HostAliases")
         public java.util.List<DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsHostAliases> hostAliases;
 
         /**
-         * <p>The region ID of the elastic container instance.</p>
+         * <p>The hostname.</p>
          */
         @NameInMap("HostName")
         public String hostName;
 
         /**
-         * <p>The password that is used to access the image repository.</p>
+         * <p>The information about the image repository.</p>
          */
         @NameInMap("ImageRegistryCredentials")
         public java.util.List<DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsImageRegistryCredentials> imageRegistryCredentials;
 
         /**
-         * <p>The restart policy of the elastic container instance. Valid values:</p>
-         * <br>
-         * <p>*   Never: never restarts the elastic container instance.</p>
-         * <p>*   Always: always restarts the elastic container instance.</p>
-         * <p>*   OnFailure: restarts the elastic container instance upon failures.</p>
+         * <p>The ID of the image cache snapshot.</p>
          */
         @NameInMap("ImageSnapshotId")
         public String imageSnapshotId;
 
         /**
-         * <p>The buffer time in which the program handles operations before the program stops.</p>
+         * <p>The maximum inbound bandwidth. Unit: bit/s.</p>
          */
         @NameInMap("IngressBandwidth")
         public Long ingressBandwidth;
 
         /**
-         * <p>Indicates whether the root file system is read-only. The only valid value is true.</p>
+         * <p>The init containers.</p>
          */
         @NameInMap("InitContainers")
         public java.util.List<DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsInitContainers> initContainers;
-
-        /**
-         * <p>5292</p>
-         */
-        @NameInMap("InstanceFamilyLevel")
-        public String instanceFamilyLevel;
-
-        @NameInMap("InstanceTypes")
-        public java.util.List<String> instanceTypes;
-
-        /**
-         * <p>The bandwidth of the EIP. Default value: 5 Mbit/s.</p>
-         */
-        @NameInMap("Ipv6AddressCount")
-        public Integer ipv6AddressCount;
 
         /**
          * <p>The instance family level, which is used to filter the range of instance types that meet the requirements. This parameter takes effect when the `CostOptimization` parameter is set to true. Valid values:</p>
@@ -1954,22 +1977,20 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
          * <p>*   EnterpriseLevel: Instances of this level provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see [Instance family](~~25378~~).</p>
          * <p>*   CreditEntryLevel: This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instances of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see [Overview](~~59977~~) of burstable instances.</p>
          */
-        @NameInMap("LifecycleState")
-        public String lifecycleState;
+        @NameInMap("InstanceFamilyLevel")
+        public String instanceFamilyLevel;
 
         /**
-         * <p>The hostname.</p>
+         * <p>指定的ECS实例规格，支持多规格（最多支持5个）。</p>
          */
-        @NameInMap("LoadBalancerWeight")
-        public Integer loadBalancerWeight;
+        @NameInMap("InstanceTypes")
+        public java.util.List<String> instanceTypes;
 
         /**
-         * <p>The maximum hourly price for the preemptible instance.</p>
-         * <br>
-         * <p>This parameter is returned only if you set the SpotStrategy parameter to SpotWithPriceLimit.</p>
+         * <p>The number of IPv6 addresses.</p>
          */
-        @NameInMap("Memory")
-        public Float memory;
+        @NameInMap("Ipv6AddressCount")
+        public Integer ipv6AddressCount;
 
         /**
          * <p>The state of the scaling configuration in the scaling group. Valid values:</p>
@@ -1977,56 +1998,102 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
          * <p>*   Active: The scaling configuration is active in the scaling group. Auto Scaling uses active scaling configurations to automatically create ECS instances.</p>
          * <p>*   Inactive: The scaling configuration is inactive in the scaling group. Auto Scaling does not use inactive scaling configurations to automatically create ECS instances. Inactive scaling configurations are retained in the scaling group.</p>
          */
+        @NameInMap("LifecycleState")
+        public String lifecycleState;
+
+        /**
+         * <p>The weight of the elastic container instance as a backend server. Valid values: 1 to 100.</p>
+         */
+        @NameInMap("LoadBalancerWeight")
+        public Integer loadBalancerWeight;
+
+        /**
+         * <p>The size of the memory.</p>
+         * <br>
+         * <p>You can specify the number of vCPUs and the memory size to determine the range of instance types. For example, you can set the Cpu parameter to 2 and the Memory parameter to 16 to specify the instance types that have 2 vCPUs and 16 GiB of memory. If you specify the Cpu and Memory parameters, Auto Scaling determines available instance types based on factors such as I/O optimization requirements and zones. Then, Auto Scaling preferentially creates instances of the instance type that is provided at the lowest price.</p>
+         * <br>
+         * <p>> You can specify CPU and memory specifications to determine the range of instance types only if the Scaling Policy parameter is set to Cost Optimization Policy and no instance type is specified in the scaling configuration.</p>
+         */
+        @NameInMap("Memory")
+        public Float memory;
+
+        /**
+         * <p>The domain names of the Network Time Protocol (NTP) servers.</p>
+         */
         @NameInMap("NtpServers")
         public java.util.List<String> ntpServers;
 
         /**
-         * <p>Indicates whether the image cache is automatically matched. Default value: false.</p>
+         * <p>The name of the instance RAM role. You can use an instance RAM role to access both elastic container instances and Elastic Compute Service (ECS) instances. For more information, see [Use the instance RAM role by calling APIs](~~61178~~).</p>
          */
         @NameInMap("RamRoleName")
         public String ramRoleName;
 
         /**
-         * <p>The number of vCPUs of the elastic container instance.</p>
+         * <p>The region ID of the elastic container instance.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the scaling configuration.</p>
+         * <p>The ID of the resource group.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The maximum inbound bandwidth. Unit: bit/s.</p>
+         * <p>The restart policy of the elastic container instance. Valid values:</p>
+         * <br>
+         * <p>*   Never: never restarts the elastic container instance.</p>
+         * <p>*   Always: always restarts the elastic container instance.</p>
+         * <p>*   OnFailure: restarts the elastic container instance upon failures.</p>
          */
         @NameInMap("RestartPolicy")
         public String restartPolicy;
 
         /**
-         * <p>> This parameter is unavailable.</p>
+         * <p>The ID of the scaling configuration.</p>
          */
         @NameInMap("ScalingConfigurationId")
         public String scalingConfigurationId;
 
         /**
-         * <p>The validity period. Unit: seconds.</p>
+         * <p>The name of the scaling configuration.</p>
          */
         @NameInMap("ScalingConfigurationName")
         public String scalingConfigurationName;
 
         /**
-         * <p>The number of IPv6 addresses.</p>
+         * <p>The scaling group ID of the scaling configuration.</p>
          */
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;
 
         /**
-         * <p>The name of the security context in which the elastic container instance runs.</p>
+         * <p>The system information of the security context in which the elastic container instance runs.</p>
          */
         @NameInMap("SecurityContextSysCtls")
         public java.util.List<DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsSecurityContextSysCtls> securityContextSysCtls;
+
+        /**
+         * <p>The ID of the security group with which the elastic container instance is associated. Elastic container instances that are associated with the same security group can access each other.</p>
+         */
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        /**
+         * <p>> This parameter is unavailable.</p>
+         */
+        @NameInMap("SlsEnable")
+        public Boolean slsEnable;
+
+        /**
+         * <p>The maximum hourly price for the preemptible instance.</p>
+         * <br>
+         * <p>This parameter is returned only if you set the SpotStrategy parameter to SpotWithPriceLimit.</p>
+         */
+        @NameInMap("SpotPriceLimit")
+        public Float spotPriceLimit;
 
         /**
          * <p>The preemption policy of the instance. Valid values:</p>
@@ -2035,46 +2102,23 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
          * <p>*   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</p>
          * <p>*   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</p>
          */
-        @NameInMap("SecurityGroupId")
-        public String securityGroupId;
-
-        /**
-         * <p>The containers in the elastic container instance.</p>
-         */
-        @NameInMap("SlsEnable")
-        public Boolean slsEnable;
-
-        /**
-         * <p>The number of threads per core. This parameter can be specified for only some instance types. If you set this parameter to 1, Hyper-Threading is disabled. For more information, see [Specify custom CPU options](~~197781~~).</p>
-         */
-        @NameInMap("SpotPriceLimit")
-        public Float spotPriceLimit;
-
-        /**
-         * <p>The scaling group ID of the scaling configuration.</p>
-         */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tags of the elastic container instance. The tags are specified in the key-value pair format.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsTags> tags;
 
         /**
-         * <p>The Domain Name System (DNS) policy.</p>
+         * <p>The buffer time in which the program handles operations before the program stops.</p>
          */
         @NameInMap("TerminationGracePeriodSeconds")
         public Integer terminationGracePeriodSeconds;
 
         /**
-         * <p>The type of the volume. Valid values:</p>
-         * <br>
-         * <p>*   EmptyDirVolume</p>
-         * <p>*   NFSVolume</p>
-         * <p>*   ConfigFileVolume</p>
-         * <p>*   FlexVolume</p>
+         * <p>Details of the volumes.</p>
          */
         @NameInMap("Volumes")
         public java.util.List<DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsVolumes> volumes;

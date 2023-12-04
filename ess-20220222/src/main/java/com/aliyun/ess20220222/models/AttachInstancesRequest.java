@@ -4,18 +4,45 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class AttachInstancesRequest extends TeaModel {
+    /**
+     * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。只支持ASCII字符，且不能超过64个字符。更多信息，请参见[如何保证幂等性](~~25965~~)。</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether the scaling group manages the lifecycles of instances that are manually added to the scaling group. Valid values:</p>
+     * <br>
+     * <p>*   true: The scaling group manages the lifecycles of instances that are manually added in a similar manner in which the scaling group manages the lifecycles of automatically created instances. After Auto Scaling removes instances from the scaling group, Auto Scaling releases the instances. After you call the DetachInstances operation to remove instances from the scaling group, Auto Scaling does not release the instances.</p>
+     * <p>*   false: The scaling group does not manage the lifecycles of instances that are manually added. After Auto Scaling removes instances from the scaling group, Auto Scaling does not release the instances.</p>
+     * <br>
+     * <p>> You cannot specify this parameter for subscription instances.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("Entrusted")
     public Boolean entrusted;
 
+    /**
+     * <p>The IDs of the ECS instances or elastic container instances that you want to add.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>Specifies whether to trigger a lifecycle hook for a scale-out activity. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("LifecycleHook")
     public Boolean lifecycleHook;
 
+    /**
+     * <p>The weights of the ECS instances or elastic container instances as the backend servers of the associated Classic Load Balancer (CLB) instance.</p>
+     */
     @NameInMap("LoadBalancerWeights")
     public java.util.List<Integer> loadBalancerWeights;
 
@@ -25,6 +52,9 @@ public class AttachInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the scaling group.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -34,6 +64,9 @@ public class AttachInstancesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the scaling group.</p>
+     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 

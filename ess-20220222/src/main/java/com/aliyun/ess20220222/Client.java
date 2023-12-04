@@ -72,6 +72,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+      * Before you associate an ALB server group with a scaling group, make sure that the following requirements are met:
+      * *   The scaling group resides in a virtual private cloud (VPC). The scaling group and the ALB server group must reside in the same VPC.
+      * *   The ALB server group is in the Available state.
+      * *   You can associate only a limited number of ALB server groups with a scaling group. To view the quota or manually request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
+      *
+      * @param request AttachAlbServerGroupsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AttachAlbServerGroupsResponse
+     */
     public AttachAlbServerGroupsResponse attachAlbServerGroupsWithOptions(AttachAlbServerGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -120,11 +130,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AttachAlbServerGroupsResponse());
     }
 
+    /**
+      * Before you associate an ALB server group with a scaling group, make sure that the following requirements are met:
+      * *   The scaling group resides in a virtual private cloud (VPC). The scaling group and the ALB server group must reside in the same VPC.
+      * *   The ALB server group is in the Available state.
+      * *   You can associate only a limited number of ALB server groups with a scaling group. To view the quota or manually request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
+      *
+      * @param request AttachAlbServerGroupsRequest
+      * @return AttachAlbServerGroupsResponse
+     */
     public AttachAlbServerGroupsResponse attachAlbServerGroups(AttachAlbServerGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.attachAlbServerGroupsWithOptions(request, runtime);
     }
 
+    /**
+      * Before you associate an ApsaraDB RDS instance with a scaling group, make sure that the ApsaraDB RDS instance meets the following requirements:
+      * *   The ApsaraDB RDS instance and the scaling group must belong to the same Alibaba Cloud account.
+      * *   The ApsaraDB RDS instance must be unlocked. For more information about the lock policy, see [ApsaraDB RDS usage notes](~~41872~~).
+      * *   The ApsaraDB RDS instance must be in the Running state.
+      * After an ApsaraDB RDS instance is associated with the scaling group, the default IP address whitelist of the ApsaraDB RDS instance can contain no more than 1,000 IP addresses. For more information, see [Set the whitelist](~~43185~~).
+      *
+      * @param request AttachDBInstancesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AttachDBInstancesResponse
+     */
     public AttachDBInstancesResponse attachDBInstancesWithOptions(AttachDBInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -173,11 +203,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AttachDBInstancesResponse());
     }
 
+    /**
+      * Before you associate an ApsaraDB RDS instance with a scaling group, make sure that the ApsaraDB RDS instance meets the following requirements:
+      * *   The ApsaraDB RDS instance and the scaling group must belong to the same Alibaba Cloud account.
+      * *   The ApsaraDB RDS instance must be unlocked. For more information about the lock policy, see [ApsaraDB RDS usage notes](~~41872~~).
+      * *   The ApsaraDB RDS instance must be in the Running state.
+      * After an ApsaraDB RDS instance is associated with the scaling group, the default IP address whitelist of the ApsaraDB RDS instance can contain no more than 1,000 IP addresses. For more information, see [Set the whitelist](~~43185~~).
+      *
+      * @param request AttachDBInstancesRequest
+      * @return AttachDBInstancesResponse
+     */
     public AttachDBInstancesResponse attachDBInstances(AttachDBInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.attachDBInstancesWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, take note of the following items:
+      * *   The scaling group is in the Active state.
+      * *   No scaling activities in the scaling group are in progress.
+      * The ECS instances or the elastic container instances that you want to add to a scaling group must meet the following requirements:
+      * *   The instances reside in the same region as the scaling group.
+      * *   The instances must be in the Running state.
+      * *   The instances are not added to other scaling groups.
+      * *   The instances use the subscription or pay-as-you-go billing method, or are preemptible instances.
+      * *   If the VswitchID parameter is specified for a scaling group, the instances that are in the classic network or those that are not in the same virtual private cloud (VPC) as the specified vSwitch cannot be added to the scaling group.
+      * *   If the VswitchID parameter is not specified for a scaling group, the instances that are in VPCs cannot be added to the scaling group.
+      * If no scaling activities in the specified scaling group are in progress, the operation can trigger scaling activities even before the cooldown time expires.
+      * A successful call indicates that Auto Scaling accepts the request. However, the scaling activity may still fail. You can obtain the status of a scaling activity by using the value of the ScalingActivityId parameter in the response.
+      * If the sum of the number of instances that you want to add and the number of existing instances in the scaling group is greater than the value of the MaxSize parameter, the call fails.
+      * Instances that are manually added by calling the AttachInstances operation are not associated with the active scaling configuration of the scaling group.
+      *
+      * @param request AttachInstancesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AttachInstancesResponse
+     */
     public AttachInstancesResponse attachInstancesWithOptions(AttachInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -242,11 +302,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AttachInstancesResponse());
     }
 
+    /**
+      * Before you call this operation, take note of the following items:
+      * *   The scaling group is in the Active state.
+      * *   No scaling activities in the scaling group are in progress.
+      * The ECS instances or the elastic container instances that you want to add to a scaling group must meet the following requirements:
+      * *   The instances reside in the same region as the scaling group.
+      * *   The instances must be in the Running state.
+      * *   The instances are not added to other scaling groups.
+      * *   The instances use the subscription or pay-as-you-go billing method, or are preemptible instances.
+      * *   If the VswitchID parameter is specified for a scaling group, the instances that are in the classic network or those that are not in the same virtual private cloud (VPC) as the specified vSwitch cannot be added to the scaling group.
+      * *   If the VswitchID parameter is not specified for a scaling group, the instances that are in VPCs cannot be added to the scaling group.
+      * If no scaling activities in the specified scaling group are in progress, the operation can trigger scaling activities even before the cooldown time expires.
+      * A successful call indicates that Auto Scaling accepts the request. However, the scaling activity may still fail. You can obtain the status of a scaling activity by using the value of the ScalingActivityId parameter in the response.
+      * If the sum of the number of instances that you want to add and the number of existing instances in the scaling group is greater than the value of the MaxSize parameter, the call fails.
+      * Instances that are manually added by calling the AttachInstances operation are not associated with the active scaling configuration of the scaling group.
+      *
+      * @param request AttachInstancesRequest
+      * @return AttachInstancesResponse
+     */
     public AttachInstancesResponse attachInstances(AttachInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.attachInstancesWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation to attach a CLB instance to your scaling group, take note of the following items:
+      * *   The CLB instance and the scaling group must belong to the same Alibaba Cloud account.
+      * *   The CLB instance and the scaling group must reside in the same region.
+      * *   The CLB instance must be in the Running state.
+      * *   The CLB instance must be configured with at least one listener. Health check is enabled for the CLB instance.
+      * *   The CLB instance and the scaling group must be in the same virtual private cloud (VPC) if their network type is VPC.
+      * *   If the network type of the scaling group is VPC, the network type of the CLB instance is classic network, and the CLB backend server groups contain instances of the VPC network type, the instances and the scaling group must be in the same VPC.
+      * *   You can attach only a limited number of CLB instances to a scaling group. Fore more information, see [Limits](~~25863~~).
+      *
+      * @param request AttachLoadBalancersRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AttachLoadBalancersResponse
+     */
     public AttachLoadBalancersResponse attachLoadBalancersWithOptions(AttachLoadBalancersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -299,6 +392,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AttachLoadBalancersResponse());
     }
 
+    /**
+      * Before you call this operation to attach a CLB instance to your scaling group, take note of the following items:
+      * *   The CLB instance and the scaling group must belong to the same Alibaba Cloud account.
+      * *   The CLB instance and the scaling group must reside in the same region.
+      * *   The CLB instance must be in the Running state.
+      * *   The CLB instance must be configured with at least one listener. Health check is enabled for the CLB instance.
+      * *   The CLB instance and the scaling group must be in the same virtual private cloud (VPC) if their network type is VPC.
+      * *   If the network type of the scaling group is VPC, the network type of the CLB instance is classic network, and the CLB backend server groups contain instances of the VPC network type, the instances and the scaling group must be in the same VPC.
+      * *   You can attach only a limited number of CLB instances to a scaling group. Fore more information, see [Limits](~~25863~~).
+      *
+      * @param request AttachLoadBalancersRequest
+      * @return AttachLoadBalancersResponse
+     */
     public AttachLoadBalancersResponse attachLoadBalancers(AttachLoadBalancersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.attachLoadBalancersWithOptions(request, runtime);
@@ -357,6 +463,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.attachServerGroupsWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation to attach a vServer group to your scaling group, take note of the following items:
+      * *   The CLB instance and the scaling group must belong to the same Alibaba Cloud account.
+      * *   The CLB instance and the scaling group must reside in the same region.
+      * *   The CLB instance must be in the Running state.
+      * *   The CLB instance must be configured with at least one listener. Health check is enabled for the CLB instance.
+      * *   The CLB instance and the scaling group must be in the same VPC if their network type is VPC.
+      * *   If the network type of the scaling group is VPC, the network type of the CLB instance is classic network, and the vServer groups of the CLB instance contain instances of the VPC network type, the instances and the scaling group must be in the same VPC.
+      * *   The vServer group that you want to attach to your scaling group must belong to the CLB instance.
+      * *   You can attach only a limited number of vServer groups to a scaling group. For information about the quota on vServer groups, see [Limits](~~25863~~).
+      * When you call this operation, you must specify the following parameters:
+      * *   LoadBalancerId: the ID of the CLB instance.
+      * *   VServerGroupId: the ID of the vServer group.
+      * *   Port: the port number of the vServer group.
+      * If a vServer group is attached to a scaling group by using different ports, Auto Scaling considers that more than one vServer group is attached to the scaling group. If multiple vServer groups with the same group ID and port number are specified in the request parameters, only the first vServer group is used. The other vServer groups are ignored.
+      *
+      * @param request AttachVServerGroupsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AttachVServerGroupsResponse
+     */
     public AttachVServerGroupsResponse attachVServerGroupsWithOptions(AttachVServerGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -405,6 +531,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AttachVServerGroupsResponse());
     }
 
+    /**
+      * Before you call this operation to attach a vServer group to your scaling group, take note of the following items:
+      * *   The CLB instance and the scaling group must belong to the same Alibaba Cloud account.
+      * *   The CLB instance and the scaling group must reside in the same region.
+      * *   The CLB instance must be in the Running state.
+      * *   The CLB instance must be configured with at least one listener. Health check is enabled for the CLB instance.
+      * *   The CLB instance and the scaling group must be in the same VPC if their network type is VPC.
+      * *   If the network type of the scaling group is VPC, the network type of the CLB instance is classic network, and the vServer groups of the CLB instance contain instances of the VPC network type, the instances and the scaling group must be in the same VPC.
+      * *   The vServer group that you want to attach to your scaling group must belong to the CLB instance.
+      * *   You can attach only a limited number of vServer groups to a scaling group. For information about the quota on vServer groups, see [Limits](~~25863~~).
+      * When you call this operation, you must specify the following parameters:
+      * *   LoadBalancerId: the ID of the CLB instance.
+      * *   VServerGroupId: the ID of the vServer group.
+      * *   Port: the port number of the vServer group.
+      * If a vServer group is attached to a scaling group by using different ports, Auto Scaling considers that more than one vServer group is attached to the scaling group. If multiple vServer groups with the same group ID and port number are specified in the request parameters, only the first vServer group is used. The other vServer groups are ignored.
+      *
+      * @param request AttachVServerGroupsRequest
+      * @return AttachVServerGroupsResponse
+     */
     public AttachVServerGroupsResponse attachVServerGroups(AttachVServerGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.attachVServerGroupsWithOptions(request, runtime);
@@ -950,6 +1095,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createLifecycleHookWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * You can configure CloudMonitor system events, Message Service (MNS) queues, or MNS topics to receive notifications. When a specified type of scaling activity or resource change occurs in a scaling group, Auto Scaling sends notifications by using CloudMonitor or MNS.
+      *
+      * @param request CreateNotificationConfigurationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateNotificationConfigurationResponse
+     */
     public CreateNotificationConfigurationResponse createNotificationConfigurationWithOptions(CreateNotificationConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -994,6 +1147,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNotificationConfigurationResponse());
     }
 
+    /**
+      * ## Description
+      * You can configure CloudMonitor system events, Message Service (MNS) queues, or MNS topics to receive notifications. When a specified type of scaling activity or resource change occurs in a scaling group, Auto Scaling sends notifications by using CloudMonitor or MNS.
+      *
+      * @param request CreateNotificationConfigurationRequest
+      * @return CreateNotificationConfigurationResponse
+     */
     public CreateNotificationConfigurationResponse createNotificationConfiguration(CreateNotificationConfigurationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createNotificationConfigurationWithOptions(request, runtime);
@@ -1195,6 +1355,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.spotStrategy)) {
             query.put("SpotStrategy", request.spotStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageSetId)) {
+            query.put("StorageSetId", request.storageSetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageSetPartitionNumber)) {
+            query.put("StorageSetPartitionNumber", request.storageSetPartitionNumber);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.systemDiskCategories)) {
@@ -1516,18 +1684,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * A scaling rule defines a specific scaling activity, such as adding or removing N instances. If the number of Elastic Compute Service (ECS) instances in a scaling group is less than the minimum number allowed or greater than the maximum number allowed after a scaling rule is executed, Auto Scaling calculates the number of ECS instances that need to be added or removed. This ensures that the number of ECS instances can be maintained within the valid range after the scaling rule is executed. Examples:
-      * *   If your scaling group contains two ECS instances and allows up to three ECS instances, only one ECS instance is added to your scaling group after you execute a scale-out rule in which three ECS instances are specified.
-      * *   If your scaling group contains three ECS instances and requires at least two ECS instances, only one ECS instance is removed from your scaling group after you execute a scale-in rule in which five ECS instances are specified.
+      * ## Description
+      * A scaling rule defines a specific scaling activity, such as adding or removing N instances. If the number of Elastic Compute Service (ECS) instances in a scaling group is less than the minimum number allowed or greater than the maximum number allowed after a scaling rule is executed, Auto Scaling adjusts the number of ECS instances that you want to add or remove. This way, the number of ECS instances can be maintained within the valid range after the scaling rule is executed. The number of ECS instances that is specified in the scaling rule remains unchanged. Example:
+      * *   If your scaling group contains two ECS instances and allows up to three ECS instances, only one ECS instance is added to your scaling group after you execute a scale-out rule in which three ECS instances are specified. The number of ECS instances that is specified in the scaling rule remains unchanged.
+      * *   If your scaling group contains three ECS instances and requires at least two ECS instances, only one ECS instance is removed from your scaling group after you execute a scale-in rule in which five ECS instances are specified. The number of ECS instances that is specified in the scaling rule remains unchanged.
       * Before you call this operation, take note of the following items:
-      * *   If you set AdjustmentType to TotalCapacity, the number of ECS instances in the scaling group is adjusted to the specified value. The value of AdjustmentValue must be greater than or equal to 0.
-      * *   If you set AdjustmentType to QuantityChangeInCapacity, a positive value of AdjustmentValue specifies the number of ECS instances that are added to the scaling group, and a negative value of AdjustmentValue specifies the number of ECS instances that are removed from the scaling group.
-      * *   If you set AdjustmentType to PercentChangeInCapacity, Auto Scaling uses the following formula to calculate a value, and then rounds the value to the nearest integer to obtain the number of ECS instances that need to be scaled: Value of TotalCapacity × Value of AdjustmentValue/100.
-      * *   If you specify a cooldown period for the scaling rule, the specified cooldown period takes effect after the rule is executed. Otherwise, the value of DefaultCooldown of the scaling group takes effect.
+      * *   If you set the AdjustmentType parameter to TotalCapacity, the number of ECS instances in the scaling group is adjusted to the specified value. The value of the AdjustmentValue parameter must be greater than or equal to 0.
+      * *   If you set the AdjustmentType parameter to QuantityChangeInCapacity or PercentChangeInCapacity, a positive value of AdjustmentValue specifies the number of ECS instances that are added to the scaling group, and a negative value of AdjustmentValue specifies the number of ECS instances that are removed from the scaling group.
+      * *   If you set the AdjustmentType parameter to PercentChangeInCapacity, Auto Scaling uses the following formula to calculate a value, and then rounds the value to the nearest integer to obtain the number of ECS instances that need to be scaled: Value of TotalCapacity × Value of AdjustmentValue/100.
+      * *   If the cooldown time is specified in a scaling rule, the specified time applies to the scaling group after the rule is executed. Otherwise, the value of the DefaultCooldown parameter of the scaling group applies to the scaling group.
       * *   You can create only a limited number of scaling rules for a scaling group. For more information, see the "Limits" topic.
       * *   The unique identifier (ScalingRuleAri) of a scaling rule can be used by the following operations:
-      *     *   ExecuteScalingRule: You can call this operation to manually execute a specific scaling rule. In this operation, you can set ScalingRuleAri to the unique identifier of the scaling rule that you want to execute.
-      *     *   CreateScheduledTask: You can call this operation to create a scheduled task. In this operation, you can set ScalingRuleAri to the unique identifier of the scaling rule that you want to associate with the scheduled task.
+      *     *   ExecuteScalingRule: You can call this operation to manually execute a specific scaling rule by setting the ScalingRuleAri parameter to the unique identifier of the scaling rule.
+      *     *   CreateScheduledTask: You can call this operation to create a scheduled task for a specific scaling rule by setting the ScheduledAction parameter to the unique identifier of the scaling rule.
       *
       * @param request CreateScalingRuleRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1650,18 +1819,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * A scaling rule defines a specific scaling activity, such as adding or removing N instances. If the number of Elastic Compute Service (ECS) instances in a scaling group is less than the minimum number allowed or greater than the maximum number allowed after a scaling rule is executed, Auto Scaling calculates the number of ECS instances that need to be added or removed. This ensures that the number of ECS instances can be maintained within the valid range after the scaling rule is executed. Examples:
-      * *   If your scaling group contains two ECS instances and allows up to three ECS instances, only one ECS instance is added to your scaling group after you execute a scale-out rule in which three ECS instances are specified.
-      * *   If your scaling group contains three ECS instances and requires at least two ECS instances, only one ECS instance is removed from your scaling group after you execute a scale-in rule in which five ECS instances are specified.
+      * ## Description
+      * A scaling rule defines a specific scaling activity, such as adding or removing N instances. If the number of Elastic Compute Service (ECS) instances in a scaling group is less than the minimum number allowed or greater than the maximum number allowed after a scaling rule is executed, Auto Scaling adjusts the number of ECS instances that you want to add or remove. This way, the number of ECS instances can be maintained within the valid range after the scaling rule is executed. The number of ECS instances that is specified in the scaling rule remains unchanged. Example:
+      * *   If your scaling group contains two ECS instances and allows up to three ECS instances, only one ECS instance is added to your scaling group after you execute a scale-out rule in which three ECS instances are specified. The number of ECS instances that is specified in the scaling rule remains unchanged.
+      * *   If your scaling group contains three ECS instances and requires at least two ECS instances, only one ECS instance is removed from your scaling group after you execute a scale-in rule in which five ECS instances are specified. The number of ECS instances that is specified in the scaling rule remains unchanged.
       * Before you call this operation, take note of the following items:
-      * *   If you set AdjustmentType to TotalCapacity, the number of ECS instances in the scaling group is adjusted to the specified value. The value of AdjustmentValue must be greater than or equal to 0.
-      * *   If you set AdjustmentType to QuantityChangeInCapacity, a positive value of AdjustmentValue specifies the number of ECS instances that are added to the scaling group, and a negative value of AdjustmentValue specifies the number of ECS instances that are removed from the scaling group.
-      * *   If you set AdjustmentType to PercentChangeInCapacity, Auto Scaling uses the following formula to calculate a value, and then rounds the value to the nearest integer to obtain the number of ECS instances that need to be scaled: Value of TotalCapacity × Value of AdjustmentValue/100.
-      * *   If you specify a cooldown period for the scaling rule, the specified cooldown period takes effect after the rule is executed. Otherwise, the value of DefaultCooldown of the scaling group takes effect.
+      * *   If you set the AdjustmentType parameter to TotalCapacity, the number of ECS instances in the scaling group is adjusted to the specified value. The value of the AdjustmentValue parameter must be greater than or equal to 0.
+      * *   If you set the AdjustmentType parameter to QuantityChangeInCapacity or PercentChangeInCapacity, a positive value of AdjustmentValue specifies the number of ECS instances that are added to the scaling group, and a negative value of AdjustmentValue specifies the number of ECS instances that are removed from the scaling group.
+      * *   If you set the AdjustmentType parameter to PercentChangeInCapacity, Auto Scaling uses the following formula to calculate a value, and then rounds the value to the nearest integer to obtain the number of ECS instances that need to be scaled: Value of TotalCapacity × Value of AdjustmentValue/100.
+      * *   If the cooldown time is specified in a scaling rule, the specified time applies to the scaling group after the rule is executed. Otherwise, the value of the DefaultCooldown parameter of the scaling group applies to the scaling group.
       * *   You can create only a limited number of scaling rules for a scaling group. For more information, see the "Limits" topic.
       * *   The unique identifier (ScalingRuleAri) of a scaling rule can be used by the following operations:
-      *     *   ExecuteScalingRule: You can call this operation to manually execute a specific scaling rule. In this operation, you can set ScalingRuleAri to the unique identifier of the scaling rule that you want to execute.
-      *     *   CreateScheduledTask: You can call this operation to create a scheduled task. In this operation, you can set ScalingRuleAri to the unique identifier of the scaling rule that you want to associate with the scheduled task.
+      *     *   ExecuteScalingRule: You can call this operation to manually execute a specific scaling rule by setting the ScalingRuleAri parameter to the unique identifier of the scaling rule.
+      *     *   CreateScheduledTask: You can call this operation to create a scheduled task for a specific scaling rule by setting the ScheduledAction parameter to the unique identifier of the scaling rule.
       *
       * @param request CreateScalingRuleRequest
       * @return CreateScalingRuleResponse
@@ -1671,6 +1841,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createScalingRuleWithOptions(request, runtime);
     }
 
+    /**
+      * *   If a scheduled task fails to trigger a scaling activity due to an ongoing scaling activity in a scaling group or because the scaling group is disabled, the scheduled task is automatically retried during the period that is specified by the LaunchExpirationTime parameter. If the scheduled task still fails to trigger a scaling activity after the period ends, the task is automatically skipped.
+      * *   If multiple tasks are scheduled at similar points in time to trigger scaling activities in the same scaling group, the earliest task triggers the scaling activity first. Other tasks trigger scaling activities within their launch expiration time. Only one scaling activity can be triggered in a scaling group at a time.`` If the previous scaling activity is complete and another scheduled task attempts to trigger a scaling activity, Auto Scaling executes the scaling rule that is specified in the scheduled task and then triggers a scaling activity.``
+      * *   A scheduled task supports the following scaling methods:
+      *     *   `ScheduledAction`: Specify an existing scaling rule that you want Auto Scaling to execute when the scheduled task is triggered.
+      *     *   `ScalingGroupId`: Specify the minimum number, maximum number, or expected number of instances for the scaling group for which you created the scheduled task.
+      * > You cannot specify the `ScheduledAction` and ScalingGroupId parameters at the same time.
+      *
+      * @param request CreateScheduledTaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateScheduledTaskResponse
+     */
     public CreateScheduledTaskResponse createScheduledTaskWithOptions(CreateScheduledTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1759,6 +1941,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateScheduledTaskResponse());
     }
 
+    /**
+      * *   If a scheduled task fails to trigger a scaling activity due to an ongoing scaling activity in a scaling group or because the scaling group is disabled, the scheduled task is automatically retried during the period that is specified by the LaunchExpirationTime parameter. If the scheduled task still fails to trigger a scaling activity after the period ends, the task is automatically skipped.
+      * *   If multiple tasks are scheduled at similar points in time to trigger scaling activities in the same scaling group, the earliest task triggers the scaling activity first. Other tasks trigger scaling activities within their launch expiration time. Only one scaling activity can be triggered in a scaling group at a time.`` If the previous scaling activity is complete and another scheduled task attempts to trigger a scaling activity, Auto Scaling executes the scaling rule that is specified in the scheduled task and then triggers a scaling activity.``
+      * *   A scheduled task supports the following scaling methods:
+      *     *   `ScheduledAction`: Specify an existing scaling rule that you want Auto Scaling to execute when the scheduled task is triggered.
+      *     *   `ScalingGroupId`: Specify the minimum number, maximum number, or expected number of instances for the scaling group for which you created the scheduled task.
+      * > You cannot specify the `ScheduledAction` and ScalingGroupId parameters at the same time.
+      *
+      * @param request CreateScheduledTaskRequest
+      * @return CreateScheduledTaskResponse
+     */
     public CreateScheduledTaskResponse createScheduledTask(CreateScheduledTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createScheduledTaskWithOptions(request, runtime);
@@ -1846,6 +2039,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteAlarmWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot delete a scaling configuration that is used to create elastic container instances in the following scenarios:
+      * *   The scaling configuration is in the Active state.
+      * *   The scaling group contains elastic container instances that are created based on the scaling configuration.
+      *
+      * @param request DeleteEciScalingConfigurationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteEciScalingConfigurationResponse
+     */
     public DeleteEciScalingConfigurationResponse deleteEciScalingConfigurationWithOptions(DeleteEciScalingConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1886,6 +2088,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEciScalingConfigurationResponse());
     }
 
+    /**
+      * You cannot delete a scaling configuration that is used to create elastic container instances in the following scenarios:
+      * *   The scaling configuration is in the Active state.
+      * *   The scaling group contains elastic container instances that are created based on the scaling configuration.
+      *
+      * @param request DeleteEciScalingConfigurationRequest
+      * @return DeleteEciScalingConfigurationResponse
+     */
     public DeleteEciScalingConfigurationResponse deleteEciScalingConfiguration(DeleteEciScalingConfigurationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteEciScalingConfigurationWithOptions(request, runtime);
@@ -1989,6 +2199,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteNotificationConfigurationWithOptions(request, runtime);
     }
 
+    /**
+      * You cannot delete a scaling configuration in one of the following scenarios:
+      * *   The scaling configuration in your scaling group is in the Active state.
+      * *   The scaling group contains ECS instances that were created based on the scaling configuration.
+      *
+      * @param request DeleteScalingConfigurationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteScalingConfigurationResponse
+     */
     public DeleteScalingConfigurationResponse deleteScalingConfigurationWithOptions(DeleteScalingConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2025,6 +2244,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteScalingConfigurationResponse());
     }
 
+    /**
+      * You cannot delete a scaling configuration in one of the following scenarios:
+      * *   The scaling configuration in your scaling group is in the Active state.
+      * *   The scaling group contains ECS instances that were created based on the scaling configuration.
+      *
+      * @param request DeleteScalingConfigurationRequest
+      * @return DeleteScalingConfigurationResponse
+     */
     public DeleteScalingConfigurationResponse deleteScalingConfiguration(DeleteScalingConfigurationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteScalingConfigurationWithOptions(request, runtime);
@@ -2303,6 +2530,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeEciScalingConfigurationsWithOptions(request, runtime);
     }
 
+    /**
+      * If a scaling activity is executed and a lifecycle hook is created for the scaling activity, the lifecycle hook triggers a lifecycle action. A lifecycle action can be in one of the following states:
+      * *   If a lifecycle action is in the Pending state, Elastic Compute Service (ECS) instances are waiting to be added to a scaling group or waiting to be removed from a scaling group.
+      * *   If a lifecycle action is in the Timeout state, the lifecycle hook that triggers the lifecycle action expires and ECS instances are added to or removed from a scaling group.
+      * *   If a lifecycle action is in the Completed state, you manually end the lifecycle hook that triggers the lifecycle action ahead of schedule.
+      * If you do not specify the action to perform, such as execute a specific OOS template, after a lifecycle hook ends, you can call this operation to obtain the token of the lifecycle action that corresponds to the lifecycle hook. Then, you can specify a custom action to perform after the lifecycle hook ends.
+      *
+      * @param request DescribeLifecycleActionsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeLifecycleActionsResponse
+     */
     public DescribeLifecycleActionsResponse describeLifecycleActionsWithOptions(DescribeLifecycleActionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2351,6 +2589,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLifecycleActionsResponse());
     }
 
+    /**
+      * If a scaling activity is executed and a lifecycle hook is created for the scaling activity, the lifecycle hook triggers a lifecycle action. A lifecycle action can be in one of the following states:
+      * *   If a lifecycle action is in the Pending state, Elastic Compute Service (ECS) instances are waiting to be added to a scaling group or waiting to be removed from a scaling group.
+      * *   If a lifecycle action is in the Timeout state, the lifecycle hook that triggers the lifecycle action expires and ECS instances are added to or removed from a scaling group.
+      * *   If a lifecycle action is in the Completed state, you manually end the lifecycle hook that triggers the lifecycle action ahead of schedule.
+      * If you do not specify the action to perform, such as execute a specific OOS template, after a lifecycle hook ends, you can call this operation to obtain the token of the lifecycle action that corresponds to the lifecycle hook. Then, you can specify a custom action to perform after the lifecycle hook ends.
+      *
+      * @param request DescribeLifecycleActionsRequest
+      * @return DescribeLifecycleActionsResponse
+     */
     public DescribeLifecycleActionsResponse describeLifecycleActions(DescribeLifecycleActionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeLifecycleActionsWithOptions(request, runtime);
@@ -2920,7 +3168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can specify a scaling group ID to query the information about all scaling rules in a scaling group. You can also specify the scaling rule ID, name, unique identifier, or type in the request parameters as filter conditions.
+      * You can specify a scaling group ID to query all scaling rules in the scaling group. You can also specify the scaling rule ID, name, unique identifier, and type in the request parameters as filter conditions.
       *
       * @param request DescribeScalingRulesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2999,7 +3247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can specify a scaling group ID to query the information about all scaling rules in a scaling group. You can also specify the scaling rule ID, name, unique identifier, or type in the request parameters as filter conditions.
+      * You can specify a scaling group ID to query all scaling rules in the scaling group. You can also specify the scaling rule ID, name, unique identifier, and type in the request parameters as filter conditions.
       *
       * @param request DescribeScalingRulesRequest
       * @return DescribeScalingRulesResponse
@@ -3184,6 +3432,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.detachDBInstancesWithOptions(request, runtime);
     }
 
+    /**
+      * After ECS instances or elastic container instances are removed from a scaling group, you can call the AttachInstances operation to add the ECS instances or elastic container instances that are removed from the scaling group to other scaling groups.
+      * After you remove an ECS instance or elastic container instance by calling the DetachInstances operation, the instance is not stopped or released.
+      * Before you call this operation, make sure that the following conditions are met:
+      * *   The specified scaling group is enabled.
+      * *   No scaling activities in the specified scaling group are in progress.
+      * > If no scaling activities in the specified scaling group are in progress, the operation can trigger scaling activities even before the cooldown time expires.
+      * A successful call indicates only that Auto Scaling accepts the request. However, the scaling activity may still fail. You can obtain the status of a scaling activity based on the value of the ScalingActivityId parameter in the response.
+      * The number of ECS instances or elastic container instances in a scaling group after you remove a specific number of instances from the scaling group must be equal to or greater than the value of the MinSize parameter. Otherwise, an error is reported when you call the DetachInstances operation.
+      *
+      * @param request DetachInstancesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DetachInstancesResponse
+     */
     public DetachInstancesResponse detachInstancesWithOptions(DetachInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3244,6 +3506,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DetachInstancesResponse());
     }
 
+    /**
+      * After ECS instances or elastic container instances are removed from a scaling group, you can call the AttachInstances operation to add the ECS instances or elastic container instances that are removed from the scaling group to other scaling groups.
+      * After you remove an ECS instance or elastic container instance by calling the DetachInstances operation, the instance is not stopped or released.
+      * Before you call this operation, make sure that the following conditions are met:
+      * *   The specified scaling group is enabled.
+      * *   No scaling activities in the specified scaling group are in progress.
+      * > If no scaling activities in the specified scaling group are in progress, the operation can trigger scaling activities even before the cooldown time expires.
+      * A successful call indicates only that Auto Scaling accepts the request. However, the scaling activity may still fail. You can obtain the status of a scaling activity based on the value of the ScalingActivityId parameter in the response.
+      * The number of ECS instances or elastic container instances in a scaling group after you remove a specific number of instances from the scaling group must be equal to or greater than the value of the MinSize parameter. Otherwise, an error is reported when you call the DetachInstances operation.
+      *
+      * @param request DetachInstancesRequest
+      * @return DetachInstancesResponse
+     */
     public DetachInstancesResponse detachInstances(DetachInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detachInstancesWithOptions(request, runtime);
@@ -3359,6 +3634,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.detachServerGroupsWithOptions(request, runtime);
     }
 
+    /**
+      * You can use the following parameters to specify the vServer groups that you want to detach from your scaling group.
+      * *   LoadBalancerId: the ID of the Classic Load Balancer (CLB) instance.
+      * *   VServerGroupId: the ID of the vServer group.
+      * *   Port: the port number of the vServer group.
+      * If the vServer group that is specified in this call matches the vServer group associated with your scaling group, the vServer group can be detached. Otherwise, the request for detaching the vServer group is ignored, and no error is reported.
+      *
+      * @param request DetachVServerGroupsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DetachVServerGroupsResponse
+     */
     public DetachVServerGroupsResponse detachVServerGroupsWithOptions(DetachVServerGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3407,6 +3693,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DetachVServerGroupsResponse());
     }
 
+    /**
+      * You can use the following parameters to specify the vServer groups that you want to detach from your scaling group.
+      * *   LoadBalancerId: the ID of the Classic Load Balancer (CLB) instance.
+      * *   VServerGroupId: the ID of the vServer group.
+      * *   Port: the port number of the vServer group.
+      * If the vServer group that is specified in this call matches the vServer group associated with your scaling group, the vServer group can be detached. Otherwise, the request for detaching the vServer group is ignored, and no error is reported.
+      *
+      * @param request DetachVServerGroupsRequest
+      * @return DetachVServerGroupsResponse
+     */
     public DetachVServerGroupsResponse detachVServerGroups(DetachVServerGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detachVServerGroupsWithOptions(request, runtime);
@@ -3682,6 +3978,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.enterStandbyWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, take note of the following items:
+      * *   The scaling group is in the Active state.
+      * *   No scaling activities in the scaling group are in progress.
+      * If no scaling activities in the scaling group are in progress, the operation can trigger scaling activities even before the cooldown time expires.
+      * A successful call indicates that Auto Scaling accepts the request. However, the scaling activity may still fail. You can obtain the status of a scaling activity by using the value of the ScalingActivityId parameter in the response.
+      * If the addition of a specified number of Elastic Compute Service (ECS) instances to a scaling group causes the total number of ECS instances in the scaling group to exceed the maximum number of instances allowed, Auto Scaling adds only a specific number of ECS instances to ensure that the total number of instances is equal to the maximum number of instances.
+      * If the removal of a specified number of ECS instances from a scaling group causes the total number of ECS instances in the scaling group to drop below the minimum number of instances allowed, Auto Scaling removes only a specific number of ECS instances to ensure that the total number of instances is equal to the minimum number of instances.
+      * You can specify only a limited number of ECS instances in each adjustment. For more information, see the description of the AdjustmentValue parameter in the CreateScalingRule topic.
+      *
+      * @param request ExecuteScalingRuleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ExecuteScalingRuleResponse
+     */
     public ExecuteScalingRuleResponse executeScalingRuleWithOptions(ExecuteScalingRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3738,6 +4048,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteScalingRuleResponse());
     }
 
+    /**
+      * Before you call this operation, take note of the following items:
+      * *   The scaling group is in the Active state.
+      * *   No scaling activities in the scaling group are in progress.
+      * If no scaling activities in the scaling group are in progress, the operation can trigger scaling activities even before the cooldown time expires.
+      * A successful call indicates that Auto Scaling accepts the request. However, the scaling activity may still fail. You can obtain the status of a scaling activity by using the value of the ScalingActivityId parameter in the response.
+      * If the addition of a specified number of Elastic Compute Service (ECS) instances to a scaling group causes the total number of ECS instances in the scaling group to exceed the maximum number of instances allowed, Auto Scaling adds only a specific number of ECS instances to ensure that the total number of instances is equal to the maximum number of instances.
+      * If the removal of a specified number of ECS instances from a scaling group causes the total number of ECS instances in the scaling group to drop below the minimum number of instances allowed, Auto Scaling removes only a specific number of ECS instances to ensure that the total number of instances is equal to the minimum number of instances.
+      * You can specify only a limited number of ECS instances in each adjustment. For more information, see the description of the AdjustmentValue parameter in the CreateScalingRule topic.
+      *
+      * @param request ExecuteScalingRuleRequest
+      * @return ExecuteScalingRuleResponse
+     */
     public ExecuteScalingRuleResponse executeScalingRule(ExecuteScalingRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.executeScalingRuleWithOptions(request, runtime);
@@ -4630,6 +4953,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SpotStrategy", request.spotStrategy);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.storageSetId)) {
+            query.put("StorageSetId", request.storageSetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageSetPartitionNumber)) {
+            query.put("StorageSetPartitionNumber", request.storageSetPartitionNumber);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.systemDiskCategories)) {
             query.put("SystemDiskCategories", request.systemDiskCategories);
         }
@@ -4952,6 +5283,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyScalingRuleWithOptions(request, runtime);
     }
 
+    /**
+      * You can use the following parameters to specify the scaling method of a scheduled task:
+      * *   If you use the `ScheduledAction` parameter, you must select an existing scaling rule for the scheduled task.
+      * *   If you use the `ScalingGroupId` parameter, you must specify the minimum number, maximum number, or expected number of instances in the scheduled task.
+      * > You cannot specify the `ScheduledAction` and `ScalingGroupId` parameters at the same time.
+      *
+      * @param request ModifyScheduledTaskRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyScheduledTaskResponse
+     */
     public ModifyScheduledTaskResponse modifyScheduledTaskWithOptions(ModifyScheduledTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5044,6 +5385,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyScheduledTaskResponse());
     }
 
+    /**
+      * You can use the following parameters to specify the scaling method of a scheduled task:
+      * *   If you use the `ScheduledAction` parameter, you must select an existing scaling rule for the scheduled task.
+      * *   If you use the `ScalingGroupId` parameter, you must specify the minimum number, maximum number, or expected number of instances in the scheduled task.
+      * > You cannot specify the `ScheduledAction` and `ScalingGroupId` parameters at the same time.
+      *
+      * @param request ModifyScheduledTaskRequest
+      * @return ModifyScheduledTaskResponse
+     */
     public ModifyScheduledTaskResponse modifyScheduledTask(ModifyScheduledTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyScheduledTaskWithOptions(request, runtime);
@@ -5098,6 +5448,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.rebalanceInstancesWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to prolong the length of a lifecycle hook up to 20 times. Take note that the total length of a lifecycle hook cannot exceed 6 hours.
+      *
+      * @param request RecordLifecycleActionHeartbeatRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RecordLifecycleActionHeartbeatResponse
+     */
     public RecordLifecycleActionHeartbeatResponse recordLifecycleActionHeartbeatWithOptions(RecordLifecycleActionHeartbeatRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5146,6 +5503,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RecordLifecycleActionHeartbeatResponse());
     }
 
+    /**
+      * You can call this operation to prolong the length of a lifecycle hook up to 20 times. Take note that the total length of a lifecycle hook cannot exceed 6 hours.
+      *
+      * @param request RecordLifecycleActionHeartbeatRequest
+      * @return RecordLifecycleActionHeartbeatResponse
+     */
     public RecordLifecycleActionHeartbeatResponse recordLifecycleActionHeartbeat(RecordLifecycleActionHeartbeatRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.recordLifecycleActionHeartbeatWithOptions(request, runtime);
@@ -5266,7 +5629,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the scaling activity.
+      * Compared with the ExecuteScalingRule operation, the ScaleWithAdjustment operation does not require a scaling rule to be created in advance. Before you call the ScaleWithAdjustment operation, take note of the following items:
+      * *   The following conditions must be met:
+      *     *   The scaling group is in the Active state.
+      *     *   No scaling activities in the scaling group are in progress.
+      * *   If no scaling activities in the scaling group are in progress, the operation can trigger scaling activities even before the cooldown time expires.
+      * *   If the addition of a specified number of Elastic Compute Service (ECS) instances to a scaling group causes the total number of ECS instances in the scaling group to exceed the maximum number of instances allowed, Auto Scaling adds only a specific number of ECS instances to ensure that the total number of instances is equal to the maximum number of instances.
+      * *   If the removal of a specified number of ECS instances from a scaling group causes the total number of ECS instances in the scaling group to drop below the minimum number of instances allowed, Auto Scaling removes only a specific number of ECS instances to ensure that the total number of instances is equal to the minimum number of instances.
+      * A successful call indicates that Auto Scaling accepts the request. However, the scaling activity may still fail. You can obtain the status of a scaling activity by using the value of the `ScalingActivityId` parameter in the response.
       *
       * @param request ScaleWithAdjustmentRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5325,7 +5695,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the scaling activity.
+      * Compared with the ExecuteScalingRule operation, the ScaleWithAdjustment operation does not require a scaling rule to be created in advance. Before you call the ScaleWithAdjustment operation, take note of the following items:
+      * *   The following conditions must be met:
+      *     *   The scaling group is in the Active state.
+      *     *   No scaling activities in the scaling group are in progress.
+      * *   If no scaling activities in the scaling group are in progress, the operation can trigger scaling activities even before the cooldown time expires.
+      * *   If the addition of a specified number of Elastic Compute Service (ECS) instances to a scaling group causes the total number of ECS instances in the scaling group to exceed the maximum number of instances allowed, Auto Scaling adds only a specific number of ECS instances to ensure that the total number of instances is equal to the maximum number of instances.
+      * *   If the removal of a specified number of ECS instances from a scaling group causes the total number of ECS instances in the scaling group to drop below the minimum number of instances allowed, Auto Scaling removes only a specific number of ECS instances to ensure that the total number of instances is equal to the minimum number of instances.
+      * A successful call indicates that Auto Scaling accepts the request. However, the scaling activity may still fail. You can obtain the status of a scaling activity by using the value of the `ScalingActivityId` parameter in the response.
       *
       * @param request ScaleWithAdjustmentRequest
       * @return ScaleWithAdjustmentResponse
