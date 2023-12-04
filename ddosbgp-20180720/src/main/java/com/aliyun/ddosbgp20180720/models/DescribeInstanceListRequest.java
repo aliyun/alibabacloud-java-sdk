@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceListRequest extends TeaModel {
     /**
-     * <p>The details about the Anti-DDoS Origin instance.</p>
+     * <p>The IDs of the Anti-DDoS Origin instances to query. Specify the value is in the `["<Instance ID 1>","<Instance ID 2>",……]` format.</p>
      */
     @NameInMap("InstanceIdList")
     public String instanceIdList;
 
     /**
-     * <p>The IDs of the Anti-DDoS Origin instances to query. Specify the value is in the `["<Instance ID 1>","<Instance ID 2>",……]` format.</p>
+     * <p>The mitigation plan of the Anti-DDoS Origin instance to query. Valid values:</p>
+     * <br>
+     * <p>*   **0**: the Professional mitigation plan</p>
+     * <p>*   **1**: the Enterprise mitigation plan</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -20,40 +23,45 @@ public class DescribeInstanceListRequest extends TeaModel {
     public java.util.List<String> instanceTypeList;
 
     /**
-     * <p>The remarks of the Anti-DDoS Origin instance to query. Fuzzy match is supported.</p>
+     * <p>The IP address of the object that is protected by the Anti-DDoS Origin instance to query.</p>
      */
     @NameInMap("Ip")
     public String ip;
 
     /**
-     * <p>The time when the instance was purchased. This value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The protocol type of the IP address asset that is protected by the Anti-DDoS Origin instance to query. Valid values:</p>
+     * <br>
+     * <p>*   **Ipv4**: IPv4</p>
+     * <p>*   **Ipv6**: IPv6</p>
      */
     @NameInMap("IpVersion")
     public String ipVersion;
 
     /**
-     * <p>The mitigation plan of the Anti-DDoS Origin instance to query. Valid values:</p>
+     * <p>The field that is used to sort the Anti-DDoS Origin instances. Set the value to **expireTime**, which indicates that the instances are sorted based on the expiration time.</p>
      * <br>
-     * <p>*   **0**: the Professional mitigation plan</p>
-     * <p>*   **1**: the Enterprise mitigation plan</p>
+     * <p>You can set the **Orderdire** parameter to specify the sorting method.</p>
      */
     @NameInMap("Orderby")
     public String orderby;
 
     /**
-     * <p>The key of the tag that is added to the Anti-DDoS Origin instance to query.</p>
+     * <p>The sorting method. Valid values:</p>
+     * <br>
+     * <p>*   **desc**: the descending order. This is the default value.</p>
+     * <p>*   **asc**: the ascending order.</p>
      */
     @NameInMap("Orderdire")
     public String orderdire;
 
     /**
-     * <p>The total number of Anti-DDoS Origin instances.</p>
+     * <p>The number of the page to return.</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
-     * <p>The IP address of the object that is protected by the Anti-DDoS Origin instance to query.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -67,10 +75,7 @@ public class DescribeInstanceListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Indicates whether auto-renewal is enabled for the instance. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enabled</p>
-     * <p>*   **false**: disabled</p>
+     * <p>The remarks of the Anti-DDoS Origin instance to query. Fuzzy match is supported.</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -197,15 +202,13 @@ public class DescribeInstanceListRequest extends TeaModel {
 
     public static class DescribeInstanceListRequestTag extends TeaModel {
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The key of the tag that is added to the Anti-DDoS Origin instance to query.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The field that is used to sort the Anti-DDoS Origin instances. Set the value to **expireTime**, which indicates that the instances are sorted based on the expiration time.</p>
-         * <br>
-         * <p>You can set the **Orderdire** parameter to specify the sorting method.</p>
+         * <p>The value of the tag that is added to the Anti-DDoS Origin instance to query.</p>
          */
         @NameInMap("Value")
         public String value;

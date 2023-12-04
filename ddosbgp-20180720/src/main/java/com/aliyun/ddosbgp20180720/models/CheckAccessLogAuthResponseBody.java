@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class CheckAccessLogAuthResponseBody extends TeaModel {
     /**
-     * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).</p>
+     * <p>Indicates whether Anti-DDoS Origin was authorized to access Log Service. Valid values:</p>
      * <br>
-     * <p>For more information about sample requests, see the **"Examples"** section of this topic.</p>
+     * <p>*   **true**: Anti-DDoS Origin was authorized.</p>
+     * <p>*   **false**: Anti-DDoS Origin was not authorized.</p>
      */
     @NameInMap("AccessLogAuth")
     public Boolean accessLogAuth;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

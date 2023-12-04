@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeTrafficResponseBody extends TeaModel {
     /**
-     * <p>The ID of the traffic statistics.</p>
+     * <p>The queried traffic statistics.</p>
      */
     @NameInMap("FlowList")
     public java.util.List<DescribeTrafficResponseBodyFlowList> flowList;
 
     /**
-     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,40 +38,51 @@ public class DescribeTrafficResponseBody extends TeaModel {
     }
 
     public static class DescribeTrafficResponseBodyFlowList extends TeaModel {
+        /**
+         * <p>The bandwidth of attack traffic. Unit: bit/s.</p>
+         * <br>
+         * <p>>  This parameter is returned only if attack traffic exists.</p>
+         */
         @NameInMap("AttackBps")
         public Long attackBps;
 
         /**
-         * <p>Queries traffic statistics of an Anti-DDoS Origin instance within a specific time period.</p>
+         * <p>The packet forwarding rate of attack traffic. Unit: packets per second.</p>
+         * <br>
+         * <p>>  This parameter is returned only if attack traffic exists.</p>
          */
         @NameInMap("AttackPps")
         public Long attackPps;
 
         /**
-         * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).</p>
+         * <p>The type of the traffic statistics. Valid values:</p>
          * <br>
-         * <p>For more information about sample requests, see the "**Examples**" section of this topic.</p>
+         * <p>*   **max**: the peak traffic within the specified interval</p>
+         * <p>*   **avg**: the average traffic within the specified interval</p>
          */
         @NameInMap("FlowType")
         public String flowType;
 
+        /**
+         * <p>The bandwidth of the total traffic. Unit: Kbit/s.</p>
+         */
         @NameInMap("Kbps")
         public Integer kbps;
 
         /**
-         * <p>DescribeTraffic</p>
+         * <p>The ID of the traffic statistics.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>WB269094</p>
+         * <p>The packet forwarding rate of the total traffic. Unit: packets per second.</p>
          */
         @NameInMap("Pps")
         public Integer pps;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The time when the traffic statistics are calculated. This value is a UNIX timestamp. Unit: seconds.</p>
          */
         @NameInMap("Time")
         public Integer time;

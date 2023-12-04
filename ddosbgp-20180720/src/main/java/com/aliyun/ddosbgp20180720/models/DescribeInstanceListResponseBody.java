@@ -5,24 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceListResponseBody extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The details about the Anti-DDoS Origin instance.</p>
      */
     @NameInMap("InstanceList")
     public java.util.List<DescribeInstanceListResponseBodyInstanceList> instanceList;
 
     /**
-     * <p>The value of the tag that is added to the Anti-DDoS Origin instance to query.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The type of the cloud service that is associated with the Anti-DDoS Origin instance. By default, this parameter is not returned. If the Anti-DDoS Origin instance is created by using a different cloud service, the code of the cloud service is returned.</p>
-     * <br>
-     * <p>Valid values:</p>
-     * <br>
-     * <p>*   **gamebox**: The Anti-DDoS Origin instance is created by using Game Security Box.</p>
-     * <p>*   **eip**: The Anti-DDoS Origin instance is created by using an elastic IP address (EIP) for which Anti-DDoS (Enhanced Edition) is enabled.</p>
+     * <p>The total number of Anti-DDoS Origin instances.</p>
      */
     @NameInMap("Total")
     public Long total;
@@ -58,54 +53,87 @@ public class DescribeInstanceListResponseBody extends TeaModel {
 
     public static class DescribeInstanceListResponseBodyInstanceList extends TeaModel {
         /**
-         * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).</p>
+         * <p>Indicates whether auto-renewal is enabled for the instance. Valid values:</p>
          * <br>
-         * <p>For more information about sample requests, see the **"Examples"** section of this topic.</p>
+         * <p>*   **true**: enabled</p>
+         * <p>*   **false**: disabled</p>
          */
         @NameInMap("AutoRenewal")
         public Boolean autoRenewal;
 
+        /**
+         * <p>The number of protected public IP addresses for which blackhole filtering is triggered.</p>
+         * <br>
+         * <p>>  You can call the [DeleteBlackhole](~~118692~~) operation to deactivate blackhole filtering for a protected IP address.</p>
+         */
         @NameInMap("BlackholdingCount")
         public String blackholdingCount;
+
+        @NameInMap("CommodityType")
+        public String commodityType;
 
         @NameInMap("CoverageType")
         public Integer coverageType;
 
         /**
-         * <p>DescribeInstanceList</p>
+         * <p>The time when the instance expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
          */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
+        /**
+         * <p>The time when the instance was purchased. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The mitigation plan of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **0**: the Professional mitigation plan</p>
+         * <p>*   **1**: the Enterprise mitigation plan</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The protocol type of the IP address asset that is protected by the instance. Valid values:</p>
+         * <br>
+         * <p>*   **Ipv4**: IPv4</p>
+         * <p>*   **Ipv6**: IPv6</p>
          */
         @NameInMap("IpType")
         public String ipType;
 
         /**
-         * <p>WB269094</p>
+         * <p>The type of the cloud service that is associated with the Anti-DDoS Origin instance. By default, this parameter is not returned. If the Anti-DDoS Origin instance is created by using a different cloud service, the code of the cloud service is returned.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   **gamebox**: The Anti-DDoS Origin instance is created by using Game Security Box.</p>
+         * <p>*   **eip**: The Anti-DDoS Origin instance is created by using an elastic IP address (EIP) for which Anti-DDoS (Enhanced Edition) is enabled.</p>
          */
         @NameInMap("Product")
         public String product;
 
         /**
-         * <p>Queries the details of all Anti-DDoS Origin instances.</p>
+         * <p>The remarks of the instance.</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
-         * <p>The remarks of the instance.</p>
+         * <p>The status of the instance. Valid values:</p>
+         * <br>
+         * <p>*   **1**: normal</p>
+         * <p>*   **2**: expired</p>
+         * <p>*   **3**: released</p>
          */
         @NameInMap("Status")
         public String status;
@@ -129,6 +157,14 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         }
         public String getBlackholdingCount() {
             return this.blackholdingCount;
+        }
+
+        public DescribeInstanceListResponseBodyInstanceList setCommodityType(String commodityType) {
+            this.commodityType = commodityType;
+            return this;
+        }
+        public String getCommodityType() {
+            return this.commodityType;
         }
 
         public DescribeInstanceListResponseBodyInstanceList setCoverageType(Integer coverageType) {

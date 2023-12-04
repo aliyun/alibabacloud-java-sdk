@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **UntagResources**.</p>
+     * <p>Specifies whether to remove all tags from the specified Anti-DDoS Origin Enterprise instances.</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
-     * <p>testKey1</p>
+     * <p>The ID of the region where the Anti-DDoS Origin Enterprise instances reside.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The type of the specified resource. Set the value to **INSTANCE**.</p>
+     * <p>The ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -26,7 +26,7 @@ public class UntagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The type of the specified resource. Set the value to **INSTANCE**.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

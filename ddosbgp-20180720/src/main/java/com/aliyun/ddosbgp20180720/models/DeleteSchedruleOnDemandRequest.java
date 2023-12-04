@@ -5,21 +5,23 @@ import com.aliyun.tea.*;
 
 public class DeleteSchedruleOnDemandRequest extends TeaModel {
     /**
-     * <p>The name of the scheduling rule that you want to delete.</p>
+     * <p>The ID of the on-demand instance.</p>
+     * <br>
+     * <p>>  You can call the [DescribeOnDemandInstance](~~152120~~) operation to query the IDs of all on-demand instances.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The region ID of the on-demand instance.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~118703~~) operation to query all regions supported by Anti-DDoS Origin.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The region ID of the on-demand instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](~~118703~~) operation to query all regions supported by Anti-DDoS Origin.</p>
+     * <p>The name of the scheduling rule that you want to delete.</p>
      */
     @NameInMap("RuleName")
     public String ruleName;

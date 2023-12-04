@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteIpResponseBody extends TeaModel {
     /**
-     * <p>Removes specific IP addresses from an Anti-DDoS Origin Enterprise instance.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,19 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListOpenedAccessLogInstancesRequest extends TeaModel {
     /**
-     * <p>The number of the Anti-DDoS Origin instances for which log analysis was enabled.</p>
+     * <p>The number of the page to return. Pages start from page 1. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The number of entries to return on each page. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. This parameter is empty by default, which indicates that the Anti-DDoS Origin instance belongs to the default resource group.</p>
+     * <br>
+     * <p>For more information about resource groups, see [Create a resource group](~~94485~~).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account.</p>
+     * <p>The details of the on-demand instance.</p>
      */
     @NameInMap("Instances")
     public java.util.List<DescribeOnDemandInstanceStatusResponseBodyInstances> instances;
 
     /**
-     * <p>The CIDR block of the on-demand instance.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,39 +39,53 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
 
     public static class DescribeOnDemandInstanceStatusResponseBodyInstances extends TeaModel {
         /**
-         * <p>WB269094</p>
+         * <p>The details of route advertisement for data centers outside the Chinese mainland. This parameter is a JSON string. The following fields are included in the value:</p>
+         * <br>
+         * <p>*   **region**: The code of the data center outside the Chinese mainland. The value is of the STRING type. For more information, see **Codes of data centers outside the Chinese mainland**.</p>
+         * <p>*   **declared**: indicates whether the data center advertised the route. The value is of the STRING type. Valid values: **0** and **1**. The value of 0 indicates that the data center did not advertise the route. The value of 1 indicates that the data center advertised the route.</p>
          */
         @NameInMap("Declared")
         public String declared;
 
+        /**
+         * <p>The description of the on-demand instance.</p>
+         * <br>
+         * <p>>  The value of this parameter is returned only when the information about multiple on-demand instances is returned. The value of this parameter is not returned because the information about only one on-demand instance is returned.</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
         /**
-         * <p>DescribeOnDemandInstanceStatus</p>
+         * <p>The ID of the on-demand instance.</p>
+         * <br>
+         * <p>>  The value of this parameter is returned only when the information about multiple on-demand instances is returned. The value of this parameter is not returned because the information about only one on-demand instance is returned.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).</p>
+         * <p>The mode used to start the on-demand instance. Valid values:</p>
          * <br>
-         * <p>For more information about sample requests, see the **"Examples"** section of this topic.</p>
+         * <p>*   **manual**: The instance is manually started.</p>
+         * <p>*   **netflow-auto**: The instance is automatically started by using NetFlow that monitors network traffic.</p>
          */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The CIDR block of the on-demand instance.</p>
+         */
         @NameInMap("Net")
         public String net;
 
         /**
-         * <p>DescribeOnDemandInstanceStatus</p>
+         * <p>The number of the autonomous system (AS). Set the value to **0**, which indicates that AS is disabled.</p>
          */
         @NameInMap("RegistedAs")
         public String registedAs;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          */
         @NameInMap("UserId")
         public String userId;

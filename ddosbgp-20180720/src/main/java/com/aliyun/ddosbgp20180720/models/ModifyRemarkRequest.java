@@ -5,22 +5,31 @@ import com.aliyun.tea.*;
 
 public class ModifyRemarkRequest extends TeaModel {
     /**
-     * <p>Adds remarks for a specific Anti-DDoS Origin instance.</p>
+     * <p>The ID of the Anti-DDoS Origin instance for which you want to add remarks.</p>
+     * <br>
+     * <p>>  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>ModifyRemark</p>
+     * <p>The remarks for the Anti-DDoS Origin instance.</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
-     * <p>WB269094</p>
+     * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
+     * <br>
+     * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

@@ -4,13 +4,17 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class GetSlsOpenStatusResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).</p>
+     * <p>Indicates whether Log Service was activated. Valid values:</p>
      * <br>
-     * <p>For more information about sample requests, see the **"Examples"** section of this topic.</p>
+     * <p>*   **true**: Log Service was activated.</p>
+     * <p>*   **false**: Log Service was not activated.</p>
      */
     @NameInMap("SlsOpenStatus")
     public Boolean slsOpenStatus;

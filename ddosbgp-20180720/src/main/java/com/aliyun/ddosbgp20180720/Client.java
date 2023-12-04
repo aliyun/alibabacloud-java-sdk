@@ -89,6 +89,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addIpWithOptions(request, runtime);
     }
 
+    public AttachAssetGroupToInstanceResponse attachAssetGroupToInstanceWithOptions(AttachAssetGroupToInstanceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AttachAssetGroupToInstanceShrinkRequest request = new AttachAssetGroupToInstanceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.assetGroupList)) {
+            request.assetGroupListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.assetGroupList, "AssetGroupList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assetGroupListShrink)) {
+            query.put("AssetGroupList", request.assetGroupListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
+            query.put("SourceIp", request.sourceIp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AttachAssetGroupToInstance"),
+            new TeaPair("version", "2018-07-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachAssetGroupToInstanceResponse());
+    }
+
+    public AttachAssetGroupToInstanceResponse attachAssetGroupToInstance(AttachAssetGroupToInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.attachAssetGroupToInstanceWithOptions(request, runtime);
+    }
+
     public CheckAccessLogAuthResponse checkAccessLogAuthWithOptions(CheckAccessLogAuthRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -123,9 +170,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Indicates whether Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account. Valid values:
-      * *   **1**: Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account.
-      * *   **0**: Anti-DDoS Origin is not authorized to obtain information about the assets within the current Alibaba Cloud account.
+      * You can call the CheckGrant operation to query whether Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request CheckGrantRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -152,9 +199,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Indicates whether Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account. Valid values:
-      * *   **1**: Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account.
-      * *   **0**: Anti-DDoS Origin is not authorized to obtain information about the assets within the current Alibaba Cloud account.
+      * You can call the CheckGrant operation to query whether Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request CheckGrantRequest
       * @return CheckGrantResponse
@@ -371,8 +418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the Anti-DDoS Origin Enterprise instance.
-      * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin Enterprise instances.
+      * The Anti-DDoS Origin Enterprise instance no longer protects the IP addresses that are removed.
       *
       * @param request DeleteIpRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -415,8 +461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the Anti-DDoS Origin Enterprise instance.
-      * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin Enterprise instances.
+      * The Anti-DDoS Origin Enterprise instance no longer protects the IP addresses that are removed.
       *
       * @param request DeleteIpRequest
       * @return DeleteIpResponse
@@ -463,8 +508,108 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteSchedruleOnDemandWithOptions(request, runtime);
     }
 
+    public DescribeAssetGroupResponse describeAssetGroupWithOptions(DescribeAssetGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
+            query.put("SourceIp", request.sourceIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAssetGroup"),
+            new TeaPair("version", "2018-07-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAssetGroupResponse());
+    }
+
+    public DescribeAssetGroupResponse describeAssetGroup(DescribeAssetGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAssetGroupWithOptions(request, runtime);
+    }
+
+    public DescribeAssetGroupToInstanceResponse describeAssetGroupToInstanceWithOptions(DescribeAssetGroupToInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberUid)) {
+            query.put("MemberUid", request.memberUid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
+            query.put("SourceIp", request.sourceIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAssetGroupToInstance"),
+            new TeaPair("version", "2018-07-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAssetGroupToInstanceResponse());
+    }
+
+    public DescribeAssetGroupToInstanceResponse describeAssetGroupToInstance(DescribeAssetGroupToInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAssetGroupToInstanceWithOptions(request, runtime);
+    }
+
     /**
-      * The number of entries to return on each page.
+      * You can call the DescribeDdosEvent operation to query the details about the DDoS attack events that occurred on a specific Anti-DDoS Origin instance by page. The details include the start time, end time, attacked IP address, and status of each event.  
+      * ## Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request DescribeDdosEventRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -523,7 +668,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The number of entries to return on each page.
+      * You can call the DescribeDdosEvent operation to query the details about the DDoS attack events that occurred on a specific Anti-DDoS Origin instance by page. The details include the start time, end time, attacked IP address, and status of each event.  
+      * ## Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request DescribeDdosEventRequest
       * @return DescribeDdosEventResponse
@@ -534,7 +681,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **DescribeExcpetionCount**.
+      * ## Usage notes
+      * You can call the DescribeExcpetionCount operation to query the number of assets that are in an abnormal state and the number of Anti-DDoS Origin instances that are about to expire in a specific region. For example, if blackhole filtering is triggered for an IP address, the IP address is in an abnormal state. An instance whose remaining validity period is less than seven days is considered as an instance that is about to expire.
       *
       * @param request DescribeExcpetionCountRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -569,7 +717,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **DescribeExcpetionCount**.
+      * ## Usage notes
+      * You can call the DescribeExcpetionCount operation to query the number of assets that are in an abnormal state and the number of Anti-DDoS Origin instances that are about to expire in a specific region. For example, if blackhole filtering is triggered for an IP address, the IP address is in an abnormal state. An instance whose remaining validity period is less than seven days is considered as an instance that is about to expire.
       *
       * @param request DescribeExcpetionCountRequest
       * @return DescribeExcpetionCountResponse
@@ -580,10 +729,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The status of the instance. Valid values:
-      * *   **1**: normal
-      * *   **2**: expired
-      * *   **3**: released
+      * You can call the DescribeInstanceList operation to query the details of all Anti-DDoS Origin instances within your Alibaba Cloud account by page. The details include the ID, validity period, and status of each instance.  
+      * ## Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request DescribeInstanceListRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -662,10 +810,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The status of the instance. Valid values:
-      * *   **1**: normal
-      * *   **2**: expired
-      * *   **3**: released
+      * You can call the DescribeInstanceList operation to query the details of all Anti-DDoS Origin instances within your Alibaba Cloud account by page. The details include the ID, validity period, and status of each instance.  
+      * ## Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request DescribeInstanceListRequest
       * @return DescribeInstanceListResponse
@@ -713,7 +860,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the resource group.
+      * >  Anti-DDoS Origin API operations are available for only Anti-DDoS Origin Enterprise users.
       *
       * @param request DescribeOnDemandDdosEventRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -772,7 +919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the resource group.
+      * >  Anti-DDoS Origin API operations are available for only Anti-DDoS Origin Enterprise users.
       *
       * @param request DescribeOnDemandDdosEventRequest
       * @return DescribeOnDemandDdosEventResponse
@@ -890,7 +1037,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The number of entries to return on each page.
+      * You can call the DescribePackIpList operation to query the details about each IP address that is protected by a specific Anti-DDoS Origin instance by page. The details include the IP address and the type of the cloud asset to which the IP address belongs. The details also include the status of the IP address, such as whether blackhole filtering is triggered for the IP address.  
+      * ## Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request DescribePackIpListRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -949,7 +1098,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The number of entries to return on each page.
+      * You can call the DescribePackIpList operation to query the details about each IP address that is protected by a specific Anti-DDoS Origin instance by page. The details include the IP address and the type of the cloud asset to which the IP address belongs. The details also include the status of the IP address, such as whether blackhole filtering is triggered for the IP address.  
+      * ## Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request DescribePackIpListRequest
       * @return DescribePackIpListResponse
@@ -993,8 +1144,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The bandwidth of attack traffic. Unit: bit/s.
-      * >  This parameter is returned only if attack traffic exists.
+      * You can call the DescribeTraffic operation to query traffic statistics of an Anti-DDoS Origin instance within a specific time period.  
+      * >  When you call this operation, you must configure the **InstanceId** parameter to specify the Anti-DDoS Origin instance whose traffic statistics you want to query.  
+      * ## Limits
+      * You can call this operation once per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request DescribeTrafficRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1057,8 +1210,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The bandwidth of attack traffic. Unit: bit/s.
-      * >  This parameter is returned only if attack traffic exists.
+      * You can call the DescribeTraffic operation to query traffic statistics of an Anti-DDoS Origin instance within a specific time period.  
+      * >  When you call this operation, you must configure the **InstanceId** parameter to specify the Anti-DDoS Origin instance whose traffic statistics you want to query.  
+      * ## Limits
+      * You can call this operation once per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request DescribeTrafficRequest
       * @return DescribeTrafficResponse
@@ -1066,6 +1221,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeTrafficResponse describeTraffic(DescribeTrafficRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeTrafficWithOptions(request, runtime);
+    }
+
+    public DettachAssetGroupToInstanceResponse dettachAssetGroupToInstanceWithOptions(DettachAssetGroupToInstanceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DettachAssetGroupToInstanceShrinkRequest request = new DettachAssetGroupToInstanceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.assetGroupList)) {
+            request.assetGroupListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.assetGroupList, "AssetGroupList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assetGroupListShrink)) {
+            query.put("AssetGroupList", request.assetGroupListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
+            query.put("SourceIp", request.sourceIp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DettachAssetGroupToInstance"),
+            new TeaPair("version", "2018-07-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DettachAssetGroupToInstanceResponse());
+    }
+
+    public DettachAssetGroupToInstanceResponse dettachAssetGroupToInstance(DettachAssetGroupToInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.dettachAssetGroupToInstanceWithOptions(request, runtime);
     }
 
     public GetSlsOpenStatusResponse getSlsOpenStatusWithOptions(GetSlsOpenStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1184,8 +1386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region where the Anti-DDoS Origin instance resides.
-      * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+      * You can call the ListTagResources operation to query the tags that are added to Anti-DDoS Origin instances at a time.
       *
       * @param request ListTagResourcesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1236,8 +1437,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region where the Anti-DDoS Origin instance resides.
-      * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+      * You can call the ListTagResources operation to query the tags that are added to Anti-DDoS Origin instances at a time.
       *
       * @param request ListTagResourcesRequest
       * @return ListTagResourcesResponse
@@ -1248,7 +1448,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **ModifyRemark**.
+      * You can call the ModifyRemark operation to add remarks for a single Anti-DDoS Origin instance.  
+      * ## Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request ModifyRemarkRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1291,7 +1493,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **ModifyRemark**.
+      * You can call the ModifyRemark operation to add remarks for a single Anti-DDoS Origin instance.  
+      * ## Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request ModifyRemarkRequest
       * @return ModifyRemarkResponse
@@ -1372,8 +1576,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of Anti-DDoS Origin Instance N to which you want to add tags.
-      * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
+      * You can call the TagResources operation to add tags to Anti-DDoS Origin instances. 
+      * ## Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request TagResourcesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1420,8 +1625,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of Anti-DDoS Origin Instance N to which you want to add tags.
-      * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
+      * You can call the TagResources operation to add tags to Anti-DDoS Origin instances. 
+      * ## Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request TagResourcesRequest
       * @return TagResourcesResponse

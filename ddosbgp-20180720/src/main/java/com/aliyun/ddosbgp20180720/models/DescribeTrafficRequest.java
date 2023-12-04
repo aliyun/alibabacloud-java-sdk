@@ -5,24 +5,28 @@ import com.aliyun.tea.*;
 
 public class DescribeTrafficRequest extends TeaModel {
     /**
-     * <p>The time when the traffic statistics are calculated. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <br>
+     * <p>If you do not specify this parameter, the current system time is used as the end time.</p>
      */
     @NameInMap("EndTime")
     public Integer endTime;
-
-    /**
-     * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.</p>
-     */
-    @NameInMap("FlowType")
-    public String flowType;
 
     /**
      * <p>The type of the traffic statistics to query. Valid values:</p>
      * <br>
      * <p>*   **max**: the peak traffic within the specified interval</p>
      * <p>*   **avg**: the average traffic within the specified interval</p>
+     */
+    @NameInMap("FlowType")
+    public String flowType;
+
+    /**
+     * <p>The ID of the Anti-DDoS Origin instance to query.</p>
+     * <br>
+     * <p>>  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.</p>
+     * <br>
+     * <p>If you specify an on-demand instance, you must configure the **Interval** parameter.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -34,39 +38,37 @@ public class DescribeTrafficRequest extends TeaModel {
     public Integer interval;
 
     /**
-     * <p>The packet forwarding rate of attack traffic. Unit: packets per second.</p>
+     * <p>The public IP address of the asset to query. If you do not specify this parameter, the traffic statistics of all public IP addresses that are protected by the Anti-DDoS Origin instance are queried.</p>
      * <br>
-     * <p>>  This parameter is returned only if attack traffic exists.</p>
+     * <p>>  The public IP address must be a protected object of the Anti-DDoS Origin instance. You can call the [DescribePackIpList](~~118701~~) operation to query all protected objects of the Anti-DDoS Origin instance.</p>
      */
     @NameInMap("Ip")
     public String ip;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeTraffic**.</p>
+     * <p>The Classless Inter-Domain Routing (CIDR) block of the on-demand instance that you want to query.</p>
      */
     @NameInMap("Ipnet")
     public String ipnet;
 
     /**
-     * <p>The bandwidth of the total traffic. Unit: Kbit/s.</p>
+     * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the Anti-DDoS Origin instance to query.</p>
+     * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
      * <br>
-     * <p>>  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.</p>
-     * <br>
-     * <p>If you specify an on-demand instance, you must configure the **Interval** parameter.</p>
+     * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
-     * <br>
-     * <p>If you do not specify this parameter, the current system time is used as the end time.</p>
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
      */
     @NameInMap("StartTime")
     public Integer startTime;

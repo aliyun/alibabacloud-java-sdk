@@ -5,43 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
-     * <br>
-     * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
+     * <p>The query token. Set the value to the **NextToken** value that is returned in the last call to the ListTagResources operation. Leave this parameter empty the first time you call this operation.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **ListTagResources**.</p>
+     * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the Anti-DDoS Origin instance.</p>
+     * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
+     * <br>
+     * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The value of the tag that is added to the instance.</p>
+     * <p>The IDs of Anti-DDoS Origin Instances to query.</p>
+     * <br>
+     * <p>>  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The value of the tag to query.</p>
-     * <br>
-     * <p>>  The **ResourceIds.N** parameter and the key-value pair (Tag.N.Key and Tag.N.Value) cannot be left empty at the same time.</p>
+     * <p>The type of the resource to query. Set the value to **INSTANCE**, which indicates instances.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The key of the tag to query.</p>
-     * <br>
-     * <p>>  The **ResourceIds.N** parameter and the key-value pair (Tag.N.Key and Tag.N.Value) cannot be left empty at the same time.</p>
+     * <p>The tags to query.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -101,13 +101,17 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The ID of the request.</p>
+         * <p>The key of the tag to query.</p>
+         * <br>
+         * <p>>  The **ResourceIds.N** parameter and the key-value pair (Tag.N.Key and Tag.N.Value) cannot be left empty at the same time.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The type of the resource. The value is fixed as **INSTANCE**, which indicates instances.</p>
+         * <p>The value of the tag to query.</p>
+         * <br>
+         * <p>>  The **ResourceIds.N** parameter and the key-value pair (Tag.N.Key and Tag.N.Value) cannot be left empty at the same time.</p>
          */
         @NameInMap("Value")
         public String value;

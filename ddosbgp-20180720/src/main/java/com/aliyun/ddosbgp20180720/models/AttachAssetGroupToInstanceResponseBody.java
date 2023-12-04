@@ -3,19 +3,16 @@ package com.aliyun.ddosbgp20180720.models;
 
 import com.aliyun.tea.*;
 
-public class AddIpResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
+public class AttachAssetGroupToInstanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static AddIpResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        AddIpResponseBody self = new AddIpResponseBody();
+    public static AttachAssetGroupToInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        AttachAssetGroupToInstanceResponseBody self = new AttachAssetGroupToInstanceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public AddIpResponseBody setRequestId(String requestId) {
+    public AttachAssetGroupToInstanceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
