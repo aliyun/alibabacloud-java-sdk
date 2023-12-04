@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>paistudio20210202</artifactId>
-  <version>1.0.29</version>
+  <version>1.0.30</version>
   <packaging>jar</packaging>
   <name>paistudio20210202</name>
   <description>Alibaba Cloud PaiStudio (20210202) SDK for Java
