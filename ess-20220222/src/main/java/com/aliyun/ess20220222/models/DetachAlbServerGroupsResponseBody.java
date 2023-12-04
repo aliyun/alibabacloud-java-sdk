@@ -4,9 +4,15 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DetachAlbServerGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the scaling activity in which the ALB server group is disassociated from the scaling group and the ECS instances in the ALB server group are removed from the ALB server group. This parameter is returned only after you set the `ForceDetach` parameter to `true`.</p>
+     */
     @NameInMap("ScalingActivityId")
     public String scalingActivityId;
 

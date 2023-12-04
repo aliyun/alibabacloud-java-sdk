@@ -4,18 +4,33 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeLifecycleActionsResponseBody extends TeaModel {
+    /**
+     * <p>The lifecycle actions.</p>
+     */
     @NameInMap("LifecycleActions")
     public java.util.List<DescribeLifecycleActionsResponseBodyLifecycleActions> lifecycleActions;
 
+    /**
+     * <p>The maximum number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The query token returned in this call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of the queried lifecycle actions.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,18 +80,36 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
     }
 
     public static class DescribeLifecycleActionsResponseBodyLifecycleActions extends TeaModel {
+        /**
+         * <p>The IDs of the ECS instances to which the lifecycle hook applies.</p>
+         */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;
 
+        /**
+         * <p>The action that is performed after the lifecycle action triggered by the lifecycle hook is complete. Valid values:</p>
+         * <br>
+         * <p>*   CONTINUE: Auto Scaling continues to add ECS instances to the scaling group, or continues to remove ECS instances from the scaling group.</p>
+         * <p>*   ABANDON: Auto Scaling stops adding ECS instances to the scaling group and releases the ECS instances, or continues to respond to scale-in requests and remove ECS instances from the scaling group.</p>
+         */
         @NameInMap("LifecycleActionResult")
         public String lifecycleActionResult;
 
+        /**
+         * <p>The status of the lifecycle action.</p>
+         */
         @NameInMap("LifecycleActionStatus")
         public String lifecycleActionStatus;
 
+        /**
+         * <p>The token of the lifecycle action.</p>
+         */
         @NameInMap("LifecycleActionToken")
         public String lifecycleActionToken;
 
+        /**
+         * <p>The ID of the lifecycle hook.</p>
+         */
         @NameInMap("LifecycleHookId")
         public String lifecycleHookId;
 

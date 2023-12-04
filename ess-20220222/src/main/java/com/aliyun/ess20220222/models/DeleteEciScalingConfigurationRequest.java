@@ -10,12 +10,18 @@ public class DeleteEciScalingConfigurationRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the scaling group.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The ID of the scaling configuration that you want to delete.</p>
+     */
     @NameInMap("ScalingConfigurationId")
     public String scalingConfigurationId;
 

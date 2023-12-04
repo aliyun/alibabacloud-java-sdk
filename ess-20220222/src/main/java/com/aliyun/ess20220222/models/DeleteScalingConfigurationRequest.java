@@ -13,6 +13,9 @@ public class DeleteScalingConfigurationRequest extends TeaModel {
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The ID of the scaling configuration that you want to delete.</p>
+     */
     @NameInMap("ScalingConfigurationId")
     public String scalingConfigurationId;
 

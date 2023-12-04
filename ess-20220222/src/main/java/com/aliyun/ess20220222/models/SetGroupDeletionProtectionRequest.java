@@ -4,18 +4,30 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class SetGroupDeletionProtectionRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable deletion protection for the scaling group. Valid values:</p>
+     * <br>
+     * <p>*   true: enables deletion protection for the scaling group. This way, the scaling group cannot be deleted.</p>
+     * <p>*   false: disables deletion protection for the scaling group.</p>
+     */
     @NameInMap("GroupDeletionProtection")
     public Boolean groupDeletionProtection;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The ID of the scaling group.</p>
+     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 

@@ -4,12 +4,18 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class EnableAlarmRequest extends TeaModel {
+    /**
+     * <p>The ID of the event-triggered task.</p>
+     */
     @NameInMap("AlarmTaskId")
     public String alarmTaskId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

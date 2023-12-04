@@ -4,21 +4,35 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class ListTagKeysRequest extends TeaModel {
+    /**
+     * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the Auto Scaling resource.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The type of the Auto Scaling resource. Set the value to scalinggroup. This indicates that the tags are added to scaling groups.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

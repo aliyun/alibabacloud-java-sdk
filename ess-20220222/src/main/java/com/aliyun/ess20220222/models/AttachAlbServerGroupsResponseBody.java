@@ -4,9 +4,15 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class AttachAlbServerGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the scaling activity in which Auto Scaling associates the ALB server group with the scaling group and adds ECS instances in the scaling group to the ALB server group. This parameter is returned only if you set the `ForceAttach` parameter to `true`.</p>
+     */
     @NameInMap("ScalingActivityId")
     public String scalingActivityId;
 

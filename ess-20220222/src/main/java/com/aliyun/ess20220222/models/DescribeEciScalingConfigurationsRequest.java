@@ -11,23 +11,23 @@ public class DescribeEciScalingConfigurationsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 50.</p>
+     * <p>The number of the page to return. Pages start from page 1.</p>
      * <br>
-     * <p>Default value: 10.</p>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The ID of the scaling group. You can use the ID to query all scaling configurations in the scaling group.</p>
+     * <p>The number of entries to return on each page. Maximum value: 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1.</p>
-     * <br>
-     * <p>Default value: 1.</p>
+     * <p>The region ID of the scaling group to which the scaling configuration belongs.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -41,7 +41,7 @@ public class DescribeEciScalingConfigurationsRequest extends TeaModel {
     /**
      * <p>The IDs of the scaling configurations that you want to query.</p>
      * <br>
-     * <p>The IDs of active and inactive scaling configurations are displayed in the query results. You can differentiate between active and inactive scaling configurations based on the value of the LifecycleState parameter.</p>
+     * <p>The IDs of active and inactive scaling configurations are displayed in the query results. You can differentiate between active and inactive scaling configurations based on the value of the `LifecycleState` parameter.</p>
      */
     @NameInMap("ScalingConfigurationIds")
     public java.util.List<String> scalingConfigurationIds;
@@ -55,9 +55,7 @@ public class DescribeEciScalingConfigurationsRequest extends TeaModel {
     public java.util.List<String> scalingConfigurationNames;
 
     /**
-     * <p>The IDs of the scaling configurations that you want to query.</p>
-     * <br>
-     * <p>The IDs of active and inactive scaling configurations are displayed in the query results. You can differentiate between active and inactive scaling configurations based on the value of the `LifecycleState` parameter.</p>
+     * <p>The ID of the scaling group. You can use the ID to query all scaling configurations in the scaling group.</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;

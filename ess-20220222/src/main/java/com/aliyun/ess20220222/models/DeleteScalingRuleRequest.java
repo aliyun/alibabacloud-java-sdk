@@ -10,12 +10,18 @@ public class DeleteScalingRuleRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the scaling group.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The ID of the scaling rule that you want to delete.</p>
+     */
     @NameInMap("ScalingRuleId")
     public String scalingRuleId;
 

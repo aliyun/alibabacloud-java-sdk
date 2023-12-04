@@ -4,6 +4,9 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DeleteScalingConfigurationResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request. The request ID is returned regardless of whether the call is successful.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

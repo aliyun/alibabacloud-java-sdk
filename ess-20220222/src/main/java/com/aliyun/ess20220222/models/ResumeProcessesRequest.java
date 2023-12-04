@@ -4,21 +4,35 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class ResumeProcessesRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.</p>
+     * <br>
+     * <p>The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Details of the processes that you want to resume.</p>
+     */
     @NameInMap("Processes")
     public java.util.List<String> processes;
 
+    /**
+     * <p>The region ID of the scaling group.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The ID of the scaling group.</p>
+     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 

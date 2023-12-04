@@ -850,6 +850,12 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
+        @NameInMap("StorageSetId")
+        public String storageSetId;
+
+        @NameInMap("StorageSetPartitionNumber")
+        public Integer storageSetPartitionNumber;
+
         /**
          * <p>The ID of the automatic snapshot policy that is applied to the system disk.</p>
          */
@@ -1353,6 +1359,22 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
         public String getSpotStrategy() {
             return this.spotStrategy;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurations setStorageSetId(String storageSetId) {
+            this.storageSetId = storageSetId;
+            return this;
+        }
+        public String getStorageSetId() {
+            return this.storageSetId;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurations setStorageSetPartitionNumber(Integer storageSetPartitionNumber) {
+            this.storageSetPartitionNumber = storageSetPartitionNumber;
+            return this;
+        }
+        public Integer getStorageSetPartitionNumber() {
+            return this.storageSetPartitionNumber;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurations setSystemDiskAutoSnapshotPolicyId(String systemDiskAutoSnapshotPolicyId) {
