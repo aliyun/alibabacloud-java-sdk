@@ -13,6 +13,9 @@ public class GetEnterpriseDataPageImageResponseBody extends TeaModel {
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
