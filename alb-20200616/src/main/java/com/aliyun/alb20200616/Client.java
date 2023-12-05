@@ -379,6 +379,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.attachCommonBandwidthPackageToLoadBalancerWithOptions(request, runtime);
     }
 
+    /**
+      * This operation is supported only by Application Load Balancer (ALB) instances that use static IP addresses. Before you call this operation, you must call the StartShiftLoadBalancerZones operation to remove the zone from the ALB instance.
+      *
+      * @param request CancelShiftLoadBalancerZonesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CancelShiftLoadBalancerZonesResponse
+     */
     public CancelShiftLoadBalancerZonesResponse cancelShiftLoadBalancerZonesWithOptions(CancelShiftLoadBalancerZonesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -415,6 +422,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CancelShiftLoadBalancerZonesResponse());
     }
 
+    /**
+      * This operation is supported only by Application Load Balancer (ALB) instances that use static IP addresses. Before you call this operation, you must call the StartShiftLoadBalancerZones operation to remove the zone from the ALB instance.
+      *
+      * @param request CancelShiftLoadBalancerZonesRequest
+      * @return CancelShiftLoadBalancerZonesResponse
+     */
     public CancelShiftLoadBalancerZonesResponse cancelShiftLoadBalancerZones(CancelShiftLoadBalancerZonesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelShiftLoadBalancerZonesWithOptions(request, runtime);
@@ -3369,6 +3382,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.startListenerWithOptions(request, runtime);
     }
 
+    /**
+      * This operation is supported by Application Load Balancer (ALB) instances that use static IP addresses. The zone cannot be removed if the ALB instance has only one available zone.
+      *
+      * @param request StartShiftLoadBalancerZonesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StartShiftLoadBalancerZonesResponse
+     */
     public StartShiftLoadBalancerZonesResponse startShiftLoadBalancerZonesWithOptions(StartShiftLoadBalancerZonesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3405,6 +3425,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartShiftLoadBalancerZonesResponse());
     }
 
+    /**
+      * This operation is supported by Application Load Balancer (ALB) instances that use static IP addresses. The zone cannot be removed if the ALB instance has only one available zone.
+      *
+      * @param request StartShiftLoadBalancerZonesRequest
+      * @return StartShiftLoadBalancerZonesResponse
+     */
     public StartShiftLoadBalancerZonesResponse startShiftLoadBalancerZones(StartShiftLoadBalancerZonesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startShiftLoadBalancerZonesWithOptions(request, runtime);
