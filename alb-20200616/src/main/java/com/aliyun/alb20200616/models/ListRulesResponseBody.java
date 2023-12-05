@@ -231,6 +231,36 @@ public class ListRulesResponseBody extends TeaModel {
 
     }
 
+    public static class ListRulesResponseBodyRulesRuleActionsForwardGroupConfigServerGroupStickySession extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("Timeout")
+        public Integer timeout;
+
+        public static ListRulesResponseBodyRulesRuleActionsForwardGroupConfigServerGroupStickySession build(java.util.Map<String, ?> map) throws Exception {
+            ListRulesResponseBodyRulesRuleActionsForwardGroupConfigServerGroupStickySession self = new ListRulesResponseBodyRulesRuleActionsForwardGroupConfigServerGroupStickySession();
+            return TeaModel.build(map, self);
+        }
+
+        public ListRulesResponseBodyRulesRuleActionsForwardGroupConfigServerGroupStickySession setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public ListRulesResponseBodyRulesRuleActionsForwardGroupConfigServerGroupStickySession setTimeout(Integer timeout) {
+            this.timeout = timeout;
+            return this;
+        }
+        public Integer getTimeout() {
+            return this.timeout;
+        }
+
+    }
+
     public static class ListRulesResponseBodyRulesRuleActionsForwardGroupConfigServerGroupTuples extends TeaModel {
         /**
          * <p>The server group to which requests are forwarded.</p>
@@ -268,6 +298,9 @@ public class ListRulesResponseBody extends TeaModel {
     }
 
     public static class ListRulesResponseBodyRulesRuleActionsForwardGroupConfig extends TeaModel {
+        @NameInMap("ServerGroupStickySession")
+        public ListRulesResponseBodyRulesRuleActionsForwardGroupConfigServerGroupStickySession serverGroupStickySession;
+
         /**
          * <p>The server groups to which requests are forwarded.</p>
          */
@@ -277,6 +310,14 @@ public class ListRulesResponseBody extends TeaModel {
         public static ListRulesResponseBodyRulesRuleActionsForwardGroupConfig build(java.util.Map<String, ?> map) throws Exception {
             ListRulesResponseBodyRulesRuleActionsForwardGroupConfig self = new ListRulesResponseBodyRulesRuleActionsForwardGroupConfig();
             return TeaModel.build(map, self);
+        }
+
+        public ListRulesResponseBodyRulesRuleActionsForwardGroupConfig setServerGroupStickySession(ListRulesResponseBodyRulesRuleActionsForwardGroupConfigServerGroupStickySession serverGroupStickySession) {
+            this.serverGroupStickySession = serverGroupStickySession;
+            return this;
+        }
+        public ListRulesResponseBodyRulesRuleActionsForwardGroupConfigServerGroupStickySession getServerGroupStickySession() {
+            return this.serverGroupStickySession;
         }
 
         public ListRulesResponseBodyRulesRuleActionsForwardGroupConfig setServerGroupTuples(java.util.List<ListRulesResponseBodyRulesRuleActionsForwardGroupConfigServerGroupTuples> serverGroupTuples) {
@@ -662,6 +703,9 @@ public class ListRulesResponseBody extends TeaModel {
         @NameInMap("MirrorGroupConfig")
         public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig mirrorGroupConfig;
 
+        @NameInMap("TargetType")
+        public String targetType;
+
         public static ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig build(java.util.Map<String, ?> map) throws Exception {
             ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig self = new ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig();
             return TeaModel.build(map, self);
@@ -673,6 +717,14 @@ public class ListRulesResponseBody extends TeaModel {
         }
         public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfigMirrorGroupConfig getMirrorGroupConfig() {
             return this.mirrorGroupConfig;
+        }
+
+        public ListRulesResponseBodyRulesRuleActionsTrafficMirrorConfig setTargetType(String targetType) {
+            this.targetType = targetType;
+            return this;
+        }
+        public String getTargetType() {
+            return this.targetType;
         }
 
     }
