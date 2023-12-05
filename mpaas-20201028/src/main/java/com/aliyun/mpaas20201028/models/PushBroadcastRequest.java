@@ -13,6 +13,9 @@ public class PushBroadcastRequest extends TeaModel {
     @NameInMap("BindPeriod")
     public Integer bindPeriod;
 
+    @NameInMap("ChannelId")
+    public String channelId;
+
     @NameInMap("Classification")
     public String classification;
 
@@ -24,6 +27,9 @@ public class PushBroadcastRequest extends TeaModel {
 
     @NameInMap("ExtendedParams")
     public String extendedParams;
+
+    @NameInMap("MiChannelId")
+    public String miChannelId;
 
     @NameInMap("Msgkey")
     public String msgkey;
@@ -54,6 +60,9 @@ public class PushBroadcastRequest extends TeaModel {
 
     @NameInMap("TemplateName")
     public String templateName;
+
+    @NameInMap("ThirdChannelCategory")
+    public java.util.Map<String, ?> thirdChannelCategory;
 
     @NameInMap("UnBindPeriod")
     public Long unBindPeriod;
@@ -90,6 +99,14 @@ public class PushBroadcastRequest extends TeaModel {
         return this.bindPeriod;
     }
 
+    public PushBroadcastRequest setChannelId(String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
+    public String getChannelId() {
+        return this.channelId;
+    }
+
     public PushBroadcastRequest setClassification(String classification) {
         this.classification = classification;
         return this;
@@ -120,6 +137,14 @@ public class PushBroadcastRequest extends TeaModel {
     }
     public String getExtendedParams() {
         return this.extendedParams;
+    }
+
+    public PushBroadcastRequest setMiChannelId(String miChannelId) {
+        this.miChannelId = miChannelId;
+        return this;
+    }
+    public String getMiChannelId() {
+        return this.miChannelId;
     }
 
     public PushBroadcastRequest setMsgkey(String msgkey) {
@@ -200,6 +225,14 @@ public class PushBroadcastRequest extends TeaModel {
     }
     public String getTemplateName() {
         return this.templateName;
+    }
+
+    public PushBroadcastRequest setThirdChannelCategory(java.util.Map<String, ?> thirdChannelCategory) {
+        this.thirdChannelCategory = thirdChannelCategory;
+        return this;
+    }
+    public java.util.Map<String, ?> getThirdChannelCategory() {
+        return this.thirdChannelCategory;
     }
 
     public PushBroadcastRequest setUnBindPeriod(Long unBindPeriod) {

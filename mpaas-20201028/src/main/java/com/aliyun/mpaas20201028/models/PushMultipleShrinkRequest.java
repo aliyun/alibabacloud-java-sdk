@@ -3,7 +3,7 @@ package com.aliyun.mpaas20201028.models;
 
 import com.aliyun.tea.*;
 
-public class PushMultipleRequest extends TeaModel {
+public class PushMultipleShrinkRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
@@ -41,7 +41,7 @@ public class PushMultipleRequest extends TeaModel {
     public Integer strategyType;
 
     @NameInMap("TargetMsg")
-    public java.util.List<PushMultipleRequestTargetMsg> targetMsg;
+    public java.util.List<PushMultipleShrinkRequestTargetMsg> targetMsg;
 
     @NameInMap("TaskName")
     public String taskName;
@@ -50,17 +50,17 @@ public class PushMultipleRequest extends TeaModel {
     public String templateName;
 
     @NameInMap("ThirdChannelCategory")
-    public java.util.Map<String, ?> thirdChannelCategory;
+    public String thirdChannelCategoryShrink;
 
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    public static PushMultipleRequest build(java.util.Map<String, ?> map) throws Exception {
-        PushMultipleRequest self = new PushMultipleRequest();
+    public static PushMultipleShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        PushMultipleShrinkRequest self = new PushMultipleShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public PushMultipleRequest setAppId(String appId) {
+    public PushMultipleShrinkRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -68,7 +68,7 @@ public class PushMultipleRequest extends TeaModel {
         return this.appId;
     }
 
-    public PushMultipleRequest setChannelId(String channelId) {
+    public PushMultipleShrinkRequest setChannelId(String channelId) {
         this.channelId = channelId;
         return this;
     }
@@ -76,7 +76,7 @@ public class PushMultipleRequest extends TeaModel {
         return this.channelId;
     }
 
-    public PushMultipleRequest setClassification(String classification) {
+    public PushMultipleShrinkRequest setClassification(String classification) {
         this.classification = classification;
         return this;
     }
@@ -84,7 +84,7 @@ public class PushMultipleRequest extends TeaModel {
         return this.classification;
     }
 
-    public PushMultipleRequest setDeliveryType(Long deliveryType) {
+    public PushMultipleShrinkRequest setDeliveryType(Long deliveryType) {
         this.deliveryType = deliveryType;
         return this;
     }
@@ -92,7 +92,7 @@ public class PushMultipleRequest extends TeaModel {
         return this.deliveryType;
     }
 
-    public PushMultipleRequest setExpiredSeconds(Long expiredSeconds) {
+    public PushMultipleShrinkRequest setExpiredSeconds(Long expiredSeconds) {
         this.expiredSeconds = expiredSeconds;
         return this;
     }
@@ -100,7 +100,7 @@ public class PushMultipleRequest extends TeaModel {
         return this.expiredSeconds;
     }
 
-    public PushMultipleRequest setExtendedParams(String extendedParams) {
+    public PushMultipleShrinkRequest setExtendedParams(String extendedParams) {
         this.extendedParams = extendedParams;
         return this;
     }
@@ -108,7 +108,7 @@ public class PushMultipleRequest extends TeaModel {
         return this.extendedParams;
     }
 
-    public PushMultipleRequest setMiChannelId(String miChannelId) {
+    public PushMultipleShrinkRequest setMiChannelId(String miChannelId) {
         this.miChannelId = miChannelId;
         return this;
     }
@@ -116,7 +116,7 @@ public class PushMultipleRequest extends TeaModel {
         return this.miChannelId;
     }
 
-    public PushMultipleRequest setNotifyType(String notifyType) {
+    public PushMultipleShrinkRequest setNotifyType(String notifyType) {
         this.notifyType = notifyType;
         return this;
     }
@@ -124,7 +124,7 @@ public class PushMultipleRequest extends TeaModel {
         return this.notifyType;
     }
 
-    public PushMultipleRequest setPushAction(Long pushAction) {
+    public PushMultipleShrinkRequest setPushAction(Long pushAction) {
         this.pushAction = pushAction;
         return this;
     }
@@ -132,7 +132,7 @@ public class PushMultipleRequest extends TeaModel {
         return this.pushAction;
     }
 
-    public PushMultipleRequest setSilent(Long silent) {
+    public PushMultipleShrinkRequest setSilent(Long silent) {
         this.silent = silent;
         return this;
     }
@@ -140,7 +140,7 @@ public class PushMultipleRequest extends TeaModel {
         return this.silent;
     }
 
-    public PushMultipleRequest setStrategyContent(String strategyContent) {
+    public PushMultipleShrinkRequest setStrategyContent(String strategyContent) {
         this.strategyContent = strategyContent;
         return this;
     }
@@ -148,7 +148,7 @@ public class PushMultipleRequest extends TeaModel {
         return this.strategyContent;
     }
 
-    public PushMultipleRequest setStrategyType(Integer strategyType) {
+    public PushMultipleShrinkRequest setStrategyType(Integer strategyType) {
         this.strategyType = strategyType;
         return this;
     }
@@ -156,15 +156,15 @@ public class PushMultipleRequest extends TeaModel {
         return this.strategyType;
     }
 
-    public PushMultipleRequest setTargetMsg(java.util.List<PushMultipleRequestTargetMsg> targetMsg) {
+    public PushMultipleShrinkRequest setTargetMsg(java.util.List<PushMultipleShrinkRequestTargetMsg> targetMsg) {
         this.targetMsg = targetMsg;
         return this;
     }
-    public java.util.List<PushMultipleRequestTargetMsg> getTargetMsg() {
+    public java.util.List<PushMultipleShrinkRequestTargetMsg> getTargetMsg() {
         return this.targetMsg;
     }
 
-    public PushMultipleRequest setTaskName(String taskName) {
+    public PushMultipleShrinkRequest setTaskName(String taskName) {
         this.taskName = taskName;
         return this;
     }
@@ -172,7 +172,7 @@ public class PushMultipleRequest extends TeaModel {
         return this.taskName;
     }
 
-    public PushMultipleRequest setTemplateName(String templateName) {
+    public PushMultipleShrinkRequest setTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
@@ -180,15 +180,15 @@ public class PushMultipleRequest extends TeaModel {
         return this.templateName;
     }
 
-    public PushMultipleRequest setThirdChannelCategory(java.util.Map<String, ?> thirdChannelCategory) {
-        this.thirdChannelCategory = thirdChannelCategory;
+    public PushMultipleShrinkRequest setThirdChannelCategoryShrink(String thirdChannelCategoryShrink) {
+        this.thirdChannelCategoryShrink = thirdChannelCategoryShrink;
         return this;
     }
-    public java.util.Map<String, ?> getThirdChannelCategory() {
-        return this.thirdChannelCategory;
+    public String getThirdChannelCategoryShrink() {
+        return this.thirdChannelCategoryShrink;
     }
 
-    public PushMultipleRequest setWorkspaceId(String workspaceId) {
+    public PushMultipleShrinkRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
@@ -196,7 +196,7 @@ public class PushMultipleRequest extends TeaModel {
         return this.workspaceId;
     }
 
-    public static class PushMultipleRequestTargetMsg extends TeaModel {
+    public static class PushMultipleShrinkRequestTargetMsg extends TeaModel {
         @NameInMap("ExtendedParams")
         public String extendedParams;
 
@@ -209,12 +209,12 @@ public class PushMultipleRequest extends TeaModel {
         @NameInMap("TemplateKeyValue")
         public String templateKeyValue;
 
-        public static PushMultipleRequestTargetMsg build(java.util.Map<String, ?> map) throws Exception {
-            PushMultipleRequestTargetMsg self = new PushMultipleRequestTargetMsg();
+        public static PushMultipleShrinkRequestTargetMsg build(java.util.Map<String, ?> map) throws Exception {
+            PushMultipleShrinkRequestTargetMsg self = new PushMultipleShrinkRequestTargetMsg();
             return TeaModel.build(map, self);
         }
 
-        public PushMultipleRequestTargetMsg setExtendedParams(String extendedParams) {
+        public PushMultipleShrinkRequestTargetMsg setExtendedParams(String extendedParams) {
             this.extendedParams = extendedParams;
             return this;
         }
@@ -222,7 +222,7 @@ public class PushMultipleRequest extends TeaModel {
             return this.extendedParams;
         }
 
-        public PushMultipleRequestTargetMsg setMsgKey(String msgKey) {
+        public PushMultipleShrinkRequestTargetMsg setMsgKey(String msgKey) {
             this.msgKey = msgKey;
             return this;
         }
@@ -230,7 +230,7 @@ public class PushMultipleRequest extends TeaModel {
             return this.msgKey;
         }
 
-        public PushMultipleRequestTargetMsg setTarget(String target) {
+        public PushMultipleShrinkRequestTargetMsg setTarget(String target) {
             this.target = target;
             return this;
         }
@@ -238,7 +238,7 @@ public class PushMultipleRequest extends TeaModel {
             return this.target;
         }
 
-        public PushMultipleRequestTargetMsg setTemplateKeyValue(String templateKeyValue) {
+        public PushMultipleShrinkRequestTargetMsg setTemplateKeyValue(String templateKeyValue) {
             this.templateKeyValue = templateKeyValue;
             return this;
         }

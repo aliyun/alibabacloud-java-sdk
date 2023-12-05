@@ -3,7 +3,7 @@ package com.aliyun.mpaas20201028.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteMsacStageInstanceByIdResponse extends TeaModel {
+public class CreateMasFunnelResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DeleteMsacStageInstanceByIdResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DeleteMsacStageInstanceByIdResponseBody body;
+    public CreateMasFunnelResponseBody body;
 
-    public static DeleteMsacStageInstanceByIdResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteMsacStageInstanceByIdResponse self = new DeleteMsacStageInstanceByIdResponse();
+    public static CreateMasFunnelResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateMasFunnelResponse self = new CreateMasFunnelResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteMsacStageInstanceByIdResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateMasFunnelResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DeleteMsacStageInstanceByIdResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteMsacStageInstanceByIdResponse setStatusCode(Integer statusCode) {
+    public CreateMasFunnelResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DeleteMsacStageInstanceByIdResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteMsacStageInstanceByIdResponse setBody(DeleteMsacStageInstanceByIdResponseBody body) {
+    public CreateMasFunnelResponse setBody(CreateMasFunnelResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteMsacStageInstanceByIdResponseBody getBody() {
+    public CreateMasFunnelResponseBody getBody() {
         return this.body;
     }
 

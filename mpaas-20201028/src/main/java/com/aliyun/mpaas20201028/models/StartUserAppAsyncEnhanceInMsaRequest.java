@@ -58,6 +58,9 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends TeaModel {
     @NameInMap("TotalSwitch")
     public Boolean totalSwitch;
 
+    @NameInMap("UseAShield")
+    public Boolean useAShield;
+
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -208,6 +211,14 @@ public class StartUserAppAsyncEnhanceInMsaRequest extends TeaModel {
     }
     public Boolean getTotalSwitch() {
         return this.totalSwitch;
+    }
+
+    public StartUserAppAsyncEnhanceInMsaRequest setUseAShield(Boolean useAShield) {
+        this.useAShield = useAShield;
+        return this;
+    }
+    public Boolean getUseAShield() {
+        return this.useAShield;
     }
 
     public StartUserAppAsyncEnhanceInMsaRequest setWorkspaceId(String workspaceId) {

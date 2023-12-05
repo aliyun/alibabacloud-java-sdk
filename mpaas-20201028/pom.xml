@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>mpaas20201028</artifactId>
-  <version>3.0.9</version>
+  <version>3.1.0</version>
   <packaging>jar</packaging>
   <name>mpaas20201028</name>
   <description>Alibaba Cloud Mobile PaaS (20201028) SDK for Java
@@ -41,17 +41,17 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.16</version>
+      <version>0.2.21</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.8</version>
+      <version>0.3.1</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.2.0</version>
+      <version>0.2.1</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

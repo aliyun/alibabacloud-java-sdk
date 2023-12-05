@@ -304,8 +304,17 @@ public class ListMcubeMiniPackagesResponseBody extends TeaModel {
     }
 
     public static class ListMcubeMiniPackagesResponseBodyListMiniPackageResult extends TeaModel {
+        @NameInMap("CurrentPage")
+        public Integer currentPage;
+
+        @NameInMap("HasMore")
+        public Boolean hasMore;
+
         @NameInMap("MiniPackageList")
         public java.util.List<ListMcubeMiniPackagesResponseBodyListMiniPackageResultMiniPackageList> miniPackageList;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
 
         @NameInMap("ResultMsg")
         public String resultMsg;
@@ -313,9 +322,28 @@ public class ListMcubeMiniPackagesResponseBody extends TeaModel {
         @NameInMap("Success")
         public Boolean success;
 
+        @NameInMap("TotalCount")
+        public Long totalCount;
+
         public static ListMcubeMiniPackagesResponseBodyListMiniPackageResult build(java.util.Map<String, ?> map) throws Exception {
             ListMcubeMiniPackagesResponseBodyListMiniPackageResult self = new ListMcubeMiniPackagesResponseBodyListMiniPackageResult();
             return TeaModel.build(map, self);
+        }
+
+        public ListMcubeMiniPackagesResponseBodyListMiniPackageResult setCurrentPage(Integer currentPage) {
+            this.currentPage = currentPage;
+            return this;
+        }
+        public Integer getCurrentPage() {
+            return this.currentPage;
+        }
+
+        public ListMcubeMiniPackagesResponseBodyListMiniPackageResult setHasMore(Boolean hasMore) {
+            this.hasMore = hasMore;
+            return this;
+        }
+        public Boolean getHasMore() {
+            return this.hasMore;
         }
 
         public ListMcubeMiniPackagesResponseBodyListMiniPackageResult setMiniPackageList(java.util.List<ListMcubeMiniPackagesResponseBodyListMiniPackageResultMiniPackageList> miniPackageList) {
@@ -324,6 +352,14 @@ public class ListMcubeMiniPackagesResponseBody extends TeaModel {
         }
         public java.util.List<ListMcubeMiniPackagesResponseBodyListMiniPackageResultMiniPackageList> getMiniPackageList() {
             return this.miniPackageList;
+        }
+
+        public ListMcubeMiniPackagesResponseBodyListMiniPackageResult setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
         }
 
         public ListMcubeMiniPackagesResponseBodyListMiniPackageResult setResultMsg(String resultMsg) {
@@ -340,6 +376,14 @@ public class ListMcubeMiniPackagesResponseBody extends TeaModel {
         }
         public Boolean getSuccess() {
             return this.success;
+        }
+
+        public ListMcubeMiniPackagesResponseBodyListMiniPackageResult setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
         }
 
     }
