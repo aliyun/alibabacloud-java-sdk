@@ -13,6 +13,12 @@ public class ListMcubeMiniPackagesRequest extends TeaModel {
     @NameInMap("PackageTypes")
     public String packageTypes;
 
+    @NameInMap("PageNum")
+    public Integer pageNum;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("TenantId")
     public String tenantId;
 
@@ -46,6 +52,22 @@ public class ListMcubeMiniPackagesRequest extends TeaModel {
     }
     public String getPackageTypes() {
         return this.packageTypes;
+    }
+
+    public ListMcubeMiniPackagesRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public ListMcubeMiniPackagesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListMcubeMiniPackagesRequest setTenantId(String tenantId) {

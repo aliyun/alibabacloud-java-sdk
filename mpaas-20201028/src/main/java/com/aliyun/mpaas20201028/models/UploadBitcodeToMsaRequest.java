@@ -10,11 +10,17 @@ public class UploadBitcodeToMsaRequest extends TeaModel {
     @NameInMap("Bitcode")
     public String bitcode;
 
+    @NameInMap("CodeVersion")
+    public String codeVersion;
+
     @NameInMap("License")
     public String license;
 
     @NameInMap("TenantId")
     public String tenantId;
+
+    @NameInMap("Type")
+    public String type;
 
     @NameInMap("WorkspaceId")
     public String workspaceId;
@@ -40,6 +46,14 @@ public class UploadBitcodeToMsaRequest extends TeaModel {
         return this.bitcode;
     }
 
+    public UploadBitcodeToMsaRequest setCodeVersion(String codeVersion) {
+        this.codeVersion = codeVersion;
+        return this;
+    }
+    public String getCodeVersion() {
+        return this.codeVersion;
+    }
+
     public UploadBitcodeToMsaRequest setLicense(String license) {
         this.license = license;
         return this;
@@ -54,6 +68,14 @@ public class UploadBitcodeToMsaRequest extends TeaModel {
     }
     public String getTenantId() {
         return this.tenantId;
+    }
+
+    public UploadBitcodeToMsaRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public UploadBitcodeToMsaRequest setWorkspaceId(String workspaceId) {

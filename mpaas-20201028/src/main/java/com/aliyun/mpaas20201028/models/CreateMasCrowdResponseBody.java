@@ -3,7 +3,7 @@ package com.aliyun.mpaas20201028.models;
 
 import com.aliyun.tea.*;
 
-public class GetMsacTinyAppInfoResponseBody extends TeaModel {
+public class CreateMasCrowdResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
@@ -11,17 +11,17 @@ public class GetMsacTinyAppInfoResponseBody extends TeaModel {
     public String resultCode;
 
     @NameInMap("ResultContent")
-    public GetMsacTinyAppInfoResponseBodyResultContent resultContent;
+    public CreateMasCrowdResponseBodyResultContent resultContent;
 
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    public static GetMsacTinyAppInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetMsacTinyAppInfoResponseBody self = new GetMsacTinyAppInfoResponseBody();
+    public static CreateMasCrowdResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CreateMasCrowdResponseBody self = new CreateMasCrowdResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetMsacTinyAppInfoResponseBody setRequestId(String requestId) {
+    public CreateMasCrowdResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetMsacTinyAppInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetMsacTinyAppInfoResponseBody setResultCode(String resultCode) {
+    public CreateMasCrowdResponseBody setResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
@@ -37,15 +37,15 @@ public class GetMsacTinyAppInfoResponseBody extends TeaModel {
         return this.resultCode;
     }
 
-    public GetMsacTinyAppInfoResponseBody setResultContent(GetMsacTinyAppInfoResponseBodyResultContent resultContent) {
+    public CreateMasCrowdResponseBody setResultContent(CreateMasCrowdResponseBodyResultContent resultContent) {
         this.resultContent = resultContent;
         return this;
     }
-    public GetMsacTinyAppInfoResponseBodyResultContent getResultContent() {
+    public CreateMasCrowdResponseBodyResultContent getResultContent() {
         return this.resultContent;
     }
 
-    public GetMsacTinyAppInfoResponseBody setResultMessage(String resultMessage) {
+    public CreateMasCrowdResponseBody setResultMessage(String resultMessage) {
         this.resultMessage = resultMessage;
         return this;
     }
@@ -53,7 +53,7 @@ public class GetMsacTinyAppInfoResponseBody extends TeaModel {
         return this.resultMessage;
     }
 
-    public static class GetMsacTinyAppInfoResponseBodyResultContent extends TeaModel {
+    public static class CreateMasCrowdResponseBodyResultContent extends TeaModel {
         @NameInMap("Code")
         public String code;
 
@@ -66,12 +66,12 @@ public class GetMsacTinyAppInfoResponseBody extends TeaModel {
         @NameInMap("Success")
         public Boolean success;
 
-        public static GetMsacTinyAppInfoResponseBodyResultContent build(java.util.Map<String, ?> map) throws Exception {
-            GetMsacTinyAppInfoResponseBodyResultContent self = new GetMsacTinyAppInfoResponseBodyResultContent();
+        public static CreateMasCrowdResponseBodyResultContent build(java.util.Map<String, ?> map) throws Exception {
+            CreateMasCrowdResponseBodyResultContent self = new CreateMasCrowdResponseBodyResultContent();
             return TeaModel.build(map, self);
         }
 
-        public GetMsacTinyAppInfoResponseBodyResultContent setCode(String code) {
+        public CreateMasCrowdResponseBodyResultContent setCode(String code) {
             this.code = code;
             return this;
         }
@@ -79,7 +79,7 @@ public class GetMsacTinyAppInfoResponseBody extends TeaModel {
             return this.code;
         }
 
-        public GetMsacTinyAppInfoResponseBodyResultContent setData(String data) {
+        public CreateMasCrowdResponseBodyResultContent setData(String data) {
             this.data = data;
             return this;
         }
@@ -87,7 +87,7 @@ public class GetMsacTinyAppInfoResponseBody extends TeaModel {
             return this.data;
         }
 
-        public GetMsacTinyAppInfoResponseBodyResultContent setMessage(String message) {
+        public CreateMasCrowdResponseBodyResultContent setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -95,7 +95,7 @@ public class GetMsacTinyAppInfoResponseBody extends TeaModel {
             return this.message;
         }
 
-        public GetMsacTinyAppInfoResponseBodyResultContent setSuccess(Boolean success) {
+        public CreateMasCrowdResponseBodyResultContent setSuccess(Boolean success) {
             this.success = success;
             return this;
         }

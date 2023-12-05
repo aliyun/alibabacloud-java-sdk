@@ -4,6 +4,9 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class ExportMappCenterAppConfigRequest extends TeaModel {
+    @NameInMap("ApkFileUrl")
+    public String apkFileUrl;
+
     @NameInMap("AppId")
     public String appId;
 
@@ -25,6 +28,14 @@ public class ExportMappCenterAppConfigRequest extends TeaModel {
     public static ExportMappCenterAppConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ExportMappCenterAppConfigRequest self = new ExportMappCenterAppConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ExportMappCenterAppConfigRequest setApkFileUrl(String apkFileUrl) {
+        this.apkFileUrl = apkFileUrl;
+        return this;
+    }
+    public String getApkFileUrl() {
+        return this.apkFileUrl;
     }
 
     public ExportMappCenterAppConfigRequest setAppId(String appId) {

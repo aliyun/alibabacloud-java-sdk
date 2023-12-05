@@ -3,7 +3,7 @@ package com.aliyun.mpaas20201028.models;
 
 import com.aliyun.tea.*;
 
-public class CreateMsacStageAppMappingResponseBody extends TeaModel {
+public class CreateMasFunnelResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
@@ -11,17 +11,17 @@ public class CreateMsacStageAppMappingResponseBody extends TeaModel {
     public String resultCode;
 
     @NameInMap("ResultContent")
-    public CreateMsacStageAppMappingResponseBodyResultContent resultContent;
+    public CreateMasFunnelResponseBodyResultContent resultContent;
 
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    public static CreateMsacStageAppMappingResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateMsacStageAppMappingResponseBody self = new CreateMsacStageAppMappingResponseBody();
+    public static CreateMasFunnelResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CreateMasFunnelResponseBody self = new CreateMasFunnelResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateMsacStageAppMappingResponseBody setRequestId(String requestId) {
+    public CreateMasFunnelResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -29,7 +29,7 @@ public class CreateMsacStageAppMappingResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateMsacStageAppMappingResponseBody setResultCode(String resultCode) {
+    public CreateMasFunnelResponseBody setResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
@@ -37,15 +37,15 @@ public class CreateMsacStageAppMappingResponseBody extends TeaModel {
         return this.resultCode;
     }
 
-    public CreateMsacStageAppMappingResponseBody setResultContent(CreateMsacStageAppMappingResponseBodyResultContent resultContent) {
+    public CreateMasFunnelResponseBody setResultContent(CreateMasFunnelResponseBodyResultContent resultContent) {
         this.resultContent = resultContent;
         return this;
     }
-    public CreateMsacStageAppMappingResponseBodyResultContent getResultContent() {
+    public CreateMasFunnelResponseBodyResultContent getResultContent() {
         return this.resultContent;
     }
 
-    public CreateMsacStageAppMappingResponseBody setResultMessage(String resultMessage) {
+    public CreateMasFunnelResponseBody setResultMessage(String resultMessage) {
         this.resultMessage = resultMessage;
         return this;
     }
@@ -53,7 +53,7 @@ public class CreateMsacStageAppMappingResponseBody extends TeaModel {
         return this.resultMessage;
     }
 
-    public static class CreateMsacStageAppMappingResponseBodyResultContent extends TeaModel {
+    public static class CreateMasFunnelResponseBodyResultContent extends TeaModel {
         @NameInMap("Code")
         public String code;
 
@@ -66,12 +66,12 @@ public class CreateMsacStageAppMappingResponseBody extends TeaModel {
         @NameInMap("Success")
         public Boolean success;
 
-        public static CreateMsacStageAppMappingResponseBodyResultContent build(java.util.Map<String, ?> map) throws Exception {
-            CreateMsacStageAppMappingResponseBodyResultContent self = new CreateMsacStageAppMappingResponseBodyResultContent();
+        public static CreateMasFunnelResponseBodyResultContent build(java.util.Map<String, ?> map) throws Exception {
+            CreateMasFunnelResponseBodyResultContent self = new CreateMasFunnelResponseBodyResultContent();
             return TeaModel.build(map, self);
         }
 
-        public CreateMsacStageAppMappingResponseBodyResultContent setCode(String code) {
+        public CreateMasFunnelResponseBodyResultContent setCode(String code) {
             this.code = code;
             return this;
         }
@@ -79,7 +79,7 @@ public class CreateMsacStageAppMappingResponseBody extends TeaModel {
             return this.code;
         }
 
-        public CreateMsacStageAppMappingResponseBodyResultContent setData(String data) {
+        public CreateMasFunnelResponseBodyResultContent setData(String data) {
             this.data = data;
             return this;
         }
@@ -87,7 +87,7 @@ public class CreateMsacStageAppMappingResponseBody extends TeaModel {
             return this.data;
         }
 
-        public CreateMsacStageAppMappingResponseBodyResultContent setMessage(String message) {
+        public CreateMasFunnelResponseBodyResultContent setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -95,7 +95,7 @@ public class CreateMsacStageAppMappingResponseBody extends TeaModel {
             return this.message;
         }
 
-        public CreateMsacStageAppMappingResponseBodyResultContent setSuccess(Boolean success) {
+        public CreateMasFunnelResponseBodyResultContent setSuccess(Boolean success) {
             this.success = success;
             return this;
         }

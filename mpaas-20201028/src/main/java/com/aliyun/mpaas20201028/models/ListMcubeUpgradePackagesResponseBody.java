@@ -502,11 +502,20 @@ public class ListMcubeUpgradePackagesResponseBody extends TeaModel {
     }
 
     public static class ListMcubeUpgradePackagesResponseBodyListPackagesResult extends TeaModel {
+        @NameInMap("CurrentPage")
+        public Integer currentPage;
+
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        @NameInMap("HasMore")
+        public Boolean hasMore;
+
         @NameInMap("Packages")
         public java.util.List<ListMcubeUpgradePackagesResponseBodyListPackagesResultPackages> packages;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
 
         @NameInMap("RequestId")
         public String requestId;
@@ -517,9 +526,20 @@ public class ListMcubeUpgradePackagesResponseBody extends TeaModel {
         @NameInMap("Success")
         public Boolean success;
 
+        @NameInMap("TotalCount")
+        public Long totalCount;
+
         public static ListMcubeUpgradePackagesResponseBodyListPackagesResult build(java.util.Map<String, ?> map) throws Exception {
             ListMcubeUpgradePackagesResponseBodyListPackagesResult self = new ListMcubeUpgradePackagesResponseBodyListPackagesResult();
             return TeaModel.build(map, self);
+        }
+
+        public ListMcubeUpgradePackagesResponseBodyListPackagesResult setCurrentPage(Integer currentPage) {
+            this.currentPage = currentPage;
+            return this;
+        }
+        public Integer getCurrentPage() {
+            return this.currentPage;
         }
 
         public ListMcubeUpgradePackagesResponseBodyListPackagesResult setErrorCode(String errorCode) {
@@ -530,12 +550,28 @@ public class ListMcubeUpgradePackagesResponseBody extends TeaModel {
             return this.errorCode;
         }
 
+        public ListMcubeUpgradePackagesResponseBodyListPackagesResult setHasMore(Boolean hasMore) {
+            this.hasMore = hasMore;
+            return this;
+        }
+        public Boolean getHasMore() {
+            return this.hasMore;
+        }
+
         public ListMcubeUpgradePackagesResponseBodyListPackagesResult setPackages(java.util.List<ListMcubeUpgradePackagesResponseBodyListPackagesResultPackages> packages) {
             this.packages = packages;
             return this;
         }
         public java.util.List<ListMcubeUpgradePackagesResponseBodyListPackagesResultPackages> getPackages() {
             return this.packages;
+        }
+
+        public ListMcubeUpgradePackagesResponseBodyListPackagesResult setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
         }
 
         public ListMcubeUpgradePackagesResponseBodyListPackagesResult setRequestId(String requestId) {
@@ -560,6 +596,14 @@ public class ListMcubeUpgradePackagesResponseBody extends TeaModel {
         }
         public Boolean getSuccess() {
             return this.success;
+        }
+
+        public ListMcubeUpgradePackagesResponseBodyListPackagesResult setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
         }
 
     }

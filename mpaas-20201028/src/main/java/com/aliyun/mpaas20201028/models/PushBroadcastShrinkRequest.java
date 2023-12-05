@@ -3,9 +3,15 @@ package com.aliyun.mpaas20201028.models;
 
 import com.aliyun.tea.*;
 
-public class PushTemplateRequest extends TeaModel {
+public class PushBroadcastShrinkRequest extends TeaModel {
+    @NameInMap("AndroidChannel")
+    public Integer androidChannel;
+
     @NameInMap("AppId")
     public String appId;
+
+    @NameInMap("BindPeriod")
+    public Integer bindPeriod;
 
     @NameInMap("ChannelId")
     public String channelId;
@@ -25,35 +31,26 @@ public class PushTemplateRequest extends TeaModel {
     @NameInMap("MiChannelId")
     public String miChannelId;
 
+    @NameInMap("Msgkey")
+    public String msgkey;
+
     @NameInMap("NotifyType")
     public String notifyType;
 
     @NameInMap("PushAction")
     public Long pushAction;
 
+    @NameInMap("PushStatus")
+    public Long pushStatus;
+
     @NameInMap("Silent")
     public Long silent;
-
-    @NameInMap("SmsSignName")
-    public String smsSignName;
-
-    @NameInMap("SmsStrategy")
-    public Integer smsStrategy;
-
-    @NameInMap("SmsTemplateCode")
-    public String smsTemplateCode;
-
-    @NameInMap("SmsTemplateParam")
-    public String smsTemplateParam;
 
     @NameInMap("StrategyContent")
     public String strategyContent;
 
     @NameInMap("StrategyType")
     public Integer strategyType;
-
-    @NameInMap("TargetMsgkey")
-    public String targetMsgkey;
 
     @NameInMap("TaskName")
     public String taskName;
@@ -65,17 +62,28 @@ public class PushTemplateRequest extends TeaModel {
     public String templateName;
 
     @NameInMap("ThirdChannelCategory")
-    public java.util.Map<String, ?> thirdChannelCategory;
+    public String thirdChannelCategoryShrink;
+
+    @NameInMap("UnBindPeriod")
+    public Long unBindPeriod;
 
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    public static PushTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
-        PushTemplateRequest self = new PushTemplateRequest();
+    public static PushBroadcastShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        PushBroadcastShrinkRequest self = new PushBroadcastShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public PushTemplateRequest setAppId(String appId) {
+    public PushBroadcastShrinkRequest setAndroidChannel(Integer androidChannel) {
+        this.androidChannel = androidChannel;
+        return this;
+    }
+    public Integer getAndroidChannel() {
+        return this.androidChannel;
+    }
+
+    public PushBroadcastShrinkRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -83,7 +91,15 @@ public class PushTemplateRequest extends TeaModel {
         return this.appId;
     }
 
-    public PushTemplateRequest setChannelId(String channelId) {
+    public PushBroadcastShrinkRequest setBindPeriod(Integer bindPeriod) {
+        this.bindPeriod = bindPeriod;
+        return this;
+    }
+    public Integer getBindPeriod() {
+        return this.bindPeriod;
+    }
+
+    public PushBroadcastShrinkRequest setChannelId(String channelId) {
         this.channelId = channelId;
         return this;
     }
@@ -91,7 +107,7 @@ public class PushTemplateRequest extends TeaModel {
         return this.channelId;
     }
 
-    public PushTemplateRequest setClassification(String classification) {
+    public PushBroadcastShrinkRequest setClassification(String classification) {
         this.classification = classification;
         return this;
     }
@@ -99,7 +115,7 @@ public class PushTemplateRequest extends TeaModel {
         return this.classification;
     }
 
-    public PushTemplateRequest setDeliveryType(Long deliveryType) {
+    public PushBroadcastShrinkRequest setDeliveryType(Long deliveryType) {
         this.deliveryType = deliveryType;
         return this;
     }
@@ -107,7 +123,7 @@ public class PushTemplateRequest extends TeaModel {
         return this.deliveryType;
     }
 
-    public PushTemplateRequest setExpiredSeconds(Long expiredSeconds) {
+    public PushBroadcastShrinkRequest setExpiredSeconds(Long expiredSeconds) {
         this.expiredSeconds = expiredSeconds;
         return this;
     }
@@ -115,7 +131,7 @@ public class PushTemplateRequest extends TeaModel {
         return this.expiredSeconds;
     }
 
-    public PushTemplateRequest setExtendedParams(String extendedParams) {
+    public PushBroadcastShrinkRequest setExtendedParams(String extendedParams) {
         this.extendedParams = extendedParams;
         return this;
     }
@@ -123,7 +139,7 @@ public class PushTemplateRequest extends TeaModel {
         return this.extendedParams;
     }
 
-    public PushTemplateRequest setMiChannelId(String miChannelId) {
+    public PushBroadcastShrinkRequest setMiChannelId(String miChannelId) {
         this.miChannelId = miChannelId;
         return this;
     }
@@ -131,7 +147,15 @@ public class PushTemplateRequest extends TeaModel {
         return this.miChannelId;
     }
 
-    public PushTemplateRequest setNotifyType(String notifyType) {
+    public PushBroadcastShrinkRequest setMsgkey(String msgkey) {
+        this.msgkey = msgkey;
+        return this;
+    }
+    public String getMsgkey() {
+        return this.msgkey;
+    }
+
+    public PushBroadcastShrinkRequest setNotifyType(String notifyType) {
         this.notifyType = notifyType;
         return this;
     }
@@ -139,7 +163,7 @@ public class PushTemplateRequest extends TeaModel {
         return this.notifyType;
     }
 
-    public PushTemplateRequest setPushAction(Long pushAction) {
+    public PushBroadcastShrinkRequest setPushAction(Long pushAction) {
         this.pushAction = pushAction;
         return this;
     }
@@ -147,7 +171,15 @@ public class PushTemplateRequest extends TeaModel {
         return this.pushAction;
     }
 
-    public PushTemplateRequest setSilent(Long silent) {
+    public PushBroadcastShrinkRequest setPushStatus(Long pushStatus) {
+        this.pushStatus = pushStatus;
+        return this;
+    }
+    public Long getPushStatus() {
+        return this.pushStatus;
+    }
+
+    public PushBroadcastShrinkRequest setSilent(Long silent) {
         this.silent = silent;
         return this;
     }
@@ -155,39 +187,7 @@ public class PushTemplateRequest extends TeaModel {
         return this.silent;
     }
 
-    public PushTemplateRequest setSmsSignName(String smsSignName) {
-        this.smsSignName = smsSignName;
-        return this;
-    }
-    public String getSmsSignName() {
-        return this.smsSignName;
-    }
-
-    public PushTemplateRequest setSmsStrategy(Integer smsStrategy) {
-        this.smsStrategy = smsStrategy;
-        return this;
-    }
-    public Integer getSmsStrategy() {
-        return this.smsStrategy;
-    }
-
-    public PushTemplateRequest setSmsTemplateCode(String smsTemplateCode) {
-        this.smsTemplateCode = smsTemplateCode;
-        return this;
-    }
-    public String getSmsTemplateCode() {
-        return this.smsTemplateCode;
-    }
-
-    public PushTemplateRequest setSmsTemplateParam(String smsTemplateParam) {
-        this.smsTemplateParam = smsTemplateParam;
-        return this;
-    }
-    public String getSmsTemplateParam() {
-        return this.smsTemplateParam;
-    }
-
-    public PushTemplateRequest setStrategyContent(String strategyContent) {
+    public PushBroadcastShrinkRequest setStrategyContent(String strategyContent) {
         this.strategyContent = strategyContent;
         return this;
     }
@@ -195,7 +195,7 @@ public class PushTemplateRequest extends TeaModel {
         return this.strategyContent;
     }
 
-    public PushTemplateRequest setStrategyType(Integer strategyType) {
+    public PushBroadcastShrinkRequest setStrategyType(Integer strategyType) {
         this.strategyType = strategyType;
         return this;
     }
@@ -203,15 +203,7 @@ public class PushTemplateRequest extends TeaModel {
         return this.strategyType;
     }
 
-    public PushTemplateRequest setTargetMsgkey(String targetMsgkey) {
-        this.targetMsgkey = targetMsgkey;
-        return this;
-    }
-    public String getTargetMsgkey() {
-        return this.targetMsgkey;
-    }
-
-    public PushTemplateRequest setTaskName(String taskName) {
+    public PushBroadcastShrinkRequest setTaskName(String taskName) {
         this.taskName = taskName;
         return this;
     }
@@ -219,7 +211,7 @@ public class PushTemplateRequest extends TeaModel {
         return this.taskName;
     }
 
-    public PushTemplateRequest setTemplateKeyValue(String templateKeyValue) {
+    public PushBroadcastShrinkRequest setTemplateKeyValue(String templateKeyValue) {
         this.templateKeyValue = templateKeyValue;
         return this;
     }
@@ -227,7 +219,7 @@ public class PushTemplateRequest extends TeaModel {
         return this.templateKeyValue;
     }
 
-    public PushTemplateRequest setTemplateName(String templateName) {
+    public PushBroadcastShrinkRequest setTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
@@ -235,15 +227,23 @@ public class PushTemplateRequest extends TeaModel {
         return this.templateName;
     }
 
-    public PushTemplateRequest setThirdChannelCategory(java.util.Map<String, ?> thirdChannelCategory) {
-        this.thirdChannelCategory = thirdChannelCategory;
+    public PushBroadcastShrinkRequest setThirdChannelCategoryShrink(String thirdChannelCategoryShrink) {
+        this.thirdChannelCategoryShrink = thirdChannelCategoryShrink;
         return this;
     }
-    public java.util.Map<String, ?> getThirdChannelCategory() {
-        return this.thirdChannelCategory;
+    public String getThirdChannelCategoryShrink() {
+        return this.thirdChannelCategoryShrink;
     }
 
-    public PushTemplateRequest setWorkspaceId(String workspaceId) {
+    public PushBroadcastShrinkRequest setUnBindPeriod(Long unBindPeriod) {
+        this.unBindPeriod = unBindPeriod;
+        return this;
+    }
+    public Long getUnBindPeriod() {
+        return this.unBindPeriod;
+    }
+
+    public PushBroadcastShrinkRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }

@@ -7,6 +7,12 @@ public class ListMcubeUpgradePackagesRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("PageNum")
+    public Integer pageNum;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("TenantId")
     public String tenantId;
 
@@ -24,6 +30,22 @@ public class ListMcubeUpgradePackagesRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public ListMcubeUpgradePackagesRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public ListMcubeUpgradePackagesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListMcubeUpgradePackagesRequest setTenantId(String tenantId) {

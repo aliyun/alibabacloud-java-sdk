@@ -60,9 +60,6 @@ public class UploadBitcodeToMsaResponseBody extends TeaModel {
         @NameInMap("Data")
         public String data;
 
-        @NameInMap("Extra")
-        public String extra;
-
         @NameInMap("Message")
         public String message;
 
@@ -88,14 +85,6 @@ public class UploadBitcodeToMsaResponseBody extends TeaModel {
         }
         public String getData() {
             return this.data;
-        }
-
-        public UploadBitcodeToMsaResponseBodyResultContent setExtra(String extra) {
-            this.extra = extra;
-            return this;
-        }
-        public String getExtra() {
-            return this.extra;
         }
 
         public UploadBitcodeToMsaResponseBodyResultContent setMessage(String message) {

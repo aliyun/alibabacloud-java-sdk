@@ -117,8 +117,17 @@ public class ListMcubeMiniAppsResponseBody extends TeaModel {
     }
 
     public static class ListMcubeMiniAppsResponseBodyListMiniResult extends TeaModel {
+        @NameInMap("CurrentPage")
+        public Integer currentPage;
+
+        @NameInMap("HasMore")
+        public Boolean hasMore;
+
         @NameInMap("MiniProgramList")
         public java.util.List<ListMcubeMiniAppsResponseBodyListMiniResultMiniProgramList> miniProgramList;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
 
         @NameInMap("ResultMsg")
         public String resultMsg;
@@ -126,9 +135,28 @@ public class ListMcubeMiniAppsResponseBody extends TeaModel {
         @NameInMap("Success")
         public Boolean success;
 
+        @NameInMap("TotalCount")
+        public Long totalCount;
+
         public static ListMcubeMiniAppsResponseBodyListMiniResult build(java.util.Map<String, ?> map) throws Exception {
             ListMcubeMiniAppsResponseBodyListMiniResult self = new ListMcubeMiniAppsResponseBodyListMiniResult();
             return TeaModel.build(map, self);
+        }
+
+        public ListMcubeMiniAppsResponseBodyListMiniResult setCurrentPage(Integer currentPage) {
+            this.currentPage = currentPage;
+            return this;
+        }
+        public Integer getCurrentPage() {
+            return this.currentPage;
+        }
+
+        public ListMcubeMiniAppsResponseBodyListMiniResult setHasMore(Boolean hasMore) {
+            this.hasMore = hasMore;
+            return this;
+        }
+        public Boolean getHasMore() {
+            return this.hasMore;
         }
 
         public ListMcubeMiniAppsResponseBodyListMiniResult setMiniProgramList(java.util.List<ListMcubeMiniAppsResponseBodyListMiniResultMiniProgramList> miniProgramList) {
@@ -137,6 +165,14 @@ public class ListMcubeMiniAppsResponseBody extends TeaModel {
         }
         public java.util.List<ListMcubeMiniAppsResponseBodyListMiniResultMiniProgramList> getMiniProgramList() {
             return this.miniProgramList;
+        }
+
+        public ListMcubeMiniAppsResponseBodyListMiniResult setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
         }
 
         public ListMcubeMiniAppsResponseBodyListMiniResult setResultMsg(String resultMsg) {
@@ -153,6 +189,14 @@ public class ListMcubeMiniAppsResponseBody extends TeaModel {
         }
         public Boolean getSuccess() {
             return this.success;
+        }
+
+        public ListMcubeMiniAppsResponseBodyListMiniResult setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
         }
 
     }

@@ -84,11 +84,20 @@ public class ListMcubeNebulaAppsResponseBody extends TeaModel {
     }
 
     public static class ListMcubeNebulaAppsResponseBodyListMcubeNebulaAppsResult extends TeaModel {
+        @NameInMap("CurrentPage")
+        public Integer currentPage;
+
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        @NameInMap("HasMore")
+        public Boolean hasMore;
+
         @NameInMap("NebulaAppInfos")
         public java.util.List<ListMcubeNebulaAppsResponseBodyListMcubeNebulaAppsResultNebulaAppInfos> nebulaAppInfos;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
 
         @NameInMap("RequestId")
         public String requestId;
@@ -99,9 +108,20 @@ public class ListMcubeNebulaAppsResponseBody extends TeaModel {
         @NameInMap("Success")
         public Boolean success;
 
+        @NameInMap("TotalCount")
+        public Long totalCount;
+
         public static ListMcubeNebulaAppsResponseBodyListMcubeNebulaAppsResult build(java.util.Map<String, ?> map) throws Exception {
             ListMcubeNebulaAppsResponseBodyListMcubeNebulaAppsResult self = new ListMcubeNebulaAppsResponseBodyListMcubeNebulaAppsResult();
             return TeaModel.build(map, self);
+        }
+
+        public ListMcubeNebulaAppsResponseBodyListMcubeNebulaAppsResult setCurrentPage(Integer currentPage) {
+            this.currentPage = currentPage;
+            return this;
+        }
+        public Integer getCurrentPage() {
+            return this.currentPage;
         }
 
         public ListMcubeNebulaAppsResponseBodyListMcubeNebulaAppsResult setErrorCode(String errorCode) {
@@ -112,12 +132,28 @@ public class ListMcubeNebulaAppsResponseBody extends TeaModel {
             return this.errorCode;
         }
 
+        public ListMcubeNebulaAppsResponseBodyListMcubeNebulaAppsResult setHasMore(Boolean hasMore) {
+            this.hasMore = hasMore;
+            return this;
+        }
+        public Boolean getHasMore() {
+            return this.hasMore;
+        }
+
         public ListMcubeNebulaAppsResponseBodyListMcubeNebulaAppsResult setNebulaAppInfos(java.util.List<ListMcubeNebulaAppsResponseBodyListMcubeNebulaAppsResultNebulaAppInfos> nebulaAppInfos) {
             this.nebulaAppInfos = nebulaAppInfos;
             return this;
         }
         public java.util.List<ListMcubeNebulaAppsResponseBodyListMcubeNebulaAppsResultNebulaAppInfos> getNebulaAppInfos() {
             return this.nebulaAppInfos;
+        }
+
+        public ListMcubeNebulaAppsResponseBodyListMcubeNebulaAppsResult setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
         }
 
         public ListMcubeNebulaAppsResponseBodyListMcubeNebulaAppsResult setRequestId(String requestId) {
@@ -142,6 +178,14 @@ public class ListMcubeNebulaAppsResponseBody extends TeaModel {
         }
         public Boolean getSuccess() {
             return this.success;
+        }
+
+        public ListMcubeNebulaAppsResponseBodyListMcubeNebulaAppsResult setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
         }
 
     }

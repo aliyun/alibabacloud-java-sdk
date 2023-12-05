@@ -3,7 +3,7 @@ package com.aliyun.mpaas20201028.models;
 
 import com.aliyun.tea.*;
 
-public class QueryMPCDUploadInfoResponse extends TeaModel {
+public class MTRSOCRServiceResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class QueryMPCDUploadInfoResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public QueryMPCDUploadInfoResponseBody body;
+    public MTRSOCRServiceResponseBody body;
 
-    public static QueryMPCDUploadInfoResponse build(java.util.Map<String, ?> map) throws Exception {
-        QueryMPCDUploadInfoResponse self = new QueryMPCDUploadInfoResponse();
+    public static MTRSOCRServiceResponse build(java.util.Map<String, ?> map) throws Exception {
+        MTRSOCRServiceResponse self = new MTRSOCRServiceResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryMPCDUploadInfoResponse setHeaders(java.util.Map<String, String> headers) {
+    public MTRSOCRServiceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class QueryMPCDUploadInfoResponse extends TeaModel {
         return this.headers;
     }
 
-    public QueryMPCDUploadInfoResponse setStatusCode(Integer statusCode) {
+    public MTRSOCRServiceResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class QueryMPCDUploadInfoResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public QueryMPCDUploadInfoResponse setBody(QueryMPCDUploadInfoResponseBody body) {
+    public MTRSOCRServiceResponse setBody(MTRSOCRServiceResponseBody body) {
         this.body = body;
         return this;
     }
-    public QueryMPCDUploadInfoResponseBody getBody() {
+    public MTRSOCRServiceResponseBody getBody() {
         return this.body;
     }
 

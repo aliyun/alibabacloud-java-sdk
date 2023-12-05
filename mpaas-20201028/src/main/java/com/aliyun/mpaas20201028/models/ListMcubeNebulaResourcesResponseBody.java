@@ -403,11 +403,20 @@ public class ListMcubeNebulaResourcesResponseBody extends TeaModel {
     }
 
     public static class ListMcubeNebulaResourcesResponseBodyListMcubeNebulaResourceResult extends TeaModel {
+        @NameInMap("CurrentPage")
+        public Integer currentPage;
+
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        @NameInMap("HasMore")
+        public Boolean hasMore;
+
         @NameInMap("NebulaResourceInfo")
         public java.util.List<ListMcubeNebulaResourcesResponseBodyListMcubeNebulaResourceResultNebulaResourceInfo> nebulaResourceInfo;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
 
         @NameInMap("RequestId")
         public String requestId;
@@ -418,9 +427,20 @@ public class ListMcubeNebulaResourcesResponseBody extends TeaModel {
         @NameInMap("Success")
         public Boolean success;
 
+        @NameInMap("TotalCount")
+        public Long totalCount;
+
         public static ListMcubeNebulaResourcesResponseBodyListMcubeNebulaResourceResult build(java.util.Map<String, ?> map) throws Exception {
             ListMcubeNebulaResourcesResponseBodyListMcubeNebulaResourceResult self = new ListMcubeNebulaResourcesResponseBodyListMcubeNebulaResourceResult();
             return TeaModel.build(map, self);
+        }
+
+        public ListMcubeNebulaResourcesResponseBodyListMcubeNebulaResourceResult setCurrentPage(Integer currentPage) {
+            this.currentPage = currentPage;
+            return this;
+        }
+        public Integer getCurrentPage() {
+            return this.currentPage;
         }
 
         public ListMcubeNebulaResourcesResponseBodyListMcubeNebulaResourceResult setErrorCode(String errorCode) {
@@ -431,12 +451,28 @@ public class ListMcubeNebulaResourcesResponseBody extends TeaModel {
             return this.errorCode;
         }
 
+        public ListMcubeNebulaResourcesResponseBodyListMcubeNebulaResourceResult setHasMore(Boolean hasMore) {
+            this.hasMore = hasMore;
+            return this;
+        }
+        public Boolean getHasMore() {
+            return this.hasMore;
+        }
+
         public ListMcubeNebulaResourcesResponseBodyListMcubeNebulaResourceResult setNebulaResourceInfo(java.util.List<ListMcubeNebulaResourcesResponseBodyListMcubeNebulaResourceResultNebulaResourceInfo> nebulaResourceInfo) {
             this.nebulaResourceInfo = nebulaResourceInfo;
             return this;
         }
         public java.util.List<ListMcubeNebulaResourcesResponseBodyListMcubeNebulaResourceResultNebulaResourceInfo> getNebulaResourceInfo() {
             return this.nebulaResourceInfo;
+        }
+
+        public ListMcubeNebulaResourcesResponseBodyListMcubeNebulaResourceResult setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
         }
 
         public ListMcubeNebulaResourcesResponseBodyListMcubeNebulaResourceResult setRequestId(String requestId) {
@@ -461,6 +497,14 @@ public class ListMcubeNebulaResourcesResponseBody extends TeaModel {
         }
         public Boolean getSuccess() {
             return this.success;
+        }
+
+        public ListMcubeNebulaResourcesResponseBodyListMcubeNebulaResourceResult setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
         }
 
     }
