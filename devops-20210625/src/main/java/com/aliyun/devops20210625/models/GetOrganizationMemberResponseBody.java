@@ -113,6 +113,9 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
         @NameInMap("identities")
         public GetOrganizationMemberResponseBodyMemberIdentities identities;
 
+        @NameInMap("jobNumber")
+        public String jobNumber;
+
         @NameInMap("joinTime")
         public Long joinTime;
 
@@ -185,6 +188,14 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
         }
         public GetOrganizationMemberResponseBodyMemberIdentities getIdentities() {
             return this.identities;
+        }
+
+        public GetOrganizationMemberResponseBodyMember setJobNumber(String jobNumber) {
+            this.jobNumber = jobNumber;
+            return this;
+        }
+        public String getJobNumber() {
+            return this.jobNumber;
         }
 
         public GetOrganizationMemberResponseBodyMember setJoinTime(Long joinTime) {

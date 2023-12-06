@@ -300,6 +300,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createBranchWithOptions(repositoryId, request, headers, runtime);
     }
 
+    public CreateCommitStatusResponse createCommitStatusWithOptions(CreateCommitStatusRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessToken)) {
+            query.put("accessToken", request.accessToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationId)) {
+            query.put("organizationId", request.organizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repositoryIdentity)) {
+            query.put("repositoryIdentity", request.repositoryIdentity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sha)) {
+            query.put("sha", request.sha);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.context)) {
+            body.put("context", request.context);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.state)) {
+            body.put("state", request.state);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetUrl)) {
+            body.put("targetUrl", request.targetUrl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCommitStatus"),
+            new TeaPair("version", "2021-06-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v4/projects/repository/commit_statuses/create_commit_status"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCommitStatusResponse());
+    }
+
+    public CreateCommitStatusResponse createCommitStatus(CreateCommitStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createCommitStatusWithOptions(request, headers, runtime);
+    }
+
     public CreateDeployKeyResponse createDeployKeyWithOptions(String repositoryId, CreateDeployKeyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3099,6 +3160,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getMergeRequestWithOptions(repositoryId, localId, request, headers, runtime);
     }
 
+    public GetMergeRequestChangeTreeResponse getMergeRequestChangeTreeWithOptions(GetMergeRequestChangeTreeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessToken)) {
+            query.put("accessToken", request.accessToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fromPatchSetBizId)) {
+            query.put("fromPatchSetBizId", request.fromPatchSetBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.localId)) {
+            query.put("localId", request.localId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationId)) {
+            query.put("organizationId", request.organizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repositoryIdentity)) {
+            query.put("repositoryIdentity", request.repositoryIdentity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toPatchSetBizId)) {
+            query.put("toPatchSetBizId", request.toPatchSetBizId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMergeRequestChangeTree"),
+            new TeaPair("version", "2021-06-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v4/projects/merge_requests/diffs/change_tree"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMergeRequestChangeTreeResponse());
+    }
+
+    public GetMergeRequestChangeTreeResponse getMergeRequestChangeTree(GetMergeRequestChangeTreeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMergeRequestChangeTreeWithOptions(request, headers, runtime);
+    }
+
     public GetOrganizationMemberResponse getOrganizationMemberWithOptions(String organizationId, String accountId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -3979,6 +4091,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.joinPipelineGroupWithOptions(organizationId, request, headers, runtime);
     }
 
+    public ListCommitStatusesResponse listCommitStatusesWithOptions(ListCommitStatusesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessToken)) {
+            query.put("accessToken", request.accessToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationId)) {
+            query.put("organizationId", request.organizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repositoryIdentity)) {
+            query.put("repositoryIdentity", request.repositoryIdentity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sha)) {
+            query.put("sha", request.sha);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCommitStatuses"),
+            new TeaPair("version", "2021-06-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v4/projects/repository/commit_statuses/list_commit_statuses"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCommitStatusesResponse());
+    }
+
+    public ListCommitStatusesResponse listCommitStatuses(ListCommitStatusesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listCommitStatusesWithOptions(request, headers, runtime);
+    }
+
     public ListFlowTagGroupsResponse listFlowTagGroupsWithOptions(String organizationId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -4146,6 +4309,165 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listHostGroupsWithOptions(organizationId, request, headers, runtime);
+    }
+
+    public ListMergeRequestCommentsResponse listMergeRequestCommentsWithOptions(ListMergeRequestCommentsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessToken)) {
+            query.put("accessToken", request.accessToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.localId)) {
+            query.put("localId", request.localId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationId)) {
+            query.put("organizationId", request.organizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repositoryIdentity)) {
+            query.put("repositoryIdentity", request.repositoryIdentity);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.commentType)) {
+            body.put("commentType", request.commentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filePath)) {
+            body.put("filePath", request.filePath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.patchSetBizIds)) {
+            body.put("patchSetBizIds", request.patchSetBizIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resolved)) {
+            body.put("resolved", request.resolved);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.state)) {
+            body.put("state", request.state);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMergeRequestComments"),
+            new TeaPair("version", "2021-06-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v4/projects/merge_requests/comments/list_comments"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMergeRequestCommentsResponse());
+    }
+
+    public ListMergeRequestCommentsResponse listMergeRequestComments(ListMergeRequestCommentsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMergeRequestCommentsWithOptions(request, headers, runtime);
+    }
+
+    public ListMergeRequestFilesReadsResponse listMergeRequestFilesReadsWithOptions(ListMergeRequestFilesReadsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessToken)) {
+            query.put("accessToken", request.accessToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fromPatchSetBizId)) {
+            query.put("fromPatchSetBizId", request.fromPatchSetBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.localId)) {
+            query.put("localId", request.localId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationId)) {
+            query.put("organizationId", request.organizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repositoryIdentity)) {
+            query.put("repositoryIdentity", request.repositoryIdentity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toPatchSetBizId)) {
+            query.put("toPatchSetBizId", request.toPatchSetBizId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMergeRequestFilesReads"),
+            new TeaPair("version", "2021-06-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v4/projects/merge_requests/diffs/files_read_infos"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMergeRequestFilesReadsResponse());
+    }
+
+    public ListMergeRequestFilesReadsResponse listMergeRequestFilesReads(ListMergeRequestFilesReadsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMergeRequestFilesReadsWithOptions(request, headers, runtime);
+    }
+
+    public ListMergeRequestPatchSetsResponse listMergeRequestPatchSetsWithOptions(ListMergeRequestPatchSetsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessToken)) {
+            query.put("accessToken", request.accessToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.localId)) {
+            query.put("localId", request.localId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationId)) {
+            query.put("organizationId", request.organizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repositoryIdentity)) {
+            query.put("repositoryIdentity", request.repositoryIdentity);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMergeRequestPatchSets"),
+            new TeaPair("version", "2021-06-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v4/projects/merge_requests/diffs/list_patchsets"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMergeRequestPatchSetsResponse());
+    }
+
+    public ListMergeRequestPatchSetsResponse listMergeRequestPatchSets(ListMergeRequestPatchSetsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMergeRequestPatchSetsWithOptions(request, headers, runtime);
     }
 
     public ListMergeRequestsResponse listMergeRequestsWithOptions(ListMergeRequestsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
