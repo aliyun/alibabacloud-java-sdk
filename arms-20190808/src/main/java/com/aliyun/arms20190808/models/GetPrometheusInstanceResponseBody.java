@@ -102,6 +102,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
     }
 
     public static class GetPrometheusInstanceResponseBodyData extends TeaModel {
+        @NameInMap("AuthToken")
+        public String authToken;
+
         /**
          * <p>The ID of the Prometheus instance.</p>
          */
@@ -131,6 +134,12 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @NameInMap("GrafanaInstanceId")
         public String grafanaInstanceId;
 
+        @NameInMap("HttpApiInterUrl")
+        public String httpApiInterUrl;
+
+        @NameInMap("HttpApiIntraUrl")
+        public String httpApiIntraUrl;
+
         /**
          * <p>The billing method. Valid values:</p>
          * <br>
@@ -140,11 +149,29 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @NameInMap("PaymentType")
         public String paymentType;
 
+        @NameInMap("PushGatewayInterUrl")
+        public String pushGatewayInterUrl;
+
+        @NameInMap("PushGatewayIntraUrl")
+        public String pushGatewayIntraUrl;
+
         /**
          * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("RemoteReadInterUrl")
+        public String remoteReadInterUrl;
+
+        @NameInMap("RemoteReadIntraUrl")
+        public String remoteReadIntraUrl;
+
+        @NameInMap("RemoteWriteInterUrl")
+        public String remoteWriteInterUrl;
+
+        @NameInMap("RemoteWriteIntraUrl")
+        public String remoteWriteIntraUrl;
 
         /**
          * <p>The ID of the resource group to which the instance belongs.</p>
@@ -199,6 +226,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetPrometheusInstanceResponseBodyData setAuthToken(String authToken) {
+            this.authToken = authToken;
+            return this;
+        }
+        public String getAuthToken() {
+            return this.authToken;
+        }
+
         public GetPrometheusInstanceResponseBodyData setClusterId(String clusterId) {
             this.clusterId = clusterId;
             return this;
@@ -231,6 +266,22 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             return this.grafanaInstanceId;
         }
 
+        public GetPrometheusInstanceResponseBodyData setHttpApiInterUrl(String httpApiInterUrl) {
+            this.httpApiInterUrl = httpApiInterUrl;
+            return this;
+        }
+        public String getHttpApiInterUrl() {
+            return this.httpApiInterUrl;
+        }
+
+        public GetPrometheusInstanceResponseBodyData setHttpApiIntraUrl(String httpApiIntraUrl) {
+            this.httpApiIntraUrl = httpApiIntraUrl;
+            return this;
+        }
+        public String getHttpApiIntraUrl() {
+            return this.httpApiIntraUrl;
+        }
+
         public GetPrometheusInstanceResponseBodyData setPaymentType(String paymentType) {
             this.paymentType = paymentType;
             return this;
@@ -239,12 +290,60 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             return this.paymentType;
         }
 
+        public GetPrometheusInstanceResponseBodyData setPushGatewayInterUrl(String pushGatewayInterUrl) {
+            this.pushGatewayInterUrl = pushGatewayInterUrl;
+            return this;
+        }
+        public String getPushGatewayInterUrl() {
+            return this.pushGatewayInterUrl;
+        }
+
+        public GetPrometheusInstanceResponseBodyData setPushGatewayIntraUrl(String pushGatewayIntraUrl) {
+            this.pushGatewayIntraUrl = pushGatewayIntraUrl;
+            return this;
+        }
+        public String getPushGatewayIntraUrl() {
+            return this.pushGatewayIntraUrl;
+        }
+
         public GetPrometheusInstanceResponseBodyData setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetPrometheusInstanceResponseBodyData setRemoteReadInterUrl(String remoteReadInterUrl) {
+            this.remoteReadInterUrl = remoteReadInterUrl;
+            return this;
+        }
+        public String getRemoteReadInterUrl() {
+            return this.remoteReadInterUrl;
+        }
+
+        public GetPrometheusInstanceResponseBodyData setRemoteReadIntraUrl(String remoteReadIntraUrl) {
+            this.remoteReadIntraUrl = remoteReadIntraUrl;
+            return this;
+        }
+        public String getRemoteReadIntraUrl() {
+            return this.remoteReadIntraUrl;
+        }
+
+        public GetPrometheusInstanceResponseBodyData setRemoteWriteInterUrl(String remoteWriteInterUrl) {
+            this.remoteWriteInterUrl = remoteWriteInterUrl;
+            return this;
+        }
+        public String getRemoteWriteInterUrl() {
+            return this.remoteWriteInterUrl;
+        }
+
+        public GetPrometheusInstanceResponseBodyData setRemoteWriteIntraUrl(String remoteWriteIntraUrl) {
+            this.remoteWriteIntraUrl = remoteWriteIntraUrl;
+            return this;
+        }
+        public String getRemoteWriteIntraUrl() {
+            return this.remoteWriteIntraUrl;
         }
 
         public GetPrometheusInstanceResponseBodyData setResourceGroupId(String resourceGroupId) {
