@@ -4,6 +4,9 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class Product extends TeaModel {
+    @NameInMap("brandName")
+    public String brandName;
+
     @NameInMap("canSell")
     public Boolean canSell;
 
@@ -70,6 +73,14 @@ public class Product extends TeaModel {
     public static Product build(java.util.Map<String, ?> map) throws Exception {
         Product self = new Product();
         return TeaModel.build(map, self);
+    }
+
+    public Product setBrandName(String brandName) {
+        this.brandName = brandName;
+        return this;
+    }
+    public String getBrandName() {
+        return this.brandName;
     }
 
     public Product setCanSell(Boolean canSell) {

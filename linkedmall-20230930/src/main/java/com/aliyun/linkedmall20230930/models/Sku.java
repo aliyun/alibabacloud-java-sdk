@@ -4,6 +4,9 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class Sku extends TeaModel {
+    @NameInMap("barcode")
+    public String barcode;
+
     @NameInMap("canSell")
     public Boolean canSell;
 
@@ -52,6 +55,14 @@ public class Sku extends TeaModel {
     public static Sku build(java.util.Map<String, ?> map) throws Exception {
         Sku self = new Sku();
         return TeaModel.build(map, self);
+    }
+
+    public Sku setBarcode(String barcode) {
+        this.barcode = barcode;
+        return this;
+    }
+    public String getBarcode() {
+        return this.barcode;
     }
 
     public Sku setCanSell(Boolean canSell) {
