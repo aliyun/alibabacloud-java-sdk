@@ -5638,12 +5638,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   If the removal of a specified number of ECS instances from a scaling group causes the total number of ECS instances in the scaling group to drop below the minimum number of instances allowed, Auto Scaling removes only a specific number of ECS instances to ensure that the total number of instances is equal to the minimum number of instances.
       * A successful call indicates that Auto Scaling accepts the request. However, the scaling activity may still fail. You can obtain the status of a scaling activity by using the value of the `ScalingActivityId` parameter in the response.
       *
-      * @param request ScaleWithAdjustmentRequest
+      * @param tmpReq ScaleWithAdjustmentRequest
       * @param runtime runtime options for this request RuntimeOptions
       * @return ScaleWithAdjustmentResponse
      */
-    public ScaleWithAdjustmentResponse scaleWithAdjustmentWithOptions(ScaleWithAdjustmentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ScaleWithAdjustmentResponse scaleWithAdjustmentWithOptions(ScaleWithAdjustmentRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ScaleWithAdjustmentShrinkRequest request = new ScaleWithAdjustmentShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.overrides)) {
+            request.overridesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.overrides, "Overrides", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.adjustmentType)) {
             query.put("AdjustmentType", request.adjustmentType);
@@ -5659,6 +5665,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.minAdjustmentMagnitude)) {
             query.put("MinAdjustmentMagnitude", request.minAdjustmentMagnitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.overridesShrink)) {
+            query.put("Overrides", request.overridesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
