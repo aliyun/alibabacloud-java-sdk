@@ -118,6 +118,9 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
     }
 
     public static class GetOrderBaseInfoResponseBodyOrderBaseInfo extends TeaModel {
+        /**
+         * <p>The Key of the ticket attachment. This information is returned only when an attachment is uploaded when a ticket is created.</p>
+         */
         @NameInMap("AttachmentKey")
         public String attachmentKey;
 
@@ -157,6 +160,9 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
         @NameInMap("OrderId")
         public Long orderId;
 
+        /**
+         * <p>The original file name of the ticket attachment. This information is returned only when an attachment is uploaded when a ticket is created.</p>
+         */
         @NameInMap("OriginAttachmentName")
         public String originAttachmentName;
 

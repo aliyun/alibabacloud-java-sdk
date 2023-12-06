@@ -23,7 +23,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public ListInstancesResponseBodyInstanceList instanceList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -31,8 +31,8 @@ public class ListInstancesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>- **true**: The request was successful.</p>
-     * <p>- **false**: The request failed.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -146,7 +146,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String groupMode;
 
         /**
-         * <p>The name of the security rule set corresponding to the control mode.</p>
+         * <p>The name of the security rule corresponding to the control mode.</p>
          */
         @NameInMap("GroupName")
         public String groupName;
@@ -182,7 +182,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String dataLinkName;
 
         /**
-         * <p>The password that is used to log on to the database.</p>
+         * <p>The password that is used to log on to the database instance.</p>
          */
         @NameInMap("DatabasePassword")
         public String databasePassword;
@@ -194,13 +194,13 @@ public class ListInstancesResponseBody extends TeaModel {
         public String databaseUser;
 
         /**
-         * <p>The ID of the database administrator (DBA) for the database instance.</p>
+         * <p>The ID of the database administrator (DBA) of the database instance.</p>
          */
         @NameInMap("DbaId")
         public String dbaId;
 
         /**
-         * <p>The nickname of the DBA for the database instance.</p>
+         * <p>The nickname of the DBA of the instance.</p>
          */
         @NameInMap("DbaNickName")
         public String dbaNickName;
@@ -226,14 +226,14 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * <p>The type of the environment to which the database instance belongs. Valid values:</p>
          * <br>
-         * <p>*   **product**: production environment</p>
+         * <p>*   **product:** production environment</p>
          * <p>*   **dev**: development environment</p>
-         * <p>*   **pre**: staging environment</p>
+         * <p>*   **pre**: pre-release environment</p>
          * <p>*   **test**: test environment</p>
          * <p>*   **sit**: SIT environment</p>
          * <p>*   **uat**: UAT environment</p>
          * <p>*   **pet**: stress testing environment</p>
-         * <p>*   **stag**: STAG environment</p>
+         * <p>*   **stag:** staging environment</p>
          */
         @NameInMap("EnvType")
         public String envType;
@@ -257,7 +257,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceAlias;
 
         /**
-         * <p>The ID of the database instance.</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -275,13 +275,13 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The ID of the owner for the database instance.</p>
+         * <p>The IDs of the owners of the database instance.</p>
          */
         @NameInMap("OwnerIdList")
         public ListInstancesResponseBodyInstanceListInstanceOwnerIdList ownerIdList;
 
         /**
-         * <p>The nickname of the owner for the database instance.</p>
+         * <p>The nicknames of the owners of the database instance.</p>
          */
         @NameInMap("OwnerNameList")
         public ListInstancesResponseBodyInstanceListInstanceOwnerNameList ownerNameList;
@@ -299,11 +299,17 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer queryTimeout;
 
         /**
-         * <p>The ID of the security rule set for the database instance.</p>
+         * <p>The ID of the security rule set of the database instance.</p>
          */
         @NameInMap("SafeRuleId")
         public String safeRuleId;
 
+        /**
+         * <p>Indicates whether the sensitive data protection feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("SellSitd")
         public Boolean sellSitd;
 
@@ -329,7 +335,7 @@ public class ListInstancesResponseBody extends TeaModel {
          * <p>Indicates whether the cross-database query feature is enabled for the database instance. Valid values:</p>
          * <br>
          * <p>*   **0**: disabled</p>
-         * <p>*   **1**: enabled</p>
+         * <p>*   **1:**: enabled</p>
          */
         @NameInMap("UseDsql")
         public Integer useDsql;

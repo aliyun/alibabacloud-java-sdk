@@ -13,14 +13,14 @@ public class ListInstancesRequest extends TeaModel {
     /**
      * <p>The type of the environment to which the database instance belongs. Valid values:</p>
      * <br>
-     * <p>*   **product**: production environment</p>
+     * <p>*   **product:** production environment</p>
      * <p>*   **dev**: development environment</p>
-     * <p>*   **pre**: staging environment</p>
+     * <p>*   **pre**: pre-release environment</p>
      * <p>*   **test**: test environment</p>
      * <p>*   **sit**: system integration testing (SIT) environment</p>
      * <p>*   **uat**: user acceptance testing (UAT) environment</p>
      * <p>*   **pet**: stress testing environment</p>
-     * <p>*   **stag**: STAG environment</p>
+     * <p>*   **stag:** staging environment</p>
      */
     @NameInMap("EnvType")
     public String envType;
@@ -39,8 +39,8 @@ public class ListInstancesRequest extends TeaModel {
     /**
      * <p>The status of the database instance. Valid values:</p>
      * <br>
-     * <p>*   **NORMAL**: normal</p>
-     * <p>*   **DISABLE**: disabled</p>
+     * <p>*   **NORMAL**</p>
+     * <p>*   **DISABLE**</p>
      */
     @NameInMap("InstanceState")
     public String instanceState;
@@ -48,8 +48,8 @@ public class ListInstancesRequest extends TeaModel {
     /**
      * <p>The network type of the database instance. Valid values:</p>
      * <br>
-     * <p>*   **CLASSIC**: classic network</p>
-     * <p>*   **VPC**: VPC</p>
+     * <p>*   **CLASSIC:** classic network</p>
+     * <p>*   **VPC:** VPC</p>
      */
     @NameInMap("NetType")
     public String netType;

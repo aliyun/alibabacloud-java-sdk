@@ -4,18 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class AnalyzeSQLLineageResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>Returned data set of SQL lineage.</p>
+     */
     @NameInMap("LineageResult")
     public AnalyzeSQLLineageResponseBodyLineageResult lineageResult;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +83,18 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
     }
 
     public static class AnalyzeSQLLineageResponseBodyLineageResultLineagesProcessDetail extends TeaModel {
+        /**
+         * <p>The calculating method. Valid values:</p>
+         * <br>
+         * <p>*   **DIRECT**: No function or expression is used.</p>
+         * <p>*   **EXPR**: A function or expression is used.</p>
+         */
         @NameInMap("CalWay")
         public String calWay;
 
+        /**
+         * <p>The SQL code snippet for field processing.</p>
+         */
         @NameInMap("Code")
         public String code;
 
@@ -95,18 +122,42 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
     }
 
     public static class AnalyzeSQLLineageResponseBodyLineageResultLineages extends TeaModel {
+        /**
+         * <p>The target.</p>
+         */
         @NameInMap("Dst")
         public String dst;
 
+        /**
+         * <p>The type of the lineage. Valid values:</p>
+         * <br>
+         * <p>*   **FIELD_DEPEND_FIELD**: Fields depend on fields.</p>
+         * <p>*   **TABLE_DEPEND_TABLE**: Tables depend on tables.</p>
+         * <p>*   **FIELD_INFLU_TABLE**: Fields influence tables.</p>
+         * <p>*   **FIELD_INFLU_FIELD**: Fields influence fields.</p>
+         * <p>*   **FIELD_INFLU_TABLE**: Tables influence fields.</p>
+         * <p>*   **FIELD_JOIN_FIELD**: Fields are associated with fields.</p>
+         */
         @NameInMap("LineageType")
         public String lineageType;
 
+        /**
+         * <p>The operation type of the SQL statement in which the data lineage is generated. For example, if the operation type is SELECT, the data lineage is generated from a SELECT statement.</p>
+         * <br>
+         * <p>>  This field is an extended field which has no practical use.</p>
+         */
         @NameInMap("OperType")
         public String operType;
 
+        /**
+         * <p>The handling details. This parameter is returned only when LineageType is FIELD_DEPEND_FIELD.</p>
+         */
         @NameInMap("ProcessDetail")
         public AnalyzeSQLLineageResponseBodyLineageResultLineagesProcessDetail processDetail;
 
+        /**
+         * <p>The source.</p>
+         */
         @NameInMap("Src")
         public String src;
 
@@ -158,6 +209,9 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
     }
 
     public static class AnalyzeSQLLineageResponseBodyLineageResultObjectMetadataFields extends TeaModel {
+        /**
+         * <p>The name of the field.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -177,15 +231,34 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
     }
 
     public static class AnalyzeSQLLineageResponseBodyLineageResultObjectMetadata extends TeaModel {
+        /**
+         * <p>The fields in the metatable.</p>
+         */
         @NameInMap("Fields")
         public java.util.List<AnalyzeSQLLineageResponseBodyLineageResultObjectMetadataFields> fields;
 
+        /**
+         * <p>The object name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The source of metadata. Valid values:</p>
+         * <br>
+         * <p>*   **DDL**: The metadata comes from parsed SQL statements or definition of databases and tables collected by DMS.</p>
+         * <p>*   **LINEAGE**: The metadata comes from lineage analysis results.</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The object type. Valid values:</p>
+         * <br>
+         * <p>*   **TABLE**</p>
+         * <p>*   **VIEW**</p>
+         * <p>*   **TMP_TABLE**</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -229,9 +302,15 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
     }
 
     public static class AnalyzeSQLLineageResponseBodyLineageResult extends TeaModel {
+        /**
+         * <p>The details about the lineage.</p>
+         */
         @NameInMap("Lineages")
         public java.util.List<AnalyzeSQLLineageResponseBodyLineageResultLineages> lineages;
 
+        /**
+         * <p>The table and field metadata information.</p>
+         */
         @NameInMap("ObjectMetadata")
         public java.util.List<AnalyzeSQLLineageResponseBodyLineageResultObjectMetadata> objectMetadata;
 

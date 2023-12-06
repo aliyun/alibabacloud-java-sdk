@@ -4,18 +4,36 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>Indicates the result of the precheck task.</p>
+     */
     @NameInMap("PreCheckResult")
     public GetDataExportPreCheckDetailResponseBodyPreCheckResult preCheckResult;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +83,15 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
     }
 
     public static class GetDataExportPreCheckDetailResponseBodyPreCheckResultPreCheckDetailListPreCheckDetailList extends TeaModel {
+        /**
+         * <p>The estimated number of data rows to be affected.</p>
+         */
         @NameInMap("AffectRows")
         public Long affectRows;
 
+        /**
+         * <p>The SQL statement.</p>
+         */
         @NameInMap("SQL")
         public String SQL;
 
@@ -114,9 +138,18 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
     }
 
     public static class GetDataExportPreCheckDetailResponseBodyPreCheckResult extends TeaModel {
+        /**
+         * <p>Specifies whether to skip verification. Valid values:</p>
+         * <br>
+         * <p>- true</p>
+         * <p>- false</p>
+         */
         @NameInMap("IgnoreAffectRows")
         public Boolean ignoreAffectRows;
 
+        /**
+         * <p>The list of pre-check details.</p>
+         */
         @NameInMap("PreCheckDetailList")
         public GetDataExportPreCheckDetailResponseBodyPreCheckResultPreCheckDetailList preCheckDetailList;
 

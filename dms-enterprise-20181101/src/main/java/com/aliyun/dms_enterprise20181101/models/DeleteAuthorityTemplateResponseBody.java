@@ -3,40 +3,28 @@ package com.aliyun.dms_enterprise20181101.models;
 
 import com.aliyun.tea.*;
 
-public class ApproveOrderResponseBody extends TeaModel {
-    /**
-     * <p>The error code returned.</p>
-     */
+public class DeleteAuthorityTemplateResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message returned.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The request ID.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
-    public static ApproveOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ApproveOrderResponseBody self = new ApproveOrderResponseBody();
+    @NameInMap("Tid")
+    public Long tid;
+
+    public static DeleteAuthorityTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteAuthorityTemplateResponseBody self = new DeleteAuthorityTemplateResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ApproveOrderResponseBody setErrorCode(String errorCode) {
+    public DeleteAuthorityTemplateResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -44,7 +32,7 @@ public class ApproveOrderResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public ApproveOrderResponseBody setErrorMessage(String errorMessage) {
+    public DeleteAuthorityTemplateResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -52,7 +40,7 @@ public class ApproveOrderResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public ApproveOrderResponseBody setRequestId(String requestId) {
+    public DeleteAuthorityTemplateResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -60,12 +48,20 @@ public class ApproveOrderResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ApproveOrderResponseBody setSuccess(Boolean success) {
+    public DeleteAuthorityTemplateResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public DeleteAuthorityTemplateResponseBody setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
     }
 
 }

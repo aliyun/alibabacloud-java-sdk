@@ -5,36 +5,43 @@ import com.aliyun.tea.*;
 
 public class ModifyDesensitizationStrategyRequest extends TeaModel {
     /**
-     * <p>The name of the field. You can call the [ListSensitiveColumns](~~188103~~) operation to query the field name.</p>
+     * <p>The name of the field. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the field name.</p>
      * <br>
-     * <p>>  You can also call the [ListColumns](~~141870~~) operation to query the field name.</p>
+     * <p>>  You can also call the [ListColumns](~~141870~~) operation to obtain the field name.</p>
      */
     @NameInMap("ColumnName")
     public String columnName;
 
     /**
-     * <p>The ID of the database. You can call the [ListDatabases](~~141873~~) operation to query the ID.</p>
+     * <p>The ID of the database. You can call the [ListDatabases](~~141873~~) operation to obtain the ID.</p>
      */
     @NameInMap("DbId")
     public Integer dbId;
 
+    /**
+     * <p>The desensitization algorithm of the field setting. The default value is false. The values are as follows:</p>
+     * <br>
+     * <p>- **true**: default desensitization algorithm.</p>
+     * <br>
+     * <p>- **false** :semi-desensitization algorithm.</p>
+     */
     @NameInMap("IsDefault")
     public Boolean isDefault;
 
     /**
      * <p>Specifies whether the database is a logical database. Valid values:</p>
      * <br>
-     * <p>*   **true:** The database is a physical database.</p>
-     * <p>*   **false:** The database is a logical database.</p>
+     * <p>*   **true**: The database is a physical database.</p>
+     * <p>*   **false**: The database is a logical database.</p>
      */
     @NameInMap("IsLogic")
     public Boolean isLogic;
 
     /**
-     * <p>Specifies whether to reset the masking rule. Valid values:</p>
+     * <p>Specifies whether to reset the masking rule. Valid value:</p>
      * <br>
-     * <p>*   **true**: resets the masking rule.</p>
-     * <p>*   **false**: does not reset the masking rule. This is the default value.</p>
+     * <p>*   **true**: Reset the masking rule.</p>
+     * <p>*   **false**: Do not reset the masking rule. This is the default value.</p>
      */
     @NameInMap("IsReset")
     public Boolean isReset;
@@ -46,18 +53,21 @@ public class ModifyDesensitizationStrategyRequest extends TeaModel {
     public Integer ruleId;
 
     /**
-     * <p>The name of the database. You can call the [ListSensitiveColumns](~~188103~~) operation to query the database name.</p>
+     * <p>The name of the database. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the database name.</p>
      * <br>
-     * <p>> * If the database is a physical database, you can call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to query the database name.</p>
-     * <p>> * If the database is a logical database, you can call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation to query the database name.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   If the database is a physical database, you can call the [ListDatabases](~~141873~~) or [SearchDatabase](~~141876~~) operation to obtain the database name.</p>
+     * <br>
+     * <p>*   If the database is a logical database, you can call the [ListLogicDatabases](~~141874~~) or [SearchDatabase](~~141876~~) operation to obtain the name of the database.</p>
      */
     @NameInMap("SchemaName")
     public String schemaName;
 
     /**
-     * <p>The name of the table. You can call the [ListSensitiveColumns](~~188103~~) operation to query the table name.</p>
+     * <p>The name of the table. You can call the [ListSensitiveColumns](~~188103~~) operation to obtain the table name.</p>
      * <br>
-     * <p>>  You can also call the [ListTables](~~141878~~) operation to query the table name.</p>
+     * <p>>  You can also call the [ListTables](~~141878~~) operation to obtain the table name.</p>
      */
     @NameInMap("TableName")
     public String tableName;
@@ -65,7 +75,7 @@ public class ModifyDesensitizationStrategyRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
      * <br>
-     * <p>>  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~).</p>
+     * <p>>  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~) in the topic "Manage DMS tenants."</p>
      */
     @NameInMap("Tid")
     public Long tid;

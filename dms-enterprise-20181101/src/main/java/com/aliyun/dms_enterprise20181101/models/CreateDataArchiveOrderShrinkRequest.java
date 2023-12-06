@@ -4,21 +4,39 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateDataArchiveOrderShrinkRequest extends TeaModel {
+    /**
+     * <p>The description of the task.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The parameters for archiving data.</p>
+     */
     @NameInMap("Param")
     public String paramShrink;
 
+    /**
+     * <p>The ID of the parent ticket. A parent ticket is generated only when a sub ticket is created.</p>
+     */
     @NameInMap("ParentId")
     public Long parentId;
 
+    /**
+     * <p>The plugin type. Default value: DATA_ARCHIVE.</p>
+     */
     @NameInMap("PluginType")
     public String pluginType;
 
+    /**
+     * <p>The list of the related users.</p>
+     */
     @NameInMap("RelatedUserList")
     public String relatedUserListShrink;
 
+    /**
+     * <p>The tenant ID. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

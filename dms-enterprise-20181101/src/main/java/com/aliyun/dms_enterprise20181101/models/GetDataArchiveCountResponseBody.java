@@ -4,12 +4,24 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetDataArchiveCountResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetDataArchiveCountResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,15 +55,27 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
     }
 
     public static class GetDataArchiveCountResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of failed archiving tickets.</p>
+         */
         @NameInMap("FailCount")
         public Long failCount;
 
+        /**
+         * <p>The number of in-progress archiving tickets.</p>
+         */
         @NameInMap("ProcessingCount")
         public Long processingCount;
 
+        /**
+         * <p>The number of successful archiving tickets.</p>
+         */
         @NameInMap("SuccessCount")
         public Long successCount;
 
+        /**
+         * <p>The total number of archiving tickets.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
