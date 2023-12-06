@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterRouteEntriesRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: **1** to **100**. Default value: **20**.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -25,6 +25,9 @@ public class ListTransitRouterRouteEntriesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The prefix list ID.</p>
+     */
     @NameInMap("PrefixListId")
     public String prefixListId;
 
@@ -34,22 +37,23 @@ public class ListTransitRouterRouteEntriesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The filter conditions for route CIDR blocks.</p>
+     */
     @NameInMap("RouteFilter")
     public java.util.List<ListTransitRouterRouteEntriesRequestRouteFilter> routeFilter;
 
     /**
-     * <p>The destination CIDR block of the route.</p>
+     * <p>The destination CIDR block of the route. **This parameter is to be deprecated. We recommend that you use the RouteFilter parameter**.</p>
      */
     @NameInMap("TransitRouterRouteEntryDestinationCidrBlock")
     @Deprecated
     public String transitRouterRouteEntryDestinationCidrBlock;
 
     /**
-     * <p>The route entry ID.</p>
+     * <p>The route ID.</p>
      * <br>
-     * <p>You can specify at most 20 route IDs in each call.</p>
-     * <br>
-     * <p>>  You can use only this parameter to query static routes.</p>
+     * <p>>  You can use this parameter to query only static routes in the specified route table. This parameter is incompatible with query conditions other than TransitRouterRouteEntryNames.</p>
      */
     @NameInMap("TransitRouterRouteEntryIds")
     public java.util.List<String> transitRouterRouteEntryIds;
@@ -59,41 +63,81 @@ public class ListTransitRouterRouteEntriesRequest extends TeaModel {
      * <br>
      * <p>The name must be 0 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -.</p>
      * <br>
-     * <p>You can specify at most 20 route names in each call.</p>
-     * <br>
-     * <p>>  You can use only this parameter to query static routes.</p>
+     * <p>>  You can use this parameter to query only static routes in the specified route table. This parameter is incompatible with query conditions other than TransitRouterRouteEntryIds.</p>
      */
     @NameInMap("TransitRouterRouteEntryNames")
     public java.util.List<String> transitRouterRouteEntryNames;
 
+    /**
+     * <p>The ID of the network instance connection that you want to specify as the next hop.</p>
+     */
     @NameInMap("TransitRouterRouteEntryNextHopId")
     public String transitRouterRouteEntryNextHopId;
 
+    /**
+     * <p>The next hop ID.</p>
+     */
     @NameInMap("TransitRouterRouteEntryNextHopResourceId")
     public String transitRouterRouteEntryNextHopResourceId;
 
+    /**
+     * <p>The next hop type. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**</p>
+     * <p>*   **VBR**</p>
+     * <p>*   **TR**</p>
+     * <p>*   **VPN**</p>
+     */
     @NameInMap("TransitRouterRouteEntryNextHopResourceType")
     public String transitRouterRouteEntryNextHopResourceType;
 
+    /**
+     * <p>The next hop type. Valid values:</p>
+     * <br>
+     * <p>*   **BlackHole**: routes network traffic to a black hole.</p>
+     * <p>*   **Attachment**: routes network traffic to a network instance connection.</p>
+     */
     @NameInMap("TransitRouterRouteEntryNextHopType")
     public String transitRouterRouteEntryNextHopType;
 
+    /**
+     * <p>The source instance ID.</p>
+     */
     @NameInMap("TransitRouterRouteEntryOriginResourceId")
     public String transitRouterRouteEntryOriginResourceId;
 
+    /**
+     * <p>The source instance type. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**</p>
+     * <p>*   **VBR**</p>
+     * <p>*   **TR**</p>
+     * <p>*   **VPN**</p>
+     */
     @NameInMap("TransitRouterRouteEntryOriginResourceType")
     public String transitRouterRouteEntryOriginResourceType;
 
     /**
      * <p>The status of the route. Valid values:</p>
      * <br>
-     * <p>*   **Creating**: The route is being created.</p>
-     * <p>*   **Active**: The route is available.</p>
-     * <p>*   **Deleting**: The route is being deleted.</p>
+     * <p>*   **All**</p>
+     * <p>*   **Active** (default)</p>
+     * <p>*   **Rejected**</p>
+     * <p>*   **Prohibited**</p>
+     * <p>*   **Standby**</p>
+     * <p>*   **Candidate**</p>
+     * <br>
+     * <p>If you do not specify a value, routes in the active state are queried.</p>
      */
     @NameInMap("TransitRouterRouteEntryStatus")
     public String transitRouterRouteEntryStatus;
 
+    /**
+     * <p>The route type. Valid values:</p>
+     * <br>
+     * <p>*   **Propagated**: automatically learned by the route table.</p>
+     * <p>*   **Static**: static routes.</p>
+     */
     @NameInMap("TransitRouterRouteEntryType")
     public String transitRouterRouteEntryType;
 
@@ -269,9 +313,22 @@ public class ListTransitRouterRouteEntriesRequest extends TeaModel {
     }
 
     public static class ListTransitRouterRouteEntriesRequestRouteFilter extends TeaModel {
+        /**
+         * <p>The match pattern for filtering CIDR blocks. Valid values:</p>
+         * <br>
+         * <p>*   **PrefixExactMatchCidrs**: exact matching.</p>
+         * <p>*   **LongestPrefixMatchCidrs**: longest prefix matching. The specified IP address and CIDR block are considered a match.</p>
+         * <p>*   **SubnetOfMatchCidrs**: subnet matching. The specified CIDR block is considered a match.</p>
+         * <p>*   **SupernetOfMatchCidrs**: supernet matching. The specified CIDR block is considered a match.</p>
+         * <br>
+         * <p>By default, the logical operator among filter conditions is **AND**. Information about a route entry is returned only if the route entry matches all filter conditions. Filter conditions must be unique.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The filter value.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 

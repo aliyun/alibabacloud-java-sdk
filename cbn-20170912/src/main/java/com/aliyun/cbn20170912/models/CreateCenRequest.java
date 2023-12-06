@@ -5,23 +5,27 @@ import com.aliyun.tea.*;
 
 public class CreateCenRequest extends TeaModel {
     /**
-     * <p>The tag keys of the resources.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
      * <br>
-     * <p>You can specify at most 20 tag keys.</p>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **CreateCen**.</p>
+     * <p>The description of the CEN instance.</p>
+     * <br>
+     * <p>The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the CEN instance.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -33,7 +37,9 @@ public class CreateCenRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The level of CIDR block overlapping.</p>
+     * <br>
+     * <p>Set the value to **REDUCED** (default). This value specifies that CIDR blocks can overlap but cannot be the same.</p>
      */
     @NameInMap("ProtectionLevel")
     public String protectionLevel;
@@ -45,7 +51,7 @@ public class CreateCenRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Creates a Cloud Enterprise Network (CEN) instance.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateCenRequestTag> tag;
@@ -129,13 +135,21 @@ public class CreateCenRequest extends TeaModel {
 
     public static class CreateCenRequestTag extends TeaModel {
         /**
-         * <p>CreateCen</p>
+         * <p>The tag keys of the resources.</p>
+         * <br>
+         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>You can specify at most 20 tag keys.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>WB656982</p>
+         * <p>The tag values of the resources.</p>
+         * <br>
+         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>Each tag key has a unique tag value. You can specify at most 20 tag values in each call.</p>
          */
         @NameInMap("Value")
         public String value;
