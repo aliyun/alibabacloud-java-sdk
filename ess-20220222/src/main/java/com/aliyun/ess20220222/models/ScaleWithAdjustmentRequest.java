@@ -36,6 +36,9 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
     @NameInMap("MinAdjustmentMagnitude")
     public Integer minAdjustmentMagnitude;
 
+    @NameInMap("Overrides")
+    public ScaleWithAdjustmentRequestOverrides overrides;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -98,6 +101,14 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
         return this.minAdjustmentMagnitude;
     }
 
+    public ScaleWithAdjustmentRequest setOverrides(ScaleWithAdjustmentRequestOverrides overrides) {
+        this.overrides = overrides;
+        return this;
+    }
+    public ScaleWithAdjustmentRequestOverrides getOverrides() {
+        return this.overrides;
+    }
+
     public ScaleWithAdjustmentRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -128,6 +139,151 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
     }
     public Boolean getSyncActivity() {
         return this.syncActivity;
+    }
+
+    public static class ScaleWithAdjustmentRequestOverridesContainerOverridesEnvironmentVars extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ScaleWithAdjustmentRequestOverridesContainerOverridesEnvironmentVars build(java.util.Map<String, ?> map) throws Exception {
+            ScaleWithAdjustmentRequestOverridesContainerOverridesEnvironmentVars self = new ScaleWithAdjustmentRequestOverridesContainerOverridesEnvironmentVars();
+            return TeaModel.build(map, self);
+        }
+
+        public ScaleWithAdjustmentRequestOverridesContainerOverridesEnvironmentVars setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ScaleWithAdjustmentRequestOverridesContainerOverridesEnvironmentVars setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ScaleWithAdjustmentRequestOverridesContainerOverrides extends TeaModel {
+        @NameInMap("Args")
+        public java.util.List<String> args;
+
+        @NameInMap("Commands")
+        public java.util.List<String> commands;
+
+        @NameInMap("Cpu")
+        public Float cpu;
+
+        @NameInMap("EnvironmentVars")
+        public java.util.List<ScaleWithAdjustmentRequestOverridesContainerOverridesEnvironmentVars> environmentVars;
+
+        @NameInMap("Memory")
+        public Float memory;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static ScaleWithAdjustmentRequestOverridesContainerOverrides build(java.util.Map<String, ?> map) throws Exception {
+            ScaleWithAdjustmentRequestOverridesContainerOverrides self = new ScaleWithAdjustmentRequestOverridesContainerOverrides();
+            return TeaModel.build(map, self);
+        }
+
+        public ScaleWithAdjustmentRequestOverridesContainerOverrides setArgs(java.util.List<String> args) {
+            this.args = args;
+            return this;
+        }
+        public java.util.List<String> getArgs() {
+            return this.args;
+        }
+
+        public ScaleWithAdjustmentRequestOverridesContainerOverrides setCommands(java.util.List<String> commands) {
+            this.commands = commands;
+            return this;
+        }
+        public java.util.List<String> getCommands() {
+            return this.commands;
+        }
+
+        public ScaleWithAdjustmentRequestOverridesContainerOverrides setCpu(Float cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Float getCpu() {
+            return this.cpu;
+        }
+
+        public ScaleWithAdjustmentRequestOverridesContainerOverrides setEnvironmentVars(java.util.List<ScaleWithAdjustmentRequestOverridesContainerOverridesEnvironmentVars> environmentVars) {
+            this.environmentVars = environmentVars;
+            return this;
+        }
+        public java.util.List<ScaleWithAdjustmentRequestOverridesContainerOverridesEnvironmentVars> getEnvironmentVars() {
+            return this.environmentVars;
+        }
+
+        public ScaleWithAdjustmentRequestOverridesContainerOverrides setMemory(Float memory) {
+            this.memory = memory;
+            return this;
+        }
+        public Float getMemory() {
+            return this.memory;
+        }
+
+        public ScaleWithAdjustmentRequestOverridesContainerOverrides setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class ScaleWithAdjustmentRequestOverrides extends TeaModel {
+        @NameInMap("ContainerOverrides")
+        public java.util.List<ScaleWithAdjustmentRequestOverridesContainerOverrides> containerOverrides;
+
+        @NameInMap("Cpu")
+        public Float cpu;
+
+        @NameInMap("Memory")
+        public Float memory;
+
+        public static ScaleWithAdjustmentRequestOverrides build(java.util.Map<String, ?> map) throws Exception {
+            ScaleWithAdjustmentRequestOverrides self = new ScaleWithAdjustmentRequestOverrides();
+            return TeaModel.build(map, self);
+        }
+
+        public ScaleWithAdjustmentRequestOverrides setContainerOverrides(java.util.List<ScaleWithAdjustmentRequestOverridesContainerOverrides> containerOverrides) {
+            this.containerOverrides = containerOverrides;
+            return this;
+        }
+        public java.util.List<ScaleWithAdjustmentRequestOverridesContainerOverrides> getContainerOverrides() {
+            return this.containerOverrides;
+        }
+
+        public ScaleWithAdjustmentRequestOverrides setCpu(Float cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Float getCpu() {
+            return this.cpu;
+        }
+
+        public ScaleWithAdjustmentRequestOverrides setMemory(Float memory) {
+            this.memory = memory;
+            return this;
+        }
+        public Float getMemory() {
+            return this.memory;
+        }
+
     }
 
 }
