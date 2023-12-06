@@ -31,6 +31,12 @@ public class JobSettings extends TeaModel {
     @NameInMap("ErrorMonitoringArgs")
     public String errorMonitoringArgs;
 
+    @NameInMap("JobReservedMinutes")
+    public Integer jobReservedMinutes;
+
+    @NameInMap("JobReservedPolicy")
+    public String jobReservedPolicy;
+
     @NameInMap("OversoldType")
     public String oversoldType;
 
@@ -115,6 +121,22 @@ public class JobSettings extends TeaModel {
     }
     public String getErrorMonitoringArgs() {
         return this.errorMonitoringArgs;
+    }
+
+    public JobSettings setJobReservedMinutes(Integer jobReservedMinutes) {
+        this.jobReservedMinutes = jobReservedMinutes;
+        return this;
+    }
+    public Integer getJobReservedMinutes() {
+        return this.jobReservedMinutes;
+    }
+
+    public JobSettings setJobReservedPolicy(String jobReservedPolicy) {
+        this.jobReservedPolicy = jobReservedPolicy;
+        return this;
+    }
+    public String getJobReservedPolicy() {
+        return this.jobReservedPolicy;
     }
 
     public JobSettings setOversoldType(String oversoldType) {
