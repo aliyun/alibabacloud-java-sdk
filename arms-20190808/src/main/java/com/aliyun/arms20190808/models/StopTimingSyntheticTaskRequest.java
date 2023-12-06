@@ -4,9 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class StopTimingSyntheticTaskRequest extends TeaModel {
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The task IDs.</p>
+     */
     @NameInMap("TaskIds")
     public java.util.List<String> taskIds;
 
