@@ -13,7 +13,9 @@ public class GetClusterCheckItemWarningStatisticsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The UUID of the server.</p>
+     * <p>The server UUID.</p>
+     * <br>
+     * <p>>  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the server UUID.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

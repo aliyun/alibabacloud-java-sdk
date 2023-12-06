@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetOssBucketScanStatisticRequest extends TeaModel {
+    /**
+     * <p>The names of the buckets.</p>
+     */
     @NameInMap("BucketNameList")
     public java.util.List<String> bucketNameList;
 

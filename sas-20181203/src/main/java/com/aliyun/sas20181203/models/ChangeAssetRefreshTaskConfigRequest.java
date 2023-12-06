@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeAssetRefreshTaskConfigRequest extends TeaModel {
     /**
-     * <p>The asset synchronization configurations.</p>
+     * <p>The asset synchronization configuration.</p>
      */
     @NameInMap("AssetRefreshConfigs")
     public java.util.List<ChangeAssetRefreshTaskConfigRequestAssetRefreshConfigs> assetRefreshConfigs;
@@ -38,6 +38,13 @@ public class ChangeAssetRefreshTaskConfigRequest extends TeaModel {
     }
 
     public static class ChangeAssetRefreshTaskConfigRequestAssetRefreshConfigs extends TeaModel {
+        /**
+         * <p>The configuration type. Valid values:</p>
+         * <br>
+         * <p>*   **0**: host refresh task</p>
+         * <p>*   **1**: cloud service refresh task</p>
+         * <p>*   **2**: scheduled AccessKey pair verification task</p>
+         */
         @NameInMap("RefreshConfigType")
         public Integer refreshConfigType;
 
@@ -55,22 +62,25 @@ public class ChangeAssetRefreshTaskConfigRequest extends TeaModel {
         public Integer schedulePeriod;
 
         /**
-         * <p>The status of the asset synchronization feature. Valid values:</p>
+         * <p>Specifies whether to enable the feature. Valid values:</p>
          * <br>
-         * <p>*   **1**: Asset synchronization is enabled.</p>
-         * <p>*   **0**: Asset synchronization is disabled.</p>
+         * <p>*   **1**: enables the feature.</p>
+         * <p>*   **0**: disables the feature.</p>
          */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The AccessKey ID of the scheduled AccessKey pair verification task.</p>
+         */
         @NameInMap("TargetId")
         public Long targetId;
 
         /**
-         * <p>The service provider of the cloud asset. Valid values:</p>
+         * <p>The cloud asset type. Valid values:</p>
          * <br>
          * <p>*   **3**: Tencent Cloud</p>
-         * <p>*   **4**: HUAWEI CLOUD</p>
+         * <p>*   **4**: Huawei Cloud</p>
          * <p>*   **7**: Amazon Web Services (AWS)</p>
          */
         @NameInMap("Vendor")

@@ -192,6 +192,13 @@ public class DescribeImageListBySensitiveFileRequest extends TeaModel {
     @NameInMap("SensitiveFileKey")
     public String sensitiveFileKey;
 
+    /**
+     * <p>The sensitive file status. Valid values:</p>
+     * <br>
+     * <p>*   **0**: unhandled</p>
+     * <p>*   **1**: ignored</p>
+     * <p>*   **2**: false positive</p>
+     */
     @NameInMap("Status")
     public String status;
 

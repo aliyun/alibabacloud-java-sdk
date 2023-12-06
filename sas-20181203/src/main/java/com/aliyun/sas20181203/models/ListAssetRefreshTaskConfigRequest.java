@@ -4,6 +4,13 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListAssetRefreshTaskConfigRequest extends TeaModel {
+    /**
+     * <p>The configuration type. Valid values:</p>
+     * <br>
+     * <p>*   **0**: host refresh task</p>
+     * <p>*   **1**: cloud service refresh task</p>
+     * <p>*   **2**: scheduled AccessKey pair verification task</p>
+     */
     @NameInMap("RefreshConfigType")
     public Integer refreshConfigType;
 
@@ -13,6 +20,9 @@ public class ListAssetRefreshTaskConfigRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The AccessKey ID of the scheduled AccessKey pair verification task.</p>
+     */
     @NameInMap("TargetId")
     public Long targetId;
 

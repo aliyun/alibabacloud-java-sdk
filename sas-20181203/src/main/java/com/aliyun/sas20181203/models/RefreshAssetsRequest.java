@@ -52,13 +52,13 @@ public class RefreshAssetsRequest extends TeaModel {
     public Integer cloudAssetType;
 
     /**
-     * <p>服务器厂商。取值：</p>
+     * <p>The type of the server. Valid values:</p>
      * <br>
-     * <p>- **0**：阿里云资产</p>
-     * <p>- **1**：云外资产</p>
-     * <p>- **2**：IDC资产</p>
-     * <p>- **3**、**4**、**5**、**7**：其它云资产</p>
-     * <p>- **8**：轻量级资产</p>
+     * <p>*   **0**: an asset provided by Alibaba Cloud</p>
+     * <p>*   **1**: a third-party cloud asset</p>
+     * <p>*   **2**: an asset in a data center</p>
+     * <p>*   **3**, **4**, **5**, and **7**: an asset provided by another cloud</p>
+     * <p>*   **8**: a lightweight asset</p>
      */
     @NameInMap("Vendor")
     public Integer vendor;

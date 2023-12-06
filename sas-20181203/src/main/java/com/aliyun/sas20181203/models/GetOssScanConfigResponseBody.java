@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetOssScanConfigResponseBody extends TeaModel {
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public GetOssScanConfigResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,42 @@ public class GetOssScanConfigResponseBody extends TeaModel {
     }
 
     public static class GetOssScanConfigResponseBodyData extends TeaModel {
+        /**
+         * <p>The names of the buckets.</p>
+         */
         @NameInMap("BucketNameList")
         public java.util.List<String> bucketNameList;
 
+        /**
+         * <p>Indicates whether the check policy is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **1**: enabled.</p>
+         * <p>*   **0**: disabled.</p>
+         */
         @NameInMap("Enable")
         public Integer enable;
 
+        /**
+         * <p>The end time of the check. The time is in the HH:mm:ss format.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The suffixes of the objects that are checked.</p>
+         */
         @NameInMap("KeySuffixList")
         public java.util.List<String> keySuffixList;
 
+        /**
+         * <p>The days when the check is performed. The value indicates the days of the week.</p>
+         */
         @NameInMap("ScanDayList")
         public java.util.List<Integer> scanDayList;
 
+        /**
+         * <p>The start time of the check. The time is in the HH:mm:ss format.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 

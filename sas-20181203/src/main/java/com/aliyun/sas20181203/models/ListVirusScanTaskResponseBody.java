@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListVirusScanTaskResponseBody extends TeaModel {
+    /**
+     * <p>The returned virus scan tasks.</p>
+     */
     @NameInMap("List")
     public java.util.List<ListVirusScanTaskResponseBodyList> list;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListVirusScanTaskResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,39 +52,85 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
     }
 
     public static class ListVirusScanTaskResponseBodyList extends TeaModel {
+        /**
+         * <p>The timestamp when the virus scan task ended. Unit: milliseconds.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The name of the server.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The public IP address of the server.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The private IP address of the server.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The progress of the task in percentage.</p>
+         */
         @NameInMap("Progress")
         public Integer progress;
 
+        /**
+         * <p>The information about the file that is scanned.</p>
+         */
         @NameInMap("ScanPath")
         public java.util.List<String> scanPath;
 
+        /**
+         * <p>The type of the virus scan task. Valid values:</p>
+         * <br>
+         * <p>*   **system**: automatic scan task</p>
+         * <p>*   **user**: custom scan task</p>
+         */
         @NameInMap("ScanType")
         public String scanType;
 
+        /**
+         * <p>The timestamp when the virus scan task started. Unit: milliseconds.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The status of the virus scan task. Valid values:</p>
+         * <br>
+         * <p>*   **1**: running</p>
+         * <p>*   **2**: complete</p>
+         * <p>*   **3**: failed</p>
+         * <p>*   **4**: timed out</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The ID of the virus scan task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The name of the virus scan task.</p>
+         * <br>
+         * <p>*   The value is fixed as **VIRUS_VUL_SCHEDULE_SCAN**, which indicates a virus scan task.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <p>The UUID of the server.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
@@ -183,12 +238,21 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
     }
 
     public static class ListVirusScanTaskResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

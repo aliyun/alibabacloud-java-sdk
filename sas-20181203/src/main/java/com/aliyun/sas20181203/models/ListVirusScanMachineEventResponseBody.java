@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListVirusScanMachineEventResponseBody extends TeaModel {
+    /**
+     * <p>The details of the alert event.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListVirusScanMachineEventResponseBodyData> data;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListVirusScanMachineEventResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +52,34 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
     }
 
     public static class ListVirusScanMachineEventResponseBodyDataDetails extends TeaModel {
+        /**
+         * <p>The display type of the value for ValueDisplay. Valid value:</p>
+         * <br>
+         * <p>*   **download_url**, which indicates a download URL.</p>
+         */
         @NameInMap("InfoType")
         public String infoType;
 
+        /**
+         * <p>The display name of the alert event.</p>
+         */
         @NameInMap("NameDisplay")
         public String nameDisplay;
 
+        /**
+         * <p>The format in which the details of the exception are displayed.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   **text**</p>
+         * <p>*   **html**</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The attribute information about the exception. The information includes the logon time or location of an alert triggered by an unusual logon, and the trojan file path or trojan type of an alert.</p>
+         */
         @NameInMap("ValueDisplay")
         public String valueDisplay;
 
@@ -95,27 +123,55 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
     }
 
     public static class ListVirusScanMachineEventResponseBodyData extends TeaModel {
+        /**
+         * <p>The details of the exception.</p>
+         */
         @NameInMap("Details")
         public java.util.List<ListVirusScanMachineEventResponseBodyDataDetails> details;
 
+        /**
+         * <p>The ID of the alert event.</p>
+         */
         @NameInMap("EventId")
         public Long eventId;
 
+        /**
+         * <p>The name of the alert event. The value indicates a subtype.</p>
+         */
         @NameInMap("EventName")
         public String eventName;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The public IP address.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The private IP address.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The timestamp when the alert event was last generated. Unit: milliseconds.</p>
+         */
         @NameInMap("LastTimeStamp")
         public Long lastTimeStamp;
 
+        /**
+         * <p>The risk level of the alert event. Valid values:</p>
+         * <br>
+         * <p>*   **serious**</p>
+         * <p>*   **suspicious**</p>
+         * <p>*   **remind**</p>
+         */
         @NameInMap("Level")
         public String level;
 
@@ -191,12 +247,21 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
     }
 
     public static class ListVirusScanMachineEventResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

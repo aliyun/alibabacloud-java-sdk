@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetObjectScanEventResponseBody extends TeaModel {
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public GetObjectScanEventResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,39 @@ public class GetObjectScanEventResponseBody extends TeaModel {
     }
 
     public static class GetObjectScanEventResponseBodyDataDetails extends TeaModel {
+        /**
+         * <p>The type of the item.</p>
+         */
         @NameInMap("InfoType")
         public String infoType;
 
+        /**
+         * <p>The name of the item.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The display name of the item.</p>
+         */
         @NameInMap("NameDisplay")
         public String nameDisplay;
 
+        /**
+         * <p>The type of the item.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The value of the item.</p>
+         */
         @NameInMap("Value")
         public String value;
 
+        /**
+         * <p>The display value of the item.</p>
+         */
         @NameInMap("ValueDisplay")
         public String valueDisplay;
 
@@ -106,15 +130,27 @@ public class GetObjectScanEventResponseBody extends TeaModel {
     }
 
     public static class GetObjectScanEventResponseBodyData extends TeaModel {
+        /**
+         * <p>The details of the alert event.</p>
+         */
         @NameInMap("Details")
         public java.util.List<GetObjectScanEventResponseBodyDataDetails> details;
 
+        /**
+         * <p>The name of the alert item.</p>
+         */
         @NameInMap("EventName")
         public String eventName;
 
+        /**
+         * <p>The name of the object.</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The MD5 hash value of the object.</p>
+         */
         @NameInMap("Md5")
         public String md5;
 

@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeDefaultProxyInstallVersionResponseBody extends TeaModel {
+    /**
+     * <p>The default installation version.</p>
+     */
     @NameInMap("InstallVersion")
     public String installVersion;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetCommonSwitchConfigRequest extends TeaModel {
+    /**
+     * <p>The type of the common switch.</p>
+     * <br>
+     * <p>>  You can call the [ListClientUserDefineRules](~~ListClientUserDefineRules~~) or [ListSystemClientRules](~~ListSystemClientRules~~) operation to obtain the switch type from the response parameter SwitchId.</p>
+     */
     @NameInMap("Type")
     public String type;
 

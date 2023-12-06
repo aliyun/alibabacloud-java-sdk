@@ -4,24 +4,56 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListOssBucketScanInfoRequest extends TeaModel {
+    /**
+     * <p>The name of the bucket.</p>
+     */
     @NameInMap("BucketName")
     public String bucketName;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The name of the bucket that is used for fuzzy match.</p>
+     */
     @NameInMap("FuzzBucketName")
     public String fuzzBucketName;
 
+    /**
+     * <p>Specifies whether at-risk objects are detected. Valid values:</p>
+     * <br>
+     * <p>*   **0**: No at-risk objects are detected.</p>
+     * <p>*   **1**: At-risk objects are detected.</p>
+     */
     @NameInMap("HasRisk")
     public Integer hasRisk;
 
+    /**
+     * <p>The language of the content in the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese.</p>
+     * <p>*   **en**: English.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The check status of the bucket. Valid values:</p>
+     * <br>
+     * <p>*   **1**: The bucket is not checked.</p>
+     * <p>*   **2**: All objects in the bucket are being checked.</p>
+     * <p>*   **3**: Only new objects in the bucket are being checked.</p>
+     * <p>*   **4**: The bucket is checked.</p>
+     */
     @NameInMap("Status")
     public Integer status;
 

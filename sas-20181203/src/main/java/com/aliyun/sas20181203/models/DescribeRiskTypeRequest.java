@@ -13,6 +13,12 @@ public class DescribeRiskTypeRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The data source. Valid values:</p>
+     * <br>
+     * <p>*   **default**: host baseline</p>
+     * <p>*   **agentless**: agentless baseline</p>
+     */
     @NameInMap("Source")
     public String source;
 

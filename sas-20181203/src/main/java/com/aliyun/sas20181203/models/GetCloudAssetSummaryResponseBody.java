@@ -10,6 +10,9 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
     @NameInMap("GroupedFields")
     public GetCloudAssetSummaryResponseBodyGroupedFields groupedFields;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -67,7 +70,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
          * <p>*   **23**: Data Security Center (DSC)</p>
          * <p>*   **24**: Elastic IP Address (EIP)</p>
          * <p>*   **25**: Identity as a Service (IDaaS) - Enterprise Identity Access Management (EIAM)</p>
-         * <p>*   **26**: PolarDB for Xscale (PolarDB-X)</p>
+         * <p>*   **26**: PolarDB-X</p>
          * <p>*   **27**: Elasticsearch</p>
          */
         @NameInMap("AssetType")
@@ -85,6 +88,15 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         @NameInMap("InstanceRiskCount")
         public Integer instanceRiskCount;
 
+        /**
+         * <p>The type of the server. Valid values:</p>
+         * <br>
+         * <p>*   **0**: an asset provided by Alibaba Cloud</p>
+         * <p>*   **1**: a third-party cloud asset</p>
+         * <p>*   **2**: an asset in a data center</p>
+         * <p>*   **3**, **4**, **5**, and **7**: an asset provided by another cloud</p>
+         * <p>*   **8**: a lightweight cloud asset</p>
+         */
         @NameInMap("Vendor")
         public Integer vendor;
 
@@ -142,9 +154,15 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         @NameInMap("CloudAssetSummaryMetas")
         public java.util.List<GetCloudAssetSummaryResponseBodyGroupedFieldsCloudAssetSummaryMetas> cloudAssetSummaryMetas;
 
+        /**
+         * <p>The total number of cloud service instances.</p>
+         */
         @NameInMap("InstanceCountTotal")
         public Integer instanceCountTotal;
 
+        /**
+         * <p>The total number of cloud service instances that are at risk.</p>
+         */
         @NameInMap("InstanceRiskCountTotal")
         public Integer instanceRiskCountTotal;
 

@@ -34,6 +34,9 @@ public class AddPrivateRegistryRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>The port number.</p>
+     */
     @NameInMap("Port")
     public Integer port;
 

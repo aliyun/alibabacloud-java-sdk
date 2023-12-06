@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteSasContainerWebDefenseRuleRequest extends TeaModel {
+    /**
+     * <p>The rule ID.</p>
+     * <br>
+     * <p>>  You can call the ListContainerWebDefenseRule operation to query the rule ID.</p>
+     */
     @NameInMap("RuleId")
     public Long ruleId;
 

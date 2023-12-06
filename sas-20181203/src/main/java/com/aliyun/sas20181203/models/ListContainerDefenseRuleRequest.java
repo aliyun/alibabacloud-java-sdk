@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListContainerDefenseRuleRequest extends TeaModel {
     /**
-     * <p>The conditions.</p>
+     * <p>The details of the condition.</p>
      */
     @NameInMap("Conditions")
     public java.util.List<ListContainerDefenseRuleRequestConditions> conditions;
@@ -24,6 +24,12 @@ public class ListContainerDefenseRuleRequest extends TeaModel {
     @NameInMap("IsDefaultRule")
     public Integer isDefaultRule;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese.</p>
+     * <p>*   **en**: English.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
@@ -35,6 +41,12 @@ public class ListContainerDefenseRuleRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The rule type. Valid values:</p>
+     * <br>
+     * <p>*   1: system rule</p>
+     * <p>*   2: user-defined rule</p>
+     */
     @NameInMap("RuleType")
     public Integer ruleType;
 
@@ -93,15 +105,15 @@ public class ListContainerDefenseRuleRequest extends TeaModel {
 
     public static class ListContainerDefenseRuleRequestConditions extends TeaModel {
         /**
-         * <p>The type of the condition. Valid values:</p>
+         * <p>The condition type. Valid values:</p>
          * <br>
-         * <p>*   **ruleName: the name of the rule**</p>
+         * <p>*   **ruleName**: the rule name</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The value of the condition.</p>
+         * <p>The rule content.</p>
          */
         @NameInMap("Value")
         public String value;

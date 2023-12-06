@@ -4,36 +4,79 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListObjectScanEventRequest extends TeaModel {
+    /**
+     * <p>The name of the OSS bucket.</p>
+     */
     @NameInMap("BucketName")
     public String bucketName;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The name of the alert.</p>
+     */
     @NameInMap("EventName")
     public String eventName;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The MD5 hash value of the file.</p>
+     */
     @NameInMap("Md5")
     public String md5;
 
+    /**
+     * <p>The key of the file that is stored in an OSS bucket.</p>
+     */
     @NameInMap("OssKey")
     public String ossKey;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The risk level of the alert. Valid values:</p>
+     * <br>
+     * <p>*   **high**</p>
+     * <p>*   **medium**</p>
+     * <p>*   **low**</p>
+     */
     @NameInMap("RiskLevel")
     public String riskLevel;
 
+    /**
+     * <p>The method that is used to detect the malicious file. Valid values:</p>
+     * <br>
+     * <p>*   **API**: uses API operations.</p>
+     * <p>*   **OSS**: uses Object Storage Service (OSS) file check.</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>The end of the time range during which the exception is detected.</p>
+     */
     @NameInMap("TimeEnd")
     public Long timeEnd;
 
+    /**
+     * <p>The beginning of the time range during which the exception is detected.</p>
+     */
     @NameInMap("TimeStart")
     public Long timeStart;
 

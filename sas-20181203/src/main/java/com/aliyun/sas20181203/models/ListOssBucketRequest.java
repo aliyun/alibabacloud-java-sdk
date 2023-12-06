@@ -4,9 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListOssBucketRequest extends TeaModel {
+    /**
+     * <p>The name of the bucket.</p>
+     */
     @NameInMap("BucketName")
     public String bucketName;
 
+    /**
+     * <p>The language of the content in the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese.</p>
+     * <p>*   **en**: English.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

@@ -40,6 +40,13 @@ public class AddContainerDefenseRuleShrinkRequest extends TeaModel {
     @NameInMap("RuleSwitch")
     public Integer ruleSwitch;
 
+    /**
+     * <p>The rule type. Valid values:</p>
+     * <br>
+     * <p>*   2: user-defined rules</p>
+     * <br>
+     * <p>> Only the value 2 is supported.</p>
+     */
     @NameInMap("RuleType")
     public Integer ruleType;
 
