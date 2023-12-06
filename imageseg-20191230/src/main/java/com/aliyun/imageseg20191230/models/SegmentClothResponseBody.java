@@ -32,12 +32,23 @@ public class SegmentClothResponseBody extends TeaModel {
     }
 
     public static class SegmentClothResponseBodyDataElements extends TeaModel {
+        @NameInMap("ClassUrl")
+        public java.util.Map<String, String> classUrl;
+
         @NameInMap("ImageURL")
         public String imageURL;
 
         public static SegmentClothResponseBodyDataElements build(java.util.Map<String, ?> map) throws Exception {
             SegmentClothResponseBodyDataElements self = new SegmentClothResponseBodyDataElements();
             return TeaModel.build(map, self);
+        }
+
+        public SegmentClothResponseBodyDataElements setClassUrl(java.util.Map<String, String> classUrl) {
+            this.classUrl = classUrl;
+            return this;
+        }
+        public java.util.Map<String, String> getClassUrl() {
+            return this.classUrl;
         }
 
         public SegmentClothResponseBodyDataElements setImageURL(String imageURL) {

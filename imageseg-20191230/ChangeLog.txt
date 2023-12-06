@@ -1,3 +1,6 @@
+2023-12-06 Version: 2.0.0
+- Generated java 2019-12-30 for imageseg.
+
 2022-11-18 Version: 1.0.5
 - Update RefineMask.
 
