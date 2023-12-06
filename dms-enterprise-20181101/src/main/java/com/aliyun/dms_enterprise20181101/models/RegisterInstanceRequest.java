@@ -36,6 +36,9 @@ public class RegisterInstanceRequest extends TeaModel {
     @NameInMap("DbaUid")
     public Long dbaUid;
 
+    @NameInMap("DbaUidByString")
+    public String dbaUidByString;
+
     /**
      * <p>Specifies whether to enable the lock-free schema change feature for the database instance. Valid values:</p>
      * <br>
@@ -237,6 +240,14 @@ public class RegisterInstanceRequest extends TeaModel {
     }
     public Long getDbaUid() {
         return this.dbaUid;
+    }
+
+    public RegisterInstanceRequest setDbaUidByString(String dbaUidByString) {
+        this.dbaUidByString = dbaUidByString;
+        return this;
+    }
+    public String getDbaUidByString() {
+        return this.dbaUidByString;
     }
 
     public RegisterInstanceRequest setDdlOnline(Integer ddlOnline) {

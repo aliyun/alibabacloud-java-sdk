@@ -168,6 +168,9 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>The alias of the database instance.</p>
+         */
         @NameInMap("InstanceAlias")
         public String instanceAlias;
 

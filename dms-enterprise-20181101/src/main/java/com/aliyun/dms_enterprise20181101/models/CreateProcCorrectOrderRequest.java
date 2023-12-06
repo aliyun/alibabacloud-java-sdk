@@ -101,6 +101,9 @@ public class CreateProcCorrectOrderRequest extends TeaModel {
         @NameInMap("DbItemList")
         public java.util.List<CreateProcCorrectOrderRequestParamDbItemList> dbItemList;
 
+        @NameInMap("ExecMode")
+        public String execMode;
+
         @NameInMap("ExecSQL")
         public String execSQL;
 
@@ -132,6 +135,14 @@ public class CreateProcCorrectOrderRequest extends TeaModel {
         }
         public java.util.List<CreateProcCorrectOrderRequestParamDbItemList> getDbItemList() {
             return this.dbItemList;
+        }
+
+        public CreateProcCorrectOrderRequestParam setExecMode(String execMode) {
+            this.execMode = execMode;
+            return this;
+        }
+        public String getExecMode() {
+            return this.execMode;
         }
 
         public CreateProcCorrectOrderRequestParam setExecSQL(String execSQL) {

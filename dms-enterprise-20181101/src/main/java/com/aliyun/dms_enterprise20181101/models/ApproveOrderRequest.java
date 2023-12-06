@@ -4,18 +4,29 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ApproveOrderRequest extends TeaModel {
+    /**
+     * <p>If ApprovalType is set to ADD_APPROVAL_NODE, you need to specify this parameter. The ID of the user that is added as the new approval node. This node must be a user-defined approval node. You can call the ListUserDefineWorkFlowNodes operation to obtain the value of this parameter.</p>
+     */
     @NameInMap("ApprovalNodeId")
     public Long approvalNodeId;
 
+    /**
+     * <p>If ApprovalType is set to ADD_APPROVAL_NODE, you need to specify this parameter. The position of the new approval node. Valid values:</p>
+     * <br>
+     * <p>*   **PRE_ADD_APPROVAL_NODE**: before the current approval node.</p>
+     * <p>*   **POST_ADD_APPROVAL_NODE**: after the current approval node.</p>
+     */
     @NameInMap("ApprovalNodePos")
     public String approvalNodePos;
 
     /**
      * <p>The action that you want to perform on the ticket. Valid values:</p>
      * <br>
-     * <p>*   AGREE: approve</p>
-     * <p>*   CANCEL: cancel</p>
-     * <p>*   REJECT: reject</p>
+     * <p>*   **AGREE**</p>
+     * <p>*   **CANCEL**</p>
+     * <p>*   **REJECT**</p>
+     * <p>*   **TRANSFER**</p>
+     * <p>*   **ADD_APPROVAL_NODE**</p>
      */
     @NameInMap("ApprovalType")
     public String approvalType;
@@ -26,9 +37,15 @@ public class ApproveOrderRequest extends TeaModel {
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The ID of the user to which the ticket is transferred. If ApprovalType is set to TRANSFER, you need to specify this parameter.</p>
+     */
     @NameInMap("NewApprover")
     public Long newApprover;
 
+    /**
+     * <p>The ID of the user that transfers the ticket to another user. The default value is the ID of the current user. If the current user is an administrator or a database administrator (DBA), the user can change the value of this parameter to the ID of another user.</p>
+     */
     @NameInMap("OldApprover")
     public Long oldApprover;
 

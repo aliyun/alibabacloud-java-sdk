@@ -251,6 +251,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addTaskFlowEdgesWithOptions(request, runtime);
     }
 
+    /**
+      * The following conditions must be met before you call this API operation.
+      * *   The database instance is of one of the following types: ApsaraDB RDS for MySQL, PolarDB for MySQL, AnalyticDB for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for PostgreSQL, AnalyticDB for PostgreSQL, Oracle, and openGauss.
+      * *   A database instance is managed in Security Collaboration mode. For more information about control modes, see [Control modes](~~151629~~).
+      *
+      * @param request AnalyzeSQLLineageRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AnalyzeSQLLineageResponse
+     */
     public AnalyzeSQLLineageResponse analyzeSQLLineageWithOptions(AnalyzeSQLLineageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -283,6 +292,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AnalyzeSQLLineageResponse());
     }
 
+    /**
+      * The following conditions must be met before you call this API operation.
+      * *   The database instance is of one of the following types: ApsaraDB RDS for MySQL, PolarDB for MySQL, AnalyticDB for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for PostgreSQL, AnalyticDB for PostgreSQL, Oracle, and openGauss.
+      * *   A database instance is managed in Security Collaboration mode. For more information about control modes, see [Control modes](~~151629~~).
+      *
+      * @param request AnalyzeSQLLineageRequest
+      * @return AnalyzeSQLLineageResponse
+     */
     public AnalyzeSQLLineageResponse analyzeSQLLineage(AnalyzeSQLLineageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.analyzeSQLLineageWithOptions(request, runtime);
@@ -2038,6 +2055,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateUploadOSSFileJobResponse createUploadOSSFileJob(CreateUploadOSSFileJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createUploadOSSFileJobWithOptions(request, runtime);
+    }
+
+    public DeleteAuthorityTemplateResponse deleteAuthorityTemplateWithOptions(DeleteAuthorityTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAuthorityTemplate"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAuthorityTemplateResponse());
+    }
+
+    public DeleteAuthorityTemplateResponse deleteAuthorityTemplate(DeleteAuthorityTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAuthorityTemplateWithOptions(request, runtime);
     }
 
     /**
@@ -5253,6 +5303,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.inspectProxyAccessSecretWithOptions(request, runtime);
     }
 
+    public ListAuthorityTemplateResponse listAuthorityTemplateWithOptions(ListAuthorityTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchKey)) {
+            query.put("SearchKey", request.searchKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAuthorityTemplate"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAuthorityTemplateResponse());
+    }
+
+    public ListAuthorityTemplateResponse listAuthorityTemplate(ListAuthorityTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAuthorityTemplateWithOptions(request, runtime);
+    }
+
     public ListClassificationTemplatesResponse listClassificationTemplatesWithOptions(ListClassificationTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7978,6 +8069,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dbaUid)) {
             query.put("DbaUid", request.dbaUid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbaUidByString)) {
+            query.put("DbaUidByString", request.dbaUidByString);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ddlOnline)) {

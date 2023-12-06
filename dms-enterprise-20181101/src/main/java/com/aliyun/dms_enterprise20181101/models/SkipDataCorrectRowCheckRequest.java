@@ -4,12 +4,21 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class SkipDataCorrectRowCheckRequest extends TeaModel {
+    /**
+     * <p>The ticket ID. You can call the [ListOrders](~~144643~~) operation to obtain the ticket ID.</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <p>The reason for skipping the verification on the number of rows in the precheck for data change.</p>
+     */
     @NameInMap("Reason")
     public String reason;
 
+    /**
+     * <p>The tenant ID. You can call the [GetUserActiveTenant](~~198073~~) or [ListUserTenants](~~198074~~) operation to obtain the tenant ID.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

@@ -37,6 +37,9 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 
