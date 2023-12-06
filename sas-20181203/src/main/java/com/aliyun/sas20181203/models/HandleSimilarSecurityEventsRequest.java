@@ -41,6 +41,9 @@ public class HandleSimilarSecurityEventsRequest extends TeaModel {
     @NameInMap("OperationParams")
     public String operationParams;
 
+    /**
+     * <p>The remark of the operation.</p>
+     */
     @NameInMap("Remark")
     public String remark;
 

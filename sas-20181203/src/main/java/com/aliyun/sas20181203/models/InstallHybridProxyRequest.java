@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class InstallHybridProxyRequest extends TeaModel {
+    /**
+     * <p>The cluster name.</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <p>The installation code.</p>
+     */
     @NameInMap("InstallCode")
     public String installCode;
 
+    /**
+     * <p>The UUIDs of the proxy servers.</p>
+     */
     @NameInMap("YundunUuids")
     public java.util.List<String> yundunUuids;
 

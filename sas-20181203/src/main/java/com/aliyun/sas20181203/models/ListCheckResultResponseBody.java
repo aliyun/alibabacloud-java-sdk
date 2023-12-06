@@ -53,25 +53,25 @@ public class ListCheckResultResponseBody extends TeaModel {
 
     public static class ListCheckResultResponseBodyChecksCheckPolicies extends TeaModel {
         /**
-         * <p>The requirement item ID of the check item.</p>
+         * <p>The ID of the requirement item for the check item.</p>
          */
         @NameInMap("RequirementId")
         public Long requirementId;
 
         /**
-         * <p>The display name of the requirement item of the check item.</p>
+         * <p>The display name of the requirement item for the check item.</p>
          */
         @NameInMap("RequirementShowName")
         public String requirementShowName;
 
         /**
-         * <p>The section ID of the check item.</p>
+         * <p>The ID of the section for the check item.</p>
          */
         @NameInMap("SectionId")
         public Long sectionId;
 
         /**
-         * <p>The section display name of section of the check item.</p>
+         * <p>The display name of the section for the check item.</p>
          */
         @NameInMap("SectionShowName")
         public String sectionShowName;
@@ -151,7 +151,7 @@ public class ListCheckResultResponseBody extends TeaModel {
         public Long checkId;
 
         /**
-         * <p>The information about the check policies.</p>
+         * <p>The check policies.</p>
          */
         @NameInMap("CheckPolicies")
         public java.util.List<ListCheckResultResponseBodyChecksCheckPolicies> checkPolicies;
@@ -197,34 +197,34 @@ public class ListCheckResultResponseBody extends TeaModel {
         /**
          * <p>The asset type of the cloud service. Valid values:</p>
          * <br>
-         * <p>*   **ECS**: Elastic Compute Service (ECS)</p>
-         * <p>*   **SLB**: Server Load Balancer (SLB)</p>
+         * <p>*   **ECS**: ECS</p>
+         * <p>*   **SLB**: SLB</p>
          * <p>*   **RDS**: ApsaraDB RDS</p>
-         * <p>*   **MONGODB**: ApsaraDB for MongoDB (MongoDB)</p>
-         * <p>*   **KVSTORE**: ApsaraDB for Redis</p>
+         * <p>*   **MONGODB**: MongoDB</p>
+         * <p>*   **KVSTORE**: Redis</p>
          * <p>*   **ACR**: Container Registry</p>
-         * <p>*   **CSK**: Container Service for Kubernetes (ACK)</p>
-         * <p>*   **VPC**: Virtual Private Cloud (VPC)</p>
+         * <p>*   **CSK**: ACK</p>
+         * <p>*   **VPC**: VPC</p>
          * <p>*   **ACTIONTRAIL**: ActionTrail</p>
-         * <p>*   **CDN**: Alibaba Cloud CDN (CDN)</p>
-         * <p>*   **CAS**: Certificate Management Service</p>
+         * <p>*   **CDN**: CDN</p>
+         * <p>*   **CAS**: Certificate Management Service (formerly SSL Certificates Service)</p>
          * <p>*   **RDC**: Apsara Devops</p>
-         * <p>*   **RAM**: Resource Access Management (RAM)</p>
+         * <p>*   **RAM**: RAM</p>
          * <p>*   **DDOS**: Anti-DDoS</p>
-         * <p>*   **WAF**: Web Application Firewall (WAF)</p>
-         * <p>*   **OSS**: Object Storage Service (OSS)</p>
+         * <p>*   **WAF**: WAF</p>
+         * <p>*   **OSS**: OSS</p>
          * <p>*   **POLARDB**: PolarDB</p>
          * <p>*   **POSTGRESQL**: ApsaraDB RDS for PostgreSQL</p>
-         * <p>*   **MSE**: Microservices Engine (MSE)</p>
-         * <p>*   **NAS**: Apsara File Storage NAS (NAS)</p>
-         * <p>*   **SDDP**: Sensitive Data Discovery and Protection (SDDP)</p>
-         * <p>*   **EIP**: Elastic IP Address (EIP)</p>
+         * <p>*   **MSE**: MSE</p>
+         * <p>*   **NAS**: NAS</p>
+         * <p>*   **SDDP**: SDDP</p>
+         * <p>*   **EIP**: EIP</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
-         * <p>The timestamp generated when the last check was performed. Unit: milliseconds.</p>
+         * <p>The timestamp when the last check was performed. Unit: milliseconds.</p>
          */
         @NameInMap("LastCheckTime")
         public Long lastCheckTime;
@@ -242,15 +242,18 @@ public class ListCheckResultResponseBody extends TeaModel {
         /**
          * <p>The status of the check item. Valid values:</p>
          * <br>
-         * <p>*   **PASS**</p>
-         * <p>*   **NOT_PASS**</p>
-         * <p>*   **CHECKING**</p>
-         * <p>*   **NOT_CHECK**</p>
-         * <p>*   **WHITELIST**</p>
+         * <p>*   **PASS**: passed</p>
+         * <p>*   **NOT_PASS**: failed</p>
+         * <p>*   **CHECKING**: being checked</p>
+         * <p>*   **NOT_CHECK**: not checked</p>
+         * <p>*   **WHITELIST**: added to the whitelist</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The message returned if the status of the check item is abnormal.</p>
+         */
         @NameInMap("StatusMessage")
         public String statusMessage;
 

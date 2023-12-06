@@ -284,6 +284,12 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         @NameInMap("Alias")
         public String alias;
 
+        /**
+         * <p>The baseline subtype permission flag of the current user version. Valid values:</p>
+         * <br>
+         * <p>- **true**: Have access</p>
+         * <p>- **false**: No permissions</p>
+         */
         @NameInMap("AuthFlag")
         public Boolean authFlag;
 
@@ -293,6 +299,12 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         @NameInMap("CheckDetails")
         public java.util.List<DescribeRiskTypeResponseBodyRiskTypesSubTypesCheckDetails> checkDetails;
 
+        /**
+         * <p>The operating system type of the server. Valid values:</p>
+         * <br>
+         * <p>- **windows**</p>
+         * <p>- **linux**</p>
+         */
         @NameInMap("SupportedOs")
         public String supportedOs;
 
@@ -356,6 +368,12 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
         @NameInMap("Alias")
         public String alias;
 
+        /**
+         * <p>The baseline type flag of the current user version. Valid values:</p>
+         * <br>
+         * <p>- **true**: Have access</p>
+         * <p>- **false**: No permissions</p>
+         */
         @NameInMap("AuthFlag")
         public Boolean authFlag;
 

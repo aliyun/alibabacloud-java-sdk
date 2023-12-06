@@ -4,15 +4,27 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class EnableCustomInstanceBlockRecordRequest extends TeaModel {
+    /**
+     * <p>The IP address that you want to block.</p>
+     */
     @NameInMap("BlockIp")
     public String blockIp;
 
+    /**
+     * <p>The traffic direction from the IP address that you want to block. Valid value:</p>
+     * <br>
+     * <p>*   **in**</p>
+     * <p>*   **out**</p>
+     */
     @NameInMap("Bound")
     public String bound;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The UUID of the server.</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

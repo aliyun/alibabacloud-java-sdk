@@ -111,7 +111,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
 
     public static class DescribeImageListBySensitiveFileResponseBodyImageInfos extends TeaModel {
         /**
-         * <p>The digest of the image.</p>
+         * <p>The image digest.</p>
          */
         @NameInMap("Digest")
         public String digest;
@@ -123,7 +123,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         public Long firstScanTime;
 
         /**
-         * <p>The ID of the image instance.</p>
+         * <p>The image instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -141,7 +141,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The name of the image repository.</p>
+         * <p>The image repository name.</p>
          */
         @NameInMap("RepoName")
         public String repoName;
@@ -162,17 +162,24 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        /**
+         * <p>The sensitive file status. Valid values:</p>
+         * <br>
+         * <p>*   **0**: unhandled</p>
+         * <p>*   **1**: ignored</p>
+         * <p>*   **2**: false positive</p>
+         */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The tag of the image.</p>
+         * <p>The tag that is added to the image.</p>
          */
         @NameInMap("Tag")
         public String tag;
 
         /**
-         * <p>The UUID of the image.</p>
+         * <p>The image UUID.</p>
          */
         @NameInMap("Uuid")
         public String uuid;

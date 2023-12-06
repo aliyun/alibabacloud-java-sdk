@@ -19,25 +19,30 @@ public class ExportVulRequest extends TeaModel {
     public String attachTypes;
 
     /**
-     * <p>要查询漏洞影响的容器名称。</p>
+     * <p>The name of the container that is affected by the vulnerability.</p>
      */
     @NameInMap("ContainerName")
     public String containerName;
 
     /**
-     * <p>首次扫描时间结束时间。</p>
-     * <p>> 时间戳，单位为毫秒。</p>
+     * <p>The end time of the first scan.</p>
+     * <br>
+     * <p>>  This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      */
     @NameInMap("CreateTsEnd")
     public Long createTsEnd;
 
     /**
-     * <p>首次扫描时间起始时间。</p>
-     * <p>> 时间戳，单位为毫秒。</p>
+     * <p>The start time of the first scan.</p>
+     * <br>
+     * <p>>  This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      */
     @NameInMap("CreateTsStart")
     public Long createTsStart;
 
+    /**
+     * <p>The Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.</p>
+     */
     @NameInMap("CveId")
     public String cveId;
 
@@ -59,7 +64,7 @@ public class ExportVulRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>要查询漏洞影响的镜像名称。</p>
+     * <p>The name of the image that is affected by the vulnerability.</p>
      */
     @NameInMap("ImageName")
     public String imageName;
@@ -84,7 +89,7 @@ public class ExportVulRequest extends TeaModel {
     public String necessity;
 
     /**
-     * <p>要查询漏洞影响的进程路径。</p>
+     * <p>The path of the process that is affected by the vulnerability.</p>
      */
     @NameInMap("Path")
     public String path;

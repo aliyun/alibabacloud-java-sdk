@@ -4,45 +4,102 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListVirusScanTaskRequest extends TeaModel {
+    /**
+     * <p>The page number. Default value: **1**.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The timestamp when the virus scan task ended. Unit: milliseconds.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The public IP address of the server.</p>
+     */
     @NameInMap("InternetIp")
     public String internetIp;
 
+    /**
+     * <p>The private IP address of the server.</p>
+     */
     @NameInMap("IntranetIp")
     public String intranetIp;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The name of the server.</p>
+     */
     @NameInMap("MachineName")
     public String machineName;
 
+    /**
+     * <p>The number of entries per page. Default value: **20**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Specifies whether the virus scan task is the root task.</p>
+     */
     @NameInMap("RootTask")
     public Boolean rootTask;
 
+    /**
+     * <p>The ID of the root task.</p>
+     * <br>
+     * <p>>  You can call the [GetVirusScanLatestTaskStatistic](~~GetVirusScanLatestTaskStatistic~~) operation to query the ID.</p>
+     */
     @NameInMap("RootTaskId")
     public String rootTaskId;
 
+    /**
+     * <p>The type of the virus scan task. Valid values:</p>
+     * <br>
+     * <p>*   **system**: automatic scan task</p>
+     * <p>*   **user**: custom scan task</p>
+     */
     @NameInMap("ScanType")
     public String scanType;
 
+    /**
+     * <p>The timestamp when the virus scan task started. Unit: milliseconds.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>The status of the virus scan task. Valid values:</p>
+     * <br>
+     * <p>*   **1**: running</p>
+     * <p>*   **2**: complete</p>
+     * <p>*   **3**: failed</p>
+     * <p>*   **4**: timed out</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>The statuses of virus scan tasks.</p>
+     */
     @NameInMap("StatusList")
     public java.util.List<Integer> statusList;
 
+    /**
+     * <p>The ID of the virus scan task.</p>
+     * <br>
+     * <p>>  You can call the [ListVirusScanTask](~~ListVirusScanTask~~) operation to query the ID.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

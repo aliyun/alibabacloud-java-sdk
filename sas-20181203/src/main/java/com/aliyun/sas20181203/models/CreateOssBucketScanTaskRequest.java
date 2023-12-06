@@ -4,15 +4,30 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateOssBucketScanTaskRequest extends TeaModel {
+    /**
+     * <p>The names of the buckets.</p>
+     */
     @NameInMap("BucketNameList")
     public java.util.List<String> bucketNameList;
 
+    /**
+     * <p>The suffixes of the objects that you do not want to check.</p>
+     */
     @NameInMap("ExcludeKeySuffixList")
     public java.util.List<String> excludeKeySuffixList;
 
+    /**
+     * <p>The suffixes of the objects that you want to check.</p>
+     */
     @NameInMap("KeySuffixList")
     public java.util.List<String> keySuffixList;
 
+    /**
+     * <p>The check mode. Valid values:</p>
+     * <br>
+     * <p>*   **1**: checks all objects in the bucket.</p>
+     * <p>*   **2**: checks only new objects in the bucket.</p>
+     */
     @NameInMap("ScanMode")
     public Integer scanMode;
 

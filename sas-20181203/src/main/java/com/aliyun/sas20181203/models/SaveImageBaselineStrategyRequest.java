@@ -21,6 +21,12 @@ public class SaveImageBaselineStrategyRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The data source. If this parameter is left empty, the baseline check policy for images is queried. Valid values:</p>
+     * <br>
+     * <p>*   **default**: the baseline check policy for images</p>
+     * <p>*   **agentless**: agentless detection</p>
+     */
     @NameInMap("Source")
     public String source;
 

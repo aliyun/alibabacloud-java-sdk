@@ -4,9 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetObjectScanEventRequest extends TeaModel {
+    /**
+     * <p>The ID of the alert event.</p>
+     */
     @NameInMap("EventId")
     public String eventId;
 
+    /**
+     * <p>The language of the content in the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese.</p>
+     * <p>*   **en**: English.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

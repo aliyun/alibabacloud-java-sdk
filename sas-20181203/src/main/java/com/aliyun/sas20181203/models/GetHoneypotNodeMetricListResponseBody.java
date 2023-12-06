@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetHoneypotNodeMetricListResponseBody extends TeaModel {
+    /**
+     * <p>The monitoring data.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

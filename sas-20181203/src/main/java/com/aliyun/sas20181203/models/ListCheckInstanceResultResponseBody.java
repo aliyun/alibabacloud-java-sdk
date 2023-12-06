@@ -93,7 +93,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
@@ -117,7 +117,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The information about the exceptions of check items.</p>
+         * <p>The exception message of the check item.</p>
          */
         @NameInMap("StatusMessage")
         public String statusMessage;
@@ -191,7 +191,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         public String showName;
 
         /**
-         * <p>The format of the check results for the instance. Valid values:</p>
+         * <p>The format of the check result for the instance. Valid values:</p>
          * <br>
          * <p>*   **text**</p>
          * <p>*   **link**</p>
@@ -244,7 +244,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>Indicates whether the search condition is supported. Valid values:</p>
+         * <p>Indicates whether the search condition is used. Valid values:</p>
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false**</p>
@@ -253,7 +253,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         public Boolean search;
 
         /**
-         * <p>The value of the search condition.</p>
+         * <p>The search key.</p>
          */
         @NameInMap("SearchKey")
         public String searchKey;
@@ -265,7 +265,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         public String showName;
 
         /**
-         * <p>The format of the check result for the instance. Valid values:</p>
+         * <p>The type of the check result for the instance. Valid values:</p>
          * <br>
          * <p>*   **text**</p>
          * <p>*   **link**</p>

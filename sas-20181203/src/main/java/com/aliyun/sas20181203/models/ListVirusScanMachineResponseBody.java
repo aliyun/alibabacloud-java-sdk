@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListVirusScanMachineResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListVirusScanMachineResponseBodyData> data;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListVirusScanMachineResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,21 +52,39 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
     }
 
     public static class ListVirusScanMachineResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of times that the alert is triggered.</p>
+         */
         @NameInMap("EventCount")
         public Integer eventCount;
 
+        /**
+         * <p>The instance ID of the server.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the server.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The public IP address of the associated server.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The private IP address of the associated server.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The UUID of the server.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
@@ -117,12 +144,21 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
     }
 
     public static class ListVirusScanMachineResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

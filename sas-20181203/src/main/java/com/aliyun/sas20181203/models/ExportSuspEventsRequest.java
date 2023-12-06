@@ -64,6 +64,17 @@ public class ExportSuspEventsRequest extends TeaModel {
     @NameInMap("From")
     public String from;
 
+    /**
+     * <p>The ID of the new server group to which the servers belong.</p>
+     * <br>
+     * <p>> You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.</p>
+     */
+    @NameInMap("GroupId")
+    public Long groupId;
+
+    /**
+     * <p>The unique ID of the alert event.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
@@ -92,6 +103,9 @@ public class ExportSuspEventsRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The status codes of alert events.</p>
+     */
     @NameInMap("OperateErrorCodeList")
     public java.util.List<String> operateErrorCodeList;
 
@@ -181,9 +195,15 @@ public class ExportSuspEventsRequest extends TeaModel {
     @NameInMap("TimeStart")
     public String timeStart;
 
+    /**
+     * <p>The unique key of the alert event.</p>
+     */
     @NameInMap("UniqueInfo")
     public String uniqueInfo;
 
+    /**
+     * <p>The unique ID of the associated instance.</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 
@@ -246,6 +266,14 @@ public class ExportSuspEventsRequest extends TeaModel {
     }
     public String getFrom() {
         return this.from;
+    }
+
+    public ExportSuspEventsRequest setGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public Long getGroupId() {
+        return this.groupId;
     }
 
     public ExportSuspEventsRequest setId(Long id) {

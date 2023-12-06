@@ -11,7 +11,7 @@ public class ExportSuspEventsResponseBody extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The ID of the export record.</p>
+     * <p>The ID of the export record of the anomalous event.</p>
      */
     @NameInMap("Id")
     public Integer id;

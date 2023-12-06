@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public GetModuleTrialAuthInfoResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,39 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
     }
 
     public static class GetModuleTrialAuthInfoResponseBodyDataTrialRecordList extends TeaModel {
+        /**
+         * <p>The authorized quota.</p>
+         */
         @NameInMap("AuthLimit")
         public Long authLimit;
 
+        /**
+         * <p>The end time of the trial use.</p>
+         */
         @NameInMap("GmtEnd")
         public Long gmtEnd;
 
+        /**
+         * <p>The start time of the trial use.</p>
+         */
         @NameInMap("GmtStart")
         public Long gmtStart;
 
+        /**
+         * <p>The module code. Valid values:</p>
+         * <br>
+         * <p>*   **vulFix**: vulnerability fixing</p>
+         * <p>*   **cloudSiem**: threat analysis</p>
+         */
         @NameInMap("ModuleCode")
         public String moduleCode;
 
+        /**
+         * <p>The status of the trial use. Valid values:</p>
+         * <br>
+         * <p>*   **1**: The feature is in trial use.</p>
+         * <p>*   **0**: The trial use ends.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
@@ -95,12 +122,27 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
     }
 
     public static class GetModuleTrialAuthInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the user is qualified for the trial use. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("CanTry")
         public Boolean canTry;
 
+        /**
+         * <p>The module code. Valid values:</p>
+         * <br>
+         * <p>*   **vulFix**: vulnerability fixing</p>
+         * <p>*   **cloudSiem**: threat analysis</p>
+         */
         @NameInMap("ModuleCode")
         public String moduleCode;
 
+        /**
+         * <p>The trial use record.</p>
+         */
         @NameInMap("TrialRecordList")
         public java.util.List<GetModuleTrialAuthInfoResponseBodyDataTrialRecordList> trialRecordList;
 

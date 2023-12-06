@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetOssBucketScanStatisticResponseBody extends TeaModel {
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public GetOssBucketScanStatisticResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +38,63 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
     }
 
     public static class GetOssBucketScanStatisticResponseBodyData extends TeaModel {
+        /**
+         * <p>The expiration time of the purchased quota.</p>
+         */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
+        /**
+         * <p>The number of high-risk objects.</p>
+         */
         @NameInMap("HighRisk")
         public Long highRisk;
 
+        /**
+         * <p>The number of low-risk objects.</p>
+         */
         @NameInMap("LowRisk")
         public Long lowRisk;
 
+        /**
+         * <p>The number of medium-risk objects.</p>
+         */
         @NameInMap("MediumRisk")
         public Long mediumRisk;
 
+        /**
+         * <p>The number of buckets that are not checked.</p>
+         */
         @NameInMap("NoScanBucket")
         public Integer noScanBucket;
 
+        /**
+         * <p>The remaining quota.</p>
+         */
         @NameInMap("RemainAuth")
         public Integer remainAuth;
 
+        /**
+         * <p>The number of buckets in which at-risk objects exist.</p>
+         */
         @NameInMap("RiskBucket")
         public Integer riskBucket;
 
+        /**
+         * <p>The number of objects that are checked.</p>
+         */
         @NameInMap("ScanObject")
         public Long scanObject;
 
+        /**
+         * <p>The total number of buckets.</p>
+         */
         @NameInMap("TotalBucket")
         public Integer totalBucket;
 
+        /**
+         * <p>The total number of objects in the bucket.</p>
+         */
         @NameInMap("TotalObject")
         public Long totalObject;
 

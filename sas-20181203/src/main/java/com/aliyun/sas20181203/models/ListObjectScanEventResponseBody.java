@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListObjectScanEventResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListObjectScanEventResponseBodyData> data;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListObjectScanEventResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,18 +52,33 @@ public class ListObjectScanEventResponseBody extends TeaModel {
     }
 
     public static class ListObjectScanEventResponseBodyDataDetails extends TeaModel {
+        /**
+         * <p>The name of the parameter in the file details.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The display name of the alert.</p>
+         */
         @NameInMap("NameDisplay")
         public String nameDisplay;
 
+        /**
+         * <p>The value type of the parameter in the file details.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The value of the parameter.</p>
+         */
         @NameInMap("Value")
         public String value;
 
+        /**
+         * <p>The value of the parameter.</p>
+         */
         @NameInMap("ValueDisplay")
         public String valueDisplay;
 
@@ -106,45 +130,97 @@ public class ListObjectScanEventResponseBody extends TeaModel {
     }
 
     public static class ListObjectScanEventResponseBodyData extends TeaModel {
+        /**
+         * <p>The name of the OSS bucket.</p>
+         */
         @NameInMap("BucketName")
         public String bucketName;
 
+        /**
+         * <p>The details of the file.</p>
+         */
         @NameInMap("Details")
         public java.util.List<ListObjectScanEventResponseBodyDataDetails> details;
 
+        /**
+         * <p>Indicates whether the file can be detected by cloud sandbox. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("DisplaySandboxResult")
         public String displaySandboxResult;
 
+        /**
+         * <p>The ID of the alert.</p>
+         */
         @NameInMap("EventId")
         public Long eventId;
 
+        /**
+         * <p>The name of the alert.</p>
+         */
         @NameInMap("EventName")
         public String eventName;
 
+        /**
+         * <p>The path to the file.</p>
+         */
         @NameInMap("FilePath")
         public String filePath;
 
+        /**
+         * <p>The timestamp at which the alert was first detected.</p>
+         */
         @NameInMap("FirstTime")
         public Long firstTime;
 
+        /**
+         * <p>The timestamp at which the alert was last detected.</p>
+         */
         @NameInMap("LastTime")
         public Long lastTime;
 
+        /**
+         * <p>The MD5 hash value of the file.</p>
+         */
         @NameInMap("Md5")
         public String md5;
 
+        /**
+         * <p>The key of the file that is stored in the OSS bucket.</p>
+         */
         @NameInMap("OssKey")
         public String ossKey;
 
+        /**
+         * <p>The risk level of the alert. Valid values:</p>
+         * <br>
+         * <p>*   **high**</p>
+         * <p>*   **medium**</p>
+         * <p>*   **low**</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        /**
+         * <p>The SHA-1 hash value of the file.</p>
+         */
         @NameInMap("Sha1")
         public String sha1;
 
+        /**
+         * <p>The SHA-256 hash value of the file.</p>
+         */
         @NameInMap("Sha256")
         public String sha256;
 
+        /**
+         * <p>The method that is used to detect the malicious file. Valid values:</p>
+         * <br>
+         * <p>*   **API**: uses API operations.</p>
+         * <p>*   **OSS**: uses OSS file check.</p>
+         */
         @NameInMap("Source")
         public String source;
 
@@ -268,12 +344,21 @@ public class ListObjectScanEventResponseBody extends TeaModel {
     }
 
     public static class ListObjectScanEventResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

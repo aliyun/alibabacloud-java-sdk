@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCloudAssetInstancesRequest extends TeaModel {
     /**
-     * <p>The cloud assets.</p>
+     * <p>The details of the cloud asset.</p>
      */
     @NameInMap("CloudAssetTypes")
     public java.util.List<ListCloudAssetInstancesRequestCloudAssetTypes> cloudAssetTypes;
@@ -111,7 +111,7 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
         /**
          * <p>The subtype of the cloud asset.</p>
          * <br>
-         * <p>You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the subtypes of cloud assets from the AssetSubType response parameter.</p>
+         * <p>You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the subtype of the cloud asset.</p>
          */
         @NameInMap("AssetSubType")
         public Integer assetSubType;
@@ -119,11 +119,20 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
         /**
          * <p>The type of the cloud asset.</p>
          * <br>
-         * <p>You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the types of cloud assets from the AssetType response parameter.</p>
+         * <p>You can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the cloud asset type.</p>
          */
         @NameInMap("AssetType")
         public Integer assetType;
 
+        /**
+         * <p>The server type. Valid values:</p>
+         * <br>
+         * <p>*   **0**: a cloud asset provided by Alibaba Cloud</p>
+         * <p>*   **1**: a cloud asset outside Alibaba Cloud</p>
+         * <p>*   **2**: a cloud asset in a data center</p>
+         * <p>*   **3**, **4**, **5**, and **7**: a cloud asset provided by a third-party service provider</p>
+         * <p>*   **8**: a lightweight cloud asset</p>
+         */
         @NameInMap("Vendor")
         public Integer vendor;
 

@@ -130,6 +130,15 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
         public Integer savedBackupCount;
 
         /**
+         * <p>The status of the anti-ransomware service. Valid values:</p>
+         * <p>*   **SERVICE_EXCEPTION**: Service exception</p>
+         * <p>*   **RESTORING**: Restoring</p>
+         * <p>*   **BACKING_UP**: Backup in process</p>
+         */
+        @NameInMap("ServiceStatus")
+        public String serviceStatus;
+
+        /**
          * <p>The status of the anti-ransomware agent. Valid values:</p>
          * <br>
          * <p>*   **NOT_INSTALLED**: not installed</p>
@@ -218,6 +227,14 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
         }
         public Integer getSavedBackupCount() {
             return this.savedBackupCount;
+        }
+
+        public DescribeBackupMachineStatusResponseBodyBackupMachineStatus setServiceStatus(String serviceStatus) {
+            this.serviceStatus = serviceStatus;
+            return this;
+        }
+        public String getServiceStatus() {
+            return this.serviceStatus;
         }
 
         public DescribeBackupMachineStatusResponseBodyBackupMachineStatus setStatus(String status) {

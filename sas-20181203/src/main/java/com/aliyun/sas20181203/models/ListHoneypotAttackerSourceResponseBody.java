@@ -4,24 +4,48 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
+    /**
+     * <p>The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The source IP addresses of the attack.</p>
+     */
     @NameInMap("List")
     public java.util.List<ListHoneypotAttackerSourceResponseBodyList> list;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListHoneypotAttackerSourceResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,21 +111,43 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
     }
 
     public static class ListHoneypotAttackerSourceResponseBodyList extends TeaModel {
+        /**
+         * <p>The total number of attack events.</p>
+         */
         @NameInMap("EventCount")
         public Integer eventCount;
 
+        /**
+         * <p>The most recent honeypot that was attacked.</p>
+         */
         @NameInMap("LastTargetHoneypot")
         public String lastTargetHoneypot;
 
+        /**
+         * <p>The most recent IP address that was attacked.</p>
+         */
         @NameInMap("LastTargetIp")
         public String lastTargetIp;
 
+        /**
+         * <p>The last time when the attack event occurred.</p>
+         */
         @NameInMap("LastTime")
         public Long lastTime;
 
+        /**
+         * <p>The risk level. Valid values:</p>
+         * <br>
+         * <p>*   **2**: low</p>
+         * <p>*   **3**: medium</p>
+         * <p>*   **4**: high</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        /**
+         * <p>The source IP address of the attack.</p>
+         */
         @NameInMap("SrcIp")
         public String srcIp;
 
@@ -161,15 +207,27 @@ public class ListHoneypotAttackerSourceResponseBody extends TeaModel {
     }
 
     public static class ListHoneypotAttackerSourceResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

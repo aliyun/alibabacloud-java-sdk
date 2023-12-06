@@ -4,21 +4,42 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class UpdateOssScanConfigRequest extends TeaModel {
+    /**
+     * <p>The names of the buckets.</p>
+     */
     @NameInMap("BucketNameList")
     public java.util.List<String> bucketNameList;
 
+    /**
+     * <p>Specifies whether to enable the bucket check policy. Valid values:</p>
+     * <br>
+     * <p>*   **1**: enables the bucket check policy.</p>
+     * <p>*   **0**: disables the bucket check policy.</p>
+     */
     @NameInMap("Enable")
     public Integer enable;
 
+    /**
+     * <p>The end time of the check. Specify the time in the HH:mm:ss format.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The suffixes of the objects that you want to check.</p>
+     */
     @NameInMap("KeySuffixList")
     public java.util.List<String> keySuffixList;
 
+    /**
+     * <p>The time when the check is performed. The value specifies the days of the week.</p>
+     */
     @NameInMap("ScanDayList")
     public java.util.List<Integer> scanDayList;
 
+    /**
+     * <p>The start time of the check. Specify the time in the HH:mm:ss format.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

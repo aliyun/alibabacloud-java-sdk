@@ -4,9 +4,17 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class OperateBucketScanTaskRequest extends TeaModel {
+    /**
+     * <p>The name of the bucket.</p>
+     */
     @NameInMap("BucketName")
     public String bucketName;
 
+    /**
+     * <p>The operation that you want to perform on the bucket. Valid value:</p>
+     * <br>
+     * <p>*   **1**: cancels the bucket check.</p>
+     */
     @NameInMap("OperateCode")
     public Integer operateCode;
 

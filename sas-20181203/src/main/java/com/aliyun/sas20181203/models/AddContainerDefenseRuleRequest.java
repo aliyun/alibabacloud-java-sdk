@@ -40,6 +40,13 @@ public class AddContainerDefenseRuleRequest extends TeaModel {
     @NameInMap("RuleSwitch")
     public Integer ruleSwitch;
 
+    /**
+     * <p>The rule type. Valid values:</p>
+     * <br>
+     * <p>*   2: user-defined rules</p>
+     * <br>
+     * <p>> Only the value 2 is supported.</p>
+     */
     @NameInMap("RuleType")
     public Integer ruleType;
 
@@ -183,11 +190,14 @@ public class AddContainerDefenseRuleRequest extends TeaModel {
         /**
          * <p>The hash values of the files that need to be added to the whitelist.</p>
          * <br>
-         * <p>>  This parameter is not supported.</p>
+         * <p>> This parameter is not supported.</p>
          */
         @NameInMap("Hash")
         public java.util.List<String> hash;
 
+        /**
+         * <p>The images that need to be added to the whitelist.</p>
+         */
         @NameInMap("Image")
         public java.util.List<String> image;
 

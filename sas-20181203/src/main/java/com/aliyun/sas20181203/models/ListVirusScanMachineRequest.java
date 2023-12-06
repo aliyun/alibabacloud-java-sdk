@@ -4,15 +4,27 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListVirusScanMachineRequest extends TeaModel {
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The information about the server that you want to query. The value can be the name or the IP address of the server.</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>The UUID of the server.</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

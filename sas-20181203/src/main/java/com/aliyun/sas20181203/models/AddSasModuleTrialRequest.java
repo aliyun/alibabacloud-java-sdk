@@ -4,9 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class AddSasModuleTrialRequest extends TeaModel {
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The module code. Valid values:</p>
+     * <br>
+     * <p>*   **vulFix**: vulnerability fixing</p>
+     * <p>*   **cloudSiem**: threat analysis</p>
+     */
     @NameInMap("ModuleCode")
     public String moduleCode;
 

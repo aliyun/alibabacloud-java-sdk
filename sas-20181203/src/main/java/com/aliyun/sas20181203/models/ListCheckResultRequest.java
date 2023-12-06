@@ -16,6 +16,12 @@ public class ListCheckResultRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Specifies whether the check item supports custom parameters. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("CustomParam")
     public Boolean customParam;
 
