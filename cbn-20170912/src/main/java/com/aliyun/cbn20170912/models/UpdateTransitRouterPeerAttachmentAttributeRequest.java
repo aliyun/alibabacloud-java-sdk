@@ -49,6 +49,9 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DefaultLinkType")
+    public String defaultLinkType;
+
     /**
      * <p>Specifies whether to perform a dry run to check information such as the permissions and the instance status. Default values:</p>
      * <br>
@@ -135,6 +138,14 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateTransitRouterPeerAttachmentAttributeRequest setDefaultLinkType(String defaultLinkType) {
+        this.defaultLinkType = defaultLinkType;
+        return this;
+    }
+    public String getDefaultLinkType() {
+        return this.defaultLinkType;
     }
 
     public UpdateTransitRouterPeerAttachmentAttributeRequest setDryRun(Boolean dryRun) {

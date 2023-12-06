@@ -579,8 +579,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The description of the CEN instance.
-      * The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://` or `https://`.
+      * **CreateCen** is an asynchronous operation. After you send a request, the system returns the CEN instance ID but the operation is still being performed in the system background. You can call **DescribeCens** to query the status of a CEN instance.
+      * * If a CEN instance is in the **Creating** state, the CEN instance is being created. You can query the CEN instance but cannot perform other operations.
+      * * If a CEN instance is in the **Active** state, the CEN instance is created.
       *
       * @param request CreateCenRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -643,8 +644,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The description of the CEN instance.
-      * The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://` or `https://`.
+      * **CreateCen** is an asynchronous operation. After you send a request, the system returns the CEN instance ID but the operation is still being performed in the system background. You can call **DescribeCens** to query the status of a CEN instance.
+      * * If a CEN instance is in the **Creating** state, the CEN instance is being created. You can query the CEN instance but cannot perform other operations.
+      * * If a CEN instance is in the **Active** state, the CEN instance is created.
       *
       * @param request CreateCenRequest
       * @return CreateCenResponse
@@ -1901,6 +1903,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultLinkType)) {
+            query.put("DefaultLinkType", request.defaultLinkType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
@@ -10650,6 +10656,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultLinkType)) {
+            query.put("DefaultLinkType", request.defaultLinkType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {

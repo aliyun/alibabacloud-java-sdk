@@ -167,6 +167,9 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        @NameInMap("DefaultLinkType")
+        public String defaultLinkType;
+
         /**
          * <p>The areas that are connected by the bandwidth plan.</p>
          */
@@ -300,6 +303,14 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachments setDefaultLinkType(String defaultLinkType) {
+            this.defaultLinkType = defaultLinkType;
+            return this;
+        }
+        public String getDefaultLinkType() {
+            return this.defaultLinkType;
         }
 
         public ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachments setGeographicSpanId(String geographicSpanId) {

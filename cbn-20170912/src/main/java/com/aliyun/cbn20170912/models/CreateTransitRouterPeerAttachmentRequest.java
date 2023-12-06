@@ -51,6 +51,9 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DefaultLinkType")
+    public String defaultLinkType;
+
     /**
      * <p>Specifies whether to perform a dry run. Default values:</p>
      * <br>
@@ -173,6 +176,14 @@ public class CreateTransitRouterPeerAttachmentRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateTransitRouterPeerAttachmentRequest setDefaultLinkType(String defaultLinkType) {
+        this.defaultLinkType = defaultLinkType;
+        return this;
+    }
+    public String getDefaultLinkType() {
+        return this.defaultLinkType;
     }
 
     public CreateTransitRouterPeerAttachmentRequest setDryRun(Boolean dryRun) {
