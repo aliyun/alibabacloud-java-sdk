@@ -22,6 +22,9 @@ public class Node extends TeaModel {
     @NameInMap("AutoRenewDurationUnit")
     public String autoRenewDurationUnit;
 
+    @NameInMap("CreateTime")
+    public Long createTime;
+
     /**
      * <p>节点过期时间。</p>
      */
@@ -125,6 +128,14 @@ public class Node extends TeaModel {
     }
     public String getAutoRenewDurationUnit() {
         return this.autoRenewDurationUnit;
+    }
+
+    public Node setCreateTime(Long createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public Long getCreateTime() {
+        return this.createTime;
     }
 
     public Node setExpireTime(Long expireTime) {

@@ -4,6 +4,9 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ListDoctorHBaseTablesResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<Data> data;
 
@@ -77,24 +80,45 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class Analysis extends TeaModel {
+        /**
+         * <p>The partitions that have read hotspot issues.</p>
+         */
         @NameInMap("ReadRequestHotspotRegionList")
         public java.util.List<String> readRequestHotspotRegionList;
 
+        /**
+         * <p>The description of read imbalance.</p>
+         */
         @NameInMap("ReadRequestUnbalanceSuggestion")
         public String readRequestUnbalanceSuggestion;
 
+        /**
+         * <p>The partitions that have read/write hotspot issues.</p>
+         */
         @NameInMap("RequestHotspotRegionList")
         public java.util.List<String> requestHotspotRegionList;
 
+        /**
+         * <p>The description of read/write imbalance.</p>
+         */
         @NameInMap("RequestUnbalanceSuggestion")
         public String requestUnbalanceSuggestion;
 
+        /**
+         * <p>The score of the table.</p>
+         */
         @NameInMap("TableScore")
         public Integer tableScore;
 
+        /**
+         * <p>The partitions that have write hotspot issues.</p>
+         */
         @NameInMap("WriteRequestHotspotRegionList")
         public java.util.List<String> writeRequestHotspotRegionList;
 
+        /**
+         * <p>The description of write imbalance.</p>
+         */
         @NameInMap("WriteRequestUnbalanceSuggestion")
         public String writeRequestUnbalanceSuggestion;
 
@@ -162,15 +186,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class ColdAccessDay extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -214,15 +250,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class ColdConfigDay extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -266,15 +314,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class ColdDataSize extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -318,15 +378,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class DailyReadRequest extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -370,15 +442,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class DailyReadRequestDayGrowthRatio extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -422,15 +506,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class DailyWriteRequest extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -474,15 +570,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class DailyWriteRequestDayGrowthRatio extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -526,15 +634,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class FreezeConfigDay extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -578,15 +698,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class FreezeDataSize extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -630,15 +762,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class HotDataSize extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -682,15 +826,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class Locality extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -734,15 +890,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class ReadRequestBalance extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -786,15 +954,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class RegionBalance extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -838,15 +1018,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class RegionCount extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -890,15 +1082,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class RegionCountDayGrowthRatio extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -942,15 +1146,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class RegionServerCount extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -994,15 +1210,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class RequestBalance extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -1046,15 +1274,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class StoreFileCount extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -1098,15 +1338,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class StoreFileCountDayGrowthRatio extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -1150,15 +1402,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class TableSize extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -1202,15 +1466,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class TableSizeDayGrowthRatio extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -1254,15 +1530,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class WarmConfigDay extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -1306,15 +1594,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class WarmDataSize extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -1358,15 +1658,27 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class WriteRequestBalance extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -1410,75 +1722,147 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class Metrics extends TeaModel {
+        /**
+         * <p>The number of days during which the table was not accessed.</p>
+         */
         @NameInMap("ColdAccessDay")
         public ColdAccessDay coldAccessDay;
 
+        /**
+         * <p>The number of consecutive days without access to data before the data is considered as cold data.</p>
+         */
         @NameInMap("ColdConfigDay")
         public ColdConfigDay coldConfigDay;
 
+        /**
+         * <p>The size of cold data.</p>
+         */
         @NameInMap("ColdDataSize")
         public ColdDataSize coldDataSize;
 
+        /**
+         * <p>The total number of read requests for the table in a day.</p>
+         */
         @NameInMap("DailyReadRequest")
         public DailyReadRequest dailyReadRequest;
 
+        /**
+         * <p>The daily increment ratio of the number of read requests in a day.</p>
+         */
         @NameInMap("DailyReadRequestDayGrowthRatio")
         public DailyReadRequestDayGrowthRatio dailyReadRequestDayGrowthRatio;
 
+        /**
+         * <p>The total number of write requests for the table in a day.</p>
+         */
         @NameInMap("DailyWriteRequest")
         public DailyWriteRequest dailyWriteRequest;
 
+        /**
+         * <p>The daily increment ratio of the number of write requests in a day.</p>
+         */
         @NameInMap("DailyWriteRequestDayGrowthRatio")
         public DailyWriteRequestDayGrowthRatio dailyWriteRequestDayGrowthRatio;
 
+        /**
+         * <p>The number of consecutive days without access to data before the data is considered as very cold data.</p>
+         */
         @NameInMap("FreezeConfigDay")
         public FreezeConfigDay freezeConfigDay;
 
+        /**
+         * <p>The size of very cold data.</p>
+         */
         @NameInMap("FreezeDataSize")
         public FreezeDataSize freezeDataSize;
 
+        /**
+         * <p>The size of hot data.</p>
+         */
         @NameInMap("HotDataSize")
         public HotDataSize hotDataSize;
 
+        /**
+         * <p>The localization rate.</p>
+         */
         @NameInMap("Locality")
         public Locality locality;
 
+        /**
+         * <p>The read balancing degree.</p>
+         */
         @NameInMap("ReadRequestBalance")
         public ReadRequestBalance readRequestBalance;
 
+        /**
+         * <p>The balancing degree.</p>
+         */
         @NameInMap("RegionBalance")
         public RegionBalance regionBalance;
 
+        /**
+         * <p>The number of partitions that are composed of the table.</p>
+         */
         @NameInMap("RegionCount")
         public RegionCount regionCount;
 
+        /**
+         * <p>The daily increment ratio of the number of partitions.</p>
+         */
         @NameInMap("RegionCountDayGrowthRatio")
         public RegionCountDayGrowthRatio regionCountDayGrowthRatio;
 
+        /**
+         * <p>The number of region servers that host the table.</p>
+         */
         @NameInMap("RegionServerCount")
         public RegionServerCount regionServerCount;
 
+        /**
+         * <p>The request balancing degree.</p>
+         */
         @NameInMap("RequestBalance")
         public RequestBalance requestBalance;
 
+        /**
+         * <p>The number of StoreFiles.</p>
+         */
         @NameInMap("StoreFileCount")
         public StoreFileCount storeFileCount;
 
+        /**
+         * <p>The daily increment ratio of the number of StoreFiles.</p>
+         */
         @NameInMap("StoreFileCountDayGrowthRatio")
         public StoreFileCountDayGrowthRatio storeFileCountDayGrowthRatio;
 
+        /**
+         * <p>The size of the table.</p>
+         */
         @NameInMap("TableSize")
         public TableSize tableSize;
 
+        /**
+         * <p>The daily increment ratio of the table size.</p>
+         */
         @NameInMap("TableSizeDayGrowthRatio")
         public TableSizeDayGrowthRatio tableSizeDayGrowthRatio;
 
+        /**
+         * <p>The number of consecutive days without access to data before the data is considered as warm data.</p>
+         */
         @NameInMap("WarmConfigDay")
         public WarmConfigDay warmConfigDay;
 
+        /**
+         * <p>The size of warm data.</p>
+         */
         @NameInMap("WarmDataSize")
         public WarmDataSize warmDataSize;
 
+        /**
+         * <p>The write balancing degree.</p>
+         */
         @NameInMap("WriteRequestBalance")
         public WriteRequestBalance writeRequestBalance;
 
@@ -1682,12 +2066,21 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     }
 
     public static class Data extends TeaModel {
+        /**
+         * <p>The diagnosis result.</p>
+         */
         @NameInMap("Analysis")
         public Analysis analysis;
 
+        /**
+         * <p>The metric information.</p>
+         */
         @NameInMap("Metrics")
         public Metrics metrics;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 

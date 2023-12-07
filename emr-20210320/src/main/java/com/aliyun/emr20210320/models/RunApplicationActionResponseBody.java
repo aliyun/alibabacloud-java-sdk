@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class RunApplicationActionResponseBody extends TeaModel {
     /**
+     * <p>异常节点列表。</p>
+     */
+    @NameInMap("AbnInstances")
+    public java.util.List<AbnInstances> abnInstances;
+
+    /**
      * <p>The operation ID.</p>
      */
     @NameInMap("OperationId")
@@ -21,6 +27,14 @@ public class RunApplicationActionResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RunApplicationActionResponseBody setAbnInstances(java.util.List<AbnInstances> abnInstances) {
+        this.abnInstances = abnInstances;
+        return this;
+    }
+    public java.util.List<AbnInstances> getAbnInstances() {
+        return this.abnInstances;
+    }
+
     public RunApplicationActionResponseBody setOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -35,6 +49,36 @@ public class RunApplicationActionResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class AbnInstances extends TeaModel {
+        @NameInMap("NodeId")
+        public String nodeId;
+
+        @NameInMap("NodeName")
+        public String nodeName;
+
+        public static AbnInstances build(java.util.Map<String, ?> map) throws Exception {
+            AbnInstances self = new AbnInstances();
+            return TeaModel.build(map, self);
+        }
+
+        public AbnInstances setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        public AbnInstances setNodeName(String nodeName) {
+            this.nodeName = nodeName;
+            return this;
+        }
+        public String getNodeName() {
+            return this.nodeName;
+        }
+
     }
 
 }

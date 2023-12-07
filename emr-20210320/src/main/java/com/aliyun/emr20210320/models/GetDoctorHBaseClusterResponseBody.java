@@ -4,11 +4,14 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class GetDoctorHBaseClusterResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public Data data;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,6 +38,9 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
     }
 
     public static class Analysis extends TeaModel {
+        /**
+         * <p>The overall score of the HBase cluster.</p>
+         */
         @NameInMap("HbaseScore")
         public Integer hbaseScore;
 
@@ -54,15 +60,27 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
     }
 
     public static class AvgLoad extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -106,15 +124,27 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
     }
 
     public static class DailyReadRequest extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -158,15 +188,27 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
     }
 
     public static class DailyWriteRequest extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -210,15 +252,27 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
     }
 
     public static class MemHeap extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -262,15 +316,27 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
     }
 
     public static class NormalAvgLoad extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -314,15 +380,27 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
     }
 
     public static class RegionBalance extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -366,15 +444,27 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
     }
 
     public static class RegionCount extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -418,15 +508,27 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
     }
 
     public static class RegionServerCount extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -470,15 +572,27 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
     }
 
     public static class StoreFileCount extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -522,15 +636,27 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
     }
 
     public static class TableCount extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -574,15 +700,27 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
     }
 
     public static class TotalDataSize extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -626,15 +764,27 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
     }
 
     public static class TotalReadRequest extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -678,15 +828,27 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
     }
 
     public static class TotalRequest extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -730,15 +892,27 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
     }
 
     public static class TotalWriteRequest extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -782,45 +956,87 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
     }
 
     public static class Metrics extends TeaModel {
+        /**
+         * <p>The average load.</p>
+         */
         @NameInMap("AvgLoad")
         public AvgLoad avgLoad;
 
+        /**
+         * <p>The number of read requests in a day.</p>
+         */
         @NameInMap("DailyReadRequest")
         public DailyReadRequest dailyReadRequest;
 
+        /**
+         * <p>The number of write requests in a day.</p>
+         */
         @NameInMap("DailyWriteRequest")
         public DailyWriteRequest dailyWriteRequest;
 
+        /**
+         * <p>The memory size.</p>
+         */
         @NameInMap("MemHeap")
         public MemHeap memHeap;
 
+        /**
+         * <p>The normal average load.</p>
+         */
         @NameInMap("NormalAvgLoad")
         public NormalAvgLoad normalAvgLoad;
 
+        /**
+         * <p>The region balance degree.</p>
+         */
         @NameInMap("RegionBalance")
         public RegionBalance regionBalance;
 
+        /**
+         * <p>The number of regions.</p>
+         */
         @NameInMap("RegionCount")
         public RegionCount regionCount;
 
+        /**
+         * <p>The number of region servers.</p>
+         */
         @NameInMap("RegionServerCount")
         public RegionServerCount regionServerCount;
 
+        /**
+         * <p>The number of StoreFiles.</p>
+         */
         @NameInMap("StoreFileCount")
         public StoreFileCount storeFileCount;
 
+        /**
+         * <p>The number of tables.</p>
+         */
         @NameInMap("TableCount")
         public TableCount tableCount;
 
+        /**
+         * <p>The size of the cluster.</p>
+         */
         @NameInMap("TotalDataSize")
         public TotalDataSize totalDataSize;
 
+        /**
+         * <p>The total number of read requests.</p>
+         */
         @NameInMap("TotalReadRequest")
         public TotalReadRequest totalReadRequest;
 
+        /**
+         * <p>The total number of requests in the cluster.</p>
+         */
         @NameInMap("TotalRequest")
         public TotalRequest totalRequest;
 
+        /**
+         * <p>The total number of write requests.</p>
+         */
         @NameInMap("TotalWriteRequest")
         public TotalWriteRequest totalWriteRequest;
 
@@ -944,9 +1160,15 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
     }
 
     public static class Data extends TeaModel {
+        /**
+         * <p>The analysis result.</p>
+         */
         @NameInMap("Analysis")
         public Analysis analysis;
 
+        /**
+         * <p>The metric information.</p>
+         */
         @NameInMap("Metrics")
         public Metrics metrics;
 

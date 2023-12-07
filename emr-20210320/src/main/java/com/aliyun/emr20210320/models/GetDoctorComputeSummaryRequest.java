@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class GetDoctorComputeSummaryRequest extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The resource information, which is used to filter the results.</p>
+     */
     @NameInMap("ComponentInfo")
     public ComponentInfo componentInfo;
 
+    /**
+     * <p>Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.</p>
+     */
     @NameInMap("DateTime")
     public String dateTime;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -60,9 +66,21 @@ public class GetDoctorComputeSummaryRequest extends TeaModel {
     }
 
     public static class ComponentInfo extends TeaModel {
+        /**
+         * <p>Set the filter condition name based on the value of ComponentType. For example, if you set ComponentType to queue, you can specify a specific queue name to obtain the resource usage of a specific queue.</p>
+         */
         @NameInMap("ComponentName")
         public String componentName;
 
+        /**
+         * <p>The resource type for filtering. Valid values:</p>
+         * <br>
+         * <p>*   engine: filters results by engine.</p>
+         * <p>*   queue: filters results by queue.</p>
+         * <p>*   cluster: displays the results at the cluster level.</p>
+         * <br>
+         * <p>If you do not specify this parameter, the information at the cluster level is displayed by default.</p>
+         */
         @NameInMap("ComponentType")
         public String componentType;
 

@@ -29,7 +29,7 @@ public class RunApplicationActionRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The name of the operation.</p>
+     * <p>The operation object.</p>
      */
     @NameInMap("ComponentInstanceSelector")
     public ComponentInstanceSelector componentInstanceSelector;

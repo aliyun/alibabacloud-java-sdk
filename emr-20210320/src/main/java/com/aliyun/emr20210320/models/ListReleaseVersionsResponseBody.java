@@ -16,6 +16,9 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The major EMR versions.</p>
+     */
     @NameInMap("ReleaseVersions")
     public java.util.List<ReleaseVersions> releaseVersions;
 
@@ -78,21 +81,19 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
 
     public static class ReleaseVersions extends TeaModel {
         /**
-         * <p>IaaS类型。取值范围：</p>
-         * <p>- ECS：基于ECS构建。</p>
-         * <p>- K8S：基于K8S构建。</p>
+         * <p>The IaaS type.</p>
          */
         @NameInMap("IaasType")
         public String iaasType;
 
         /**
-         * <p>EMR发行版。</p>
+         * <p>The EMR version.</p>
          */
         @NameInMap("ReleaseVersion")
         public String releaseVersion;
 
         /**
-         * <p>版本序列。</p>
+         * <p>The version series.</p>
          */
         @NameInMap("Series")
         public String series;

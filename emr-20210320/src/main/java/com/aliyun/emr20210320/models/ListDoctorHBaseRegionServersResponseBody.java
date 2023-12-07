@@ -4,29 +4,32 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<Data> data;
 
     /**
-     * <p>本次请求所返回的最大记录条数。</p>
+     * <p>The maximum number of entries that are returned.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+     * <p>A pagination token.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>本次请求条件下的数据总量。</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -77,15 +80,27 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
     }
 
     public static class AvgGc extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -129,15 +144,27 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
     }
 
     public static class CacheRatio extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -181,15 +208,27 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
     }
 
     public static class DailyReadRequest extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -233,15 +272,27 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
     }
 
     public static class DailyReadRequestDayGrowthRatio extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -285,15 +336,27 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
     }
 
     public static class DailyWriteRequest extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -337,15 +400,27 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
     }
 
     public static class DailyWriteRequestDayGrowthRatio extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -389,15 +464,27 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
     }
 
     public static class RegionCount extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -441,15 +528,27 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
     }
 
     public static class TotalReadRequest extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -493,15 +592,27 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
     }
 
     public static class TotalRequest extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -545,15 +656,27 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
     }
 
     public static class TotalWriteRequest extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -597,33 +720,63 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
     }
 
     public static class Metrics extends TeaModel {
+        /**
+         * <p>The average garbage collection (GC) duration.</p>
+         */
         @NameInMap("AvgGc")
         public AvgGc avgGc;
 
+        /**
+         * <p>The cache hit ratio.</p>
+         */
         @NameInMap("CacheRatio")
         public CacheRatio cacheRatio;
 
+        /**
+         * <p>The number of daily read requests.</p>
+         */
         @NameInMap("DailyReadRequest")
         public DailyReadRequest dailyReadRequest;
 
+        /**
+         * <p>The growth rate of the number of daily read requests.</p>
+         */
         @NameInMap("DailyReadRequestDayGrowthRatio")
         public DailyReadRequestDayGrowthRatio dailyReadRequestDayGrowthRatio;
 
+        /**
+         * <p>The number of daily write requests.</p>
+         */
         @NameInMap("DailyWriteRequest")
         public DailyWriteRequest dailyWriteRequest;
 
+        /**
+         * <p>The growth rate of the number of daily write requests.</p>
+         */
         @NameInMap("DailyWriteRequestDayGrowthRatio")
         public DailyWriteRequestDayGrowthRatio dailyWriteRequestDayGrowthRatio;
 
+        /**
+         * <p>The number of regions.</p>
+         */
         @NameInMap("RegionCount")
         public RegionCount regionCount;
 
+        /**
+         * <p>The cumulative number of read requests.</p>
+         */
         @NameInMap("TotalReadRequest")
         public TotalReadRequest totalReadRequest;
 
+        /**
+         * <p>The cumulative number of all requests.</p>
+         */
         @NameInMap("TotalRequest")
         public TotalRequest totalRequest;
 
+        /**
+         * <p>The cumulative number of write requests.</p>
+         */
         @NameInMap("TotalWriteRequest")
         public TotalWriteRequest totalWriteRequest;
 
@@ -715,9 +868,15 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
     }
 
     public static class Data extends TeaModel {
+        /**
+         * <p>The metric information.</p>
+         */
         @NameInMap("Metrics")
         public Metrics metrics;
 
+        /**
+         * <p>The RegionServer host.</p>
+         */
         @NameInMap("RegionServerHost")
         public String regionServerHost;
 

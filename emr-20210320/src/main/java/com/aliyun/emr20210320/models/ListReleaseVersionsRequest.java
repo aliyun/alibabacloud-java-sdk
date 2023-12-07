@@ -17,7 +17,7 @@ public class ListReleaseVersionsRequest extends TeaModel {
     public String iaasType;
 
     /**
-     * <p>The ID of the region in which you want to create the instance.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

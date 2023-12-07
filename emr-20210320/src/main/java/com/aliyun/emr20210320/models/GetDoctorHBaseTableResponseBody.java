@@ -4,6 +4,9 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class GetDoctorHBaseTableResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public Data data;
 
@@ -38,12 +41,18 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         @NameInMap("ReadRequestHotspotRegionList")
         public java.util.List<String> readRequestHotspotRegionList;
 
+        /**
+         * <p>The description of read imbalance.</p>
+         */
         @NameInMap("ReadRequestUnbalanceSuggestion")
         public String readRequestUnbalanceSuggestion;
 
         @NameInMap("RequestHotspotRegionList")
         public java.util.List<String> requestHotspotRegionList;
 
+        /**
+         * <p>The description of read/write imbalance.</p>
+         */
         @NameInMap("RequestUnbalanceSuggestion")
         public String requestUnbalanceSuggestion;
 
@@ -53,6 +62,9 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         @NameInMap("WriteRequestHotspotRegionList")
         public java.util.List<String> writeRequestHotspotRegionList;
 
+        /**
+         * <p>The description of write imbalance.</p>
+         */
         @NameInMap("WriteRequestUnbalanceSuggestion")
         public String writeRequestUnbalanceSuggestion;
 
@@ -1640,6 +1652,9 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class Data extends TeaModel {
+        /**
+         * <p>The diagnosis result.</p>
+         */
         @NameInMap("Analysis")
         public Analysis analysis;
 

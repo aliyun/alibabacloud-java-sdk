@@ -4,6 +4,9 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ListDoctorReportsResponseBody extends TeaModel {
+    /**
+     * <p>The reports.</p>
+     */
     @NameInMap("Data")
     public java.util.List<Data> data;
 
@@ -77,12 +80,21 @@ public class ListDoctorReportsResponseBody extends TeaModel {
     }
 
     public static class SummaryReport extends TeaModel {
+        /**
+         * <p>The score.</p>
+         */
         @NameInMap("Score")
         public Integer score;
 
+        /**
+         * <p>The optimization suggestion.</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
+        /**
+         * <p>The summary of the report.</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
@@ -118,12 +130,71 @@ public class ListDoctorReportsResponseBody extends TeaModel {
     }
 
     public static class Data extends TeaModel {
+        /**
+         * <p>The service types.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   compute</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   hive</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   hdfs</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   yarn</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   oss</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   hbase</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("ComponentTypes")
         public java.util.List<String> componentTypes;
 
+        /**
+         * <p>The date on which the report was generated.</p>
+         */
         @NameInMap("DateTime")
         public String dateTime;
 
+        /**
+         * <p>The summary of the report.</p>
+         */
         @NameInMap("SummaryReport")
         public SummaryReport summaryReport;
 

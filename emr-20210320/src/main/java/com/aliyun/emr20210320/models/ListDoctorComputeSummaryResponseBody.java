@@ -4,29 +4,32 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ListDoctorComputeSummaryResponseBody extends TeaModel {
+    /**
+     * <p>The details of resource usage.</p>
+     */
     @NameInMap("Data")
     public java.util.List<Data> data;
 
     /**
-     * <p>本次请求所返回的最大记录条数。</p>
+     * <p>The maximum number of entries that are returned.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+     * <p>A pagination token.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>本次请求条件下的数据总量。</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -77,21 +80,39 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
     }
 
     public static class Analysis extends TeaModel {
+        /**
+         * <p>The total number of healthy jobs.</p>
+         */
         @NameInMap("HealthyJobCount")
         public Long healthyJobCount;
 
+        /**
+         * <p>The total number of jobs that require attention.</p>
+         */
         @NameInMap("NeedAttentionJobCount")
         public Long needAttentionJobCount;
 
+        /**
+         * <p>The score for jobs.</p>
+         */
         @NameInMap("Score")
         public Integer score;
 
+        /**
+         * <p>The day-to-day growth rate of the score for jobs.</p>
+         */
         @NameInMap("ScoreDayGrowthRatio")
         public Float scoreDayGrowthRatio;
 
+        /**
+         * <p>The total number of sub-healthy jobs.</p>
+         */
         @NameInMap("SubHealthyJobCount")
         public Long subHealthyJobCount;
 
+        /**
+         * <p>The total number of unhealthy jobs.</p>
+         */
         @NameInMap("UnhealthyJobCount")
         public Long unhealthyJobCount;
 
@@ -151,15 +172,27 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
     }
 
     public static class MemSeconds extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -203,15 +236,27 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
     }
 
     public static class MemSecondsDayGrowthRatio extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -255,15 +300,27 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
     }
 
     public static class MemUtilization extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -307,15 +364,27 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
     }
 
     public static class ReadSize extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -359,15 +428,27 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
     }
 
     public static class VcoreSeconds extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -411,15 +492,27 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
     }
 
     public static class VcoreSecondsDayGrowthRatio extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -463,15 +556,27 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
     }
 
     public static class VcoreUtilization extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -515,15 +620,27 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
     }
 
     public static class WriteSize extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -567,27 +684,51 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
     }
 
     public static class Metrics extends TeaModel {
+        /**
+         * <p>The total memory consumption over time in seconds.</p>
+         */
         @NameInMap("MemSeconds")
         public MemSeconds memSeconds;
 
+        /**
+         * <p>The day-to-day growth rate of the total memory consumption over time in seconds.</p>
+         */
         @NameInMap("MemSecondsDayGrowthRatio")
         public MemSecondsDayGrowthRatio memSecondsDayGrowthRatio;
 
+        /**
+         * <p>The average memory usage.</p>
+         */
         @NameInMap("MemUtilization")
         public MemUtilization memUtilization;
 
+        /**
+         * <p>The total amount of data read from the file system.</p>
+         */
         @NameInMap("ReadSize")
         public ReadSize readSize;
 
+        /**
+         * <p>The total CPU consumption over time in seconds.</p>
+         */
         @NameInMap("VcoreSeconds")
         public VcoreSeconds vcoreSeconds;
 
+        /**
+         * <p>The day-to-day growth rate of the total CPU consumption over time in seconds.</p>
+         */
         @NameInMap("VcoreSecondsDayGrowthRatio")
         public VcoreSecondsDayGrowthRatio vcoreSecondsDayGrowthRatio;
 
+        /**
+         * <p>The average CPU utilization. The meaning is the same as the %CPU parameter in the output of the top command in Linux.</p>
+         */
         @NameInMap("VcoreUtilization")
         public VcoreUtilization vcoreUtilization;
 
+        /**
+         * <p>The total amount of data written to the file system.</p>
+         */
         @NameInMap("WriteSize")
         public WriteSize writeSize;
 
@@ -663,12 +804,21 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
     }
 
     public static class Data extends TeaModel {
+        /**
+         * <p>The resource analysis results.</p>
+         */
         @NameInMap("Analysis")
         public Analysis analysis;
 
+        /**
+         * <p>The name of the resource whose details are obtained based on the value of ComponentTypes. For example, if the value of ComponentTypes is Queue, the value of this parameter is a queue, such as DW.</p>
+         */
         @NameInMap("ComponentName")
         public String componentName;
 
+        /**
+         * <p>The metric information.</p>
+         */
         @NameInMap("Metrics")
         public Metrics metrics;
 
