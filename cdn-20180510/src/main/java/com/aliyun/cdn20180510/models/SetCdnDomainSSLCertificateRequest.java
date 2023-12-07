@@ -37,6 +37,9 @@ public class SetCdnDomainSSLCertificateRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>Specifies whether the certificate is issued in canary releases. If you set this parameter to **staging**, the certificate is issued in canary releases. If you do not specify this parameter or set this parameter to other values, the certificate is officially issued.</p>
+     */
     @NameInMap("Env")
     public String env;
 
