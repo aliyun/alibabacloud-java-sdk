@@ -1751,6 +1751,12 @@ public class GetResultResponseBody extends TeaModel {
         @NameInMap("Remark9")
         public String remark9;
 
+        @NameInMap("TaskConfigId")
+        public Long taskConfigId;
+
+        @NameInMap("TaskConfigName")
+        public String taskConfigName;
+
         @NameInMap("Url")
         public String url;
 
@@ -1957,6 +1963,22 @@ public class GetResultResponseBody extends TeaModel {
         }
         public String getRemark9() {
             return this.remark9;
+        }
+
+        public GetResultResponseBodyDataResultInfoRecording setTaskConfigId(Long taskConfigId) {
+            this.taskConfigId = taskConfigId;
+            return this;
+        }
+        public Long getTaskConfigId() {
+            return this.taskConfigId;
+        }
+
+        public GetResultResponseBodyDataResultInfoRecording setTaskConfigName(String taskConfigName) {
+            this.taskConfigName = taskConfigName;
+            return this;
+        }
+        public String getTaskConfigName() {
+            return this.taskConfigName;
         }
 
         public GetResultResponseBodyDataResultInfoRecording setUrl(String url) {
