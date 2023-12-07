@@ -4,6 +4,10 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ComponentInstanceSelector extends TeaModel {
+    @NameInMap("ActionScope")
+    @Deprecated
+    public String actionScope;
+
     /**
      * <p>应用名称。</p>
      */
@@ -24,7 +28,10 @@ public class ComponentInstanceSelector extends TeaModel {
     public java.util.List<Components> components;
 
     /**
-     * <p>执行范围。</p>
+     * <p>动作执行范围。取值范围：</p>
+     * <p>- APPLICATION：应用级别。</p>
+     * <p>- COMPONENT：组件级别。</p>
+     * <p>- COMPONENT_INSTANCE：组件实例级别。</p>
      */
     @NameInMap("RunActionScope")
     public String runActionScope;
@@ -32,6 +39,14 @@ public class ComponentInstanceSelector extends TeaModel {
     public static ComponentInstanceSelector build(java.util.Map<String, ?> map) throws Exception {
         ComponentInstanceSelector self = new ComponentInstanceSelector();
         return TeaModel.build(map, self);
+    }
+
+    public ComponentInstanceSelector setActionScope(String actionScope) {
+        this.actionScope = actionScope;
+        return this;
+    }
+    public String getActionScope() {
+        return this.actionScope;
     }
 
     public ComponentInstanceSelector setApplicationName(String applicationName) {

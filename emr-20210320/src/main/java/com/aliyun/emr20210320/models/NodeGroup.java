@@ -121,6 +121,12 @@ public class NodeGroup extends TeaModel {
     public NodeGroupStateChangeReason stateChangeReason;
 
     /**
+     * <p>节点组状态，NodeGroupState别名。</p>
+     */
+    @NameInMap("Status")
+    public String status;
+
+    /**
      * <p>系统盘信息。</p>
      */
     @NameInMap("SystemDisk")
@@ -285,6 +291,14 @@ public class NodeGroup extends TeaModel {
     }
     public NodeGroupStateChangeReason getStateChangeReason() {
         return this.stateChangeReason;
+    }
+
+    public NodeGroup setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public NodeGroup setSystemDisk(SystemDisk systemDisk) {

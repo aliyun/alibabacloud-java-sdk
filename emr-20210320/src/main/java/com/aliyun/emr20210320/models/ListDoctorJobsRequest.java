@@ -5,65 +5,80 @@ import com.aliyun.tea.*;
 
 public class ListDoctorJobsRequest extends TeaModel {
     /**
-     * <p>app ID数组</p>
+     * <p>The IDs of the jobs that are submitted to YARN.</p>
      */
     @NameInMap("AppIds")
     public java.util.List<String> appIds;
 
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>结束range</p>
+     * <p>The range of end time. You can filter jobs whose end time falls within the specified time range.</p>
      */
     @NameInMap("EndRange")
     public EndRange endRange;
 
     /**
-     * <p>一次获取的最大记录数。取值范围：1~100。</p>
+     * <p>The maximum number of entries to return on each page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>标记当前开始读取的位置，置空表示从头开始。</p>
+     * <p>The pagination token that is used in the request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>排序字段</p>
+     * <p>The field that you use to sort the query results. Valid values:</p>
+     * <br>
+     * <p>*   vcoreSeconds: the aggregated number of vCPUs that are allocated to the job multiplied by the number of seconds the job has been running</p>
+     * <p>*   memSeconds: the aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;
 
     /**
-     * <p>排序类型</p>
+     * <p>The order in which you want to sort the query results. Valid values:</p>
+     * <br>
+     * <p>*   ASC: the ascending order</p>
+     * <p>*   DESC: the descending order</p>
      */
     @NameInMap("OrderType")
     public String orderType;
 
+    /**
+     * <p>The YARN queues to which the jobs are submitted.</p>
+     */
     @NameInMap("Queues")
     public java.util.List<String> queues;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>开始range</p>
+     * <p>The range of start time. You can filter jobs whose start time falls within the specified time range.</p>
      */
     @NameInMap("StartRange")
     public StartRange startRange;
 
+    /**
+     * <p>The YARN engines to which the jobs are submitted.</p>
+     */
     @NameInMap("Types")
     public java.util.List<String> types;
 
+    /**
+     * <p>The users who submit the jobs.</p>
+     */
     @NameInMap("Users")
     public java.util.List<String> users;
 
@@ -169,9 +184,15 @@ public class ListDoctorJobsRequest extends TeaModel {
     }
 
     public static class EndRange extends TeaModel {
+        /**
+         * <p>The end of the time range during which jobs ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The beginning of the time range during which jobs ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
@@ -199,9 +220,15 @@ public class ListDoctorJobsRequest extends TeaModel {
     }
 
     public static class StartRange extends TeaModel {
+        /**
+         * <p>The end of the time range during which jobs were submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The beginning of the time range during which jobs were submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 

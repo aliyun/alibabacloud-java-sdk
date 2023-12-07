@@ -5,20 +5,26 @@ import com.aliyun.tea.*;
 
 public class GetDoctorHBaseRegionServerRequest extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The date.</p>
+     */
     @NameInMap("DateTime")
     public String dateTime;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The host of the region server.</p>
+     */
     @NameInMap("RegionServerHost")
     public String regionServerHost;
 

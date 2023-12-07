@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationConfigsRequest extends TeaModel {
     /**
-     * <p>The list of application configurations.</p>
+     * <p>The application configurations.</p>
      */
     @NameInMap("ApplicationConfigs")
     public java.util.List<UpdateApplicationConfig> applicationConfigs;
@@ -48,7 +48,7 @@ public class UpdateApplicationConfigsRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the node group.</p>
+     * <p>The node group ID.</p>
      */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;

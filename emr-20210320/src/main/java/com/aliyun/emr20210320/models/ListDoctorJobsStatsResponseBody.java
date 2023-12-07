@@ -4,29 +4,32 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ListDoctorJobsStatsResponseBody extends TeaModel {
+    /**
+     * <p>The summary of job information.</p>
+     */
     @NameInMap("Data")
     public java.util.List<Data> data;
 
     /**
-     * <p>本次请求所返回的最大记录条数。</p>
+     * <p>The maximum number of entries returned.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+     * <p>A pagination token.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>本次请求条件下的数据总量。</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -77,15 +80,27 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
     }
 
     public static class AppsCount extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -129,15 +144,27 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
     }
 
     public static class MemSeconds extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -181,15 +208,27 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
     }
 
     public static class VcoreSeconds extends TeaModel {
+        /**
+         * <p>The description of the metric.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The unit of the metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -233,21 +272,39 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
     }
 
     public static class Data extends TeaModel {
+        /**
+         * <p>The total number of jobs.</p>
+         */
         @NameInMap("AppsCount")
         public AppsCount appsCount;
 
+        /**
+         * <p>The aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running.</p>
+         */
         @NameInMap("MemSeconds")
         public MemSeconds memSeconds;
 
+        /**
+         * <p>The YARN queue to which the job was submitted.</p>
+         */
         @NameInMap("Queue")
         public String queue;
 
+        /**
+         * <p>The type of the compute engine.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The username that is used to submit the job.</p>
+         */
         @NameInMap("User")
         public String user;
 
+        /**
+         * <p>The aggregated number of vCPUs that are allocated to the job multiplied by the number of seconds the job has been running.</p>
+         */
         @NameInMap("VcoreSeconds")
         public VcoreSeconds vcoreSeconds;
 

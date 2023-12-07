@@ -4,6 +4,9 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class GetDoctorHBaseRegionResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public Data data;
 
@@ -142,12 +145,18 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -301,6 +310,9 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         @NameInMap("DailyWriteRequest")
         public DailyWriteRequest dailyWriteRequest;
 
+        /**
+         * <p>The number of StoreFiles.</p>
+         */
         @NameInMap("StoreFileCount")
         public StoreFileCount storeFileCount;
 
@@ -358,6 +370,9 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
     }
 
     public static class Data extends TeaModel {
+        /**
+         * <p>The metric information.</p>
+         */
         @NameInMap("Metrics")
         public Metrics metrics;
 

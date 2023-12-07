@@ -5,41 +5,64 @@ import com.aliyun.tea.*;
 
 public class ListDoctorJobsStatsRequest extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The range of end time. You can filter jobs whose end time falls within the specified time range.</p>
+     */
     @NameInMap("EndRange")
     public EndRange endRange;
 
+    /**
+     * <p>The fields that are used for grouping data.</p>
+     * <br>
+     * <p>Currently, only the first value is used for grouping data. Combinations of multiple values will be supported in the future.</p>
+     */
     @NameInMap("GroupBy")
     public java.util.List<String> groupBy;
 
     /**
-     * <p>一次获取的最大记录数。取值范围：1~100。</p>
+     * <p>The maximum number of entries to return on each page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>标记当前开始读取的位置，置空表示从头开始。</p>
+     * <p>The pagination token that is used in the request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The field that you use to sort the query results. Valid values:</p>
+     * <br>
+     * <p>*   vcoreSeconds: the aggregated number of vCPUs that are allocated to the job multiplied by the number of seconds the job has been running</p>
+     * <p>*   memSeconds: the aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
+    /**
+     * <p>The order in which you want to sort the query results. Valid values:</p>
+     * <br>
+     * <p>*   ASC: in ascending order</p>
+     * <p>*   DESC: in descending order</p>
+     */
     @NameInMap("OrderType")
     public String orderType;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The range of start time. You can filter jobs whose start time falls within the specified time range.</p>
+     */
     @NameInMap("StartRange")
     public StartRange startRange;
 
@@ -121,9 +144,15 @@ public class ListDoctorJobsStatsRequest extends TeaModel {
     }
 
     public static class EndRange extends TeaModel {
+        /**
+         * <p>The end of the time range during which jobs ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The beginning of the time range during which jobs ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
@@ -151,9 +180,15 @@ public class ListDoctorJobsStatsRequest extends TeaModel {
     }
 
     public static class StartRange extends TeaModel {
+        /**
+         * <p>The end of the time range during which jobs were submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The beginning of the time range during which jobs were submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 

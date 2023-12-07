@@ -4,6 +4,9 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class GetDoctorReportComponentSummaryResponseBody extends TeaModel {
+    /**
+     * <p>The content of the report.</p>
+     */
     @NameInMap("Data")
     public Data data;
 
@@ -41,6 +44,9 @@ public class GetDoctorReportComponentSummaryResponseBody extends TeaModel {
         @NameInMap("Suggestion")
         public String suggestion;
 
+        /**
+         * <p>The summary of the report.</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
