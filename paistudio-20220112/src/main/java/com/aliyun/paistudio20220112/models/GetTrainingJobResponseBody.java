@@ -52,6 +52,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
     @NameInMap("OutputChannels")
     public java.util.List<GetTrainingJobResponseBodyOutputChannels> outputChannels;
 
+    @NameInMap("OutputModel")
+    public GetTrainingJobResponseBodyOutputModel outputModel;
+
     @NameInMap("ReasonCode")
     public String reasonCode;
 
@@ -227,6 +230,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
         return this.outputChannels;
     }
 
+    public GetTrainingJobResponseBody setOutputModel(GetTrainingJobResponseBodyOutputModel outputModel) {
+        this.outputModel = outputModel;
+        return this;
+    }
+    public GetTrainingJobResponseBodyOutputModel getOutputModel() {
+        return this.outputModel;
+    }
+
     public GetTrainingJobResponseBody setReasonCode(String reasonCode) {
         this.reasonCode = reasonCode;
         return this;
@@ -339,12 +350,84 @@ public class GetTrainingJobResponseBody extends TeaModel {
         return this.workspaceId;
     }
 
+    public static class GetTrainingJobResponseBodyComputeResourceInstanceSpec extends TeaModel {
+        @NameInMap("CPU")
+        public String CPU;
+
+        @NameInMap("GPU")
+        public String GPU;
+
+        @NameInMap("GPUType")
+        public String GPUType;
+
+        @NameInMap("Memory")
+        public String memory;
+
+        @NameInMap("SharedMemory")
+        public String sharedMemory;
+
+        public static GetTrainingJobResponseBodyComputeResourceInstanceSpec build(java.util.Map<String, ?> map) throws Exception {
+            GetTrainingJobResponseBodyComputeResourceInstanceSpec self = new GetTrainingJobResponseBodyComputeResourceInstanceSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTrainingJobResponseBodyComputeResourceInstanceSpec setCPU(String CPU) {
+            this.CPU = CPU;
+            return this;
+        }
+        public String getCPU() {
+            return this.CPU;
+        }
+
+        public GetTrainingJobResponseBodyComputeResourceInstanceSpec setGPU(String GPU) {
+            this.GPU = GPU;
+            return this;
+        }
+        public String getGPU() {
+            return this.GPU;
+        }
+
+        public GetTrainingJobResponseBodyComputeResourceInstanceSpec setGPUType(String GPUType) {
+            this.GPUType = GPUType;
+            return this;
+        }
+        public String getGPUType() {
+            return this.GPUType;
+        }
+
+        public GetTrainingJobResponseBodyComputeResourceInstanceSpec setMemory(String memory) {
+            this.memory = memory;
+            return this;
+        }
+        public String getMemory() {
+            return this.memory;
+        }
+
+        public GetTrainingJobResponseBodyComputeResourceInstanceSpec setSharedMemory(String sharedMemory) {
+            this.sharedMemory = sharedMemory;
+            return this;
+        }
+        public String getSharedMemory() {
+            return this.sharedMemory;
+        }
+
+    }
+
     public static class GetTrainingJobResponseBodyComputeResource extends TeaModel {
         @NameInMap("EcsCount")
         public Long ecsCount;
 
         @NameInMap("EcsSpec")
         public String ecsSpec;
+
+        @NameInMap("InstanceCount")
+        public Long instanceCount;
+
+        @NameInMap("InstanceSpec")
+        public GetTrainingJobResponseBodyComputeResourceInstanceSpec instanceSpec;
+
+        @NameInMap("ResourceId")
+        public String resourceId;
 
         public static GetTrainingJobResponseBodyComputeResource build(java.util.Map<String, ?> map) throws Exception {
             GetTrainingJobResponseBodyComputeResource self = new GetTrainingJobResponseBodyComputeResource();
@@ -365,6 +448,30 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
         public String getEcsSpec() {
             return this.ecsSpec;
+        }
+
+        public GetTrainingJobResponseBodyComputeResource setInstanceCount(Long instanceCount) {
+            this.instanceCount = instanceCount;
+            return this;
+        }
+        public Long getInstanceCount() {
+            return this.instanceCount;
+        }
+
+        public GetTrainingJobResponseBodyComputeResource setInstanceSpec(GetTrainingJobResponseBodyComputeResourceInstanceSpec instanceSpec) {
+            this.instanceSpec = instanceSpec;
+            return this;
+        }
+        public GetTrainingJobResponseBodyComputeResourceInstanceSpec getInstanceSpec() {
+            return this.instanceSpec;
+        }
+
+        public GetTrainingJobResponseBodyComputeResource setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
         }
 
     }
@@ -679,6 +786,36 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
         public String getOutputUri() {
             return this.outputUri;
+        }
+
+    }
+
+    public static class GetTrainingJobResponseBodyOutputModel extends TeaModel {
+        @NameInMap("OutputChannelName")
+        public String outputChannelName;
+
+        @NameInMap("Uri")
+        public String uri;
+
+        public static GetTrainingJobResponseBodyOutputModel build(java.util.Map<String, ?> map) throws Exception {
+            GetTrainingJobResponseBodyOutputModel self = new GetTrainingJobResponseBodyOutputModel();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTrainingJobResponseBodyOutputModel setOutputChannelName(String outputChannelName) {
+            this.outputChannelName = outputChannelName;
+            return this;
+        }
+        public String getOutputChannelName() {
+            return this.outputChannelName;
+        }
+
+        public GetTrainingJobResponseBodyOutputModel setUri(String uri) {
+            this.uri = uri;
+            return this;
+        }
+        public String getUri() {
+            return this.uri;
         }
 
     }
