@@ -4,6 +4,12 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class RefreshObjectCachesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to refresh resources in a directory if the resources are different from the resources in the same directory in the origin server. Default value: false.</p>
+     * <br>
+     * <p>*   **true**: refresh all resources in the directory.</p>
+     * <p>*   **false**: refresh the changed resources in the directory.</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 

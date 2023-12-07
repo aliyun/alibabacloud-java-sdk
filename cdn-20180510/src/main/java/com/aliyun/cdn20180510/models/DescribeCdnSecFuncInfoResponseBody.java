@@ -4,18 +4,36 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
+    /**
+     * <p>Queried data.</p>
+     */
     @NameInMap("Content")
     public java.util.List<DescribeCdnSecFuncInfoResponseBodyContent> content;
 
+    /**
+     * <p>The description.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatus")
     public String httpStatus;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The HTTP request response code.</p>
+     * <br>
+     * <p>*   0: OK.</p>
+     * <p>*   Values other than 0: an error.</p>
+     */
     @NameInMap("RetCode")
     public String retCode;
 
@@ -65,9 +83,15 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnSecFuncInfoResponseBodyContent extends TeaModel {
+        /**
+         * <p>The tag.</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>The value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
