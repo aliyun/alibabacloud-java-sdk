@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class TagResourceRequest extends TeaModel {
+    /**
+     * <p>The configuration of the resource tag.</p>
+     */
     @NameInMap("body")
     public TagResourceInput body;
 

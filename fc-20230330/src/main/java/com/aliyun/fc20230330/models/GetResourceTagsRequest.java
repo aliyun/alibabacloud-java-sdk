@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class GetResourceTagsRequest extends TeaModel {
+    /**
+     * <p>The resource ID.</p>
+     */
     @NameInMap("arn")
     public String arn;
 
