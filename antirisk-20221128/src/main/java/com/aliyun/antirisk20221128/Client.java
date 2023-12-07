@@ -181,4 +181,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listChannelRiskDetailsWithOptions(request, headers, runtime);
     }
+
+    public ListUninstallDetailResponse listUninstallDetailWithOptions(ListUninstallDetailRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceId)) {
+            query.put("dataSourceId", request.dataSourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDs)) {
+            query.put("endDs", request.endDs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDs)) {
+            query.put("startDs", request.startDs);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListUninstallDetail"),
+            new TeaPair("version", "2022-11-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/uninstall/listUninstallDetail"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListUninstallDetailResponse());
+    }
+
+    public ListUninstallDetailResponse listUninstallDetail(ListUninstallDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listUninstallDetailWithOptions(request, headers, runtime);
+    }
 }
