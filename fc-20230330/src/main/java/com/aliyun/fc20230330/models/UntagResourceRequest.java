@@ -4,12 +4,21 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class UntagResourceRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to delete all tags.</p>
+     */
     @NameInMap("all")
     public Boolean all;
 
+    /**
+     * <p>The resource ID.</p>
+     */
     @NameInMap("arn")
     public String arn;
 
+    /**
+     * <p>The tag name.</p>
+     */
     @NameInMap("tagKeys")
     public String tagKeys;
 

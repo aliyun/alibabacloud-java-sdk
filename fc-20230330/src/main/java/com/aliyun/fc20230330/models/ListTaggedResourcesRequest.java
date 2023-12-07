@@ -4,12 +4,21 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ListTaggedResourcesRequest extends TeaModel {
+    /**
+     * <p>The number of resources to return.</p>
+     */
     @NameInMap("limit")
     public Integer limit;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The type of the resource quantity. ALIYUN::FC::FUNCTION indicates functions in Function Compute 3.0. ALIYUN::FC::SERVICE indicates the original service of Function Compute. The default value is ALIYUN::FC:FUNCTION.</p>
+     */
     @NameInMap("resourceType")
     public String resourceType;
 

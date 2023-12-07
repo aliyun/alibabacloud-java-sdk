@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class PublishFunctionVersionRequest extends TeaModel {
+    /**
+     * <p>The information about the function version.</p>
+     */
     @NameInMap("body")
     public PublishVersionInput body;
 

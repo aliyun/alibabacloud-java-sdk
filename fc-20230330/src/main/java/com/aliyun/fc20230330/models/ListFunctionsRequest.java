@@ -4,12 +4,21 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ListFunctionsRequest extends TeaModel {
+    /**
+     * <p>The number of functions to return.</p>
+     */
     @NameInMap("limit")
     public Integer limit;
 
+    /**
+     * <p>A pagination token.</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>A prefix of function names.</p>
+     */
     @NameInMap("prefix")
     public String prefix;
 
