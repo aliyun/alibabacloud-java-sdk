@@ -26,6 +26,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+      * You can call this operation to add an image to an Image Search instance.
+      * > If you want to obtain more information about the service and technical support, click [Online Consulting](https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2) or join the DingTalk group (ID 35035130).
+      * ## QPS limits
+      * By default, the concurrency limit for adding an image to instances whose image capacity specifications are 0.1 million images is 1. This means that the system can process up to one request of adding an image every second. By default, the concurrency limit for adding an image to instances of other image capacity specifications is 5. This means that the system can process up to five requests of adding an image every second.
+      *
+      * @param request AddImageRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddImageResponse
+     */
     public AddImageResponse addImageWithOptions(AddImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -94,6 +104,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddImageResponse());
     }
 
+    /**
+      * You can call this operation to add an image to an Image Search instance.
+      * > If you want to obtain more information about the service and technical support, click [Online Consulting](https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2) or join the DingTalk group (ID 35035130).
+      * ## QPS limits
+      * By default, the concurrency limit for adding an image to instances whose image capacity specifications are 0.1 million images is 1. This means that the system can process up to one request of adding an image every second. By default, the concurrency limit for adding an image to instances of other image capacity specifications is 5. This means that the system can process up to five requests of adding an image every second.
+      *
+      * @param request AddImageRequest
+      * @return AddImageResponse
+     */
     public AddImageResponse addImage(AddImageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addImageWithOptions(request, runtime);
@@ -173,6 +192,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return addImageResp;
     }
 
+    /**
+      * This operation deletes images from an Image Search instance.
+      * >  A success response is returned even if the specified image does not exist on the instance. Therefore, you cannot determine whether the image exists on the instance based on the response.
+      * ## QPS limits
+      * By default, the maximum number of queries supported by this operation is 20. In this case, the system can process at most 20 requests every second.
+      *
+      * @param request DeleteImageRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteImageResponse
+     */
     public DeleteImageResponse deleteImageWithOptions(DeleteImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -205,11 +234,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteImageResponse());
     }
 
+    /**
+      * This operation deletes images from an Image Search instance.
+      * >  A success response is returned even if the specified image does not exist on the instance. Therefore, you cannot determine whether the image exists on the instance based on the response.
+      * ## QPS limits
+      * By default, the maximum number of queries supported by this operation is 20. In this case, the system can process at most 20 requests every second.
+      *
+      * @param request DeleteImageRequest
+      * @return DeleteImageResponse
+     */
     public DeleteImageResponse deleteImage(DeleteImageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteImageWithOptions(request, runtime);
     }
 
+    /**
+      * This operation queries instance details.
+      * ## QPS limits
+      * By default, the maximum number of queries supported by this operation is 1. In this case, the system can process only 1 request every second.
+      *
+      * @param request DetailRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DetailResponse
+     */
     public DetailResponse detailWithOptions(DetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -234,11 +281,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DetailResponse());
     }
 
+    /**
+      * This operation queries instance details.
+      * ## QPS limits
+      * By default, the maximum number of queries supported by this operation is 1. In this case, the system can process only 1 request every second.
+      *
+      * @param request DetailRequest
+      * @return DetailResponse
+     */
     public DetailResponse detail(DetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detailWithOptions(request, runtime);
     }
 
+    /**
+      * This operation creates a task for exporting metadata from an Image Search instance.
+      * ## QPS limits
+      * By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.
+      *
+      * @param request DumpMetaRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DumpMetaResponse
+     */
     public DumpMetaResponse dumpMetaWithOptions(DumpMetaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -263,11 +327,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DumpMetaResponse());
     }
 
+    /**
+      * This operation creates a task for exporting metadata from an Image Search instance.
+      * ## QPS limits
+      * By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.
+      *
+      * @param request DumpMetaRequest
+      * @return DumpMetaResponse
+     */
     public DumpMetaResponse dumpMeta(DumpMetaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.dumpMetaWithOptions(request, runtime);
     }
 
+    /**
+      * This operation queries tasks that are used for exporting metadata from an Image Search instance.
+      * ## QPS limits
+      * By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.
+      *
+      * @param request DumpMetaListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DumpMetaListResponse
+     */
     public DumpMetaListResponse dumpMetaListWithOptions(DumpMetaListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -304,11 +385,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DumpMetaListResponse());
     }
 
+    /**
+      * This operation queries tasks that are used for exporting metadata from an Image Search instance.
+      * ## QPS limits
+      * By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.
+      *
+      * @param request DumpMetaListRequest
+      * @return DumpMetaListResponse
+     */
     public DumpMetaListResponse dumpMetaList(DumpMetaListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.dumpMetaListWithOptions(request, runtime);
     }
 
+    /**
+      * This operation creates a batch task on an Image Search instance.
+      * ## QPS limits
+      * By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.
+      *
+      * @param request IncreaseInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return IncreaseInstanceResponse
+     */
     public IncreaseInstanceResponse increaseInstanceWithOptions(IncreaseInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -345,11 +443,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new IncreaseInstanceResponse());
     }
 
+    /**
+      * This operation creates a batch task on an Image Search instance.
+      * ## QPS limits
+      * By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.
+      *
+      * @param request IncreaseInstanceRequest
+      * @return IncreaseInstanceResponse
+     */
     public IncreaseInstanceResponse increaseInstance(IncreaseInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.increaseInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * This operation queries batch tasks on an Image Search instance.
+      * ## QPS limits
+      * By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.
+      *
+      * @param request IncreaseListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return IncreaseListResponse
+     */
     public IncreaseListResponse increaseListWithOptions(IncreaseListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -394,11 +509,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new IncreaseListResponse());
     }
 
+    /**
+      * This operation queries batch tasks on an Image Search instance.
+      * ## QPS limits
+      * By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.
+      *
+      * @param request IncreaseListRequest
+      * @return IncreaseListResponse
+     */
     public IncreaseListResponse increaseList(IncreaseListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.increaseListWithOptions(request, runtime);
     }
 
+    /**
+      * This operation searches for images by image name on an Image Search instance.
+      * ## QPS limits
+      * The maximum number of queries per second is displayed in the Image Search console. The upper limit is specified when you purchase the instance. You can set the upper limit to 5 QPS or 10 QPS.
+      *
+      * @param request SearchImageByNameRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SearchImageByNameResponse
+     */
     public SearchImageByNameResponse searchImageByNameWithOptions(SearchImageByNameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -447,11 +579,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SearchImageByNameResponse());
     }
 
+    /**
+      * This operation searches for images by image name on an Image Search instance.
+      * ## QPS limits
+      * The maximum number of queries per second is displayed in the Image Search console. The upper limit is specified when you purchase the instance. You can set the upper limit to 5 QPS or 10 QPS.
+      *
+      * @param request SearchImageByNameRequest
+      * @return SearchImageByNameResponse
+     */
     public SearchImageByNameResponse searchImageByName(SearchImageByNameRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.searchImageByNameWithOptions(request, runtime);
     }
 
+    /**
+      * This operation searches for images by image name on an Image Search instance.
+      * ## QPS limits
+      * The maximum number of queries per second is displayed in the Image Search console. The upper limit is specified when you purchase the instance. You can set the upper limit to 5 QPS or 10 QPS.  
+      * ## SDK release notes
+      * The Image Search SDK has been upgraded to version 3.1.1, which supports multi-subject recognition and similarity scores. For more information, see [Image Search SDK for Java](/help/en/image-search/latest/version-v3-java-sdk).
+      *
+      * @param request SearchImageByPicRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SearchImageByPicResponse
+     */
     public SearchImageByPicResponse searchImageByPicWithOptions(SearchImageByPicRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -504,6 +655,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SearchImageByPicResponse());
     }
 
+    /**
+      * This operation searches for images by image name on an Image Search instance.
+      * ## QPS limits
+      * The maximum number of queries per second is displayed in the Image Search console. The upper limit is specified when you purchase the instance. You can set the upper limit to 5 QPS or 10 QPS.  
+      * ## SDK release notes
+      * The Image Search SDK has been upgraded to version 3.1.1, which supports multi-subject recognition and similarity scores. For more information, see [Image Search SDK for Java](/help/en/image-search/latest/version-v3-java-sdk).
+      *
+      * @param request SearchImageByPicRequest
+      * @return SearchImageByPicResponse
+     */
     public SearchImageByPicResponse searchImageByPic(SearchImageByPicRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.searchImageByPicWithOptions(request, runtime);
@@ -583,6 +744,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return searchImageByPicResp;
     }
 
+    /**
+      * This operation updates image information on an Image Search instance.
+      * > *   Limits are imposed on the instance creation time.
+      * >*   This operation is supported by instances that are created in the Singapore (Singapore) region after December 2021. This operation is not supported in other regions.
+      * ## QPS limits
+      * By default, the maximum number of queries supported by this operation is 20. In this case, the system can process at most 20 requests every second.
+      *
+      * @param request UpdateImageRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateImageResponse
+     */
     public UpdateImageResponse updateImageWithOptions(UpdateImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -635,6 +807,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateImageResponse());
     }
 
+    /**
+      * This operation updates image information on an Image Search instance.
+      * > *   Limits are imposed on the instance creation time.
+      * >*   This operation is supported by instances that are created in the Singapore (Singapore) region after December 2021. This operation is not supported in other regions.
+      * ## QPS limits
+      * By default, the maximum number of queries supported by this operation is 20. In this case, the system can process at most 20 requests every second.
+      *
+      * @param request UpdateImageRequest
+      * @return UpdateImageResponse
+     */
     public UpdateImageResponse updateImage(UpdateImageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateImageWithOptions(request, runtime);

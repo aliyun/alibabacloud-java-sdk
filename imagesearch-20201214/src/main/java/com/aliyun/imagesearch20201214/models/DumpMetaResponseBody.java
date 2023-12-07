@@ -4,12 +4,21 @@ package com.aliyun.imagesearch20201214.models;
 import com.aliyun.tea.*;
 
 public class DumpMetaResponseBody extends TeaModel {
+    /**
+     * <p>The information about the export task.</p>
+     */
     @NameInMap("Data")
     public DumpMetaResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +52,19 @@ public class DumpMetaResponseBody extends TeaModel {
     }
 
     public static class DumpMetaResponseBodyData extends TeaModel {
+        /**
+         * <p>The status of the export task.</p>
+         * <br>
+         * <p>*   PROCESSING: in progress</p>
+         * <p>*   FAIL: failed</p>
+         * <p>*   SUCCESS: successful</p>
+         */
         @NameInMap("DumpMetaStatus")
         public String dumpMetaStatus;
 
+        /**
+         * <p>The ID of the export task.</p>
+         */
         @NameInMap("Id")
         public String id;
 

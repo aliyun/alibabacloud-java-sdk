@@ -4,12 +4,21 @@ package com.aliyun.imagesearch20201214.models;
 import com.aliyun.tea.*;
 
 public class DetailResponseBody extends TeaModel {
+    /**
+     * <p>The details about the instance.</p>
+     */
     @NameInMap("Instance")
     public DetailResponseBodyInstance instance;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,27 +52,53 @@ public class DetailResponseBody extends TeaModel {
     }
 
     public static class DetailResponseBodyInstance extends TeaModel {
+        /**
+         * <p>The capacity of the plan. Unit: × 10,000 images.</p>
+         */
         @NameInMap("Capacity")
         public Integer capacity;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The number of queries per second supported by the plan.</p>
+         */
         @NameInMap("Qps")
         public Integer qps;
 
+        /**
+         * <p>The information about the region.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The Image Search model.</p>
+         * <br>
+         * <p>0: commodity search. 1: generic image search.</p>
+         */
         @NameInMap("ServiceType")
         public Integer serviceType;
 
+        /**
+         * <p>The number of images.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
+        /**
+         * <p>The time when the instance was created. Unit: milliseconds.</p>
+         */
         @NameInMap("UtcCreate")
         public String utcCreate;
 
+        /**
+         * <p>The time when the instance expires. Unit: milliseconds.</p>
+         */
         @NameInMap("UtcExpireTime")
         public String utcExpireTime;
 

@@ -4,6 +4,9 @@ package com.aliyun.imagesearch20201214.models;
 import com.aliyun.tea.*;
 
 public class DetailRequest extends TeaModel {
+    /**
+     * <p>The name of the instance.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
