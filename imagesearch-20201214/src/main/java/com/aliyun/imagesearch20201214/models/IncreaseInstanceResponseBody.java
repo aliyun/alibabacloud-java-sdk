@@ -4,12 +4,21 @@ package com.aliyun.imagesearch20201214.models;
 import com.aliyun.tea.*;
 
 public class IncreaseInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The information about the task.</p>
+     */
     @NameInMap("Data")
     public IncreaseInstanceResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +52,19 @@ public class IncreaseInstanceResponseBody extends TeaModel {
     }
 
     public static class IncreaseInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The status of the task.</p>
+         * <br>
+         * <p>*   PROCESSING: in progress</p>
+         * <p>*   FAIL: failed</p>
+         * <p>*   SUCCESS: successful</p>
+         */
         @NameInMap("IncrementStatus")
         public String incrementStatus;
 

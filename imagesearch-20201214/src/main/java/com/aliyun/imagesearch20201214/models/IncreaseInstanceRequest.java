@@ -4,15 +4,29 @@ package com.aliyun.imagesearch20201214.models;
 import com.aliyun.tea.*;
 
 public class IncreaseInstanceRequest extends TeaModel {
+    /**
+     * <p>The name of the Object Storage Service (OSS) bucket.</p>
+     * <br>
+     * <p>>  The bucket must be in the same region as the Image Search instance.</p>
+     */
     @NameInMap("BucketName")
     public String bucketName;
 
+    /**
+     * <p>The callback address.</p>
+     */
     @NameInMap("CallbackAddress")
     public String callbackAddress;
 
+    /**
+     * <p>The name of the instance.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The absolute path to the increment.meta file in the bucket. The path must start with a forward slash (/) and cannot end with a forward slash (/).</p>
+     */
     @NameInMap("Path")
     public String path;
 

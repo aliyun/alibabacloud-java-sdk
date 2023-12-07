@@ -4,24 +4,54 @@ package com.aliyun.imagesearch20201214.models;
 import com.aliyun.tea.*;
 
 public class SearchImageByNameRequest extends TeaModel {
+    /**
+     * <p>The category of the product. For more information, see [Category references](~~179184~~).</p>
+     * <br>
+     * <p>*   For product search: If a category is specified, the specified category prevails. If no category is specified, the system estimates and selects a category. The category selected by the system is included in the response.</p>
+     * <p>*   For generic search: The parameter value is set to 88888888 regardless of whether a category is specified.</p>
+     */
     @NameInMap("CategoryId")
     public Integer categoryId;
 
+    /**
+     * <p>The filter conditions. int_attr supports the following operators: >, >=, <, <=, and =. str_attr supports the following operators: = and !=. You can set the logical operator between conditions to AND or OR.</p>
+     * <br>
+     * <p>Examples:</p>
+     * <br>
+     * <p>*   int_attr>=100</p>
+     * <p>*   str_attr!="value1"</p>
+     * <p>*   int_attr=1000 AND str_attr="value1"</p>
+     */
     @NameInMap("Filter")
     public String filter;
 
+    /**
+     * <p>The name of the Image Search instance. The name can be up to 20 characters in length.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The number of images to return on each page. Valid values: 1 to 100. Default value: 10.</p>
+     */
     @NameInMap("Num")
     public Integer num;
 
+    /**
+     * <p>The name of the image.</p>
+     */
     @NameInMap("PicName")
     public String picName;
 
+    /**
+     * <p>The ID of the product.</p>
+     */
     @NameInMap("ProductId")
     public String productId;
 
+    /**
+     * <p>The number of the image to return. Valid values: 0 to 499. Default value: 0.</p>
+     */
     @NameInMap("Start")
     public Integer start;
 

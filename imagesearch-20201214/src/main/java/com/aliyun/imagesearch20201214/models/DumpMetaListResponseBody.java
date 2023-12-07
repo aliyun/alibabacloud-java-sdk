@@ -4,9 +4,15 @@ package com.aliyun.imagesearch20201214.models;
 import com.aliyun.tea.*;
 
 public class DumpMetaListResponseBody extends TeaModel {
+    /**
+     * <p>The information about the task that is used to export metadata.</p>
+     */
     @NameInMap("Data")
     public DumpMetaListResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +38,52 @@ public class DumpMetaListResponseBody extends TeaModel {
     }
 
     public static class DumpMetaListResponseBodyDataDumpMetaList extends TeaModel {
+        /**
+         * <p>The error code returned.</p>
+         * <br>
+         * <p>*   A value of 0 indicates that the operation is successful.</p>
+         * <p>*   Values other than 0 indicate errors.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The address where you can download the metadata. The address is valid for 2 hours.</p>
+         */
         @NameInMap("MetaUrl")
         public String metaUrl;
 
+        /**
+         * <p>The error message returned.</p>
+         */
         @NameInMap("Msg")
         public String msg;
 
+        /**
+         * <p>The status of the export task.</p>
+         * <br>
+         * <p>*   PROCESSING: in progress</p>
+         * <p>*   FAIL: failed</p>
+         * <p>*   SUCCESS: successful</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The time when the task was created. Unit: milliseconds.</p>
+         */
         @NameInMap("UtcCreate")
         public String utcCreate;
 
+        /**
+         * <p>The time when the task was updated. Unit: milliseconds.</p>
+         */
         @NameInMap("UtcModified")
         public Long utcModified;
 
@@ -117,15 +151,27 @@ public class DumpMetaListResponseBody extends TeaModel {
     }
 
     public static class DumpMetaListResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of tasks that are used to export metadata.</p>
+         */
         @NameInMap("DumpMetaList")
         public java.util.List<DumpMetaListResponseBodyDataDumpMetaList> dumpMetaList;
 
+        /**
+         * <p>The number of the page to return.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries to return on each page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of tasks.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

@@ -4,18 +4,36 @@ package com.aliyun.imagesearch20201214.models;
 import com.aliyun.tea.*;
 
 public class DeleteImageResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned.</p>
+     * <br>
+     * <p>*   A value of 0 indicates that the operation is successful.</p>
+     * <p>*   Values other than 0 indicate errors.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about the deleted images.</p>
+     */
     @NameInMap("Data")
     public DeleteImageResponseBodyData data;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +83,9 @@ public class DeleteImageResponseBody extends TeaModel {
     }
 
     public static class DeleteImageResponseBodyData extends TeaModel {
+        /**
+         * <p>The name (PicName) of the deleted image.</p>
+         */
         @NameInMap("PicNames")
         public java.util.List<String> picNames;
 
