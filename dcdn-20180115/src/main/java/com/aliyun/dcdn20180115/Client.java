@@ -656,8 +656,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > *   You can specify up to 50 domain names in each request.
-      * >*   You can call this operation up to 30 times per second per account.
+      * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
+      * *   You can call this operation up to 30 times per second per account.
       *
       * @param request BatchSetDcdnDomainConfigsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -704,8 +704,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > *   You can specify up to 50 domain names in each request.
-      * >*   You can call this operation up to 30 times per second per account.
+      * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
+      * *   You can call this operation up to 30 times per second per account.
       *
       * @param request BatchSetDcdnDomainConfigsRequest
       * @return BatchSetDcdnDomainConfigsResponse
@@ -1150,9 +1150,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
-      * *   This operation allows you to customize an operations report for a specific domain name. You can view the statistics about the domain name in the report.
-      * *   You can call this operation up to three times per second per account.
+      * **
+      * ****
+      * *
+      * *
       *
       * @param request CreateDcdnSubTaskRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1187,9 +1188,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
-      * *   This operation allows you to customize an operations report for a specific domain name. You can view the statistics about the domain name in the report.
-      * *   You can call this operation up to three times per second per account.
+      * **
+      * ****
+      * *
+      * *
       *
       * @param request CreateDcdnSubTaskRequest
       * @return CreateDcdnSubTaskResponse
@@ -1293,10 +1295,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
-      * *   The parameters must comply with the rules of EnvConf. The description of a routine cannot exceed 50 characters in length.
-      * *   You can only specify the production and staging environments when you call this operation.
-      * *   You can call this operation up to 100 times per second.
+      * > *   The parameters must comply with the rules of EnvConf. The description of a routine cannot exceed 50 characters in length.
+      * >*   You can only specify the production and staging environments when you call this operation.
+      * >*   You can call this operation up to 100 times per second per account.
       *
       * @param tmpReq CreateRoutineRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1341,10 +1342,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
-      * *   The parameters must comply with the rules of EnvConf. The description of a routine cannot exceed 50 characters in length.
-      * *   You can only specify the production and staging environments when you call this operation.
-      * *   You can call this operation up to 100 times per second.
+      * > *   The parameters must comply with the rules of EnvConf. The description of a routine cannot exceed 50 characters in length.
+      * >*   You can only specify the production and staging environments when you call this operation.
+      * >*   You can call this operation up to 100 times per second per account.
       *
       * @param request CreateRoutineRequest
       * @return CreateRoutineResponse
@@ -2526,8 +2526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **
-      * **You can call this operation up to three times per second.
+      * >You can call this operation up to three times per second.
       *
       * @param request DescribeDcdnDeliverListRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2558,8 +2557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **
-      * **You can call this operation up to three times per second.
+      * >You can call this operation up to three times per second.
       *
       * @param request DescribeDcdnDeliverListRequest
       * @return DescribeDcdnDeliverListResponse
@@ -6131,7 +6129,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
       * *   You can query the refresh or prefetch tasks by ID or URL.
       * *   You can set both **TaskId** and **ObjectPath** in a request. If you do not set **TaskId** or **ObjectPath**, the data in the last 3 days on the first page is returned. By default, a maximum of 20 entries can be displayed on each page.
       * *   If you specify **DomainName** or **Status**, you must also specify **ObjectType**.
@@ -6206,7 +6203,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
       * *   You can query the refresh or prefetch tasks by ID or URL.
       * *   You can set both **TaskId** and **ObjectPath** in a request. If you do not set **TaskId** or **ObjectPath**, the data in the last 3 days on the first page is returned. By default, a maximum of 20 entries can be displayed on each page.
       * *   If you specify **DomainName** or **Status**, you must also specify **ObjectType**.
@@ -10748,7 +10744,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The parameters that specify the time interval at which the tracking task sends operations reports. The settings must be escaped in JSON.
+      * > You can call this operation up to three times per second per account.
       *
       * @param request UpdateDcdnDeliverTaskRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -10799,7 +10795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The parameters that specify the time interval at which the tracking task sends operations reports. The settings must be escaped in JSON.
+      * > You can call this operation up to three times per second per account.
       *
       * @param request UpdateDcdnDeliverTaskRequest
       * @return UpdateDcdnDeliverTaskResponse

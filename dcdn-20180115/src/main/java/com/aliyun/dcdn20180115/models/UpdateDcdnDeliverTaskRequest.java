@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class UpdateDcdnDeliverTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The method that is used to send operations reports. Operations reports are sent to you only by email. The settings need to be escaped in JSON.</p>
      */
     @NameInMap("Deliver")
     public String deliver;
 
     /**
-     * <p>Domain Subscription</p>
+     * <p>The ID of the tracking task that you want to update.</p>
      */
     @NameInMap("DeliverId")
     public Long deliverId;
 
     /**
-     * <p>{"schedName":"subscription task name","description":"description","crontab":"000**?","frequency":"d","status":"enable","effectiveFrom": "2020-09-17T00:00:00Z","effectiveEnd":"2020-11-17T00:00:00Z"}</p>
+     * <p>The domain names from which the tracking task collects data. Separate domain names with commas (,). If you do not specify a domain name, the task collects data from all domain names that belong to your Alibaba Cloud account.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -29,13 +29,13 @@ public class UpdateDcdnDeliverTaskRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The operations reports that are tracked by the task. The data must be escaped in JSON.</p>
+     * <p>The operations reports that are tracked by the task. The data needs to be escaped in JSON.</p>
      */
     @NameInMap("Reports")
     public String reports;
 
     /**
-     * <p>The method that is used to send operations reports. Operations reports are sent to you only by email. The settings must be escaped in JSON.</p>
+     * <p>The parameters that specify the time interval at which the tracking task sends operations reports. The settings need to be escaped in JSON.</p>
      */
     @NameInMap("Schedule")
     public String schedule;

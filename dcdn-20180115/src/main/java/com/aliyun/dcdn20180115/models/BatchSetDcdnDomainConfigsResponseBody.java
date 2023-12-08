@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
     /**
-     * <p>The list of domain configurations.</p>
+     * <p>域名配置清单。</p>
      */
     @NameInMap("DomainConfigList")
     public BatchSetDcdnDomainConfigsResponseBodyDomainConfigList domainConfigList;
@@ -39,19 +39,19 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
 
     public static class BatchSetDcdnDomainConfigsResponseBodyDomainConfigListDomainConfigModel extends TeaModel {
         /**
-         * <p>The ID of the configuration. If 0 is returned, the configuration failed and you need reconfigure this configuration.</p>
+         * <p>配置ID，如果返回为0，则表示该条配置未配置成功，需要重新配置。</p>
          */
         @NameInMap("ConfigId")
         public Long configId;
 
         /**
-         * <p>The domain name.</p>
+         * <p>域名。</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
-         * <p>The feature name.</p>
+         * <p>功能名称。</p>
          */
         @NameInMap("FunctionName")
         public String functionName;

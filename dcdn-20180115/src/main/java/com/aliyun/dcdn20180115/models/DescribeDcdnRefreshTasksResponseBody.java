@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -23,7 +23,7 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The tasks.</p>
+     * <p>Details about tasks.</p>
      */
     @NameInMap("Tasks")
     public DescribeDcdnRefreshTasksResponseBodyTasks tasks;
@@ -103,11 +103,10 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
         public String objectPath;
 
         /**
-         * <p>The type of the task. Valid values:</p>
+         * <p>The type of the task.</p>
          * <br>
          * <p>*   **file**: URL-based refresh</p>
          * <p>*   **path**: directory-based refresh</p>
-         * <p>*   **regex**: regular expression-based refresh</p>
          * <p>*   **preload**: URL-based prefetch</p>
          */
         @NameInMap("ObjectType")
@@ -120,7 +119,7 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
         public String process;
 
         /**
-         * <p>The status of the auxiliary media asset.</p>
+         * <p>The status of the task.</p>
          * <br>
          * <p>*   **Complete**: The task is complete.</p>
          * <p>*   **Refreshing**: The task is in progress.</p>
@@ -130,7 +129,7 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          */
         @NameInMap("TaskId")
         public String taskId;
