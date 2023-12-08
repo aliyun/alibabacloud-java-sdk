@@ -16,6 +16,9 @@ public class GenerateExecutionPolicyRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("TemplateContent")
+    public String templateContent;
+
     /**
      * <p>The name of the template.</p>
      */
@@ -47,6 +50,14 @@ public class GenerateExecutionPolicyRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public GenerateExecutionPolicyRequest setTemplateContent(String templateContent) {
+        this.templateContent = templateContent;
+        return this;
+    }
+    public String getTemplateContent() {
+        return this.templateContent;
     }
 
     public GenerateExecutionPolicyRequest setTemplateName(String templateName) {

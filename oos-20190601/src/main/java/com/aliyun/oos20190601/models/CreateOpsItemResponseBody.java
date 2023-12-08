@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateOpsItemResponseBody extends TeaModel {
     /**
-     * <p>The O\&M item.</p>
+     * <p>The information about the O\&M item.</p>
      */
     @NameInMap("OpsItem")
     public CreateOpsItemResponseBodyOpsItem opsItem;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +39,13 @@ public class CreateOpsItemResponseBody extends TeaModel {
 
     public static class CreateOpsItemResponseBodyOpsItem extends TeaModel {
         /**
-         * <p>The information about the properties of the O\&M item.</p>
+         * <p>The attributes of the O\&M item.</p>
          */
         @NameInMap("Attributes")
         public String attributes;
 
         /**
-         * <p>The category.</p>
+         * <p>The category of the O\&M item.</p>
          */
         @NameInMap("Category")
         public String category;
@@ -57,19 +57,19 @@ public class CreateOpsItemResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>The user who created the OpsItem.</p>
+         * <p>The user who created the O\&M item.</p>
          */
         @NameInMap("CreatedBy")
         public String createdBy;
 
         /**
-         * <p>The description.</p>
+         * <p>The description of the O\&M item.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The user who modified the O\&M item.</p>
+         * <p>The user who last modified the O\&M item.</p>
          */
         @NameInMap("LastModifiedBy")
         public String lastModifiedBy;
@@ -81,7 +81,7 @@ public class CreateOpsItemResponseBody extends TeaModel {
         public String opsItemId;
 
         /**
-         * <p>The priority.</p>
+         * <p>The priority of the O\&M item.</p>
          */
         @NameInMap("Priority")
         public Integer priority;
@@ -93,37 +93,37 @@ public class CreateOpsItemResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The ARN of the associated resource.</p>
+         * <p>The ARNs of the associated resources.</p>
          */
         @NameInMap("Resources")
         public String resources;
 
         /**
-         * <p>The severity level.</p>
+         * <p>The severity level of the O\&M item.</p>
          */
         @NameInMap("Severity")
         public String severity;
 
         /**
-         * <p>The solution.</p>
+         * <p>The solutions.</p>
          */
         @NameInMap("Solutions")
         public String solutions;
 
         /**
-         * <p>The source business.</p>
+         * <p>The source business of the O\&M item.</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
-         * <p>The status.</p>
+         * <p>The state of the O\&M item.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The tags.</p>
+         * <p>The tags of the O\&M item.</p>
          */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;

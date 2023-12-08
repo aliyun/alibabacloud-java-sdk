@@ -75,7 +75,7 @@ public class GetOpsItemResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The user who modified the O\&M item.</p>
+         * <p>The user who last modified the O\&M item.</p>
          */
         @NameInMap("LastModifiedBy")
         public String lastModifiedBy;

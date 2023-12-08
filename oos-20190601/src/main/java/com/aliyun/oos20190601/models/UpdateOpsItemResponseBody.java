@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateOpsItemResponseBody extends TeaModel {
     /**
-     * <p>The O\&M item.</p>
+     * <p>The information about the O\&M item.</p>
      */
     @NameInMap("OpsItem")
     public UpdateOpsItemResponseBodyOpsItem opsItem;
@@ -39,7 +39,7 @@ public class UpdateOpsItemResponseBody extends TeaModel {
 
     public static class UpdateOpsItemResponseBodyOpsItem extends TeaModel {
         /**
-         * <p>The information about the properties of the O\&M item.</p>
+         * <p>The attributes of the O\&M item.</p>
          */
         @NameInMap("Attributes")
         public String attributes;
@@ -105,7 +105,7 @@ public class UpdateOpsItemResponseBody extends TeaModel {
         public String severity;
 
         /**
-         * <p>The list of solutions.</p>
+         * <p>The solutions.</p>
          */
         @NameInMap("Solutions")
         public java.util.List<String> solutions;
