@@ -38,12 +38,21 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyApplicationAlarmConfig extends TeaModel {
+        /**
+         * <p>The alert contact list.</p>
+         */
         @NameInMap("ContactGroups")
         public java.util.List<String> contactGroups;
 
+        /**
+         * <p>The health check URL of the application.</p>
+         */
         @NameInMap("HealthCheckUrl")
         public String healthCheckUrl;
 
+        /**
+         * <p>The ID of the alert template.</p>
+         */
         @NameInMap("TemplateIds")
         public java.util.List<String> templateIds;
 
@@ -79,9 +88,41 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyApplication extends TeaModel {
+        /**
+         * <p>The configurations of application alerts.</p>
+         */
         @NameInMap("AlarmConfig")
         public GetApplicationResponseBodyApplicationAlarmConfig alarmConfig;
 
+        /**
+         * <p>The type of the application.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   ComputeNest</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Custom</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   DingTalk</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("ApplicationType")
         public String applicationType;
 
@@ -109,6 +150,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The ID of the service.</p>
+         */
         @NameInMap("ServiceId")
         public String serviceId;
 

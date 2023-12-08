@@ -72,6 +72,9 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("Category")
         public String category;
 
+        @NameInMap("Constraints")
+        public String constraints;
+
         /**
          * <p>The user who created the template.</p>
          */
@@ -102,6 +105,9 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("Hash")
         public String hash;
 
+        @NameInMap("IsFavorite")
+        public Boolean isFavorite;
+
         /**
          * <p>The popularity of the public template. Valid values: **1-10**. A greater value indicates higher popularity. If the **ShareType** parameter is set to **Private**, the value of this parameter is `-1`.</p>
          * <br>
@@ -109,6 +115,9 @@ public class ListTemplatesResponseBody extends TeaModel {
          */
         @NameInMap("Popularity")
         public Integer popularity;
+
+        @NameInMap("Publisher")
+        public String publisher;
 
         /**
          * <p>The ID of the resource group.</p>
@@ -193,6 +202,14 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.category;
         }
 
+        public ListTemplatesResponseBodyTemplates setConstraints(String constraints) {
+            this.constraints = constraints;
+            return this;
+        }
+        public String getConstraints() {
+            return this.constraints;
+        }
+
         public ListTemplatesResponseBodyTemplates setCreatedBy(String createdBy) {
             this.createdBy = createdBy;
             return this;
@@ -233,12 +250,28 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.hash;
         }
 
+        public ListTemplatesResponseBodyTemplates setIsFavorite(Boolean isFavorite) {
+            this.isFavorite = isFavorite;
+            return this;
+        }
+        public Boolean getIsFavorite() {
+            return this.isFavorite;
+        }
+
         public ListTemplatesResponseBodyTemplates setPopularity(Integer popularity) {
             this.popularity = popularity;
             return this;
         }
         public Integer getPopularity() {
             return this.popularity;
+        }
+
+        public ListTemplatesResponseBodyTemplates setPublisher(String publisher) {
+            this.publisher = publisher;
+            return this;
+        }
+        public String getPublisher() {
+            return this.publisher;
         }
 
         public ListTemplatesResponseBodyTemplates setResourceGroupId(String resourceGroupId) {

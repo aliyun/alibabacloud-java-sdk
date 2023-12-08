@@ -40,6 +40,9 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The ID of the service.</p>
+     */
     @NameInMap("ServiceId")
     public String serviceId;
 

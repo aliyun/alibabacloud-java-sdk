@@ -135,7 +135,7 @@ public class CreateOpsItemRequest extends TeaModel {
     public String severity;
 
     /**
-     * <p>The list of solutions.</p>
+     * <p>The solutions.</p>
      */
     @NameInMap("Solutions")
     public String solutions;

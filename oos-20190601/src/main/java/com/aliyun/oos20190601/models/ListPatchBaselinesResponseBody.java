@@ -157,7 +157,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         public String operationSystem;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -169,13 +169,13 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         public String shareType;
 
         /**
-         * <p>The patch source configurations.</p>
+         * <p>The configurations of patch sources.</p>
          */
         @NameInMap("Sources")
         public java.util.List<String> sources;
 
         /**
-         * <p>The tags.</p>
+         * <p>The tags of the patch baseline.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListPatchBaselinesResponseBodyPatchBaselinesTags> tags;

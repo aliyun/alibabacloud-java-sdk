@@ -41,6 +41,9 @@ public class ListTemplatesShrinkRequest extends TeaModel {
     @NameInMap("HasTrigger")
     public Boolean hasTrigger;
 
+    @NameInMap("IsFavorite")
+    public Boolean isFavorite;
+
     /**
      * <p>The number of entries to return on each page. Valid values: 20 to 100. Default value: 50.</p>
      */
@@ -81,6 +84,7 @@ public class ListTemplatesShrinkRequest extends TeaModel {
      * <p>*   **Popularity**: The system sorts the returned templates based on the popularity of the template.</p>
      * <p>*   **TemplateName**: The system sorts the returned templates based on the name of the template.</p>
      * <p>*   **CreatedDate**: The system sorts the returned templates based on the creation time of the template.</p>
+     * <p>*   **UpdateDate**: The system sorts the returned templates based on the update time of the template.</p>
      */
     @NameInMap("SortField")
     public String sortField;
@@ -190,6 +194,14 @@ public class ListTemplatesShrinkRequest extends TeaModel {
     }
     public Boolean getHasTrigger() {
         return this.hasTrigger;
+    }
+
+    public ListTemplatesShrinkRequest setIsFavorite(Boolean isFavorite) {
+        this.isFavorite = isFavorite;
+        return this;
+    }
+    public Boolean getIsFavorite() {
+        return this.isFavorite;
     }
 
     public ListTemplatesShrinkRequest setMaxResults(Integer maxResults) {
