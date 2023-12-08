@@ -91,6 +91,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
             query.put("SourceId", request.sourceId);
         }
@@ -168,10 +172,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateNetworkReachableAnalysisResponse createNetworkReachableAnalysisWithOptions(CreateNetworkReachableAnalysisRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.auditParam)) {
-            query.put("AuditParam", request.auditParam);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.networkPathId)) {
             query.put("NetworkPathId", request.networkPathId);
         }

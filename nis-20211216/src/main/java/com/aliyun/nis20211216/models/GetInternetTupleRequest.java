@@ -8,7 +8,7 @@ public class GetInternetTupleRequest extends TeaModel {
      * <p>The IDs of member accounts.</p>
      */
     @NameInMap("AccountIds")
-    public java.util.List<String> accountIds;
+    public java.util.List<Long> accountIds;
 
     /**
      * <p>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
@@ -33,7 +33,7 @@ public class GetInternetTupleRequest extends TeaModel {
     /**
      * <p>The local port.</p>
      * <br>
-     * <p>> This parameter is required only when you set **TupleType** to **5**.</p>
+     * <p>>  This parameter is required only if you set the **TupleType** parameter to **5**.</p>
      */
     @NameInMap("CloudPort")
     public String cloudPort;
@@ -41,8 +41,8 @@ public class GetInternetTupleRequest extends TeaModel {
     /**
      * <p>The direction of the Internet traffic that you want to query. Valid values:</p>
      * <br>
-     * <p>- **in**: inbound</p>
-     * <p>- **out**: outbound</p>
+     * <p>*   **in**: inbound</p>
+     * <p>*   **out**: outbound</p>
      */
     @NameInMap("Direction")
     public String direction;
@@ -66,7 +66,7 @@ public class GetInternetTupleRequest extends TeaModel {
     public java.util.List<String> instanceList;
 
     /**
-     * <p>The metric for instance ranking. Default value: **ByteCount**. This value specifies that instances are ranked by traffic volume.</p>
+     * <p>The metric for data ranking. Default value: **ByteCount**. This value specifies that data is ranked by traffic volume.</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;
@@ -128,32 +128,32 @@ public class GetInternetTupleRequest extends TeaModel {
     /**
      * <p>The order in which instances are ranked by Internet traffic. Valid values:</p>
      * <br>
-     * <p>- **desc**: the descending order</p>
-     * <p>- **asc**: the ascending order</p>
+     * <p>*   **desc**: the descending order</p>
+     * <p>*   **asc**: the ascending order</p>
      */
     @NameInMap("Sort")
     public String sort;
 
     /**
-     * <p>Specifies top-N traffic data to display. Default value: **10**. This value specifies to display top-10 traffic data by default.</p>
+     * <p>Specifies top-N traffic data to display. Default value: **10**. This value specifies to display top-10 traffic data by default.</p>
      */
     @NameInMap("TopN")
     public Integer topN;
 
     /**
-     * <p>The type of the tuple. Valid values:</p>
+     * <p>The type of the tuple. Valid values:</p>
      * <br>
-     * <p>- **1**: 1-tuple</p>
-     * <p>- **2**: 2-tuples</p>
-     * <p>- **5**: 5-tuples</p>
+     * <p>*   **1**: 1-tuple</p>
+     * <p>*   **2**: 2-tuple</p>
+     * <p>*   **5**: 5-tuple</p>
      */
     @NameInMap("TupleType")
     public Integer tupleType;
 
     /**
-     * <p>Specifies whether to enable the multi-account management feature. Default value: **false**. This value specifies that the multi-account management feature is disabled.</p>
+     * <p>Specifies whether to enable the multi-account management feature. Default value: **false**. This value specifies that the multi-account management feature is disabled.</p>
      * <br>
-     * <p>> By default, the multi-account management feature is disabled. If you want to enable this feature, contact your customer business manager.</p>
+     * <p>>  By default, the multi-account management feature is not available. If you want to use this feature, contact your customer business manager to apply for permissions.</p>
      */
     @NameInMap("UseMultiAccount")
     public Boolean useMultiAccount;
@@ -163,11 +163,11 @@ public class GetInternetTupleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetInternetTupleRequest setAccountIds(java.util.List<String> accountIds) {
+    public GetInternetTupleRequest setAccountIds(java.util.List<Long> accountIds) {
         this.accountIds = accountIds;
         return this;
     }
-    public java.util.List<String> getAccountIds() {
+    public java.util.List<Long> getAccountIds() {
         return this.accountIds;
     }
 

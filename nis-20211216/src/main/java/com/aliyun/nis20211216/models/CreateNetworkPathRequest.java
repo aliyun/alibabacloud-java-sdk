@@ -32,6 +32,9 @@ public class CreateNetworkPathRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The ID of the source resource.</p>
      */
@@ -62,6 +65,9 @@ public class CreateNetworkPathRequest extends TeaModel {
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <p>The tags to add to the resource.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateNetworkPathRequestTag> tag;
 
@@ -131,6 +137,14 @@ public class CreateNetworkPathRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateNetworkPathRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateNetworkPathRequest setSourceId(String sourceId) {
@@ -206,9 +220,19 @@ public class CreateNetworkPathRequest extends TeaModel {
     }
 
     public static class CreateNetworkPathRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N to add to the resource. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.</p>
+         * <br>
+         * <p>You can add up to 20 tags in each call.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
+         */
         @NameInMap("Value")
         public String value;
 
