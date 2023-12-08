@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMongoDBCurrentOpRequest extends TeaModel {
     /**
-     * <p>The condition used to filter sessions during the query. For more information, see the currentOp command of MongoDB.</p>
+     * <p>The `db.currentOp()` command that is used to filter sessions. For more information, see [db.currentOp()](https://docs.mongodb.com/manual/reference/method/db.currentOp/) of MongoDB Documentation.</p>
      */
     @NameInMap("FilterDoc")
     public String filterDoc;

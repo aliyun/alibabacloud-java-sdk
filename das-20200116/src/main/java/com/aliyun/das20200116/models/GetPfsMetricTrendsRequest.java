@@ -7,7 +7,7 @@ public class GetPfsMetricTrendsRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <br>
-     * <p>>  The end time must be later than the start time. You can view the data of up to seven days within the last month.</p>
+     * <p>>  The end time must be later than the start time. You can view the data of up to seven days in the previous 30 days.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -32,7 +32,7 @@ public class GetPfsMetricTrendsRequest extends TeaModel {
     /**
      * <p>The node ID.</p>
      * <br>
-     * <p>>  You must specify this parameter for an ApsaraDB RDS for MySQL Cluster Edition instance and a PolarDB for MySQL cluster.</p>
+     * <p>>  You must specify this parameter for an ApsaraDB RDS for MySQL cluster instance and a PolarDB for MySQL cluster.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;

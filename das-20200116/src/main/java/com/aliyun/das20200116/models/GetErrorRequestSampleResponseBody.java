@@ -86,19 +86,19 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
 
     public static class GetErrorRequestSampleResponseBodyData extends TeaModel {
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          */
         @NameInMap("database")
         public String database;
 
         /**
-         * <p>The error code.</p>
+         * <p>The error code that is returned.</p>
          */
         @NameInMap("errorCode")
         public String errorCode;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
@@ -116,7 +116,7 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
         public String sql;
 
         /**
-         * <p>The ID of the SQL query.</p>
+         * <p>The SQL query ID.</p>
          */
         @NameInMap("sqlId")
         public String sqlId;
@@ -128,7 +128,7 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
         public java.util.List<String> tables;
 
         /**
-         * <p>The time when the SQL query was executed. The value of this parameter is a UNIX timestamp. Unit: ms.</p>
+         * <p>The time when the SQL query was executed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("timestamp")
         public Long timestamp;

@@ -690,13 +690,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * Before you call this operation, take note of the following items:
       * *   If you use an SDK to call Database Autonomy Service (DAS), you must set the region to cn-shanghai.
       * *   This operation supports the following database engines:
-      *     *   RDS MySQL
-      *     *   RDS PostgreSQL
-      *     *   RDS SQL Server
+      *     *   ApsaraDB RDS for MySQL
+      *     *   ApsaraDB RDS for PostgreSQL
+      *     *   ApsaraDB RDS for SQL Server
       *     *   PolarDB for MySQL
-      *     *   PolarDB for PostgreSQL (Compatible with Oracle)
+      *     *   PolarDB for PostgreSQL (compatible with Oracle)
       *     *   ApsaraDB for MongoDB
-      * >  The minor engine version of the Apsara RDS for PostgreSQL instance must be 20220130 or later. For information about how to update the minor engine version, see [Update the minor engine version of an ApsaraDB RDS for PostgreSQL instance](~~146895~~).
+      * >  The minor engine version of ApsaraDB RDS for PostgreSQL instances must be 20221230 or later. For more information about how to check and update the minor engine version of an ApsaraDB RDS for PostgreSQL instance, see [Update the minor engine version of an ApsaraDB RDS for PostgreSQL instance](~~146895~~).
       *
       * @param request CreateRequestDiagnosisRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -742,13 +742,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * Before you call this operation, take note of the following items:
       * *   If you use an SDK to call Database Autonomy Service (DAS), you must set the region to cn-shanghai.
       * *   This operation supports the following database engines:
-      *     *   RDS MySQL
-      *     *   RDS PostgreSQL
-      *     *   RDS SQL Server
+      *     *   ApsaraDB RDS for MySQL
+      *     *   ApsaraDB RDS for PostgreSQL
+      *     *   ApsaraDB RDS for SQL Server
       *     *   PolarDB for MySQL
-      *     *   PolarDB for PostgreSQL (Compatible with Oracle)
+      *     *   PolarDB for PostgreSQL (compatible with Oracle)
       *     *   ApsaraDB for MongoDB
-      * >  The minor engine version of the Apsara RDS for PostgreSQL instance must be 20220130 or later. For information about how to update the minor engine version, see [Update the minor engine version of an ApsaraDB RDS for PostgreSQL instance](~~146895~~).
+      * >  The minor engine version of ApsaraDB RDS for PostgreSQL instances must be 20221230 or later. For more information about how to check and update the minor engine version of an ApsaraDB RDS for PostgreSQL instance, see [Update the minor engine version of an ApsaraDB RDS for PostgreSQL instance](~~146895~~).
       *
       * @param request CreateRequestDiagnosisRequest
       * @return CreateRequestDiagnosisResponse
@@ -756,6 +756,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateRequestDiagnosisResponse createRequestDiagnosis(CreateRequestDiagnosisRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRequestDiagnosisWithOptions(request, runtime);
+    }
+
+    public CreateStorageAnalysisTaskResponse createStorageAnalysisTaskWithOptions(CreateStorageAnalysisTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbName)) {
+            query.put("DbName", request.dbName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            query.put("NodeId", request.nodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
+            query.put("TableName", request.tableName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateStorageAnalysisTask"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateStorageAnalysisTaskResponse());
+    }
+
+    public CreateStorageAnalysisTaskResponse createStorageAnalysisTask(CreateStorageAnalysisTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createStorageAnalysisTaskWithOptions(request, runtime);
     }
 
     /**
@@ -2186,6 +2227,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getAsyncErrorRequestStatResultWithOptions(request, runtime);
     }
 
+    public GetAutoIncrementUsageStatisticResponse getAutoIncrementUsageStatisticWithOptions(GetAutoIncrementUsageStatisticRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbNames)) {
+            query.put("DbNames", request.dbNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ratioFilter)) {
+            query.put("RatioFilter", request.ratioFilter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realTime)) {
+            query.put("RealTime", request.realTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAutoIncrementUsageStatistic"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAutoIncrementUsageStatisticResponse());
+    }
+
+    public GetAutoIncrementUsageStatisticResponse getAutoIncrementUsageStatistic(GetAutoIncrementUsageStatisticRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAutoIncrementUsageStatisticWithOptions(request, runtime);
+    }
+
     /**
       * Before you call this operation, take note of the following items:
       * *   If you use an SDK to call operations of Database Autonomy Service (DAS), you must set the region ID to cn-shanghai.
@@ -2242,8 +2324,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * Before you call this operation, take note of the following items:
       * *   If you use an SDK to call API operations of Database Autonomy Service (DAS), you must set the region ID to cn-shanghai.
       * *   The database instance that you want to manage is of one of the following types:
-      *     *   ApsaraDB RDS for MySQL High-availability Edition or Enterprise Edition that runs MySQL 5.6, MySQL 5.7, or MySQL 8.0
-      *     *   PolarDB for MySQL Cluster Edition that runs MySQL 5.6, MySQL 5.7, or MySQL 8.0, or PolarDB for MySQL X-Engine Edition that runs MySQL 8.0.
+      *     *   ApsaraDB RDS for MySQL High-availability Edition or Enterprise Edition instance that runs MySQL 5.6, MySQL 5.7, or MySQL 8.0.
+      *     *   PolarDB for MySQL Cluster Edition instance that runs MySQL 5.6, MySQL 5.7, or MySQL 8.0, or PolarDB for MySQL X-Engine Edition instance that runs MySQL 8.0.
       *
       * @param request GetAutoThrottleRulesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2281,8 +2363,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * Before you call this operation, take note of the following items:
       * *   If you use an SDK to call API operations of Database Autonomy Service (DAS), you must set the region ID to cn-shanghai.
       * *   The database instance that you want to manage is of one of the following types:
-      *     *   ApsaraDB RDS for MySQL High-availability Edition or Enterprise Edition that runs MySQL 5.6, MySQL 5.7, or MySQL 8.0
-      *     *   PolarDB for MySQL Cluster Edition that runs MySQL 5.6, MySQL 5.7, or MySQL 8.0, or PolarDB for MySQL X-Engine Edition that runs MySQL 8.0.
+      *     *   ApsaraDB RDS for MySQL High-availability Edition or Enterprise Edition instance that runs MySQL 5.6, MySQL 5.7, or MySQL 8.0.
+      *     *   PolarDB for MySQL Cluster Edition instance that runs MySQL 5.6, MySQL 5.7, or MySQL 8.0, or PolarDB for MySQL X-Engine Edition instance that runs MySQL 8.0.
       *
       * @param request GetAutoThrottleRulesRequest
       * @return GetAutoThrottleRulesResponse
@@ -4717,6 +4799,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetSqlOptimizeAdviceResponse getSqlOptimizeAdvice(GetSqlOptimizeAdviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getSqlOptimizeAdviceWithOptions(request, runtime);
+    }
+
+    public GetStorageAnalysisResultResponse getStorageAnalysisResultWithOptions(GetStorageAnalysisResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            query.put("NodeId", request.nodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetStorageAnalysisResult"),
+            new TeaPair("version", "2020-01-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetStorageAnalysisResultResponse());
+    }
+
+    public GetStorageAnalysisResultResponse getStorageAnalysisResult(GetStorageAnalysisResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getStorageAnalysisResultWithOptions(request, runtime);
     }
 
     /**

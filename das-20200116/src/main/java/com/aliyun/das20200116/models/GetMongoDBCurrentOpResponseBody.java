@@ -86,7 +86,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
 
     public static class GetMongoDBCurrentOpResponseBodyDataSessionList extends TeaModel {
         /**
-         * <p>Indicates whether the operation is active.</p>
+         * <p>Indicates whether the operation is active. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("Active")
         public Boolean active;
@@ -116,7 +119,7 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
         public String desc;
 
         /**
-         * <p>The driver.</p>
+         * <p>The driver for MongoDB.</p>
          */
         @NameInMap("Driver")
         public String driver;
@@ -128,7 +131,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
         public String host;
 
         /**
-         * <p>Indicates whether the operation is marked as terminated. If the operation is marked as terminated, true is returned.</p>
+         * <p>Indicates whether the operation is marked as terminated.</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("KillPending")
         public Boolean killPending;
@@ -188,7 +194,9 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
         public Long secsRunning;
 
         /**
-         * <p>The shard.</p>
+         * <p>The ID of the data shard.</p>
+         * <br>
+         * <p>>  This parameter is returned for sharded cluster instances.</p>
          */
         @NameInMap("Shard")
         public String shard;
