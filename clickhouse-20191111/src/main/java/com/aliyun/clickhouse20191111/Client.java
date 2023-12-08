@@ -524,6 +524,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createAccountAndAuthorityWithOptions(request, runtime);
     }
 
+    /**
+      * >  This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.
+      *
+      * @param request CreateBackupPolicyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateBackupPolicyResponse
+     */
     public CreateBackupPolicyResponse createBackupPolicyWithOptions(CreateBackupPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -580,6 +587,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBackupPolicyResponse());
     }
 
+    /**
+      * >  This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.
+      *
+      * @param request CreateBackupPolicyRequest
+      * @return CreateBackupPolicyResponse
+     */
     public CreateBackupPolicyResponse createBackupPolicy(CreateBackupPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createBackupPolicyWithOptions(request, runtime);
@@ -680,12 +693,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("VPCId", request.VPCId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchBak)) {
+            query.put("VSwitchBak", request.vSwitchBak);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchBak2)) {
+            query.put("VSwitchBak2", request.vSwitchBak2);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
             query.put("VSwitchId", request.vSwitchId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.zondIdBak2)) {
+            query.put("ZondIdBak2", request.zondIdBak2);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
             query.put("ZoneId", request.zoneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneIdBak)) {
+            query.put("ZoneIdBak", request.zoneIdBak);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
