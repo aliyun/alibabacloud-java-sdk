@@ -38,6 +38,15 @@ public class GetOssScanConfigResponseBody extends TeaModel {
     }
 
     public static class GetOssScanConfigResponseBodyData extends TeaModel {
+        @NameInMap("AllKeyPrefix")
+        public Boolean allKeyPrefix;
+
+        @NameInMap("BucketCount")
+        public Integer bucketCount;
+
+        @NameInMap("BucketName")
+        public String bucketName;
+
         /**
          * <p>The names of the buckets.</p>
          */
@@ -59,11 +68,23 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("KeyPrefixList")
+        public java.util.List<String> keyPrefixList;
+
         /**
          * <p>The suffixes of the objects that are checked.</p>
          */
         @NameInMap("KeySuffixList")
         public java.util.List<String> keySuffixList;
+
+        @NameInMap("LastUpdateTime")
+        public Long lastUpdateTime;
+
+        @NameInMap("Name")
+        public String name;
 
         /**
          * <p>The days when the check is performed. The value indicates the days of the week.</p>
@@ -80,6 +101,30 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         public static GetOssScanConfigResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetOssScanConfigResponseBodyData self = new GetOssScanConfigResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetOssScanConfigResponseBodyData setAllKeyPrefix(Boolean allKeyPrefix) {
+            this.allKeyPrefix = allKeyPrefix;
+            return this;
+        }
+        public Boolean getAllKeyPrefix() {
+            return this.allKeyPrefix;
+        }
+
+        public GetOssScanConfigResponseBodyData setBucketCount(Integer bucketCount) {
+            this.bucketCount = bucketCount;
+            return this;
+        }
+        public Integer getBucketCount() {
+            return this.bucketCount;
+        }
+
+        public GetOssScanConfigResponseBodyData setBucketName(String bucketName) {
+            this.bucketName = bucketName;
+            return this;
+        }
+        public String getBucketName() {
+            return this.bucketName;
         }
 
         public GetOssScanConfigResponseBodyData setBucketNameList(java.util.List<String> bucketNameList) {
@@ -106,12 +151,44 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             return this.endTime;
         }
 
+        public GetOssScanConfigResponseBodyData setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public GetOssScanConfigResponseBodyData setKeyPrefixList(java.util.List<String> keyPrefixList) {
+            this.keyPrefixList = keyPrefixList;
+            return this;
+        }
+        public java.util.List<String> getKeyPrefixList() {
+            return this.keyPrefixList;
+        }
+
         public GetOssScanConfigResponseBodyData setKeySuffixList(java.util.List<String> keySuffixList) {
             this.keySuffixList = keySuffixList;
             return this;
         }
         public java.util.List<String> getKeySuffixList() {
             return this.keySuffixList;
+        }
+
+        public GetOssScanConfigResponseBodyData setLastUpdateTime(Long lastUpdateTime) {
+            this.lastUpdateTime = lastUpdateTime;
+            return this;
+        }
+        public Long getLastUpdateTime() {
+            return this.lastUpdateTime;
+        }
+
+        public GetOssScanConfigResponseBodyData setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public GetOssScanConfigResponseBodyData setScanDayList(java.util.List<Integer> scanDayList) {

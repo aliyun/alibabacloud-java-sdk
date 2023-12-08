@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetOpaStrategyDetailNewRequest extends TeaModel {
+    /**
+     * <p>The rule ID.</p>
+     * <br>
+     * <p>>  You can call the [ListOpaClusterStrategyNew](~~2623574~~) operation to obtain the rule ID.</p>
+     */
     @NameInMap("StrategyId")
     public Long strategyId;
 

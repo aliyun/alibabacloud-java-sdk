@@ -35,7 +35,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the sensitive files.</p>
+     * <p>The information about the sensitive file.</p>
      */
     @NameInMap("SensitiveFileList")
     public java.util.List<DescribeImageSensitiveFileListResponseBodySensitiveFileList> sensitiveFileList;
@@ -189,9 +189,15 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
     }
 
     public static class DescribeImageSensitiveFileListResponseBodySensitiveFileList extends TeaModel {
+        /**
+         * <p>The key of the sensitive file type.</p>
+         */
         @NameInMap("ClassKey")
         public String classKey;
 
+        /**
+         * <p>The name of the sensitive file type.</p>
+         */
         @NameInMap("ClassName")
         public String className;
 
@@ -208,7 +214,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         public Long firstScanTime;
 
         /**
-         * <p>The timestamp generated when the last baseline check was performed. Unit: milliseconds.</p>
+         * <p>The timestamp generated when the last scan was performed. Unit: milliseconds.</p>
          */
         @NameInMap("LastScanTime")
         public Long lastScanTime;
@@ -224,7 +230,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
-         * <p>The type of alerts for the sensitive file. Valid value:</p>
+         * <p>The type of the alert for the sensitive file. Valid values:</p>
          * <br>
          * <p>*   **npm_token**: NPM access token</p>
          * <p>*   **ftp_cfg**: FTP configuration</p>
@@ -291,7 +297,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
          * <p>*   **rdp**: RDP</p>
          * <p>*   **mailgun_key**: Mailgun webhook signing key</p>
          * <p>*   **mailchimp_api_key**: API key for Mailchimp</p>
-         * <p>*   **netrc_cfg**: .netrc configuration file</p>
+         * <p>*   **netrc_cfg**: netrc configuration file</p>
          * <p>*   **openvpn_cfg**: OpenVPN configuration</p>
          * <p>*   **github_refresh_token**: GitHub refresh token</p>
          * <p>*   **salesforce**: Salesforce credentials</p>

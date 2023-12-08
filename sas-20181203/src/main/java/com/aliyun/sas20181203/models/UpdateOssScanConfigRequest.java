@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class UpdateOssScanConfigRequest extends TeaModel {
+    @NameInMap("AllKeyPrefix")
+    public Boolean allKeyPrefix;
+
     /**
      * <p>The names of the buckets.</p>
      */
@@ -25,11 +28,20 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("Id")
+    public String id;
+
+    @NameInMap("KeyPrefixList")
+    public java.util.List<String> keyPrefixList;
+
     /**
      * <p>The suffixes of the objects that you want to check.</p>
      */
     @NameInMap("KeySuffixList")
     public java.util.List<String> keySuffixList;
+
+    @NameInMap("Name")
+    public String name;
 
     /**
      * <p>The time when the check is performed. The value specifies the days of the week.</p>
@@ -46,6 +58,14 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     public static UpdateOssScanConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateOssScanConfigRequest self = new UpdateOssScanConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateOssScanConfigRequest setAllKeyPrefix(Boolean allKeyPrefix) {
+        this.allKeyPrefix = allKeyPrefix;
+        return this;
+    }
+    public Boolean getAllKeyPrefix() {
+        return this.allKeyPrefix;
     }
 
     public UpdateOssScanConfigRequest setBucketNameList(java.util.List<String> bucketNameList) {
@@ -72,12 +92,36 @@ public class UpdateOssScanConfigRequest extends TeaModel {
         return this.endTime;
     }
 
+    public UpdateOssScanConfigRequest setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
+    }
+
+    public UpdateOssScanConfigRequest setKeyPrefixList(java.util.List<String> keyPrefixList) {
+        this.keyPrefixList = keyPrefixList;
+        return this;
+    }
+    public java.util.List<String> getKeyPrefixList() {
+        return this.keyPrefixList;
+    }
+
     public UpdateOssScanConfigRequest setKeySuffixList(java.util.List<String> keySuffixList) {
         this.keySuffixList = keySuffixList;
         return this;
     }
     public java.util.List<String> getKeySuffixList() {
         return this.keySuffixList;
+    }
+
+    public UpdateOssScanConfigRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public UpdateOssScanConfigRequest setScanDayList(java.util.List<Integer> scanDayList) {

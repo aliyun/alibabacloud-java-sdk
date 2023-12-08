@@ -16,6 +16,12 @@ public class ListCheckTypesRequest extends TeaModel {
     @NameInMap("RiskId")
     public Long riskId;
 
+    @NameInMap("ShowChecks")
+    public Boolean showChecks;
+
+    @NameInMap("Source")
+    public String source;
+
     @NameInMap("Uuid")
     public String uuid;
 
@@ -54,6 +60,22 @@ public class ListCheckTypesRequest extends TeaModel {
     }
     public Long getRiskId() {
         return this.riskId;
+    }
+
+    public ListCheckTypesRequest setShowChecks(Boolean showChecks) {
+        this.showChecks = showChecks;
+        return this;
+    }
+    public Boolean getShowChecks() {
+        return this.showChecks;
+    }
+
+    public ListCheckTypesRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public ListCheckTypesRequest setUuid(String uuid) {

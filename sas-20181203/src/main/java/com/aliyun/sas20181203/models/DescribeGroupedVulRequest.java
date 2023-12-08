@@ -56,7 +56,8 @@ public class DescribeGroupedVulRequest extends TeaModel {
     /**
      * <p>Specifies whether the vulnerability is handled. Valid values:</p>
      * <br>
-     * <p>**y**: yes **n**: no</p>
+     * <p>*   **y**: handled</p>
+     * <p>*   **n**: not handled</p>
      */
     @NameInMap("Dealed")
     public String dealed;
@@ -95,20 +96,20 @@ public class DescribeGroupedVulRequest extends TeaModel {
     /**
      * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
      * <br>
-     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.</p>
+     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the account ID.</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>The tag that is used to filter vulnerabilities. Valid values:</p>
+     * <p>The tag that is used to search for the vulnerability. Valid values:</p>
      * <br>
-     * <p>*   Restart required</p>
-     * <p>*   Remote utilization</p>
-     * <p>*   EXP exists</p>
-     * <p>*   Available</p>
-     * <p>*   Elevation of Privilege</p>
-     * <p>*   Code Execution</p>
+     * <p>*   **Restart required**</p>
+     * <p>*   **Remote utilization**</p>
+     * <p>*   **EXP exists**</p>
+     * <p>*   **Available**</p>
+     * <p>*   **Elevation of Privilege**</p>
+     * <p>*   **Code Execution**</p>
      */
     @NameInMap("SearchTags")
     public String searchTags;
@@ -128,8 +129,8 @@ public class DescribeGroupedVulRequest extends TeaModel {
      * <p>*   **cve**: Linux software vulnerability</p>
      * <p>*   **sys**: Windows system vulnerability</p>
      * <p>*   **cms**: Web-CMS vulnerability</p>
-     * <p>*   **app**: application vulnerability</p>
-     * <p>*   **emg**: urgent vulnerability</p>
+     * <p>*   **app**: application vulnerability that is detected by network scanning</p>
+     * <p>*   **sca**: application vulnerability that is detected by software component analysis</p>
      */
     @NameInMap("Type")
     public String type;

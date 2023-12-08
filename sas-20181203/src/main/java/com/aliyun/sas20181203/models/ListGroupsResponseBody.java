@@ -4,24 +4,48 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The groups.</p>
+     */
     @NameInMap("List")
     public java.util.List<ListGroupsResponseBodyList> list;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListGroupsResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether exceptions are handled. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,12 +111,24 @@ public class ListGroupsResponseBody extends TeaModel {
     }
 
     public static class ListGroupsResponseBodyList extends TeaModel {
+        /**
+         * <p>The server group type. Valid values:</p>
+         * <br>
+         * <p>*   **0**: default group</p>
+         * <p>*   **1**: other group</p>
+         */
         @NameInMap("GroupFlag")
         public Integer groupFlag;
 
+        /**
+         * <p>The server group ID.</p>
+         */
         @NameInMap("GroupId")
         public Long groupId;
 
+        /**
+         * <p>The server group name.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
@@ -128,18 +164,33 @@ public class ListGroupsResponseBody extends TeaModel {
     }
 
     public static class ListGroupsResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

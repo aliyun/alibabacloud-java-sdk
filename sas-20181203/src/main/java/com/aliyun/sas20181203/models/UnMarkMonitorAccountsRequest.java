@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class UnMarkMonitorAccountsRequest extends TeaModel {
+    /**
+     * <p>The IDs of the members.</p>
+     */
     @NameInMap("AccountIds")
     public String accountIds;
 

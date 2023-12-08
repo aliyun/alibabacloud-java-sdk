@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCheckWarningDetailRequest extends TeaModel {
+    @NameInMap("CheckId")
+    public String checkId;
+
     /**
      * <p>The ID of the alert that is triggered by the check item.</p>
      * <br>
@@ -35,9 +38,20 @@ public class DescribeCheckWarningDetailRequest extends TeaModel {
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    @NameInMap("Uuid")
+    public String uuid;
+
     public static DescribeCheckWarningDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCheckWarningDetailRequest self = new DescribeCheckWarningDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCheckWarningDetailRequest setCheckId(String checkId) {
+        this.checkId = checkId;
+        return this;
+    }
+    public String getCheckId() {
+        return this.checkId;
     }
 
     public DescribeCheckWarningDetailRequest setCheckWarningId(Long checkWarningId) {
@@ -70,6 +84,14 @@ public class DescribeCheckWarningDetailRequest extends TeaModel {
     }
     public String getSourceIp() {
         return this.sourceIp;
+    }
+
+    public DescribeCheckWarningDetailRequest setUuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
+    public String getUuid() {
+        return this.uuid;
     }
 
 }

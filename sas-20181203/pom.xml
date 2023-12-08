@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>sas20181203</artifactId>
-  <version>2.18.0</version>
+  <version>2.18.1</version>
   <packaging>jar</packaging>
   <name>sas20181203</name>
   <description>Alibaba Cloud Threat Detection  (20181203) SDK for Java

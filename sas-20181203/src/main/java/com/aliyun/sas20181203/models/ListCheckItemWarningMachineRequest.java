@@ -90,6 +90,9 @@ public class ListCheckItemWarningMachineRequest extends TeaModel {
     @NameInMap("Status")
     public Integer status;
 
+    @NameInMap("UuidList")
+    public java.util.List<String> uuidList;
+
     public static ListCheckItemWarningMachineRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCheckItemWarningMachineRequest self = new ListCheckItemWarningMachineRequest();
         return TeaModel.build(map, self);
@@ -181,6 +184,14 @@ public class ListCheckItemWarningMachineRequest extends TeaModel {
     }
     public Integer getStatus() {
         return this.status;
+    }
+
+    public ListCheckItemWarningMachineRequest setUuidList(java.util.List<String> uuidList) {
+        this.uuidList = uuidList;
+        return this;
+    }
+    public java.util.List<String> getUuidList() {
+        return this.uuidList;
     }
 
 }

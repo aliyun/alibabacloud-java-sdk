@@ -118,7 +118,7 @@ public class GetClusterStrategyCountResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The number of rules.</p>
+         * <p>The number of policies.</p>
          */
         @NameInMap("StrategyCount")
         public Integer strategyCount;

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListAssetRefreshTaskConfigRequest extends TeaModel {
     /**
-     * <p>The configuration type. Valid values:</p>
+     * <p>The type of the configuration. Valid values:</p>
      * <br>
-     * <p>*   **0**: host refresh task</p>
-     * <p>*   **1**: cloud service refresh task</p>
+     * <p>*   **0**: server synchronization task</p>
+     * <p>*   **1**: cloud service synchronization task</p>
      * <p>*   **2**: scheduled AccessKey pair verification task</p>
      */
     @NameInMap("RefreshConfigType")
@@ -21,7 +21,7 @@ public class ListAssetRefreshTaskConfigRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The AccessKey ID of the scheduled AccessKey pair verification task.</p>
+     * <p>The ID of the data entry containing the AccessKey pair that you specify when you configure the scheduled AccessKey pair verification task.</p>
      */
     @NameInMap("TargetId")
     public Long targetId;

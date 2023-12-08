@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
     /**
-     * <p>The details of the sub-tasks.</p>
+     * <p>The details of the sub-task.</p>
      */
     @NameInMap("OnceTasks")
     public java.util.List<DescribeOnceTaskLeafRecordPageResponseBodyOnceTasks> onceTasks;
@@ -65,11 +65,25 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The cluster name.</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The time consumed. The value is in the JSON format. The end time of each item is displayed.</p>
+         * <br>
+         * <p>*   **vul**: system vulnerabilities</p>
+         * <p>*   **scaVul**: application vulnerabilities</p>
+         * <p>*   **scaVul**: baseline</p>
+         * <p>*   **binary**: binary</p>
+         * <p>*   **forbiddenPackageInfo**: information about the prohibited package</p>
+         * <p>*   **identificationInfo**: identity authentication</p>
+         * <p>*   **script**: malicious scripts</p>
+         * <p>*   **sensitiveFile**: sensitive files</p>
+         * <p>*   **sensitiveInfo**: AccessKey pair leaks</p>
+         * <p>*   **webshell**: website scripts</p>
+         */
         @NameInMap("CostTimeInfo")
         public String costTimeInfo;
 
@@ -315,7 +329,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         public Long realRunTime;
 
         /**
-         * <p>The execution result of the sub-task.</p>
+         * <p>The execution result.</p>
          */
         @NameInMap("ResultInfo")
         public String resultInfo;
@@ -333,12 +347,12 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The status of the sub-task. Valid values:</p>
+         * <p>The sub-task status. Valid values:</p>
          * <br>
          * <p>*   **INIT**: The sub-task is not started.</p>
          * <p>*   **START**: The sub-task is started.</p>
          * <p>*   **SUCCESS**: The sub-task is complete.</p>
-         * <p>*   **TIMEOUT**: The task timed out.</p>
+         * <p>*   **TIMEOUT**: The sub-task timed out.</p>
          */
         @NameInMap("StatusText")
         public String statusText;
@@ -350,7 +364,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         public String target;
 
         /**
-         * <p>The type of the assets that are scanned.</p>
+         * <p>The type of the assets that are scanned. Valid values:</p>
          * <br>
          * <p>*   **IMAGE_REPO**: image repository</p>
          * <p>*   **IMAGE**: image</p>

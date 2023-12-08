@@ -123,12 +123,12 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         public Integer nntfCount;
 
         /**
-         * <p>Indicates whether the application protection feature is supported.</p>
+         * <p>Indicates whether the application protection feature is supported. Valid values:</p>
          * <br>
-         * <p>*   **0**: no</p>
-         * <p>*   **1**: yes</p>
+         * <p>*   **0**: not supported</p>
+         * <p>*   **1**: supported</p>
          * <br>
-         * <p>> If this parameter is not returned, the application protection feature is not supported.</p>
+         * <p>>  If this parameter is not returned, the application protection feature is not supported.</p>
          */
         @NameInMap("RaspDefend")
         public Integer raspDefend;
@@ -140,14 +140,14 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         public String related;
 
         /**
-         * <p>The tag that is added to the vulnerability. Valid values:</p>
+         * <p>The tag of the vulnerability. Valid values:</p>
          * <br>
-         * <p>*   Restart required</p>
-         * <p>*   Remote utilization</p>
-         * <p>*   EXP exists</p>
-         * <p>*   Available</p>
-         * <p>*   Elevation of Privilege</p>
-         * <p>*   Code Execution</p>
+         * <p>*   **Restart required**</p>
+         * <p>*   **Remote utilization**</p>
+         * <p>*   **EXP exists**</p>
+         * <p>*   **Available**</p>
+         * <p>*   **Elevation of Privilege**</p>
+         * <p>*   **Code Execution**</p>
          */
         @NameInMap("Tags")
         public String tags;
@@ -166,7 +166,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
          * <p>*   **cms**: Web-CMS vulnerability</p>
          * <p>*   **app**: application vulnerability</p>
          * <p>*   **emg**: urgent vulnerability</p>
-         * <p>*   **sca**: vulnerability that is detected based on software component analysis</p>
+         * <p>*   **sca**: vulnerability that is detected by software component analysis</p>
          */
         @NameInMap("Type")
         public String type;

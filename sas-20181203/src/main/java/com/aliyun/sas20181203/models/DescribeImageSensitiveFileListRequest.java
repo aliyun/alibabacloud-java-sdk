@@ -142,7 +142,7 @@ public class DescribeImageSensitiveFileListRequest extends TeaModel {
     /**
      * <p>The UUID of the image.</p>
      * <br>
-     * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the UUIDs of images from the value of the **ImageUuid** response parameter.</p>
+     * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation of Container Registry to query the image UUID from the value of the **ImageUuid** response parameter.</p>
      */
     @NameInMap("ImageUuid")
     public String imageUuid;
