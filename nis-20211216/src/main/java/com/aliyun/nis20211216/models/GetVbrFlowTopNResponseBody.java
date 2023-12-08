@@ -4,9 +4,15 @@ package com.aliyun.nis20211216.models;
 import com.aliyun.tea.*;
 
 public class GetVbrFlowTopNResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ranking result of hybrid cloud traffic data.</p>
+     */
     @NameInMap("VirtualBorderRouterFlowlogTopN")
     public java.util.List<GetVbrFlowTopNResponseBodyVirtualBorderRouterFlowlogTopN> virtualBorderRouterFlowlogTopN;
 
@@ -32,36 +38,69 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
     }
 
     public static class GetVbrFlowTopNResponseBodyVirtualBorderRouterFlowlogTopN extends TeaModel {
+        /**
+         * <p>The account ID.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The CEN connection ID.</p>
+         */
         @NameInMap("AttachmentId")
         public String attachmentId;
 
+        /**
+         * <p>The total volume of traffic in the specified time range.</p>
+         */
         @NameInMap("Bytes")
         public Double bytes;
 
+        /**
+         * <p>The local IP address.</p>
+         */
         @NameInMap("CloudIp")
         public String cloudIp;
 
+        /**
+         * <p>The local port.</p>
+         */
         @NameInMap("CloudPort")
         public String cloudPort;
 
+        /**
+         * <p>The local region where the local IP address resides.</p>
+         */
         @NameInMap("CloudRegion")
         public String cloudRegion;
 
+        /**
+         * <p>The remote IP address.</p>
+         */
         @NameInMap("OtherIp")
         public String otherIp;
 
+        /**
+         * <p>The remote port.</p>
+         */
         @NameInMap("OtherPort")
         public String otherPort;
 
+        /**
+         * <p>The total number of packets in the specified time range.</p>
+         */
         @NameInMap("Packets")
         public Double packets;
 
+        /**
+         * <p>The protocol number.</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The ID of the VBR that is associated with the Express Connect circuit.</p>
+         */
         @NameInMap("VirtualBorderRouterId")
         public String virtualBorderRouterId;
 

@@ -223,11 +223,8 @@ public class GetInternetTupleResponseBody extends TeaModel {
         @NameInMap("Protocol")
         public String protocol;
 
-        /**
-         * <p>The number of repeated packets.</p>
-         */
-        @NameInMap("RetranCount")
-        public Double retranCount;
+        @NameInMap("RetransmitRate")
+        public Double retransmitRate;
 
         /**
          * <p>The round-trip time (RTT). Unit: milliseconds.</p>
@@ -480,12 +477,12 @@ public class GetInternetTupleResponseBody extends TeaModel {
             return this.protocol;
         }
 
-        public GetInternetTupleResponseBodyData setRetranCount(Double retranCount) {
-            this.retranCount = retranCount;
+        public GetInternetTupleResponseBodyData setRetransmitRate(Double retransmitRate) {
+            this.retransmitRate = retransmitRate;
             return this;
         }
-        public Double getRetranCount() {
-            return this.retranCount;
+        public Double getRetransmitRate() {
+            return this.retransmitRate;
         }
 
         public GetInternetTupleResponseBodyData setRtt(Double rtt) {
