@@ -261,6 +261,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("ZoneId")
         public String zoneId;
 
+        @NameInMap("ZoneIdVswitchMap")
+        public java.util.Map<String, ?> zoneIdVswitchMap;
+
         @NameInMap("ZookeeperClass")
         public String zookeeperClass;
 
@@ -659,6 +662,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getZoneId() {
             return this.zoneId;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setZoneIdVswitchMap(java.util.Map<String, ?> zoneIdVswitchMap) {
+            this.zoneIdVswitchMap = zoneIdVswitchMap;
+            return this;
+        }
+        public java.util.Map<String, ?> getZoneIdVswitchMap() {
+            return this.zoneIdVswitchMap;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBCluster setZookeeperClass(String zookeeperClass) {
