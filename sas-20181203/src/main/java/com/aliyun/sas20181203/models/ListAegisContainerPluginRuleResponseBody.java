@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListAegisContainerPluginRuleResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The rules.</p>
+     */
     @NameInMap("RuleList")
     public java.util.List<ListAegisContainerPluginRuleResponseBodyRuleList> ruleList;
 
@@ -43,12 +52,21 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
     }
 
     public static class ListAegisContainerPluginRuleResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -84,36 +102,72 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
     }
 
     public static class ListAegisContainerPluginRuleResponseBodyRuleList extends TeaModel {
+        /**
+         * <p>The time when the rule was created. Unit: milliseconds.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The time when the rule was modified. Unit: milliseconds.</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The action of the rule. Valid values:</p>
+         * <br>
+         * <p>*   **1**: Alert</p>
+         * <p>*   **2**: Block</p>
+         */
         @NameInMap("Mode")
         public Integer mode;
 
+        /**
+         * <p>The description of the rule.</p>
+         */
         @NameInMap("RuleDescription")
         public String ruleDescription;
 
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
+        /**
+         * <p>The name of the rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The ID of the rule template. The ListSystemClientRules operation returns the ID of a rule template.</p>
+         */
         @NameInMap("RuleTemplateId")
         public String ruleTemplateId;
 
+        /**
+         * <p>The name of the rule template.</p>
+         */
         @NameInMap("RuleTemplateName")
         public String ruleTemplateName;
 
+        /**
+         * <p>The fields in the value of the rule subtype.</p>
+         */
         @NameInMap("SelectedPolicy")
         public java.util.List<String> selectedPolicy;
 
+        /**
+         * <p>The switch ID of the rule.</p>
+         */
         @NameInMap("SwitchId")
         public String switchId;
 
+        /**
+         * <p>The images that are added to the whitelist of the rule.</p>
+         */
         @NameInMap("WhiteImages")
         public java.util.List<String> whiteImages;
 

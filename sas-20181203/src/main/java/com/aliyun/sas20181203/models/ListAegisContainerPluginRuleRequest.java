@@ -4,18 +4,39 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListAegisContainerPluginRuleRequest extends TeaModel {
+    /**
+     * <p>The query condition.</p>
+     */
     @NameInMap("Criteria")
     public String criteria;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The type of the rule. Valid values:</p>
+     * <br>
+     * <p>*   **0**: custom</p>
+     * <p>*   **1**: system</p>
+     */
     @NameInMap("RuleType")
     public Integer ruleType;
 

@@ -76,6 +76,9 @@ public class ListOssBucketResponseBody extends TeaModel {
         @NameInMap("Support")
         public Boolean support;
 
+        @NameInMap("SupportConfig")
+        public String supportConfig;
+
         public static ListOssBucketResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListOssBucketResponseBodyData self = new ListOssBucketResponseBodyData();
             return TeaModel.build(map, self);
@@ -119,6 +122,14 @@ public class ListOssBucketResponseBody extends TeaModel {
         }
         public Boolean getSupport() {
             return this.support;
+        }
+
+        public ListOssBucketResponseBodyData setSupportConfig(String supportConfig) {
+            this.supportConfig = supportConfig;
+            return this;
+        }
+        public String getSupportConfig() {
+            return this.supportConfig;
         }
 
     }

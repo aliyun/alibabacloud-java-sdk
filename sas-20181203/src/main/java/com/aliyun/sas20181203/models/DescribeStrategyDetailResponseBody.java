@@ -327,6 +327,9 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         @NameInMap("On")
         public Boolean on;
 
+        @NameInMap("SupportedOs")
+        public String supportedOs;
+
         /**
          * <p>The type of the sub-check item.</p>
          */
@@ -360,6 +363,14 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         }
         public Boolean getOn() {
             return this.on;
+        }
+
+        public DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypes setSupportedOs(String supportedOs) {
+            this.supportedOs = supportedOs;
+            return this;
+        }
+        public String getSupportedOs() {
+            return this.supportedOs;
         }
 
         public DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypes setTypeName(String typeName) {

@@ -10,6 +10,9 @@ public class IgnoreCheckItemsRequest extends TeaModel {
     @NameInMap("CheckAndRiskTypeList")
     public java.util.List<IgnoreCheckItemsRequestCheckAndRiskTypeList> checkAndRiskTypeList;
 
+    @NameInMap("CheckIds")
+    public java.util.List<Long> checkIds;
+
     /**
      * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
      * <br>
@@ -61,6 +64,14 @@ public class IgnoreCheckItemsRequest extends TeaModel {
     }
     public java.util.List<IgnoreCheckItemsRequestCheckAndRiskTypeList> getCheckAndRiskTypeList() {
         return this.checkAndRiskTypeList;
+    }
+
+    public IgnoreCheckItemsRequest setCheckIds(java.util.List<Long> checkIds) {
+        this.checkIds = checkIds;
+        return this;
+    }
+    public java.util.List<Long> getCheckIds() {
+        return this.checkIds;
     }
 
     public IgnoreCheckItemsRequest setLang(String lang) {

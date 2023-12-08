@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateOssBucketScanTaskRequest extends TeaModel {
+    @NameInMap("AllKeyPrefix")
+    public Boolean allKeyPrefix;
+
     /**
      * <p>The names of the buckets.</p>
      */
@@ -15,6 +18,9 @@ public class CreateOssBucketScanTaskRequest extends TeaModel {
      */
     @NameInMap("ExcludeKeySuffixList")
     public java.util.List<String> excludeKeySuffixList;
+
+    @NameInMap("KeyPrefixList")
+    public java.util.List<String> keyPrefixList;
 
     /**
      * <p>The suffixes of the objects that you want to check.</p>
@@ -36,6 +42,14 @@ public class CreateOssBucketScanTaskRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateOssBucketScanTaskRequest setAllKeyPrefix(Boolean allKeyPrefix) {
+        this.allKeyPrefix = allKeyPrefix;
+        return this;
+    }
+    public Boolean getAllKeyPrefix() {
+        return this.allKeyPrefix;
+    }
+
     public CreateOssBucketScanTaskRequest setBucketNameList(java.util.List<String> bucketNameList) {
         this.bucketNameList = bucketNameList;
         return this;
@@ -50,6 +64,14 @@ public class CreateOssBucketScanTaskRequest extends TeaModel {
     }
     public java.util.List<String> getExcludeKeySuffixList() {
         return this.excludeKeySuffixList;
+    }
+
+    public CreateOssBucketScanTaskRequest setKeyPrefixList(java.util.List<String> keyPrefixList) {
+        this.keyPrefixList = keyPrefixList;
+        return this;
+    }
+    public java.util.List<String> getKeyPrefixList() {
+        return this.keyPrefixList;
     }
 
     public CreateOssBucketScanTaskRequest setKeySuffixList(java.util.List<String> keySuffixList) {

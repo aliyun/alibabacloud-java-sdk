@@ -4,21 +4,42 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetOpaStrategyDetailNewResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +97,15 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
     }
 
     public static class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBaselineItem extends TeaModel {
+        /**
+         * <p>The ID of the baseline check item.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the baseline check item.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -106,9 +133,15 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
     }
 
     public static class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBaseline extends TeaModel {
+        /**
+         * <p>The baseline information.</p>
+         */
         @NameInMap("Item")
         public java.util.List<GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBaselineItem> item;
 
+        /**
+         * <p>The risk levels.</p>
+         */
         @NameInMap("RiskLevel")
         public java.util.List<String> riskLevel;
 
@@ -136,9 +169,15 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
     }
 
     public static class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailMaliciousFileItem extends TeaModel {
+        /**
+         * <p>The ID of the malicious sample.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the malicious sample.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -166,9 +205,15 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
     }
 
     public static class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailMaliciousFile extends TeaModel {
+        /**
+         * <p>The information about the malicious samples.</p>
+         */
         @NameInMap("Item")
         public java.util.List<GetOpaStrategyDetailNewResponseBodyDataAlarmDetailMaliciousFileItem> item;
 
+        /**
+         * <p>The risk levels.</p>
+         */
         @NameInMap("RiskLevel")
         public java.util.List<String> riskLevel;
 
@@ -196,9 +241,15 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
     }
 
     public static class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVulItem extends TeaModel {
+        /**
+         * <p>The vulnerability ID.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The vulnerability name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -226,9 +277,15 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
     }
 
     public static class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVul extends TeaModel {
+        /**
+         * <p>The vulnerability information.</p>
+         */
         @NameInMap("Item")
         public java.util.List<GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVulItem> item;
 
+        /**
+         * <p>The risk levels.</p>
+         */
         @NameInMap("RiskLevel")
         public java.util.List<String> riskLevel;
 
@@ -256,12 +313,21 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
     }
 
     public static class GetOpaStrategyDetailNewResponseBodyDataAlarmDetail extends TeaModel {
+        /**
+         * <p>The baseline configuration information.</p>
+         */
         @NameInMap("Baseline")
         public GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBaseline baseline;
 
+        /**
+         * <p>The configuration information about the malicious sample.</p>
+         */
         @NameInMap("MaliciousFile")
         public GetOpaStrategyDetailNewResponseBodyDataAlarmDetailMaliciousFile maliciousFile;
 
+        /**
+         * <p>The vulnerability configuration information.</p>
+         */
         @NameInMap("Vul")
         public GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVul vul;
 
@@ -297,15 +363,30 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
     }
 
     public static class GetOpaStrategyDetailNewResponseBodyDataScopes extends TeaModel {
+        /**
+         * <p>The ID of the rule in the cluster.</p>
+         */
         @NameInMap("AckPolicyInstanceId")
         public String ackPolicyInstanceId;
 
+        /**
+         * <p>Specifies whether all namespaces are included. Valid values:</p>
+         * <br>
+         * <p>*   **1**: All namespaces are included.</p>
+         * <p>*   **0**: Not all namespaces are included.</p>
+         */
         @NameInMap("AllNamespace")
         public Integer allNamespace;
 
+        /**
+         * <p>The cluster ID.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The namespaces.</p>
+         */
         @NameInMap("NamespaceList")
         public java.util.List<String> namespaceList;
 
@@ -349,54 +430,118 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
     }
 
     public static class GetOpaStrategyDetailNewResponseBodyData extends TeaModel {
+        /**
+         * <p>The rule configuration information.</p>
+         */
         @NameInMap("AlarmDetail")
         public GetOpaStrategyDetailNewResponseBodyDataAlarmDetail alarmDetail;
 
+        /**
+         * <p>The cluster ID.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The cluster name.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The page number. Default value: **1**. Pages start from page 1.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The rule description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The image names.</p>
+         */
         @NameInMap("ImageName")
         public java.util.List<String> imageName;
 
+        /**
+         * <p>The image tags.</p>
+         */
         @NameInMap("Label")
         public java.util.List<String> label;
 
+        /**
+         * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+         * <br>
+         * <p>*   **zh**: Chinese</p>
+         * <p>*   **en**: English</p>
+         */
         @NameInMap("Lang")
         public String lang;
 
+        /**
+         * <p>Indicates whether the rule applies to malicious Internet images. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("MaliciousImage")
         public Boolean maliciousImage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The action that is performed when the rule is hit. Valid values:</p>
+         * <br>
+         * <p>*   **1**: trigger alerts</p>
+         * <p>*   **2**: block</p>
+         * <p>*   **3**: allow</p>
+         */
         @NameInMap("RuleAction")
         public Integer ruleAction;
 
+        /**
+         * <p>The scope.</p>
+         */
         @NameInMap("Scopes")
         public java.util.List<GetOpaStrategyDetailNewResponseBodyDataScopes> scopes;
 
+        /**
+         * <p>The rule ID.</p>
+         */
         @NameInMap("StrategyId")
         public Long strategyId;
 
+        /**
+         * <p>The rule name.</p>
+         */
         @NameInMap("StrategyName")
         public String strategyName;
 
+        /**
+         * <p>The ID of the rule template.</p>
+         */
         @NameInMap("StrategyTemplateId")
         public Long strategyTemplateId;
 
+        /**
+         * <p>Indicates whether the rule applies to unscanned images. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("UnScanedImage")
         public Boolean unScanedImage;
 
+        /**
+         * <p>The image tags that are added to the whitelist.</p>
+         */
         @NameInMap("WhiteList")
         public java.util.List<String> whiteList;
 

@@ -39,49 +39,49 @@ public class ChangeAssetRefreshTaskConfigRequest extends TeaModel {
 
     public static class ChangeAssetRefreshTaskConfigRequestAssetRefreshConfigs extends TeaModel {
         /**
-         * <p>The configuration type. Valid values:</p>
+         * <p>The type of the configuration. Valid values:</p>
          * <br>
-         * <p>*   **0**: host refresh task</p>
-         * <p>*   **1**: cloud service refresh task</p>
+         * <p>*   **0**: server synchronization task</p>
+         * <p>*   **1**: cloud service synchronization task</p>
          * <p>*   **2**: scheduled AccessKey pair verification task</p>
          */
         @NameInMap("RefreshConfigType")
         public Integer refreshConfigType;
 
         /**
-         * <p>The interval at which assets are synchronized. Unit: minutes. Valid values:</p>
+         * <p>The synchronization cycle. Valid values:</p>
          * <br>
-         * <p>*   **60**</p>
-         * <p>*   **180**</p>
-         * <p>*   **360**</p>
-         * <p>*   **720**</p>
-         * <p>*   **1440**</p>
-         * <p>*   **10080**</p>
+         * <p>*   **60**: 60 minutes</p>
+         * <p>*   **180**: 3 hours</p>
+         * <p>*   **360**: 6 hours</p>
+         * <p>*   **720**: 12 hours</p>
+         * <p>*   **1440**: 1 day</p>
+         * <p>*   **10080**: 7 days</p>
          */
         @NameInMap("SchedulePeriod")
         public Integer schedulePeriod;
 
         /**
-         * <p>Specifies whether to enable the feature. Valid values:</p>
+         * <p>The status of the configuration. Valid values:</p>
          * <br>
-         * <p>*   **1**: enables the feature.</p>
-         * <p>*   **0**: disables the feature.</p>
+         * <p>*   **1**: enabled</p>
+         * <p>*   **0**: disabled</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
-         * <p>The AccessKey ID of the scheduled AccessKey pair verification task.</p>
+         * <p>The ID of the data entry containing the AccessKey pair that you specify when you configure the scheduled AccessKey pair verification task.</p>
          */
         @NameInMap("TargetId")
         public Long targetId;
 
         /**
-         * <p>The cloud asset type. Valid values:</p>
+         * <p>The service provider of the cloud asset. Valid values:</p>
          * <br>
          * <p>*   **3**: Tencent Cloud</p>
          * <p>*   **4**: Huawei Cloud</p>
-         * <p>*   **7**: Amazon Web Services (AWS)</p>
+         * <p>*   **7**: Amazon Web Services (AWS) Cloud</p>
          */
         @NameInMap("Vendor")
         public Integer vendor;

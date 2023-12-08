@@ -164,6 +164,9 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         @NameInMap("FixList")
         public java.util.List<ListCheckItemWarningMachineResponseBodyListFixList> fixList;
 
+        @NameInMap("FixStatus")
+        public Integer fixStatus;
+
         /**
          * <p>The instance ID of the server.</p>
          */
@@ -187,6 +190,9 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
+
+        @NameInMap("LastHandleTime")
+        public Long lastHandleTime;
 
         /**
          * <p>The timestamp generated when the last scan was performed. Unit: milliseconds.</p>
@@ -305,6 +311,14 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             return this.fixList;
         }
 
+        public ListCheckItemWarningMachineResponseBodyList setFixStatus(Integer fixStatus) {
+            this.fixStatus = fixStatus;
+            return this;
+        }
+        public Integer getFixStatus() {
+            return this.fixStatus;
+        }
+
         public ListCheckItemWarningMachineResponseBodyList setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
@@ -335,6 +349,14 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         }
         public String getIntranetIp() {
             return this.intranetIp;
+        }
+
+        public ListCheckItemWarningMachineResponseBodyList setLastHandleTime(Long lastHandleTime) {
+            this.lastHandleTime = lastHandleTime;
+            return this;
+        }
+        public Long getLastHandleTime() {
+            return this.lastHandleTime;
         }
 
         public ListCheckItemWarningMachineResponseBodyList setLastScanTime(Long lastScanTime) {

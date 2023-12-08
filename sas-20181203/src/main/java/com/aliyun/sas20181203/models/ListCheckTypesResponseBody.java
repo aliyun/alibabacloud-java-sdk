@@ -86,7 +86,62 @@ public class ListCheckTypesResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class ListCheckTypesResponseBodyDataCheckDetails extends TeaModel {
+        @NameInMap("AffiliatedRiskTypes")
+        public java.util.List<String> affiliatedRiskTypes;
+
+        @NameInMap("AffiliatedRisks")
+        public java.util.List<String> affiliatedRisks;
+
+        @NameInMap("CheckId")
+        public Long checkId;
+
+        @NameInMap("CheckItem")
+        public String checkItem;
+
+        public static ListCheckTypesResponseBodyDataCheckDetails build(java.util.Map<String, ?> map) throws Exception {
+            ListCheckTypesResponseBodyDataCheckDetails self = new ListCheckTypesResponseBodyDataCheckDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCheckTypesResponseBodyDataCheckDetails setAffiliatedRiskTypes(java.util.List<String> affiliatedRiskTypes) {
+            this.affiliatedRiskTypes = affiliatedRiskTypes;
+            return this;
+        }
+        public java.util.List<String> getAffiliatedRiskTypes() {
+            return this.affiliatedRiskTypes;
+        }
+
+        public ListCheckTypesResponseBodyDataCheckDetails setAffiliatedRisks(java.util.List<String> affiliatedRisks) {
+            this.affiliatedRisks = affiliatedRisks;
+            return this;
+        }
+        public java.util.List<String> getAffiliatedRisks() {
+            return this.affiliatedRisks;
+        }
+
+        public ListCheckTypesResponseBodyDataCheckDetails setCheckId(Long checkId) {
+            this.checkId = checkId;
+            return this;
+        }
+        public Long getCheckId() {
+            return this.checkId;
+        }
+
+        public ListCheckTypesResponseBodyDataCheckDetails setCheckItem(String checkItem) {
+            this.checkItem = checkItem;
+            return this;
+        }
+        public String getCheckItem() {
+            return this.checkItem;
+        }
+
+    }
+
     public static class ListCheckTypesResponseBodyData extends TeaModel {
+        @NameInMap("CheckDetails")
+        public java.util.List<ListCheckTypesResponseBodyDataCheckDetails> checkDetails;
+
         @NameInMap("CheckType")
         public String checkType;
 
@@ -96,6 +151,14 @@ public class ListCheckTypesResponseBody extends TeaModel {
         public static ListCheckTypesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListCheckTypesResponseBodyData self = new ListCheckTypesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListCheckTypesResponseBodyData setCheckDetails(java.util.List<ListCheckTypesResponseBodyDataCheckDetails> checkDetails) {
+            this.checkDetails = checkDetails;
+            return this;
+        }
+        public java.util.List<ListCheckTypesResponseBodyDataCheckDetails> getCheckDetails() {
+            return this.checkDetails;
         }
 
         public ListCheckTypesResponseBodyData setCheckType(String checkType) {
