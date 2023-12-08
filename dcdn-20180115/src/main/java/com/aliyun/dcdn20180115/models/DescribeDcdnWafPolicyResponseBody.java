@@ -91,7 +91,7 @@ public class DescribeDcdnWafPolicyResponseBody extends TeaModel {
         public String policyType;
 
         /**
-         * <p>The protection rule configurations that are defined in the protection policy. The configurations only support bot management. For more information, see [BatchCreateDcdnWafRules](~~BatchCreateDcdnWafRules~~).</p>
+         * <p>The protection rule configurations corresponding to the protection policy. The configurations only support Bot management. For more information, see [BatchCreateDcdnWafRules](~~BatchCreateDcdnWafRules~~).</p>
          */
         @NameInMap("RuleConfigs")
         public String ruleConfigs;

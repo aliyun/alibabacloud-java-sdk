@@ -11,9 +11,7 @@ public class DescribeDcdnWafFilterInfoRequest extends TeaModel {
      * <p>*   custom_acl: custom protection</p>
      * <p>*   whitelist: IP address whitelist</p>
      * <br>
-     * <p>**</p>
-     * <br>
-     * <p>**If you do not specify this parameter, all types are returned.</p>
+     * <p>>If you do not specify this parameter, all types are returned.</p>
      */
     @NameInMap("DefenseScenes")
     public String defenseScenes;

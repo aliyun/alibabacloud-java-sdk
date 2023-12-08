@@ -45,7 +45,7 @@ public class BatchSetDcdnDomainCertificateRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the HTTPS certificate. Valid values:</p>
      * <br>
-     * <p>*   \*\*on\*\*: enables the HTTPS certificate.</p>
+     * <p>*   **on**: enables the HTTPS certificate.</p>
      * <p>*   **off**: does not enable the HTTPS certificate.</p>
      * <br>
      * <p>This is the default value.</p>
