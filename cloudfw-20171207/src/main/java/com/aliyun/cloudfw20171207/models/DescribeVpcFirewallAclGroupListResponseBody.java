@@ -80,6 +80,9 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
         @NameInMap("AclRuleCount")
         public Integer aclRuleCount;
 
+        @NameInMap("IsDefault")
+        public Boolean isDefault;
+
         /**
          * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
          */
@@ -113,6 +116,14 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
         }
         public Integer getAclRuleCount() {
             return this.aclRuleCount;
+        }
+
+        public DescribeVpcFirewallAclGroupListResponseBodyAclGroupList setIsDefault(Boolean isDefault) {
+            this.isDefault = isDefault;
+            return this;
+        }
+        public Boolean getIsDefault() {
+            return this.isDefault;
         }
 
         public DescribeVpcFirewallAclGroupListResponseBodyAclGroupList setMemberUid(String memberUid) {

@@ -10,6 +10,9 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends TeaModel {
     @NameInMap("AclUuid")
     public String aclUuid;
 
+    @NameInMap("Direction")
+    public String direction;
+
     /**
      * <p>The language of the content within the response. Valid values:</p>
      * <br>
@@ -46,6 +49,14 @@ public class ModifyNatFirewallControlPolicyPositionRequest extends TeaModel {
     }
     public String getAclUuid() {
         return this.aclUuid;
+    }
+
+    public ModifyNatFirewallControlPolicyPositionRequest setDirection(String direction) {
+        this.direction = direction;
+        return this;
+    }
+    public String getDirection() {
+        return this.direction;
     }
 
     public ModifyNatFirewallControlPolicyPositionRequest setLang(String lang) {

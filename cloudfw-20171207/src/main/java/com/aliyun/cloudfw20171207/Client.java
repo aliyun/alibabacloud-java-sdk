@@ -2991,10 +2991,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Lang", request.lang);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
-            query.put("Lang", request.lang);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
         }
@@ -4102,6 +4098,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DestinationType", request.destinationType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
+            query.put("Direction", request.direction);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.domainResolveType)) {
             query.put("DomainResolveType", request.domainResolveType);
         }
@@ -4187,6 +4187,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.aclUuid)) {
             query.put("AclUuid", request.aclUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
+            query.put("Direction", request.direction);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
