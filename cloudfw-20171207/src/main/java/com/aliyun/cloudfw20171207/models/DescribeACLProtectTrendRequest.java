@@ -4,15 +4,30 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeACLProtectTrendRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query. The value is a UNIX timestamp that is accurate to seconds.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The language of the content within the request and the response. Valid values:</p>
+     * <br>
+     * <p>*   **zh** (default): Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp that is accurate to seconds.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

@@ -81,6 +81,9 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
     @NameInMap("DestinationType")
     public String destinationType;
 
+    @NameInMap("Direction")
+    public String direction;
+
     /**
      * <p>The domain name resolution method of the access control policy. By default, an access control policy is enabled after it is created. Valid values:</p>
      * <br>
@@ -248,6 +251,14 @@ public class ModifyNatFirewallControlPolicyRequest extends TeaModel {
     }
     public String getDestinationType() {
         return this.destinationType;
+    }
+
+    public ModifyNatFirewallControlPolicyRequest setDirection(String direction) {
+        this.direction = direction;
+        return this;
+    }
+    public String getDirection() {
+        return this.direction;
     }
 
     public ModifyNatFirewallControlPolicyRequest setDomainResolveType(String domainResolveType) {
