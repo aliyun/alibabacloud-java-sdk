@@ -588,6 +588,9 @@ public class ListProjectsResponseBody extends TeaModel {
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>Indicates whether the current project support the three-tier model</p>
+         */
         @NameInMap("threeTierModel")
         public Boolean threeTierModel;
 

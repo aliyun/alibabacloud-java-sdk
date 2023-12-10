@@ -10,6 +10,15 @@ public class GetPackageResponseBody extends TeaModel {
     @NameInMap("data")
     public GetPackageResponseBodyData data;
 
+    @NameInMap("errorCode")
+    public String errorCode;
+
+    @NameInMap("errorMsg")
+    public String errorMsg;
+
+    @NameInMap("httpCode")
+    public Integer httpCode;
+
     /**
      * <p>The ID of the request.</p>
      */
@@ -27,6 +36,30 @@ public class GetPackageResponseBody extends TeaModel {
     }
     public GetPackageResponseBodyData getData() {
         return this.data;
+    }
+
+    public GetPackageResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetPackageResponseBody setErrorMsg(String errorMsg) {
+        this.errorMsg = errorMsg;
+        return this;
+    }
+    public String getErrorMsg() {
+        return this.errorMsg;
+    }
+
+    public GetPackageResponseBody setHttpCode(Integer httpCode) {
+        this.httpCode = httpCode;
+        return this;
+    }
+    public Integer getHttpCode() {
+        return this.httpCode;
     }
 
     public GetPackageResponseBody setRequestId(String requestId) {
@@ -86,6 +119,9 @@ public class GetPackageResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        @NameInMap("schemaName")
+        public String schemaName;
+
         public static GetPackageResponseBodyDataResourceListFunction build(java.util.Map<String, ?> map) throws Exception {
             GetPackageResponseBodyDataResourceListFunction self = new GetPackageResponseBodyDataResourceListFunction();
             return TeaModel.build(map, self);
@@ -107,6 +143,14 @@ public class GetPackageResponseBody extends TeaModel {
             return this.name;
         }
 
+        public GetPackageResponseBodyDataResourceListFunction setSchemaName(String schemaName) {
+            this.schemaName = schemaName;
+            return this;
+        }
+        public String getSchemaName() {
+            return this.schemaName;
+        }
+
     }
 
     public static class GetPackageResponseBodyDataResourceListResource extends TeaModel {
@@ -121,6 +165,9 @@ public class GetPackageResponseBody extends TeaModel {
          */
         @NameInMap("name")
         public String name;
+
+        @NameInMap("schemaName")
+        public String schemaName;
 
         public static GetPackageResponseBodyDataResourceListResource build(java.util.Map<String, ?> map) throws Exception {
             GetPackageResponseBodyDataResourceListResource self = new GetPackageResponseBodyDataResourceListResource();
@@ -143,6 +190,14 @@ public class GetPackageResponseBody extends TeaModel {
             return this.name;
         }
 
+        public GetPackageResponseBodyDataResourceListResource setSchemaName(String schemaName) {
+            this.schemaName = schemaName;
+            return this;
+        }
+        public String getSchemaName() {
+            return this.schemaName;
+        }
+
     }
 
     public static class GetPackageResponseBodyDataResourceListTable extends TeaModel {
@@ -157,6 +212,9 @@ public class GetPackageResponseBody extends TeaModel {
          */
         @NameInMap("name")
         public String name;
+
+        @NameInMap("schemaName")
+        public String schemaName;
 
         public static GetPackageResponseBodyDataResourceListTable build(java.util.Map<String, ?> map) throws Exception {
             GetPackageResponseBodyDataResourceListTable self = new GetPackageResponseBodyDataResourceListTable();
@@ -177,6 +235,14 @@ public class GetPackageResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetPackageResponseBodyDataResourceListTable setSchemaName(String schemaName) {
+            this.schemaName = schemaName;
+            return this;
+        }
+        public String getSchemaName() {
+            return this.schemaName;
         }
 
     }

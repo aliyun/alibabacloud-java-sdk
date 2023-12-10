@@ -666,6 +666,9 @@ public class GetProjectResponseBody extends TeaModel {
         @NameInMap("status")
         public String status;
 
+        @NameInMap("superAdmins")
+        public java.util.List<String> superAdmins;
+
         /**
          * <p>The type of the project. Valid values: -**managed**: The project is an internal project. -**external**: The project is an external project.</p>
          */
@@ -763,6 +766,14 @@ public class GetProjectResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetProjectResponseBodyData setSuperAdmins(java.util.List<String> superAdmins) {
+            this.superAdmins = superAdmins;
+            return this;
+        }
+        public java.util.List<String> getSuperAdmins() {
+            return this.superAdmins;
         }
 
         public GetProjectResponseBodyData setType(String type) {

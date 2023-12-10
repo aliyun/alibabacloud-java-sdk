@@ -10,6 +10,15 @@ public class GetRoleAclResponseBody extends TeaModel {
     @NameInMap("data")
     public GetRoleAclResponseBodyData data;
 
+    @NameInMap("errorCode")
+    public String errorCode;
+
+    @NameInMap("errorMsg")
+    public String errorMsg;
+
+    @NameInMap("httpCode")
+    public Integer httpCode;
+
     /**
      * <p>The ID of the request.</p>
      */
@@ -27,6 +36,30 @@ public class GetRoleAclResponseBody extends TeaModel {
     }
     public GetRoleAclResponseBodyData getData() {
         return this.data;
+    }
+
+    public GetRoleAclResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetRoleAclResponseBody setErrorMsg(String errorMsg) {
+        this.errorMsg = errorMsg;
+        return this;
+    }
+    public String getErrorMsg() {
+        return this.errorMsg;
+    }
+
+    public GetRoleAclResponseBody setHttpCode(Integer httpCode) {
+        this.httpCode = httpCode;
+        return this;
+    }
+    public Integer getHttpCode() {
+        return this.httpCode;
     }
 
     public GetRoleAclResponseBody setRequestId(String requestId) {
@@ -50,6 +83,9 @@ public class GetRoleAclResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        @NameInMap("schemaName")
+        public String schemaName;
+
         public static GetRoleAclResponseBodyDataFunction build(java.util.Map<String, ?> map) throws Exception {
             GetRoleAclResponseBodyDataFunction self = new GetRoleAclResponseBodyDataFunction();
             return TeaModel.build(map, self);
@@ -71,6 +107,14 @@ public class GetRoleAclResponseBody extends TeaModel {
             return this.name;
         }
 
+        public GetRoleAclResponseBodyDataFunction setSchemaName(String schemaName) {
+            this.schemaName = schemaName;
+            return this;
+        }
+        public String getSchemaName() {
+            return this.schemaName;
+        }
+
     }
 
     public static class GetRoleAclResponseBodyDataInstance extends TeaModel {
@@ -85,6 +129,9 @@ public class GetRoleAclResponseBody extends TeaModel {
          */
         @NameInMap("name")
         public String name;
+
+        @NameInMap("schemaName")
+        public String schemaName;
 
         public static GetRoleAclResponseBodyDataInstance build(java.util.Map<String, ?> map) throws Exception {
             GetRoleAclResponseBodyDataInstance self = new GetRoleAclResponseBodyDataInstance();
@@ -107,6 +154,14 @@ public class GetRoleAclResponseBody extends TeaModel {
             return this.name;
         }
 
+        public GetRoleAclResponseBodyDataInstance setSchemaName(String schemaName) {
+            this.schemaName = schemaName;
+            return this;
+        }
+        public String getSchemaName() {
+            return this.schemaName;
+        }
+
     }
 
     public static class GetRoleAclResponseBodyDataPackage extends TeaModel {
@@ -121,6 +176,9 @@ public class GetRoleAclResponseBody extends TeaModel {
          */
         @NameInMap("name")
         public String name;
+
+        @NameInMap("schemaName")
+        public String schemaName;
 
         public static GetRoleAclResponseBodyDataPackage build(java.util.Map<String, ?> map) throws Exception {
             GetRoleAclResponseBodyDataPackage self = new GetRoleAclResponseBodyDataPackage();
@@ -143,6 +201,14 @@ public class GetRoleAclResponseBody extends TeaModel {
             return this.name;
         }
 
+        public GetRoleAclResponseBodyDataPackage setSchemaName(String schemaName) {
+            this.schemaName = schemaName;
+            return this;
+        }
+        public String getSchemaName() {
+            return this.schemaName;
+        }
+
     }
 
     public static class GetRoleAclResponseBodyDataProject extends TeaModel {
@@ -157,6 +223,9 @@ public class GetRoleAclResponseBody extends TeaModel {
          */
         @NameInMap("name")
         public String name;
+
+        @NameInMap("schemaName")
+        public String schemaName;
 
         public static GetRoleAclResponseBodyDataProject build(java.util.Map<String, ?> map) throws Exception {
             GetRoleAclResponseBodyDataProject self = new GetRoleAclResponseBodyDataProject();
@@ -179,6 +248,14 @@ public class GetRoleAclResponseBody extends TeaModel {
             return this.name;
         }
 
+        public GetRoleAclResponseBodyDataProject setSchemaName(String schemaName) {
+            this.schemaName = schemaName;
+            return this;
+        }
+        public String getSchemaName() {
+            return this.schemaName;
+        }
+
     }
 
     public static class GetRoleAclResponseBodyDataResource extends TeaModel {
@@ -193,6 +270,9 @@ public class GetRoleAclResponseBody extends TeaModel {
          */
         @NameInMap("name")
         public String name;
+
+        @NameInMap("schemaName")
+        public String schemaName;
 
         public static GetRoleAclResponseBodyDataResource build(java.util.Map<String, ?> map) throws Exception {
             GetRoleAclResponseBodyDataResource self = new GetRoleAclResponseBodyDataResource();
@@ -215,6 +295,14 @@ public class GetRoleAclResponseBody extends TeaModel {
             return this.name;
         }
 
+        public GetRoleAclResponseBodyDataResource setSchemaName(String schemaName) {
+            this.schemaName = schemaName;
+            return this;
+        }
+        public String getSchemaName() {
+            return this.schemaName;
+        }
+
     }
 
     public static class GetRoleAclResponseBodyDataTable extends TeaModel {
@@ -229,6 +317,9 @@ public class GetRoleAclResponseBody extends TeaModel {
          */
         @NameInMap("name")
         public String name;
+
+        @NameInMap("schemaName")
+        public String schemaName;
 
         public static GetRoleAclResponseBodyDataTable build(java.util.Map<String, ?> map) throws Exception {
             GetRoleAclResponseBodyDataTable self = new GetRoleAclResponseBodyDataTable();
@@ -249,6 +340,14 @@ public class GetRoleAclResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetRoleAclResponseBodyDataTable setSchemaName(String schemaName) {
+            this.schemaName = schemaName;
+            return this;
+        }
+        public String getSchemaName() {
+            return this.schemaName;
         }
 
     }
