@@ -4,6 +4,9 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class ListProjectsRequest extends TeaModel {
+    /**
+     * <p>The flag to choose whether list the specific catalog - system_catalog.</p>
+     */
     @NameInMap("listSystemCatalog")
     public Boolean listSystemCatalog;
 
