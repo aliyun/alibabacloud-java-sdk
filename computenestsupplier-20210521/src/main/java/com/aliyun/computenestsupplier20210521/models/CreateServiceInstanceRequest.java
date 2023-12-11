@@ -10,6 +10,9 @@ public class CreateServiceInstanceRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("EndTime")
+    public String endTime;
+
     @NameInMap("Name")
     public String name;
 
@@ -59,6 +62,14 @@ public class CreateServiceInstanceRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public CreateServiceInstanceRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public CreateServiceInstanceRequest setName(String name) {
