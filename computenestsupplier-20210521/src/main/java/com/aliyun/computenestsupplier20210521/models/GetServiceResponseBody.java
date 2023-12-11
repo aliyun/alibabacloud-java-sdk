@@ -10,6 +10,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("ApprovalType")
     public String approvalType;
 
+    @NameInMap("BillEntityMappings")
+    public GetServiceResponseBodyBillEntityMappings billEntityMappings;
+
     @NameInMap("Categories")
     public String categories;
 
@@ -36,6 +39,9 @@ public class GetServiceResponseBody extends TeaModel {
 
     @NameInMap("Duration")
     public Long duration;
+
+    @NameInMap("EntitySource")
+    public java.util.Map<String, String> entitySource;
 
     @NameInMap("IsSupportOperated")
     public Boolean isSupportOperated;
@@ -181,6 +187,14 @@ public class GetServiceResponseBody extends TeaModel {
         return this.approvalType;
     }
 
+    public GetServiceResponseBody setBillEntityMappings(GetServiceResponseBodyBillEntityMappings billEntityMappings) {
+        this.billEntityMappings = billEntityMappings;
+        return this;
+    }
+    public GetServiceResponseBodyBillEntityMappings getBillEntityMappings() {
+        return this.billEntityMappings;
+    }
+
     public GetServiceResponseBody setCategories(String categories) {
         this.categories = categories;
         return this;
@@ -251,6 +265,14 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public Long getDuration() {
         return this.duration;
+    }
+
+    public GetServiceResponseBody setEntitySource(java.util.Map<String, String> entitySource) {
+        this.entitySource = entitySource;
+        return this;
+    }
+    public java.util.Map<String, String> getEntitySource() {
+        return this.entitySource;
     }
 
     public GetServiceResponseBody setIsSupportOperated(Boolean isSupportOperated) {
@@ -579,6 +601,107 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public String getVirtualInternetService() {
         return this.virtualInternetService;
+    }
+
+    public static class GetServiceResponseBodyBillEntityMappingsMappingConfigMappings extends TeaModel {
+        @NameInMap("BillCode")
+        public String billCode;
+
+        @NameInMap("MeteringAssist")
+        public String meteringAssist;
+
+        public static GetServiceResponseBodyBillEntityMappingsMappingConfigMappings build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyBillEntityMappingsMappingConfigMappings self = new GetServiceResponseBodyBillEntityMappingsMappingConfigMappings();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyBillEntityMappingsMappingConfigMappings setBillCode(String billCode) {
+            this.billCode = billCode;
+            return this;
+        }
+        public String getBillCode() {
+            return this.billCode;
+        }
+
+        public GetServiceResponseBodyBillEntityMappingsMappingConfigMappings setMeteringAssist(String meteringAssist) {
+            this.meteringAssist = meteringAssist;
+            return this;
+        }
+        public String getMeteringAssist() {
+            return this.meteringAssist;
+        }
+
+    }
+
+    public static class GetServiceResponseBodyBillEntityMappingsMappingConfig extends TeaModel {
+        @NameInMap("Mappings")
+        public java.util.List<GetServiceResponseBodyBillEntityMappingsMappingConfigMappings> mappings;
+
+        @NameInMap("PredefinedParameters")
+        public String predefinedParameters;
+
+        @NameInMap("TemplateName")
+        public String templateName;
+
+        public static GetServiceResponseBodyBillEntityMappingsMappingConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyBillEntityMappingsMappingConfig self = new GetServiceResponseBodyBillEntityMappingsMappingConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyBillEntityMappingsMappingConfig setMappings(java.util.List<GetServiceResponseBodyBillEntityMappingsMappingConfigMappings> mappings) {
+            this.mappings = mappings;
+            return this;
+        }
+        public java.util.List<GetServiceResponseBodyBillEntityMappingsMappingConfigMappings> getMappings() {
+            return this.mappings;
+        }
+
+        public GetServiceResponseBodyBillEntityMappingsMappingConfig setPredefinedParameters(String predefinedParameters) {
+            this.predefinedParameters = predefinedParameters;
+            return this;
+        }
+        public String getPredefinedParameters() {
+            return this.predefinedParameters;
+        }
+
+        public GetServiceResponseBodyBillEntityMappingsMappingConfig setTemplateName(String templateName) {
+            this.templateName = templateName;
+            return this;
+        }
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+    }
+
+    public static class GetServiceResponseBodyBillEntityMappings extends TeaModel {
+        @NameInMap("MappingConfig")
+        public java.util.List<GetServiceResponseBodyBillEntityMappingsMappingConfig> mappingConfig;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static GetServiceResponseBodyBillEntityMappings build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyBillEntityMappings self = new GetServiceResponseBodyBillEntityMappings();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyBillEntityMappings setMappingConfig(java.util.List<GetServiceResponseBodyBillEntityMappingsMappingConfig> mappingConfig) {
+            this.mappingConfig = mappingConfig;
+            return this;
+        }
+        public java.util.List<GetServiceResponseBodyBillEntityMappingsMappingConfig> getMappingConfig() {
+            return this.mappingConfig;
+        }
+
+        public GetServiceResponseBodyBillEntityMappings setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
     }
 
     public static class GetServiceResponseBodyCommodityEntities extends TeaModel {
