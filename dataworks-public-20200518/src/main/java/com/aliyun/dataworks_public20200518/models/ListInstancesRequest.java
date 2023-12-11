@@ -49,6 +49,9 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("NodeName")
     public String nodeName;
 
+    @NameInMap("OrderBy")
+    public String orderBy;
+
     /**
      * <p>The connection string.</p>
      */
@@ -150,6 +153,14 @@ public class ListInstancesRequest extends TeaModel {
     }
     public String getNodeName() {
         return this.nodeName;
+    }
+
+    public ListInstancesRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    public String getOrderBy() {
+        return this.orderBy;
     }
 
     public ListInstancesRequest setOwner(String owner) {

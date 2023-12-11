@@ -63,15 +63,6 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
         public String extensionName;
 
         /**
-         * <p>The timestamp when extension was modified.</p>
-         */
-        @NameInMap("GmtCreate")
-        public Long gmtCreate;
-
-        @NameInMap("GmtModified")
-        public Long gmtModified;
-
-        /**
          * <p>The description of the extension.</p>
          */
         @NameInMap("ModifyUser")
@@ -130,22 +121,6 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
         }
         public String getExtensionName() {
             return this.extensionName;
-        }
-
-        public ListEnabledExtensionsForProjectResponseBodyExtensions setGmtCreate(Long gmtCreate) {
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-        public Long getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        public ListEnabledExtensionsForProjectResponseBodyExtensions setGmtModified(Long gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public Long getGmtModified() {
-            return this.gmtModified;
         }
 
         public ListEnabledExtensionsForProjectResponseBodyExtensions setModifyUser(String modifyUser) {
