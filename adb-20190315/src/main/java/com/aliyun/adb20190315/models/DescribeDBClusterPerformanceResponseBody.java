@@ -81,11 +81,14 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
 
     public static class DescribeDBClusterPerformanceResponseBodyPerformancesSeries extends TeaModel {
         /**
-         * <p>The name of the performance metric.</p>
+         * <p>The name of the performance metric value.</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The tags that are added to the cluster.</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
@@ -140,7 +143,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         public java.util.List<DescribeDBClusterPerformanceResponseBodyPerformancesSeries> series;
 
         /**
-         * <p>The unit of the performance metric.</p>
+         * <p>The unit of the performance metrics.</p>
          */
         @NameInMap("Unit")
         public String unit;

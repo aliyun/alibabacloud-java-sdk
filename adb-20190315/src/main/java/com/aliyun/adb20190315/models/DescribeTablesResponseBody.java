@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeTablesResponseBody extends TeaModel {
     /**
-     * <p>The list of tables.</p>
+     * <p>The queried tables.</p>
      */
     @NameInMap("Items")
     public DescribeTablesResponseBodyItems items;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,7 +39,7 @@ public class DescribeTablesResponseBody extends TeaModel {
 
     public static class DescribeTablesResponseBodyItemsTable extends TeaModel {
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
          */
         @NameInMap("DBClusterId")
         public String DBClusterId;

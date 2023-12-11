@@ -39,15 +39,15 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     public static class DescribeDBClusterAttributeResponseBodyItemsDBClusterTagsTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * <br>
-         * <p>> You can call the [TagResources](~~179253~~) operation to add a tag to the cluster.</p>
+         * <p>>  You can call the [TagResources](~~179253~~) operation to add a tag to the cluster.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -102,7 +102,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          * <p>*   **CLUSTER**: reserved mode for Cluster Edition.</p>
          * <p>*   **MIXED_STORAGE**: elastic mode for Cluster Edition.</p>
          * <br>
-         * <p>> For more information about cluster editions, see [Editions](~~205001~~).</p>
+         * <p>>  For more information about cluster editions, see [Editions](~~205001~~).</p>
          */
         @NameInMap("Category")
         public String category;
@@ -117,7 +117,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
-         * <p>The specifications of computing resources that are used by the cluster in elastic mode. The increase of computing resources can speed up queries. You can adjust the value of this parameter to scale the cluster.</p>
+         * <p>The specifications of computing resources that are used in the cluster in elastic mode. The increase of computing resources can speed up queries. You can adjust the value of this parameter to scale the cluster.</p>
          */
         @NameInMap("ComputeResource")
         public String computeResource;
@@ -191,6 +191,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("DBVersion")
         public String DBVersion;
 
+        @NameInMap("DiskEncryption")
+        public String diskEncryption;
+
         /**
          * <p>The ESSD performance level.</p>
          */
@@ -204,11 +207,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          * <p>*   **cloud**: basic disk.</p>
          * <p>*   **cloud_ssd**: standard SSD.</p>
          * <p>*   **cloud_efficiency**: ultra disk.</p>
-         * <p>*   **cloud_essd**: PL1 enhanced SSD (ESSD).</p>
+         * <p>*   **cloud_essd0**: PL0 enhanced SSD (ESSD).</p>
+         * <p>*   **cloud_essd**: PL1 ESSD.</p>
          * <p>*   **cloud_essd2**: PL2 ESSD.</p>
          * <p>*   **cloud_essd3**: PL3 ESSD.</p>
          * <br>
-         * <p>> For more information about ESSDs, see [ESSD specifications](~~122389~~).</p>
+         * <p>>  For more information about ESSDs, see [ESSDs](~~122389~~).</p>
          */
         @NameInMap("DiskType")
         public String diskType;
@@ -306,7 +310,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         /**
          * <p>The ID of the key that is used to encrypt disk data.</p>
          * <br>
-         * <p>> This parameter is returned only when disk encryption is enabled.</p>
+         * <p>>  This parameter is returned only when disk encryption is enabled.</p>
          */
         @NameInMap("KmsId")
         public String kmsId;
@@ -326,15 +330,15 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         /**
          * <p>The reason why the cluster is locked.</p>
          * <br>
-         * <p>> This parameter is returned only when the cluster was locked. The value is **instance_expire**.</p>
+         * <p>>  This parameter is returned only when the cluster was locked. **instance_expire** is returned.</p>
          */
         @NameInMap("LockReason")
         public String lockReason;
 
         /**
-         * <p>The maintenance window of the cluster. The window is in the *HH:mmZ-HH:mmZ* format. The time is displayed in UTC. Example: *04:00Z-05:00Z*, which indicates that routine maintenance can be performed from 04:00 to 05:00.</p>
+         * <p>The maintenance window of the cluster. The window follows the ISO 8601 standard in the *HH:mmZ- HH:mmZ* format. The time is displayed in UTC. An example is *04:00Z-05:00Z*, which indicates that routine maintenance can be performed from 04:00 to 05:00.</p>
          * <br>
-         * <p>> For more information about maintenance windows, see [Configure a maintenance window](~~122569~~).</p>
+         * <p>>  For more information about maintenance windows, see [Configure a maintenance window](~~122569~~).</p>
          */
         @NameInMap("MaintainTime")
         public String maintainTime;
@@ -345,7 +349,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          * <p>*   **flexible**: elastic mode.</p>
          * <p>*   **reserver**: reserved mode.</p>
          * <br>
-         * <p>> For more information about cluster modes, see [Editions](~~205001~~).</p>
+         * <p>>  For more information about cluster modes, see [Editions](~~205001~~).</p>
          */
         @NameInMap("Mode")
         public String mode;
@@ -378,13 +382,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The specifications of storage resources that are used by the cluster in elastic mode. These resources are used to read and write data. You can increase the value of this parameter to improve the read and write performance of the cluster.</p>
+         * <p>The specifications of storage resources that are used in the cluster in elastic mode. These resources are used to read and write data. You can increase the value of this parameter to improve the read and write performance of the cluster.</p>
          */
         @NameInMap("StorageResource")
         public String storageResource;
@@ -543,6 +547,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getDBVersion() {
             return this.DBVersion;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setDiskEncryption(String diskEncryption) {
+            this.diskEncryption = diskEncryption;
+            return this;
+        }
+        public String getDiskEncryption() {
+            return this.diskEncryption;
         }
 
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setDiskPerformanceLevel(String diskPerformanceLevel) {

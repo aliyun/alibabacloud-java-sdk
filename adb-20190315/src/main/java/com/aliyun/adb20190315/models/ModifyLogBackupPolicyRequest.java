@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyLogBackupPolicyRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -33,6 +33,9 @@ public class ModifyLogBackupPolicyRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

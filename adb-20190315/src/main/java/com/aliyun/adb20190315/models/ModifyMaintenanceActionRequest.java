@@ -6,12 +6,8 @@ import com.aliyun.tea.*;
 public class ModifyMaintenanceActionRequest extends TeaModel {
     /**
      * <p>The ID of the pending O\&M event. You can specify multiple IDs to batch change the switchover time. Separate multiple IDs with commas (,).</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   You can call the [DescribeMaintenanceAction](~~271738~~) operation to query the information about pending O\&M events, including the event ID.</p>
-     * <br>
-     * <p>*   You can change the switchover time only for pending O\&M events. The switchover time of historical O\&M events cannot be changed. For more information about the status of pending and historical O\&M events, see [DescribeMaintenanceAction](~~271738~~).</p>
+     * <p>> - You can call the [DescribeMaintenanceAction](~~271738~~) operation to query the information about pending O\&M events, including the event ID.</p>
+     * <p>> - You can change the switchover time only for pending O\&M events. The switchover time of historical O\&M events cannot be changed. For more information about the status of pending and historical O\&M events, see [DescribeMaintenanceAction](~~271738~~).</p>
      */
     @NameInMap("Ids")
     public String ids;
@@ -25,13 +21,14 @@ public class ModifyMaintenanceActionRequest extends TeaModel {
     /**
      * <p>The ID of the region where the pending O\&M event occurs.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     * <p>> - You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

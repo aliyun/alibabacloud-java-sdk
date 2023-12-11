@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
     /**
-     * <p>The list of database accounts.</p>
+     * <p>The queried database accounts.</p>
      */
     @NameInMap("AccountList")
     public DescribeAccountsResponseBodyAccountList accountList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,30 +39,30 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
     public static class DescribeAccountsResponseBodyAccountListDBAccount extends TeaModel {
         /**
-         * <p>The description of the account.</p>
+         * <p>The description of the database account.</p>
          */
         @NameInMap("AccountDescription")
         public String accountDescription;
 
         /**
-         * <p>The name of the account.</p>
+         * <p>The name of the database account.</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
-         * <p>The status of the account.</p>
+         * <p>The state of the database account. Valid values:</p>
          * <br>
-         * <p>*   Creating: The account is being created.</p>
-         * <p>*   Available: The account is available.</p>
-         * <p>*   Deleting: The account is being deleted.</p>
+         * <p>*   Creating</p>
+         * <p>*   Available</p>
+         * <p>*   Deleting</p>
          */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
         /**
-         * <p>*   Normal: standard account</p>
-         * <p>*   Super: privileged account</p>
+         * <p>*   Normal: standard account.</p>
+         * <p>*   Super: privileged account.</p>
          */
         @NameInMap("AccountType")
         public String accountType;

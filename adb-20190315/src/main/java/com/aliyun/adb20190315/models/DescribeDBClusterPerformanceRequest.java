@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterPerformanceRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the AnalyticDB for MySQL cluster.</p>
      * <br>
-     * <p>> You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region, including cluster IDs.</p>
+     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -31,37 +31,37 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
      * <br>
      * <p>    *   **AnalyticDB_Connections**: the number of database connections.</p>
      * <br>
-     * <p>*   Write</p>
+     * <p>*   Writes</p>
      * <br>
      * <p>    *   **AnalyticDB_TPS**: the write transactions per second (TPS).</p>
      * <p>    *   **AnalyticDB_InsertRT**: the write response time.</p>
-     * <p>    *   **AnalyticDB_InsertBytes**: the write throughout.</p>
+     * <p>    *   **AnalyticDB_InsertBytes**: the write throughput.</p>
      * <br>
-     * <p>*   Update</p>
+     * <p>*   Updates</p>
      * <br>
      * <p>    *   **AnalyticDB_UpdateRT**: the update response time.</p>
      * <br>
-     * <p>*   Delete</p>
+     * <p>*   Deletion</p>
      * <br>
      * <p>    *   **AnalyticDB_DeleteRT**: the delete response time.</p>
      * <br>
-     * <p>*   Query</p>
+     * <p>*   Queries</p>
      * <br>
      * <p>    *   **AnalyticDB_QPS**: the queries per second (QPS).</p>
      * <p>    *   **AnalyticDB_QueryRT**: the query response time.</p>
      * <p>    *   **AnalyticDB_QueryWaitTime**: the query wait time.</p>
      * <br>
-     * <p>*   Disk</p>
+     * <p>*   Disks</p>
      * <br>
      * <p>    *   **AnalyticDB_IO**: the disk I/O throughput.</p>
      * <p>    *   **AnalyticDB_IO_UTIL**: the I/O utilization.</p>
      * <p>    *   **AnalyticDB_IO_WAIT**: the I/O wait time.</p>
      * <p>    *   **AnalyticDB_IOPS**: the disk input/output operations per second (IOPS).</p>
-     * <p>    *   **AnalyticDB_DiskUsage**: the disk usage.</p>
-     * <p>    *   **AnalyticDB_HotDataDiskUsage**: the disk usage of hot data.</p>
-     * <p>    *   **AnalyticDB_ColdDataDiskUsage**: the disk usage of cold data.</p>
+     * <p>    *   **AnalyticDB_DiskUsage**: the disk space that is used.</p>
+     * <p>    *   **AnalyticDB_HotDataDiskUsage**: the disk space that is used by hot data.</p>
+     * <p>    *   **AnalyticDB_ColdDataDiskUsage**: the disk space that is used by cold data.</p>
      * <br>
-     * <p>> If you leave this parameter empty, the values of all the preceding performance metrics are returned.</p>
+     * <p>>  If you leave this parameter empty, the values of all the preceding performance metrics are returned.</p>
      */
     @NameInMap("Key")
     public String key;
@@ -72,6 +72,9 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the cluster.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -81,6 +84,9 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The name of the resource group.</p>
+     */
     @NameInMap("ResourcePools")
     public String resourcePools;
 
