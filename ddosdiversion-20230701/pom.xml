@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ddosdiversion20230701</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>ddosdiversion20230701</name>
   <description>Alibaba Cloud DdosDiversion (20230701) SDK for Java
