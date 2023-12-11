@@ -83,7 +83,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         /**
          * <p>The tag key.</p>
          * <br>
-         * <p>> You can call the [TagResources](~~179253~~) operation to add tags to a cluster.</p>
+         * <p>>  You can call the [TagResources](~~179253~~) operation to add tags to a cluster.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -144,7 +144,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
          * <p>*   **CLUSTER**: reserved mode for Cluster Edition.</p>
          * <p>*   **MIXED_STORAGE**: elastic mode for Cluster Edition.</p>
          * <br>
-         * <p>> For more information about cluster editions, see [Editions](~~205001~~).</p>
+         * <p>>  For more information about cluster editions, see [Editions](~~205001~~).</p>
          */
         @NameInMap("Category")
         public String category;
@@ -237,11 +237,12 @@ public class DescribeDBClustersResponseBody extends TeaModel {
          * <p>*   **cloud**: basic disk.</p>
          * <p>*   **cloud_ssd**: standard SSD.</p>
          * <p>*   **cloud_efficiency**: ultra disk.</p>
-         * <p>*   **cloud_essd**: PL1 enhanced SSD (ESSD).</p>
+         * <p>*   **cloud_essd**: PL0 enhanced SSD (ESSD).</p>
+         * <p>*   **cloud_essd**: PL1 ESSD.</p>
          * <p>*   **cloud_essd2**: PL2 ESSD.</p>
          * <p>*   **cloud_essd3**: PL3 ESSD.</p>
          * <br>
-         * <p>> For more information, see [ESSDs](~~122389~~).</p>
+         * <p>>  For more information, see [ESSDs](~~122389~~).</p>
          */
         @NameInMap("DiskType")
         public String diskType;
@@ -255,7 +256,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         /**
          * <p>The number of elastic I/O units (EIUs). For more information, see [Use EIUs to scale up storage resources](~~189505~~).</p>
          * <br>
-         * <p>> This parameter is returned only for clusters in elastic mode.</p>
+         * <p>>  This parameter is returned only for clusters in elastic mode.</p>
          */
         @NameInMap("ElasticIOResource")
         public Integer elasticIOResource;
@@ -320,7 +321,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         /**
          * <p>The reason why the cluster is locked.</p>
          * <br>
-         * <p>> This parameter is returned only when the cluster was locked. **instance_expire** is returned.</p>
+         * <p>>  This parameter is returned only when the cluster was locked. **instance_expire** is returned.</p>
          */
         @NameInMap("LockReason")
         public String lockReason;
@@ -366,7 +367,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;

@@ -3,12 +3,12 @@ package com.aliyun.adb20190315.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeTablesRequest extends TeaModel {
-    /**
-     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
-     */
+public class DescribeSQAConfigRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
+
+    @NameInMap("GroupName")
+    public String groupName;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -16,13 +16,11 @@ public class DescribeTablesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The region ID of the cluster.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -30,18 +28,12 @@ public class DescribeTablesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The name of the database.</p>
-     */
-    @NameInMap("SchemaName")
-    public String schemaName;
-
-    public static DescribeTablesRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeTablesRequest self = new DescribeTablesRequest();
+    public static DescribeSQAConfigRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeSQAConfigRequest self = new DescribeSQAConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeTablesRequest setDBClusterId(String DBClusterId) {
+    public DescribeSQAConfigRequest setDBClusterId(String DBClusterId) {
         this.DBClusterId = DBClusterId;
         return this;
     }
@@ -49,7 +41,15 @@ public class DescribeTablesRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public DescribeTablesRequest setOwnerAccount(String ownerAccount) {
+    public DescribeSQAConfigRequest setGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    public String getGroupName() {
+        return this.groupName;
+    }
+
+    public DescribeSQAConfigRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -57,7 +57,7 @@ public class DescribeTablesRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeTablesRequest setOwnerId(Long ownerId) {
+    public DescribeSQAConfigRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -65,7 +65,7 @@ public class DescribeTablesRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeTablesRequest setRegionId(String regionId) {
+    public DescribeSQAConfigRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -73,7 +73,15 @@ public class DescribeTablesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeTablesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public DescribeSQAConfigRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public DescribeSQAConfigRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -81,20 +89,12 @@ public class DescribeTablesRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DescribeTablesRequest setResourceOwnerId(Long resourceOwnerId) {
+    public DescribeSQAConfigRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeTablesRequest setSchemaName(String schemaName) {
-        this.schemaName = schemaName;
-        return this;
-    }
-    public String getSchemaName() {
-        return this.schemaName;
     }
 
 }

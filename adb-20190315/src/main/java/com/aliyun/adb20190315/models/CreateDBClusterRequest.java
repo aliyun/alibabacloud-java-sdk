@@ -90,6 +90,9 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("DBNodeStorage")
     public String DBNodeStorage;
 
+    @NameInMap("DiskEncryption")
+    public String diskEncryption;
+
     /**
      * <p>The number of elastic I/O units (EIUs). For more information, see [Use EIUs to scale up storage resources](~~189505~~).</p>
      */
@@ -101,6 +104,9 @@ public class CreateDBClusterRequest extends TeaModel {
      */
     @NameInMap("ExecutorCount")
     public String executorCount;
+
+    @NameInMap("KmsId")
+    public String kmsId;
 
     /**
      * <p>The mode of the cluster. Valid values:</p>
@@ -312,6 +318,14 @@ public class CreateDBClusterRequest extends TeaModel {
         return this.DBNodeStorage;
     }
 
+    public CreateDBClusterRequest setDiskEncryption(String diskEncryption) {
+        this.diskEncryption = diskEncryption;
+        return this;
+    }
+    public String getDiskEncryption() {
+        return this.diskEncryption;
+    }
+
     public CreateDBClusterRequest setElasticIOResource(String elasticIOResource) {
         this.elasticIOResource = elasticIOResource;
         return this;
@@ -326,6 +340,14 @@ public class CreateDBClusterRequest extends TeaModel {
     }
     public String getExecutorCount() {
         return this.executorCount;
+    }
+
+    public CreateDBClusterRequest setKmsId(String kmsId) {
+        this.kmsId = kmsId;
+        return this;
+    }
+    public String getKmsId() {
+        return this.kmsId;
     }
 
     public CreateDBClusterRequest setMode(String mode) {

@@ -7,7 +7,7 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
      * <br>
-     * <p>> You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+     * <p>> You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -21,11 +21,8 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The end time must be later than the start time.</p>
-     * <br>
-     * <p>*   The maximum time range that can be specified is 24 hours.</p>
+     * <p>> - The end time must be later than the start time.</p>
+     * <p>> - The maximum time range that can be specified is 24 hours.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -120,9 +117,9 @@ public class DescribeAuditLogRecordsRequest extends TeaModel {
      * <p>*   **INSERT_INTO_SELECT**</p>
      * <p>*   **ALTER**</p>
      * <p>*   **DROP**</p>
-     * <p>*   **INSERT**</p>
+     * <p>*   **CREATE**</p>
      * <br>
-     * <p>> You can query only a single type of SQL statements at a time. If this parameter is left empty, the **SELECT** SQL statements are queried.</p>
+     * <p>> You can query only a single type of SQL statements at a time. If you leave this parameter empty, the **SELECT** statements are queried.</p>
      */
     @NameInMap("SqlType")
     public String sqlType;

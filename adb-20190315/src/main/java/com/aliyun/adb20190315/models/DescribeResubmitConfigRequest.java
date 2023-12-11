@@ -3,12 +3,12 @@ package com.aliyun.adb20190315.models;
 
 import com.aliyun.tea.*;
 
-public class MigrateDBClusterRequest extends TeaModel {
-    /**
-     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
-     */
+public class DescribeResubmitConfigRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
+
+    @NameInMap("GroupName")
+    public String groupName;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -16,18 +16,21 @@ public class MigrateDBClusterRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    public static MigrateDBClusterRequest build(java.util.Map<String, ?> map) throws Exception {
-        MigrateDBClusterRequest self = new MigrateDBClusterRequest();
+    public static DescribeResubmitConfigRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeResubmitConfigRequest self = new DescribeResubmitConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public MigrateDBClusterRequest setDBClusterId(String DBClusterId) {
+    public DescribeResubmitConfigRequest setDBClusterId(String DBClusterId) {
         this.DBClusterId = DBClusterId;
         return this;
     }
@@ -35,7 +38,15 @@ public class MigrateDBClusterRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public MigrateDBClusterRequest setOwnerAccount(String ownerAccount) {
+    public DescribeResubmitConfigRequest setGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    public String getGroupName() {
+        return this.groupName;
+    }
+
+    public DescribeResubmitConfigRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -43,7 +54,7 @@ public class MigrateDBClusterRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public MigrateDBClusterRequest setOwnerId(Long ownerId) {
+    public DescribeResubmitConfigRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -51,7 +62,15 @@ public class MigrateDBClusterRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public MigrateDBClusterRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public DescribeResubmitConfigRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public DescribeResubmitConfigRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -59,7 +78,7 @@ public class MigrateDBClusterRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public MigrateDBClusterRequest setResourceOwnerId(Long resourceOwnerId) {
+    public DescribeResubmitConfigRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }

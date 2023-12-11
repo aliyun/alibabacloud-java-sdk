@@ -3,19 +3,16 @@ package com.aliyun.adb20190315.models;
 
 import com.aliyun.tea.*;
 
-public class MigrateDBClusterResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     */
+public class ModifySQAConfigResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static MigrateDBClusterResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        MigrateDBClusterResponseBody self = new MigrateDBClusterResponseBody();
+    public static ModifySQAConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ModifySQAConfigResponseBody self = new ModifySQAConfigResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public MigrateDBClusterResponseBody setRequestId(String requestId) {
+    public ModifySQAConfigResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

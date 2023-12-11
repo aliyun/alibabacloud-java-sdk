@@ -5,20 +5,20 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountsRequest extends TeaModel {
     /**
-     * <p>The account of the database.</p>
+     * <p>The name of the database account.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
-     * <p>*   Normal: standard account</p>
-     * <p>*   Super: privileged account</p>
+     * <p>*   Normal: standard account.</p>
+     * <p>*   Super: privileged account.</p>
      */
     @NameInMap("AccountType")
     public String accountType;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

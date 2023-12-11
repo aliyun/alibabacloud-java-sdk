@@ -4,6 +4,9 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeComputeResourceRequest extends TeaModel {
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -13,6 +16,11 @@ public class DescribeComputeResourceRequest extends TeaModel {
     @NameInMap("DBClusterVersion")
     public String DBClusterVersion;
 
+    /**
+     * <p>The available computing resources for migrating AnalyticDB MySQL Data Warehouse Edition to AnalyticDB MySQL Lakehouse Edition. Possible values are:</p>
+     * <p>- **true**</p>
+     * <p>- **false**(default value)</p>
+     */
     @NameInMap("Migrate")
     public Boolean migrate;
 

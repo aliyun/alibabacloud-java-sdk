@@ -13,7 +13,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <br>
-     * <p>> You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class DeleteElasticPlanRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <br>
+     * <p>> You can call the [DescribeDBClusters](~~612241~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>The name of the elastic plan.</p>
+     * <p>The name of the scaling plan.</p>
+     * <br>
+     * <p>> You can call the [DescribeElasticPlans](~~601334~~) operation to query the names of scaling plans.</p>
      */
     @NameInMap("ElasticPlanName")
     public String elasticPlanName;

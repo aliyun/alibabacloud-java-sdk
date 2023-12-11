@@ -102,7 +102,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
          * <p>The backup size. Unit: bytes.</p>
          */
         @NameInMap("BackupSize")
-        public Integer backupSize;
+        public Long backupSize;
 
         /**
          * <p>The start time of the backup.</p>
@@ -154,11 +154,11 @@ public class DescribeBackupsResponseBody extends TeaModel {
             return this.backupMethod;
         }
 
-        public DescribeBackupsResponseBodyItemsBackup setBackupSize(Integer backupSize) {
+        public DescribeBackupsResponseBodyItemsBackup setBackupSize(Long backupSize) {
             this.backupSize = backupSize;
             return this;
         }
-        public Integer getBackupSize() {
+        public Long getBackupSize() {
             return this.backupSize;
         }
 
