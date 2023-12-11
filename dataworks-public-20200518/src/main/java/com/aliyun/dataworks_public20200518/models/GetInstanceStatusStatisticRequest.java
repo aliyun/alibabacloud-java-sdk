@@ -33,6 +33,9 @@ public class GetInstanceStatusStatisticRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
+    @NameInMap("SchedulerPeriod")
+    public String schedulerPeriod;
+
     /**
      * <p>The scheduling type of the node. Valid values:</p>
      * <br>
@@ -79,6 +82,14 @@ public class GetInstanceStatusStatisticRequest extends TeaModel {
     }
     public Long getProjectId() {
         return this.projectId;
+    }
+
+    public GetInstanceStatusStatisticRequest setSchedulerPeriod(String schedulerPeriod) {
+        this.schedulerPeriod = schedulerPeriod;
+        return this;
+    }
+    public String getSchedulerPeriod() {
+        return this.schedulerPeriod;
     }
 
     public GetInstanceStatusStatisticRequest setSchedulerType(String schedulerType) {

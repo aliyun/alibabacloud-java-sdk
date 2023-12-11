@@ -5124,6 +5124,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ProjectId", request.projectId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.schedulerPeriod)) {
+            body.put("SchedulerPeriod", request.schedulerPeriod);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.schedulerType)) {
             body.put("SchedulerType", request.schedulerType);
         }
@@ -8210,6 +8214,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nodeName)) {
             body.put("NodeName", request.nodeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            body.put("OrderBy", request.orderBy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
