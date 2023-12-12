@@ -10,6 +10,9 @@ public class SubmitCopyrightExtractRequest extends TeaModel {
     @NameInMap("Input")
     public String input;
 
+    @NameInMap("Params")
+    public String params;
+
     @NameInMap("Url")
     public String url;
 
@@ -35,6 +38,14 @@ public class SubmitCopyrightExtractRequest extends TeaModel {
     }
     public String getInput() {
         return this.input;
+    }
+
+    public SubmitCopyrightExtractRequest setParams(String params) {
+        this.params = params;
+        return this;
+    }
+    public String getParams() {
+        return this.params;
     }
 
     public SubmitCopyrightExtractRequest setUrl(String url) {

@@ -70,12 +70,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public QueryCopyrightResponse queryCopyright(QueryCopyrightRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.queryCopyrightWithOptions(request, headers, runtime);
-    }
-
     public QueryCopyrightResponse queryCopyrightWithOptions(QueryCopyrightRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -121,10 +115,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCopyrightResponse());
     }
 
-    public QueryCopyrightExtractResponse queryCopyrightExtract(QueryCopyrightExtractRequest request) throws Exception {
+    public QueryCopyrightResponse queryCopyright(QueryCopyrightRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.queryCopyrightExtractWithOptions(request, headers, runtime);
+        return this.queryCopyrightWithOptions(request, headers, runtime);
     }
 
     public QueryCopyrightExtractResponse queryCopyrightExtractWithOptions(QueryCopyrightExtractRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -152,10 +146,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCopyrightExtractResponse());
     }
 
-    public QueryTraceAbResponse queryTraceAb(QueryTraceAbRequest request) throws Exception {
+    public QueryCopyrightExtractResponse queryCopyrightExtract(QueryCopyrightExtractRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.queryTraceAbWithOptions(request, headers, runtime);
+        return this.queryCopyrightExtractWithOptions(request, headers, runtime);
     }
 
     public QueryTraceAbResponse queryTraceAbWithOptions(QueryTraceAbRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -187,10 +181,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryTraceAbResponse());
     }
 
-    public QueryTraceExtractResponse queryTraceExtract(QueryTraceExtractRequest request) throws Exception {
+    public QueryTraceAbResponse queryTraceAb(QueryTraceAbRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.queryTraceExtractWithOptions(request, headers, runtime);
+        return this.queryTraceAbWithOptions(request, headers, runtime);
     }
 
     public QueryTraceExtractResponse queryTraceExtractWithOptions(QueryTraceExtractRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -218,10 +212,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryTraceExtractResponse());
     }
 
-    public QueryTraceMuResponse queryTraceMu(QueryTraceMuRequest request) throws Exception {
+    public QueryTraceExtractResponse queryTraceExtract(QueryTraceExtractRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.queryTraceMuWithOptions(request, headers, runtime);
+        return this.queryTraceExtractWithOptions(request, headers, runtime);
     }
 
     public QueryTraceMuResponse queryTraceMuWithOptions(QueryTraceMuRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -273,10 +267,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryTraceMuResponse());
     }
 
-    public SubmitCopyrightExtractResponse submitCopyrightExtract(SubmitCopyrightExtractRequest request) throws Exception {
+    public QueryTraceMuResponse queryTraceMu(QueryTraceMuRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.submitCopyrightExtractWithOptions(request, headers, runtime);
+        return this.queryTraceMuWithOptions(request, headers, runtime);
     }
 
     public SubmitCopyrightExtractResponse submitCopyrightExtractWithOptions(SubmitCopyrightExtractRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -288,6 +282,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.input)) {
             body.put("Input", request.input);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.params)) {
+            body.put("Params", request.params);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.url)) {
@@ -316,10 +314,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitCopyrightExtractResponse());
     }
 
-    public SubmitCopyrightJobResponse submitCopyrightJob(SubmitCopyrightJobRequest request) throws Exception {
+    public SubmitCopyrightExtractResponse submitCopyrightExtract(SubmitCopyrightExtractRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.submitCopyrightJobWithOptions(request, headers, runtime);
+        return this.submitCopyrightExtractWithOptions(request, headers, runtime);
     }
 
     public SubmitCopyrightJobResponse submitCopyrightJobWithOptions(SubmitCopyrightJobRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -391,10 +389,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitCopyrightJobResponse());
     }
 
-    public SubmitImageCopyrightResponse submitImageCopyright(SubmitImageCopyrightRequest request) throws Exception {
+    public SubmitCopyrightJobResponse submitCopyrightJob(SubmitCopyrightJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.submitImageCopyrightWithOptions(request, headers, runtime);
+        return this.submitCopyrightJobWithOptions(request, headers, runtime);
     }
 
     public SubmitImageCopyrightResponse submitImageCopyrightWithOptions(SubmitImageCopyrightRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -434,10 +432,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitImageCopyrightResponse());
     }
 
-    public SubmitTraceAbResponse submitTraceAb(SubmitTraceAbRequest request) throws Exception {
+    public SubmitImageCopyrightResponse submitImageCopyright(SubmitImageCopyrightRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.submitTraceAbWithOptions(request, headers, runtime);
+        return this.submitImageCopyrightWithOptions(request, headers, runtime);
     }
 
     public SubmitTraceAbResponse submitTraceAbWithOptions(SubmitTraceAbRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -497,10 +495,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitTraceAbResponse());
     }
 
-    public SubmitTraceExtractResponse submitTraceExtract(SubmitTraceExtractRequest request) throws Exception {
+    public SubmitTraceAbResponse submitTraceAb(SubmitTraceAbRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.submitTraceExtractWithOptions(request, headers, runtime);
+        return this.submitTraceAbWithOptions(request, headers, runtime);
     }
 
     public SubmitTraceExtractResponse submitTraceExtractWithOptions(SubmitTraceExtractRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -540,10 +538,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitTraceExtractResponse());
     }
 
-    public SubmitTracemuResponse submitTracemu(SubmitTracemuRequest request) throws Exception {
+    public SubmitTraceExtractResponse submitTraceExtract(SubmitTraceExtractRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.submitTracemuWithOptions(request, headers, runtime);
+        return this.submitTraceExtractWithOptions(request, headers, runtime);
     }
 
     public SubmitTracemuResponse submitTracemuWithOptions(SubmitTracemuRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -581,5 +579,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitTracemuResponse());
+    }
+
+    public SubmitTracemuResponse submitTracemu(SubmitTracemuRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.submitTracemuWithOptions(request, headers, runtime);
     }
 }
