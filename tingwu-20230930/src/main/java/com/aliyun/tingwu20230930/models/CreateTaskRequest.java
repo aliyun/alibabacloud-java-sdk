@@ -252,6 +252,9 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("OutputLevel")
         public Integer outputLevel;
 
+        @NameInMap("PhraseId")
+        public String phraseId;
+
         public static CreateTaskRequestParametersTranscription build(java.util.Map<String, ?> map) throws Exception {
             CreateTaskRequestParametersTranscription self = new CreateTaskRequestParametersTranscription();
             return TeaModel.build(map, self);
@@ -287,6 +290,14 @@ public class CreateTaskRequest extends TeaModel {
         }
         public Integer getOutputLevel() {
             return this.outputLevel;
+        }
+
+        public CreateTaskRequestParametersTranscription setPhraseId(String phraseId) {
+            this.phraseId = phraseId;
+            return this;
+        }
+        public String getPhraseId() {
+            return this.phraseId;
         }
 
     }
