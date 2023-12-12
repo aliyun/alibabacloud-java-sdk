@@ -1,3 +1,6 @@
+2023-12-12 Version: 2.4.0
+- Generated java 2020-01-16 for DAS.
+
 2023-12-08 Version: 2.3.0
 - Generated java 2020-01-16 for DAS.
 
