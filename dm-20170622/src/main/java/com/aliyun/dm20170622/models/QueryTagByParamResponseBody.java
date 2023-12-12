@@ -65,6 +65,9 @@ public class QueryTagByParamResponseBody extends TeaModel {
     }
 
     public static class QueryTagByParamResponseBodyDataTag extends TeaModel {
+        @NameInMap("TagDescription")
+        public String tagDescription;
+
         @NameInMap("TagId")
         public String tagId;
 
@@ -74,6 +77,14 @@ public class QueryTagByParamResponseBody extends TeaModel {
         public static QueryTagByParamResponseBodyDataTag build(java.util.Map<String, ?> map) throws Exception {
             QueryTagByParamResponseBodyDataTag self = new QueryTagByParamResponseBodyDataTag();
             return TeaModel.build(map, self);
+        }
+
+        public QueryTagByParamResponseBodyDataTag setTagDescription(String tagDescription) {
+            this.tagDescription = tagDescription;
+            return this;
+        }
+        public String getTagDescription() {
+            return this.tagDescription;
         }
 
         public QueryTagByParamResponseBodyDataTag setTagId(String tagId) {
