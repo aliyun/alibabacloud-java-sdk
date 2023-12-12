@@ -27,6 +27,12 @@ public class CreateLindormInstanceRequest extends TeaModel {
     @NameInMap("ArchVersion")
     public String archVersion;
 
+    @NameInMap("AutoRenewDuration")
+    public String autoRenewDuration;
+
+    @NameInMap("AutoRenewal")
+    public Boolean autoRenewal;
+
     /**
      * <p>The cold storage capacity of the instance. By default, if you leave this parameter unspecified, cold storage is not enabled for the instance. Unit: GB. Valid values: **800** to **1000000**.</p>
      */
@@ -351,6 +357,22 @@ public class CreateLindormInstanceRequest extends TeaModel {
     }
     public String getArchVersion() {
         return this.archVersion;
+    }
+
+    public CreateLindormInstanceRequest setAutoRenewDuration(String autoRenewDuration) {
+        this.autoRenewDuration = autoRenewDuration;
+        return this;
+    }
+    public String getAutoRenewDuration() {
+        return this.autoRenewDuration;
+    }
+
+    public CreateLindormInstanceRequest setAutoRenewal(Boolean autoRenewal) {
+        this.autoRenewal = autoRenewal;
+        return this;
+    }
+    public Boolean getAutoRenewal() {
+        return this.autoRenewal;
     }
 
     public CreateLindormInstanceRequest setColdStorage(Integer coldStorage) {
