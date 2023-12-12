@@ -75,6 +75,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createTaskWithOptions(request, headers, runtime);
     }
 
+    public CreateTranscriptionPhrasesResponse createTranscriptionPhrasesWithOptions(CreateTranscriptionPhrasesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wordWeights)) {
+            body.put("WordWeights", request.wordWeights);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateTranscriptionPhrases"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/tingwu/v2/resources/phrases"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTranscriptionPhrasesResponse());
+    }
+
+    public CreateTranscriptionPhrasesResponse createTranscriptionPhrases(CreateTranscriptionPhrasesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createTranscriptionPhrasesWithOptions(request, headers, runtime);
+    }
+
+    public DeleteTranscriptionPhrasesResponse deleteTranscriptionPhrasesWithOptions(String PhraseId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteTranscriptionPhrases"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/tingwu/v2/resources/phrases/" + com.aliyun.openapiutil.Client.getEncodeParam(PhraseId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTranscriptionPhrasesResponse());
+    }
+
+    public DeleteTranscriptionPhrasesResponse deleteTranscriptionPhrases(String PhraseId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteTranscriptionPhrasesWithOptions(PhraseId, headers, runtime);
+    }
+
     public GetTaskInfoResponse getTaskInfoWithOptions(String TaskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -97,5 +160,92 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getTaskInfoWithOptions(TaskId, headers, runtime);
+    }
+
+    public GetTranscriptionPhrasesResponse getTranscriptionPhrasesWithOptions(String PhraseId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTranscriptionPhrases"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/tingwu/v2/resources/phrases/" + com.aliyun.openapiutil.Client.getEncodeParam(PhraseId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTranscriptionPhrasesResponse());
+    }
+
+    public GetTranscriptionPhrasesResponse getTranscriptionPhrases(String PhraseId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getTranscriptionPhrasesWithOptions(PhraseId, headers, runtime);
+    }
+
+    public ListTranscriptionPhrasesResponse listTranscriptionPhrasesWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTranscriptionPhrases"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/tingwu/v2/resources/phrases"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTranscriptionPhrasesResponse());
+    }
+
+    public ListTranscriptionPhrasesResponse listTranscriptionPhrases() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listTranscriptionPhrasesWithOptions(headers, runtime);
+    }
+
+    public UpdateTranscriptionPhrasesResponse updateTranscriptionPhrasesWithOptions(String PhraseId, UpdateTranscriptionPhrasesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wordWeights)) {
+            body.put("WordWeights", request.wordWeights);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateTranscriptionPhrases"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/tingwu/v2/resources/phrases/" + com.aliyun.openapiutil.Client.getEncodeParam(PhraseId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTranscriptionPhrasesResponse());
+    }
+
+    public UpdateTranscriptionPhrasesResponse updateTranscriptionPhrases(String PhraseId, UpdateTranscriptionPhrasesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateTranscriptionPhrasesWithOptions(PhraseId, request, headers, runtime);
     }
 }
