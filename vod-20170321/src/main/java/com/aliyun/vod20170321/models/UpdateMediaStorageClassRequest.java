@@ -4,6 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateMediaStorageClassRequest extends TeaModel {
+    @NameInMap("AllowUpdateWithoutTimeLimit")
+    public Boolean allowUpdateWithoutTimeLimit;
+
     /**
      * <p>The media asset ID. You can specify a maximum of 20 IDs. Separate multiple IDs with commas (,). You can use one of the following methods to obtain the ID:</p>
      * <br>
@@ -47,6 +50,14 @@ public class UpdateMediaStorageClassRequest extends TeaModel {
     public static UpdateMediaStorageClassRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateMediaStorageClassRequest self = new UpdateMediaStorageClassRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateMediaStorageClassRequest setAllowUpdateWithoutTimeLimit(Boolean allowUpdateWithoutTimeLimit) {
+        this.allowUpdateWithoutTimeLimit = allowUpdateWithoutTimeLimit;
+        return this;
+    }
+    public Boolean getAllowUpdateWithoutTimeLimit() {
+        return this.allowUpdateWithoutTimeLimit;
     }
 
     public UpdateMediaStorageClassRequest setMediaIds(String mediaIds) {
