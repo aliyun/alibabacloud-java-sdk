@@ -5,15 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteGroupMonitoringAgentProcessRequest extends TeaModel {
     /**
-     * <p>The ID of the process monitoring task.</p>
+     * <p>The ID of the application group.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>The ID of the process monitoring task.</p>
      */
     @NameInMap("Id")
     public String id;

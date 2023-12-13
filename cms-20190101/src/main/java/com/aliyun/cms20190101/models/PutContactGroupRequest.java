@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class PutContactGroupRequest extends TeaModel {
     /**
-     * <p>The description of the alert contact group.</p>
+     * <p>The name of the alert contact group.</p>
+     * <br>
+     * <p>For information about how to obtain the name of an alert contact group, see [DescribeContactGroupList](~~114922~~).</p>
      */
     @NameInMap("ContactGroupName")
     public String contactGroupName;
@@ -14,18 +16,18 @@ public class PutContactGroupRequest extends TeaModel {
     public java.util.List<String> contactNames;
 
     /**
+     * <p>The description of the alert contact group.</p>
+     */
+    @NameInMap("Describe")
+    public String describe;
+
+    /**
      * <p>Specifies whether to enable the weekly report subscription feature. Valid values:</p>
      * <br>
      * <p>*   true: The weekly report subscription feature is enabled.</p>
      * <p>*   false: The weekly report subscription feature is disabled.</p>
      * <br>
      * <p>>  You can enable the weekly report subscription only for an Alibaba Cloud account that has at least five Elastic Compute Service (ECS) instances.</p>
-     */
-    @NameInMap("Describe")
-    public String describe;
-
-    /**
-     * <p>The name of the alert contact. Valid values of N: 1 to 100.</p>
      */
     @NameInMap("EnableSubscribed")
     public Boolean enableSubscribed;

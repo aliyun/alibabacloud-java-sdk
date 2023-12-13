@@ -5,38 +5,36 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:</p>
+     * <p>The HTTP status code.</p>
      * <br>
-     * <p>*   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.</p>
-     * <p>*   {userId}: the ID of the Alibaba Cloud account.</p>
-     * <p>*   {regionId}: the region ID of the message queue or topic.</p>
-     * <p>*   {Resource type}`: the type of the resource for which alerts are triggered. Valid values: - **queues** - **topics** {Resource name}: the name of the resource. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.`</p>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The ID of the resource for which alerts are triggered.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeMetricRuleTargets**.</p>
+     * <p>The information about the resource for which alerts are triggered.</p>
      */
     @NameInMap("Targets")
     public DescribeMetricRuleTargetsResponseBodyTargets targets;
@@ -88,20 +86,35 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
 
     public static class DescribeMetricRuleTargetsResponseBodyTargetsTarget extends TeaModel {
         /**
-         * <p>Queries the resources that are associated with a specified alert rule.</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:</p>
+         * <br>
+         * <p>*   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.</p>
+         * <p>*   {userId}: the ID of the Alibaba Cloud account.</p>
+         * <p>*   {regionId}: the region ID of the message queue or topic.</p>
+         * <p>*   {Resource type}`: the type of the resource for which alerts are triggered. Valid values: - **queues** - **topics** {Resource name}: the name of the resource. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.`</p>
          */
         @NameInMap("Arn")
         public String arn;
 
         /**
-         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         * <p>The ID of the resource for which alerts are triggered.</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The parameters of the alert callback. The parameters are in the JSON format.</p>
+         */
         @NameInMap("JsonParams")
         public String jsonParams;
 
+        /**
+         * <p>The level of the alert. Valid values:</p>
+         * <br>
+         * <p>*   INFO: information</p>
+         * <p>*   WARN: warning</p>
+         * <p>*   CRITICAL: critical</p>
+         */
         @NameInMap("Level")
         public String level;
 

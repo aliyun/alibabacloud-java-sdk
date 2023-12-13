@@ -5,36 +5,36 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomEventAttributeResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The time when the custom event occurred.</p>
-     * <br>
-     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The details of the custom event.</p>
      */
     @NameInMap("CustomEvents")
     public DescribeCustomEventAttributeResponseBodyCustomEvents customEvents;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
      * <br>
      * <p>*   true: The call was successful.</p>
      * <p>*   false: The call failed.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    /**
-     * <p>The details of the custom event.</p>
      */
     @NameInMap("Success")
     public String success;
@@ -86,31 +86,33 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
 
     public static class DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent extends TeaModel {
         /**
-         * <p>The ID of the custom event.</p>
+         * <p>The content of the custom event.</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>The content of the custom event.</p>
+         * <p>The ID of the application group.</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
-         * <p>Queries the details of a custom event occurred in a specified time period.</p>
+         * <p>The ID of the custom event.</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The ID of the application group.</p>
+         * <p>The name of the custom event.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The name of the custom event.</p>
+         * <p>The time when the custom event occurred.</p>
+         * <br>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("Time")
         public String time;

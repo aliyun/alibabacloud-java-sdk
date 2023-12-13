@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeAlertingMetricRuleResourcesRequest extends TeaModel {
     /**
+     * <p>Queries the alerts that were triggered before the specified time. Timestamps in milliseconds are supported.</p>
+     */
+    @NameInMap("AlertBeforeTime")
+    public String alertBeforeTime;
+
+    /**
      * <p>The dimensions that specify the resources whose monitoring data you want to query.</p>
      */
     @NameInMap("Dimensions")
@@ -52,6 +58,14 @@ public class DescribeAlertingMetricRuleResourcesRequest extends TeaModel {
     public static DescribeAlertingMetricRuleResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAlertingMetricRuleResourcesRequest self = new DescribeAlertingMetricRuleResourcesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAlertingMetricRuleResourcesRequest setAlertBeforeTime(String alertBeforeTime) {
+        this.alertBeforeTime = alertBeforeTime;
+        return this;
+    }
+    public String getAlertBeforeTime() {
+        return this.alertBeforeTime;
     }
 
     public DescribeAlertingMetricRuleResourcesRequest setDimensions(String dimensions) {

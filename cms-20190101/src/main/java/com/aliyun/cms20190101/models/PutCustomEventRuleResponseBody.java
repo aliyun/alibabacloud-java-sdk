@@ -5,28 +5,30 @@ import com.aliyun.tea.*;
 
 public class PutCustomEventRuleResponseBody extends TeaModel {
     /**
-     * <p>The error message.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The value 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
      * <br>
      * <p>*   true: The call was successful.</p>
      * <p>*   false: The call failed.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    /**
-     * <p>Before you call this operation, call the PutCustomEvent operation to report the monitoring data of the custom event. For more information, see [PutCustomEvent](~~115012~~).</p>
      */
     @NameInMap("Success")
     public Boolean success;

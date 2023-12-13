@@ -5,20 +5,29 @@ import com.aliyun.tea.*;
 
 public class DeleteHybridMonitorNamespaceResponseBody extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **DeleteHybridMonitorNamespace**.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public String success;
 

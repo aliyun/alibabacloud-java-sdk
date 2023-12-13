@@ -5,23 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateMonitorGroupNotifyPolicyRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The timestamp that indicates the end time of the validity period for the policy.</p>
+     * <br>
+     * <p>This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The HTTP status code 200 indicates that the call succeeds.</p>
+     * <p>The ID of the application group.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The timestamp that indicates the end time of the validity period for the policy.</p>
-     * <br>
-     * <p>This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The type of the policy. Valid value: PauseNotify.</p>
      */
     @NameInMap("PolicyType")
     public String policyType;
@@ -30,7 +28,9 @@ public class CreateMonitorGroupNotifyPolicyRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The error message.</p>
+     * <p>The timestamp that indicates the start time of the validity period for the policy.</p>
+     * <br>
+     * <p>This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

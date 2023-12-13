@@ -8,7 +8,10 @@ public class DescribeMonitorResourceQuotaAttributeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the instance to be monitored.</p>
+     * <p>Specifies whether to return information about used quotas. Valid values:</p>
+     * <br>
+     * <p>*   true (default): yes</p>
+     * <p>*   false: no</p>
      */
     @NameInMap("ShowUsed")
     public Boolean showUsed;

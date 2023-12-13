@@ -5,33 +5,39 @@ import com.aliyun.tea.*;
 
 public class DescribeEventRuleListRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to DescribeEventRuleList.</p>
+     * <p>The ID of the application group.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>Specifies whether to enable the event-triggered alert rule. Valid values:</p>
+     * <br>
+     * <p>true (default)</p>
+     * <br>
+     * <p>false</p>
+     */
     @NameInMap("IsEnable")
     public Boolean isEnable;
 
     /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>The prefix in the name of the event-triggered alert rule.</p>
      */
     @NameInMap("NamePrefix")
     public String namePrefix;
 
     /**
-     * <p>The description of the event-triggered alert rule.</p>
+     * <p>The page number.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
-     * <p>The status of the event-triggered alert rule. Valid values:</p>
+     * <p>The number of entries per page.</p>
      * <br>
-     * <p>*   ENABLED: enabled</p>
-     * <p>*   DISABLED: disabled</p>
+     * <p>Pages start from page 1. Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;

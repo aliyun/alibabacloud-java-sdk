@@ -5,45 +5,51 @@ import com.aliyun.tea.*;
 
 public class PutEventRuleTargetsResponseBody extends TeaModel {
     /**
-     * <p>The name of the API operation.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The name of the queue. Valid values of N: 1 to 5.</p>
+     * <p>This parameter is returned if the specified alert contact groups in the request failed to be created or modified.</p>
      */
     @NameInMap("FailedContactParameters")
     public PutEventRuleTargetsResponseBodyFailedContactParameters failedContactParameters;
 
+    /**
+     * <p>This parameter is returned if the specified functions in the request failed to be created or modified in Function Compute.</p>
+     */
     @NameInMap("FailedFcParameters")
     public PutEventRuleTargetsResponseBodyFailedFcParameters failedFcParameters;
 
+    /**
+     * <p>This parameter is returned if the specified queues in the request failed to be created or modified in MNS.</p>
+     */
     @NameInMap("FailedMnsParameters")
     public PutEventRuleTargetsResponseBodyFailedMnsParameters failedMnsParameters;
 
     /**
-     * <p>The name of the Function Compute service. Valid values of N: 1 to 5.</p>
+     * <p>The number of resources that failed to be created or modified.</p>
      */
     @NameInMap("FailedParameterCount")
     public String failedParameterCount;
 
     /**
-     * <p>The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The alert notification methods. Valid values:</p>
-     * <br>
-     * <p>4: Alert notifications are sent by using DingTalk chatbots and emails.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The name of the role.</p>
+     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -119,14 +125,22 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
 
     public static class PutEventRuleTargetsResponseBodyFailedContactParametersContactParameter extends TeaModel {
         /**
-         * <p>The ID of the request.</p>
+         * <p>The name of the alert contact group.</p>
          */
         @NameInMap("ContactGroupName")
         public String contactGroupName;
 
+        /**
+         * <p>The ID of the recipient.</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>The alert level and the corresponding notification methods. Valid values:</p>
+         * <br>
+         * <p>4: Alert notifications are sent by using DingTalk chatbots and emails.</p>
+         */
         @NameInMap("Level")
         public String level;
 
@@ -181,15 +195,27 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
     }
 
     public static class PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter extends TeaModel {
+        /**
+         * <p>The name of the function.</p>
+         */
         @NameInMap("FunctionName")
         public String functionName;
 
+        /**
+         * <p>The ID of the recipient.</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The name of the Function Compute service.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
@@ -252,12 +278,21 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
     }
 
     public static class PutEventRuleTargetsResponseBodyFailedMnsParametersMnsParameter extends TeaModel {
+        /**
+         * <p>The ID of the recipient.</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>The name of the MNS queue.</p>
+         */
         @NameInMap("Queue")
         public String queue;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("Region")
         public String region;
 

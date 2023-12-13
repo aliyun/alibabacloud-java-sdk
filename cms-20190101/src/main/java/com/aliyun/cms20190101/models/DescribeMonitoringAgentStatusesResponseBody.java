@@ -7,7 +7,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
      * <br>
-     * <p>>  The status code 200 indicates that the request was successful.</p>
+     * <p>> The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -19,7 +19,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The host status information.</p>
+     * <p>The status information.</p>
      */
     @NameInMap("NodeStatusList")
     public DescribeMonitoringAgentStatusesResponseBodyNodeStatusList nodeStatusList;
@@ -85,6 +85,9 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
     }
 
     public static class DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus extends TeaModel {
+        @NameInMap("AgentInstallErrorCode")
+        public String agentInstallErrorCode;
+
         /**
          * <p>Indicates whether the CloudMonitor agent is automatically installed. Valid values:</p>
          * <br>
@@ -101,10 +104,11 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Indicates whether the SysAK monitoring feature is enabled.`` Valid values:</p>
+         * <p>SysOM插件的配置信息`sysak`是否开启监控。取值：</p>
          * <br>
-         * <p>*   `true`: The SysAK monitoring feature is enabled.</p>
-         * <p>*   `false`: the SysAK monitoring feature is disabled.</p>
+         * <p>- true：`sysak`开启监控。</p>
+         * <br>
+         * <p>- false：`sysak`未开启监控。</p>
          */
         @NameInMap("OsMonitorConfig")
         public String osMonitorConfig;
@@ -146,7 +150,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         public String osMonitorStatus;
 
         /**
-         * <p>The SysOM version.</p>
+         * <p>SysOM监控的插件版本。</p>
          */
         @NameInMap("OsMonitorVersion")
         public String osMonitorVersion;
@@ -167,6 +171,14 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         public static DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus self = new DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus setAgentInstallErrorCode(String agentInstallErrorCode) {
+            this.agentInstallErrorCode = agentInstallErrorCode;
+            return this;
+        }
+        public String getAgentInstallErrorCode() {
+            return this.agentInstallErrorCode;
         }
 
         public DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus setAutoInstall(Boolean autoInstall) {

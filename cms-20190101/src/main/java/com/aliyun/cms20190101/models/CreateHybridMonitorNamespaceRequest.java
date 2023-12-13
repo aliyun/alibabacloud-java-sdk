@@ -5,10 +5,27 @@ import com.aliyun.tea.*;
 
 public class CreateHybridMonitorNamespaceRequest extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the namespace.</p>
      */
     @NameInMap("Description")
     public String description;
+
+    /**
+     * <p>The name of the namespace.</p>
+     * <br>
+     * <p>The name can contain lowercase letters, digits, and hyphens (-).</p>
+     */
+    @NameInMap("Namespace")
+    public String namespace;
+
+    @NameInMap("NamespaceRegion")
+    public String namespaceRegion;
+
+    @NameInMap("NamespaceType")
+    public String namespaceType;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     /**
      * <p>The data retention period of the namespace. Valid values:</p>
@@ -21,15 +38,6 @@ public class CreateHybridMonitorNamespaceRequest extends TeaModel {
      * <p>*   cms.s1.12xlarge: 376 days</p>
      * <br>
      * <p>For information about the pricing for different retention periods, see the **Pricing** section in [Billing of the dashboard feature](~~223532~~).</p>
-     */
-    @NameInMap("Namespace")
-    public String namespace;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    /**
-     * <p>The ID of the request.</p>
      */
     @NameInMap("Spec")
     public String spec;
@@ -53,6 +61,22 @@ public class CreateHybridMonitorNamespaceRequest extends TeaModel {
     }
     public String getNamespace() {
         return this.namespace;
+    }
+
+    public CreateHybridMonitorNamespaceRequest setNamespaceRegion(String namespaceRegion) {
+        this.namespaceRegion = namespaceRegion;
+        return this;
+    }
+    public String getNamespaceRegion() {
+        return this.namespaceRegion;
+    }
+
+    public CreateHybridMonitorNamespaceRequest setNamespaceType(String namespaceType) {
+        this.namespaceType = namespaceType;
+        return this;
+    }
+    public String getNamespaceType() {
+        return this.namespaceType;
     }
 
     public CreateHybridMonitorNamespaceRequest setRegionId(String regionId) {

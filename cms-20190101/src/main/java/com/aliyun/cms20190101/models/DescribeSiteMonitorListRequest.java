@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorListRequest extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The keyword to be matched.</p>
      * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>>  You can search for tasks by name or address. Fuzzy search is supported.</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>The number of hops for the PING protocol.</p>
+     * <p>The page number. Default value: 1.</p>
      */
     @NameInMap("Page")
     public Integer page;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeSiteMonitorList**.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -28,22 +28,22 @@ public class DescribeSiteMonitorListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The parsing path of the assertion.</p>
-     * <br>
-     * <p>*   If the assertion type is `body_json`, the path is `json path`.</p>
-     * <p>*   If the assertion type is `body_xml`, the path is `xml path`.</p>
+     * <p>The ID of the site monitoring task.</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
-     * <p>The ID of the site monitoring task.</p>
+     * <p>The task status. Valid values:</p>
+     * <br>
+     * <p>*   1: The task is enabled.</p>
+     * <p>*   2: The task is disabled.</p>
      */
     @NameInMap("TaskState")
     public String taskState;
 
     /**
-     * <p>The time when the site monitoring task was updated.</p>
+     * <p>The protocol that is used by the site monitoring task. Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

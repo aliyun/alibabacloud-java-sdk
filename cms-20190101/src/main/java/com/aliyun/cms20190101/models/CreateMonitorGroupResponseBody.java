@@ -5,16 +5,30 @@ import com.aliyun.tea.*;
 
 public class CreateMonitorGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the application group.</p>
+     * <p>The response code.</p>
+     * <br>
+     * <p>>  The value 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     * <p>The ID of the application group.</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
+
+    /**
+     * <p>The error message.</p>
+     */
+    @NameInMap("Message")
+    public String message;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
@@ -22,15 +36,6 @@ public class CreateMonitorGroupResponseBody extends TeaModel {
      * <p>*   true: The call was successful.</p>
      * <p>*   false: The call failed.</p>
      */
-    @NameInMap("Message")
-    public String message;
-
-    /**
-     * <p>In this example, the application group named `ECS_Group` is created.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Success")
     public Boolean success;
 

@@ -5,15 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteMonitorGroupDynamicRuleRequest extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>The service to which the rule applies. Valid values: ecs, rds, and slb.</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
-     * <p>The service to which the rule applies. Valid values: ecs, rds, and slb.</p>
+     * <p>The ID of the application group.</p>
      */
     @NameInMap("GroupId")
     public Long groupId;

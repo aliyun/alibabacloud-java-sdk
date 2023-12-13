@@ -5,23 +5,28 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomMetricListResponseBody extends TeaModel {
     /**
-     * <p>The reported custom metrics that are found in the query.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The value 200 indicates that the call is successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>>  You can call the DescribeMetricList operation to query the metrics of a cloud service. For more information, see [DescribeMetricList](~~51936~~).</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The reported custom metrics that are found in the query.</p>
+     */
     @NameInMap("Result")
     public String result;
 

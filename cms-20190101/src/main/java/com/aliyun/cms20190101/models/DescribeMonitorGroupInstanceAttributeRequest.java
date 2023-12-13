@@ -5,41 +5,47 @@ import com.aliyun.tea.*;
 
 public class DescribeMonitorGroupInstanceAttributeRequest extends TeaModel {
     /**
-     * <p>The keyword that is used to search for resources.</p>
+     * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     * <br>
+     * <p>To obtain the abbreviation of an Alibaba Cloud service name, call the [DescribeProjectMeta](~~114916~~) operation. The `metricCategory` tag in the `Labels` response parameter indicates the abbreviation of the Alibaba Cloud service name.</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>The ID of the application group.</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
-     * <p>The ID of the application group.</p>
+     * <p>The ID of the resource. Separate multiple resource IDs with commas (,). You can query the details about a maximum of 20 resources in each request.</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     /**
-     * <p>The ID of the vSwitch to which the instance belongs.</p>
+     * <p>The keyword that is used to search for resources.</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeMonitorGroupInstanceAttribute**.</p>
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Valid values: 1 to 1000000000.</p>
+     * <br>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     * <p>The number of entries to return on each page.</p>
      * <br>
-     * <p>To obtain the abbreviation of an Alibaba Cloud service name, call the [DescribeProjectMeta](~~114916~~) operation. The `metricCategory` tag in the `Labels` response parameter indicates the abbreviation of the Alibaba Cloud service name.</p>
+     * <p>Valid values: 1 to 1000000000.</p>
+     * <br>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -48,7 +54,10 @@ public class DescribeMonitorGroupInstanceAttributeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The error message.</p>
+     * <p>Specifies whether to return the total number of resources in the specified application group. Valid values:</p>
+     * <br>
+     * <p>*   true (default value)</p>
+     * <p>*   false</p>
      */
     @NameInMap("Total")
     public Boolean total;

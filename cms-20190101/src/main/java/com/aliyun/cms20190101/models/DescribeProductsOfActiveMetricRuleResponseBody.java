@@ -10,29 +10,49 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
     @NameInMap("AllProductInitMetricRuleList")
     public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleList allProductInitMetricRuleList;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the request was successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about the services for which one-click alert is enabled. Services are separated with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   ecs: Elastic Compute Service (ECS)</p>
+     * <p>*   rds: ApsaraDB RDS</p>
+     * <p>*   slb: Server Load Balancer (SLB)</p>
+     * <p>*   redis_standard: ApsaraDB for Redis of the standard architecture</p>
+     * <p>*   redis_sharding: ApsaraDB for Redis of the cluster architecture</p>
+     * <p>*   redis_splitrw: ApsaraDB for Redis of the read/write splitting architecture</p>
+     * <p>*   mongodb: ApsaraDB for MongoDB of the replica set architecture</p>
+     * <p>*   mongodb_sharding: ApsaraDB for MongoDB of the sharded cluster architecture</p>
+     * <p>*   hbase: ApsaraDB for HBase</p>
+     * <p>*   elasticsearch: Elasticsearch</p>
+     * <p>*   opensearch: OpenSearch</p>
+     */
     @NameInMap("Datapoints")
     public String datapoints;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -92,13 +112,75 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
 
     public static class DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig extends TeaModel {
         /**
-         * <p>The consecutive number of times for which the metric value is measured before an alert is triggered.</p>
+         * <p>The operator that is used to compare the metric value with the threshold for Warn-level alerts.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   LessThanThreshold: less than the threshold</p>
+         * <br>
+         * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
+         * <br>
+         * <p>*   LessThanOrEqualToThreshold: less than or equal to the threshold</p>
+         * <br>
+         * <p>*   NotEqualToThreshold: does not equal to the threshold</p>
+         * <br>
+         * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
+         * <br>
+         * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
+         * <br>
+         * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
+         * <br>
+         * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
+         * <br>
+         * <p>*   GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
+         * <br>
+         * <p>*   GreaterThanThreshold: greater than the threshold</p>
+         * <br>
+         * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
+         */
+        @NameInMap("ComparisonOperator")
+        public String comparisonOperator;
+
+        /**
+         * <p>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.</p>
          */
         @NameInMap("EvaluationCount")
         public String evaluationCount;
 
         /**
-         * <p>The name of the metric. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+         * <p>The alert level.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   INFO</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   WARN</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   CRITICAL</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
+        @NameInMap("Level")
+        public String level;
+
+        /**
+         * <p>The metric name. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
          */
         @NameInMap("MetricName")
         public String metricName;
@@ -110,19 +192,19 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The aggregation period of the monitoring data. Unit: minutes. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+         * <p>The aggregation period of monitoring data. Unit: minutes. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
          */
         @NameInMap("Period")
         public String period;
 
         /**
-         * <p>The statistical aggregation method that is used to calculate metric values that trigger alerts. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+         * <p>The method used to calculate metric values that trigger alerts. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
          */
         @NameInMap("Statistics")
         public String statistics;
 
         /**
-         * <p>The threshold of the metric value.</p>
+         * <p>The alert threshold.</p>
          */
         @NameInMap("Threshold")
         public String threshold;
@@ -132,12 +214,28 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig setComparisonOperator(String comparisonOperator) {
+            this.comparisonOperator = comparisonOperator;
+            return this;
+        }
+        public String getComparisonOperator() {
+            return this.comparisonOperator;
+        }
+
         public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig setEvaluationCount(String evaluationCount) {
             this.evaluationCount = evaluationCount;
             return this;
         }
         public String getEvaluationCount() {
             return this.evaluationCount;
+        }
+
+        public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
         }
 
         public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig setMetricName(String metricName) {
@@ -208,6 +306,9 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
         @NameInMap("AlertInitConfigList")
         public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigList alertInitConfigList;
 
+        /**
+         * <p>The abbreviation of the service name.</p>
+         */
         @NameInMap("Product")
         public String product;
 

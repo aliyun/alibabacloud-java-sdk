@@ -5,34 +5,36 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricRuleCountResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The number of alert rules without active alerts.</p>
+     * <p>The number of alert rules in each state.</p>
      */
     @NameInMap("MetricRuleCount")
     public DescribeMetricRuleCountResponseBodyMetricRuleCount metricRuleCount;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
      * <br>
      * <p>*   true: The call was successful.</p>
      * <p>*   false: The call failed.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    /**
-     * <p>The number of alert rules in each state.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -83,29 +85,32 @@ public class DescribeMetricRuleCountResponseBody extends TeaModel {
     }
 
     public static class DescribeMetricRuleCountResponseBodyMetricRuleCount extends TeaModel {
+        /**
+         * <p>The number of alert rules with active alerts.</p>
+         */
         @NameInMap("Alarm")
         public Integer alarm;
 
         /**
-         * <p>The total number of alert rules.</p>
+         * <p>The number of disabled alert rules.</p>
          */
         @NameInMap("Disable")
         public Integer disable;
 
         /**
-         * <p>The number of disabled alert rules.</p>
+         * <p>The number of alert rules without data.</p>
          */
         @NameInMap("Nodata")
         public Integer nodata;
 
         /**
-         * <p>The number of alert rules without data.</p>
+         * <p>The number of alert rules without active alerts.</p>
          */
         @NameInMap("Ok")
         public Integer ok;
 
         /**
-         * <p>The number of alert rules with active alerts.</p>
+         * <p>The total number of alert rules.</p>
          */
         @NameInMap("Total")
         public Integer total;

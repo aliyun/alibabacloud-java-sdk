@@ -33,10 +33,24 @@ public class PutCustomEventRequest extends TeaModel {
 
     public static class PutCustomEventRequestEventInfo extends TeaModel {
         /**
-         * <p>The ID of the request.</p>
+         * <p>The content of the custom event. Valid values of N: 1 to 50.</p>
          */
         @NameInMap("Content")
         public String content;
+
+        /**
+         * <p>The name of the custom event. Valid values of N: 1 to 50.</p>
+         */
+        @NameInMap("EventName")
+        public String eventName;
+
+        /**
+         * <p>The ID of the application group. Valid values of N: 0 to 50.</p>
+         * <br>
+         * <p>Default value: 0. This value indicates that the custom event to be reported does not belong to any application group.</p>
+         */
+        @NameInMap("GroupId")
+        public String groupId;
 
         /**
          * <p>The time when the custom event occurred.</p>
@@ -46,20 +60,6 @@ public class PutCustomEventRequest extends TeaModel {
          * <p>Valid values of N: 1 to 50.</p>
          * <br>
          * <p>>  You can also specify a UNIX timestamp. Example: 1552199984000. Unit: milliseconds.</p>
-         */
-        @NameInMap("EventName")
-        public String eventName;
-
-        /**
-         * <p>The HTTP status code.</p>
-         * <br>
-         * <p>>  The status code 200 indicates that the call was successful.</p>
-         */
-        @NameInMap("GroupId")
-        public String groupId;
-
-        /**
-         * <p>The content of the custom event. Valid values of N: 1 to 50.</p>
          */
         @NameInMap("Time")
         public String time;

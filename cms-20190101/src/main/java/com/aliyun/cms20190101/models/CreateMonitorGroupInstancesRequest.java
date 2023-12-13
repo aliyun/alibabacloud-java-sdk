@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateMonitorGroupInstancesRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the application group.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The instances that you want to add to the application group.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<CreateMonitorGroupInstancesRequestInstances> instances;
 
@@ -47,27 +50,27 @@ public class CreateMonitorGroupInstancesRequest extends TeaModel {
 
     public static class CreateMonitorGroupInstancesRequestInstances extends TeaModel {
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The abbreviation of the Alibaba Cloud service name.</p>
          * <br>
-         * <p>>  The status code 200 indicates that the call was successful.</p>
+         * <p>To obtain the abbreviation of an Alibaba Cloud service name, call the [DescribeProjectMeta](~~114916~~) operation. The `metricCategory` tag in the `Labels` response parameter indicates the abbreviation of the Alibaba Cloud service name.</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The operation that you want to perform. Set the value to **CreateMonitorGroupInstances**.</p>
+         * <p>The region ID of the instance.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

@@ -14,27 +14,17 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The statistical aggregation method that is used to calculate the metric values. Valid values of N: 1 to 200.</p>
-     * <br>
-     * <p>>  Set the value to Average.</p>
+     * <p>The ID of the process monitoring task.</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
-     * <p>The comparison operator that is used to compare the metric value with the threshold. Valid values of N: 1 to 200. Valid values:</p>
+     * <p>The logical operator used between conditional expressions that are used to match instances. Valid values:</p>
      * <br>
-     * <p>*   GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
-     * <p>*   GreaterThanThreshold: greater than the threshold</p>
-     * <p>*   LessThanOrEqualToThreshold: less than or equal to the threshold</p>
-     * <p>*   LessThanThreshold: less than the threshold.</p>
-     * <p>*   NotEqualToThreshold: not equal to the threshold</p>
-     * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday.</p>
-     * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
-     * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
-     * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
-     * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
-     * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
+     * <p>*   all</p>
+     * <p>*   and</p>
+     * <p>*   or</p>
      */
     @NameInMap("MatchExpressFilterRelation")
     public String matchExpressFilterRelation;
@@ -104,19 +94,25 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
         public String arn;
 
         /**
-         * <p>The time period during which the alert rule is ineffective. Valid values of N: 1 to 200.</p>
+         * <p>The ID of the resource for which alerts are triggered.</p>
+         * <br>
+         * <p>For information about how to obtain the ID of a resource for which alerts are triggered, see [DescribeMetricRuleTargets](~~121592~~).</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The alert threshold. Valid values of N: 1 to 200.</p>
+         * <p>The parameters of the alert callback. The parameters are in the JSON format.</p>
          */
         @NameInMap("JsonParams")
         public String jsonParams;
 
         /**
-         * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule. Valid values of N: 1 to 200.</p>
+         * <p>The level of the alert. Valid values:</p>
+         * <br>
+         * <p>*   INFO: information</p>
+         * <p>*   WARN: warning</p>
+         * <p>*   CRITICAL: critical</p>
          */
         @NameInMap("Level")
         public String level;
@@ -162,42 +158,28 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
 
     public static class ModifyGroupMonitoringAgentProcessRequestAlertConfig extends TeaModel {
         /**
-         * <p>The level of the alert. Valid values:</p>
+         * <p>The comparison operator that is used to compare the metric value with the threshold. Valid values of N: 1 to 200. Valid values:</p>
          * <br>
-         * <p>*   INFO: information</p>
-         * <p>*   WARN: warning</p>
-         * <p>*   CRITICAL: critical</p>
+         * <p>*   GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
+         * <p>*   GreaterThanThreshold: greater than the threshold</p>
+         * <p>*   LessThanOrEqualToThreshold: less than or equal to the threshold</p>
+         * <p>*   LessThanThreshold: less than the threshold.</p>
+         * <p>*   NotEqualToThreshold: not equal to the threshold</p>
+         * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday.</p>
+         * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
+         * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
+         * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
+         * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
+         * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
          */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
         /**
-         * <p>The error message.</p>
+         * <p>The time period during which the alert rule is effective. Valid values of N: 1 to 200.</p>
          */
         @NameInMap("EffectiveInterval")
         public String effectiveInterval;
-
-        /**
-         * <p>The time period during which the alert rule is effective. Valid values of N: 1 to 200.</p>
-         */
-        @NameInMap("EscalationsLevel")
-        public String escalationsLevel;
-
-        /**
-         * <p>The ID of the process monitoring task.</p>
-         */
-        @NameInMap("NoEffectiveInterval")
-        public String noEffectiveInterval;
-
-        /**
-         * <p>The logical operator used between conditional expressions that are used to match instances. Valid values:</p>
-         * <br>
-         * <p>*   all</p>
-         * <p>*   and</p>
-         * <p>*   or</p>
-         */
-        @NameInMap("SilenceTime")
-        public String silenceTime;
 
         /**
          * <p>The level of the alert. Valid values of N: 1 to 200. Valid values:</p>
@@ -206,11 +188,14 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
          * <p>*   warn: warning</p>
          * <p>*   info: information</p>
          */
-        @NameInMap("Statistics")
-        public String statistics;
+        @NameInMap("EscalationsLevel")
+        public String escalationsLevel;
 
-        @NameInMap("TargetList")
-        public java.util.List<ModifyGroupMonitoringAgentProcessRequestAlertConfigTargetList> targetList;
+        /**
+         * <p>The time period during which the alert rule is ineffective. Valid values of N: 1 to 200.</p>
+         */
+        @NameInMap("NoEffectiveInterval")
+        public String noEffectiveInterval;
 
         /**
          * <p>The mute period during which new alerts are not sent even if the trigger conditions are met. Valid values of N: 1 to 200.</p>
@@ -219,19 +204,36 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
          * <br>
          * <p>>  Only one alert notification is sent during a mute period even if the metric value exceeds the alert threshold during consecutive checks.</p>
          */
+        @NameInMap("SilenceTime")
+        public String silenceTime;
+
+        /**
+         * <p>The statistical aggregation method that is used to calculate the metric values. Valid values of N: 1 to 200.</p>
+         * <br>
+         * <p>>  Set the value to Average.</p>
+         */
+        @NameInMap("Statistics")
+        public String statistics;
+
+        @NameInMap("TargetList")
+        public java.util.List<ModifyGroupMonitoringAgentProcessRequestAlertConfigTargetList> targetList;
+
+        /**
+         * <p>The alert threshold. Valid values of N: 1 to 200.</p>
+         */
         @NameInMap("Threshold")
         public String threshold;
 
         /**
-         * <p>The operation that you want to perform. Set the value to **ModifyGroupMonitoringAgentProcess**.</p>
+         * <p>The number of times for which the threshold can be consecutively exceeded. Valid values of N: 1 to 200. Default value: 3.</p>
+         * <br>
+         * <p>>  A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.</p>
          */
         @NameInMap("Times")
         public String times;
 
         /**
-         * <p>The HTTP status code.</p>
-         * <br>
-         * <p>>  The status code 200 indicates that the call was successful.</p>
+         * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule. Valid values of N: 1 to 200.</p>
          */
         @NameInMap("Webhook")
         public String webhook;

@@ -5,39 +5,36 @@ import com.aliyun.tea.*;
 
 public class PutResourceMetricRulesResponseBody extends TeaModel {
     /**
-     * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</p>
+     * <p>The HTTP status code.</p>
      * <br>
-     * <p>Valid values of N: 1 to 500.</p>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The alert rules that failed to be created for the resource.</p>
      */
     @NameInMap("FailedListResult")
     public PutResourceMetricRulesResponseBodyFailedListResult failedListResult;
 
     /**
-     * <p>The ID of the alert rule.</p>
-     * <br>
-     * <p>Valid values of N: 1 to 500.</p>
-     * <br>
-     * <p>You can specify a new ID or the ID of an existing alert rule. For information about how to query the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
-     * <br>
-     * <p>>  If you specify a new ID, you create a threshold-triggered alert rule.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The alert rule that failed to be created.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The key of the tag.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -89,14 +86,23 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
 
     public static class PutResourceMetricRulesResponseBodyFailedListResultTargetResult extends TeaModel {
         /**
-         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         * <p>The HTTP status code.</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <br>
+         * <p>*   true: The call was successful.</p>
+         * <p>*   false: The call failed.</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 
@@ -133,19 +139,13 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
 
     public static class PutResourceMetricRulesResponseBodyFailedListResultTarget extends TeaModel {
         /**
-         * <p>The alert rules that failed to be created for the resource.</p>
+         * <p>The alert rule that failed to be created.</p>
          */
         @NameInMap("Result")
         public PutResourceMetricRulesResponseBodyFailedListResultTargetResult result;
 
         /**
-         * <p>The statistical period of the metric.</p>
-         * <br>
-         * <p>Unit: seconds. The default value is the interval at which the monitoring data of the metric is collected.</p>
-         * <br>
-         * <p>Valid values of N: 1 to 500.</p>
-         * <br>
-         * <p>>  For information about how to query the statistical period of a metric, see [Appendix 1: Metrics](~~163515~~).</p>
+         * <p>The ID of the alert rule.</p>
          */
         @NameInMap("RuleId")
         public String ruleId;

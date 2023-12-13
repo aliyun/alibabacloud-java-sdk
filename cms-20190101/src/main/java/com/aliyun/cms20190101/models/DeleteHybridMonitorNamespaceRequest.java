@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteHybridMonitorNamespaceRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the namespace.</p>
+     * <br>
+     * <p>For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).</p>
      */
     @NameInMap("Namespace")
     public String namespace;

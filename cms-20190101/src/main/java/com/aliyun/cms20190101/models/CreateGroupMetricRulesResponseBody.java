@@ -4,18 +4,38 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateGroupMetricRulesResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call is successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the alert rules.</p>
+     */
     @NameInMap("Resources")
     public CreateGroupMetricRulesResponseBodyResources resources;
 
+    /**
+     * <p>Indicates whether the call is successful. Valid value:</p>
+     * <br>
+     * <p>- true: The call is successful.</p>
+     * <p>- false: The call fails.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +85,38 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
     }
 
     public static class CreateGroupMetricRulesResponseBodyResourcesAlertResult extends TeaModel {
+        /**
+         * <p>The status code that is returned for the alert rule.</p>
+         * <br>
+         * <p>>  The status code 200 indicates that the call is successful.</p>
+         */
         @NameInMap("Code")
         public Integer code;
 
+        /**
+         * <p>The error message that is returned for the alert rule.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The ID of the alert rule.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The name of the alert rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>Indicates whether the alert rule was created. Valid value:</p>
+         * <br>
+         * <p>- true: The alert rule was created.</p>
+         * <p>- false: The alert rule failed to be created.</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

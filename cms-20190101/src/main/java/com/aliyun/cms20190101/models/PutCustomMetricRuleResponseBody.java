@@ -5,28 +5,30 @@ import com.aliyun.tea.*;
 
 public class PutCustomMetricRuleResponseBody extends TeaModel {
     /**
-     * <p>The returned message. If the call was successful, the return value is null. If the call failed, an error message is returned.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The value 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The returned message. If the call was successful, the return value is null. If the call failed, an error message is returned.</p>
      */
     @NameInMap("Message")
     public String message;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
      * <br>
      * <p>*   true: The call was successful.</p>
      * <p>*   false: The call failed.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    /**
-     * <p>Before you call this operation, call the PutCustomMetric operation to report custom monitoring data. For more information, see [PutCustomMetric](~~115004~~).</p>
      */
     @NameInMap("Success")
     public Boolean success;

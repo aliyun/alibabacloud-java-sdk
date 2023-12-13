@@ -5,26 +5,24 @@ import com.aliyun.tea.*;
 
 public class CreateMetricRuleResourcesRequest extends TeaModel {
     /**
-     * <p>The resources to be associated with the alert rule. The value is a JSON array.</p>
+     * <p>Specifies whether to overwrite the existing data. Valid values:</p>
      * <br>
-     * <p>>  You can add up to 100 resources each time. An alert rule can be associated with up to 3,000 resources.</p>
+     * <p>*   true: The resources submitted this time will overwrite the previous associated resources.</p>
+     * <p>*   false: The resources submitted this time will not overwrite the previous associated resources. The associated resources after submission include the previous associated resources and the resources submitted this time.</p>
      */
     @NameInMap("Overwrite")
     public String overwrite;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The resources to be associated with the alert rule. The value is a JSON array.</p>
      * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>>  You can add up to 100 resources each time. An alert rule can be associated with up to 3,000 resources.</p>
      */
     @NameInMap("Resources")
     public String resources;
 
     /**
-     * <p>Specifies whether to overwrite the existing data. Valid values:</p>
-     * <br>
-     * <p>*   true: The resources submitted this time will overwrite the previous associated resources.</p>
-     * <p>*   false: The resources submitted this time will not overwrite the previous associated resources. The associated resources after submission include the previous associated resources and the resources submitted this time.</p>
+     * <p>The ID of the alert rule.</p>
      */
     @NameInMap("RuleId")
     public String ruleId;

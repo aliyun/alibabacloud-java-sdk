@@ -5,31 +5,40 @@ import com.aliyun.tea.*;
 
 public class DescribeEventRuleTargetListResponseBody extends TeaModel {
     /**
-     * <p>The alert notification methods. Valid values:</p>
+     * <p>The HTTP status code.</p>
      * <br>
-     * <p>4: Alert notifications are sent by using DingTalk chatbots and emails.</p>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     * <p>The information about the recipients if alert notifications are sent to the alert contacts of an alert contact group.</p>
      */
     @NameInMap("ContactParameters")
     public DescribeEventRuleTargetListResponseBodyContactParameters contactParameters;
 
+    /**
+     * <p>The information about the recipients in Function Compute.</p>
+     */
     @NameInMap("FcParameters")
     public DescribeEventRuleTargetListResponseBodyFcParameters fcParameters;
 
     /**
-     * <p>The information about the recipients if alert notifications are sent to the alert contacts of an alert contact group.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The information about the recipients in Message Service (MNS).</p>
+     */
     @NameInMap("MnsParameters")
     public DescribeEventRuleTargetListResponseBodyMnsParameters mnsParameters;
 
+    /**
+     * <p>The information about the recipients in OpenAPI Explorer.</p>
+     */
     @NameInMap("OpenApiParameters")
     public DescribeEventRuleTargetListResponseBodyOpenApiParameters openApiParameters;
 
@@ -39,9 +48,15 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the recipients in Log Service.</p>
+     */
     @NameInMap("SlsParameters")
     public DescribeEventRuleTargetListResponseBodySlsParameters slsParameters;
 
+    /**
+     * <p>The information about the recipients if alert notifications are sent by sending a request to a callback URL.</p>
+     */
     @NameInMap("WebhookParameters")
     public DescribeEventRuleTargetListResponseBodyWebhookParameters webhookParameters;
 
@@ -124,14 +139,22 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
 
     public static class DescribeEventRuleTargetListResponseBodyContactParametersContactParameter extends TeaModel {
         /**
-         * <p>Queries the details of an event-triggered alert rule.</p>
+         * <p>The name of the alert group.</p>
          */
         @NameInMap("ContactGroupName")
         public String contactGroupName;
 
+        /**
+         * <p>The ID of the recipient.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The alert notification methods. Valid values:</p>
+         * <br>
+         * <p>4: Alert notifications are sent by using DingTalk chatbots and emails.</p>
+         */
         @NameInMap("Level")
         public String level;
 
@@ -186,18 +209,41 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventRuleTargetListResponseBodyFcParametersFCParameter extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the function. </p>
+         * <br>
+         * <p>Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields: </p>
+         * <br>
+         * <p>- Service: the code of an Alibaba Cloud service</p>
+         * <p>- Region: the region ID</p>
+         * <p>- Account: the ID of an Alibaba Cloud account</p>
+         * <p>- ResourceType: the resource type</p>
+         * <p>- ResourceId: the resource ID</p>
+         */
         @NameInMap("Arn")
         public String arn;
 
+        /**
+         * <p>The name of the function.</p>
+         */
         @NameInMap("FunctionName")
         public String functionName;
 
+        /**
+         * <p>The ID of the recipient.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The region where Function Compute is deployed.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The name of the Function Compute service.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
@@ -268,18 +314,41 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventRuleTargetListResponseBodyMnsParametersMnsParameter extends TeaModel {
+        /**
+         * <p>The ARN of the MNS queue. </p>
+         * <br>
+         * <p>Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields: </p>
+         * <br>
+         * <p>- Service: the code of an Alibaba Cloud service</p>
+         * <p>- Region: the region ID</p>
+         * <p>- Account: the ID of an Alibaba Cloud account</p>
+         * <p>- ResourceType: the resource type</p>
+         * <p>- ResourceId: the resource ID</p>
+         */
         @NameInMap("Arn")
         public String arn;
 
+        /**
+         * <p>The ID of the recipient.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the MNS queue.</p>
+         */
         @NameInMap("Queue")
         public String queue;
 
+        /**
+         * <p>The region where MNS is deployed.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The MNS topic.</p>
+         */
         @NameInMap("Topic")
         public String topic;
 
@@ -350,24 +419,60 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventRuleTargetListResponseBodyOpenApiParametersOpenApiParameters extends TeaModel {
+        /**
+         * <p>The name of the API operation.</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The ARN of the API operation. </p>
+         * <br>
+         * <p>Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields: </p>
+         * <br>
+         * <p>- Service: the code of an Alibaba Cloud service</p>
+         * <p>- Region: the region ID</p>
+         * <p>- Account: the ID of an Alibaba Cloud account</p>
+         * <p>- ResourceType: the resource type</p>
+         * <p>- ResourceId: the resource ID The ARN of the Log Service Logstore. </p>
+         * <br>
+         * <p>Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields:</p>
+         * <p>- Service: the code of an Alibaba Cloud service</p>
+         * <p>- Region: the region ID</p>
+         * <p>- Account: the ID of an Alibaba Cloud account</p>
+         * <p>- ResourceType: the resource type</p>
+         * <p>- ResourceId: the resource ID</p>
+         */
         @NameInMap("Arn")
         public String arn;
 
+        /**
+         * <p>The ID of the recipient.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The ID of the cloud service to which the API operation belongs.</p>
+         */
         @NameInMap("Product")
         public String product;
 
+        /**
+         * <p>The region where the resource resides.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The name of the role.</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>The version of the API.</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -454,18 +559,41 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventRuleTargetListResponseBodySlsParametersSlsParameter extends TeaModel {
+        /**
+         * <p>The ARN of the Log Service Logstore. </p>
+         * <br>
+         * <p>Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields: </p>
+         * <br>
+         * <p>- Service: the code of an Alibaba Cloud service</p>
+         * <p>- Region: the region ID</p>
+         * <p>- Account: the ID of an Alibaba Cloud account</p>
+         * <p>- ResourceType: the resource type</p>
+         * <p>- ResourceId: the resource ID</p>
+         */
         @NameInMap("Arn")
         public String arn;
 
+        /**
+         * <p>The ID of the recipient.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the Logstore.</p>
+         */
         @NameInMap("LogStore")
         public String logStore;
 
+        /**
+         * <p>The name of the project.</p>
+         */
         @NameInMap("Project")
         public String project;
 
+        /**
+         * <p>The ID of the region where the Log Service project resides.</p>
+         */
         @NameInMap("Region")
         public String region;
 
@@ -536,15 +664,27 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventRuleTargetListResponseBodyWebhookParametersWebhookParameter extends TeaModel {
+        /**
+         * <p>The ID of the recipient.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The HTTP request method. Valid values: GET and POST.</p>
+         */
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <p>The protocol type.</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The callback URL.</p>
+         */
         @NameInMap("Url")
         public String url;
 

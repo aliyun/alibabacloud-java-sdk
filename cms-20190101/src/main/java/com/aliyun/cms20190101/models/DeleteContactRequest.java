@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteContactRequest extends TeaModel {
     /**
-     * <p>test-01</p>
+     * <p>The name of the alert contact.</p>
      */
     @NameInMap("ContactName")
     public String contactName;

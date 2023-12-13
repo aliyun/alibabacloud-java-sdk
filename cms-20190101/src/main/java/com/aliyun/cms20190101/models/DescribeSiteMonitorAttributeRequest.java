@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Specifies whether to return the information of the alert rules that are configured for the site monitoring task. Valid values:</p>
+     * <br>
+     * <p>*   true: The system returns the information of the alert rules that are configured for the site monitoring task.</p>
+     * <p>*   false (default): The system does not return the information of the alert rules that are configured for the site monitoring task.</p>
      */
     @NameInMap("IncludeAlert")
     public Boolean includeAlert;
@@ -14,9 +17,7 @@ public class DescribeSiteMonitorAttributeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>The ID of the site monitoring task.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

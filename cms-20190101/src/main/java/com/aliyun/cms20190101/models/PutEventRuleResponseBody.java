@@ -5,31 +5,37 @@ import com.aliyun.tea.*;
 
 public class PutEventRuleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     * <p>The number of event-triggered alert rules that were created or modified.</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The level of the event-triggered alert rule. Valid values of N: 1 to 50. Valid values:</p>
-     * <br>
-     * <p>*   CRITICAL: critical</p>
-     * <p>*   WARN: warning</p>
-     * <p>*   INFO: information</p>
-     * <p>*   \*: all levels</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMonitoringAgentProcessesRequest extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

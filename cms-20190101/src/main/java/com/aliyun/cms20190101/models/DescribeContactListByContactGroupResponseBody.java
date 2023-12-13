@@ -5,34 +5,36 @@ import com.aliyun.tea.*;
 
 public class DescribeContactListByContactGroupResponseBody extends TeaModel {
     /**
-     * <p>The error message.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The time when the alert contact was modified.</p>
+     * <p>The alert group.</p>
      */
     @NameInMap("Contacts")
     public DescribeContactListByContactGroupResponseBodyContacts contacts;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
      * <br>
      * <p>*   true: The call was successful.</p>
      * <p>*   false: The call failed.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    /**
-     * <p>The alert group.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -84,29 +86,29 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
 
     public static class DescribeContactListByContactGroupResponseBodyContactsContactChannels extends TeaModel {
         /**
-         * <p>The webhook URL of the DingTalk chatbot.</p>
+         * <p>The TradeManager ID of the alert contact.</p>
+         * <br>
+         * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
          */
         @NameInMap("AliIM")
         public String aliIM;
 
         /**
-         * <p>The phone number of the alert contact.</p>
-         * <br>
-         * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
+         * <p>The webhook URL of the DingTalk chatbot.</p>
          */
         @NameInMap("DingWebHook")
         public String dingWebHook;
 
         /**
-         * <p>The TradeManager ID of the alert contact.</p>
-         * <br>
-         * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
+         * <p>The email address of the alert contact.</p>
          */
         @NameInMap("Mail")
         public String mail;
 
         /**
-         * <p>Queries the alert contacts in an alert group.</p>
+         * <p>The phone number of the alert contact.</p>
+         * <br>
+         * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
          */
         @NameInMap("SMS")
         public String SMS;
@@ -152,31 +154,31 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
 
     public static class DescribeContactListByContactGroupResponseBodyContactsContact extends TeaModel {
         /**
-         * <p>The email address of the alert contact.</p>
+         * <p>The alert notification targets.</p>
          */
         @NameInMap("Channels")
         public DescribeContactListByContactGroupResponseBodyContactsContactChannels channels;
 
         /**
-         * <p>The description of the alert contact.</p>
+         * <p>The time when the alert contact was created.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>The alert notification targets.</p>
+         * <p>The description of the alert contact.</p>
          */
         @NameInMap("Desc")
         public String desc;
 
         /**
-         * <p>The time when the alert contact was created.</p>
+         * <p>The name of the alert contact.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The name of the alert contact.</p>
+         * <p>The time when the alert contact was modified.</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

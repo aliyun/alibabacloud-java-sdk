@@ -5,22 +5,31 @@ import com.aliyun.tea.*;
 
 public class ModifyGroupMonitoringAgentProcessResponseBody extends TeaModel {
     /**
-     * <p>The number of times for which the threshold can be consecutively exceeded. Valid values of N: 1 to 200. Default value: 3.</p>
+     * <p>The HTTP status code.</p>
      * <br>
-     * <p>>  A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.</p>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

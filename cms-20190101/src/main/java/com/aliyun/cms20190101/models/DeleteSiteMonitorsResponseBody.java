@@ -5,26 +5,34 @@ import com.aliyun.tea.*;
 
 public class DeleteSiteMonitorsResponseBody extends TeaModel {
     /**
-     * <p>The information about the site monitoring tasks that were deleted.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The information about the site monitoring tasks that were deleted.</p>
+     */
     @NameInMap("Data")
     public DeleteSiteMonitorsResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The returned message. If the call was successful, the value success is returned. If the call failed, an error message such as `TaskId not found` is returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Deletes one or more site monitoring tasks.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. The value true indicates success. The value false indicates failure.</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -74,6 +82,9 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
     }
 
     public static class DeleteSiteMonitorsResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of the site monitoring tasks that were deleted.</p>
+         */
         @NameInMap("count")
         public Integer count;
 

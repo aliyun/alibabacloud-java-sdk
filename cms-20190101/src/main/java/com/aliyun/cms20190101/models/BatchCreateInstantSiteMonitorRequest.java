@@ -33,18 +33,12 @@ public class BatchCreateInstantSiteMonitorRequest extends TeaModel {
 
     public static class BatchCreateInstantSiteMonitorRequestTaskList extends TeaModel {
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The URL or IP address that is monitored by the task.</p>
          * <br>
-         * <p>>  The status code 200 indicates that the call was successful.</p>
+         * <p>>  You must create at least one site monitoring task. You must specify all of the `Address`, `TaskName`, and `TaskType` parameters in each request.</p>
          */
         @NameInMap("Address")
         public String address;
-
-        /**
-         * <p>The ID of the site monitoring task.</p>
-         */
-        @NameInMap("IspCities")
-        public String ispCities;
 
         /**
          * <p>The detection points. If you leave this parameter empty, the system randomly selects three detection points.</p>
@@ -53,17 +47,31 @@ public class BatchCreateInstantSiteMonitorRequest extends TeaModel {
          * <br>
          * <p>For information about how to obtain detection points, see [DescribeSiteMonitorISPCityList](~~115045~~).</p>
          */
+        @NameInMap("IspCities")
+        public String ispCities;
+
+        /**
+         * <p>The extended options of the protocol that is used by the site monitoring task. The options vary based on the protocol.</p>
+         */
         @NameInMap("OptionsJson")
         public String optionsJson;
 
         /**
-         * <p>The operation that you want to perform. Set the value to **BatchCreateInstantSiteMonitor**.</p>
+         * <p>The name of the site monitoring task.</p>
+         * <br>
+         * <p>The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).</p>
+         * <br>
+         * <p>>  You must create at least one site monitoring task. You must specify all of the `Address`, `TaskName`, and `TaskType` parameters in each request.</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
-         * <p>The name of the site monitoring task.</p>
+         * <p>The type of the site monitoring task.</p>
+         * <br>
+         * <p>Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
+         * <br>
+         * <p>>  You must create at least one site monitoring task. You must specify all of the `Address`, `TaskName`, and `TaskType` parameters in each request.</p>
          */
         @NameInMap("TaskType")
         public String taskType;

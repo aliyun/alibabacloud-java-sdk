@@ -24,6 +24,9 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
+    @NameInMap("EventType")
+    public String eventType;
+
     /**
      * <p>The dimensions based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL. Valid values:</p>
      * <br>
@@ -98,6 +101,9 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RuleId")
+    public String ruleId;
+
     /**
      * <p>The name of the alert rule.</p>
      */
@@ -163,6 +169,14 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeAlertLogHistogramRequest setEventType(String eventType) {
+        this.eventType = eventType;
+        return this;
+    }
+    public String getEventType() {
+        return this.eventType;
     }
 
     public DescribeAlertLogHistogramRequest setGroupBy(String groupBy) {
@@ -243,6 +257,14 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeAlertLogHistogramRequest setRuleId(String ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public String getRuleId() {
+        return this.ruleId;
     }
 
     public DescribeAlertLogHistogramRequest setRuleName(String ruleName) {

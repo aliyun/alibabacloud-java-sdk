@@ -222,9 +222,9 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
         /**
          * <p>The alert level. Valid values:</p>
          * <br>
-         * <p>*   critical (default)</p>
-         * <p>*   warn</p>
-         * <p>*   info</p>
+         * <p>*   critical (default): critical</p>
+         * <p>*   warn: warning</p>
+         * <p>*   info: information</p>
          * <br>
          * <p>Valid values of N: 1 to 3.</p>
          */
@@ -232,15 +232,13 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
         public String escalationsLevel;
 
         /**
-         * <p>The time period during which the alert rule is ineffective.</p>
-         * <br>
-         * <p>Valid values of N: 1 to 3.</p>
+         * <p>This parameter is deprecated.</p>
          */
         @NameInMap("NoEffectiveInterval")
         public String noEffectiveInterval;
 
         /**
-         * <p>The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to 1 hour. Default value: 86400, which is equivalent to one day.</p>
+         * <p>The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.</p>
          * <br>
          * <p>Valid values of N: 1 to 3.</p>
          * <br>
@@ -269,6 +267,8 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
          * <p>The alert threshold.</p>
          * <br>
          * <p>Valid values of N: 1 to 3.</p>
+         * <br>
+         * <p>Unit: cores.</p>
          */
         @NameInMap("Threshold")
         public String threshold;

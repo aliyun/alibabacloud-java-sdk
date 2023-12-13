@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeTagValueListRequest extends TeaModel {
     /**
-     * <p>The key of the tag whose values you want to query.</p>
+     * <p>The number of the page to return.</p>
      * <br>
-     * <p>For more information about how to obtain a tag key, see [DescribeTagKeyList](~~145558~~).</p>
+     * <p>Pages start from page 1. Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The number of entries to return on each page.</p>
      * <br>
-     * <p>>  The value 200 indicates that the call was successful.</p>
+     * <p>Valid values: 1 to 100. Pages start from page 1. Default value: 50.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -24,7 +24,9 @@ public class DescribeTagValueListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The error message.</p>
+     * <p>The key of the tag whose values you want to query.</p>
+     * <br>
+     * <p>For more information about how to obtain a tag key, see [DescribeTagKeyList](~~145558~~).</p>
      */
     @NameInMap("TagKey")
     public String tagKey;

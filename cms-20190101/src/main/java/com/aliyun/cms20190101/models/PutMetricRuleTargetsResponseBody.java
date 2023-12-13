@@ -5,22 +5,15 @@ import com.aliyun.tea.*;
 
 public class PutMetricRuleTargetsResponseBody extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **PutMetricRuleTargets**.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The ARN of the resource.</p>
-     * <br>
-     * <p>For information about how to obtain the ARN of a resource, see [DescribeMetricRuleTargets](~~121592~~).</p>
-     * <br>
-     * <p>Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:</p>
-     * <br>
-     * <p>*   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.</p>
-     * <p>*   {userId}: the ID of the Alibaba Cloud account.</p>
-     * <p>*   {regionId}: the region ID of the message queue or topic.</p>
-     * <p>*   {Resource type}`: the type of the resource for which alerts are triggered. Valid values: - **queues** - **topics** {Resource name}: the name of the resource. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.`</p>
+     * <p>The list of resources that failed to be created or modified.</p>
      */
     @NameInMap("FailData")
     public PutMetricRuleTargetsResponseBodyFailData failData;
@@ -32,19 +25,16 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the alert rule.</p>
-     * <br>
-     * <p>For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The level of the alert. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <br>
-     * <p>*   INFO: information</p>
-     * <p>*   WARN: warning</p>
-     * <p>*   CRITICAL: critical</p>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -95,15 +85,32 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
     }
 
     public static class PutMetricRuleTargetsResponseBodyFailDataTargetsTarget extends TeaModel {
+        /**
+         * <p>The ARN of the resource.</p>
+         * <br>
+         * <p>Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:</p>
+         * <br>
+         * <p>*   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.</p>
+         * <p>*   {userId}: the ID of the Alibaba Cloud account.</p>
+         * <p>*   {regionId}: the region ID of the message queue or topic.</p>
+         * <p>*   {Resource type}`: the type of the resource for which alerts are triggered. Valid values: - **queues** - **topics** {Resource name}: the name of the resource. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.`</p>
+         */
         @NameInMap("Arn")
         public String arn;
 
         /**
-         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         * <p>The ID of the resource for which alerts are triggered.</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The level of the alert. Valid values:</p>
+         * <br>
+         * <p>*   INFO: information</p>
+         * <p>*   WARN: warning</p>
+         * <p>*   CRITICAL: critical</p>
+         */
         @NameInMap("Level")
         public String level;
 
@@ -159,7 +166,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
 
     public static class PutMetricRuleTargetsResponseBodyFailData extends TeaModel {
         /**
-         * <p>The ID of the request.</p>
+         * <p>The information about the resource for which alerts are triggered.</p>
          */
         @NameInMap("Targets")
         public PutMetricRuleTargetsResponseBodyFailDataTargets targets;

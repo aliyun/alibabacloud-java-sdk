@@ -5,26 +5,37 @@ import com.aliyun.tea.*;
 
 public class CreateHybridMonitorTaskResponseBody extends TeaModel {
     /**
-     * <p>The alias of the aggregation result.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <p>The ID of the metric import task.</p>
+     */
     @NameInMap("TaskId")
     public Long taskId;
 

@@ -5,33 +5,42 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricMetaListRequest extends TeaModel {
     /**
-     * <p>The page to return. Default value: 1</p>
+     * <p>The tags for filtering metrics. Specify a JSON string.</p>
+     * <br>
+     * <p>Format:`[{"name":"tag name","value":"tag value"},{"name":"tag name","value":"tag value"}]`. The following tags are available:</p>
+     * <br>
+     * <p>*   metricCategory: the category of the metric.</p>
+     * <p>*   alertEnable: specifies whether to report alerts for the metric.</p>
+     * <p>*   alertUnit: the suggested unit of the metric value in alerts.</p>
+     * <p>*   unitFactor: the factor for metric unit conversion.</p>
+     * <p>*   minAlertPeriod: the minimum time interval to report a new alert.</p>
+     * <p>*   productCategory: the category of the service.</p>
      */
     @NameInMap("Labels")
     public String labels;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 30.</p>
+     * <p>The name of the metric. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
     /**
-     * <p>The name of the metric. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+     * <p>The namespace of the service.</p>
+     * <br>
+     * <p>For more information, see [Appendix 1: Metrics](~~163515~~).</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>The response code.</p>
-     * <br>
-     * <p>>  The HTTP 200 code indicates that the request was successful.</p>
+     * <p>The page to return. Default value: 1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The error message.</p>
+     * <p>The number of entries to return on each page. Default value: 30.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

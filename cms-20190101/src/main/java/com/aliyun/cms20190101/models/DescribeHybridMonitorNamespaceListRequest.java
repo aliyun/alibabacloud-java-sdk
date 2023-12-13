@@ -5,28 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridMonitorNamespaceListRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return the configuration details of metric import tasks for Alibaba Cloud services and the number of metric import tasks for third-party services. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false (default value)</p>
+     * <p>The keyword that is used to search for namespaces.</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>The error message.</p>
+     * <p>The name of the namespace.</p>
+     * <br>
+     * <p>The name can contain uppercase letters, lowercase letters, digits, and hyphens (-).</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeHybridMonitorNamespaceList**.</p>
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>A minimum of 1 entry can be returned on each page. Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -35,7 +38,10 @@ public class DescribeHybridMonitorNamespaceListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The details of the namespaces.</p>
+     * <p>Specifies whether to return the configuration details of metric import tasks for Alibaba Cloud services and the number of metric import tasks for third-party services. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false (default value)</p>
      */
     @NameInMap("ShowTaskStatistic")
     public Boolean showTaskStatistic;
