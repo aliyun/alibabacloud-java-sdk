@@ -4,18 +4,36 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
+    /**
+     * <p>The response code. **OK** indicates that the request is successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<QueryUsageStatisticsByTagIdResponseBodyData> data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful.</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -66,67 +84,67 @@ public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
 
     public static class QueryUsageStatisticsByTagIdResponseBodyData extends TeaModel {
         /**
-         * <p>授权码</p>
+         * <p>The authorization code.</p>
          */
         @NameInMap("AuthorizationCode")
         public String authorizationCode;
 
         /**
-         * <p>查询失败号码数</p>
+         * <p>The numbers for which the query failed.</p>
          */
         @NameInMap("FailTotal")
         public Long failTotal;
 
         /**
-         * <p>创建时间</p>
+         * <p>The creation time.</p>
          */
         @NameInMap("GmtDateStr")
         public String gmtDateStr;
 
         /**
-         * <p>授权码使用记录 id</p>
+         * <p>The ID of the authorization code usage record.</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>行业名称</p>
+         * <p>The industry name.</p>
          */
         @NameInMap("IndustryName")
         public String industryName;
 
         /**
-         * <p>客户 pid</p>
+         * <p>The customer product ID (PID).</p>
          */
         @NameInMap("PartnerId")
         public Long partnerId;
 
         /**
-         * <p>场景名称</p>
+         * <p>The scene name.</p>
          */
         @NameInMap("SceneName")
         public String sceneName;
 
         /**
-         * <p>查询成功号码数</p>
+         * <p>The numbers for which the query succeeded.</p>
          */
         @NameInMap("SuccessTotal")
         public Long successTotal;
 
         /**
-         * <p>标签名称</p>
+         * <p>The tag name.</p>
          */
         @NameInMap("TagId")
         public Long tagId;
 
         /**
-         * <p>标签名称</p>
+         * <p>The tag name.</p>
          */
         @NameInMap("TagName")
         public String tagName;
 
         /**
-         * <p>查询总号码数</p>
+         * <p>The total quantity of numbers that are involved in the query.</p>
          */
         @NameInMap("Total")
         public Long total;

@@ -4,12 +4,25 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class InvalidPhoneNumberFilterRequest extends TeaModel {
+    /**
+     * <p>The authorization code.</p>
+     * <br>
+     * <p>>  On the **My Applications** page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/analysis/apply), you can obtain the authorization code (also known as authorization ID).</p>
+     */
     @NameInMap("AuthCode")
     public String authCode;
 
+    /**
+     * <p>The phone number to be queried.</p>
+     */
     @NameInMap("InputNumber")
     public String inputNumber;
 
+    /**
+     * <p>The encryption method of the phone number.</p>
+     * <br>
+     * <p>>  Only the NORMAL encryption method is supported.</p>
+     */
     @NameInMap("Mask")
     public String mask;
 

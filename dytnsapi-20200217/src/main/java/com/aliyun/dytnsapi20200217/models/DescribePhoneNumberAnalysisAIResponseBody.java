@@ -4,15 +4,29 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class DescribePhoneNumberAnalysisAIResponseBody extends TeaModel {
+    /**
+     * <p>The response code. Valid values:</p>
+     * <br>
+     * <p>*   OK: The request is successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public DescribePhoneNumberAnalysisAIResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +68,19 @@ public class DescribePhoneNumberAnalysisAIResponseBody extends TeaModel {
     }
 
     public static class DescribePhoneNumberAnalysisAIResponseBodyData extends TeaModel {
+        /**
+         * <p>The returned code.</p>
+         * <br>
+         * <p>*   YES: The specified phone number is valid.</p>
+         * <p>*   NO: The specified phone number is invalid.</p>
+         * <p>*   UNKNOWN: The specified phone number is unknown</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The specified phone number.</p>
+         */
         @NameInMap("Number")
         public String number;
 

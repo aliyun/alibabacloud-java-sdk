@@ -7,6 +7,9 @@ public class DescribePhoneNumberAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The phone number that you want to query.</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 

@@ -4,18 +4,57 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class ThreeElementsVerificationRequest extends TeaModel {
+    /**
+     * <p>The authorization code.</p>
+     * <br>
+     * <p>>  On the **My Applications** page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/analysis/apply), you can obtain the authorization code (also known as authorization ID).</p>
+     */
     @NameInMap("AuthCode")
     public String authCode;
 
+    /**
+     * <p>The ID card number to be verified.</p>
+     * <br>
+     * <p>*   If the value of Mask is NORMAL, specify a value in plaintext for this field.</p>
+     * <p>*   If the value of Mask is MD5, specify a MD5-encrypted value for this field.</p>
+     * <p>*   If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.</p>
+     * <br>
+     * <p>>  Letters in the encrypted strings are not case-sensitive.</p>
+     */
     @NameInMap("CertCode")
     public String certCode;
 
+    /**
+     * <p>The phone number to be verified.</p>
+     * <br>
+     * <p>*   If the value of Mask is NORMAL, specify a value in plaintext for this field.</p>
+     * <p>*   If the value of Mask is MD5, specify a MD5-encrypted value for this field.</p>
+     * <p>*   If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.</p>
+     * <br>
+     * <p>>  Letters in the encrypted strings are not case-sensitive.</p>
+     */
     @NameInMap("InputNumber")
     public String inputNumber;
 
+    /**
+     * <p>The encryption method. Valid values:</p>
+     * <br>
+     * <p>*   **NORMAL**: The phone number is not encrypted.</p>
+     * <p>*   **MD5**</p>
+     * <p>*   **SHA256**</p>
+     */
     @NameInMap("Mask")
     public String mask;
 
+    /**
+     * <p>The name to be verified.</p>
+     * <br>
+     * <p>*   If the value of Mask is NORMAL, specify a value in plaintext for this field.</p>
+     * <p>*   If the value of Mask is MD5, specify a MD5-encrypted value for this field.</p>
+     * <p>*   If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.</p>
+     * <br>
+     * <p>>  Letters in the encrypted strings are not case-sensitive.</p>
+     */
     @NameInMap("Name")
     public String name;
 

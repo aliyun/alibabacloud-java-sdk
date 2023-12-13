@@ -4,18 +4,36 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class QueryTagListPageResponseBody extends TeaModel {
+    /**
+     * <p>The response code. **OK** indicates that the request is successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public QueryTagListPageResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -66,73 +84,74 @@ public class QueryTagListPageResponseBody extends TeaModel {
 
     public static class QueryTagListPageResponseBodyDataRecords extends TeaModel {
         /**
-         * <p>前端调用的api名称</p>
+         * <p>The API operation that is called by the frontend.</p>
          */
         @NameInMap("ApiName")
         public String apiName;
 
         /**
-         * <p>code</p>
+         * <p>Code</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>API文档链接</p>
+         * <p>The URL for the API documentation.</p>
          */
         @NameInMap("DocAddress")
         public String docAddress;
 
         /**
-         * <p>标签 id</p>
+         * <p>The tag ID.</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>行业id</p>
+         * <p>The industry ID.</p>
          */
         @NameInMap("IndustryId")
         public Long industryId;
 
         /**
-         * <p>行业名称</p>
+         * <p>The industry name.</p>
          */
         @NameInMap("IndustryName")
         public String industryName;
 
         /**
-         * <p>标签介绍</p>
+         * <p>The tag description.</p>
          */
         @NameInMap("Introduction")
         public String introduction;
 
         /**
-         * <p>是否已经申请开通</p>
+         * <p>Indicates whether the number is activated.</p>
          */
         @NameInMap("IsOpen")
         public Long isOpen;
 
         /**
-         * <p>标签名称</p>
+         * <p>The tag name.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>0 隐藏 1 公开</p>
+         * <p>*   0: The number is hidden.</p>
+         * <p>*   1: The number is public.</p>
          */
         @NameInMap("SaleStatusStr")
         public String saleStatusStr;
 
         /**
-         * <p>场景id</p>
+         * <p>The scene ID.</p>
          */
         @NameInMap("SceneId")
         public Long sceneId;
 
         /**
-         * <p>场景名称</p>
+         * <p>The scene name.</p>
          */
         @NameInMap("SceneName")
         public String sceneName;
@@ -241,18 +260,33 @@ public class QueryTagListPageResponseBody extends TeaModel {
     }
 
     public static class QueryTagListPageResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("PageNo")
         public Long pageNo;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>The retruned data.</p>
+         */
         @NameInMap("Records")
         public java.util.List<QueryTagListPageResponseBodyDataRecords> records;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
+        /**
+         * <p>The total number of returned pages.</p>
+         */
         @NameInMap("TotalPage")
         public Long totalPage;
 

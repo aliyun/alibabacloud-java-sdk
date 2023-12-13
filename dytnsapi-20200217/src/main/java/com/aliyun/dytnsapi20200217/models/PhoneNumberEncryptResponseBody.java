@@ -4,15 +4,30 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class PhoneNumberEncryptResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * <br>
+     * <p>*   The value OK indicates that the request was successful.</p>
+     * <p>*   Other values indicate that the request failed. For more information, see [Error codes](~~109196~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Details about the returned entries.</p>
+     */
     @NameInMap("Data")
     public java.util.List<PhoneNumberEncryptResponseBodyData> data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,12 +69,21 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
     }
 
     public static class PhoneNumberEncryptResponseBodyData extends TeaModel {
+        /**
+         * <p>The encrypted phone number.</p>
+         */
         @NameInMap("EncryptedNumber")
         public String encryptedNumber;
 
+        /**
+         * <p>The time when the phone number expires.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The original phone number.</p>
+         */
         @NameInMap("OriginalNumber")
         public String originalNumber;
 

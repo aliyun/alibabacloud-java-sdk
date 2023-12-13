@@ -4,18 +4,39 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class CompanyFourElementsVerificationRequest extends TeaModel {
+    /**
+     * <p>The authorization code.</p>
+     * <br>
+     * <p>>  On the [My Applications](https://dytns.console.aliyun.com/analysis/apply) page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/overview?spm=a2c4g.608385.0.0.79847f8b3awqUC), you can obtain the authorization code (also known as authorization ID).</p>
+     */
     @NameInMap("AuthCode")
     public String authCode;
 
+    /**
+     * <p>The enterprise name.</p>
+     */
     @NameInMap("EpCertName")
     public String epCertName;
 
+    /**
+     * <p>The business license number.</p>
+     */
     @NameInMap("EpCertNo")
     public String epCertNo;
 
+    /**
+     * <p>The name of the legal representative.</p>
+     * <br>
+     * <p>>  If an enterprise has multiple legal representatives, separate them with commas (,).</p>
+     */
     @NameInMap("LegalPersonCertName")
     public String legalPersonCertName;
 
+    /**
+     * <p>The ID card number of the legal representative.</p>
+     * <br>
+     * <p>>  If an enterprise has multiple legal representatives, separate the ID card numbers with commas (,).</p>
+     */
     @NameInMap("LegalPersonCertNo")
     public String legalPersonCertNo;
 
