@@ -4,23 +4,21 @@ package com.aliyun.eci20180808.models;
 import com.aliyun.tea.*;
 
 public class DescribeContainerGroupPriceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
+    /**
+     * <p>The information about the prices and discount rules.</p>
+     */
     @NameInMap("PriceInfo")
     public DescribeContainerGroupPriceResponseBodyPriceInfo priceInfo;
+
+    /**
+     * <p>The request ID.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeContainerGroupPriceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeContainerGroupPriceResponseBody self = new DescribeContainerGroupPriceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeContainerGroupPriceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeContainerGroupPriceResponseBody setPriceInfo(DescribeContainerGroupPriceResponseBodyPriceInfo priceInfo) {
@@ -31,81 +29,24 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
         return this.priceInfo;
     }
 
-    public static class DescribeContainerGroupPriceResponseBodyPriceInfoSpotPricesSpotPrice extends TeaModel {
-        @NameInMap("ZoneId")
-        public String zoneId;
-
-        @NameInMap("SpotPrice")
-        public Float spotPrice;
-
-        @NameInMap("InstanceType")
-        public String instanceType;
-
-        @NameInMap("OriginPrice")
-        public Float originPrice;
-
-        public static DescribeContainerGroupPriceResponseBodyPriceInfoSpotPricesSpotPrice build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupPriceResponseBodyPriceInfoSpotPricesSpotPrice self = new DescribeContainerGroupPriceResponseBodyPriceInfoSpotPricesSpotPrice();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeContainerGroupPriceResponseBodyPriceInfoSpotPricesSpotPrice setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        public DescribeContainerGroupPriceResponseBodyPriceInfoSpotPricesSpotPrice setSpotPrice(Float spotPrice) {
-            this.spotPrice = spotPrice;
-            return this;
-        }
-        public Float getSpotPrice() {
-            return this.spotPrice;
-        }
-
-        public DescribeContainerGroupPriceResponseBodyPriceInfoSpotPricesSpotPrice setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-        public String getInstanceType() {
-            return this.instanceType;
-        }
-
-        public DescribeContainerGroupPriceResponseBodyPriceInfoSpotPricesSpotPrice setOriginPrice(Float originPrice) {
-            this.originPrice = originPrice;
-            return this;
-        }
-        public Float getOriginPrice() {
-            return this.originPrice;
-        }
-
+    public DescribeContainerGroupPriceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
     }
-
-    public static class DescribeContainerGroupPriceResponseBodyPriceInfoSpotPrices extends TeaModel {
-        @NameInMap("SpotPrice")
-        public java.util.List<DescribeContainerGroupPriceResponseBodyPriceInfoSpotPricesSpotPrice> spotPrice;
-
-        public static DescribeContainerGroupPriceResponseBodyPriceInfoSpotPrices build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupPriceResponseBodyPriceInfoSpotPrices self = new DescribeContainerGroupPriceResponseBodyPriceInfoSpotPrices();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeContainerGroupPriceResponseBodyPriceInfoSpotPrices setSpotPrice(java.util.List<DescribeContainerGroupPriceResponseBodyPriceInfoSpotPricesSpotPrice> spotPrice) {
-            this.spotPrice = spotPrice;
-            return this;
-        }
-        public java.util.List<DescribeContainerGroupPriceResponseBodyPriceInfoSpotPricesSpotPrice> getSpotPrice() {
-            return this.spotPrice;
-        }
-
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeContainerGroupPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoRulesRule extends TeaModel {
+        /**
+         * <p>The description of the rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The rule ID.</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
@@ -152,32 +93,39 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeContainerGroupPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo extends TeaModel {
-        @NameInMap("Resource")
-        public String resource;
-
+        /**
+         * <p>The discount.</p>
+         */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
-        @NameInMap("TradePrice")
-        public Float tradePrice;
-
+        /**
+         * <p>The original price.</p>
+         */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
+        /**
+         * <p>The name of the resource.</p>
+         */
+        @NameInMap("Resource")
+        public String resource;
+
+        /**
+         * <p>Details about the pricing rules.</p>
+         */
         @NameInMap("Rules")
         public DescribeContainerGroupPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoRules rules;
+
+        /**
+         * <p>The transaction price.</p>
+         */
+        @NameInMap("TradePrice")
+        public Float tradePrice;
 
         public static DescribeContainerGroupPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeContainerGroupPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo self = new DescribeContainerGroupPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeContainerGroupPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo setResource(String resource) {
-            this.resource = resource;
-            return this;
-        }
-        public String getResource() {
-            return this.resource;
         }
 
         public DescribeContainerGroupPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo setDiscountPrice(Float discountPrice) {
@@ -188,14 +136,6 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             return this.discountPrice;
         }
 
-        public DescribeContainerGroupPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo setTradePrice(Float tradePrice) {
-            this.tradePrice = tradePrice;
-            return this;
-        }
-        public Float getTradePrice() {
-            return this.tradePrice;
-        }
-
         public DescribeContainerGroupPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo setOriginalPrice(Float originalPrice) {
             this.originalPrice = originalPrice;
             return this;
@@ -204,12 +144,28 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             return this.originalPrice;
         }
 
+        public DescribeContainerGroupPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo setResource(String resource) {
+            this.resource = resource;
+            return this;
+        }
+        public String getResource() {
+            return this.resource;
+        }
+
         public DescribeContainerGroupPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo setRules(DescribeContainerGroupPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoRules rules) {
             this.rules = rules;
             return this;
         }
         public DescribeContainerGroupPriceResponseBodyPriceInfoPriceDetailInfosDetailInfoRules getRules() {
             return this.rules;
+        }
+
+        public DescribeContainerGroupPriceResponseBodyPriceInfoPriceDetailInfosDetailInfo setTradePrice(Float tradePrice) {
+            this.tradePrice = tradePrice;
+            return this;
+        }
+        public Float getTradePrice() {
+            return this.tradePrice;
         }
 
     }
@@ -234,56 +190,42 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeContainerGroupPriceResponseBodyPriceInfoPrice extends TeaModel {
-        @NameInMap("DiscountPrice")
-        public Float discountPrice;
+        /**
+         * <p>The currency unit. Valid values:</p>
+         * <br>
+         * <p>*   CNY: This value only applies to the China site (aliyun.com).</p>
+         * <p>*   USD: This value only applies to the International site (alibabacloud.com).</p>
+         */
+        @NameInMap("Currency")
+        public String currency;
 
-        @NameInMap("TradePrice")
-        public Float tradePrice;
-
-        @NameInMap("OriginalPrice")
-        public Float originalPrice;
-
+        /**
+         * <p>The information about the price.</p>
+         */
         @NameInMap("DetailInfos")
         public DescribeContainerGroupPriceResponseBodyPriceInfoPriceDetailInfos detailInfos;
 
-        @NameInMap("Currency")
-        public String currency;
+        /**
+         * <p>The discount.</p>
+         */
+        @NameInMap("DiscountPrice")
+        public Float discountPrice;
+
+        /**
+         * <p>The original price.</p>
+         */
+        @NameInMap("OriginalPrice")
+        public Float originalPrice;
+
+        /**
+         * <p>The transaction price, which is equal to the original price minus the discount.</p>
+         */
+        @NameInMap("TradePrice")
+        public Float tradePrice;
 
         public static DescribeContainerGroupPriceResponseBodyPriceInfoPrice build(java.util.Map<String, ?> map) throws Exception {
             DescribeContainerGroupPriceResponseBodyPriceInfoPrice self = new DescribeContainerGroupPriceResponseBodyPriceInfoPrice();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeContainerGroupPriceResponseBodyPriceInfoPrice setDiscountPrice(Float discountPrice) {
-            this.discountPrice = discountPrice;
-            return this;
-        }
-        public Float getDiscountPrice() {
-            return this.discountPrice;
-        }
-
-        public DescribeContainerGroupPriceResponseBodyPriceInfoPrice setTradePrice(Float tradePrice) {
-            this.tradePrice = tradePrice;
-            return this;
-        }
-        public Float getTradePrice() {
-            return this.tradePrice;
-        }
-
-        public DescribeContainerGroupPriceResponseBodyPriceInfoPrice setOriginalPrice(Float originalPrice) {
-            this.originalPrice = originalPrice;
-            return this;
-        }
-        public Float getOriginalPrice() {
-            return this.originalPrice;
-        }
-
-        public DescribeContainerGroupPriceResponseBodyPriceInfoPrice setDetailInfos(DescribeContainerGroupPriceResponseBodyPriceInfoPriceDetailInfos detailInfos) {
-            this.detailInfos = detailInfos;
-            return this;
-        }
-        public DescribeContainerGroupPriceResponseBodyPriceInfoPriceDetailInfos getDetailInfos() {
-            return this.detailInfos;
         }
 
         public DescribeContainerGroupPriceResponseBodyPriceInfoPrice setCurrency(String currency) {
@@ -294,12 +236,50 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             return this.currency;
         }
 
+        public DescribeContainerGroupPriceResponseBodyPriceInfoPrice setDetailInfos(DescribeContainerGroupPriceResponseBodyPriceInfoPriceDetailInfos detailInfos) {
+            this.detailInfos = detailInfos;
+            return this;
+        }
+        public DescribeContainerGroupPriceResponseBodyPriceInfoPriceDetailInfos getDetailInfos() {
+            return this.detailInfos;
+        }
+
+        public DescribeContainerGroupPriceResponseBodyPriceInfoPrice setDiscountPrice(Float discountPrice) {
+            this.discountPrice = discountPrice;
+            return this;
+        }
+        public Float getDiscountPrice() {
+            return this.discountPrice;
+        }
+
+        public DescribeContainerGroupPriceResponseBodyPriceInfoPrice setOriginalPrice(Float originalPrice) {
+            this.originalPrice = originalPrice;
+            return this;
+        }
+        public Float getOriginalPrice() {
+            return this.originalPrice;
+        }
+
+        public DescribeContainerGroupPriceResponseBodyPriceInfoPrice setTradePrice(Float tradePrice) {
+            this.tradePrice = tradePrice;
+            return this;
+        }
+        public Float getTradePrice() {
+            return this.tradePrice;
+        }
+
     }
 
     public static class DescribeContainerGroupPriceResponseBodyPriceInfoRulesRule extends TeaModel {
+        /**
+         * <p>The description of the promotion rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the promotion rule.</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
@@ -345,27 +325,111 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupPriceResponseBodyPriceInfo extends TeaModel {
-        @NameInMap("SpotPrices")
-        public DescribeContainerGroupPriceResponseBodyPriceInfoSpotPrices spotPrices;
+    public static class DescribeContainerGroupPriceResponseBodyPriceInfoSpotPricesSpotPrice extends TeaModel {
+        /**
+         * <p>The ECS instance type.</p>
+         */
+        @NameInMap("InstanceType")
+        public String instanceType;
 
+        /**
+         * <p>The original price.</p>
+         */
+        @NameInMap("OriginPrice")
+        public Float originPrice;
+
+        /**
+         * <p>The prices of preemptible elastic container instances.</p>
+         */
+        @NameInMap("SpotPrice")
+        public Float spotPrice;
+
+        /**
+         * <p>The zone ID of the instance.</p>
+         */
+        @NameInMap("ZoneId")
+        public String zoneId;
+
+        public static DescribeContainerGroupPriceResponseBodyPriceInfoSpotPricesSpotPrice build(java.util.Map<String, ?> map) throws Exception {
+            DescribeContainerGroupPriceResponseBodyPriceInfoSpotPricesSpotPrice self = new DescribeContainerGroupPriceResponseBodyPriceInfoSpotPricesSpotPrice();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeContainerGroupPriceResponseBodyPriceInfoSpotPricesSpotPrice setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public DescribeContainerGroupPriceResponseBodyPriceInfoSpotPricesSpotPrice setOriginPrice(Float originPrice) {
+            this.originPrice = originPrice;
+            return this;
+        }
+        public Float getOriginPrice() {
+            return this.originPrice;
+        }
+
+        public DescribeContainerGroupPriceResponseBodyPriceInfoSpotPricesSpotPrice setSpotPrice(Float spotPrice) {
+            this.spotPrice = spotPrice;
+            return this;
+        }
+        public Float getSpotPrice() {
+            return this.spotPrice;
+        }
+
+        public DescribeContainerGroupPriceResponseBodyPriceInfoSpotPricesSpotPrice setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+    }
+
+    public static class DescribeContainerGroupPriceResponseBodyPriceInfoSpotPrices extends TeaModel {
+        @NameInMap("SpotPrice")
+        public java.util.List<DescribeContainerGroupPriceResponseBodyPriceInfoSpotPricesSpotPrice> spotPrice;
+
+        public static DescribeContainerGroupPriceResponseBodyPriceInfoSpotPrices build(java.util.Map<String, ?> map) throws Exception {
+            DescribeContainerGroupPriceResponseBodyPriceInfoSpotPrices self = new DescribeContainerGroupPriceResponseBodyPriceInfoSpotPrices();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeContainerGroupPriceResponseBodyPriceInfoSpotPrices setSpotPrice(java.util.List<DescribeContainerGroupPriceResponseBodyPriceInfoSpotPricesSpotPrice> spotPrice) {
+            this.spotPrice = spotPrice;
+            return this;
+        }
+        public java.util.List<DescribeContainerGroupPriceResponseBodyPriceInfoSpotPricesSpotPrice> getSpotPrice() {
+            return this.spotPrice;
+        }
+
+    }
+
+    public static class DescribeContainerGroupPriceResponseBodyPriceInfo extends TeaModel {
+        /**
+         * <p>The price.</p>
+         */
         @NameInMap("Price")
         public DescribeContainerGroupPriceResponseBodyPriceInfoPrice price;
 
+        /**
+         * <p>Details about the promotion rules.</p>
+         */
         @NameInMap("Rules")
         public DescribeContainerGroupPriceResponseBodyPriceInfoRules rules;
+
+        /**
+         * <p>The information about the prices of preemptible elastic container instances.</p>
+         */
+        @NameInMap("SpotPrices")
+        public DescribeContainerGroupPriceResponseBodyPriceInfoSpotPrices spotPrices;
 
         public static DescribeContainerGroupPriceResponseBodyPriceInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeContainerGroupPriceResponseBodyPriceInfo self = new DescribeContainerGroupPriceResponseBodyPriceInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeContainerGroupPriceResponseBodyPriceInfo setSpotPrices(DescribeContainerGroupPriceResponseBodyPriceInfoSpotPrices spotPrices) {
-            this.spotPrices = spotPrices;
-            return this;
-        }
-        public DescribeContainerGroupPriceResponseBodyPriceInfoSpotPrices getSpotPrices() {
-            return this.spotPrices;
         }
 
         public DescribeContainerGroupPriceResponseBodyPriceInfo setPrice(DescribeContainerGroupPriceResponseBodyPriceInfoPrice price) {
@@ -382,6 +446,14 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
         }
         public DescribeContainerGroupPriceResponseBodyPriceInfoRules getRules() {
             return this.rules;
+        }
+
+        public DescribeContainerGroupPriceResponseBodyPriceInfo setSpotPrices(DescribeContainerGroupPriceResponseBodyPriceInfoSpotPrices spotPrices) {
+            this.spotPrices = spotPrices;
+            return this;
+        }
+        public DescribeContainerGroupPriceResponseBodyPriceInfoSpotPrices getSpotPrices() {
+            return this.spotPrices;
         }
 
     }

@@ -4,6 +4,9 @@ package com.aliyun.eci20180808.models;
 import com.aliyun.tea.*;
 
 public class DeleteContainerGroupResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

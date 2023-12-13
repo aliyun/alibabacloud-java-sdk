@@ -4,8 +4,46 @@ package com.aliyun.eci20180808.models;
 import com.aliyun.tea.*;
 
 public class DescribeContainerLogRequest extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     */
+    @NameInMap("ContainerGroupId")
+    public String containerGroupId;
+
+    /**
+     * <p>The name of the container.</p>
+     */
+    @NameInMap("ContainerName")
+    public String containerName;
+
+    /**
+     * <p>Specifies whether to query the logs of the previous container if the container exits and restarts. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
+    @NameInMap("LastTime")
+    public Boolean lastTime;
+
+    /**
+     * <p>The limit on the total size of logs. Unit: bytes. Valid values: 1 to 1048576(1 MB).</p>
+     */
+    @NameInMap("LimitBytes")
+    public Long limitBytes;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    /**
+     * <p>The region ID of the elastic container instance.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,79 +51,38 @@ public class DescribeContainerLogRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ContainerGroupId")
-    public String containerGroupId;
-
-    @NameInMap("ContainerName")
-    public String containerName;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("Tail")
-    public Integer tail;
-
-    @NameInMap("LastTime")
-    public Boolean lastTime;
-
+    /**
+     * <p>A relative time in seconds before the current time from which to show logs. Examples: 10, 20, and 30.</p>
+     */
     @NameInMap("SinceSeconds")
     public Integer sinceSeconds;
 
-    @NameInMap("LimitBytes")
-    public Long limitBytes;
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the RFC 3339 standard. The time must be in UTC.</p>
+     */
+    @NameInMap("StartTime")
+    public String startTime;
 
+    /**
+     * <p>The number of log entries that you want to query. Default value: 500. Maximum value: 2000. A maximum of 1 MB of logs can be returned.</p>
+     */
+    @NameInMap("Tail")
+    public Integer tail;
+
+    /**
+     * <p>Specifies whether to return the timestamps of logs. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("Timestamps")
     public Boolean timestamps;
 
     public static DescribeContainerLogRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeContainerLogRequest self = new DescribeContainerLogRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeContainerLogRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeContainerLogRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DescribeContainerLogRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeContainerLogRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeContainerLogRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DescribeContainerLogRequest setContainerGroupId(String containerGroupId) {
@@ -104,6 +101,70 @@ public class DescribeContainerLogRequest extends TeaModel {
         return this.containerName;
     }
 
+    public DescribeContainerLogRequest setLastTime(Boolean lastTime) {
+        this.lastTime = lastTime;
+        return this;
+    }
+    public Boolean getLastTime() {
+        return this.lastTime;
+    }
+
+    public DescribeContainerLogRequest setLimitBytes(Long limitBytes) {
+        this.limitBytes = limitBytes;
+        return this;
+    }
+    public Long getLimitBytes() {
+        return this.limitBytes;
+    }
+
+    public DescribeContainerLogRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeContainerLogRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeContainerLogRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeContainerLogRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeContainerLogRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeContainerLogRequest setSinceSeconds(Integer sinceSeconds) {
+        this.sinceSeconds = sinceSeconds;
+        return this;
+    }
+    public Integer getSinceSeconds() {
+        return this.sinceSeconds;
+    }
+
     public DescribeContainerLogRequest setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -118,30 +179,6 @@ public class DescribeContainerLogRequest extends TeaModel {
     }
     public Integer getTail() {
         return this.tail;
-    }
-
-    public DescribeContainerLogRequest setLastTime(Boolean lastTime) {
-        this.lastTime = lastTime;
-        return this;
-    }
-    public Boolean getLastTime() {
-        return this.lastTime;
-    }
-
-    public DescribeContainerLogRequest setSinceSeconds(Integer sinceSeconds) {
-        this.sinceSeconds = sinceSeconds;
-        return this;
-    }
-    public Integer getSinceSeconds() {
-        return this.sinceSeconds;
-    }
-
-    public DescribeContainerLogRequest setLimitBytes(Long limitBytes) {
-        this.limitBytes = limitBytes;
-        return this;
-    }
-    public Long getLimitBytes() {
-        return this.limitBytes;
     }
 
     public DescribeContainerLogRequest setTimestamps(Boolean timestamps) {

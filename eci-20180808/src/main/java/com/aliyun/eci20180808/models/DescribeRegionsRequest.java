@@ -4,8 +4,17 @@ package com.aliyun.eci20180808.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    /**
+     * <p>The region ID.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,15 +22,17 @@ public class DescribeRegionsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static DescribeRegionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsRequest self = new DescribeRegionsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeRegionsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeRegionsRequest setOwnerId(Long ownerId) {
@@ -30,6 +41,14 @@ public class DescribeRegionsRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeRegionsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeRegionsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -46,22 +65,6 @@ public class DescribeRegionsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeRegionsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeRegionsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }
