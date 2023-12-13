@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeReplicaSetRoleRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -21,9 +21,6 @@ public class DescribeReplicaSetRoleRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
 
     public static DescribeReplicaSetRoleRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeReplicaSetRoleRequest self = new DescribeReplicaSetRoleRequest();
@@ -68,14 +65,6 @@ public class DescribeReplicaSetRoleRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeReplicaSetRoleRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

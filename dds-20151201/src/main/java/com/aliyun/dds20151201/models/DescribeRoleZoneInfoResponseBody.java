@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRoleZoneInfoResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>An array that consists of information of nodes in the zone.</p>
+     * <p>The information of nodes in the zone.</p>
      */
     @NameInMap("ZoneInfos")
     public DescribeRoleZoneInfoResponseBodyZoneInfos zoneInfos;
@@ -52,13 +52,13 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
          * <p>*   **shard**</p>
          * <p>*   **mongos**</p>
          * <br>
-         * <p>>  Valid value for replica set instances: **normal**. Valid values for replica set instances: **configServer**, **shard**, and **mongos**.</p>
+         * <p>> Valid value for replica set instances: **normal**. Valid values for sharded cluster instances: **configServer**, **shard**, and **mongos**.</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
 
         /**
-         * <p>The ID of the role.</p>
+         * <p>The role ID.</p>
          */
         @NameInMap("RoleId")
         public String roleId;
@@ -74,7 +74,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         public String roleType;
 
         /**
-         * <p>The zone ID.</p>
+         * <p>The zone ID of the node.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

@@ -48,9 +48,6 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     @NameInMap("RoleARN")
     public String roleARN;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     /**
      * <p>The TDE status. When the value of this parameter is set to **Enabled**, TDE is enabled.</p>
      * <br>
@@ -126,14 +123,6 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     }
     public String getRoleARN() {
         return this.roleARN;
-    }
-
-    public ModifyDBInstanceTDERequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public ModifyDBInstanceTDERequest setTDEStatus(String TDEStatus) {

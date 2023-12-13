@@ -43,9 +43,6 @@ public class ResetAccountPasswordRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static ResetAccountPasswordRequest build(java.util.Map<String, ?> map) throws Exception {
         ResetAccountPasswordRequest self = new ResetAccountPasswordRequest();
         return TeaModel.build(map, self);
@@ -113,14 +110,6 @@ public class ResetAccountPasswordRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ResetAccountPasswordRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

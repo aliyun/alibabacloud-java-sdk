@@ -73,9 +73,6 @@ public class EvaluateResourceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     /**
      * <p>The node information about the sharded cluster instance. This parameter is required when you check whether resources are sufficient for creating or upgrading a sharded cluster instance.</p>
      * <br>
@@ -217,14 +214,6 @@ public class EvaluateResourceRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public EvaluateResourceRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public EvaluateResourceRequest setShardsInfo(String shardsInfo) {

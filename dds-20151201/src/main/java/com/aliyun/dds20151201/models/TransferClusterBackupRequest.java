@@ -4,6 +4,9 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class TransferClusterBackupRequest extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -18,9 +21,6 @@ public class TransferClusterBackupRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
 
     public static TransferClusterBackupRequest build(java.util.Map<String, ?> map) throws Exception {
         TransferClusterBackupRequest self = new TransferClusterBackupRequest();
@@ -65,14 +65,6 @@ public class TransferClusterBackupRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public TransferClusterBackupRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

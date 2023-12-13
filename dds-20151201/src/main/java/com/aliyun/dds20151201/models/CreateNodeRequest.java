@@ -112,9 +112,6 @@ public class CreateNodeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     /**
      * <p>Specifies whether to apply for an endpoint for the shard node. Default value: false. Valid values:</p>
      * <br>
@@ -247,14 +244,6 @@ public class CreateNodeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CreateNodeRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public CreateNodeRequest setShardDirect(Boolean shardDirect) {

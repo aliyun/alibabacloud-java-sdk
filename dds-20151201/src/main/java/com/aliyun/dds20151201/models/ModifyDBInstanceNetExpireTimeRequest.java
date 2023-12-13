@@ -34,9 +34,6 @@ public class ModifyDBInstanceNetExpireTimeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static ModifyDBInstanceNetExpireTimeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceNetExpireTimeRequest self = new ModifyDBInstanceNetExpireTimeRequest();
         return TeaModel.build(map, self);
@@ -96,14 +93,6 @@ public class ModifyDBInstanceNetExpireTimeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyDBInstanceNetExpireTimeRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

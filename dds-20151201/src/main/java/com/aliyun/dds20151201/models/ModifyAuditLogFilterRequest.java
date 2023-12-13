@@ -45,9 +45,6 @@ public class ModifyAuditLogFilterRequest extends TeaModel {
     @NameInMap("RoleType")
     public String roleType;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static ModifyAuditLogFilterRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAuditLogFilterRequest self = new ModifyAuditLogFilterRequest();
         return TeaModel.build(map, self);
@@ -107,14 +104,6 @@ public class ModifyAuditLogFilterRequest extends TeaModel {
     }
     public String getRoleType() {
         return this.roleType;
-    }
-
-    public ModifyAuditLogFilterRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

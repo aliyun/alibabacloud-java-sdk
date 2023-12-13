@@ -57,9 +57,6 @@ public class RenewDBInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static RenewDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RenewDBInstanceRequest self = new RenewDBInstanceRequest();
         return TeaModel.build(map, self);
@@ -143,14 +140,6 @@ public class RenewDBInstanceRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public RenewDBInstanceRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

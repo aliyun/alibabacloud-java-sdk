@@ -89,9 +89,6 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     /**
      * <p>The ID of the vSwitch.</p>
      */
@@ -217,14 +214,6 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeDBInstancesOverviewRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public DescribeDBInstancesOverviewRequest setVSwitchId(String vSwitchId) {

@@ -46,9 +46,6 @@ public class CreateNodeBatchRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("ShardDirect")
     public Boolean shardDirect;
 
@@ -159,14 +156,6 @@ public class CreateNodeBatchRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CreateNodeBatchRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public CreateNodeBatchRequest setShardDirect(Boolean shardDirect) {

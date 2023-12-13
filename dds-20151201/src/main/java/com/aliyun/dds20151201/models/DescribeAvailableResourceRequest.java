@@ -4,6 +4,9 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceRequest extends TeaModel {
+    /**
+     * <p>The instance type of the instance.</p>
+     */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
@@ -16,13 +19,16 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     @NameInMap("DbType")
     public String dbType;
 
+    /**
+     * <p>The database engine version of the instance.</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
-     * <p>The billing method of the instance. Default value: PrePaid. Valid values:</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <br>
-     * <p>*   **PrePaid**: subscription</p>
+     * <p>*   **PrePaid** (default): subscription</p>
      * <p>*   **PostPaid**: pay-as-you-go</p>
      */
     @NameInMap("InstanceChargeType")
@@ -52,9 +58,17 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
+    /**
+     * <p>The storage type of the instance. Valid values:</p>
+     * <br>
+     * <p>- **local_ssd**: local SSD </p>
+     * <p>- **cloud_essd1**: PL1 enhanced SSD (ESSD) </p>
+     * <p>- **cloud_essd2**: PL2 ESSD </p>
+     * <p>- **cloud_essd3**: PL3 ESSD </p>
+     * <p>- **cloud_auto**: ESSD AutoPL </p>
+     * <br>
+     * <p>By default, this parameter is empty, which indicates that all types of storage resources are queried.</p>
+     */
     @NameInMap("StorageType")
     public String storageType;
 
@@ -147,14 +161,6 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeAvailableResourceRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public DescribeAvailableResourceRequest setStorageType(String storageType) {

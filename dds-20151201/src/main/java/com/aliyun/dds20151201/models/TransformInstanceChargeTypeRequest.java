@@ -10,7 +10,7 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
      * <p>*   **true**</p>
      * <p>*   **false**</p>
      * <br>
-     * <p>> Default value: **true**.</p>
+     * <p>>  Default value: **true**.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
@@ -60,11 +60,22 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The subscription duration of the instance. Unit: months. Valid values: **1, 2, 3, 4, 5, 6, 7, 8, 9******, **12**, **24**, and **36**.</p>
+     * <p>The subscription duration. Valid values:</p>
+     * <br>
+     * <p>*   If the PricingCycle parameter is set to Month, the valid values of this parameter range from **1** to **9**.</p>
+     * <p>*   If the PricingCycle parameter is set to Year, the valid values of this parameter are **1**, **2**, **3**, and **5**.</p>
      */
     @NameInMap("Period")
     public Long period;
 
+    /**
+     * <p>The unit of the subscription duration. Valid values:</p>
+     * <br>
+     * <p>*   **Month**</p>
+     * <p>*   **Year**</p>
+     * <br>
+     * <p>Default value: Month.</p>
+     */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
@@ -73,9 +84,6 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
 
     public static TransformInstanceChargeTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         TransformInstanceChargeTypeRequest self = new TransformInstanceChargeTypeRequest();
@@ -176,14 +184,6 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public TransformInstanceChargeTypeRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

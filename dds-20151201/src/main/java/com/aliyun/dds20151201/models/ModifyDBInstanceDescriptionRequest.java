@@ -46,9 +46,6 @@ public class ModifyDBInstanceDescriptionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static ModifyDBInstanceDescriptionRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceDescriptionRequest self = new ModifyDBInstanceDescriptionRequest();
         return TeaModel.build(map, self);
@@ -108,14 +105,6 @@ public class ModifyDBInstanceDescriptionRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyDBInstanceDescriptionRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

@@ -25,9 +25,6 @@ public class DescribeKernelReleaseNotesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static DescribeKernelReleaseNotesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeKernelReleaseNotesRequest self = new DescribeKernelReleaseNotesRequest();
         return TeaModel.build(map, self);
@@ -71,14 +68,6 @@ public class DescribeKernelReleaseNotesRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeKernelReleaseNotesRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

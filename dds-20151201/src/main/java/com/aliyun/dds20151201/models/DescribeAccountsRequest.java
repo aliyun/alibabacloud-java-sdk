@@ -28,9 +28,6 @@ public class DescribeAccountsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static DescribeAccountsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccountsRequest self = new DescribeAccountsRequest();
         return TeaModel.build(map, self);
@@ -82,14 +79,6 @@ public class DescribeAccountsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeAccountsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

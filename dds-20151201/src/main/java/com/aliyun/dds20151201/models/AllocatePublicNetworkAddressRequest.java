@@ -32,9 +32,6 @@ public class AllocatePublicNetworkAddressRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static AllocatePublicNetworkAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         AllocatePublicNetworkAddressRequest self = new AllocatePublicNetworkAddressRequest();
         return TeaModel.build(map, self);
@@ -86,14 +83,6 @@ public class AllocatePublicNetworkAddressRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public AllocatePublicNetworkAddressRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

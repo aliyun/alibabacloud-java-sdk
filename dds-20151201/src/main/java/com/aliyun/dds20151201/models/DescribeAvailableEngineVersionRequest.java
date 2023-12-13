@@ -22,9 +22,6 @@ public class DescribeAvailableEngineVersionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static DescribeAvailableEngineVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAvailableEngineVersionRequest self = new DescribeAvailableEngineVersionRequest();
         return TeaModel.build(map, self);
@@ -68,14 +65,6 @@ public class DescribeAvailableEngineVersionRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeAvailableEngineVersionRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

@@ -57,9 +57,6 @@ public class ModifySecurityIpsRequest extends TeaModel {
     @NameInMap("SecurityIps")
     public String securityIps;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static ModifySecurityIpsRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySecurityIpsRequest self = new ModifySecurityIpsRequest();
         return TeaModel.build(map, self);
@@ -135,14 +132,6 @@ public class ModifySecurityIpsRequest extends TeaModel {
     }
     public String getSecurityIps() {
         return this.securityIps;
-    }
-
-    public ModifySecurityIpsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

@@ -49,9 +49,6 @@ public class CheckRecoveryConditionRequest extends TeaModel {
     @NameInMap("RestoreTime")
     public String restoreTime;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     /**
      * <p>The operation that you want to perform. Set the value to **CheckRecoveryCondition**.</p>
      */
@@ -125,14 +122,6 @@ public class CheckRecoveryConditionRequest extends TeaModel {
     }
     public String getRestoreTime() {
         return this.restoreTime;
-    }
-
-    public CheckRecoveryConditionRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public CheckRecoveryConditionRequest setSourceDBInstance(String sourceDBInstance) {

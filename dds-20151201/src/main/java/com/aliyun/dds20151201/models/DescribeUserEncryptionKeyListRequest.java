@@ -22,9 +22,6 @@ public class DescribeUserEncryptionKeyListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     /**
      * <p>The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.</p>
      */
@@ -74,14 +71,6 @@ public class DescribeUserEncryptionKeyListRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeUserEncryptionKeyListRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public DescribeUserEncryptionKeyListRequest setTargetRegionId(String targetRegionId) {

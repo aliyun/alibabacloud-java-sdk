@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The cluster backup sets of the instance. A cluster backup file contains the backup sets of each node.</p>
+     */
     @NameInMap("RestoreRanges")
     public java.util.List<DescribeClusterRecoverTimeResponseBodyRestoreRanges> restoreRanges;
 
@@ -35,12 +38,23 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterRecoverTimeResponseBodyRestoreRanges extends TeaModel {
+        /**
+         * <p>The beginning of the time range to which data can be restored.</p>
+         */
         @NameInMap("RestoreBeginTime")
         public String restoreBeginTime;
 
+        /**
+         * <p>The end of the time range to which data can be restored.</p>
+         */
         @NameInMap("RestoreEndTime")
         public String restoreEndTime;
 
+        /**
+         * <p>The method used to restore data. Valid values:</p>
+         * <br>
+         * <p>*   \*\* PointInTime\*\* (default): Data is restored based on point in time</p>
+         */
         @NameInMap("RestoreType")
         public String restoreType;
 

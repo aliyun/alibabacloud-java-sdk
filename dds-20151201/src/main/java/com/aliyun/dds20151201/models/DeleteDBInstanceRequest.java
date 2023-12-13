@@ -28,9 +28,6 @@ public class DeleteDBInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static DeleteDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDBInstanceRequest self = new DeleteDBInstanceRequest();
         return TeaModel.build(map, self);
@@ -82,14 +79,6 @@ public class DeleteDBInstanceRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteDBInstanceRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

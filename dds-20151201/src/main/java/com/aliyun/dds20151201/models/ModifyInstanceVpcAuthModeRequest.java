@@ -28,9 +28,6 @@ public class ModifyInstanceVpcAuthModeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     /**
      * <p>The ID of the mongos node in the specified sharded cluster instance.</p>
      * <br>
@@ -90,14 +87,6 @@ public class ModifyInstanceVpcAuthModeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyInstanceVpcAuthModeRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public ModifyInstanceVpcAuthModeRequest setVpcAuthMode(String vpcAuthMode) {
