@@ -4,8 +4,35 @@ package com.aliyun.eci20180808.models;
 import com.aliyun.tea.*;
 
 public class DescribeMultiContainerGroupMetricRequest extends TeaModel {
+    /**
+     * <p>The instance ID. The value is a JSON array. You can specify up to 20 instance IDs at a time.</p>
+     */
+    @NameInMap("ContainerGroupIds")
+    public String containerGroupIds;
+
+    /**
+     * <p>The type of the monitoring data. Set the value to summary. This value indicates that records are returned.</p>
+     */
+    @NameInMap("MetricType")
+    public String metricType;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    /**
+     * <p>The region ID of the instance.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <p>The ID of the resource group to which the elastic container instances belong.</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,24 +40,33 @@ public class DescribeMultiContainerGroupMetricRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ContainerGroupIds")
-    public String containerGroupIds;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    @NameInMap("MetricType")
-    public String metricType;
-
     public static DescribeMultiContainerGroupMetricRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMultiContainerGroupMetricRequest self = new DescribeMultiContainerGroupMetricRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMultiContainerGroupMetricRequest setContainerGroupIds(String containerGroupIds) {
+        this.containerGroupIds = containerGroupIds;
+        return this;
+    }
+    public String getContainerGroupIds() {
+        return this.containerGroupIds;
+    }
+
+    public DescribeMultiContainerGroupMetricRequest setMetricType(String metricType) {
+        this.metricType = metricType;
+        return this;
+    }
+    public String getMetricType() {
+        return this.metricType;
+    }
+
+    public DescribeMultiContainerGroupMetricRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeMultiContainerGroupMetricRequest setOwnerId(Long ownerId) {
@@ -39,6 +75,22 @@ public class DescribeMultiContainerGroupMetricRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeMultiContainerGroupMetricRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeMultiContainerGroupMetricRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeMultiContainerGroupMetricRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -55,46 +107,6 @@ public class DescribeMultiContainerGroupMetricRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeMultiContainerGroupMetricRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeMultiContainerGroupMetricRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeMultiContainerGroupMetricRequest setContainerGroupIds(String containerGroupIds) {
-        this.containerGroupIds = containerGroupIds;
-        return this;
-    }
-    public String getContainerGroupIds() {
-        return this.containerGroupIds;
-    }
-
-    public DescribeMultiContainerGroupMetricRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    public DescribeMultiContainerGroupMetricRequest setMetricType(String metricType) {
-        this.metricType = metricType;
-        return this;
-    }
-    public String getMetricType() {
-        return this.metricType;
     }
 
 }

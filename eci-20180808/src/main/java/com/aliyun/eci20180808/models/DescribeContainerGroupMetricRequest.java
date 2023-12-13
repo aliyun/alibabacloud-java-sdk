@@ -4,8 +4,39 @@ package com.aliyun.eci20180808.models;
 import com.aliyun.tea.*;
 
 public class DescribeContainerGroupMetricRequest extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     */
+    @NameInMap("ContainerGroupId")
+    public String containerGroupId;
+
+    /**
+     * <p>The end of the time range to query. The default value is the current time.</p>
+     * <br>
+     * <p>Specify the time in RFC 3339 format.</p>
+     */
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    /**
+     * <p>The data aggregation period. Unit: seconds. Valid values: 15, 30, 60, and 600. Default value: 60.</p>
+     * <br>
+     * <p>>  If the StartTime and EndTime parameters are not specified, the system returns the monitoring data generated in the last 5 minutes with a data aggregation period of 15s. The Period parameter is ignored.</p>
+     */
+    @NameInMap("Period")
+    public String period;
+
+    /**
+     * <p>The region ID of the instance.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,30 +44,41 @@ public class DescribeContainerGroupMetricRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ContainerGroupId")
-    public String containerGroupId;
-
+    /**
+     * <p>The beginning of the time range to query. The beginning of the time range must be a time point in the last 30 days. The default value is 5 minutes before the value of EndTime.</p>
+     * <br>
+     * <p>Specify the time in RFC 3339 format. For example, to query the data starting from March 12, 2019, 09:00 UTC+8, you can set the parameter to 2019-03-12T09:00:00.000+08:00 or 2019-03-12T01:00:00.000Z.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("Period")
-    public String period;
-
-    @NameInMap("VkClientVersion")
-    public String vkClientVersion;
 
     public static DescribeContainerGroupMetricRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeContainerGroupMetricRequest self = new DescribeContainerGroupMetricRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeContainerGroupMetricRequest setContainerGroupId(String containerGroupId) {
+        this.containerGroupId = containerGroupId;
+        return this;
+    }
+    public String getContainerGroupId() {
+        return this.containerGroupId;
+    }
+
+    public DescribeContainerGroupMetricRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeContainerGroupMetricRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeContainerGroupMetricRequest setOwnerId(Long ownerId) {
@@ -45,6 +87,22 @@ public class DescribeContainerGroupMetricRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeContainerGroupMetricRequest setPeriod(String period) {
+        this.period = period;
+        return this;
+    }
+    public String getPeriod() {
+        return this.period;
+    }
+
+    public DescribeContainerGroupMetricRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeContainerGroupMetricRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -63,60 +121,12 @@ public class DescribeContainerGroupMetricRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeContainerGroupMetricRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public DescribeContainerGroupMetricRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeContainerGroupMetricRequest setContainerGroupId(String containerGroupId) {
-        this.containerGroupId = containerGroupId;
-        return this;
-    }
-    public String getContainerGroupId() {
-        return this.containerGroupId;
-    }
-
     public DescribeContainerGroupMetricRequest setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeContainerGroupMetricRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeContainerGroupMetricRequest setPeriod(String period) {
-        this.period = period;
-        return this;
-    }
-    public String getPeriod() {
-        return this.period;
-    }
-
-    public DescribeContainerGroupMetricRequest setVkClientVersion(String vkClientVersion) {
-        this.vkClientVersion = vkClientVersion;
-        return this;
-    }
-    public String getVkClientVersion() {
-        return this.vkClientVersion;
     }
 
 }

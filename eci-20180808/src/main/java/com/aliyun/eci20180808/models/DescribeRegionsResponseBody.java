@@ -4,23 +4,21 @@ package com.aliyun.eci20180808.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
+    /**
+     * <p>The queried regions.</p>
+     */
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
+
+    /**
+     * <p>The request ID.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeRegionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsResponseBody self = new DescribeRegionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRegionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeRegionsResponseBody setRegions(java.util.List<DescribeRegionsResponseBodyRegions> regions) {
@@ -31,30 +29,42 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return this.regions;
     }
 
-    public static class DescribeRegionsResponseBodyRegions extends TeaModel {
-        @NameInMap("Zones")
-        public java.util.List<String> zones;
+    public DescribeRegionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeRegionsResponseBodyRegions extends TeaModel {
+        /**
+         * <p>The recommended zones. Recommended zones are zones that have relatively sufficient resources in the current region.</p>
+         */
         @NameInMap("RecommendZones")
         public java.util.List<String> recommendZones;
 
+        /**
+         * <p>The endpoint for the region.</p>
+         */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
+
+        /**
+         * <p>The queried zones.</p>
+         */
+        @NameInMap("Zones")
+        public java.util.List<String> zones;
 
         public static DescribeRegionsResponseBodyRegions build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseBodyRegions self = new DescribeRegionsResponseBodyRegions();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRegionsResponseBodyRegions setZones(java.util.List<String> zones) {
-            this.zones = zones;
-            return this;
-        }
-        public java.util.List<String> getZones() {
-            return this.zones;
         }
 
         public DescribeRegionsResponseBodyRegions setRecommendZones(java.util.List<String> recommendZones) {
@@ -79,6 +89,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeRegionsResponseBodyRegions setZones(java.util.List<String> zones) {
+            this.zones = zones;
+            return this;
+        }
+        public java.util.List<String> getZones() {
+            return this.zones;
         }
 
     }
