@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
-     * <p>Specifies the language of the returned **RegionName** and **ZoneName** values. Default value: zh. Valid values:</p>
+     * <p>The language of the values of the returned **RegionName** and **ZoneName** parameters. Valid values:</p>
      * <br>
-     * <p>*   **zh**: Chinese.</p>
-     * <p>*   **en**: English</p>
+     * <p>*   **zh** (default)</p>
+     * <p>*   **en**</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
@@ -20,7 +20,7 @@ public class DescribeRegionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <br>
      * <p>>  If you do not specify this parameter, all supported regions are queried.</p>
      */
@@ -32,9 +32,6 @@ public class DescribeRegionsRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
 
     public static DescribeRegionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsRequest self = new DescribeRegionsRequest();
@@ -87,14 +84,6 @@ public class DescribeRegionsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeRegionsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

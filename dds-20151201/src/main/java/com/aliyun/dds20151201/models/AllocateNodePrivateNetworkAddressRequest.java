@@ -49,9 +49,6 @@ public class AllocateNodePrivateNetworkAddressRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     /**
      * <p>The zone ID of the instance.</p>
      * <br>
@@ -127,14 +124,6 @@ public class AllocateNodePrivateNetworkAddressRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public AllocateNodePrivateNetworkAddressRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public AllocateNodePrivateNetworkAddressRequest setZoneId(String zoneId) {

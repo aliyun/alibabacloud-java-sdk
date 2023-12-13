@@ -34,9 +34,6 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static DescribeRenewalPriceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRenewalPriceRequest self = new DescribeRenewalPriceRequest();
         return TeaModel.build(map, self);
@@ -96,14 +93,6 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeRenewalPriceRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

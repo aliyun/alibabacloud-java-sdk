@@ -22,9 +22,6 @@ public class CheckCloudResourceAuthorizedRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     /**
      * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.</p>
      */
@@ -74,14 +71,6 @@ public class CheckCloudResourceAuthorizedRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CheckCloudResourceAuthorizedRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public CheckCloudResourceAuthorizedRequest setTargetRegionId(String targetRegionId) {

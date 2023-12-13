@@ -40,9 +40,6 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static DescribeParameterTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeParameterTemplatesRequest self = new DescribeParameterTemplatesRequest();
         return TeaModel.build(map, self);
@@ -102,14 +99,6 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeParameterTemplatesRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

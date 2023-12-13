@@ -18,7 +18,10 @@ public class DescribePriceRequest extends TeaModel {
      * <p>*   **dds_sharding**: a sharded cluster instance that uses the pay-as-you-go billing method</p>
      * <p>*   **badds_sharding**: a sharded cluster instance that uses the subscription billing method</p>
      * <p>*   **badds_sharding_intl**: a sharded cluster instance that uses the subscription billing method and is available on the International site (alibabacloud.com)</p>
+     * <p>*   **dds_sharding_intl**: a sharded cluster instance that uses the pay-as-you-go billing method and is available on the International site (alibabacloud.com)</p>
      * <p>*   **badds_sharding_jp**: a sharded cluster instance that uses the subscription billing method and is available on the Japan site (jp.alibabacloud.com)</p>
+     * <p>*   **badds_intl**: a replica set instance that uses the subscription billing method and is available on the International site (alibabacloud.com)</p>
+     * <p>*   **dds_intl**: a replica set instance that uses the pay-as-you-go billing method and is available on the International site (alibabacloud.com)</p>
      */
     @NameInMap("CommodityCode")
     public String commodityCode;
@@ -83,9 +86,6 @@ public class DescribePriceRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
 
     public static DescribePriceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePriceRequest self = new DescribePriceRequest();
@@ -194,14 +194,6 @@ public class DescribePriceRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribePriceRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

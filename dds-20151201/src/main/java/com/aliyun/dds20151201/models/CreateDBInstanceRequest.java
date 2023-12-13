@@ -256,9 +256,6 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("SecurityIPList")
     public String securityIPList;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     /**
      * <p>The business information. This is an additional parameter.</p>
      */
@@ -583,14 +580,6 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getSecurityIPList() {
         return this.securityIPList;
-    }
-
-    public CreateDBInstanceRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public CreateDBInstanceRequest setSrcDBInstanceId(String srcDBInstanceId) {

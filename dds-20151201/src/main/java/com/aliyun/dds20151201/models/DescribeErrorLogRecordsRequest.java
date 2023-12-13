@@ -73,9 +73,6 @@ public class DescribeErrorLogRecordsRequest extends TeaModel {
     @NameInMap("RoleType")
     public String roleType;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     /**
      * <p>The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
      */
@@ -181,14 +178,6 @@ public class DescribeErrorLogRecordsRequest extends TeaModel {
     }
     public String getRoleType() {
         return this.roleType;
-    }
-
-    public DescribeErrorLogRecordsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public DescribeErrorLogRecordsRequest setStartTime(String startTime) {

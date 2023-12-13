@@ -116,7 +116,10 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static class DescribePriceResponseBodyOrderCouponsCoupon extends TeaModel {
         /**
-         * <p>The billing method to which the coupon was applied. Valid values: **payondemand**: subscription. **payasyougo**: pay-as-you-go.</p>
+         * <p>The activity type of the coupon. Valid values:</p>
+         * <br>
+         * <p>*   **payondemand**: subscription</p>
+         * <p>*   **payasyougo**: pay-as-you-go</p>
          */
         @NameInMap("ActivityCategory")
         public String activityCategory;
@@ -161,7 +164,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public String promotionOptionCode;
 
         /**
-         * <p>The rules that match the coupon.</p>
+         * <p>Details about the rules that match the coupon.</p>
          */
         @NameInMap("PromotionRuleIdList")
         public DescribePriceResponseBodyOrderCouponsCouponPromotionRuleIdList promotionRuleIdList;
@@ -277,7 +280,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static class DescribePriceResponseBodyOrder extends TeaModel {
         /**
-         * <p>The coupons.</p>
+         * <p>The information of coupons.</p>
          */
         @NameInMap("Coupons")
         public DescribePriceResponseBodyOrderCoupons coupons;
@@ -306,6 +309,9 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("RuleIds")
         public DescribePriceResponseBodyOrderRuleIds ruleIds;
 
+        /**
+         * <p>Indicates whether the information of the discount is displayed.</p>
+         */
         @NameInMap("ShowDiscountInfo")
         public Boolean showDiscountInfo;
 
@@ -380,19 +386,19 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static class DescribePriceResponseBodyRulesRule extends TeaModel {
         /**
-         * <p>The name of the rule.</p>
+         * <p>The rule name.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The ID of the policy.</p>
+         * <p>The rule ID.</p>
          */
         @NameInMap("RuleDescId")
         public Long ruleDescId;
 
         /**
-         * <p>The title of the rule.</p>
+         * <p>The rule title.</p>
          */
         @NameInMap("Title")
         public String title;
@@ -474,13 +480,13 @@ public class DescribePriceResponseBody extends TeaModel {
         public String discountAmount;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The original price of the order.</p>
+         * <p>The list price of the order.</p>
          */
         @NameInMap("OriginalAmount")
         public String originalAmount;

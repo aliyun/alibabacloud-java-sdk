@@ -261,9 +261,6 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     @NameInMap("SecurityIPList")
     public String securityIPList;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     /**
      * <p>The source instance ID.</p>
      * <br>
@@ -541,14 +538,6 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     }
     public String getSecurityIPList() {
         return this.securityIPList;
-    }
-
-    public CreateShardingDBInstanceRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public CreateShardingDBInstanceRequest setSrcDBInstanceId(String srcDBInstanceId) {

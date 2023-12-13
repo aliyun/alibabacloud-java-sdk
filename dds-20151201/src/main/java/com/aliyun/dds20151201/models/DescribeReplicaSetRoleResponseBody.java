@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeReplicaSetRoleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>Details about the replica set roles.</p>
+     * <p>The details of the roles of the replica set instance.</p>
      */
     @NameInMap("ReplicaSets")
     public DescribeReplicaSetRoleResponseBodyReplicaSets replicaSets;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -59,7 +59,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
         public String connectionDomain;
 
         /**
-         * <p>The port of the node.</p>
+         * <p>The port number that is used to connect to the node.</p>
          */
         @NameInMap("ConnectionPort")
         public String connectionPort;
@@ -71,17 +71,17 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>The network type. Valid values:</p>
+         * <p>The network type of the instance. Valid values:</p>
          * <br>
-         * <p>*   **VPC**</p>
-         * <p>*   **Classic**</p>
-         * <p>*   **Public**</p>
+         * <p>*   **VPC**: the virtual private cloud (VPC)</p>
+         * <p>*   **Classic**: the classic network</p>
+         * <p>*   **Public**: the Internet</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
-         * <p>The role of the node in the replica set.</p>
+         * <p>The role of the node in the replica set instance. Valid values:</p>
          * <br>
          * <p>*   **Primary**</p>
          * <p>*   **Secondary**</p>

@@ -34,9 +34,6 @@ public class ModifyResourceGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static ModifyResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyResourceGroupRequest self = new ModifyResourceGroupRequest();
         return TeaModel.build(map, self);
@@ -96,14 +93,6 @@ public class ModifyResourceGroupRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyResourceGroupRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

@@ -7,22 +7,21 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     /**
      * <p>The retention period of the original classic network address when you change the network type to VPC. Valid values: **14**, **30**, **60**, and **120**. Unit: days.</p>
      * <br>
-     * <p>>  This parameter is required when the **NetworkType** parameter is set to **VPC** and the **RetainClassic** parameter is set to **True**.</p>
+     * <p>> This parameter is required when the **NetworkType** parameter is set to **VPC** and the **RetainClassic** parameter is set to **True**.</p>
      */
     @NameInMap("ClassicExpiredDays")
     public Integer classicExpiredDays;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The network type to switch to. Valid values:</p>
+     * <p>The network type to switch to. Valid value:</p>
      * <br>
      * <p>*   **VPC**</p>
-     * <p>*   **Classic**</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
@@ -42,36 +41,36 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to retain the original classic network address when you change the network type to VPC. Valid values:</p>
      * <br>
-     * <p>- **True**: retains the original classic network address.</p>
-     * <p>- **False**: does not retain the original classic network address.</p>
+     * <p>*   **True**: retains the original classic network address.</p>
+     * <p>*   **False**: does not retain the original classic network address.</p>
      * <br>
-     * <p>> * This parameter is required when the **NetworkType** parameter is set to **VPC**.</p>
-     * <p>> * If you set this parameter to **True**, you must also specify the **ClassicExpiredDays** parameter.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   This parameter is required when the **NetworkType** parameter is set to **VPC**.</p>
+     * <br>
+     * <p>*   If you set this parameter to **True**, you must also specify the **ClassicExpiredDays** parameter.</p>
      */
     @NameInMap("RetainClassic")
     public String retainClassic;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The ID of the vSwitch in the VPC.</p>
      * <br>
-     * <p>>  This parameter is required when the **NetworkType** parameter is set to **VPC**.</p>
+     * <p>> This parameter is required when the **NetworkType** parameter is set to **VPC**.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC).</p>
+     * <p>The ID of the VPC.</p>
      * <br>
-     * <p>>  This parameter is required when the **NetworkType** parameter is set to **VPC**.</p>
+     * <p>> This parameter is required when the **NetworkType** parameter is set to **VPC**.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>The zone ID of the instance. You can call the [DescribeRegions](~~468365~~) operation to query the most recent zone list.</p>
+     * <p>可用区ID，您可以通过调用[DescribeRegions](~~61933~~)接口查询可用区ID。</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -143,14 +142,6 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     }
     public String getRetainClassic() {
         return this.retainClassic;
-    }
-
-    public ModifyDBInstanceNetworkTypeRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public ModifyDBInstanceNetworkTypeRequest setVSwitchId(String vSwitchId) {

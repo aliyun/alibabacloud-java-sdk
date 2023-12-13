@@ -22,9 +22,6 @@ public class DescribeActiveOperationTaskCountRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static DescribeActiveOperationTaskCountRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeActiveOperationTaskCountRequest self = new DescribeActiveOperationTaskCountRequest();
         return TeaModel.build(map, self);
@@ -68,14 +65,6 @@ public class DescribeActiveOperationTaskCountRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeActiveOperationTaskCountRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

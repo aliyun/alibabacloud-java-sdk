@@ -4,6 +4,9 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterRecoverTimeRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -18,9 +21,6 @@ public class DescribeClusterRecoverTimeRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
 
     public static DescribeClusterRecoverTimeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterRecoverTimeRequest self = new DescribeClusterRecoverTimeRequest();
@@ -65,14 +65,6 @@ public class DescribeClusterRecoverTimeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeClusterRecoverTimeRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

@@ -31,9 +31,6 @@ public class ModifySecurityGroupConfigurationRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static ModifySecurityGroupConfigurationRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySecurityGroupConfigurationRequest self = new ModifySecurityGroupConfigurationRequest();
         return TeaModel.build(map, self);
@@ -85,14 +82,6 @@ public class ModifySecurityGroupConfigurationRequest extends TeaModel {
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
-    }
-
-    public ModifySecurityGroupConfigurationRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

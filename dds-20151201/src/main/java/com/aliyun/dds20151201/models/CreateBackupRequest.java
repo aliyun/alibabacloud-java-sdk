@@ -33,9 +33,6 @@ public class CreateBackupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static CreateBackupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateBackupRequest self = new CreateBackupRequest();
         return TeaModel.build(map, self);
@@ -87,14 +84,6 @@ public class CreateBackupRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CreateBackupRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

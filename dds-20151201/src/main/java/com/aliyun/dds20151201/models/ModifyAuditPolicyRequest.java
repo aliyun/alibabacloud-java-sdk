@@ -37,9 +37,6 @@ public class ModifyAuditPolicyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     /**
      * <p>The type of the audit log feature. Valid values:</p>
      * <br>
@@ -116,14 +113,6 @@ public class ModifyAuditPolicyRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyAuditPolicyRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public ModifyAuditPolicyRequest setServiceType(String serviceType) {

@@ -25,9 +25,6 @@ public class ModifyGlobalSecurityIPGroupNameRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static ModifyGlobalSecurityIPGroupNameRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyGlobalSecurityIPGroupNameRequest self = new ModifyGlobalSecurityIPGroupNameRequest();
         return TeaModel.build(map, self);
@@ -87,14 +84,6 @@ public class ModifyGlobalSecurityIPGroupNameRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyGlobalSecurityIPGroupNameRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

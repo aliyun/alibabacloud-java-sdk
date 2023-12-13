@@ -4,15 +4,30 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterBackupsRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster backup set.</p>
+     */
     @NameInMap("BackupId")
     public String backupId;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC. The end time must be later than the start time.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>Specifies whether to query information about child nodes in the cluster backup. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The system returns only the basic information of the cluster backup.</p>
+     * <p>*   **false** (default): The system returns the backup information of all child nodes.</p>
+     */
     @NameInMap("IsOnlyGetClusterBackUp")
     public Boolean isOnlyGetClusterBackUp;
 
@@ -22,9 +37,19 @@ public class DescribeClusterBackupsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number. Default value: **1**. The page number must be a positive integer.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values:</p>
+     * <br>
+     * <p>*   **30** (default)</p>
+     * <p>*   **50**</p>
+     * <p>*   **100**</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -34,9 +59,9 @@ public class DescribeClusterBackupsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -123,14 +148,6 @@ public class DescribeClusterBackupsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeClusterBackupsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public DescribeClusterBackupsRequest setStartTime(String startTime) {

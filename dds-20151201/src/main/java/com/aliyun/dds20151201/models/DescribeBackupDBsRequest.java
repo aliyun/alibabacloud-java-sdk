@@ -52,9 +52,6 @@ public class DescribeBackupDBsRequest extends TeaModel {
     @NameInMap("RestoreTime")
     public String restoreTime;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     /**
      * <p>The ID of the source instance.</p>
      */
@@ -136,14 +133,6 @@ public class DescribeBackupDBsRequest extends TeaModel {
     }
     public String getRestoreTime() {
         return this.restoreTime;
-    }
-
-    public DescribeBackupDBsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public DescribeBackupDBsRequest setSourceDBInstance(String sourceDBInstance) {

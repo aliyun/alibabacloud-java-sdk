@@ -22,9 +22,6 @@ public class DescribeMongoDBLogConfigRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static DescribeMongoDBLogConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMongoDBLogConfigRequest self = new DescribeMongoDBLogConfigRequest();
         return TeaModel.build(map, self);
@@ -68,14 +65,6 @@ public class DescribeMongoDBLogConfigRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeMongoDBLogConfigRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

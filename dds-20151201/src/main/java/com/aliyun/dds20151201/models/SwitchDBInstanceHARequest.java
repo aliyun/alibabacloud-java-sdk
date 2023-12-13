@@ -42,9 +42,6 @@ public class SwitchDBInstanceHARequest extends TeaModel {
     @NameInMap("RoleIds")
     public String roleIds;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     /**
      * <p>The time when the primary and secondary nodes are switched. Valid values:</p>
      * <br>
@@ -113,14 +110,6 @@ public class SwitchDBInstanceHARequest extends TeaModel {
     }
     public String getRoleIds() {
         return this.roleIds;
-    }
-
-    public SwitchDBInstanceHARequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public SwitchDBInstanceHARequest setSwitchMode(Integer switchMode) {

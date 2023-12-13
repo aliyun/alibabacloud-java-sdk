@@ -22,9 +22,6 @@ public class DescribeDBInstanceSSLRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static DescribeDBInstanceSSLRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstanceSSLRequest self = new DescribeDBInstanceSSLRequest();
         return TeaModel.build(map, self);
@@ -68,14 +65,6 @@ public class DescribeDBInstanceSSLRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeDBInstanceSSLRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

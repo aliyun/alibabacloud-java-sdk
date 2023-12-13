@@ -34,9 +34,6 @@ public class DeleteNodeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     public static DeleteNodeRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteNodeRequest self = new DeleteNodeRequest();
         return TeaModel.build(map, self);
@@ -96,14 +93,6 @@ public class DeleteNodeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteNodeRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }
