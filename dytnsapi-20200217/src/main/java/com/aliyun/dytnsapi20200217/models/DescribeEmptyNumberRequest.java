@@ -4,12 +4,29 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class DescribeEmptyNumberRequest extends TeaModel {
+    /**
+     * <p>The authorization code.</p>
+     * <br>
+     * <p>>  On the **My Applications** page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/analysis/apply), you can obtain the authorization code (also known as authorization ID).</p>
+     */
     @NameInMap("AuthCode")
     public String authCode;
 
+    /**
+     * <p>The phone number to be queried.</p>
+     * <br>
+     * <p>>  You can query only one phone number a time.</p>
+     */
     @NameInMap("InputNumber")
     public String inputNumber;
 
+    /**
+     * <p>The encryption method of the phone number. Valid values:</p>
+     * <br>
+     * <p>*   **NORMAL**: The phone number is not encrypted.</p>
+     * <p>*   **MD5**</p>
+     * <p>*   **SHA256**</p>
+     */
     @NameInMap("Mask")
     public String mask;
 

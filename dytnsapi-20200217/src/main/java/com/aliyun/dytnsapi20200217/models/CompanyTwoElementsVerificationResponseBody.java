@@ -4,18 +4,33 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class CompanyTwoElementsVerificationResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The response code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public CompanyTwoElementsVerificationResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The unique request ID. It is a common parameter and can be used to troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,9 +80,15 @@ public class CompanyTwoElementsVerificationResponseBody extends TeaModel {
     }
 
     public static class CompanyTwoElementsVerificationResponseBodyDataDetailInfo extends TeaModel {
+        /**
+         * <p>The business status of the enterprise.</p>
+         */
         @NameInMap("EnterpriseStatus")
         public String enterpriseStatus;
 
+        /**
+         * <p>The business term of the enterprise.</p>
+         */
         @NameInMap("OpenTime")
         public String openTime;
 
@@ -95,15 +116,35 @@ public class CompanyTwoElementsVerificationResponseBody extends TeaModel {
     }
 
     public static class CompanyTwoElementsVerificationResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the enterprise.</p>
+         */
         @NameInMap("DetailInfo")
         public CompanyTwoElementsVerificationResponseBodyDataDetailInfo detailInfo;
 
+        /**
+         * <p>The fields to be verified.</p>
+         */
         @NameInMap("InconsistentData")
         public java.util.List<String> inconsistentData;
 
+        /**
+         * <p>The code of the verification result. Valid values:</p>
+         * <br>
+         * <p>*   0: The two elements belong to the same enterprise.</p>
+         * <p>*   1: The two elements belong to the same enterprise, but the business status of the enterprise is abnormal.</p>
+         * <p>*   3: The two elements do not belong to the same enterprise.</p>
+         * <p>*   4: No information about the enterprise is found.</p>
+         */
         @NameInMap("ReasonCode")
         public String reasonCode;
 
+        /**
+         * <p>The verification result. Valid values:</p>
+         * <br>
+         * <p>*   true: The two elements belong to the same enterprise and the business status of the enterprise is Active.</p>
+         * <p>*   false: The two elements do not belong to the same enterprise.</p>
+         */
         @NameInMap("VerifyResult")
         public String verifyResult;
 

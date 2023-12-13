@@ -4,18 +4,36 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class QueryTagApplyRuleResponseBody extends TeaModel {
+    /**
+     * <p>The response code. **OK** indicates that the request is successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public QueryTagApplyRuleResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -66,37 +84,37 @@ public class QueryTagApplyRuleResponseBody extends TeaModel {
 
     public static class QueryTagApplyRuleResponseBodyData extends TeaModel {
         /**
-         * <p>申请材料要求</p>
+         * <p>The requirements for application materials.</p>
          */
         @NameInMap("ApplyMaterialDesc")
         public String applyMaterialDesc;
 
         /**
-         * <p>是否自动审批</p>
+         * <p>Indicates whether the application is automatically approved.</p>
          */
         @NameInMap("AutoAudit")
         public Long autoAudit;
 
         /**
-         * <p>计费标准说明链接</p>
+         * <p>The URL for the billing documentation.</p>
          */
         @NameInMap("ChargingStandardLink")
         public String chargingStandardLink;
 
         /**
-         * <p>是否支持加密查询</p>
+         * <p>indicates whether encrypted queries are supported.</p>
          */
         @NameInMap("EncryptedQuery")
         public Long encryptedQuery;
 
         /**
-         * <p>是否需要提供申请材料</p>
+         * <p>Indicates whether application materials are required.</p>
          */
         @NameInMap("NeedApplyMaterial")
         public Long needApplyMaterial;
 
         /**
-         * <p>服务协议链接</p>
+         * <p>The URL for the service agreement.</p>
          */
         @NameInMap("SlaLink")
         public String slaLink;

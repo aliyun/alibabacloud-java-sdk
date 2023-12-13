@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryUsageStatisticsByTagIdRequest extends TeaModel {
     /**
-     * <p>开始时间</p>
+     * <p>The beginning of the time range to query.</p>
      */
     @NameInMap("BeginTime")
     public String beginTime;
 
     /**
-     * <p>结束时间</p>
+     * <p>The end of the time range to query.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -19,9 +19,15 @@ public class QueryUsageStatisticsByTagIdRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number. Default value: 1.</p>
+     */
     @NameInMap("PageNo")
     public Long pageNo;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -32,7 +38,7 @@ public class QueryUsageStatisticsByTagIdRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>结束时间</p>
+     * <p>The tag ID.</p>
      */
     @NameInMap("TagId")
     public Long tagId;

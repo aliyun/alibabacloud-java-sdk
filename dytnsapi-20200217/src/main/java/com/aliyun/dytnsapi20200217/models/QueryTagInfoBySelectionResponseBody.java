@@ -4,18 +4,36 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class QueryTagInfoBySelectionResponseBody extends TeaModel {
+    /**
+     * <p>The response code. **OK** indicates that the request is successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<QueryTagInfoBySelectionResponseBodyData> data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -66,13 +84,13 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
 
     public static class QueryTagInfoBySelectionResponseBodyDataParamListValueDict extends TeaModel {
         /**
-         * <p>英文名</p>
+         * <p>The English name.</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>中文名</p>
+         * <p>The Chinese name.</p>
          */
         @NameInMap("Desc")
         public String desc;
@@ -102,37 +120,37 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
 
     public static class QueryTagInfoBySelectionResponseBodyDataParamList extends TeaModel {
         /**
-         * <p>参数英文名</p>
+         * <p>The English name of the parameter.</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>输入提示</p>
+         * <p>The input hint.</p>
          */
         @NameInMap("Hint")
         public String hint;
 
         /**
-         * <p>是否必填</p>
+         * <p>Indicates whether the parameter is required.</p>
          */
         @NameInMap("Must")
         public Boolean must;
 
         /**
-         * <p>参数中文名</p>
+         * <p>The Chinese name of the parameter.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>类型EnumUIWidgetTypes对应的code</p>
+         * <p>The type. The code that corresponds to EnumUIWidgetTypes.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>枚举值定义，code:desc</p>
+         * <p>The definitions of the enumerated values such as Code or Desc.</p>
          */
         @NameInMap("ValueDict")
         public java.util.List<QueryTagInfoBySelectionResponseBodyDataParamListValueDict> valueDict;
@@ -194,73 +212,79 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
 
     public static class QueryTagInfoBySelectionResponseBodyData extends TeaModel {
         /**
-         * <p>可用的授权码列表</p>
+         * <p>The list of available authorization codes.</p>
          */
         @NameInMap("AuthCodeList")
         public java.util.List<String> authCodeList;
 
+        @NameInMap("ComplexityType")
+        public String complexityType;
+
         /**
-         * <p>API demo链接</p>
+         * <p>The URL for the API demo.</p>
          */
         @NameInMap("DemoAddress")
         public String demoAddress;
 
         /**
-         * <p>API文档链接</p>
+         * <p>The URL for the API documentation.</p>
          */
         @NameInMap("DocAddress")
         public String docAddress;
 
         /**
-         * <p>枚举值定义链接</p>
+         * <p>The URL for the definitions of the enumerated values.</p>
          */
         @NameInMap("EnumDefinitionAddress")
         public String enumDefinitionAddress;
 
         /**
-         * <p>流程名称</p>
+         * <p>The flow name.</p>
          */
         @NameInMap("FlowName")
         public String flowName;
 
         /**
-         * <p>行业id</p>
+         * <p>The industry ID.</p>
          */
         @NameInMap("IndustryId")
         public Long industryId;
 
         /**
-         * <p>行业名称</p>
+         * <p>The industry name.</p>
          */
         @NameInMap("IndustryName")
         public String industryName;
 
         /**
-         * <p>标签参数列表</p>
+         * <p>The list of tag parameters.</p>
          */
         @NameInMap("ParamList")
         public java.util.List<QueryTagInfoBySelectionResponseBodyDataParamList> paramList;
 
+        @NameInMap("RichTextDescription")
+        public String richTextDescription;
+
         /**
-         * <p>场景id</p>
+         * <p>The scene ID.</p>
          */
         @NameInMap("SceneId")
         public Long sceneId;
 
         /**
-         * <p>场景名称</p>
+         * <p>The scene name.</p>
          */
         @NameInMap("SceneName")
         public String sceneName;
 
         /**
-         * <p>标签id</p>
+         * <p>The tag ID.</p>
          */
         @NameInMap("TagId")
         public Long tagId;
 
         /**
-         * <p>标签名称</p>
+         * <p>The tag name.</p>
          */
         @NameInMap("TagName")
         public String tagName;
@@ -276,6 +300,14 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
         }
         public java.util.List<String> getAuthCodeList() {
             return this.authCodeList;
+        }
+
+        public QueryTagInfoBySelectionResponseBodyData setComplexityType(String complexityType) {
+            this.complexityType = complexityType;
+            return this;
+        }
+        public String getComplexityType() {
+            return this.complexityType;
         }
 
         public QueryTagInfoBySelectionResponseBodyData setDemoAddress(String demoAddress) {
@@ -332,6 +364,14 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
         }
         public java.util.List<QueryTagInfoBySelectionResponseBodyDataParamList> getParamList() {
             return this.paramList;
+        }
+
+        public QueryTagInfoBySelectionResponseBodyData setRichTextDescription(String richTextDescription) {
+            this.richTextDescription = richTextDescription;
+            return this;
+        }
+        public String getRichTextDescription() {
+            return this.richTextDescription;
         }
 
         public QueryTagInfoBySelectionResponseBodyData setSceneId(Long sceneId) {

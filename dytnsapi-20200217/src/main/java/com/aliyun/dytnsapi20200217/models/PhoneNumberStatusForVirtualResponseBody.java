@@ -4,15 +4,31 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class PhoneNumberStatusForVirtualResponseBody extends TeaModel {
+    /**
+     * <p>The response code. Valid values:</p>
+     * <br>
+     * <p>*   **OK**: The request is successful.</p>
+     * <p>*   **OperatorLimit**: The carrier prohibits the query of the phone number.</p>
+     * <p>*   **RequestFrequencyLimit**: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public PhoneNumberStatusForVirtualResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +70,12 @@ public class PhoneNumberStatusForVirtualResponseBody extends TeaModel {
     }
 
     public static class PhoneNumberStatusForVirtualResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicate whether the phone number is a virtual number assigned by the carrier. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("IsPrivacyNumber")
         public Boolean isPrivacyNumber;
 
