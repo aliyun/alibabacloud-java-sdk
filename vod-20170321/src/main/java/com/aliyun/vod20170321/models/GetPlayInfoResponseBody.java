@@ -481,6 +481,9 @@ public class GetPlayInfoResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("StorageClass")
+        public String storageClass;
+
         /**
          * <p>The title of the audio or video file.</p>
          */
@@ -544,6 +547,14 @@ public class GetPlayInfoResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetPlayInfoResponseBodyVideoBase setStorageClass(String storageClass) {
+            this.storageClass = storageClass;
+            return this;
+        }
+        public String getStorageClass() {
+            return this.storageClass;
         }
 
         public GetPlayInfoResponseBodyVideoBase setTitle(String title) {
