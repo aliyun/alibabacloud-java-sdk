@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridMonitorDataListRequest extends TeaModel {
     /**
-     * <p>The interval at which monitoring data is collected.</p>
+     * <p>The timestamp that specifies the end of the time range to query.</p>
      * <br>
      * <p>Unit: seconds.</p>
      */
@@ -13,21 +13,25 @@ public class DescribeHybridMonitorDataListRequest extends TeaModel {
     public Long end;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The name of the namespace.</p>
      * <br>
-     * <p>>  The status code 200 indicates that the call is successful.</p>
+     * <p>For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>The error message.</p>
+     * <p>The interval at which monitoring data is collected.</p>
+     * <br>
+     * <p>Unit: seconds.</p>
      */
     @NameInMap("Period")
     public String period;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeHybridMonitorDataList**.</p>
+     * <p>The name of the metric.</p>
+     * <br>
+     * <p>>  PromQL statements are supported.</p>
      */
     @NameInMap("PromSQL")
     public String promSQL;
@@ -36,7 +40,9 @@ public class DescribeHybridMonitorDataListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The metric values that are collected at different timestamps.</p>
+     * <p>The timestamp that specifies the beginning of the time range to query.</p>
+     * <br>
+     * <p>Unit: seconds.</p>
      */
     @NameInMap("Start")
     public Long start;

@@ -5,29 +5,31 @@ import com.aliyun.tea.*;
 
 public class SendDryRunSystemEventRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to SendDryRunSystemEvent.</p>
+     * <p>The content of the system event.</p>
+     * <br>
+     * <p>>  The value of this parameter is a JSON object. We recommend that you include the `product`, `resourceId`, and `regionId` fields in the JSON object.</p>
      */
     @NameInMap("EventContent")
     public String eventContent;
 
     /**
-     * <p>The ID of the application group.</p>
+     * <p>The name of the system event.</p>
+     * <br>
+     * <p>>  For more information, see [DescribeSystemEventMetaList](~~114972~~).</p>
      */
     @NameInMap("EventName")
     public String eventName;
 
     /**
-     * <p>The content of the system event.</p>
-     * <br>
-     * <p>>  The value of this parameter is a JSON object. We recommend that you include the `product`, `resourceId`, and `regionId` fields in the JSON object.</p>
+     * <p>The ID of the application group.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The name of the system event.</p>
+     * <p>The name of the cloud service.</p>
      * <br>
-     * <p>>  For more information, see [DescribeSystemEventMetaList](~~114972~~).</p>
+     * <p>>  For information about the system events supported by Cloud Monitor for Alibaba Cloud services, see [System events](~~167388~~).</p>
      */
     @NameInMap("Product")
     public String product;

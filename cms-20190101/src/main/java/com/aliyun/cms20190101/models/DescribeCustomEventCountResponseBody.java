@@ -5,33 +5,33 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomEventCountResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The number of times that the custom event occurred in the specified time period.</p>
+     * <p>The details of the custom event.</p>
      */
     @NameInMap("CustomEventCounts")
     public DescribeCustomEventCountResponseBodyCustomEventCounts customEventCounts;
 
     /**
-     * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
+     * <p>The returned message. If the call was successful, the value success is returned. If the call failed, an error message is returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The details of the custom event.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The time when the custom event occurred.</p>
-     * <br>
-     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -83,19 +83,21 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
 
     public static class DescribeCustomEventCountResponseBodyCustomEventCountsCustomEventCount extends TeaModel {
         /**
-         * <p>Queries the number of times that a custom event occurred in a specified time period.</p>
+         * <p>The name of the custom event.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>>  This operation counts the number of times that a custom event occurred for each service.</p>
+         * <p>The number of times that the custom event occurred in the specified time period.</p>
          */
         @NameInMap("Num")
         public Integer num;
 
         /**
-         * <p>The name of the custom event.</p>
+         * <p>The time when the custom event occurred.</p>
+         * <br>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("Time")
         public Long time;

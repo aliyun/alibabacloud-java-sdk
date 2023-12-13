@@ -123,9 +123,18 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObj extends TeaModel {
+        /**
+         * <p>事件匹配的关键字列表。</p>
+         */
         @NameInMap("Keywords")
         public DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObjKeywords keywords;
 
+        /**
+         * <p>多个关键字的条件。取值：</p>
+         * <br>
+         * <p>- OR： 多个关键字之间或的关系。</p>
+         * <p>- NOT：不包含关键字。表示匹配非关键字列表中的所有事件。</p>
+         */
         @NameInMap("Relation")
         public String relation;
 
@@ -216,6 +225,9 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
         @NameInMap("EventTypeList")
         public DescribeEventRuleAttributeResponseBodyResultEventPatternEventTypeList eventTypeList;
 
+        /**
+         * <p>过滤关键词。</p>
+         */
         @NameInMap("KeywordFilterObj")
         public DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObj keywordFilterObj;
 
@@ -231,6 +243,9 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
         @NameInMap("Product")
         public String product;
 
+        /**
+         * <p>按照SQL过滤日志。如果符合条件，则触发报警。</p>
+         */
         @NameInMap("SQLFilter")
         public String SQLFilter;
 
@@ -308,13 +323,13 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The event pattern. This parameter specifies the trigger conditions of an event.</p>
+         * <p>The event pattern. This parameter describes the trigger conditions of an event.</p>
          */
         @NameInMap("EventPattern")
         public DescribeEventRuleAttributeResponseBodyResultEventPattern eventPattern;
 
         /**
-         * <p>The type of the event. Valid values: Valid values:</p>
+         * <p>The event type. Valid values:</p>
          * <br>
          * <p>*   SYSTEM: system event</p>
          * <p>*   CUSTOM: custom event</p>

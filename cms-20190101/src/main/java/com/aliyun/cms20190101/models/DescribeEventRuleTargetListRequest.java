@@ -8,7 +8,7 @@ public class DescribeEventRuleTargetListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the alert group.</p>
+     * <p>The name of the event-triggered alert rule.</p>
      */
     @NameInMap("RuleName")
     public String ruleName;

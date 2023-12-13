@@ -94,6 +94,9 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
         @NameInMap("GroupId")
         public String groupId;
 
+        @NameInMap("Id")
+        public String id;
+
         /**
          * <p>The name of the instance.</p>
          */
@@ -167,6 +170,14 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
         }
         public String getGroupId() {
             return this.groupId;
+        }
+
+        public DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent setInstanceName(String instanceName) {

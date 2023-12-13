@@ -4,35 +4,49 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricListResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>Queries the monitoring data of a metric for a specified cloud service.</p>
+     * <p>The monitoring data.</p>
      */
     @NameInMap("Datapoints")
     public String datapoints;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The paging token.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The interval at which the monitoring data is queried. Unit: seconds. Valid values: 60, 300, and 900.</p>
+     */
     @NameInMap("Period")
     public String period;
 
     /**
-     * <p>The monitoring data.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;

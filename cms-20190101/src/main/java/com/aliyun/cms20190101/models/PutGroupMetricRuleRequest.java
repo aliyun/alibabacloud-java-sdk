@@ -107,6 +107,9 @@ public class PutGroupMetricRuleRequest extends TeaModel {
     @NameInMap("NoEffectiveInterval")
     public String noEffectiveInterval;
 
+    @NameInMap("Options")
+    public String options;
+
     /**
      * <p>The aggregation period of the metric data.</p>
      * <br>
@@ -264,6 +267,14 @@ public class PutGroupMetricRuleRequest extends TeaModel {
     }
     public String getNoEffectiveInterval() {
         return this.noEffectiveInterval;
+    }
+
+    public PutGroupMetricRuleRequest setOptions(String options) {
+        this.options = options;
+        return this;
+    }
+    public String getOptions() {
+        return this.options;
     }
 
     public PutGroupMetricRuleRequest setPeriod(String period) {

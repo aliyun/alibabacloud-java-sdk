@@ -5,15 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricRuleCountRequest extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>The name of the metric. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
     /**
-     * <p>The name of the metric. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+     * <p>The namespace of the service. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
      */
     @NameInMap("Namespace")
     public String namespace;

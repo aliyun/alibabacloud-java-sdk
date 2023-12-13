@@ -11,7 +11,7 @@ public class DeleteEventRuleTargetsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the target. Valid values of N: 1 to 20.</p>
+     * <p>The name of the event-triggered alert rule.</p>
      */
     @NameInMap("RuleName")
     public String ruleName;

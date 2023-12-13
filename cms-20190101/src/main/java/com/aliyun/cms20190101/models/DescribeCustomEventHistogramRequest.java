@@ -5,33 +5,24 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomEventHistogramRequest extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The end of the time range to query.</p>
      * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The ID of the application group.</p>
+     * <p>The ID of the custom event.</p>
      */
     @NameInMap("EventId")
     public String eventId;
 
     /**
-     * <p>The keywords that are contained in the content of the custom event to query. You can use a logical operator between keywords.</p>
-     * <br>
-     * <p>*   If you need to query the custom event whose content contains a and b, set the value to a and b.</p>
-     * <p>*   If you need to query the custom event whose content contains a or b, set the value to a or b.</p>
+     * <p>The ID of the application group.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
-
-    /**
-     * <p>The ID of the custom event.</p>
-     */
-    @NameInMap("Level")
-    public String level;
 
     /**
      * <p>The level of the custom event. Valid values:</p>
@@ -40,6 +31,12 @@ public class DescribeCustomEventHistogramRequest extends TeaModel {
      * <p>*   WARN</p>
      * <p>*   INFO</p>
      */
+    @NameInMap("Level")
+    public String level;
+
+    /**
+     * <p>The name of the custom event.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -47,15 +44,16 @@ public class DescribeCustomEventHistogramRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>The keywords that are contained in the content of the custom event to query. You can use a logical operator between keywords.</p>
      * <br>
-     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>*   If you need to query the custom event whose content contains a and b, set the value to a and b.</p>
+     * <p>*   If you need to query the custom event whose content contains a or b, set the value to a or b.</p>
      */
     @NameInMap("SearchKeywords")
     public String searchKeywords;
 
     /**
-     * <p>The end of the time range to query.</p>
+     * <p>The beginning of the time range to query.</p>
      * <br>
      * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
      */

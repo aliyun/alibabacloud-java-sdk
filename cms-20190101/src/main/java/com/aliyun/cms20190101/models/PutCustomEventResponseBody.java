@@ -5,14 +5,22 @@ import com.aliyun.tea.*;
 
 public class PutCustomEventResponseBody extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **PutCustomEvent**.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

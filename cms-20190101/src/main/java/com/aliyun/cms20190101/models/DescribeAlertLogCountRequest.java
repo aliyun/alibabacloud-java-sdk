@@ -22,6 +22,9 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
+    @NameInMap("EventType")
+    public String eventType;
+
     /**
      * <p>The dimension based on which data is aggregated. This parameter is similar to the Group By clause of SQL statements. Valid values:</p>
      * <br>
@@ -98,6 +101,9 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RuleId")
+    public String ruleId;
+
     /**
      * <p>The name of the alert rule.</p>
      */
@@ -161,6 +167,14 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeAlertLogCountRequest setEventType(String eventType) {
+        this.eventType = eventType;
+        return this;
+    }
+    public String getEventType() {
+        return this.eventType;
     }
 
     public DescribeAlertLogCountRequest setGroupBy(String groupBy) {
@@ -241,6 +255,14 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeAlertLogCountRequest setRuleId(String ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public String getRuleId() {
+        return this.ruleId;
     }
 
     public DescribeAlertLogCountRequest setRuleName(String ruleName) {

@@ -5,63 +5,54 @@ import com.aliyun.tea.*;
 
 public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
     /**
-     * <p>The tag value.</p>
+     * <p>The HTTP status code.</p>
      * <br>
-     * <p>The `TagValue` and `TagValueMatchFunction` parameters must be used in pairs.</p>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The tag value.</p>
-     * <br>
-     * <p>For more information about how to obtain a tag value, see [DescribeTagKeyList](~~145557~~).</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The status of adding instances that meet the tag rule to the application group. Valid values:</p>
-     * <br>
-     * <p>*   `RUNNING`</p>
-     * <p>*   `FINISH`</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
-     * <p>The ID of the region to which the tags belong.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
-     * <p>The logical operator that is used between conditional expressions. Valid values:</p>
-     * <br>
-     * <p>*   `and`</p>
-     * <p>*   `or`</p>
-     * <br>
-     * <p>>  Only one logical operator can be used in a request.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The tag key.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <br>
-     * <p>For more information about how to obtain a tag key, see [DescribeTagKeyList](~~145558~~).</p>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The ID of the tag rule.</p>
+     * <p>The tag rules of application groups.</p>
      */
     @NameInMap("TagGroupList")
     public DescribeDynamicTagRuleListResponseBodyTagGroupList tagGroupList;
 
     /**
-     * <p>The tag rules of application groups.</p>
+     * <p>The total number of returned entries.</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -155,17 +146,29 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpressMatchExpress extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         * <p>The tag value.</p>
+         * <br>
+         * <p>The `TagValue` and `TagValueMatchFunction` parameters must be used in pairs.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
 
         /**
-         * <p>Queries tag rules.</p>
+         * <p>The method that is used to match tag values. Valid values:</p>
+         * <br>
+         * <p>*   all: includes all</p>
+         * <p>*   startWith: starts with a prefix</p>
+         * <p>*   endWith: ends with a suffix</p>
+         * <p>*   contains: contains</p>
+         * <p>*   notContains: does not contain</p>
+         * <p>*   equals: equals</p>
          */
         @NameInMap("TagValueMatchFunction")
         public String tagValueMatchFunction;
@@ -240,47 +243,59 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroup extends TeaModel {
+        /**
+         * <p>The alert contact group.</p>
+         */
         @NameInMap("ContactGroupList")
         public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupContactGroupList contactGroupList;
 
         /**
-         * <p>The tag key.</p>
+         * <p>The ID of the tag rule.</p>
          */
         @NameInMap("DynamicTagRuleId")
         public String dynamicTagRuleId;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The conditional expressions used to create an application group based on the tag.</p>
          */
         @NameInMap("MatchExpress")
         public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpress matchExpress;
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The logical operator that is used between conditional expressions. Valid values:</p>
          * <br>
-         * <p>Pages start from page 1. Default value: 1.</p>
+         * <p>*   `and`</p>
+         * <p>*   `or`</p>
+         * <br>
+         * <p>>  Only one logical operator can be used in a request.</p>
          */
         @NameInMap("MatchExpressFilterRelation")
         public String matchExpressFilterRelation;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The ID of the region to which the tags belong.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The alert contact group.</p>
+         * <p>The status of adding instances that meet the tag rule to the application group. Valid values:</p>
+         * <br>
+         * <p>*   `RUNNING`</p>
+         * <p>*   `FINISH`</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The IDs of the alert templates.</p>
+         */
         @NameInMap("TemplateIdList")
         public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupTemplateIdList templateIdList;
 

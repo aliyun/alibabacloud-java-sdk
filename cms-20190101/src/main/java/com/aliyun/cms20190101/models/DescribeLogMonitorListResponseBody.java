@@ -5,37 +5,42 @@ import com.aliyun.tea.*;
 
 public class DescribeLogMonitorListResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The logical operator that is used between log filter conditions. The ValueFilter and ValueFilterRelation parameters are used in pair. Valid values:</p>
-     * <br>
-     * <p>*   and</p>
-     * <p>*   or</p>
+     * <p>The log monitoring metrics.</p>
      */
     @NameInMap("LogMonitorList")
     public java.util.List<DescribeLogMonitorListResponseBodyLogMonitorList> logMonitorList;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The total number of the returned entries.</p>
+     * <p>The number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The number of entries returned on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
@@ -43,19 +48,11 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
      * <p>*   true: The call was successful.</p>
      * <p>*   false: The call failed.</p>
      */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The log monitoring metrics.</p>
+     * <p>The total number of the returned entries.</p>
      */
     @NameInMap("Total")
     public Long total;
@@ -131,13 +128,10 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
 
     public static class DescribeLogMonitorListResponseBodyLogMonitorListValueFilter extends TeaModel {
         /**
-         * <p>The field value to be matched in the filter condition.</p>
+         * <p>The name of the log field used for matching in the filter condition.</p>
          */
         @NameInMap("Key")
         public String key;
-
-        @NameInMap("Operator")
-        public String operator;
 
         /**
          * <p>The method that is used to match the field value. Valid values:</p>
@@ -148,6 +142,12 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
          * <p>*   `<`: less than</p>
          * <p>*   `>=`: greater than or equal to</p>
          * <p>*   `<=`: less than or equal to</p>
+         */
+        @NameInMap("Operator")
+        public String operator;
+
+        /**
+         * <p>The field value to be matched in the filter condition.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -185,59 +185,62 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
 
     public static class DescribeLogMonitorListResponseBodyLogMonitorList extends TeaModel {
         /**
-         * <p>The name of the Log Service project.</p>
+         * <p>The time when the log monitoring metric was created.</p>
+         * <br>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
-         * <p>The ID returned by Log Service.</p>
+         * <p>The ID of the application group.</p>
          */
         @NameInMap("GroupId")
         public Long groupId;
 
         /**
-         * <p>The ID of the region where the Log Service Logstore resides.</p>
+         * <p>The ID returned by Log Service.</p>
          */
         @NameInMap("LogId")
         public Long logId;
 
         /**
-         * <p>The ID of the application group.</p>
+         * <p>The name of the log monitoring metric. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
         /**
-         * <p>The name of the log monitoring metric. For more information, see [Appendix 1: Metrics](~~163515~~).</p>
+         * <p>The name of the Log Service Logstore.</p>
          */
         @NameInMap("SlsLogstore")
         public String slsLogstore;
+
+        /**
+         * <p>The name of the Log Service project.</p>
+         */
+        @NameInMap("SlsProject")
+        public String slsProject;
+
+        /**
+         * <p>The ID of the region where the Log Service Logstore resides.</p>
+         */
+        @NameInMap("SlsRegionId")
+        public String slsRegionId;
 
         /**
          * <p>The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements.</p>
          * <br>
          * <p>If no filter condition is specified, all logs are processed. Assume that logs contain the Level field, which may be set to Error. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.</p>
          */
-        @NameInMap("SlsProject")
-        public String slsProject;
-
-        /**
-         * <p>The time when the log monitoring metric was created.</p>
-         * <br>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-         */
-        @NameInMap("SlsRegionId")
-        public String slsRegionId;
-
-        /**
-         * <p>The name of the log field used for matching in the filter condition.</p>
-         */
         @NameInMap("ValueFilter")
         public java.util.List<DescribeLogMonitorListResponseBodyLogMonitorListValueFilter> valueFilter;
 
         /**
-         * <p>The name of the Log Service Logstore.</p>
+         * <p>The logical operator that is used between log filter conditions. The ValueFilter and ValueFilterRelation parameters are used in pair. Valid values:</p>
+         * <br>
+         * <p>*   and</p>
+         * <p>*   or</p>
          */
         @NameInMap("ValueFilterRelation")
         public String valueFilterRelation;

@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeContactListByContactGroupRequest extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>The name of the alert group.</p>
      */
     @NameInMap("ContactGroupName")
     public String contactGroupName;

@@ -5,10 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeSystemEventCountResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>The HTTP status code.</p>
      * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -17,19 +16,22 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The details of the system event.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The status of the system event.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
      */
     @NameInMap("Success")
     public String success;
 
     /**
-     * <p>The timestamp when the system event occurred. Unit: milliseconds.</p>
+     * <p>The details of the system event.</p>
      */
     @NameInMap("SystemEventCounts")
     public DescribeSystemEventCountResponseBodySystemEventCounts systemEventCounts;
@@ -81,28 +83,22 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
 
     public static class DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount extends TeaModel {
         /**
-         * <p>The ID of the region.</p>
+         * <p>The description of the system event.</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The ID of the application group.</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The name of the instance.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
-
-        /**
-         * <p>This topic provides an example on how to query the number of times that a system event occurred for Elastic Compute Service (`ECS`). The returned result indicates that the number of times that the specified system event occurred is 3.</p>
-         */
-        @NameInMap("Level")
-        public String level;
 
         /**
          * <p>The level of the system event. Valid values:</p>
@@ -111,41 +107,47 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
          * <p>*   Warn</p>
          * <p>*   Info</p>
          */
+        @NameInMap("Level")
+        public String level;
+
+        /**
+         * <p>The name of the system event.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The name of the system event.</p>
+         * <p>The number of times that the system event occurred.</p>
          */
         @NameInMap("Num")
         public Long num;
 
         /**
-         * <p>The number of times that the system event occurred.</p>
+         * <p>The name of the cloud service in which the system event occurred.</p>
          */
         @NameInMap("Product")
         public String product;
 
         /**
-         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         * <p>The ID of the region.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The description of the system event.</p>
+         * <p>The ID of the resource.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The ID of the application group.</p>
+         * <p>The status of the system event.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The name of the cloud service in which the system event occurred.</p>
+         * <p>The timestamp when the system event occurred. Unit: milliseconds.</p>
          */
         @NameInMap("Time")
         public Long time;

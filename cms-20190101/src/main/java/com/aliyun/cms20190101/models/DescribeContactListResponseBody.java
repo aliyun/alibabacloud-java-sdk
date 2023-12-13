@@ -5,41 +5,36 @@ import com.aliyun.tea.*;
 
 public class DescribeContactListResponseBody extends TeaModel {
     /**
-     * <p>The description of the alert contact.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The status of the phone number. Valid values:</p>
-     * <br>
-     * <p>*   PENDING: The phone number is not activated. Alert notifications can be sent to the phone number by using text messages only after the phone number is activated.</p>
-     * <p>*   OK: The phone number is activated and can receive alert notifications.</p>
-     * <br>
-     * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
+     * <p>The alert contacts.</p>
      */
     @NameInMap("Contacts")
     public DescribeContactListResponseBodyContacts contacts;
 
     /**
-     * <p>The language in which the alert information is displayed. Valid values:</p>
-     * <br>
-     * <p>*   zh-cn: simplified Chinese</p>
-     * <p>*   en: English</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>Default value: 100.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The TradeManager ID of the alert contact.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -105,30 +100,25 @@ public class DescribeContactListResponseBody extends TeaModel {
 
     public static class DescribeContactListResponseBodyContactsContactChannels extends TeaModel {
         /**
-         * <p>The alert notification method. Valid values:</p>
-         * <br>
-         * <p>*   Mail: emails</p>
-         * <p>*   DingWebHook: DingTalk chatbots</p>
+         * <p>The TradeManager ID of the alert contact.</p>
          */
         @NameInMap("AliIM")
         public String aliIM;
 
         /**
-         * <p>The timestamp when the alert contact was updated.</p>
-         * <br>
-         * <p>Unit: milliseconds.</p>
+         * <p>The webhook URL of the DingTalk chatbot.</p>
          */
         @NameInMap("DingWebHook")
         public String dingWebHook;
 
         /**
-         * <p>The alert contact groups.</p>
+         * <p>The email address of the alert contact.</p>
          */
         @NameInMap("Mail")
         public String mail;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The phone number of the alert contact.</p>
          */
         @NameInMap("SMS")
         public String SMS;
@@ -174,22 +164,40 @@ public class DescribeContactListResponseBody extends TeaModel {
 
     public static class DescribeContactListResponseBodyContactsContactChannelsState extends TeaModel {
         /**
-         * <p>Queries alert contacts.</p>
+         * <p>The status of the TradeManager ID.</p>
+         * <br>
+         * <p>Valid value: OK. The value OK indicates that the TradeManager ID is valid and can receive alert notifications.</p>
+         * <br>
+         * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
          */
         @NameInMap("AliIM")
         public String aliIM;
-
-        @NameInMap("DingWebHook")
-        public String dingWebHook;
 
         /**
          * <p>The status of the DingTalk chatbot.</p>
          * <br>
          * <p>Valid value: OK. The value OK indicates that the DingTalk chatbot is normal and alert notifications can be received in a DingTalk group.</p>
          */
+        @NameInMap("DingWebHook")
+        public String dingWebHook;
+
+        /**
+         * <p>The status of the email address. Valid values:</p>
+         * <br>
+         * <p>*   PENDING: The email address is not activated. Alert notifications can be sent to the email address only after the email address is activated.</p>
+         * <p>*   OK: The email address is activated and can receive alert notifications.</p>
+         */
         @NameInMap("Mail")
         public String mail;
 
+        /**
+         * <p>The status of the phone number. Valid values:</p>
+         * <br>
+         * <p>*   PENDING: The phone number is not activated. Alert notifications can be sent to the phone number by using text messages only after the phone number is activated.</p>
+         * <p>*   OK: The phone number is activated and can receive alert notifications.</p>
+         * <br>
+         * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
+         */
         @NameInMap("SMS")
         public String SMS;
 
@@ -253,10 +261,7 @@ public class DescribeContactListResponseBody extends TeaModel {
 
     public static class DescribeContactListResponseBodyContactsContact extends TeaModel {
         /**
-         * <p>The status of the email address. Valid values:</p>
-         * <br>
-         * <p>*   PENDING: The email address is not activated. Alert notifications can be sent to the email address only after the email address is activated.</p>
-         * <p>*   OK: The email address is activated and can receive alert notifications.</p>
+         * <p>The alert notification method.</p>
          */
         @NameInMap("Channels")
         public DescribeContactListResponseBodyContactsContactChannels channels;
@@ -270,41 +275,44 @@ public class DescribeContactListResponseBody extends TeaModel {
         public DescribeContactListResponseBodyContactsContactChannelsState channelsState;
 
         /**
-         * <p>The alert notification method.</p>
+         * <p>The alert contact groups.</p>
          */
         @NameInMap("ContactGroups")
         public DescribeContactListResponseBodyContactsContactContactGroups contactGroups;
-
-        /**
-         * <p>The name of the alert contact.</p>
-         */
-        @NameInMap("CreateTime")
-        public Long createTime;
-
-        /**
-         * <p>The alert contacts.</p>
-         */
-        @NameInMap("Desc")
-        public String desc;
 
         /**
          * <p>The timestamp when the alert contact was created.</p>
          * <br>
          * <p>Unit: milliseconds.</p>
          */
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        /**
+         * <p>The description of the alert contact.</p>
+         */
+        @NameInMap("Desc")
+        public String desc;
+
+        /**
+         * <p>The language in which the alert information is displayed. Valid values:</p>
+         * <br>
+         * <p>*   zh-cn: simplified Chinese</p>
+         * <p>*   en: English</p>
+         */
         @NameInMap("Lang")
         public String lang;
 
         /**
-         * <p>The number of the page to return.</p>
-         * <br>
-         * <p>Default value: 1.</p>
+         * <p>The name of the alert contact.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The email address of the alert contact.</p>
+         * <p>The timestamp when the alert contact was updated.</p>
+         * <br>
+         * <p>Unit: milliseconds.</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

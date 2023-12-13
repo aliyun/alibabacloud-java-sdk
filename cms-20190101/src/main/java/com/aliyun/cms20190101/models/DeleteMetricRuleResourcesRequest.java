@@ -5,15 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteMetricRuleResourcesRequest extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>The resources to be disassociated from the alert rule.</p>
      */
     @NameInMap("Resources")
     public String resources;
 
     /**
-     * <p>The resources to be disassociated from the alert rule.</p>
+     * <p>The ID of the alert rule.</p>
      */
     @NameInMap("RuleId")
     public String ruleId;

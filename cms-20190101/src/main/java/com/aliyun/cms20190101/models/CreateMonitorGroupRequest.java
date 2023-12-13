@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateMonitorGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The alert groups that receive alert notifications for the application group. The alarm notifications for the application group are sent to the alert contacts in the alarm groups.</p>
+     * <br>
+     * <p>>  An alert group is a group of one or more alert contacts. For more information about how to create alert contacts and alert groups, see [PutContact](~~114923~~) and [PutContactGroup](~~114929~~).</p>
      */
     @NameInMap("ContactGroups")
     public String contactGroups;
 
     /**
-     * <p>The error message.</p>
+     * <p>The name of the application group.</p>
      */
     @NameInMap("GroupName")
     public String groupName;

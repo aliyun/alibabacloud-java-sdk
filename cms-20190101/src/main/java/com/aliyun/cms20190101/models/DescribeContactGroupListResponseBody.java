@@ -5,46 +5,48 @@ import com.aliyun.tea.*;
 
 public class DescribeContactGroupListResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The description of the alert group.</p>
+     * <p>The information about alert groups that were queried.</p>
      */
     @NameInMap("ContactGroupList")
     public DescribeContactGroupListResponseBodyContactGroupList contactGroupList;
 
     /**
-     * <p>The information about alert groups that were queried.</p>
+     * <p>The names of alert groups.</p>
      */
     @NameInMap("ContactGroups")
     public DescribeContactGroupListResponseBodyContactGroups contactGroups;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The total number of the returned entries.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
-
-    /**
-     * <p>The names of alert groups.</p>
-     */
-    @NameInMap("Success")
-    public Boolean success;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
      * <br>
      * <p>*   true: The call was successful.</p>
      * <p>*   false: The call failed.</p>
+     */
+    @NameInMap("Success")
+    public Boolean success;
+
+    /**
+     * <p>The total number of the returned entries.</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -131,10 +133,31 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
 
     public static class DescribeContactGroupListResponseBodyContactGroupListContactGroup extends TeaModel {
         /**
-         * <p>Queries alert groups.</p>
+         * <p>The alert contacts in the alert group.</p>
          */
         @NameInMap("Contacts")
         public DescribeContactGroupListResponseBodyContactGroupListContactGroupContacts contacts;
+
+        /**
+         * <p>The time when the alert group was created. This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        /**
+         * <p>The description of the alert group.</p>
+         */
+        @NameInMap("Describe")
+        public String describe;
+
+        /**
+         * <p>Indicates whether the alert group subscribes to weekly reports. Valid values:</p>
+         * <br>
+         * <p>*   true: The alert group subscribes to weekly reports.</p>
+         * <p>*   false: The alert group does not subscribe to weekly reports.</p>
+         */
+        @NameInMap("EnableSubscribed")
+        public Boolean enableSubscribed;
 
         /**
          * <p>Indicates whether the alert group can subscribe to weekly reports. Valid values:</p>
@@ -144,38 +167,17 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
          * <br>
          * <p>>  The weekly report subscription feature is only available for Alibaba Cloud accounts with more than five Elastic Compute Service (ECS) instances.</p>
          */
-        @NameInMap("CreateTime")
-        public Long createTime;
-
-        /**
-         * <p>The time when the alert group was modified. This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         */
-        @NameInMap("Describe")
-        public String describe;
-
-        /**
-         * <p>The alert contacts in the alert group.</p>
-         */
-        @NameInMap("EnableSubscribed")
-        public Boolean enableSubscribed;
-
-        /**
-         * <p>The name of the alert group.</p>
-         */
         @NameInMap("EnabledWeeklyReport")
         public Boolean enabledWeeklyReport;
 
         /**
-         * <p>Indicates whether the alert group subscribes to weekly reports. Valid values:</p>
-         * <br>
-         * <p>*   true: The alert group subscribes to weekly reports.</p>
-         * <p>*   false: The alert group does not subscribe to weekly reports.</p>
+         * <p>The name of the alert group.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The time when the alert group was created. This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the alert group was modified. This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

@@ -5,39 +5,40 @@ import com.aliyun.tea.*;
 
 public class DescribeContactListRequest extends TeaModel {
     /**
-     * <p>The status of the TradeManager ID.</p>
+     * <p>The alert notification method. Valid values:</p>
      * <br>
-     * <p>Valid value: OK. The value OK indicates that the TradeManager ID is valid and can receive alert notifications.</p>
-     * <br>
-     * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
+     * <p>*   Mail: emails</p>
+     * <p>*   DingWebHook: DingTalk chatbots</p>
      */
     @NameInMap("ChanelType")
     public String chanelType;
-
-    /**
-     * <p>The error message.</p>
-     */
-    @NameInMap("ChanelValue")
-    public String chanelValue;
 
     /**
      * <p>The value specified for the alert notification method.</p>
      * <br>
      * <p>>  This parameter is required only if you set the `ChanelType` parameter to `Mail`.</p>
      */
+    @NameInMap("ChanelValue")
+    public String chanelValue;
+
+    /**
+     * <p>The name of the alert contact.</p>
+     */
     @NameInMap("ContactName")
     public String contactName;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeContactList**.</p>
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The number of entries to return on each page.</p>
      * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>Default value: 100.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

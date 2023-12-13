@@ -5,31 +5,36 @@ import com.aliyun.tea.*;
 
 public class CreateMonitoringAgentProcessResponseBody extends TeaModel {
     /**
-     * <p>The error message.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the process.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
      * <br>
      * <p>*   true: The call was successful.</p>
      * <p>*   false: The call failed.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
-
-    /**
-     * <p>The ID of the process.</p>
      */
     @NameInMap("Success")
     public Boolean success;

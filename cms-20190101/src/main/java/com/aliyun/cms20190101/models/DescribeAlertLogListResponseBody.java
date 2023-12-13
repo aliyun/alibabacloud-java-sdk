@@ -5,45 +5,48 @@ import com.aliyun.tea.*;
 
 public class DescribeAlertLogListResponseBody extends TeaModel {
     /**
-     * <p>The status code of the alert callback.</p>
+     * <p>The queried alert logs.</p>
      */
     @NameInMap("AlertLogList")
     public java.util.List<DescribeAlertLogListResponseBodyAlertLogList> alertLogList;
 
     /**
-     * <p>The extended fields.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>> The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The end timestamp of the alert logs to be queried. Unit: milliseconds.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The DingTalk chatbots of alert contacts.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The name of the metric.</p>
-     * <br>
-     * <p>>  For more information about the metrics of different cloud services, see [Appendix 1: Metrics](~~163515~~).</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The name of the alert rule.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The timestamp that was generated when the alert was triggered. Unit: milliseconds.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -111,13 +114,13 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
 
     public static class DescribeAlertLogListResponseBodyAlertLogListDimensions extends TeaModel {
         /**
-         * <p>The list of sending results that are categorized by notification method.</p>
+         * <p>The key of the dimension.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The ID of the blacklist policy.</p>
+         * <p>The value of the dimension.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -146,12 +149,26 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
     }
 
     public static class DescribeAlertLogListResponseBodyAlertLogListEscalation extends TeaModel {
+        /**
+         * <p>The description of the alert rule.</p>
+         * <br>
+         * <p>> The content of the alert rule. If the metric value meets the alert condition, an alert is triggered.</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
+        /**
+         * <p>The severity level and notification methods of the alert. Valid values:</p>
+         * <br>
+         * <p>*   P4: Alert notifications are sent by using emails and DingTalk chatbots.</p>
+         * <p>*   OK: No alert is generated.</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <p>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.</p>
+         */
         @NameInMap("Times")
         public Integer times;
 
@@ -188,21 +205,13 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
 
     public static class DescribeAlertLogListResponseBodyAlertLogListExtendedInfo extends TeaModel {
         /**
-         * <p>The name of the event.</p>
+         * <p>The name of the extended field.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The method that is used to send alert notifications. Valid values:</p>
-         * <br>
-         * <p>*   MAIL: email</p>
-         * <p>*   SMS: text message</p>
-         * <p>*   WEBHOOK: alert callback</p>
-         * <p>*   SLS: Log Service</p>
-         * <p>*   ONCALL: phone call</p>
-         * <p>*   FC: Function Compute</p>
-         * <p>*   MNS: Message Service queue</p>
+         * <p>The value of the extended field.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -232,39 +241,37 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
 
     public static class DescribeAlertLogListResponseBodyAlertLogListSendDetailChannelResultListResultList extends TeaModel {
         /**
-         * <p>The severity level and notification methods of the alert. Valid values:</p>
+         * <p>The HTTP status code.</p>
          * <br>
-         * <p>*   P4: Alert notifications are sent by using emails and DingTalk chatbots.</p>
-         * <br>
-         * <p><!----></p>
-         * <br>
-         * <p>*   OK: No alert is generated.</p>
+         * <p>*   If the value of the `Channel` parameter is `WEBHOOK`, the status code is 200 or 500.</p>
+         * <p>*   If the value of the `Channel` parameter is `MAIL`, `SMS`, `SLS`, `ONCALL`, `FC`, or `MNS`, this parameter is empty or not returned.</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The name of the application group.</p>
+         * <p>The details of the returned results.</p>
          */
         @NameInMap("Detail")
         public String detail;
 
         /**
-         * <p>The ID of the alert rule.</p>
-         * <br>
-         * <p>For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
+         * <p>The request ID returned when CloudMonitor calls another cloud service.</p>
          */
         @NameInMap("RequestId")
         public String requestId;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("Success")
         public Boolean success;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The queried resources.</p>
          */
         @NameInMap("notifyTargetList")
         public java.util.List<String> notifyTargetList;
@@ -318,13 +325,21 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
 
     public static class DescribeAlertLogListResponseBodyAlertLogListSendDetailChannelResultList extends TeaModel {
         /**
-         * <p>The queried resources.</p>
+         * <p>The method that is used to send alert notifications. Valid values:</p>
+         * <br>
+         * <p>*   MAIL: email</p>
+         * <p>*   SMS: text message</p>
+         * <p>*   WEBHOOK: alert callback</p>
+         * <p>*   SLS: Simple Log Service</p>
+         * <p>*   ONCALL: phone call</p>
+         * <p>*   FC: Function Compute</p>
+         * <p>*   MNS: Message Service queue</p>
          */
         @NameInMap("Channel")
         public String channel;
 
         /**
-         * <p>The details about the sending results of alert notifications.</p>
+         * <p>The sending results of alert notifications.</p>
          */
         @NameInMap("ResultList")
         public java.util.List<DescribeAlertLogListResponseBodyAlertLogListSendDetailChannelResultListResultList> resultList;
@@ -354,13 +369,16 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
 
     public static class DescribeAlertLogListResponseBodyAlertLogListSendDetail extends TeaModel {
         /**
-         * <p>The namespace of the cloud service.</p>
+         * <p>The list of sending results that are categorized by notification method.</p>
          */
         @NameInMap("ChannelResultList")
         public java.util.List<DescribeAlertLogListResponseBodyAlertLogListSendDetailChannelResultList> channelResultList;
 
         /**
-         * <p>The alert logs.</p>
+         * <p>Indicates whether the alert notifications are sent.</p>
+         * <br>
+         * <p>*   If the alert notifications are sent, the value "success" is returned.</p>
+         * <p>*   If the configuration is invalid, no alert notification is sent and an error code is returned.</p>
          */
         @NameInMap("ResultCode")
         public String resultCode;
@@ -390,11 +408,21 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
 
     public static class DescribeAlertLogListResponseBodyAlertLogListSendResultList extends TeaModel {
         /**
-         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         * <p>The category of the alert notification method. Valid values:</p>
+         * <br>
+         * <p>*   Mail: email</p>
+         * <p>*   ALIIM: TradeManager</p>
+         * <p>*   SMS: text message</p>
+         * <p>*   CALL: phone call</p>
+         * <p>*   DING: DingTalk chatbot</p>
+         * <p>*   Merged: alert merging</p>
          */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The alert notification methods.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 
@@ -423,19 +451,19 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
 
     public static class DescribeAlertLogListResponseBodyAlertLogListWebhookList extends TeaModel {
         /**
-         * <p>The search keyword that is used to query alert logs.</p>
+         * <p>The status code of the alert callback.</p>
          */
         @NameInMap("code")
         public String code;
 
         /**
-         * <p>The error message.</p>
+         * <p>The message returned for the alert callback.</p>
          */
         @NameInMap("message")
         public String message;
 
         /**
-         * <p>The request ID returned when CloudMonitor calls another cloud service.</p>
+         * <p>The callback URL.</p>
          */
         @NameInMap("url")
         public String url;
@@ -473,218 +501,216 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
 
     public static class DescribeAlertLogListResponseBodyAlertLogList extends TeaModel {
         /**
-         * <p>The details of the blacklist policy.</p>
+         * <p>The timestamp that was generated when the alert was triggered. Unit: milliseconds.</p>
          */
         @NameInMap("AlertTime")
         public String alertTime;
 
         /**
-         * <p>The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL. Valid values:</p>
-         * <br>
-         * <p>*   `product`: aggregates data by cloud service.</p>
-         * <p>*   `level`: aggregates data by alert level.</p>
-         * <p>*   `groupId`: aggregates data by application group.</p>
-         * <p>*   `contactGroup`: aggregates data by alert contact group.</p>
-         * <p>*   `product,metricName`: aggregates data both by cloud service and by metric.</p>
+         * <p>The details of the blacklist policy.</p>
          */
         @NameInMap("BlackListDetail")
         public String blackListDetail;
 
         /**
-         * <p>The number of entries to return on each page. Default value: 10.</p>
+         * <p>The name of the blacklist policy.</p>
          */
         @NameInMap("BlackListName")
         public String blackListName;
 
         /**
-         * <p>The category of the alert notification method. Valid values:</p>
-         * <br>
-         * <p>*   Mail: email</p>
-         * <p>*   ALIIM: TradeManager</p>
-         * <p>*   SMS: text message</p>
-         * <p>*   CALL: phone call</p>
-         * <p>*   DING: DingTalk chatbot</p>
-         * <p>*   Merged: alert merging</p>
+         * <p>The ID of the blacklist policy.</p>
          */
         @NameInMap("BlackListUUID")
         public String blackListUUID;
 
         /**
-         * <p>The name of the extended field.</p>
+         * <p>The TradeManager IDs of the alert contacts.</p>
+         * <br>
+         * <p>> This parameter is valid only on the China site (aliyun.com).</p>
          */
         @NameInMap("ContactALIIWWList")
         public java.util.List<String> contactALIIWWList;
 
         /**
-         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * <p>The DingTalk chatbots of the alert contacts.</p>
          */
         @NameInMap("ContactDingList")
         public java.util.List<String> contactDingList;
 
         /**
-         * <p>The alert notification method.</p>
+         * <p>The alert contact groups.</p>
          */
         @NameInMap("ContactGroups")
         public java.util.List<String> contactGroups;
 
         /**
-         * <p>The callback URL.</p>
+         * <p>The email addresses of the alert contacts.</p>
          */
         @NameInMap("ContactMailList")
         public java.util.List<String> contactMailList;
 
         /**
-         * <p>The name of the resource.</p>
+         * <p>The phone numbers of the alert contacts that receive alert phone calls.</p>
+         * <br>
+         * <p>> This parameter is valid only on the China site (aliyun.com).</p>
          */
         @NameInMap("ContactOnCallList")
         public java.util.List<String> contactOnCallList;
 
         /**
-         * <p>The statistical period of alert logs. Unit: minutes.</p>
+         * <p>The phone numbers of the alert contacts that receive alert text messages.</p>
+         * <br>
+         * <p>> This parameter is valid only on the China site (aliyun.com).</p>
          */
         @NameInMap("ContactSMSList")
         public java.util.List<String> contactSMSList;
+
+        /**
+         * <p>The dimensions of the resource that triggered alerts.</p>
+         */
+        @NameInMap("Dimensions")
+        public java.util.List<DescribeAlertLogListResponseBodyAlertLogListDimensions> dimensions;
+
+        /**
+         * <p>The webhook URLs of the alert contacts.</p>
+         */
+        @NameInMap("DingdingWebhookList")
+        public java.util.List<String> dingdingWebhookList;
+
+        /**
+         * <p>The alert rule based on which the alert is triggered.</p>
+         */
+        @NameInMap("Escalation")
+        public DescribeAlertLogListResponseBodyAlertLogListEscalation escalation;
+
+        /**
+         * <p>The event name.</p>
+         */
+        @NameInMap("EventName")
+        public String eventName;
+
+        /**
+         * <p>The extended fields.</p>
+         */
+        @NameInMap("ExtendedInfo")
+        public java.util.List<DescribeAlertLogListResponseBodyAlertLogListExtendedInfo> extendedInfo;
+
+        /**
+         * <p>The ID of the application group.</p>
+         */
+        @NameInMap("GroupId")
+        public String groupId;
+
+        /**
+         * <p>The name of the application group.</p>
+         */
+        @NameInMap("GroupName")
+        public String groupName;
+
+        /**
+         * <p>The resource ID.</p>
+         */
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        /**
+         * <p>The resource name.</p>
+         */
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        /**
+         * <p>The severity level and notification methods of the alert. Valid values:</p>
+         * <br>
+         * <p>*   P4: Alert notifications are sent by using emails and DingTalk chatbots.</p>
+         * <p>*   OK: No alert is generated.</p>
+         */
+        @NameInMap("Level")
+        public String level;
+
+        /**
+         * <p>Indicates whether the alert level was changed. Valid values:</p>
+         * <br>
+         * <p>*   `P4->OK`: The alert level was changed from P4 to OK.</p>
+         * <p>*   `P4->P4`: The alert level was still P4.</p>
+         */
+        @NameInMap("LevelChange")
+        public String levelChange;
+
+        /**
+         * <p>The log ID.</p>
+         */
+        @NameInMap("LogId")
+        public String logId;
+
+        /**
+         * <p>The alert information in a JSON string.</p>
+         */
+        @NameInMap("Message")
+        public String message;
+
+        /**
+         * <p>The metric name.</p>
+         */
+        @NameInMap("MetricName")
+        public String metricName;
+
+        /**
+         * <p>The namespace of the cloud service.</p>
+         */
+        @NameInMap("Namespace")
+        public String namespace;
+
+        /**
+         * <p>The identifier of the cloud service. Valid values:</p>
+         * <br>
+         * <p>*   If the cloud service is provided by Alibaba Cloud, the abbreviation of the service name is returned. Example: ECS.</p>
+         * <p>*   If the cloud service is not provided by Alibaba Cloud, a value in the `acs_Service keyword` format is returned. Example: acs_networkmonitor.</p>
+         */
+        @NameInMap("Product")
+        public String product;
+
+        /**
+         * <p>The ID of the alert rule.</p>
+         */
+        @NameInMap("RuleId")
+        public String ruleId;
+
+        /**
+         * <p>The name of the alert rule.</p>
+         */
+        @NameInMap("RuleName")
+        public String ruleName;
+
+        /**
+         * <p>The details of the alert notification method.</p>
+         */
+        @NameInMap("SendDetail")
+        public DescribeAlertLogListResponseBodyAlertLogListSendDetail sendDetail;
+
+        /**
+         * <p>The sending results of alert notifications.</p>
+         */
+        @NameInMap("SendResultList")
+        public java.util.List<DescribeAlertLogListResponseBodyAlertLogListSendResultList> sendResultList;
 
         /**
          * <p>The status of the alert. Valid values:</p>
          * <br>
          * <p>*   0: The alert is triggered or cleared.</p>
          * <p>*   1: The alert is ineffective.</p>
-         * <p>*   2: The alert is muted and not triggered in a specified period.</p>
+         * <p>*   2: The alert is muted.</p>
          * <p>*   3: The host is restarting.</p>
          * <p>*   4: No alert notification is sent.</p>
          * <br>
          * <p>If the value of the SendStatus parameter is 0, the value P4 of the Level parameter indicates a triggered alert and the value OK indicates a cleared alert.</p>
          */
-        @NameInMap("Dimensions")
-        public java.util.List<DescribeAlertLogListResponseBodyAlertLogListDimensions> dimensions;
-
-        /**
-         * <p>The ID of the application group.</p>
-         */
-        @NameInMap("DingdingWebhookList")
-        public java.util.List<String> dingdingWebhookList;
-
-        @NameInMap("Escalation")
-        public DescribeAlertLogListResponseBodyAlertLogListEscalation escalation;
-
-        /**
-         * <p>The number of the page to return. Default value: 1.</p>
-         */
-        @NameInMap("EventName")
-        public String eventName;
-
-        /**
-         * <p>The sending results of alert notifications.</p>
-         */
-        @NameInMap("ExtendedInfo")
-        public java.util.List<DescribeAlertLogListResponseBodyAlertLogListExtendedInfo> extendedInfo;
-
-        /**
-         * <p>The number of entries returned per page.</p>
-         */
-        @NameInMap("GroupId")
-        public String groupId;
-
-        /**
-         * <p>The ID of the alert rule.</p>
-         */
-        @NameInMap("GroupName")
-        public String groupName;
-
-        /**
-         * <p>The alert contact group.</p>
-         */
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        /**
-         * <p>The list of callback URLs.</p>
-         */
-        @NameInMap("InstanceName")
-        public String instanceName;
-
-        /**
-         * <p>The HTTP status code.</p>
-         * <br>
-         * <p>*   If the value of the `Channel` parameter is `WEBHOOK`, the status code is 200 or 500.</p>
-         * <p>*   If the value of the `Channel` parameter is `MAIL`, `SMS`, `SLS`, `ONCALL`, `FC`, or `MNS`, this parameter is empty or not returned.</p>
-         */
-        @NameInMap("Level")
-        public String level;
-
-        /**
-         * <p>The key of the dimension.</p>
-         */
-        @NameInMap("LevelChange")
-        public String levelChange;
-
-        @NameInMap("LogId")
-        public String logId;
-
-        /**
-         * <p>The name of the alert rule.</p>
-         */
-        @NameInMap("Message")
-        public String message;
-
-        /**
-         * <p>The name of the metric.</p>
-         */
-        @NameInMap("MetricName")
-        public String metricName;
-
-        /**
-         * <p>The dimensions of the resource that triggered alerts.</p>
-         */
-        @NameInMap("Namespace")
-        public String namespace;
-
-        /**
-         * <p>Indicates whether the alert notifications are sent.</p>
-         * <br>
-         * <p>*   If the alert notifications are sent, the value "success" is returned.</p>
-         * <p>*   If the configuration is invalid, no alert notification is sent and an error code is returned.</p>
-         */
-        @NameInMap("Product")
-        public String product;
-
-        /**
-         * <p>The phone numbers of alert contacts that can receive alert phone calls.</p>
-         * <br>
-         * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
-         */
-        @NameInMap("RuleId")
-        public String ruleId;
-
-        /**
-         * <p>The ID of the resource.</p>
-         */
-        @NameInMap("RuleName")
-        public String ruleName;
-
-        /**
-         * <p>The namespace of the cloud service.</p>
-         * <br>
-         * <p>>  For more information about the namespaces of different cloud services, see [Appendix 1: Metrics](~~163515~~).</p>
-         */
-        @NameInMap("SendDetail")
-        public DescribeAlertLogListResponseBodyAlertLogListSendDetail sendDetail;
-
-        /**
-         * <p>The details of the returned results.</p>
-         */
-        @NameInMap("SendResultList")
-        public java.util.List<DescribeAlertLogListResponseBodyAlertLogListSendResultList> sendResultList;
-
-        /**
-         * <p>The value of the dimension.</p>
-         */
         @NameInMap("SendStatus")
         public String sendStatus;
 
         /**
-         * <p>The value of the extended field.</p>
+         * <p>The callback URLs.</p>
          */
         @NameInMap("WebhookList")
         public java.util.List<DescribeAlertLogListResponseBodyAlertLogListWebhookList> webhookList;

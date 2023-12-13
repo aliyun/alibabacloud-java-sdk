@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeLogMonitorAttributeRequest extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The name of the log monitoring metric. Exact match is supported.</p>
      * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>For more information, see [Appendix 1: Metrics](~~163515~~).</p>
      */
     @NameInMap("MetricName")
     public String metricName;

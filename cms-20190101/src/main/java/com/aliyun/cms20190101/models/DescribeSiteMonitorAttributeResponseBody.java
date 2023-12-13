@@ -5,37 +5,42 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>The response code.</p>
      * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <p>>  The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The consecutive number of times for which the metric value is measured before an alert is triggered.</p>
+     * <p>The information of the alert rules that are configured for the site monitoring task.</p>
      */
     @NameInMap("MetricRules")
     public DescribeSiteMonitorAttributeResponseBodyMetricRules metricRules;
 
     /**
-     * <p>The details of the site monitoring task.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The interval at which the site monitoring task is executed. Unit: minutes. Valid values: 1, 5, 15, 30, and 60.</p>
+     * <p>The details of the site monitoring task.</p>
      */
     @NameInMap("SiteMonitors")
     public DescribeSiteMonitorAttributeResponseBodySiteMonitors siteMonitors;
 
     /**
-     * <p>The protocol that is used by the site monitoring task. Valid values: HTTP, HTTPS, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -95,87 +100,22 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     public static class DescribeSiteMonitorAttributeResponseBodyMetricRulesMetricRule extends TeaModel {
         /**
-         * <p>The alert threshold.</p>
-         */
-        @NameInMap("ActionEnable")
-        public String actionEnable;
-
-        /**
-         * <p>The name of the alert rule.</p>
-         */
-        @NameInMap("AlarmActions")
-        public String alarmActions;
-
-        /**
-         * <p>The dimension of the alert rule.</p>
-         */
-        @NameInMap("ComparisonOperator")
-        public String comparisonOperator;
-
-        /**
-         * <p>The status of the alert. Valid values:</p>
-         * <br>
-         * <p>*   OK: normal.</p>
-         * <p>*   ALARM: The alert is triggered.</p>
-         */
-        @NameInMap("Dimensions")
-        public String dimensions;
-
-        /**
-         * <p>The alert contact groups to which alert notifications are sent.</p>
-         */
-        @NameInMap("EvaluationCount")
-        public String evaluationCount;
-
-        /**
          * <p>Indicates whether the alert rule is enabled. Valid values:</p>
          * <br>
          * <p>*   true: The alert rule is enabled.</p>
          * <p>*   false: The alert rule is disabled.</p>
          */
-        @NameInMap("Expression")
-        public String expression;
-
-        /**
-         * <p>This topic provides an example on how to query the details of a site monitoring task whose ID is `cc641dff-c19d-45f3-ad0a-818a0c4f****`. The returned result indicates that the task name is `test123`, the address that is monitored by the task is `https://aliyun.com`, and the name of the carrier is `Alibaba`.</p>
-         */
-        @NameInMap("Level")
-        public String level;
-
-        /**
-         * <p>The namespace of the cloud service.</p>
-         */
-        @NameInMap("MetricName")
-        public String metricName;
+        @NameInMap("ActionEnable")
+        public String actionEnable;
 
         /**
          * <p>The alert contact group to which alert notifications are sent.</p>
          */
-        @NameInMap("Namespace")
-        public String namespace;
+        @NameInMap("AlarmActions")
+        public String alarmActions;
 
         /**
-         * <p>The ID of the alert rule.</p>
-         */
-        @NameInMap("OkActions")
-        public String okActions;
-
-        /**
-         * <p>The expression that is used to trigger alerts.</p>
-         */
-        @NameInMap("Period")
-        public String period;
-
-        /**
-         * <p>The interval at which the monitoring data is queried. The value is the same as the interval at which metric data is reported. Unit: seconds.</p>
-         * <br>
-         * <p>>  If you specify a statistical period for the alert rule, raw data is queried based on the statistical period.</p>
-         */
-        @NameInMap("RuleId")
-        public String ruleId;
-
-        /**
-         * <p>The comparison operator that is used in the alert rule. Valid values:</p>
+         * <p>The operator that is used to compare the metric value with the threshold in the alert rule. Valid values:</p>
          * <br>
          * <p>*   `>=`</p>
          * <p>*   `>`</p>
@@ -190,24 +130,85 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
          * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
          * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
          */
-        @NameInMap("RuleName")
-        public String ruleName;
+        @NameInMap("ComparisonOperator")
+        public String comparisonOperator;
 
         /**
-         * <p>The severity of the alert. Valid values:</p>
+         * <p>The dimension of the alert rule.</p>
+         */
+        @NameInMap("Dimensions")
+        public String dimensions;
+
+        /**
+         * <p>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.</p>
+         */
+        @NameInMap("EvaluationCount")
+        public String evaluationCount;
+
+        /**
+         * <p>The expression that is used to trigger alerts.</p>
+         */
+        @NameInMap("Expression")
+        public String expression;
+
+        /**
+         * <p>The alert severity. Valid values:</p>
          * <br>
          * <p>*   1: critical</p>
          * <p>*   2: warning</p>
          * <p>*   3: information</p>
          */
-        @NameInMap("StateValue")
-        public String stateValue;
+        @NameInMap("Level")
+        public String level;
 
         /**
-         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         * <p>The metric name.</p>
          */
-        @NameInMap("Statistics")
-        public String statistics;
+        @NameInMap("MetricName")
+        public String metricName;
+
+        /**
+         * <p>The namespace of the cloud service.</p>
+         * <br>
+         * <p>The value is in the following format: acs_service name.</p>
+         */
+        @NameInMap("Namespace")
+        public String namespace;
+
+        /**
+         * <p>The alert contact group that receives alert notifications.</p>
+         */
+        @NameInMap("OkActions")
+        public String okActions;
+
+        /**
+         * <p>The time interval. The value is the same as the interval at which metric data is reported. Unit: seconds.</p>
+         * <br>
+         * <p>>  If you specify a statistical period for the alert rule, data is queried based on the statistical period.</p>
+         */
+        @NameInMap("Period")
+        public String period;
+
+        /**
+         * <p>The ID of the alert rule.</p>
+         */
+        @NameInMap("RuleId")
+        public String ruleId;
+
+        /**
+         * <p>The name of the alert rule.</p>
+         */
+        @NameInMap("RuleName")
+        public String ruleName;
+
+        /**
+         * <p>The alert status. Valid values:</p>
+         * <br>
+         * <p>*   OK: The alert rule has no active alerts.</p>
+         * <p>*   ALARM: The alert rule has active alerts.</p>
+         */
+        @NameInMap("StateValue")
+        public String stateValue;
 
         /**
          * <p>The statistical method of the alert rule. Valid values:</p>
@@ -217,6 +218,12 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
          * <p>*   ErrorCodeMaximum: a status code for an alert</p>
          * <p>*   ErrorCodeMinimum: all status codes for a set of alerts</p>
          * <p>*   Average: response time</p>
+         */
+        @NameInMap("Statistics")
+        public String statistics;
+
+        /**
+         * <p>The alert threshold.</p>
          */
         @NameInMap("Threshold")
         public String threshold;
@@ -448,25 +455,25 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsIspCitiesIspCity extends TeaModel {
         /**
-         * <p>The ID of the carrier.</p>
+         * <p>The city ID.</p>
          */
         @NameInMap("City")
         public String city;
 
         /**
-         * <p>The name of the metric.</p>
+         * <p>The city name.</p>
          */
         @NameInMap("CityName")
         public String cityName;
 
         /**
-         * <p>The information of the alert rules that are configured for the site monitoring task.</p>
+         * <p>The carrier ID.</p>
          */
         @NameInMap("Isp")
         public String isp;
 
         /**
-         * <p>The name of the city.</p>
+         * <p>The carrier name.</p>
          */
         @NameInMap("IspName")
         public String ispName;
@@ -786,9 +793,18 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("assertions")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonAssertions assertions;
 
+        /**
+         * <p>The number of retries after a DNS failure occurred.</p>
+         */
         @NameInMap("attempts")
         public Long attempts;
 
+        /**
+         * <p>Indicates whether the security authentication feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   0: The feature is disabled.</p>
+         * <p>*   1: The feature is enabled.</p>
+         */
         @NameInMap("authentication")
         public Integer authentication;
 
@@ -810,6 +826,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("browser_task_version")
         public String browserTaskVersion;
 
+        /**
+         * <p>The cookie of the HTTP request.</p>
+         */
         @NameInMap("cookie")
         public String cookie;
 
@@ -822,12 +841,34 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("dns_hijack_whitelist")
         public String dnsHijackWhitelist;
 
+        /**
+         * <p>The relationship between the list of expected aliases or IP addresses and the list of DNS results. Valid values:</p>
+         * <br>
+         * <p>*   IN_DNS: The list of expected values is a subset of the list of DNS results.</p>
+         * <p>*   DNS_IN: The list of DNS results is a subset of the list of expected values.</p>
+         * <p>*   EQUAL: The list of DNS results is the same as the list of expected values.</p>
+         * <p>*   ANY: The list of DNS results intersects with the list of expected values.</p>
+         */
         @NameInMap("dns_match_rule")
         public String dnsMatchRule;
 
+        /**
+         * <p>The IP address of the DNS server.</p>
+         * <br>
+         * <p>>  This parameter is returned only if the TaskType parameter is set to DNS.</p>
+         */
         @NameInMap("dns_server")
         public String dnsServer;
 
+        /**
+         * <p>The type of the DNS record. This parameter is returned only if the TaskType parameter is set to DNS. Valid values:</p>
+         * <br>
+         * <p>*   A (default): a record that specifies an IP address related to the specified host name or domain name.</p>
+         * <p>*   CNAME: a record that maps multiple domain names to a domain name.</p>
+         * <p>*   NS: a record that specifies a DNS server used to parse domain names.</p>
+         * <p>*   MX: a record that links domain names to the address of a mail server.</p>
+         * <p>*   TXT: a record that stores the text information of host name or domain names. The text must be 1 to 512 bytes in length. The TXT record serves as a Sender Policy Framework (SPF) record to fight against spam.</p>
+         */
         @NameInMap("dns_type")
         public String dnsType;
 
@@ -837,30 +878,62 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("expect_non_exist_string")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectNonExistString expectNonExistString;
 
+        /**
+         * <p>The domain name or alias to be parsed.</p>
+         * <br>
+         * <p>>  This parameter is returned only if the TaskType parameter is set to DNS.</p>
+         */
         @NameInMap("expect_value")
         public String expectValue;
 
+        /**
+         * <p>The packet loss rate.</p>
+         * <br>
+         * <p>>  This parameter is returned only if the TaskType parameter is set to PING.</p>
+         */
         @NameInMap("failure_rate")
         public Float failureRate;
 
+        /**
+         * <p>The header of the HTTP request.</p>
+         */
         @NameInMap("header")
         public String header;
 
+        /**
+         * <p>The HTTP request method. Valid values:</p>
+         * <br>
+         * <p>*   get</p>
+         * <p>*   post</p>
+         * <p>*   head</p>
+         */
         @NameInMap("http_method")
         public String httpMethod;
 
         @NameInMap("isBase64Encode")
         public String isBase64Encode;
 
+        /**
+         * <p>Indicates whether the alert rule is included. Valid values:</p>
+         * <br>
+         * <p>*   0: The alert rule is included.</p>
+         * <p>*   1: The alert rule is excluded.</p>
+         */
         @NameInMap("match_rule")
         public Integer matchRule;
 
         @NameInMap("min_tls_version")
         public String minTlsVersion;
 
+        /**
+         * <p>The password of the SMTP, POP3, or FTP protocol.</p>
+         */
         @NameInMap("password")
         public String password;
 
+        /**
+         * <p>The heartbeat of the PING protocol.</p>
+         */
         @NameInMap("ping_num")
         public Integer pingNum;
 
@@ -870,21 +943,45 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("ping_type")
         public String pingType;
 
+        /**
+         * <p>The port number of the TCP, UDP, SMTP, or POP3 protocol.</p>
+         */
         @NameInMap("port")
         public Integer port;
 
+        /**
+         * <p>The protocol that is used to send the request.</p>
+         */
         @NameInMap("protocol")
         public String protocol;
 
+        /**
+         * <p>The content of the HTTP request.</p>
+         */
         @NameInMap("request_content")
         public String requestContent;
 
+        /**
+         * <p>The format of the HTTP request. Valid values:</p>
+         * <br>
+         * <p>*   hex: hexadecimal</p>
+         * <p>*   txt: text</p>
+         */
         @NameInMap("request_format")
         public String requestFormat;
 
+        /**
+         * <p>The response to the HTTP request.</p>
+         */
         @NameInMap("response_content")
         public String responseContent;
 
+        /**
+         * <p>The format of the HTTP response. Valid values:</p>
+         * <br>
+         * <p>*   hex: hexadecimal</p>
+         * <p>*   txt: text</p>
+         */
         @NameInMap("response_format")
         public String responseFormat;
 
@@ -894,6 +991,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("strict_mode")
         public Boolean strictMode;
 
+        /**
+         * <p>The timeout period. Unit: milliseconds.</p>
+         */
         @NameInMap("time_out")
         public Long timeOut;
 
@@ -906,6 +1006,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("traffic_hijack_element_whitelist")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementWhitelist trafficHijackElementWhitelist;
 
+        /**
+         * <p>The username of the FTP, SMTP, or POP3 protocol.</p>
+         */
         @NameInMap("username")
         public String username;
 
@@ -1265,7 +1368,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     public static class DescribeSiteMonitorAttributeResponseBodySiteMonitors extends TeaModel {
         /**
-         * <p>The information of detection points. The information includes the carriers that provide the detection points and the cities where the detection points reside.</p>
+         * <p>The URL that is monitored by the site monitoring task.</p>
          */
         @NameInMap("Address")
         public String address;
@@ -1277,43 +1380,46 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomSchedule customSchedule;
 
         /**
-         * <p>The name of the site monitoring task.</p>
+         * <p>The interval at which the site monitoring task is executed. Unit: minutes. Valid values: 1, 5, 15, 30, and 60.</p>
          */
         @NameInMap("Interval")
         public String interval;
 
         /**
-         * <p>The name of the carrier.</p>
+         * <p>The information of detection points. The information includes the carriers that provide the detection points and the cities where the detection points reside.</p>
          */
         @NameInMap("IspCities")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsIspCities ispCities;
 
+        /**
+         * <p>The extended options of the site monitoring task. The options vary based on the specified protocol. For more information, see [CreateSiteMonitor](~~115048~~).</p>
+         */
         @NameInMap("OptionJson")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson optionJson;
 
         /**
-         * <p>The ID of the city.</p>
+         * <p>The ID of the site monitoring task.</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
-         * <p>The ID of the site monitoring task.</p>
+         * <p>The name of the site monitoring task.</p>
          */
         @NameInMap("TaskName")
         public String taskName;
-
-        /**
-         * <p>The address that is monitored by the site monitoring task.</p>
-         */
-        @NameInMap("TaskState")
-        public String taskState;
 
         /**
          * <p>The status of the site monitoring task. Valid values:</p>
          * <br>
          * <p>*   1: The task is enabled.</p>
          * <p>*   2: The task is disabled.</p>
+         */
+        @NameInMap("TaskState")
+        public String taskState;
+
+        /**
+         * <p>The protocol that is used by the site monitoring task. Valid values: HTTP, HTTPS, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
          */
         @NameInMap("TaskType")
         public String taskType;

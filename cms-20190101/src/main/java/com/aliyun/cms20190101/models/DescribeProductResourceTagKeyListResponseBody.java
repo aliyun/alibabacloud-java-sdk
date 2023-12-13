@@ -5,39 +5,41 @@ import com.aliyun.tea.*;
 
 public class DescribeProductResourceTagKeyListResponseBody extends TeaModel {
     /**
-     * <p>The error message.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
+
+    /**
+     * <p>The error message.</p>
+     */
+    @NameInMap("Message")
+    public String message;
 
     /**
      * <p>The pagination cursor. If more entries are to be returned on the next page, a pagination cursor is returned.</p>
      * <br>
      * <p>>  If the value of this parameter is not null, more entries are to be returned on the next page. You can use the returned pagination cursor as a request parameter to obtain entries on the next page. If the value of this parameter is null, all the entries have been returned.</p>
      */
-    @NameInMap("Message")
-    public String message;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The keys of tags.</p>
+     * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>>  If a tag is attached to multiple cloud resources in the region, the key of the tag is returned only once.</p>
+     * <p>The keys of tags.</p>
      */
     @NameInMap("TagKeys")
     public DescribeProductResourceTagKeyListResponseBodyTagKeys tagKeys;

@@ -5,77 +5,54 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorListResponseBody extends TeaModel {
     /**
-     * <p>The numeric value or character used for matching.</p>
+     * <p>The status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>Indicates whether the DNS server of the carrier is used.</p>
-     * <br>
-     * <p>*   true (default value): The DNS server of the carrier is used.</p>
-     * <p>*   false: The DNS server of the carrier is not used. The default DNS server or the specified DNS server is used.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Indicates whether the alert rule is included. Valid values:</p>
-     * <br>
-     * <p>*   0: The alert rule is included.</p>
-     * <p>*   1: The alert rule is not included.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The domain name or IP address of the DNS server.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>Indicates whether ping requests are automatically sent to detect network latency if a detection task fails. Valid values:</p>
-     * <br>
-     * <p>*   false (default value): Ping requests are not automatically sent to detect network latency if a detection task fails.</p>
-     * <p>*   true: Ping requests are automatically sent to detect network latency if a detection task fails.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The type of the assertion. Valid values:</p>
-     * <br>
-     * <p>*   response_time: checks whether the response time meets expectations.</p>
-     * <p>*   status_code: checks whether the HTTP status code meets expectations.</p>
-     * <p>*   header: checks whether the fields in the response header meet expectations.</p>
-     * <p>*   body_text: checks whether the content in the response body meets expectations by using text matching.</p>
-     * <p>*   body_json: checks whether the content in the response body meets expectations by using JSON parsing (JSONPath).</p>
-     * <p>*   body_xml: checks whether the content in the response body meets expectations by using XML parsing (XPath).</p>
+     * <p>The site monitoring tasks that are returned.</p>
      */
     @NameInMap("SiteMonitors")
     public DescribeSiteMonitorListResponseBodySiteMonitors siteMonitors;
 
     /**
-     * <p>The comparison operator of the assertion. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   contains: contains</p>
-     * <p>*   doesNotContain: does not contain</p>
-     * <p>*   matches: matches regular expressions</p>
-     * <p>*   doesNotMatch: does not match regular expressions</p>
-     * <p>*   is: equal to a numeric value or matches a character</p>
-     * <p>*   isNot: not equal to</p>
-     * <p>*   lessThan: less than</p>
-     * <p>*   moreThan: greater than</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("Success")
     public String success;
 
     /**
-     * <p>Indicates whether redirects are followed if the status code 301 or 302 is returned. Valid values:</p>
-     * <br>
-     * <p>*   true: Redirects are not followed.</p>
-     * <p>*   false (default value): Redirects are followed.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -150,25 +127,45 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
     }
 
     public static class DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJsonAssertionsAssertions extends TeaModel {
+        /**
+         * <p>The comparison operator of the assertion. Valid values:</p>
+         * <br>
+         * <p>*   contains: contains</p>
+         * <p>*   doesNotContain: does not contain</p>
+         * <p>*   matches: matches regular expressions</p>
+         * <p>*   doesNotMatch: does not match regular expressions</p>
+         * <p>*   is: equal to a numeric value or matches a character</p>
+         * <p>*   isNot: not equal to</p>
+         * <p>*   lessThan: less than</p>
+         * <p>*   moreThan: greater than</p>
+         */
         @NameInMap("operator")
         public String operator;
 
         /**
-         * <p>The relationship between the list of expected aliases or IP addresses and the list of DNS results. Valid values:</p>
+         * <p>The parsing path of the assertion.</p>
          * <br>
-         * <p>*   IN_DNS: The list of expected values is a subset of the list of DNS results.</p>
-         * <p>*   DNS_IN: The list of DNS results is a subset of the list of expected values.</p>
-         * <p>*   EQUAL: The list of DNS results is the same as the list of expected values.</p>
-         * <p>*   ANY: The list of DNS results intersects with the list of expected values.</p>
+         * <p>*   If the assertion type is `body_json`, the path is `json path`.</p>
+         * <p>*   If the assertion type is `body_xml`, the path is `xml path`.</p>
          */
         @NameInMap("property")
         public String property;
 
+        /**
+         * <p>The numeric value or character used for matching.</p>
+         */
         @NameInMap("target")
         public String target;
 
         /**
-         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         * <p>The assertion type. Valid values:</p>
+         * <br>
+         * <p>*   response_time: checks whether the response time meets expectations.</p>
+         * <p>*   status_code: checks whether the HTTP status code meets expectations.</p>
+         * <p>*   header: checks whether the fields in the response header meet expectations.</p>
+         * <p>*   body_text: checks whether the content in the response body meets expectations by using text matching.</p>
+         * <p>*   body_json: checks whether the content in the response body meets expectations by using JSON parsing (JSONPath).</p>
+         * <p>*   body_xml: checks whether the content in the response body meets expectations by using XML parsing (XPath).</p>
          */
         @NameInMap("type")
         public String type;
@@ -233,79 +230,190 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
 
     public static class DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson extends TeaModel {
         /**
-         * <p>The header of the HTTP request. An HTTP header is a key-value pair in which the key and the value are separated by a colon (:). The format is `key1:value1`. Each HTTP header occupies a line.</p>
+         * <p>The acceptable status code.</p>
+         * <br>
+         * <p>>  We recommend that you configure assertions.</p>
          */
         @NameInMap("acceptable_response_code")
         public String acceptableResponseCode;
 
         /**
-         * <p>The number of retries after a DNS failure occurred.</p>
+         * <p>The assertions.</p>
          */
         @NameInMap("assertions")
         public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJsonAssertions assertions;
 
         /**
-         * <p>The username of the FTP, SMTP, or POP3 protocol.</p>
+         * <p>The number of retries after a DNS failure occurred.</p>
          */
         @NameInMap("attempts")
         public Long attempts;
 
         /**
-         * <p>The status of the task. Valid values:</p>
+         * <p>Indicates whether the security authentication feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   1: The task is enabled.</p>
-         * <p>*   2: The task is disabled.</p>
+         * <p>*   0: The feature is enabled.</p>
+         * <p>*   1: The feature is disabled.</p>
          */
         @NameInMap("authentication")
         public Integer authentication;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>Indicates whether the certificate is verified. Valid values:</p>
+         * <br>
+         * <p>*   false (default): The certificate is not verified.</p>
+         * <p>*   true: The certificate is verified.</p>
          */
         @NameInMap("cert_verify")
         public Boolean certVerify;
 
         /**
-         * <p>The returned message.</p>
+         * <p>The cookie of the HTTP request.</p>
          */
         @NameInMap("cookie")
         public String cookie;
 
         /**
-         * <p>The extended options of the site monitoring task. The options vary based on the specified protocol. For more information, see [CreateSiteMonitor](~~115048~~).</p>
+         * <p>Indicates whether MTR is automatically used to diagnose network issues if a task fails. Valid values:</p>
+         * <br>
+         * <p>*   false (default): MTR is not automatically used to diagnose network issues if a task fails.</p>
+         * <p>*   true: MTR is automatically used to diagnose network issues if a task fails.</p>
          */
         @NameInMap("diagnosis_mtr")
         public Boolean diagnosisMtr;
 
         /**
-         * <p>The cookie of the HTTP request.</p>
+         * <p>Indicates whether ping requests are automatically sent to detect network latency if a detection task fails. Valid values:</p>
+         * <br>
+         * <p>*   false (default): Ping requests are not automatically sent to detect network latency if a detection task fails.</p>
+         * <p>*   true: Ping requests are automatically sent to detect network latency if a detection task fails.</p>
          */
         @NameInMap("diagnosis_ping")
         public Boolean diagnosisPing;
 
         /**
-         * <p>The URL or IP address that is monitored by the site monitoring task.</p>
+         * <p>The relationship between the list of expected aliases or IP addresses and the list of DNS results. Valid values:</p>
+         * <br>
+         * <p>*   IN_DNS: The list of expected values is a subset of the list of DNS results.</p>
+         * <p>*   DNS_IN: The list of DNS results is a subset of the list of expected values.</p>
+         * <p>*   EQUAL: The list of DNS results is the same as the list of expected values.</p>
+         * <p>*   ANY: The list of DNS results intersects with the list of expected values.</p>
          */
         @NameInMap("dns_match_rule")
         public String dnsMatchRule;
 
         /**
-         * <p>Indicates whether the certificate is verified. Valid values:</p>
-         * <br>
-         * <p>*   false (default value): The certificate is not verified.</p>
-         * <p>*   true: The certificate is verified.</p>
+         * <p>The domain name or IP address of the DNS server.</p>
          */
         @NameInMap("dns_server")
         public String dnsServer;
 
         /**
-         * <p>Indicates whether the password is decoded by using the Base64 algorithm. Valid values:</p>
+         * <p>The type of the DNS record. This parameter is returned only if the TaskType parameter is set to DNS. Valid values:</p>
          * <br>
-         * <p>*   true: The password is decoded by using the Base64 algorithm.</p>
-         * <p>*   false (default value): The password is not decoded by using the Base64 algorithm.</p>
+         * <p>*   A (default): a record that specifies an IP address related to the specified host name or domain name.</p>
+         * <p>*   CNAME: a record that maps multiple domain names to a domain name.</p>
+         * <p>*   NS: a record that specifies a DNS server used to parse domain names.</p>
+         * <p>*   MX: a record that links domain names to the address of a mail server.</p>
+         * <p>*   TXT: a record that stores the text information of host name or domain names. The text must be 1 to 512 bytes in length. The TXT record serves as a Sender Policy Framework (SPF) record to fight against spam.</p>
+         * <p>*   AAAA: a record that maps a domain name to the relevant IPv6 address.</p>
          */
         @NameInMap("dns_type")
         public String dnsType;
+
+        /**
+         * <p>Indicates whether the DNS server of the carrier is used.</p>
+         * <br>
+         * <p>*   true (default): The DNS server of the carrier is used.</p>
+         * <p>*   false: The DNS server of the carrier is not used. The default DNS server or the specified DNS server is used.</p>
+         */
+        @NameInMap("enable_operator_dns")
+        public Boolean enableOperatorDns;
+
+        /**
+         * <p>The packet loss rate.</p>
+         * <br>
+         * <p>>  This parameter is returned only if the TaskType parameter is set to PING.</p>
+         */
+        @NameInMap("failure_rate")
+        public Float failureRate;
+
+        /**
+         * <p>The header of the HTTP request. An HTTP header is a key-value pair in which the key and the value are separated by a colon (:). The format is `key1:value1`. Each HTTP header occupies a line.</p>
+         */
+        @NameInMap("header")
+        public String header;
+
+        /**
+         * <p>The HTTP request method. Valid values:</p>
+         * <br>
+         * <p>*   get</p>
+         * <p>*   post</p>
+         * <p>*   head</p>
+         */
+        @NameInMap("http_method")
+        public String httpMethod;
+
+        /**
+         * <p>Indicates whether the password is decoded by using the Base64 algorithm. Valid values:</p>
+         * <br>
+         * <p>*   true: The password is decoded by using the Base64 algorithm.</p>
+         * <p>*   false (default): The password is not decoded by using the Base64 algorithm.</p>
+         */
+        @NameInMap("isBase64Encode")
+        public String isBase64Encode;
+
+        /**
+         * <p>Indicates whether the alert rule is included. Valid values:</p>
+         * <br>
+         * <p>*   0: The alert rule is included.</p>
+         * <p>*   1: The alert rule is not included.</p>
+         */
+        @NameInMap("match_rule")
+        public Integer matchRule;
+
+        /**
+         * <p>The password of the SMTP, POP3, or FTP protocol.</p>
+         */
+        @NameInMap("password")
+        public String password;
+
+        /**
+         * <p>The number of hops for the PING protocol.</p>
+         */
+        @NameInMap("ping_num")
+        public Integer pingNum;
+
+        /**
+         * <p>The port number of the TCP, UDP, SMTP, or POP3 protocol.</p>
+         */
+        @NameInMap("port")
+        public Integer port;
+
+        /**
+         * <p>The protocol type of DNS detection. Valid values:</p>
+         * <br>
+         * <p>*   udp (default)</p>
+         * <p>*   tcp</p>
+         * <p>*   tcp-tls</p>
+         */
+        @NameInMap("protocol")
+        public String protocol;
+
+        /**
+         * <p>Indicates whether the PROXY protocol is enabled. Valid values:</p>
+         * <br>
+         * <p>*   false (default): The PROXY protocol is disabled.</p>
+         * <p>*   true: The PROXY protocol is enabled.</p>
+         */
+        @NameInMap("proxy_protocol")
+        public Boolean proxyProtocol;
+
+        /**
+         * <p>The content of the HTTP request.</p>
+         */
+        @NameInMap("request_content")
+        public String requestContent;
 
         /**
          * <p>The format of the HTTP request. Valid values:</p>
@@ -313,8 +421,8 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
          * <p>*   hex: hexadecimal</p>
          * <p>*   txt: text</p>
          */
-        @NameInMap("enable_operator_dns")
-        public Boolean enableOperatorDns;
+        @NameInMap("request_format")
+        public String requestFormat;
 
         /**
          * <p>The response to the HTTP request.</p>
@@ -322,65 +430,8 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
          * <p>*   Hexadecimal format: If the request content is a byte string and cannot be represented in printable characters, you can convert the byte string to printable characters in the hexadecimal format. If you convert the byte string to printable characters in the hexadecimal format, one byte is converted to two hexadecimal characters. For example, (byte)1 is converted to `01` and (byte)27 is converted to `1B`. If the request content is a binary array in the Java format, for example, `{(byte)1, (byte)27}`, you can convert the binary array to `011b` or `011B`. Hexadecimal characters are not case-sensitive in site monitoring tasks. You can enter `011B` in the request content and set the request_format parameter to hex.</p>
          * <p>*   Text format: Common text refers to strings that consist of printable characters.</p>
          */
-        @NameInMap("failure_rate")
-        public Float failureRate;
-
-        /**
-         * <p>The number of entries to return on each page. Default value: 10.</p>
-         */
-        @NameInMap("header")
-        public String header;
-
-        /**
-         * <p>The status of the task. Valid values:</p>
-         * <br>
-         * <p>*   1: The task is enabled.</p>
-         * <p>*   2: The task is disabled.</p>
-         */
-        @NameInMap("http_method")
-        public String httpMethod;
-
-        /**
-         * <p>The time when the site monitoring task was created.</p>
-         */
-        @NameInMap("isBase64Encode")
-        public String isBase64Encode;
-
-        /**
-         * <p>The assertions.</p>
-         */
-        @NameInMap("match_rule")
-        public Integer matchRule;
-
-        /**
-         * <p>The number of entries returned per page.</p>
-         */
-        @NameInMap("password")
-        public String password;
-
-        /**
-         * <p>The protocol that is used by the site monitoring task. Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
-         */
-        @NameInMap("ping_num")
-        public Integer pingNum;
-
-        /**
-         * <p>The interval at which detection requests are sent. Unit: minutes.</p>
-         */
-        @NameInMap("port")
-        public Integer port;
-
-        /**
-         * <p>The name of the site monitoring task.</p>
-         */
-        @NameInMap("protocol")
-        public String protocol;
-
-        /**
-         * <p>The ID of the site monitoring task.</p>
-         */
-        @NameInMap("proxy_protocol")
-        public Boolean proxyProtocol;
+        @NameInMap("response_content")
+        public String responseContent;
 
         /**
          * <p>The format of the HTTP response. Valid values:</p>
@@ -388,59 +439,32 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
          * <p>*   hex: hexadecimal</p>
          * <p>*   txt: text</p>
          */
-        @NameInMap("request_content")
-        public String requestContent;
-
-        /**
-         * <p>The acceptable status code.</p>
-         * <br>
-         * <p>>  We recommend that you configure assertions.</p>
-         */
-        @NameInMap("request_format")
-        public String requestFormat;
-
-        /**
-         * <p>The total number of returned entries.</p>
-         */
-        @NameInMap("response_content")
-        public String responseContent;
-
-        /**
-         * <p>The port number of the TCP, UDP, SMTP, or POP3 protocol.</p>
-         */
         @NameInMap("response_format")
         public String responseFormat;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The number of times a failed detection request is retried.</p>
          */
         @NameInMap("retry_delay")
         public Integer retryDelay;
 
         /**
-         * <p>The password of the SMTP, POP3, or FTP protocol.</p>
+         * <p>The timeout period. Unit: milliseconds.</p>
          */
         @NameInMap("time_out")
         public Long timeOut;
 
         /**
-         * <p>Indicates whether the PROXY protocol is enabled. Valid values:</p>
+         * <p>Indicates whether redirects are followed if the status code 301 or 302 is returned. Valid values:</p>
          * <br>
-         * <p>*   false (default value): The PROXY protocol is disabled.</p>
-         * <p>*   true: The PROXY protocol is enabled.</p>
+         * <p>*   true: Redirects are not followed.</p>
+         * <p>*   false (default): Redirects are followed.</p>
          */
         @NameInMap("unfollow_redirect")
         public Boolean unfollowRedirect;
 
         /**
-         * <p>The type of the DNS record. This parameter is returned only if the TaskType parameter is set to DNS. Valid values:</p>
-         * <br>
-         * <p>*   A (default value): a record that specifies an IP address related to the specified host name or domain name.</p>
-         * <p>*   CNAME: a record that maps multiple domain names to a domain name.</p>
-         * <p>*   NS: a record that specifies a DNS server used to parse domain names.</p>
-         * <p>*   MX: a record that links domain names to the address of a mail server.</p>
-         * <p>*   TXT: a record that stores the text information of host name or domain names. The text must be 1 to 512 bytes in length. The TXT record serves as a Sender Policy Framework (SPF) record to fight against spam.</p>
-         * <p>*   AAAA: a record that maps a domain name to the relevant IPv6 address.</p>
+         * <p>The username of the FTP, SMTP, or POP3 protocol.</p>
          */
         @NameInMap("username")
         public String username;
@@ -694,59 +718,55 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
 
     public static class DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitor extends TeaModel {
         /**
-         * <p>The site monitoring tasks that are returned.</p>
+         * <p>The URL or IP address that is monitored by the site monitoring task.</p>
          */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>The detection point type. Valid values:</p>
+         * <br>
+         * <p>*   PC</p>
+         * <p>*   MOBILE</p>
+         */
         @NameInMap("AgentGroup")
         public String agentGroup;
 
         /**
-         * <p>The keyword to be matched.</p>
-         * <br>
-         * <p>>  You can search for tasks by name or address. Fuzzy search is supported.</p>
+         * <p>The time when the site monitoring task was created.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The protocol type of DNS detection. Valid values:</p>
-         * <br>
-         * <p>*   udp (default value)</p>
-         * <p>*   tcp</p>
-         * <p>*   tcp-tls</p>
+         * <p>The interval at which detection requests are sent. Unit: minutes.</p>
          */
         @NameInMap("Interval")
         public String interval;
 
         /**
-         * <p>The number of the page to return. Default value: 1.</p>
+         * <p>The extended options of the site monitoring task. The options vary based on the specified protocol. For more information, see [CreateSiteMonitor](~~115048~~).</p>
          */
         @NameInMap("OptionsJson")
         public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson optionsJson;
 
         /**
-         * <p>The HTTP request method. Valid values:</p>
-         * <br>
-         * <p>*   get</p>
-         * <p>*   post</p>
-         * <p>*   head</p>
+         * <p>The ID of the site monitoring task.</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
-         * <p>The number of times a failed detection request is retried.</p>
+         * <p>The name of the site monitoring task.</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
-         * <p>Indicates whether MTR is automatically used to diagnose network issues if a task fails. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <br>
-         * <p>*   false (default value): MTR is not automatically used to diagnose network issues if a task fails.</p>
-         * <p>*   true: MTR is automatically used to diagnose network issues if a task fails.</p>
+         * <p>*   1: The task is enabled.</p>
+         * <p>*   2: The task is disabled.</p>
          */
         @NameInMap("TaskState")
         public String taskState;
@@ -758,9 +778,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The packet loss rate.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the TaskType parameter is set to PING.</p>
+         * <p>The time when the site monitoring task was updated.</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

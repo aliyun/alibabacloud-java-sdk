@@ -5,20 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteMonitorGroupInstancesRequest extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
-     */
-    @NameInMap("Category")
-    public String category;
-
-    /**
-     * <p>The instances to be removed from the application group. Separate multiple instances with commas (,). You can remove a maximum of 20 instances from an application group at a time.</p>
-     */
-    @NameInMap("GroupId")
-    public Long groupId;
-
-    /**
      * <p>The abbreviation of the service name. Valid values:</p>
      * <br>
      * <p>*   ECS: Elastic Compute Service (ECS) instances provided by Alibaba Cloud and hosts not provided by Alibaba Cloud</p>
@@ -56,6 +42,18 @@ public class DeleteMonitorGroupInstancesRequest extends TeaModel {
      * <p>*   SHAREBANDWIDTHPACKAGES: EIP Bandwidth Plan</p>
      * <p>*   SLS: Log Service</p>
      * <p>*   VPN: VPN Gateway</p>
+     */
+    @NameInMap("Category")
+    public String category;
+
+    /**
+     * <p>The ID of the application group.</p>
+     */
+    @NameInMap("GroupId")
+    public Long groupId;
+
+    /**
+     * <p>The instances to be removed from the application group. Separate multiple instances with commas (,). You can remove a maximum of 20 instances from an application group at a time.</p>
      */
     @NameInMap("InstanceIdList")
     public String instanceIdList;

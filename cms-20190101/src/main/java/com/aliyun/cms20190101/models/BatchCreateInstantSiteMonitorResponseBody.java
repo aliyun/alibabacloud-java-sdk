@@ -4,33 +4,37 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The information about the site monitoring task.</p>
      */
     @NameInMap("Data")
     public java.util.List<BatchCreateInstantSiteMonitorResponseBodyData> data;
 
     /**
-     * <p>The type of the site monitoring task.</p>
-     * <br>
-     * <p>Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
-     * <br>
-     * <p>>  You must create at least one site monitoring task. You must specify all of the `Address`, `TaskName`, and `TaskType` parameters in each request.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information about the site monitoring task.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -81,11 +85,14 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
     }
 
     public static class BatchCreateInstantSiteMonitorResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the site monitoring task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
-         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         * <p>The name of the site monitoring task.</p>
          */
         @NameInMap("TaskName")
         public String taskName;

@@ -5,37 +5,35 @@ import com.aliyun.tea.*;
 
 public class DescribeHostAvailabilityListRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the application group.</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
+
+    /**
+     * <p>The ID of the availability monitoring task.</p>
+     */
+    @NameInMap("Id")
+    public Long id;
+
+    /**
+     * <p>The IDs of the availability monitoring tasks. Separate multiple IDs with commas (,).</p>
+     */
+    @NameInMap("Ids")
+    public String ids;
 
     /**
      * <p>The number of the page to return.</p>
      * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
      */
-    @NameInMap("Id")
-    public Long id;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
      * <br>
      * <p>Default value: 10.</p>
-     */
-    @NameInMap("Ids")
-    public String ids;
-
-    /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The value 200 indicates that the call was successful.</p>
-     */
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    /**
-     * <p>The error message.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -44,7 +42,7 @@ public class DescribeHostAvailabilityListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the application group.</p>
+     * <p>The name of the availability monitoring task.</p>
      */
     @NameInMap("TaskName")
     public String taskName;

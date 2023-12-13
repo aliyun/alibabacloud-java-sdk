@@ -5,16 +5,24 @@ import com.aliyun.tea.*;
 
 public class DeleteMetricRuleResourcesResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
@@ -22,9 +30,6 @@ public class DeleteMetricRuleResourcesResponseBody extends TeaModel {
      * <p>*   true: The call was successful.</p>
      * <p>*   false: The call failed.</p>
      */
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Success")
     public Boolean success;
 

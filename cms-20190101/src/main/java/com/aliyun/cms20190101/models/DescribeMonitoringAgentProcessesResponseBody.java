@@ -5,22 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>The HTTP status code.</p>
      * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <p>>  The value 200 indicates that the call was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The information about the processes.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the process.</p>
+     * <p>The information about the processes.</p>
      */
     @NameInMap("NodeProcesses")
     public DescribeMonitoringAgentProcessesResponseBodyNodeProcesses nodeProcesses;
@@ -29,7 +28,10 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The name of the process.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -81,41 +83,39 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
 
     public static class DescribeMonitoringAgentProcessesResponseBodyNodeProcessesNodeProcess extends TeaModel {
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The command used to obtain the number of processes. Valid value: `number`.</p>
+         * <br>
+         * <p>>  The `number` command obtains the number of processes that match the condition.</p>
          */
         @NameInMap("Command")
         public String command;
 
         /**
-         * <p>The user who launched the process.</p>
+         * <p>The ID of the application group.</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
-         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The command used to obtain the number of processes. Valid value: `number`.</p>
-         * <br>
-         * <p>>  The `number` command obtains the number of processes that match the condition.</p>
+         * <p>The ID of the process.</p>
          */
         @NameInMap("ProcessId")
         public Long processId;
 
         /**
-         * <p>The ID of the application group.</p>
+         * <p>The name of the process.</p>
          */
         @NameInMap("ProcessName")
         public String processName;
 
         /**
-         * <p>>  Before you call this operation, call the CreateMonitoringAgentProcess operation to create processes. For more information, see [CreateMonitoringAgentProcess](~~114951~~~).</p>
-         * <br>
-         * <p>This topic provides an example of how to query the processes of the `i-hp3hl3cx1pbahzy8****` instance. The response indicates the details of the `NGINX` and `HTTP` processes.</p>
+         * <p>The user who launched the process.</p>
          */
         @NameInMap("ProcessUser")
         public String processUser;

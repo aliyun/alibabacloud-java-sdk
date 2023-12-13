@@ -5,26 +5,40 @@ import com.aliyun.tea.*;
 
 public class PutLogMonitorResponseBody extends TeaModel {
     /**
-     * <p>The name of the Log Service Logstore.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the call is successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the log monitoring metric.</p>
+     */
     @NameInMap("LogId")
     public String logId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The returned message.</p>
+     * <br>
+     * <p>*   If the call is successful, the value `successful` is returned.</p>
+     * <p>*   If the call fails, an error message is returned. Example: `alias of aggreate must be set value.`</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call is successful.</p>
+     * <p>*   false: The call fails.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

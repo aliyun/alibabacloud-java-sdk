@@ -5,9 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteSiteMonitorsRequest extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>Specifies whether to delete the alert rules configured for the site monitoring tasks. Valid values:</p>
      * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>*   true (default value)</p>
+     * <p>*   false</p>
      */
     @NameInMap("IsDeleteAlarms")
     public Boolean isDeleteAlarms;
@@ -16,10 +17,7 @@ public class DeleteSiteMonitorsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to delete the alert rules configured for the site monitoring tasks. Valid values:</p>
-     * <br>
-     * <p>*   true (default value)</p>
-     * <p>*   false</p>
+     * <p>The IDs of the site monitoring tasks that you want to delete. Separate multiple task IDs with commas (,).</p>
      */
     @NameInMap("TaskIds")
     public String taskIds;

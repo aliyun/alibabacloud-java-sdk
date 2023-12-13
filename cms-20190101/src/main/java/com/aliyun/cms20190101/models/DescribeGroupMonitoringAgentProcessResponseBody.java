@@ -5,51 +5,51 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
     /**
-     * <p>The number of the returned page. Default value: 1.</p>
+     * <p>The HTTP status codes.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The number of entries returned on each page. Default value: 10.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The page number. Default value: 1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
-     * <p>The process monitoring tasks created for the application group.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
-     * <p>The ID of the process monitoring task.</p>
+     * <p>The process monitoring tasks.</p>
      */
     @NameInMap("Processes")
     public DescribeGroupMonitoringAgentProcessResponseBodyProcesses processes;
 
     /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The returned message.</p>
+     * <p>Indicates whether the request was successful. Valid values: Valid values: true and false.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The name of the process monitoring task.</p>
+     * <p>The total number of returned entries.</p>
      */
     @NameInMap("Total")
     public String total;
@@ -124,15 +124,31 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetListTarget extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the resource. Format: acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message. Example: acs:mns:cn-hangzhou:120886317861\*\*\*\*:/queues/test123/message. Fields:</p>
+         * <br>
+         * <p>{Service name abbreviation}: the abbreviation of the service name. Valid value: mns. {userId}: the ID of the Alibaba Cloud account. {regionId}: the region ID of the message queue or topic. {Resource type}: the type of the resource that triggers the alert. Valid values: - **queues** - **topics** - {Resource name}: the resource name. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.</p>
+         */
         @NameInMap("Arn")
         public String arn;
 
+        /**
+         * <p>The ID of the resource for which alerts are triggered.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The parameters of the alert callback. The parameters are in the JSON format.</p>
+         */
         @NameInMap("JsonParmas")
         public String jsonParmas;
 
+        /**
+         * <p>The level of the alert. Valid values:</p>
+         * <br>
+         * <p>INFO WARN CRITICAL</p>
+         */
         @NameInMap("Level")
         public String level;
 
@@ -196,64 +212,81 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
 
     public static class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfig extends TeaModel {
         /**
-         * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</p>
+         * <p>The comparison operator that is used to compare the metric value with the threshold. Valid values:</p>
+         * <br>
+         * <p>*   GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
+         * <p>*   GreaterThanThreshold: greater than the threshold</p>
+         * <p>*   LessThanOrEqualToThreshold: less than or equal to the threshold</p>
+         * <p>*   LessThanThreshold: less than the threshold</p>
+         * <p>*   NotEqualToThreshold: not equal to the threshold</p>
+         * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday.</p>
+         * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
+         * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
+         * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
+         * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
+         * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
          */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
         /**
-         * <p>The method used to calculate metric values that trigger alerts.</p>
+         * <p>The time period during which the alert rule is effective.</p>
          */
         @NameInMap("EffectiveInterval")
         public String effectiveInterval;
-
-        /**
-         * <p>The time period during which the alert rule is effective.</p>
-         */
-        @NameInMap("EscalationsLevel")
-        public String escalationsLevel;
-
-        /**
-         * <p>The threshold for triggering alerts.</p>
-         */
-        @NameInMap("NoEffectiveInterval")
-        public String noEffectiveInterval;
-
-        /**
-         * <p>The number of times for which the threshold can be consecutively exceeded.</p>
-         * <br>
-         * <p>>  A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.</p>
-         */
-        @NameInMap("SilenceTime")
-        public String silenceTime;
-
-        /**
-         * <p>Queries the process monitoring tasks for an application group.</p>
-         */
-        @NameInMap("Statistics")
-        public String statistics;
-
-        @NameInMap("TargetList")
-        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetList targetList;
-
-        /**
-         * <p>You can create a process monitoring task to monitor all or the specified Elastic Compute Service (ECS) instances in an application group and set alert rules for the process monitoring task.</p>
-         */
-        @NameInMap("Threshold")
-        public String threshold;
-
-        /**
-         * <p>The time period during which the alert rule is ineffective.</p>
-         */
-        @NameInMap("Times")
-        public String times;
 
         /**
          * <p>The level of the alert. Valid values:</p>
          * <br>
          * <p>*   critical</p>
          * <p>*   warn</p>
-         * <p>*   info</p>
+         * <p>*   Info</p>
+         */
+        @NameInMap("EscalationsLevel")
+        public String escalationsLevel;
+
+        /**
+         * <p>The time period during which the alert rule is ineffective.</p>
+         */
+        @NameInMap("NoEffectiveInterval")
+        public String noEffectiveInterval;
+
+        /**
+         * <p>The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.</p>
+         * <br>
+         * <p>>  Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.</p>
+         */
+        @NameInMap("SilenceTime")
+        public String silenceTime;
+
+        /**
+         * <p>The method used to calculate metric values that trigger alerts.</p>
+         */
+        @NameInMap("Statistics")
+        public String statistics;
+
+        /**
+         * <p>The resource for which alerts are triggered.</p>
+         */
+        @NameInMap("TargetList")
+        public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfigAlertConfigTargetList targetList;
+
+        /**
+         * <p>The alert threshold.</p>
+         */
+        @NameInMap("Threshold")
+        public String threshold;
+
+        /**
+         * <p>The number of times for which the threshold can be consecutively exceeded.</p>
+         * <br>
+         * <p>>  A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.</p>
+         */
+        @NameInMap("Times")
+        public String times;
+
+        /**
+         * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</p>
          */
         @NameInMap("Webhook")
         public String webhook;
@@ -366,40 +399,30 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
 
     public static class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpressMatchExpress extends TeaModel {
         /**
-         * <p>The comparison operator of the threshold for critical-level alerts. Valid values:</p>
+         * <p>The matching condition. Valid values:</p>
          * <br>
-         * <p>*   GreaterThanOrEqualToThreshold: greater than or equal to the threshold</p>
-         * <p>*   GreaterThanThreshold: greater than the threshold</p>
-         * <p>*   LessThanOrEqualToThreshold: less than or equal to the threshold</p>
-         * <p>*   LessThanThreshold: less than the threshold</p>
-         * <p>*   NotEqualToThreshold: not equal to the threshold</p>
-         * <p>*   GreaterThanYesterday: greater than the metric value at the same time yesterday</p>
-         * <p>*   LessThanYesterday: less than the metric value at the same time yesterday</p>
-         * <p>*   GreaterThanLastWeek: greater than the metric value at the same time last week</p>
-         * <p>*   LessThanLastWeek: less than the metric value at the same time last week</p>
-         * <p>*   GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</p>
-         * <p>*   LessThanLastPeriod: less than the metric value in the last monitoring cycle</p>
+         * <p>*   all (default): matches all</p>
+         * <p>*   startWith: starts with a prefix</p>
+         * <p>*   endWith: ends with a suffix</p>
+         * <p>*   contains: contains</p>
+         * <p>*   notContains: excludes</p>
+         * <p>*   equals: equals</p>
+         * <br>
+         * <p>>  The matched instances are monitored by the process monitoring task.</p>
          */
         @NameInMap("Function")
         public String function;
 
         /**
-         * <p>The configurations of the alert rule.</p>
+         * <p>The criteria based on which the instances are matched.</p>
+         * <br>
+         * <p>>  Set the value to `name`. The value name indicates that the instances are matched based on the instance name.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The method used to match the instances. Default value: all. Valid values:</p>
-         * <br>
-         * <p>*   all</p>
-         * <p>*   startWith</p>
-         * <p>*   endWith</p>
-         * <p>*   contains</p>
-         * <p>*   notContains</p>
-         * <p>*   equals</p>
-         * <br>
-         * <p>>  The matched instances are monitored by the process monitoring task.</p>
+         * <p>The keyword used to match the instance name.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -456,37 +479,43 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
 
     public static class DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcess extends TeaModel {
         /**
-         * <p>The duration of the mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.</p>
-         * <br>
-         * <p>>  Only one alert notification is sent during each mute period even if the metric value consecutively exceeds the alert threshold several times.</p>
+         * <p>The alert rule configurations.</p>
          */
         @NameInMap("AlertConfig")
         public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessAlertConfig alertConfig;
 
+        /**
+         * <p>The ID of the application group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
-         * <p>The keyword used to match the instance name.</p>
+         * <p>The ID of the process monitoring task.</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The criteria based on which the instances are matched.</p>
+         * <p>The matching conditions.</p>
          * <br>
-         * <p>>  Set the value to `name`, indicating that the instances are matched based on instance name.</p>
+         * <p>>  Only the instances that meet the conditional expressions are monitored by the process monitoring task.</p>
          */
         @NameInMap("MatchExpress")
         public DescribeGroupMonitoringAgentProcessResponseBodyProcessesProcessMatchExpress matchExpress;
 
+        /**
+         * <p>The logical operator used between conditional expressions that are used to match instances. Valid values:</p>
+         * <br>
+         * <p>*   all</p>
+         * <p>*   and</p>
+         * <p>*   or</p>
+         */
         @NameInMap("MatchExpressFilterRelation")
         public String matchExpressFilterRelation;
 
         /**
-         * <p>The conditional expressions used to match the instances.</p>
-         * <br>
-         * <p>>  Only the instances that meet the conditional expressions are monitored by the process monitoring task.</p>
+         * <p>The process name.</p>
          */
         @NameInMap("ProcessName")
         public String processName;

@@ -5,20 +5,31 @@ import com.aliyun.tea.*;
 
 public class ModifyMetricRuleTemplateResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>> The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

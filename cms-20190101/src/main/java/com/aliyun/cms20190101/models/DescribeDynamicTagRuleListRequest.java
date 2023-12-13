@@ -5,39 +5,45 @@ import com.aliyun.tea.*;
 
 public class DescribeDynamicTagRuleListRequest extends TeaModel {
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The ID of the tag rule.</p>
      */
     @NameInMap("DynamicTagRuleId")
     public String dynamicTagRuleId;
 
     /**
-     * <p>The ID of the region to which the tags belong.</p>
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
-
-    /**
-     * <p>The conditional expressions used to create an application group based on the tag.</p>
-     */
-    @NameInMap("PageSize")
-    public String pageSize;
-
-    /**
-     * <p>The error message.</p>
-     */
-    @NameInMap("TagKey")
-    public String tagKey;
 
     /**
      * <p>The number of entries to return on each page.</p>
      * <br>
      * <p>Minimum value: 1. Default value: 30.</p>
      */
+    @NameInMap("PageSize")
+    public String pageSize;
+
+    /**
+     * <p>The tag key.</p>
+     * <br>
+     * <p>For more information about how to obtain a tag key, see [DescribeTagKeyList](~~145558~~).</p>
+     */
+    @NameInMap("TagKey")
+    public String tagKey;
+
+    /**
+     * <p>The ID of the region to which the tags belong.</p>
+     */
     @NameInMap("TagRegionId")
     public String tagRegionId;
 
     /**
-     * <p>The ID of the tag rule.</p>
+     * <p>The tag value.</p>
+     * <br>
+     * <p>For more information about how to obtain a tag value, see [DescribeTagKeyList](~~145557~~).</p>
      */
     @NameInMap("TagValue")
     public String tagValue;

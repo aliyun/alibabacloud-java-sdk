@@ -150,6 +150,9 @@ public class EscalationRule extends TeaModel {
     }
 
     public static class EscalationRuleEscalations extends TeaModel {
+        @NameInMap("BackupContactGroups")
+        public java.util.List<String> backupContactGroups;
+
         @NameInMap("ContactGroups")
         public java.util.List<String> contactGroups;
 
@@ -162,6 +165,14 @@ public class EscalationRule extends TeaModel {
         public static EscalationRuleEscalations build(java.util.Map<String, ?> map) throws Exception {
             EscalationRuleEscalations self = new EscalationRuleEscalations();
             return TeaModel.build(map, self);
+        }
+
+        public EscalationRuleEscalations setBackupContactGroups(java.util.List<String> backupContactGroups) {
+            this.backupContactGroups = backupContactGroups;
+            return this;
+        }
+        public java.util.List<String> getBackupContactGroups() {
+            return this.backupContactGroups;
         }
 
         public EscalationRuleEscalations setContactGroups(java.util.List<String> contactGroups) {

@@ -5,39 +5,42 @@ import com.aliyun.tea.*;
 
 public class DescribeEventRuleListResponseBody extends TeaModel {
     /**
-     * <p>The prefix in the name of the event-triggered alert rule.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <br>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>The event-triggered alert rule.</p>
      */
     @NameInMap("EventRules")
     public DescribeEventRuleListResponseBodyEventRules eventRules;
 
     /**
-     * <p>The event-triggered alert rules.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The name of the event-triggered alert rule.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The list of event names.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -134,9 +137,18 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilter extends TeaModel {
+        /**
+         * <p>The keywords that are used to match events.</p>
+         */
         @NameInMap("Keywords")
         public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilterKeywords keywords;
 
+        /**
+         * <p>The relationship between multiple keywords in a condition. Valid values:</p>
+         * <br>
+         * <p>*   OR: The relationship between keywords is OR.</p>
+         * <p>*   NOT: The keyword is excluded. The value NOT indicates that all events that do not contain the keywords are matched.</p>
+         */
         @NameInMap("Relation")
         public String relation;
 
@@ -203,43 +215,44 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
 
     public static class DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPattern extends TeaModel {
         /**
-         * <p>The ID of the request.</p>
+         * <p>The custom filter conditions.</p>
          */
         @NameInMap("CustomFilters")
         public String customFilters;
 
         /**
-         * <p>The keywords that are used to match events.</p>
+         * <p>The types of the event-triggered alert rules.</p>
          */
         @NameInMap("EventTypeList")
         public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternEventTypeList eventTypeList;
 
         /**
-         * <p>Queries event-triggered alert rules.</p>
+         * <p>The keyword for filtering.</p>
          */
         @NameInMap("KeywordFilter")
         public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternKeywordFilter keywordFilter;
 
         /**
-         * <p>The type of the event-triggered alert rule.</p>
-         * <br>
-         * <p>`*` indicates all types of alert rules.</p>
+         * <p>The levels of the event-triggered alerts.</p>
          */
         @NameInMap("LevelList")
         public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternLevelList levelList;
 
         /**
-         * <p>Indicates that logs are filtered based on the specified SQL statement. If the specified conditions are met, an alert is triggered.</p>
+         * <p>The event names.</p>
          */
         @NameInMap("NameList")
         public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPatternEventPatternNameList nameList;
 
         /**
-         * <p>The ID of the application group.</p>
+         * <p>The abbreviation of the Alibaba Cloud service name.</p>
          */
         @NameInMap("Product")
         public String product;
 
+        /**
+         * <p>Indicates that logs are filtered based on the specified SQL statement. If the specified conditions are met, an alert is triggered.</p>
+         */
         @NameInMap("SQLFilter")
         public String SQLFilter;
 
@@ -327,49 +340,49 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
 
     public static class DescribeEventRuleListResponseBodyEventRulesEventRule extends TeaModel {
         /**
-         * <p>The filter keyword.</p>
+         * <p>The description of the event-triggered alert rule.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the application group.</p>
+         * <p>The mode of the event-triggered alert rule.</p>
          */
         @NameInMap("EventPattern")
         public DescribeEventRuleListResponseBodyEventRulesEventRuleEventPattern eventPattern;
 
         /**
-         * <p>The mode of the event-triggered alert rule.</p>
+         * <p>The type of the event-triggered alert rule. Valid values:</p>
+         * <br>
+         * <p>*   SYSTEM: system event-triggered alert rule</p>
+         * <p>*   CUSTOM: custom event-triggered alert rule</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
         /**
-         * <p>The number of entries to return on each page.</p>
-         * <br>
-         * <p>A minimum of one entry can be returned on each page. Default value: 10.</p>
+         * <p>The ID of the application group.</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
-         * <p>The relationship between multiple keywords in a condition. Valid values:</p>
-         * <br>
-         * <p>*   OR: The relationship between keywords is OR.</p>
-         * <p>*   NOT: The keyword is excluded. The value NOT indicates that all events that do not contain the keywords are matched.</p>
+         * <p>The name of the event-triggered alert rule.</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The mute period during which new alert notifications are not sent even if the trigger conditions are met.</p>
+         */
         @NameInMap("SilenceTime")
         public Long silenceTime;
 
         /**
-         * <p>The level of the event. Valid values:</p>
+         * <p>The status of the event-triggered alert rule. Valid values:</p>
          * <br>
-         * <p>*   CRITICAL: critical</p>
-         * <p>*   WARN: warning</p>
-         * <p>*   INFO: information</p>
+         * <p>*   ENABLED</p>
+         * <p>*   DISABLED</p>
          */
         @NameInMap("State")
         public String state;

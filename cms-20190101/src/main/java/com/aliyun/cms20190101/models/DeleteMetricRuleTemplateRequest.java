@@ -8,9 +8,7 @@ public class DeleteMetricRuleTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>The ID of the alert template.</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

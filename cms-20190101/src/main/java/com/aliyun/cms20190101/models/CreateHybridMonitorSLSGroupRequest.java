@@ -7,19 +7,24 @@ public class CreateHybridMonitorSLSGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The configurations of the Logstore group.</p>
+     * <br>
+     * <p>Valid values of N: 1 to 25.</p>
+     */
     @NameInMap("SLSGroupConfig")
     public java.util.List<CreateHybridMonitorSLSGroupRequestSLSGroupConfig> SLSGroupConfig;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **CreateHybridMonitorSLSGroup**.</p>
+     * <p>The description of the Logstore group.</p>
      */
     @NameInMap("SLSGroupDescription")
     public String SLSGroupDescription;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The name of the Logstore group.</p>
      * <br>
-     * <p>>  The status code 200 indicates that the call is successful.</p>
+     * <p>The name must be 2 to 32 characters in length and can contain uppercase letters, lowercase letters, digits, and underscores (\_). The name must start with a letter.</p>
      */
     @NameInMap("SLSGroupName")
     public String SLSGroupName;
@@ -63,35 +68,37 @@ public class CreateHybridMonitorSLSGroupRequest extends TeaModel {
 
     public static class CreateHybridMonitorSLSGroupRequestSLSGroupConfig extends TeaModel {
         /**
-         * <p>The name of the Logstore group.</p>
+         * <p>The Logstore.</p>
          * <br>
-         * <p>The name must be 2 to 32 characters in length and can contain uppercase letters, lowercase letters, digits, and underscores (\_). The name must start with a letter.</p>
+         * <p>Valid values of N: 1 to 25.</p>
          */
         @NameInMap("SLSLogstore")
         public String SLSLogstore;
 
         /**
-         * <p>The IDs of the member accounts.</p>
+         * <p>The Simple Log Service project.</p>
          * <br>
          * <p>Valid values of N: 1 to 25.</p>
-         * <br>
-         * <p>If you call API operations by using a management account, you can connect the Alibaba Cloud services that are activated for a member account in Resource Directory to Hybrid Cloud Monitoring. You can use Resource Directory to monitor Alibaba Cloud services across enterprise accounts.</p>
-         * <br>
-         * <p>>  If a member uses CloudMonitor for the first time, you must make sure that the service-linked role AliyunServiceRoleForCloudMonitor is attached to the member. For more information, see [Manage the service-linked role for CloudMonitor](~~170423~~).</p>
          */
         @NameInMap("SLSProject")
         public String SLSProject;
 
         /**
-         * <p>The error message.</p>
+         * <p>The region ID.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 25.</p>
          */
         @NameInMap("SLSRegion")
         public String SLSRegion;
 
         /**
-         * <p>The Logstores.</p>
+         * <p>The member ID.</p>
          * <br>
          * <p>Valid values of N: 1 to 25.</p>
+         * <br>
+         * <p>If you call this operation by using the management account of a resource directory, you can connect the Alibaba Cloud services that are activated for all members in the resource directory to Hybrid Cloud Monitoring. You can use the resource directory to monitor Alibaba Cloud services across enterprise accounts.</p>
+         * <br>
+         * <p>> If a member uses CloudMonitor for the first time, you must make sure that the service-linked role AliyunServiceRoleForCloudMonitor is attached to the member. For more information, see [Manage the service-linked role for CloudMonitor](~~170423~~).</p>
          */
         @NameInMap("SLSUserId")
         public String SLSUserId;
