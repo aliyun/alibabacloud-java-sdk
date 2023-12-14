@@ -80,16 +80,17 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("RefreshTokenValidity")
     public Integer refreshTokenValidity;
 
+    @NameInMap("RequiredScopes")
+    public String requiredScopes;
+
     /**
      * <p>Indicates whether a secret is required. Valid values:</p>
      * <br>
      * <p>*   true</p>
      * <p>*   false</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   For applications of the WebApp and ServerApp types, this parameter is automatically set to true and cannot be changed.</p>
-     * <p>*   For applications of the NativeApp type, this parameter can be set to true or false. If you do not set this parameter, false is used. Applications of the NativeApp type run in untrusted environments and the secrets of these applications are not protected. Therefore, we recommend that you do not set this parameter to true unless otherwise specified. For more information, see [Use an application of the NativeApp type to log on to Alibaba Cloud](~~93697~~).</p>
+     * <p>>- For applications of the WebApp and ServerApp types, this parameter is automatically set to true and cannot be changed.</p>
+     * <p>>- For applications of the NativeApp type, this parameter can be set to true or false. If you do not set this parameter, false is used. Applications of the NativeApp type run in untrusted environments and the secrets of these applications are not protected. Therefore, we recommend that you do not set this parameter to true unless otherwise specified. For more information, see [Use an application of the NativeApp type to log on to Alibaba Cloud](~~93697~~).</p>
      */
     @NameInMap("SecretRequired")
     public Boolean secretRequired;
@@ -161,6 +162,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public Integer getRefreshTokenValidity() {
         return this.refreshTokenValidity;
+    }
+
+    public CreateApplicationRequest setRequiredScopes(String requiredScopes) {
+        this.requiredScopes = requiredScopes;
+        return this;
+    }
+    public String getRequiredScopes() {
+        return this.requiredScopes;
     }
 
     public CreateApplicationRequest setSecretRequired(Boolean secretRequired) {

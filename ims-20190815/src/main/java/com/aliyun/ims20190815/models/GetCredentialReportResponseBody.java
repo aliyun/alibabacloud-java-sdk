@@ -18,9 +18,18 @@ public class GetCredentialReportResponseBody extends TeaModel {
     @NameInMap("GeneratedTime")
     public String generatedTime;
 
+    /**
+     * <p>Indicates whether the response is truncated. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("IsTruncated")
     public String isTruncated;
 
+    /**
+     * <p>The parameter that is used to obtain the truncated part. This parameter takes effect only when `IsTruncated` is set to true.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

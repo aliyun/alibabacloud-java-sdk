@@ -41,7 +41,7 @@ public class CreateUserRequest extends TeaModel {
     /**
      * <p>The tag value.</p>
      * <br>
-     * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be a up to128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.</p>
+     * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateUserRequestTag> tag;
@@ -121,7 +121,7 @@ public class CreateUserRequest extends TeaModel {
         /**
          * <p>The value of tag N.</p>
          * <br>
-         * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be a up to128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.</p>
+         * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -20,13 +20,13 @@ public class ListUsersResponseBody extends TeaModel {
     public String marker;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>An array that consists of the information about the RAM user.</p>
+     * <p>The details of the RAM user.</p>
      */
     @NameInMap("Users")
     public ListUsersResponseBodyUsers users;
@@ -70,13 +70,13 @@ public class ListUsersResponseBody extends TeaModel {
 
     public static class ListUsersResponseBodyUsersUserTagsTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -131,7 +131,7 @@ public class ListUsersResponseBody extends TeaModel {
         public String comments;
 
         /**
-         * <p>The time when the RAM user was created.</p>
+         * <p>The point in time when the RAM user was created. The time is displayed in UTC.</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
@@ -145,13 +145,13 @@ public class ListUsersResponseBody extends TeaModel {
         /**
          * <p>The email address of the RAM user.</p>
          * <br>
-         * <p>>  This parameter is valid only on the China site (aliyun.com).</p>
+         * <p>>  This parameter applies only to the Alibaba Cloud China site (aliyun.com).</p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
-         * <p>The last time when the RAM user logged on to the Alibaba Cloud Management Console.</p>
+         * <p>The timestamp when the RAM user last logged on to the console.</p>
          */
         @NameInMap("LastLoginDate")
         public String lastLoginDate;
@@ -159,7 +159,7 @@ public class ListUsersResponseBody extends TeaModel {
         /**
          * <p>The mobile phone number of the RAM user.</p>
          * <br>
-         * <p>>  This parameter is valid only on the China site (aliyun.com).</p>
+         * <p>>  This parameter applies only to the Alibaba Cloud China site (aliyun.com).</p>
          */
         @NameInMap("MobilePhone")
         public String mobilePhone;
@@ -175,13 +175,13 @@ public class ListUsersResponseBody extends TeaModel {
         public String provisionType;
 
         /**
-         * <p>An array that consists of tags.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public ListUsersResponseBodyUsersUserTags tags;
 
         /**
-         * <p>The time when the information about the RAM user was updated.</p>
+         * <p>The point in time when the information about the RAM user was last modified. The time is displayed in UTC.</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;

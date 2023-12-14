@@ -50,6 +50,9 @@ public class CreateApplicationResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("Required")
+        public Boolean required;
+
         public static CreateApplicationResponseBodyApplicationDelegatedScopePredefinedScopesPredefinedScope build(java.util.Map<String, ?> map) throws Exception {
             CreateApplicationResponseBodyApplicationDelegatedScopePredefinedScopesPredefinedScope self = new CreateApplicationResponseBodyApplicationDelegatedScopePredefinedScopesPredefinedScope();
             return TeaModel.build(map, self);
@@ -69,6 +72,14 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public CreateApplicationResponseBodyApplicationDelegatedScopePredefinedScopesPredefinedScope setRequired(Boolean required) {
+            this.required = required;
+            return this;
+        }
+        public Boolean getRequired() {
+            return this.required;
         }
 
     }

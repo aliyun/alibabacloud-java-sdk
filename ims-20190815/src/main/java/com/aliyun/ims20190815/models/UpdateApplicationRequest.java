@@ -61,6 +61,9 @@ public class UpdateApplicationRequest extends TeaModel {
     @NameInMap("NewRefreshTokenValidity")
     public Integer newRefreshTokenValidity;
 
+    @NameInMap("NewRequiredScopes")
+    public String newRequiredScopes;
+
     /**
      * <p>Specifies whether a secret is required. Valid values:</p>
      * <br>
@@ -134,6 +137,14 @@ public class UpdateApplicationRequest extends TeaModel {
     }
     public Integer getNewRefreshTokenValidity() {
         return this.newRefreshTokenValidity;
+    }
+
+    public UpdateApplicationRequest setNewRequiredScopes(String newRequiredScopes) {
+        this.newRequiredScopes = newRequiredScopes;
+        return this;
+    }
+    public String getNewRequiredScopes() {
+        return this.newRequiredScopes;
     }
 
     public UpdateApplicationRequest setNewSecretRequired(Boolean newSecretRequired) {
