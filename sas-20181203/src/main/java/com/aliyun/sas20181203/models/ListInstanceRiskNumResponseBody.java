@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceRiskNumResponseBody extends TeaModel {
+    /**
+     * <p>The information about the risks in the instance.</p>
+     */
     @NameInMap("InstanceRiskNum")
     public java.util.List<ListInstanceRiskNumResponseBodyInstanceRiskNum> instanceRiskNum;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
     }
 
     public static class ListInstanceRiskNumResponseBodyInstanceRiskNumInstanceItem extends TeaModel {
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The UUID of the instance.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
@@ -62,24 +74,45 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
     }
 
     public static class ListInstanceRiskNumResponseBodyInstanceRiskNumRiskNumEntity extends TeaModel {
+        /**
+         * <p>The number of high-risk alerts.</p>
+         */
         @NameInMap("SuspiciousHighCount")
         public Integer suspiciousHighCount;
 
+        /**
+         * <p>The number of low-risk alerts.</p>
+         */
         @NameInMap("SuspiciousLowCount")
         public Integer suspiciousLowCount;
 
+        /**
+         * <p>The number of medium-risk alerts.</p>
+         */
         @NameInMap("SuspiciousMediumCount")
         public Integer suspiciousMediumCount;
 
+        /**
+         * <p>The number of high-risk vulnerabilities.</p>
+         */
         @NameInMap("VulHighCount")
         public Integer vulHighCount;
 
+        /**
+         * <p>The number of low-risk vulnerabilities.</p>
+         */
         @NameInMap("VulLowCount")
         public Integer vulLowCount;
 
+        /**
+         * <p>The number of medium-risk vulnerabilities.</p>
+         */
         @NameInMap("VulMediumCount")
         public Integer vulMediumCount;
 
+        /**
+         * <p>The number of weak passwords exposed on the Internet.</p>
+         */
         @NameInMap("WeakPassWordCount")
         public Integer weakPassWordCount;
 
@@ -147,9 +180,15 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
     }
 
     public static class ListInstanceRiskNumResponseBodyInstanceRiskNum extends TeaModel {
+        /**
+         * <p>The information about the instance.</p>
+         */
         @NameInMap("InstanceItem")
         public ListInstanceRiskNumResponseBodyInstanceRiskNumInstanceItem instanceItem;
 
+        /**
+         * <p>The statistics about the risks.</p>
+         */
         @NameInMap("RiskNumEntity")
         public ListInstanceRiskNumResponseBodyInstanceRiskNumRiskNumEntity riskNumEntity;
 

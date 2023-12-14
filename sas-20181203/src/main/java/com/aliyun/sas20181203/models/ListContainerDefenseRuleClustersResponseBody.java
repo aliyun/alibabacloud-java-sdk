@@ -132,6 +132,11 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
         @NameInMap("Namespaces")
         public java.util.List<String> namespaces;
 
+        /**
+         * <p>The ID of the rule.</p>
+         * <br>
+         * <p>>  You can call the [ListInterceptionRulePage](~~2590599~~) operation to query the IDs of rules.</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 

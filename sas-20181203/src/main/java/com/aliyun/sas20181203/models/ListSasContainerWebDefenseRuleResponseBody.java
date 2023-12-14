@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
+    /**
+     * <p>The rules for container tamper-proofing.</p>
+     */
     @NameInMap("ContainerWebDefenseRuleList")
     public java.util.List<ListSasContainerWebDefenseRuleResponseBodyContainerWebDefenseRuleList> containerWebDefenseRuleList;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListSasContainerWebDefenseRuleResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID, which is used to query logs and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,33 +52,69 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
     }
 
     public static class ListSasContainerWebDefenseRuleResponseBodyContainerWebDefenseRuleListPathConfDTOList extends TeaModel {
+        /**
+         * <p>The backup paths.</p>
+         */
         @NameInMap("BackupPath")
         public String backupPath;
 
+        /**
+         * <p>The prevention mode. Valid values:</p>
+         * <br>
+         * <p>*   **block**</p>
+         * <p>*   **audit**</p>
+         */
         @NameInMap("DefenseMode")
         public String defenseMode;
 
+        /**
+         * <p>The protected path.</p>
+         */
         @NameInMap("DefensePath")
         public String defensePath;
 
+        /**
+         * <p>The file that is excluded.</p>
+         */
         @NameInMap("ExcludeFile")
         public String excludeFile;
 
+        /**
+         * <p>The path to the file that is excluded.</p>
+         */
         @NameInMap("ExcludeFilePath")
         public String excludeFilePath;
 
+        /**
+         * <p>The type of the file that is excluded.</p>
+         */
         @NameInMap("ExcludeFileType")
         public String excludeFileType;
 
+        /**
+         * <p>The protection mode. Valid values:</p>
+         * <br>
+         * <p>*   **0**: basic mode (whitelist)</p>
+         * <p>*   **1**: complex mode (blacklist)</p>
+         */
         @NameInMap("GuardType")
         public Integer guardType;
 
+        /**
+         * <p>The file that is included.</p>
+         */
         @NameInMap("IncludeFile")
         public String includeFile;
 
+        /**
+         * <p>The type of the file that is included.</p>
+         */
         @NameInMap("IncludeFileType")
         public String includeFileType;
 
+        /**
+         * <p>The processes that are added to the whitelist.</p>
+         */
         @NameInMap("ProcessPathList")
         public java.util.List<String> processPathList;
 
@@ -161,27 +206,54 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
     }
 
     public static class ListSasContainerWebDefenseRuleResponseBodyContainerWebDefenseRuleList extends TeaModel {
+        /**
+         * <p>The user ID.</p>
+         */
         @NameInMap("AliUid")
         public Long aliUid;
 
+        /**
+         * <p>The number of the applications.</p>
+         */
         @NameInMap("ApptotalCount")
         public Integer apptotalCount;
 
+        /**
+         * <p>The creation time. Unit: milliseconds.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The timestamp when the alert event was last modified. Unit: milliseconds.</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The paths that are protected.</p>
+         */
         @NameInMap("PathConfDTOList")
         public java.util.List<ListSasContainerWebDefenseRuleResponseBodyContainerWebDefenseRuleListPathConfDTOList> pathConfDTOList;
 
+        /**
+         * <p>The name of the rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The status of the rule. Valid values:</p>
+         * <br>
+         * <p>*   **1**: enabled</p>
+         * <p>*   **0**: disabled</p>
+         */
         @NameInMap("RuleStatus")
         public Integer ruleStatus;
 
@@ -257,15 +329,27 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
     }
 
     public static class ListSasContainerWebDefenseRuleResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

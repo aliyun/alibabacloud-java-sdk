@@ -4,27 +4,62 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyContainerDefenseRuleShrinkRequest extends TeaModel {
+    /**
+     * <p>The description of the rule.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The action specified in the rule. Valid values:</p>
+     * <br>
+     * <p>*   **1**: alert</p>
+     * <p>*   **2**: block</p>
+     */
     @NameInMap("RuleAction")
     public Integer ruleAction;
 
+    /**
+     * <p>The ID of the rule.</p>
+     * <br>
+     * <p>>  You can call the [ListContainerDefenseRule](~~2590599~~) operation to query the IDs of rules.</p>
+     */
     @NameInMap("RuleId")
     public Long ruleId;
 
+    /**
+     * <p>The name of the rule.</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The status of the rule. Valid values:</p>
+     * <br>
+     * <p>*   **1**: enabled</p>
+     * <p>*   **0**: disabled</p>
+     */
     @NameInMap("RuleSwitch")
     public Integer ruleSwitch;
 
+    /**
+     * <p>The type of the rule. Valid values:</p>
+     * <br>
+     * <p>*   1: system rule</p>
+     * <p>*   2: custom rule</p>
+     */
     @NameInMap("RuleType")
     public Integer ruleType;
 
+    /**
+     * <p>The effective scope of the rule.</p>
+     */
     @NameInMap("Scope")
     public java.util.List<ModifyContainerDefenseRuleShrinkRequestScope> scope;
 
+    /**
+     * <p>The whitelist.</p>
+     */
     @NameInMap("Whitelist")
     public String whitelistShrink;
 
@@ -98,12 +133,26 @@ public class ModifyContainerDefenseRuleShrinkRequest extends TeaModel {
     }
 
     public static class ModifyContainerDefenseRuleShrinkRequestScope extends TeaModel {
+        /**
+         * <p>Specifies whether to include all namespaces. Valid values:</p>
+         * <br>
+         * <p>*   **0**: no</p>
+         * <p>*   **1**: yes</p>
+         */
         @NameInMap("AllNamespace")
         public Integer allNamespace;
 
+        /**
+         * <p>The ID of the cluster on which the rule takes effect.</p>
+         * <br>
+         * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The namespaces.</p>
+         */
         @NameInMap("Namespaces")
         public java.util.List<String> namespaces;
 

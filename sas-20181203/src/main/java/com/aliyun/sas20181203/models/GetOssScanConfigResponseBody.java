@@ -38,12 +38,21 @@ public class GetOssScanConfigResponseBody extends TeaModel {
     }
 
     public static class GetOssScanConfigResponseBodyData extends TeaModel {
+        /**
+         * <p>Whether to match all file prefixes.</p>
+         */
         @NameInMap("AllKeyPrefix")
         public Boolean allKeyPrefix;
 
+        /**
+         * <p>The number of the buckets.</p>
+         */
         @NameInMap("BucketCount")
         public Integer bucketCount;
 
+        /**
+         * <p>The name of the bucket.</p>
+         */
         @NameInMap("BucketName")
         public String bucketName;
 
@@ -68,9 +77,15 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The ID of the policy.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The prefixes of the object that you want to check.</p>
+         */
         @NameInMap("KeyPrefixList")
         public java.util.List<String> keyPrefixList;
 
@@ -80,9 +95,15 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         @NameInMap("KeySuffixList")
         public java.util.List<String> keySuffixList;
 
+        /**
+         * <p>The time when the policy last update.</p>
+         */
         @NameInMap("LastUpdateTime")
         public Long lastUpdateTime;
 
+        /**
+         * <p>The name of the policy.</p>
+         */
         @NameInMap("Name")
         public String name;
 

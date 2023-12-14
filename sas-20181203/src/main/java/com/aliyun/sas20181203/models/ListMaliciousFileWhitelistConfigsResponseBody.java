@@ -4,24 +4,48 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
+    /**
+     * <p>The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The alert whitelist rules of sensitive files that are detected by using the agentless detection feature.</p>
+     */
     @NameInMap("List")
     public java.util.List<ListMaliciousFileWhitelistConfigsResponseBodyList> list;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListMaliciousFileWhitelistConfigsResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,36 +111,83 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
     }
 
     public static class ListMaliciousFileWhitelistConfigsResponseBodyList extends TeaModel {
+        /**
+         * <p>The number of the assets on which the rule takes effect.</p>
+         * <br>
+         * <p>>  The value of this parameter is returned only if the value of TargetType is SELECTION_KEY.</p>
+         */
         @NameInMap("Count")
         public String count;
 
+        /**
+         * <p>The name of the alert.</p>
+         * <br>
+         * <p>*   The value is fixed as ALL, which indicates all alert types.</p>
+         */
         @NameInMap("EventName")
         public String eventName;
 
+        /**
+         * <p>The field that is used in the whitelist rule.</p>
+         */
         @NameInMap("Field")
         public String field;
 
+        /**
+         * <p>The value of the field that is used in the whitelist rule.</p>
+         */
         @NameInMap("FieldValue")
         public String fieldValue;
 
+        /**
+         * <p>The time when the rule was created.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the rule was modified.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The logical operator of the whitelist rule.</p>
+         * <br>
+         * <p>*   The value is fixed as strEqual, which indicates the equality operator (=).</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>The feature to which this operation belongs.</p>
+         * <br>
+         * <p>*   The value is fixed as agentless, which indicates the agentless detection feature.</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The type of the assets on which the rule takes effect. Valid values:</p>
+         * <br>
+         * <p>*   ALL: all assets</p>
+         * <p>*   SELECTION_KEY: selected assets</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
+        /**
+         * <p>The assets on which the rule takes effect. Valid values:</p>
+         * <br>
+         * <p>*   ALL: all assets</p>
+         * <p>*   Others: selected assets</p>
+         */
         @NameInMap("TargetValue")
         public String targetValue;
 
@@ -216,15 +287,27 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
     }
 
     public static class ListMaliciousFileWhitelistConfigsResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

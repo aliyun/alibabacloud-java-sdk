@@ -4,24 +4,52 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class UploadedHoneyPotFileRequest extends TeaModel {
+    /**
+     * <p>The file key that you use to upload the file.</p>
+     * <br>
+     * <p>>  The key is in the format of HONEYPOT_FILE/{Timestamp}\_{Custom file name}.</p>
+     */
     @NameInMap("FileKey")
     public String fileKey;
 
+    /**
+     * <p>The name of the file that you want to upload.</p>
+     */
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <p>The file type.</p>
+     */
     @NameInMap("FileType")
     public String fileType;
 
+    /**
+     * <p>The name of the honeypot image.</p>
+     */
     @NameInMap("HoneypotImageName")
     public String honeypotImageName;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The ID of the management node to which the honeypot belongs.</p>
+     * <br>
+     * <p>>  You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to obtain the IDs of management nodes. operation to query the management node ID.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>The prompt template that corresponds to the file.</p>
+     */
     @NameInMap("TemplateExtra")
     public String templateExtra;
 

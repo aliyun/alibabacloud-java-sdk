@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteMaliciousFileWhitelistConfigRequest extends TeaModel {
+    /**
+     * <p>The ID of the whitelist rule. You can call the [ListMaliciousFileWhitelistConfigs](~~ListMaliciousFileWhitelistConfigs~~) operation to query the IDs of whitelist rules.</p>
+     */
     @NameInMap("ConfigId")
     public Long configId;
 

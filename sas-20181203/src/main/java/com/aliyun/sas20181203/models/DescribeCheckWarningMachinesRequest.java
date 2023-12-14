@@ -38,9 +38,10 @@ public class DescribeCheckWarningMachinesRequest extends TeaModel {
     public Long riskId;
 
     /**
-     * <p>Specifies whether the check item passed the baseline check. Valid values:</p>
-     * <p>*   **1**: no</p>
-     * <p>*   **3**: yes</p>
+     * <p>The risk status of the check item. Valid values:</p>
+     * <br>
+     * <p>*   **1**: failed</p>
+     * <p>*   **3**: passed</p>
      */
     @NameInMap("Status")
     public Integer status;

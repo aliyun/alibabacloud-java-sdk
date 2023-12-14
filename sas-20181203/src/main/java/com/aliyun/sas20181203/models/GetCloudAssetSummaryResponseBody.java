@@ -70,7 +70,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
          * <p>*   **23**: Data Security Center (DSC)</p>
          * <p>*   **24**: Elastic IP Address (EIP)</p>
          * <p>*   **25**: Identity as a Service (IDaaS) - Enterprise Identity Access Management (EIAM)</p>
-         * <p>*   **26**: PolarDB-X</p>
+         * <p>*   **26**: PolarDB for Xscale (PolarDB-X)</p>
          * <p>*   **27**: Elasticsearch</p>
          */
         @NameInMap("AssetType")
@@ -89,13 +89,13 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         public Integer instanceRiskCount;
 
         /**
-         * <p>The type of the server. Valid values:</p>
+         * <p>The server type. Valid values:</p>
          * <br>
          * <p>*   **0**: an asset provided by Alibaba Cloud</p>
-         * <p>*   **1**: a third-party cloud asset</p>
+         * <p>*   **1**: an asset outside Alibaba Cloud</p>
          * <p>*   **2**: an asset in a data center</p>
-         * <p>*   **3**, **4**, **5**, and **7**: an asset provided by another cloud</p>
-         * <p>*   **8**: a lightweight cloud asset</p>
+         * <p>*   **3**, **4**, **5**, and **7**: an asset provided by a third-party service provider</p>
+         * <p>*   **8**: a lightweight asset</p>
          */
         @NameInMap("Vendor")
         public Integer vendor;

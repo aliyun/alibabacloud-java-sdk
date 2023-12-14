@@ -4,21 +4,42 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetHoneypotStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The status code that is returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The honeypot usage statistics.</p>
+     */
     @NameInMap("Data")
     public GetHoneypotStatisticsResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,24 +97,48 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetHoneypotStatisticsResponseBodyData extends TeaModel {
+        /**
+         * <p>The total number of honeypots.</p>
+         */
         @NameInMap("TotalHoneypotCount")
         public Integer totalHoneypotCount;
 
+        /**
+         * <p>The health status of the management node. Valid values:</p>
+         * <br>
+         * <p>*   1: normal</p>
+         * <p>*   2: abnormal</p>
+         */
         @NameInMap("TotalNodeStatus")
         public Integer totalNodeStatus;
 
+        /**
+         * <p>The total number of authorized probes.</p>
+         */
         @NameInMap("TotalProbeCount")
         public Integer totalProbeCount;
 
+        /**
+         * <p>The number of deployed honeypots.</p>
+         */
         @NameInMap("UsedHoneypotCount")
         public Integer usedHoneypotCount;
 
+        /**
+         * <p>The number of deployed host probes.</p>
+         */
         @NameInMap("UsedHostProbeCount")
         public Integer usedHostProbeCount;
 
+        /**
+         * <p>The number of deployed probes.</p>
+         */
         @NameInMap("UsedProbeCount")
         public Integer usedProbeCount;
 
+        /**
+         * <p>The number of deployed VPC probes.</p>
+         */
         @NameInMap("UsedVpcProbeCount")
         public Integer usedVpcProbeCount;
 

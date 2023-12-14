@@ -4,45 +4,107 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateOpaStrategyNewShrinkRequest extends TeaModel {
+    /**
+     * <p>The risks that you want to detect by using the rule.</p>
+     */
     @NameInMap("AlarmDetail")
     public String alarmDetailShrink;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>> This parameter is deprecated.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The name of the cluster.</p>
+     * <br>
+     * <p>> This parameter is deprecated.</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <p>The description of the rule.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The names of the images.</p>
+     */
     @NameInMap("ImageName")
     public java.util.List<String> imageName;
 
+    /**
+     * <p>The tags that are added to the containers.</p>
+     */
     @NameInMap("Label")
     public java.util.List<String> label;
 
+    /**
+     * <p>Specifies whether the rule supports malicious Internet images. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("MaliciousImage")
     public Boolean maliciousImage;
 
+    /**
+     * <p>The action that is performed when the rule is hit. Valid values:</p>
+     * <br>
+     * <p>*   **1**: trigger alerts</p>
+     * <p>*   **2**: block</p>
+     * <p>*   **3**: allow</p>
+     */
     @NameInMap("RuleAction")
     public Integer ruleAction;
 
+    /**
+     * <p>The effective scope of the rule.</p>
+     */
     @NameInMap("Scopes")
     public java.util.List<CreateOpaStrategyNewShrinkRequestScopes> scopes;
 
+    /**
+     * <p>The ID of the rule.</p>
+     * <br>
+     * <p>>  You can call the [ListOpaClusterStrategyNew](~~2623574~~) operation to query the IDs of rules.</p>
+     * <br>
+     * <p>> This parameter is invalid when you create a rule.</p>
+     */
     @NameInMap("StrategyId")
     public Long strategyId;
 
+    /**
+     * <p>The name of the rule.</p>
+     */
     @NameInMap("StrategyName")
     public String strategyName;
 
+    /**
+     * <p>The ID of the rule template.</p>
+     * <br>
+     * <p>>  You can call the [GetOpaStrategyTemplateSummary](~~2539952~~) operation to query the IDs of rule templates.</p>
+     */
     @NameInMap("StrategyTemplateId")
     public Long strategyTemplateId;
 
+    /**
+     * <p>Specifies whether the rule supports unscanned images. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("UnScanedImage")
     public Boolean unScanedImage;
 
+    /**
+     * <p>The whitelist.</p>
+     */
     @NameInMap("WhiteList")
     public java.util.List<String> whiteList;
 
@@ -164,15 +226,36 @@ public class CreateOpaStrategyNewShrinkRequest extends TeaModel {
     }
 
     public static class CreateOpaStrategyNewShrinkRequestScopes extends TeaModel {
+        /**
+         * <p>The rule instance ID in the cluster.</p>
+         * <br>
+         * <p>> This parameter is invalid when you create a rule.</p>
+         */
         @NameInMap("AckPolicyInstanceId")
         public String ackPolicyInstanceId;
 
+        /**
+         * <p>Specifies whether to include all namespaces. Valid values:</p>
+         * <br>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
+         */
         @NameInMap("AllNamespace")
         public Integer allNamespace;
 
+        /**
+         * <p>The ID of the cluster in the rule.</p>
+         * <br>
+         * <p>>  You can call the [DescribeGroupedContainerInstances](~~421736~~) operation to query the IDs of clusters.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The namespaces.</p>
+         * <br>
+         * <p>> This parameter is valid only when AllNamespace is set to 0.</p>
+         */
         @NameInMap("NamespaceList")
         public java.util.List<String> namespaceList;
 

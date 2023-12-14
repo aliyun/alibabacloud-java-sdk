@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetAegisContainerPluginRuleCriteriaResponseBody extends TeaModel {
+    /**
+     * <p>The information about the search condition.</p>
+     */
     @NameInMap("CriteriaList")
     public java.util.List<GetAegisContainerPluginRuleCriteriaResponseBodyCriteriaList> criteriaList;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,35 @@ public class GetAegisContainerPluginRuleCriteriaResponseBody extends TeaModel {
     }
 
     public static class GetAegisContainerPluginRuleCriteriaResponseBodyCriteriaList extends TeaModel {
+        /**
+         * <p>The name of the search condition. Valid values:</p>
+         * <br>
+         * <p>*   **instanceId**: the ID of the container instance.</p>
+         * <p>*   **clusterId**: the cluster ID.</p>
+         * <p>*   **regionId**: the ID of the region in which the container resides.</p>
+         * <p>*   **clusterName**: the name of the cluster.</p>
+         * <p>*   **clusterType**: the type of the cluster.</p>
+         * <p>*   **hostIp**: the public IP address.</p>
+         * <p>*   **pod**: the pod.</p>
+         * <p>*   **podIp**: the IP address of the pod.</p>
+         * <p>*   **containerId**: the container ID.</p>
+         * <p>*   **containerScope**: the type of the container.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The type of the search condition. Valid values:</p>
+         * <br>
+         * <p>*   **input**: The search condition needs to be specified.</p>
+         * <p>*   **select**: The search condition is an option that can be selected from the drop-down list.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The values.</p>
+         */
         @NameInMap("Values")
         public String values;
 

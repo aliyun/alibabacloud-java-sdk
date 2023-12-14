@@ -4103,6 +4103,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteOpaStrategyNewWithOptions(request, runtime);
     }
 
+    public DeleteOssScanConfigResponse deleteOssScanConfigWithOptions(DeleteOssScanConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteOssScanConfig"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteOssScanConfigResponse());
+    }
+
+    public DeleteOssScanConfigResponse deleteOssScanConfig(DeleteOssScanConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteOssScanConfigWithOptions(request, runtime);
+    }
+
     public DeletePrivateRegistryResponse deletePrivateRegistryWithOptions(DeletePrivateRegistryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -20460,6 +20489,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listInterceptionTargetPageWithOptions(request, runtime);
     }
 
+    /**
+      * You can use this operation to query the access information about Kubernetes clusters.
+      *
+      * @param request ListK8sAccessInfoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListK8sAccessInfoResponse
+     */
     public ListK8sAccessInfoResponse listK8sAccessInfoWithOptions(ListK8sAccessInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -20496,6 +20532,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListK8sAccessInfoResponse());
     }
 
+    /**
+      * You can use this operation to query the access information about Kubernetes clusters.
+      *
+      * @param request ListK8sAccessInfoRequest
+      * @return ListK8sAccessInfoResponse
+     */
     public ListK8sAccessInfoResponse listK8sAccessInfo(ListK8sAccessInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listK8sAccessInfoWithOptions(request, runtime);
@@ -20744,6 +20786,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListOssBucketScanInfoResponse listOssBucketScanInfo(ListOssBucketScanInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listOssBucketScanInfoWithOptions(request, runtime);
+    }
+
+    public ListOssScanConfigResponse listOssScanConfigWithOptions(ListOssScanConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListOssScanConfig"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListOssScanConfigResponse());
+    }
+
+    public ListOssScanConfigResponse listOssScanConfig(ListOssScanConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listOssScanConfigWithOptions(request, runtime);
     }
 
     public ListPluginForUuidResponse listPluginForUuidWithOptions(ListPluginForUuidRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -25926,6 +25993,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.removeCheckResultWhiteListWithOptions(request, runtime);
     }
 
+    public ResetHoneypotResponse resetHoneypotWithOptions(ResetHoneypotRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.honeypotId)) {
+            query.put("HoneypotId", request.honeypotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResetHoneypot"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResetHoneypotResponse());
+    }
+
+    public ResetHoneypotResponse resetHoneypot(ResetHoneypotRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.resetHoneypotWithOptions(request, runtime);
+    }
+
     public RetryAgentlessTaskResponse retryAgentlessTaskWithOptions(RetryAgentlessTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -26339,6 +26439,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartDiscoverDatabaseTaskResponse startDiscoverDatabaseTask() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startDiscoverDatabaseTaskWithOptions(runtime);
+    }
+
+    public StartHoneypotResponse startHoneypotWithOptions(StartHoneypotRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.honeypotId)) {
+            query.put("HoneypotId", request.honeypotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartHoneypot"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartHoneypotResponse());
+    }
+
+    public StartHoneypotResponse startHoneypot(StartHoneypotRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startHoneypotWithOptions(request, runtime);
     }
 
     public StartPreCheckDatabaseResponse startPreCheckDatabaseWithOptions(StartPreCheckDatabaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

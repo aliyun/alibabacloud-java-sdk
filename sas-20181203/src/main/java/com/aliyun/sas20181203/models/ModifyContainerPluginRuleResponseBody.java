@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyContainerPluginRuleResponseBody extends TeaModel {
+    /**
+     * <p>The defense rule against container escapes.</p>
+     */
     @NameInMap("Data")
     public ModifyContainerPluginRuleResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
     }
 
     public static class ModifyContainerPluginRuleResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
+        /**
+         * <p>The name of the rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The switch ID.</p>
+         */
         @NameInMap("SwitchId")
         public String switchId;
 

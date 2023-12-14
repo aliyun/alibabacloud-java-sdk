@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class AddSasContainerWebDefenseRuleRequest extends TeaModel {
+    /**
+     * <p>The paths that you want to protect.</p>
+     */
     @NameInMap("PathConfDTOList")
     public java.util.List<AddSasContainerWebDefenseRuleRequestPathConfDTOList> pathConfDTOList;
 
+    /**
+     * <p>The name of the rule.</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
@@ -32,33 +38,69 @@ public class AddSasContainerWebDefenseRuleRequest extends TeaModel {
     }
 
     public static class AddSasContainerWebDefenseRuleRequestPathConfDTOList extends TeaModel {
+        /**
+         * <p>The backup path.</p>
+         */
         @NameInMap("BackupPath")
         public String backupPath;
 
+        /**
+         * <p>The prevention mode. Valid values:</p>
+         * <br>
+         * <p>*   **block**</p>
+         * <p>*   **audit**</p>
+         */
         @NameInMap("DefenseMode")
         public String defenseMode;
 
+        /**
+         * <p>The path that you want to protect.</p>
+         */
         @NameInMap("DefensePath")
         public String defensePath;
 
+        /**
+         * <p>The file that you want to exclude.</p>
+         */
         @NameInMap("ExcludeFile")
         public String excludeFile;
 
+        /**
+         * <p>The path to the file that you want to exclude.</p>
+         */
         @NameInMap("ExcludeFilePath")
         public String excludeFilePath;
 
+        /**
+         * <p>The type of the file that you want to exclude.</p>
+         */
         @NameInMap("ExcludeFileType")
         public String excludeFileType;
 
+        /**
+         * <p>The protecion mode. Valid values:</p>
+         * <br>
+         * <p>*   **0**: basic mode (whitelist)</p>
+         * <p>*   **1**: complex mode (blacklist)</p>
+         */
         @NameInMap("GuardType")
         public Integer guardType;
 
+        /**
+         * <p>The file that you want to include.</p>
+         */
         @NameInMap("IncludeFile")
         public String includeFile;
 
+        /**
+         * <p>The type of the file that you want to include.</p>
+         */
         @NameInMap("IncludeFileType")
         public String includeFileType;
 
+        /**
+         * <p>The processes that you want to add to the whitelist.</p>
+         */
         @NameInMap("ProcessPathList")
         public java.util.List<String> processPathList;
 

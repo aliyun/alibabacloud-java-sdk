@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListClusterPluginInfoResponseBody extends TeaModel {
+    /**
+     * <p>The information about the plug-in.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListClusterPluginInfoResponseBodyData> data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,39 +38,86 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
     }
 
     public static class ListClusterPluginInfoResponseBodyDataNodePluginInfoList extends TeaModel {
+        /**
+         * <p>The error code returned.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message returned.</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        /**
+         * <p>Indicates whether the plug-in is installed. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Installed")
         public Boolean installed;
 
+        /**
+         * <p>The public IP address of the server.</p>
+         */
         @NameInMap("MachineInternetIp")
         public String machineInternetIp;
 
+        /**
+         * <p>The private IP address of the server.</p>
+         */
         @NameInMap("MachineIntranetIp")
         public String machineIntranetIp;
 
+        /**
+         * <p>The name of the server.</p>
+         */
         @NameInMap("MachineName")
         public String machineName;
 
+        /**
+         * <p>The type of the instance. Valid values include:</p>
+         * <br>
+         * <p>*   **ecs**: Elastic Compute Service (ECS) instance</p>
+         * <p>*   **slb**: Server Load Balancer (SLB) instance</p>
+         */
         @NameInMap("MachineType")
         public Long machineType;
 
+        /**
+         * <p>Indicates whether the Security Center agent is online. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         * <br>
+         * <p>>  If the Security Center agent of the server is offline, Security Center does not protect the server.</p>
+         */
         @NameInMap("Online")
         public Boolean online;
 
+        /**
+         * <p>The name of the plug-in.</p>
+         */
         @NameInMap("PluginName")
         public String pluginName;
 
+        /**
+         * <p>The version of the plug-in.</p>
+         */
         @NameInMap("PluginVersion")
         public String pluginVersion;
 
+        /**
+         * <p>The UUID of the server.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
+        /**
+         * <p>The instance ID of the server.</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
@@ -172,15 +225,31 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
     }
 
     public static class ListClusterPluginInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The status of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   1: normal</p>
+         * <p>*   2: abnormal</p>
+         * <p>*   3: offline</p>
+         */
         @NameInMap("ClusterStatus")
         public String clusterStatus;
 
+        /**
+         * <p>The plug-ins.</p>
+         */
         @NameInMap("NodePluginInfoList")
         public java.util.List<ListClusterPluginInfoResponseBodyDataNodePluginInfoList> nodePluginInfoList;
 

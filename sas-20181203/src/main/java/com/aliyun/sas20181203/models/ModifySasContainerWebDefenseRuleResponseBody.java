@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifySasContainerWebDefenseRuleResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

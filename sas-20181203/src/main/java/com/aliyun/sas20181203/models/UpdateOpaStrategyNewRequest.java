@@ -4,45 +4,105 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class UpdateOpaStrategyNewRequest extends TeaModel {
+    /**
+     * <p>The risks that you want to detect by using the rule on images.</p>
+     */
     @NameInMap("AlarmDetail")
     public UpdateOpaStrategyNewRequestAlarmDetail alarmDetail;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>> This parameter is deprecated. We recommend that you use the Scopes parameter to specify the clusters in which the rule takes effect.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The name of the cluster.</p>
+     * <br>
+     * <p>> This parameter is deprecated.</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <p>The description of the rule.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The names of the images in the rule.</p>
+     */
     @NameInMap("ImageName")
     public java.util.List<String> imageName;
 
+    /**
+     * <p>The tags that are added to the images in the rule.</p>
+     */
     @NameInMap("Label")
     public java.util.List<String> label;
 
+    /**
+     * <p>Specifies whether the rule supports malicious Internet images. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("MaliciousImage")
     public Boolean maliciousImage;
 
+    /**
+     * <p>The action that is performed when the rule is hit. Valid values:</p>
+     * <br>
+     * <p>*   **1**: trigger alerts</p>
+     * <p>*   **2**: block</p>
+     * <p>*   **3**: allow</p>
+     */
     @NameInMap("RuleAction")
     public Integer ruleAction;
 
+    /**
+     * <p>The effective scope of the rule.</p>
+     */
     @NameInMap("Scopes")
     public java.util.List<UpdateOpaStrategyNewRequestScopes> scopes;
 
+    /**
+     * <p>The ID of the rule.</p>
+     * <br>
+     * <p>>  You can call the \[ListOpaClusterStrategyNew]\(~~2623574~~) operation to query the IDs of rules.</p>
+     */
     @NameInMap("StrategyId")
     public Long strategyId;
 
+    /**
+     * <p>The name of the rule.</p>
+     */
     @NameInMap("StrategyName")
     public String strategyName;
 
+    /**
+     * <p>The ID of the rule template.</p>
+     * <br>
+     * <p>>  You can call the [GetOpaStrategyTemplateSummary](~~2539952~~) operation to query the IDs of rule templates.</p>
+     */
     @NameInMap("StrategyTemplateId")
     public Long strategyTemplateId;
 
+    /**
+     * <p>Specifies whether the rule supports unscanned images. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("UnScanedImage")
     public Boolean unScanedImage;
 
+    /**
+     * <p>The whitelist.</p>
+     */
     @NameInMap("WhiteList")
     public java.util.List<String> whiteList;
 
@@ -164,9 +224,19 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     }
 
     public static class UpdateOpaStrategyNewRequestAlarmDetailBaselineItem extends TeaModel {
+        /**
+         * <p>The ID of the baseline check item.</p>
+         * <br>
+         * <p>>  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the IDs of check items.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the baseline check item.</p>
+         * <br>
+         * <p>>  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the names of check items.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -194,9 +264,15 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     }
 
     public static class UpdateOpaStrategyNewRequestAlarmDetailBaseline extends TeaModel {
+        /**
+         * <p>The baseline check items.</p>
+         */
         @NameInMap("Item")
         public java.util.List<UpdateOpaStrategyNewRequestAlarmDetailBaselineItem> item;
 
+        /**
+         * <p>The risk levels.</p>
+         */
         @NameInMap("RiskLevel")
         public java.util.List<String> riskLevel;
 
@@ -224,9 +300,19 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     }
 
     public static class UpdateOpaStrategyNewRequestAlarmDetailMaliciousFileItem extends TeaModel {
+        /**
+         * <p>The ID of the malicious sample.</p>
+         * <br>
+         * <p>>  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the IDs of malicious samples.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the malicious sample.</p>
+         * <br>
+         * <p>>  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the names of malicious samples.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -254,9 +340,15 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     }
 
     public static class UpdateOpaStrategyNewRequestAlarmDetailMaliciousFile extends TeaModel {
+        /**
+         * <p>The malicious samples.</p>
+         */
         @NameInMap("Item")
         public java.util.List<UpdateOpaStrategyNewRequestAlarmDetailMaliciousFileItem> item;
 
+        /**
+         * <p>The risk levels.</p>
+         */
         @NameInMap("RiskLevel")
         public java.util.List<String> riskLevel;
 
@@ -284,9 +376,19 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     }
 
     public static class UpdateOpaStrategyNewRequestAlarmDetailVulItem extends TeaModel {
+        /**
+         * <p>The ID of the vulnerability.</p>
+         * <br>
+         * <p>>  You can call the [DescribeVulListPage](~~471928~~) operation to query the IDs of vulnerabilities.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the vulnerability.</p>
+         * <br>
+         * <p>>  You can call the [DescribeVulListPage](~~471928~~) operation to query the names of vulnerabilities.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -314,9 +416,15 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     }
 
     public static class UpdateOpaStrategyNewRequestAlarmDetailVul extends TeaModel {
+        /**
+         * <p>The vulnerabilities.</p>
+         */
         @NameInMap("Item")
         public java.util.List<UpdateOpaStrategyNewRequestAlarmDetailVulItem> item;
 
+        /**
+         * <p>The risk levels.</p>
+         */
         @NameInMap("RiskLevel")
         public java.util.List<String> riskLevel;
 
@@ -344,12 +452,21 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     }
 
     public static class UpdateOpaStrategyNewRequestAlarmDetail extends TeaModel {
+        /**
+         * <p>The baseline risks.</p>
+         */
         @NameInMap("Baseline")
         public UpdateOpaStrategyNewRequestAlarmDetailBaseline baseline;
 
+        /**
+         * <p>The malicious sample risks.</p>
+         */
         @NameInMap("MaliciousFile")
         public UpdateOpaStrategyNewRequestAlarmDetailMaliciousFile maliciousFile;
 
+        /**
+         * <p>The vulnerability risks.</p>
+         */
         @NameInMap("Vul")
         public UpdateOpaStrategyNewRequestAlarmDetailVul vul;
 
@@ -385,15 +502,36 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     }
 
     public static class UpdateOpaStrategyNewRequestScopes extends TeaModel {
+        /**
+         * <p>The instance ID of the rule in the cluster.</p>
+         * <br>
+         * <p>>  You can call the [GetOpaStrategyDetailNew](~~GetOpaStrategyDetailNew~~) operation to query the instance IDs of rules.</p>
+         */
         @NameInMap("AckPolicyInstanceId")
         public String ackPolicyInstanceId;
 
+        /**
+         * <p>Specifies whether to include all namespaces.</p>
+         * <br>
+         * <p>*   **0**: no</p>
+         * <p>*   **1**: yes</p>
+         */
         @NameInMap("AllNamespace")
         public Integer allNamespace;
 
+        /**
+         * <p>The ID of the container cluster.</p>
+         * <br>
+         * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The namespaces.</p>
+         * <br>
+         * <p>> This parameter is valid only when AllNamespace is set to 0.</p>
+         */
         @NameInMap("NamespaceList")
         public java.util.List<String> namespaceList;
 

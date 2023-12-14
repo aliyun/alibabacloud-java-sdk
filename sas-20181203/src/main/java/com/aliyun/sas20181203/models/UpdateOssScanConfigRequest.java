@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class UpdateOssScanConfigRequest extends TeaModel {
+    /**
+     * <p>Whether to match all file prefixes.</p>
+     */
     @NameInMap("AllKeyPrefix")
     public Boolean allKeyPrefix;
 
@@ -28,9 +31,15 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the policy.</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The prefixes of the object that you want to check.</p>
+     */
     @NameInMap("KeyPrefixList")
     public java.util.List<String> keyPrefixList;
 
@@ -40,6 +49,9 @@ public class UpdateOssScanConfigRequest extends TeaModel {
     @NameInMap("KeySuffixList")
     public java.util.List<String> keySuffixList;
 
+    /**
+     * <p>The name of the policy.</p>
+     */
     @NameInMap("Name")
     public String name;
 

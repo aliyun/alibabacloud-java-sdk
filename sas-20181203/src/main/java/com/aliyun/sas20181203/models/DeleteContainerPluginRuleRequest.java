@@ -14,7 +14,7 @@ public class DeleteContainerPluginRuleRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The ID of the rule. You can call the addContainerWebDefenseRule operation to query the ID.</p>
      */
     @NameInMap("RuleId")
     public Integer ruleId;

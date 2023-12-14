@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetOssScanConfigRequest extends TeaModel {
+    /**
+     * <p>The name of the bucket.</p>
+     */
     @NameInMap("BucketName")
     public String bucketName;
 
+    /**
+     * <p>The ID of the policy.</p>
+     */
     @NameInMap("Id")
     public String id;
 

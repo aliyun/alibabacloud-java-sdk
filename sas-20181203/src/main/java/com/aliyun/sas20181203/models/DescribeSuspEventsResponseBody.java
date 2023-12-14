@@ -424,7 +424,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The public IP address of the associated instance.</p>
+         * <p>The public IP address that is associated with instance.</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
@@ -471,6 +471,12 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @NameInMap("K8sPodName")
         public String k8sPodName;
 
+        /**
+         * <p>Indicates whether the large model analysis tag is supported. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("LargeModel")
         public Boolean largeModel;
 
@@ -499,8 +505,8 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         /**
          * <p>The status of the malicious behavior defense rule. Valid values:</p>
          * <br>
-         * <p>*   **open**: enabled.</p>
-         * <p>*   **close**: disabled.</p>
+         * <p>*   **open**</p>
+         * <p>*   **close**</p>
          */
         @NameInMap("MaliciousRuleStatus")
         public String maliciousRuleStatus;
@@ -557,7 +563,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         public String saleVersion;
 
         /**
-         * <p>The IDs of the associated alert events.</p>
+         * <p>The ID of the associated alert event.</p>
          */
         @NameInMap("SecurityEventIds")
         public String securityEventIds;

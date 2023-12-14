@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVulCheckTaskStatusDetailRequest extends TeaModel {
     /**
-     * <p>The IDs of tasks.</p>
+     * <p>The task IDs.</p>
      */
     @NameInMap("TaskIds")
     public java.util.List<String> taskIds;

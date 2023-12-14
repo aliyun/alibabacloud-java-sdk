@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetMaliciousFileWhitelistConfigRequest extends TeaModel {
+    /**
+     * <p>The ID of the whitelist rule.</p>
+     */
     @NameInMap("ConfigId")
     public Long configId;
 

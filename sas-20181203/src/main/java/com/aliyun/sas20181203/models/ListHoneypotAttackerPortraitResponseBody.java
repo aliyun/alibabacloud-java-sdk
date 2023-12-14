@@ -4,24 +4,48 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
+    /**
+     * <p>The status code that is returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The details of the attacker profile.</p>
+     */
     @NameInMap("List")
     public java.util.List<ListHoneypotAttackerPortraitResponseBodyList> list;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListHoneypotAttackerPortraitResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,12 +111,21 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
     }
 
     public static class ListHoneypotAttackerPortraitResponseBodyListNetwork extends TeaModel {
+        /**
+         * <p>The public IP addresses.</p>
+         */
         @NameInMap("ExternalIp")
         public java.util.List<String> externalIp;
 
+        /**
+         * <p>The private IP addresses.</p>
+         */
         @NameInMap("InternalIp")
         public java.util.List<String> internalIp;
 
+        /**
+         * <p>The originating IP addresses.</p>
+         */
         @NameInMap("RealIp")
         public java.util.List<String> realIp;
 
@@ -128,24 +161,45 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
     }
 
     public static class ListHoneypotAttackerPortraitResponseBodyList extends TeaModel {
+        /**
+         * <p>The number of attacks.</p>
+         */
         @NameInMap("AttackCount")
         public Integer attackCount;
 
+        /**
+         * <p>The information about the browsers of the attack source.</p>
+         */
         @NameInMap("Browser")
         public java.util.List<String> browser;
 
+        /**
+         * <p>The information about the hosts of the attack source.</p>
+         */
         @NameInMap("Host")
         public java.util.List<String> host;
 
+        /**
+         * <p>The timestamp at which the attack was last detected. Unit: milliseconds.</p>
+         */
         @NameInMap("LastTime")
         public Long lastTime;
 
+        /**
+         * <p>The network information about the attack source.</p>
+         */
         @NameInMap("Network")
         public ListHoneypotAttackerPortraitResponseBodyListNetwork network;
 
+        /**
+         * <p>The attacker profile ID.</p>
+         */
         @NameInMap("PortraitId")
         public String portraitId;
 
+        /**
+         * <p>The social information about the attack source.</p>
+         */
         @NameInMap("Social")
         public java.util.List<String> social;
 
@@ -213,15 +267,27 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
     }
 
     public static class ListHoneypotAttackerPortraitResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

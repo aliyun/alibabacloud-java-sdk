@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeContainerInstancesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the information about containers.</p>
+     * <p>The details of the container asset.</p>
      */
     @NameInMap("ContainerInstanceList")
     public java.util.List<DescribeContainerInstancesResponseBodyContainerInstanceList> containerInstanceList;
@@ -74,13 +74,13 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The ID of cluster.</p>
+         * <p>The ID of the cluster.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The cluster name.</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
@@ -98,13 +98,16 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The container is exposed.</p>
+         * <p>Indicates whether the asset is exposed to the Internet.</p>
+         * <br>
+         * <p>*   **1**: exposed</p>
+         * <p>*   **0**: not exposed</p>
          */
         @NameInMap("Exposed")
         public Integer exposed;
 
         /**
-         * <p>The container exposed details .</p>
+         * <p>The exposure details. The value is a JSON string.</p>
          */
         @NameInMap("ExposedDetail")
         public String exposedDetail;
@@ -125,7 +128,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
         public String hcStatus;
 
         /**
-         * <p>The IP address of the server.</p>
+         * <p>The IP address of the host.</p>
          */
         @NameInMap("HostIp")
         public String hostIp;
@@ -143,7 +146,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
         public String imageDigest;
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The image ID.</p>
          */
         @NameInMap("ImageId")
         public String imageId;
@@ -155,7 +158,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
         public String imageRepoName;
 
         /**
-         * <p>The namespace to which the image repository belongs.</p>
+         * <p>The namespace of the image repository.</p>
          */
         @NameInMap("ImageRepoNamespace")
         public String imageRepoNamespace;

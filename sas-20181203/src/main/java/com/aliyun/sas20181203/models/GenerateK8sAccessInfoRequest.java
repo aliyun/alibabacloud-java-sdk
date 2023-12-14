@@ -4,33 +4,69 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GenerateK8sAccessInfoRequest extends TeaModel {
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("AliyunYundunGatewayApiName")
     public String aliyunYundunGatewayApiName;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("AliyunYundunGatewayPopName")
     public String aliyunYundunGatewayPopName;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("AliyunYundunGatewayProjectName")
     public String aliyunYundunGatewayProjectName;
 
+    /**
+     * <p>The Simple Log Service Logstore that is used to store the audit logs.</p>
+     */
     @NameInMap("AuditLogStore")
     public String auditLogStore;
 
+    /**
+     * <p>The Simple Log Service project that is used to store the audit logs.</p>
+     */
     @NameInMap("AuditProject")
     public String auditProject;
 
+    /**
+     * <p>The ID of the region in which the audit logs are stored.</p>
+     */
     @NameInMap("AuditRegionId")
     public String auditRegionId;
 
+    /**
+     * <p>The name of the Kubernetes cluster.</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <p>The time at which the container ends to be added.</p>
+     */
     @NameInMap("ExpireDate")
     public Long expireDate;
 
+    /**
+     * <p>The group ID.</p>
+     */
     @NameInMap("GroupId")
     public Long groupId;
 
+    /**
+     * <p>The service provider of the cloud asset. Valid values:</p>
+     * <br>
+     * <p>*   **Tencent**</p>
+     * <p>*   **HUAWEICLOUD**</p>
+     * <p>*   **Azure**</p>
+     * <p>*   **AWS**</p>
+     * <p>*   **Others**</p>
+     */
     @NameInMap("Vendor")
     public String vendor;
 

@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GenerateK8sAccessInfoResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GenerateK8sAccessInfoResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +38,57 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
     }
 
     public static class GenerateK8sAccessInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         */
         @NameInMap("AliUid")
         public Long aliUid;
 
+        /**
+         * <p>The Simple Log Service Logstore that is used to store the audit logs.</p>
+         */
         @NameInMap("AuditLogStore")
         public String auditLogStore;
 
+        /**
+         * <p>The Simple Log Service project that is used to store the audit logs.</p>
+         */
         @NameInMap("AuditProject")
         public String auditProject;
 
+        /**
+         * <p>The ID of the region in which the server is deployed.</p>
+         */
         @NameInMap("AuditRegionId")
         public String auditRegionId;
 
+        /**
+         * <p>The cluster ID.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The cluster name.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The expiration time. Unit: milliseconds.</p>
+         */
         @NameInMap("ExpireDate")
         public Long expireDate;
 
+        /**
+         * <p>The server group ID.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The installation key of the server.</p>
+         */
         @NameInMap("InstallKey")
         public String installKey;
 

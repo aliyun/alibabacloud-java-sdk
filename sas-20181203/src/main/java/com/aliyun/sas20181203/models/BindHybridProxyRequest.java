@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class BindHybridProxyRequest extends TeaModel {
+    /**
+     * <p>The name of the proxy cluster.</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <p>The UUIDs of servers that you want to add to Security Center over the proxy server.</p>
+     */
     @NameInMap("YundunUuids")
     public java.util.List<String> yundunUuids;
 

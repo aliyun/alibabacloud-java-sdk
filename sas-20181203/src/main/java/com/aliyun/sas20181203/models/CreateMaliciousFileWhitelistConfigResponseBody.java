@@ -4,21 +4,42 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateMaliciousFileWhitelistConfigResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public CreateMaliciousFileWhitelistConfigResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,36 +97,83 @@ public class CreateMaliciousFileWhitelistConfigResponseBody extends TeaModel {
     }
 
     public static class CreateMaliciousFileWhitelistConfigResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of the assets on which the whitelist rule takes effect.</p>
+         * <br>
+         * <p>>  The value of this parameter is returned only if the value of TargetType is SELECTION_KEY.</p>
+         */
         @NameInMap("Count")
         public String count;
 
+        /**
+         * <p>The name of the alert.</p>
+         * <br>
+         * <p>*   The value is fixed as ALL, which indicates all alert types.</p>
+         */
         @NameInMap("EventName")
         public String eventName;
 
+        /**
+         * <p>The field that is used in the whitelist rule.</p>
+         */
         @NameInMap("Field")
         public String field;
 
+        /**
+         * <p>The value of the field that is used in the whitelist rule.</p>
+         */
         @NameInMap("FieldValue")
         public String fieldValue;
 
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The modification time.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the whitelist rule.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The logical operator that is used in the whitelist rule.</p>
+         * <br>
+         * <p>*   The value is fixed as strEqual, which indicates the equality operator (=).</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>The feature to which this operation belongs.</p>
+         * <br>
+         * <p>*   The value is fixed as agentless, which indicates the agentless detection feature.</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The type of the assets on which the whitelist rule takes effect. Valid values:</p>
+         * <br>
+         * <p>*   ALL: all assets</p>
+         * <p>*   SELECTION_KEY: selected assets</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
+        /**
+         * <p>The assets on which the whitelist rule takes effect. Valid values:</p>
+         * <br>
+         * <p>*   ALL: all assets</p>
+         * <p>*   Others: selected assets</p>
+         */
         @NameInMap("TargetValue")
         public String targetValue;
 

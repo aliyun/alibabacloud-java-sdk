@@ -4,15 +4,30 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListK8sAccessInfoRequest extends TeaModel {
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("AliyunYundunGatewayApiName")
     public String aliyunYundunGatewayApiName;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("AliyunYundunGatewayPopName")
     public String aliyunYundunGatewayPopName;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("AliyunYundunGatewayProjectName")
     public String aliyunYundunGatewayProjectName;
 
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
