@@ -131,6 +131,18 @@ public class SubmitAudioTo2DAvatarVideoTaskRequest extends TeaModel {
         @NameInMap("Code")
         public String code;
 
+        @NameInMap("Height")
+        public Integer height;
+
+        @NameInMap("Width")
+        public Integer width;
+
+        @NameInMap("X")
+        public Integer x;
+
+        @NameInMap("Y")
+        public Integer y;
+
         public static SubmitAudioTo2DAvatarVideoTaskRequestAvatarInfo build(java.util.Map<String, ?> map) throws Exception {
             SubmitAudioTo2DAvatarVideoTaskRequestAvatarInfo self = new SubmitAudioTo2DAvatarVideoTaskRequestAvatarInfo();
             return TeaModel.build(map, self);
@@ -142,6 +154,38 @@ public class SubmitAudioTo2DAvatarVideoTaskRequest extends TeaModel {
         }
         public String getCode() {
             return this.code;
+        }
+
+        public SubmitAudioTo2DAvatarVideoTaskRequestAvatarInfo setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
+        public SubmitAudioTo2DAvatarVideoTaskRequestAvatarInfo setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
+        }
+
+        public SubmitAudioTo2DAvatarVideoTaskRequestAvatarInfo setX(Integer x) {
+            this.x = x;
+            return this;
+        }
+        public Integer getX() {
+            return this.x;
+        }
+
+        public SubmitAudioTo2DAvatarVideoTaskRequestAvatarInfo setY(Integer y) {
+            this.y = y;
+            return this;
+        }
+        public Integer getY() {
+            return this.y;
         }
 
     }
