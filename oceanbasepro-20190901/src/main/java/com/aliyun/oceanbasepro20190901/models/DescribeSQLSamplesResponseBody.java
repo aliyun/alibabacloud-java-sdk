@@ -132,7 +132,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
          * <p>Whether to initiate RPC.</p>
          */
         @NameInMap("ExecutorRpc")
-        public Double executorRpc;
+        public Boolean executorRpc;
 
         /**
          * <p>Degree of parallelism.</p>
@@ -153,7 +153,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
          * <p>Whether to hit the execution plan.</p>
          */
         @NameInMap("HitPlan")
-        public Double hitPlan;
+        public Boolean hitPlan;
 
         /**
          * <p>Whether an internal SQL.</p>
@@ -297,7 +297,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
          * <p>Whether to perform full table scan.</p>
          */
         @NameInMap("TableScan")
-        public Double tableScan;
+        public Boolean tableScan;
 
         /**
          * <p>Trace ID.</p>
@@ -472,11 +472,11 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             return this.executeTime;
         }
 
-        public DescribeSQLSamplesResponseBodyData setExecutorRpc(Double executorRpc) {
+        public DescribeSQLSamplesResponseBodyData setExecutorRpc(Boolean executorRpc) {
             this.executorRpc = executorRpc;
             return this;
         }
-        public Double getExecutorRpc() {
+        public Boolean getExecutorRpc() {
             return this.executorRpc;
         }
 
@@ -504,11 +504,11 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             return this.getPlanTime;
         }
 
-        public DescribeSQLSamplesResponseBodyData setHitPlan(Double hitPlan) {
+        public DescribeSQLSamplesResponseBodyData setHitPlan(Boolean hitPlan) {
             this.hitPlan = hitPlan;
             return this;
         }
-        public Double getHitPlan() {
+        public Boolean getHitPlan() {
             return this.hitPlan;
         }
 
@@ -696,11 +696,11 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             return this.statement;
         }
 
-        public DescribeSQLSamplesResponseBodyData setTableScan(Double tableScan) {
+        public DescribeSQLSamplesResponseBodyData setTableScan(Boolean tableScan) {
             this.tableScan = tableScan;
             return this;
         }
-        public Double getTableScan() {
+        public Boolean getTableScan() {
             return this.tableScan;
         }
 
