@@ -7,6 +7,9 @@ public class ImportEnterpriseDocumentRequest extends TeaModel {
     @NameInMap("AgentKey")
     public String agentKey;
 
+    @NameInMap("DataType")
+    public Integer dataType;
+
     @NameInMap("DocumentList")
     public java.util.List<ImportEnterpriseDocumentRequestDocumentList> documentList;
 
@@ -30,6 +33,14 @@ public class ImportEnterpriseDocumentRequest extends TeaModel {
     }
     public String getAgentKey() {
         return this.agentKey;
+    }
+
+    public ImportEnterpriseDocumentRequest setDataType(Integer dataType) {
+        this.dataType = dataType;
+        return this;
+    }
+    public Integer getDataType() {
+        return this.dataType;
     }
 
     public ImportEnterpriseDocumentRequest setDocumentList(java.util.List<ImportEnterpriseDocumentRequestDocumentList> documentList) {
