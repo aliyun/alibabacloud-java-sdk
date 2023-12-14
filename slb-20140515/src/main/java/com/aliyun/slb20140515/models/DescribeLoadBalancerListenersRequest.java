@@ -4,9 +4,15 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerListenersRequest extends TeaModel {
+    /**
+     * <p>The description of the listener.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The frontend port that is used by the CLB instance.</p>
+     */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
@@ -28,9 +34,9 @@ public class DescribeLoadBalancerListenersRequest extends TeaModel {
     public java.util.List<String> loadBalancerId;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <br>
-     * <p>Valid values: **1** to **100**. If you do not specify a value, the default value **20** is used.</p>
+     * <p>Valid values: **1** to **100**. If you do not specify this parameter, the default value **20** is used.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -67,7 +73,7 @@ public class DescribeLoadBalancerListenersRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>标签列表。</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeLoadBalancerListenersRequestTag> tag;
@@ -175,16 +181,17 @@ public class DescribeLoadBalancerListenersRequest extends TeaModel {
 
     public static class DescribeLoadBalancerListenersRequestTag extends TeaModel {
         /**
-         * <p>资源的标签键。N的取值范围：**1~20**。一旦输入该值，则不允许为空字符串。</p>
+         * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>最多支持64个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。</p>
+         * <p>The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>资源的标签值。N的取值范围：**1~20**。一旦输入该值，可以为空字符串。</p>
-         * <p>最多支持128个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。</p>
+         * <p>The tag value. Valid values of N: **1 to 20**. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

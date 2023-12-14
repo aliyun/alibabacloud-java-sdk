@@ -844,12 +844,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("XForwardedFor", request.XForwardedFor);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.XForwardedFor_ClientSrcPort)) {
+            query.put("XForwardedFor_ClientSrcPort", request.XForwardedFor_ClientSrcPort);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.XForwardedFor_SLBID)) {
             query.put("XForwardedFor_SLBID", request.XForwardedFor_SLBID);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.XForwardedFor_SLBIP)) {
             query.put("XForwardedFor_SLBIP", request.XForwardedFor_SLBIP);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.XForwardedFor_SLBPORT)) {
+            query.put("XForwardedFor_SLBPORT", request.XForwardedFor_SLBPORT);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.XForwardedFor_proto)) {
@@ -1050,12 +1058,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("XForwardedFor", request.XForwardedFor);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.XForwardedFor_ClientSrcPort)) {
+            query.put("XForwardedFor_ClientSrcPort", request.XForwardedFor_ClientSrcPort);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.XForwardedFor_SLBID)) {
             query.put("XForwardedFor_SLBID", request.XForwardedFor_SLBID);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.XForwardedFor_SLBIP)) {
             query.put("XForwardedFor_SLBIP", request.XForwardedFor_SLBIP);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.XForwardedFor_SLBPORT)) {
+            query.put("XForwardedFor_SLBPORT", request.XForwardedFor_SLBPORT);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.XForwardedFor_proto)) {
@@ -2179,6 +2195,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteServerCertificateWithOptions(request, runtime);
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Slb\\&api=DeleteTLSCipherPolicy\\&type=RPC\\&version=2014-05-15)
+      *
+      * @param request DeleteTLSCipherPolicyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteTLSCipherPolicyResponse
+     */
     public DeleteTLSCipherPolicyResponse deleteTLSCipherPolicyWithOptions(DeleteTLSCipherPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2223,6 +2247,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTLSCipherPolicyResponse());
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Slb\\&api=DeleteTLSCipherPolicy\\&type=RPC\\&version=2014-05-15)
+      *
+      * @param request DeleteTLSCipherPolicyRequest
+      * @return DeleteTLSCipherPolicyResponse
+     */
     public DeleteTLSCipherPolicyResponse deleteTLSCipherPolicy(DeleteTLSCipherPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteTLSCipherPolicyWithOptions(request, runtime);
@@ -5493,12 +5524,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("XForwardedFor", request.XForwardedFor);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.XForwardedFor_ClientSrcPort)) {
+            query.put("XForwardedFor_ClientSrcPort", request.XForwardedFor_ClientSrcPort);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.XForwardedFor_SLBID)) {
             query.put("XForwardedFor_SLBID", request.XForwardedFor_SLBID);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.XForwardedFor_SLBIP)) {
             query.put("XForwardedFor_SLBIP", request.XForwardedFor_SLBIP);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.XForwardedFor_SLBPORT)) {
+            query.put("XForwardedFor_SLBPORT", request.XForwardedFor_SLBPORT);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.XForwardedFor_proto)) {
@@ -5694,12 +5733,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("XForwardedFor", request.XForwardedFor);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.XForwardedFor_ClientSrcPort)) {
+            query.put("XForwardedFor_ClientSrcPort", request.XForwardedFor_ClientSrcPort);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.XForwardedFor_SLBID)) {
             query.put("XForwardedFor_SLBID", request.XForwardedFor_SLBID);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.XForwardedFor_SLBIP)) {
             query.put("XForwardedFor_SLBIP", request.XForwardedFor_SLBIP);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.XForwardedFor_SLBPORT)) {
+            query.put("XForwardedFor_SLBPORT", request.XForwardedFor_SLBPORT);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.XForwardedFor_proto)) {

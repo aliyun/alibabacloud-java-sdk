@@ -286,6 +286,9 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
     @NameInMap("XForwardedFor")
     public String XForwardedFor;
 
+    @NameInMap("XForwardedFor_ClientSrcPort")
+    public String XForwardedFor_ClientSrcPort;
+
     /**
      * <p>Specifies whether to use the `SLB-ID` header to retrieve the ID of the CLB instance. Valid values:</p>
      * <br>
@@ -303,6 +306,9 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
      */
     @NameInMap("XForwardedFor_SLBIP")
     public String XForwardedFor_SLBIP;
+
+    @NameInMap("XForwardedFor_SLBPORT")
+    public String XForwardedFor_SLBPORT;
 
     /**
      * <p>Specifies whether to use the `X-Forwarded-Proto` header to retrieve the listener protocol. Valid values:</p>
@@ -582,6 +588,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
         return this.XForwardedFor;
     }
 
+    public SetLoadBalancerHTTPListenerAttributeRequest setXForwardedFor_ClientSrcPort(String XForwardedFor_ClientSrcPort) {
+        this.XForwardedFor_ClientSrcPort = XForwardedFor_ClientSrcPort;
+        return this;
+    }
+    public String getXForwardedFor_ClientSrcPort() {
+        return this.XForwardedFor_ClientSrcPort;
+    }
+
     public SetLoadBalancerHTTPListenerAttributeRequest setXForwardedFor_SLBID(String XForwardedFor_SLBID) {
         this.XForwardedFor_SLBID = XForwardedFor_SLBID;
         return this;
@@ -596,6 +610,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends TeaModel {
     }
     public String getXForwardedFor_SLBIP() {
         return this.XForwardedFor_SLBIP;
+    }
+
+    public SetLoadBalancerHTTPListenerAttributeRequest setXForwardedFor_SLBPORT(String XForwardedFor_SLBPORT) {
+        this.XForwardedFor_SLBPORT = XForwardedFor_SLBPORT;
+        return this;
+    }
+    public String getXForwardedFor_SLBPORT() {
+        return this.XForwardedFor_SLBPORT;
     }
 
     public SetLoadBalancerHTTPListenerAttributeRequest setXForwardedFor_proto(String XForwardedFor_proto) {

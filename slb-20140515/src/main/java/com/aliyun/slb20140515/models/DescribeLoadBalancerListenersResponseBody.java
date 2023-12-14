@@ -1341,13 +1341,15 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
 
     public static class DescribeLoadBalancerListenersResponseBodyListenersTags extends TeaModel {
         /**
-         * <p>资源的标签键。</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>资源的标签值。</p>
+         * <p>The tag value.</p>
+         * <br>
+         * <p>For more information about how to obtain a tag value, see [DescribeTagKeyList](~~145557~~).</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -1670,7 +1672,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         public DescribeLoadBalancerListenersResponseBodyListenersTCPListenerConfig TCPListenerConfig;
 
         /**
-         * <p>标签列表。</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeLoadBalancerListenersResponseBodyListenersTags> tags;

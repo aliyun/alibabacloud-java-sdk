@@ -284,6 +284,9 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
     @NameInMap("XForwardedFor")
     public String XForwardedFor;
 
+    @NameInMap("XForwardedFor_ClientSrcPort")
+    public String XForwardedFor_ClientSrcPort;
+
     /**
      * <p>Indicates whether the `SLB-ID` header is used to retrieve the ID of the CLB instance. Valid values:</p>
      * <br>
@@ -301,6 +304,9 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
      */
     @NameInMap("XForwardedFor_SLBIP")
     public String XForwardedFor_SLBIP;
+
+    @NameInMap("XForwardedFor_SLBPORT")
+    public String XForwardedFor_SLBPORT;
 
     /**
      * <p>Indicates whether the `X-Forwarded-Proto` header is used to retrieve the listener protocol. Valid values:</p>
@@ -596,6 +602,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         return this.XForwardedFor;
     }
 
+    public DescribeLoadBalancerHTTPListenerAttributeResponseBody setXForwardedFor_ClientSrcPort(String XForwardedFor_ClientSrcPort) {
+        this.XForwardedFor_ClientSrcPort = XForwardedFor_ClientSrcPort;
+        return this;
+    }
+    public String getXForwardedFor_ClientSrcPort() {
+        return this.XForwardedFor_ClientSrcPort;
+    }
+
     public DescribeLoadBalancerHTTPListenerAttributeResponseBody setXForwardedFor_SLBID(String XForwardedFor_SLBID) {
         this.XForwardedFor_SLBID = XForwardedFor_SLBID;
         return this;
@@ -610,6 +624,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
     }
     public String getXForwardedFor_SLBIP() {
         return this.XForwardedFor_SLBIP;
+    }
+
+    public DescribeLoadBalancerHTTPListenerAttributeResponseBody setXForwardedFor_SLBPORT(String XForwardedFor_SLBPORT) {
+        this.XForwardedFor_SLBPORT = XForwardedFor_SLBPORT;
+        return this;
+    }
+    public String getXForwardedFor_SLBPORT() {
+        return this.XForwardedFor_SLBPORT;
     }
 
     public DescribeLoadBalancerHTTPListenerAttributeResponseBody setXForwardedFor_proto(String XForwardedFor_proto) {

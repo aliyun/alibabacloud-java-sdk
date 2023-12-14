@@ -5,51 +5,54 @@ import com.aliyun.tea.*;
 
 public class CreateMasterSlaveServerGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the Classic Load Balancer (CLB) instance.</p>
+     * <p>The ID of the SLB instance.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
-     * <p>The list of backend servers in the primary/secondary server group.</p>
+     * <p>The backend servers in the primary/secondary server group.</p>
      * <br>
      * <p>The value of this parameter must be a STRING list in the JSON format. You can specify up to 20 elements in each request.</p>
      * <br>
-     * <p>*   **ServerId**: This parameter is required. Specify the ID of the backend server. This parameter must be of the STRING type.</p>
+     * <p>*   **ServerId**: Required. Specify the ID of the backend server. The value must be of the STRING type.</p>
      * <br>
-     * <p>*   **Port**: This parameter is required. Specify the port that is used by the backend server. This parameter must be of the INTEGER type. Valid values: **1** to **65535**.</p>
+     * <p>*   **Port**: Required. Specify the port that is used by the backend server. The value must be of the INTEGER type. Valid values: **1** to **65535**.</p>
      * <br>
-     * <p>*   **Weight**: This parameter is required. Specify the weight of the backend server. This parameter must be of the INTEGER type. Valid values: **0** to **100**.</p>
+     * <p>*   **Weight**: Required. Specify the weight of the backend server. The value must be of the INTEGER type. Valid values: **0** to **100**.</p>
      * <br>
-     * <p>*   **Description**: This parameter is optional. Specify the description of the backend server. This parameter must be of the STRING type. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.),and underscores (\_).</p>
+     * <p>*   \*\*Description \*\*: Optional. The description of the backend server. The value must be of the STRING type. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).</p>
      * <br>
-     * <p>*   **ServerType**: Specify the type of the backend server. This parameter must be of the STRING type. Valid values:</p>
+     * <p>*   **ServerType**: the type of the backend server. The value must be of the STRING type. Valid values:</p>
      * <br>
-     * <p>    *   **Master**: primary server</p>
+     * <p>    *   **Master**</p>
      * <br>
-     * <p>    <!----></p>
+     * <p>*   **Slave**</p>
      * <br>
-     * <p>    *   **Slave**: secondary server</p>
+     * <p>*   **Type**: the service type of backend server. The value must be of the STRING type. Valid values:</p>
      * <br>
-     * <p>*   **Type**: Specify the type of backend server. This parameter must be of the STRING type. Valid values:</p>
+     * <p>    *   **ecs**</p>
+     * <p>    *   **eni**</p>
      * <br>
-     * <p>    *   **ecs**: an ECS instance</p>
-     * <p>    *   **eni**: an elastic network interface (ENI)</p>
+     * <p>*   **ServerIp**</p>
      * <br>
-     * <p>*   **ServerIp**: the IP address of the ECS instance or ENI</p>
+     * <p>A primary/secondary server group can contain up to two backend servers.</p>
      * <br>
-     * <p>A primary/secondary server group can contain at most two backend servers.</p>
-     * <br>
-     * <p>If you do not set this parameter, an empty primary/secondary server group is created.</p>
+     * <p>If you do not specify this parameter, an empty primary/secondary server group is created.</p>
      * <br>
      * <p>Examples:</p>
      * <br>
-     * <p>*   ECS: `[{ "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port":"82","ServerType":"Master","Description":"test-112" }, { "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port":"84","ServerType":"Slave","Description":"test-112" }]`</p>
+     * <p>*   ECS instances:</p>
      * <br>
-     * <p><!----></p>
+     * <p>`[{ "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port":"82","ServerType":"Master","Description":"test-112" }, { "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port":"84","ServerType":"Slave","Description":"test-112" }]`</p>
      * <br>
-     * <p>*   ENI: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "Port":"80","ServerType":"Master","Description":"test-112" }, { "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","ServerType":"Slave","Description":"test-112" }]`</p>
-     * <p>*   ENI with multiple IP addresses: `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni","ServerIp": "192.168.**.**", "Port":"80","ServerType":"Master","Description":"test-112" }, { "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni","ServerIp": "192.168.**.**", "Port":"80","ServerType":"Slave","Description":"test-112" }]`</p>
+     * <p>*   ENIs:</p>
+     * <br>
+     * <p>    `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "Port":"80","ServerType":"Master","Description":"test-112" }, { "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","ServerType":"Slave","Description":"test-112" }]`</p>
+     * <br>
+     * <p>*   IP addresses of ENIs:</p>
+     * <br>
+     * <p>    `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni","ServerIp": "192.168.**.**", "Port":"80","ServerType":"Master","Description":"test-112" }, { "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni","ServerIp": "192.168.**.**", "Port":"80","ServerType":"Slave","Description":"test-112" }]`</p>
      */
     @NameInMap("MasterSlaveBackendServers")
     public String masterSlaveBackendServers;
@@ -67,7 +70,7 @@ public class CreateMasterSlaveServerGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the CLB instance is deployed.</p>
+     * <p>The ID of the region where the Server Load Balancer (SLB) instance is deployed.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -78,6 +81,9 @@ public class CreateMasterSlaveServerGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>标签列表。</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateMasterSlaveServerGroupRequestTag> tag;
 
@@ -159,9 +165,18 @@ public class CreateMasterSlaveServerGroupRequest extends TeaModel {
     }
 
     public static class CreateMasterSlaveServerGroupRequestTag extends TeaModel {
+        /**
+         * <p>资源标签键。N的取值范围：**1**~**20**。一旦输入该值，则不允许为空字符串。</p>
+         * <br>
+         * <p>最多支持64个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>资源的标签值。N的取值范围：**1~20**。一旦输入该值，可以为空字符串。</p>
+         * <p>最多支持128个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。</p>
+         */
         @NameInMap("Value")
         public String value;
 
