@@ -4,18 +4,33 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class ListUserCertificateOrderResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the information about the certificates and orders.</p>
+     */
     @NameInMap("CertificateOrderList")
     public java.util.List<ListUserCertificateOrderResponseBodyCertificateOrderList> certificateOrderList;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("ShowSize")
     public Long showSize;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,111 +80,245 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
     }
 
     public static class ListUserCertificateOrderResponseBodyCertificateOrderList extends TeaModel {
+        /**
+         * <p>The algorithm. This parameter is returned only if OrderType is set to CPACK or BUY.</p>
+         */
         @NameInMap("Algorithm")
         public String algorithm;
 
+        /**
+         * <p>The ID of the Alibaba Cloud order. This parameter is returned only if OrderType is set to CPACK or BUY.</p>
+         */
         @NameInMap("AliyunOrderId")
         public Long aliyunOrderId;
 
+        /**
+         * <p>The time at which the order was placed. Unit: milliseconds. This parameter is returned only if OrderType is set to CPACK or BUY.</p>
+         */
         @NameInMap("BuyDate")
         public Long buyDate;
 
+        /**
+         * <p>The time at which the certificate expires. Unit: milliseconds. This parameter is returned only if OrderType is set to CPACK or BUY.</p>
+         */
         @NameInMap("CertEndTime")
         public Long certEndTime;
 
+        /**
+         * <p>The time at which the certificate starts to take effect. Unit: milliseconds. This parameter is returned only if OrderType is set to CPACK or BUY.</p>
+         */
         @NameInMap("CertStartTime")
         public Long certStartTime;
 
+        /**
+         * <p>The type of the certificate. This parameter is returned only if OrderType is set to CPACK or BUY. Valid values:</p>
+         * <br>
+         * <p>*   **DV**: domain validated (DV) certificate</p>
+         * <p>*   **EV**: extended validation (EV) certificate</p>
+         * <p>*   **OV**: organization validated (OV) certificate</p>
+         * <p>*   **FREE**: free certificate</p>
+         */
         @NameInMap("CertType")
         public String certType;
 
+        /**
+         * <p>The ID of the certificate. This parameter is returned only if OrderType is set to CERT or UPLOAD.</p>
+         */
         @NameInMap("CertificateId")
         public Long certificateId;
 
+        /**
+         * <p>The city in which the organization is located. This parameter is returned only if OrderType is set to CERT or UPLOAD.</p>
+         */
         @NameInMap("City")
         public String city;
 
+        /**
+         * <p>The parent domain name of the certificate. This parameter is returned only if OrderType is set to CERT or UPLOAD.</p>
+         */
         @NameInMap("CommonName")
         public String commonName;
 
+        /**
+         * <p>The code of the country in which the organization is located. This parameter is returned only if OrderType is set to CERT or UPLOAD.</p>
+         */
         @NameInMap("Country")
         public String country;
 
+        /**
+         * <p>The domain name. This parameter is returned only if OrderType is set to CPACK or BUY.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The total number of domain names that can be bound to the certificate. This parameter is returned only if OrderType is set to CPACK or BUY.</p>
+         */
         @NameInMap("DomainCount")
         public Long domainCount;
 
+        /**
+         * <p>The type of the domain name. This parameter is returned only if OrderType is set to CPACK or BUY. Valid values:</p>
+         * <br>
+         * <p>*   **ONE**: single domain name</p>
+         * <p>*   **MULTIPLE**: multiple domain names</p>
+         * <p>*   **WILDCARD**: single wildcard domain name</p>
+         * <p>*   **M_WILDCARD**: multiple wildcard domain names</p>
+         * <p>*   **MIX**: hybrid domain name</p>
+         */
         @NameInMap("DomainType")
         public String domainType;
 
+        /**
+         * <p>The time at which the certificate expires. This parameter is returned only if OrderType is set to CERT or UPLOAD.</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
+        /**
+         * <p>Indicates whether the certificate expires. This parameter is returned only if OrderType is set to CERT or UPLOAD.</p>
+         */
         @NameInMap("Expired")
         public Boolean expired;
 
+        /**
+         * <p>The fingerprint of the certificate. This parameter is returned only if OrderType is set to CERT or UPLOAD.</p>
+         */
         @NameInMap("Fingerprint")
         public String fingerprint;
 
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The issuer of the certificate. This parameter is returned only if OrderType is set to CERT or UPLOAD.</p>
+         */
         @NameInMap("Issuer")
         public String issuer;
 
+        /**
+         * <p>The name of the certificate. This parameter is returned only if OrderType is set to CERT or UPLOAD.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The order ID. This parameter is returned only if OrderType is set to CPACK or BUY.</p>
+         */
         @NameInMap("OrderId")
         public Long orderId;
 
+        /**
+         * <p>The name of the organization that is associated with the certificate. This parameter is returned only if OrderType is set to CERT or UPLOAD.</p>
+         */
         @NameInMap("OrgName")
         public String orgName;
 
+        /**
+         * <p>The ID of the certificate authority (CA) order. This parameter is returned only if OrderType is set to CPACK or BUY.</p>
+         */
         @NameInMap("PartnerOrderId")
         public String partnerOrderId;
 
+        /**
+         * <p>The specification ID of the order. This parameter is returned only if OrderType is set to CPACK or BUY.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The specification name of the order. This parameter is returned only if OrderType is set to CPACK or BUY.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
+        /**
+         * <p>The name of the province or autonomous region in which the organization is located. This parameter is returned only if OrderType is set to CERT or UPLOAD.</p>
+         */
         @NameInMap("Province")
         public String province;
 
+        /**
+         * <p>The ID of the resource group. This parameter is returned only if OrderType is set to CERT or UPLOAD.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The brand of the certificate. Valid values: WoSign, CFCA, DigiCert, and vTrus. This parameter is returned only if OrderType is set to CPACK or BUY.</p>
+         */
         @NameInMap("RootBrand")
         public String rootBrand;
 
+        /**
+         * <p>All domain names that are bound to the certificate. Multiple domain names are separated by commas (,). This parameter is returned only if OrderType is set to CERT or UPLOAD.</p>
+         */
         @NameInMap("Sans")
         public String sans;
 
+        /**
+         * <p>The serial number of the certificate. This parameter is returned only if OrderType is set to CERT or UPLOAD.</p>
+         */
         @NameInMap("SerialNo")
         public String serialNo;
 
+        /**
+         * <p>The SHA-2 value of the certificate. This parameter is returned only if OrderType is set to CERT or UPLOAD.</p>
+         */
         @NameInMap("Sha2")
         public String sha2;
 
+        /**
+         * <p>The type of the order. This parameter is returned only if OrderType is set to CPACK or BUY.</p>
+         * <br>
+         * <p>*   **cpack**: virtual resource order</p>
+         * <p>*   **buy**: purchase order</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 
+        /**
+         * <p>The time at which the certificate starts to take effect. This parameter is returned only if OrderType is set to CERT or UPLOAD.</p>
+         */
         @NameInMap("StartDate")
         public String startDate;
 
+        /**
+         * <p>The certificate status of the order. This parameter is returned only if OrderType is set to CPACK or BUY.</p>
+         * <br>
+         * <p>*   **PAYED**: pending application</p>
+         * <p>*   **CHECKING**: reviewing</p>
+         * <p>*   **CHECKED_FAIL**: review failed</p>
+         * <p>*   **ISSUED**: issued</p>
+         * <p>*   **WILLEXPIRED**: about to expire</p>
+         * <p>*   **EXPIRED**: expired</p>
+         * <p>*   **NOTACTIVATED**: not activated</p>
+         * <p>*   **REVOKED**: revoked</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The hosting status of the certificate. This parameter is returned only if OrderType is set to CPACK or BUY.</p>
+         * <br>
+         * <p>*   **unTrustee**: not hosted</p>
+         * <p>*   **trustee**: hosted</p>
+         */
         @NameInMap("TrusteeStatus")
         public String trusteeStatus;
 
+        /**
+         * <p>Indicates whether the certificate is an uploaded certificate. This parameter is returned only if OrderType is set to CERT or UPLOAD.</p>
+         */
         @NameInMap("Upload")
         public Boolean upload;
 
+        /**
+         * <p>The number of wildcard domain names that can be bound to the certificate. This parameter is returned only if OrderType is set to CPACK or BUY.</p>
+         */
         @NameInMap("WildDomainCount")
         public Long wildDomainCount;
 
