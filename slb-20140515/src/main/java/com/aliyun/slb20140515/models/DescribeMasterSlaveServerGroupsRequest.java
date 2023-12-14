@@ -4,20 +4,23 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
+    /**
+     * <p>The description of the primary/secondary server group.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Specifies whether to return information about the associated listeners. Valid values:</p>
      * <br>
-     * <p>*   **true**: returns information about the associated listeners.</p>
-     * <p>*   **false**: does not return information about the associated listeners.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("IncludeListener")
     public Boolean includeListener;
 
     /**
-     * <p>The ID of the CLB instance.</p>
+     * <p>The CLB instance ID.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -29,7 +32,7 @@ public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
+     * <p>The region ID of the CLB instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -125,17 +128,15 @@ public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
 
     public static class DescribeMasterSlaveServerGroupsRequestTag extends TeaModel {
         /**
-         * <p>The tag key. You can specify at most 20 tag keys.</p>
+         * <p>The key of tag N. Valid values of N: **1 to 20**. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>The tag key cannot be an empty string. The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be up to 64 characters in length, and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value. You can specify at most 20 tag values. The tag value cannot be an empty string.</p>
-         * <br>
-         * <p>The tag value must be 1 to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The value of tag N. Valid values of N: **1 to 20**. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` and `acs:`.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>slb20140515</artifactId>
-  <version>3.3.22</version>
+  <version>3.3.23</version>
   <packaging>jar</packaging>
   <name>slb20140515</name>
   <description>Alibaba Cloud Server Load Balancer (20140515) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.8</version>
+      <version>0.3.1</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

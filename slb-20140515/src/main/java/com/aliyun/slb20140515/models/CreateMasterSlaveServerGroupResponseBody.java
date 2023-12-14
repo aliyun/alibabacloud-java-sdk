@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
     /**
-     * <p>The list of backend servers in the primary/secondary server group.</p>
+     * <p>The backend servers in the primary/secondary server group.</p>
      */
     @NameInMap("MasterSlaveBackendServers")
     public CreateMasterSlaveServerGroupResponseBodyMasterSlaveBackendServers masterSlaveBackendServers;
 
     /**
-     * <p>The ID of the primary/secondary server group.</p>
+     * <p>The primary/secondary server group ID.</p>
      */
     @NameInMap("MasterSlaveServerGroupId")
     public String masterSlaveServerGroupId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -59,7 +59,7 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The port number used by the backend server.</p>
+         * <p>The port that is used by the backend server.</p>
          */
         @NameInMap("Port")
         public Integer port;
@@ -79,10 +79,10 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
         public String serverType;
 
         /**
-         * <p>The type of the backend server. Valid values:</p>
+         * <p>The service type of the backend server. Valid values:</p>
          * <br>
-         * <p>*   **ecs**: an ECS instance</p>
-         * <p>*   **eni**: an ENI</p>
+         * <p>*   **ecs**</p>
+         * <p>*   **eni**</p>
          */
         @NameInMap("Type")
         public String type;
