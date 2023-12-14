@@ -4,78 +4,167 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class GetUserCertificateDetailResponseBody extends TeaModel {
+    /**
+     * <p>The algorithm.</p>
+     */
+    @NameInMap("Algorithm")
+    public String algorithm;
+
+    /**
+     * <p>Indicates whether the certificate was purchased from Alibaba Cloud. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("BuyInAliyun")
     public Boolean buyInAliyun;
 
+    /**
+     * <p>The content of the certificate.</p>
+     */
     @NameInMap("Cert")
     public String cert;
 
+    /**
+     * <p>The city of the company or organization to which the certificate purchaser belongs.</p>
+     */
     @NameInMap("City")
     public String city;
 
+    /**
+     * <p>The parent domain name that is bound to the certificate.</p>
+     */
     @NameInMap("Common")
     public String common;
 
+    /**
+     * <p>The country or region of the company or organization to which the certificate purchaser belongs.</p>
+     */
     @NameInMap("Country")
     public String country;
 
+    /**
+     * <p>The content of the encryption certificate in PEM format.</p>
+     */
     @NameInMap("EncryptCert")
     public String encryptCert;
 
+    /**
+     * <p>The private key of the encryption certificate in the PEM format.</p>
+     */
     @NameInMap("EncryptPrivateKey")
     public String encryptPrivateKey;
 
+    /**
+     * <p>The expiration date of the certificate.</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <p>Indicates whether the certificate has expired. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("Expired")
     public Boolean expired;
 
+    /**
+     * <p>The fingerprint of the certificate.</p>
+     */
     @NameInMap("Fingerprint")
     public String fingerprint;
 
+    /**
+     * <p>The ID of the certificate.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The certificate authority (CA) that issued the certificate.</p>
+     */
     @NameInMap("Issuer")
     public String issuer;
 
+    /**
+     * <p>The private key.</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>The name of the certificate.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the certificate application order.</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <p>The name of the company or organization to which the certificate purchaser belongs.</p>
+     */
     @NameInMap("OrgName")
     public String orgName;
 
+    /**
+     * <p>The province of the company or organization to which the certificate purchaser belongs.</p>
+     */
     @NameInMap("Province")
     public String province;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group to which the certificate belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>All domain names that are bound to the certificate.</p>
+     */
     @NameInMap("Sans")
     public String sans;
 
+    /**
+     * <p>The content of the signing certificate in the PEM format.</p>
+     */
     @NameInMap("SignCert")
     public String signCert;
 
+    /**
+     * <p>The private key of the signing certificate in the PEM format.</p>
+     */
     @NameInMap("SignPrivateKey")
     public String signPrivateKey;
 
+    /**
+     * <p>The issuance date of the certificate.</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
 
     public static GetUserCertificateDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetUserCertificateDetailResponseBody self = new GetUserCertificateDetailResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetUserCertificateDetailResponseBody setAlgorithm(String algorithm) {
+        this.algorithm = algorithm;
+        return this;
+    }
+    public String getAlgorithm() {
+        return this.algorithm;
     }
 
     public GetUserCertificateDetailResponseBody setBuyInAliyun(Boolean buyInAliyun) {

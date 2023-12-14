@@ -4,9 +4,17 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class CreateCertificateRequestResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the certificate application order.</p>
+     * <br>
+     * <p>> You can use the ID to query the status of the certificate application. For more information, see [DescribeCertificateState](~~455800~~).</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

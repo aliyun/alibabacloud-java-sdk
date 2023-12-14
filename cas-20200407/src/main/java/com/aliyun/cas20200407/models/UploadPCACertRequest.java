@@ -4,15 +4,31 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class UploadPCACertRequest extends TeaModel {
+    /**
+     * <p><UploadPCACertResponse></p>
+     * <p>    <RequestId>15C66C7B-671A-4297-9187-2C4477247A74</RequestId></p>
+     * <p></UploadPCACertResponse></p>
+     */
     @NameInMap("Cert")
     public String cert;
 
+    /**
+     * <p>UploadPCACert</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>Uploads a private certificate to a certificate repository.</p>
+     */
     @NameInMap("PrivateKey")
     public String privateKey;
 
+    /**
+     * <p>{</p>
+     * <p>    "RequestId": "15C66C7B-671A-4297-9187-2C4477247A74"</p>
+     * <p>}</p>
+     */
     @NameInMap("WarehouseId")
     public Long warehouseId;
 

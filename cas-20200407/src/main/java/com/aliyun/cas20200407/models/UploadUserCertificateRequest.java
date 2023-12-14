@@ -4,27 +4,53 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class UploadUserCertificateRequest extends TeaModel {
+    /**
+     * <p>The content of the certificate in the PEM format.</p>
+     */
     @NameInMap("Cert")
     public String cert;
 
+    /**
+     * <p>The content of the encryption certificate in PEM format.</p>
+     */
     @NameInMap("EncryptCert")
     public String encryptCert;
 
+    /**
+     * <p>The private key of the encryption certificate in the PEM format.</p>
+     */
     @NameInMap("EncryptPrivateKey")
     public String encryptPrivateKey;
 
+    /**
+     * <p>The private key of the certificate in the PEM format.</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>The name of the certificate. The name can contain up to 128 characters in length. The name can contain all types of characters, such as letters, digits, and underscores (\_).</p>
+     * <br>
+     * <p>>  The name must be unique within an Alibaba Cloud account.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>the resource group id.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The content of the signing certificate in the PEM format.</p>
+     */
     @NameInMap("SignCert")
     public String signCert;
 
+    /**
+     * <p>The private key of the signing certificate in the PEM format.</p>
+     */
     @NameInMap("SignPrivateKey")
     public String signPrivateKey;
 

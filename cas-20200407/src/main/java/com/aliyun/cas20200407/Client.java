@@ -12,7 +12,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-hangzhou", "cas.aliyuncs.com"),
             new TeaPair("ap-northeast-2-pop", "cas.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "cas.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "cas.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "cas.aliyuncs.com"),
             new TeaPair("cn-beijing", "cas.aliyuncs.com"),
@@ -34,6 +33,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-hongkong", "cas.aliyuncs.com"),
             new TeaPair("cn-hongkong-finance-pop", "cas.aliyuncs.com"),
             new TeaPair("cn-huhehaote", "cas.aliyuncs.com"),
+            new TeaPair("cn-huhehaote-nebula-1", "cas.aliyuncs.com"),
             new TeaPair("cn-north-2-gov-1", "cas.aliyuncs.com"),
             new TeaPair("cn-qingdao", "cas.aliyuncs.com"),
             new TeaPair("cn-qingdao-nebula", "cas.aliyuncs.com"),
@@ -49,7 +49,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-shenzhen-st4-d01", "cas.aliyuncs.com"),
             new TeaPair("cn-shenzhen-su18-b01", "cas.aliyuncs.com"),
             new TeaPair("cn-wuhan", "cas.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "cas.aliyuncs.com"),
             new TeaPair("cn-yushanfang", "cas.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "cas.aliyuncs.com"),
             new TeaPair("cn-zhangbei-na61-b01", "cas.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "cas.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou-na62-a01", "cas.aliyuncs.com"),
@@ -77,6 +79,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+      * Revokes an issued certificate and cancels the application order of the certificate.
+      *
+      * @param request CancelCertificateForPackageRequestRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CancelCertificateForPackageRequestResponse
+     */
     public CancelCertificateForPackageRequestResponse cancelCertificateForPackageRequestWithOptions(CancelCertificateForPackageRequestRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -101,11 +110,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CancelCertificateForPackageRequestResponse());
     }
 
+    /**
+      * Revokes an issued certificate and cancels the application order of the certificate.
+      *
+      * @param request CancelCertificateForPackageRequestRequest
+      * @return CancelCertificateForPackageRequestResponse
+     */
     public CancelCertificateForPackageRequestResponse cancelCertificateForPackageRequest(CancelCertificateForPackageRequestRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelCertificateForPackageRequestWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the CancelOrderRequest operation to cancel a certificate application order only in the following scenarios:
+      * *   The order is in the **pending validation** state. You have submitted a certificate application but the verification of the domain name ownership is not complete.
+      * *   The order is in the **being reviewed** state. You have submitted a certificate application and the verification of the domain name ownership is complete, but the certificate authority (CA) does not complete the review of the certificate application.
+      * After a certificate application order is canceled, the status of the order changes to the **pending application** state. In this case, you can call the [DeleteCertificateRequest](~~164109~~) operation to delete the certificate application order. Then, the consumed certificate quota is returned to you.
+      *
+      * @param request CancelOrderRequestRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CancelOrderRequestResponse
+     */
     public CancelOrderRequestResponse cancelOrderRequestWithOptions(CancelOrderRequestRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -130,11 +155,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CancelOrderRequestResponse());
     }
 
+    /**
+      * You can call the CancelOrderRequest operation to cancel a certificate application order only in the following scenarios:
+      * *   The order is in the **pending validation** state. You have submitted a certificate application but the verification of the domain name ownership is not complete.
+      * *   The order is in the **being reviewed** state. You have submitted a certificate application and the verification of the domain name ownership is complete, but the certificate authority (CA) does not complete the review of the certificate application.
+      * After a certificate application order is canceled, the status of the order changes to the **pending application** state. In this case, you can call the [DeleteCertificateRequest](~~164109~~) operation to delete the certificate application order. Then, the consumed certificate quota is returned to you.
+      *
+      * @param request CancelOrderRequestRequest
+      * @return CancelOrderRequestResponse
+     */
     public CancelOrderRequestResponse cancelOrderRequest(CancelOrderRequestRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelOrderRequestWithOptions(request, runtime);
     }
 
+    /**
+      * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](~~28542~~). You can call the [DescribePackageState](~~455800~~) operation to query the usage of certificate resource plans of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that are submitted, and the number of certificates that are issued.
+      * *   After you call this operation to submit a certificate application and the certificate is issued, the certificate quota provided by the resource plan that you purchased is consumed. When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate that you want to apply for.
+      * *   After you call this operation to submit a certificate application, you also need to call the [DescribeCertificateState](~~455800~~) operation to obtain the information that is required to complete the verification of the domain name ownership, and complete the verification. If you use the DNS verification method, you must complete the verification in the management platform of the domain name. If you use the file verification method, you must complete the verification in the DNS server. Then, the certificate application order will be reviewed by the certificate authority (CA).
+      *
+      * @param request CreateCertificateForPackageRequestRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateCertificateForPackageRequestResponse
+     */
     public CreateCertificateForPackageRequestResponse createCertificateForPackageRequestWithOptions(CreateCertificateForPackageRequestRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -187,11 +230,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCertificateForPackageRequestResponse());
     }
 
+    /**
+      * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](~~28542~~). You can call the [DescribePackageState](~~455800~~) operation to query the usage of certificate resource plans of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that are submitted, and the number of certificates that are issued.
+      * *   After you call this operation to submit a certificate application and the certificate is issued, the certificate quota provided by the resource plan that you purchased is consumed. When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate that you want to apply for.
+      * *   After you call this operation to submit a certificate application, you also need to call the [DescribeCertificateState](~~455800~~) operation to obtain the information that is required to complete the verification of the domain name ownership, and complete the verification. If you use the DNS verification method, you must complete the verification in the management platform of the domain name. If you use the file verification method, you must complete the verification in the DNS server. Then, the certificate application order will be reviewed by the certificate authority (CA).
+      *
+      * @param request CreateCertificateForPackageRequestRequest
+      * @return CreateCertificateForPackageRequestResponse
+     */
     public CreateCertificateForPackageRequestResponse createCertificateForPackageRequest(CreateCertificateForPackageRequestRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createCertificateForPackageRequestWithOptions(request, runtime);
     }
 
+    /**
+      * *   You can call this operation to apply for only DV certificates. If you want to apply for an organization validated (OV) or extended validation (EV) certificate, we recommend that you call the [CreateCertificateForPackageRequest](~~455296~~) operation. This operation allows you to apply for certificates of all specifications and specify the method to generate a certificate signing request (CSR) file.
+      * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](~~28542~~). You can call the [DescribePackageState](~~455803~~) operation to query the usage of certificate resource plans of specified specifications, including the total number of purchased certificate resource plans of the specified specifications, the number of times that certificate applications have been submitted, and the number of times that certificates have been issued.
+      * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate.
+      * *   After you call this operation to submit a certificate application, Certificate Management Service automatically creates a CSR file for your application and consumes the certificate quota in the certificate resource plans of the specified specifications that you purchased. After you call this operation, you also need to call the [DescribeCertificateState](~~455800~~) operation to obtain the information that is required to complete domain name verification, and manually complete the verification. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on your DNS server. Then, the certificate authority (CA) will review your certificate application.
+      *
+      * @param request CreateCertificateRequestRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateCertificateRequestResponse
+     */
     public CreateCertificateRequestResponse createCertificateRequestWithOptions(CreateCertificateRequestRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -236,11 +297,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCertificateRequestResponse());
     }
 
+    /**
+      * *   You can call this operation to apply for only DV certificates. If you want to apply for an organization validated (OV) or extended validation (EV) certificate, we recommend that you call the [CreateCertificateForPackageRequest](~~455296~~) operation. This operation allows you to apply for certificates of all specifications and specify the method to generate a certificate signing request (CSR) file.
+      * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](~~28542~~). You can call the [DescribePackageState](~~455803~~) operation to query the usage of certificate resource plans of specified specifications, including the total number of purchased certificate resource plans of the specified specifications, the number of times that certificate applications have been submitted, and the number of times that certificates have been issued.
+      * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate.
+      * *   After you call this operation to submit a certificate application, Certificate Management Service automatically creates a CSR file for your application and consumes the certificate quota in the certificate resource plans of the specified specifications that you purchased. After you call this operation, you also need to call the [DescribeCertificateState](~~455800~~) operation to obtain the information that is required to complete domain name verification, and manually complete the verification. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on your DNS server. Then, the certificate authority (CA) will review your certificate application.
+      *
+      * @param request CreateCertificateRequestRequest
+      * @return CreateCertificateRequestResponse
+     */
     public CreateCertificateRequestResponse createCertificateRequest(CreateCertificateRequestRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createCertificateRequestWithOptions(request, runtime);
     }
 
+    /**
+      * *   You can call the CreateCertificateWithCsrRequest operation to apply only for DV certificates. We recommend that you call the [CreateCertificateForPackageRequest](~~455296~~) operation to submit a certificate application. This operation allows you to apply for certificates of all specifications and specify the method to generate a CSR file.
+      * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](~~28542~~). You can call the [DescribePackageState](~~164110~~) operation to query the usage of certificate resource plans of specified specifications. The usage information includes the total number of purchased certificate resource plans of the specified specifications, the number of times that certificate applications are submitted, and the number of times that certificates are issued.
+      * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate.
+      * *   After you call this operation to submit a certificate application, the certificate quota of the required specifications that you purchased is consumed. After you call this operation, you also need to call the [DescribeCertificateState](~~164111~~) operation to obtain the information that is required to complete domain name verification, and manually complete the verification. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on your DNS server. The certificate authority (CA) starts to review your certificate application only after the domain name verification is complete.
+      *
+      * @param request CreateCertificateWithCsrRequestRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateCertificateWithCsrRequestResponse
+     */
     public CreateCertificateWithCsrRequestResponse createCertificateWithCsrRequestWithOptions(CreateCertificateWithCsrRequestRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -285,6 +365,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCertificateWithCsrRequestResponse());
     }
 
+    /**
+      * *   You can call the CreateCertificateWithCsrRequest operation to apply only for DV certificates. We recommend that you call the [CreateCertificateForPackageRequest](~~455296~~) operation to submit a certificate application. This operation allows you to apply for certificates of all specifications and specify the method to generate a CSR file.
+      * *   Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see [Purchase a certificate resource plan](~~28542~~). You can call the [DescribePackageState](~~164110~~) operation to query the usage of certificate resource plans of specified specifications. The usage information includes the total number of purchased certificate resource plans of the specified specifications, the number of times that certificate applications are submitted, and the number of times that certificates are issued.
+      * *   When you call this operation, you can use the **ProductCode** parameter to specify the specifications of the certificate.
+      * *   After you call this operation to submit a certificate application, the certificate quota of the required specifications that you purchased is consumed. After you call this operation, you also need to call the [DescribeCertificateState](~~164111~~) operation to obtain the information that is required to complete domain name verification, and manually complete the verification. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on your DNS server. The certificate authority (CA) starts to review your certificate application only after the domain name verification is complete.
+      *
+      * @param request CreateCertificateWithCsrRequestRequest
+      * @return CreateCertificateWithCsrRequestResponse
+     */
     public CreateCertificateWithCsrRequestResponse createCertificateWithCsrRequest(CreateCertificateWithCsrRequestRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createCertificateWithCsrRequestWithOptions(request, runtime);
@@ -424,6 +513,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.decryptWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to delete a certificate application order only in the following scenarios:
+      * *   The status of the order is review failed. You have called the [DescribeCertificateState](~~455800~~)  operation to query the status of the certificate application order and the value of the **Type** parameter is **verify_fail**.
+      * *   The status of the order is **pending application**. You have called the [CancelOrderRequest](~~455299~~) operation to cancel a certificate application order whose status is pending review or being reviewed. The status of the certificate application order that is canceled in this case changes to **pending application**.
+      *
+      * @param request DeleteCertificateRequestRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteCertificateRequestResponse
+     */
     public DeleteCertificateRequestResponse deleteCertificateRequestWithOptions(DeleteCertificateRequestRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -448,6 +546,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCertificateRequestResponse());
     }
 
+    /**
+      * You can call this operation to delete a certificate application order only in the following scenarios:
+      * *   The status of the order is review failed. You have called the [DescribeCertificateState](~~455800~~)  operation to query the status of the certificate application order and the value of the **Type** parameter is **verify_fail**.
+      * *   The status of the order is **pending application**. You have called the [CancelOrderRequest](~~455299~~) operation to cancel a certificate application order whose status is pending review or being reviewed. The status of the certificate application order that is canceled in this case changes to **pending application**.
+      *
+      * @param request DeleteCertificateRequestRequest
+      * @return DeleteCertificateRequestResponse
+     */
     public DeleteCertificateRequestResponse deleteCertificateRequest(DeleteCertificateRequestRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteCertificateRequestWithOptions(request, runtime);
@@ -482,6 +588,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deletePCACertWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DeleteUserCertificateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteUserCertificateResponse
+     */
     public DeleteUserCertificateResponse deleteUserCertificateWithOptions(DeleteUserCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -506,11 +619,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteUserCertificateResponse());
     }
 
+    /**
+      * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request DeleteUserCertificateRequest
+      * @return DeleteUserCertificateResponse
+     */
     public DeleteUserCertificateResponse deleteUserCertificate(DeleteUserCertificateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteUserCertificateWithOptions(request, runtime);
     }
 
+    /**
+      * If you do not complete the verification of the domain name ownership after you submit a certificate application, you can call this operation to obtain the information that is required to complete the verification. You can complete the verification of the domain name ownership based on the data returned. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on the DNS server.
+      * The certificate authority (CA) reviews your certificate application only after you complete the verification of the domain name ownership. After the CA approves your certificate application, the CA issues the certificate. If a certificate is issued, you can call this operation to obtain the CA certificate and private key of the certificate.
+      *
+      * @param request DescribeCertificateStateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeCertificateStateResponse
+     */
     public DescribeCertificateStateResponse describeCertificateStateWithOptions(DescribeCertificateStateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -535,6 +662,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCertificateStateResponse());
     }
 
+    /**
+      * If you do not complete the verification of the domain name ownership after you submit a certificate application, you can call this operation to obtain the information that is required to complete the verification. You can complete the verification of the domain name ownership based on the data returned. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on the DNS server.
+      * The certificate authority (CA) reviews your certificate application only after you complete the verification of the domain name ownership. After the CA approves your certificate application, the CA issues the certificate. If a certificate is issued, you can call this operation to obtain the CA certificate and private key of the certificate.
+      *
+      * @param request DescribeCertificateStateRequest
+      * @return DescribeCertificateStateResponse
+     */
     public DescribeCertificateStateResponse describeCertificateState(DescribeCertificateStateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCertificateStateWithOptions(request, runtime);
@@ -631,9 +765,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getCertWarehouseQuotaWithOptions(runtime);
     }
 
+    /**
+      * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request GetUserCertificateDetailRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetUserCertificateDetailResponse
+     */
     public GetUserCertificateDetailResponse getUserCertificateDetailWithOptions(GetUserCertificateDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certFilter)) {
+            query.put("CertFilter", request.certFilter);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.certId)) {
             query.put("CertId", request.certId);
         }
@@ -655,6 +800,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserCertificateDetailResponse());
     }
 
+    /**
+      * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request GetUserCertificateDetailRequest
+      * @return GetUserCertificateDetailResponse
+     */
     public GetUserCertificateDetailResponse getUserCertificateDetail(GetUserCertificateDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getUserCertificateDetailWithOptions(request, runtime);
@@ -754,6 +905,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listCertWarehouseWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the ListUserCertificateOrder operation to query the certificates or certificate orders of users. If you set OrderType to CERT or UPLOAD, certificates are returned. If you set OrderType to CPACK or BUY, certificate orders are returned.
+      * ## Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request ListUserCertificateOrderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListUserCertificateOrderResponse
+     */
     public ListUserCertificateOrderResponse listUserCertificateOrderWithOptions(ListUserCertificateOrderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -798,11 +958,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserCertificateOrderResponse());
     }
 
+    /**
+      * You can call the ListUserCertificateOrder operation to query the certificates or certificate orders of users. If you set OrderType to CERT or UPLOAD, certificates are returned. If you set OrderType to CPACK or BUY, certificate orders are returned.
+      * ## Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request ListUserCertificateOrderRequest
+      * @return ListUserCertificateOrderResponse
+     */
     public ListUserCertificateOrderResponse listUserCertificateOrder(ListUserCertificateOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listUserCertificateOrderWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to submit a renewal application for a certificate only when the order of the certificate is in the expiring state. After the renewal is complete, a new certificate order whose status is pending application is generated. You must submit a certificate application for the new certificate order and install the new certificate after the new certificate is issued.
+      * > You can call the [DescribeCertificateState](~~455800~~) operation to query the status of a certificate application order. If the value of the **Type** response parameter is **certificate**, the certificate is issued.
+      *
+      * @param request RenewCertificateOrderForPackageRequestRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RenewCertificateOrderForPackageRequestResponse
+     */
     public RenewCertificateOrderForPackageRequestResponse renewCertificateOrderForPackageRequestWithOptions(RenewCertificateOrderForPackageRequestRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -831,6 +1007,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RenewCertificateOrderForPackageRequestResponse());
     }
 
+    /**
+      * You can call this operation to submit a renewal application for a certificate only when the order of the certificate is in the expiring state. After the renewal is complete, a new certificate order whose status is pending application is generated. You must submit a certificate application for the new certificate order and install the new certificate after the new certificate is issued.
+      * > You can call the [DescribeCertificateState](~~455800~~) operation to query the status of a certificate application order. If the value of the **Type** response parameter is **certificate**, the certificate is issued.
+      *
+      * @param request RenewCertificateOrderForPackageRequestRequest
+      * @return RenewCertificateOrderForPackageRequestResponse
+     */
     public RenewCertificateOrderForPackageRequestResponse renewCertificateOrderForPackageRequest(RenewCertificateOrderForPackageRequestRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.renewCertificateOrderForPackageRequestWithOptions(request, runtime);
@@ -906,6 +1089,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.signWithOptions(request, runtime);
     }
 
+    /**
+      * The unique identifier of the certificate.
+      *
+      * @param request UploadPCACertRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UploadPCACertResponse
+     */
     public UploadPCACertResponse uploadPCACertWithOptions(UploadPCACertRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -942,11 +1132,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UploadPCACertResponse());
     }
 
+    /**
+      * The unique identifier of the certificate.
+      *
+      * @param request UploadPCACertRequest
+      * @return UploadPCACertResponse
+     */
     public UploadPCACertResponse uploadPCACert(UploadPCACertRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.uploadPCACertWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request UploadUserCertificateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UploadUserCertificateResponse
+     */
     public UploadUserCertificateResponse uploadUserCertificateWithOptions(UploadUserCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -999,6 +1202,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UploadUserCertificateResponse());
     }
 
+    /**
+      * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request UploadUserCertificateRequest
+      * @return UploadUserCertificateResponse
+     */
     public UploadUserCertificateResponse uploadUserCertificate(UploadUserCertificateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.uploadUserCertificateWithOptions(request, runtime);
