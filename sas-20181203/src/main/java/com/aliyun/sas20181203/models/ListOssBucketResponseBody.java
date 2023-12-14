@@ -76,6 +76,12 @@ public class ListOssBucketResponseBody extends TeaModel {
         @NameInMap("Support")
         public Boolean support;
 
+        /**
+         * <p>Whether to support config. Valid values:</p>
+         * <br>
+         * <p>* true</p>
+         * <p>* false</p>
+         */
         @NameInMap("SupportConfig")
         public String supportConfig;
 

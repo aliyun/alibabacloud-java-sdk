@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateOssScanConfigRequest extends TeaModel {
+    /**
+     * <p>Whether to match all prefixes.</p>
+     */
     @NameInMap("AllKeyPrefix")
     public Boolean allKeyPrefix;
 
@@ -28,6 +31,9 @@ public class CreateOssScanConfigRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The prefixes of the object that you want to check.</p>
+     */
     @NameInMap("KeyPrefixList")
     public java.util.List<String> keyPrefixList;
 
@@ -37,6 +43,9 @@ public class CreateOssScanConfigRequest extends TeaModel {
     @NameInMap("KeySuffixList")
     public java.util.List<String> keySuffixList;
 
+    /**
+     * <p>The name of the policy.</p>
+     */
     @NameInMap("Name")
     public String name;
 

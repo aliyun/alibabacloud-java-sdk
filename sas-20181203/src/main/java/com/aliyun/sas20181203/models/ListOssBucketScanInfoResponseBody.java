@@ -58,6 +58,13 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
         @NameInMap("BucketName")
         public String bucketName;
 
+        /**
+         * <p>Configuration status, valid values:</p>
+         * <br>
+         * <p>- **0**: No Configuration.</p>
+         * <p>- **1**: Not Open.</p>
+         * <p>- **2**: Open.</p>
+         */
         @NameInMap("ConfigStatus")
         public Integer configStatus;
 

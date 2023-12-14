@@ -4,24 +4,48 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListHoneypotEventFlowsResponseBody extends TeaModel {
+    /**
+     * <p>The status code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The attack timelines.</p>
+     */
     @NameInMap("HoneypotEventFlows")
     public java.util.List<ListHoneypotEventFlowsResponseBodyHoneypotEventFlows> honeypotEventFlows;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListHoneypotEventFlowsResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,69 +111,143 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
     }
 
     public static class ListHoneypotEventFlowsResponseBodyHoneypotEventFlows extends TeaModel {
+        /**
+         * <p>The ID of the probe.</p>
+         */
         @NameInMap("AgentId")
         public String agentId;
 
+        /**
+         * <p>The name of the probe.</p>
+         */
         @NameInMap("AgentName")
         public String agentName;
 
+        /**
+         * <p>The ID of the container.</p>
+         */
         @NameInMap("DockerId")
         public String dockerId;
 
+        /**
+         * <p>The destination IP address.</p>
+         */
         @NameInMap("DstIp")
         public String dstIp;
 
+        /**
+         * <p>The destination port.</p>
+         */
         @NameInMap("DstPort")
         public Integer dstPort;
 
+        /**
+         * <p>The UUID of the connection in the attack.</p>
+         */
         @NameInMap("EventConnection")
         public String eventConnection;
 
+        /**
+         * <p>The extended information about the attack payload.</p>
+         */
         @NameInMap("Extra")
         public String extra;
 
+        /**
+         * <p>The extension information about the virtual private cloud (VPC).</p>
+         */
         @NameInMap("Extra1")
         public String extra1;
 
+        /**
+         * <p>The Object Storage Service (OSS) URL of the file.</p>
+         */
         @NameInMap("FileOssUrl")
         public String fileOssUrl;
 
+        /**
+         * <p>The timestamp when the intrusion event was first occurred.</p>
+         */
         @NameInMap("FirstTime")
         public Long firstTime;
 
+        /**
+         * <p>The ID of the intrusion event. The value is a string.</p>
+         */
         @NameInMap("HoneypotEventId")
         public String honeypotEventId;
 
+        /**
+         * <p>The ID of the honeypot.</p>
+         */
         @NameInMap("HoneypotId")
         public String honeypotId;
 
+        /**
+         * <p>The name of the honeypot.</p>
+         */
         @NameInMap("HoneypotName")
         public String honeypotName;
 
+        /**
+         * <p>The timestamp when the intrusion event was last occurred.</p>
+         */
         @NameInMap("LastTime")
         public Long lastTime;
 
+        /**
+         * <p>The risk level. Valid values:</p>
+         * <br>
+         * <p>*   **2**: low</p>
+         * <p>*   **3**: medium</p>
+         * <p>*   **4**: high</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        /**
+         * <p>The ID of the intrusion event.</p>
+         */
         @NameInMap("SecurityEventId")
         public Long securityEventId;
 
+        /**
+         * <p>The source IP address.</p>
+         */
         @NameInMap("SrcIp")
         public String srcIp;
 
+        /**
+         * <p>The source media access control (MAC) address.</p>
+         */
         @NameInMap("SrcMac")
         public String srcMac;
 
+        /**
+         * <p>The source port number.</p>
+         */
         @NameInMap("SrcPort")
         public Integer srcPort;
 
+        /**
+         * <p>The handling status of the intrusion event. Valid values:</p>
+         * <br>
+         * <p>*   **1**: pending handling</p>
+         * <p>*   **2**: ignored</p>
+         * <p>*   **4**: confirmed</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The ID of the attack type.</p>
+         */
         @NameInMap("TypeId")
         public String typeId;
 
+        /**
+         * <p>The UUID of an attack in the intrusion event.</p>
+         */
         @NameInMap("Uid")
         public String uid;
 
@@ -337,15 +435,27 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
     }
 
     public static class ListHoneypotEventFlowsResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

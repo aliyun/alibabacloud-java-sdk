@@ -11,7 +11,7 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>An array consisting of the servers on which the same risk item is detected.</p>
+     * <p>The servers on which the same risk item is detected.</p>
      */
     @NameInMap("Machines")
     public java.util.List<DescribeCheckWarningMachinesResponseBodyMachines> machines;
@@ -55,20 +55,20 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether Security Center is authorized to protect the asset. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("Bind")
         public Boolean bind;
 
         /**
-         * <p>The ID of the server.</p>
+         * <p>The instance ID of the server.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The name of the server.</p>
+         * <p>The instance name of the server.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;

@@ -4,39 +4,87 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class UpdateHoneypotProbeBindRequest extends TeaModel {
+    /**
+     * <p>The unique ID of the honeypot to which the probe is bound.</p>
+     */
     @NameInMap("BindId")
     public String bindId;
 
+    /**
+     * <p>The ports that are bound to the probe.</p>
+     */
     @NameInMap("BindPortList")
     public java.util.List<UpdateHoneypotProbeBindRequestBindPortList> bindPortList;
 
+    /**
+     * <p>The operation that the probe performs. Valid values:</p>
+     * <br>
+     * <p>*   **forward_honey**: forward traffic to a honeypot</p>
+     * <p>*   **scan_port**: monitor and scan</p>
+     */
     @NameInMap("BindType")
     public String bindType;
 
+    /**
+     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The honeypot ID.</p>
+     * <br>
+     * <p>>  You can call the [ListHoneypot](~~ListHoneypot~~) operation to obtain the IDs of honeypots.</p>
+     */
     @NameInMap("HoneypotId")
     public String honeypotId;
 
+    /**
+     * <p>The port ID of the probe service.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
+     * <br>
+     * <p>>  We recommend that you do not leave this parameter empty.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ports that are monitored.</p>
+     */
     @NameInMap("Ports")
     public String ports;
 
+    /**
+     * <p>The probe ID.</p>
+     * <br>
+     * <p>>  You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.</p>
+     */
     @NameInMap("ProbeId")
     public String probeId;
 
+    /**
+     * <p>The IP addresses that are monitored.</p>
+     */
     @NameInMap("ServiceIpList")
     public java.util.List<String> serviceIpList;
 
+    /**
+     * <p>The status of the port.</p>
+     */
     @NameInMap("SetStatus")
     public Integer setStatus;
 
@@ -142,24 +190,54 @@ public class UpdateHoneypotProbeBindRequest extends TeaModel {
     }
 
     public static class UpdateHoneypotProbeBindRequestBindPortList extends TeaModel {
+        /**
+         * <p>Specifies whether to bind a port. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("BindPort")
         public Boolean bindPort;
 
+        /**
+         * <p>The end port on which the probe monitors.</p>
+         */
         @NameInMap("EndPort")
         public Integer endPort;
 
+        /**
+         * <p>Specifies whether the port is fixed. Valid values:</p>
+         * <br>
+         * <p>*   **0**: no</p>
+         * <p>*   **1**: yes</p>
+         */
         @NameInMap("Fixed")
         public Boolean fixed;
 
+        /**
+         * <p>The UUID of the port.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The type of the protocol. Valid values:</p>
+         * <br>
+         * <p>*   **tcp**</p>
+         * <p>*   **udp**</p>
+         */
         @NameInMap("Proto")
         public String proto;
 
+        /**
+         * <p>The start port on which the probe monitors.</p>
+         */
         @NameInMap("StartPort")
         public Integer startPort;
 
+        /**
+         * <p>The destination port.</p>
+         */
         @NameInMap("TargetPort")
         public Integer targetPort;
 

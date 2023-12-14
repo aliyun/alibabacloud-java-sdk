@@ -4,24 +4,54 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyContainerPluginRuleRequest extends TeaModel {
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The action mode of the rule. Valid values:</p>
+     * <br>
+     * <p>*   **1**: alerts</p>
+     * <p>*   **2**: block</p>
+     */
     @NameInMap("Mode")
     public Integer mode;
 
+    /**
+     * <p>The ID of the rule.</p>
+     */
     @NameInMap("RuleId")
     public Integer ruleId;
 
+    /**
+     * <p>The name of the rule.</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The type of the rule. Valid values:</p>
+     * <br>
+     * <p>*   **0**: user-defined rule</p>
+     * <p>*   **1**: built-in rule</p>
+     */
     @NameInMap("RuleType")
     public Integer ruleType;
 
+    /**
+     * <p>The rule items.</p>
+     */
     @NameInMap("SelectedPolicy")
     public java.util.List<String> selectedPolicy;
 
+    /**
+     * <p>The images that are added to the whitelist.</p>
+     */
     @NameInMap("WhiteImages")
     public java.util.List<String> whiteImages;
 

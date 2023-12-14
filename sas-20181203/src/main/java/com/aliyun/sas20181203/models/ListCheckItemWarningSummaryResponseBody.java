@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the risk statistics of check items.</p>
+     * <p>The risk statistics of check items.</p>
      */
     @NameInMap("List")
     public java.util.List<ListCheckItemWarningSummaryResponseBodyList> list;
@@ -58,9 +58,15 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         @NameInMap("Advice")
         public String advice;
 
+        /**
+         * <p>The list of the baseline categories of attribution.</p>
+         */
         @NameInMap("AffiliatedRiskTypes")
         public java.util.List<String> affiliatedRiskTypes;
 
+        /**
+         * <p>The list of baselines attribution.</p>
+         */
         @NameInMap("AffiliatedRisks")
         public java.util.List<String> affiliatedRisks;
 
@@ -83,9 +89,10 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         public String checkItem;
 
         /**
-         * <p>The risk level of the check item.Valid values:</p>
+         * <p>The risk level of the check item. Valid values:</p>
+         * <br>
          * <p>*   **high**</p>
-         * <p>*  **medium**</p>
+         * <p>*   **medium**</p>
          * <p>*   **low**</p>
          */
         @NameInMap("CheckLevel")
@@ -98,9 +105,10 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         public String checkType;
 
         /**
-         * <p>Checks if the item belongs to the container runtime category.Valid values:</p>
+         * <p>Indicates whether the check item belongs to the container runtime type. Valid values:</p>
+         * <br>
          * <p>*   **true**</p>
-         * <p>*  **false**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("ContainerCheckItem")
         public Boolean containerCheckItem;
@@ -118,10 +126,10 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         public String riskType;
 
         /**
-         * <p>The risk status of the check item.Valid values:</p>
-         * <p>*  **1**: failed</p>
+         * <p>The risk status of the check item. Valid values:</p>
          * <br>
-         * <p>*  **3**: passed</p>
+         * <p>*   **1**: failed</p>
+         * <p>*   **3**: passed</p>
          */
         @NameInMap("Status")
         public Integer status;

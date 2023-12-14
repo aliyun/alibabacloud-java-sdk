@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePropertyPortDetailRequest extends TeaModel {
     /**
-     * <p>The IP address that is bound to the listening port.</p>
+     * <p>The IP address bound to the port.</p>
      */
     @NameInMap("BindIp")
     public String bindIp;

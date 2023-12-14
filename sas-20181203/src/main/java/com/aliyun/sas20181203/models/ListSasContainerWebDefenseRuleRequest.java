@@ -4,15 +4,39 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListSasContainerWebDefenseRuleRequest extends TeaModel {
+    /**
+     * <p>The search conditions for assets. The value of this parameter is in the JSON format and contains the following fields:</p>
+     * <br>
+     * <p>*   **name**: the name of the search condition.</p>
+     * <br>
+     * <p>*   **value**: the value of the search condition.</p>
+     * <br>
+     * <p>*   **logicalExp**: the logical relation for multiple search conditions. Valid values:</p>
+     * <br>
+     * <p>    *   **OR**: The search conditions use a logical **OR**.</p>
+     * <p>    *   **AND**: The search conditions use a logical **AND**.</p>
+     */
     @NameInMap("Criteria")
     public String criteria;
 
+    /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The logical relation for multiple search conditions. Valid values:</p>
+     * <br>
+     * <p>*   **OR**: The search conditions use a logical **OR**.</p>
+     * <p>*   **AND**: The search conditions use a logical **AND**.</p>
+     */
     @NameInMap("LogicalExp")
     public String logicalExp;
 
+    /**
+     * <p>The number of entries per page. Default value: **20**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

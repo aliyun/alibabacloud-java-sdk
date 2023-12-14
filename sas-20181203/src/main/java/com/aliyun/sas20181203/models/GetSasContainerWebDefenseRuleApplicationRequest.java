@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetSasContainerWebDefenseRuleApplicationRequest extends TeaModel {
+    /**
+     * <p>The ID of the rule.</p>
+     * <br>
+     * <p>>  You can call the ListSasContainerWebDefenseRule operation to query the IDs of rules.</p>
+     */
     @NameInMap("RuleId")
     public Long ruleId;
 

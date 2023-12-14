@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateOssBucketScanTaskRequest extends TeaModel {
+    /**
+     * <p>Whether to match all prefixes.</p>
+     */
     @NameInMap("AllKeyPrefix")
     public Boolean allKeyPrefix;
 
@@ -19,6 +22,9 @@ public class CreateOssBucketScanTaskRequest extends TeaModel {
     @NameInMap("ExcludeKeySuffixList")
     public java.util.List<String> excludeKeySuffixList;
 
+    /**
+     * <p>The prefixes of the objects that you want to check.</p>
+     */
     @NameInMap("KeyPrefixList")
     public java.util.List<String> keyPrefixList;
 

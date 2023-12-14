@@ -4,21 +4,50 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListHoneypotEventFlowsRequest extends TeaModel {
+    /**
+     * <p>The page number. Default value: **1**.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The status of the event. Valid values:</p>
+     * <br>
+     * <p>*   **y**: handled</p>
+     * <p>*   **n**: unhandled</p>
+     * <p>*   **a**: all statuses</p>
+     */
     @NameInMap("Dealed")
     public String dealed;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <br>
+     * <p>>  We recommend that you do not leave this parameter empty.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the alert event. The ID of the management account of the ListHoneypotEvents resource directory.</p>
+     * <br>
+     * <p>>  You can call the [ListHoneypotEvents](~~ListHoneypotEvents~~) operation to query the IDs of alert events.</p>
+     */
     @NameInMap("SecurityEventId")
     public Long securityEventId;
 

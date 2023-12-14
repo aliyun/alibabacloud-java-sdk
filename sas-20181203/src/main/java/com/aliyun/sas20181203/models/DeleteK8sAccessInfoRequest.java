@@ -4,15 +4,27 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteK8sAccessInfoRequest extends TeaModel {
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("AliyunYundunGatewayApiName")
     public String aliyunYundunGatewayApiName;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("AliyunYundunGatewayPopName")
     public String aliyunYundunGatewayPopName;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("AliyunYundunGatewayProjectName")
     public String aliyunYundunGatewayProjectName;
 
+    /**
+     * <p>The ID generated when Kubernetes is connected. You can call the GenerateK8sAccessInfo operation to query the ID.</p>
+     */
     @NameInMap("Id")
     public Long id;
 

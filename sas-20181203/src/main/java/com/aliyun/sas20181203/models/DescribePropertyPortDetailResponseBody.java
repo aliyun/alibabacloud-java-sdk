@@ -11,7 +11,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
     public DescribePropertyPortDetailResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>An array that consists of the fingerprints of the ports.</p>
+     * <p>The fingerprints of the ports.</p>
      */
     @NameInMap("Propertys")
     public java.util.List<DescribePropertyPortDetailResponseBodyPropertys> propertys;
@@ -117,7 +117,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
 
     public static class DescribePropertyPortDetailResponseBodyPropertys extends TeaModel {
         /**
-         * <p>The IP address that is bound to the listening port.</p>
+         * <p>The IP address bound to the port.</p>
          */
         @NameInMap("BindIp")
         public String bindIp;
@@ -129,13 +129,13 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The ID of the server.</p>
+         * <p>The instance ID of the server.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The name of the server.</p>
+         * <p>The instance name of the server.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
@@ -165,7 +165,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
         public String pid;
 
         /**
-         * <p>The listening port.</p>
+         * <p>The listener port.</p>
          */
         @NameInMap("Port")
         public String port;

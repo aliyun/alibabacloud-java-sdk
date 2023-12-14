@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class AddSasContainerWebDefenseRuleResponseBody extends TeaModel {
+    /**
+     * <p>The unique value of the created rule.</p>
+     */
     @NameInMap("Data")
     public Long data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

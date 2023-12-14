@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCheckWarningDetailRequest extends TeaModel {
+    /**
+     * <p>The ID of the check item.</p>
+     * <br>
+     * <p>> You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of check items.</p>
+     */
     @NameInMap("CheckId")
     public String checkId;
 
@@ -38,6 +43,11 @@ public class DescribeCheckWarningDetailRequest extends TeaModel {
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <p>The server UUID.</p>
+     * <br>
+     * <p>>  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the server UUID.</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

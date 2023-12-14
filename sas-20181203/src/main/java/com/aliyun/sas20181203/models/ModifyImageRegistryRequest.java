@@ -4,15 +4,27 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyImageRegistryRequest extends TeaModel {
+    /**
+     * <p>The ID of the image repository. You can call the listImageRegistry operation to query the ID of the image repository.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The password.</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>The number of images that are scanned per hour.</p>
+     */
     @NameInMap("TransPerHour")
     public Integer transPerHour;
 
+    /**
+     * <p>The username.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

@@ -91,6 +91,9 @@ public class ListCheckItemWarningSummaryRequest extends TeaModel {
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>The UUID array of the servers.</p>
+     */
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;
 

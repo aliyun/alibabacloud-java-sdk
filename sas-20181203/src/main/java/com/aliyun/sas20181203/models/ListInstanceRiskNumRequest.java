@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceRiskNumRequest extends TeaModel {
+    /**
+     * <p>The instances.</p>
+     */
     @NameInMap("InstanceList")
     public java.util.List<ListInstanceRiskNumRequestInstanceList> instanceList;
 
@@ -21,9 +24,15 @@ public class ListInstanceRiskNumRequest extends TeaModel {
     }
 
     public static class ListInstanceRiskNumRequestInstanceList extends TeaModel {
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The UUID of the instance.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 

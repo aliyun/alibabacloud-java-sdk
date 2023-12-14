@@ -4,9 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyContainerDefenseRuleSwitchRequest extends TeaModel {
+    /**
+     * <p>The IDs of rules.</p>
+     */
     @NameInMap("RuleIds")
     public java.util.List<Long> ruleIds;
 
+    /**
+     * <p>The status of the rule. Valid values:</p>
+     * <br>
+     * <p>*   **1**: enabled</p>
+     * <p>*   **0**: disabled</p>
+     */
     @NameInMap("RuleSwitch")
     public Integer ruleSwitch;
 

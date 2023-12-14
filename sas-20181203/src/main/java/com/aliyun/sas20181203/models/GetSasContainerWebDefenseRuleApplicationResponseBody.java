@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaModel {
+    /**
+     * <p>The applications.</p>
+     */
     @NameInMap("ContainerWebDefenseAppList")
     public java.util.List<GetSasContainerWebDefenseRuleApplicationResponseBodyContainerWebDefenseAppList> containerWebDefenseAppList;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +38,47 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
     }
 
     public static class GetSasContainerWebDefenseRuleApplicationResponseBodyContainerWebDefenseAppList extends TeaModel {
+        /**
+         * <p>The user ID.</p>
+         */
         @NameInMap("AliUid")
         public Long aliUid;
 
+        /**
+         * <p>The ID of the container cluster.</p>
+         * <br>
+         * <p>>  The IDs of clusters can be obtained by using the [DescribeGroupedContainerInstances](~~182997~~) operation.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The time when the application was created. Unit: milliseconds.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The last modification time. Unit: milliseconds.</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
+        /**
+         * <p>The value of the application label.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
