@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class UninstallPromClusterRequest extends TeaModel {
     /**
-     * <p>语言环境, 默认为中文 zh | en</p>
+     * <p>Language environment(If left blank, defaults to zh):</p>
+     * <p>- zh</p>
+     * <p>- en</p>
      */
     @NameInMap("AliyunLang")
     public String aliyunLang;

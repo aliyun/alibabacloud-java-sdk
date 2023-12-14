@@ -5,13 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusInstancesRequest extends TeaModel {
     /**
-     * <p>实例类型</p>
+     * <p>Optional instance types (if left blank, all types of instances will be queried):</p>
+     * <p>- cloud-product-prometheus </p>
+     * <p>- ManagedKubernetes</p>
+     * <p>- satellite</p>
+     * <p>- Ask</p>
+     * <p>- remote-write-prometheus</p>
+     * <p>- cloud-monitor-cmee</p>
+     * <p>- ExternalKubernetes</p>
+     * <p>- vpc-prometheus</p>
+     * <p>- cloud-monitor-direct</p>
+     * <p>- Edge Kubernetes</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

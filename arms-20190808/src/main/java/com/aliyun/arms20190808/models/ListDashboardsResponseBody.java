@@ -10,6 +10,9 @@ public class ListDashboardsResponseBody extends TeaModel {
     @NameInMap("DashboardVos")
     public java.util.List<ListDashboardsResponseBodyDashboardVos> dashboardVos;
 
+    /**
+     * <p>The indicators of whether the Prometheus service has been activated.</p>
+     */
     @NameInMap("PrometheusServiceOpened")
     public String prometheusServiceOpened;
 
