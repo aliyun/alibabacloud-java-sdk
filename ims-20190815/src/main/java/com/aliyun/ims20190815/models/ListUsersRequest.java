@@ -11,7 +11,7 @@ public class ListUsersRequest extends TeaModel {
     public String marker;
 
     /**
-     * <p>The number of entries to return. If a response is truncated because it reaches the value of `MaxItems`, the value of `IsTruncated` will be true.</p>
+     * <p>The number of entries per page. If a response is truncated because it reaches the value of `MaxItems`, the value of `IsTruncated` will be true.</p>
      * <br>
      * <p>Valid values: 1 to 1000. Default value: 1000.</p>
      */
@@ -19,7 +19,7 @@ public class ListUsersRequest extends TeaModel {
     public Integer maxItems;
 
     /**
-     * <p>The tag value.</p>
+     * <p>The tags. A maximum number of 20 tags are supported.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListUsersRequestTag> tag;

@@ -87,7 +87,7 @@ public class CreateOIDCProviderResponseBody extends TeaModel {
         public Long issuanceLimitTime;
 
         /**
-         * <p>The URL of the issuer,</p>
+         * <p>The URL of the issuer.</p>
          */
         @NameInMap("IssuerUrl")
         public String issuerUrl;
