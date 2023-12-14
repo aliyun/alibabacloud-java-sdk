@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdatePrometheusGlobalViewRequest extends TeaModel {
     /**
-     * <p>创建GlobalView时，是否要求所有子实例都校验成功时，才创建GlobalView实例。默认是false，即可以部分成功。</p>
+     * <p>To edit a GlobalView aggregated instance, do you require all passed child instances to be verified successfully before creating a GlobalView instance (optional, default to false):</p>
+     * <p>- true</p>
+     * <p>- false</p>
      */
     @NameInMap("AllSubClustersSuccess")
     public Boolean allSubClustersSuccess;
@@ -16,9 +18,15 @@ public class UpdatePrometheusGlobalViewRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The name of the global aggregation instance.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>The region ID of the global aggregation instance.</p>
+     */
     @NameInMap("MostRegionId")
     public String mostRegionId;
 

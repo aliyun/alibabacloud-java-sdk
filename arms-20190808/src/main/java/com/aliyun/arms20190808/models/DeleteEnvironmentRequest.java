@@ -4,17 +4,20 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteEnvironmentRequest extends TeaModel {
+    /**
+     * <p>cascade delete Prometheus instance.</p>
+     */
     @NameInMap("DeletePromInstance")
     public Boolean deletePromInstance;
 
     /**
-     * <p>Environment instance ID.</p>
+     * <p>The ID of the environment instance.</p>
      */
     @NameInMap("EnvironmentId")
     public String environmentId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

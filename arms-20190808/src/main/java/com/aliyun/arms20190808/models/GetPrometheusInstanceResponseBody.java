@@ -102,6 +102,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
     }
 
     public static class GetPrometheusInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>auth token string.</p>
+         */
         @NameInMap("AuthToken")
         public String authToken;
 
@@ -134,9 +137,15 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @NameInMap("GrafanaInstanceId")
         public String grafanaInstanceId;
 
+        /**
+         * <p>http api internet url.</p>
+         */
         @NameInMap("HttpApiInterUrl")
         public String httpApiInterUrl;
 
+        /**
+         * <p>http api intranet url.</p>
+         */
         @NameInMap("HttpApiIntraUrl")
         public String httpApiIntraUrl;
 
@@ -149,9 +158,15 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @NameInMap("PaymentType")
         public String paymentType;
 
+        /**
+         * <p>push gateway internet url.</p>
+         */
         @NameInMap("PushGatewayInterUrl")
         public String pushGatewayInterUrl;
 
+        /**
+         * <p>push gateway intranet url.</p>
+         */
         @NameInMap("PushGatewayIntraUrl")
         public String pushGatewayIntraUrl;
 
@@ -161,15 +176,27 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>remote read internet url.</p>
+         */
         @NameInMap("RemoteReadInterUrl")
         public String remoteReadInterUrl;
 
+        /**
+         * <p>remote read intranet url.</p>
+         */
         @NameInMap("RemoteReadIntraUrl")
         public String remoteReadIntraUrl;
 
+        /**
+         * <p>remote write internet url.</p>
+         */
         @NameInMap("RemoteWriteInterUrl")
         public String remoteWriteInterUrl;
 
+        /**
+         * <p>remote write intranet url.</p>
+         */
         @NameInMap("RemoteWriteIntraUrl")
         public String remoteWriteIntraUrl;
 

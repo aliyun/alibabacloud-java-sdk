@@ -436,9 +436,15 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateAlertRuleResponseBodyAlertRuleTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -600,6 +606,9 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         @NameInMap("MetricsType")
         public String metricsType;
 
+        /**
+         * <p>Notification Mode.</p>
+         */
         @NameInMap("NotifyMode")
         public String notifyMode;
 
@@ -627,6 +636,9 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<CreateOrUpdateAlertRuleResponseBodyAlertRuleTags> tags;
 

@@ -327,6 +327,9 @@ public class ListAlertsResponseBody extends TeaModel {
     }
 
     public static class ListAlertsResponseBodyPageBeanListAlerts extends TeaModel {
+        @NameInMap("AcknowledgeTime")
+        public Long acknowledgeTime;
+
         /**
          * <p>The list of activities.</p>
          */
@@ -357,6 +360,9 @@ public class ListAlertsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("Describe")
+        public String describe;
+
         /**
          * <p>The ID of the notification policy.</p>
          */
@@ -368,6 +374,18 @@ public class ListAlertsResponseBody extends TeaModel {
          */
         @NameInMap("DispatchRuleName")
         public String dispatchRuleName;
+
+        @NameInMap("Handler")
+        public String handler;
+
+        @NameInMap("NotifyRobots")
+        public String notifyRobots;
+
+        @NameInMap("Owner")
+        public String owner;
+
+        @NameInMap("RecoverTime")
+        public Long recoverTime;
 
         /**
          * <p>The severity level of the alert. Valid values: P6, P5, P4, P3, P2, and P1. The preceding values are listed in ascending order of severity.</p>
@@ -394,6 +412,14 @@ public class ListAlertsResponseBody extends TeaModel {
         public static ListAlertsResponseBodyPageBeanListAlerts build(java.util.Map<String, ?> map) throws Exception {
             ListAlertsResponseBodyPageBeanListAlerts self = new ListAlertsResponseBodyPageBeanListAlerts();
             return TeaModel.build(map, self);
+        }
+
+        public ListAlertsResponseBodyPageBeanListAlerts setAcknowledgeTime(Long acknowledgeTime) {
+            this.acknowledgeTime = acknowledgeTime;
+            return this;
+        }
+        public Long getAcknowledgeTime() {
+            return this.acknowledgeTime;
         }
 
         public ListAlertsResponseBodyPageBeanListAlerts setActivities(java.util.List<ListAlertsResponseBodyPageBeanListAlertsActivities> activities) {
@@ -436,6 +462,14 @@ public class ListAlertsResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public ListAlertsResponseBodyPageBeanListAlerts setDescribe(String describe) {
+            this.describe = describe;
+            return this;
+        }
+        public String getDescribe() {
+            return this.describe;
+        }
+
         public ListAlertsResponseBodyPageBeanListAlerts setDispatchRuleId(Float dispatchRuleId) {
             this.dispatchRuleId = dispatchRuleId;
             return this;
@@ -450,6 +484,38 @@ public class ListAlertsResponseBody extends TeaModel {
         }
         public String getDispatchRuleName() {
             return this.dispatchRuleName;
+        }
+
+        public ListAlertsResponseBodyPageBeanListAlerts setHandler(String handler) {
+            this.handler = handler;
+            return this;
+        }
+        public String getHandler() {
+            return this.handler;
+        }
+
+        public ListAlertsResponseBodyPageBeanListAlerts setNotifyRobots(String notifyRobots) {
+            this.notifyRobots = notifyRobots;
+            return this;
+        }
+        public String getNotifyRobots() {
+            return this.notifyRobots;
+        }
+
+        public ListAlertsResponseBodyPageBeanListAlerts setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
+        }
+
+        public ListAlertsResponseBodyPageBeanListAlerts setRecoverTime(Long recoverTime) {
+            this.recoverTime = recoverTime;
+            return this;
+        }
+        public Long getRecoverTime() {
+            return this.recoverTime;
         }
 
         public ListAlertsResponseBodyPageBeanListAlerts setSeverity(String severity) {

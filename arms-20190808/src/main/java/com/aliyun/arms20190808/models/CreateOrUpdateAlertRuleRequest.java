@@ -38,6 +38,9 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     @NameInMap("AlertName")
     public String alertName;
 
+    /**
+     * <p>Alarm Notification Channel Configuration. Used for compatibility with legacy rules.</p>
+     */
     @NameInMap("AlertPiplines")
     public String alertPiplines;
 
@@ -112,6 +115,13 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>Data Configuration. The dataRevision field specifies the data repair method when there is no data for the metric.</p>
+     * <br>
+     * <p>- Fill with zero: 0</p>
+     * <p>- Fill with one: 1</p>
+     * <p>- Fill with null: 2 (default, does not trigger an alarm)</p>
+     */
     @NameInMap("DataConfig")
     public String dataConfig;
 
@@ -159,6 +169,9 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     @NameInMap("Level")
     public String level;
 
+    /**
+     * <p>Application Tags. Used for application monitoring alert rules, to filter applications associated with alert rules.</p>
+     */
     @NameInMap("MarkTags")
     public java.util.List<CreateOrUpdateAlertRuleRequestMarkTags> markTags;
 
@@ -182,9 +195,15 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     @NameInMap("MetricsType")
     public String metricsType;
 
+    /**
+     * <p>Effective Time and Notification Time. Used for compatibility with legacy rules.</p>
+     */
     @NameInMap("Notice")
     public String notice;
 
+    /**
+     * <p>Notification Mode. Normal mode or Simplified mode.</p>
+     */
     @NameInMap("NotifyMode")
     public String notifyMode;
 
@@ -215,6 +234,9 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateOrUpdateAlertRuleRequestTags> tags;
 
@@ -440,9 +462,15 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     }
 
     public static class CreateOrUpdateAlertRuleRequestMarkTags extends TeaModel {
+        /**
+         * <p>The Tag Key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The Tag Value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -470,9 +498,15 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     }
 
     public static class CreateOrUpdateAlertRuleRequestTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

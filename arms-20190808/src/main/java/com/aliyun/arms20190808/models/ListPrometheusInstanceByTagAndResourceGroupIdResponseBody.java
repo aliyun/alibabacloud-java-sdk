@@ -102,6 +102,9 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
     }
 
     public static class ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances extends TeaModel {
+        @NameInMap("AuthToken")
+        public String authToken;
+
         /**
          * <p>The ID of the Prometheus instance.</p>
          */
@@ -132,6 +135,12 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         @NameInMap("GrafanaInstanceId")
         public String grafanaInstanceId;
 
+        @NameInMap("HttpApiInterUrl")
+        public String httpApiInterUrl;
+
+        @NameInMap("HttpApiIntraUrl")
+        public String httpApiIntraUrl;
+
         /**
          * <p>The billing method. Valid values:</p>
          * <br>
@@ -141,11 +150,29 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         @NameInMap("PaymentType")
         public String paymentType;
 
+        @NameInMap("PushGatewayInterUrl")
+        public String pushGatewayInterUrl;
+
+        @NameInMap("PushGatewayIntraUrl")
+        public String pushGatewayIntraUrl;
+
         /**
          * <p>The region ID of the Prometheus instance.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("RemoteReadInterUrl")
+        public String remoteReadInterUrl;
+
+        @NameInMap("RemoteReadIntraUrl")
+        public String remoteReadIntraUrl;
+
+        @NameInMap("RemoteWriteInterUrl")
+        public String remoteWriteInterUrl;
+
+        @NameInMap("RemoteWriteIntraUrl")
+        public String remoteWriteIntraUrl;
 
         /**
          * <p>The ID of the resource group to which the Prometheus instance belongs.</p>
@@ -200,6 +227,14 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             return TeaModel.build(map, self);
         }
 
+        public ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances setAuthToken(String authToken) {
+            this.authToken = authToken;
+            return this;
+        }
+        public String getAuthToken() {
+            return this.authToken;
+        }
+
         public ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances setClusterId(String clusterId) {
             this.clusterId = clusterId;
             return this;
@@ -232,6 +267,22 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             return this.grafanaInstanceId;
         }
 
+        public ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances setHttpApiInterUrl(String httpApiInterUrl) {
+            this.httpApiInterUrl = httpApiInterUrl;
+            return this;
+        }
+        public String getHttpApiInterUrl() {
+            return this.httpApiInterUrl;
+        }
+
+        public ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances setHttpApiIntraUrl(String httpApiIntraUrl) {
+            this.httpApiIntraUrl = httpApiIntraUrl;
+            return this;
+        }
+        public String getHttpApiIntraUrl() {
+            return this.httpApiIntraUrl;
+        }
+
         public ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances setPaymentType(String paymentType) {
             this.paymentType = paymentType;
             return this;
@@ -240,12 +291,60 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             return this.paymentType;
         }
 
+        public ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances setPushGatewayInterUrl(String pushGatewayInterUrl) {
+            this.pushGatewayInterUrl = pushGatewayInterUrl;
+            return this;
+        }
+        public String getPushGatewayInterUrl() {
+            return this.pushGatewayInterUrl;
+        }
+
+        public ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances setPushGatewayIntraUrl(String pushGatewayIntraUrl) {
+            this.pushGatewayIntraUrl = pushGatewayIntraUrl;
+            return this;
+        }
+        public String getPushGatewayIntraUrl() {
+            return this.pushGatewayIntraUrl;
+        }
+
         public ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances setRemoteReadInterUrl(String remoteReadInterUrl) {
+            this.remoteReadInterUrl = remoteReadInterUrl;
+            return this;
+        }
+        public String getRemoteReadInterUrl() {
+            return this.remoteReadInterUrl;
+        }
+
+        public ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances setRemoteReadIntraUrl(String remoteReadIntraUrl) {
+            this.remoteReadIntraUrl = remoteReadIntraUrl;
+            return this;
+        }
+        public String getRemoteReadIntraUrl() {
+            return this.remoteReadIntraUrl;
+        }
+
+        public ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances setRemoteWriteInterUrl(String remoteWriteInterUrl) {
+            this.remoteWriteInterUrl = remoteWriteInterUrl;
+            return this;
+        }
+        public String getRemoteWriteInterUrl() {
+            return this.remoteWriteInterUrl;
+        }
+
+        public ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances setRemoteWriteIntraUrl(String remoteWriteIntraUrl) {
+            this.remoteWriteIntraUrl = remoteWriteIntraUrl;
+            return this;
+        }
+        public String getRemoteWriteIntraUrl() {
+            return this.remoteWriteIntraUrl;
         }
 
         public ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances setResourceGroupId(String resourceGroupId) {

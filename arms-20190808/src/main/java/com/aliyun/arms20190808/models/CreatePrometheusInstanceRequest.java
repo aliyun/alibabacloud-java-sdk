@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreatePrometheusInstanceRequest extends TeaModel {
     /**
-     * <p>创建GlobalView时，是否要求所有子实例都校验成功时，才创建GlobalView实例。默认是false，即可以部分成功。</p>
+     * <p>To edit a GlobalView aggregated instance, do you require all passed child instances to be verified successfully before creating a GlobalView instance (optional, default to false):</p>
+     * <p>- true</p>
+     * <p>- false</p>
      */
     @NameInMap("AllSubClustersSuccess")
     public Boolean allSubClustersSuccess;
 
     /**
-     * <p>The ID of the cluster. This parameter is required if you set ClusterType to aliyun-cs��.</p>
+     * <p>The ID of the cluster. This parameter is required if you set ClusterType to aliyun-cs.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -23,7 +25,11 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The type of the Prometheus instance. Valid values: remote-write: Prometheus instance for remote write. ecs: Prometheus instance for ECS. cloud-monitor�: Prometheus instance for cloud services in China. cloud-product: Prometheus instance for Alibaba Cloud services outside China. global-view: Prometheus instance for GlobalView. aliyun-cs��: Prometheus instance for Container Service.</p>
+     * <p>Types include:</p>
+     * <p>- remote-write: General-purpose Instance</p>
+     * <p>- ecs: Prometheus for ECS</p>
+     * <p>- global-view: Global Aggregation Instance</p>
+     * <p>- aliyun-cs: Prometheus Instance for Container Service</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;

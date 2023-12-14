@@ -5,37 +5,39 @@ import com.aliyun.tea.*;
 
 public class CreateEnvironmentRequest extends TeaModel {
     /**
-     * <p>Locale, the default is Chinese zh | en.</p>
+     * <p>The language. Valid values: zh and en. Default value: zh.</p>
      */
     @NameInMap("AliyunLang")
     public String aliyunLang;
 
     /**
-     * <p>Resource instance ID bound to the environment, including container instance ID or VpcId.</p>
+     * <p>The ID of the resource associated with the environment, such as the ACK cluster ID or VPC ID.</p>
      */
     @NameInMap("BindResourceId")
     public String bindResourceId;
 
     /**
-     * <p>Environment name.</p>
+     * <p>The name of the environment.</p>
      */
     @NameInMap("EnvironmentName")
     public String environmentName;
 
     /**
-     * <p>Environment subtypes:</p>
-     * <p>- CS: Currently supports ACK.</p>
-     * <p>- ECS: ECS is currently supported.</p>
-     * <p>- Cloud: Currently supports Cloud.</p>
+     * <p>The subtype of the environment. Valid values:</p>
+     * <br>
+     * <p>*   CS: Container Service for Kubernetes (ACK)</p>
+     * <p>*   ECS: ECS</p>
+     * <p>*   Cloud: cloud service</p>
      */
     @NameInMap("EnvironmentSubType")
     public String environmentSubType;
 
     /**
-     * <p>Environment type:</p>
-     * <p>- CS: Container Service.</p>
-     * <p>- ECS.</p>
-     * <p>- Cloud: cloud service.</p>
+     * <p>The type of the environment. Valid values:</p>
+     * <br>
+     * <p>*   CS: Container Service</p>
+     * <p>*   ECS: Elastic Compute Service</p>
+     * <p>*   Cloud: cloud service</p>
      */
     @NameInMap("EnvironmentType")
     public String environmentType;
@@ -53,7 +55,7 @@ public class CreateEnvironmentRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags to add to the instance.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateEnvironmentRequestTags> tags;
