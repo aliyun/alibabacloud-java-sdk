@@ -25,6 +25,9 @@ public class CreateGatewayRequest extends TeaModel {
     @NameInMap("ReleaseAfterExpiration")
     public Boolean releaseAfterExpiration;
 
+    @NameInMap("ResourceRegionId")
+    public String resourceRegionId;
+
     @NameInMap("SecurityToken")
     public String securityToken;
 
@@ -96,6 +99,14 @@ public class CreateGatewayRequest extends TeaModel {
     }
     public Boolean getReleaseAfterExpiration() {
         return this.releaseAfterExpiration;
+    }
+
+    public CreateGatewayRequest setResourceRegionId(String resourceRegionId) {
+        this.resourceRegionId = resourceRegionId;
+        return this;
+    }
+    public String getResourceRegionId() {
+        return this.resourceRegionId;
     }
 
     public CreateGatewayRequest setSecurityToken(String securityToken) {

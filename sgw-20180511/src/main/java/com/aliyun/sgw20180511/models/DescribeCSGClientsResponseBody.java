@@ -113,6 +113,9 @@ public class DescribeCSGClientsResponseBody extends TeaModel {
         @NameInMap("EcsInstanceId")
         public String ecsInstanceId;
 
+        @NameInMap("HostInstanceId")
+        public String hostInstanceId;
+
         @NameInMap("LastHeartbeatTime")
         public Long lastHeartbeatTime;
 
@@ -168,6 +171,14 @@ public class DescribeCSGClientsResponseBody extends TeaModel {
         }
         public String getEcsInstanceId() {
             return this.ecsInstanceId;
+        }
+
+        public DescribeCSGClientsResponseBodyClients setHostInstanceId(String hostInstanceId) {
+            this.hostInstanceId = hostInstanceId;
+            return this;
+        }
+        public String getHostInstanceId() {
+            return this.hostInstanceId;
         }
 
         public DescribeCSGClientsResponseBodyClients setLastHeartbeatTime(Long lastHeartbeatTime) {

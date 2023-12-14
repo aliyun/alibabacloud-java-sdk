@@ -4,6 +4,9 @@ package com.aliyun.sgw20180511.models;
 import com.aliyun.tea.*;
 
 public class DescribeGatewaySMBUsersResponseBody extends TeaModel {
+    @NameInMap("ActiveDirectory")
+    public Boolean activeDirectory;
+
     @NameInMap("Code")
     public String code;
 
@@ -31,6 +34,14 @@ public class DescribeGatewaySMBUsersResponseBody extends TeaModel {
     public static DescribeGatewaySMBUsersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGatewaySMBUsersResponseBody self = new DescribeGatewaySMBUsersResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeGatewaySMBUsersResponseBody setActiveDirectory(Boolean activeDirectory) {
+        this.activeDirectory = activeDirectory;
+        return this;
+    }
+    public Boolean getActiveDirectory() {
+        return this.activeDirectory;
     }
 
     public DescribeGatewaySMBUsersResponseBody setCode(String code) {

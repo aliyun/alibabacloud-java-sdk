@@ -4,11 +4,17 @@ package com.aliyun.sgw20180511.models;
 import com.aliyun.tea.*;
 
 public class DescribeVSwitchesRequest extends TeaModel {
+    @NameInMap("Name")
+    public String name;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("ResourceRegionId")
+    public String resourceRegionId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
@@ -27,6 +33,14 @@ public class DescribeVSwitchesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeVSwitchesRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
     public DescribeVSwitchesRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -41,6 +55,14 @@ public class DescribeVSwitchesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeVSwitchesRequest setResourceRegionId(String resourceRegionId) {
+        this.resourceRegionId = resourceRegionId;
+        return this;
+    }
+    public String getResourceRegionId() {
+        return this.resourceRegionId;
     }
 
     public DescribeVSwitchesRequest setSecurityToken(String securityToken) {

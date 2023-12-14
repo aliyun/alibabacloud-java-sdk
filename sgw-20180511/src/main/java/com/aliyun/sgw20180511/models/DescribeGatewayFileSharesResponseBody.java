@@ -170,6 +170,9 @@ public class DescribeGatewayFileSharesResponseBody extends TeaModel {
         @NameInMap("NfsV4Optimization")
         public Boolean nfsV4Optimization;
 
+        @NameInMap("NoPartition")
+        public Boolean noPartition;
+
         @NameInMap("ObsoleteBuckets")
         public String obsoleteBuckets;
 
@@ -194,6 +197,9 @@ public class DescribeGatewayFileSharesResponseBody extends TeaModel {
         @NameInMap("PartialSyncPaths")
         public String partialSyncPaths;
 
+        /**
+         * <p>OSS Prefix。</p>
+         */
         @NameInMap("PathPrefix")
         public String pathPrefix;
 
@@ -241,6 +247,9 @@ public class DescribeGatewayFileSharesResponseBody extends TeaModel {
 
         @NameInMap("State")
         public String state;
+
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("SupportArchive")
         public Boolean supportArchive;
@@ -554,6 +563,14 @@ public class DescribeGatewayFileSharesResponseBody extends TeaModel {
             return this.nfsV4Optimization;
         }
 
+        public DescribeGatewayFileSharesResponseBodyFileSharesFileShare setNoPartition(Boolean noPartition) {
+            this.noPartition = noPartition;
+            return this;
+        }
+        public Boolean getNoPartition() {
+            return this.noPartition;
+        }
+
         public DescribeGatewayFileSharesResponseBodyFileSharesFileShare setObsoleteBuckets(String obsoleteBuckets) {
             this.obsoleteBuckets = obsoleteBuckets;
             return this;
@@ -744,6 +761,14 @@ public class DescribeGatewayFileSharesResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
+        }
+
+        public DescribeGatewayFileSharesResponseBodyFileSharesFileShare setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeGatewayFileSharesResponseBodyFileSharesFileShare setSupportArchive(Boolean supportArchive) {
