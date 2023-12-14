@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeCustomizeRuleTestResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +83,27 @@ public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
     }
 
     public static class DescribeCustomizeRuleTestResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The historical data that is used in the simulation test.</p>
+         */
         @NameInMap("SimulateData")
         public String simulateData;
 
+        /**
+         * <p>The status of the rule. Valid values:</p>
+         * <br>
+         * <p>*   0: The rule is in the initial state.</p>
+         * <p>*   10: The simulation data is tested.</p>
+         * <p>*   15: The business data is being tested.</p>
+         * <p>*   20: The business data test ends.</p>
+         * <p>*   100: The rule takes effect.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

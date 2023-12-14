@@ -4,41 +4,21 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class GetCapacityResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public Integer code;
-
+    /**
+     * <p>The information about the storage capacity.</p>
+     */
     @NameInMap("Data")
     public GetCapacityResponseBodyData data;
 
-    @NameInMap("DyCode")
-    public String dyCode;
-
-    @NameInMap("DyMessage")
-    public String dyMessage;
-
-    @NameInMap("ErrCode")
-    public String errCode;
-
-    @NameInMap("Message")
-    public String message;
-
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     public static GetCapacityResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCapacityResponseBody self = new GetCapacityResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetCapacityResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public GetCapacityResponseBody setData(GetCapacityResponseBodyData data) {
@@ -49,38 +29,6 @@ public class GetCapacityResponseBody extends TeaModel {
         return this.data;
     }
 
-    public GetCapacityResponseBody setDyCode(String dyCode) {
-        this.dyCode = dyCode;
-        return this;
-    }
-    public String getDyCode() {
-        return this.dyCode;
-    }
-
-    public GetCapacityResponseBody setDyMessage(String dyMessage) {
-        this.dyMessage = dyMessage;
-        return this;
-    }
-    public String getDyMessage() {
-        return this.dyMessage;
-    }
-
-    public GetCapacityResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
-        return this;
-    }
-    public String getErrCode() {
-        return this.errCode;
-    }
-
-    public GetCapacityResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public GetCapacityResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -89,21 +37,25 @@ public class GetCapacityResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetCapacityResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public static class GetCapacityResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the Logstores for the threat analysis feature exist on the user side. Valid values:</p>
+         * <br>
+         * <p>*   true: The logs are in the normal state. The log analysis feature is available.</p>
+         * <p>*   false: The logs are being cleared. The log analysis feature is unavailable.</p>
+         */
         @NameInMap("ExistLogStore")
         public Boolean existLogStore;
 
+        /**
+         * <p>The purchased storage capacity of the threat analysis feature. Unit: GB.</p>
+         */
         @NameInMap("PreservedCapacity")
         public Long preservedCapacity;
 
+        /**
+         * <p>The billable storage capacity of the threat analysis feature. Unit: GB.</p>
+         */
         @NameInMap("UsedCapacity")
         public Double usedCapacity;
 

@@ -4,45 +4,110 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class ListDisposeStrategyRequest extends TeaModel {
+    /**
+     * <p>The page number. Pages start from page 1.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The status of the policy. Valid values:</p>
+     * <br>
+     * <p>*   0: invalid</p>
+     * <p>*   1: valid</p>
+     */
     @NameInMap("EffectiveStatus")
     public Integer effectiveStatus;
 
+    /**
+     * <p>The end of the time range to query. Unit: milliseconds.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The feature value of the entity. Fuzzy match is supported.</p>
+     */
     @NameInMap("EntityIdentity")
     public String entityIdentity;
 
+    /**
+     * <p>The entity type of the playbook. Valid values:</p>
+     * <br>
+     * <p>*   ip</p>
+     * <p>*   process</p>
+     * <p>*   file</p>
+     */
     @NameInMap("EntityType")
     public String entityType;
 
+    /**
+     * <p>The sort order. Valid values:</p>
+     * <br>
+     * <p>*   desc: descending order.</p>
+     * <p>*   asc: ascending order.</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <p>The sort field. Valid values:</p>
+     * <br>
+     * <p>*   GmtModified: sorts the policies by update time.</p>
+     * <p>*   GmtCreate: sorts the policies by creation time.</p>
+     * <p>*   FinishTime: sorts the policies by end time.</p>
+     */
     @NameInMap("OrderField")
     public String orderField;
 
+    /**
+     * <p>The number of entries per page. Maximum value: 100.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The name of the playbook, which is the unique identifier of the playbook.</p>
+     */
     @NameInMap("PlaybookName")
     public String playbookName;
 
+    /**
+     * <p>The type of the playbook. Valid values:</p>
+     * <br>
+     * <p>*   system: user-triggered playbook</p>
+     * <p>*   custom: event-triggered playbook</p>
+     * <p>*   custom_alert: alert-triggered playbook</p>
+     * <p>*   soar-manual: user-run playbook</p>
+     * <p>*   soar-mdr: MDR-run playbook</p>
+     */
     @NameInMap("PlaybookTypes")
     public String playbookTypes;
 
+    /**
+     * <p>The UUID of the playbook.</p>
+     */
     @NameInMap("PlaybookUuid")
     public String playbookUuid;
 
+    /**
+     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <br>
+     * <p>*   cn-hangzhou: Your assets reside in regions in China.</p>
+     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the SOAR handling policy.</p>
+     */
     @NameInMap("SophonTaskId")
     public String sophonTaskId;
 
+    /**
+     * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

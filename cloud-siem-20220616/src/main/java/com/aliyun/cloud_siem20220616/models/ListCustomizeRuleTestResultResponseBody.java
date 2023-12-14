@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ListCustomizeRuleTestResultResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +83,21 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
     }
 
     public static class ListCustomizeRuleTestResultResponseBodyDataPageInfo extends TeaModel {
+        /**
+         * <p>The current page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
@@ -106,48 +133,100 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
     }
 
     public static class ListCustomizeRuleTestResultResponseBodyDataResponseData extends TeaModel {
+        /**
+         * <p>The description of the alert.</p>
+         */
         @NameInMap("AlertDesc")
         public String alertDesc;
 
+        /**
+         * <p>The alert details in the JSON format.</p>
+         */
         @NameInMap("AlertDetail")
         public String alertDetail;
 
+        /**
+         * <p>The source of the alert.</p>
+         */
         @NameInMap("AlertSrcProd")
         public String alertSrcProd;
 
+        /**
+         * <p>The sub-module of the source.</p>
+         */
         @NameInMap("AlertSrcProdModule")
         public String alertSrcProdModule;
 
+        /**
+         * <p>The tag of the ATT\&CK attack.</p>
+         */
         @NameInMap("AttCk")
         public String attCk;
 
+        /**
+         * <p>The name of the alert, which corresponds to the name of the custom rule.</p>
+         */
         @NameInMap("EventName")
         public String eventName;
 
+        /**
+         * <p>The risk type, which indicates the alert type.</p>
+         */
         @NameInMap("EventType")
         public String eventType;
 
+        /**
+         * <p>The risk level. Valid values:</p>
+         * <br>
+         * <p>*   serious: high</p>
+         * <p>*   suspicious: medium</p>
+         * <p>*   remind: low</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <p>The log source of the rule.</p>
+         */
         @NameInMap("LogSource")
         public String logSource;
 
+        /**
+         * <p>The time when the alert was recorded.</p>
+         */
         @NameInMap("LogTime")
         public String logTime;
 
+        /**
+         * <p>The log type of the rule.</p>
+         */
         @NameInMap("LogType")
         public String logType;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is associated with the alert in SIEM.</p>
+         */
         @NameInMap("MainUserId")
         public String mainUserId;
 
+        /**
+         * <p>The status of the alert data. Valid values:</p>
+         * <br>
+         * <p>*   test: business test data</p>
+         * <p>*   online: online data</p>
+         */
         @NameInMap("OnlineStatus")
         public String onlineStatus;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account within which the alert is generated.</p>
+         */
         @NameInMap("SubUserId")
         public String subUserId;
 
+        /**
+         * <p>The UUID of the alert.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
@@ -279,9 +358,15 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
     }
 
     public static class ListCustomizeRuleTestResultResponseBodyData extends TeaModel {
+        /**
+         * <p>The pagination information.</p>
+         */
         @NameInMap("PageInfo")
         public ListCustomizeRuleTestResultResponseBodyDataPageInfo pageInfo;
 
+        /**
+         * <p>The detailed data.</p>
+         */
         @NameInMap("ResponseData")
         public java.util.List<ListCustomizeRuleTestResultResponseBodyDataResponseData> responseData;
 

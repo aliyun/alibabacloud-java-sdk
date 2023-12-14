@@ -4,41 +4,21 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DoQuickFieldResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public Integer code;
-
+    /**
+     * <p>The response of the quick analysis.</p>
+     */
     @NameInMap("Data")
     public DoQuickFieldResponseBodyData data;
 
-    @NameInMap("DyCode")
-    public String dyCode;
-
-    @NameInMap("DyMessage")
-    public String dyMessage;
-
-    @NameInMap("ErrCode")
-    public String errCode;
-
-    @NameInMap("Message")
-    public String message;
-
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     public static DoQuickFieldResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DoQuickFieldResponseBody self = new DoQuickFieldResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DoQuickFieldResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public DoQuickFieldResponseBody setData(DoQuickFieldResponseBodyData data) {
@@ -49,38 +29,6 @@ public class DoQuickFieldResponseBody extends TeaModel {
         return this.data;
     }
 
-    public DoQuickFieldResponseBody setDyCode(String dyCode) {
-        this.dyCode = dyCode;
-        return this;
-    }
-    public String getDyCode() {
-        return this.dyCode;
-    }
-
-    public DoQuickFieldResponseBody setDyMessage(String dyMessage) {
-        this.dyMessage = dyMessage;
-        return this;
-    }
-    public String getDyMessage() {
-        return this.dyMessage;
-    }
-
-    public DoQuickFieldResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
-        return this;
-    }
-    public String getErrCode() {
-        return this.errCode;
-    }
-
-    public DoQuickFieldResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public DoQuickFieldResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -89,45 +37,73 @@ public class DoQuickFieldResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DoQuickFieldResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public static class DoQuickFieldResponseBodyData extends TeaModel {
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("AggQueryd")
         public String aggQueryd;
 
+        /**
+         * <p>Indicates whether the quick analysis was successful. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("CompleteOrNot")
         public Boolean completeOrNot;
 
+        /**
+         * <p>The number of entries returned.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("HasSQL")
         public Boolean hasSQL;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("Keys")
         public java.util.List<String> keys;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("Limited")
         public Long limited;
 
+        /**
+         * <p>The logs queried by using the quick analysis feature.</p>
+         */
         @NameInMap("Logs")
         public java.util.List<?> logs;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("PQuery")
         public String PQuery;
 
+        /**
+         * <p>The number of entries queried.</p>
+         */
         @NameInMap("ProcessedRows")
         public Long processedRows;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("QueryMode")
         public Integer queryMode;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("WhereQuery")
         public String whereQuery;
 

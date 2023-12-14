@@ -4,27 +4,57 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DataProductListLogMapValue extends TeaModel {
+    /**
+     * <p>The code of the log.</p>
+     */
     @NameInMap("LogCode")
     public String logCode;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("LogName")
     public String logName;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("LogNameEn")
     public String logNameEn;
 
+    /**
+     * <p>The language code of the log that is used to indicate the language in which the log is displayed.</p>
+     */
     @NameInMap("LogNameKey")
     public String logNameKey;
 
+    /**
+     * <p>The status of the log delivery. Valid values:</p>
+     * <br>
+     * <p>*   true: The logs are being delivered.</p>
+     * <p>*   false: The log delivery feature is disabled.</p>
+     */
     @NameInMap("Status")
     public Boolean status;
 
+    /**
+     * <p>Indicates whether the log delivery feature can be enabled or disabled. The feature can be enabled or disabled only by the administrator of the threat analysis feature. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("CanOperateOrNot")
     public Boolean canOperateOrNot;
 
+    /**
+     * <p>The topic of the log in the Logstore. The value is an index field in the Logstore that can be used to distinguish different logs.</p>
+     */
     @NameInMap("Topic")
     public String topic;
 
+    /**
+     * <p>The extended parameter.</p>
+     */
     @NameInMap("ExtraParameters")
     public java.util.List<DataProductListLogMapValueExtraParameters> extraParameters;
 
@@ -98,9 +128,15 @@ public class DataProductListLogMapValue extends TeaModel {
     }
 
     public static class DataProductListLogMapValueExtraParameters extends TeaModel {
+        /**
+         * <p>The ID of the extended parameter.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the extended parameter.</p>
+         */
         @NameInMap("Value")
         public String value;
 

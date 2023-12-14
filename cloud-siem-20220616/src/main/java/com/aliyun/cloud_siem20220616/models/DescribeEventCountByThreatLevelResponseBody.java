@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeEventCountByThreatLevelResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +83,33 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
     }
 
     public static class DescribeEventCountByThreatLevelResponseBodyData extends TeaModel {
+        /**
+         * <p>The total number of events.</p>
+         */
         @NameInMap("EventNum")
         public Long eventNum;
 
+        /**
+         * <p>The number of high-risk events.</p>
+         */
         @NameInMap("HighLevelEventNum")
         public Long highLevelEventNum;
 
+        /**
+         * <p>The number of low-risk events.</p>
+         */
         @NameInMap("LowLevelEventNum")
         public Long lowLevelEventNum;
 
+        /**
+         * <p>The number of medium-risk events.</p>
+         */
         @NameInMap("MediumLevelEventNum")
         public Long mediumLevelEventNum;
 
+        /**
+         * <p>The number of unhandled events.</p>
+         */
         @NameInMap("UndealEventNum")
         public Long undealEventNum;
 

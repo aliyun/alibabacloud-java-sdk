@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeEntityInfoResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeEntityInfoResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +83,34 @@ public class DescribeEntityInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeEntityInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>The logical ID of the entity.</p>
+         */
         @NameInMap("EntityId")
         public Long entityId;
 
+        /**
+         * <p>The information about the entry.</p>
+         */
         @NameInMap("EntityInfo")
         public java.util.Map<String, ?> entityInfo;
 
+        /**
+         * <p>The type of the entity. Valid values:</p>
+         * <br>
+         * <p>*   ip</p>
+         * <p>*   domain</p>
+         * <p>*   url</p>
+         * <p>*   process</p>
+         * <p>*   file</p>
+         * <p>*   host</p>
+         */
         @NameInMap("EntityType")
         public String entityType;
 
+        /**
+         * <p>The information about the risk Intelligence.</p>
+         */
         @NameInMap("TipInfo")
         public java.util.Map<String, ?> tipInfo;
 

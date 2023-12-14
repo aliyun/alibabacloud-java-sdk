@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudSiemEventsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeCloudSiemEventsResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +83,21 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudSiemEventsResponseBodyDataPageInfo extends TeaModel {
+        /**
+         * <p>The current page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
@@ -106,54 +133,114 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudSiemEventsResponseBodyDataResponseData extends TeaModel {
+        /**
+         * <p>The number of alerts that are associated with the event.</p>
+         */
         @NameInMap("AlertNum")
         public Integer alertNum;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the event belongs.</p>
+         */
         @NameInMap("Aliuid")
         public Long aliuid;
 
+        /**
+         * <p>The number of assets that are associated with the event.</p>
+         */
         @NameInMap("AssetNum")
         public Integer assetNum;
 
+        /**
+         * <p>The tags of the ATT\&CK attack.</p>
+         */
         @NameInMap("AttCkLabels")
         public java.util.List<String> attCkLabels;
 
+        /**
+         * <p>The sources of the alert.</p>
+         */
         @NameInMap("DataSources")
         public java.util.List<String> dataSources;
 
+        /**
+         * <p>The description of the event.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The event description in English.</p>
+         */
         @NameInMap("DescriptionEn")
         public String descriptionEn;
 
+        /**
+         * <p>The extended event information in the JSON format.</p>
+         */
         @NameInMap("ExtContent")
         public String extContent;
 
+        /**
+         * <p>The time when the event occurred.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the event was last updated.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The name of the event.</p>
+         */
         @NameInMap("IncidentName")
         public String incidentName;
 
+        /**
+         * <p>The event name in English.</p>
+         */
         @NameInMap("IncidentNameEn")
         public String incidentNameEn;
 
+        /**
+         * <p>The UUID of the event.</p>
+         */
         @NameInMap("IncidentUuid")
         public String incidentUuid;
 
+        /**
+         * <p>The remarks of the event.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The status of the event. Valid values:</p>
+         * <br>
+         * <p>*   0: unhandled</p>
+         * <p>*   1: handling</p>
+         * <p>*   5: handling failed</p>
+         * <p>*   10: handled</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The risk level. Valid values:</p>
+         * <br>
+         * <p>*   serious: high</p>
+         * <p>*   suspicious: medium</p>
+         * <p>*   remind: low</p>
+         */
         @NameInMap("ThreatLevel")
         public String threatLevel;
 
+        /**
+         * <p>The risk score of the event. Valid values: 0 to 100. A higher value indicates a higher risk level.</p>
+         */
         @NameInMap("ThreatScore")
         public Float threatScore;
 
@@ -301,9 +388,15 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudSiemEventsResponseBodyData extends TeaModel {
+        /**
+         * <p>The pagination information.</p>
+         */
         @NameInMap("PageInfo")
         public DescribeCloudSiemEventsResponseBodyDataPageInfo pageInfo;
 
+        /**
+         * <p>The detailed data.</p>
+         */
         @NameInMap("ResponseData")
         public java.util.List<DescribeCloudSiemEventsResponseBodyDataResponseData> responseData;
 

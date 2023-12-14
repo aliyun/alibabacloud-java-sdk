@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutomateResponseConfigPlayBooksResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeAutomateResponseConfigPlayBooksResponseBodyData> data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +83,37 @@ public class DescribeAutomateResponseConfigPlayBooksResponseBody extends TeaMode
     }
 
     public static class DescribeAutomateResponseConfigPlayBooksResponseBodyData extends TeaModel {
+        /**
+         * <p>The description of the playbook.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The display name of the playbook.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The unique identifier name of the playbook.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The input parameter template of the playbook. Valid values:</p>
+         * <br>
+         * <p>*   template-ip: IP address</p>
+         * <p>*   template-process: process</p>
+         * <p>*   template-filee: file</p>
+         */
         @NameInMap("ParamType")
         public String paramType;
 
+        /**
+         * <p>The UUID of the playbook.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 

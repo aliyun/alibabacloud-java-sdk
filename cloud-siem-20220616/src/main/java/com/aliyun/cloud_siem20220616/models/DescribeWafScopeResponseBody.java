@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeWafScopeResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeWafScopeResponseBodyData> data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +83,21 @@ public class DescribeWafScopeResponseBody extends TeaModel {
     }
 
     public static class DescribeWafScopeResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account in SIEM.</p>
+         */
         @NameInMap("Aliuid")
         public Long aliuid;
 
+        /**
+         * <p>The domain names that are protected by the WAF instance.</p>
+         */
         @NameInMap("Domains")
         public java.util.List<String> domains;
 
+        /**
+         * <p>The ID of the WAF instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 

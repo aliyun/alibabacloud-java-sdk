@@ -4,36 +4,85 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class ListCloudSiemPredefinedRulesRequest extends TeaModel {
+    /**
+     * <p>The alert type.</p>
+     */
     @NameInMap("AlertType")
     public String alertType;
 
+    /**
+     * <p>The page number. Pages start from page 1.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The end of the time range to query. Unit: milliseconds.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The ID of the rule.</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The number of entries per page. Maximum value: 100.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <br>
+     * <p>*   cn-hangzhou: Your assets reside in regions in China.</p>
+     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the rule. The name can contain letters, digits, underscores (\_), and periods (.).</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The type of the rule. Valid values:</p>
+     * <br>
+     * <p>*   predefine</p>
+     * <p>*   customize</p>
+     */
     @NameInMap("RuleType")
     public String ruleType;
 
+    /**
+     * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>The status of the rule. Valid values:</p>
+     * <br>
+     * <p>*   0: The rule is in the initial state.</p>
+     * <p>*   10: The simulation data is tested.</p>
+     * <p>*   15: The business data is being tested.</p>
+     * <p>*   20: The business data test ends.</p>
+     * <p>*   100: The rule takes effect.</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>The risk level. The value is a JSON array. Valid values:</p>
+     * <br>
+     * <p>*   serious: high</p>
+     * <p>*   suspicious: medium</p>
+     * <p>*   remind: low</p>
+     */
     @NameInMap("ThreatLevel")
     public java.util.List<String> threatLevel;
 

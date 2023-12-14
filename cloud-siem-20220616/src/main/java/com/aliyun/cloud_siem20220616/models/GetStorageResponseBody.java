@@ -4,41 +4,21 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class GetStorageResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public Integer code;
-
+    /**
+     * <p>The information about the storage.</p>
+     */
     @NameInMap("Data")
     public GetStorageResponseBodyData data;
 
-    @NameInMap("DyCode")
-    public String dyCode;
-
-    @NameInMap("DyMessage")
-    public String dyMessage;
-
-    @NameInMap("ErrCode")
-    public String errCode;
-
-    @NameInMap("Message")
-    public String message;
-
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     public static GetStorageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetStorageResponseBody self = new GetStorageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetStorageResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public GetStorageResponseBody setData(GetStorageResponseBodyData data) {
@@ -49,38 +29,6 @@ public class GetStorageResponseBody extends TeaModel {
         return this.data;
     }
 
-    public GetStorageResponseBody setDyCode(String dyCode) {
-        this.dyCode = dyCode;
-        return this;
-    }
-    public String getDyCode() {
-        return this.dyCode;
-    }
-
-    public GetStorageResponseBody setDyMessage(String dyMessage) {
-        this.dyMessage = dyMessage;
-        return this;
-    }
-    public String getDyMessage() {
-        return this.dyMessage;
-    }
-
-    public GetStorageResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
-        return this;
-    }
-    public String getErrCode() {
-        return this.errCode;
-    }
-
-    public GetStorageResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public GetStorageResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -89,24 +37,34 @@ public class GetStorageResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetStorageResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public static class GetStorageResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the storage region can be changed for once. Default value: false Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("CanOperate")
         public Boolean canOperate;
 
+        /**
+         * <p>Indicates whether the storage region can be changed. Default value: false Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("DisplayRegion")
         public Boolean displayRegion;
 
+        /**
+         * <p>The region in which the logs are stored. Default value: cn-shanghai. Valid values: cn-shanghai for the China site and ap-southeast-1 for the international site.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The storage period of logs. Unit: day. Default value: 180. Valid values: 30 to 3000.</p>
+         */
         @NameInMap("Ttl")
         public Integer ttl;
 

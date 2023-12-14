@@ -4,30 +4,67 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertsWithEventRequest extends TeaModel {
+    /**
+     * <p>The title of the alert.</p>
+     */
     @NameInMap("AlertTitle")
     public String alertTitle;
 
+    /**
+     * <p>The page number. Pages start from page 1.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The ID of the event.</p>
+     */
     @NameInMap("IncidentUuid")
     public String incidentUuid;
 
+    /**
+     * <p>Specifies whether an attack is defended. Valid values:</p>
+     * <br>
+     * <p>*   0: detected</p>
+     * <p>*   1: blocked</p>
+     */
     @NameInMap("IsDefend")
     public String isDefend;
 
+    /**
+     * <p>The risk levels. The value is a JSON array. Valid values:</p>
+     * <br>
+     * <p>*   serious: high</p>
+     * <p>*   suspicious: medium</p>
+     * <p>*   remind: low</p>
+     */
     @NameInMap("Level")
     public java.util.List<String> level;
 
+    /**
+     * <p>The number of entries per page. Maximum value: 100.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <br>
+     * <p>*   cn-hangzhou: Your assets reside in regions in China.</p>
+     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The data source of the alert.</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>The ID of the account within which the alert is generated.</p>
+     */
     @NameInMap("SubUserId")
     public Long subUserId;
 

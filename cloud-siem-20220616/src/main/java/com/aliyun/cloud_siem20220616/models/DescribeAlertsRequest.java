@@ -4,36 +4,79 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertsRequest extends TeaModel {
+    /**
+     * <p>The title of the alert.</p>
+     */
     @NameInMap("AlertTitle")
     public String alertTitle;
 
+    /**
+     * <p>The UUID of the alert.</p>
+     */
     @NameInMap("AlertUuid")
     public String alertUuid;
 
+    /**
+     * <p>The page number. Pages start from page 1.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The end of the time range to query. Unit: milliseconds.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>Specifies whether an attack is defended. Valid values:</p>
+     * <br>
+     * <p>*   0: detected.</p>
+     * <p>*   1: blocked.</p>
+     */
     @NameInMap("IsDefend")
     public String isDefend;
 
+    /**
+     * <p>The risk level. The value is a JSON array. Valid values:</p>
+     * <br>
+     * <p>*   serious: high</p>
+     * <p>*   suspicious: medium</p>
+     * <p>*   remind: low</p>
+     */
     @NameInMap("Level")
     public java.util.List<String> level;
 
+    /**
+     * <p>The number of entries per page. Maximum value: 100.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <br>
+     * <p>*   cn-hangzhou: Your assets reside in regions in China.</p>
+     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The source of the alert.</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account within which the alert is generated.</p>
+     */
     @NameInMap("SubUserId")
     public String subUserId;
 

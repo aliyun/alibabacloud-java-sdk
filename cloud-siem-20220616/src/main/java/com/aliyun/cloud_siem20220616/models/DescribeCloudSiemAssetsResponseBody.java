@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeCloudSiemAssetsResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +83,21 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudSiemAssetsResponseBodyDataPageInfo extends TeaModel {
+        /**
+         * <p>The current page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
@@ -106,12 +133,21 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudSiemAssetsResponseBodyDataResponseDataAssetInfo extends TeaModel {
+        /**
+         * <p>The attribute key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The name of the key.</p>
+         */
         @NameInMap("KeyName")
         public String keyName;
 
+        /**
+         * <p>The value of the key.</p>
+         */
         @NameInMap("Values")
         public String values;
 
@@ -147,39 +183,86 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudSiemAssetsResponseBodyDataResponseData extends TeaModel {
+        /**
+         * <p>The UUID of the alert associated with the event.</p>
+         */
         @NameInMap("AlertUuid")
         public String alertUuid;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account in SIEM.</p>
+         */
         @NameInMap("Aliuid")
         public Long aliuid;
 
+        /**
+         * <p>The logical ID of the asset.</p>
+         */
         @NameInMap("AssetId")
         public String assetId;
 
+        /**
+         * <p>The display information of the asset is in the JSON format.</p>
+         */
         @NameInMap("AssetInfo")
         public java.util.List<DescribeCloudSiemAssetsResponseBodyDataResponseDataAssetInfo> assetInfo;
 
+        /**
+         * <p>The name of the asset.</p>
+         */
         @NameInMap("AssetName")
         public String assetName;
 
+        /**
+         * <p>The type of the asset. Valid values:</p>
+         * <br>
+         * <p>*   ip</p>
+         * <p>*   domain</p>
+         * <p>*   url</p>
+         * <p>*   process</p>
+         * <p>*   file</p>
+         * <p>*   host</p>
+         */
         @NameInMap("AssetType")
         public String assetType;
 
+        /**
+         * <p>The cloud code of the entity. Valid values:</p>
+         * <br>
+         * <p>*   aliyun: Alibaba Cloud</p>
+         * <p>*   qcloud: Tencent Cloud</p>
+         * <p>*   hcloud: Huawei Cloud</p>
+         */
         @NameInMap("CloudCode")
         public String cloudCode;
 
+        /**
+         * <p>The time when the asset was synchronized.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the asset was last updated.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the asset.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The UUID of the event.</p>
+         */
         @NameInMap("IncidentUuid")
         public String incidentUuid;
 
+        /**
+         * <p>The ID of the associated account to which the asset belongs.</p>
+         */
         @NameInMap("SubUserId")
         public Long subUserId;
 
@@ -287,9 +370,15 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudSiemAssetsResponseBodyData extends TeaModel {
+        /**
+         * <p>The pagination information.</p>
+         */
         @NameInMap("PageInfo")
         public DescribeCloudSiemAssetsResponseBodyDataPageInfo pageInfo;
 
+        /**
+         * <p>The detailed data.</p>
+         */
         @NameInMap("ResponseData")
         public java.util.List<DescribeCloudSiemAssetsResponseBodyDataResponseData> responseData;
 

@@ -4,41 +4,21 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class ListDeliveryResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public Integer code;
-
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public ListDeliveryResponseBodyData data;
 
-    @NameInMap("DyCode")
-    public String dyCode;
-
-    @NameInMap("DyMessage")
-    public String dyMessage;
-
-    @NameInMap("ErrCode")
-    public String errCode;
-
-    @NameInMap("Message")
-    public String message;
-
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     public static ListDeliveryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDeliveryResponseBody self = new ListDeliveryResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListDeliveryResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public ListDeliveryResponseBody setData(ListDeliveryResponseBodyData data) {
@@ -49,38 +29,6 @@ public class ListDeliveryResponseBody extends TeaModel {
         return this.data;
     }
 
-    public ListDeliveryResponseBody setDyCode(String dyCode) {
-        this.dyCode = dyCode;
-        return this;
-    }
-    public String getDyCode() {
-        return this.dyCode;
-    }
-
-    public ListDeliveryResponseBody setDyMessage(String dyMessage) {
-        this.dyMessage = dyMessage;
-        return this;
-    }
-    public String getDyMessage() {
-        return this.dyMessage;
-    }
-
-    public ListDeliveryResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
-        return this;
-    }
-    public String getErrCode() {
-        return this.errCode;
-    }
-
-    public ListDeliveryResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public ListDeliveryResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -89,18 +37,16 @@ public class ListDeliveryResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListDeliveryResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public static class ListDeliveryResponseBodyDataProductListLogListExtraParameters extends TeaModel {
+        /**
+         * <p>The ID of the extended parameter.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the extended parameter.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -128,27 +74,57 @@ public class ListDeliveryResponseBody extends TeaModel {
     }
 
     public static class ListDeliveryResponseBodyDataProductListLogList extends TeaModel {
+        /**
+         * <p>Indicates whether the log delivery feature can be enabled or disabled. The feature can be enabled or disabled only by the administrator of the threat analysis feature. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("CanOperateOrNot")
         public Boolean canOperateOrNot;
 
+        /**
+         * <p>The extended parameter.</p>
+         */
         @NameInMap("ExtraParameters")
         public java.util.List<ListDeliveryResponseBodyDataProductListLogListExtraParameters> extraParameters;
 
+        /**
+         * <p>The code of the log.</p>
+         */
         @NameInMap("LogCode")
         public String logCode;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("LogName")
         public String logName;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("LogNameEn")
         public String logNameEn;
 
+        /**
+         * <p>The language code of the log that is used to indicate the language in which the log is displayed.</p>
+         */
         @NameInMap("LogNameKey")
         public String logNameKey;
 
+        /**
+         * <p>The status of the log delivery. Valid values:</p>
+         * <br>
+         * <p>*   true: The logs are being delivered.</p>
+         * <p>*   false: The log delivery feature is disabled.</p>
+         */
         @NameInMap("Status")
         public Boolean status;
 
+        /**
+         * <p>The topic of the log in the Logstore. The value is an index field in the Logstore that can be used to distinguish different logs.</p>
+         */
         @NameInMap("Topic")
         public String topic;
 
@@ -224,15 +200,51 @@ public class ListDeliveryResponseBody extends TeaModel {
     }
 
     public static class ListDeliveryResponseBodyDataProductList extends TeaModel {
+        /**
+         * <p>The logs of the cloud services.</p>
+         */
         @NameInMap("LogList")
         public java.util.List<ListDeliveryResponseBodyDataProductListLogList> logList;
 
+        /**
+         * <p>The log group. For example, in Security Center, the logs of hosts and networks are stored in different groups. Key indicates the group information, and value indicates the logs in the group.</p>
+         */
         @NameInMap("LogMap")
         public java.util.Map<String, java.util.List<DataProductListLogMapValue>> logMap;
 
+        /**
+         * <p>The code of the cloud service. Valid values:</p>
+         * <br>
+         * <p>*   qcloud_waf</p>
+         * <p>*   qlcoud_cfw</p>
+         * <p>*   hcloud_waf</p>
+         * <p>*   hcloud_cfw</p>
+         * <p>*   ddos</p>
+         * <p>*   sas</p>
+         * <p>*   cfw</p>
+         * <p>*   config</p>
+         * <p>*   csk</p>
+         * <p>*   fc</p>
+         * <p>*   rds</p>
+         * <p>*   nas</p>
+         * <p>*   apigateway</p>
+         * <p>*   cdn</p>
+         * <p>*   mongodb</p>
+         * <p>*   eip</p>
+         * <p>*   slb</p>
+         * <p>*   vpc</p>
+         * <p>*   actiontrail</p>
+         * <p>*   waf</p>
+         * <p>*   bastionhost</p>
+         * <p>*   oss</p>
+         * <p>*   polardb</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
@@ -276,21 +288,42 @@ public class ListDeliveryResponseBody extends TeaModel {
     }
 
     public static class ListDeliveryResponseBodyData extends TeaModel {
+        /**
+         * <p>The URL that is displayed in charts.</p>
+         */
         @NameInMap("DashboardUrl")
         public String dashboardUrl;
 
+        /**
+         * <p>Indicates whether the log delivery switch is displayed. Default value: true. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("DisplaySwitchOrNot")
         public Boolean displaySwitchOrNot;
 
+        /**
+         * <p>The name of the Logstore for the threat analysis feature on the user side. The value is in the cloud_siem format.</p>
+         */
         @NameInMap("LogStoreName")
         public String logStoreName;
 
+        /**
+         * <p>The cloud services.</p>
+         */
         @NameInMap("ProductList")
         public java.util.List<ListDeliveryResponseBodyDataProductList> productList;
 
+        /**
+         * <p>The name of the project for the threat analysis feature in Simple Log service on the user side. The value is in the aliyun-cloudsiem-data-${aliUid}-${region} format.</p>
+         */
         @NameInMap("ProjectName")
         public String projectName;
 
+        /**
+         * <p>The URL that is used for log analysis.</p>
+         */
         @NameInMap("SearchUrl")
         public String searchUrl;
 

@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeScopeUsersResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeScopeUsersResponseBodyData> data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +83,27 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
     }
 
     public static class DescribeScopeUsersResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the security information and event management (SIEM) user.</p>
+         */
         @NameInMap("AliUid")
         public Long aliUid;
 
+        /**
+         * <p>An array consisting of the domain names that are protected by the WAF instance.</p>
+         */
         @NameInMap("Domains")
         public java.util.List<String> domains;
 
+        /**
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The username.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

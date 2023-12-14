@@ -4,9 +4,15 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DeleteCustomizeRuleRequest extends TeaModel {
+    /**
+     * <p>The region in which the service is deployed.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the rule.</p>
+     */
     @NameInMap("RuleId")
     public Long ruleId;
 

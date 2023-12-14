@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeAutomateResponseConfigFeatureResponseBodyData> data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +83,15 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
     }
 
     public static class DescribeAutomateResponseConfigFeatureResponseBodyDataRightValueEnums extends TeaModel {
+        /**
+         * <p>The enumerated value of the right operand.</p>
+         */
         @NameInMap("Value")
         public String value;
 
+        /**
+         * <p>The internal code of the enumerated value.</p>
+         */
         @NameInMap("ValueMds")
         public String valueMds;
 
@@ -95,27 +119,54 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
     }
 
     public static class DescribeAutomateResponseConfigFeatureResponseBodyDataSupportOperators extends TeaModel {
+        /**
+         * <p>Indicates whether the right operand is required. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("HasRightValue")
         public Boolean hasRightValue;
 
+        /**
+         * <p>The position of the operator in the operator list.</p>
+         */
         @NameInMap("Index")
         public Integer index;
 
+        /**
+         * <p>The operator.</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>The description of the operator in Chinese.</p>
+         */
         @NameInMap("OperatorDescCn")
         public String operatorDescCn;
 
+        /**
+         * <p>The description of the operator in English.</p>
+         */
         @NameInMap("OperatorDescEn")
         public String operatorDescEn;
 
+        /**
+         * <p>The display name of the operator.</p>
+         */
         @NameInMap("OperatorName")
         public String operatorName;
 
+        /**
+         * <p>The data types that are supported by the current operator. The data types are separated by commas (,).</p>
+         */
         @NameInMap("SupportDataType")
         public String supportDataType;
 
+        /**
+         * <p>The scenarios that are supported by the operator. Multiple scenarios are separated by commas (,), such as aggregation scenarios. This parameter is empty by default.</p>
+         */
         @NameInMap("SupportTag")
         public java.util.List<String> supportTag;
 
@@ -191,15 +242,27 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
     }
 
     public static class DescribeAutomateResponseConfigFeatureResponseBodyData extends TeaModel {
+        /**
+         * <p>The data type of the condition field in the automated response rule.</p>
+         */
         @NameInMap("DataType")
         public String dataType;
 
+        /**
+         * <p>The name of the condition field in the automated response rule.</p>
+         */
         @NameInMap("Feature")
         public String feature;
 
+        /**
+         * <p>The enumerated values of the right operand for the field.</p>
+         */
         @NameInMap("RightValueEnums")
         public java.util.List<DescribeAutomateResponseConfigFeatureResponseBodyDataRightValueEnums> rightValueEnums;
 
+        /**
+         * <p>The operators that are supported for the condition field.</p>
+         */
         @NameInMap("SupportOperators")
         public java.util.List<DescribeAutomateResponseConfigFeatureResponseBodyDataSupportOperators> supportOperators;
 

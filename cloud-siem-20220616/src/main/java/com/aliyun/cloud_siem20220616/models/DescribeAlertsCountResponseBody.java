@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertsCountResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeAlertsCountResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +83,33 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
     }
 
     public static class DescribeAlertsCountResponseBodyData extends TeaModel {
+        /**
+         * <p>The total number of alerts.</p>
+         */
         @NameInMap("All")
         public Long all;
 
+        /**
+         * <p>The number of high-risk alerts.</p>
+         */
         @NameInMap("High")
         public Long high;
 
+        /**
+         * <p>The number of low-risk alerts.</p>
+         */
         @NameInMap("Low")
         public Long low;
 
+        /**
+         * <p>The number of medium-risk alerts.</p>
+         */
         @NameInMap("Medium")
         public Long medium;
 
+        /**
+         * <p>The number of connected services.</p>
+         */
         @NameInMap("ProductNum")
         public Integer productNum;
 

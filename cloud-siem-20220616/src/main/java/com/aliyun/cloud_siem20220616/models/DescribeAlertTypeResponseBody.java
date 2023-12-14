@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertTypeResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeAlertTypeResponseBodyData> data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +83,15 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeAlertTypeResponseBodyData extends TeaModel {
+        /**
+         * <p>The type of the risk.</p>
+         */
         @NameInMap("AlertType")
         public String alertType;
 
+        /**
+         * <p>The internal code of the risk type.</p>
+         */
         @NameInMap("AlertTypeMds")
         public String alertTypeMds;
 
