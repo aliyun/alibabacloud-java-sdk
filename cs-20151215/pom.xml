@@ -59,17 +59,6 @@
       <version>1.2.0</version>
     </dependency>
     <dependency>
-      <groupId>com.aliyun</groupId>
-      <artifactId>credentials-java</artifactId>
-      <version>0.2.2</version>
-      <exclusions>
-        <exclusion>
-          <groupId>com.aliyun</groupId>
-          <artifactId>tea</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.13.1</version>

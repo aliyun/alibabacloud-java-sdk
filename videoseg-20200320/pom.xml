@@ -85,11 +85,6 @@
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
-      <artifactId>credentials-java</artifactId>
-      <version>0.2.2</version>
-    </dependency>
-    <dependency>
-      <groupId>com.aliyun</groupId>
       <artifactId>tea-rpc-util</artifactId>
       <version>0.1.0</version>
     </dependency>
