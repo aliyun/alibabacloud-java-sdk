@@ -55,6 +55,9 @@ public class DescribeGatewayResponseBody extends TeaModel {
     @NameInMap("GatewayId")
     public String gatewayId;
 
+    @NameInMap("GatewayRegionId")
+    public String gatewayRegionId;
+
     @NameInMap("GatewayType")
     public String gatewayType;
 
@@ -260,6 +263,14 @@ public class DescribeGatewayResponseBody extends TeaModel {
     }
     public String getGatewayId() {
         return this.gatewayId;
+    }
+
+    public DescribeGatewayResponseBody setGatewayRegionId(String gatewayRegionId) {
+        this.gatewayRegionId = gatewayRegionId;
+        return this;
+    }
+    public String getGatewayRegionId() {
+        return this.gatewayRegionId;
     }
 
     public DescribeGatewayResponseBody setGatewayType(String gatewayType) {

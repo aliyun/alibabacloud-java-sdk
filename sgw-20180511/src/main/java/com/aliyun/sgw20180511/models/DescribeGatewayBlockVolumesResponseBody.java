@@ -95,6 +95,9 @@ public class DescribeGatewayBlockVolumesResponseBody extends TeaModel {
         @NameInMap("LocalPath")
         public String localPath;
 
+        /**
+         * <p>LUN ID。</p>
+         */
         @NameInMap("LunId")
         public Integer lunId;
 

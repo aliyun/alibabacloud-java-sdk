@@ -7,6 +7,9 @@ public class DescribeSubscriptionPriceRequest extends TeaModel {
     @NameInMap("CacheCloudEfficiencySize")
     public Long cacheCloudEfficiencySize;
 
+    @NameInMap("CacheESSDPl1Size")
+    public Long cacheESSDPl1Size;
+
     @NameInMap("CacheSSDSize")
     public Long cacheSSDSize;
 
@@ -36,6 +39,14 @@ public class DescribeSubscriptionPriceRequest extends TeaModel {
     }
     public Long getCacheCloudEfficiencySize() {
         return this.cacheCloudEfficiencySize;
+    }
+
+    public DescribeSubscriptionPriceRequest setCacheESSDPl1Size(Long cacheESSDPl1Size) {
+        this.cacheESSDPl1Size = cacheESSDPl1Size;
+        return this;
+    }
+    public Long getCacheESSDPl1Size() {
+        return this.cacheESSDPl1Size;
     }
 
     public DescribeSubscriptionPriceRequest setCacheSSDSize(Long cacheSSDSize) {

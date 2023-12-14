@@ -10,6 +10,9 @@ public class DescribePayAsYouGoPriceResponseBody extends TeaModel {
     @NameInMap("CacheCloudSSDSizePrice")
     public Float cacheCloudSSDSizePrice;
 
+    @NameInMap("CacheESSDPl1SizePrice")
+    public Float cacheESSDPl1SizePrice;
+
     @NameInMap("Code")
     public String code;
 
@@ -47,6 +50,14 @@ public class DescribePayAsYouGoPriceResponseBody extends TeaModel {
     }
     public Float getCacheCloudSSDSizePrice() {
         return this.cacheCloudSSDSizePrice;
+    }
+
+    public DescribePayAsYouGoPriceResponseBody setCacheESSDPl1SizePrice(Float cacheESSDPl1SizePrice) {
+        this.cacheESSDPl1SizePrice = cacheESSDPl1SizePrice;
+        return this;
+    }
+    public Float getCacheESSDPl1SizePrice() {
+        return this.cacheESSDPl1SizePrice;
     }
 
     public DescribePayAsYouGoPriceResponseBody setCode(String code) {

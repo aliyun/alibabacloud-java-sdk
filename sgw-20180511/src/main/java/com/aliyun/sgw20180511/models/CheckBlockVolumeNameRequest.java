@@ -4,6 +4,9 @@ package com.aliyun.sgw20180511.models;
 import com.aliyun.tea.*;
 
 public class CheckBlockVolumeNameRequest extends TeaModel {
+    /**
+     * <p>Bucket Endpoint。</p>
+     */
     @NameInMap("BucketEndpoint")
     public String bucketEndpoint;
 

@@ -13,6 +13,9 @@ public class DescribeOssBucketInfoResponseBody extends TeaModel {
     @NameInMap("IsBackToResource")
     public Boolean isBackToResource;
 
+    @NameInMap("IsColdArchive")
+    public Boolean isColdArchive;
+
     @NameInMap("IsFresh")
     public Boolean isFresh;
 
@@ -64,6 +67,14 @@ public class DescribeOssBucketInfoResponseBody extends TeaModel {
     }
     public Boolean getIsBackToResource() {
         return this.isBackToResource;
+    }
+
+    public DescribeOssBucketInfoResponseBody setIsColdArchive(Boolean isColdArchive) {
+        this.isColdArchive = isColdArchive;
+        return this;
+    }
+    public Boolean getIsColdArchive() {
+        return this.isColdArchive;
     }
 
     public DescribeOssBucketInfoResponseBody setIsFresh(Boolean isFresh) {

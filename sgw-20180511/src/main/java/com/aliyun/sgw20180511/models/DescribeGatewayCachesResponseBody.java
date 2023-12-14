@@ -80,8 +80,17 @@ public class DescribeGatewayCachesResponseBody extends TeaModel {
         @NameInMap("ExpiredTime")
         public Long expiredTime;
 
+        /**
+         * <p>IOPS。</p>
+         */
         @NameInMap("Iops")
         public Long iops;
+
+        @NameInMap("IsDirectExpand")
+        public String isDirectExpand;
+
+        @NameInMap("IsNoPartition")
+        public Boolean isNoPartition;
 
         @NameInMap("IsUsed")
         public Boolean isUsed;
@@ -152,6 +161,22 @@ public class DescribeGatewayCachesResponseBody extends TeaModel {
         }
         public Long getIops() {
             return this.iops;
+        }
+
+        public DescribeGatewayCachesResponseBodyCachesCache setIsDirectExpand(String isDirectExpand) {
+            this.isDirectExpand = isDirectExpand;
+            return this;
+        }
+        public String getIsDirectExpand() {
+            return this.isDirectExpand;
+        }
+
+        public DescribeGatewayCachesResponseBodyCachesCache setIsNoPartition(Boolean isNoPartition) {
+            this.isNoPartition = isNoPartition;
+            return this;
+        }
+        public Boolean getIsNoPartition() {
+            return this.isNoPartition;
         }
 
         public DescribeGatewayCachesResponseBodyCachesCache setIsUsed(Boolean isUsed) {

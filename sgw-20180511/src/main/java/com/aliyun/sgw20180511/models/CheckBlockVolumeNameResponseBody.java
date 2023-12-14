@@ -7,6 +7,9 @@ public class CheckBlockVolumeNameResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("IsAlreadyExist")
+    public Boolean isAlreadyExist;
+
     @NameInMap("IsRequireRecovery")
     public String isRequireRecovery;
 
@@ -30,6 +33,14 @@ public class CheckBlockVolumeNameResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public CheckBlockVolumeNameResponseBody setIsAlreadyExist(Boolean isAlreadyExist) {
+        this.isAlreadyExist = isAlreadyExist;
+        return this;
+    }
+    public Boolean getIsAlreadyExist() {
+        return this.isAlreadyExist;
     }
 
     public CheckBlockVolumeNameResponseBody setIsRequireRecovery(String isRequireRecovery) {
