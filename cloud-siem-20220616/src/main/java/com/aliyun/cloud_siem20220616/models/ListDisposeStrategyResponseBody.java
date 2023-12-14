@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class ListDisposeStrategyResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ListDisposeStrategyResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +83,21 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
     }
 
     public static class ListDisposeStrategyResponseBodyDataPageInfo extends TeaModel {
+        /**
+         * <p>The current page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
@@ -106,66 +133,147 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
     }
 
     public static class ListDisposeStrategyResponseBodyDataResponseData extends TeaModel {
+        /**
+         * <p>The UUID of the alert.</p>
+         */
         @NameInMap("AlertUuid")
         public String alertUuid;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is associated with the policy in SIEM.</p>
+         */
         @NameInMap("Aliuid")
         public Long aliuid;
 
+        /**
+         * <p>The status of the policy. Valid values:</p>
+         * <br>
+         * <p>*   0: invalid</p>
+         * <p>*   1: valid</p>
+         */
         @NameInMap("EffectiveStatus")
         public Integer effectiveStatus;
 
+        /**
+         * <p>The details of the entity. The value is a JSON array.</p>
+         */
         @NameInMap("Entity")
         public java.util.List<?> entity;
 
+        /**
+         * <p>The ID of the entity.</p>
+         */
         @NameInMap("EntityId")
         public Long entityId;
 
+        /**
+         * <p>The type of the entity. Valid values:</p>
+         * <br>
+         * <p>*   ip</p>
+         * <p>*   process</p>
+         * <p>*   file</p>
+         */
         @NameInMap("EntityType")
         public String entityType;
 
+        /**
+         * <p>The summary information about the failed task.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The end time of the task.</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The update time.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the policy.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the event.</p>
+         */
         @NameInMap("IncidentName")
         public String incidentName;
 
+        /**
+         * <p>The UUID of the event.</p>
+         */
         @NameInMap("IncidentUuid")
         public String incidentUuid;
 
+        /**
+         * <p>The name of the playbook, which is the unique identifier of the playbook.</p>
+         */
         @NameInMap("PlaybookName")
         public String playbookName;
 
+        /**
+         * <p>The type of the playbook. Valid values:</p>
+         * <br>
+         * <p>*   system: user-triggered playbook</p>
+         * <p>*   custom: event-triggered playbook</p>
+         * <p>*   custom_alert: alert-triggered playbook</p>
+         * <p>*   soar-manual: user-run playbook</p>
+         * <p>*   soar-mdr: MDR-run playbook</p>
+         */
         @NameInMap("PlaybookType")
         public String playbookType;
 
+        /**
+         * <p>The UUID of the playbook.</p>
+         */
         @NameInMap("PlaybookUuid")
         public String playbookUuid;
 
+        /**
+         * <p>The scope of the policy.</p>
+         */
         @NameInMap("Scope")
         public java.util.List<?> scope;
 
+        /**
+         * <p>The ID of the SOAR handling policy.</p>
+         */
         @NameInMap("SophonTaskId")
         public String sophonTaskId;
 
+        /**
+         * <p>The running status of the playbook. Valid values:</p>
+         * <br>
+         * <p>*   200: successful</p>
+         * <p>*   10: deleted</p>
+         * <p>*   5: failed</p>
+         * <p>*   0: initial</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The ID of the Alibaba account that is used to configure the policy.</p>
+         */
         @NameInMap("SubAliuid")
         public Long subAliuid;
 
+        /**
+         * <p>The parameters that are used to trigger the playbook. The value is in the JSON format.</p>
+         */
         @NameInMap("TaskParam")
         public String taskParam;
 
@@ -345,9 +453,15 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
     }
 
     public static class ListDisposeStrategyResponseBodyData extends TeaModel {
+        /**
+         * <p>The pagination information.</p>
+         */
         @NameInMap("PageInfo")
         public ListDisposeStrategyResponseBodyDataPageInfo pageInfo;
 
+        /**
+         * <p>The detailed data.</p>
+         */
         @NameInMap("ResponseData")
         public java.util.List<ListDisposeStrategyResponseBodyDataResponseData> responseData;
 

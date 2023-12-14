@@ -4,21 +4,47 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class PostEventDisposeAndWhiteruleListRequest extends TeaModel {
+    /**
+     * <p>The configuration of event handling. The value is a JSON object.</p>
+     */
     @NameInMap("EventDispose")
     public String eventDispose;
 
+    /**
+     * <p>The UUID of the event.</p>
+     */
     @NameInMap("IncidentUuid")
     public String incidentUuid;
 
+    /**
+     * <p>The configuration of the alert recipient. The value is a JSON object.</p>
+     */
     @NameInMap("ReceiverInfo")
     public String receiverInfo;
 
+    /**
+     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+     * <br>
+     * <p>*   cn-hangzhou: Your assets reside in regions in China.</p>
+     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The remarks of the event.</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>The status of the event. Valid values:</p>
+     * <br>
+     * <p>*   0: unhandled</p>
+     * <p>*   1: handing</p>
+     * <p>*   5: handling failed</p>
+     * <p>*   10: handled</p>
+     */
     @NameInMap("Status")
     public Integer status;
 

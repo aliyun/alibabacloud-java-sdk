@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventDisposeResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeEventDisposeResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,27 +83,57 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
     }
 
     public static class DescribeEventDisposeResponseBodyDataReceiverInfo extends TeaModel {
+        /**
+         * <p>The channel of the contact information. Valid values:</p>
+         * <br>
+         * <p>*   message</p>
+         * <p>*   mail</p>
+         */
         @NameInMap("Channel")
         public String channel;
 
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The modification time.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the recipient who receives the event handling result.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The UUID of the event.</p>
+         */
         @NameInMap("IncidentUuid")
         public String incidentUuid;
 
+        /**
+         * <p>The message title.</p>
+         */
         @NameInMap("MessageTitle")
         public String messageTitle;
 
+        /**
+         * <p>The contact information of the recipient.</p>
+         */
         @NameInMap("Receiver")
         public String receiver;
 
+        /**
+         * <p>Indicates whether the message is sent. Valid values:</p>
+         * <br>
+         * <p>*   0: not sent</p>
+         * <p>*   1: sent</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
@@ -161,15 +209,32 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
     }
 
     public static class DescribeEventDisposeResponseBodyData extends TeaModel {
+        /**
+         * <p>An array consisting of JSON objects that are configured for event handling.</p>
+         */
         @NameInMap("EventDispose")
         public java.util.List<?> eventDispose;
 
+        /**
+         * <p>The JSON object that is configured for an alert recipient.</p>
+         */
         @NameInMap("ReceiverInfo")
         public DescribeEventDisposeResponseBodyDataReceiverInfo receiverInfo;
 
+        /**
+         * <p>The description of the event.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The status of the event. Valid values:</p>
+         * <br>
+         * <p>*   0: not handled</p>
+         * <p>*   1: handing</p>
+         * <p>*   5: handling failed</p>
+         * <p>*   10: handled</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

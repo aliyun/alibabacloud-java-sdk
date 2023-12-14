@@ -26,6 +26,194 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public AddDataSourceResponse addDataSourceWithOptions(AddDataSourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            body.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudCode)) {
+            body.put("CloudCode", request.cloudCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceInstanceName)) {
+            body.put("DataSourceInstanceName", request.dataSourceInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceInstanceParams)) {
+            body.put("DataSourceInstanceParams", request.dataSourceInstanceParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceInstanceRemark)) {
+            body.put("DataSourceInstanceRemark", request.dataSourceInstanceRemark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceType)) {
+            body.put("DataSourceType", request.dataSourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddDataSource"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddDataSourceResponse());
+    }
+
+    public AddDataSourceResponse addDataSource(AddDataSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addDataSourceWithOptions(request, runtime);
+    }
+
+    public AddDataSourceLogResponse addDataSourceLogWithOptions(AddDataSourceLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            body.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudCode)) {
+            body.put("CloudCode", request.cloudCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceInstanceId)) {
+            body.put("DataSourceInstanceId", request.dataSourceInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceInstanceLogs)) {
+            body.put("DataSourceInstanceLogs", request.dataSourceInstanceLogs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logCode)) {
+            body.put("LogCode", request.logCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddDataSourceLog"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddDataSourceLogResponse());
+    }
+
+    public AddDataSourceLogResponse addDataSourceLog(AddDataSourceLogRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addDataSourceLogWithOptions(request, runtime);
+    }
+
+    public AddUserResponse addUserWithOptions(AddUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addedUserId)) {
+            body.put("AddedUserId", request.addedUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddUser"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddUserResponse());
+    }
+
+    public AddUserResponse addUser(AddUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addUserWithOptions(request, runtime);
+    }
+
+    public AddUserSourceLogConfigResponse addUserSourceLogConfigWithOptions(AddUserSourceLogConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deleted)) {
+            body.put("Deleted", request.deleted);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disPlayLine)) {
+            body.put("DisPlayLine", request.disPlayLine);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceLogCode)) {
+            body.put("SourceLogCode", request.sourceLogCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceLogInfo)) {
+            body.put("SourceLogInfo", request.sourceLogInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceProdCode)) {
+            body.put("SourceProdCode", request.sourceProdCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subUserId)) {
+            body.put("SubUserId", request.subUserId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddUserSourceLogConfig"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddUserSourceLogConfigResponse());
+    }
+
+    public AddUserSourceLogConfigResponse addUserSourceLogConfig(AddUserSourceLogConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addUserSourceLogConfigWithOptions(request, runtime);
+    }
+
     public BatchJobCheckResponse batchJobCheckWithOptions(BatchJobCheckRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -90,6 +278,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public BatchJobSubmitResponse batchJobSubmit(BatchJobSubmitRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchJobSubmitWithOptions(request, runtime);
+    }
+
+    public BindAccountResponse bindAccountWithOptions(BindAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessId)) {
+            body.put("AccessId", request.accessId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            body.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            body.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudCode)) {
+            body.put("CloudCode", request.cloudCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BindAccount"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BindAccountResponse());
+    }
+
+    public BindAccountResponse bindAccount(BindAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.bindAccountWithOptions(request, runtime);
     }
 
     public CloseDeliveryResponse closeDeliveryWithOptions(CloseDeliveryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -162,6 +395,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteAutomateResponseConfigWithOptions(request, runtime);
     }
 
+    public DeleteBindAccountResponse deleteBindAccountWithOptions(DeleteBindAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessId)) {
+            body.put("AccessId", request.accessId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            body.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bindId)) {
+            body.put("BindId", request.bindId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudCode)) {
+            body.put("CloudCode", request.cloudCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteBindAccount"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteBindAccountResponse());
+    }
+
+    public DeleteBindAccountResponse deleteBindAccount(DeleteBindAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteBindAccountWithOptions(request, runtime);
+    }
+
     public DeleteCustomizeRuleResponse deleteCustomizeRuleWithOptions(DeleteCustomizeRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -195,6 +473,92 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteCustomizeRuleWithOptions(request, runtime);
     }
 
+    public DeleteDataSourceResponse deleteDataSourceWithOptions(DeleteDataSourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            body.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudCode)) {
+            body.put("CloudCode", request.cloudCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceInstanceId)) {
+            body.put("DataSourceInstanceId", request.dataSourceInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDataSource"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDataSourceResponse());
+    }
+
+    public DeleteDataSourceResponse deleteDataSource(DeleteDataSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDataSourceWithOptions(request, runtime);
+    }
+
+    public DeleteDataSourceLogResponse deleteDataSourceLogWithOptions(DeleteDataSourceLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            body.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudCode)) {
+            body.put("CloudCode", request.cloudCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceInstanceId)) {
+            body.put("DataSourceInstanceId", request.dataSourceInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logInstanceId)) {
+            body.put("LogInstanceId", request.logInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDataSourceLog"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDataSourceLogResponse());
+    }
+
+    public DeleteDataSourceLogResponse deleteDataSourceLog(DeleteDataSourceLogRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDataSourceLogWithOptions(request, runtime);
+    }
+
     public DeleteQuickQueryResponse deleteQuickQueryWithOptions(DeleteQuickQueryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -226,6 +590,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteQuickQueryResponse deleteQuickQuery(DeleteQuickQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteQuickQueryWithOptions(request, runtime);
+    }
+
+    public DeleteUserResponse deleteUserWithOptions(DeleteUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addedUserId)) {
+            body.put("AddedUserId", request.addedUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteUser"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteUserResponse());
+    }
+
+    public DeleteUserResponse deleteUser(DeleteUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteUserWithOptions(request, runtime);
     }
 
     public DeleteWhiteRuleListResponse deleteWhiteRuleListWithOptions(DeleteWhiteRuleListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -716,6 +1113,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeAttackTimeLineWithOptions(request, runtime);
     }
 
+    public DescribeAuthResponse describeAuthWithOptions(DescribeAuthRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAuth"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAuthResponse());
+    }
+
+    public DescribeAuthResponse describeAuth(DescribeAuthRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAuthWithOptions(request, runtime);
+    }
+
     public DescribeAutomateResponseConfigCounterResponse describeAutomateResponseConfigCounterWithOptions(DescribeAutomateResponseConfigCounterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -999,6 +1425,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeCloudSiemEventsWithOptions(request, runtime);
     }
 
+    public DescribeCsImportedProdStatusByUserResponse describeCsImportedProdStatusByUserWithOptions(DescribeCsImportedProdStatusByUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceLogProd)) {
+            body.put("SourceLogProd", request.sourceLogProd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCsImportedProdStatusByUser"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCsImportedProdStatusByUserResponse());
+    }
+
+    public DescribeCsImportedProdStatusByUserResponse describeCsImportedProdStatusByUser(DescribeCsImportedProdStatusByUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCsImportedProdStatusByUserWithOptions(request, runtime);
+    }
+
     public DescribeCustomizeRuleResponse describeCustomizeRuleWithOptions(DescribeCustomizeRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1125,6 +1588,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCustomizeRuleTestHistogramResponse describeCustomizeRuleTestHistogram(DescribeCustomizeRuleTestHistogramRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCustomizeRuleTestHistogramWithOptions(request, runtime);
+    }
+
+    public DescribeDataSourceInstanceResponse describeDataSourceInstanceWithOptions(DescribeDataSourceInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            body.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudCode)) {
+            body.put("CloudCode", request.cloudCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceInstanceId)) {
+            body.put("DataSourceInstanceId", request.dataSourceInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDataSourceInstance"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDataSourceInstanceResponse());
+    }
+
+    public DescribeDataSourceInstanceResponse describeDataSourceInstance(DescribeDataSourceInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDataSourceInstanceWithOptions(request, runtime);
+    }
+
+    public DescribeDataSourceParametersResponse describeDataSourceParametersWithOptions(DescribeDataSourceParametersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudCode)) {
+            body.put("CloudCode", request.cloudCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceType)) {
+            body.put("DataSourceType", request.dataSourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDataSourceParameters"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDataSourceParametersResponse());
+    }
+
+    public DescribeDataSourceParametersResponse describeDataSourceParameters(DescribeDataSourceParametersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDataSourceParametersWithOptions(request, runtime);
     }
 
     public DescribeDisposeAndPlaybookResponse describeDisposeAndPlaybookWithOptions(DescribeDisposeAndPlaybookRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1324,6 +1865,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeEventDisposeWithOptions(request, runtime);
     }
 
+    public DescribeImportedLogCountResponse describeImportedLogCountWithOptions(DescribeImportedLogCountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeImportedLogCount"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeImportedLogCountResponse());
+    }
+
+    public DescribeImportedLogCountResponse describeImportedLogCount(DescribeImportedLogCountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeImportedLogCountWithOptions(request, runtime);
+    }
+
     public DescribeJobStatusResponse describeJobStatusWithOptions(DescribeJobStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1518,6 +2088,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeOperatorsWithOptions(request, runtime);
     }
 
+    public DescribeProdCountResponse describeProdCountWithOptions(DescribeProdCountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeProdCount"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeProdCountResponse());
+    }
+
+    public DescribeProdCountResponse describeProdCount(DescribeProdCountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeProdCountWithOptions(request, runtime);
+    }
+
     public DescribeScopeUsersResponse describeScopeUsersWithOptions(DescribeScopeUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1547,6 +2146,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeScopeUsersWithOptions(request, runtime);
     }
 
+    public DescribeServiceStatusResponse describeServiceStatusWithOptions(DescribeServiceStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeServiceStatus"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeServiceStatusResponse());
+    }
+
+    public DescribeServiceStatusResponse describeServiceStatus(DescribeServiceStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeServiceStatusWithOptions(request, runtime);
+    }
+
     public DescribeStorageResponse describeStorageWithOptions(DescribeStorageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1574,6 +2202,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeStorageResponse describeStorage(DescribeStorageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeStorageWithOptions(request, runtime);
+    }
+
+    public DescribeUserBuyStatusResponse describeUserBuyStatusWithOptions(DescribeUserBuyStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subUserId)) {
+            body.put("SubUserId", request.subUserId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeUserBuyStatus"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUserBuyStatusResponse());
+    }
+
+    public DescribeUserBuyStatusResponse describeUserBuyStatus(DescribeUserBuyStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeUserBuyStatusWithOptions(request, runtime);
     }
 
     public DescribeWafScopeResponse describeWafScopeWithOptions(DescribeWafScopeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1746,6 +2407,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DoSelfDelegateResponse doSelfDelegate(DoSelfDelegateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.doSelfDelegateWithOptions(request, runtime);
+    }
+
+    public EnableAccessForCloudSiemResponse enableAccessForCloudSiemWithOptions(EnableAccessForCloudSiemRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableAccessForCloudSiem"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableAccessForCloudSiemResponse());
+    }
+
+    public EnableAccessForCloudSiemResponse enableAccessForCloudSiem(EnableAccessForCloudSiemRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableAccessForCloudSiemWithOptions(request, runtime);
+    }
+
+    public EnableServiceForCloudSiemResponse enableServiceForCloudSiemWithOptions(EnableServiceForCloudSiemRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableServiceForCloudSiem"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableServiceForCloudSiemResponse());
+    }
+
+    public EnableServiceForCloudSiemResponse enableServiceForCloudSiem(EnableServiceForCloudSiemRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableServiceForCloudSiemWithOptions(request, runtime);
     }
 
     public GetCapacityResponse getCapacityWithOptions(GetCapacityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1937,6 +2656,109 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getStorageWithOptions(request, runtime);
     }
 
+    public ListAccountAccessIdResponse listAccountAccessIdWithOptions(ListAccountAccessIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudCode)) {
+            body.put("CloudCode", request.cloudCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAccountAccessId"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAccountAccessIdResponse());
+    }
+
+    public ListAccountAccessIdResponse listAccountAccessId(ListAccountAccessIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAccountAccessIdWithOptions(request, runtime);
+    }
+
+    public ListAccountsByLogResponse listAccountsByLogWithOptions(ListAccountsByLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudCode)) {
+            body.put("CloudCode", request.cloudCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logCodes)) {
+            body.put("LogCodes", request.logCodes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prodCode)) {
+            body.put("ProdCode", request.prodCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAccountsByLog"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAccountsByLogResponse());
+    }
+
+    public ListAccountsByLogResponse listAccountsByLog(ListAccountsByLogRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAccountsByLogWithOptions(request, runtime);
+    }
+
+    public ListAllProdsResponse listAllProdsWithOptions(ListAllProdsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAllProds"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAllProdsResponse());
+    }
+
+    public ListAllProdsResponse listAllProds(ListAllProdsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAllProdsWithOptions(request, runtime);
+    }
+
     public ListAutomateResponseConfigsResponse listAutomateResponseConfigsWithOptions(ListAutomateResponseConfigsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2000,6 +2822,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAutomateResponseConfigsResponse listAutomateResponseConfigs(ListAutomateResponseConfigsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAutomateResponseConfigsWithOptions(request, runtime);
+    }
+
+    public ListBindAccountResponse listBindAccountWithOptions(ListBindAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudCode)) {
+            body.put("CloudCode", request.cloudCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListBindAccount"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListBindAccountResponse());
+    }
+
+    public ListBindAccountResponse listBindAccount(ListBindAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listBindAccountWithOptions(request, runtime);
+    }
+
+    public ListBindDataSourcesResponse listBindDataSourcesWithOptions(ListBindDataSourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            body.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudCode)) {
+            body.put("CloudCode", request.cloudCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListBindDataSources"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListBindDataSourcesResponse());
+    }
+
+    public ListBindDataSourcesResponse listBindDataSources(ListBindDataSourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listBindDataSourcesWithOptions(request, runtime);
     }
 
     public ListCloudSiemCustomizeRulesResponse listCloudSiemCustomizeRulesWithOptions(ListCloudSiemCustomizeRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2181,6 +3073,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listCustomizeRuleTestResultWithOptions(request, runtime);
     }
 
+    public ListDataSourceLogsResponse listDataSourceLogsWithOptions(ListDataSourceLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            body.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudCode)) {
+            body.put("CloudCode", request.cloudCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceInstanceId)) {
+            body.put("DataSourceInstanceId", request.dataSourceInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataSourceLogs"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataSourceLogsResponse());
+    }
+
+    public ListDataSourceLogsResponse listDataSourceLogs(ListDataSourceLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataSourceLogsWithOptions(request, runtime);
+    }
+
+    public ListDataSourceTypesResponse listDataSourceTypesWithOptions(ListDataSourceTypesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudCode)) {
+            body.put("CloudCode", request.cloudCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDataSourceTypes"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataSourceTypesResponse());
+    }
+
+    public ListDataSourceTypesResponse listDataSourceTypes(ListDataSourceTypesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDataSourceTypesWithOptions(request, runtime);
+    }
+
     public ListDeliveryResponse listDeliveryWithOptions(ListDeliveryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2291,6 +3257,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listDisposeStrategyWithOptions(request, runtime);
     }
 
+    public ListImportedLogsByProdResponse listImportedLogsByProdWithOptions(ListImportedLogsByProdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudCode)) {
+            body.put("CloudCode", request.cloudCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prodCode)) {
+            body.put("ProdCode", request.prodCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListImportedLogsByProd"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListImportedLogsByProdResponse());
+    }
+
+    public ListImportedLogsByProdResponse listImportedLogsByProd(ListImportedLogsByProdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listImportedLogsByProdWithOptions(request, runtime);
+    }
+
     public ListOperationResponse listOperationWithOptions(ListOperationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2318,6 +3321,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListOperationResponse listOperation(ListOperationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listOperationWithOptions(request, runtime);
+    }
+
+    public ListProjectLogStoresResponse listProjectLogStoresWithOptions(ListProjectLogStoresRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceLogCode)) {
+            body.put("SourceLogCode", request.sourceLogCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceProdCode)) {
+            body.put("SourceProdCode", request.sourceProdCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subUserId)) {
+            body.put("SubUserId", request.subUserId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProjectLogStores"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProjectLogStoresResponse());
+    }
+
+    public ListProjectLogStoresResponse listProjectLogStores(ListProjectLogStoresRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listProjectLogStoresWithOptions(request, runtime);
     }
 
     public ListQuickQueryResponse listQuickQueryWithOptions(ListQuickQueryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2355,6 +3399,268 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListQuickQueryResponse listQuickQuery(ListQuickQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listQuickQueryWithOptions(request, runtime);
+    }
+
+    public ListRdUsersResponse listRdUsersWithOptions(ListRdUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRdUsers"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRdUsersResponse());
+    }
+
+    public ListRdUsersResponse listRdUsers(ListRdUsersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listRdUsersWithOptions(request, runtime);
+    }
+
+    public ListUserProdLogsResponse listUserProdLogsWithOptions(ListUserProdLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceLogCode)) {
+            body.put("SourceLogCode", request.sourceLogCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceProdCode)) {
+            body.put("SourceProdCode", request.sourceProdCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListUserProdLogs"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserProdLogsResponse());
+    }
+
+    public ListUserProdLogsResponse listUserProdLogs(ListUserProdLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listUserProdLogsWithOptions(request, runtime);
+    }
+
+    public ListUsersByProdResponse listUsersByProdWithOptions(ListUsersByProdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceProdCode)) {
+            body.put("SourceProdCode", request.sourceProdCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListUsersByProd"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListUsersByProdResponse());
+    }
+
+    public ListUsersByProdResponse listUsersByProd(ListUsersByProdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listUsersByProdWithOptions(request, runtime);
+    }
+
+    public ModifyBindAccountResponse modifyBindAccountWithOptions(ModifyBindAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessId)) {
+            body.put("AccessId", request.accessId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            body.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            body.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bindId)) {
+            body.put("BindId", request.bindId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudCode)) {
+            body.put("CloudCode", request.cloudCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyBindAccount"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyBindAccountResponse());
+    }
+
+    public ModifyBindAccountResponse modifyBindAccount(ModifyBindAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyBindAccountWithOptions(request, runtime);
+    }
+
+    public ModifyDataSourceResponse modifyDataSourceWithOptions(ModifyDataSourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            body.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudCode)) {
+            body.put("CloudCode", request.cloudCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceInstanceId)) {
+            body.put("DataSourceInstanceId", request.dataSourceInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceInstanceName)) {
+            body.put("DataSourceInstanceName", request.dataSourceInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceInstanceParams)) {
+            body.put("DataSourceInstanceParams", request.dataSourceInstanceParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceInstanceRemark)) {
+            body.put("DataSourceInstanceRemark", request.dataSourceInstanceRemark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceType)) {
+            body.put("DataSourceType", request.dataSourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDataSource"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDataSourceResponse());
+    }
+
+    public ModifyDataSourceResponse modifyDataSource(ModifyDataSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDataSourceWithOptions(request, runtime);
+    }
+
+    public ModifyDataSourceLogResponse modifyDataSourceLogWithOptions(ModifyDataSourceLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
+            body.put("AccountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudCode)) {
+            body.put("CloudCode", request.cloudCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceInstanceId)) {
+            body.put("DataSourceInstanceId", request.dataSourceInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceInstanceLogs)) {
+            body.put("DataSourceInstanceLogs", request.dataSourceInstanceLogs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceType)) {
+            body.put("DataSourceType", request.dataSourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logCode)) {
+            body.put("LogCode", request.logCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logInstanceId)) {
+            body.put("LogInstanceId", request.logInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDataSourceLog"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDataSourceLogResponse());
+    }
+
+    public ModifyDataSourceLogResponse modifyDataSourceLog(ModifyDataSourceLogRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDataSourceLogWithOptions(request, runtime);
     }
 
     public OpenDeliveryResponse openDeliveryWithOptions(OpenDeliveryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2879,6 +4185,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ShowQuickAnalysisResponse showQuickAnalysis(ShowQuickAnalysisRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.showQuickAnalysisWithOptions(request, runtime);
+    }
+
+    public SubmitImportLogTasksResponse submitImportLogTasksWithOptions(SubmitImportLogTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accounts)) {
+            body.put("Accounts", request.accounts);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoImported)) {
+            body.put("AutoImported", request.autoImported);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudCode)) {
+            body.put("CloudCode", request.cloudCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logCodes)) {
+            body.put("LogCodes", request.logCodes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prodCode)) {
+            body.put("ProdCode", request.prodCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitImportLogTasks"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitImportLogTasksResponse());
+    }
+
+    public SubmitImportLogTasksResponse submitImportLogTasks(SubmitImportLogTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitImportLogTasksWithOptions(request, runtime);
+    }
+
+    public SubmitJobsResponse submitJobsWithOptions(SubmitJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jsonParam)) {
+            body.put("JsonParam", request.jsonParam);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitJobs"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitJobsResponse());
+    }
+
+    public SubmitJobsResponse submitJobs(SubmitJobsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitJobsWithOptions(request, runtime);
     }
 
     public UpdateAutomateResponseConfigStatusResponse updateAutomateResponseConfigStatusWithOptions(UpdateAutomateResponseConfigStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

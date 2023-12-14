@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class PostCustomizeRuleResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public PostCustomizeRuleResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,69 +83,155 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
     }
 
     public static class PostCustomizeRuleResponseBodyData extends TeaModel {
+        /**
+         * <p>The risk type.</p>
+         */
         @NameInMap("AlertType")
         public String alertType;
 
+        /**
+         * <p>The internal code of the risk type.</p>
+         */
         @NameInMap("AlertTypeMds")
         public String alertTypeMds;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+         */
         @NameInMap("Aliuid")
         public Long aliuid;
 
+        /**
+         * <p>The extended information about event generation. If eventTransferType is set to allToSingle, the value of this parameter indicates the length and unit of the alert aggregation window. The HTML escape characters are reversed.</p>
+         */
         @NameInMap("EventTransferExt")
         public String eventTransferExt;
 
+        /**
+         * <p>Indicates whether the system generates an event for the alert. Valid values:</p>
+         * <br>
+         * <p>*   0: no</p>
+         * <p>*   1: yes</p>
+         */
         @NameInMap("EventTransferSwitch")
         public Integer eventTransferSwitch;
 
+        /**
+         * <p>The event generation method. Valid values:</p>
+         * <br>
+         * <p>*   default: The default method is used.</p>
+         * <p>*   singleToSingle: The system generates an event for each alert.</p>
+         * <p>*   allToSingle: The system generates an event for alerts within a period of time.</p>
+         */
         @NameInMap("EventTransferType")
         public String eventTransferType;
 
+        /**
+         * <p>The time when the custom rule was created.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the custom rule was last updated.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the custom rule.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The log source of the rule.</p>
+         */
         @NameInMap("LogSource")
         public String logSource;
 
+        /**
+         * <p>The internal code of the log source.</p>
+         */
         @NameInMap("LogSourceMds")
         public String logSourceMds;
 
+        /**
+         * <p>The log type of the rule.</p>
+         */
         @NameInMap("LogType")
         public String logType;
 
+        /**
+         * <p>The internal code of the log type.</p>
+         */
         @NameInMap("LogTypeMds")
         public String logTypeMds;
 
+        /**
+         * <p>The window length of the rule. The HTML escape characters are reversed.</p>
+         */
         @NameInMap("QueryCycle")
         public String queryCycle;
 
+        /**
+         * <p>The query condition of the rule. The value is in the JSON format. The HTML escape characters are reversed.</p>
+         */
         @NameInMap("RuleCondition")
         public String ruleCondition;
 
+        /**
+         * <p>The description of the rule.</p>
+         */
         @NameInMap("RuleDesc")
         public String ruleDesc;
 
+        /**
+         * <p>The log aggregation field of the rule. The value is a JSON string. The HTML escape characters are reversed.</p>
+         */
         @NameInMap("RuleGroup")
         public String ruleGroup;
 
+        /**
+         * <p>The name of the rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The threshold configuration of the rule. The value is in the JSON format. The HTML escape characters are reversed.</p>
+         */
         @NameInMap("RuleThreshold")
         public String ruleThreshold;
 
+        /**
+         * <p>The type of the rule. Valid values:</p>
+         * <br>
+         * <p>*   predefine</p>
+         * <p>*   customize</p>
+         */
         @NameInMap("RuleType")
         public String ruleType;
 
+        /**
+         * <p>The rule status. Valid values:</p>
+         * <br>
+         * <p>*   0: The rule is in the initial state.</p>
+         * <p>*   10: The simulation data is tested.</p>
+         * <p>*   15: The business data is being tested.</p>
+         * <p>*   20: The business data test ends.</p>
+         * <p>*   100: The rule takes effect.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The risk level. Valid values:</p>
+         * <br>
+         * <p>*   serious: high</p>
+         * <p>*   suspicious: medium</p>
+         * <p>*   remind: low</p>
+         */
         @NameInMap("ThreatLevel")
         public String threatLevel;
 

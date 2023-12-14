@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeDisposeStrategyPlaybookResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeDisposeStrategyPlaybookResponseBodyData> data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +83,15 @@ public class DescribeDisposeStrategyPlaybookResponseBody extends TeaModel {
     }
 
     public static class DescribeDisposeStrategyPlaybookResponseBodyData extends TeaModel {
+        /**
+         * <p>The playbook name, which is the unique identifier of the playbook.</p>
+         */
         @NameInMap("PlaybookName")
         public String playbookName;
 
+        /**
+         * <p>The UUID of the playbook.</p>
+         */
         @NameInMap("PlaybookUuid")
         public String playbookUuid;
 

@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class GetLogsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The results of the log query.</p>
+     */
     @NameInMap("Data")
     public GetLogsResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +83,21 @@ public class GetLogsResponseBody extends TeaModel {
     }
 
     public static class GetLogsResponseBodyDataPageInfo extends TeaModel {
+        /**
+         * <p>The page number. Pages start from page 1.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
@@ -106,21 +133,45 @@ public class GetLogsResponseBody extends TeaModel {
     }
 
     public static class GetLogsResponseBodyDataResponseData extends TeaModel {
+        /**
+         * <p>The status of the log query. Valid values:</p>
+         * <br>
+         * <p>*   true: The query is complete and the returned result is complete.</p>
+         * <p>*   false: The query is complete but the returned result is incomplete. You must resend the request to obtain the complete result.</p>
+         */
         @NameInMap("CompleteOrNot")
         public Boolean completeOrNot;
 
+        /**
+         * <p>The time period of the log query. Unit: milliseconds.</p>
+         */
         @NameInMap("Cost")
         public Long cost;
 
+        /**
+         * <p>The number of entries returned.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>Indicated whether an analytic statement is contained. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("HasSql")
         public Boolean hasSql;
 
+        /**
+         * <p>The index fields of the logs.</p>
+         */
         @NameInMap("Keys")
         public java.util.List<String> keys;
 
+        /**
+         * <p>The raw data generated in the query.</p>
+         */
         @NameInMap("Lines")
         public java.util.List<?> lines;
 
@@ -180,9 +231,15 @@ public class GetLogsResponseBody extends TeaModel {
     }
 
     public static class GetLogsResponseBodyData extends TeaModel {
+        /**
+         * <p>The result on the current page.</p>
+         */
         @NameInMap("PageInfo")
         public GetLogsResponseBodyDataPageInfo pageInfo;
 
+        /**
+         * <p>The log.</p>
+         */
         @NameInMap("ResponseData")
         public GetLogsResponseBodyDataResponseData responseData;
 

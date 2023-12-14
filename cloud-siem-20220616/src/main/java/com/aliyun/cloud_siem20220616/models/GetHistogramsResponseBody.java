@@ -4,41 +4,21 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class GetHistogramsResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public Integer code;
-
+    /**
+     * <p>The data of the charts.</p>
+     */
     @NameInMap("Data")
     public GetHistogramsResponseBodyData data;
 
-    @NameInMap("DyCode")
-    public String dyCode;
-
-    @NameInMap("DyMessage")
-    public String dyMessage;
-
-    @NameInMap("ErrCode")
-    public String errCode;
-
-    @NameInMap("Message")
-    public String message;
-
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     public static GetHistogramsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetHistogramsResponseBody self = new GetHistogramsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetHistogramsResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public GetHistogramsResponseBody setData(GetHistogramsResponseBodyData data) {
@@ -49,38 +29,6 @@ public class GetHistogramsResponseBody extends TeaModel {
         return this.data;
     }
 
-    public GetHistogramsResponseBody setDyCode(String dyCode) {
-        this.dyCode = dyCode;
-        return this;
-    }
-    public String getDyCode() {
-        return this.dyCode;
-    }
-
-    public GetHistogramsResponseBody setDyMessage(String dyMessage) {
-        this.dyMessage = dyMessage;
-        return this;
-    }
-    public String getDyMessage() {
-        return this.dyMessage;
-    }
-
-    public GetHistogramsResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
-        return this;
-    }
-    public String getErrCode() {
-        return this.errCode;
-    }
-
-    public GetHistogramsResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public GetHistogramsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -89,24 +37,31 @@ public class GetHistogramsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetHistogramsResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public static class GetHistogramsResponseBodyDataHistograms extends TeaModel {
+        /**
+         * <p>Indicates whether the query results within the subinterval is complete. Valid values:</p>
+         * <br>
+         * <p>*   true: The query is complete and the returned result is complete.</p>
+         * <p>*   false: The query is complete but the returned result is incomplete. You must repeat the request to obtain the complete result.</p>
+         */
         @NameInMap("CompletedOrNot")
         public Boolean completedOrNot;
 
+        /**
+         * <p>The number of logs within the subinterval.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The start time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("From")
         public Integer from;
 
+        /**
+         * <p>The end time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("To")
         public Integer to;
 
@@ -150,12 +105,21 @@ public class GetHistogramsResponseBody extends TeaModel {
     }
 
     public static class GetHistogramsResponseBodyData extends TeaModel {
+        /**
+         * <p>The distribution of logs.</p>
+         */
         @NameInMap("Histograms")
         public java.util.List<GetHistogramsResponseBodyDataHistograms> histograms;
 
+        /**
+         * <p>The name of the server.</p>
+         */
         @NameInMap("Server")
         public String server;
 
+        /**
+         * <p>The number of logs that are generated within the subinterval.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ListCloudSiemPredefinedRulesResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +83,21 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
     }
 
     public static class ListCloudSiemPredefinedRulesResponseBodyDataPageInfo extends TeaModel {
+        /**
+         * <p>The current page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
@@ -106,33 +133,70 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
     }
 
     public static class ListCloudSiemPredefinedRulesResponseBodyDataResponseData extends TeaModel {
+        /**
+         * <p>The type of the risk.</p>
+         */
         @NameInMap("AlertType")
         public String alertType;
 
+        /**
+         * <p>The time when the rule was created.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the rule was modified.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the predefined rule.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The internal code of the rule description.</p>
+         */
         @NameInMap("RuleDescMds")
         public String ruleDescMds;
 
+        /**
+         * <p>The name of the rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The internal code of the rule name.</p>
+         */
         @NameInMap("RuleNameMds")
         public String ruleNameMds;
 
+        /**
+         * <p>The log source of the rule.</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The status of the predefined rule. Valid values:</p>
+         * <br>
+         * <p>*   0: The rule is in the initial state.</p>
+         * <p>*   100: The rule takes effect.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The threat level. Valid values:</p>
+         * <br>
+         * <p>*   serious: high</p>
+         * <p>*   suspicious: medium</p>
+         * <p>*   remind: low</p>
+         */
         @NameInMap("ThreatLevel")
         public String threatLevel;
 
@@ -224,9 +288,15 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
     }
 
     public static class ListCloudSiemPredefinedRulesResponseBodyData extends TeaModel {
+        /**
+         * <p>The pagination information.</p>
+         */
         @NameInMap("PageInfo")
         public ListCloudSiemPredefinedRulesResponseBodyDataPageInfo pageInfo;
 
+        /**
+         * <p>The detailed data.</p>
+         */
         @NameInMap("ResponseData")
         public java.util.List<ListCloudSiemPredefinedRulesResponseBodyDataResponseData> responseData;
 

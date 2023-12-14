@@ -4,15 +4,33 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class PostCustomizeRuleTestRequest extends TeaModel {
+    /**
+     * <p>The ID of the rule.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The data management center of the threat analysis feature. Specify this parameter based on the region in which your assets reside. Valid values:</p>
+     * <br>
+     * <p>*   cn-hangzhou: Your assets reside in regions inside China.</p>
+     * <p>*   ap-southeast-1: Your assets reside in regions outside China.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The simulation data for the testing. This parameter is available only when TestType is set to simulate.</p>
+     */
     @NameInMap("SimulatedData")
     public String simulatedData;
 
+    /**
+     * <p>The testing type. Valid values:</p>
+     * <br>
+     * <p>*   simulate: simulation data test</p>
+     * <p>*   business: business data test</p>
+     */
     @NameInMap("TestType")
     public String testType;
 

@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeCustomizeRuleTestHistogramResponseBodyData> data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +83,21 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
     }
 
     public static class DescribeCustomizeRuleTestHistogramResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of alerts that are generated in the query time range.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The start of the time range for querying alerts. The value is a UNIX timestamp. Unit: seconds.</p>
+         */
         @NameInMap("From")
         public Long from;
 
+        /**
+         * <p>The end of the time range for querying alerts. The value is a UNIX timestamp. Unit: seconds.</p>
+         */
         @NameInMap("To")
         public Long to;
 

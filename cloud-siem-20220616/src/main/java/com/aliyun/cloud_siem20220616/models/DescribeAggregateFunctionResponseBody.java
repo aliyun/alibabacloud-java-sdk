@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeAggregateFunctionResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeAggregateFunctionResponseBodyData> data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +83,15 @@ public class DescribeAggregateFunctionResponseBody extends TeaModel {
     }
 
     public static class DescribeAggregateFunctionResponseBodyData extends TeaModel {
+        /**
+         * <p>The aggregate function.</p>
+         */
         @NameInMap("Function")
         public String function;
 
+        /**
+         * <p>The display name of the aggregate function.</p>
+         */
         @NameInMap("FunctionName")
         public String functionName;
 

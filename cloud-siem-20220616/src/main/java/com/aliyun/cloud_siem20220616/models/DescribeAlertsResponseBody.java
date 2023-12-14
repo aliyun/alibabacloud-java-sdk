@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeAlertsResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +83,21 @@ public class DescribeAlertsResponseBody extends TeaModel {
     }
 
     public static class DescribeAlertsResponseBodyDataPageInfo extends TeaModel {
+        /**
+         * <p>The current page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
@@ -106,12 +133,21 @@ public class DescribeAlertsResponseBody extends TeaModel {
     }
 
     public static class DescribeAlertsResponseBodyDataResponseDataAlertInfoList extends TeaModel {
+        /**
+         * <p>The attribute key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The name of the key.</p>
+         */
         @NameInMap("KeyName")
         public String keyName;
 
+        /**
+         * <p>The value of the key.</p>
+         */
         @NameInMap("Values")
         public String values;
 
@@ -147,99 +183,206 @@ public class DescribeAlertsResponseBody extends TeaModel {
     }
 
     public static class DescribeAlertsResponseBodyDataResponseData extends TeaModel {
+        /**
+         * <p>The description of the alert.</p>
+         */
         @NameInMap("AlertDesc")
         public String alertDesc;
 
+        /**
+         * <p>The internal code of the alert description.</p>
+         */
         @NameInMap("AlertDescCode")
         public String alertDescCode;
 
+        /**
+         * <p>The description of the alert in English.</p>
+         */
         @NameInMap("AlertDescEn")
         public String alertDescEn;
 
+        /**
+         * <p>The details of the alert.</p>
+         */
         @NameInMap("AlertDetail")
         public String alertDetail;
 
+        /**
+         * <p>The displayed details of the alert.</p>
+         */
         @NameInMap("AlertInfoList")
         public java.util.List<DescribeAlertsResponseBodyDataResponseDataAlertInfoList> alertInfoList;
 
+        /**
+         * <p>The threat level. Valid values:</p>
+         * <br>
+         * <p>*   serious: high</p>
+         * <p>*   suspicious: medium</p>
+         * <p>*   remind: low</p>
+         */
         @NameInMap("AlertLevel")
         public String alertLevel;
 
+        /**
+         * <p>The name of the alert.</p>
+         */
         @NameInMap("AlertName")
         public String alertName;
 
+        /**
+         * <p>The internal code of the alert name.</p>
+         */
         @NameInMap("AlertNameCode")
         public String alertNameCode;
 
+        /**
+         * <p>The name of the alert in English.</p>
+         */
         @NameInMap("AlertNameEn")
         public String alertNameEn;
 
+        /**
+         * <p>The service for which the alert associated with the event is generated.</p>
+         */
         @NameInMap("AlertSrcProd")
         public String alertSrcProd;
 
+        /**
+         * <p>The sub-module of ther alert source.</p>
+         */
         @NameInMap("AlertSrcProdModule")
         public String alertSrcProdModule;
 
+        /**
+         * <p>The title of the alert.</p>
+         */
         @NameInMap("AlertTitle")
         public String alertTitle;
 
+        /**
+         * <p>The title of the alert in English.</p>
+         */
         @NameInMap("AlertTitleEn")
         public String alertTitleEn;
 
+        /**
+         * <p>The alert type.</p>
+         */
         @NameInMap("AlertType")
         public String alertType;
 
+        /**
+         * <p>The internal code of the alert type.</p>
+         */
         @NameInMap("AlertTypeCode")
         public String alertTypeCode;
 
+        /**
+         * <p>The type of the alert in English.</p>
+         */
         @NameInMap("AlertTypeEn")
         public String alertTypeEn;
 
+        /**
+         * <p>The UUID of the alert.</p>
+         */
         @NameInMap("AlertUuid")
         public String alertUuid;
 
+        /**
+         * <p>The details of the asset.</p>
+         */
         @NameInMap("AssetList")
         public String assetList;
 
+        /**
+         * <p>The tag of the ATT\&CK attack.</p>
+         */
         @NameInMap("AttCk")
         public String attCk;
 
+        /**
+         * <p>The cloud code. Valid values:</p>
+         * <br>
+         * <p>*   aliyun: Alibaba Cloud</p>
+         * <p>*   qcloud: Tencent Cloud</p>
+         * <p>*   hcloud: Huawei Cloud</p>
+         */
         @NameInMap("CloudCode")
         public String cloudCode;
 
+        /**
+         * <p>The time when the alert was closed.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The time when the alert was received.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the alert was last updated.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The unique ID of the alert.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The UUID of the event.</p>
+         */
         @NameInMap("IncidentUuid")
         public String incidentUuid;
 
+        /**
+         * <p>Indicates whether an attack is defended. Valid values:</p>
+         * <br>
+         * <p>*   0: detected.</p>
+         * <p>*   1: blocked.</p>
+         */
         @NameInMap("IsDefend")
         public String isDefend;
 
+        /**
+         * <p>The time when the alert was recorded.</p>
+         */
         @NameInMap("LogTime")
         public String logTime;
 
+        /**
+         * <p>The UUID of the alert log.</p>
+         */
         @NameInMap("LogUuid")
         public String logUuid;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is associated with the alert in SIEM.</p>
+         */
         @NameInMap("MainUserId")
         public Long mainUserId;
 
+        /**
+         * <p>The time when the alert is triggered.</p>
+         */
         @NameInMap("OccurTime")
         public String occurTime;
 
+        /**
+         * <p>The time at which the alert was first generated.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account within which the alert is generated.</p>
+         */
         @NameInMap("SubUserId")
         public Long subUserId;
 
@@ -507,9 +650,15 @@ public class DescribeAlertsResponseBody extends TeaModel {
     }
 
     public static class DescribeAlertsResponseBodyData extends TeaModel {
+        /**
+         * <p>The pagination information.</p>
+         */
         @NameInMap("PageInfo")
         public DescribeAlertsResponseBodyDataPageInfo pageInfo;
 
+        /**
+         * <p>The detailed data.</p>
+         */
         @NameInMap("ResponseData")
         public java.util.List<DescribeAlertsResponseBodyDataResponseData> responseData;
 

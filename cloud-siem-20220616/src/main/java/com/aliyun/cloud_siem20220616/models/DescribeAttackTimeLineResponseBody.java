@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeAttackTimeLineResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeAttackTimeLineResponseBodyData> data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,63 +83,131 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
     }
 
     public static class DescribeAttackTimeLineResponseBodyData extends TeaModel {
+        /**
+         * <p>The risk level. Valid values:</p>
+         * <br>
+         * <p>*   serious: high</p>
+         * <p>*   suspicious: medium</p>
+         * <p>*   remind: low</p>
+         */
         @NameInMap("AlertLevel")
         public String alertLevel;
 
+        /**
+         * <p>The alert name in English.</p>
+         */
         @NameInMap("AlertName")
         public String alertName;
 
+        /**
+         * <p>The internal code of the alert name.</p>
+         */
         @NameInMap("AlertNameCode")
         public String alertNameCode;
 
+        /**
+         * <p>The alert name in English.</p>
+         */
         @NameInMap("AlertNameEn")
         public String alertNameEn;
 
+        /**
+         * <p>The source of the alert.</p>
+         */
         @NameInMap("AlertSrcProd")
         public String alertSrcProd;
 
+        /**
+         * <p>The sub-module of the alert source.</p>
+         */
         @NameInMap("AlertSrcProdModule")
         public String alertSrcProdModule;
 
+        /**
+         * <p>The time when the alert was triggered.</p>
+         */
         @NameInMap("AlertTime")
         public Long alertTime;
 
+        /**
+         * <p>The title of the alert.</p>
+         */
         @NameInMap("AlertTitle")
         public String alertTitle;
 
+        /**
+         * <p>The alert title in English.</p>
+         */
         @NameInMap("AlertTitleEn")
         public String alertTitleEn;
 
+        /**
+         * <p>The type of the alert.</p>
+         */
         @NameInMap("AlertType")
         public String alertType;
 
+        /**
+         * <p>The internal code of the alert type.</p>
+         */
         @NameInMap("AlertTypeCode")
         public String alertTypeCode;
 
+        /**
+         * <p>The alert type in English.</p>
+         */
         @NameInMap("AlertTypeEn")
         public String alertTypeEn;
 
+        /**
+         * <p>The UUID of the alert</p>
+         */
         @NameInMap("AlertUuid")
         public String alertUuid;
 
+        /**
+         * <p>The logical ID of the asset.</p>
+         */
         @NameInMap("AssetId")
         public String assetId;
 
+        /**
+         * <p>The details of the asset.</p>
+         */
         @NameInMap("AssetList")
         public String assetList;
 
+        /**
+         * <p>The name of the asset.</p>
+         */
         @NameInMap("AssetName")
         public String assetName;
 
+        /**
+         * <p>The tag of the ATT\&CK attack.</p>
+         */
         @NameInMap("AttCk")
         public String attCk;
 
+        /**
+         * <p>The cloud code. Valid values:</p>
+         * <br>
+         * <p>*   aliyun: Alibaba Cloud</p>
+         * <p>*   qcloud: Tencent Cloud</p>
+         * <p>*   hcloud: Huawei Cloud</p>
+         */
         @NameInMap("CloudCode")
         public String cloudCode;
 
+        /**
+         * <p>The UUID of the event.</p>
+         */
         @NameInMap("IncidentUuid")
         public String incidentUuid;
 
+        /**
+         * <p>The time when the alert was recorded.</p>
+         */
         @NameInMap("LogTime")
         public String logTime;
 

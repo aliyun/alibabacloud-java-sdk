@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class ListAutomateResponseConfigsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ListAutomateResponseConfigsResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +83,21 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
     }
 
     public static class ListAutomateResponseConfigsResponseBodyDataPageInfo extends TeaModel {
+        /**
+         * <p>The current page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
@@ -106,36 +133,79 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
     }
 
     public static class ListAutomateResponseConfigsResponseBodyDataResponseData extends TeaModel {
+        /**
+         * <p>The configuration of the action that is performed after the rule is hit. The value is in JSON format.</p>
+         */
         @NameInMap("ActionConfig")
         public String actionConfig;
 
+        /**
+         * <p>The type of the handling action. Multiple types are separated by commas (,). Valid values:</p>
+         * <br>
+         * <p>*   doPlaybook: runs a playbook.</p>
+         * <p>*   changeEventStatus: changes the status of an event.</p>
+         * <p>*   changeThreatLevel: changes the risk level of an event.</p>
+         */
         @NameInMap("ActionType")
         public String actionType;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is associated with the rule in SIEM.</p>
+         */
         @NameInMap("Aliuid")
         public Long aliuid;
 
+        /**
+         * <p>The type of the automated response rule. Valid values:</p>
+         * <br>
+         * <p>*   event</p>
+         * <p>*   alert</p>
+         */
         @NameInMap("AutoResponseType")
         public String autoResponseType;
 
+        /**
+         * <p>The trigger condition of the rule. The value is in the JSON format.</p>
+         */
         @NameInMap("ExecutionCondition")
         public String executionCondition;
 
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The update time.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the automated response rule.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the automated response rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The status of the rule. Valid values:</p>
+         * <br>
+         * <p>*   0: disabled</p>
+         * <p>*   100: enabled</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The ID of the user who created the rule.</p>
+         */
         @NameInMap("SubUserId")
         public Long subUserId;
 
@@ -235,9 +305,15 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
     }
 
     public static class ListAutomateResponseConfigsResponseBodyData extends TeaModel {
+        /**
+         * <p>The pagination information.</p>
+         */
         @NameInMap("PageInfo")
         public ListAutomateResponseConfigsResponseBodyDataPageInfo pageInfo;
 
+        /**
+         * <p>The detailed data.</p>
+         */
         @NameInMap("ResponseData")
         public java.util.List<ListAutomateResponseConfigsResponseBodyDataResponseData> responseData;
 

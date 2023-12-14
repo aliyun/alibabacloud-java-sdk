@@ -4,18 +4,36 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeOperatorsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeOperatorsResponseBodyData> data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,24 +83,45 @@ public class DescribeOperatorsResponseBody extends TeaModel {
     }
 
     public static class DescribeOperatorsResponseBodyData extends TeaModel {
+        /**
+         * <p>The position of the operator in the operator list.</p>
+         */
         @NameInMap("Index")
         public Integer index;
 
+        /**
+         * <p>The operator.</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>The description of the operator in Chinese.</p>
+         */
         @NameInMap("OperatorDescCn")
         public String operatorDescCn;
 
+        /**
+         * <p>The description of the operator in English.</p>
+         */
         @NameInMap("OperatorDescEn")
         public String operatorDescEn;
 
+        /**
+         * <p>The display name of the operator.</p>
+         */
         @NameInMap("OperatorName")
         public String operatorName;
 
+        /**
+         * <p>The data types that are supported by the current operator. The data types are separated by commas (,).</p>
+         */
         @NameInMap("SupportDataType")
         public String supportDataType;
 
+        /**
+         * <p>The scenarios that are supported by the operator. Multiple scenarios are separated by commas (,), such as AGGREGATE scenarios. This parameter is empty by default.</p>
+         */
         @NameInMap("SupportTag")
         public java.util.List<String> supportTag;
 
