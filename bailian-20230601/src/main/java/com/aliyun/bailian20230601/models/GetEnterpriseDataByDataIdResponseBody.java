@@ -86,9 +86,6 @@ public class GetEnterpriseDataByDataIdResponseBody extends TeaModel {
         @NameInMap("DataTypeCode")
         public Integer dataTypeCode;
 
-        @NameInMap("DownloadUrl")
-        public String downloadUrl;
-
         @NameInMap("StatusDetail")
         public String statusDetail;
 
@@ -160,14 +157,6 @@ public class GetEnterpriseDataByDataIdResponseBody extends TeaModel {
         }
         public Integer getDataTypeCode() {
             return this.dataTypeCode;
-        }
-
-        public GetEnterpriseDataByDataIdResponseBodyData setDownloadUrl(String downloadUrl) {
-            this.downloadUrl = downloadUrl;
-            return this;
-        }
-        public String getDownloadUrl() {
-            return this.downloadUrl;
         }
 
         public GetEnterpriseDataByDataIdResponseBodyData setStatusDetail(String statusDetail) {

@@ -86,9 +86,6 @@ public class QueryEnterpriseDataListResponseBody extends TeaModel {
         @NameInMap("DataTypeCode")
         public Integer dataTypeCode;
 
-        @NameInMap("DownloadUrl")
-        public String downloadUrl;
-
         @NameInMap("StatusDetail")
         public String statusDetail;
 
@@ -160,14 +157,6 @@ public class QueryEnterpriseDataListResponseBody extends TeaModel {
         }
         public Integer getDataTypeCode() {
             return this.dataTypeCode;
-        }
-
-        public QueryEnterpriseDataListResponseBodyDataList setDownloadUrl(String downloadUrl) {
-            this.downloadUrl = downloadUrl;
-            return this;
-        }
-        public String getDownloadUrl() {
-            return this.downloadUrl;
         }
 
         public QueryEnterpriseDataListResponseBodyDataList setStatusDetail(String statusDetail) {
