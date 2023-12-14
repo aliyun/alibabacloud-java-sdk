@@ -40,17 +40,6 @@
   <dependencies>
     <dependency>
       <groupId>com.aliyun</groupId>
-      <artifactId>credentials-java</artifactId>
-      <version>0.2.2</version>
-      <exclusions>
-        <exclusion>
-          <groupId>com.aliyun</groupId>
-          <artifactId>tea</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>com.aliyun</groupId>
       <artifactId>oss-client</artifactId>
       <version>3.0.3</version>
       <exclusions>
