@@ -277,6 +277,9 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("MountPath")
         public String mountPath;
 
+        @NameInMap("Uri")
+        public String uri;
+
         public static CreateJobRequestDataSources build(java.util.Map<String, ?> map) throws Exception {
             CreateJobRequestDataSources self = new CreateJobRequestDataSources();
             return TeaModel.build(map, self);
@@ -296,6 +299,14 @@ public class CreateJobRequest extends TeaModel {
         }
         public String getMountPath() {
             return this.mountPath;
+        }
+
+        public CreateJobRequestDataSources setUri(String uri) {
+            this.uri = uri;
+            return this;
+        }
+        public String getUri() {
+            return this.uri;
         }
 
     }

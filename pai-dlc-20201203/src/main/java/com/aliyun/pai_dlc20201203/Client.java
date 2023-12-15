@@ -798,6 +798,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Tags", request.tagsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.userIdForFilter)) {
+            query.put("UserIdForFilter", request.userIdForFilter);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             query.put("WorkspaceId", request.workspaceId);
         }

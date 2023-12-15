@@ -55,6 +55,9 @@ public class ListJobsRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.Map<String, String> tags;
 
+    @NameInMap("UserIdForFilter")
+    public String userIdForFilter;
+
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -197,6 +200,14 @@ public class ListJobsRequest extends TeaModel {
     }
     public java.util.Map<String, String> getTags() {
         return this.tags;
+    }
+
+    public ListJobsRequest setUserIdForFilter(String userIdForFilter) {
+        this.userIdForFilter = userIdForFilter;
+        return this;
+    }
+    public String getUserIdForFilter() {
+        return this.userIdForFilter;
     }
 
     public ListJobsRequest setWorkspaceId(String workspaceId) {
