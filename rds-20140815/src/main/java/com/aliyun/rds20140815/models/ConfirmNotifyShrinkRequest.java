@@ -11,7 +11,7 @@ public class ConfirmNotifyShrinkRequest extends TeaModel {
     public Long confirmor;
 
     /**
-     * <p>The IDs of the notifications that needs to be confirmed. You can call the [QueryNotify](~~427959~~) operation to query notifications for an instance.</p>
+     * <p>The notification IDs.</p>
      */
     @NameInMap("NotifyIdList")
     public String notifyIdListShrink;

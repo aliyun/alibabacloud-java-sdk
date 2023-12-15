@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The result of the whitelist configuration. Valid values:</p>
+     * <p>The result of the IP address whitelist configuration. Valid values:</p>
      * <br>
      * <p>*   **Success**</p>
      * <p>*   **Fail**</p>
@@ -20,13 +20,13 @@ public class ModifyDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
     public String DTCSetResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

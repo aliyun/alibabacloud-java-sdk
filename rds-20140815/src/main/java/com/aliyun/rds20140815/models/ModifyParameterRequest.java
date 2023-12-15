@@ -11,7 +11,7 @@ public class ModifyParameterRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -34,18 +34,21 @@ public class ModifyParameterRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the parameter template.</p>
+     * <p>The parameter template ID.</p>
      * <br>
-     * <p>> *   If you specify this parameter, you do not need to specify **Parameters**.</p>
-     * <p>> *   If the parameter template can be applied only after the instance is restarted, you must specify **Forcerestart**.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   If you specify this parameter, you do not need to specify **Parameters**.</p>
+     * <br>
+     * <p>*   If the parameter template can be applied only after the instance is restarted, you must specify **Forcerestart**.</p>
      */
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;
 
     /**
-     * <p>The JSON strings of parameters and their values. All the parameter values are of the string type. Format: {"Parameter name 1":"Parameter value 1","Parameter name 2":"Parameter value 2"...}. You can call the [DescribeParameterTemplates](~~26284~~) operation to query parameter names and values.</p>
+     * <p>The JSON strings of parameters and their values. All the parameter values are of the string type. Format: {"Parameter name 1":"Parameter value 1","Parameter name 2":"Parameter value 2"...}. You can call the DescribeParameterTemplates operation to query parameter names and values.</p>
      * <br>
-     * <p>> If you specify this parameter, you do not need to specify **ParameterGroupId**.</p>
+     * <p>>  If you specify this parameter, you do not need to specify **ParameterGroupId**.</p>
      */
     @NameInMap("Parameters")
     public String parameters;
@@ -68,8 +71,8 @@ public class ModifyParameterRequest extends TeaModel {
      * <p>The time at which the modification takes effect. Valid values:</p>
      * <br>
      * <p>*   **Immediately**: immediately modifies the parameter. This is the default value.</p>
-     * <p>*   **MaintainTime**: modifies the parameter during the maintenance window of the instance. You can call the [ModifyDBInstanceMaintainTime](~~26249~~) operation to change the maintenance window of the instance.</p>
-     * <p>*   **ScheduleTime**: The modification takes effect at the point in time that you specify. If you specify this value, you must also specify **SwitchTime**.</p>
+     * <p>*   **MaintainTime**: modifies the parameter during the maintenance window of the instance. You can call the ModifyDBInstanceMaintainTime operation to change the maintenance window.</p>
+     * <p>*   **ScheduleTime**: modifies the parameter at the point in time that you specify. If you specify this value, you must also specify **SwitchTime**.</p>
      */
     @NameInMap("SwitchTimeMode")
     public String switchTimeMode;

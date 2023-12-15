@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
-     * <p>An array that consists of ECS security groups.</p>
+     * <p>An array that consists of information about the ECS security group.</p>
      */
     @NameInMap("Items")
     public ModifySecurityGroupConfigurationResponseBodyItems items;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,7 +53,7 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
 
     public static class ModifySecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation extends TeaModel {
         /**
-         * <p>The network type of an ECS security group. Valid values:</p>
+         * <p>The network type of the ECS security group. Valid values:</p>
          * <br>
          * <p>*   **Classic**</p>
          * <p>*   **VPC**</p>
@@ -62,7 +62,7 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
         public String networkType;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

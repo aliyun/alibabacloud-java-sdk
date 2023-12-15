@@ -5,13 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeMarketingActivityRequest extends TeaModel {
     /**
-     * <p>The unique ID (UID) of the Alibaba Cloud account.</p>
+     * <p>The ID of the Alibaba Cloud account.</p>
      */
     @NameInMap("AliUid")
     public Long aliUid;
 
     /**
-     * <p>The BID of the account to which the Anycast EIP belongs.</p>
+     * <p>*   China site: 26842</p>
+     * <p>*   International site: 26888</p>
      */
     @NameInMap("Bid")
     public String bid;
@@ -26,13 +27,13 @@ public class DescribeMarketingActivityRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query region ID of the instance.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -44,7 +45,7 @@ public class DescribeMarketingActivityRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Upgrade Code</p>
+     * <p>The service name.</p>
      */
     @NameInMap("UpgradeCode")
     public String upgradeCode;

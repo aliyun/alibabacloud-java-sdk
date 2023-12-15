@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DeleteGadInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the global active database cluster. You can call the [DescribeGadInstances](~~330105~~) operation to query the ID of the global active database cluster.</p>
+     * <p>The ID of the global active database cluster. You can call the GadInstanceName operation to query the cluster ID.</p>
      */
     @NameInMap("GadInstanceName")
     public String gadInstanceName;
 
     /**
-     * <p>The region ID of the central node of the global active database cluster. You can call the [DescribeRegions](~~330105~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the central node of the global active database cluster. The central node refers to the primary node. You can call the DescribeGadInstances operation to query the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the ID of the resource group.</p>
+     * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class RestoreTableRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to obtain the ID of the backup set.</p>
+     * <p>The backup set ID. You can call the DescribeBackups operation to obtain the backup set ID.</p>
      * <br>
-     * <p>> You must specify at least one of BackupId or **RestoreTime** parameters.</p>
+     * <p>>  You must specify at least one of **BackupId** or **RestoreTime** parameters.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

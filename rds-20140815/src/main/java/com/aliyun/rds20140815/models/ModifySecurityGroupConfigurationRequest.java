@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityGroupConfigurationRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -20,7 +20,7 @@ public class ModifySecurityGroupConfigurationRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the ECS security group. Each RDS instance can be added to up to three security groups. Separate the security group IDs with commas (,). To delete an ECS security group for the RDS instance, leave this parameter empty. You can call the [DescribeSecurityGroups](~~25556~~) operation to query the ECS security group list.</p>
+     * <p>The ID of the ECS security group. Each instance can be added to up to three security groups. Separate the security group IDs with commas (,). To delete an ECS security group for the instance, leave this parameter empty. You can call the DescribeSecurityGroups operation to query the ID of the ECS security group.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;

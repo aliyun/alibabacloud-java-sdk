@@ -23,7 +23,7 @@ public class DeleteDBInstanceRequest extends TeaModel {
      * <p>*   **Lastest**: Only the last archived backup file is retained.</p>
      * <p>*   **All**: All archived backup files are retained.</p>
      * <br>
-     * <p>> This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.</p>
+     * <p>> This parameter is supported only for ApsaraDB RDS for MySQL instance with local disks.</p>
      */
     @NameInMap("ReleasedKeepPolicy")
     public String releasedKeepPolicy;

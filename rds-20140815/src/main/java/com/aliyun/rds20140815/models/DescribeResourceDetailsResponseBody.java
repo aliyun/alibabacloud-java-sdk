@@ -11,67 +11,67 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
     public Long backupDataSize;
 
     /**
-     * <p>The storage that is occupied by log backup files, excluding archived backup files, on the instance. Unit: bytes.</p>
+     * <p>The size of the backup log. Unit: bytes.</p>
      */
     @NameInMap("BackupLogSize")
     public Long backupLogSize;
 
     /**
-     * <p>The storage that is used to store backup files. Unit: bytes. The value -1 indicates that no backup files are stored.</p>
+     * <p>The size of the backup data. Unit: MB.</p>
      */
     @NameInMap("BackupSize")
     public Long backupSize;
 
     /**
-     * <p>Database Storage.</p>
+     * <p>The disk capacity of the instance.</p>
      */
     @NameInMap("DbInstanceStorage")
     public Long dbInstanceStorage;
 
     /**
-     * <p>ProxyInstance name.</p>
+     * <p>The name of the proxy instance.</p>
      */
     @NameInMap("DbProxyInstanceName")
     public String dbProxyInstanceName;
 
     /**
-     * <p>The total storage that is occupied by data files and log files on the instance. Unit: bytes. The value -1 indicates that no data files or log files are stored on the instance.</p>
+     * <p>The total storage used. The value is the sum of the DataSize and LogSize values. Unit: bytes. The value -1 indicates that no data files or log files are stored.</p>
      */
     @NameInMap("DiskUsed")
     public Long diskUsed;
 
     /**
-     * <p>Instance StorageType</p>
+     * <p>The storage type of the instance.</p>
      */
     @NameInMap("InstanceStorageType")
     public String instanceStorageType;
 
     /**
-     * <p>Whitelist Rules.</p>
+     * <p>The rule for the IP address whitelist of the instance.</p>
      */
     @NameInMap("RdsEcsSecurityGroupRel")
     public java.util.List<DescribeResourceDetailsResponseBodyRdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The IP address whitelist of the serverless instance. For more information, see [Use a database client or the CLI to connect to an ApsaraDB RDS for PostgreSQL instance](~~43185~~). If the IP address whitelist contains more than one entry, separate the entries with commas (,). Each entry must be unique. You can specify up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:</p>
+     * <p>The IP address whitelist of the instance. For more information, see [Configure IP address whitelists](~~43185~~). If the returned IP address whitelist contains more than one entry, these entries are separated with commas (,). Each entry is unique and up to 1,000 entries are returned. The entries in the IP address whitelist must be in one of the following formats:</p>
      * <br>
      * <p>*   IP addresses, such as 10.10.XX.XX.</p>
      * <p>*   CIDR blocks, such as 10.10.XX.XX/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.</p>
@@ -83,12 +83,14 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
 
     /**
      * <p>The vSwitch ID.</p>
+     * <br>
+     * <p>>  The vSwitch must belong to the same zone as the instance.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>VPC ID.</p>
+     * <p>The ID of the virtual private cloud (VPC).</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

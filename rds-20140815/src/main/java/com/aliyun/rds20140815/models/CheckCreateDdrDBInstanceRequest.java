@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CheckCreateDdrDBInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set that is used for the restoration. You can call the [DescribeCrossRegionBackups](~~121733~~) operation to query the ID of the backup set.</p>
+     * <p>The ID of the backup set that is used for the restoration. You can call the DescribeCrossRegionBackups operation to query the backup set ID.</p>
      * <br>
-     * <p>> If you set **RestoreType** to **0**, you must also specify this parameter.</p>
+     * <p>>  This parameter must be specified when the **RestoreType** parameter is set to **0**.</p>
      */
     @NameInMap("BackupSetId")
     public String backupSetId;
@@ -48,13 +48,13 @@ public class CheckCreateDdrDBInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the destination instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the destination instance. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) to obtain the ID of the resource group.</p>
+     * <p>The resource group ID. You can call the DescribeDBInstanceAttribute to query the resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -87,7 +87,7 @@ public class CheckCreateDdrDBInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the source instance if you want to restore data to a point in time.</p>
      * <br>
-     * <p>> If you set **RestoreType** to **1**, you must also specify this parameter.</p>
+     * <p>>  This parameter must be specified when the **RestoreType** parameter is set to **1**.</p>
      */
     @NameInMap("SourceDBInstanceName")
     public String sourceDBInstanceName;

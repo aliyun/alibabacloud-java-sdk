@@ -5,19 +5,21 @@ import com.aliyun.tea.*;
 
 public class RestoreDdrTableRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set.</p>
+     * <p>The cross-region backup set ID. You can call the DescribeCrossRegionBackups operation to query the IDs of the backup sets that are available to an instance.</p>
+     * <br>
+     * <p>>  If you set the **RestoreType** parameter to **0**, you must also specify the BackupId parameter.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The source instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -26,13 +28,13 @@ public class RestoreDdrTableRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the destination instance. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -63,9 +65,9 @@ public class RestoreDdrTableRequest extends TeaModel {
     public String restoreType;
 
     /**
-     * <p>The ID of the source instance if you want to restore data to a point in time.</p>
+     * <p>The ID of the source instance whose data you want to restore to a point in time.</p>
      * <br>
-     * <p>> : If you set **RestoreType** to **1**, you must also specify this parameter.</p>
+     * <p>>  If you set the **RestoreType** parameter to **1**, you must also specify the SourceDBInstanceName parameter.</p>
      */
     @NameInMap("SourceDBInstanceName")
     public String sourceDBInstanceName;

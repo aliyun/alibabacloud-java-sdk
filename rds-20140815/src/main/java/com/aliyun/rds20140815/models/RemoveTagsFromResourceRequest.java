@@ -26,13 +26,13 @@ public class RemoveTagsFromResourceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. You can call the [ListResourceGroups](~~158855~~) operation to obtain the ID of the resource group.</p>
+     * <p>The resource group ID. You can call the ListResourceGroups operation to query the resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDBMiniEngineVersionsRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The dedicated cluster ID. You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the ID of the dedicated cluster.</p>
+     * <p>The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.</p>
      */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
@@ -38,7 +38,7 @@ public class DescribeDBMiniEngineVersionsRequest extends TeaModel {
     public String minorVersionTag;
 
     /**
-     * <p>The RDS edition of the instance. Valid values:</p>
+     * <p>The instance edition. Valid values:</p>
      * <br>
      * <p>*   **Basic**: RDS Basic Edition</p>
      * <p>*   **HighAvailability**: RDS High-availability Edition</p>
@@ -48,7 +48,7 @@ public class DescribeDBMiniEngineVersionsRequest extends TeaModel {
     public String nodeType;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

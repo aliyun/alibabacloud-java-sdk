@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudMigrationResultRequest extends TeaModel {
     /**
-     * <p>The ID of the destination instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
@@ -41,13 +41,13 @@ public class DescribeCloudMigrationResultRequest extends TeaModel {
     public Long sourcePort;
 
     /**
-     * <p>The ID of the task. You can obtain the ID of a task from the response that is returned when you call the [CreateCloudMigrationTask](~~411690~~) operation to create the task.</p>
+     * <p>The task ID. You can obtain the task ID from the response that is returned when you call the CreateCloudMigrationTask operation to create the task.</p>
      */
     @NameInMap("TaskId")
     public Long taskId;
 
     /**
-     * <p>The name of the task. You can obtain the ID of a task from the response that is returned when you call the [CreateCloudMigrationTask](~~411690~~) operation to create the task.</p>
+     * <p>The task name. You can obtain the task name from the response that is returned when you call the CreateCloudMigrationTask operation to create the task.</p>
      */
     @NameInMap("TaskName")
     public String taskName;

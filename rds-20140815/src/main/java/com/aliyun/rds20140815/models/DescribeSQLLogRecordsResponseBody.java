@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSQLLogRecordsResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the details about each SQL audit log entry.</p>
+     * <p>The details about each SQL audit log entry.</p>
      */
     @NameInMap("Items")
     public DescribeSQLLogRecordsResponseBodyItems items;
@@ -87,13 +87,13 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          */
         @NameInMap("DBName")
         public String DBName;
 
         /**
-         * <p>The time at which the SQL statement was executed. The time follows the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time at which the SQL statement was executed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("ExecuteTime")
         public String executeTime;
@@ -111,13 +111,13 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         public Long returnRowCounts;
 
         /**
-         * <p>The SQL statement that is executed in the query.</p>
+         * <p>The SQL statement.</p>
          */
         @NameInMap("SQLText")
         public String SQLText;
 
         /**
-         * <p>The ID of the thread.</p>
+         * <p>The thread ID.</p>
          */
         @NameInMap("ThreadID")
         public String threadID;

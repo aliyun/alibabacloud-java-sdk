@@ -114,6 +114,9 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        @NameInMap("ExpireDate")
+        public String expireDate;
+
         /**
          * <p>The expiration status of the minor engine version. Valid values:</p>
          * <br>
@@ -211,6 +214,14 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         }
         public String getEngineVersion() {
             return this.engineVersion;
+        }
+
+        public DescribeDBMiniEngineVersionsResponseBodyMinorVersionItems setExpireDate(String expireDate) {
+            this.expireDate = expireDate;
+            return this;
+        }
+        public String getExpireDate() {
+            return this.expireDate;
         }
 
         public DescribeDBMiniEngineVersionsResponseBodyMinorVersionItems setExpireStatus(String expireStatus) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSQLLogFilesRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeMetaListResponseBody extends TeaModel {
     /**
-     * <p>The name of the instance.</p>
+     * <p>The instance name.</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
-     * <p>An array consisting of the information about the databases and tables whose data is included in the backup set.</p>
+     * <p>The information about the databases and tables whose data is included in the backup set.</p>
      */
     @NameInMap("Items")
     public DescribeMetaListResponseBodyItems items;
@@ -109,19 +109,19 @@ public class DescribeMetaListResponseBody extends TeaModel {
 
     public static class DescribeMetaListResponseBodyItemsMeta extends TeaModel {
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          */
         @NameInMap("Database")
         public String database;
 
         /**
-         * <p>The size of the table. Unit: KB.</p>
+         * <p>The table size. Unit: KB.</p>
          */
         @NameInMap("Size")
         public String size;
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name.</p>
          */
         @NameInMap("Tables")
         public String tables;

@@ -11,7 +11,7 @@ public class DescribeCurrentModifyOrderRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;

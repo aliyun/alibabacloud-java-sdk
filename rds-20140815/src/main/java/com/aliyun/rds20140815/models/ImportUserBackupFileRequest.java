@@ -17,7 +17,7 @@ public class ImportUserBackupFileRequest extends TeaModel {
     public String backupFile;
 
     /**
-     * <p>The region ID of the OSS bucket where the full backup file of the self-managed MySQL database is located. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the OSS bucket where the full backup file of the self-managed MySQL database is located. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("BucketRegion")
     public String bucketRegion;
@@ -38,19 +38,16 @@ public class ImportUserBackupFileRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the DescribeRegions operation to query the most recent region list.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The value of this parameter is the ID of the region in which you want to create the instance.</p>
-     * <br>
-     * <p>*   The value of this parameter must be consistent with the value of **BucketRegion**.</p>
+     * <p>> *   The value of this parameter is the ID of the region in which you want to create the instance.</p>
+     * <p>> *   The value of this parameter must be consistent with the value of **BucketRegion**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the ID of the resource group.</p>
+     * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -64,11 +61,8 @@ public class ImportUserBackupFileRequest extends TeaModel {
     /**
      * <p>The amount of storage that is required to restore the data of the full backup file. Unit: GB.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The default value of this parameter is 5 times the size of the full backup file.</p>
-     * <br>
-     * <p>*   The minimum value of this parameter is 20.</p>
+     * <p>> *   The default value of this parameter is 5 times the size of the full backup file.</p>
+     * <p>> *   The minimum value of this parameter is 20.</p>
      */
     @NameInMap("RestoreSize")
     public Integer restoreSize;
@@ -80,13 +74,10 @@ public class ImportUserBackupFileRequest extends TeaModel {
     public Integer retention;
 
     /**
-     * <p>The ID of the zone. You can call the [DescribeRegions](~~26243~~) operation to query the ID of the zone.</p>
+     * <p>The zone ID. You can call the DescribeRegions operation to query the zone ID.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If you specify this parameter, the system creates a snapshot in single-digit seconds, which greatly reduces the time that is required to import the full backup file.</p>
-     * <br>
-     * <p>*   When you call the [CreateDBInstance](~~26228~~) operation to create an instance by using the full backup file, the instance is created in the zone that you specify for this parameter.</p>
+     * <p>> *   If you specify this parameter, the system creates a snapshot in single-digit seconds, which greatly reduces the time that is required to import the full backup file.</p>
+     * <p>> *   When you call the CreateDBInstance operation to create an instance by using the full backup file, the instance is created in the zone that you specify for this parameter.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

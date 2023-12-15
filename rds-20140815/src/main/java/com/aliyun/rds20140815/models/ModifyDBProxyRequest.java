@@ -14,7 +14,7 @@ public class ModifyDBProxyRequest extends TeaModel {
     public String configDBProxyService;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -34,6 +34,12 @@ public class ModifyDBProxyRequest extends TeaModel {
     public String DBProxyInstanceNum;
 
     /**
+     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     */
+    @NameInMap("DBProxyInstanceType")
+    public String DBProxyInstanceType;
+
+    /**
      * <p>The network type of the instance. Set the value to **VPC**.</p>
      * <br>
      * <p>> This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</p>
@@ -44,8 +50,11 @@ public class ModifyDBProxyRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PersistentConnectionStatus")
+    public String persistentConnectionStatus;
+
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -63,7 +72,7 @@ public class ModifyDBProxyRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the instance belongs. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the VPC ID of the instance.</p>
+     * <p>The ID of the virtual private cloud (VPC) to which the instance belongs. You can call the DescribeDBInstanceAttribute operation to query the VPC ID.</p>
      * <br>
      * <p>>  This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</p>
      */
@@ -71,7 +80,7 @@ public class ModifyDBProxyRequest extends TeaModel {
     public String VPCId;
 
     /**
-     * <p>The vSwitch ID of the instance. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the vSwitch ID of the instance.</p>
+     * <p>The vSwitch ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the vSwitch ID.</p>
      * <br>
      * <p>>  This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</p>
      */
@@ -115,6 +124,14 @@ public class ModifyDBProxyRequest extends TeaModel {
         return this.DBProxyInstanceNum;
     }
 
+    public ModifyDBProxyRequest setDBProxyInstanceType(String DBProxyInstanceType) {
+        this.DBProxyInstanceType = DBProxyInstanceType;
+        return this;
+    }
+    public String getDBProxyInstanceType() {
+        return this.DBProxyInstanceType;
+    }
+
     public ModifyDBProxyRequest setInstanceNetworkType(String instanceNetworkType) {
         this.instanceNetworkType = instanceNetworkType;
         return this;
@@ -129,6 +146,14 @@ public class ModifyDBProxyRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyDBProxyRequest setPersistentConnectionStatus(String persistentConnectionStatus) {
+        this.persistentConnectionStatus = persistentConnectionStatus;
+        return this;
+    }
+    public String getPersistentConnectionStatus() {
+        return this.persistentConnectionStatus;
     }
 
     public ModifyDBProxyRequest setRegionId(String regionId) {

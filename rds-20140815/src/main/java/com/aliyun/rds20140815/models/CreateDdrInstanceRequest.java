@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateDdrInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set that is used for the restoration. You can call the [DescribeCrossRegionBackups](~~121733~~) operation to query the ID of the backup set.</p>
+     * <p>The backup set ID that you want to use for the restoration. You can call the DescribeCrossRegionBackups operation to query backup set ID.</p>
      * <br>
-     * <p>> If you set **RestoreType** to **BackupSet**, you must specify this parameter.</p>
+     * <p>>  This parameter is required when you set the **RestoreType** parameter to **BackupSet**.</p>
      */
     @NameInMap("BackupSetId")
     public String backupSetId;
@@ -36,9 +36,9 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>The name of the instance. The name must be 2 to 256 characters in length. The name can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The instance name. The name must be 2 to 256 characters in length. The value can contain letters, digits, underscores (\_), and hyphens (-), and must start with a letter.</p>
      * <br>
-     * <p>> The name cannot start with http:// or https://.</p>
+     * <p>>  The value cannot start with http:// or https://.</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
@@ -124,19 +124,19 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The private IP address of the destination instance. The private IP address must be within the CIDR block that is supported by the specified vSwitch. The system automatically assigns a private IP address to an instance based on the values of **VPCId** and **VSwitchId**.</p>
+     * <p>The private IP address of the destination instance. The private IP address must be within the CIDR block that is supported by the specified vSwitch. The system automatically assigns an internal IP address based on the values of the **VPCId** and **VSwitchId** parameters.</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
     /**
-     * <p>The region ID of the destination instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the destination instance. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -156,9 +156,9 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String restoreTime;
 
     /**
-     * <p>The method that is used to restore data. Valid values:</p>
+     * <p>The restoration method that you want to use. Valid values:</p>
      * <br>
-     * <p>*   **BackupSet**: restores data from a backup set. If you use this value, you must also specify **BackupSetID**.</p>
+     * <p>*   **BackupSet**: restores data from a backup set. If you use this value, you must also specify **BackupSetId**.</p>
      * <p>*   **BackupTime**: restores data to a point in time. If you use this value, you must also specify **RestoreTime**, **SourceRegion**, and **SourceDBInstanceName**.</p>
      */
     @NameInMap("RestoreType")
@@ -174,9 +174,9 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String securityIPList;
 
     /**
-     * <p>The ID of the source instance if you want to restore data to a point in time.</p>
+     * <p>The source instance ID, which is used if you want to restore data to a point in time.</p>
      * <br>
-     * <p>> If you set **RestoreType** to **BackupTime**, you must specify this parameter.</p>
+     * <p>>  This parameter is required when you set the **RestoreType** parameter to **BackupTime**.</p>
      */
     @NameInMap("SourceDBInstanceName")
     public String sourceDBInstanceName;
@@ -212,17 +212,17 @@ public class CreateDdrInstanceRequest extends TeaModel {
     public String usedTime;
 
     /**
-     * <p>The VPC ID of the instance. This parameter is available only when you set **InstanceNetworkType** to **VPC**.</p>
+     * <p>The VPC ID of the destination instance. This parameter is available only when you set the **InstanceNetworkType** parameter to **VPC**.</p>
      * <br>
-     * <p>> If you specify this parameter, you must also specify **ZoneId**.</p>
+     * <p>>  If you specify this parameter, you must also specify the **ZoneId** parameter.</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
 
     /**
-     * <p>The vSwitch ID of the destination instance. If you specify more than one vSwitch, separate the IDs of the vSwitches with commas (,). This parameter is available only when you set **InstanceNetworkType** to **VPC**.</p>
+     * <p>The vSwitch ID of the destination instance. If you specify more than one vSwitch, separate the IDs of the vSwitches with commas (,). This parameter is available only when you set the **InstanceNetworkType** parameter to **VPC**.</p>
      * <br>
-     * <p>> If you specify this parameter, you must also specify **ZoneId**.</p>
+     * <p>>  If you specify this parameter, you must also specify the **ZoneId** parameter.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

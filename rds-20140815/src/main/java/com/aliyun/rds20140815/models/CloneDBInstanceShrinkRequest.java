@@ -16,11 +16,11 @@ public class CloneDBInstanceShrinkRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The ID of the backup set.</p>
+     * <p>The backup set ID.</p>
      * <br>
-     * <p>You can call the [DescribeBackups](~~26273~~) operation to query the backup sets.</p>
+     * <p>You can call the DescribeBackups operation to query the backup set ID.</p>
      * <br>
-     * <p>> You must specify at least one of the **BackupId** and **RestoreTime** parameters.</p>
+     * <p>>  You must specify at least one of the **BackupId** or **RestoreTime** parameters.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
@@ -51,15 +51,15 @@ public class CloneDBInstanceShrinkRequest extends TeaModel {
      * <br>
      * <p>*   **Basic**: RDS Basic Edition.</p>
      * <p>*   **HighAvailability**: RDS High-availability Edition.</p>
-     * <p>*   **AlwaysOn**: RDS Cluster Edition for SQL Server.</p>
-     * <p>*   **cluster**: RDS Cluster Edition for MySQL.</p>
+     * <p>*   **AlwaysOn**: RDS Cluster Edition for ApsaraDB RDS for SQL Server.</p>
+     * <p>*   **cluster**: RDS Cluster Edition for ApsaraDB RDS for MySQL.</p>
      * <p>*   **Finance**: RDS Enterprise Edition. This edition is available only on the China site (aliyun.com).</p>
      * <br>
-     * <p>**Serverless instance**</p>
+     * <p>**Serverless instances**</p>
      * <br>
-     * <p>*   **serverless_basic**: RDS Serverless Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.</p>
-     * <p>*   **serverless_standard**: RDS Serverless High-availability Edition for MySQL.</p>
-     * <p>*   **serverless_ha**: RDS Serverless High-availability Edition for SQL Server.</p>
+     * <p>*   **serverless_basic**: RDS Basic Edition. This edition is available only for serverless instances that run MySQL and PostgreSQL.</p>
+     * <p>*   **serverless_standard**: RDS High-availability Edition for ApsaraDB RDS for MySQL</p>
+     * <p>*   **serverless_ha**: RDS High-availability Edition for ApsaraDB RDS for SQL Server</p>
      * <br>
      * <p>>  You do not need to configure this parameter. The value of this parameter is the same as that of the original instance.</p>
      */
@@ -162,7 +162,7 @@ public class CloneDBInstanceShrinkRequest extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>The region ID of the new instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -225,9 +225,9 @@ public class CloneDBInstanceShrinkRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The zone ID of the primary instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID of the primary instance. You can call the DescribeRegions operation to query the zone ID.</p>
      * <br>
-     * <p>> By default, the new instance resides in the same region as the original instance.</p>
+     * <p>>  Set this value to the zone ID of the original instance.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

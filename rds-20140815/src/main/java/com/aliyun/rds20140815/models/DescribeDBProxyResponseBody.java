@@ -78,6 +78,9 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;
 
+    @NameInMap("DBProxyPersistentConnectionStatus")
+    public String DBProxyPersistentConnectionStatus;
+
     /**
      * <p>The status of the database proxy.</p>
      * <br>
@@ -188,6 +191,14 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     }
     public String getDBProxyInstanceType() {
         return this.DBProxyInstanceType;
+    }
+
+    public DescribeDBProxyResponseBody setDBProxyPersistentConnectionStatus(String DBProxyPersistentConnectionStatus) {
+        this.DBProxyPersistentConnectionStatus = DBProxyPersistentConnectionStatus;
+        return this;
+    }
+    public String getDBProxyPersistentConnectionStatus() {
+        return this.DBProxyPersistentConnectionStatus;
     }
 
     public DescribeDBProxyResponseBody setDBProxyServiceStatus(String DBProxyServiceStatus) {

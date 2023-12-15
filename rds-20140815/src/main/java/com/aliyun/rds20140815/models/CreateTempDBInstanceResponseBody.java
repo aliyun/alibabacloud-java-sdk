@@ -11,7 +11,7 @@ public class CreateTempDBInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the temporary instance.</p>
+     * <p>The temporary instance ID.</p>
      */
     @NameInMap("TempDBInstanceId")
     public String tempDBInstanceId;

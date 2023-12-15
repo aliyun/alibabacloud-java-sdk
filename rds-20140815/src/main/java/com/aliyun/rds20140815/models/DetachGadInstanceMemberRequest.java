@@ -11,19 +11,19 @@ public class DetachGadInstanceMemberRequest extends TeaModel {
     public String gadInstanceName;
 
     /**
-     * <p>The ID of the instance that serves as the unit node you want to remove. You can call the [DescribeGadInstances](~~330105~~) query the ID of the instance.</p>
+     * <p>The ID of the instance that serves as the unit node you want to remove. You can call the DescribeGadInstances query the instance ID.</p>
      */
     @NameInMap("MemberInstanceName")
     public String memberInstanceName;
 
     /**
-     * <p>The region ID of the central node. You can call the [DescribeGadInstances](~~330105~~) operation to query the information.</p>
+     * <p>The region ID of the central node. You can call the DescribeGadInstances operation to query the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) to obtain the ID of the resource group.</p>
+     * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateGadInstanceMemberRequest extends TeaModel {
     /**
-     * <p>The ID of the central node. You can call the [DescribeGadInstances](~~330105~~) operation to query the ID of the central node.</p>
+     * <p>The ID of the central node . You can call the DescribeGadInstances operation to query the ID.</p>
      */
     @NameInMap("CentralDBInstanceId")
     public String centralDBInstanceId;
 
     /**
-     * <p>The username of the privileged account of the central node. You can call the [DescribeAccounts](~~26265~~) operation to query the privileged account of the central node.</p>
+     * <p>The username of the privileged account of the central node. You can call the DescribeAccounts operation to query the privileged account of the central node.</p>
      */
     @NameInMap("CentralRdsDtsAdminAccount")
     public String centralRdsDtsAdminAccount;
@@ -23,7 +23,7 @@ public class CreateGadInstanceMemberRequest extends TeaModel {
     public String centralRdsDtsAdminPassword;
 
     /**
-     * <p>The region ID of the central node. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the central node. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("CentralRegionId")
     public String centralRegionId;
@@ -43,7 +43,7 @@ public class CreateGadInstanceMemberRequest extends TeaModel {
     public String DBList;
 
     /**
-     * <p>The ID of the global active database cluster. You can call the [DescribeGadInstances](~~330105~~) operation to query the ID of the global active database cluster.</p>
+     * <p>The ID of the global active database cluster. You can call the DescribeGadInstances operation to query the ID.</p>
      */
     @NameInMap("GadInstanceId")
     public String gadInstanceId;
@@ -129,7 +129,7 @@ public class CreateGadInstanceMemberRequest extends TeaModel {
         public String DBInstanceDescription;
 
         /**
-         * <p>The storage capacity of the unit node that you want to create. Unit: GB. You can adjust the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can call the [DescribeAvailableResource](~~134039~~) operation to query the storage capacity range that is supported for a specified instance type in a region.</p>
+         * <p>The storage capacity of the unit node that you want to create. Unit: GB. You can adjust the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the DescribeAvailableResource operation to query the storage capacity range that is available for a specific instance type in a region.</p>
          * <br>
          * <p>**N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.</p>
          */
@@ -141,15 +141,15 @@ public class CreateGadInstanceMemberRequest extends TeaModel {
          * <br>
          * <p>*   **local_ssd**: local SSDs</p>
          * <p>*   **cloud_ssd**: standard SSDs</p>
-         * <p>*   **cloud_essd**: enhanced SSDs (ESSDs) of performance level 1 (PL1)</p>
-         * <p>*   **cloud_essd2**: ESSDs of PL2.</p>
-         * <p>*   **cloud_essd3**: ESSD of PL3.</p>
+         * <p>*   **cloud_essd**: PL1 ESSDs</p>
+         * <p>*   **cloud_essd2**: PL2 ESSDs</p>
+         * <p>*   **cloud_essd3**: PL3 ESSD</p>
          */
         @NameInMap("DBInstanceStorageType")
         public String DBInstanceStorageType;
 
         /**
-         * <p>The instance type of the unit node that you want to create. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can call the [DescribeAvailableResource](~~134039~~) operation to query the available instance types in a region.</p>
+         * <p>The instance type of the unit node that you want to create. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can call the DescribeAvailableResource operation to query the available instance types in a region.</p>
          * <br>
          * <p>**N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.</p>
          */
@@ -205,7 +205,7 @@ public class CreateGadInstanceMemberRequest extends TeaModel {
         public String engineVersion;
 
         /**
-         * <p>The region ID of the unit node that you want to create. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+         * <p>The region ID of the unit node that you want to create. You can call the DescribeRegions operation to query the most recent region list.</p>
          * <br>
          * <p>**N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.</p>
          */
@@ -240,7 +240,7 @@ public class CreateGadInstanceMemberRequest extends TeaModel {
         public String vpcID;
 
         /**
-         * <p>The zone ID of the unit node that you want to create. You can call the [DescribeRegions](~~26243~~) operation to query the ID of the zone.</p>
+         * <p>The zone ID of the unit node that you want to create. You can call the DescribeRegions operation to query zone ID.</p>
          * <br>
          * <p>**N** specifies unit node N. The value of N is an integer that ranges from **1 to 10**. You can create up to 10 unit nodes in a global active database cluster.</p>
          */
@@ -248,7 +248,7 @@ public class CreateGadInstanceMemberRequest extends TeaModel {
         public String zoneID;
 
         /**
-         * <p>The zone ID of the secondary node of the unit node that you want to create. You can call the [DescribeRegions](~~26243~~) operation to query the ID of the zone.</p>
+         * <p>The zone ID of the secondary node of the unit node that you want to create. You can call the DescribeRegions operation to query the zone ID.</p>
          * <br>
          * <p>*   If the value of this parameter is the same as the **zone ID** of the unit node that you want to create, the single-zone deployment method is used.</p>
          * <p>*   If the value of this parameter is different from the **zone ID** of the unit node that you want to create, the multiple-zone deployment method is used.</p>
@@ -259,7 +259,7 @@ public class CreateGadInstanceMemberRequest extends TeaModel {
         public String zoneIDSlave1;
 
         /**
-         * <p>The zone ID of the logger node of the unit node that you want to create. You can call the [DescribeRegions](~~26243~~) operation to query the ID of the zone.</p>
+         * <p>The zone ID of the logger node of the unit node that you want to create. You can call the DescribeRegions operation to query the zone ID.</p>
          * <br>
          * <p>*   If the value of this parameter is the same as the **zone ID** of the unit node that you want to create, the single-zone deployment method is used.</p>
          * <p>*   If the value of this parameter is different from the **zone ID** of the unit node that you want to create, the multiple-zone deployment method is used.</p>

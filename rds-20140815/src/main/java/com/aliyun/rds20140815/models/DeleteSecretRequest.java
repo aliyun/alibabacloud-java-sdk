@@ -11,9 +11,9 @@ public class DeleteSecretRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the instance. You can call the **DescribeDBInstances** operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <br>
-     * <p>> If you specify this parameter, you must also specify **SecretName**.</p>
+     * <p>>  If you specify this parameter, you must also specify the **SecretName** parameter. parameter.</p>
      */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
@@ -30,13 +30,13 @@ public class DeleteSecretRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the **DescribeRegions** operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeSecrets operation to query the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. You can call the **DescribeDBInstanceAttribute** operation to obtain the ID of the resource group.</p>
+     * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -48,9 +48,9 @@ public class DeleteSecretRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account. You can call the **CreateSecret** operation to obtain the value of this parameter.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account. You can call the CreateSecret operation to obtain the value of this parameter.</p>
      * <br>
-     * <p>> You must specify one of **SecretName** and SecretArn.</p>
+     * <p>>  You must specify one of the SecretArn and **SecretName** parameters.</p>
      */
     @NameInMap("SecretArn")
     public String secretArn;

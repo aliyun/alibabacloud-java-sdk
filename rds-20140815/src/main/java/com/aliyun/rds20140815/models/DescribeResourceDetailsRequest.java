@@ -11,7 +11,7 @@ public class DescribeResourceDetailsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the instance You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -20,13 +20,13 @@ public class DescribeResourceDetailsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

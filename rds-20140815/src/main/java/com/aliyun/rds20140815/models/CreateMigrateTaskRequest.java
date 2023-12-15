@@ -27,7 +27,7 @@ public class CreateMigrateTaskRequest extends TeaModel {
     public String checkDBMode;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

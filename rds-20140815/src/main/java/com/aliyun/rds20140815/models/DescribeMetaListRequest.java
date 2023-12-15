@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeMetaListRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set from which you want to restore data. You can call the [DescribeBackups](~~26273~~) operation to query the IDs of backup sets.</p>
+     * <p>The ID of the backup set from which you want to restore data. You can call the DescribeBackups operation to query the backup set ID.</p>
      * <br>
-     * <p>> If you set the **RestoreType** parameter to **BackupSetID**, you must also specify this parameter.</p>
+     * <p>>  This parameter must be specified when the **RestoreType** parameter is set to **BackupSetID**.</p>
      */
     @NameInMap("BackupSetID")
     public Integer backupSetID;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -60,7 +60,7 @@ public class DescribeMetaListRequest extends TeaModel {
     public String pattern;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -72,9 +72,9 @@ public class DescribeMetaListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The point in time to which you want to restore data. The specified point in time must be earlier than the current time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. You can call the [DescribeBackups](~~26273~~) operation to query the restorable time range.</p>
+     * <p>The point in time to which you want to restore data. The specified point in time must be earlier than the current time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. You can call the DescribeBackups operation to query the restorable time range.</p>
      * <br>
-     * <p>> If you set the **RestoreType** parameter to **RestoreTime**, you must also specify this parameter.</p>
+     * <p>>  This parameter must be specified when the **RestoreType** parameter is set to **RestoreTime**.</p>
      */
     @NameInMap("RestoreTime")
     public String restoreTime;

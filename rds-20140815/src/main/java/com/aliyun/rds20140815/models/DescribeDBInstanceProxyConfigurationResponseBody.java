@@ -10,11 +10,10 @@ public class DescribeDBInstanceProxyConfigurationResponseBody extends TeaModel {
      * <p>*   **Enable**</p>
      * <p>*   **Disable**</p>
      * <br>
-     * <p>The return value is a JSON string. Examples:</p>
+     * <p>The return value is a JSON string. Example:</p>
      * <br>
-     * <p>{"status":"Disable", "check_interval_seconds": 60,</p>
-     * <br>
-     * <p>"max_failed_login_attempts": 60, "blocking_seconds": 600}</p>
+     * <p>    {"status":"Disable", "check_interval_seconds": 60,</p>
+     * <p>              "max_failed_login_attempts": 60, "blocking_seconds": 600}</p>
      * <br>
      * <p>Description:</p>
      * <br>
@@ -35,15 +34,15 @@ public class DescribeDBInstanceProxyConfigurationResponseBody extends TeaModel {
      * <p>*   **Enable**</p>
      * <p>*   **Disable**</p>
      * <br>
-     * <p>The return value is a JSON string. Example:</p>
+     * <p>In this case, the return value is a JSON string. Examples:</p>
      * <br>
-     * <p>{"status":"Disable"}.</p>
+     * <p>    {"status":"Disable"}.</p>
      */
     @NameInMap("PersistentConnectionsConfiguration")
     public String persistentConnectionsConfiguration;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -56,7 +55,7 @@ public class DescribeDBInstanceProxyConfigurationResponseBody extends TeaModel {
      * <br>
      * <p>The return value is a JSON string. Example:</p>
      * <br>
-     * <p>{"status":"Enable"}.</p>
+     * <p>    {"status":"Enable"}</p>
      */
     @NameInMap("TransparentSwitchConfiguration")
     public String transparentSwitchConfiguration;

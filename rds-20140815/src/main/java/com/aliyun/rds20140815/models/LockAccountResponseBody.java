@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LockAccountResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
