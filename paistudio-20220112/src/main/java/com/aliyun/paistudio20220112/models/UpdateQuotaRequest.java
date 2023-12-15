@@ -10,6 +10,9 @@ public class UpdateQuotaRequest extends TeaModel {
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
+    @NameInMap("QueueStrategy")
+    public String queueStrategy;
+
     public static UpdateQuotaRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateQuotaRequest self = new UpdateQuotaRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class UpdateQuotaRequest extends TeaModel {
     }
     public java.util.List<Label> getLabels() {
         return this.labels;
+    }
+
+    public UpdateQuotaRequest setQueueStrategy(String queueStrategy) {
+        this.queueStrategy = queueStrategy;
+        return this;
+    }
+    public String getQueueStrategy() {
+        return this.queueStrategy;
     }
 
 }
