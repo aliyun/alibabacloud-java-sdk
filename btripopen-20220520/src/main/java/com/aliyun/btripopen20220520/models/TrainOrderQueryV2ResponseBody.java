@@ -142,6 +142,9 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         @NameInMap("ticket_no")
         public String ticketNo;
 
+        @NameInMap("ticket_status")
+        public Integer ticketStatus;
+
         @NameInMap("to_city_name")
         public String toCityName;
 
@@ -317,6 +320,14 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         }
         public String getTicketNo() {
             return this.ticketNo;
+        }
+
+        public TrainOrderQueryV2ResponseBodyModuleChangeTicketInfoList setTicketStatus(Integer ticketStatus) {
+            this.ticketStatus = ticketStatus;
+            return this;
+        }
+        public Integer getTicketStatus() {
+            return this.ticketStatus;
         }
 
         public TrainOrderQueryV2ResponseBodyModuleChangeTicketInfoList setToCityName(String toCityName) {

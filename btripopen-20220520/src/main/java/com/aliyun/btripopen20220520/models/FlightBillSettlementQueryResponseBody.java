@@ -85,6 +85,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("airline_corp_name")
         public String airlineCorpName;
 
+        @NameInMap("alipay_id")
+        public String alipayId;
+
         @NameInMap("alipay_trade_no")
         public String alipayTradeNo;
 
@@ -391,6 +394,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getAirlineCorpName() {
             return this.airlineCorpName;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModuleDataList setAlipayId(String alipayId) {
+            this.alipayId = alipayId;
+            return this;
+        }
+        public String getAlipayId() {
+            return this.alipayId;
         }
 
         public FlightBillSettlementQueryResponseBodyModuleDataList setAlipayTradeNo(String alipayTradeNo) {
