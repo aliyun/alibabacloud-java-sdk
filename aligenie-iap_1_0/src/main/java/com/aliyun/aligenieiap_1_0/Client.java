@@ -3,55 +3,33 @@ package com.aliyun.aligenieiap_1_0;
 
 import com.aliyun.tea.*;
 import com.aliyun.aligenieiap_1_0.models.*;
-import com.aliyun.teautil.*;
-import com.aliyun.teautil.models.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.openapiutil.*;
-import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "";
-        this.checkConfig(config);
-        this._endpoint = this.getEndpoint("aligenie", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
-    }
-
-
-    public String getEndpoint(String productId, String regionId, String endpointRule, String network, String suffix, java.util.Map<String, String> endpointMap, String endpoint) throws Exception {
-        if (!com.aliyun.teautil.Common.empty(endpoint)) {
-            return endpoint;
+        if (com.aliyun.teautil.Common.empty(_endpoint)) {
+            this._endpoint = "openapi.aligenie.com/v1.0/iap";
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(endpointMap) && !com.aliyun.teautil.Common.empty(endpointMap.get(regionId))) {
-            return endpointMap.get(regionId);
-        }
-
-        return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public AppUseTimeReportResponse appUseTimeReport(AppUseTimeReportRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        AppUseTimeReportHeaders headers = new AppUseTimeReportHeaders();
-        return this.appUseTimeReportWithOptions(request, headers, runtime);
-    }
 
-    public AppUseTimeReportResponse appUseTimeReportWithOptions(AppUseTimeReportRequest tmpReq, AppUseTimeReportHeaders headers, RuntimeOptions runtime) throws Exception {
+    public AppUseTimeReportResponse appUseTimeReportWithOptions(AppUseTimeReportRequest tmpReq, AppUseTimeReportHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         AppUseTimeReportShrinkRequest request = new AppUseTimeReportShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.deviceInfo))) {
-            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.deviceInfo), "DeviceInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.deviceInfo)) {
+            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deviceInfo, "DeviceInfo", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.payload))) {
-            request.payloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.payload), "Payload", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.payload)) {
+            request.payloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.payload, "Payload", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.userInfo))) {
-            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.userInfo), "UserInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userInfo)) {
+            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userInfo, "UserInfo", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -80,11 +58,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "AppUseTimeReport"),
             new TeaPair("version", "iap_1.0"),
             new TeaPair("protocol", "HTTPS"),
@@ -98,26 +76,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AppUseTimeReportResponse());
     }
 
-    public CreateReminderResponse createReminder(CreateReminderRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        CreateReminderHeaders headers = new CreateReminderHeaders();
-        return this.createReminderWithOptions(request, headers, runtime);
+    public AppUseTimeReportResponse appUseTimeReport(AppUseTimeReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        AppUseTimeReportHeaders headers = new AppUseTimeReportHeaders();
+        return this.appUseTimeReportWithOptions(request, headers, runtime);
     }
 
-    public CreateReminderResponse createReminderWithOptions(CreateReminderRequest tmpReq, CreateReminderHeaders headers, RuntimeOptions runtime) throws Exception {
+    public CreateReminderResponse createReminderWithOptions(CreateReminderRequest tmpReq, CreateReminderHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateReminderShrinkRequest request = new CreateReminderShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.deviceInfo))) {
-            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.deviceInfo), "DeviceInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.deviceInfo)) {
+            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deviceInfo, "DeviceInfo", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.payload))) {
-            request.payloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.payload), "Payload", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.payload)) {
+            request.payloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.payload, "Payload", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.userInfo))) {
-            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.userInfo), "UserInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userInfo)) {
+            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userInfo, "UserInfo", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -146,11 +124,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateReminder"),
             new TeaPair("version", "iap_1.0"),
             new TeaPair("protocol", "HTTPS"),
@@ -164,26 +142,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateReminderResponse());
     }
 
-    public DeleteReminderResponse deleteReminder(DeleteReminderRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        DeleteReminderHeaders headers = new DeleteReminderHeaders();
-        return this.deleteReminderWithOptions(request, headers, runtime);
+    public CreateReminderResponse createReminder(CreateReminderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CreateReminderHeaders headers = new CreateReminderHeaders();
+        return this.createReminderWithOptions(request, headers, runtime);
     }
 
-    public DeleteReminderResponse deleteReminderWithOptions(DeleteReminderRequest tmpReq, DeleteReminderHeaders headers, RuntimeOptions runtime) throws Exception {
+    public DeleteReminderResponse deleteReminderWithOptions(DeleteReminderRequest tmpReq, DeleteReminderHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DeleteReminderShrinkRequest request = new DeleteReminderShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.deviceInfo))) {
-            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.deviceInfo), "DeviceInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.deviceInfo)) {
+            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deviceInfo, "DeviceInfo", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.payload))) {
-            request.payloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.payload), "Payload", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.payload)) {
+            request.payloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.payload, "Payload", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.userInfo))) {
-            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.userInfo), "UserInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userInfo)) {
+            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userInfo, "UserInfo", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -212,11 +190,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteReminder"),
             new TeaPair("version", "iap_1.0"),
             new TeaPair("protocol", "HTTPS"),
@@ -230,26 +208,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteReminderResponse());
     }
 
-    public GetAccountForAppResponse getAccountForApp(GetAccountForAppRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        GetAccountForAppHeaders headers = new GetAccountForAppHeaders();
-        return this.getAccountForAppWithOptions(request, headers, runtime);
+    public DeleteReminderResponse deleteReminder(DeleteReminderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        DeleteReminderHeaders headers = new DeleteReminderHeaders();
+        return this.deleteReminderWithOptions(request, headers, runtime);
     }
 
-    public GetAccountForAppResponse getAccountForAppWithOptions(GetAccountForAppRequest tmpReq, GetAccountForAppHeaders headers, RuntimeOptions runtime) throws Exception {
+    public GetAccountForAppResponse getAccountForAppWithOptions(GetAccountForAppRequest tmpReq, GetAccountForAppHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetAccountForAppShrinkRequest request = new GetAccountForAppShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.deviceInfo))) {
-            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.deviceInfo), "DeviceInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.deviceInfo)) {
+            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deviceInfo, "DeviceInfo", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.payload))) {
-            request.payloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.payload), "Payload", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.payload)) {
+            request.payloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.payload, "Payload", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.userInfo))) {
-            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.userInfo), "UserInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userInfo)) {
+            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userInfo, "UserInfo", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -278,11 +256,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetAccountForApp"),
             new TeaPair("version", "iap_1.0"),
             new TeaPair("protocol", "HTTPS"),
@@ -296,22 +274,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAccountForAppResponse());
     }
 
-    public GetPhoneNumberResponse getPhoneNumber(GetPhoneNumberRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        GetPhoneNumberHeaders headers = new GetPhoneNumberHeaders();
-        return this.getPhoneNumberWithOptions(request, headers, runtime);
+    public GetAccountForAppResponse getAccountForApp(GetAccountForAppRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetAccountForAppHeaders headers = new GetAccountForAppHeaders();
+        return this.getAccountForAppWithOptions(request, headers, runtime);
     }
 
-    public GetPhoneNumberResponse getPhoneNumberWithOptions(GetPhoneNumberRequest tmpReq, GetPhoneNumberHeaders headers, RuntimeOptions runtime) throws Exception {
+    public GetPhoneNumberResponse getPhoneNumberWithOptions(GetPhoneNumberRequest tmpReq, GetPhoneNumberHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetPhoneNumberShrinkRequest request = new GetPhoneNumberShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.deviceInfo))) {
-            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.deviceInfo), "DeviceInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.deviceInfo)) {
+            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deviceInfo, "DeviceInfo", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.userInfo))) {
-            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.userInfo), "UserInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userInfo)) {
+            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userInfo, "UserInfo", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -336,11 +314,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetPhoneNumber"),
             new TeaPair("version", "iap_1.0"),
             new TeaPair("protocol", "HTTPS"),
@@ -354,26 +332,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetPhoneNumberResponse());
     }
 
-    public GetReminderResponse getReminder(GetReminderRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        GetReminderHeaders headers = new GetReminderHeaders();
-        return this.getReminderWithOptions(request, headers, runtime);
+    public GetPhoneNumberResponse getPhoneNumber(GetPhoneNumberRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetPhoneNumberHeaders headers = new GetPhoneNumberHeaders();
+        return this.getPhoneNumberWithOptions(request, headers, runtime);
     }
 
-    public GetReminderResponse getReminderWithOptions(GetReminderRequest tmpReq, GetReminderHeaders headers, RuntimeOptions runtime) throws Exception {
+    public GetReminderResponse getReminderWithOptions(GetReminderRequest tmpReq, GetReminderHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetReminderShrinkRequest request = new GetReminderShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.deviceInfo))) {
-            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.deviceInfo), "DeviceInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.deviceInfo)) {
+            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deviceInfo, "DeviceInfo", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.payload))) {
-            request.payloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.payload), "Payload", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.payload)) {
+            request.payloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.payload, "Payload", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.userInfo))) {
-            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.userInfo), "UserInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userInfo)) {
+            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userInfo, "UserInfo", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -402,11 +380,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetReminder"),
             new TeaPair("version", "iap_1.0"),
             new TeaPair("protocol", "HTTPS"),
@@ -420,26 +398,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetReminderResponse());
     }
 
-    public ListRemindersResponse listReminders(ListRemindersRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        ListRemindersHeaders headers = new ListRemindersHeaders();
-        return this.listRemindersWithOptions(request, headers, runtime);
+    public GetReminderResponse getReminder(GetReminderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetReminderHeaders headers = new GetReminderHeaders();
+        return this.getReminderWithOptions(request, headers, runtime);
     }
 
-    public ListRemindersResponse listRemindersWithOptions(ListRemindersRequest tmpReq, ListRemindersHeaders headers, RuntimeOptions runtime) throws Exception {
+    public ListRemindersResponse listRemindersWithOptions(ListRemindersRequest tmpReq, ListRemindersHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListRemindersShrinkRequest request = new ListRemindersShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.deviceInfo))) {
-            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.deviceInfo), "DeviceInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.deviceInfo)) {
+            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deviceInfo, "DeviceInfo", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.payload))) {
-            request.payloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.payload), "Payload", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.payload)) {
+            request.payloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.payload, "Payload", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.userInfo))) {
-            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.userInfo), "UserInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userInfo)) {
+            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userInfo, "UserInfo", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -468,11 +446,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListReminders"),
             new TeaPair("version", "iap_1.0"),
             new TeaPair("protocol", "HTTPS"),
@@ -486,26 +464,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListRemindersResponse());
     }
 
-    public PullCashierResponse pullCashier(PullCashierRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        PullCashierHeaders headers = new PullCashierHeaders();
-        return this.pullCashierWithOptions(request, headers, runtime);
+    public ListRemindersResponse listReminders(ListRemindersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ListRemindersHeaders headers = new ListRemindersHeaders();
+        return this.listRemindersWithOptions(request, headers, runtime);
     }
 
-    public PullCashierResponse pullCashierWithOptions(PullCashierRequest tmpReq, PullCashierHeaders headers, RuntimeOptions runtime) throws Exception {
+    public PullCashierResponse pullCashierWithOptions(PullCashierRequest tmpReq, PullCashierHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         PullCashierShrinkRequest request = new PullCashierShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.deviceInfo))) {
-            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.deviceInfo), "DeviceInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.deviceInfo)) {
+            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deviceInfo, "DeviceInfo", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.payload))) {
-            request.payloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.payload), "Payload", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.payload)) {
+            request.payloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.payload, "Payload", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.userInfo))) {
-            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.userInfo), "UserInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userInfo)) {
+            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userInfo, "UserInfo", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -534,11 +512,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PullCashier"),
             new TeaPair("version", "iap_1.0"),
             new TeaPair("protocol", "HTTPS"),
@@ -552,22 +530,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PullCashierResponse());
     }
 
-    public PushNotificationsResponse pushNotifications(PushNotificationsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        PushNotificationsHeaders headers = new PushNotificationsHeaders();
-        return this.pushNotificationsWithOptions(request, headers, runtime);
+    public PullCashierResponse pullCashier(PullCashierRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        PullCashierHeaders headers = new PullCashierHeaders();
+        return this.pullCashierWithOptions(request, headers, runtime);
     }
 
-    public PushNotificationsResponse pushNotificationsWithOptions(PushNotificationsRequest tmpReq, PushNotificationsHeaders headers, RuntimeOptions runtime) throws Exception {
+    public PushNotificationsResponse pushNotificationsWithOptions(PushNotificationsRequest tmpReq, PushNotificationsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         PushNotificationsShrinkRequest request = new PushNotificationsShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.notificationUnicastRequest))) {
-            request.notificationUnicastRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.notificationUnicastRequest), "NotificationUnicastRequest", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notificationUnicastRequest)) {
+            request.notificationUnicastRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notificationUnicastRequest, "NotificationUnicastRequest", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.tenantInfo))) {
-            request.tenantInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.tenantInfo), "TenantInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantInfo)) {
+            request.tenantInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantInfo, "TenantInfo", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -592,11 +570,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PushNotifications"),
             new TeaPair("version", "iap_1.0"),
             new TeaPair("protocol", "HTTPS"),
@@ -610,30 +588,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PushNotificationsResponse());
     }
 
-    public SendNotificationsResponse sendNotifications(SendNotificationsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        SendNotificationsHeaders headers = new SendNotificationsHeaders();
-        return this.sendNotificationsWithOptions(request, headers, runtime);
+    public PushNotificationsResponse pushNotifications(PushNotificationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        PushNotificationsHeaders headers = new PushNotificationsHeaders();
+        return this.pushNotificationsWithOptions(request, headers, runtime);
     }
 
-    public SendNotificationsResponse sendNotificationsWithOptions(SendNotificationsRequest tmpReq, SendNotificationsHeaders headers, RuntimeOptions runtime) throws Exception {
+    public SendNotificationsResponse sendNotificationsWithOptions(SendNotificationsRequest tmpReq, SendNotificationsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SendNotificationsShrinkRequest request = new SendNotificationsShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.deviceInfo))) {
-            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.deviceInfo), "DeviceInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.deviceInfo)) {
+            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deviceInfo, "DeviceInfo", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.notificationUnicastRequest))) {
-            request.notificationUnicastRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.notificationUnicastRequest), "NotificationUnicastRequest", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notificationUnicastRequest)) {
+            request.notificationUnicastRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notificationUnicastRequest, "NotificationUnicastRequest", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.tenantInfo))) {
-            request.tenantInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.tenantInfo), "TenantInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantInfo)) {
+            request.tenantInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantInfo, "TenantInfo", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.userInfo))) {
-            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.userInfo), "UserInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userInfo)) {
+            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userInfo, "UserInfo", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -666,11 +644,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SendNotifications"),
             new TeaPair("version", "iap_1.0"),
             new TeaPair("protocol", "HTTPS"),
@@ -684,26 +662,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SendNotificationsResponse());
     }
 
-    public UpdateReminderResponse updateReminder(UpdateReminderRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        UpdateReminderHeaders headers = new UpdateReminderHeaders();
-        return this.updateReminderWithOptions(request, headers, runtime);
+    public SendNotificationsResponse sendNotifications(SendNotificationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        SendNotificationsHeaders headers = new SendNotificationsHeaders();
+        return this.sendNotificationsWithOptions(request, headers, runtime);
     }
 
-    public UpdateReminderResponse updateReminderWithOptions(UpdateReminderRequest tmpReq, UpdateReminderHeaders headers, RuntimeOptions runtime) throws Exception {
+    public UpdateReminderResponse updateReminderWithOptions(UpdateReminderRequest tmpReq, UpdateReminderHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateReminderShrinkRequest request = new UpdateReminderShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.deviceInfo))) {
-            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.deviceInfo), "DeviceInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.deviceInfo)) {
+            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deviceInfo, "DeviceInfo", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.payload))) {
-            request.payloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.payload), "Payload", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.payload)) {
+            request.payloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.payload, "Payload", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.userInfo))) {
-            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.userInfo), "UserInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userInfo)) {
+            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userInfo, "UserInfo", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -732,11 +710,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateReminder"),
             new TeaPair("version", "iap_1.0"),
             new TeaPair("protocol", "HTTPS"),
@@ -750,26 +728,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateReminderResponse());
     }
 
-    public VideoAppReportResponse videoAppReport(VideoAppReportRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        VideoAppReportHeaders headers = new VideoAppReportHeaders();
-        return this.videoAppReportWithOptions(request, headers, runtime);
+    public UpdateReminderResponse updateReminder(UpdateReminderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        UpdateReminderHeaders headers = new UpdateReminderHeaders();
+        return this.updateReminderWithOptions(request, headers, runtime);
     }
 
-    public VideoAppReportResponse videoAppReportWithOptions(VideoAppReportRequest tmpReq, VideoAppReportHeaders headers, RuntimeOptions runtime) throws Exception {
+    public VideoAppReportResponse videoAppReportWithOptions(VideoAppReportRequest tmpReq, VideoAppReportHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         VideoAppReportShrinkRequest request = new VideoAppReportShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.deviceInfo))) {
-            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.deviceInfo), "DeviceInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.deviceInfo)) {
+            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deviceInfo, "DeviceInfo", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.payload))) {
-            request.payloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.payload), "Payload", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.payload)) {
+            request.payloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.payload, "Payload", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.userInfo))) {
-            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.userInfo), "UserInfo", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userInfo)) {
+            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userInfo, "UserInfo", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -798,11 +776,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "VideoAppReport"),
             new TeaPair("version", "iap_1.0"),
             new TeaPair("protocol", "HTTPS"),
@@ -816,13 +794,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new VideoAppReportResponse());
     }
 
-    public WakeUpAppResponse wakeUpApp(WakeUpAppRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        WakeUpAppHeaders headers = new WakeUpAppHeaders();
-        return this.wakeUpAppWithOptions(request, headers, runtime);
+    public VideoAppReportResponse videoAppReport(VideoAppReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        VideoAppReportHeaders headers = new VideoAppReportHeaders();
+        return this.videoAppReportWithOptions(request, headers, runtime);
     }
 
-    public WakeUpAppResponse wakeUpAppWithOptions(WakeUpAppRequest request, WakeUpAppHeaders headers, RuntimeOptions runtime) throws Exception {
+    public WakeUpAppResponse wakeUpAppWithOptions(WakeUpAppRequest request, WakeUpAppHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.isDebug)) {
@@ -833,7 +811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Path", request.path);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.targetInfo))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.targetInfo)) {
             body.put("TargetInfo", request.targetInfo);
         }
 
@@ -850,11 +828,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "WakeUpApp"),
             new TeaPair("version", "iap_1.0"),
             new TeaPair("protocol", "HTTPS"),
@@ -866,5 +844,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new WakeUpAppResponse());
+    }
+
+    public WakeUpAppResponse wakeUpApp(WakeUpAppRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        WakeUpAppHeaders headers = new WakeUpAppHeaders();
+        return this.wakeUpAppWithOptions(request, headers, runtime);
     }
 }

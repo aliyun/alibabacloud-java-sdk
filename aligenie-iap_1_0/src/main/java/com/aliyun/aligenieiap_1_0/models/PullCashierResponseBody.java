@@ -4,11 +4,9 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class PullCashierResponseBody extends TeaModel {
-    // 错误吗
     @NameInMap("RetCode")
     public Integer retCode;
 
-    // 错误信息
     @NameInMap("RetMsg")
     public String retMsg;
 

@@ -4,19 +4,15 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetReminderResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    // 错误信息
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
-    // 提醒信息
     @NameInMap("Model")
     public GetReminderResponseBodyModel model;
 
-    // 服务成功标识
     @NameInMap("Success")
     public Boolean success;
 
@@ -58,47 +54,36 @@ public class GetReminderResponseBody extends TeaModel {
     }
 
     public static class GetReminderResponseBodyModelRemindResponsesRecurrenceRule extends TeaModel {
-        // 天
         @NameInMap("Day")
         public Integer day;
 
-        // 月的第几天 可用作月循环
         @NameInMap("DaysOfMonth")
         public java.util.List<Integer> daysOfMonth;
 
-        // 周循环字段，取值范围：1-7
         @NameInMap("DaysOfWeek")
         public java.util.List<Integer> daysOfWeek;
 
-        // 调度结束时间
         @NameInMap("EndDateTime")
         public String endDateTime;
 
-        // 调度类型
         @NameInMap("Freq")
         public String freq;
 
-        // 小时
         @NameInMap("Hour")
         public Integer hour;
 
-        // 分
         @NameInMap("Minute")
         public Integer minute;
 
-        // 月
         @NameInMap("Month")
         public Integer month;
 
-        // 秒
         @NameInMap("Second")
         public Integer second;
 
-        // 调度开始时间
         @NameInMap("StartDateTime")
         public String startDateTime;
 
-        // 年
         @NameInMap("Year")
         public Integer year;
 
@@ -198,31 +183,24 @@ public class GetReminderResponseBody extends TeaModel {
     }
 
     public static class GetReminderResponseBodyModelRemindResponses extends TeaModel {
-        // 执行动作topic
         @NameInMap("ActionTopic")
         public String actionTopic;
 
-        // 触发条件描述
         @NameInMap("DayDesc")
         public String dayDesc;
 
-        // 调度信息
         @NameInMap("RecurrenceRule")
         public GetReminderResponseBodyModelRemindResponsesRecurrenceRule recurrenceRule;
 
-        // 提醒id
         @NameInMap("RemindId")
         public Long remindId;
 
-        // 下次提醒时间
         @NameInMap("RemindTime")
         public String remindTime;
 
-        // 重复次数
         @NameInMap("RepeatCount")
         public Integer repeatCount;
 
-        // 触发为周几
         @NameInMap("Week")
         public String week;
 
@@ -290,7 +268,6 @@ public class GetReminderResponseBody extends TeaModel {
     }
 
     public static class GetReminderResponseBodyModel extends TeaModel {
-        // 提醒信息
         @NameInMap("RemindResponses")
         public java.util.List<GetReminderResponseBodyModelRemindResponses> remindResponses;
 

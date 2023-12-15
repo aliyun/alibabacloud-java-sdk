@@ -4,11 +4,9 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class PushNotificationsShrinkRequest extends TeaModel {
-    // 消息推送入参对象。
     @NameInMap("NotificationUnicastRequest")
     public String notificationUnicastRequestShrink;
 
-    // 身份信息。
     @NameInMap("TenantInfo")
     public String tenantInfoShrink;
 

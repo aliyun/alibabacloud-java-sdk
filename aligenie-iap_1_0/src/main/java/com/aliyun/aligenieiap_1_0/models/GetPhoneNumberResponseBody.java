@@ -4,7 +4,6 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetPhoneNumberResponseBody extends TeaModel {
-    // 用户手机号
     @NameInMap("phoneNumber")
     public String phoneNumber;
 

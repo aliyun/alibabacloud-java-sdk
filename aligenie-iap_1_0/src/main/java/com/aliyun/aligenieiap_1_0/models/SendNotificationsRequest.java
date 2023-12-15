@@ -4,19 +4,15 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class SendNotificationsRequest extends TeaModel {
-    // 设备标识信息
     @NameInMap("DeviceInfo")
     public SendNotificationsRequestDeviceInfo deviceInfo;
 
-    // 消息推送入参对象。
     @NameInMap("NotificationUnicastRequest")
     public SendNotificationsRequestNotificationUnicastRequest notificationUnicastRequest;
 
-    // 身份信息。
     @NameInMap("TenantInfo")
     public SendNotificationsRequestTenantInfo tenantInfo;
 
-    // 用户标识信息
     @NameInMap("UserInfo")
     public SendNotificationsRequestUserInfo userInfo;
 
@@ -58,23 +54,18 @@ public class SendNotificationsRequest extends TeaModel {
     }
 
     public static class SendNotificationsRequestDeviceInfo extends TeaModel {
-        // 编码类型对应的值，编码类型是SKILL_ID时，其值为应用的Skill ID； 编码类型是PACKAGE_NAME时，其值为对应客户端App的packageName。
         @NameInMap("EncodeKey")
         public String encodeKey;
 
-        // 编码类型，获取猫精的设备标识的途径有多种，不同途径对应不同的编码类型 - PACKAGE_NAME：apk包名，Android应用客户链路的编码类型 - SKILL_ID：技能ID，云端链路的编码类型
         @NameInMap("EncodeType")
         public String encodeType;
 
-        // 设备标识（deviceOpenId或deviceUnionId）
         @NameInMap("Id")
         public String id;
 
-        // 设备Id的类型 - OPEN_ID：默认的设备ID标识 - UNION_ID: 组织维度的设备ID标识，在猫精技能应用开放平台申请过组织后才会有
         @NameInMap("IdType")
         public String idType;
 
-        // 组织ID，如果IdType为UNION_ID时必填
         @NameInMap("OrganizationId")
         public String organizationId;
 
@@ -134,19 +125,15 @@ public class SendNotificationsRequest extends TeaModel {
     }
 
     public static class SendNotificationsRequestNotificationUnicastRequest extends TeaModel {
-        // 调试标识
         @NameInMap("IsDebug")
         public Boolean isDebug;
 
-        // 消息模板，在天猫精灵应用平台中申请消息模板时得到的模板id。
         @NameInMap("MessageTemplateId")
         public String messageTemplateId;
 
-        // 占位符信息，例如：模板是【你好，{nick}！】这里可以是：{"nick":"小甜甜"}
         @NameInMap("PlaceHolder")
         public java.util.Map<String, String> placeHolder;
 
-        // 消息推送的目标信息。
         @NameInMap("SendTarget")
         public SendNotificationsRequestNotificationUnicastRequestSendTarget sendTarget;
 
@@ -198,23 +185,18 @@ public class SendNotificationsRequest extends TeaModel {
     }
 
     public static class SendNotificationsRequestUserInfo extends TeaModel {
-        // 编码类型对应的值，编码类型是SKILL_ID时，其值为应用的Skill ID； 编码类型是PACKAGE_NAME时，其值为对应客户端App的packageName。
         @NameInMap("EncodeKey")
         public String encodeKey;
 
-        // 编码类型，获取猫精的用户标识的途径有多种，不同途径对应不同的编码类型 - PACKAGE_NAME：apk包名，Android应用客户链路的编码类型 - SKILL_ID：技能ID，云端链路的编码类型
         @NameInMap("EncodeType")
         public String encodeType;
 
-        // 用户标识（userOpenId或userUnionId）
         @NameInMap("Id")
         public String id;
 
-        // 用户Id的类型 - OPEN_ID：默认的用户ID标识 - UNION_ID: 组织维度的用户ID标识，在猫精技能应用开放平台申请过组织后才会有
         @NameInMap("IdType")
         public String idType;
 
-        // 组织ID，如果IdType为UNION_ID时必填
         @NameInMap("OrganizationId")
         public String organizationId;
 

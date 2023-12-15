@@ -4,15 +4,12 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class CreateReminderRequest extends TeaModel {
-    // 设备标识信息
     @NameInMap("DeviceInfo")
     public CreateReminderRequestDeviceInfo deviceInfo;
 
-    // 服务请求入参
     @NameInMap("Payload")
     public CreateReminderRequestPayload payload;
 
-    // 用户标识信息
     @NameInMap("UserInfo")
     public CreateReminderRequestUserInfo userInfo;
 
@@ -46,23 +43,18 @@ public class CreateReminderRequest extends TeaModel {
     }
 
     public static class CreateReminderRequestDeviceInfo extends TeaModel {
-        // 编码类型对应的值，编码类型是SKILL_ID时，其值为应用的Skill ID； 编码类型是PACKAGE_NAME时，其值为对应客户端App的packageName。
         @NameInMap("EncodeKey")
         public String encodeKey;
 
-        // 编码类型，获取猫精的设备标识的途径有多种，不同途径对应不同的编码类型 - PACKAGE_NAME：apk包名，Android应用客户链路的编码类型 - SKILL_ID：技能ID，云端链路的编码类型
         @NameInMap("EncodeType")
         public String encodeType;
 
-        // 设备标识（deviceOpenId或deviceUnionId）
         @NameInMap("Id")
         public String id;
 
-        // 设备Id的类型 - OPEN_ID：默认的设备ID标识 - UNION_ID: 组织维度的设备ID标识，在猫精技能应用开放平台申请过组织后才会有
         @NameInMap("IdType")
         public String idType;
 
-        // 组织ID，如果IdType为UNION_ID时必填
         @NameInMap("OrganizationId")
         public String organizationId;
 
@@ -114,47 +106,36 @@ public class CreateReminderRequest extends TeaModel {
     }
 
     public static class CreateReminderRequestPayloadRecurrenceRule extends TeaModel {
-        // 触发时间的日
         @NameInMap("Day")
         public Integer day;
 
-        // 月循环相关，表示每月的几号的集合,数值范围为1-31
         @NameInMap("DaysOfMonth")
         public java.util.List<Integer> daysOfMonth;
 
-        // 周循环相关，表示每周几触发，数值范围为1-7
         @NameInMap("DaysOfWeek")
         public java.util.List<Integer> daysOfWeek;
 
-        // 结束时间，时间戳毫秒
         @NameInMap("EndDateTime")
         public Long endDateTime;
 
-        // 循环类型:支持单次ONCE、每天DAILY、每周WEEKLY、每月MONTHLY
         @NameInMap("Freq")
         public String freq;
 
-        // 触发时间的时
         @NameInMap("Hour")
         public Integer hour;
 
-        // 触发时间的分
         @NameInMap("Minute")
         public Integer minute;
 
-        // 触发时间的月
         @NameInMap("Month")
         public Integer month;
 
-        // 触发时间的秒
         @NameInMap("Second")
         public Integer second;
 
-        // 开始时间，时间戳毫秒
         @NameInMap("StartDateTime")
         public Long startDateTime;
 
-        // 触发时间的年
         @NameInMap("Year")
         public Integer year;
 
@@ -254,15 +235,12 @@ public class CreateReminderRequest extends TeaModel {
     }
 
     public static class CreateReminderRequestPayload extends TeaModel {
-        // 提醒内容
         @NameInMap("Content")
         public String content;
 
-        // 调试标识
         @NameInMap("IsDebug")
         public Boolean isDebug;
 
-        // 提醒调度信息
         @NameInMap("RecurrenceRule")
         public CreateReminderRequestPayloadRecurrenceRule recurrenceRule;
 
@@ -298,23 +276,18 @@ public class CreateReminderRequest extends TeaModel {
     }
 
     public static class CreateReminderRequestUserInfo extends TeaModel {
-        // 编码类型对应的值，编码类型是SKILL_ID时，其值为应用的Skill ID； 编码类型是PACKAGE_NAME时，其值为对应客户端App的packageName。
         @NameInMap("EncodeKey")
         public String encodeKey;
 
-        // 编码类型，获取猫精的用户标识的途径有多种，不同途径对应不同的编码类型 - PACKAGE_NAME：apk包名，Android应用客户链路的编码类型 - SKILL_ID：技能ID，云端链路的编码类型
         @NameInMap("EncodeType")
         public String encodeType;
 
-        // 用户标识（userOpenId或userUnionId）
         @NameInMap("Id")
         public String id;
 
-        // 用户Id的类型 - OPEN_ID：默认的用户ID标识 - UNION_ID: 组织维度的用户ID标识，在猫精技能应用开放平台申请过组织后才会有
         @NameInMap("IdType")
         public String idType;
 
-        // 组织ID，如果IdType为UNION_ID时必填
         @NameInMap("OrganizationId")
         public String organizationId;
 
