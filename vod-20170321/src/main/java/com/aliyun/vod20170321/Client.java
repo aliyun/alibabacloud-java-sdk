@@ -7324,12 +7324,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * > *   Only snapshots in the JPG format are generated.
       * > *   After a snapshot job is complete, ApsaraVideo VOD sends a [SnapshotComplete](~~57337~~) event notification that contains EventType=SnapshotComplete and SubType=SpecifiedTime.
       *
-      * @param request SubmitSnapshotJobRequest
+      * @param tmpReq SubmitSnapshotJobRequest
       * @param runtime runtime options for this request RuntimeOptions
       * @return SubmitSnapshotJobResponse
      */
-    public SubmitSnapshotJobResponse submitSnapshotJobWithOptions(SubmitSnapshotJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public SubmitSnapshotJobResponse submitSnapshotJobWithOptions(SubmitSnapshotJobRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitSnapshotJobShrinkRequest request = new SubmitSnapshotJobShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.specifiedOffsetTimes)) {
+            request.specifiedOffsetTimesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.specifiedOffsetTimes, "SpecifiedOffsetTimes", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.count)) {
             query.put("Count", request.count);
@@ -7349,6 +7355,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.specifiedOffsetTime)) {
             query.put("SpecifiedOffsetTime", request.specifiedOffsetTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.specifiedOffsetTimesShrink)) {
+            query.put("SpecifiedOffsetTimes", request.specifiedOffsetTimesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.spriteSnapshotConfig)) {
