@@ -13,7 +13,7 @@ public class AllocateReadWriteSplittingConnectionRequest extends TeaModel {
     public String connectionStringPrefix;
 
     /**
-     * <p>The ID of the primary instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     * <p>The primary instance ID. You can call the DescribeDBInstances operation to query the primary instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -21,7 +21,7 @@ public class AllocateReadWriteSplittingConnectionRequest extends TeaModel {
     /**
      * <p>The method that is used to assign read weights. Valid values:</p>
      * <br>
-     * <p>*   **Standard**: ApsaraDB RDS automatically assigns read weights to the primary and read-only instances based on the specifications of these instances.</p>
+     * <p>*   **Standard**: The system automatically assigns read weights to the primary and read-only instances based on the specifications of these instances.</p>
      * <p>*   **Custom**: You must manually assign a read weight to each instance.</p>
      */
     @NameInMap("DistributionType")
@@ -38,8 +38,8 @@ public class AllocateReadWriteSplittingConnectionRequest extends TeaModel {
     /**
      * <p>The network type of the read-only routing endpoint. Valid values:</p>
      * <br>
-     * <p>*   **Internet**: Internet</p>
-     * <p>*   **Intranet**: internal network</p>
+     * <p>*   **Internet**</p>
+     * <p>*   **Intranet**</p>
      * <br>
      * <p>>  The default value is Intranet. Make sure that the network type of the read-only routing endpoint is the same as that of the primary instance.</p>
      */
@@ -67,11 +67,14 @@ public class AllocateReadWriteSplittingConnectionRequest extends TeaModel {
     /**
      * <p>The read weights of the primary instance and its read-only instances. The read weight is increased in increments of 100. The maximum value is 10000.</p>
      * <br>
-     * <p>* For ApsaraDB RDS instances, the value of this parameter is in the following format: `{"<ID of the read-only instance >":<Weight>,"master":<Weight>,"slave":<Weight>}`.</p>
-     * <p>* For ApsaraDB MyBase instances, the value of this parameter is in the following format: `[{"instanceName":"<ID of the primary instance>","weight":<Weight>,"role":"master"},{"instanceName":"<ID of the primary instance>","weight":<Weight>,"role":"slave"},{"instanceName":"<ID of the read-only instance>","weight":<Weight>,"role":"master"}]`</p>
+     * <p>*   For ApsaraDB RDS instances, the value of this parameter is in the following format: `{"<ID of the read-only instance >":<Weight>,"master":<Weight>,"slave":<Weight>}`.</p>
+     * <p>*   For ApsaraDB MyBase instances, the value of this parameter is in the following format: `[{"instanceName":"<Primary instance ID>","weight":<Weight>,"role":"master"},{"instanceName":"<Primary instance ID>","weight":<Weight>,"role":"slave"},{"instanceName":"<Read-only instance ID>","weight":<Weight>,"role":"master"}]`</p>
      * <br>
-     * <p>> * If you set the **DistributionType** parameter to **Custom**, you must also specify this parameter.</p>
-     * <p>> * If you set the **DistributionType** parameter to **Standard**, this parameter is invalid.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   This parameter must be specified when **DistributionType** is set to **Custom**.</p>
+     * <br>
+     * <p>*   If **DistributionType** is set to **Standard**, this parameter is invalid.</p>
      */
     @NameInMap("Weight")
     public String weight;

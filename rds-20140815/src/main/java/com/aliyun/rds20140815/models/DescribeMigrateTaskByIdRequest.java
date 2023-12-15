@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeMigrateTaskByIdRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The ID of the migration task. You can call the [DescribeMigrateTasks](~~64563~~) operation to query the ID of the migration task.</p>
+     * <p>The migration task ID. You can call the DescribeMigrateTasks operation to query the migration task ID.</p>
      */
     @NameInMap("MigrateTaskId")
     public String migrateTaskId;

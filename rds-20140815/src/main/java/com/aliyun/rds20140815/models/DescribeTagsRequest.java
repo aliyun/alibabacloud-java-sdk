@@ -11,9 +11,9 @@ public class DescribeTagsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <br>
-     * <p>> If you specify this parameter, all tags that are added to the instance are queried. Other filter conditions are invalid.</p>
+     * <p>>  If you specify this parameter, all tags that are added to this instance are queried, and other filter conditions becomes invalid.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -25,7 +25,7 @@ public class DescribeTagsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ReleaseInstancePublicConnectionRequest extends TeaModel {
     /**
-     * <p>The public endpoint.</p>
+     * <p>The public endpoint. You can call the DescribeDBInstanceNetInfo to query the public endpoint.</p>
      */
     @NameInMap("CurrentConnectionString")
     public String currentConnectionString;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

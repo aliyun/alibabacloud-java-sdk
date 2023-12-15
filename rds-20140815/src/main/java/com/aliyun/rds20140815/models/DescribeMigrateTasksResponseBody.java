@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMigrateTasksResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -95,7 +95,7 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
 
     public static class DescribeMigrateTasksResponseBodyItemsMigrateTask extends TeaModel {
         /**
-         * <p>The type of the migration task. Valid values:</p>
+         * <p>The migration task type. Valid values:</p>
          * <br>
          * <p>*   **FULL**: The migration task migrates full backup files that can be used to restore the full data of the instance.</p>
          * <p>*   **UPDF**: The migration task migrates incremental or log backup files that can be used to restore the incremental data of the instance.</p>
@@ -110,7 +110,7 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          */
         @NameInMap("DBName")
         public String DBName;
@@ -134,7 +134,7 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
         public String isDBReplaced;
 
         /**
-         * <p>The ID of the migration task.</p>
+         * <p>The migration task ID.</p>
          */
         @NameInMap("MigrateTaskId")
         public String migrateTaskId;

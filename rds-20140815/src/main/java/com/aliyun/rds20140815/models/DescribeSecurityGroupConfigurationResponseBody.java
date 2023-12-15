@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
-     * <p>An array that consists of ECS security groups.</p>
+     * <p>The information about the ECS security group.</p>
      */
     @NameInMap("Items")
     public DescribeSecurityGroupConfigurationResponseBodyItems items;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -62,7 +62,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         public String networkType;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -74,7 +74,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The name of the security group.</p>
+         * <p>The security group name.</p>
          */
         @NameInMap("SecurityGroupName")
         public String securityGroupName;

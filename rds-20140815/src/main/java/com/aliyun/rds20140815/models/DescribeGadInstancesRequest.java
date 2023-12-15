@@ -16,7 +16,7 @@ public class DescribeGadInstancesRequest extends TeaModel {
     public String gadInstanceName;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

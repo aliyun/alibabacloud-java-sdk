@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable or disable auto-renewal. Valid values: **True and False**.</p>
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+     * <br>
+     * <p>*   **True**</p>
+     * <p>*   **False**</p>
      */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -25,7 +28,7 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
     /**
      * <p>The number of months for auto-renewal. Valid values: **1 to 12**.</p>
      * <br>
-     * <p>>  You must specify this parameter if you set the** AutoRenew **parameter to** True**.</p>
+     * <p>>  This parameter must be specified when **AutoRenew** is set to **True**.</p>
      */
     @NameInMap("Duration")
     public String duration;
@@ -37,7 +40,7 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

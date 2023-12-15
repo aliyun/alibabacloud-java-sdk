@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the dedicated cluster.</p>
+     * <p>The host group ID.</p>
      */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
 
     /**
-     * <p>An array that consists of hosts returned.</p>
+     * <p>The host information.</p>
      */
     @NameInMap("DedicatedHosts")
     public DescribeDedicatedHostsResponseBodyDedicatedHosts dedicatedHosts;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,34 +53,34 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHosts extends TeaModel {
         /**
-         * <p>The account of the host. You can call the [CreateDedicatedHostAccount](~~196877~~) operation to create a host account.</p>
+         * <p>The host account. You can call the [CreateDedicatedHostAccount](~~196877~~) operation to create a host account.</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
-         * <p>Indicates whether the system allows you to create instances on the host. Valid values:</p>
+         * <p>Specifies whether instances can be deployed on the host. Valid values:</p>
          * <br>
-         * <p>*   **0**: The system does not allow you to create instances on the host.</p>
-         * <p>*   **1**: The system allows you to create instances on the host.</p>
+         * <p>*   **0**: Instances cannot be deployed on the host.</p>
+         * <p>*   **1**: Instances can be deployed on the host.</p>
          */
         @NameInMap("AllocationStatus")
         public String allocationStatus;
 
         /**
-         * <p>The ID of the bastion host.</p>
+         * <p>The bastion host ID.</p>
          */
         @NameInMap("BastionInstanceId")
         public String bastionInstanceId;
 
         /**
-         * <p>The core overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).</p>
+         * <p>The core overcommitment ratio of the dedicated cluster. Unit: percentage. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).</p>
          */
         @NameInMap("CPUAllocationRatio")
         public String CPUAllocationRatio;
 
         /**
-         * <p>The number of used cores on the host.</p>
+         * <p>The number of used CPU cores on the host. Unit: cores.</p>
          */
         @NameInMap("CpuUsed")
         public String cpuUsed;
@@ -92,19 +92,19 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The ID of the dedicated cluster.</p>
+         * <p>The dedicated cluster ID.</p>
          */
         @NameInMap("DedicatedHostGroupId")
         public String dedicatedHostGroupId;
 
         /**
-         * <p>The ID of the host.</p>
+         * <p>The host ID.</p>
          */
         @NameInMap("DedicatedHostId")
         public String dedicatedHostId;
 
         /**
-         * <p>The disk overcommitment ratio of the dedicated cluster. Unit: %. For more information about the disk overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).</p>
+         * <p>The disk overcommitment ratio of the dedicated cluster. Unit: percentage. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).</p>
          */
         @NameInMap("DiskAllocationRatio")
         public String diskAllocationRatio;
@@ -122,13 +122,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The total number of cores that are configured for the host.</p>
+         * <p>The total number of CPU cores that are configured for the host. Unit: cores.</p>
          */
         @NameInMap("HostCPU")
         public String hostCPU;
 
         /**
-         * <p>The specifications of the host.</p>
+         * <p>The instance type of the host.</p>
          */
         @NameInMap("HostClass")
         public String hostClass;
@@ -140,7 +140,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public String hostMem;
 
         /**
-         * <p>The name of the host.</p>
+         * <p>The host name.</p>
          */
         @NameInMap("HostName")
         public String hostName;
@@ -148,13 +148,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         /**
          * <p>The status of the host. Valid values:</p>
          * <br>
-         * <p>*   **0**: The host is being created.</p>
-         * <p>*   **1**: The host is running.</p>
-         * <p>*   **2**: The host is faulty.</p>
-         * <p>*   **3**: The host is being replaced.</p>
-         * <p>*   **4**: The host is deprecated.</p>
-         * <p>*   **5**: The host is being deleted.</p>
-         * <p>*   **6**: The host is restarting.</p>
+         * <p>*   **0**: creating</p>
+         * <p>*   **1**: running</p>
+         * <p>*   **2**: faulty</p>
+         * <p>*   **3**: being replaced</p>
+         * <p>*   **4**: deprecated</p>
+         * <p>*   **5**: deleting</p>
+         * <p>*   **6**: restarting</p>
          */
         @NameInMap("HostStatus")
         public String hostStatus;
@@ -166,9 +166,9 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public String hostStorage;
 
         /**
-         * <p>The type of storage media that is used for the host. Valid values:</p>
+         * <p>The storage type of the host. Valid values:</p>
          * <br>
-         * <p>*   **dhg_cloud_ssd**: enhanced SSD</p>
+         * <p>*   **dhg_cloud_ssd**: ESSD</p>
          * <p>*   **dhg_local_ssd**: local SSD</p>
          */
         @NameInMap("HostType")
@@ -181,11 +181,11 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public String IPAddress;
 
         /**
-         * <p>The image of the host. This parameter is returned only when the **Engine** parameter is set to **mssql**. Valid values:</p>
+         * <p>The host image. This parameter is returned only when the **Engine** parameter is set to **mssql**. Valid values:</p>
          * <br>
-         * <p>*   **WindowsWithMssqlStdLicense**: a Windows image, which contains the licenses of the SQL Server Standard Edition</p>
-         * <p>*   **WindowsWithMssqlEntLisence**: a Windows image, which contains the licenses of the SQL Server Enterprise Edition</p>
-         * <p>*   **WindowsWithMssqlWebLisence**: a Windows image, which contains the licenses of the SQL Server Web Edition</p>
+         * <p>*   **WindowsWithMssqlStdLicense**: a Windows image that contains the licenses of SQL Server Standard Edition</p>
+         * <p>*   **WindowsWithMssqlEntLisence**: a Windows image that contains the licenses of SQL Server Enterprise Edition</p>
+         * <p>*   **WindowsWithMssqlWebLisence**: a Windows image that contains the licenses of SQL Server Web Edition</p>
          */
         @NameInMap("ImageCategory")
         public String imageCategory;
@@ -203,13 +203,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public String memAllocationRatio;
 
         /**
-         * <p>The amount of used memory space on the host. Unit: MB.</p>
+         * <p>The size of the used memory. Unit: MB.</p>
          */
         @NameInMap("MemoryUsed")
         public String memoryUsed;
 
         /**
-         * <p>Indicates whether the operating system permissions of the host can be granted. Valid values:</p>
+         * <p>Indicates whether the feature that allows you to have the OS permissions on the host is enabled. Valid values:</p>
          * <br>
          * <p>*   **0** or **null**: The permissions cannot be granted.</p>
          * <p>*   **1**: The permissions can be granted.</p>

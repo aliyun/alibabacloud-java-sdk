@@ -11,13 +11,13 @@ public class ModifyActionEventPolicyResponseBody extends TeaModel {
     public String enableEventLog;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the region for which the event history feature is enabled or disabled.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

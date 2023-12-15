@@ -60,6 +60,11 @@ public class ModifyDBNodeShrinkRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>Effective time, value:</p>
+     * <p>- Immediate (default value): takes effect immediately.</p>
+     * <p>- MaintainTime: Effective within the operational time period, please refer to ModifyDBInstanceMaintainTime.</p>
+     */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 

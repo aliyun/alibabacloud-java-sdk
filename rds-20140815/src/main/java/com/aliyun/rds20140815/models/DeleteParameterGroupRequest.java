@@ -8,19 +8,19 @@ public class DeleteParameterGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the parameter template. You can call the [DescribeParameterGroups](~~144491~~) operation to query the ID of the parameter template.</p>
+     * <p>The parameter template ID. You can call the DescribeParameterGroups operation to query the parameter template ID.</p>
      */
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The resource group ID. You can call the [DescribeDBInstanceAttribute](~~610394~~) to obtain the ID of the resource group.</p>
+     * <p>The resource group ID. You can call the DescribeDBInstanceAttribute to obtain the resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

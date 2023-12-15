@@ -11,25 +11,25 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
     public DescribeSQLLogReportListResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of reports on the current page.</p>
+     * <p>The number of SQL log reports on the current page.</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of records returned.</p>
+     * <p>The total number of entries.</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -93,7 +93,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         public Long SQLExecuteTimes;
 
         /**
-         * <p>The SQL statement returned.</p>
+         * <p>The SQL statement.</p>
          * <br>
          * <p>>  Only the first 128 characters of the SQL statement are returned. In addition, only the SQL statements that take more than 100 ms to execute are returned.</p>
          */
@@ -158,7 +158,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         public Long SQLExecuteTimes;
 
         /**
-         * <p>The SQL statement returned. </p>
+         * <p>The SQL statement.</p>
          * <br>
          * <p>>  Only the first 128 characters of the SQL statement are returned. In addition, only the SQL statements that take more than 5 ms to execute are returned.</p>
          */

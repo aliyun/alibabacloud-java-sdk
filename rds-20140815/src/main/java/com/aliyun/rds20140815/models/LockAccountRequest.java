@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class LockAccountRequest extends TeaModel {
     /**
-     * <p>The account that you want to lock. You can lock only one account at a time.</p>
+     * <p>The account that you want to lock. You can lock only a single account at a time.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
-     * <p>The ID of the ApsaraDB RDS for PostgreSQL instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

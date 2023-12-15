@@ -9,16 +9,11 @@ public class RenewInstanceRequest extends TeaModel {
      * <br>
      * <p>*   **True**: enables automatic payment. Make sure that your Alibaba Cloud account has adequate balance.</p>
      * <p>*   **False** (default): disables automatic payment. You have to manually pay the order in the console.</p>
-     * <br>
      * <p>>  For more information about manual renewal in the console, see the following topics:</p>
-     * <br>
-     * <p>*   [Manually renew an ApsaraDB RDS for MySQL instance](~~96050~~)</p>
-     * <br>
-     * <p>*   [Manually renew an ApsaraDB RDS for PostgreSQL instance](~~96741~~)</p>
-     * <br>
-     * <p>*   [Manually renew an ApsaraDB RDS for SQL Server instance](~~95637~~)</p>
-     * <br>
-     * <p>*   [Manually renew an ApsaraDB RDS for MariaDB instance](~~97122~~)</p>
+     * <p>> *   [Manually renew an ApsaraDB RDS for MySQL instance](~~96050~~)</p>
+     * <p>> *   [Manually renew an ApsaraDB RDS for PostgreSQL instance](~~96741~~)</p>
+     * <p>> *   [Manually renew an ApsaraDB RDS for SQL Server instance](~~95637~~)</p>
+     * <p>> *   [Manually renew an ApsaraDB RDS for MariaDB instance](~~97122~~)</p>
      */
     @NameInMap("AutoPay")
     public String autoPay;

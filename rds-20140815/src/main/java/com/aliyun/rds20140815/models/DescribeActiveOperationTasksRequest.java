@@ -71,9 +71,9 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String productId;
 
     /**
-     * <p>The ID of the region to which the pending task belongs. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the pending event. You can call the DescribeRegions operation to query the most recent region list.</p>
      * <br>
-     * <p>> The value **all** indicates all regions.</p>
+     * <p>>  The value **all** indicates all regions.</p>
      */
     @NameInMap("Region")
     public String region;

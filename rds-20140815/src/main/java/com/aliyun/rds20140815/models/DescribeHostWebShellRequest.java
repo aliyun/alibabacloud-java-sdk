@@ -11,19 +11,19 @@ public class DescribeHostWebShellRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The password of the account.</p>
+     * <p>The password of the host account.</p>
      */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The hostname of the instance. You can call the [DescribeDBInstanceIpHostname](~~610525~~) operation to query the hostname.</p>
+     * <p>The instance hostname. You can call the DescribeDBInstanceIpHostname operation to query the hostname.</p>
      */
     @NameInMap("HostName")
     public String hostName;
@@ -32,7 +32,7 @@ public class DescribeHostWebShellRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the region ID.</p>
      */
     @NameInMap("RegionID")
     public String regionID;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -17,19 +17,19 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return in the upgrade check report.</p>
+     * <p>The page number.</p>
      * <br>
-     * <p>Valid values: any non-zero positive integer. Default value: 1.</p>
+     * <p>Valid values: any non-zero positive integer. Default value: 1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page of the upgrade check report.</p>
+     * <p>The number of entries per page.</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>*   30 (This is the default value.)</p>
+     * <p>*   30 (default)</p>
      * <p>*   50</p>
      * <p>*   100</p>
      */
@@ -44,14 +44,12 @@ public class DescribeUpgradeMajorVersionPrecheckTaskRequest extends TeaModel {
 
     /**
      * <p>The new major engine version of the instance. The new major engine version must be later than the original major engine version.</p>
-     * <br>
-     * <p>For example, if the original major engine version is PostgreSQL 9.4, the new major engine version can be PostgreSQL 10, PostgreSQL 11, PostgreSQL 12, or PostgreSQL 13.</p>
      */
     @NameInMap("TargetMajorVersion")
     public String targetMajorVersion;
 
     /**
-     * <p>The ID of the upgrade check task. You can obtain the ID of the upgrade check task from the **TaskId** parameter that is returned from the call of the [UpgradeDBInstanceMajorVersionPrecheck](~~330050~~) operation.</p>
+     * <p>The ID of the upgrade check task. You can obtain the ID of the upgrade check task from the **TaskId** parameter in the response to the UpgradeDBInstanceMajorVersionPrecheck operation.</p>
      */
     @NameInMap("TaskId")
     public Integer taskId;

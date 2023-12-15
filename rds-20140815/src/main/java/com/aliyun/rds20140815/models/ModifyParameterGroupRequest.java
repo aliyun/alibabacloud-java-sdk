@@ -30,7 +30,7 @@ public class ModifyParameterGroupRequest extends TeaModel {
     public String parameterGroupDesc;
 
     /**
-     * <p>The parameter template ID. You can call the [DescribeParameterGroups](~~144491~~) operation to query the parameter template ID.</p>
+     * <p>The parameter template ID. You can call the DescribeParameterGroups operation to query the parameter template ID.</p>
      */
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;
@@ -60,15 +60,15 @@ public class ModifyParameterGroupRequest extends TeaModel {
     public String parameters;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      * <br>
-     * <p>> The region of a parameter template cannot be changed. You can call the [CloneParameterGroup](~~144581~~) operation to replicate a parameter template to a specific region.</p>
+     * <p>>  The region of a parameter template cannot be changed. You can call the CloneParameterGroup operation to replicate a parameter template to a specific region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the ID of the resource group.</p>
+     * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

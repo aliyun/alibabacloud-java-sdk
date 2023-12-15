@@ -52,6 +52,9 @@ public class CreatePostgresExtensionsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("RiskConfirmed")
+    public Boolean riskConfirmed;
+
     /**
      * <p>The source database from which you want to synchronize the extension to the destination database. If you do not specify the **Extensions** parameter, you must specify this parameter.</p>
      */
@@ -141,6 +144,14 @@ public class CreatePostgresExtensionsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreatePostgresExtensionsRequest setRiskConfirmed(Boolean riskConfirmed) {
+        this.riskConfirmed = riskConfirmed;
+        return this;
+    }
+    public Boolean getRiskConfirmed() {
+        return this.riskConfirmed;
     }
 
     public CreatePostgresExtensionsRequest setSourceDatabase(String sourceDatabase) {

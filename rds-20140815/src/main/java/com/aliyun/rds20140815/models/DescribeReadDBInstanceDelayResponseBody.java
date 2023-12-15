@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
     /**
-     * <p>The ID of the primary instance.</p>
+     * <p>The primary instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The latency of data replication between the primary instance and the read-only instance.</p>
+     * <p>The latency of data replication. Unit: seconds.</p>
      */
     @NameInMap("DelayTime")
     public Integer delayTime;
 
     /**
-     * <p>An array that consists of latency information.</p>
+     * <p>The latency information.</p>
      */
     @NameInMap("Items")
     public DescribeReadDBInstanceDelayResponseBodyItems items;
 
     /**
-     * <p>The ID of the read-only instance.</p>
+     * <p>The read-only instance ID.</p>
      */
     @NameInMap("ReadDBInstanceId")
     public String readDBInstanceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -131,7 +131,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         public String flushLatency;
 
         /**
-         * <p>The ID of the read-only instance.</p>
+         * <p>The read-only instance ID.</p>
          */
         @NameInMap("ReadDBInstanceName")
         public String readDBInstanceName;
@@ -258,31 +258,27 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
 
     public static class DescribeReadDBInstanceDelayResponseBodyItemsItems extends TeaModel {
         /**
-         * <p>The ID of the primary instance.</p>
+         * <p>The primary instance ID.</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
          * <p>An array that consists of information about the read-only instance.</p>
-         * <br>
-         * <p>>  This parameter is returned only when the primary instance runs the MySQL database engine.</p>
          */
         @NameInMap("ReadDBInstanceNames")
         public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames readDBInstanceNames;
 
         /**
-         * <p>An array that consists of latencies.</p>
-         * <br>
-         * <p>>  This parameter is returned only when the primary instance runs the MySQL database engine.</p>
+         * <p>The latency of data replication.</p>
          */
         @NameInMap("ReadDelayTimes")
         public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDelayTimes readDelayTimes;
 
         /**
-         * <p>An array that consists of information about the write-ahead log (WAL) latency.</p>
+         * <p>The information about the write-ahead log (WAL) latency.</p>
          * <br>
-         * <p>>  This parameter is returned only when the primary instance runs the PostgreSQL database engine.</p>
+         * <p>>  This parameter is returned only when the primary instance runs PostgreSQL.</p>
          */
         @NameInMap("ReadonlyInstanceDelay")
         public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelay readonlyInstanceDelay;

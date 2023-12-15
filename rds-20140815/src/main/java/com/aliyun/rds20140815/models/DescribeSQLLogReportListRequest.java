@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSQLLogReportListRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the IDs of instances.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.**</p>
      * <br>
      * <p>>  The end time must be later than the start time.</p>
      */
@@ -25,7 +25,7 @@ public class DescribeSQLLogReportListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Valid values: any **non-zero** positive integer.</p>
+     * <p>The page number. Valid values: any **non-zero** positive integer.</p>
      * <br>
      * <p>Default value: **1**.</p>
      */
@@ -33,7 +33,7 @@ public class DescribeSQLLogReportListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <br>
      * <p>*   **30**</p>
      * <p>*   **50**</p>

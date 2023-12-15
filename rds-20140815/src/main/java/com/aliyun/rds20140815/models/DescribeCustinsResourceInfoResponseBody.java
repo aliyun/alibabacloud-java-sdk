@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeCustinsResourceInfoResponseBodyData> data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,139 +39,139 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
 
     public static class DescribeCustinsResourceInfoResponseBodyData extends TeaModel {
         /**
-         * <p>Cpu adjustment deadline.</p>
+         * <p>The deadline for the CPU adjustment.</p>
          */
         @NameInMap("CpuAdjustDeadline")
         public String cpuAdjustDeadline;
 
         /**
-         * <p>Cpu adjustable maximum ratio.</p>
+         * <p>The maximum percentage of the system CPU resources that the instance can use.</p>
          */
         @NameInMap("CpuAdjustableMaxRatio")
         public String cpuAdjustableMaxRatio;
 
         /**
-         * <p>Maximum CPU usage.</p>
+         * <p>The maximum CPU utilization.</p>
          */
         @NameInMap("CpuAdjustableMaxValue")
         public String cpuAdjustableMaxValue;
 
         /**
-         * <p>CPU usage rate.</p>
+         * <p>The CPU utilization.</p>
          */
         @NameInMap("CpuIncreaseRatio")
         public String cpuIncreaseRatio;
 
         /**
-         * <p>CPU usage rate.</p>
+         * <p>The CPU utilization. Unit: percentage.</p>
          */
         @NameInMap("CpuIncreaseRatioValue")
         public String cpuIncreaseRatioValue;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
-         * <p>The maximum number of IO requests per second.</p>
+         * <p>The maximum IOPS.</p>
          */
         @NameInMap("IopsAdjustableMaxValue")
         public String iopsAdjustableMaxValue;
 
         /**
-         * <p>Maximum Connection Adjustment Deadline</p>
+         * <p>The deadline for the adjustment of the maximum number of connections.</p>
          */
         @NameInMap("MaxConnAdjustDeadline")
         public String maxConnAdjustDeadline;
 
         /**
-         * <p>Maximum number of concurrent connections.</p>
+         * <p>The maximum number of concurrent connections.</p>
          */
         @NameInMap("MaxConnAdjustableMaxValue")
         public String maxConnAdjustableMaxValue;
 
         /**
-         * <p>Maximum number of concurrent connections.</p>
+         * <p>The maximum number of concurrent connections.</p>
          */
         @NameInMap("MaxConnIncreaseRatio")
         public String maxConnIncreaseRatio;
 
         /**
-         * <p>Maximum number of concurrent connections.</p>
+         * <p>The maximum number of concurrent connections.</p>
          */
         @NameInMap("MaxConnIncreaseRatioValue")
         public String maxConnIncreaseRatioValue;
 
         /**
-         * <p>Maximum iops adjustment deadline.</p>
+         * <p>The deadline for the adjustment of the maximum IOPS.</p>
          */
         @NameInMap("MaxIopsAdjustDeadline")
         public String maxIopsAdjustDeadline;
 
         /**
-         * <p>The maximum number of IO requests per second.</p>
+         * <p>The maximum IOPS.</p>
          */
         @NameInMap("MaxIopsIncreaseRatio")
         public String maxIopsIncreaseRatio;
 
         /**
-         * <p>The maximum number of IO requests per second.</p>
+         * <p>The maximum IOPS that can be supported by the instance.</p>
          */
         @NameInMap("MaxIopsIncreaseRatioValue")
         public String maxIopsIncreaseRatioValue;
 
         /**
-         * <p>Memory adjustable maximum ratio.</p>
+         * <p>The maximum percentage of the system memory that the instance can use.</p>
          */
         @NameInMap("MemAdjustableMaxRatio")
         public String memAdjustableMaxRatio;
 
         /**
-         * <p>The maximum value of the resource to be evaluated.</p>
+         * <p>The maximum value of the resources to be evaluated.</p>
          */
         @NameInMap("MemAdjustableMaxValue")
         public String memAdjustableMaxValue;
 
         /**
-         * <p>Memory adjustment deadline.</p>
+         * <p>The deadline for the memory adjustment.</p>
          */
         @NameInMap("MemoryAdjustDeadline")
         public String memoryAdjustDeadline;
 
         /**
-         * <p>Memory creation time.</p>
+         * <p>The memory increase percentage.</p>
          */
         @NameInMap("MemoryIncreaseRatio")
         public String memoryIncreaseRatio;
 
         /**
-         * <p>Memory usage.</p>
+         * <p>The memory usage. Unit: MB.</p>
          */
         @NameInMap("MemoryIncreaseRatioValue")
         public String memoryIncreaseRatioValue;
 
         /**
-         * <p>Number of instance CPUs.</p>
+         * <p>The number of CPUs of the instance.</p>
          */
         @NameInMap("OriginCpu")
         public String originCpu;
 
         /**
-         * <p>Maximum number of concurrent connections.</p>
+         * <p>The maximum number of concurrent connections.</p>
          */
         @NameInMap("OriginMaxConn")
         public String originMaxConn;
 
         /**
-         * <p>The maximum number of IO requests per second.</p>
+         * <p>The maximum IOPS.</p>
          */
         @NameInMap("OriginMaxIops")
         public String originMaxIops;
 
         /**
-         * <p>Actual memory used.</p>
+         * <p>The actual memory used. Unit: MB.</p>
          */
         @NameInMap("OriginMemory")
         public String originMemory;

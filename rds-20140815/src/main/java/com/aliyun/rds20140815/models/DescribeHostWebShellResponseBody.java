@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHostWebShellResponseBody extends TeaModel {
     /**
-     * <p>The URL of the webshell.</p>
+     * <p>The webshell URL.</p>
      */
     @NameInMap("LoginUrl")
     public String loginUrl;

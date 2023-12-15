@@ -11,7 +11,7 @@ public class CreateDBProxyEndpointAddressRequest extends TeaModel {
     public String connectionStringPrefix;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -29,7 +29,7 @@ public class CreateDBProxyEndpointAddressRequest extends TeaModel {
     public String DBProxyConnectStringNetType;
 
     /**
-     * <p>The ID of the proxy endpoint. You can call the [DescribeDBProxyEndpoint](~~610507~~) operation to query the ID of the proxy endpoint.</p>
+     * <p>The proxy endpoint ID. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.</p>
      */
     @NameInMap("DBProxyEndpointId")
     public String DBProxyEndpointId;
@@ -50,7 +50,7 @@ public class CreateDBProxyEndpointAddressRequest extends TeaModel {
     public String DBProxyNewConnectStringPort;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -62,17 +62,17 @@ public class CreateDBProxyEndpointAddressRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the VPC to which the proxy endpoint belongs. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the VPC ID of the instance.</p>
+     * <p>The ID of the VPC to which the proxy endpoint belongs. You can call the DescribeDBInstanceAttribute operation to query the VPC ID.</p>
      * <br>
-     * <p>>  This parameter must be specified when DBProxyConnectStringNetType is set to **VPC**.</p>
+     * <p>>  This parameter must be specified when **DBProxyConnectStringNetType** is set to **VPC**.</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
 
     /**
-     * <p>The ID of the vSwitch that is associated with the specified VPC. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the vSwitch ID of the instance.</p>
+     * <p>The ID of the vSwitch that is associated with the specified VPC. You can call the DescribeDBInstanceAttribute operation to query the vSwitch ID.</p>
      * <br>
-     * <p>>  This parameter must be specified when DBProxyConnectStringNetType is set to **VPC**.</p>
+     * <p>>  This parameter must be specified when **DBProxyConnectStringNetType** is set to **VPC**.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

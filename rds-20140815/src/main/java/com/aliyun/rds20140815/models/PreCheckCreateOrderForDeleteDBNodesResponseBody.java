@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The information about the failed order.</p>
      */
     @NameInMap("Failures")
     public PreCheckCreateOrderForDeleteDBNodesResponseBodyFailures failures;
 
     /**
-     * <p>Indicates the result of the precheck task.</p>
+     * <p>The precheck result.</p>
      */
     @NameInMap("PreCheckResult")
     public Boolean preCheckResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,12 +53,12 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
 
     public static class PreCheckCreateOrderForDeleteDBNodesResponseBodyFailuresFailures extends TeaModel {
         /**
-         * <p>The response code returned. Valid values:</p>
+         * <p>The response code. Valid values:</p>
          * <br>
          * <p>*   **200**: success</p>
          * <p>*   **400**: client error</p>
          * <p>*   **401**: identity authentication failed</p>
-         * <p>*   **404**: request page not found</p>
+         * <p>*   **404**: requested page not found</p>
          * <p>*   **500**: server error</p>
          */
         @NameInMap("Code")

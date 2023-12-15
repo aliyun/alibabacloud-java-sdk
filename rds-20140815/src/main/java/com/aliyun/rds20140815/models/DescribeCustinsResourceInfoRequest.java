@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCustinsResourceInfoRequest extends TeaModel {
     /**
-     * <p>The instance ID. Separate multiple values with commas (,).</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceIds")
     public String DBInstanceIds;
@@ -14,7 +14,7 @@ public class DescribeCustinsResourceInfoRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

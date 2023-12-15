@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateYouhuiForOrderRequest extends TeaModel {
     /**
-     * <p>The ticket ID.</p>
+     * <p>The activity ID.</p>
      */
     @NameInMap("ActivityId")
     public Long activityId;

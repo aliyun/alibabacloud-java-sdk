@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteBackupFileRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set. You can specify the IDs of up to 100 backup sets at a time. Separate the IDs with commas (,).</p>
+     * <p>The backup set ID. You can specify the IDs of up to 100 backup sets at a time. Separate the IDs with commas (,).</p>
      * <br>
      * <p>> </p>
      * <br>
-     * <p>*   Only the IDs of the backup sets for the database is supported.</p>
+     * <p>*   If the instance runs SQL Server, only the ID of the backup set for an individual database is supported.</p>
      * <br>
-     * <p>*   You can call the [DescribeBackups](~~26273~~) operation to query the IDs of backup sets.</p>
+     * <p>*   You can call the DescribeBackups operation to query the backup set ID.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
@@ -23,7 +23,7 @@ public class DeleteBackupFileRequest extends TeaModel {
     public String backupTime;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -38,7 +38,7 @@ public class DeleteBackupFileRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeDBInstanceAttribute operation to query the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

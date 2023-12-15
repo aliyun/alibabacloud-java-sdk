@@ -80,11 +80,8 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
      * <br>
      * <p>Unit: cents (US dollars).</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If you set the CommodityCode parameter to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.</p>
-     * <br>
-     * <p>*   If you set the CommodityCode parameter to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.</p>
+     * <p>> *   If you set the CommodityCode parameter to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.</p>
+     * <p>> *   If you set the CommodityCode parameter to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.</p>
      */
     @NameInMap("ReferencePrice")
     public String referencePrice;

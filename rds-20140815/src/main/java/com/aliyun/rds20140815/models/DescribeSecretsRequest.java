@@ -22,7 +22,7 @@ public class DescribeSecretsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
@@ -56,7 +56,7 @@ public class DescribeSecretsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query region ID of the instance.</p>
+     * <p>The region ID. You can call the DescribeDBInstanceAttribute operation to query the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

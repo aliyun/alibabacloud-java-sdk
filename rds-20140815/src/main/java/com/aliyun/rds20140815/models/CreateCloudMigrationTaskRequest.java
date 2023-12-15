@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCloudMigrationTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     * <p>The ID of the destination instance. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;

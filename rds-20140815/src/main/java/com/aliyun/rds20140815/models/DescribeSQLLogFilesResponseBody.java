@@ -81,7 +81,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
 
     public static class DescribeSQLLogFilesResponseBodyItemsLogFile extends TeaModel {
         /**
-         * <p>The name of the file.</p>
+         * <p>The file name.</p>
          */
         @NameInMap("FileID")
         public String fileID;

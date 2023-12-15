@@ -5,31 +5,32 @@ import com.aliyun.tea.*;
 
 public class DescribeMarketingActivityResponseBody extends TeaModel {
     /**
-     * <p>The unique ID (UID) of the Alibaba Cloud account.</p>
+     * <p>The ID of the Alibaba Cloud account.</p>
      */
     @NameInMap("AliUid")
     public Long aliUid;
 
     /**
-     * <p>The BID of the account to which the Anycast EIP belongs.</p>
+     * <p>*   China site: 26842</p>
+     * <p>*   International site: 26888</p>
      */
     @NameInMap("Bid")
     public String bid;
 
     /**
-     * <p>The details of the instance.</p>
+     * <p>The activity parameters</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeMarketingActivityResponseBodyItems> items;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -84,27 +85,24 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
          * <p>The RDS edition of the instance. Valid values:</p>
          * <br>
          * <p>*   **Basic**: RDS Basic Edition</p>
-         * <p>*   **HighAvailability**: High-availability Edition</p>
+         * <p>*   **HighAvailability**: RDS High-availability Edition</p>
+         * <p>*   **AlwaysOn**: RDS Cluster Edition</p>
          * <p>*   **Finance**: RDS Enterprise Edition</p>
-         * <br>
-         * <p>> This parameter is returned only when **InstanceLevel** is set to **1**.</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>The billing method of the instance. Valid values:</p>
+         * <p>The payment type. Valid values:</p>
          * <br>
-         * <p>*   **PostPaid** (default): pay-as-you-go</p>
-         * <p>*   **PrePaid**: subscription</p>
-         * <br>
-         * <p>> **Period** is required if you set the value of this parameter to **PrePaid**.</p>
+         * <p>*   POSTPAY: pay-as-you-go</p>
+         * <p>*   PREPAY: subscription</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
-         * <p>The code of the instance type. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~) and [Read-only ApsaraDB RDS instance types](~~145759~~).</p>
+         * <p>The instance type. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~) and [Read-only ApsaraDB RDS instance types](~~145759~~).</p>
          */
         @NameInMap("ClassCode")
         public String classCode;
@@ -116,16 +114,13 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
         public String classGroup;
 
         /**
-         * <p>The number of vCPU cores. Unit: cores.</p>
+         * <p>The number of CPU cores that are supported by the instance type. Unit: cores.</p>
          */
         @NameInMap("Cpu")
         public String cpu;
 
         /**
-         * <p>The disk size. Unit: GB.</p>
-         * <br>
-         * <p>*   The disk size that you specify must be greater than or equal to the current disk size of the instance.</p>
-         * <p>*   For more information about the valid values, see [Billing](~~84737~~).</p>
+         * <p>The disk capacity per node. Unit: GB.</p>
          */
         @NameInMap("DiskSize")
         public Integer diskSize;
@@ -133,16 +128,17 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
         /**
          * <p>The database engine of the instance. Valid values:</p>
          * <br>
-         * <p>*   **MySQL**</p>
-         * <p>*   **PostgreSQL**</p>
-         * <p>*   **SQLServer**</p>
-         * <p>*   **MariaDB**</p>
+         * <p>*   MySQL</p>
+         * <p>*   SQLServer</p>
+         * <p>*   PostgreSQL</p>
+         * <p>*   PPAS</p>
+         * <p>*   MariaDB</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
-         * <p>The database engine version.</p>
+         * <p>The version of the database engine.</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
@@ -166,19 +162,19 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
         public Integer maxConnections;
 
         /**
-         * <p>MaxIombps</p>
+         * <p>The maximum I/O throughput. Unit: Mbit/s.</p>
          */
         @NameInMap("MaxIombps")
         public Integer maxIombps;
 
         /**
-         * <p>MaxIops</p>
+         * <p>The maximum IOPS.</p>
          */
         @NameInMap("MaxIops")
         public Integer maxIops;
 
         /**
-         * <p>The memory size that you applied for each instance. Unit: MB.</p>
+         * <p>The memory size.</p>
          */
         @NameInMap("Memory")
         public Long memory;
@@ -188,81 +184,81 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
          * <br>
          * <p>*   **local_ssd**: local SSD</p>
          * <p>*   **cloud_ssd**: standard SSD</p>
-         * <p>*   **cloud_essd**: enhanced SSD (ESSD) of performance level 1 (PL1)</p>
-         * <p>*   **cloud_essd2**: ESSD of PL2</p>
-         * <p>*   **cloud_essd3**: ESSD of PL3</p>
+         * <p>*   **cloud_essd**: performance level 1 (PL1) enhanced SSD (ESSD)</p>
+         * <p>*   **cloud_essd2**: PL2 ESSD</p>
+         * <p>*   **cloud_essd3**: PL3 ESSD</p>
          */
         @NameInMap("StorageType")
         public String storageType;
 
         /**
-         * <p>UpgradeCategory</p>
+         * <p>The RDS edition after the upgrade.</p>
          */
         @NameInMap("UpgradeCategory")
         public String upgradeCategory;
 
         /**
-         * <p>UpgradeClassCode</p>
+         * <p>The instance type after the upgrade.</p>
          */
         @NameInMap("UpgradeClassCode")
         public String upgradeClassCode;
 
         /**
-         * <p>UpgradeClassGroup</p>
+         * <p>The instance family after the upgrade.</p>
          */
         @NameInMap("UpgradeClassGroup")
         public String upgradeClassGroup;
 
         /**
-         * <p>UpgradeCpu</p>
+         * <p>The number of CPU cores after the upgrade.</p>
          */
         @NameInMap("UpgradeCpu")
         public String upgradeCpu;
 
         /**
-         * <p>UpgradeDescContent</p>
+         * <p>The description of the upgrade.</p>
          */
         @NameInMap("UpgradeDescContent")
         public String upgradeDescContent;
 
         /**
-         * <p>UpgradeDiskSize</p>
+         * <p>The disk capacity after the upgrade.</p>
          */
         @NameInMap("UpgradeDiskSize")
         public Integer upgradeDiskSize;
 
         /**
-         * <p>UpgradeMaxConnections</p>
+         * <p>The maximum number of concurrent connections after the upgrade.</p>
          */
         @NameInMap("UpgradeMaxConnections")
         public Integer upgradeMaxConnections;
 
         /**
-         * <p>UpgradeMaxIombps</p>
+         * <p>The maximum I/O throughput after the upgrade. Unit: Mbit/s.</p>
          */
         @NameInMap("UpgradeMaxIombps")
         public Integer upgradeMaxIombps;
 
         /**
-         * <p>UpgradeMaxIops</p>
+         * <p>The maximum IOPS after the upgrade.</p>
          */
         @NameInMap("UpgradeMaxIops")
         public Integer upgradeMaxIops;
 
         /**
-         * <p>UpgradeMemory</p>
+         * <p>The memory size after the upgrade.</p>
          */
         @NameInMap("UpgradeMemory")
         public Long upgradeMemory;
 
         /**
-         * <p>UpgradeReferencePrice</p>
+         * <p>The reference price of the upgrade.</p>
          */
         @NameInMap("UpgradeReferencePrice")
         public String upgradeReferencePrice;
 
         /**
-         * <p>UpgradeStorageType</p>
+         * <p>The storage type after the upgrade.</p>
          */
         @NameInMap("UpgradeStorageType")
         public String upgradeStorageType;

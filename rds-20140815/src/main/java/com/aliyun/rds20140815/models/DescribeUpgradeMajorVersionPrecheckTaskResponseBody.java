@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the attributes in the upgrade check report.</p>
+     * <p>The information about the upgrade check report.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeUpgradeMajorVersionPrecheckTaskResponseBodyItems> items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -110,7 +110,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
          * <p>*   Success</p>
          * <p>*   Fail</p>
          * <br>
-         * <p>>  If the check result is **Fail**, you must check the value of the **Detail** parameter to obtain the information about the errors that occurred. After you handle the errors, you can try again. For more information about how to handle common errors, see [Introduction to the check report for a major engine version upgrade to an ApsaraDB RDS for PostgreSQL instance](~~218391~~).</p>
+         * <p>>  If the check result is **Fail**, you must check the value of the **Detail** parameter to obtain the information about the errors that occurred, resolve the errors, and then try again. For more information about how to resolve common errors, see [Introduction to the check report for a major engine version upgrade to an ApsaraDB RDS for PostgreSQL instance](~~218391~~).</p>
          */
         @NameInMap("Result")
         public String result;
