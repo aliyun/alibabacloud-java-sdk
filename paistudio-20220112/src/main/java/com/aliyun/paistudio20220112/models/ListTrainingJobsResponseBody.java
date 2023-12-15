@@ -393,6 +393,9 @@ public class ListTrainingJobsResponseBody extends TeaModel {
     }
 
     public static class ListTrainingJobsResponseBodyTrainingJobsUserVpc extends TeaModel {
+        @NameInMap("DefaultRoute")
+        public String defaultRoute;
+
         @NameInMap("ExtendedCIDRs")
         public java.util.List<String> extendedCIDRs;
 
@@ -408,6 +411,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         public static ListTrainingJobsResponseBodyTrainingJobsUserVpc build(java.util.Map<String, ?> map) throws Exception {
             ListTrainingJobsResponseBodyTrainingJobsUserVpc self = new ListTrainingJobsResponseBodyTrainingJobsUserVpc();
             return TeaModel.build(map, self);
+        }
+
+        public ListTrainingJobsResponseBodyTrainingJobsUserVpc setDefaultRoute(String defaultRoute) {
+            this.defaultRoute = defaultRoute;
+            return this;
+        }
+        public String getDefaultRoute() {
+            return this.defaultRoute;
         }
 
         public ListTrainingJobsResponseBodyTrainingJobsUserVpc setExtendedCIDRs(java.util.List<String> extendedCIDRs) {
