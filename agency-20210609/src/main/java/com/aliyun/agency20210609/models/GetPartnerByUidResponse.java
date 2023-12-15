@@ -3,7 +3,7 @@ package com.aliyun.agency20210609.models;
 
 import com.aliyun.tea.*;
 
-public class QueryFusionOrderListResponse extends TeaModel {
+public class GetPartnerByUidResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class QueryFusionOrderListResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public QueryFusionOrderListResponseBody body;
+    public GetPartnerByUidResponseBody body;
 
-    public static QueryFusionOrderListResponse build(java.util.Map<String, ?> map) throws Exception {
-        QueryFusionOrderListResponse self = new QueryFusionOrderListResponse();
+    public static GetPartnerByUidResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetPartnerByUidResponse self = new GetPartnerByUidResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryFusionOrderListResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetPartnerByUidResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class QueryFusionOrderListResponse extends TeaModel {
         return this.headers;
     }
 
-    public QueryFusionOrderListResponse setStatusCode(Integer statusCode) {
+    public GetPartnerByUidResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class QueryFusionOrderListResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public QueryFusionOrderListResponse setBody(QueryFusionOrderListResponseBody body) {
+    public GetPartnerByUidResponse setBody(GetPartnerByUidResponseBody body) {
         this.body = body;
         return this;
     }
-    public QueryFusionOrderListResponseBody getBody() {
+    public GetPartnerByUidResponseBody getBody() {
         return this.body;
     }
 
