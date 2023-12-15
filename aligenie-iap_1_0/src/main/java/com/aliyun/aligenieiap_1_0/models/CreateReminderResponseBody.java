@@ -4,19 +4,15 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class CreateReminderResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // 错误信息
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
-    // 创建的提醒id
     @NameInMap("Model")
     public Long model;
 
-    // 服务成功标识
     @NameInMap("Success")
     public Boolean success;
 

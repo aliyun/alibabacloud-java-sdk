@@ -4,15 +4,12 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetAccountForAppResponseBody extends TeaModel {
-    // 错误码
     @NameInMap("RetCode")
     public Integer retCode;
 
-    // 错误信息
     @NameInMap("RetMsg")
     public String retMsg;
 
-    // 用户信息
     @NameInMap("RetValue")
     public GetAccountForAppResponseBodyRetValue retValue;
 
@@ -46,15 +43,12 @@ public class GetAccountForAppResponseBody extends TeaModel {
     }
 
     public static class GetAccountForAppResponseBodyRetValue extends TeaModel {
-        // 是否VIP
         @NameInMap("IsVip")
         public Boolean isVip;
 
-        // 日期格式，到期时间
         @NameInMap("StrVipExpire")
         public String strVipExpire;
 
-        // 若以前开通过会员，返回会员失效时间，若从未开通过会员，此字段为0
         @NameInMap("VipExpireAt")
         public Long vipExpireAt;
 

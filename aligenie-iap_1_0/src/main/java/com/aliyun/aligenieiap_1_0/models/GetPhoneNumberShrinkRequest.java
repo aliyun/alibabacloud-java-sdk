@@ -4,11 +4,9 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetPhoneNumberShrinkRequest extends TeaModel {
-    // 设备标识信息
     @NameInMap("DeviceInfo")
     public String deviceInfoShrink;
 
-    // 用户标识信息
     @NameInMap("UserInfo")
     public String userInfoShrink;
 
