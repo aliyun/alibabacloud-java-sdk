@@ -3,7 +3,7 @@ package com.aliyun.vod20170321.models;
 
 import com.aliyun.tea.*;
 
-public class SubmitSnapshotJobRequest extends TeaModel {
+public class SubmitSnapshotJobShrinkRequest extends TeaModel {
     /**
      * <p>The maximum number of snapshots. Default value: **1**.</p>
      */
@@ -42,7 +42,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
     public Long specifiedOffsetTime;
 
     @NameInMap("SpecifiedOffsetTimes")
-    public java.util.List<Long> specifiedOffsetTimes;
+    public String specifiedOffsetTimesShrink;
 
     /**
      * <p>The sprite snapshot configuration. If you set this parameter, sprite snapshots are generated. For more information, see [SpriteSnapshotConfig](~~86952~~).</p>
@@ -72,12 +72,12 @@ public class SubmitSnapshotJobRequest extends TeaModel {
     @NameInMap("Width")
     public String width;
 
-    public static SubmitSnapshotJobRequest build(java.util.Map<String, ?> map) throws Exception {
-        SubmitSnapshotJobRequest self = new SubmitSnapshotJobRequest();
+    public static SubmitSnapshotJobShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        SubmitSnapshotJobShrinkRequest self = new SubmitSnapshotJobShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public SubmitSnapshotJobRequest setCount(Long count) {
+    public SubmitSnapshotJobShrinkRequest setCount(Long count) {
         this.count = count;
         return this;
     }
@@ -85,7 +85,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         return this.count;
     }
 
-    public SubmitSnapshotJobRequest setHeight(String height) {
+    public SubmitSnapshotJobShrinkRequest setHeight(String height) {
         this.height = height;
         return this;
     }
@@ -93,7 +93,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         return this.height;
     }
 
-    public SubmitSnapshotJobRequest setInterval(Long interval) {
+    public SubmitSnapshotJobShrinkRequest setInterval(Long interval) {
         this.interval = interval;
         return this;
     }
@@ -101,7 +101,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         return this.interval;
     }
 
-    public SubmitSnapshotJobRequest setSnapshotTemplateId(String snapshotTemplateId) {
+    public SubmitSnapshotJobShrinkRequest setSnapshotTemplateId(String snapshotTemplateId) {
         this.snapshotTemplateId = snapshotTemplateId;
         return this;
     }
@@ -109,7 +109,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         return this.snapshotTemplateId;
     }
 
-    public SubmitSnapshotJobRequest setSpecifiedOffsetTime(Long specifiedOffsetTime) {
+    public SubmitSnapshotJobShrinkRequest setSpecifiedOffsetTime(Long specifiedOffsetTime) {
         this.specifiedOffsetTime = specifiedOffsetTime;
         return this;
     }
@@ -117,15 +117,15 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         return this.specifiedOffsetTime;
     }
 
-    public SubmitSnapshotJobRequest setSpecifiedOffsetTimes(java.util.List<Long> specifiedOffsetTimes) {
-        this.specifiedOffsetTimes = specifiedOffsetTimes;
+    public SubmitSnapshotJobShrinkRequest setSpecifiedOffsetTimesShrink(String specifiedOffsetTimesShrink) {
+        this.specifiedOffsetTimesShrink = specifiedOffsetTimesShrink;
         return this;
     }
-    public java.util.List<Long> getSpecifiedOffsetTimes() {
-        return this.specifiedOffsetTimes;
+    public String getSpecifiedOffsetTimesShrink() {
+        return this.specifiedOffsetTimesShrink;
     }
 
-    public SubmitSnapshotJobRequest setSpriteSnapshotConfig(String spriteSnapshotConfig) {
+    public SubmitSnapshotJobShrinkRequest setSpriteSnapshotConfig(String spriteSnapshotConfig) {
         this.spriteSnapshotConfig = spriteSnapshotConfig;
         return this;
     }
@@ -133,7 +133,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         return this.spriteSnapshotConfig;
     }
 
-    public SubmitSnapshotJobRequest setUserData(String userData) {
+    public SubmitSnapshotJobShrinkRequest setUserData(String userData) {
         this.userData = userData;
         return this;
     }
@@ -141,7 +141,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         return this.userData;
     }
 
-    public SubmitSnapshotJobRequest setVideoId(String videoId) {
+    public SubmitSnapshotJobShrinkRequest setVideoId(String videoId) {
         this.videoId = videoId;
         return this;
     }
@@ -149,7 +149,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         return this.videoId;
     }
 
-    public SubmitSnapshotJobRequest setWidth(String width) {
+    public SubmitSnapshotJobShrinkRequest setWidth(String width) {
         this.width = width;
         return this;
     }
