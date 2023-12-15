@@ -4,12 +4,21 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DisableInstanceAccessControlRequest extends TeaModel {
+    /**
+     * <p>The ID of the access control policy.</p>
+     */
     @NameInMap("AclId")
     public String aclId;
 
+    /**
+     * <p>IP版本，可以设置为**ipv4**或者**ipv6**。</p>
+     */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

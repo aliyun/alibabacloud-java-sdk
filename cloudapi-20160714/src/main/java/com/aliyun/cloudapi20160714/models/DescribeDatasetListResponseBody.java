@@ -64,6 +64,36 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeDatasetListResponseBodyDatasetInfoListTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeDatasetListResponseBodyDatasetInfoListTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDatasetListResponseBodyDatasetInfoListTags self = new DescribeDatasetListResponseBodyDatasetInfoListTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDatasetListResponseBodyDatasetInfoListTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeDatasetListResponseBodyDatasetInfoListTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeDatasetListResponseBodyDatasetInfoList extends TeaModel {
         @NameInMap("CreatedTime")
         public String createdTime;
@@ -79,6 +109,9 @@ public class DescribeDatasetListResponseBody extends TeaModel {
 
         @NameInMap("ModifiedTime")
         public String modifiedTime;
+
+        @NameInMap("Tags")
+        public java.util.List<DescribeDatasetListResponseBodyDatasetInfoListTags> tags;
 
         public static DescribeDatasetListResponseBodyDatasetInfoList build(java.util.Map<String, ?> map) throws Exception {
             DescribeDatasetListResponseBodyDatasetInfoList self = new DescribeDatasetListResponseBodyDatasetInfoList();
@@ -123,6 +156,14 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         }
         public String getModifiedTime() {
             return this.modifiedTime;
+        }
+
+        public DescribeDatasetListResponseBodyDatasetInfoList setTags(java.util.List<DescribeDatasetListResponseBodyDatasetInfoListTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeDatasetListResponseBodyDatasetInfoListTags> getTags() {
+            return this.tags;
         }
 
     }

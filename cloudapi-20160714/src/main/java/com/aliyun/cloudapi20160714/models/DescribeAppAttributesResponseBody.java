@@ -81,13 +81,13 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
 
     public static class DescribeAppAttributesResponseBodyAppsAppAttributeTagsTagInfo extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -136,37 +136,37 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
 
     public static class DescribeAppAttributesResponseBodyAppsAppAttribute extends TeaModel {
         /**
-         * <p>The ID of the app.</p>
+         * <p>The application ID.</p>
          */
         @NameInMap("AppId")
         public Long appId;
 
         /**
-         * <p>The name of the app.</p>
+         * <p>The application name.</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
-         * <p>The creation time (UTC) of the app.</p>
+         * <p>The creation time (UTC) of the application.</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
-         * <p>The description of the app.</p>
+         * <p>The application description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Extended Fields.</p>
+         * <p>The extended information.</p>
          */
         @NameInMap("Extend")
         public String extend;
 
         /**
-         * <p>The modification time (UTC) of the app.</p>
+         * <p>The modification time (UTC) of the application.</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;

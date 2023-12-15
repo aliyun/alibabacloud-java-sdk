@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
     /**
-     * <p>The list of HTTP status codes returned.</p>
+     * <p>The HTTP status codes.</p>
      */
     @NameInMap("InstanceHttpCode")
     public DescribeInstanceHttpCodeResponseBodyInstanceHttpCode instanceHttpCode;
@@ -39,13 +39,13 @@ public class DescribeInstanceHttpCodeResponseBody extends TeaModel {
 
     public static class DescribeInstanceHttpCodeResponseBodyInstanceHttpCodeMonitorItem extends TeaModel {
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The HTTP status code returned.</p>
          */
         @NameInMap("ItemTime")
         public String itemTime;
 
         /**
-         * <p>The number of HTTP status codes returned.</p>
+         * <p>The corresponding value.</p>
          */
         @NameInMap("ItemValue")
         public String itemValue;

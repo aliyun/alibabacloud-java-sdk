@@ -3,19 +3,16 @@ package com.aliyun.cloudapi20160714.models;
 
 import com.aliyun.tea.*;
 
-public class DetachApiProductResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     */
+public class SetAppsAuthToApiProductResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DetachApiProductResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DetachApiProductResponseBody self = new DetachApiProductResponseBody();
+    public static SetAppsAuthToApiProductResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        SetAppsAuthToApiProductResponseBody self = new SetAppsAuthToApiProductResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DetachApiProductResponseBody setRequestId(String requestId) {
+    public SetAppsAuthToApiProductResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

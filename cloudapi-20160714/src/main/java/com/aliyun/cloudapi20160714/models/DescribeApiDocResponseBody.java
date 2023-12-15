@@ -282,7 +282,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
 
     public static class DescribeApiDocResponseBodyErrorCodeSamplesErrorCodeSample extends TeaModel {
         /**
-         * <p>The error code.</p>
+         * <p>The returned error code.</p>
          */
         @NameInMap("Code")
         public String code;
@@ -294,7 +294,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The error message.</p>
+         * <p>The returned error message.</p>
          */
         @NameInMap("Message")
         public String message;
@@ -449,7 +449,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
 
     public static class DescribeApiDocResponseBodyRequestParametersRequestParameter extends TeaModel {
         /**
-         * <p>The name of the API parameter.</p>
+         * <p>The name of the parameter in the API request.</p>
          */
         @NameInMap("ApiParameterName")
         public String apiParameterName;
@@ -461,37 +461,37 @@ public class DescribeApiDocResponseBody extends TeaModel {
         public String arrayItemsType;
 
         /**
-         * <p>Default value</p>
+         * <p>The default value.</p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
         /**
-         * <p>Example</p>
+         * <p>The example value.</p>
          */
         @NameInMap("DemoValue")
         public String demoValue;
 
         /**
-         * <p>Description</p>
+         * <p>The description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The order in the document.</p>
+         * <p>The order in which the parameter is sorted in the document.</p>
          */
         @NameInMap("DocOrder")
         public Integer docOrder;
 
         /**
-         * <p>Specifies whether the document is public. Valid values: PUBLIC and PRIVATE.</p>
+         * <p>Indicates whether the document is public. Valid values: **PUBLIC** and **PRIVATE**.</p>
          */
         @NameInMap("DocShow")
         public String docShow;
 
         /**
-         * <p>The hash values that can be entered when ParameterType is set to Int, Long, Float, Double, or String. Separate different values with commas (,), such as 1,2,3,4,9 or A,B,C,E,F.</p>
+         * <p>The hash values that can be specified if the **ParameterType** parameter is set to Int, Long, Float, Double, or String. Separate multiple hash values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.</p>
          */
         @NameInMap("EnumValue")
         public String enumValue;
@@ -533,19 +533,19 @@ public class DescribeApiDocResponseBody extends TeaModel {
         public Long minValue;
 
         /**
-         * <p>The type of the parameter.</p>
+         * <p>The data type of the parameter.</p>
          */
         @NameInMap("ParameterType")
         public String parameterType;
 
         /**
-         * <p>The regular expression used for parameter validation when ParameterType is set to String.</p>
+         * <p>The regular expression that is used to validate the parameter if the **ParameterType** parameter is set to String.</p>
          */
         @NameInMap("RegularExpression")
         public String regularExpression;
 
         /**
-         * <p>Required</p>
+         * <p>Indicates whether the parameter is required.</p>
          */
         @NameInMap("Required")
         public String required;

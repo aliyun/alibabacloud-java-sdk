@@ -1,3 +1,6 @@
+2023-12-15 Version: 3.4.0
+- Generated java 2016-07-14 for CloudAPI.
+
 2023-10-30 Version: 3.3.0
 - Generated java 2016-07-14 for CloudAPI.
 

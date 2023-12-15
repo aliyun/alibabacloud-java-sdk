@@ -4,9 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class RemoveApiProductsAuthoritiesShrinkRequest extends TeaModel {
+    /**
+     * <p>The API products.</p>
+     */
     @NameInMap("ApiProductIds")
     public String apiProductIdsShrink;
 
+    /**
+     * <p>The application ID.</p>
+     */
     @NameInMap("AppId")
     public Long appId;
 

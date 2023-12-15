@@ -4,6 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaModel {
+    /**
+     * <p>The authorization information of the API.</p>
+     */
     @NameInMap("AppApiRelationInfos")
     public DescribeApisWithStageNameIntegratedByAppResponseBodyAppApiRelationInfos appApiRelationInfos;
 
@@ -65,39 +68,78 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
     }
 
     public static class DescribeApisWithStageNameIntegratedByAppResponseBodyAppApiRelationInfosAppApiRelationInfo extends TeaModel {
+        /**
+         * <p>The API ID.</p>
+         */
         @NameInMap("ApiId")
         public String apiId;
 
+        /**
+         * <p>The API name.</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>The authorization source.</p>
+         */
         @NameInMap("AuthorizationSource")
         public String authorizationSource;
 
+        /**
+         * <p>The time when the authorization was created.</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>The API description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the API group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the API group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The request HTTP method for the API.</p>
+         */
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <p>The authorizer. Valid values:</p>
+         * <br>
+         * <p>*   **PROVIDER:**: the API owner</p>
+         * <p>*   **CONSUMER:**: the API caller</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>The API request path.</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The mapping information between environments and authorizations.</p>
+         */
         @NameInMap("StageNameAndAuth")
         public java.util.Map<String, String> stageNameAndAuth;
 

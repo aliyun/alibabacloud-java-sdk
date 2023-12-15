@@ -4,15 +4,42 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeImportOASTaskResponseBody extends TeaModel {
+    /**
+     * <p>The execution status of the subtask. Valid values:</p>
+     * <br>
+     * <p>*   RUNNING</p>
+     * <p>*   WAIT</p>
+     * <p>*   OVER</p>
+     * <p>*   FAIL</p>
+     * <p>*   CANCEL</p>
+     */
     @NameInMap("ApiResults")
     public DescribeImportOASTaskResponseBodyApiResults apiResults;
 
+    /**
+     * <p>The execution status of the subtask. Valid values:</p>
+     * <br>
+     * <p>*   RUNNING</p>
+     * <p>*   WAIT</p>
+     * <p>*   OVER</p>
+     * <p>*   FAIL</p>
+     * <p>*   CANCEL</p>
+     */
     @NameInMap("ModelResults")
     public DescribeImportOASTaskResponseBodyModelResults modelResults;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the import task. Valid values:</p>
+     * <br>
+     * <p>*   Running</p>
+     * <p>*   Finished</p>
+     */
     @NameInMap("TaskStatus")
     public String taskStatus;
 

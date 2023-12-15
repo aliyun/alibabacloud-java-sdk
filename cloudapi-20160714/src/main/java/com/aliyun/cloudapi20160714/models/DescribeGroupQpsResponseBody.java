@@ -39,13 +39,13 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
 
     public static class DescribeGroupQpsResponseBodyGroupQpsMonitorItem extends TeaModel {
         /**
-         * <p>The time.</p>
+         * <p>The point in time.</p>
          */
         @NameInMap("ItemTime")
         public String itemTime;
 
         /**
-         * <p>The number of requests that fall into the time range.</p>
+         * <p>The number of requests at the specified point in time.</p>
          */
         @NameInMap("ItemValue")
         public String itemValue;

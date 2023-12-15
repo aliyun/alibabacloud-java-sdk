@@ -39,6 +39,9 @@ public class ModifyApiRequest extends TeaModel {
     @NameInMap("AuthType")
     public String authType;
 
+    /**
+     * <p>Configuration Mode</p>
+     */
     @NameInMap("BackendEnable")
     public Boolean backendEnable;
 

@@ -11,7 +11,7 @@ public class SetDomainCertificateRequest extends TeaModel {
     public String caCertificateBody;
 
     /**
-     * <p>The content of the certificate.</p>
+     * <p>The certificate content.</p>
      */
     @NameInMap("CertificateBody")
     public String certificateBody;

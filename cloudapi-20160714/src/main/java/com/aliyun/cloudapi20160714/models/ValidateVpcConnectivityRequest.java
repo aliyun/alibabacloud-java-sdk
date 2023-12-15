@@ -4,12 +4,18 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ValidateVpcConnectivityRequest extends TeaModel {
+    /**
+     * <p>The ID of the API Gateway instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The ID of the VPC access authorization.</p>
+     */
     @NameInMap("VpcAccessId")
     public String vpcAccessId;
 

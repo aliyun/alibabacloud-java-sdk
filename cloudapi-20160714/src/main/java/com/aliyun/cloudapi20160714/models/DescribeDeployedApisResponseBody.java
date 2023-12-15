@@ -81,7 +81,7 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
 
     public static class DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem extends TeaModel {
         /**
-         * <p>The ID of the API.</p>
+         * <p>The API ID.</p>
          */
         @NameInMap("ApiId")
         public String apiId;
@@ -93,7 +93,7 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
         public String apiMethod;
 
         /**
-         * <p>The name of the API.</p>
+         * <p>The API name.</p>
          */
         @NameInMap("ApiName")
         public String apiName;
@@ -105,37 +105,37 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
         public String apiPath;
 
         /**
-         * <p>The publishing time (UTC) of the API.</p>
+         * <p>The time when the API was published. The time is displayed in UTC.</p>
          */
         @NameInMap("DeployedTime")
         public String deployedTime;
 
         /**
-         * <p>The description of the API.</p>
+         * <p>The API description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the API group.</p>
+         * <p>The API group ID.</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
-         * <p>The name of the API group.</p>
+         * <p>The name of the API group to which the API belongs.</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
-         * <p>The region in which the API is located.</p>
+         * <p>The region ID of the API.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The name of the runtime environment. Valid values:</p>
+         * <p>The environment name. Valid values:</p>
          * <br>
          * <p>*   **RELEASE**</p>
          * <p>*   **TEST**</p>

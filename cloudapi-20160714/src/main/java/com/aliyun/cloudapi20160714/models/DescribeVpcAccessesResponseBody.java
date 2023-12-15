@@ -64,6 +64,55 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         return this.vpcAccessAttributes;
     }
 
+    public static class DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTagsTagInfo extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTagsTagInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTagsTagInfo self = new DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTagsTagInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTagsTagInfo setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTagsTagInfo setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTags extends TeaModel {
+        @NameInMap("TagInfo")
+        public java.util.List<DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTagsTagInfo> tagInfo;
+
+        public static DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTags self = new DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTags setTagInfo(java.util.List<DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTagsTagInfo> tagInfo) {
+            this.tagInfo = tagInfo;
+            return this;
+        }
+        public java.util.List<DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTagsTagInfo> getTagInfo() {
+            return this.tagInfo;
+        }
+
+    }
+
     public static class DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute extends TeaModel {
         @NameInMap("CreatedTime")
         public String createdTime;
@@ -82,6 +131,9 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
 
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("Tags")
+        public DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTags tags;
 
         @NameInMap("VpcAccessId")
         public String vpcAccessId;
@@ -143,6 +195,14 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute setTags(DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTags getTags() {
+            return this.tags;
         }
 
         public DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute setVpcAccessId(String vpcAccessId) {

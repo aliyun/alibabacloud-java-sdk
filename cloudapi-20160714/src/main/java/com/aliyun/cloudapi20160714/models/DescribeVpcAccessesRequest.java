@@ -22,6 +22,9 @@ public class DescribeVpcAccessesRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeVpcAccessesRequestTag> tag;
+
     @NameInMap("VpcAccessId")
     public String vpcAccessId;
 
@@ -81,6 +84,14 @@ public class DescribeVpcAccessesRequest extends TeaModel {
         return this.securityToken;
     }
 
+    public DescribeVpcAccessesRequest setTag(java.util.List<DescribeVpcAccessesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeVpcAccessesRequestTag> getTag() {
+        return this.tag;
+    }
+
     public DescribeVpcAccessesRequest setVpcAccessId(String vpcAccessId) {
         this.vpcAccessId = vpcAccessId;
         return this;
@@ -95,6 +106,36 @@ public class DescribeVpcAccessesRequest extends TeaModel {
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public static class DescribeVpcAccessesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeVpcAccessesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpcAccessesRequestTag self = new DescribeVpcAccessesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcAccessesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeVpcAccessesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

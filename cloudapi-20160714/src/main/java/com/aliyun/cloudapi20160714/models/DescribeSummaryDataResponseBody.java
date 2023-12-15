@@ -4,21 +4,39 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeSummaryDataResponseBody extends TeaModel {
+    /**
+     * <p>The number of subscription dedicated instances that expire in 14 days or less.</p>
+     */
     @NameInMap("ExpireInstanceNum")
     public Integer expireInstanceNum;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of APIs.</p>
+     */
     @NameInMap("UsageApiNum")
     public Integer usageApiNum;
 
+    /**
+     * <p>The number of API groups.</p>
+     */
     @NameInMap("UsageGroupNum")
     public Integer usageGroupNum;
 
+    /**
+     * <p>The number of running dedicated instances.</p>
+     */
     @NameInMap("UsageInstanceNum")
     public Integer usageInstanceNum;
 

@@ -62,10 +62,10 @@ public class DescribeApisRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The environment in which the API is requested. Valid values:</p>
+     * <p>The environment in which you want to perform this operation. Valid values:</p>
      * <br>
      * <p>*   **RELEASE**: the production environment</p>
-     * <p>*   **PRE**: the pre-release environment</p>
+     * <p>*   **PRE**: the staging environment</p>
      * <p>*   **TEST**: the test environment</p>
      */
     @NameInMap("StageName")

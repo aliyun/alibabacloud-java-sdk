@@ -4,18 +4,33 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppsByApiProductResponseBody extends TeaModel {
+    /**
+     * <p>The information about authorized applications.</p>
+     */
     @NameInMap("AuthorizedApps")
     public DescribeAppsByApiProductResponseBodyAuthorizedApps authorizedApps;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,21 +80,39 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
     }
 
     public static class DescribeAppsByApiProductResponseBodyAuthorizedAppsAuthorizedApp extends TeaModel {
+        /**
+         * <p>The application ID.</p>
+         */
         @NameInMap("AppId")
         public Long appId;
 
+        /**
+         * <p>The application name.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The expiration time of the authorization. The time is in GMT. An empty value indicates that the authorization does not expire.</p>
+         */
         @NameInMap("AuthValidTime")
         public String authValidTime;
 
+        /**
+         * <p>The time when the authorization was created. The time is in GMT.</p>
+         */
         @NameInMap("AuthorizedTime")
         public String authorizedTime;
 
+        /**
+         * <p>The authorization description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The extended information.</p>
+         */
         @NameInMap("Extend")
         public String extend;
 

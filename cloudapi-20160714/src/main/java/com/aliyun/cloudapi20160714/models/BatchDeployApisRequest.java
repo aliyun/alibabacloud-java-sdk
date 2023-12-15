@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchDeployApisRequest extends TeaModel {
     /**
-     * <p>The APIs that you want to operate.</p>
+     * <p>The APIs that you want to publish.</p>
      */
     @NameInMap("Api")
     public java.util.List<BatchDeployApisRequestApi> api;
@@ -68,13 +68,13 @@ public class BatchDeployApisRequest extends TeaModel {
 
     public static class BatchDeployApisRequestApi extends TeaModel {
         /**
-         * <p>The ID of the API.</p>
+         * <p>The API ID.</p>
          */
         @NameInMap("ApiUid")
         public String apiUid;
 
         /**
-         * <p>The ID of the API group.</p>
+         * <p>The API group ID.</p>
          */
         @NameInMap("GroupId")
         public String groupId;

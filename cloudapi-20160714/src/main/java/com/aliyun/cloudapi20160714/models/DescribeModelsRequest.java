@@ -34,6 +34,9 @@ public class DescribeModelsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeModelsRequestTag> tag;
+
     public static DescribeModelsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeModelsRequest self = new DescribeModelsRequest();
         return TeaModel.build(map, self);
@@ -77,6 +80,44 @@ public class DescribeModelsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeModelsRequest setTag(java.util.List<DescribeModelsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeModelsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeModelsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeModelsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeModelsRequestTag self = new DescribeModelsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeModelsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeModelsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
