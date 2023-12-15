@@ -4,11 +4,9 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class PaasButtonListDTO extends TeaModel {
-    // Button
     @NameInMap("Button")
     public java.util.List<PaasButtonDTO> button;
 
-    // Intro
     @NameInMap("Intro")
     public String intro;
 

@@ -4,23 +4,18 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class PaasFunctionPluginParams extends TeaModel {
-    // Body
     @NameInMap("Body")
     public String body;
 
-    // Header
     @NameInMap("Header")
     public java.util.Map<String, String> header;
 
-    // Method
     @NameInMap("Method")
     public String method;
 
-    // Query
     @NameInMap("Query")
     public java.util.Map<String, String> query;
 
-    // Url
     @NameInMap("Url")
     public String url;
 

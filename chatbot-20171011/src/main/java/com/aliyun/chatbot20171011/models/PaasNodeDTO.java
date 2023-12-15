@@ -4,27 +4,21 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class PaasNodeDTO extends TeaModel {
-    // Code
     @NameInMap("Code")
     public String code;
 
-    // Id
     @NameInMap("Id")
     public String id;
 
-    // Label
     @NameInMap("Label")
     public String label;
 
-    // PluginData
     @NameInMap("PluginData")
     public PaasPluginDataDTO pluginData;
 
-    // Xx
     @NameInMap("Xx")
     public Double xx;
 
-    // Yy
     @NameInMap("Yy")
     public Double yy;
 

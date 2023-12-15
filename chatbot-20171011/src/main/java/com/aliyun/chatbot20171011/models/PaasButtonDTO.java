@@ -4,15 +4,12 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class PaasButtonDTO extends TeaModel {
-    // Name
     @NameInMap("Name")
     public String name;
 
-    // Text
     @NameInMap("Text")
     public String text;
 
-    // Type
     @NameInMap("Type")
     public String type;
 

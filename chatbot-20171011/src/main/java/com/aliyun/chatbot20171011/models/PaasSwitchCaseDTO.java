@@ -4,23 +4,18 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class PaasSwitchCaseDTO extends TeaModel {
-    // Id
     @NameInMap("Id")
     public String id;
 
-    // Label
     @NameInMap("Label")
     public String label;
 
-    // Type
     @NameInMap("Type")
     public String type;
 
-    // Value
     @NameInMap("Value")
     public String value;
 
-    // VariableName
     @NameInMap("VariableName")
     public String variableName;
 

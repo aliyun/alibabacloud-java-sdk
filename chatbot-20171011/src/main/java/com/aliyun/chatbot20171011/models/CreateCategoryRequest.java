@@ -4,15 +4,8 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class CreateCategoryRequest extends TeaModel {
-    // 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
     @NameInMap("AgentKey")
     public String agentKey;
-
-    @NameInMap("BizCode")
-    public String bizCode;
-
-    @NameInMap("KnowledgeType")
-    public Integer knowledgeType;
 
     @NameInMap("Name")
     public String name;
@@ -31,22 +24,6 @@ public class CreateCategoryRequest extends TeaModel {
     }
     public String getAgentKey() {
         return this.agentKey;
-    }
-
-    public CreateCategoryRequest setBizCode(String bizCode) {
-        this.bizCode = bizCode;
-        return this;
-    }
-    public String getBizCode() {
-        return this.bizCode;
-    }
-
-    public CreateCategoryRequest setKnowledgeType(Integer knowledgeType) {
-        this.knowledgeType = knowledgeType;
-        return this;
-    }
-    public Integer getKnowledgeType() {
-        return this.knowledgeType;
     }
 
     public CreateCategoryRequest setName(String name) {

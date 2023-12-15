@@ -22,6 +22,9 @@ public class DescribeKnowledgeResponseBody extends TeaModel {
     @NameInMap("KeyWords")
     public java.util.List<String> keyWords;
 
+    /**
+     * <p>FAQ ID</p>
+     */
     @NameInMap("KnowledgeId")
     public Long knowledgeId;
 
@@ -208,6 +211,9 @@ public class DescribeKnowledgeResponseBody extends TeaModel {
     }
 
     public static class DescribeKnowledgeResponseBodyOutlines extends TeaModel {
+        /**
+         * <p>FAQ ID</p>
+         */
         @NameInMap("KnowledgeId")
         public Long knowledgeId;
 

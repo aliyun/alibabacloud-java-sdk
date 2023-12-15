@@ -4,27 +4,21 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class PaasSlotConfigDTO extends TeaModel {
-    // IsArray
     @NameInMap("IsArray")
     public Boolean isArray;
 
-    // IsNecessary
     @NameInMap("IsNecessary")
     public Boolean isNecessary;
 
-    // LifeSpan
     @NameInMap("LifeSpan")
     public Integer lifeSpan;
 
-    // Name
     @NameInMap("Name")
     public String name;
 
-    // Question
     @NameInMap("Question")
     public java.util.List<String> question;
 
-    // Value
     @NameInMap("Value")
     public String value;
 

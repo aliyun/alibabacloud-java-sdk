@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetConversationListResponseBody extends TeaModel {
     @NameInMap("Messages")
-    public java.util.List<java.util.Map<String, ?>> messages;
+    public java.util.List<java.util.Map<String, String>> messages;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -24,11 +24,11 @@ public class GetConversationListResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetConversationListResponseBody setMessages(java.util.List<java.util.Map<String, ?>> messages) {
+    public GetConversationListResponseBody setMessages(java.util.List<java.util.Map<String, String>> messages) {
         this.messages = messages;
         return this;
     }
-    public java.util.List<java.util.Map<String, ?>> getMessages() {
+    public java.util.List<java.util.Map<String, String>> getMessages() {
         return this.messages;
     }
 

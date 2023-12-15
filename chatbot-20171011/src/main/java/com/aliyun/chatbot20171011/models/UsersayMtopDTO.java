@@ -4,15 +4,12 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class UsersayMtopDTO extends TeaModel {
-    // Data
     @NameInMap("Data")
     public java.util.List<SectionMtopDTO> data;
 
-    // Id
     @NameInMap("Id")
     public String id;
 
-    // Strict
     @NameInMap("Strict")
     public Boolean strict;
 

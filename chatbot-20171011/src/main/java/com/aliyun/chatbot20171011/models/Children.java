@@ -4,23 +4,18 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class Children extends TeaModel {
-    // 地区代号
     @NameInMap("AreaCode")
     public String areaCode;
 
-    // 分类Id
     @NameInMap("CategoryId")
     public Long categoryId;
 
-    // 子元素
     @NameInMap("Childrens")
     public java.util.List<Children> childrens;
 
-    // 名称
     @NameInMap("Name")
     public String name;
 
-    // 父分类Id
     @NameInMap("ParentCategoryId")
     public Long parentCategoryId;
 

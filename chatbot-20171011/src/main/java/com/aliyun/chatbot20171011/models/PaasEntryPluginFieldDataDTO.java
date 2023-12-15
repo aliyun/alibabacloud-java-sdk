@@ -4,15 +4,12 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class PaasEntryPluginFieldDataDTO extends TeaModel {
-    // ContentEntry
     @NameInMap("ContentEntry")
     public java.util.List<PaasConditionSetDTO> contentEntry;
 
-    // LifeSpan
     @NameInMap("LifeSpan")
     public Long lifeSpan;
 
-    // Name
     @NameInMap("Name")
     public String name;
 

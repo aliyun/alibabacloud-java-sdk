@@ -80,6 +80,9 @@ public class QueryKnowledgesResponseBody extends TeaModel {
         @NameInMap("EndDate")
         public String endDate;
 
+        /**
+         * <p>FAQ ID</p>
+         */
         @NameInMap("KnowledgeId")
         public Long knowledgeId;
 

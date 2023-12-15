@@ -4,43 +4,33 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class PaasFunctionPluginFieldDataDTO extends TeaModel {
-    // AliyunFunction
     @NameInMap("AliyunFunction")
     public String aliyunFunction;
 
-    // AliyunService
     @NameInMap("AliyunService")
     public String aliyunService;
 
-    // Code
     @NameInMap("Code")
     public String code;
 
-    // Description
     @NameInMap("Description")
     public String description;
 
-    // EndPoint
     @NameInMap("EndPoint")
     public String endPoint;
 
-    // Function
     @NameInMap("Function")
     public String function;
 
-    // Name
     @NameInMap("Name")
     public String name;
 
-    // Params
     @NameInMap("Params")
     public java.util.Map<String, ?> params;
 
-    // Switch
     @NameInMap("Switch")
     public java.util.List<PaasSwitchCaseDTO> _switch;
 
-    // Type
     @NameInMap("Type")
     public String type;
 

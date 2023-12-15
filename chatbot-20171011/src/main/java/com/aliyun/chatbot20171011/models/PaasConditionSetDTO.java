@@ -4,7 +4,6 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class PaasConditionSetDTO extends TeaModel {
-    // ConditionEntries
     @NameInMap("ConditionEntries")
     public java.util.List<PaasConditionEntryDTO> conditionEntries;
 

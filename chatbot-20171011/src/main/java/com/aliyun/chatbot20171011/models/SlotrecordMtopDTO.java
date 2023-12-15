@@ -4,35 +4,27 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class SlotrecordMtopDTO extends TeaModel {
-    // Id
     @NameInMap("Id")
     public String id;
 
-    // IsArray
     @NameInMap("IsArray")
     public Boolean isArray;
 
-    // IsNecessary
     @NameInMap("IsNecessary")
     public Boolean isNecessary;
 
-    // LifeSpan
     @NameInMap("LifeSpan")
     public Integer lifeSpan;
 
-    // Name
     @NameInMap("Name")
     public String name;
 
-    // Question
     @NameInMap("Question")
     public java.util.List<String> question;
 
-    // Tags
     @NameInMap("Tags")
     public java.util.List<TagMtopDTO> tags;
 
-    // Value
     @NameInMap("Value")
     public String value;
 

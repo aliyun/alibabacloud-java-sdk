@@ -4,11 +4,9 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class SectionMtopDTO extends TeaModel {
-    // SlotId
     @NameInMap("SlotId")
     public String slotId;
 
-    // Text
     @NameInMap("Text")
     public String text;
 
