@@ -55,6 +55,9 @@ public class ListJobsShrinkRequest extends TeaModel {
     @NameInMap("Tags")
     public String tagsShrink;
 
+    @NameInMap("UserIdForFilter")
+    public String userIdForFilter;
+
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -197,6 +200,14 @@ public class ListJobsShrinkRequest extends TeaModel {
     }
     public String getTagsShrink() {
         return this.tagsShrink;
+    }
+
+    public ListJobsShrinkRequest setUserIdForFilter(String userIdForFilter) {
+        this.userIdForFilter = userIdForFilter;
+        return this;
+    }
+    public String getUserIdForFilter() {
+        return this.userIdForFilter;
     }
 
     public ListJobsShrinkRequest setWorkspaceId(String workspaceId) {

@@ -453,6 +453,9 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("MountPath")
         public String mountPath;
 
+        @NameInMap("Uri")
+        public String uri;
+
         public static GetJobResponseBodyDataSources build(java.util.Map<String, ?> map) throws Exception {
             GetJobResponseBodyDataSources self = new GetJobResponseBodyDataSources();
             return TeaModel.build(map, self);
@@ -472,6 +475,14 @@ public class GetJobResponseBody extends TeaModel {
         }
         public String getMountPath() {
             return this.mountPath;
+        }
+
+        public GetJobResponseBodyDataSources setUri(String uri) {
+            this.uri = uri;
+            return this;
+        }
+        public String getUri() {
+            return this.uri;
         }
 
     }
