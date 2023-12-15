@@ -4,22 +4,18 @@ package com.aliyun.agency20210609.models;
 import com.aliyun.tea.*;
 
 public class GetOwnerAgreementInstanceResponseBody extends TeaModel {
-    // data
     @NameInMap("Data")
-    public String data;
+    public GetOwnerAgreementInstanceResponseBodyData data;
 
-    // errCode
     @NameInMap("ErrCode")
     public String errCode;
 
-    // errMsg
     @NameInMap("ErrMsg")
     public String errMsg;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    // success
     @NameInMap("Success")
     public Boolean success;
 
@@ -28,11 +24,11 @@ public class GetOwnerAgreementInstanceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetOwnerAgreementInstanceResponseBody setData(String data) {
+    public GetOwnerAgreementInstanceResponseBody setData(GetOwnerAgreementInstanceResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public GetOwnerAgreementInstanceResponseBodyData getData() {
         return this.data;
     }
 
@@ -66,6 +62,77 @@ public class GetOwnerAgreementInstanceResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class GetOwnerAgreementInstanceResponseBodyDataAgreementPropertyRoleDTOList extends TeaModel {
+        @NameInMap("AgreementCode")
+        public String agreementCode;
+
+        public static GetOwnerAgreementInstanceResponseBodyDataAgreementPropertyRoleDTOList build(java.util.Map<String, ?> map) throws Exception {
+            GetOwnerAgreementInstanceResponseBodyDataAgreementPropertyRoleDTOList self = new GetOwnerAgreementInstanceResponseBodyDataAgreementPropertyRoleDTOList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetOwnerAgreementInstanceResponseBodyDataAgreementPropertyRoleDTOList setAgreementCode(String agreementCode) {
+            this.agreementCode = agreementCode;
+            return this;
+        }
+        public String getAgreementCode() {
+            return this.agreementCode;
+        }
+
+    }
+
+    public static class GetOwnerAgreementInstanceResponseBodyData extends TeaModel {
+        @NameInMap("AgreementPropertyRoleDTOList")
+        public java.util.List<GetOwnerAgreementInstanceResponseBodyDataAgreementPropertyRoleDTOList> agreementPropertyRoleDTOList;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Pid")
+        public String pid;
+
+        @NameInMap("Uid")
+        public String uid;
+
+        public static GetOwnerAgreementInstanceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetOwnerAgreementInstanceResponseBodyData self = new GetOwnerAgreementInstanceResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public GetOwnerAgreementInstanceResponseBodyData setAgreementPropertyRoleDTOList(java.util.List<GetOwnerAgreementInstanceResponseBodyDataAgreementPropertyRoleDTOList> agreementPropertyRoleDTOList) {
+            this.agreementPropertyRoleDTOList = agreementPropertyRoleDTOList;
+            return this;
+        }
+        public java.util.List<GetOwnerAgreementInstanceResponseBodyDataAgreementPropertyRoleDTOList> getAgreementPropertyRoleDTOList() {
+            return this.agreementPropertyRoleDTOList;
+        }
+
+        public GetOwnerAgreementInstanceResponseBodyData setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetOwnerAgreementInstanceResponseBodyData setPid(String pid) {
+            this.pid = pid;
+            return this;
+        }
+        public String getPid() {
+            return this.pid;
+        }
+
+        public GetOwnerAgreementInstanceResponseBodyData setUid(String uid) {
+            this.uid = uid;
+            return this;
+        }
+        public String getUid() {
+            return this.uid;
+        }
+
     }
 
 }
