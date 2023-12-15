@@ -4,18 +4,33 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiProductApisResponseBody extends TeaModel {
+    /**
+     * <p>The information about the returned APIs.</p>
+     */
     @NameInMap("ApiInfoList")
     public DescribeApiProductApisResponseBodyApiInfoList apiInfoList;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,30 +80,61 @@ public class DescribeApiProductApisResponseBody extends TeaModel {
     }
 
     public static class DescribeApiProductApisResponseBodyApiInfoListApiInfo extends TeaModel {
+        /**
+         * <p>The API ID.</p>
+         */
         @NameInMap("ApiId")
         public String apiId;
 
+        /**
+         * <p>The API name.</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>The API description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the API group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the API group to which the API belongs.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The request method of the API.</p>
+         */
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <p>The request path of the API.</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <p>The ID of the region where the API is deployed.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The environment to which the API is published. Valid values:</p>
+         * <br>
+         * <p>*   **RELEASE**: the production environment</p>
+         * <p>*   **PRE**: the staging environment</p>
+         * <p>*   **TEST**: the test environment</p>
+         */
         @NameInMap("StageName")
         public String stageName;
 

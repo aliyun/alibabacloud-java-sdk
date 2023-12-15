@@ -38,33 +38,63 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig extends TeaModel {
+        /**
+         * <p>The AccessKey of the RAM user that has the resource management permissions on Microservices Engine (MSE).</p>
+         */
         @NameInMap("AccessKey")
         public String accessKey;
 
+        /**
+         * <p>The authentication method.</p>
+         */
         @NameInMap("AuthType")
         public String authType;
 
+        /**
+         * <p>The name of the cluster to which the microservice belongs.</p>
+         */
         @NameInMap("Clusters")
         public String clusters;
 
+        /**
+         * <p>The name of the group to which the microservice that is registered with Nacos belongs.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The ID of the namespace where the microservice that is registered with Nacos resides.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The password.</p>
+         */
         @NameInMap("Password")
         public String password;
 
+        /**
+         * <p>The SecretKey of the RAM user that has the resource management permissions on MSE.</p>
+         */
         @NameInMap("SecretKey")
         public String secretKey;
 
+        /**
+         * <p>The Nacos service address.</p>
+         */
         @NameInMap("ServerAddress")
         public String serverAddress;
 
+        /**
+         * <p>The microservice name.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>The username.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
@@ -156,9 +186,15 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfig extends TeaModel {
+        /**
+         * <p>The Nacos configurations.</p>
+         */
         @NameInMap("NacosConfig")
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigNacosConfig nacosConfig;
 
+        /**
+         * <p>The registry type.</p>
+         */
         @NameInMap("RcType")
         public String rcType;
 
@@ -185,6 +221,91 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEdasConfig extends TeaModel {
+        @NameInMap("EdasAppId")
+        public String edasAppId;
+
+        @NameInMap("MicroserviceNamespace")
+        public String microserviceNamespace;
+
+        @NameInMap("MicroserviceNamespaceId")
+        public String microserviceNamespaceId;
+
+        @NameInMap("MicroserviceNamespaceName")
+        public String microserviceNamespaceName;
+
+        @NameInMap("MseInstanceId")
+        public String mseInstanceId;
+
+        @NameInMap("RegistryType")
+        public String registryType;
+
+        @NameInMap("ServiceName")
+        public String serviceName;
+
+        public static DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEdasConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEdasConfig self = new DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEdasConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEdasConfig setEdasAppId(String edasAppId) {
+            this.edasAppId = edasAppId;
+            return this;
+        }
+        public String getEdasAppId() {
+            return this.edasAppId;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEdasConfig setMicroserviceNamespace(String microserviceNamespace) {
+            this.microserviceNamespace = microserviceNamespace;
+            return this;
+        }
+        public String getMicroserviceNamespace() {
+            return this.microserviceNamespace;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEdasConfig setMicroserviceNamespaceId(String microserviceNamespaceId) {
+            this.microserviceNamespaceId = microserviceNamespaceId;
+            return this;
+        }
+        public String getMicroserviceNamespaceId() {
+            return this.microserviceNamespaceId;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEdasConfig setMicroserviceNamespaceName(String microserviceNamespaceName) {
+            this.microserviceNamespaceName = microserviceNamespaceName;
+            return this;
+        }
+        public String getMicroserviceNamespaceName() {
+            return this.microserviceNamespaceName;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEdasConfig setMseInstanceId(String mseInstanceId) {
+            this.mseInstanceId = mseInstanceId;
+            return this;
+        }
+        public String getMseInstanceId() {
+            return this.mseInstanceId;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEdasConfig setRegistryType(String registryType) {
+            this.registryType = registryType;
+            return this;
+        }
+        public String getRegistryType() {
+            return this.registryType;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEdasConfig setServiceName(String serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
+    }
+
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEventBridgeConfig extends TeaModel {
         /**
          * <p>The region ID of the event bus in EventBridge.</p>
@@ -193,7 +314,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public String eventBridgeRegionId;
 
         /**
-         * <p>The name of the event bus.</p>
+         * <p>The event bus.</p>
          */
         @NameInMap("EventBus")
         public String eventBus;
@@ -263,19 +384,19 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public String fcRegionId;
 
         /**
-         * <p>The type of the Function Compute service.</p>
+         * <p>The type of the service in Function Compute.</p>
          */
         @NameInMap("FcType")
         public String fcType;
 
         /**
-         * <p>The function name defined in Function Compute.</p>
+         * <p>The function name that is defined in Function Compute.</p>
          */
         @NameInMap("FunctionName")
         public String functionName;
 
         /**
-         * <p>The backend service path.</p>
+         * <p>Indicates whether the backend service receives only the service path.</p>
          */
         @NameInMap("OnlyBusinessPath")
         public Boolean onlyBusinessPath;
@@ -287,13 +408,13 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public String qualifier;
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role to be assumed by API Gateway to access Function Compute.</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that is assumed by API Gateway to access Function Compute.</p>
          */
         @NameInMap("RoleArn")
         public String roleArn;
 
         /**
-         * <p>The service name defined in Function Compute.</p>
+         * <p>The service name that is defined in Function Compute.</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
@@ -370,9 +491,15 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfigMockHeaders extends TeaModel {
+        /**
+         * <p>The name of the header parameter.</p>
+         */
         @NameInMap("HeaderName")
         public String headerName;
 
+        /**
+         * <p>The value of the header parameter.</p>
+         */
         @NameInMap("HeaderValue")
         public String headerValue;
 
@@ -400,12 +527,21 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfig extends TeaModel {
+        /**
+         * <p>The header returned for service mocking.</p>
+         */
         @NameInMap("MockHeaders")
         public java.util.List<DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfigMockHeaders> mockHeaders;
 
+        /**
+         * <p>The result returned for service mocking.</p>
+         */
         @NameInMap("MockResult")
         public String mockResult;
 
+        /**
+         * <p>The status code that is returned for service mocking.</p>
+         */
         @NameInMap("MockStatusCode")
         public String mockStatusCode;
 
@@ -448,7 +584,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The region ID of the Object Storage Service (OSS) bucket.</p>
+         * <p>The region ID of the OSS bucket.</p>
          */
         @NameInMap("OssRegionId")
         public String ossRegionId;
@@ -484,7 +620,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The name of the VPC Configuration.</p>
+         * <p>The name of the VPC configuration.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -508,7 +644,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>http/https</p>
+         * <p>Indicates whether HTTP or HTTPS is used.</p>
          */
         @NameInMap("VpcScheme")
         public String vpcScheme;
@@ -583,17 +719,23 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig extends TeaModel {
+        /**
+         * <p>The information about the backend service whose type is Service Discovery.</p>
+         */
         @NameInMap("DiscoveryConfig")
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfig discoveryConfig;
 
+        @NameInMap("EdasConfig")
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEdasConfig edasConfig;
+
         /**
-         * <p>The information about the backend service that is EventBridge.</p>
+         * <p>The information about the backend service whose type is EventBridge.</p>
          */
         @NameInMap("EventBridgeConfig")
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEventBridgeConfig eventBridgeConfig;
 
         /**
-         * <p>The information about the backend service whose type is FC_EVENT or FC_HTTP.</p>
+         * <p>The information about the backend service whose type is Function Compute.</p>
          */
         @NameInMap("FunctionComputeConfig")
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigFunctionComputeConfig functionComputeConfig;
@@ -604,11 +746,14 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         @NameInMap("HttpTargetHostName")
         public String httpTargetHostName;
 
+        /**
+         * <p>The information about the backend service whose type is Mock.</p>
+         */
         @NameInMap("MockConfig")
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigMockConfig mockConfig;
 
         /**
-         * <p>The information about the backend service whose type is OSS.</p>
+         * <p>The information about the backend service whose type is Object Storage Service (OSS).</p>
          */
         @NameInMap("OssConfig")
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigOssConfig ossConfig;
@@ -645,6 +790,14 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         }
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfig getDiscoveryConfig() {
             return this.discoveryConfig;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig setEdasConfig(DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEdasConfig edasConfig) {
+            this.edasConfig = edasConfig;
+            return this;
+        }
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEdasConfig getEdasConfig() {
+            return this.edasConfig;
         }
 
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig setEventBridgeConfig(DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigEventBridgeConfig eventBridgeConfig) {
@@ -723,7 +876,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModels extends TeaModel {
         /**
-         * <p>The backend configurations.</p>
+         * <p>The backend service configurations.</p>
          */
         @NameInMap("BackendConfig")
         public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfig backendConfig;
@@ -759,7 +912,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public String stageModeId;
 
         /**
-         * <p>The name of the environment.</p>
+         * <p>The environment name.</p>
          */
         @NameInMap("StageName")
         public String stageName;
@@ -835,7 +988,7 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         public String backendId;
 
         /**
-         * <p>The time when the backend service was created.</p>
+         * <p>The configurations of the backend service in the environment.</p>
          */
         @NameInMap("BackendModels")
         public java.util.List<DescribeBackendInfoResponseBodyBackendInfoBackendModels> backendModels;

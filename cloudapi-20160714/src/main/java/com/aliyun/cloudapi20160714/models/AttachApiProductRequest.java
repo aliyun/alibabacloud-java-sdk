@@ -4,9 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class AttachApiProductRequest extends TeaModel {
+    /**
+     * <p>The ID of the API product.</p>
+     */
     @NameInMap("ApiProductId")
     public String apiProductId;
 
+    /**
+     * <p>The APIs to be attached.</p>
+     */
     @NameInMap("Apis")
     public java.util.List<AttachApiProductRequestApis> apis;
 
@@ -43,9 +49,19 @@ public class AttachApiProductRequest extends TeaModel {
     }
 
     public static class AttachApiProductRequestApis extends TeaModel {
+        /**
+         * <p>The API ID.</p>
+         */
         @NameInMap("ApiId")
         public String apiId;
 
+        /**
+         * <p>The environment. Valid values:</p>
+         * <br>
+         * <p>*   **RELEASE**: the production environment</p>
+         * <p>*   **PRE**: the staging environment</p>
+         * <p>*   **TEST**: the test environment</p>
+         */
         @NameInMap("StageName")
         public String stageName;
 

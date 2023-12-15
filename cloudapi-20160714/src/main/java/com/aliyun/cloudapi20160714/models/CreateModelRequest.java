@@ -28,6 +28,9 @@ public class CreateModelRequest extends TeaModel {
     @NameInMap("Schema")
     public String schema;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateModelRequestTag> tag;
+
     public static CreateModelRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateModelRequest self = new CreateModelRequest();
         return TeaModel.build(map, self);
@@ -63,6 +66,44 @@ public class CreateModelRequest extends TeaModel {
     }
     public String getSchema() {
         return this.schema;
+    }
+
+    public CreateModelRequest setTag(java.util.List<CreateModelRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateModelRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateModelRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateModelRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateModelRequestTag self = new CreateModelRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateModelRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateModelRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

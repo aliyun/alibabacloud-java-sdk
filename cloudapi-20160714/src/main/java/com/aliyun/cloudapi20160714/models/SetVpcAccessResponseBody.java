@@ -7,6 +7,9 @@ public class SetVpcAccessResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("VpcAccessId")
+    public String vpcAccessId;
+
     public static SetVpcAccessResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SetVpcAccessResponseBody self = new SetVpcAccessResponseBody();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class SetVpcAccessResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public SetVpcAccessResponseBody setVpcAccessId(String vpcAccessId) {
+        this.vpcAccessId = vpcAccessId;
+        return this;
+    }
+    public String getVpcAccessId() {
+        return this.vpcAccessId;
     }
 
 }

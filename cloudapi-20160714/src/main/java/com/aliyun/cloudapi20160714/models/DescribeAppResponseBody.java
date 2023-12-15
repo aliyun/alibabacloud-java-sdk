@@ -29,7 +29,7 @@ public class DescribeAppResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>Extended Fields.</p>
+     * <p>The extended information.</p>
      */
     @NameInMap("Extend")
     public String extend;

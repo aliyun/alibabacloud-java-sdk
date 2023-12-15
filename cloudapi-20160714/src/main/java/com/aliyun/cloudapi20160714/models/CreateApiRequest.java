@@ -145,6 +145,9 @@ public class CreateApiRequest extends TeaModel {
     @NameInMap("SystemParameters")
     public String systemParameters;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateApiRequestTag> tag;
+
     /**
      * <p>Specifies whether to make the API public. Valid values:</p>
      * <br>
@@ -365,6 +368,14 @@ public class CreateApiRequest extends TeaModel {
         return this.systemParameters;
     }
 
+    public CreateApiRequest setTag(java.util.List<CreateApiRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateApiRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateApiRequest setVisibility(String visibility) {
         this.visibility = visibility;
         return this;
@@ -379,6 +390,36 @@ public class CreateApiRequest extends TeaModel {
     }
     public String getWebSocketApiType() {
         return this.webSocketApiType;
+    }
+
+    public static class CreateApiRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateApiRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateApiRequestTag self = new CreateApiRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateApiRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateApiRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

@@ -4,9 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupTrafficResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The traffic information per second.</p>
+     */
     @NameInMap("TrafficPerSecond")
     public DescribeGroupTrafficResponseBodyTrafficPerSecond trafficPerSecond;
 
@@ -32,12 +38,24 @@ public class DescribeGroupTrafficResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupTrafficResponseBodyTrafficPerSecondMonitorItem extends TeaModel {
+        /**
+         * <p>The metric. Valid values:</p>
+         * <br>
+         * <p>*   inbound: traffic consumed by requests</p>
+         * <p>*   outbound: traffic consumed by responses</p>
+         */
         @NameInMap("Item")
         public String item;
 
+        /**
+         * <p>The corresponding time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ.</p>
+         */
         @NameInMap("ItemTime")
         public String itemTime;
 
+        /**
+         * <p>The traffic volume per second.</p>
+         */
         @NameInMap("ItemValue")
         public String itemValue;
 

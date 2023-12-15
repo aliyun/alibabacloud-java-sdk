@@ -11,7 +11,7 @@ public class CreatePluginRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The plug-in definition statement, which can be in JSON or YAML format.</p>
+     * <p>The plug-in definition. Supported formats: JSON and YAML.</p>
      */
     @NameInMap("PluginData")
     public String pluginData;

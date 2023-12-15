@@ -35,7 +35,7 @@ public class DescribeAppAttributesRequest extends TeaModel {
     public Boolean enableTagAuth;
 
     /**
-     * <p>Extended Fields.</p>
+     * <p>The extended information.</p>
      */
     @NameInMap("Extend")
     public String extend;
@@ -165,17 +165,17 @@ public class DescribeAppAttributesRequest extends TeaModel {
 
     public static class DescribeAppAttributesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The value of tag N.</p>
          * <br>
-         * <p>N can be an integer from 1 to 20.``</p>
+         * <p>Valid values of n: `[1, 20]`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The key of tag N.</p>
          * <br>
-         * <p>N can be an integer from 1 to 20.``</p>
+         * <p>Valid values of n: `[1, 20]`.</p>
          */
         @NameInMap("Value")
         public String value;

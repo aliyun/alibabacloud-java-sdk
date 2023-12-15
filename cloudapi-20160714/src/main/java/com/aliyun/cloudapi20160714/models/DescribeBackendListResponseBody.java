@@ -4,18 +4,33 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackendListResponseBody extends TeaModel {
+    /**
+     * <p>The backend services.</p>
+     */
     @NameInMap("BackendInfoList")
     public java.util.List<DescribeBackendListResponseBodyBackendInfoList> backendInfoList;
 
+    /**
+     * <p>The number of the current page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -64,24 +79,75 @@ public class DescribeBackendListResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeBackendListResponseBodyBackendInfoListTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeBackendListResponseBodyBackendInfoListTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeBackendListResponseBodyBackendInfoListTags self = new DescribeBackendListResponseBodyBackendInfoListTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeBackendListResponseBodyBackendInfoListTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeBackendListResponseBodyBackendInfoListTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeBackendListResponseBodyBackendInfoList extends TeaModel {
+        /**
+         * <p>The ID of the backend service.</p>
+         */
         @NameInMap("BackendId")
         public String backendId;
 
+        /**
+         * <p>The name of the backend service.</p>
+         */
         @NameInMap("BackendName")
         public String backendName;
 
+        /**
+         * <p>The type of the backend service.</p>
+         */
         @NameInMap("BackendType")
         public String backendType;
 
+        /**
+         * <p>The time when the backend service was created.</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>The description of the backend service.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The time when the backend service was modified.</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
+
+        @NameInMap("Tags")
+        public java.util.List<DescribeBackendListResponseBodyBackendInfoListTags> tags;
 
         public static DescribeBackendListResponseBodyBackendInfoList build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackendListResponseBodyBackendInfoList self = new DescribeBackendListResponseBodyBackendInfoList();
@@ -134,6 +200,14 @@ public class DescribeBackendListResponseBody extends TeaModel {
         }
         public String getModifiedTime() {
             return this.modifiedTime;
+        }
+
+        public DescribeBackendListResponseBodyBackendInfoList setTags(java.util.List<DescribeBackendListResponseBodyBackendInfoListTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeBackendListResponseBodyBackendInfoListTags> getTags() {
+            return this.tags;
         }
 
     }

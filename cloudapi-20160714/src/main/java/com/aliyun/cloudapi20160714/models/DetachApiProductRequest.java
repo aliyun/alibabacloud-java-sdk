@@ -4,9 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DetachApiProductRequest extends TeaModel {
+    /**
+     * <p>The ID of the API product.</p>
+     */
     @NameInMap("ApiProductId")
     public String apiProductId;
 
+    /**
+     * <p>The APIs that you want to detach from the API product.</p>
+     */
     @NameInMap("Apis")
     public java.util.List<DetachApiProductRequestApis> apis;
 
@@ -43,9 +49,19 @@ public class DetachApiProductRequest extends TeaModel {
     }
 
     public static class DetachApiProductRequestApis extends TeaModel {
+        /**
+         * <p>The API ID.</p>
+         */
         @NameInMap("ApiId")
         public String apiId;
 
+        /**
+         * <p>The environment to which the API is published. Valid values:</p>
+         * <br>
+         * <p>*   **RELEASE**: the production environment</p>
+         * <p>*   **PRE**: the pre-release environment</p>
+         * <p>*   **TEST**: the test environment</p>
+         */
         @NameInMap("StageName")
         public String stageName;
 

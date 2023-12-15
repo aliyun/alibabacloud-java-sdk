@@ -4,18 +4,33 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiProductsByAppResponseBody extends TeaModel {
+    /**
+     * <p>The information about API products.</p>
+     */
     @NameInMap("ApiProductInfoList")
     public DescribeApiProductsByAppResponseBodyApiProductInfoList apiProductInfoList;
 
+    /**
+     * <p>The page number. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,6 +80,9 @@ public class DescribeApiProductsByAppResponseBody extends TeaModel {
     }
 
     public static class DescribeApiProductsByAppResponseBodyApiProductInfoListApiProductInfo extends TeaModel {
+        /**
+         * <p>The ID of the API product.</p>
+         */
         @NameInMap("ApiProductId")
         public String apiProductId;
 

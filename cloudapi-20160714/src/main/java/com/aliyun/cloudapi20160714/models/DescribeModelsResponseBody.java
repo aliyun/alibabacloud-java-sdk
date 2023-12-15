@@ -79,6 +79,55 @@ public class DescribeModelsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeModelsResponseBodyModelDetailsModelDetailTagsTagInfo extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeModelsResponseBodyModelDetailsModelDetailTagsTagInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeModelsResponseBodyModelDetailsModelDetailTagsTagInfo self = new DescribeModelsResponseBodyModelDetailsModelDetailTagsTagInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeModelsResponseBodyModelDetailsModelDetailTagsTagInfo setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeModelsResponseBodyModelDetailsModelDetailTagsTagInfo setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeModelsResponseBodyModelDetailsModelDetailTags extends TeaModel {
+        @NameInMap("TagInfo")
+        public java.util.List<DescribeModelsResponseBodyModelDetailsModelDetailTagsTagInfo> tagInfo;
+
+        public static DescribeModelsResponseBodyModelDetailsModelDetailTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeModelsResponseBodyModelDetailsModelDetailTags self = new DescribeModelsResponseBodyModelDetailsModelDetailTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeModelsResponseBodyModelDetailsModelDetailTags setTagInfo(java.util.List<DescribeModelsResponseBodyModelDetailsModelDetailTagsTagInfo> tagInfo) {
+            this.tagInfo = tagInfo;
+            return this;
+        }
+        public java.util.List<DescribeModelsResponseBodyModelDetailsModelDetailTagsTagInfo> getTagInfo() {
+            return this.tagInfo;
+        }
+
+    }
+
     public static class DescribeModelsResponseBodyModelDetailsModelDetail extends TeaModel {
         /**
          * <p>The time when the model was created.</p>
@@ -127,6 +176,9 @@ public class DescribeModelsResponseBody extends TeaModel {
          */
         @NameInMap("Schema")
         public String schema;
+
+        @NameInMap("Tags")
+        public DescribeModelsResponseBodyModelDetailsModelDetailTags tags;
 
         public static DescribeModelsResponseBodyModelDetailsModelDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribeModelsResponseBodyModelDetailsModelDetail self = new DescribeModelsResponseBodyModelDetailsModelDetail();
@@ -195,6 +247,14 @@ public class DescribeModelsResponseBody extends TeaModel {
         }
         public String getSchema() {
             return this.schema;
+        }
+
+        public DescribeModelsResponseBodyModelDetailsModelDetail setTags(DescribeModelsResponseBodyModelDetailsModelDetailTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeModelsResponseBodyModelDetailsModelDetailTags getTags() {
+            return this.tags;
         }
 
     }

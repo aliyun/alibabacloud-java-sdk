@@ -4,18 +4,34 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupTrafficRequest extends TeaModel {
+    /**
+     * <p>The end time for the query. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the API group.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The environment to which the APIs in the API group are published. Valid values:</p>
+     * <br>
+     * <p>*   **RELEASE**: the production environment</p>
+     * <p>*   **PRE**: the staging environment</p>
+     * <p>*   **TEST**: the test environment</p>
+     */
     @NameInMap("StageName")
     public String stageName;
 
+    /**
+     * <p>The start time for the query. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

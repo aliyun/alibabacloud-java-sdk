@@ -4,6 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DeleteApiProductRequest extends TeaModel {
+    /**
+     * <p>The ID of the API product.</p>
+     */
     @NameInMap("ApiProductId")
     public String apiProductId;
 

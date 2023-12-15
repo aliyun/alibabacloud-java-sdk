@@ -34,6 +34,9 @@ public class CreateAppRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The extended information.</p>
+     */
     @NameInMap("Extend")
     public String extend;
 

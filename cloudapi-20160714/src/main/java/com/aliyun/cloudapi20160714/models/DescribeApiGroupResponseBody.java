@@ -76,6 +76,12 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Indicates whether access over the public second-level domain name is enabled. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("DisableInnerDomain")
     public Boolean disableInnerDomain;
 
@@ -474,7 +480,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
 
     public static class DescribeApiGroupResponseBodyCustomDomainsDomainItem extends TeaModel {
         /**
-         * <p>The name of the bound runtime environment.</p>
+         * <p>The environment in which the associated API group runs.</p>
          */
         @NameInMap("BindStageName")
         public String bindStageName;
@@ -486,14 +492,20 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         public String certificateId;
 
         /**
-         * <p>The name of the SSL certificate.</p>
+         * <p>The SSL certificate name.</p>
          */
         @NameInMap("CertificateName")
         public String certificateName;
 
+        /**
+         * <p>The time when the certificate expires.</p>
+         */
         @NameInMap("CertificateValidEnd")
         public Long certificateValidEnd;
 
+        /**
+         * <p>The time when the certificate takes effect.</p>
+         */
         @NameInMap("CertificateValidStart")
         public Long certificateValidStart;
 
@@ -515,8 +527,8 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         /**
          * <p>The domain name resolution status. Valid values:</p>
          * <br>
-         * <p>*   **RESOLVED**: The domain name has been resolved.</p>
-         * <p>*   **UNRESOLVED**: The domain name has not been resolved.</p>
+         * <p>*   **RESOLVED**</p>
+         * <p>*   **UNRESOLVED**</p>
          */
         @NameInMap("DomainCNAMEStatus")
         public String domainCNAMEStatus;
@@ -537,7 +549,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>The domain name-related remarks, such as the cause for a domain name exception.</p>
+         * <p>Remarks about the domain name, such as the cause of an exception.</p>
          */
         @NameInMap("DomainRemark")
         public String domainRemark;
@@ -549,7 +561,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         public String domainWebSocketStatus;
 
         /**
-         * <p>Indicates whether to redirect HTTP requests to HTTPS.</p>
+         * <p>Indicates whether to redirect HTTP requests as HTTPS requests.</p>
          */
         @NameInMap("IsHttpRedirectToHttps")
         public Boolean isHttpRedirectToHttps;
@@ -700,19 +712,19 @@ public class DescribeApiGroupResponseBody extends TeaModel {
 
     public static class DescribeApiGroupResponseBodyStageItemsStageInfo extends TeaModel {
         /**
-         * <p>The description of the runtime environment.</p>
+         * <p>The environment description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the runtime environment.</p>
+         * <p>The environment ID.</p>
          */
         @NameInMap("StageId")
         public String stageId;
 
         /**
-         * <p>The name of the runtime environment.</p>
+         * <p>The environment name.</p>
          */
         @NameInMap("StageName")
         public String stageName;

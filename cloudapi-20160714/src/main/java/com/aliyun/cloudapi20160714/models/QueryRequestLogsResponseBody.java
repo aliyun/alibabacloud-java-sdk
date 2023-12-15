@@ -11,7 +11,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of request logs.</p>
+     * <p>The request logs.</p>
      */
     @NameInMap("RequestLogs")
     public QueryRequestLogsResponseBodyRequestLogs requestLogs;
@@ -39,29 +39,44 @@ public class QueryRequestLogsResponseBody extends TeaModel {
 
     public static class QueryRequestLogsResponseBodyRequestLogsRequestLog extends TeaModel {
         /**
-         * <p>The ID of the API.</p>
+         * <p>The API ID.</p>
          */
         @NameInMap("ApiId")
         public String apiId;
 
         /**
-         * <p>The name of the API</p>
+         * <p>The API name.</p>
          */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>The application name.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The time when API Gateway finished forwarding the request to the backend service.</p>
+         */
         @NameInMap("BackendRequestEnd")
         public Long backendRequestEnd;
 
+        /**
+         * <p>The time when API Gateway started to forward the request to the backend service.</p>
+         */
         @NameInMap("BackendRequestStart")
         public Long backendRequestStart;
 
+        /**
+         * <p>The time when API Gateway finished receiving the response from the backend service.</p>
+         */
         @NameInMap("BackendResponseEnd")
         public Long backendResponseEnd;
 
+        /**
+         * <p>The time when API Gateway started to receive the response from the backend service.</p>
+         */
         @NameInMap("BackendResponseStart")
         public Long backendResponseStart;
 
@@ -78,37 +93,37 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         public String clientNonce;
 
         /**
-         * <p>The ID of the application from which an API request is sent.</p>
+         * <p>The application ID that is used by the caller.</p>
          */
         @NameInMap("ConsumerAppId")
         public String consumerAppId;
 
         /**
-         * <p>The application key used by the caller.</p>
+         * <p>The App Key that is used by the caller.</p>
          */
         @NameInMap("ConsumerAppKey")
         public String consumerAppKey;
 
         /**
-         * <p>The ID of the custom trace.</p>
+         * <p>The custom trace ID.</p>
          */
         @NameInMap("CustomTraceId")
         public String customTraceId;
 
         /**
-         * <p>The domain name of the request.</p>
+         * <p>The requested domain name in the request.</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code that is returned.</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
-         * <p>The error message returned if the request fails.</p>
+         * <p>The error message returned if the call fails.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
@@ -119,15 +134,27 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         @NameInMap("Exception")
         public String exception;
 
+        /**
+         * <p>The time when API Gateway finished receiving the request.</p>
+         */
         @NameInMap("FrontRequestEnd")
         public Long frontRequestEnd;
 
+        /**
+         * <p>The time when API Gateway started to receive the request.</p>
+         */
         @NameInMap("FrontRequestStart")
         public Long frontRequestStart;
 
+        /**
+         * <p>The time when API Gateway finished forwarding the response to the client.</p>
+         */
         @NameInMap("FrontResponseEnd")
         public Long frontResponseEnd;
 
+        /**
+         * <p>The time when API Gateway started to forward the response to the client.</p>
+         */
         @NameInMap("FrontResponseStart")
         public Long frontResponseStart;
 
@@ -144,7 +171,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The HTTP method used to send the request.</p>
+         * <p>The HTTP method that is used to send the request.</p>
          */
         @NameInMap("HttpMethod")
         public String httpMethod;
@@ -174,7 +201,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         public String jwtClaims;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region in which the instance resides.</p>
          */
         @NameInMap("Region")
         public String region;
@@ -192,7 +219,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         public String requestHeaders;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          */
         @NameInMap("RequestId")
         public String requestId;
@@ -240,7 +267,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         public String responseSize;
 
         /**
-         * <p>The total time consumed to access backend resources. The total time includes the time consumed to request a connection to the resources, the time consumed to establish the connection, and the time consumed to call the backend service. Unit: milliseconds.</p>
+         * <p>The total time consumed to access the backend resources. The total time includes the time consumed to request a connection to the resources, the time consumed to establish the connection, and the time consumed to call the backend service. Unit: milliseconds.</p>
          */
         @NameInMap("ServiceLatency")
         public String serviceLatency;
@@ -258,7 +285,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         public String stageName;
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code returned.</p>
          */
         @NameInMap("StatusCode")
         public String statusCode;
@@ -270,7 +297,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         public String totalLatency;
 
         /**
-         * <p>The list of plug-ins hit by the request and the relevant context.</p>
+         * <p>The plug-in hit by the request and the relevant context.</p>
          */
         @NameInMap("plugin")
         public String plugin;

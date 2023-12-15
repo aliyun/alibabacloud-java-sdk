@@ -205,7 +205,7 @@ public class DescribeApiResponseBody extends TeaModel {
     public String resultType;
 
     /**
-     * <p>The configuration items of API requests sent by API Gateway to the backend service.</p>
+     * <p>The configuration items of API requests that API Gateway sends to the backend service.</p>
      */
     @NameInMap("ServiceConfig")
     public DescribeApiResponseBodyServiceConfig serviceConfig;
@@ -238,12 +238,12 @@ public class DescribeApiResponseBody extends TeaModel {
     public String visibility;
 
     /**
-     * <p>The type of the two-way communication API. Valid values:</p>
+     * <p>The type of the two-way communication API.</p>
      * <br>
-     * <p>*   **COMMON**: general APIs</p>
-     * <p>*   **REGISTER**: registered APIs</p>
-     * <p>*   **UNREGISTER**: unregistered APIs</p>
-     * <p>*   **NOTIFY**: downstream notification</p>
+     * <p>*   **COMMON**: common API</p>
+     * <p>*   **REGISTER**: registered API</p>
+     * <p>*   **UNREGISTER**: unregistered API</p>
+     * <p>*   **NOTIFY**: downstream notification API</p>
      */
     @NameInMap("WebSocketApiType")
     public String webSocketApiType;
@@ -585,13 +585,13 @@ public class DescribeApiResponseBody extends TeaModel {
 
     public static class DescribeApiResponseBodyConstantParametersConstantParameter extends TeaModel {
         /**
-         * <p>The value of the parameter.</p>
+         * <p>The constant parameter value.</p>
          */
         @NameInMap("ConstantValue")
         public String constantValue;
 
         /**
-         * <p>Description</p>
+         * <p>The parameter description.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -603,7 +603,7 @@ public class DescribeApiResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>The name of the backend service parameter.</p>
+         * <p>The mapped parameter name in the backend service.</p>
          */
         @NameInMap("ServiceParameterName")
         public String serviceParameterName;
@@ -668,13 +668,13 @@ public class DescribeApiResponseBody extends TeaModel {
 
     public static class DescribeApiResponseBodyCustomSystemParametersCustomSystemParameter extends TeaModel {
         /**
-         * <p>Examples</p>
+         * <p>The example value.</p>
          */
         @NameInMap("DemoValue")
         public String demoValue;
 
         /**
-         * <p>Description</p>
+         * <p>The parameter description.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -692,7 +692,7 @@ public class DescribeApiResponseBody extends TeaModel {
         public String parameterName;
 
         /**
-         * <p>The name of the corresponding backend parameter.</p>
+         * <p>The mapped parameter name in the backend service.</p>
          */
         @NameInMap("ServiceParameterName")
         public String serviceParameterName;
@@ -777,7 +777,7 @@ public class DescribeApiResponseBody extends TeaModel {
         public String effectiveVersion;
 
         /**
-         * <p>The name of the runtime environment. Valid values: RELEASE and TEST.</p>
+         * <p>The environment to which the API is published. Valid values: RELEASE and TEST.</p>
          */
         @NameInMap("StageName")
         public String stageName;
@@ -834,25 +834,25 @@ public class DescribeApiResponseBody extends TeaModel {
 
     public static class DescribeApiResponseBodyErrorCodeSamplesErrorCodeSample extends TeaModel {
         /**
-         * <p>Error codes</p>
+         * <p>The returned error code.</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>Description</p>
+         * <p>The error description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Error message</p>
+         * <p>The returned error message.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>Model</p>
+         * <p>The model.</p>
          */
         @NameInMap("Model")
         public String model;
@@ -1092,7 +1092,7 @@ public class DescribeApiResponseBody extends TeaModel {
 
     public static class DescribeApiResponseBodyRequestParametersRequestParameter extends TeaModel {
         /**
-         * <p>The name of the parameter.</p>
+         * <p>The parameter name.</p>
          */
         @NameInMap("ApiParameterName")
         public String apiParameterName;
@@ -1110,19 +1110,19 @@ public class DescribeApiResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
-         * <p>Examples</p>
+         * <p>The example value.</p>
          */
         @NameInMap("DemoValue")
         public String demoValue;
 
         /**
-         * <p>Description</p>
+         * <p>The parameter description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The order in the document.</p>
+         * <p>The order in which the parameter is sorted in the document.</p>
          */
         @NameInMap("DocOrder")
         public Integer docOrder;
@@ -1134,7 +1134,7 @@ public class DescribeApiResponseBody extends TeaModel {
         public String docShow;
 
         /**
-         * <p>The hash values that can be entered when **ParameterType** is set to Int, Long, Float, Double, or String. Separate different values with commas (,), such as 1,2,3,4,9 or A,B,C,E,F.</p>
+         * <p>The hash values that can be specified if the **ParameterType** parameter is set to Int, Long, Float, Double, or String. Separate multiple hash values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.</p>
          */
         @NameInMap("EnumValue")
         public String enumValue;
@@ -1152,37 +1152,37 @@ public class DescribeApiResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>The maximum parameter length when **ParameterType** is set to String.</p>
+         * <p>The maximum length of the parameter value if the **ParameterType** parameter is set to String.</p>
          */
         @NameInMap("MaxLength")
         public Long maxLength;
 
         /**
-         * <p>The maximum parameter value when **ParameterType** is set to Int, Long, Float, or Double.</p>
+         * <p>The maximum value of the parameter if the **ParameterType** parameter is set to Int, Long, Float, or Double.</p>
          */
         @NameInMap("MaxValue")
         public Long maxValue;
 
         /**
-         * <p>The minimum parameter length when **ParameterType** is set to String.</p>
+         * <p>The minimum length of the parameter value if the **ParameterType** parameter is set to String.</p>
          */
         @NameInMap("MinLength")
         public Long minLength;
 
         /**
-         * <p>The minimum parameter value when **ParameterType** is set to Int, Long, Float, or Double.</p>
+         * <p>The minimum value of the parameter if the **ParameterType** parameter is set to Int, Long, Float, or Double.</p>
          */
         @NameInMap("MinValue")
         public Long minValue;
 
         /**
-         * <p>The type of a request parameter. Valid values: String, Int, Long, Float, Double, and Boolean.</p>
+         * <p>The data type of the parameter. Valid values: String, Int, Long, Float, Double, and Boolean.</p>
          */
         @NameInMap("ParameterType")
         public String parameterType;
 
         /**
-         * <p>The regular expression used for parameter validation when **ParameterType** is set to String.</p>
+         * <p>The regular expression that is used to validate the parameter if the **ParameterType** parameter is set to String.</p>
          */
         @NameInMap("RegularExpression")
         public String regularExpression;
@@ -1655,6 +1655,17 @@ public class DescribeApiResponseBody extends TeaModel {
     }
 
     public static class DescribeApiResponseBodyServiceConfigOssConfig extends TeaModel {
+        /**
+         * <p>The operation options on OSS. Valid values:</p>
+         * <br>
+         * <p>*   GetObject</p>
+         * <p>*   PostObject</p>
+         * <p>*   DeleteObject</p>
+         * <p>*   PutObject</p>
+         * <p>*   HeadObject</p>
+         * <p>*   GetObjectMeta</p>
+         * <p>*   AppendObject</p>
+         */
         @NameInMap("Action")
         public String action;
 
@@ -1664,6 +1675,9 @@ public class DescribeApiResponseBody extends TeaModel {
         @NameInMap("BucketName")
         public String bucketName;
 
+        /**
+         * <p>The stored object or folder path.</p>
+         */
         @NameInMap("Key")
         public String key;
 
@@ -1853,7 +1867,7 @@ public class DescribeApiResponseBody extends TeaModel {
         public Integer mockStatusCode;
 
         /**
-         * <p>Information when the backend service is OSS</p>
+         * <p>The information returned when the backend service is Object Storage Service (OSS).</p>
          */
         @NameInMap("OssConfig")
         public DescribeApiResponseBodyServiceConfigOssConfig ossConfig;
@@ -2051,13 +2065,13 @@ public class DescribeApiResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>The data type of the back-end service parameter.</p>
+         * <p>The data type of the parameter. Valid values: STRING, NUMBER, and BOOLEAN.</p>
          */
         @NameInMap("ParameterType")
         public String parameterType;
 
         /**
-         * <p>The name of the backend service parameter.</p>
+         * <p>The mapped parameter name in the backend service.</p>
          */
         @NameInMap("ServiceParameterName")
         public String serviceParameterName;
@@ -2114,13 +2128,13 @@ public class DescribeApiResponseBody extends TeaModel {
 
     public static class DescribeApiResponseBodyServiceParametersMapServiceParameterMap extends TeaModel {
         /**
-         * <p>The corresponding frontend parameter name. It must be included in RequestParametersObject and matches ApiParameterName in RequestParameter data.</p>
+         * <p>The name of the frontend parameter. The name must be included in RequestParametersObject and match ApiParameterName in RequestParameters.</p>
          */
         @NameInMap("RequestParameterName")
         public String requestParameterName;
 
         /**
-         * <p>The name of the backend service parameter.</p>
+         * <p>The mapped parameter name in the backend service.</p>
          */
         @NameInMap("ServiceParameterName")
         public String serviceParameterName;
@@ -2169,13 +2183,13 @@ public class DescribeApiResponseBody extends TeaModel {
 
     public static class DescribeApiResponseBodySystemParametersSystemParameter extends TeaModel {
         /**
-         * <p>Examples</p>
+         * <p>The example value.</p>
          */
         @NameInMap("DemoValue")
         public String demoValue;
 
         /**
-         * <p>Description</p>
+         * <p>The parameter description.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -2193,7 +2207,7 @@ public class DescribeApiResponseBody extends TeaModel {
         public String parameterName;
 
         /**
-         * <p>The name of the corresponding backend parameter.</p>
+         * <p>The mapped parameter name in the backend service.</p>
          */
         @NameInMap("ServiceParameterName")
         public String serviceParameterName;
