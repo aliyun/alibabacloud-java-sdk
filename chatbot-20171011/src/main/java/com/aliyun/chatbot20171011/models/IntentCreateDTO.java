@@ -4,22 +4,18 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class IntentCreateDTO extends TeaModel {
-    // IntentId
     @NameInMap("IntentId")
     public Long intentId;
 
-    // Name
     @NameInMap("Name")
     public String name;
 
-    // RuleCheck
     @NameInMap("RuleCheck")
     public java.util.List<RuleMtopDTO> ruleCheck;
 
     @NameInMap("Slot")
     public java.util.List<SlotrecordMtopDTO> slot;
 
-    // UserSay
     @NameInMap("UserSay")
     public java.util.List<UsersayMtopDTO> userSay;
 

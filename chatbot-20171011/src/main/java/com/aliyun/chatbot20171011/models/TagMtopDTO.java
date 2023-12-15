@@ -4,11 +4,9 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class TagMtopDTO extends TeaModel {
-    // UserSayId
     @NameInMap("UserSayId")
     public String userSayId;
 
-    // Value
     @NameInMap("Value")
     public String value;
 

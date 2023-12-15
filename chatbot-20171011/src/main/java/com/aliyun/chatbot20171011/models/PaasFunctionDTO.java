@@ -4,7 +4,6 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class PaasFunctionDTO extends TeaModel {
-    // PluginFieldDataFunction
     @NameInMap("PluginFieldDataFunction")
     public PaasFunctionPluginFieldDataDTO pluginFieldDataFunction;
 

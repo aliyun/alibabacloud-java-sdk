@@ -4,11 +4,9 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class PaasProcessData extends TeaModel {
-    // Edges
     @NameInMap("Edges")
     public java.util.List<PaasEdgeDTO> edges;
 
-    // Nodes
     @NameInMap("Nodes")
     public java.util.List<PaasNodeDTO> nodes;
 

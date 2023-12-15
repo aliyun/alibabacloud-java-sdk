@@ -49,9 +49,15 @@ public class DescribeDialogFlowResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>0 for deleted, 1 for inSandbox, 2 for draft，3 for online</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>null</p>
+     */
     @NameInMap("Tags")
     public String tags;
 

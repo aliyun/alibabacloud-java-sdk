@@ -516,14 +516,12 @@ public class ChatResponseBody extends TeaModel {
         @NameInMap("Text")
         public ChatResponseBodyMessagesText text;
 
-        // 在线场景，反问标题
         @NameInMap("Title")
         public String title;
 
         @NameInMap("Type")
         public String type;
 
-        // 语音场景，澄清内容
         @NameInMap("VoiceTitle")
         public String voiceTitle;
 

@@ -4,19 +4,15 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class PaasEdgeDTO extends TeaModel {
-    // Id
     @NameInMap("Id")
     public String id;
 
-    // Label
     @NameInMap("Label")
     public String label;
 
-    // Source
     @NameInMap("Source")
     public String source;
 
-    // Target
     @NameInMap("Target")
     public String target;
 

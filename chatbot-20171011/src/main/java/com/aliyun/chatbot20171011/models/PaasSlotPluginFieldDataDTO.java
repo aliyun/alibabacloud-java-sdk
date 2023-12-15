@@ -4,23 +4,18 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class PaasSlotPluginFieldDataDTO extends TeaModel {
-    // ContentSlot
     @NameInMap("ContentSlot")
     public java.util.List<PaasSlotConfigDTO> contentSlot;
 
-    // IntentId
     @NameInMap("IntentId")
     public String intentId;
 
-    // IntentName
     @NameInMap("IntentName")
     public String intentName;
 
-    // IsSysIntent
     @NameInMap("IsSysIntent")
     public Boolean isSysIntent;
 
-    // Name
     @NameInMap("Name")
     public String name;
 

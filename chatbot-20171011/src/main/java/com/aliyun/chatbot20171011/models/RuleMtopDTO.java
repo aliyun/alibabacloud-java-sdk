@@ -4,19 +4,15 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class RuleMtopDTO extends TeaModel {
-    // Error
     @NameInMap("Error")
     public java.util.List<String> error;
 
-    // Strict
     @NameInMap("Strict")
     public Boolean strict;
 
-    // Text
     @NameInMap("Text")
     public String text;
 
-    // Warning
     @NameInMap("Warning")
     public java.util.List<String> warning;
 

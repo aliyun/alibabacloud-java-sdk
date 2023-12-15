@@ -4,11 +4,9 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class PaasResponsePluginFieldDataDTO extends TeaModel {
-    // ContentResponse
     @NameInMap("ContentResponse")
     public PaasResponseNodeContentDTO contentResponse;
 
-    // Name
     @NameInMap("Name")
     public String name;
 

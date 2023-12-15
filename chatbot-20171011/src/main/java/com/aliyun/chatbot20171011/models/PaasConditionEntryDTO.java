@@ -4,23 +4,18 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class PaasConditionEntryDTO extends TeaModel {
-    // Id
     @NameInMap("Id")
     public String id;
 
-    // Name
     @NameInMap("Name")
     public String name;
 
-    // Term
     @NameInMap("Term")
     public String term;
 
-    // Type
     @NameInMap("Type")
     public String type;
 
-    // Value
     @NameInMap("Value")
     public String value;
 
