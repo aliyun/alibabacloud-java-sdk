@@ -4,39 +4,78 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The IPv4 CIDR block of the network.</p>
+     */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
+    /**
+     * <p>The list of resources in the network.</p>
+     */
     @NameInMap("CloudResources")
     public DescribeNetworkAttributeResponseBodyCloudResources cloudResources;
 
+    /**
+     * <p>The time when the network was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+     */
     @NameInMap("CreatedTime")
     public String createdTime;
 
+    /**
+     * <p>The description of the network.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the edge node.</p>
+     */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The ID of the network access control list (ACL).</p>
+     */
     @NameInMap("NetworkAclId")
     public String networkAclId;
 
+    /**
+     * <p>The ID of the network.</p>
+     */
     @NameInMap("NetworkId")
     public String networkId;
 
+    /**
+     * <p>The name of the network.</p>
+     */
     @NameInMap("NetworkName")
     public String networkName;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the route table.</p>
+     */
     @NameInMap("RouterTableId")
     public String routerTableId;
 
+    /**
+     * <p>The status of the network. Valid values:</p>
+     * <br>
+     * <p>*   Pending</p>
+     * <p>*   Available</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The list of vSwitches in the network.</p>
+     */
     @NameInMap("VSwitchIds")
     public DescribeNetworkAttributeResponseBodyVSwitchIds vSwitchIds;
 
@@ -142,9 +181,15 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkAttributeResponseBodyCloudResourcesCloudResourceSetType extends TeaModel {
+        /**
+         * <p>The number of resources in the network.</p>
+         */
         @NameInMap("ResourceCount")
         public Integer resourceCount;
 
+        /**
+         * <p>The resource type. VSwitch.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 

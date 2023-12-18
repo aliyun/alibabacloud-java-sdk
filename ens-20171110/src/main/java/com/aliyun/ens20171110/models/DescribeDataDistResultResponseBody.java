@@ -4,18 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataDistResultResponseBody extends TeaModel {
+    /**
+     * <p>The distribution status of data files on edge instances.</p>
+     */
     @NameInMap("DistResults")
     public DescribeDataDistResultResponseBodyDistResults distResults;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,15 +80,27 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
     }
 
     public static class DescribeDataDistResultResponseBodyDistResultsDistResultStatusStatsStatusStatInstancesInstance extends TeaModel {
+        /**
+         * <p>The ID of the instance</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The start time of the distribution. The time is displayed in UTC.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The description of the distribution status.</p>
+         */
         @NameInMap("StatusDescrip")
         public String statusDescrip;
 
+        /**
+         * <p>The time when the distribution status was last updated. The time is displayed in UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -136,12 +163,27 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
     }
 
     public static class DescribeDataDistResultResponseBodyDistResultsDistResultStatusStatsStatusStat extends TeaModel {
+        /**
+         * <p>The number of associated edge instances.</p>
+         */
         @NameInMap("InstanceCount")
         public String instanceCount;
 
+        /**
+         * <p>The distribution status of the edge instance.</p>
+         */
         @NameInMap("Instances")
         public DescribeDataDistResultResponseBodyDistResultsDistResultStatusStatsStatusStatInstances instances;
 
+        /**
+         * <p>The distribution status. The value is of the enumeration type. Valid values:</p>
+         * <br>
+         * <p>*   SUCCESS: The distribution is successful.</p>
+         * <p>*   FAILED: The distribution failed.</p>
+         * <p>*   DISTING: The data is being distributed.</p>
+         * <p>*   POD_RESTARTING: The idle pod is being restarted.</p>
+         * <p>*   DELETED: The data is cleared or removed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -196,12 +238,21 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
     }
 
     public static class DescribeDataDistResultResponseBodyDistResultsDistResult extends TeaModel {
+        /**
+         * <p>The name of the data file.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The distribution status statistics.</p>
+         */
         @NameInMap("StatusStats")
         public DescribeDataDistResultResponseBodyDistResultsDistResultStatusStats statusStats;
 
+        /**
+         * <p>The version number of the data file.</p>
+         */
         @NameInMap("Version")
         public String version;
 

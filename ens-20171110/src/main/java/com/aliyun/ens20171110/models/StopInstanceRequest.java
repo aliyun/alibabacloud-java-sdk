@@ -4,12 +4,24 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class StopInstanceRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to forcibly stop the servers.</p>
+     * <br>
+     * <p>*   **true**: forcibly stops the instance.</p>
+     * <p>*   **false**: normally stops the servers. This is the default value.</p>
+     */
     @NameInMap("ForceStop")
     public String forceStop;
 
+    /**
+     * <p>The ID of the instance that you want to stop. You can specify only one instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The version number.</p>
+     */
     @NameInMap("Version")
     public String version;
 

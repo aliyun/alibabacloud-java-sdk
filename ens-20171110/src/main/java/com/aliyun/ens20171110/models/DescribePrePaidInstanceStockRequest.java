@@ -4,15 +4,24 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribePrePaidInstanceStockRequest extends TeaModel {
+    /**
+     * <p>The ID of the datadisk.</p>
+     */
     @NameInMap("DataDiskSize")
     public Integer dataDiskSize;
 
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The size of the system disk. Unit: GB.</p>
+     */
     @NameInMap("InstanceSpec")
     public String instanceSpec;
 
+    /**
+     * <p>The ID of the systemdisk</p>
+     */
     @NameInMap("SystemDiskSize")
     public Integer systemDiskSize;
 

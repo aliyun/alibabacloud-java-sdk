@@ -4,11 +4,14 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class AssignPrivateIpAddressesResponseBody extends TeaModel {
+    /**
+     * <p>Details about the ENI and the secondary private IP addresses that are assigned to the ENI.</p>
+     */
     @NameInMap("AssignedPrivateIpAddressesSet")
     public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,9 +38,15 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
     }
 
     public static class AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet extends TeaModel {
+        /**
+         * <p>The ID of the ENI.</p>
+         */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
+        /**
+         * <p>The secondary private IP addresses that are assigned to the ENI.</p>
+         */
         @NameInMap("PrivateIpSet")
         public java.util.List<String> privateIpSet;
 

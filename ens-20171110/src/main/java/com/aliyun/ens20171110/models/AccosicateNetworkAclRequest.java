@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class AccosicateNetworkAclRequest extends TeaModel {
+    /**
+     * <p>The ID of the network ACL.</p>
+     */
     @NameInMap("NetworkAclId")
     public String networkAclId;
 
+    /**
+     * <p>The information about the resources with which you want to associate the network ACL.</p>
+     */
     @NameInMap("Resource")
     public java.util.List<AccosicateNetworkAclRequestResource> resource;
 
@@ -32,9 +38,17 @@ public class AccosicateNetworkAclRequest extends TeaModel {
     }
 
     public static class AccosicateNetworkAclRequestResource extends TeaModel {
+        /**
+         * <p>The ID of the resource with which you want to associate the network ACL.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of resource with which you want to associate the network ACL. Set the value to **Network**.</p>
+         * <br>
+         * <p>****</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 

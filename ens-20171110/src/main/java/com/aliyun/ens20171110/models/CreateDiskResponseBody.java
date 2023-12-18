@@ -4,12 +4,23 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateDiskResponseBody extends TeaModel {
+    /**
+     * <p>IDs of instances.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>The ID of the order. Multiple IDs are separated by commas (,).</p>
+     * <br>
+     * <p>>  This parameter is not returned for the pay-as-you-go billing method.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

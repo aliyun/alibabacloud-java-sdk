@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetOssUsageDataResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The array of usage data.</p>
+     */
     @NameInMap("UsageList")
     public java.util.List<GetOssUsageDataResponseBodyUsageList> usageList;
 
@@ -35,24 +38,45 @@ public class GetOssUsageDataResponseBody extends TeaModel {
     }
 
     public static class GetOssUsageDataResponseBodyUsageList extends TeaModel {
+        /**
+         * <p>The inbound bandwidth over the intranet. Unit: bit/s.</p>
+         */
         @NameInMap("LanRxBw")
         public Long lanRxBw;
 
+        /**
+         * <p>The outbound bandwidth over the intranet. Unit: bit/s.</p>
+         */
         @NameInMap("LanTxBw")
         public Long lanTxBw;
 
+        /**
+         * <p>The number of time point within a day.</p>
+         */
         @NameInMap("Point")
         public Long point;
 
+        /**
+         * <p>The point in time, in UTC. Format: 2010-01-21T09:50:23Z.</p>
+         */
         @NameInMap("PointTs")
         public String pointTs;
 
+        /**
+         * <p>The storage usage. Unit: bytes.</p>
+         */
         @NameInMap("StorageUsageByte")
         public Long storageUsageByte;
 
+        /**
+         * <p>The outbound bandwidth over the intranet. Unit: bit/s.</p>
+         */
         @NameInMap("WanRxBw")
         public Long wanRxBw;
 
+        /**
+         * <p>The outbound bandwidth over the Internet. Unit: bit/s.</p>
+         */
         @NameInMap("WanTxBw")
         public Long wanTxBw;
 

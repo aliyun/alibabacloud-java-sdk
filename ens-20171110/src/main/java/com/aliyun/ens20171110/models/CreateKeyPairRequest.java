@@ -4,9 +4,18 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateKeyPairRequest extends TeaModel {
+    /**
+     * <p>The name of the key pair. The name must conform to the following naming conventions:</p>
+     * <br>
+     * <p>*   The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>*   It must start with a letter but cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
+    /**
+     * <p>The version number. Set the value to 2017-11-10.</p>
+     */
     @NameInMap("Version")
     public String version;
 

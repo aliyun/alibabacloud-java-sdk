@@ -4,21 +4,50 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserBandWidthDataRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query.</p>
+     * <br>
+     * <p>*   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>*   If the value of the seconds place is not 00, the start time is automatically set to the next minute.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the node. You can specify only one node ID. By default, all nodes are queried.</p>
+     */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The ID of the instance for which you want to query the data. You can specify only one instance ID. By default, all instances are queried.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The Internet service provider (ISP). Valid values:</p>
+     * <br>
+     * <p>*   cmcc: China Mobile</p>
+     * <p>*   telecom: China Telecom</p>
+     * <p>*   unicom: China Unicom</p>
+     * <p>*   multiCarrier: multi-line ISP</p>
+     */
     @NameInMap("Isp")
     public String isp;
 
+    /**
+     * <p>The precision of the monitoring data that you want to obtain. Valid values: 300, 1200, 3600, and 14400. Default value: 300. Unit: seconds.</p>
+     */
     @NameInMap("Period")
     public String period;
 
+    /**
+     * <p>The beginning of the time range to query.</p>
+     * <br>
+     * <p>*   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>*   If the value of the seconds place is not 00, the start time is automatically set to the next minute.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

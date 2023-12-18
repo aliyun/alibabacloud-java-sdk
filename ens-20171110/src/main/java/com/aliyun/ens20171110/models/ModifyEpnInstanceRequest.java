@@ -4,15 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ModifyEpnInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the EPN instance.</p>
+     */
     @NameInMap("EPNInstanceId")
     public String EPNInstanceId;
 
+    /**
+     * <p>The name of the EPN instance.</p>
+     */
     @NameInMap("EPNInstanceName")
     public String EPNInstanceName;
 
+    /**
+     * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 1 Mbit/s to 100 Mbit/s.</p>
+     */
     @NameInMap("InternetMaxBandwidthOut")
     public Integer internetMaxBandwidthOut;
 
+    /**
+     * <p>The networking mode. Valid values:</p>
+     * <br>
+     * <p>*   **SpeedUp**: Intelligent acceleration network (Internet).</p>
+     * <p>*   **Connection**: Internal network.</p>
+     * <p>*   **SpeedUpAndConnection**: Intelligent acceleration network and internal network.</p>
+     * <br>
+     * <p>>  The internal network supports only **Connection** and **SpeedUpAndConnection**.</p>
+     */
     @NameInMap("NetworkingModel")
     public String networkingModel;
 

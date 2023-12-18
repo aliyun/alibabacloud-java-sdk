@@ -4,18 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsEipAddressesResponseBody extends TeaModel {
+    /**
+     * <p>Details about the EIP.</p>
+     */
     @NameInMap("EipAddresses")
     public DescribeEnsEipAddressesResponseBodyEipAddresses eipAddresses;
 
+    /**
+     * <p>The page number. Valid values: an integer that is greater than 0. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Default value: 10. Valid values: **10** to **100**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,48 +80,116 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress extends TeaModel {
+        /**
+         * <p>The ID of the EIP.</p>
+         */
         @NameInMap("AllocationId")
         public String allocationId;
 
+        /**
+         * <p>The time when the EIP was created.</p>
+         */
         @NameInMap("AllocationTime")
         public String allocationTime;
 
+        /**
+         * <p>The peak bandwidth of the EIP. Default value: 5. Valid values: **5** to **10000**. Unit: Mbit/s.</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        /**
+         * <p>The billing method of the EIP. Valid values:</p>
+         * <br>
+         * <p>*   **PrePaid**: subscription.</p>
+         * <p>*   **PostPaid**: pay-as-you-go</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <p>The description of the EIP.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the ENS node.</p>
+         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
+        /**
+         * <p>The ID of the instance that is associated with the EIP.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The type of the instance that is associated with the EIP. Valid values:</p>
+         * <br>
+         * <p>*   **EnsInstance**: ENS instance in a VPC</p>
+         * <p>*   **SlbInstance**: SLB instance</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The metering method of the EIP.</p>
+         * <br>
+         * <p>*   **95BandwidthByMonth**: Pay by monthly 95th percentile bandwidth</p>
+         * <p>*   **PayByBandwidth**: Pay by bandwidth</p>
+         */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
+        /**
+         * <p>The EIP.</p>
+         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
+        /**
+         * <p>The running status of the EIP. This parameter is returned if the EIP is a secondary EIP. Valid values:</p>
+         * <br>
+         * <p>*   **Stopped**</p>
+         * <p>*   **Running**</p>
+         * <p>*   **Starting**</p>
+         * <p>*   **Stopping**</p>
+         */
         @NameInMap("IpStatus")
         public String ipStatus;
 
+        /**
+         * <p>The Internet service provider (ISP). Valid values:</p>
+         * <br>
+         * <p>*   **cmcc**: China Mobile</p>
+         * <p>*   **unicom**: China Unicom</p>
+         * <p>*   **telecom**: China Telecom</p>
+         */
         @NameInMap("Isp")
         public String isp;
 
+        /**
+         * <p>The name of the EIP.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Indicates whether the EIP is a secondary EIP.</p>
+         */
         @NameInMap("Standby")
         public Boolean standby;
 
+        /**
+         * <p>The status of the EIP. Valid values:</p>
+         * <br>
+         * <p>*   **Associating**</p>
+         * <p>*   **Unassociating**</p>
+         * <p>*   **InUse**</p>
+         * <p>*   **Available**</p>
+         */
         @NameInMap("Status")
         public String status;
 

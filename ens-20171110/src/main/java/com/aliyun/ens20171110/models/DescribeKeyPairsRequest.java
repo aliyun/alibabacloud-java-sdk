@@ -4,15 +4,34 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeKeyPairsRequest extends TeaModel {
+    /**
+     * <p>The name of the key pair. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain the following characters:</p>
+     * <br>
+     * <p>*   Digits</p>
+     * <p>*   :</p>
+     * <p>*   \_</p>
+     * <p>*   *</p>
+     * <br>
+     * <p>You can specify only one name. By default, all key pairs are queried.</p>
+     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
+    /**
+     * <p>The page number of the returned page. Valid values: integers that are greater than 0. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries per page. Valid values: integers that are greater than 0. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The version number. Set the value to 2017-11-10.</p>
+     */
     @NameInMap("Version")
     public String version;
 

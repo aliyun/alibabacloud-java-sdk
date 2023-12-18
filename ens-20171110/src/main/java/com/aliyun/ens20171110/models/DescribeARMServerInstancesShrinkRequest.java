@@ -4,45 +4,90 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeARMServerInstancesShrinkRequest extends TeaModel {
+    /**
+     * <p>The container specifications.</p>
+     */
     @NameInMap("AICSpecs")
     public String AICSpecsShrink;
 
+    /**
+     * <p>Spcifies whether the result contains the container information. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("DescribeAICInstances")
     public Boolean describeAICInstances;
 
+    /**
+     * <p>The IDs of the Edge Node Service (ENS) nodes.</p>
+     */
     @NameInMap("EnsRegionIds")
     public String ensRegionIdsShrink;
 
-    @NameInMap("LatestAction")
-    public String latestAction;
-
+    /**
+     * <p>The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+     */
     @NameInMap("MaxDate")
     public String maxDate;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+     */
     @NameInMap("MinDate")
     public String minDate;
 
+    /**
+     * <p>The name of the server.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The namespace.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The sorting order of the results to return. Valid values: ServerIdSort, ServerNameSort, ExpireTimeSort, CreationTimeSort, and EnsRegionIdSort.</p>
+     * <br>
+     * <p>asc: ascending order. desc: descending order.</p>
+     */
     @NameInMap("OrderByParams")
     public String orderByParams;
 
+    /**
+     * <p>The page number. Pages start from page **1**.</p>
+     * <br>
+     * <p>Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. The maximum value is **100**.</p>
+     * <br>
+     * <p>Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The IDs of the ARM servers.</p>
+     */
     @NameInMap("ServerIds")
     public String serverIdsShrink;
 
+    /**
+     * <p>The server specifications.</p>
+     */
     @NameInMap("ServerSpecs")
     public String serverSpecsShrink;
 
+    /**
+     * <p>The operation statuses.</p>
+     */
     @NameInMap("States")
     public String statesShrink;
 
@@ -73,14 +118,6 @@ public class DescribeARMServerInstancesShrinkRequest extends TeaModel {
     }
     public String getEnsRegionIdsShrink() {
         return this.ensRegionIdsShrink;
-    }
-
-    public DescribeARMServerInstancesShrinkRequest setLatestAction(String latestAction) {
-        this.latestAction = latestAction;
-        return this;
-    }
-    public String getLatestAction() {
-        return this.latestAction;
     }
 
     public DescribeARMServerInstancesShrinkRequest setMaxDate(String maxDate) {

@@ -4,18 +4,36 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
+    /**
+     * <p>Specify whether to automatically renew the subscription of the nodes. Valid values: true and false. Default value: false.</p>
+     */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
+    /**
+     * <p>The auto-renewal period of the instance. Unit: months. Valid values: 1 to 9 and 12. This parameter is required if the AutoRenew parameter is set to true.</p>
+     */
     @NameInMap("Duration")
     public String duration;
 
+    /**
+     * <p>The ID of the instance. Separate multiple instance IDs with semicolons (;).</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>Specifies whether to renew the instance. The **RenewalStatus** parameter has a higher priority than the **AutoRenew** parameter. If you do not specify **RenewalStatus**, the **AutoRenew** parameter is used by default.</p>
+     * <br>
+     * <p>*   AutoRenewal: Auto-renewal is enabled for the instance.</p>
+     * <p>*   Normal: Auto-renewal is disabled for the instance.</p>
+     * <p>*   NotRenewal: The instance is not renewed.</p>
+     * <br>
+     * <p>The system no longer sends an expiration notification but sends only a renewal notification three days before the instance expires. To renew the instance, you can change the value of this parameter from NotRenewal to Normal and then manually renew the instance, or change the value of this parameter from NotRenewal to AutoRenewal.</p>
+     */
     @NameInMap("RenewalStatus")
     public String renewalStatus;
 

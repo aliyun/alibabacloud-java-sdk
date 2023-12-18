@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeCreatePrePaidInstanceResultRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance. You can call the CreateIntance operation to create an instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The version number.</p>
+     */
     @NameInMap("Version")
     public String version;
 

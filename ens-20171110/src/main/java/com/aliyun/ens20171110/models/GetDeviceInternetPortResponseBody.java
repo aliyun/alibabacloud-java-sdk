@@ -4,12 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceInternetPortResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the instance. The value is the ID of the server or container.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The network mapping information about the instance.</p>
+     */
     @NameInMap("NetworkInfo")
     public java.util.List<GetDeviceInternetPortResponseBodyNetworkInfo> networkInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,21 +52,39 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
     }
 
     public static class GetDeviceInternetPortResponseBodyNetworkInfo extends TeaModel {
+        /**
+         * <p>The public IP address.</p>
+         */
         @NameInMap("ExternalIp")
         public String externalIp;
 
+        /**
+         * <p>The external port number.</p>
+         */
         @NameInMap("ExternalPort")
         public String externalPort;
 
+        /**
+         * <p>The Internet service provider (ISP).</p>
+         */
         @NameInMap("ISP")
         public String ISP;
 
+        /**
+         * <p>The internal IP address.</p>
+         */
         @NameInMap("InternalIp")
         public String internalIp;
 
+        /**
+         * <p>The internal port number.</p>
+         */
         @NameInMap("InternalPort")
         public String internalPort;
 
+        /**
+         * <p>The status of the external port.</p>
+         */
         @NameInMap("Status")
         public String status;
 

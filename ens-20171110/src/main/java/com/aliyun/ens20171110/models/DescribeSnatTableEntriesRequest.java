@@ -4,24 +4,49 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnatTableEntriesRequest extends TeaModel {
+    /**
+     * <p>The ID of the Network Address Translation (NAT) gateway.</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
+    /**
+     * <p>The page number. Pages start from page **1**.</p>
+     * <br>
+     * <p>Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. The maximum value is **100**.</p>
+     * <br>
+     * <p>Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the SNAT entry.</p>
+     */
     @NameInMap("SnatEntryId")
     public String snatEntryId;
 
+    /**
+     * <p>The name of the SNAT entry.</p>
+     */
     @NameInMap("SnatEntryName")
     public String snatEntryName;
 
+    /**
+     * <p>The elastic IP address (EIP) specified in the SNAT entry.</p>
+     */
     @NameInMap("SnatIp")
     public String snatIp;
 
+    /**
+     * <p>The source CIDR block specified in the SNAT entry.</p>
+     */
     @NameInMap("SourceCIDR")
     public String sourceCIDR;
 

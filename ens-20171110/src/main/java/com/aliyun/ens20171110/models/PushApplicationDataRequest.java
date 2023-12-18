@@ -4,15 +4,27 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class PushApplicationDataRequest extends TeaModel {
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The data files that you want to push. The value must be a JSON string.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The push policy in the canary release environment. The value must be a JSON string. You can specify multiple push policies. By default, all data files are pushed.</p>
+     */
     @NameInMap("PushStrategy")
     public String pushStrategy;
 
+    /**
+     * <p>This parameter does not take effect.</p>
+     */
     @NameInMap("Timeout")
     public Integer timeout;
 

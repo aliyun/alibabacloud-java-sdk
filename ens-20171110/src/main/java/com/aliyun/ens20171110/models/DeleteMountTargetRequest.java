@@ -4,12 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DeleteMountTargetRequest extends TeaModel {
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The ID of the file system.</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <p>The name of the mount target.</p>
+     */
     @NameInMap("MountTargetName")
     public String mountTargetName;
 

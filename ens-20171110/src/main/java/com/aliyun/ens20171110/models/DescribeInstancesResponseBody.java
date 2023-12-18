@@ -4,21 +4,39 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The returned service code. 0 indicates that the request was successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about instances returned. The value is an array that consists of InstanceAttributesType data.</p>
+     */
     @NameInMap("Instances")
     public DescribeInstancesResponseBodyInstances instances;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,32 +94,66 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk extends TeaModel {
+        /**
+         * <p>The category of the cloud disk or local disk. Valid values:</p>
+         * <br>
+         * <p>*   **file**: local disk.</p>
+         * <p>*   **pangu**: ultra disk.</p>
+         * <p>*   **local_hdd**: local HDD.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The disk ID.</p>
+         */
         @NameInMap("DiskId")
         public String diskId;
 
+        /**
+         * <p>The name of the disk.</p>
+         */
         @NameInMap("DiskName")
         public String diskName;
 
+        /**
+         * <p>The size of the disk. Unit: MiB.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
+        /**
+         * <p>The extended field of the disk category. Valid values:</p>
+         * <br>
+         * <p>*   **file**: local disk.</p>
+         * <p>*   **pangu**: ultra disk.</p>
+         * <p>*   **local_hdd**: local HDD.</p>
+         */
         @NameInMap("device_type")
         public String deviceType;
 
+        /**
+         * <p>The type of the cloud disk or local disk. Valid values:</p>
+         * <br>
+         * <p>**system**: system disk. **data**: data disk.</p>
+         */
         @NameInMap("disk_type")
         public String diskType;
 
+        /**
+         * <p>The name of the disk.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The size of the disk. Unit: MiB.</p>
+         */
         @NameInMap("storage")
         public Integer storage;
 
         /**
-         * <p>UUID。</p>
+         * <p>The UUID of the disk.</p>
          */
         @NameInMap("uuid")
         public String uuid;
@@ -243,12 +295,21 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes extends TeaModel {
+        /**
+         * <p>The ID of the network.</p>
+         */
         @NameInMap("NetworkId")
         public String networkId;
 
+        /**
+         * <p>The details of the private IP addresses.</p>
+         */
         @NameInMap("PrivateIpAddress")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributesPrivateIpAddress privateIpAddress;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -284,12 +345,21 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstancePrivateIpAddressesPrivateIpAddress extends TeaModel {
+        /**
+         * <p>The gateway.</p>
+         */
         @NameInMap("GateWay")
         public String gateWay;
 
+        /**
+         * <p>The IP address.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The information about the ISP.</p>
+         */
         @NameInMap("Isp")
         public String isp;
 
@@ -363,12 +433,21 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstancePublicIpAddressesPublicIpAddress extends TeaModel {
+        /**
+         * <p>The gateway.</p>
+         */
         @NameInMap("GateWay")
         public String gateWay;
 
+        /**
+         * <p>The IP address.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The information about the ISP.</p>
+         */
         @NameInMap("Isp")
         public String isp;
 
@@ -442,32 +521,67 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceSystemDisk extends TeaModel {
+        /**
+         * <p>The category of the cloud disk or local disk. Valid values:</p>
+         * <br>
+         * <p>*   **file**: local disk.</p>
+         * <p>*   **pangu**: ultra disk.</p>
+         * <p>*   **local_hdd**: local HDD.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The disk ID.</p>
+         */
         @NameInMap("DiskId")
         public String diskId;
 
+        /**
+         * <p>The name of the disk.</p>
+         */
         @NameInMap("DiskName")
         public String diskName;
 
+        /**
+         * <p>The size of the disk. Unit: MiB.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
+        /**
+         * <p>The extended field of the disk category. Valid values:</p>
+         * <br>
+         * <p>*   **file**: local disk.</p>
+         * <p>*   **pangu**: ultra disk.</p>
+         * <p>*   **local_hdd**: local HDD.</p>
+         */
         @NameInMap("device_type")
         public String deviceType;
 
+        /**
+         * <p>The type of the cloud disk or local disk. Valid values:</p>
+         * <br>
+         * <p>*   **system**: system disk.</p>
+         * <p>*   **data**: data disk.</p>
+         */
         @NameInMap("disk_type")
         public String diskType;
 
+        /**
+         * <p>The name of the disk.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The size of the disk. Unit: MiB.</p>
+         */
         @NameInMap("storage")
         public Integer storage;
 
         /**
-         * <p>UUID。</p>
+         * <p>The UUID of the disk.</p>
          */
         @NameInMap("uuid")
         public String uuid;
@@ -552,83 +666,173 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstance extends TeaModel {
+        /**
+         * <p>The number of vCPUs.</p>
+         */
         @NameInMap("Cpu")
         public String cpu;
 
+        /**
+         * <p>The time when the instance is created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The details of the data disk.</p>
+         */
         @NameInMap("DataDisk")
         public DescribeInstancesResponseBodyInstancesInstanceDataDisk dataDisk;
 
+        /**
+         * <p>The total size of the disk. Unit: MiB.</p>
+         */
         @NameInMap("Disk")
         public Integer disk;
 
+        /**
+         * <p>The region ID of the instance.</p>
+         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
+        /**
+         * <p>The expiration time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <p>The hostname of the instance.</p>
+         * <br>
+         * <p>*   The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).</p>
+         * <p>*   For a Windows instance, the hostname must be 2 to 15 characters in length and can contain letters, digits, and hyphens (-). It cannot contain periods (.) or contain only digits.</p>
+         * <p>*   For an instance that runs an operating system of another type such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).</p>
+         */
         @NameInMap("HostName")
         public String hostName;
 
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>Internal IP addresses of instances.</p>
+         */
         @NameInMap("InnerIpAddress")
         public DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress innerIpAddress;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The type of the instance. Valid values:</p>
+         * <br>
+         * <p>*   EnsInstance: ENS instances that you purchase.</p>
+         * <p>*   EnsService: ENS instances that belong to edge services.</p>
+         * <p>*   BuildMachine: ENS instances that are configured with image builders.</p>
+         * <p>*   EnsPostPaidInstance: Pay-as-you-go ENS instances that you purchase.</p>
+         */
         @NameInMap("InstanceResourceType")
         public String instanceResourceType;
 
+        /**
+         * <p>The instance family. Valid values:</p>
+         * <br>
+         * <p>*   x86\_vm: x86-based computing instance.</p>
+         * <p>*   x86\_pm: x86-based physical machine.</p>
+         * <p>*   x86\_bmi: x86-based bare metal instance.</p>
+         * <p>*   x86\_bm: SmartNIC bare metal.</p>
+         * <p>*   pc_bmi: heterogeneous bare metal.</p>
+         * <p>*   pc_vm: heterogeneous virtual machine.</p>
+         * <p>*   arm_bmi: ARM-based computing instance.</p>
+         */
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
+        /**
+         * <p>The maximum outbound bandwidth. Unit: Mbit/s.</p>
+         */
         @NameInMap("InternetMaxBandwidthIn")
         public Integer internetMaxBandwidthIn;
 
+        /**
+         * <p>The minimum inbound bandwidth. Unit: Mbit/s.</p>
+         */
         @NameInMap("InternetMaxBandwidthOut")
         public Integer internetMaxBandwidthOut;
 
+        /**
+         * <p>The memory size. Unit: MB.</p>
+         */
         @NameInMap("Memory")
         public Integer memory;
 
         /**
-         * <p>Schema of Response</p>
+         * <p>The returned information about the network.</p>
          */
         @NameInMap("NetworkAttributes")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes networkAttributes;
 
+        /**
+         * <p>The name of the image.</p>
+         */
         @NameInMap("OSName")
         public String OSName;
 
+        /**
+         * <p>The details of the private IP addresses.</p>
+         */
         @NameInMap("PrivateIpAddresses")
         public DescribeInstancesResponseBodyInstancesInstancePrivateIpAddresses privateIpAddresses;
 
+        /**
+         * <p>The public IP addresses.</p>
+         */
         @NameInMap("PublicIpAddress")
         public DescribeInstancesResponseBodyInstancesInstancePublicIpAddress publicIpAddress;
 
+        /**
+         * <p>The details of the public IP addresses.</p>
+         */
         @NameInMap("PublicIpAddresses")
         public DescribeInstancesResponseBodyInstancesInstancePublicIpAddresses publicIpAddresses;
 
+        /**
+         * <p>IDs of security groups.</p>
+         */
         @NameInMap("SecurityGroupIds")
         public DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds securityGroupIds;
 
+        /**
+         * <p>The code of the instance type.</p>
+         */
         @NameInMap("SpecName")
         public String specName;
 
+        /**
+         * <p>The status. Valid values:</p>
+         * <br>
+         * <p>*   Running</p>
+         * <p>*   Expired</p>
+         * <p>*   Stopped</p>
+         */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>Schema of Response</p>
+         * <p>The returned information about the disk.</p>
          */
         @NameInMap("SystemDisk")
         public DescribeInstancesResponseBodyInstancesInstanceSystemDisk systemDisk;

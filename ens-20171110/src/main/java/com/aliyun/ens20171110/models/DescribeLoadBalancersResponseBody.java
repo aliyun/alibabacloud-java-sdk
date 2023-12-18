@@ -4,18 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoadBalancersResponseBody extends TeaModel {
+    /**
+     * <p>The returned ELB instances.</p>
+     */
     @NameInMap("LoadBalancers")
     public DescribeLoadBalancersResponseBodyLoadBalancers loadBalancers;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Default value: 10. Valid values: **10** to **100**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,33 +80,69 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
     }
 
     public static class DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer extends TeaModel {
+        /**
+         * <p>The IP address that the ELB instance uses to provide services.</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>The version of the IP address. Valid values: ipv4 and ipv6.</p>
+         */
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
 
+        /**
+         * <p>The time when the ELB instance was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the ENS node.</p>
+         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
+        /**
+         * <p>The ID of the ELB instance.</p>
+         */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
+        /**
+         * <p>The name of the ELB instance.</p>
+         */
         @NameInMap("LoadBalancerName")
         public String loadBalancerName;
 
+        /**
+         * <p>The status of the ELB instance. Valid values:</p>
+         * <br>
+         * <p>*   **Active** (default): The listener for the instance can forward the received traffic based on the rule.</p>
+         * <p>*   **InActive**: The listener for the instance does not forward the received traffic.</p>
+         */
         @NameInMap("LoadBalancerStatus")
         public String loadBalancerStatus;
 
+        /**
+         * <p>The ID of the network.</p>
+         */
         @NameInMap("NetworkId")
         public String networkId;
 
+        /**
+         * <p>The billing method. Valid values:</p>
+         * <br>
+         * <p>*   **PrePaid**: subscription.</p>
+         * <p>*   **PostPaid**: pay-as-you-go. Only this billing method is supported.</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 

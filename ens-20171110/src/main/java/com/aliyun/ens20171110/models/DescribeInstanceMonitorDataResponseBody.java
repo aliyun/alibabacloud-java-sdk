@@ -4,12 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
+    /**
+     * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The set of InstanceMonitorDataType data.</p>
+     */
     @NameInMap("MonitorData")
     public DescribeInstanceMonitorDataResponseBodyMonitorData monitorData;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +52,21 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData extends TeaModel {
+        /**
+         * <p>The vCPU usage of the instance, which is raw data. For example, a value of 0.02 indicates that the usage is 2%.</p>
+         */
         @NameInMap("CPU")
         public String CPU;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>This parameter is not yet supported.</p>
+         */
         @NameInMap("Memory")
         public String memory;
 

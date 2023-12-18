@@ -4,12 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeSelfImagesResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The image information.</p>
+     */
     @NameInMap("Images")
     public DescribeSelfImagesResponseBodyImages images;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,39 +52,97 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeSelfImagesResponseBodyImagesImage extends TeaModel {
+        /**
+         * <p>The image architecture. Valid values:</p>
+         * <br>
+         * <p>*   i386</p>
+         * <p>*   x86\_64</p>
+         */
         @NameInMap("Architecture")
         public String architecture;
 
+        /**
+         * <p>Computing type. ens_vm/ens: x86 computing. bare_metal: x86 bare machine or x86 bare metal. arm_vm: ARM computing. arm_bare_metal: ARM bare machine or ARM bare metal. pcfarm: heterogeneous computing.</p>
+         */
         @NameInMap("ComputeType")
         public String computeType;
 
+        /**
+         * <p>The image creation time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The name of the image.</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
+        /**
+         * <p>The source of the image. Valid values:</p>
+         * <br>
+         * <p>*   **system: public images**</p>
+         * <p>*   **self: your custom images**</p>
+         */
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
 
+        /**
+         * <p>The size of the image. Unit: GiB.</p>
+         */
         @NameInMap("ImageSize")
         public String imageSize;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The operating system version.</p>
+         */
         @NameInMap("OsVersion")
         public String osVersion;
 
+        /**
+         * <p>The platform.</p>
+         * <br>
+         * <p>*   centos</p>
+         * <p>*   ubuntu</p>
+         * <p>*   alios</p>
+         * <p>*   debian</p>
+         * <p>*   rhel</p>
+         * <p>*   windows</p>
+         */
         @NameInMap("Platform")
         public String platform;
 
+        /**
+         * <p>The ID of the snapshot.</p>
+         */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
+        /**
+         * <p>The state of the image.</p>
+         * <br>
+         * <p>*   Creating.</p>
+         * <p>*   Packing.</p>
+         * <p>*   Uploading.</p>
+         * <p>*   Pack_failed.</p>
+         * <p>*   Upload_failed.</p>
+         * <p>*   Available: Only images in the Available state can be used and operated.</p>
+         * <p>*   Unavailable.</p>
+         * <p>*   Copying.</p>
+         */
         @NameInMap("Status")
         public String status;
 

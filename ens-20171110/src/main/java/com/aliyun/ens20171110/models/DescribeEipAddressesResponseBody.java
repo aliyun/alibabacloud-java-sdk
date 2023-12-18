@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEipAddressesResponseBody extends TeaModel {
+    /**
+     * <p>Details about the EIP.</p>
+     */
     @NameInMap("EipAddresses")
     public DescribeEipAddressesResponseBodyEipAddresses eipAddresses;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
     }
 
     public static class DescribeEipAddressesResponseBodyEipAddressesEipAddress extends TeaModel {
+        /**
+         * <p>The information about the EIP.</p>
+         */
         @NameInMap("Eip")
         public String eip;
 
+        /**
+         * <p>The public IP address of the ENS instance.</p>
+         */
         @NameInMap("InstanceIdInternetIp")
         public String instanceIdInternetIp;
 

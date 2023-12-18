@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnatAttributeRequest extends TeaModel {
+    /**
+     * <p>The ID of the SNAT entry.</p>
+     */
     @NameInMap("SnatEntryId")
     public String snatEntryId;
 

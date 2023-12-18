@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ExportMeasurementDataResponseBody extends TeaModel {
+    /**
+     * <p>The download path of the exported file.</p>
+     */
     @NameInMap("FilePath")
     public String filePath;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

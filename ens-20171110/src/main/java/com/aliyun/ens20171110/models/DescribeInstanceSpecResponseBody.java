@@ -4,24 +4,45 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSpecResponseBody extends TeaModel {
+    /**
+     * <p>The bandwidth limit for a single instance. Unit: Mbit/s.</p>
+     */
     @NameInMap("BandwidthLimit")
     public Integer bandwidthLimit;
 
+    /**
+     * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The maximum capacity of a data disk. Unit: GB.</p>
+     */
     @NameInMap("DataDiskMaxSize")
     public Integer dataDiskMaxSize;
 
+    /**
+     * <p>The minimum capacity of a data disk. Unit: GB.</p>
+     */
     @NameInMap("DataDiskMinSize")
     public Integer dataDiskMinSize;
 
+    /**
+     * <p>The information about instance specifications.</p>
+     */
     @NameInMap("InstanceSpecs")
     public DescribeInstanceSpecResponseBodyInstanceSpecs instanceSpecs;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The maximum capacity of the system disk. Unit: GiB.</p>
+     */
     @NameInMap("SystemDiskMaxSize")
     public Integer systemDiskMaxSize;
 
@@ -87,15 +108,27 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceSpecResponseBodyInstanceSpecsInstanceSpec extends TeaModel {
+        /**
+         * <p>The number of CPU cores.</p>
+         */
         @NameInMap("Core")
         public String core;
 
+        /**
+         * <p>The display name of the instance type.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The type of the instance.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The memory size. Unit: MB.</p>
+         */
         @NameInMap("Memory")
         public String memory;
 

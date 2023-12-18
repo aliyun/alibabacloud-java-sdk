@@ -4,15 +4,30 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateFileSystemResponseBody extends TeaModel {
+    /**
+     * <p>The information about the file system that was created.</p>
+     */
     @NameInMap("AllocationId")
     public java.util.List<String> allocationId;
 
+    /**
+     * <p>The status code for successful operations. Valid values:</p>
+     * <br>
+     * <p>*   PartSuccess: The operation is partially successful.</p>
+     * <p>*   AllSuccess: The operation is successful.</p>
+     */
     @NameInMap("BizStatusCode")
     public String bizStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the file system that failed to be created.</p>
+     */
     @NameInMap("UnAllocationId")
     public java.util.List<String> unAllocationId;
 

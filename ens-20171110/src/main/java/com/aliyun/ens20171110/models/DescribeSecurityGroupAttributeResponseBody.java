@@ -4,18 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The description of the security group.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Details about the rules.</p>
+     */
     @NameInMap("Permissions")
     public DescribeSecurityGroupAttributeResponseBodyPermissions permissions;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the destination security group.</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>The name of the destination security group.</p>
+     */
     @NameInMap("SecurityGroupName")
     public String securityGroupName;
 
@@ -65,33 +80,63 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityGroupAttributeResponseBodyPermissionsPermission extends TeaModel {
+        /**
+         * <p>The time at which the security group rule was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The range of destination IP addresses for outbound access control.</p>
+         */
         @NameInMap("DestCidrIp")
         public String destCidrIp;
 
+        /**
+         * <p>The direction in which the security group rule is applied.</p>
+         */
         @NameInMap("Direction")
         public String direction;
 
+        /**
+         * <p>The transport layer protocol.</p>
+         */
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
+        /**
+         * <p>The policy.</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
+        /**
+         * <p>The source port range.</p>
+         */
         @NameInMap("PortRange")
         public String portRange;
 
+        /**
+         * <p>The priority of the rule.</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>The range of source IP addresses for inbound access control.</p>
+         */
         @NameInMap("SourceCidrIp")
         public String sourceCidrIp;
 
+        /**
+         * <p>The source port number range for the security group.</p>
+         */
         @NameInMap("SourcePortRange")
         public String sourcePortRange;
 

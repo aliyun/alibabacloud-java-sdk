@@ -4,14 +4,17 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateSecurityGroupRequest extends TeaModel {
+    /**
+     * <p>The description of the security group. The description must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-). By default, this parameter is empty.</p>
+     */
     @NameInMap("SecurityGroupName")
     public String securityGroupName;
-
-    @NameInMap("Version")
-    public String version;
 
     public static CreateSecurityGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSecurityGroupRequest self = new CreateSecurityGroupRequest();
@@ -32,14 +35,6 @@ public class CreateSecurityGroupRequest extends TeaModel {
     }
     public String getSecurityGroupName() {
         return this.securityGroupName;
-    }
-
-    public CreateSecurityGroupRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

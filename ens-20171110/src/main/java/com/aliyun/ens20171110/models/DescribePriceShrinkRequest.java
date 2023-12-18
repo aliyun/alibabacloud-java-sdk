@@ -10,24 +10,57 @@ public class DescribePriceShrinkRequest extends TeaModel {
     @NameInMap("SystemDisk")
     public DescribePriceShrinkRequestSystemDisk systemDisk;
 
+    /**
+     * <p>If you leave DataDisk.1.Size empty, the value that you specified for this parameter is used.</p>
+     */
     @NameInMap("DataDisks")
     public String dataDisksShrink;
 
+    /**
+     * <p>The ID of the ENS node.</p>
+     */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The type of the instance.</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>The bandwidth metering method of the instance. Valid values:</p>
+     * <br>
+     * <p>*   BandwidthByDay: Pay by daily peak bandwidth</p>
+     * <p>*   95BandwidthByMonth: Pay by monthly 95th percentile bandwidth</p>
+     * <p>*   PayByBandwidth4thMonth: Pay by monthly fourth peak bandwidth</p>
+     * <p>*   PayByBandwidth: Pay by fixed bandwidth</p>
+     */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
+    /**
+     * <p>The subscription duration of the instance.</p>
+     * <br>
+     * <p>*   If you leave the PeriodUnit parameter empty, the instance is purchased on a monthly basis. Valid values: Day and Month.</p>
+     * <p>*   If you set PeriodUnit to Day, you can set Period only to 3.</p>
+     * <p>*   If you set PeriodUnit to Month, you can set Period to a number from 1 to 9, or set Period to 12.</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <p>The billing cycle of the ENS instance. Valid values:</p>
+     * <br>
+     * <p>*   Month (default):</p>
+     * <p>*   Day</p>
+     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <p>The number of instances.</p>
+     */
     @NameInMap("Quantity")
     public Integer quantity;
 
@@ -109,6 +142,9 @@ public class DescribePriceShrinkRequest extends TeaModel {
     }
 
     public static class DescribePriceShrinkRequestDataDisk extends TeaModel {
+        /**
+         * <p>The size of the data disk. Unit: GB. If you specify this parameter, this parameter takes precedence over the Size property in DataDisks.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
@@ -128,6 +164,9 @@ public class DescribePriceShrinkRequest extends TeaModel {
     }
 
     public static class DescribePriceShrinkRequestSystemDisk extends TeaModel {
+        /**
+         * <p>The size of the system disk. Unit: GB.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 

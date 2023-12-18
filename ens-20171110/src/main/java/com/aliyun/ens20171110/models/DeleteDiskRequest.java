@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DeleteDiskRequest extends TeaModel {
+    /**
+     * <p>The ID of the disk.</p>
+     */
     @NameInMap("DiskId")
     public String diskId;
 

@@ -4,15 +4,27 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceResponseBody extends TeaModel {
+    /**
+     * <p>The returned service code. 0 indicates that the request was successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The details of the images.</p>
+     */
     @NameInMap("Images")
     public DescribeAvailableResourceResponseBodyImages images;
 
+    /**
+     * <p>The ID of the request. This is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The specifications of resources that you can purchase.</p>
+     */
     @NameInMap("SupportResources")
     public DescribeAvailableResourceResponseBodySupportResources supportResources;
 
@@ -54,9 +66,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyImagesImage extends TeaModel {
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The name of the image.</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
@@ -103,18 +121,33 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodySupportResourcesSupportResource extends TeaModel {
+        /**
+         * <p>The size of the data disk. Unit: GB.</p>
+         */
         @NameInMap("DataDiskSize")
         public String dataDiskSize;
 
+        /**
+         * <p>The ID of the edge node.</p>
+         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
+        /**
+         * <p>The specifications of the resource plan.</p>
+         */
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
+        /**
+         * <p>The number of resources that you can purchase.</p>
+         */
         @NameInMap("SupportResourcesCount")
         public String supportResourcesCount;
 
+        /**
+         * <p>The size of the system disk. Unit: GiB.</p>
+         */
         @NameInMap("SystemDiskSize")
         public String systemDiskSize;
 

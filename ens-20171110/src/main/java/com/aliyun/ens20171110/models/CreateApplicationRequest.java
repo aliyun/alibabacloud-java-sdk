@@ -4,9 +4,20 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
+    /**
+     * <p>The edge application template. The value must be a JSON string that contains the following information:</p>
+     * <br>
+     * <p>*   Basic information such as the name of the application</p>
+     * <p>*   Information such as resource specifications and network security configurations</p>
+     * <p>*   Service specifications</p>
+     * <p>*   Required resources</p>
+     */
     @NameInMap("Template")
     public String template;
 
+    /**
+     * <p>The timeout period for asynchronous processing. Unit: seconds. Default value: 1800.</p>
+     */
     @NameInMap("Timeout")
     public Integer timeout;
 

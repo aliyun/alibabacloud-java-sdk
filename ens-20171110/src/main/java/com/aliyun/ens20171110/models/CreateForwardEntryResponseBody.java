@@ -4,11 +4,14 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateForwardEntryResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the DNAT entry.</p>
+     */
     @NameInMap("ForwardEntryId")
     public String forwardEntryId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

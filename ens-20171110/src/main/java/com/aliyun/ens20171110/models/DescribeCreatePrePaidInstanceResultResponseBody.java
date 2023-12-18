@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
+    /**
+     * <p>Returned results of creating an instance.</p>
+     */
     @NameInMap("InstanceCreateResult")
     public DescribeCreatePrePaidInstanceResultResponseBodyInstanceCreateResult instanceCreateResult;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,20 @@ public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
     }
 
     public static class DescribeCreatePrePaidInstanceResultResponseBodyInstanceCreateResult extends TeaModel {
+        /**
+         * <p>The status of the instance creation.</p>
+         * <br>
+         * <p>*   Accepted</p>
+         * <p>*   Creating</p>
+         * <p>*   Failed</p>
+         * <p>*   Successed</p>
+         */
         @NameInMap("InstanceCreateStatus")
         public String instanceCreateStatus;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 

@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerUDPListenerAttributeRequest extends TeaModel {
+    /**
+     * <p>The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: **1** to **65535**.</p>
+     */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
+    /**
+     * <p>The ID of the ELB instance.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 

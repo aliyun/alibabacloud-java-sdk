@@ -4,9 +4,20 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeExportImageStatusResponseBody extends TeaModel {
+    /**
+     * <p>The export status of the image. Valid values:</p>
+     * <br>
+     * <p>*   Exporting</p>
+     * <p>*   Exported</p>
+     * <p>*   ExportError</p>
+     * <p>*   Unexported</p>
+     */
     @NameInMap("ImageExportStatus")
     public String imageExportStatus;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

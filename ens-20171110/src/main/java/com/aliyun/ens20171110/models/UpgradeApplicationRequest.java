@@ -4,12 +4,26 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class UpgradeApplicationRequest extends TeaModel {
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The information template for phased update. The value must be a JSON string and contain the following information:</p>
+     * <br>
+     * <p>*   Version range that you want to update</p>
+     * <p>*   Configuration information of the target version</p>
+     * <p>*   Canary release policy for resources</p>
+     * <p>*   Intelligent upgrade policy that contains information such as the time window and resource usage limit</p>
+     */
     @NameInMap("Template")
     public String template;
 
+    /**
+     * <p>The timeout period for asynchronous upgrade. Unit: seconds. Default value: 300.</p>
+     */
     @NameInMap("Timeout")
     public Integer timeout;
 

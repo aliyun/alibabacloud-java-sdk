@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ReInitDiskRequest extends TeaModel {
+    /**
+     * <p>The ID of the disk to be initialized. You can initialize only one disk at a time.</p>
+     */
     @NameInMap("DiskId")
     public String diskId;
 
+    /**
+     * <p>The ID of the image to use to create the instance.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 

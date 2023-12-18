@@ -4,18 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnatTableEntriesResponseBody extends TeaModel {
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details of SNAT entries.</p>
+     */
     @NameInMap("SnatTableEntries")
     public java.util.List<DescribeSnatTableEntriesResponseBodySnatTableEntries> snatTableEntries;
 
+    /**
+     * <p>The number of SNAT entries that are returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,27 +80,60 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
     }
 
     public static class DescribeSnatTableEntriesResponseBodySnatTableEntries extends TeaModel {
+        /**
+         * <p>The ID of the NAT gateway.</p>
+         */
         @NameInMap("NatGatewayId")
         public String natGatewayId;
 
+        /**
+         * <p>The ID of the SNAT entry.</p>
+         */
         @NameInMap("SnatEntryId")
         public String snatEntryId;
 
+        /**
+         * <p>The name of the SNAT entry.</p>
+         */
         @NameInMap("SnatEntryName")
         public String snatEntryName;
 
+        /**
+         * <p>The EIP specified in the SNAT entry.</p>
+         */
         @NameInMap("SnatIp")
         public String snatIp;
 
+        /**
+         * <p>The source CIDR block specified in the SNAT entry.</p>
+         */
         @NameInMap("SourceCIDR")
         public String sourceCIDR;
 
+        /**
+         * <p>The secondary EIP. Multiple EIPs are separated by commas (,).</p>
+         */
         @NameInMap("StandbySnatIp")
         public String standbySnatIp;
 
+        /**
+         * <p>The status of the secondary EIP. Valid values:</p>
+         * <br>
+         * <p>*   Running</p>
+         * <p>*   Stopping</p>
+         * <p>*   Stopped</p>
+         * <p>*   Starting</p>
+         */
         @NameInMap("StandbyStatus")
         public String standbyStatus;
 
+        /**
+         * <p>The status of the SNAT entry. Valid values:</p>
+         * <br>
+         * <p>*   Pending: The SNAT entry is being created or modified.</p>
+         * <p>*   Available: The SNAT entry is available.</p>
+         * <p>*   Deleting: The SNAT entry is being deleted.</p>
+         */
         @NameInMap("Status")
         public String status;
 

@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ReleaseAICInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the server.</p>
+     */
     @NameInMap("ServerId")
     public String serverId;
 

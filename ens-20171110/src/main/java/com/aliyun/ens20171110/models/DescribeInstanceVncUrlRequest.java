@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceVncUrlRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

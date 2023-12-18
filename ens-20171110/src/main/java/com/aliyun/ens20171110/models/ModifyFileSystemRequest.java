@@ -4,12 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ModifyFileSystemRequest extends TeaModel {
+    /**
+     * <p>The description of the file system.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The ID of the file system.</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 

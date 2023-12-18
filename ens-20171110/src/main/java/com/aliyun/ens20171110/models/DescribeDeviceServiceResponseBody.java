@@ -4,21 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeviceServiceResponseBody extends TeaModel {
+    /**
+     * <p>The basic properties of the application.</p>
+     */
     @NameInMap("AppMetaData")
     public DescribeDeviceServiceResponseBodyAppMetaData appMetaData;
 
+    /**
+     * <p>The status information of the application.</p>
+     */
     @NameInMap("AppStatus")
     public DescribeDeviceServiceResponseBodyAppStatus appStatus;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the devices.</p>
+     */
     @NameInMap("ResourceDetailInfos")
     public java.util.List<DescribeDeviceServiceResponseBodyResourceDetailInfos> resourceDetailInfos;
 
+    /**
+     * <p>The information about the instances.</p>
+     */
     @NameInMap("ResourceInfos")
     public java.util.List<DescribeDeviceServiceResponseBodyResourceInfos> resourceInfos;
 
@@ -68,24 +80,48 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
     }
 
     public static class DescribeDeviceServiceResponseBodyAppMetaData extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The stable version number of the application.</p>
+         */
         @NameInMap("AppStableVersion")
         public String appStableVersion;
 
+        /**
+         * <p>The type of the application. The value is of the enumeration type. Valid values:</p>
+         * <br>
+         * <p>*   Common</p>
+         * <p>*   Scheduler</p>
+         */
         @NameInMap("AppType")
         public String appType;
 
+        /**
+         * <p>The name of the application cluster.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The time when the application was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the application.</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -153,12 +189,34 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
     }
 
     public static class DescribeDeviceServiceResponseBodyAppStatus extends TeaModel {
+        /**
+         * <p>The status of the application. The value is of the enumeration type. Valid values:</p>
+         * <br>
+         * <p>Three intermediate states:</p>
+         * <br>
+         * <p>*   CREATING</p>
+         * <p>*   UPDATING</p>
+         * <p>*   DELETING</p>
+         * <br>
+         * <p>Four final states:</p>
+         * <br>
+         * <p>*   CREATE_FAILED</p>
+         * <p>*   UPDATE_FAILED</p>
+         * <p>*   DELETE_FAILED</p>
+         * <p>*   RUNNING</p>
+         */
         @NameInMap("Phase")
         public String phase;
 
+        /**
+         * <p>The description of the application status.</p>
+         */
         @NameInMap("StatusDescrip")
         public String statusDescrip;
 
+        /**
+         * <p>The time when the status was last updated.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -194,33 +252,63 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
     }
 
     public static class DescribeDeviceServiceResponseBodyResourceDetailInfos extends TeaModel {
+        /**
+         * <p>The name of the device.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The ID of the cloud device.</p>
+         */
         @NameInMap("ID")
         public String ID;
 
+        /**
+         * <p>The IP address.</p>
+         */
         @NameInMap("IP")
         public String IP;
 
+        /**
+         * <p>The Internet service provider (ISP).</p>
+         */
         @NameInMap("ISP")
         public String ISP;
 
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageID")
         public String imageID;
 
+        /**
+         * <p>The media access control (MAC) address of the device.</p>
+         */
         @NameInMap("Mac")
         public String mac;
 
+        /**
+         * <p>The ID of the ENS node.</p>
+         */
         @NameInMap("RegionID")
         public String regionID;
 
+        /**
+         * <p>The server name of the ENS node.</p>
+         */
         @NameInMap("Server")
         public String server;
 
+        /**
+         * <p>The status of the device.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The type of the device.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -312,15 +400,30 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
     }
 
     public static class DescribeDeviceServiceResponseBodyResourceInfosDeviceInfosNetwork extends TeaModel {
+        /**
+         * <p>The port of the container.</p>
+         */
         @NameInMap("ContainerPorts")
         public String containerPorts;
 
+        /**
+         * <p>The public IP address.</p>
+         */
         @NameInMap("ExternalIp")
         public String externalIp;
 
+        /**
+         * <p>The port range.</p>
+         */
         @NameInMap("HostPorts")
         public String hostPorts;
 
+        /**
+         * <p>The protocol of the gateway. The value is of the enumeration type. Valid values:</p>
+         * <br>
+         * <p>*   TCP</p>
+         * <p>*   UDP</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
@@ -364,12 +467,21 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
     }
 
     public static class DescribeDeviceServiceResponseBodyResourceInfosDeviceInfos extends TeaModel {
+        /**
+         * <p>The name of the device.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The network information.</p>
+         */
         @NameInMap("Network")
         public java.util.List<DescribeDeviceServiceResponseBodyResourceInfosDeviceInfosNetwork> network;
 
+        /**
+         * <p>The status.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -405,6 +517,9 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
     }
 
     public static class DescribeDeviceServiceResponseBodyResourceInfosInternalIps extends TeaModel {
+        /**
+         * <p>The internal IP address.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
@@ -424,6 +539,9 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
     }
 
     public static class DescribeDeviceServiceResponseBodyResourceInfosPublicIps extends TeaModel {
+        /**
+         * <p>The public IP address.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
@@ -443,39 +561,75 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
     }
 
     public static class DescribeDeviceServiceResponseBodyResourceInfos extends TeaModel {
+        /**
+         * <p>The version of the application.</p>
+         */
         @NameInMap("AppVersion")
         public String appVersion;
 
+        /**
+         * <p>The area code.</p>
+         */
         @NameInMap("AreaCode")
         public String areaCode;
 
+        /**
+         * <p>The region name.</p>
+         */
         @NameInMap("AreaName")
         public String areaName;
 
+        /**
+         * <p>The time when the application was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The information about the devices.</p>
+         */
         @NameInMap("DeviceInfos")
         public java.util.List<DescribeDeviceServiceResponseBodyResourceInfosDeviceInfos> deviceInfos;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The status of the instance.</p>
+         */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
+        /**
+         * <p>The internal IP addresses.</p>
+         */
         @NameInMap("InternalIps")
         public java.util.List<DescribeDeviceServiceResponseBodyResourceInfosInternalIps> internalIps;
 
+        /**
+         * <p>The public IP addresses.</p>
+         */
         @NameInMap("PublicIps")
         public java.util.List<DescribeDeviceServiceResponseBodyResourceInfosPublicIps> publicIps;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionCode")
         public String regionCode;
 
+        /**
+         * <p>The ID of the ENS node.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The name of the region.</p>
+         */
         @NameInMap("RegionName")
         public String regionName;
 

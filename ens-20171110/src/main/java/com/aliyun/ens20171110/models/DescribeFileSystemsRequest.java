@@ -4,18 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeFileSystemsRequest extends TeaModel {
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The ID of the file system.</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <p>The name of the file system.</p>
+     */
     @NameInMap("FileSystemName")
     public String fileSystemName;
 
+    /**
+     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. The maximum value is **100**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

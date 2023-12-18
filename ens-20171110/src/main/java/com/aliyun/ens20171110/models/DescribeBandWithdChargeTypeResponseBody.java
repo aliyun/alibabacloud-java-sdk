@@ -4,18 +4,36 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeBandWithdChargeTypeResponseBody extends TeaModel {
+    /**
+     * <p>The information about the metering method.</p>
+     */
     @NameInMap("BandWithTypeInfo")
     public String bandWithTypeInfo;
 
+    /**
+     * <p>The metering type.</p>
+     * <br>
+     * <p>*   ChargeByUnified: unified metering.</p>
+     * <p>*   ChargeByGrade: differential metering.</p>
+     */
     @NameInMap("ChargeContractType")
     public String chargeContractType;
 
+    /**
+     * <p>The metering cycle. Currently, this parameter is empty in the response.</p>
+     */
     @NameInMap("ChargeCycleInfo")
     public String chargeCycleInfo;
 
+    /**
+     * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

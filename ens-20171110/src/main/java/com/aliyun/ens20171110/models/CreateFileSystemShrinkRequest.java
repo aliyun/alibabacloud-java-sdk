@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateFileSystemShrinkRequest extends TeaModel {
+    /**
+     * <p>The information about the orders.</p>
+     */
     @NameInMap("OrderDetails")
     public String orderDetailsShrink;
 

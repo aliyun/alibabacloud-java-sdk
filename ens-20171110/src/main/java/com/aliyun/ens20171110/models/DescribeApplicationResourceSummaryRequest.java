@@ -4,9 +4,25 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeApplicationResourceSummaryRequest extends TeaModel {
+    /**
+     * <p>The region level. The value must be of the enumerated data type. Valid values:</p>
+     * <br>
+     * <p>*   **National** (default): Chinese mainland</p>
+     * <p>*   **Big**: area</p>
+     * <p>*   **Middle**: province</p>
+     * <p>*   **Small**: city</p>
+     * <p>*   **RegionId**: edge node</p>
+     */
     @NameInMap("Level")
     public String level;
 
+    /**
+     * <p>The resource type.</p>
+     * <br>
+     * <p>Valid value:</p>
+     * <br>
+     * <p>*   Ens</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

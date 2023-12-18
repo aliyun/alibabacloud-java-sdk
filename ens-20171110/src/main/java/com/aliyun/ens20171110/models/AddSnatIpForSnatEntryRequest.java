@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class AddSnatIpForSnatEntryRequest extends TeaModel {
+    /**
+     * <p>The ID of the SNAT entry.</p>
+     */
     @NameInMap("SnatEntryId")
     public String snatEntryId;
 
+    /**
+     * <p>The EIP that you want to add to the SNAT entry.</p>
+     */
     @NameInMap("SnatIp")
     public String snatIp;
 

@@ -4,18 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataDownloadURLRequest extends TeaModel {
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The name of the data file.</p>
+     */
     @NameInMap("DataName")
     public String dataName;
 
+    /**
+     * <p>The version number of the data file.</p>
+     */
     @NameInMap("DataVersion")
     public String dataVersion;
 
+    /**
+     * <p>This parameter is reserved.</p>
+     */
     @NameInMap("ExpireTimeout")
     public Long expireTimeout;
 
+    /**
+     * <p>The condition that you want to use to filter file servers. You can specify multiple canary release policies. By default, all resources are queried.</p>
+     */
     @NameInMap("ServerFilterStrategy")
     public String serverFilterStrategy;
 

@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateFileSystemRequest extends TeaModel {
+    /**
+     * <p>The information about the orders.</p>
+     */
     @NameInMap("OrderDetails")
     public java.util.List<CreateFileSystemRequestOrderDetails> orderDetails;
 
@@ -21,30 +24,54 @@ public class CreateFileSystemRequest extends TeaModel {
     }
 
     public static class CreateFileSystemRequestOrderDetails extends TeaModel {
+        /**
+         * <p>The billing method of the NAS file system. Valid values:</p>
+         * <br>
+         * <p>*   PrePaid: subscription. This billing method is not supported.</p>
+         * <p>*   PostPaid: pay-as-you-go.</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <p>The ID of the ENS node.</p>
+         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
+        /**
+         * <p>The name of the file system.</p>
+         */
         @NameInMap("FileSystemName")
         public String fileSystemName;
 
+        /**
+         * <p>The name of the mount target.</p>
+         */
         @NameInMap("MountTargetDomain")
         public String mountTargetDomain;
 
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("NetworkId")
         public String networkId;
 
         /**
-         * <p>BUY。</p>
+         * <p>The type of the order.</p>
          */
         @NameInMap("OrderType")
         public String orderType;
 
+        /**
+         * <p>The storage protocol. Valid values: nsf and smb.</p>
+         */
         @NameInMap("ProtocolType")
         public String protocolType;
 
+        /**
+         * <p>The type of the storage. Set the value to capacity.</p>
+         */
         @NameInMap("StorgeType")
         public String storgeType;
 

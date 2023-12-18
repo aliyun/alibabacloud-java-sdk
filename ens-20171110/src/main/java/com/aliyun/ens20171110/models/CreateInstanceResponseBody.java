@@ -4,12 +4,23 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The return code. A value of 0 indicates that the request is successful.</p>
+     * <br>
+     * <p>>  If you call this operation by using SDKs, the return value is of the integer type. If you call this operation by using common methods or HTTP requests, the return value is of the string type.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The IDs of instances.</p>
+     */
     @NameInMap("InstanceIds")
     public CreateInstanceResponseBodyInstanceIds instanceIds;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

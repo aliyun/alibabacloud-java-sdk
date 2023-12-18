@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class AssignPrivateIpAddressesRequest extends TeaModel {
+    /**
+     * <p>The ID of the ENI.</p>
+     */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
+    /**
+     * <p>The ID of the vSwitch.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 

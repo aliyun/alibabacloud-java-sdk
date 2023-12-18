@@ -4,15 +4,31 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageSharePermissionRequest extends TeaModel {
+    /**
+     * <p>The ID of the Alibaba Cloud account.</p>
+     */
     @NameInMap("AliyunId")
     public Long aliyunId;
 
+    /**
+     * <p>The ID of the image.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The page number. Pages start from page **1**.</p>
+     * <br>
+     * <p>Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries per page. Maximum value: **100**.</p>
+     * <br>
+     * <p>Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 

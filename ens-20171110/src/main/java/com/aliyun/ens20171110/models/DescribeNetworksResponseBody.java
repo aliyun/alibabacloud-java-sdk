@@ -4,18 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworksResponseBody extends TeaModel {
+    /**
+     * <p>The list of networks.</p>
+     */
     @NameInMap("Networks")
     public DescribeNetworksResponseBodyNetworks networks;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries in the list.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -84,33 +99,66 @@ public class DescribeNetworksResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworksResponseBodyNetworksNetwork extends TeaModel {
+        /**
+         * <p>The IPv4 CIDR block of the network.</p>
+         */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
+        /**
+         * <p>The timestamp when the instance was created. Unit: milliseconds.</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>The description of the network.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the edge node.</p>
+         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
+        /**
+         * <p>The ID of the network access control list (ACL).</p>
+         */
         @NameInMap("NetworkAclId")
         public String networkAclId;
 
+        /**
+         * <p>The ID of the network.</p>
+         */
         @NameInMap("NetworkId")
         public String networkId;
 
+        /**
+         * <p>The name of the network.</p>
+         */
         @NameInMap("NetworkName")
         public String networkName;
 
+        /**
+         * <p>The route table ID.</p>
+         */
         @NameInMap("RouterTableId")
         public String routerTableId;
 
+        /**
+         * <p>The status of the network. Valid values:</p>
+         * <br>
+         * <p>*   Pending</p>
+         * <p>*   Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The list of vSwitches in the network.</p>
+         */
         @NameInMap("VSwitchIds")
         public DescribeNetworksResponseBodyNetworksNetworkVSwitchIds vSwitchIds;
 

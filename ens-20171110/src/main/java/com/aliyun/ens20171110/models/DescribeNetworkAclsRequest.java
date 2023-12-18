@@ -4,18 +4,35 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkAclsRequest extends TeaModel {
+    /**
+     * <p>The ID of the network ACL.</p>
+     */
     @NameInMap("NetworkAclId")
     public String networkAclId;
 
+    /**
+     * <p>The name of the network ACL.</p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length. The name cannot start with \*\*http:// **or** https://\*\*.</p>
+     */
     @NameInMap("NetworkAclName")
     public String networkAclName;
 
+    /**
+     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The ID of the associated instance.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 

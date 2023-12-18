@@ -4,18 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationsResponseBody extends TeaModel {
+    /**
+     * <p>Details about applications.</p>
+     */
     @NameInMap("Applications")
     public ListApplicationsResponseBodyApplications applications;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +80,15 @@ public class ListApplicationsResponseBody extends TeaModel {
     }
 
     public static class ListApplicationsResponseBodyApplicationsApplicationAppListApp extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The information about the application, such as the resource specification, parameter configuration, and resources.</p>
+         */
         @NameInMap("AppInfo")
         public String appInfo;
 
@@ -114,9 +135,15 @@ public class ListApplicationsResponseBody extends TeaModel {
     }
 
     public static class ListApplicationsResponseBodyApplicationsApplication extends TeaModel {
+        /**
+         * <p>Details about the application.</p>
+         */
         @NameInMap("AppList")
         public ListApplicationsResponseBodyApplicationsApplicationAppList appList;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 

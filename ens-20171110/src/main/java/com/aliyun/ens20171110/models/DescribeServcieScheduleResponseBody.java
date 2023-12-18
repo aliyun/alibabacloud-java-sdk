@@ -4,27 +4,51 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeServcieScheduleResponseBody extends TeaModel {
+    /**
+     * <p>The index number of the scheduled virtual device (pod).</p>
+     */
     @NameInMap("Index")
     public Integer index;
 
+    /**
+     * <p>The ID of the scheduled instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The IP address of the scheduled instance.</p>
+     */
     @NameInMap("InstanceIp")
     public String instanceIp;
 
+    /**
+     * <p>The start port of the scheduled instance.</p>
+     */
     @NameInMap("InstancePort")
     public Integer instancePort;
 
+    /**
+     * <p>The summary information about the scheduled virtual device.</p>
+     */
     @NameInMap("PodAbstractInfo")
     public DescribeServcieScheduleResponseBodyPodAbstractInfo podAbstractInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is repeated.</p>
+     */
     @NameInMap("RequestRepeated")
     public Boolean requestRepeated;
 
+    /**
+     * <p>The TCP port range of the scheduled instance or container. The value is in the ${from}-$-{to} format. Example: 80-88.</p>
+     */
     @NameInMap("TcpPorts")
     public String tcpPorts;
 
@@ -98,9 +122,15 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
     }
 
     public static class DescribeServcieScheduleResponseBodyPodAbstractInfoContainerStatusesContainerStatus extends TeaModel {
+        /**
+         * <p>The ID of the container.</p>
+         */
         @NameInMap("ContainerId")
         public String containerId;
 
+        /**
+         * <p>The name of the container.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -147,21 +177,39 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
     }
 
     public static class DescribeServcieScheduleResponseBodyPodAbstractInfo extends TeaModel {
+        /**
+         * <p>The name of the container service.</p>
+         */
         @NameInMap("ContainerService")
         public Boolean containerService;
 
+        /**
+         * <p>The information about the container.</p>
+         */
         @NameInMap("ContainerStatuses")
         public DescribeServcieScheduleResponseBodyPodAbstractInfoContainerStatuses containerStatuses;
 
+        /**
+         * <p>The name of the pod.</p>
+         */
         @NameInMap("Name")
         public Boolean name;
 
+        /**
+         * <p>The name of the namespace.</p>
+         */
         @NameInMap("Namespace")
         public Boolean namespace;
 
+        /**
+         * <p>The pod scope.</p>
+         */
         @NameInMap("ResourceScope")
         public Boolean resourceScope;
 
+        /**
+         * <p>The status of the pod.</p>
+         */
         @NameInMap("Status")
         public Boolean status;
 

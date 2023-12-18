@@ -4,15 +4,29 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class GetOssUsageDataRequest extends TeaModel {
+    /**
+     * <p>The name of the logical Object Storage Service (OSS) bucket.</p>
+     */
     @NameInMap("Bucket")
     public String bucket;
 
+    /**
+     * <p>The end of the time range to query. The time is in UTC. Format: 2010-01-21T09:50:23Z.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The aggregation granularity. Unit: minutes.</p>
+     * <br>
+     * <p>Default value: 5. Valid values: 5 to 1440.</p>
+     */
     @NameInMap("Period")
     public String period;
 
+    /**
+     * <p>The beginning of the time range to query. The time is in UTC. Format: 2010-01-21T09:50:23Z.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

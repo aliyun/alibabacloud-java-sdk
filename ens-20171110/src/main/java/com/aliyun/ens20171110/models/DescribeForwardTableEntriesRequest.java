@@ -4,27 +4,59 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeForwardTableEntriesRequest extends TeaModel {
+    /**
+     * <p>The EIP in the DNAT entry. The public IP address is used to access the Internet.</p>
+     */
     @NameInMap("ExternalIp")
     public String externalIp;
 
+    /**
+     * <p>The ID of the DNAT entry.</p>
+     */
     @NameInMap("ForwardEntryId")
     public String forwardEntryId;
 
+    /**
+     * <p>The name of the DNAT entry.</p>
+     */
     @NameInMap("ForwardEntryName")
     public String forwardEntryName;
 
+    /**
+     * <p>The private IP address of the instance that uses the DNAT entry for Internet communication.</p>
+     */
     @NameInMap("InternalIp")
     public String internalIp;
 
+    /**
+     * <p>The protocol. Valid values:</p>
+     * <br>
+     * <p>*   **TCP**: forwards TCP packets.</p>
+     * <p>*   **UDP**: forwards UDP packets.</p>
+     * <p>*   **Any**: forwards all packets.</p>
+     */
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
+    /**
+     * <p>The ID of the NAT gateway.</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
+    /**
+     * <p>The page number. Pages start from page **1**.</p>
+     * <br>
+     * <p>Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Maximum value: **100**.</p>
+     * <br>
+     * <p>Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

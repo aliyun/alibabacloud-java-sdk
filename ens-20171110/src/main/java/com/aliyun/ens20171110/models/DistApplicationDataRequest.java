@@ -4,12 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DistApplicationDataRequest extends TeaModel {
+    /**
+     * <p>The ID of the application. To obtain the application ID, call the ListApplications operation.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The list of data files that you want to distribute. The value must be a JSON string.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The canary release policy. The value must be a JSON string. You can specify multiple distribution policies. By default, all data files are distributed.</p>
+     */
     @NameInMap("DistStrategy")
     public String distStrategy;
 

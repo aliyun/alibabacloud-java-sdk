@@ -4,27 +4,51 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class RunServiceScheduleResponseBody extends TeaModel {
+    /**
+     * <p>The execution results of the commands.</p>
+     */
     @NameInMap("CommandResults")
     public RunServiceScheduleResponseBodyCommandResults commandResults;
 
+    /**
+     * <p>The index number of the scheduled virtual device (pod).</p>
+     */
     @NameInMap("Index")
     public Integer index;
 
+    /**
+     * <p>The ID of the scheduled instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The IP address of the scheduled instance.</p>
+     */
     @NameInMap("InstanceIp")
     public String instanceIp;
 
+    /**
+     * <p>The start port of the scheduled instance.</p>
+     */
     @NameInMap("InstancePort")
     public Integer instancePort;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is repeated. This parameter is not returned if ServcieAction is set to Console.</p>
+     */
     @NameInMap("RequestRepeated")
     public String requestRepeated;
 
+    /**
+     * <p>The TCP port range of the scheduled instance or container. The value is in the ${from}-$-{to} format. Example: 80-88.</p>
+     */
     @NameInMap("TcpPorts")
     public Boolean tcpPorts;
 
@@ -98,12 +122,21 @@ public class RunServiceScheduleResponseBody extends TeaModel {
     }
 
     public static class RunServiceScheduleResponseBodyCommandResultsCommandResult extends TeaModel {
+        /**
+         * <p>The command.</p>
+         */
         @NameInMap("Command")
         public String command;
 
+        /**
+         * <p>The name of the container.</p>
+         */
         @NameInMap("ContainerName")
         public String containerName;
 
+        /**
+         * <p>The execution result of the command.</p>
+         */
         @NameInMap("ResultMsg")
         public String resultMsg;
 
