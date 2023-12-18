@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceAutoRenewAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

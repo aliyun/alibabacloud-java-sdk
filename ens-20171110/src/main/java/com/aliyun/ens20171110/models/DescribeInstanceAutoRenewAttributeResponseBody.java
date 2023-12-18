@@ -4,12 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The renewal status of the instance.</p>
+     */
     @NameInMap("InstanceRenewAttributes")
     public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes instanceRenewAttributes;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +52,24 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute extends TeaModel {
+        /**
+         * <p>The renewal type of the instance.</p>
+         * <br>
+         * <p>*   **true**: enables auto-renewal.</p>
+         * <p>*   **false**: disables auto-renewal.</p>
+         */
         @NameInMap("AutoRenewal")
         public Boolean autoRenewal;
 
+        /**
+         * <p>The unit of the auto-renewal period.</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 

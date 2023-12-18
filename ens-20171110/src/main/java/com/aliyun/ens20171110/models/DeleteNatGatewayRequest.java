@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DeleteNatGatewayRequest extends TeaModel {
+    /**
+     * <p>The ID of the NAT gateway that you want to delete.</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 

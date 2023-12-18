@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeApplicationResourceSummaryResponseBody extends TeaModel {
+    /**
+     * <p>The statistical information about the resource quota and usage in different regions.</p>
+     */
     @NameInMap("ApplicationResource")
     public String applicationResource;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

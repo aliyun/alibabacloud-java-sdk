@@ -4,14 +4,20 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class LeaveSecurityGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("NetworkInterfaceId")
+    public String networkInterfaceId;
+
+    /**
+     * <p>The ID of the security group.</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
-
-    @NameInMap("Version")
-    public String version;
 
     public static LeaveSecurityGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         LeaveSecurityGroupRequest self = new LeaveSecurityGroupRequest();
@@ -26,20 +32,20 @@ public class LeaveSecurityGroupRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public LeaveSecurityGroupRequest setNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
+    }
+
     public LeaveSecurityGroupRequest setSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
-    }
-
-    public LeaveSecurityGroupRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

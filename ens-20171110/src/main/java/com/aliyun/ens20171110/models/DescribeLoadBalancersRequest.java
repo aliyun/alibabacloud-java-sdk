@@ -4,33 +4,66 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoadBalancersRequest extends TeaModel {
+    /**
+     * <p>The IP address that the ELB instance uses to provide services.</p>
+     */
     @NameInMap("Address")
     public String address;
 
+    /**
+     * <p>The ID of the Edge Node Service (ENS) node.</p>
+     */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The ID of the ELB instance.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
+    /**
+     * <p>The name of the ELB instance.</p>
+     */
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
 
+    /**
+     * <p>The status of the ELB instance. Valid values:</p>
+     * <br>
+     * <p>*   **Active** (default): The listener for the instance can forward the received traffic based on the rule.</p>
+     * <p>*   **InActive**: The listener for the instance does not forward the received traffic.</p>
+     */
     @NameInMap("LoadBalancerStatus")
     public String loadBalancerStatus;
 
+    /**
+     * <p>The ID of the network.</p>
+     */
     @NameInMap("NetworkId")
     public String networkId;
 
+    /**
+     * <p>The page number. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Default value: 10. Valid values: **10** to **100**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the backend server.</p>
+     */
     @NameInMap("ServerId")
     public String serverId;
 
+    /**
+     * <p>The ID of the vSwitch.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 

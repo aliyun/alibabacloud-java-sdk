@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ExportImageResponseBody extends TeaModel {
+    /**
+     * <p>The URL that points to the exported image.</p>
+     */
     @NameInMap("ExportedImageURL")
     public String exportedImageURL;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

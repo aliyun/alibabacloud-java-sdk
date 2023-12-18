@@ -4,12 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageInfosResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about images.</p>
+     */
     @NameInMap("Images")
     public DescribeImageInfosResponseBodyImages images;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,24 +52,50 @@ public class DescribeImageInfosResponseBody extends TeaModel {
     }
 
     public static class DescribeImageInfosResponseBodyImagesImage extends TeaModel {
+        /**
+         * <p>The computing type of the image. Valid values:</p>
+         * <br>
+         * <p>*   ens_vm: x86 computing.</p>
+         * <p>*   arm_vm: ARM computing.</p>
+         * <p>*   bare_metal: x86 bare machine.</p>
+         * <p>*   pcfarm: heterogeneous computing.</p>
+         */
         @NameInMap("ComputeType")
         public String computeType;
 
+        /**
+         * <p>The description of the image.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The size of the image. Unit: GiB.</p>
+         */
         @NameInMap("ImageSize")
         public String imageSize;
 
+        /**
+         * <p>The version of the image.</p>
+         */
         @NameInMap("ImageVersion")
         public String imageVersion;
 
+        /**
+         * <p>The type of the image. Valid values: **centos**, **debian**, **ubuntu**, and **windows**.</p>
+         */
         @NameInMap("OSName")
         public String OSName;
 
+        /**
+         * <p>The type of the operating system.</p>
+         */
         @NameInMap("OSType")
         public String OSType;
 

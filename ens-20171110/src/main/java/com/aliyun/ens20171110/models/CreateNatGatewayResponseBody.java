@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateNatGatewayResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the NAT gateway.</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

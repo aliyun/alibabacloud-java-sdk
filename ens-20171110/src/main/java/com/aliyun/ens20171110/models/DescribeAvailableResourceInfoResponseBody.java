@@ -4,12 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
+    /**
+     * <p>The information about the image.</p>
+     */
     @NameInMap("Images")
     public DescribeAvailableResourceInfoResponseBodyImages images;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The specifications of resources that you can purchase.</p>
+     */
     @NameInMap("SupportResources")
     public DescribeAvailableResourceInfoResponseBodySupportResources supportResources;
 
@@ -43,12 +52,21 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceInfoResponseBodyImagesImage extends TeaModel {
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The name of the image.</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
+        /**
+         * <p>The size of the image. Unit: GB.</p>
+         */
         @NameInMap("ImageSize")
         public Integer imageSize;
 
@@ -141,18 +159,39 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIdsExtendsEnsRegionId extends TeaModel {
+        /**
+         * <p>The region.</p>
+         */
         @NameInMap("Area")
         public String area;
 
+        /**
+         * <p>The name. This parameter is empty by default.</p>
+         */
         @NameInMap("EnName")
         public String enName;
 
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
+        /**
+         * <p>The Internet service provider (ISP).</p>
+         */
+        @NameInMap("Isp")
+        public String isp;
+
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The province.</p>
+         */
         @NameInMap("Province")
         public String province;
 
@@ -183,6 +222,14 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         }
         public String getEnsRegionId() {
             return this.ensRegionId;
+        }
+
+        public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIdsExtendsEnsRegionId setIsp(String isp) {
+            this.isp = isp;
+            return this;
+        }
+        public String getIsp() {
+            return this.isp;
         }
 
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIdsExtendsEnsRegionId setName(String name) {
@@ -241,28 +288,68 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceIsp extends TeaModel {
+        @NameInMap("Isp")
+        public java.util.List<String> isp;
+
+        public static DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceIsp build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceIsp self = new DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceIsp();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceIsp setIsp(java.util.List<String> isp) {
+            this.isp = isp;
+            return this;
+        }
+        public java.util.List<String> getIsp() {
+            return this.isp;
+        }
+
+    }
+
     public static class DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResource extends TeaModel {
         @NameInMap("BandwidthTypes")
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceBandwidthTypes bandwidthTypes;
 
+        /**
+         * <p>The maximum capacity of a data disk. Unit: GB.</p>
+         */
         @NameInMap("DataDiskMaxSize")
         public Integer dataDiskMaxSize;
 
+        /**
+         * <p>The minimum data disk size. Unit: GiB.</p>
+         */
         @NameInMap("DataDiskMinSize")
         public Integer dataDiskMinSize;
 
         @NameInMap("EnsRegionIds")
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIds ensRegionIds;
 
+        /**
+         * <p>The supplementary information about the edge nodes.</p>
+         */
         @NameInMap("EnsRegionIdsExtends")
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIdsExtends ensRegionIdsExtends;
 
         @NameInMap("InstanceSpeces")
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceInstanceSpeces instanceSpeces;
 
+        /**
+         * <p>The Internet service provider (ISP).</p>
+         */
+        @NameInMap("Isp")
+        public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceIsp isp;
+
+        /**
+         * <p>The maximum size of the system disk. Unit: GiB.</p>
+         */
         @NameInMap("SystemDiskMaxSize")
         public Integer systemDiskMaxSize;
 
+        /**
+         * <p>The minimum capacity of a system disk. Unit: GB.</p>
+         */
         @NameInMap("SystemDiskMinSize")
         public Integer systemDiskMinSize;
 
@@ -317,6 +404,14 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         }
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceInstanceSpeces getInstanceSpeces() {
             return this.instanceSpeces;
+        }
+
+        public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResource setIsp(DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceIsp isp) {
+            this.isp = isp;
+            return this;
+        }
+        public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceIsp getIsp() {
+            return this.isp;
         }
 
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResource setSystemDiskMaxSize(Integer systemDiskMaxSize) {

@@ -4,11 +4,14 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionIspsResponseBody extends TeaModel {
+    /**
+     * <p>The list of ISPs.</p>
+     */
     @NameInMap("Isps")
     public java.util.List<DescribeRegionIspsResponseBodyIsps> isps;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,9 +38,15 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionIspsResponseBodyIsps extends TeaModel {
+        /**
+         * <p>The code of the ISP.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The name of the ISP.</p>
+         */
         @NameInMap("Name")
         public String name;
 

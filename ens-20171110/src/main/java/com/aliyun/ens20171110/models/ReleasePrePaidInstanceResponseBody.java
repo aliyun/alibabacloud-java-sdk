@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ReleasePrePaidInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

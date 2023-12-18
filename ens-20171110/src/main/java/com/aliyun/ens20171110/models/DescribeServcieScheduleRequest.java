@@ -4,12 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeServcieScheduleRequest extends TeaModel {
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter does not take effect.</p>
+     */
     @NameInMap("PodConfigName")
     public String podConfigName;
 
+    /**
+     * <p>The UUID of the device.</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

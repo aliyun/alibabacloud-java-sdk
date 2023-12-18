@@ -4,21 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the route.</p>
+     */
     @NameInMap("RouteEntrys")
     public java.util.List<DescribeEnsRouteEntryListResponseBodyRouteEntrys> routeEntrys;
 
+    /**
+     * <p>The number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -68,9 +80,15 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsRouteEntryListResponseBodyRouteEntrysNextHops extends TeaModel {
+        /**
+         * <p>The ID of the next hop.</p>
+         */
         @NameInMap("NextHopId")
         public String nextHopId;
 
+        /**
+         * <p>The type of the next hop. Valid values:</p>
+         */
         @NameInMap("NextHopType")
         public String nextHopType;
 
@@ -98,27 +116,51 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsRouteEntryListResponseBodyRouteEntrys extends TeaModel {
+        /**
+         * <p>Enter a description for the route.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The destination CIDR block of the route.</p>
+         */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
+        /**
+         * <p>The information about the next hop.</p>
+         */
         @NameInMap("NextHops")
         public java.util.List<DescribeEnsRouteEntryListResponseBodyRouteEntrysNextHops> nextHops;
 
+        /**
+         * <p>The ID of the route.</p>
+         */
         @NameInMap("RouteEntryId")
         public String routeEntryId;
 
+        /**
+         * <p>The name of the route.</p>
+         */
         @NameInMap("RouteEntryName")
         public String routeEntryName;
 
+        /**
+         * <p>The ID of the route table.</p>
+         */
         @NameInMap("RouteTableId")
         public String routeTableId;
 
+        /**
+         * <p>The status of the route entry. Valid values:</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The type of the route entry.</p>
+         */
         @NameInMap("Type")
         public String type;
 

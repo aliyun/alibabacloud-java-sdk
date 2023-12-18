@@ -4,18 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfacesResponseBody extends TeaModel {
+    /**
+     * <p>Details about the ENIs.</p>
+     */
     @NameInMap("NetworkInterfaceSets")
     public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets networkInterfaceSets;
 
+    /**
+     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries in the list.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +80,18 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet extends TeaModel {
+        /**
+         * <p>Indicates whether the IP address is the primary private IP address. Valid values:</p>
+         * <br>
+         * <p>*   true: The IP address is the primary private IP address.</p>
+         * <p>*   false: The IP address is the secondary private IP address.</p>
+         */
         @NameInMap("Primary")
         public Boolean primary;
 
+        /**
+         * <p>The private IP address.</p>
+         */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
@@ -113,34 +137,125 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetSecurityGroupIds extends TeaModel {
+        @NameInMap("SecurityGroup")
+        public java.util.List<String> securityGroup;
+
+        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetSecurityGroupIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetSecurityGroupIds self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetSecurityGroupIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetSecurityGroupIds setSecurityGroup(java.util.List<String> securityGroup) {
+            this.securityGroup = securityGroup;
+            return this;
+        }
+        public java.util.List<String> getSecurityGroup() {
+            return this.securityGroup;
+        }
+
+    }
+
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet extends TeaModel {
+        /**
+         * <p>The time when the ENI was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC. The format is yyyy-MM-ddThh:mmZ.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The description of the ENI.</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>The ID of the edge node.</p>
+         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
+        /**
+         * <p>The ID of the instance to which the ENI is attached.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The media access control (MAC) address of the ENI.</p>
+         */
         @NameInMap("MacAddress")
         public String macAddress;
 
+        /**
+         * <p>The ID of the network.</p>
+         */
+        @NameInMap("NetworkId")
+        public String networkId;
+
+        /**
+         * <p>The ID of the ENI.</p>
+         */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
+        /**
+         * <p>The name of the ENI.</p>
+         */
+        @NameInMap("NetworkInterfaceName")
+        public String networkInterfaceName;
+
+        /**
+         * <p>The primary private IP address.</p>
+         */
         @NameInMap("PrimaryIp")
         public String primaryIp;
 
+        /**
+         * <p>The type of the primary IP address. Valid values:</p>
+         * <br>
+         * <p>*   **Public**: public endpoint.</p>
+         * <p>*   **Private**: internal endpoint.</p>
+         */
         @NameInMap("PrimaryIpType")
         public String primaryIpType;
 
+        /**
+         * <p>Details about the private IP addresses.</p>
+         */
         @NameInMap("PrivateIpSets")
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets privateIpSets;
 
+        /**
+         * <p>IDs of security groups.</p>
+         */
+        @NameInMap("SecurityGroupIds")
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetSecurityGroupIds securityGroupIds;
+
+        /**
+         * <p>The status of the ENI. Valid values:</p>
+         * <br>
+         * <p>*   Available: The ENI is available.</p>
+         * <p>*   Attaching: The ENI is being attached to an instance.</p>
+         * <p>*   InUse: The ENI is attached to an instance.</p>
+         * <p>*   Detaching: The ENI is being detached from an instance.</p>
+         * <p>*   Deleting: The ENI is being deleted.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The type of the ENI. Valid values:</p>
+         * <br>
+         * <p>*   Primary</p>
+         * <p>*   Secondary</p>
+         */
+        @NameInMap("Type")
+        public String type;
+
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -155,6 +270,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setEnsRegionId(String ensRegionId) {
@@ -181,12 +304,28 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.macAddress;
         }
 
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setNetworkId(String networkId) {
+            this.networkId = networkId;
+            return this;
+        }
+        public String getNetworkId() {
+            return this.networkId;
+        }
+
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setNetworkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
         public String getNetworkInterfaceId() {
             return this.networkInterfaceId;
+        }
+
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setNetworkInterfaceName(String networkInterfaceName) {
+            this.networkInterfaceName = networkInterfaceName;
+            return this;
+        }
+        public String getNetworkInterfaceName() {
+            return this.networkInterfaceName;
         }
 
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setPrimaryIp(String primaryIp) {
@@ -213,12 +352,28 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.privateIpSets;
         }
 
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setSecurityGroupIds(DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetSecurityGroupIds securityGroupIds) {
+            this.securityGroupIds = securityGroupIds;
+            return this;
+        }
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetSecurityGroupIds getSecurityGroupIds() {
+            return this.securityGroupIds;
+        }
+
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setVSwitchId(String vSwitchId) {

@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
+    /**
+     * <p>The information about resources.</p>
+     */
     @NameInMap("ElbAvailableResourceInfo")
     public java.util.List<DescribeElbAvailableResourceInfoResponseBodyElbAvailableResourceInfo> elbAvailableResourceInfo;
 
+    /**
+     * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use the ID to troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +38,45 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeElbAvailableResourceInfoResponseBodyElbAvailableResourceInfo extends TeaModel {
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("Area")
         public String area;
 
+        /**
+         * <p>The number of resources that you can purchase.</p>
+         */
         @NameInMap("CanBuyCount")
         public String canBuyCount;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("EnName")
         public String enName;
 
+        /**
+         * <p>The ID of the Edge Node Service (ENS) node.</p>
+         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
+        /**
+         * <p>The specifications of the ELB instances.</p>
+         */
         @NameInMap("LoadBalancerSpec")
         public java.util.List<String> loadBalancerSpec;
 
+        /**
+         * <p>The Chinese name of the node.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The province where the node is deployed.</p>
+         */
         @NameInMap("Province")
         public String province;
 

@@ -4,21 +4,41 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateLoadBalancerRequest extends TeaModel {
+    /**
+     * <p>The ID of the Edge Node Service (ENS) node.</p>
+     */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The name of the ELB instance. The name must be 1 to 80 characters in length. If you leave this parameter empty, the system randomly allocates a name as the value of this parameter.</p>
+     * <br>
+     * <p>>  The value cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
 
+    /**
+     * <p>The specification of the ELB instance.</p>
+     */
     @NameInMap("LoadBalancerSpec")
     public String loadBalancerSpec;
 
+    /**
+     * <p>The network ID of the created ELB instance.</p>
+     */
     @NameInMap("NetworkId")
     public String networkId;
 
+    /**
+     * <p>The billing method of the instance. Valid value: PostPaid. PostPaid specifies the pay-as-you-go billing method.</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <p>The ID of the vSwitch to which the internal-facing ELB instance belongs.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 

@@ -4,15 +4,27 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DistApplicationDataResponseBody extends TeaModel {
+    /**
+     * <p>The list of ENS instance IDs.</p>
+     */
     @NameInMap("DistInstanceIds")
     public DistApplicationDataResponseBodyDistInstanceIds distInstanceIds;
 
+    /**
+     * <p>The total number of ENS instance IDs.</p>
+     */
     @NameInMap("DistInstanceTotalCount")
     public Integer distInstanceTotalCount;
 
+    /**
+     * <p>The distribution result of the data file.</p>
+     */
     @NameInMap("DistResults")
     public DistApplicationDataResponseBodyDistResults distResults;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -73,15 +85,27 @@ public class DistApplicationDataResponseBody extends TeaModel {
     }
 
     public static class DistApplicationDataResponseBodyDistResultsDistResult extends TeaModel {
+        /**
+         * <p>The name of the data file.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The error code. The value is of the enumerated data type.</p>
+         */
         @NameInMap("ResultCode")
         public Integer resultCode;
 
+        /**
+         * <p>The description of the distribution result.</p>
+         */
         @NameInMap("ResultDescrip")
         public String resultDescrip;
 
+        /**
+         * <p>The version number of the data file.</p>
+         */
         @NameInMap("Version")
         public String version;
 

@@ -4,21 +4,39 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageSharePermissionResponseBody extends TeaModel {
+    /**
+     * <p>The account information.</p>
+     */
     @NameInMap("Accounts")
     public DescribeImageSharePermissionResponseBodyAccounts accounts;
 
+    /**
+     * <p>The ID of the image.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of Alibaba Cloud accounts with which you share the image.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

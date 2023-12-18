@@ -4,12 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
+    /**
+     * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about the ISPs in the area.</p>
+     */
     @NameInMap("EnsNetDistricts")
     public DescribeEnsNetSaleDistrictResponseBodyEnsNetDistricts ensNetDistricts;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,24 +52,49 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsNetSaleDistrictResponseBodyEnsNetDistrictsEnsNetDistrict extends TeaModel {
+        /**
+         * <p>The information about the ISP.</p>
+         */
         @NameInMap("EnsRegionIdCount")
         public String ensRegionIdCount;
 
+        /**
+         * <p>The information about the instance.</p>
+         */
         @NameInMap("InstanceCount")
         public String instanceCount;
 
+        /**
+         * <p>The region code.</p>
+         */
         @NameInMap("NetDistrictCode")
         public String netDistrictCode;
 
+        /**
+         * <p>The name of the region.</p>
+         */
         @NameInMap("NetDistrictEnName")
         public String netDistrictEnName;
 
+        /**
+         * <p>The parent code of the region.</p>
+         */
         @NameInMap("NetDistrictFatherCode")
         public String netDistrictFatherCode;
 
+        /**
+         * <p>The region level. Valid values:</p>
+         * <br>
+         * <p>*   **Big**: area</p>
+         * <p>*   **Middle**: province</p>
+         * <p>*   **Small**: city</p>
+         */
         @NameInMap("NetDistrictLevel")
         public String netDistrictLevel;
 
+        /**
+         * <p>The Chinese name of the region.</p>
+         */
         @NameInMap("NetDistrictName")
         public String netDistrictName;
 

@@ -4,18 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeMountTargetsResponseBody extends TeaModel {
+    /**
+     * <p>The information about mount targets.</p>
+     */
     @NameInMap("MountTargets")
     public java.util.List<DescribeMountTargetsResponseBodyMountTargets> mountTargets;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of mount targets.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,21 +80,44 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
     }
 
     public static class DescribeMountTargetsResponseBodyMountTargets extends TeaModel {
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
+        /**
+         * <p>The ID of the file system.</p>
+         */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
+        /**
+         * <p>The path of the mount target.</p>
+         */
         @NameInMap("MountTargetDomain")
         public String mountTargetDomain;
 
+        /**
+         * <p>The name of the mount target.</p>
+         */
         @NameInMap("MountTargetName")
         public String mountTargetName;
 
+        /**
+         * <p>The ID of the network.</p>
+         */
         @NameInMap("NetWorkId")
         public String netWorkId;
 
+        /**
+         * <p>The state of the mount target. Valid values:</p>
+         * <br>
+         * <p>*   active: The mount target is available.</p>
+         * <p>*   inactive: The mount target is unavailable.</p>
+         * <p>*   pending: A task is being queued for the mount target.</p>
+         * <p>*   deleting: The mount target is being deleted.</p>
+         */
         @NameInMap("Status")
         public String status;
 

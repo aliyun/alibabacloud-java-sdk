@@ -4,18 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeNatGatewaysResponseBody extends TeaModel {
+    /**
+     * <p>Details about the NAT gateways.</p>
+     */
     @NameInMap("NatGateways")
     public java.util.List<DescribeNatGatewaysResponseBodyNatGateways> natGateways;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of NAT gateways that are returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,24 +80,45 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     }
 
     public static class DescribeNatGatewaysResponseBodyNatGateways extends TeaModel {
+        /**
+         * <p>The time when the NAT gateway was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The ID of the ENS node.</p>
+         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
+        /**
+         * <p>The name of the NAT gateway.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the NAT gateway.</p>
+         */
         @NameInMap("NatGatewayId")
         public String natGatewayId;
 
+        /**
+         * <p>The ID of the network.</p>
+         */
         @NameInMap("NetworkId")
         public String networkId;
 
+        /**
+         * <p>The type of the NAT gateway.</p>
+         */
         @NameInMap("Spec")
         public String spec;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 

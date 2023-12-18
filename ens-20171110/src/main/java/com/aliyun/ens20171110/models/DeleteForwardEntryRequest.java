@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DeleteForwardEntryRequest extends TeaModel {
+    /**
+     * <p>The ID of the DNAT entry that you want to delete.</p>
+     */
     @NameInMap("ForwardEntryId")
     public String forwardEntryId;
 

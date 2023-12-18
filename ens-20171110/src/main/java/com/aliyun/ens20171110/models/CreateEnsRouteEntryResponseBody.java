@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateEnsRouteEntryResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the route.</p>
+     */
     @NameInMap("RouteEntryId")
     public String routeEntryId;
 

@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DeleteVSwitchRequest extends TeaModel {
+    /**
+     * <p>The ID of the vSwitch.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The version number.</p>
+     */
     @NameInMap("Version")
     public String version;
 

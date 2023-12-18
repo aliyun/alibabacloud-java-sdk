@@ -4,30 +4,57 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
+    /**
+     * <p>The number of resources that you can purchase.</p>
+     */
     @NameInMap("AvaliableCount")
     public Integer avaliableCount;
 
+    /**
+     * <p>The number of vCPUs.</p>
+     */
     @NameInMap("Cores")
     public Integer cores;
 
+    /**
+     * <p>The size of the data disk.</p>
+     */
     @NameInMap("DataDiskSize")
     public Integer dataDiskSize;
 
+    /**
+     * <p>The ID of the node.</p>
+     */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The instance type.</p>
+     */
     @NameInMap("InstanceSpec")
     public String instanceSpec;
 
+    /**
+     * <p>The memory size. Unit: GB.</p>
+     */
     @NameInMap("Memory")
     public Integer memory;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The reasons for resource scarcity</p>
+     */
     @NameInMap("ResourceGap")
     public String resourceGap;
 
+    /**
+     * <p>The size of the system disk. Unit: GB.</p>
+     */
     @NameInMap("SystemDiskSize")
     public Integer systemDiskSize;
 

@@ -4,18 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeForwardTableEntriesResponseBody extends TeaModel {
+    /**
+     * <p>Details of DNAT entries.</p>
+     */
     @NameInMap("ForwardTableEntries")
     public java.util.List<DescribeForwardTableEntriesResponseBodyForwardTableEntries> forwardTableEntries;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -65,39 +80,88 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
     }
 
     public static class DescribeForwardTableEntriesResponseBodyForwardTableEntries extends TeaModel {
+        /**
+         * <p>The EIP in the DNAT entry. The public IP address is used to access the Internet.</p>
+         */
         @NameInMap("ExternalIp")
         public String externalIp;
 
+        /**
+         * <p>The external port or port range that is used in port forwarding.</p>
+         */
         @NameInMap("ExternalPort")
         public String externalPort;
 
+        /**
+         * <p>The ID of the DNAT entry.</p>
+         */
         @NameInMap("ForwardEntryId")
         public String forwardEntryId;
 
+        /**
+         * <p>The name of the DNAT entry.</p>
+         */
         @NameInMap("ForwardEntryName")
         public String forwardEntryName;
 
+        /**
+         * <p>The probe port of DNAT.</p>
+         */
         @NameInMap("HealthCheckPort")
         public String healthCheckPort;
 
+        /**
+         * <p>The private IP address of the instance that uses the DNAT entry for Internet communication.</p>
+         */
         @NameInMap("InternalIp")
         public String internalIp;
 
+        /**
+         * <p>The internal port or port range that is used for port forwarding.</p>
+         */
         @NameInMap("InternalPort")
         public String internalPort;
 
+        /**
+         * <p>The protocol. Valid values:</p>
+         * <br>
+         * <p>*   **TCP**: forwards TCP packets.</p>
+         * <p>*   **UDP**: forwards UDP packets.</p>
+         * <p>*   **Any**: forwards all packets.</p>
+         */
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
+        /**
+         * <p>The ID of the NAT gateway.</p>
+         */
         @NameInMap("NatGatewayId")
         public String natGatewayId;
 
+        /**
+         * <p>The secondary EIP that is used to access the Internet.</p>
+         */
         @NameInMap("StandbyExternalIp")
         public String standbyExternalIp;
 
+        /**
+         * <p>The status of the secondary EIP. Valid values:</p>
+         * <br>
+         * <p>*   Running</p>
+         * <p>*   Stopping</p>
+         * <p>*   Stopped</p>
+         * <p>*   Starting</p>
+         */
         @NameInMap("StandbyStatus")
         public String standbyStatus;
 
+        /**
+         * <p>The status of the DNAT entry. Valid values:</p>
+         * <br>
+         * <p>*   Pending: The DNAT entry is being created or modified.</p>
+         * <p>*   Available: The DNAT entry is available.</p>
+         * <p>*   Deleting: The DNAT entry is being deleted.</p>
+         */
         @NameInMap("Status")
         public String status;
 

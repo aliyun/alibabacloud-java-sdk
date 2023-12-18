@@ -4,12 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsNetLevelResponseBody extends TeaModel {
+    /**
+     * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The network levels.</p>
+     */
     @NameInMap("EnsNetLevels")
     public DescribeEnsNetLevelResponseBodyEnsNetLevels ensNetLevels;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,6 +52,13 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsNetLevelResponseBodyEnsNetLevelsEnsNetLevel extends TeaModel {
+        /**
+         * <p>The network level. Valid values:</p>
+         * <br>
+         * <p>*   Big: greater area.</p>
+         * <p>*   Middle: province.</p>
+         * <p>*   Small: city.</p>
+         */
         @NameInMap("EnsNetLevelCode")
         public String ensNetLevelCode;
 

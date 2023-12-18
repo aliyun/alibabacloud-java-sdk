@@ -4,18 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeExportImageInfoResponseBody extends TeaModel {
+    /**
+     * <p>The returned result. For more information, see the Images parameter described in the JSON-formatted sample success response.</p>
+     */
     @NameInMap("Images")
     public DescribeExportImageInfoResponseBodyImages images;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,27 +80,59 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeExportImageInfoResponseBodyImagesImage extends TeaModel {
+        /**
+         * <p>The architecture of the image. Example: **x86\_64**.</p>
+         */
         @NameInMap("Architecture")
         public String architecture;
 
+        /**
+         * <p>The time when the image was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The URL of the exported image.</p>
+         */
         @NameInMap("ExportedImageURL")
         public String exportedImageURL;
 
+        /**
+         * <p>The export status of the image. Valid values:</p>
+         * <br>
+         * <p>*   Exporting</p>
+         * <p>*   Exported</p>
+         * <p>*   ExportError</p>
+         * <p>*   Unexported</p>
+         */
         @NameInMap("ImageExportStatus")
         public String imageExportStatus;
 
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The name of the image.</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
+        /**
+         * <p>The source of the image. Valid values:</p>
+         * <br>
+         * <p>*   system: public image</p>
+         * <p>*   self: custom image</p>
+         */
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
 
+        /**
+         * <p>The OS.</p>
+         */
         @NameInMap("Platform")
         public String platform;
 

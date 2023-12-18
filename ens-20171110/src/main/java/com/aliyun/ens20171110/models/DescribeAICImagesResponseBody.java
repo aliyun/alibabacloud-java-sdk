@@ -4,18 +4,35 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeAICImagesResponseBody extends TeaModel {
+    /**
+     * <p>The information about the images.</p>
+     */
     @NameInMap("Images")
     public java.util.List<DescribeAICImagesResponseBodyImages> images;
 
+    /**
+     * <p>The page number. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,21 +82,39 @@ public class DescribeAICImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeAICImagesResponseBodyImages extends TeaModel {
+        /**
+         * <p>The time when the image was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The description of the image.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The image ID of the AIC instance.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The URL of the AIC image repository.</p>
+         */
         @NameInMap("ImageUrl")
         public String imageUrl;
 
+        /**
+         * <p>The status of the image. **Available** is returned for this parameter. Available indicates that the image is available.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The username of the image repository.</p>
+         */
         @NameInMap("User")
         public String user;
 

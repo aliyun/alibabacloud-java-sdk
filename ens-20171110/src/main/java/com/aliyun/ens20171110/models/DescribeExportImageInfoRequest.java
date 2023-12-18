@@ -4,15 +4,27 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeExportImageInfoRequest extends TeaModel {
+    /**
+     * <p>The ID of the image.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The name of the image.</p>
+     */
     @NameInMap("ImageName")
     public String imageName;
 
+    /**
+     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

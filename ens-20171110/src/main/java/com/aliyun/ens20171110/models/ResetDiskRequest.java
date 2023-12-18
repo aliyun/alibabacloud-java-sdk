@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ResetDiskRequest extends TeaModel {
+    /**
+     * <p>The ID of the disk that you want to roll back.</p>
+     */
     @NameInMap("DiskId")
     public String diskId;
 
+    /**
+     * <p>The ID of the snapshot that you want to use to roll back the disk.</p>
+     */
     @NameInMap("SnapshotId")
     public String snapshotId;
 

@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the bucket.</p>
+     */
     @NameInMap("BucketList")
     public java.util.List<GetOssStorageAndAccByBucketsResponseBodyBucketList> bucketList;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
     }
 
     public static class GetOssStorageAndAccByBucketsResponseBodyBucketList extends TeaModel {
+        /**
+         * <p>The number of visits.</p>
+         */
         @NameInMap("Acc")
         public Long acc;
 
+        /**
+         * <p>The bucket name.</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <p>The storage usage of the cluster, in bytes.</p>
+         */
         @NameInMap("StorageUsageByte")
         public Long storageUsageByte;
 

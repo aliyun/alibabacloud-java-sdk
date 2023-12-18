@@ -4,12 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEipAddressesRequest extends TeaModel {
+    /**
+     * <p>The information about the EIPs.</p>
+     */
     @NameInMap("Eips")
     public String eips;
 
+    /**
+     * <p>The ID of the Edge Node Service (ENS) node.</p>
+     */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The version number. Set the value to 2017-11-10.</p>
+     */
     @NameInMap("Version")
     public String version;
 

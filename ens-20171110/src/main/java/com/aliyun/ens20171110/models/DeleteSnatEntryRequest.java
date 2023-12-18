@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DeleteSnatEntryRequest extends TeaModel {
+    /**
+     * <p>The ID of the SNAT entry that you want to delete.</p>
+     */
     @NameInMap("SnatEntryId")
     public String snatEntryId;
 

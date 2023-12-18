@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerSpecRequest extends TeaModel {
+    /**
+     * <p>The specifications of the ELB instance.</p>
+     */
     @NameInMap("LoadBalancerSpec")
     public String loadBalancerSpec;
 

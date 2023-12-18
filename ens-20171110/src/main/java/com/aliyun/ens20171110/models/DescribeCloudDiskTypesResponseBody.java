@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudDiskTypesResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The specifications of resources that you can purchase.</p>
+     */
     @NameInMap("SupportResources")
     public DescribeCloudDiskTypesResponseBodySupportResources supportResources;
 
@@ -32,9 +38,20 @@ public class DescribeCloudDiskTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudDiskTypesResponseBodySupportResourcesSupportResource extends TeaModel {
+        /**
+         * <p>The category of the disk.</p>
+         * <br>
+         * <p>*   cloud_efficiency: ultra disk.</p>
+         * <p>*   cloud_ssd: all-flash disk.</p>
+         * <p>*   local_hdd: local HDD.</p>
+         * <p>*   local_ssd: local SSD.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The ID of the edge node.</p>
+         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 

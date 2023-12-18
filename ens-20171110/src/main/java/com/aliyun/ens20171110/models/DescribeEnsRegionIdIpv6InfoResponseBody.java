@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>IPv6 support information.</p>
+     */
     @NameInMap("SupportIpv6Info")
     public DescribeEnsRegionIdIpv6InfoResponseBodySupportIpv6Info supportIpv6Info;
 
@@ -32,9 +38,18 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsRegionIdIpv6InfoResponseBodySupportIpv6Info extends TeaModel {
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
+        /**
+         * <p>Specifies whether IPv6 is supported. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("SupportIpv6")
         public Boolean supportIpv6;
 

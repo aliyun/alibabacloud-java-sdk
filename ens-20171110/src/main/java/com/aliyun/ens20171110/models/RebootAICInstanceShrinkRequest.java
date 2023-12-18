@@ -4,12 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class RebootAICInstanceShrinkRequest extends TeaModel {
+    /**
+     * <p>The ID of the AIC instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The IDs of the AIC instance groups.</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIdsShrink;
 
+    /**
+     * <p>The ID of the server.</p>
+     */
     @NameInMap("ServerId")
     public String serverId;
 

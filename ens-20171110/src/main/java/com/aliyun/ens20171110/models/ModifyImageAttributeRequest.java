@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ModifyImageAttributeRequest extends TeaModel {
+    /**
+     * <p>The ID of the image.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The name of the image.</p>
+     */
     @NameInMap("ImageName")
     public String imageName;
 
@@ -16,6 +22,9 @@ public class ModifyImageAttributeRequest extends TeaModel {
     @NameInMap("Version")
     public String version;
 
+    /**
+     * <p>This parameter is unavailable.</p>
+     */
     @NameInMap("product")
     public String product;
 

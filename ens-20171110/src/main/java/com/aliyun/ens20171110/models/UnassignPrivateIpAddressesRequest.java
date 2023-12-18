@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class UnassignPrivateIpAddressesRequest extends TeaModel {
+    /**
+     * <p>The ID of the ENI.</p>
+     */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
+    /**
+     * <p>The secondary private IP addresses that you want to unassign.</p>
+     */
     @NameInMap("PrivateIpAddress")
     public java.util.List<String> privateIpAddress;
 

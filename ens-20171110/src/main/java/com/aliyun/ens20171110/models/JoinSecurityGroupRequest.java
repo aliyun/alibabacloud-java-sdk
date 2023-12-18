@@ -4,9 +4,18 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class JoinSecurityGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("NetworkInterfaceId")
+    public String networkInterfaceId;
+
+    /**
+     * <p>The ID of the security group.</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
@@ -21,6 +30,14 @@ public class JoinSecurityGroupRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public JoinSecurityGroupRequest setNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
     }
 
     public JoinSecurityGroupRequest setSecurityGroupId(String securityGroupId) {

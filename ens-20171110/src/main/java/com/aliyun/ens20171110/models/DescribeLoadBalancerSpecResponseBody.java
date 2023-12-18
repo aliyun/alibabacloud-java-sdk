@@ -4,21 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
+    /**
+     * <p>The specifications. Valid values:</p>
+     */
     @NameInMap("LoadBalancerSpecs")
     public java.util.List<DescribeLoadBalancerSpecResponseBodyLoadBalancerSpecs> loadBalancerSpecs;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Maximum value: 100. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -68,9 +80,15 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
     }
 
     public static class DescribeLoadBalancerSpecResponseBodyLoadBalancerSpecs extends TeaModel {
+        /**
+         * <p>The display name of the instance type.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The specifications of the ELB instance.</p>
+         */
         @NameInMap("LoadBalancerSpec")
         public String loadBalancerSpec;
 

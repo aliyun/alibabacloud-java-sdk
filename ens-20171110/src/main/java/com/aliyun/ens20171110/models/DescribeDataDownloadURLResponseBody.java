@@ -4,15 +4,27 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataDownloadURLResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The download URLs of data files.</p>
+     */
     @NameInMap("Data")
     public DescribeDataDownloadURLResponseBodyData data;
 
+    /**
+     * <p>The response message. Success is returned for a successful request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,15 @@ public class DescribeDataDownloadURLResponseBody extends TeaModel {
     }
 
     public static class DescribeDataDownloadURLResponseBodyDataServerList extends TeaModel {
+        /**
+         * <p>The host address of the file server.</p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>The ID of the Edge Node Service (ENS) node.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
@@ -84,12 +102,21 @@ public class DescribeDataDownloadURLResponseBody extends TeaModel {
     }
 
     public static class DescribeDataDownloadURLResponseBodyData extends TeaModel {
+        /**
+         * <p>The time when the data file expires. The time is displayed in UTC.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The file servers.</p>
+         */
         @NameInMap("ServerList")
         public java.util.List<DescribeDataDownloadURLResponseBodyDataServerList> serverList;
 
+        /**
+         * <p>The download URL of the data file.</p>
+         */
         @NameInMap("Url")
         public String url;
 

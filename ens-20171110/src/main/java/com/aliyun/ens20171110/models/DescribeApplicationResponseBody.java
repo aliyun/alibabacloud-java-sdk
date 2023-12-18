@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeApplicationResponseBody extends TeaModel {
+    /**
+     * <p>The returned application information.</p>
+     */
     @NameInMap("Application")
     public String application;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,18 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworksRequest extends TeaModel {
+    /**
+     * <p>The ID of the edge node.</p>
+     */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The ID of the network.</p>
+     */
     @NameInMap("NetworkId")
     public String networkId;
 
+    /**
+     * <p>The name of the network.</p>
+     */
     @NameInMap("NetworkName")
     public String networkName;
 
+    /**
+     * <p>The page number of the returned page. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Valid values: **1 to 50**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

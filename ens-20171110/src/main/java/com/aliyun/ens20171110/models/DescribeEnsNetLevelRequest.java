@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsNetLevelRequest extends TeaModel {
+    /**
+     * <p>The version number.</p>
+     */
     @NameInMap("Version")
     public String version;
 

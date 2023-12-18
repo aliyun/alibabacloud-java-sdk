@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ResizeDiskRequest extends TeaModel {
+    /**
+     * <p>The ID of the disk that you want to resize.</p>
+     */
     @NameInMap("DiskId")
     public String diskId;
 
+    /**
+     * <p>The size of the disk that you want to resize. Unit: GiB.</p>
+     */
     @NameInMap("NewSize")
     public String newSize;
 

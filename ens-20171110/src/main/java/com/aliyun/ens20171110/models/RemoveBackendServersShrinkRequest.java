@@ -4,9 +4,17 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class RemoveBackendServersShrinkRequest extends TeaModel {
+    /**
+     * <p>The list of backend servers that you want to add. You can add at most 20 backend servers.</p>
+     * <br>
+     * <p>>  Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.</p>
+     */
     @NameInMap("BackendServers")
     public String backendServersShrink;
 
+    /**
+     * <p>The ID of the Edge Load Balancer (ELB) instance.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 

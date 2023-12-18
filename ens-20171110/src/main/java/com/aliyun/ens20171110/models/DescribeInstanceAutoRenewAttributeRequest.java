@@ -4,12 +4,18 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAutoRenewAttributeRequest extends TeaModel {
+    /**
+     * <p>The ID of an instance. Separate multiple IDs with semicolons (;).</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The version number.</p>
+     */
     @NameInMap("Version")
     public String version;
 

@@ -4,21 +4,39 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagesResponseBody extends TeaModel {
+    /**
+     * <p>The returned service code. 0 indicates that the request was successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about images.</p>
+     */
     @NameInMap("Images")
     public DescribeImagesResponseBodyImages images;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of images.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,27 +94,58 @@ public class DescribeImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeImagesResponseBodyImagesImage extends TeaModel {
+        /**
+         * <p>The architecture of the image. Example: **x86\_64**.</p>
+         */
         @NameInMap("Architecture")
         public String architecture;
 
+        /**
+         * <p>The time when the image was created. The time follows the ISO 8601 standard.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The name of the image.</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
+        /**
+         * <p>The source of the image. Valid values:</p>
+         * <br>
+         * <p>*   system: Alibaba Cloud public images</p>
+         * <p>*   self: your custom images</p>
+         * <p>*   others: shared images from other Alibaba Cloud accounts, or community images published by other Alibaba Cloud accounts</p>
+         */
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
 
+        /**
+         * <p>The size of the image. Unit: GiB.</p>
+         */
         @NameInMap("ImageSize")
         public String imageSize;
 
+        /**
+         * <p>The operating system type of the image. Valid values:</p>
+         * <br>
+         * <p>*   Linux</p>
+         * <p>*   Windows</p>
+         */
         @NameInMap("Platform")
         public String platform;
 
+        /**
+         * <p>The ID of the snapshot.</p>
+         */
         @NameInMap("SnapshotId")
         public String snapshotId;
 

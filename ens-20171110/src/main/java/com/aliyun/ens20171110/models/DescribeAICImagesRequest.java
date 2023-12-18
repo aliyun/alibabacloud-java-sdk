@@ -4,30 +4,64 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeAICImagesRequest extends TeaModel {
+    /**
+     * <p>The description of the image.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The image ID of the AIC instance.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The type of the image. Valid values:</p>
+     * <br>
+     * <p>*   **public**: public image</p>
+     * <p>*   **private**: custom image</p>
+     */
     @NameInMap("ImageType")
     public String imageType;
 
+    /**
+     * <p>The URL of the AIC image repository.</p>
+     */
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    /**
+     * <p>The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+     */
     @NameInMap("MaxDate")
     public String maxDate;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+     */
     @NameInMap("MinDate")
     public String minDate;
 
+    /**
+     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries per page. The maximum value is **100**. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The status of the image. Valid values:</p>
+     * <br>
+     * <p>*   **verifying**</p>
+     * <p>*   **disable**</p>
+     * <p>*   **available**</p>
+     */
     @NameInMap("Status")
     public String status;
 

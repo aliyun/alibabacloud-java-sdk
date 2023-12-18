@@ -4,18 +4,27 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class RescaleDeviceServiceResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of the devices.</p>
+     */
     @NameInMap("DeviceIds")
     public java.util.List<String> deviceIds;
 
+    /**
+     * <p>The ID of the order.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The key properties of the device.</p>
+     */
     @NameInMap("ResourceDetailInfos")
     public java.util.List<RescaleDeviceServiceResponseBodyResourceDetailInfos> resourceDetailInfos;
 
@@ -57,27 +66,51 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
     }
 
     public static class RescaleDeviceServiceResponseBodyResourceDetailInfos extends TeaModel {
+        /**
+         * <p>The ID of the device.</p>
+         */
         @NameInMap("ID")
         public String ID;
 
+        /**
+         * <p>The IP address of the device.</p>
+         */
         @NameInMap("IP")
         public String IP;
 
+        /**
+         * <p>The Internet service provider (ISP) to which the device belongs.</p>
+         */
         @NameInMap("ISP")
         public String ISP;
 
+        /**
+         * <p>The media access control (MAC) address of the device.</p>
+         */
         @NameInMap("Mac")
         public String mac;
 
+        /**
+         * <p>The ID of the edge node to which the device belongs.</p>
+         */
         @NameInMap("RegionID")
         public String regionID;
 
+        /**
+         * <p>The name of the server on which the device is deployed.</p>
+         */
         @NameInMap("Server")
         public String server;
 
+        /**
+         * <p>The status of the device.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The type of the instance.</p>
+         */
         @NameInMap("Type")
         public String type;
 

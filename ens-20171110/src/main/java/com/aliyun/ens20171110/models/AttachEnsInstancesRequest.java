@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class AttachEnsInstancesRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance. You can specify only one instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The command that you want to execute on the instance. The command must be encoded in Base64 or UTF-8.</p>
+     */
     @NameInMap("Scripts")
     public String scripts;
 

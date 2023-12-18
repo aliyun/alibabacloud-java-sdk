@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateNetworkAclResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the network ACL.</p>
+     */
     @NameInMap("NetworkAclId")
     public String networkAclId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,14 +4,24 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsNetSaleDistrictRequest extends TeaModel {
+    /**
+     * <p>The region code.</p>
+     * <br>
+     * <p>*   If you do not specify this parameter, only nodes under the area level that is specified by NetLevelCode are queried.</p>
+     * <p>*   If you specify this parameter, only child nodes in the area that is specified by NetDistrictCode are queried.</p>
+     */
     @NameInMap("NetDistrictCode")
     public String netDistrictCode;
 
+    /**
+     * <p>The network level. Valid values:</p>
+     * <br>
+     * <p>*   **Big**: area</p>
+     * <p>*   **Middle**: province</p>
+     * <p>*   **Small**: city</p>
+     */
     @NameInMap("NetLevelCode")
     public String netLevelCode;
-
-    @NameInMap("Version")
-    public String version;
 
     public static DescribeEnsNetSaleDistrictRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEnsNetSaleDistrictRequest self = new DescribeEnsNetSaleDistrictRequest();
@@ -32,14 +42,6 @@ public class DescribeEnsNetSaleDistrictRequest extends TeaModel {
     }
     public String getNetLevelCode() {
         return this.netLevelCode;
-    }
-
-    public DescribeEnsNetSaleDistrictRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

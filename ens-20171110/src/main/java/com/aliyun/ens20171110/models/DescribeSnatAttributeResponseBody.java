@@ -4,41 +4,89 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnatAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The time when the entry was created. The time is displayed in UTC.</p>
+     */
     @NameInMap("CreationTime")
     public String creationTime;
 
+    @NameInMap("DestCIDR")
+    public String destCIDR;
+
+    @NameInMap("IdleTimeout")
+    public Integer idleTimeout;
+
+    /**
+     * <p>The ID of the Network Address Translation (NAT) gateway.</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the SNAT entry.</p>
+     */
     @NameInMap("SnatEntryId")
     public String snatEntryId;
 
+    /**
+     * <p>The name of the SNAT entry.</p>
+     */
     @NameInMap("SnatEntryName")
     public String snatEntryName;
 
+    /**
+     * <p>The EIP specified in the SNAT entry. Multiple EIPs are separated by commas (,).</p>
+     */
     @NameInMap("SnatIp")
     public String snatIp;
 
+    /**
+     * <p>The information about the EIP specified in the SNAT entry.</p>
+     */
     @NameInMap("SnatIps")
     public java.util.List<DescribeSnatAttributeResponseBodySnatIps> snatIps;
 
+    /**
+     * <p>The source CIDR block specified in the SNAT entry.</p>
+     */
     @NameInMap("SourceCIDR")
     public String sourceCIDR;
 
+    /**
+     * <p>The secondary EIP specified in the SNAT entry. Multiple secondary EIPs are separated by commas (,).</p>
+     */
     @NameInMap("StandbySnatIp")
     public String standbySnatIp;
 
+    /**
+     * <p>The status of the secondary EIP.</p>
+     * <br>
+     * <p>*   Running</p>
+     * <p>*   Stopping</p>
+     * <p>*   Stopped</p>
+     * <p>*   Starting</p>
+     */
     @NameInMap("StandbyStatus")
     public String standbyStatus;
 
+    /**
+     * <p>The status of the SNAT entry.</p>
+     * <br>
+     * <p>*   Pending: The SNAT entry is being created or modified.</p>
+     * <p>*   Available: The SNAT entry is available.</p>
+     * <p>*   Deleting: The SNAT entry is being deleted.</p>
+     */
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("Type")
+    public String type;
 
     public static DescribeSnatAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnatAttributeResponseBody self = new DescribeSnatAttributeResponseBody();
@@ -51,6 +99,22 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     }
     public String getCreationTime() {
         return this.creationTime;
+    }
+
+    public DescribeSnatAttributeResponseBody setDestCIDR(String destCIDR) {
+        this.destCIDR = destCIDR;
+        return this;
+    }
+    public String getDestCIDR() {
+        return this.destCIDR;
+    }
+
+    public DescribeSnatAttributeResponseBody setIdleTimeout(Integer idleTimeout) {
+        this.idleTimeout = idleTimeout;
+        return this;
+    }
+    public Integer getIdleTimeout() {
+        return this.idleTimeout;
     }
 
     public DescribeSnatAttributeResponseBody setNatGatewayId(String natGatewayId) {
@@ -133,13 +197,36 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         return this.status;
     }
 
+    public DescribeSnatAttributeResponseBody setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
+    }
+
     public static class DescribeSnatAttributeResponseBodySnatIps extends TeaModel {
+        /**
+         * <p>The time when the EIP was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The IP address.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The status of the EIP.</p>
+         * <br>
+         * <p>*   Running</p>
+         * <p>*   Stopping</p>
+         * <p>*   Stopped</p>
+         * <p>*   Starting</p>
+         * <p>*   Releasing</p>
+         */
         @NameInMap("Status")
         public String status;
 

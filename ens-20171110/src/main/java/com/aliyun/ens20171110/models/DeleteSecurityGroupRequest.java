@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DeleteSecurityGroupRequest extends TeaModel {
+    /**
+     * <p>The security group ID of the instance.</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>The version number.</p>
+     */
     @NameInMap("Version")
     public String version;
 

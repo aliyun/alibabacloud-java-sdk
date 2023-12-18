@@ -4,18 +4,35 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeSelfImagesRequest extends TeaModel {
+    /**
+     * <p>The ID of the image. Fuzzy search is supported.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The name of the image. Fuzzy search is supported.</p>
+     */
     @NameInMap("ImageName")
     public String imageName;
 
+    /**
+     * <p>The page number to return. Pages start from page **1**. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the snapshot.</p>
+     */
     @NameInMap("SnapshotId")
     public String snapshotId;
 

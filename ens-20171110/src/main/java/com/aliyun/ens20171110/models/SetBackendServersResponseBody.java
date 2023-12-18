@@ -4,9 +4,17 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class SetBackendServersResponseBody extends TeaModel {
+    /**
+     * <p>The list of backend servers that you want to add. You can add at most 20 backend servers.</p>
+     * <br>
+     * <p>>  Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.</p>
+     */
     @NameInMap("BackendServers")
     public SetBackendServersResponseBodyBackendServers backendServers;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +40,38 @@ public class SetBackendServersResponseBody extends TeaModel {
     }
 
     public static class SetBackendServersResponseBodyBackendServersBackendServer extends TeaModel {
+        /**
+         * <p>The IP address of the backend server.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The backend port that is used by the ELB instance.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The ID of the instance that is used as the backend server.</p>
+         */
         @NameInMap("ServerId")
         public String serverId;
 
+        /**
+         * <p>The type of the backend server. Valid values:</p>
+         * <br>
+         * <p>*   **ens**: ENS instance.</p>
+         * <p>*   **eni**: ENI.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The weight of the backend server. Default value: 100. Valid values: **0** to **100**.</p>
+         * <br>
+         * <p>>  The value 0 indicates that requests are not forwarded to the backend server.</p>
+         */
         @NameInMap("Weight")
         public Integer weight;
 

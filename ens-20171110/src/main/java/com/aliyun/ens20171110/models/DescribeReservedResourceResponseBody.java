@@ -4,15 +4,27 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeReservedResourceResponseBody extends TeaModel {
+    /**
+     * <p>The returned service code. 0 indicates that the request was successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about images.</p>
+     */
     @NameInMap("Images")
     public DescribeReservedResourceResponseBodyImages images;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The specifications of resources that you can purchase.</p>
+     */
     @NameInMap("SupportResources")
     public DescribeReservedResourceResponseBodySupportResources supportResources;
 
@@ -54,9 +66,15 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeReservedResourceResponseBodyImagesImage extends TeaModel {
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The name of the image.</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
@@ -141,18 +159,33 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeReservedResourceResponseBodySupportResourcesSupportResource extends TeaModel {
+        /**
+         * <p>The information of the data disk.</p>
+         */
         @NameInMap("DataDiskSizes")
         public DescribeReservedResourceResponseBodySupportResourcesSupportResourceDataDiskSizes dataDiskSizes;
 
+        /**
+         * <p>The node ID.</p>
+         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
+        /**
+         * <p>The instance type.</p>
+         */
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
+        /**
+         * <p>The number of resources that you can purchase.</p>
+         */
         @NameInMap("SupportResourcesCount")
         public String supportResourcesCount;
 
+        /**
+         * <p>The information of the system disk.</p>
+         */
         @NameInMap("SystemDiskSizes")
         public DescribeReservedResourceResponseBodySupportResourcesSupportResourceSystemDiskSizes systemDiskSizes;
 

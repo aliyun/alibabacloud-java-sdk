@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeExportImageStatusRequest extends TeaModel {
+    /**
+     * <p>The ID of the image.</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The version number. Set the value to 2017-11-10.</p>
+     */
     @NameInMap("Version")
     public String version;
 

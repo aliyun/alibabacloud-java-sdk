@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class UnAssociateEnsEipAddressRequest extends TeaModel {
+    /**
+     * <p>The ID of the EIP.</p>
+     */
     @NameInMap("AllocationId")
     public String allocationId;
 

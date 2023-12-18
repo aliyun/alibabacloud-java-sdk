@@ -4,9 +4,20 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateMountTargetResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The state of the mount target. Valid values:</p>
+     * <br>
+     * <p>*   active</p>
+     * <p>*   inactive</p>
+     * <p>*   pending</p>
+     * <p>*   deleting</p>
+     */
     @NameInMap("Status")
     public String status;
 

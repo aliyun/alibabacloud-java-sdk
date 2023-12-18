@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The specifications of resources that you can purchase.</p>
+     */
     @NameInMap("SupportResources")
     public DescribeCloudDiskAvailableResourceInfoResponseBodySupportResources supportResources;
 
@@ -35,24 +38,50 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
     }
 
     public static class DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResource extends TeaModel {
+        /**
+         * <p>The number of disks that you can purchase.</p>
+         */
         @NameInMap("CanBuyCount")
         public Long canBuyCount;
 
+        /**
+         * <p>The type of the disk.</p>
+         * <br>
+         * <p>*   cloud_efficiency: ultra disk.</p>
+         * <p>*   cloud_ssd: all-flash disk.</p>
+         * <p>*   local_hdd: local HDD.</p>
+         * <p>*   local_ssd: local SSD.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The default size of the disk. Unit: GiB.</p>
+         */
         @NameInMap("DefaultDiskSize")
         public Long defaultDiskSize;
 
+        /**
+         * <p>The maximum size of the disk. Unit: GiB.</p>
+         */
         @NameInMap("DiskMaxSize")
         public Long diskMaxSize;
 
+        /**
+         * <p>The minimum size of the disk size. Unit: GiB.</p>
+         */
         @NameInMap("DiskMinSize")
         public Long diskMinSize;
 
+        /**
+         * <p>The ID of the edge node.</p>
+         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
+        /**
+         * <p>The name of the task node.</p>
+         */
         @NameInMap("EnsRegionName")
         public String ensRegionName;
 

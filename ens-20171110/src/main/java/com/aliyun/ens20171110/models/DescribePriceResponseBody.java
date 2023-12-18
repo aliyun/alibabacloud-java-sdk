@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribePriceResponseBody extends TeaModel {
+    /**
+     * <p>The price information.</p>
+     */
     @NameInMap("PriceInfo")
     public DescribePriceResponseBodyPriceInfo priceInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,30 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyPriceInfoPrice extends TeaModel {
+        /**
+         * <p>The type of currency.</p>
+         * <br>
+         * <p>*   USD: US dollar</p>
+         * <p>*   JPY: Japanese Yen</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The discount.</p>
+         */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
+        /**
+         * <p>The original price.</p>
+         */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
+        /**
+         * <p>The final price.</p>
+         */
         @NameInMap("TradePrice")
         public Float tradePrice;
 
@@ -84,6 +105,9 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyPriceInfo extends TeaModel {
+        /**
+         * <p>The price.</p>
+         */
         @NameInMap("Price")
         public DescribePriceResponseBodyPriceInfoPrice price;
 

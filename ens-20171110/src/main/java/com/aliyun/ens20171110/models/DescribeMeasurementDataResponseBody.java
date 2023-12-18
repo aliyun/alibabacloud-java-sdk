@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeMeasurementDataResponseBody extends TeaModel {
+    /**
+     * <p>The metering data returned.</p>
+     */
     @NameInMap("MeasurementDatas")
     public DescribeMeasurementDataResponseBodyMeasurementDatas measurementDatas;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
     }
 
     public static class DescribeMeasurementDataResponseBodyMeasurementDatasMeasurementDataBandWidthFeeDatasBandWidthFeeData extends TeaModel {
+        /**
+         * <p>The code of the bandwidth plan.</p>
+         */
         @NameInMap("CostCode")
         public String costCode;
 
+        /**
+         * <p>The name of the bandwidth plan.</p>
+         */
         @NameInMap("CostName")
         public String costName;
 
+        /**
+         * <p>The bandwidth consumption. Unit: bit/second.</p>
+         */
         @NameInMap("CostVal")
         public Integer costVal;
 
@@ -92,12 +107,21 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
     }
 
     public static class DescribeMeasurementDataResponseBodyMeasurementDatasMeasurementDataResourceFeeData extends TeaModel {
+        /**
+         * <p>The memory size. Unit: GB.</p>
+         */
         @NameInMap("Memory")
         public Integer memory;
 
+        /**
+         * <p>The storage capacity. Unit: GB.</p>
+         */
         @NameInMap("Storage")
         public Integer storage;
 
+        /**
+         * <p>The number of vCPUs.</p>
+         */
         @NameInMap("Vcpu")
         public Integer vcpu;
 
@@ -133,15 +157,31 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
     }
 
     public static class DescribeMeasurementDataResponseBodyMeasurementDatasMeasurementDataResourceFeeDataDetailsResourceFeeDataDetail extends TeaModel {
+        /**
+         * <p>The code of the resource.</p>
+         */
         @NameInMap("CostCode")
         public String costCode;
 
+        /**
+         * <p>The name of the resource.</p>
+         */
         @NameInMap("CostName")
         public String costName;
 
+        /**
+         * <p>The consumption of the resource.</p>
+         * <br>
+         * <p>*   Memory unit: GB.</p>
+         * <p>*   CPU unit: vCPU.</p>
+         * <p>*   Storage unit: GB.</p>
+         */
         @NameInMap("CostVal")
         public Integer costVal;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -204,24 +244,48 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
     }
 
     public static class DescribeMeasurementDataResponseBodyMeasurementDatasMeasurementData extends TeaModel {
+        /**
+         * <p>The bandwidth data returned.</p>
+         */
         @NameInMap("BandWidthFeeDatas")
         public DescribeMeasurementDataResponseBodyMeasurementDatasMeasurementDataBandWidthFeeDatas bandWidthFeeDatas;
 
+        /**
+         * <p>The metering method. Valid values:</p>
+         * <br>
+         * <p>*   ChargeByUnified: unified metering.</p>
+         * <p>*   ChargeByGrade: differential metering.</p>
+         */
         @NameInMap("ChargeModel")
         public String chargeModel;
 
+        /**
+         * <p>The metering cycle.</p>
+         */
         @NameInMap("CostCycle")
         public String costCycle;
 
+        /**
+         * <p>The end time of the metering cycle.</p>
+         */
         @NameInMap("CostEndTime")
         public String costEndTime;
 
+        /**
+         * <p>The start time of the metering cycle.</p>
+         */
         @NameInMap("CostStartTime")
         public String costStartTime;
 
+        /**
+         * <p>The information about computing resources.</p>
+         */
         @NameInMap("ResourceFeeData")
         public DescribeMeasurementDataResponseBodyMeasurementDatasMeasurementDataResourceFeeData resourceFeeData;
 
+        /**
+         * <p>Details of the computing resources.</p>
+         */
         @NameInMap("ResourceFeeDataDetails")
         public DescribeMeasurementDataResponseBodyMeasurementDatasMeasurementDataResourceFeeDataDetails resourceFeeDataDetails;
 

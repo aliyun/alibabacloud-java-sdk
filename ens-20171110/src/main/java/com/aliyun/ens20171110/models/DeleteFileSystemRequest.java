@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DeleteFileSystemRequest extends TeaModel {
+    /**
+     * <p>The ID of the node.</p>
+     */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The ID of the file system that you want to delete.</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 

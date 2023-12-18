@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ResizeDiskResponseBody extends TeaModel {
+    /**
+     * <p>The order ID.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,24 +4,49 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeNatGatewaysRequest extends TeaModel {
+    /**
+     * <p>The ID of the Edge Node Service (ENS) node.</p>
+     */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The name of the NAT gateway.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the NAT gateway.</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
+    /**
+     * <p>The ID of the network.</p>
+     */
     @NameInMap("NetworkId")
     public String networkId;
 
+    /**
+     * <p>The page number. Pages start from page **1**.</p>
+     * <br>
+     * <p>Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. The maximum value is **100**.</p>
+     * <br>
+     * <p>Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the vSwitch.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 

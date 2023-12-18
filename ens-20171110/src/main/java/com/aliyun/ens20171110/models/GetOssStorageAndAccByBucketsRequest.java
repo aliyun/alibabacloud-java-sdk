@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class GetOssStorageAndAccByBucketsRequest extends TeaModel {
+    /**
+     * <p>The information about the bucket.</p>
+     */
     @NameInMap("BucketList")
     public String bucketList;
 

@@ -4,18 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeKeyPairsResponseBody extends TeaModel {
+    /**
+     * <p>Details about the key pairs.</p>
+     */
     @NameInMap("KeyPairs")
     public DescribeKeyPairsResponseBodyKeyPairs keyPairs;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of key pairs.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,12 +80,21 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
     }
 
     public static class DescribeKeyPairsResponseBodyKeyPairsKeyPair extends TeaModel {
+        /**
+         * <p>The time when the key pair was created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The fingerprint of the key pair.</p>
+         */
         @NameInMap("KeyPairFingerPrint")
         public String keyPairFingerPrint;
 
+        /**
+         * <p>The name of the SSH key pair.</p>
+         */
         @NameInMap("KeyPairName")
         public String keyPairName;
 

@@ -4,54 +4,111 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The IP address that the ELB instance uses to provide services.</p>
+     */
     @NameInMap("Address")
     public String address;
 
+    /**
+     * <p>The IP version of the ELB instance. Valid values: ipv4 and ipv6.</p>
+     */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
+    /**
+     * <p>The backend servers.</p>
+     */
     @NameInMap("BackendServers")
     public java.util.List<DescribeLoadBalancerAttributeResponseBodyBackendServers> backendServers;
 
+    /**
+     * <p>The maximum bandwidth of the elastic IP address (EIP). Default value: 5. Valid values: **5** to **10000**. Unit: Mbit/s.</p>
+     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
+    /**
+     * <p>The time when the ELB instance was created. The time is displayed in UTC.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The time when the ELB instance was disabled.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the ENS node.</p>
+     */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The frontend ports that are used by the ELB instance.</p>
+     */
     @NameInMap("ListenerPorts")
     public java.util.List<String> listenerPorts;
 
+    /**
+     * <p>The frontend ports and protocols that are used by the ELB instance.</p>
+     */
     @NameInMap("ListenerPortsAndProtocols")
     public java.util.List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocols> listenerPortsAndProtocols;
 
+    /**
+     * <p>The ID of the ELB instance.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
+    /**
+     * <p>The name of the ELB instance.</p>
+     */
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
 
+    /**
+     * <p>The specifications of the ELB instance.</p>
+     */
     @NameInMap("LoadBalancerSpec")
     public String loadBalancerSpec;
 
+    /**
+     * <p>The status of the ELB instance. Valid values:</p>
+     * <br>
+     * <p>*   **Active** (default): The listener for the instance can forward the received traffic based on the rule.</p>
+     * <p>*   **InActive**: The listener for the instance does not forward the received traffic.</p>
+     */
     @NameInMap("LoadBalancerStatus")
     public String loadBalancerStatus;
 
+    /**
+     * <p>The ID of the network.</p>
+     */
     @NameInMap("NetworkId")
     public String networkId;
 
+    /**
+     * <p>The billing method. Valid values:</p>
+     * <br>
+     * <p>*   **PrePaid**: subscription.</p>
+     * <p>*   **PostPaid**: pay-as-you-go. Only this billing method is supported.</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the vSwitch.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
@@ -197,18 +254,33 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeLoadBalancerAttributeResponseBodyBackendServers extends TeaModel {
+        /**
+         * <p>The IP address of the backend server.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The port that is used by the backend server.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The ID of the backend server.</p>
+         */
         @NameInMap("ServerId")
         public String serverId;
 
+        /**
+         * <p>The type of the backend server.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The weight of the backend server.</p>
+         */
         @NameInMap("Weight")
         public Integer weight;
 
@@ -260,18 +332,33 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocols extends TeaModel {
+        /**
+         * <p>The description of the listener.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The destination listening port to which requests are forwarded.</p>
+         */
         @NameInMap("ForwardPort")
         public Integer forwardPort;
 
+        /**
+         * <p>Indicates whether the listener is enabled.</p>
+         */
         @NameInMap("ListenerForward")
         public String listenerForward;
 
+        /**
+         * <p>The listener port of the instance.</p>
+         */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
+        /**
+         * <p>The listener protocol.</p>
+         */
         @NameInMap("ListenerProtocol")
         public String listenerProtocol;
 

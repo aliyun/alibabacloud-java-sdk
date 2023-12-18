@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DeleteEnsRouteEntryRequest extends TeaModel {
+    /**
+     * <p>The ID of the route that you want to delete.</p>
+     */
     @NameInMap("RouteEntryId")
     public String routeEntryId;
 

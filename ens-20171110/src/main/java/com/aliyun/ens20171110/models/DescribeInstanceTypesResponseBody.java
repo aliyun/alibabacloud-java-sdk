@@ -4,12 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceTypesResponseBody extends TeaModel {
+    /**
+     * <p>The status code. If the request is successful, 0 is returned. If the request fails, a non-zero error code is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Details about the instance types.</p>
+     */
     @NameInMap("InstanceTypes")
     public DescribeInstanceTypesResponseBodyInstanceTypes instanceTypes;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +52,27 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceType extends TeaModel {
+        /**
+         * <p>The number of vCPUs.</p>
+         */
         @NameInMap("CpuCoreCount")
         public Integer cpuCoreCount;
 
+        /**
+         * <p>This parameter is unavailable.</p>
+         */
         @NameInMap("InstanceTypeId")
         public String instanceTypeId;
 
+        /**
+         * <p>The name of the instance type.</p>
+         */
         @NameInMap("InstanceTypeName")
         public String instanceTypeName;
 
+        /**
+         * <p>The memory size. Unit: MB.</p>
+         */
         @NameInMap("MemorySize")
         public Integer memorySize;
 
