@@ -93,6 +93,9 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         @NameInMap("FrameNum")
         public Integer frameNum;
 
+        @NameInMap("ReqId")
+        public String reqId;
+
         @NameInMap("Result")
         public java.util.List<DescribeImageModerationResultResponseBodyDataResult> result;
 
@@ -123,6 +126,14 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         }
         public Integer getFrameNum() {
             return this.frameNum;
+        }
+
+        public DescribeImageModerationResultResponseBodyData setReqId(String reqId) {
+            this.reqId = reqId;
+            return this;
+        }
+        public String getReqId() {
+            return this.reqId;
         }
 
         public DescribeImageModerationResultResponseBodyData setResult(java.util.List<DescribeImageModerationResultResponseBodyDataResult> result) {
