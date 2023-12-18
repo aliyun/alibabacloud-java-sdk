@@ -4,9 +4,15 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListReservedCapacitiesResponseBody extends TeaModel {
+    /**
+     * <p>The token used to obtain more results.</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The information about subscription instances.</p>
+     */
     @NameInMap("reservedCapacities")
     public java.util.List<OpenReservedCapacity> reservedCapacities;
 

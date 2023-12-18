@@ -8,22 +8,19 @@ public class GetResourceTagsHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the resource. </p>
-     * <p>> **Note:** You can use the value of this parameter to query the information about the resource, such as the account, service, and region information of the resource. You can manage tags only for services for top level resources.</p>
+     * <p>The ID of your Alibaba Cloud account.</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
-     * <p>The tag dictionary. Valid values:</p>
-     * <p>- **key**: the key of the tag. </p>
-     * <p>- **value**: the value of the tag.</p>
+     * <p>The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
-     * <p>Example 1</p>
+     * <p>The custom request ID.</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

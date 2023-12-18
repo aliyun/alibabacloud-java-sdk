@@ -73,12 +73,26 @@ public class UpdateFunctionResponseBody extends TeaModel {
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
+    /**
+     * <p>An array that consists of the information of layers.</p>
+     * <br>
+     * <p>> Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name as a layer with a larger subscript.</p>
+     */
     @NameInMap("layers")
     public java.util.List<String> layers;
+
+    /**
+     * <p>ARN list of layers</p>
+     */
+    @NameInMap("layersArnV2")
+    public java.util.List<String> layersArnV2;
 
     @NameInMap("memorySize")
     public Integer memorySize;
 
+    /**
+     * <p>The runtime environment of the function. Valid values: **nodejs16**, **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.10**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore3.1**, **dotnetcore2.1**, **custom.debian10**, **custom**, and **custom-container**. For more information, see [Supported function runtime environments](~~73338~~).</p>
+     */
     @NameInMap("runtime")
     public String runtime;
 
@@ -280,6 +294,14 @@ public class UpdateFunctionResponseBody extends TeaModel {
     }
     public java.util.List<String> getLayers() {
         return this.layers;
+    }
+
+    public UpdateFunctionResponseBody setLayersArnV2(java.util.List<String> layersArnV2) {
+        this.layersArnV2 = layersArnV2;
+        return this;
+    }
+    public java.util.List<String> getLayersArnV2() {
+        return this.layersArnV2;
     }
 
     public UpdateFunctionResponseBody setMemorySize(Integer memorySize) {

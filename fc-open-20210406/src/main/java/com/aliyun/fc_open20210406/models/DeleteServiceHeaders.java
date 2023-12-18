@@ -8,20 +8,26 @@ public class DeleteServiceHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>Examples</p>
+     * <p>The ETag value of the service. This value is used to ensure that the modified service is consistent with the service to be modified. The ETag value is returned in the responses of the [CreateService](~~175256~~), [UpdateService](~~188167~~), and [GetService](~~189225~~) operations.</p>
      */
     @NameInMap("If-Match")
     public String ifMatch;
 
     /**
-     * <p>Liuxia</p>
+     * <p>The ID of your Alibaba Cloud account.</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
+    /**
+     * <p>The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.</p>
+     */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
+    /**
+     * <p>The custom request ID.</p>
+     */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;
 

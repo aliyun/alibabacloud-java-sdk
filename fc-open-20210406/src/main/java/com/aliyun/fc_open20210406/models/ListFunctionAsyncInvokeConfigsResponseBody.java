@@ -4,9 +4,15 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListFunctionAsyncInvokeConfigsResponseBody extends TeaModel {
+    /**
+     * <p>The list of asynchronous invocation configurations.</p>
+     */
     @NameInMap("configs")
     public java.util.List<ListFunctionAsyncInvokeConfigsResponseBodyConfigs> configs;
 
+    /**
+     * <p>The token used to obtain more results.</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
@@ -32,30 +38,62 @@ public class ListFunctionAsyncInvokeConfigsResponseBody extends TeaModel {
     }
 
     public static class ListFunctionAsyncInvokeConfigsResponseBodyConfigs extends TeaModel {
+        /**
+         * <p>The time when the desktop group was created.</p>
+         */
         @NameInMap("createdTime")
         public String createdTime;
 
+        /**
+         * <p>The configuration structure of the destination for asynchronous invocations. If you have not configured this parameter, this parameter is null.</p>
+         */
         @NameInMap("destinationConfig")
         public DestinationConfig destinationConfig;
 
+        /**
+         * <p>The name of the function.</p>
+         */
         @NameInMap("function")
         public String function;
 
+        /**
+         * <p>The time when the configuration was last modified.</p>
+         */
         @NameInMap("lastModifiedTime")
         public String lastModifiedTime;
 
+        /**
+         * <p>The maximum validity period of a message. If you have not configured this parameter, this parameter is null.</p>
+         */
         @NameInMap("maxAsyncEventAgeInSeconds")
         public Long maxAsyncEventAgeInSeconds;
 
+        /**
+         * <p>The maximum number of retries allowed after an asynchronous invocation fails. If you have not configured this parameter, this parameter is null.</p>
+         */
         @NameInMap("maxAsyncRetryAttempts")
         public Long maxAsyncRetryAttempts;
 
+        /**
+         * <p>The version or alias of the service.</p>
+         */
         @NameInMap("qualifier")
         public String qualifier;
 
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("service")
         public String service;
 
+        /**
+         * <p>Indicates whether the asynchronous task feature is enabled.</p>
+         * <br>
+         * <p>*   **true**: The asynchronous task feature is enabled.</p>
+         * <p>*   **false**: The asynchronous task feature is disabled.</p>
+         * <br>
+         * <p>If you have not configured this parameter, this parameter is null.</p>
+         */
         @NameInMap("statefulInvocation")
         public Boolean statefulInvocation;
 

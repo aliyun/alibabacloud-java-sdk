@@ -8,7 +8,7 @@ public class PutFunctionOnDemandConfigHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The name of the service.</p>
+     * <p>If the ETag specified in the request matches the ETag value of the object, the object and 200 OK are returned. Otherwise, 412 Precondition Failed is returned.</p>
      */
     @NameInMap("If-Match")
     public String ifMatch;
@@ -20,13 +20,13 @@ public class PutFunctionOnDemandConfigHeaders extends TeaModel {
     public String xFcAccountId;
 
     /**
-     * <p>Example 1</p>
+     * <p>The time when the function is invoked. The value is in the **EEE,d MMM yyyy HH:mm:ss GMT** format.</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
-     * <p>Creates function rules.</p>
+     * <p>The unique ID of the trace.</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;
