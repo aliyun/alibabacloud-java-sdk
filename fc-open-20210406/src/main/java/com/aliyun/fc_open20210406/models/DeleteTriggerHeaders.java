@@ -7,15 +7,27 @@ public class DeleteTriggerHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    /**
+     * <p>This parameter is used to ensure that the modified resource is consistent with the resource to be modified. You can obtain the parameter value from the responses of [CreateTrigger](~~415729~~), [GetTrigger](~~415732~~), and [UpdateTrigger](~~415731~~) operations.</p>
+     */
     @NameInMap("If-Match")
     public String ifMatch;
 
+    /**
+     * <p>The ID of your Alibaba Cloud account.</p>
+     */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
+    /**
+     * <p>The time when the request is initiated on the client. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.</p>
+     */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
+    /**
+     * <p>The custom request ID.</p>
+     */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;
 

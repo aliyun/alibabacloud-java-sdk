@@ -4,9 +4,15 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class ListTaggedResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The token used to obtain more results. You do not need to provide this parameter in the first call. The tokens for subsequent queries are obtained from the returned results.</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The information about tagged services.</p>
+     */
     @NameInMap("resources")
     public java.util.List<Resource> resources;
 

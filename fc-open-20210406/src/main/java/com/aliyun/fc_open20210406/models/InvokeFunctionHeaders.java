@@ -37,6 +37,16 @@ public class InvokeFunctionHeaders extends TeaModel {
     @NameInMap("X-Fc-Log-Type")
     public String xFcLogType;
 
+    /**
+     * <p>Specifies whether to enable the asynchronous task mode for requests. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   This parameter takes effect only for asynchronous invocations. It does not take effect for synchronous invocations.</p>
+     */
     @NameInMap("X-Fc-Stateful-Async-Invocation-Enable")
     public String xFcStatefulAsyncInvocationEnable;
 

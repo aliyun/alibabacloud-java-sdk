@@ -1340,6 +1340,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getFunctionWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
+    /**
+      * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If the value of StatefulAsyncInvocation is true, the asynchronous task feature is enabled. All asynchronous invocations change to asynchronous task mode.
+      *
+      * @param request GetFunctionAsyncInvokeConfigRequest
+      * @param headers GetFunctionAsyncInvokeConfigHeaders
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetFunctionAsyncInvokeConfigResponse
+     */
     public GetFunctionAsyncInvokeConfigResponse getFunctionAsyncInvokeConfigWithOptions(String serviceName, String functionName, GetFunctionAsyncInvokeConfigRequest request, GetFunctionAsyncInvokeConfigHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1382,6 +1390,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetFunctionAsyncInvokeConfigResponse());
     }
 
+    /**
+      * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If the value of StatefulAsyncInvocation is true, the asynchronous task feature is enabled. All asynchronous invocations change to asynchronous task mode.
+      *
+      * @param request GetFunctionAsyncInvokeConfigRequest
+      * @return GetFunctionAsyncInvokeConfigResponse
+     */
     public GetFunctionAsyncInvokeConfigResponse getFunctionAsyncInvokeConfig(String serviceName, String functionName, GetFunctionAsyncInvokeConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         GetFunctionAsyncInvokeConfigHeaders headers = new GetFunctionAsyncInvokeConfigHeaders();
@@ -1791,9 +1805,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("qualifier", request.qualifier);
         }
 
-        String body = "";
+        byte[] body = null;
         if (!com.aliyun.teautil.Common.isUnset(request.body)) {
-            body = com.aliyun.teautil.Common.toString(request.body);
+            body = request.body;
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -1842,7 +1856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "byte"),
             new TeaPair("bodyType", "byte")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new InvokeFunctionResponse());
@@ -2022,6 +2036,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listEventSourcesWithOptions(serviceName, functionName, request, headers, runtime);
     }
 
+    /**
+      * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If StatefulAsyncInvocation is set to true, the asynchronous task is enabled. All asynchronous invocations to the function corresponding to this configuration change to asynchronous task mode.
+      *
+      * @param request ListFunctionAsyncInvokeConfigsRequest
+      * @param headers ListFunctionAsyncInvokeConfigsHeaders
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListFunctionAsyncInvokeConfigsResponse
+     */
     public ListFunctionAsyncInvokeConfigsResponse listFunctionAsyncInvokeConfigsWithOptions(String serviceName, String functionName, ListFunctionAsyncInvokeConfigsRequest request, ListFunctionAsyncInvokeConfigsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2080,6 +2102,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListFunctionAsyncInvokeConfigsResponse());
     }
 
+    /**
+      * StatefulAsyncInvocation indicates whether the asynchronous task feature is enabled. If StatefulAsyncInvocation is set to true, the asynchronous task is enabled. All asynchronous invocations to the function corresponding to this configuration change to asynchronous task mode.
+      *
+      * @param request ListFunctionAsyncInvokeConfigsRequest
+      * @return ListFunctionAsyncInvokeConfigsResponse
+     */
     public ListFunctionAsyncInvokeConfigsResponse listFunctionAsyncInvokeConfigs(String serviceName, String functionName, ListFunctionAsyncInvokeConfigsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         ListFunctionAsyncInvokeConfigsHeaders headers = new ListFunctionAsyncInvokeConfigsHeaders();
@@ -2151,8 +2179,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The maximum number of resources to return. Valid values: \\[0,1000].
-      * The number of returned resources is less than or equal to the specified number.
+      * The ListInstances operation allows you to query the available instances of a function.
+      * Available instances are instances that are processing requests or can be scheduled to process requests. Available instances queried by the ListInstances operation are the same as those that can be used when you call the InvokeFunction operation with the same values specified for the `serviceName`, `functionName`, and `qualifier` parameters.
       *
       * @param request ListInstancesRequest
       * @param headers ListInstancesHeaders
@@ -2202,8 +2230,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The maximum number of resources to return. Valid values: \\[0,1000].
-      * The number of returned resources is less than or equal to the specified number.
+      * The ListInstances operation allows you to query the available instances of a function.
+      * Available instances are instances that are processing requests or can be scheduled to process requests. Available instances queried by the ListInstances operation are the same as those that can be used when you call the InvokeFunction operation with the same values specified for the `serviceName`, `functionName`, and `qualifier` parameters.
       *
       * @param request ListInstancesRequest
       * @return ListInstancesResponse

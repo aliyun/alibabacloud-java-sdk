@@ -5,77 +5,80 @@ import com.aliyun.tea.*;
 
 public class UpdateTriggerResponseBody extends TeaModel {
     /**
-     * <p>The ARN of the RAM role that is used by the event source to invoke the function.</p>
+     * <p>The time when the audio or video file was created.</p>
      */
     @NameInMap("createdTime")
     public String createdTime;
 
     /**
-     * <p>The unique ID of the trigger.</p>
+     * <p>The description of the trigger.</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The public domain address. You can access HTTP triggers over the Internet by using HTTP or HTTPS.</p>
+     * <p>The domain name used to invoke the function by using HTTP. You can add this domain name as the prefix to the endpoint of Function Compute. This way, you can invoke the function that corresponds to the trigger by using HTTP. For example, `{domainName}.cn-shanghai.fc.aliyuncs.com`.</p>
      */
     @NameInMap("domainName")
     public String domainName;
 
     /**
-     * <p>The last modification time.</p>
+     * <p>The ARN of the RAM role that is used by the event source to invoke the function.</p>
      */
     @NameInMap("invocationRole")
     public String invocationRole;
 
     /**
-     * <p>The version or alias of the service.</p>
+     * <p>The last modification time.</p>
      */
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
     /**
-     * <p>The ARN of the event source.</p>
+     * <p>The version or alias of the service.</p>
      */
     @NameInMap("qualifier")
     public String qualifier;
 
     /**
-     * <p>The configurations of the trigger. The configurations vary based on the trigger type.</p>
+     * <p>The ARN of the event source.</p>
      */
     @NameInMap("sourceArn")
     public String sourceArn;
 
     /**
-     * <p>The name of the trigger.</p>
+     * <p>The configurations of the trigger. The configurations vary based on the trigger type.</p>
      */
     @NameInMap("triggerConfig")
     public String triggerConfig;
 
     /**
-     * <p>The domain name used to invoke the function by using HTTP. You can add this domain name as the prefix to the endpoint of Function Compute. This way, you can invoke the function that corresponds to the trigger by using HTTP. For example, `{domainName}.cn-shanghai.fc.aliyuncs.com`.</p>
+     * <p>The unique ID of the trigger.</p>
      */
     @NameInMap("triggerId")
     public String triggerId;
 
     /**
-     * <p>The trigger type, such as **oss**, **log**, **tablestore**, **timer**, **http**, **cdn_events**, and **mns_topic**.</p>
+     * <p>The name of the trigger.</p>
      */
     @NameInMap("triggerName")
     public String triggerName;
 
     /**
-     * <p>The description of the trigger.</p>
+     * <p>The trigger type. Example values: **oss**, **log**, **tablestore**, **timer**, **http**, **cdn_events**, **mns_topic**, and **eventbridge**.</p>
      */
     @NameInMap("triggerType")
     public String triggerType;
 
     /**
-     * <p>The private endpoint. In a VPC, you can access HTTP triggers by using HTTP or HTTPS.</p>
+     * <p>The public domain address. You can access HTTP triggers over the Internet by using HTTP or HTTPS.</p>
      */
     @NameInMap("urlInternet")
     public String urlInternet;
 
+    /**
+     * <p>The private endpoint. In a VPC, you can access HTTP triggers by using HTTP or HTTPS.</p>
+     */
     @NameInMap("urlIntranet")
     public String urlIntranet;
 

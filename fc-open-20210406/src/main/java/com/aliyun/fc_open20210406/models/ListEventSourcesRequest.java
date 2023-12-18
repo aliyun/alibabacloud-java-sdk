@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEventSourcesRequest extends TeaModel {
     /**
-     * <p>$.parameters[7].schema.example</p>
+     * <p>The version or alias of the service.</p>
      */
     @NameInMap("qualifier")
     public String qualifier;

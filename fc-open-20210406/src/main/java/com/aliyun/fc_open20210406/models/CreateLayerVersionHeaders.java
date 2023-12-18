@@ -8,19 +8,19 @@ public class CreateLayerVersionHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The description of the layer.</p>
+     * <p>The ID of your Alibaba Cloud account.</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
-     * <p>The checksum of the layer code package.</p>
+     * <p>The time when the function is invoked. The value is in the **EEE,d MMM yyyy HH:mm:ss GMT** format.</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
-     * <p>The information about the layer code package.</p>
+     * <p>The trace ID of the invocation request of Function Compute.</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

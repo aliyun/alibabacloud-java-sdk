@@ -7,12 +7,21 @@ public class ReleaseGPUInstanceHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    /**
+     * <p>The ID of your Alibaba Cloud account.</p>
+     */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
+    /**
+     * <p>The time when the function is invoked. The format of the value is: EEE,d MMM yyyy HH:mm:ss GMT.</p>
+     */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
+    /**
+     * <p>The custom request ID.</p>
+     */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;
 

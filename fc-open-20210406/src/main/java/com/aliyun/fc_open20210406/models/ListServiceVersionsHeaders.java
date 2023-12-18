@@ -20,7 +20,7 @@ public class ListServiceVersionsHeaders extends TeaModel {
     public String xFcDate;
 
     /**
-     * <p>The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.</p>
+     * <p>The trace ID of the invocation request of Function Compute.</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

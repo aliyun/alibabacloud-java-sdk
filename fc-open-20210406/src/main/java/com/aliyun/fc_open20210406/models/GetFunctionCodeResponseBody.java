@@ -4,9 +4,15 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class GetFunctionCodeResponseBody extends TeaModel {
+    /**
+     * <p>The CRC-64 value of the function code package.</p>
+     */
     @NameInMap("checksum")
     public String checksum;
 
+    /**
+     * <p>The URL of the function code package.</p>
+     */
     @NameInMap("url")
     public String url;
 

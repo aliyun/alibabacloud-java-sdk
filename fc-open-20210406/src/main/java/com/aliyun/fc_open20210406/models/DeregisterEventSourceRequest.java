@@ -4,6 +4,9 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class DeregisterEventSourceRequest extends TeaModel {
+    /**
+     * <p>The version or alias of the service.</p>
+     */
     @NameInMap("qualifier")
     public String qualifier;
 

@@ -10,8 +10,14 @@ public class EventBridgeTriggerConfig extends TeaModel {
     @NameInMap("eventRuleFilterPattern")
     public String eventRuleFilterPattern;
 
+    @NameInMap("eventSinkConfig")
+    public EventSinkConfig eventSinkConfig;
+
     @NameInMap("eventSourceConfig")
     public EventSourceConfig eventSourceConfig;
+
+    @NameInMap("runOptions")
+    public RunOptions runOptions;
 
     @NameInMap("triggerEnable")
     public Boolean triggerEnable;
@@ -37,12 +43,28 @@ public class EventBridgeTriggerConfig extends TeaModel {
         return this.eventRuleFilterPattern;
     }
 
+    public EventBridgeTriggerConfig setEventSinkConfig(EventSinkConfig eventSinkConfig) {
+        this.eventSinkConfig = eventSinkConfig;
+        return this;
+    }
+    public EventSinkConfig getEventSinkConfig() {
+        return this.eventSinkConfig;
+    }
+
     public EventBridgeTriggerConfig setEventSourceConfig(EventSourceConfig eventSourceConfig) {
         this.eventSourceConfig = eventSourceConfig;
         return this;
     }
     public EventSourceConfig getEventSourceConfig() {
         return this.eventSourceConfig;
+    }
+
+    public EventBridgeTriggerConfig setRunOptions(RunOptions runOptions) {
+        this.runOptions = runOptions;
+        return this;
+    }
+    public RunOptions getRunOptions() {
+        return this.runOptions;
     }
 
     public EventBridgeTriggerConfig setTriggerEnable(Boolean triggerEnable) {

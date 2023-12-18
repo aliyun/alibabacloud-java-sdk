@@ -8,19 +8,19 @@ public class ListTriggersHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The time when the request is initiated on the client. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.</p>
+     * <p>The ID of your Alibaba Cloud account.</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
-     * <p>The custom request ID.</p>
+     * <p>The time when the request is initiated on the client. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The custom request ID.</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

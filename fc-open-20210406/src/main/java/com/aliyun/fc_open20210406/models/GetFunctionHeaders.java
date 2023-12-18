@@ -8,19 +8,19 @@ public class GetFunctionHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The custom request ID.</p>
+     * <p>The ID of your Alibaba Cloud account.</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
-     * <p>The value that is used to ensure that the modified function is consistent with the function that is expected to be modified.</p>
+     * <p>The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
-     * <p>The definition of the function.</p>
+     * <p>The custom request ID.</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

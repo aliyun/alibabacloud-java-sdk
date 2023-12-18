@@ -8,19 +8,19 @@ public class ListProvisionConfigsHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The actual number of provisioned instances.</p>
+     * <p>The ID of your Alibaba Cloud account.</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
-     * <p>Specifies whether to always allocate CPU to a function instance.</p>
+     * <p>The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
-     * <p>The configurations of scheduled auto scaling.</p>
+     * <p>The trace ID of the invocation request of Function Compute.</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

@@ -5,58 +5,61 @@ import com.aliyun.tea.*;
 
 public class CreateLayerVersionResponseBody extends TeaModel {
     /**
-     * <p>Creates a layer version.</p>
+     * <p>The access mode of the layer.</p>
      */
     @NameInMap("acl")
     public Integer acl;
 
+    /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of the layer.</p>
+     */
     @NameInMap("arn")
     public String arn;
 
     /**
-     * <p>The access mode of the layer.</p>
+     * <p>The information about the layer code package.</p>
      */
     @NameInMap("code")
     public OutputCodeLocation code;
 
     /**
-     * <p>Example 1</p>
+     * <p>The CRC-64 value of the layer code package. The value is calculated based on the **ECMA-182 **standard.</p>
      */
     @NameInMap("codeChecksum")
     public String codeChecksum;
 
     /**
-     * <p>The size of the layer code package. Unit: Byte.</p>
+     * <p>The size of the layer code package. Unit: bytes.</p>
      */
     @NameInMap("codesize")
     public Long codesize;
 
     /**
-     * <p>Luoni</p>
+     * <p>The runtime environments that are supported by the layer.</p>
      */
     @NameInMap("compatibleRuntime")
     public java.util.List<String> compatibleRuntime;
 
     /**
-     * <p>Creates a layer version.</p>
+     * <p>The time when the layer version was created. The time is in the yyyy-MM-ddTHH:mm:ssZ format.</p>
      */
     @NameInMap("createTime")
     public String createTime;
 
     /**
-     * <p>The name of the layer.</p>
+     * <p>The description of the layer version.</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The list of runtime environments that are supported by the layer.</p>
+     * <p>The layer name.</p>
      */
     @NameInMap("layerName")
     public String layerName;
 
     /**
-     * <p>The time when the layer version was created. The time follows the **yyyy-MM-ddTHH:mm:ssZ** format.</p>
+     * <p>The layer version.</p>
      */
     @NameInMap("version")
     public Integer version;

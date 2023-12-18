@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTaggedResourcesRequest extends TeaModel {
     /**
-     * <p>Example 1</p>
+     * <p>The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.</p>
      */
     @NameInMap("limit")
     public Integer limit;

@@ -5,19 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
     /**
-     * <p>The name of the service.</p>
+     * <p>The IDs of the instance.</p>
      */
     @NameInMap("instanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The ID of your Alibaba Cloud account.</p>
+     * <p>The maximum number of resources to return. Valid values: \[0,1000].</p>
+     * <br>
+     * <p>The number of returned resources is less than or equal to the specified number.</p>
      */
     @NameInMap("limit")
     public Integer limit;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The version or alias.</p>
      */
     @NameInMap("qualifier")
     public String qualifier;
