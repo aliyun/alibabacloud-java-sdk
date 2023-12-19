@@ -108,12 +108,92 @@ public class ListDigitalHumanMaterialsResponseBody extends TeaModel {
         return this.total;
     }
 
-    public static class ListDigitalHumanMaterialsResponseBodyData extends TeaModel {
+    public static class ListDigitalHumanMaterialsResponseBodyDataComponents extends TeaModel {
         @NameInMap("Ext")
         public String ext;
 
         @NameInMap("FileUrl")
         public String fileUrl;
+
+        @NameInMap("Files")
+        public java.util.Map<String, ?> files;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static ListDigitalHumanMaterialsResponseBodyDataComponents build(java.util.Map<String, ?> map) throws Exception {
+            ListDigitalHumanMaterialsResponseBodyDataComponents self = new ListDigitalHumanMaterialsResponseBodyDataComponents();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDigitalHumanMaterialsResponseBodyDataComponents setExt(String ext) {
+            this.ext = ext;
+            return this;
+        }
+        public String getExt() {
+            return this.ext;
+        }
+
+        public ListDigitalHumanMaterialsResponseBodyDataComponents setFileUrl(String fileUrl) {
+            this.fileUrl = fileUrl;
+            return this;
+        }
+        public String getFileUrl() {
+            return this.fileUrl;
+        }
+
+        public ListDigitalHumanMaterialsResponseBodyDataComponents setFiles(java.util.Map<String, ?> files) {
+            this.files = files;
+            return this;
+        }
+        public java.util.Map<String, ?> getFiles() {
+            return this.files;
+        }
+
+        public ListDigitalHumanMaterialsResponseBodyDataComponents setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public ListDigitalHumanMaterialsResponseBodyDataComponents setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListDigitalHumanMaterialsResponseBodyDataComponents setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class ListDigitalHumanMaterialsResponseBodyData extends TeaModel {
+        @NameInMap("Components")
+        public java.util.List<ListDigitalHumanMaterialsResponseBodyDataComponents> components;
+
+        @NameInMap("Ext")
+        public String ext;
+
+        @NameInMap("FileUrl")
+        public String fileUrl;
+
+        @NameInMap("Files")
+        public java.util.Map<String, ?> files;
 
         @NameInMap("Id")
         public String id;
@@ -127,6 +207,14 @@ public class ListDigitalHumanMaterialsResponseBody extends TeaModel {
         public static ListDigitalHumanMaterialsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListDigitalHumanMaterialsResponseBodyData self = new ListDigitalHumanMaterialsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListDigitalHumanMaterialsResponseBodyData setComponents(java.util.List<ListDigitalHumanMaterialsResponseBodyDataComponents> components) {
+            this.components = components;
+            return this;
+        }
+        public java.util.List<ListDigitalHumanMaterialsResponseBodyDataComponents> getComponents() {
+            return this.components;
         }
 
         public ListDigitalHumanMaterialsResponseBodyData setExt(String ext) {
@@ -143,6 +231,14 @@ public class ListDigitalHumanMaterialsResponseBody extends TeaModel {
         }
         public String getFileUrl() {
             return this.fileUrl;
+        }
+
+        public ListDigitalHumanMaterialsResponseBodyData setFiles(java.util.Map<String, ?> files) {
+            this.files = files;
+            return this;
+        }
+        public java.util.Map<String, ?> getFiles() {
+            return this.files;
         }
 
         public ListDigitalHumanMaterialsResponseBodyData setId(String id) {
