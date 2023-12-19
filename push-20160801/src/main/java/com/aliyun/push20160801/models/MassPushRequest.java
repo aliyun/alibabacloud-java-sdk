@@ -131,6 +131,9 @@ public class MassPushRequest extends TeaModel {
         @NameInMap("AndroidVivoPushMode")
         public Integer androidVivoPushMode;
 
+        @NameInMap("AndroidVivoReceiptId")
+        public String androidVivoReceiptId;
+
         @NameInMap("AndroidXiaoMiActivity")
         @Deprecated
         public String androidXiaoMiActivity;
@@ -501,6 +504,14 @@ public class MassPushRequest extends TeaModel {
         }
         public Integer getAndroidVivoPushMode() {
             return this.androidVivoPushMode;
+        }
+
+        public MassPushRequestPushTask setAndroidVivoReceiptId(String androidVivoReceiptId) {
+            this.androidVivoReceiptId = androidVivoReceiptId;
+            return this;
+        }
+        public String getAndroidVivoReceiptId() {
+            return this.androidVivoReceiptId;
         }
 
         public MassPushRequestPushTask setAndroidXiaoMiActivity(String androidXiaoMiActivity) {

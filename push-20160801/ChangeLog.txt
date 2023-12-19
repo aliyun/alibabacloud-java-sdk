@@ -1,3 +1,6 @@
+2023-12-19 Version: 1.0.9
+- Generated java 2016-08-01 for Push.
+
 2023-10-12 Version: 1.0.8
 - Generated java 2016-08-01 for Push.
 
