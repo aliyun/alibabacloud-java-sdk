@@ -59,6 +59,9 @@ public class AddServiceSourceShrinkRequest extends TeaModel {
     @NameInMap("Source")
     public String source;
 
+    @NameInMap("ToAuthorizeSecurityGroups")
+    public String toAuthorizeSecurityGroupsShrink;
+
     /**
      * <p>The type of the service source.</p>
      * <br>
@@ -135,6 +138,14 @@ public class AddServiceSourceShrinkRequest extends TeaModel {
     }
     public String getSource() {
         return this.source;
+    }
+
+    public AddServiceSourceShrinkRequest setToAuthorizeSecurityGroupsShrink(String toAuthorizeSecurityGroupsShrink) {
+        this.toAuthorizeSecurityGroupsShrink = toAuthorizeSecurityGroupsShrink;
+        return this;
+    }
+    public String getToAuthorizeSecurityGroupsShrink() {
+        return this.toAuthorizeSecurityGroupsShrink;
     }
 
     public AddServiceSourceShrinkRequest setType(String type) {

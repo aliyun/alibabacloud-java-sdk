@@ -22,7 +22,7 @@ public class ListServiceSourceRequest extends TeaModel {
     /**
      * <p>Specifies the type of the returned service source. If this parameter is not specified, service sources of all types are returned. Valid values:</p>
      * <br>
-     * <p>*   K8S</p>
+     * <p>*   K8s</p>
      * <p>*   MSE</p>
      * <p>*   MSE_ZK</p>
      * <p>*   SAE</p>

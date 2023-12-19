@@ -17,7 +17,7 @@ public class GetServiceListPageRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>应用名字。</p>
+     * <p>The application name.</p>
      */
     @NameInMap("AppName")
     public String appName;

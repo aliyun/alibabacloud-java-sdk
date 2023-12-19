@@ -26,7 +26,7 @@ public class UpdateGatewayRouteHeaderOpRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
-     * <p>The information about the header configuration policy.</p>
+     * <p>The description of user header settings.</p>
      */
     @NameInMap("HeaderOpJSON")
     public String headerOpJSON;

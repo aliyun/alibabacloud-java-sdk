@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryClusterInfoResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The details of the data.</p>
      */
     @NameInMap("Data")
     public QueryClusterInfoResponseBodyData data;
@@ -206,9 +206,15 @@ public class QueryClusterInfoResponseBody extends TeaModel {
     }
 
     public static class QueryClusterInfoResponseBodyDataMaintenancePeriod extends TeaModel {
+        /**
+         * <p>The start time of the O\&M time window.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The end time of the O\&M time window.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -321,13 +327,13 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>弹性公网IP（EIP）的实例ID</p>
+         * <p>The ID of the instance that is associated with the Elastic IP Address (EIP).</p>
          */
         @NameInMap("EipInstanceId")
         public String eipInstanceId;
 
         /**
-         * <p>到期时间（包年包月）</p>
+         * <p>The time when the subscription instance expires.</p>
          */
         @NameInMap("EndDate")
         public String endDate;
@@ -410,6 +416,9 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         @NameInMap("IntranetPort")
         public String intranetPort;
 
+        /**
+         * <p>The O\&M time window.</p>
+         */
         @NameInMap("MaintenancePeriod")
         public QueryClusterInfoResponseBodyDataMaintenancePeriod maintenancePeriod;
 
@@ -451,13 +460,13 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>ENI网络接入的安全组ID</p>
+         * <p>The ID of the security group to which the elastic network interface (ENI) is connected.</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
-         * <p>ENI网络接入的安全组类型</p>
+         * <p>The type of the security group to which the ENI is connected.</p>
          */
         @NameInMap("SecurityGroupType")
         public String securityGroupType;

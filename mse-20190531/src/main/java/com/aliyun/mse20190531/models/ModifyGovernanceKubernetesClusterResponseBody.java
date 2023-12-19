@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyGovernanceKubernetesClusterResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The response code returned.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The details of the data.</p>
+     * <p>The deletion result.</p>
      */
     @NameInMap("Data")
     public Boolean data;

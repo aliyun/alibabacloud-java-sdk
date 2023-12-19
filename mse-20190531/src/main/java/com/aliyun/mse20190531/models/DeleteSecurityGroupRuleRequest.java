@@ -13,6 +13,9 @@ public class DeleteSecurityGroupRuleRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("CascadingDelete")
+    public Boolean cascadingDelete;
+
     /**
      * <p>The unique ID of the gateway.</p>
      */
@@ -36,6 +39,14 @@ public class DeleteSecurityGroupRuleRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public DeleteSecurityGroupRuleRequest setCascadingDelete(Boolean cascadingDelete) {
+        this.cascadingDelete = cascadingDelete;
+        return this;
+    }
+    public Boolean getCascadingDelete() {
+        return this.cascadingDelete;
     }
 
     public DeleteSecurityGroupRuleRequest setGatewayUniqueId(String gatewayUniqueId) {

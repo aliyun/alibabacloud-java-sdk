@@ -105,6 +105,9 @@ public class CreateFlowRuleRequest extends TeaModel {
     @NameInMap("Resource")
     public String resource;
 
+    @NameInMap("ResourceType")
+    public Integer resourceType;
+
     /**
      * <p>The throttling threshold.</p>
      */
@@ -186,6 +189,14 @@ public class CreateFlowRuleRequest extends TeaModel {
     }
     public String getResource() {
         return this.resource;
+    }
+
+    public CreateFlowRuleRequest setResourceType(Integer resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public Integer getResourceType() {
+        return this.resourceType;
     }
 
     public CreateFlowRuleRequest setThreshold(Integer threshold) {

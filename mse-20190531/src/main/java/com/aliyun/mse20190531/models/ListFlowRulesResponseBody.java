@@ -224,6 +224,9 @@ public class ListFlowRulesResponseBody extends TeaModel {
         @NameInMap("Resource")
         public String resource;
 
+        @NameInMap("ResourceType")
+        public Integer resourceType;
+
         /**
          * <p>The ID of the rule.</p>
          */
@@ -325,6 +328,14 @@ public class ListFlowRulesResponseBody extends TeaModel {
         }
         public String getResource() {
             return this.resource;
+        }
+
+        public ListFlowRulesResponseBodyDataResult setResourceType(Integer resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public Integer getResourceType() {
+            return this.resourceType;
         }
 
         public ListFlowRulesResponseBodyDataResult setRuleId(Long ruleId) {

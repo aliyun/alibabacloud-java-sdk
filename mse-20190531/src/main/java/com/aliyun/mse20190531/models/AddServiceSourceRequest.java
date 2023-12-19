@@ -59,6 +59,9 @@ public class AddServiceSourceRequest extends TeaModel {
     @NameInMap("Source")
     public String source;
 
+    @NameInMap("ToAuthorizeSecurityGroups")
+    public java.util.List<AddServiceSourceRequestToAuthorizeSecurityGroups> toAuthorizeSecurityGroups;
+
     /**
      * <p>The type of the service source.</p>
      * <br>
@@ -137,6 +140,14 @@ public class AddServiceSourceRequest extends TeaModel {
         return this.source;
     }
 
+    public AddServiceSourceRequest setToAuthorizeSecurityGroups(java.util.List<AddServiceSourceRequestToAuthorizeSecurityGroups> toAuthorizeSecurityGroups) {
+        this.toAuthorizeSecurityGroups = toAuthorizeSecurityGroups;
+        return this;
+    }
+    public java.util.List<AddServiceSourceRequestToAuthorizeSecurityGroups> getToAuthorizeSecurityGroups() {
+        return this.toAuthorizeSecurityGroups;
+    }
+
     public AddServiceSourceRequest setType(String type) {
         this.type = type;
         return this;
@@ -209,6 +220,47 @@ public class AddServiceSourceRequest extends TeaModel {
         }
         public String getWatchNamespace() {
             return this.watchNamespace;
+        }
+
+    }
+
+    public static class AddServiceSourceRequestToAuthorizeSecurityGroups extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("PortRange")
+        public String portRange;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        public static AddServiceSourceRequestToAuthorizeSecurityGroups build(java.util.Map<String, ?> map) throws Exception {
+            AddServiceSourceRequestToAuthorizeSecurityGroups self = new AddServiceSourceRequestToAuthorizeSecurityGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public AddServiceSourceRequestToAuthorizeSecurityGroups setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public AddServiceSourceRequestToAuthorizeSecurityGroups setPortRange(String portRange) {
+            this.portRange = portRange;
+            return this;
+        }
+        public String getPortRange() {
+            return this.portRange;
+        }
+
+        public AddServiceSourceRequestToAuthorizeSecurityGroups setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
         }
 
     }
