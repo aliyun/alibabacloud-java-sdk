@@ -648,6 +648,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AndroidVivoPushMode", request.androidVivoPushMode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.androidVivoReceiptId)) {
+            query.put("AndroidVivoReceiptId", request.androidVivoReceiptId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.androidXiaoMiActivity)) {
             query.put("AndroidXiaoMiActivity", request.androidXiaoMiActivity);
         }

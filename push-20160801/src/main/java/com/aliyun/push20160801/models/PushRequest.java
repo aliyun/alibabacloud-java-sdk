@@ -103,6 +103,9 @@ public class PushRequest extends TeaModel {
     @NameInMap("AndroidVivoPushMode")
     public Integer androidVivoPushMode;
 
+    @NameInMap("AndroidVivoReceiptId")
+    public String androidVivoReceiptId;
+
     @NameInMap("AndroidXiaoMiActivity")
     @Deprecated
     public String androidXiaoMiActivity;
@@ -491,6 +494,14 @@ public class PushRequest extends TeaModel {
     }
     public Integer getAndroidVivoPushMode() {
         return this.androidVivoPushMode;
+    }
+
+    public PushRequest setAndroidVivoReceiptId(String androidVivoReceiptId) {
+        this.androidVivoReceiptId = androidVivoReceiptId;
+        return this;
+    }
+    public String getAndroidVivoReceiptId() {
+        return this.androidVivoReceiptId;
     }
 
     public PushRequest setAndroidXiaoMiActivity(String androidXiaoMiActivity) {
