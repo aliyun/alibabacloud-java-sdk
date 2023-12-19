@@ -25,9 +25,15 @@ public class UpdateClusterRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The end time of the O\&M window.</p>
+     */
     @NameInMap("MaintenanceEndTime")
     public String maintenanceEndTime;
 
+    /**
+     * <p>The start time of the O\&M window.</p>
+     */
     @NameInMap("MaintenanceStartTime")
     public String maintenanceStartTime;
 

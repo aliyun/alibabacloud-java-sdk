@@ -71,7 +71,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the primary key. The value -1 specifies a request that is used to create a lane. A value greater than 0 specifies a request that is used to modify a lane.</p>
+     * <p>The tag.</p>
      */
     @NameInMap("Tag")
     public String tag;

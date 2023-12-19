@@ -19,11 +19,14 @@ public class ModifyGovernanceKubernetesClusterRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The information about the namespace for which Microservices Engine(MSE) Microservices Governance is enabled.</p>
+     */
     @NameInMap("NamespaceInfos")
     public java.util.List<ModifyGovernanceKubernetesClusterRequestNamespaceInfos> namespaceInfos;
 
     /**
-     * <p>The region in which the cluster resides.</p>
+     * <p>The ID of the region in which the instance resides. The region is supported by MSE.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -66,9 +69,15 @@ public class ModifyGovernanceKubernetesClusterRequest extends TeaModel {
     }
 
     public static class ModifyGovernanceKubernetesClusterRequestNamespaceInfos extends TeaModel {
+        /**
+         * <p>The microservice namespace.If you do not specify this parameter, Microservice Governance is not enabled for the namespace.</p>
+         */
         @NameInMap("MseNamespace")
         public String mseNamespace;
 
+        /**
+         * <p>The name of the Kubernetes namespace.</p>
+         */
         @NameInMap("Name")
         public String name;
 

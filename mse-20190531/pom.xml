@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>mse20190531</artifactId>
-  <version>6.2.3</version>
+  <version>6.2.4</version>
   <packaging>jar</packaging>
   <name>mse20190531</name>
   <description>Alibaba Cloud Microservice Engine (20190531) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.8</version>
+      <version>0.3.1</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

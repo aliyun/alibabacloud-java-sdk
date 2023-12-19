@@ -97,6 +97,9 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
     }
 
     public static class ListSecurityGroupRuleResponseBodyData extends TeaModel {
+        @NameInMap("AuthCidrs")
+        public java.util.List<String> authCidrs;
+
         /**
          * <p>The rule description.</p>
          */
@@ -154,6 +157,14 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
         public static ListSecurityGroupRuleResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListSecurityGroupRuleResponseBodyData self = new ListSecurityGroupRuleResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListSecurityGroupRuleResponseBodyData setAuthCidrs(java.util.List<String> authCidrs) {
+            this.authCidrs = authCidrs;
+            return this;
+        }
+        public java.util.List<String> getAuthCidrs() {
+            return this.authCidrs;
         }
 
         public ListSecurityGroupRuleResponseBodyData setDescription(String description) {

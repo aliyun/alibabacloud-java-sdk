@@ -19,11 +19,14 @@ public class ModifyGovernanceKubernetesClusterShrinkRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The information about the namespace for which Microservices Engine(MSE) Microservices Governance is enabled.</p>
+     */
     @NameInMap("NamespaceInfos")
     public String namespaceInfosShrink;
 
     /**
-     * <p>The region in which the cluster resides.</p>
+     * <p>The ID of the region in which the instance resides. The region is supported by MSE.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

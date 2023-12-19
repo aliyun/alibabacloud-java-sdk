@@ -91,6 +91,9 @@ public class CreateCircuitBreakerRuleRequest extends TeaModel {
     @NameInMap("Resource")
     public String resource;
 
+    @NameInMap("ResourceType")
+    public Integer resourceType;
+
     /**
      * <p>The period in which circuit breaking is implemented. Unit: milliseconds. If circuit breaking is implemented on the requests for the route, the calls to all the requests for the route fail in the configured circuit breaking period. The value must be an integral multiple of 1,000. Default value: 10000. This value indicates 10 seconds.</p>
      */
@@ -232,6 +235,14 @@ public class CreateCircuitBreakerRuleRequest extends TeaModel {
     }
     public String getResource() {
         return this.resource;
+    }
+
+    public CreateCircuitBreakerRuleRequest setResourceType(Integer resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public Integer getResourceType() {
+        return this.resourceType;
     }
 
     public CreateCircuitBreakerRuleRequest setRetryTimeoutMs(Integer retryTimeoutMs) {

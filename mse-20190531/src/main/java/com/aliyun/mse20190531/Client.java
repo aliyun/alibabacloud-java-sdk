@@ -948,6 +948,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.pathListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.pathList, "PathList", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.toAuthorizeSecurityGroups)) {
+            request.toAuthorizeSecurityGroupsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.toAuthorizeSecurityGroups, "ToAuthorizeSecurityGroups", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
             query.put("AcceptLanguage", request.acceptLanguage);
@@ -979,6 +983,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
             query.put("Source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toAuthorizeSecurityGroupsShrink)) {
+            query.put("ToAuthorizeSecurityGroups", request.toAuthorizeSecurityGroupsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
@@ -1273,6 +1281,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Resource", request.resource);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.retryTimeoutMs)) {
             query.put("RetryTimeoutMs", request.retryTimeoutMs);
         }
@@ -1527,6 +1539,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resource)) {
             query.put("Resource", request.resource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.threshold)) {
@@ -2901,6 +2917,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
             query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cascadingDelete)) {
+            query.put("CascadingDelete", request.cascadingDelete);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.gatewayUniqueId)) {

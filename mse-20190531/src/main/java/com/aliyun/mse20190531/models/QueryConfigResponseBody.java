@@ -179,6 +179,9 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("ConfigSecretSupported")
         public Boolean configSecretSupported;
 
+        /**
+         * <p>Indicates whether the Nacos open source console is enabled.</p>
+         */
         @NameInMap("ConsoleUIEnabled")
         public Boolean consoleUIEnabled;
 
