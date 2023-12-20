@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>rds20140815</artifactId>
-  <version>2.0.0</version>
+  <version>2.0.1</version>
   <packaging>jar</packaging>
   <name>rds20140815</name>
   <description>Alibaba Cloud rds (20140815) SDK for Java
