@@ -105,6 +105,110 @@ public class ListDeployConfigResponseBody extends TeaModel {
 
     }
 
+    public static class ListDeployConfigResponseBodyDataContainerResourceLimit extends TeaModel {
+        @NameInMap("Cpu")
+        public String cpu;
+
+        @NameInMap("Gpu")
+        public String gpu;
+
+        @NameInMap("Memory")
+        public String memory;
+
+        @NameInMap("Storage")
+        public String storage;
+
+        public static ListDeployConfigResponseBodyDataContainerResourceLimit build(java.util.Map<String, ?> map) throws Exception {
+            ListDeployConfigResponseBodyDataContainerResourceLimit self = new ListDeployConfigResponseBodyDataContainerResourceLimit();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDeployConfigResponseBodyDataContainerResourceLimit setCpu(String cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public String getCpu() {
+            return this.cpu;
+        }
+
+        public ListDeployConfigResponseBodyDataContainerResourceLimit setGpu(String gpu) {
+            this.gpu = gpu;
+            return this;
+        }
+        public String getGpu() {
+            return this.gpu;
+        }
+
+        public ListDeployConfigResponseBodyDataContainerResourceLimit setMemory(String memory) {
+            this.memory = memory;
+            return this;
+        }
+        public String getMemory() {
+            return this.memory;
+        }
+
+        public ListDeployConfigResponseBodyDataContainerResourceLimit setStorage(String storage) {
+            this.storage = storage;
+            return this;
+        }
+        public String getStorage() {
+            return this.storage;
+        }
+
+    }
+
+    public static class ListDeployConfigResponseBodyDataContainerResourceRequest extends TeaModel {
+        @NameInMap("Cpu")
+        public String cpu;
+
+        @NameInMap("Gpu")
+        public String gpu;
+
+        @NameInMap("Memory")
+        public String memory;
+
+        @NameInMap("Storage")
+        public String storage;
+
+        public static ListDeployConfigResponseBodyDataContainerResourceRequest build(java.util.Map<String, ?> map) throws Exception {
+            ListDeployConfigResponseBodyDataContainerResourceRequest self = new ListDeployConfigResponseBodyDataContainerResourceRequest();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDeployConfigResponseBodyDataContainerResourceRequest setCpu(String cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public String getCpu() {
+            return this.cpu;
+        }
+
+        public ListDeployConfigResponseBodyDataContainerResourceRequest setGpu(String gpu) {
+            this.gpu = gpu;
+            return this;
+        }
+        public String getGpu() {
+            return this.gpu;
+        }
+
+        public ListDeployConfigResponseBodyDataContainerResourceRequest setMemory(String memory) {
+            this.memory = memory;
+            return this;
+        }
+        public String getMemory() {
+            return this.memory;
+        }
+
+        public ListDeployConfigResponseBodyDataContainerResourceRequest setStorage(String storage) {
+            this.storage = storage;
+            return this;
+        }
+        public String getStorage() {
+            return this.storage;
+        }
+
+    }
+
     public static class ListDeployConfigResponseBodyDataContainerYamlConf extends TeaModel {
         @NameInMap("ConfigMap")
         public String configMap;
@@ -186,6 +290,12 @@ public class ListDeployConfigResponseBody extends TeaModel {
         @NameInMap("ContainerCodePath")
         public ListDeployConfigResponseBodyDataContainerCodePath containerCodePath;
 
+        @NameInMap("ContainerResourceLimit")
+        public ListDeployConfigResponseBodyDataContainerResourceLimit containerResourceLimit;
+
+        @NameInMap("ContainerResourceRequest")
+        public ListDeployConfigResponseBodyDataContainerResourceRequest containerResourceRequest;
+
         @NameInMap("ContainerYamlConf")
         public ListDeployConfigResponseBodyDataContainerYamlConf containerYamlConf;
 
@@ -217,6 +327,22 @@ public class ListDeployConfigResponseBody extends TeaModel {
         }
         public ListDeployConfigResponseBodyDataContainerCodePath getContainerCodePath() {
             return this.containerCodePath;
+        }
+
+        public ListDeployConfigResponseBodyData setContainerResourceLimit(ListDeployConfigResponseBodyDataContainerResourceLimit containerResourceLimit) {
+            this.containerResourceLimit = containerResourceLimit;
+            return this;
+        }
+        public ListDeployConfigResponseBodyDataContainerResourceLimit getContainerResourceLimit() {
+            return this.containerResourceLimit;
+        }
+
+        public ListDeployConfigResponseBodyData setContainerResourceRequest(ListDeployConfigResponseBodyDataContainerResourceRequest containerResourceRequest) {
+            this.containerResourceRequest = containerResourceRequest;
+            return this;
+        }
+        public ListDeployConfigResponseBodyDataContainerResourceRequest getContainerResourceRequest() {
+            return this.containerResourceRequest;
         }
 
         public ListDeployConfigResponseBodyData setContainerYamlConf(ListDeployConfigResponseBodyDataContainerYamlConf containerYamlConf) {
