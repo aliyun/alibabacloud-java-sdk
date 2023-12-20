@@ -44,21 +44,39 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
         @NameInMap("buildDeployId")
         public Integer buildDeployId;
 
+        /**
+         * <p>The time to start index building.</p>
+         */
         @NameInMap("createTime")
         public Long createTime;
 
+        /**
+         * <p>The directory where the index file created by using the dump table is saved.</p>
+         */
         @NameInMap("dataDumpRoot")
         public String dataDumpRoot;
 
+        /**
+         * <p>The primary key of the generation.</p>
+         */
         @NameInMap("generation")
         public Long generation;
 
+        /**
+         * <p>Key indicates the name of the index. value indicates the number of shards.</p>
+         */
         @NameInMap("partition")
         public java.util.Map<String, Integer> partition;
 
+        /**
+         * <p>The status.</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The timestamp when the offline indexing was initiated.</p>
+         */
         @NameInMap("timestamp")
         public Long timestamp;
 

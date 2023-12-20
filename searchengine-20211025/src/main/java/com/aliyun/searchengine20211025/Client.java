@@ -430,7 +430,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The result returned
+      * ## Method
+      * `DELETE`
+      * ## URI
+      * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
       *
       * @param headers map
       * @param runtime runtime options for this request RuntimeOptions
@@ -455,7 +458,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The result returned
+      * ## Method
+      * `DELETE`
+      * ## URI
+      * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
       *
       * @return DeleteDataSourceResponse
      */
@@ -1154,7 +1160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return ListClusterNamesResponse
      */
-    public ListClusterNamesResponse listClusterNamesWithOptions(String instanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListClusterNamesResponse listClusterNamesWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -1162,7 +1168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ListClusterNames"),
             new TeaPair("version", "2021-10-25"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/cluster-names"),
+            new TeaPair("pathname", "/openapi/ha3/cluster-names"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1180,10 +1186,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
       *
       * @return ListClusterNamesResponse
      */
-    public ListClusterNamesResponse listClusterNames(String instanceId) throws Exception {
+    public ListClusterNamesResponse listClusterNames() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listClusterNamesWithOptions(instanceId, headers, runtime);
+        return this.listClusterNamesWithOptions(headers, runtime);
     }
 
     public ListClusterTasksResponse listClusterTasksWithOptions(String instanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1330,6 +1336,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listDataSourcesWithOptions(instanceId, headers, runtime);
     }
 
+    /**
+      * ### Method
+      * `GET`
+      * ### URI
+      * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}`
+      *
+      * @param request ListDateSourceGenerationsRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListDateSourceGenerationsResponse
+     */
     public ListDateSourceGenerationsResponse listDateSourceGenerationsWithOptions(String instanceId, String dataSourceName, ListDateSourceGenerationsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1359,6 +1376,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListDateSourceGenerationsResponse());
     }
 
+    /**
+      * ### Method
+      * `GET`
+      * ### URI
+      * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}/generations?domainName={domainName}`
+      *
+      * @param request ListDateSourceGenerationsRequest
+      * @return ListDateSourceGenerationsResponse
+     */
     public ListDateSourceGenerationsResponse listDateSourceGenerations(String instanceId, String dataSourceName, ListDateSourceGenerationsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1684,7 +1710,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The name of the cluster
+      * ### Method
+      * `PUT`
+      * ### URI
+      * `/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc`
       *
       * @param request ModifyClusterDescRequest
       * @param headers map
@@ -1717,7 +1746,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The name of the cluster
+      * ### Method
+      * `PUT`
+      * ### URI
+      * `/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc`
       *
       * @param request ModifyClusterDescRequest
       * @return ModifyClusterDescResponse
@@ -2399,7 +2431,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The name of the index
+      * ### Method
+      * `POST`
+      * ### URI
+      * `/openapi/ha3/instances/{instanceId}/recover-index`
       *
       * @param request RecoverIndexRequest
       * @param headers map
@@ -2444,7 +2479,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The name of the index
+      * ### Method
+      * `POST`
+      * ### URI
+      * `/openapi/ha3/instances/{instanceId}/recover-index`
       *
       * @param request RecoverIndexRequest
       * @return RecoverIndexResponse

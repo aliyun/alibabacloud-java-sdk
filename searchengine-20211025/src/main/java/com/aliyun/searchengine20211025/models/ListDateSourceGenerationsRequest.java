@@ -4,11 +4,17 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ListDateSourceGenerationsRequest extends TeaModel {
+    /**
+     * <p>The data center where the data source is deployed.</p>
+     */
     @NameInMap("domainName")
     public String domainName;
 
     /**
-     * <p>Obtains the data restoration version of a data source.</p>
+     * <p>The valid state of the data source. Valid values: true and false. The default value of this parameter is true.</p>
+     * <br>
+     * <p>1.  true indicates that the generations that have not expired and of which the tasks have been executed are returned.</p>
+     * <p>2.  false indicates that all generations are returned.</p>
      */
     @NameInMap("validStatus")
     public Boolean validStatus;

@@ -4,6 +4,9 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterDescRequest extends TeaModel {
+    /**
+     * <p>The parameters in the request body</p>
+     */
     @NameInMap("body")
     public java.util.Map<String, ?> body;
 
