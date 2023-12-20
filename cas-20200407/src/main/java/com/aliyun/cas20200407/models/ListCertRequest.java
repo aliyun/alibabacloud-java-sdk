@@ -4,27 +4,68 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class ListCertRequest extends TeaModel {
+    /**
+     * <p>The type of the certificate.</p>
+     * <br>
+     * <p>*   **CA**: the CA certificate.</p>
+     * <p>*   **CERT**: a issued certificate.</p>
+     */
+    @NameInMap("CertType")
+    public String certType;
+
+    /**
+     * <p>The number of the page to return. Default value: 1.</p>
+     */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
+    /**
+     * <p>The keyword for the query. You can enter a name, domain name, or Subject Alternative Name (SAN) extension. Fuzzy match is supported.</p>
+     */
     @NameInMap("KeyWord")
     public String keyWord;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 50.</p>
+     */
     @NameInMap("ShowSize")
     public Long showSize;
 
+    /**
+     * <p>The source of the certificate. Valid values:</p>
+     * <br>
+     * <p>*   **upload**: uploaded certificate</p>
+     * <p>*   **aliyun**: Alibaba Cloud certificate</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <p>The status of the certificate. Valid values:</p>
+     * <br>
+     * <p>*   **ISSUE**: issued</p>
+     * <p>*   **REVOKE**: revoked</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The ID of the certificate repository. You can call the [ListCertWarehouse](~~453246~~) operation to query the IDs of certificate repositories.</p>
+     */
     @NameInMap("WarehouseId")
     public Long warehouseId;
 
     public static ListCertRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCertRequest self = new ListCertRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListCertRequest setCertType(String certType) {
+        this.certType = certType;
+        return this;
+    }
+    public String getCertType() {
+        return this.certType;
     }
 
     public ListCertRequest setCurrentPage(Long currentPage) {
