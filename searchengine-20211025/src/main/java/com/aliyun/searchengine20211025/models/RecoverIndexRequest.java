@@ -10,6 +10,9 @@ public class RecoverIndexRequest extends TeaModel {
     @NameInMap("buildDeployId")
     public Integer buildDeployId;
 
+    /**
+     * <p>The name of the data source</p>
+     */
     @NameInMap("dataSourceName")
     public String dataSourceName;
 
@@ -19,6 +22,9 @@ public class RecoverIndexRequest extends TeaModel {
     @NameInMap("generation")
     public String generation;
 
+    /**
+     * <p>The name of the index</p>
+     */
     @NameInMap("indexName")
     public String indexName;
 

@@ -5,37 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyIndexVersionRequest extends TeaModel {
     /**
-     * <p>## Sample requests</p>
-     * <br>
-     * <p>﻿</p>
-     * <br>
-     * <p>    PUT /openapi/ha3/instances/ha3_instance_nameclusters/test_cluster/index-version</p>
-     * <br>
-     * <p>﻿</p>
-     * <br>
-     * <p>    [</p>
-     * <p>    ﻿</p>
-     * <p>      {</p>
-     * <p>    ﻿</p>
-     * <p>        "indexName": "index1",</p>
-     * <p>    ﻿</p>
-     * <p>        "version": "123456",</p>
-     * <p>    ﻿</p>
-     * <p>        "buildDeployId": "20201010"</p>
-     * <p>    ﻿</p>
-     * <p>      },</p>
-     * <p>    ﻿</p>
-     * <p>      {</p>
-     * <p>    ﻿</p>
-     * <p>        "indexName": "index1",</p>
-     * <p>    ﻿</p>
-     * <p>        "version": "123456",</p>
-     * <p>    ﻿</p>
-     * <p>        "buildDeployId": "20201010"</p>
-     * <p>    ﻿</p>
-     * <p>      }</p>
-     * <p>    ﻿</p>
-     * <p>    ]</p>
+     * <p>The keyword used to search for a version. Fuzzy match is supported.</p>
      */
     @NameInMap("body")
     public java.util.List<ModifyIndexVersionRequestBody> body;
@@ -54,15 +24,21 @@ public class ModifyIndexVersionRequest extends TeaModel {
     }
 
     public static class ModifyIndexVersionRequestBody extends TeaModel {
+        /**
+         * <p>The ID of the index deployed in offline mode.</p>
+         */
         @NameInMap("buildDeployId")
         public String buildDeployId;
 
         /**
-         * <p>WB01240825</p>
+         * <p>The name of the index.</p>
          */
         @NameInMap("indexName")
         public String indexName;
 
+        /**
+         * <p>The version of the index.</p>
+         */
         @NameInMap("version")
         public String version;
 
