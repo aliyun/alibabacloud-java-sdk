@@ -1,3 +1,6 @@
+2023-12-20 Version: 1.1.0
+- Generated java 2022-09-26 for Green.
+
 2023-12-20 Version: 1.0.0
 - Generated java 2022-09-26 for Green.
 
