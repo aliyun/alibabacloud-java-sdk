@@ -3950,12 +3950,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateNormalDeployConfigShrinkRequest request = new UpdateNormalDeployConfigShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.containerResourceLimit))) {
-            request.containerResourceLimitShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.containerResourceLimit), "ContainerResourceLimit", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.containerResourceLimit)) {
+            request.containerResourceLimitShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.containerResourceLimit, "ContainerResourceLimit", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.containerResourceRequest))) {
-            request.containerResourceRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.containerResourceRequest), "ContainerResourceRequest", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.containerResourceRequest)) {
+            request.containerResourceRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.containerResourceRequest, "ContainerResourceRequest", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
