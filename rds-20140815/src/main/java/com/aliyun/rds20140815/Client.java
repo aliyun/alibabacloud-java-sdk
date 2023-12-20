@@ -17766,6 +17766,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBInstanceId", request.DBInstanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.forceEncryption)) {
+            query.put("ForceEncryption", request.forceEncryption);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -17796,6 +17800,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serverKey)) {
             query.put("ServerKey", request.serverKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tlsVersion)) {
+            query.put("TlsVersion", request.tlsVersion);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

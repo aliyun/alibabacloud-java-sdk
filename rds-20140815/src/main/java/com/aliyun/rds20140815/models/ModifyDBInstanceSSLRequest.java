@@ -66,6 +66,9 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("ForceEncryption")
+    public String forceEncryption;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -109,6 +112,9 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
      */
     @NameInMap("ServerKey")
     public String serverKey;
+
+    @NameInMap("TlsVersion")
+    public String tlsVersion;
 
     public static ModifyDBInstanceSSLRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceSSLRequest self = new ModifyDBInstanceSSLRequest();
@@ -179,6 +185,14 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
+    public ModifyDBInstanceSSLRequest setForceEncryption(String forceEncryption) {
+        this.forceEncryption = forceEncryption;
+        return this;
+    }
+    public String getForceEncryption() {
+        return this.forceEncryption;
+    }
+
     public ModifyDBInstanceSSLRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -241,6 +255,14 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     }
     public String getServerKey() {
         return this.serverKey;
+    }
+
+    public ModifyDBInstanceSSLRequest setTlsVersion(String tlsVersion) {
+        this.tlsVersion = tlsVersion;
+        return this;
+    }
+    public String getTlsVersion() {
+        return this.tlsVersion;
     }
 
 }

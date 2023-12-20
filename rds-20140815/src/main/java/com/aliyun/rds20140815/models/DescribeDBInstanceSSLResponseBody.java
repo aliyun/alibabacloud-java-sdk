@@ -48,6 +48,9 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     @NameInMap("ConnectionString")
     public String connectionString;
 
+    @NameInMap("ForceEncryption")
+    public String forceEncryption;
+
     /**
      * <p>The status of the SSL link. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:</p>
      * <br>
@@ -155,6 +158,9 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     @NameInMap("ServerKey")
     public String serverKey;
 
+    @NameInMap("TlsVersion")
+    public String tlsVersion;
+
     public static DescribeDBInstanceSSLResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstanceSSLResponseBody self = new DescribeDBInstanceSSLResponseBody();
         return TeaModel.build(map, self);
@@ -206,6 +212,14 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     }
     public String getConnectionString() {
         return this.connectionString;
+    }
+
+    public DescribeDBInstanceSSLResponseBody setForceEncryption(String forceEncryption) {
+        this.forceEncryption = forceEncryption;
+        return this;
+    }
+    public String getForceEncryption() {
+        return this.forceEncryption;
     }
 
     public DescribeDBInstanceSSLResponseBody setLastModifyStatus(String lastModifyStatus) {
@@ -310,6 +324,14 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     }
     public String getServerKey() {
         return this.serverKey;
+    }
+
+    public DescribeDBInstanceSSLResponseBody setTlsVersion(String tlsVersion) {
+        this.tlsVersion = tlsVersion;
+        return this;
+    }
+    public String getTlsVersion() {
+        return this.tlsVersion;
     }
 
 }
