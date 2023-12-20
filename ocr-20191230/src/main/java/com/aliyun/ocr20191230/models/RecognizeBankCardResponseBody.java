@@ -38,6 +38,9 @@ public class RecognizeBankCardResponseBody extends TeaModel {
         @NameInMap("CardNumber")
         public String cardNumber;
 
+        @NameInMap("CardType")
+        public String cardType;
+
         @NameInMap("ValidDate")
         public String validDate;
 
@@ -60,6 +63,14 @@ public class RecognizeBankCardResponseBody extends TeaModel {
         }
         public String getCardNumber() {
             return this.cardNumber;
+        }
+
+        public RecognizeBankCardResponseBodyData setCardType(String cardType) {
+            this.cardType = cardType;
+            return this;
+        }
+        public String getCardType() {
+            return this.cardType;
         }
 
         public RecognizeBankCardResponseBodyData setValidDate(String validDate) {
