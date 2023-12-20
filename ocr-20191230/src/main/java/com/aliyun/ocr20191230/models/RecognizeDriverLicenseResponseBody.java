@@ -87,6 +87,9 @@ public class RecognizeDriverLicenseResponseBody extends TeaModel {
         @NameInMap("Address")
         public String address;
 
+        @NameInMap("BirthDate")
+        public String birthDate;
+
         @NameInMap("EndDate")
         public String endDate;
 
@@ -105,6 +108,9 @@ public class RecognizeDriverLicenseResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("Nationality")
+        public String nationality;
+
         @NameInMap("StartDate")
         public String startDate;
 
@@ -122,6 +128,14 @@ public class RecognizeDriverLicenseResponseBody extends TeaModel {
         }
         public String getAddress() {
             return this.address;
+        }
+
+        public RecognizeDriverLicenseResponseBodyDataFaceResult setBirthDate(String birthDate) {
+            this.birthDate = birthDate;
+            return this;
+        }
+        public String getBirthDate() {
+            return this.birthDate;
         }
 
         public RecognizeDriverLicenseResponseBodyDataFaceResult setEndDate(String endDate) {
@@ -170,6 +184,14 @@ public class RecognizeDriverLicenseResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public RecognizeDriverLicenseResponseBodyDataFaceResult setNationality(String nationality) {
+            this.nationality = nationality;
+            return this;
+        }
+        public String getNationality() {
+            return this.nationality;
         }
 
         public RecognizeDriverLicenseResponseBodyDataFaceResult setStartDate(String startDate) {
