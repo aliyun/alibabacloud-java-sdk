@@ -149,20 +149,39 @@ public class CreateTaskRequest extends TeaModel {
 
     }
 
+    public static class CreateTaskRequestParametersMeetingAssistance extends TeaModel {
+        @NameInMap("Types")
+        public java.util.List<String> types;
+
+        public static CreateTaskRequestParametersMeetingAssistance build(java.util.Map<String, ?> map) throws Exception {
+            CreateTaskRequestParametersMeetingAssistance self = new CreateTaskRequestParametersMeetingAssistance();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTaskRequestParametersMeetingAssistance setTypes(java.util.List<String> types) {
+            this.types = types;
+            return this;
+        }
+        public java.util.List<String> getTypes() {
+            return this.types;
+        }
+
+    }
+
     public static class CreateTaskRequestParametersSummarization extends TeaModel {
         @NameInMap("Types")
-        public java.util.Map<String, ?> types;
+        public java.util.List<String> types;
 
         public static CreateTaskRequestParametersSummarization build(java.util.Map<String, ?> map) throws Exception {
             CreateTaskRequestParametersSummarization self = new CreateTaskRequestParametersSummarization();
             return TeaModel.build(map, self);
         }
 
-        public CreateTaskRequestParametersSummarization setTypes(java.util.Map<String, ?> types) {
+        public CreateTaskRequestParametersSummarization setTypes(java.util.List<String> types) {
             this.types = types;
             return this;
         }
-        public java.util.Map<String, ?> getTypes() {
+        public java.util.List<String> getTypes() {
             return this.types;
         }
 
@@ -307,7 +326,7 @@ public class CreateTaskRequest extends TeaModel {
         public Integer outputLevel;
 
         @NameInMap("TargetLanguages")
-        public java.util.Map<String, ?> targetLanguages;
+        public java.util.List<String> targetLanguages;
 
         public static CreateTaskRequestParametersTranslation build(java.util.Map<String, ?> map) throws Exception {
             CreateTaskRequestParametersTranslation self = new CreateTaskRequestParametersTranslation();
@@ -322,11 +341,11 @@ public class CreateTaskRequest extends TeaModel {
             return this.outputLevel;
         }
 
-        public CreateTaskRequestParametersTranslation setTargetLanguages(java.util.Map<String, ?> targetLanguages) {
+        public CreateTaskRequestParametersTranslation setTargetLanguages(java.util.List<String> targetLanguages) {
             this.targetLanguages = targetLanguages;
             return this;
         }
-        public java.util.Map<String, ?> getTargetLanguages() {
+        public java.util.List<String> getTargetLanguages() {
             return this.targetLanguages;
         }
 
@@ -335,6 +354,9 @@ public class CreateTaskRequest extends TeaModel {
     public static class CreateTaskRequestParameters extends TeaModel {
         @NameInMap("AutoChaptersEnabled")
         public Boolean autoChaptersEnabled;
+
+        @NameInMap("MeetingAssistance")
+        public CreateTaskRequestParametersMeetingAssistance meetingAssistance;
 
         @NameInMap("MeetingAssistanceEnabled")
         public Boolean meetingAssistanceEnabled;
@@ -371,6 +393,14 @@ public class CreateTaskRequest extends TeaModel {
         }
         public Boolean getAutoChaptersEnabled() {
             return this.autoChaptersEnabled;
+        }
+
+        public CreateTaskRequestParameters setMeetingAssistance(CreateTaskRequestParametersMeetingAssistance meetingAssistance) {
+            this.meetingAssistance = meetingAssistance;
+            return this;
+        }
+        public CreateTaskRequestParametersMeetingAssistance getMeetingAssistance() {
+            return this.meetingAssistance;
         }
 
         public CreateTaskRequestParameters setMeetingAssistanceEnabled(Boolean meetingAssistanceEnabled) {
