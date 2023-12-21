@@ -16,6 +16,9 @@ public class CreateDeliveryPlanRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
+    @NameInMap("TenantContext")
+    public CreateDeliveryPlanRequestTenantContext tenantContext;
+
     @NameInMap("UserIdList")
     public java.util.List<String> userIdList;
 
@@ -56,12 +59,39 @@ public class CreateDeliveryPlanRequest extends TeaModel {
         return this.startTime;
     }
 
+    public CreateDeliveryPlanRequest setTenantContext(CreateDeliveryPlanRequestTenantContext tenantContext) {
+        this.tenantContext = tenantContext;
+        return this;
+    }
+    public CreateDeliveryPlanRequestTenantContext getTenantContext() {
+        return this.tenantContext;
+    }
+
     public CreateDeliveryPlanRequest setUserIdList(java.util.List<String> userIdList) {
         this.userIdList = userIdList;
         return this;
     }
     public java.util.List<String> getUserIdList() {
         return this.userIdList;
+    }
+
+    public static class CreateDeliveryPlanRequestTenantContext extends TeaModel {
+        @NameInMap("tenantId")
+        public String tenantId;
+
+        public static CreateDeliveryPlanRequestTenantContext build(java.util.Map<String, ?> map) throws Exception {
+            CreateDeliveryPlanRequestTenantContext self = new CreateDeliveryPlanRequestTenantContext();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDeliveryPlanRequestTenantContext setTenantId(String tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+        public String getTenantId() {
+            return this.tenantId;
+        }
+
     }
 
 }

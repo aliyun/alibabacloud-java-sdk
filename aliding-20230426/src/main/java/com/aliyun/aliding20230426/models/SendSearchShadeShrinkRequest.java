@@ -13,6 +13,9 @@ public class SendSearchShadeShrinkRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
+    @NameInMap("TenantContext")
+    public String tenantContextShrink;
+
     public static SendSearchShadeShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SendSearchShadeShrinkRequest self = new SendSearchShadeShrinkRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class SendSearchShadeShrinkRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public SendSearchShadeShrinkRequest setTenantContextShrink(String tenantContextShrink) {
+        this.tenantContextShrink = tenantContextShrink;
+        return this;
+    }
+    public String getTenantContextShrink() {
+        return this.tenantContextShrink;
     }
 
 }

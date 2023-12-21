@@ -13,6 +13,9 @@ public class SendBannerRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
+    @NameInMap("TenantContext")
+    public SendBannerRequestTenantContext tenantContext;
+
     public static SendBannerRequest build(java.util.Map<String, ?> map) throws Exception {
         SendBannerRequest self = new SendBannerRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,33 @@ public class SendBannerRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public SendBannerRequest setTenantContext(SendBannerRequestTenantContext tenantContext) {
+        this.tenantContext = tenantContext;
+        return this;
+    }
+    public SendBannerRequestTenantContext getTenantContext() {
+        return this.tenantContext;
+    }
+
+    public static class SendBannerRequestTenantContext extends TeaModel {
+        @NameInMap("tenantId")
+        public String tenantId;
+
+        public static SendBannerRequestTenantContext build(java.util.Map<String, ?> map) throws Exception {
+            SendBannerRequestTenantContext self = new SendBannerRequestTenantContext();
+            return TeaModel.build(map, self);
+        }
+
+        public SendBannerRequestTenantContext setTenantId(String tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+        public String getTenantId() {
+            return this.tenantId;
+        }
+
     }
 
 }
