@@ -7,6 +7,9 @@ public class CreateModelVersionRequest extends TeaModel {
     @NameInMap("ApprovalStatus")
     public String approvalStatus;
 
+    @NameInMap("ExtraInfo")
+    public java.util.Map<String, ?> extraInfo;
+
     @NameInMap("FormatType")
     public String formatType;
 
@@ -54,6 +57,14 @@ public class CreateModelVersionRequest extends TeaModel {
     }
     public String getApprovalStatus() {
         return this.approvalStatus;
+    }
+
+    public CreateModelVersionRequest setExtraInfo(java.util.Map<String, ?> extraInfo) {
+        this.extraInfo = extraInfo;
+        return this;
+    }
+    public java.util.Map<String, ?> getExtraInfo() {
+        return this.extraInfo;
     }
 
     public CreateModelVersionRequest setFormatType(String formatType) {

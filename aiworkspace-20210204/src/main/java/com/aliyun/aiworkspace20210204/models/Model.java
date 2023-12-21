@@ -10,6 +10,9 @@ public class Model extends TeaModel {
     @NameInMap("Domain")
     public String domain;
 
+    @NameInMap("ExtraInfo")
+    public java.util.Map<String, ?> extraInfo;
+
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
@@ -34,6 +37,9 @@ public class Model extends TeaModel {
     @NameInMap("ModelName")
     public String modelName;
 
+    @NameInMap("ModelType")
+    public String modelType;
+
     @NameInMap("OrderNumber")
     public Long orderNumber;
 
@@ -45,12 +51,6 @@ public class Model extends TeaModel {
 
     @NameInMap("Provider")
     public String provider;
-
-    @NameInMap("SourceId")
-    public String sourceId;
-
-    @NameInMap("SourceType")
-    public String sourceType;
 
     @NameInMap("Task")
     public String task;
@@ -80,6 +80,14 @@ public class Model extends TeaModel {
     }
     public String getDomain() {
         return this.domain;
+    }
+
+    public Model setExtraInfo(java.util.Map<String, ?> extraInfo) {
+        this.extraInfo = extraInfo;
+        return this;
+    }
+    public java.util.Map<String, ?> getExtraInfo() {
+        return this.extraInfo;
     }
 
     public Model setGmtCreateTime(String gmtCreateTime) {
@@ -146,6 +154,14 @@ public class Model extends TeaModel {
         return this.modelName;
     }
 
+    public Model setModelType(String modelType) {
+        this.modelType = modelType;
+        return this;
+    }
+    public String getModelType() {
+        return this.modelType;
+    }
+
     public Model setOrderNumber(Long orderNumber) {
         this.orderNumber = orderNumber;
         return this;
@@ -176,22 +192,6 @@ public class Model extends TeaModel {
     }
     public String getProvider() {
         return this.provider;
-    }
-
-    public Model setSourceId(String sourceId) {
-        this.sourceId = sourceId;
-        return this;
-    }
-    public String getSourceId() {
-        return this.sourceId;
-    }
-
-    public Model setSourceType(String sourceType) {
-        this.sourceType = sourceType;
-        return this;
-    }
-    public String getSourceType() {
-        return this.sourceType;
     }
 
     public Model setTask(String task) {

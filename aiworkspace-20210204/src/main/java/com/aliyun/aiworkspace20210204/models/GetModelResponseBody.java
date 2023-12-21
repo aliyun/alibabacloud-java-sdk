@@ -10,6 +10,9 @@ public class GetModelResponseBody extends TeaModel {
     @NameInMap("Domain")
     public String domain;
 
+    @NameInMap("ExtraInfo")
+    public java.util.Map<String, ?> extraInfo;
+
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
@@ -33,6 +36,12 @@ public class GetModelResponseBody extends TeaModel {
 
     @NameInMap("ModelName")
     public String modelName;
+
+    @NameInMap("ModelType")
+    public String modelType;
+
+    @NameInMap("OrderNumber")
+    public Long orderNumber;
 
     @NameInMap("Origin")
     public String origin;
@@ -74,6 +83,14 @@ public class GetModelResponseBody extends TeaModel {
     }
     public String getDomain() {
         return this.domain;
+    }
+
+    public GetModelResponseBody setExtraInfo(java.util.Map<String, ?> extraInfo) {
+        this.extraInfo = extraInfo;
+        return this;
+    }
+    public java.util.Map<String, ?> getExtraInfo() {
+        return this.extraInfo;
     }
 
     public GetModelResponseBody setGmtCreateTime(String gmtCreateTime) {
@@ -138,6 +155,22 @@ public class GetModelResponseBody extends TeaModel {
     }
     public String getModelName() {
         return this.modelName;
+    }
+
+    public GetModelResponseBody setModelType(String modelType) {
+        this.modelType = modelType;
+        return this;
+    }
+    public String getModelType() {
+        return this.modelType;
+    }
+
+    public GetModelResponseBody setOrderNumber(Long orderNumber) {
+        this.orderNumber = orderNumber;
+        return this;
+    }
+    public Long getOrderNumber() {
+        return this.orderNumber;
     }
 
     public GetModelResponseBody setOrigin(String origin) {
