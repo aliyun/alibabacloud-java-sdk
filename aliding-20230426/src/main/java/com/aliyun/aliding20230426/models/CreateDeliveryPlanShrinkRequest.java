@@ -16,6 +16,9 @@ public class CreateDeliveryPlanShrinkRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
+    @NameInMap("TenantContext")
+    public String tenantContextShrink;
+
     @NameInMap("UserIdList")
     public String userIdListShrink;
 
@@ -54,6 +57,14 @@ public class CreateDeliveryPlanShrinkRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public CreateDeliveryPlanShrinkRequest setTenantContextShrink(String tenantContextShrink) {
+        this.tenantContextShrink = tenantContextShrink;
+        return this;
+    }
+    public String getTenantContextShrink() {
+        return this.tenantContextShrink;
     }
 
     public CreateDeliveryPlanShrinkRequest setUserIdListShrink(String userIdListShrink) {

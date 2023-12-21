@@ -13,6 +13,9 @@ public class SendSearchShadeRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
+    @NameInMap("TenantContext")
+    public SendSearchShadeRequestTenantContext tenantContext;
+
     public static SendSearchShadeRequest build(java.util.Map<String, ?> map) throws Exception {
         SendSearchShadeRequest self = new SendSearchShadeRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,33 @@ public class SendSearchShadeRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public SendSearchShadeRequest setTenantContext(SendSearchShadeRequestTenantContext tenantContext) {
+        this.tenantContext = tenantContext;
+        return this;
+    }
+    public SendSearchShadeRequestTenantContext getTenantContext() {
+        return this.tenantContext;
+    }
+
+    public static class SendSearchShadeRequestTenantContext extends TeaModel {
+        @NameInMap("tenantId")
+        public String tenantId;
+
+        public static SendSearchShadeRequestTenantContext build(java.util.Map<String, ?> map) throws Exception {
+            SendSearchShadeRequestTenantContext self = new SendSearchShadeRequestTenantContext();
+            return TeaModel.build(map, self);
+        }
+
+        public SendSearchShadeRequestTenantContext setTenantId(String tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+        public String getTenantId() {
+            return this.tenantId;
+        }
+
     }
 
 }
