@@ -4,6 +4,9 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListModelsRequest extends TeaModel {
+    @NameInMap("Collections")
+    public String collections;
+
     @NameInMap("Domain")
     public String domain;
 
@@ -12,6 +15,9 @@ public class ListModelsRequest extends TeaModel {
 
     @NameInMap("ModelName")
     public String modelName;
+
+    @NameInMap("ModelType")
+    public String modelType;
 
     @NameInMap("Order")
     public String order;
@@ -34,12 +40,6 @@ public class ListModelsRequest extends TeaModel {
     @NameInMap("SortBy")
     public String sortBy;
 
-    @NameInMap("SouceType")
-    public String souceType;
-
-    @NameInMap("SourceId")
-    public String sourceId;
-
     @NameInMap("Task")
     public String task;
 
@@ -49,6 +49,14 @@ public class ListModelsRequest extends TeaModel {
     public static ListModelsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListModelsRequest self = new ListModelsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListModelsRequest setCollections(String collections) {
+        this.collections = collections;
+        return this;
+    }
+    public String getCollections() {
+        return this.collections;
     }
 
     public ListModelsRequest setDomain(String domain) {
@@ -73,6 +81,14 @@ public class ListModelsRequest extends TeaModel {
     }
     public String getModelName() {
         return this.modelName;
+    }
+
+    public ListModelsRequest setModelType(String modelType) {
+        this.modelType = modelType;
+        return this;
+    }
+    public String getModelType() {
+        return this.modelType;
     }
 
     public ListModelsRequest setOrder(String order) {
@@ -129,22 +145,6 @@ public class ListModelsRequest extends TeaModel {
     }
     public String getSortBy() {
         return this.sortBy;
-    }
-
-    public ListModelsRequest setSouceType(String souceType) {
-        this.souceType = souceType;
-        return this;
-    }
-    public String getSouceType() {
-        return this.souceType;
-    }
-
-    public ListModelsRequest setSourceId(String sourceId) {
-        this.sourceId = sourceId;
-        return this;
-    }
-    public String getSourceId() {
-        return this.sourceId;
     }
 
     public ListModelsRequest setTask(String task) {

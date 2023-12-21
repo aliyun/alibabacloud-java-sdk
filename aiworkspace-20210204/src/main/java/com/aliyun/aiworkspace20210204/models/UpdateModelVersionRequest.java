@@ -7,6 +7,9 @@ public class UpdateModelVersionRequest extends TeaModel {
     @NameInMap("ApprovalStatus")
     public String approvalStatus;
 
+    @NameInMap("ExtraInfo")
+    public java.util.Map<String, ?> extraInfo;
+
     @NameInMap("InferenceSpec")
     public java.util.Map<String, ?> inferenceSpec;
 
@@ -39,6 +42,14 @@ public class UpdateModelVersionRequest extends TeaModel {
     }
     public String getApprovalStatus() {
         return this.approvalStatus;
+    }
+
+    public UpdateModelVersionRequest setExtraInfo(java.util.Map<String, ?> extraInfo) {
+        this.extraInfo = extraInfo;
+        return this;
+    }
+    public java.util.Map<String, ?> getExtraInfo() {
+        return this.extraInfo;
     }
 
     public UpdateModelVersionRequest setInferenceSpec(java.util.Map<String, ?> inferenceSpec) {

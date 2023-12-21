@@ -7,6 +7,9 @@ public class GetModelVersionResponseBody extends TeaModel {
     @NameInMap("ApprovalStatus")
     public String approvalStatus;
 
+    @NameInMap("ExtraInfo")
+    public java.util.Map<String, ?> extraInfo;
+
     @NameInMap("FormatType")
     public String formatType;
 
@@ -24,6 +27,9 @@ public class GetModelVersionResponseBody extends TeaModel {
 
     @NameInMap("Labels")
     public java.util.List<Label> labels;
+
+    @NameInMap("Metrics")
+    public java.util.Map<String, ?> metrics;
 
     @NameInMap("Options")
     public String options;
@@ -66,6 +72,14 @@ public class GetModelVersionResponseBody extends TeaModel {
     }
     public String getApprovalStatus() {
         return this.approvalStatus;
+    }
+
+    public GetModelVersionResponseBody setExtraInfo(java.util.Map<String, ?> extraInfo) {
+        this.extraInfo = extraInfo;
+        return this;
+    }
+    public java.util.Map<String, ?> getExtraInfo() {
+        return this.extraInfo;
     }
 
     public GetModelVersionResponseBody setFormatType(String formatType) {
@@ -114,6 +128,14 @@ public class GetModelVersionResponseBody extends TeaModel {
     }
     public java.util.List<Label> getLabels() {
         return this.labels;
+    }
+
+    public GetModelVersionResponseBody setMetrics(java.util.Map<String, ?> metrics) {
+        this.metrics = metrics;
+        return this;
+    }
+    public java.util.Map<String, ?> getMetrics() {
+        return this.metrics;
     }
 
     public GetModelVersionResponseBody setOptions(String options) {

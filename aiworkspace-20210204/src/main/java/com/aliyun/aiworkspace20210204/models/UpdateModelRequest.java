@@ -10,6 +10,9 @@ public class UpdateModelRequest extends TeaModel {
     @NameInMap("Domain")
     public String domain;
 
+    @NameInMap("ExtraInfo")
+    public java.util.Map<String, ?> extraInfo;
+
     @NameInMap("ModelDescription")
     public String modelDescription;
 
@@ -19,17 +22,14 @@ public class UpdateModelRequest extends TeaModel {
     @NameInMap("ModelName")
     public String modelName;
 
+    @NameInMap("ModelType")
+    public String modelType;
+
     @NameInMap("OrderNumber")
     public Long orderNumber;
 
     @NameInMap("Origin")
     public String origin;
-
-    @NameInMap("SourceId")
-    public String sourceId;
-
-    @NameInMap("SourceType")
-    public String sourceType;
 
     @NameInMap("Task")
     public String task;
@@ -53,6 +53,14 @@ public class UpdateModelRequest extends TeaModel {
     }
     public String getDomain() {
         return this.domain;
+    }
+
+    public UpdateModelRequest setExtraInfo(java.util.Map<String, ?> extraInfo) {
+        this.extraInfo = extraInfo;
+        return this;
+    }
+    public java.util.Map<String, ?> getExtraInfo() {
+        return this.extraInfo;
     }
 
     public UpdateModelRequest setModelDescription(String modelDescription) {
@@ -79,6 +87,14 @@ public class UpdateModelRequest extends TeaModel {
         return this.modelName;
     }
 
+    public UpdateModelRequest setModelType(String modelType) {
+        this.modelType = modelType;
+        return this;
+    }
+    public String getModelType() {
+        return this.modelType;
+    }
+
     public UpdateModelRequest setOrderNumber(Long orderNumber) {
         this.orderNumber = orderNumber;
         return this;
@@ -93,22 +109,6 @@ public class UpdateModelRequest extends TeaModel {
     }
     public String getOrigin() {
         return this.origin;
-    }
-
-    public UpdateModelRequest setSourceId(String sourceId) {
-        this.sourceId = sourceId;
-        return this;
-    }
-    public String getSourceId() {
-        return this.sourceId;
-    }
-
-    public UpdateModelRequest setSourceType(String sourceType) {
-        this.sourceType = sourceType;
-        return this;
-    }
-    public String getSourceType() {
-        return this.sourceType;
     }
 
     public UpdateModelRequest setTask(String task) {

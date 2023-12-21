@@ -10,6 +10,9 @@ public class CreateModelRequest extends TeaModel {
     @NameInMap("Domain")
     public String domain;
 
+    @NameInMap("ExtraInfo")
+    public java.util.Map<String, ?> extraInfo;
+
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
@@ -22,17 +25,14 @@ public class CreateModelRequest extends TeaModel {
     @NameInMap("ModelName")
     public String modelName;
 
+    @NameInMap("ModelType")
+    public String modelType;
+
     @NameInMap("OrderNumber")
     public Long orderNumber;
 
     @NameInMap("Origin")
     public String origin;
-
-    @NameInMap("SourceId")
-    public String sourceId;
-
-    @NameInMap("SourceType")
-    public String sourceType;
 
     @NameInMap("Task")
     public String task;
@@ -59,6 +59,14 @@ public class CreateModelRequest extends TeaModel {
     }
     public String getDomain() {
         return this.domain;
+    }
+
+    public CreateModelRequest setExtraInfo(java.util.Map<String, ?> extraInfo) {
+        this.extraInfo = extraInfo;
+        return this;
+    }
+    public java.util.Map<String, ?> getExtraInfo() {
+        return this.extraInfo;
     }
 
     public CreateModelRequest setLabels(java.util.List<Label> labels) {
@@ -93,6 +101,14 @@ public class CreateModelRequest extends TeaModel {
         return this.modelName;
     }
 
+    public CreateModelRequest setModelType(String modelType) {
+        this.modelType = modelType;
+        return this;
+    }
+    public String getModelType() {
+        return this.modelType;
+    }
+
     public CreateModelRequest setOrderNumber(Long orderNumber) {
         this.orderNumber = orderNumber;
         return this;
@@ -107,22 +123,6 @@ public class CreateModelRequest extends TeaModel {
     }
     public String getOrigin() {
         return this.origin;
-    }
-
-    public CreateModelRequest setSourceId(String sourceId) {
-        this.sourceId = sourceId;
-        return this;
-    }
-    public String getSourceId() {
-        return this.sourceId;
-    }
-
-    public CreateModelRequest setSourceType(String sourceType) {
-        this.sourceType = sourceType;
-        return this;
-    }
-    public String getSourceType() {
-        return this.sourceType;
     }
 
     public CreateModelRequest setTask(String task) {

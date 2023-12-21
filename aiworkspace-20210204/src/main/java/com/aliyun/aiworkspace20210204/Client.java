@@ -355,6 +355,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Domain", request.domain);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.extraInfo)) {
+            body.put("ExtraInfo", request.extraInfo);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.labels)) {
             body.put("Labels", request.labels);
         }
@@ -371,20 +375,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ModelName", request.modelName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.modelType)) {
+            body.put("ModelType", request.modelType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.orderNumber)) {
             body.put("OrderNumber", request.orderNumber);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.origin)) {
             body.put("Origin", request.origin);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
-            body.put("SourceId", request.sourceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
-            body.put("SourceType", request.sourceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.task)) {
@@ -455,6 +455,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.approvalStatus)) {
             body.put("ApprovalStatus", request.approvalStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraInfo)) {
+            body.put("ExtraInfo", request.extraInfo);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.formatType)) {
@@ -1612,6 +1616,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListModelsResponse listModelsWithOptions(ListModelsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collections)) {
+            query.put("Collections", request.collections);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
             query.put("Domain", request.domain);
         }
@@ -1622,6 +1630,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.modelName)) {
             query.put("ModelName", request.modelName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelType)) {
+            query.put("ModelType", request.modelType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.order)) {
@@ -1650,14 +1662,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
             query.put("SortBy", request.sortBy);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.souceType)) {
-            query.put("SouceType", request.souceType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
-            query.put("SourceId", request.sourceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.task)) {
@@ -2118,7 +2122,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.removeImageWithOptions(ImageId, headers, runtime);
     }
 
-    public RemoveImageLabelsResponse removeImageLabelsWithOptions(String ImageId, String LabelKeys, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public RemoveImageLabelsResponse removeImageLabelsWithOptions(String ImageId, String LabelKey, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -2126,7 +2130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "RemoveImageLabels"),
             new TeaPair("version", "2021-02-04"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/api/v1/images/" + com.aliyun.openapiutil.Client.getEncodeParam(ImageId) + "/labels/" + com.aliyun.openapiutil.Client.getEncodeParam(LabelKeys) + ""),
+            new TeaPair("pathname", "/api/v1/images/" + com.aliyun.openapiutil.Client.getEncodeParam(ImageId) + "/labels/" + com.aliyun.openapiutil.Client.getEncodeParam(LabelKey) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2136,10 +2140,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveImageLabelsResponse());
     }
 
-    public RemoveImageLabelsResponse removeImageLabels(String ImageId, String LabelKeys) throws Exception {
+    public RemoveImageLabelsResponse removeImageLabels(String ImageId, String LabelKey) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.removeImageLabelsWithOptions(ImageId, LabelKeys, headers, runtime);
+        return this.removeImageLabelsWithOptions(ImageId, LabelKey, headers, runtime);
     }
 
     public RemoveMemberRoleResponse removeMemberRoleWithOptions(String WorkspaceId, String MemberId, String RoleName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2247,6 +2251,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Domain", request.domain);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.extraInfo)) {
+            body.put("ExtraInfo", request.extraInfo);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.modelDescription)) {
             body.put("ModelDescription", request.modelDescription);
         }
@@ -2259,20 +2267,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ModelName", request.modelName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.modelType)) {
+            body.put("ModelType", request.modelType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.orderNumber)) {
             body.put("OrderNumber", request.orderNumber);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.origin)) {
             body.put("Origin", request.origin);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
-            body.put("SourceId", request.sourceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
-            body.put("SourceType", request.sourceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.task)) {
@@ -2308,6 +2312,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.approvalStatus)) {
             body.put("ApprovalStatus", request.approvalStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraInfo)) {
+            body.put("ExtraInfo", request.extraInfo);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.inferenceSpec)) {
