@@ -4,24 +4,48 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListCheckTypesResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListCheckTypesResponseBodyData> data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,15 +111,27 @@ public class ListCheckTypesResponseBody extends TeaModel {
     }
 
     public static class ListCheckTypesResponseBodyDataCheckDetails extends TeaModel {
+        /**
+         * <p>The list of the baseline categories of attribution.</p>
+         */
         @NameInMap("AffiliatedRiskTypes")
         public java.util.List<String> affiliatedRiskTypes;
 
+        /**
+         * <p>The list of baselines attribution.</p>
+         */
         @NameInMap("AffiliatedRisks")
         public java.util.List<String> affiliatedRisks;
 
+        /**
+         * <p>The ID of the check item.</p>
+         */
         @NameInMap("CheckId")
         public Long checkId;
 
+        /**
+         * <p>The description of the check item.</p>
+         */
         @NameInMap("CheckItem")
         public String checkItem;
 
@@ -139,12 +175,21 @@ public class ListCheckTypesResponseBody extends TeaModel {
     }
 
     public static class ListCheckTypesResponseBodyData extends TeaModel {
+        /**
+         * <p>The detail of check items.</p>
+         */
         @NameInMap("CheckDetails")
         public java.util.List<ListCheckTypesResponseBodyDataCheckDetails> checkDetails;
 
+        /**
+         * <p>The type of the check item.</p>
+         */
         @NameInMap("CheckType")
         public String checkType;
 
+        /**
+         * <p>The display name of the check item type.</p>
+         */
         @NameInMap("CheckTypeDisName")
         public String checkTypeDisName;
 

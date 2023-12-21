@@ -10,6 +10,9 @@ public class IgnoreCheckItemsRequest extends TeaModel {
     @NameInMap("CheckAndRiskTypeList")
     public java.util.List<IgnoreCheckItemsRequestCheckAndRiskTypeList> checkAndRiskTypeList;
 
+    /**
+     * <p>The IDs of check items.</p>
+     */
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;
 

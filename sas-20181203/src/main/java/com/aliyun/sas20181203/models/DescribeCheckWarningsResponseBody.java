@@ -106,9 +106,15 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         @NameInMap("CheckWarningId")
         public Long checkWarningId;
 
+        /**
+         * <p>The ID of the container.</p>
+         */
         @NameInMap("ContainerId")
         public String containerId;
 
+        /**
+         * <p>The name of the container.</p>
+         */
         @NameInMap("ContainerName")
         public String containerName;
 

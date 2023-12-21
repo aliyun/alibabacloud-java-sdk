@@ -164,6 +164,11 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         @NameInMap("FixList")
         public java.util.List<ListCheckItemWarningMachineResponseBodyListFixList> fixList;
 
+        /**
+         * <p>Whether the repair is supported. Valid values:</p>
+         * <p>*   **0**: Supported</p>
+         * <p>*   **1**: Not Supported</p>
+         */
         @NameInMap("FixStatus")
         public Integer fixStatus;
 
@@ -191,6 +196,9 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The timestamp of the latest processing of the check item risk of the machine. Unit: milliseconds.</p>
+         */
         @NameInMap("LastHandleTime")
         public Long lastHandleTime;
 

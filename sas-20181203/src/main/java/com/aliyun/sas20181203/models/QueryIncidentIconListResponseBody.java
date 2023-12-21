@@ -4,24 +4,51 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class QueryIncidentIconListResponseBody extends TeaModel {
+    /**
+     * <p>The response code. Valid values:</p>
+     * <br>
+     * <p>*   **200**: The request was successful.</p>
+     * <p>*   **400**: The request failed.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The information about the entities and edges.</p>
+     */
     @NameInMap("InfoList")
     public QueryIncidentIconListResponseBodyInfoList infoList;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The consumed time of the request. Unit: seconds.</p>
+     */
     @NameInMap("TimeCost")
     public Long timeCost;
 
@@ -87,36 +114,72 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
     }
 
     public static class QueryIncidentIconListResponseBodyInfoListEntityTypeList extends TeaModel {
+        /**
+         * <p>The display color of the entity.</p>
+         */
         @NameInMap("DisplayColor")
         public String displayColor;
 
+        /**
+         * <p>The icon that corresponds to the entity.</p>
+         */
         @NameInMap("DisplayIcon")
         public String displayIcon;
 
+        /**
+         * <p>The display sequence of the entity.</p>
+         */
         @NameInMap("DisplayOrder")
         public String displayOrder;
 
+        /**
+         * <p>The display template of the entity.</p>
+         */
         @NameInMap("DisplayTemplate")
         public String displayTemplate;
 
+        /**
+         * <p>The time when the entity was created.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the entity was updated.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the entity.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>Indicates whether the entity is a virtual node. Valid values:</p>
+         * <br>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
+         */
         @NameInMap("IsVirtualNode")
         public String isVirtualNode;
 
+        /**
+         * <p>The name of the entity.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The namespace of the entity.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The tag that indicates whether tracing was successful.</p>
+         */
         @NameInMap("TraceSuccessFlag")
         public String traceSuccessFlag;
 
@@ -216,33 +279,66 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
     }
 
     public static class QueryIncidentIconListResponseBodyInfoListRelationTypeList extends TeaModel {
+        /**
+         * <p>The direction of the edge. Valid values:</p>
+         * <br>
+         * <p>*   **1**: forward</p>
+         * <p>*   **0**: reverse</p>
+         */
         @NameInMap("Directed")
         public String directed;
 
+        /**
+         * <p>The display color of the edge.</p>
+         */
         @NameInMap("DisplayColor")
         public String displayColor;
 
+        /**
+         * <p>The icon that corresponds to the edge.</p>
+         */
         @NameInMap("DisplayIcon")
         public String displayIcon;
 
+        /**
+         * <p>The display template of the edge.</p>
+         */
         @NameInMap("DisplayTemplate")
         public String displayTemplate;
 
+        /**
+         * <p>The time when the edge was created.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the edge was modified.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the edge.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the edge.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The namespace of the edge.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The display type of the edge.</p>
+         */
         @NameInMap("ShowType")
         public String showType;
 
@@ -334,9 +430,15 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
     }
 
     public static class QueryIncidentIconListResponseBodyInfoList extends TeaModel {
+        /**
+         * <p>The information about the entities.</p>
+         */
         @NameInMap("EntityTypeList")
         public java.util.List<QueryIncidentIconListResponseBodyInfoListEntityTypeList> entityTypeList;
 
+        /**
+         * <p>The information about the edges.</p>
+         */
         @NameInMap("RelationTypeList")
         public java.util.List<QueryIncidentIconListResponseBodyInfoListRelationTypeList> relationTypeList;
 

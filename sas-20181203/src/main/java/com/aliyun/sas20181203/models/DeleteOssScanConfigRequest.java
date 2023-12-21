@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteOssScanConfigRequest extends TeaModel {
+    /**
+     * <p>The ID of the policy.</p>
+     * <br>
+     * <p>>  You can call the [ListOssScanConfig](~~ListOssScanConfig~~) operation to query the IDs of rules.</p>
+     */
     @NameInMap("Id")
     public Long id;
 

@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
+    /**
+     * <p>The details of the tasks.</p>
+     */
     @NameInMap("OnceTasks")
     public java.util.List<ListUnfinishedOnceTaskResponseBodyOnceTasks> onceTasks;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,48 +38,93 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
     }
 
     public static class ListUnfinishedOnceTaskResponseBodyOnceTasksTaskImageInfo extends TeaModel {
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The image digest.</p>
+         */
         @NameInMap("Digest")
         public String digest;
 
+        /**
+         * <p>The container image.</p>
+         */
         @NameInMap("Image")
         public String image;
 
+        /**
+         * <p>The instance ID of the node.</p>
+         */
         @NameInMap("NodeInstanceId")
         public String nodeInstanceId;
 
+        /**
+         * <p>The IP address of the node.</p>
+         */
         @NameInMap("NodeIp")
         public String nodeIp;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The pod of the image.</p>
+         */
         @NameInMap("Pod")
         public String pod;
 
+        /**
+         * <p>The region ID of the server image.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the image repository.</p>
+         */
         @NameInMap("RepoId")
         public String repoId;
 
+        /**
+         * <p>The name of the image repository.</p>
+         */
         @NameInMap("RepoName")
         public String repoName;
 
+        /**
+         * <p>The namespace to which the image repository belongs.</p>
+         */
         @NameInMap("RepoNamespace")
         public String repoNamespace;
 
+        /**
+         * <p>The region ID of the image repository.</p>
+         */
         @NameInMap("RepoRegionId")
         public String repoRegionId;
 
+        /**
+         * <p>The image tag.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
@@ -205,51 +256,110 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
     }
 
     public static class ListUnfinishedOnceTaskResponseBodyOnceTasks extends TeaModel {
+        /**
+         * <p>The time when the task ends.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>Indicates whether the task is complete. Valid values:</p>
+         * <br>
+         * <p>*   **0**: no</p>
+         * <p>*   **1**: yes</p>
+         */
         @NameInMap("Finish")
         public Integer finish;
 
+        /**
+         * <p>The number of assets on which the task is complete.</p>
+         */
         @NameInMap("FinishCount")
         public Integer finishCount;
 
+        /**
+         * <p>The progress percentage of the task.</p>
+         */
         @NameInMap("Progress")
         public Long progress;
 
+        /**
+         * <p>The execution duration of the task.</p>
+         */
         @NameInMap("RealRunTime")
         public Long realRunTime;
 
+        /**
+         * <p>The execution result of the task.</p>
+         */
         @NameInMap("ResultInfo")
         public String resultInfo;
 
+        /**
+         * <p>The time when the task is started.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The status.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The status of the task. Valid values:</p>
+         * <br>
+         * <p>*   **INIT**: The task is not started.</p>
+         * <p>*   **START**: The task is started.</p>
+         * <p>*   **SUCCESS**: The task is complete.</p>
+         * <p>*   **TIMEOUT**: The task timed out.</p>
+         */
         @NameInMap("StatusText")
         public String statusText;
 
+        /**
+         * <p>The objective of the task.</p>
+         */
         @NameInMap("Target")
         public String target;
 
+        /**
+         * <p>The type of the assets that are scanned. Valid values:</p>
+         * <br>
+         * <p>*   **IMAGE_REPO**: image repository</p>
+         * <p>*   **IMAGE**: image</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The information about the image scan task.</p>
+         */
         @NameInMap("TaskImageInfo")
         public ListUnfinishedOnceTaskResponseBodyOnceTasksTaskImageInfo taskImageInfo;
 
+        /**
+         * <p>The name of the task.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <p>The type of the task.</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

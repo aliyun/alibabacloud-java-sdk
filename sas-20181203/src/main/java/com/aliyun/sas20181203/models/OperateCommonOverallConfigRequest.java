@@ -14,6 +14,17 @@ public class OperateCommonOverallConfigRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>Specifies whether to configure assets for the feature. Default value: **false**. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     * <br>
+     * <p>>  This parameter takes effect only when you set **Config** to **on**.</p>
+     */
+    @NameInMap("NoTargetAsOn")
+    public Boolean noTargetAsOn;
+
+    /**
      * <p>The source IP address of the request.</p>
      */
     @NameInMap("SourceIp")
@@ -107,6 +118,14 @@ public class OperateCommonOverallConfigRequest extends TeaModel {
     }
     public String getConfig() {
         return this.config;
+    }
+
+    public OperateCommonOverallConfigRequest setNoTargetAsOn(Boolean noTargetAsOn) {
+        this.noTargetAsOn = noTargetAsOn;
+        return this;
+    }
+    public Boolean getNoTargetAsOn() {
+        return this.noTargetAsOn;
     }
 
     public OperateCommonOverallConfigRequest setSourceIp(String sourceIp) {
