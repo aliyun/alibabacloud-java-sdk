@@ -147,6 +147,9 @@ public class PopQueryObjectGenerationProjectDetailResponseBody extends TeaModel 
     }
 
     public static class PopQueryObjectGenerationProjectDetailResponseBodyData extends TeaModel {
+        @NameInMap("BizUsage")
+        public String bizUsage;
+
         @NameInMap("BuildDetail")
         public PopQueryObjectGenerationProjectDetailResponseBodyDataBuildDetail buildDetail;
 
@@ -171,6 +174,14 @@ public class PopQueryObjectGenerationProjectDetailResponseBody extends TeaModel 
         public static PopQueryObjectGenerationProjectDetailResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             PopQueryObjectGenerationProjectDetailResponseBodyData self = new PopQueryObjectGenerationProjectDetailResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public PopQueryObjectGenerationProjectDetailResponseBodyData setBizUsage(String bizUsage) {
+            this.bizUsage = bizUsage;
+            return this;
+        }
+        public String getBizUsage() {
+            return this.bizUsage;
         }
 
         public PopQueryObjectGenerationProjectDetailResponseBodyData setBuildDetail(PopQueryObjectGenerationProjectDetailResponseBodyDataBuildDetail buildDetail) {

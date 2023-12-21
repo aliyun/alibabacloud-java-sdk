@@ -4,6 +4,9 @@ package com.aliyun.xrengine20230313.models;
 import com.aliyun.tea.*;
 
 public class PopCreateObjectGenerationProjectRequest extends TeaModel {
+    @NameInMap("BizUsage")
+    public String bizUsage;
+
     @NameInMap("ExtInfo")
     public String extInfo;
 
@@ -19,6 +22,14 @@ public class PopCreateObjectGenerationProjectRequest extends TeaModel {
     public static PopCreateObjectGenerationProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         PopCreateObjectGenerationProjectRequest self = new PopCreateObjectGenerationProjectRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PopCreateObjectGenerationProjectRequest setBizUsage(String bizUsage) {
+        this.bizUsage = bizUsage;
+        return this;
+    }
+    public String getBizUsage() {
+        return this.bizUsage;
     }
 
     public PopCreateObjectGenerationProjectRequest setExtInfo(String extInfo) {

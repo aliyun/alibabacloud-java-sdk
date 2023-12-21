@@ -84,6 +84,9 @@ public class PopBatchQueryObjectGenerationProjectStatusResponseBody extends TeaM
     }
 
     public static class PopBatchQueryObjectGenerationProjectStatusResponseBodyData extends TeaModel {
+        @NameInMap("BizUsage")
+        public String bizUsage;
+
         @NameInMap("Dataset")
         public PopBatchQueryObjectGenerationProjectStatusResponseBodyDataDataset dataset;
 
@@ -96,6 +99,14 @@ public class PopBatchQueryObjectGenerationProjectStatusResponseBody extends TeaM
         public static PopBatchQueryObjectGenerationProjectStatusResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             PopBatchQueryObjectGenerationProjectStatusResponseBodyData self = new PopBatchQueryObjectGenerationProjectStatusResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public PopBatchQueryObjectGenerationProjectStatusResponseBodyData setBizUsage(String bizUsage) {
+            this.bizUsage = bizUsage;
+            return this;
+        }
+        public String getBizUsage() {
+            return this.bizUsage;
         }
 
         public PopBatchQueryObjectGenerationProjectStatusResponseBodyData setDataset(PopBatchQueryObjectGenerationProjectStatusResponseBodyDataDataset dataset) {
