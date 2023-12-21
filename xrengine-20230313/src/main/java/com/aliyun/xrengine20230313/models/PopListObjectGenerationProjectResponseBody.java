@@ -191,6 +191,9 @@ public class PopListObjectGenerationProjectResponseBody extends TeaModel {
     }
 
     public static class PopListObjectGenerationProjectResponseBodyData extends TeaModel {
+        @NameInMap("BizUsage")
+        public String bizUsage;
+
         @NameInMap("BuildDetail")
         public PopListObjectGenerationProjectResponseBodyDataBuildDetail buildDetail;
 
@@ -215,6 +218,14 @@ public class PopListObjectGenerationProjectResponseBody extends TeaModel {
         public static PopListObjectGenerationProjectResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             PopListObjectGenerationProjectResponseBodyData self = new PopListObjectGenerationProjectResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public PopListObjectGenerationProjectResponseBodyData setBizUsage(String bizUsage) {
+            this.bizUsage = bizUsage;
+            return this;
+        }
+        public String getBizUsage() {
+            return this.bizUsage;
         }
 
         public PopListObjectGenerationProjectResponseBodyData setBuildDetail(PopListObjectGenerationProjectResponseBodyDataBuildDetail buildDetail) {
