@@ -4,12 +4,24 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class QueryIncidentTracingDetailResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The information about the provenance graph.</p>
+     */
     @NameInMap("TracingDetail")
     public QueryIncidentTracingDetailResponseBodyTracingDetail tracingDetail;
 
@@ -44,61 +56,119 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
 
     public static class QueryIncidentTracingDetailResponseBodyTracingDetailEdgeList extends TeaModel {
         /**
-         * <p>AliUid</p>
+         * <p>The ID of the Alibaba Cloud account to which the current edge belongs.</p>
          */
         @NameInMap("Aliuid")
         public String aliuid;
 
+        /**
+         * <p>The ID of the end node for the current edge.</p>
+         */
         @NameInMap("EndId")
         public String endId;
 
+        /**
+         * <p>The type of the end node for the current edge. Valid values include the following values:</p>
+         * <br>
+         * <p>*   **process**</p>
+         * <p>*   **file**</p>
+         * <p>*   **alert**</p>
+         * <p>*   **ip**</p>
+         * <p>*   **domain**</p>
+         */
         @NameInMap("EndType")
         public String endType;
 
+        /**
+         * <p>The name of the current edge.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Origin</p>
+         * <p>The origin vertex ID of the current edge.</p>
          */
         @NameInMap("Origin")
         public String origin;
 
+        /**
+         * <p>The text that contains the properties of the current edge.</p>
+         */
         @NameInMap("Properties")
         public String properties;
 
+        /**
+         * <p>The property of the current edge.</p>
+         */
         @NameInMap("Property")
         public java.util.Map<String, ?> property;
 
+        /**
+         * <p>The ID of the rule based on which the current edge is generated.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The display type of the current edge.</p>
+         */
         @NameInMap("ShowType")
         public String showType;
 
+        /**
+         * <p>The ID of the start node for the current edge.</p>
+         */
         @NameInMap("StartId")
         public String startId;
 
+        /**
+         * <p>The type of the start node for the current edge. Valid values include the following values:</p>
+         * <br>
+         * <p>*   **process**</p>
+         * <p>*   **file**</p>
+         * <p>*   **alert**:</p>
+         * <p>*   **ip**</p>
+         * <p>*   **domain**</p>
+         */
         @NameInMap("StartType")
         public String startType;
 
+        /**
+         * <p>The time when the current edge was created.</p>
+         */
         @NameInMap("Time")
         public String time;
 
+        /**
+         * <p>The UNIX timestamp when the current edge was created. Unit: milliseconds.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        /**
+         * <p>The type of the current edge. Valid values include the following values:</p>
+         * <br>
+         * <p>*   **process_exec_file**: The relationship indicates an executable file that is run by a process.</p>
+         * <p>*   **process_connect_ip**: The relationship indicates an IP address that is connected by a process.</p>
+         * <p>*   **domain_trgger_alert**: The relationship indicates an alert that is triggered for a domain name.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The type of the current edge.</p>
+         */
         @NameInMap("TypeName")
         public String typeName;
 
+        /**
+         * <p>The time when the current edge was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
         /**
-         * <p>UUID</p>
+         * <p>The UUID of the current edge. The SIEM system generates UUIDs for nodes and edges in the provenance graph to help you locate the nodes or edges.</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -247,48 +317,93 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
     }
 
     public static class QueryIncidentTracingDetailResponseBodyTracingDetailEntityTypeList extends TeaModel {
+        /**
+         * <p>The version ID of the current entity.</p>
+         */
         @NameInMap("CurrentVersionId")
         public String currentVersionId;
 
+        /**
+         * <p>The display color of the current entity.</p>
+         */
         @NameInMap("DisplayColor")
         public String displayColor;
 
+        /**
+         * <p>The display icon of the current entity.</p>
+         */
         @NameInMap("DisplayIcon")
         public String displayIcon;
 
+        /**
+         * <p>The display sequence of the current entity.</p>
+         */
         @NameInMap("DisplayOrder")
         public Integer displayOrder;
 
+        /**
+         * <p>The display template of the current entity.</p>
+         */
         @NameInMap("DisplayTemplate")
         public String displayTemplate;
 
+        /**
+         * <p>The time when the current entity was created.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the current entity was updated.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the current entity.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>Indicates whether the entity is a virtual node. Valid values:</p>
+         * <br>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
+         */
         @NameInMap("IsVirtualNode")
         public Integer isVirtualNode;
 
+        /**
+         * <p>The type of the current entity. Valid values include the following values:</p>
+         * <br>
+         * <p>*   **process**</p>
+         * <p>*   **file**</p>
+         * <p>*   **alert**</p>
+         * <p>*   **ip**</p>
+         * <p>*   **domain**</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>namespace</p>
+         * <p>The namespace of the current entity.</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
-         * <p>SyncId</p>
+         * <p>The synchronization ID of the current entity.</p>
          */
         @NameInMap("SyncId")
         public Integer syncId;
 
+        /**
+         * <p>The tag that indicates whether tracing was successful. Valid values:</p>
+         * <br>
+         * <p>*   **1**: successful</p>
+         * <p>*   **0**: failed</p>
+         */
         @NameInMap("TraceSuccessFlag")
         public Integer traceSuccessFlag;
 
@@ -404,44 +519,81 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
     }
 
     public static class QueryIncidentTracingDetailResponseBodyTracingDetailRelationTypeList extends TeaModel {
+        /**
+         * <p>The version ID of the current relationship.</p>
+         */
         @NameInMap("CurrentVersionId")
         public String currentVersionId;
 
+        /**
+         * <p>The direction of the current relationship. Valid values:</p>
+         * <br>
+         * <p>*   **1**: forward</p>
+         * <p>*   **0**: reverse</p>
+         */
         @NameInMap("Directed")
         public Integer directed;
 
+        /**
+         * <p>The display color of the current relationship.</p>
+         */
         @NameInMap("DisplayColor")
         public String displayColor;
 
         /**
-         * <p>ICON</p>
+         * <p>The display icon of the current relationship.</p>
          */
         @NameInMap("DisplayIcon")
         public String displayIcon;
 
+        /**
+         * <p>The display template of the current relationship.</p>
+         */
         @NameInMap("DisplayTemplate")
         public String displayTemplate;
 
+        /**
+         * <p>The time when the current relationship was created.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the current relationship was updated.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the current relationship.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The type of the current relationship. Valid values include the following values:</p>
+         * <br>
+         * <p>*   **process_exec_file**: The relationship indicates an executable file that is run by a process.</p>
+         * <p>*   **process_connect_ip**: The relationship indicates an IP address that is connected by a process.</p>
+         * <p>*   **domain_trgger_alert**: The relationship indicates an alert that is triggered for a domain name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The namespace of the current relationship.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The display type of the current relationship.</p>
+         */
         @NameInMap("ShowType")
         public String showType;
 
         /**
-         * <p>SyncID</p>
+         * <p>The synchronization ID of the current relationship.</p>
          */
         @NameInMap("SyncId")
         public Integer syncId;
@@ -550,9 +702,15 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
     }
 
     public static class QueryIncidentTracingDetailResponseBodyTracingDetailVertexListDisplayInfo extends TeaModel {
+        /**
+         * <p>The name of the property that needs to be displayed for the current node.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The value of the property that needs to be displayed for the current node.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -580,12 +738,30 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
     }
 
     public static class QueryIncidentTracingDetailResponseBodyTracingDetailVertexListNeighborList extends TeaModel {
+        /**
+         * <p>The number of nodes.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>Indicates whether more nodes are adjacent to the current node. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("HasMore")
         public Boolean hasMore;
 
+        /**
+         * <p>The type of the node. Valid values include the following values:</p>
+         * <br>
+         * <p>*   **process**</p>
+         * <p>*   **file**</p>
+         * <p>*   **alert**</p>
+         * <p>*   **ip**</p>
+         * <p>*   **domain**</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -622,49 +798,91 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
 
     public static class QueryIncidentTracingDetailResponseBodyTracingDetailVertexList extends TeaModel {
         /**
-         * <p>aliuid</p>
+         * <p>The ID of the Alibaba Cloud account to which the current node belongs.</p>
          */
         @NameInMap("Aliuid")
         public String aliuid;
 
+        /**
+         * <p>The display information of the current node.</p>
+         */
         @NameInMap("DisplayInfo")
         public java.util.List<QueryIncidentTracingDetailResponseBodyTracingDetailVertexListDisplayInfo> displayInfo;
 
+        /**
+         * <p>The ID of the current node.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The rendering language of the current node.</p>
+         */
         @NameInMap("Lang")
         public String lang;
 
+        /**
+         * <p>The name of the current node.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The nodes that are adjacent to the current node.</p>
+         */
         @NameInMap("NeighborList")
         public java.util.List<QueryIncidentTracingDetailResponseBodyTracingDetailVertexListNeighborList> neighborList;
 
+        /**
+         * <p>The text that contains the properties of the current node.</p>
+         */
         @NameInMap("Properties")
         public String properties;
 
+        /**
+         * <p>The property of the current node.</p>
+         */
         @NameInMap("Property")
         public java.util.Map<String, ?> property;
 
+        /**
+         * <p>The ID of the rule based on which the current node is generated.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The time when the current node was created.</p>
+         */
         @NameInMap("Time")
         public String time;
 
+        /**
+         * <p>The UNIX timestamp when the current node was created. Unit: milliseconds.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        /**
+         * <p>The type of the current node. Valid values include the following values:</p>
+         * <br>
+         * <p>*   **process**</p>
+         * <p>*   **file**</p>
+         * <p>*   **alert**</p>
+         * <p>*   **ip**</p>
+         * <p>*   **domain**</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The time when the current node was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
         /**
-         * <p>UUID</p>
+         * <p>The UUID of the current node. The security information and event management (SIEM) system generates UUIDs for nodes and edges in the provenance graph to help you locate the nodes or edges.</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -789,18 +1007,36 @@ public class QueryIncidentTracingDetailResponseBody extends TeaModel {
     }
 
     public static class QueryIncidentTracingDetailResponseBodyTracingDetail extends TeaModel {
+        /**
+         * <p>The edges.</p>
+         */
         @NameInMap("EdgeList")
         public java.util.List<QueryIncidentTracingDetailResponseBodyTracingDetailEdgeList> edgeList;
 
+        /**
+         * <p>The entities.</p>
+         */
         @NameInMap("EntityTypeList")
         public java.util.List<QueryIncidentTracingDetailResponseBodyTracingDetailEntityTypeList> entityTypeList;
 
+        /**
+         * <p>The rendering language of the returned result. Valid values:</p>
+         * <br>
+         * <p>*   **zh**: Chinese</p>
+         * <p>*   **en**: English</p>
+         */
         @NameInMap("Lang")
         public String lang;
 
+        /**
+         * <p>The relationships.</p>
+         */
         @NameInMap("RelationTypeList")
         public java.util.List<QueryIncidentTracingDetailResponseBodyTracingDetailRelationTypeList> relationTypeList;
 
+        /**
+         * <p>The nodes.</p>
+         */
         @NameInMap("VertexList")
         public java.util.List<QueryIncidentTracingDetailResponseBodyTracingDetailVertexList> vertexList;
 

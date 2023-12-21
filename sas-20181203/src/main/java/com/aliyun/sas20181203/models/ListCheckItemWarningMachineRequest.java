@@ -90,6 +90,9 @@ public class ListCheckItemWarningMachineRequest extends TeaModel {
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>The UUID array of the servers.</p>
+     */
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;
 

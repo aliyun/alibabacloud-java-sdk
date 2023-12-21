@@ -4,18 +4,33 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListOpaClusterStrategyNewRequest extends TeaModel {
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The image names.</p>
+     */
     @NameInMap("ImageName")
     public java.util.List<String> imageName;
 
+    /**
+     * <p>The tags that are added to the container.</p>
+     */
     @NameInMap("Label")
     public java.util.List<String> label;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The rule names.</p>
+     */
     @NameInMap("StrategyName")
     public java.util.List<String> strategyName;
 

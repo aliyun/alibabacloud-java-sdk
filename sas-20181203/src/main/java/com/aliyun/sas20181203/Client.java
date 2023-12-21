@@ -15687,6 +15687,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceDirectoryAccountId", request.resourceDirectoryAccountId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.vendors)) {
+            query.put("Vendors", request.vendors);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -15901,8 +15905,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getCloudAssetDetailWithOptions(request, runtime);
     }
 
-    public GetCloudAssetSummaryResponse getCloudAssetSummaryWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+    public GetCloudAssetSummaryResponse getCloudAssetSummaryWithOptions(GetCloudAssetSummaryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.vendors)) {
+            query.put("Vendors", request.vendors);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetCloudAssetSummary"),
             new TeaPair("version", "2018-12-03"),
@@ -15917,9 +15929,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetCloudAssetSummaryResponse());
     }
 
-    public GetCloudAssetSummaryResponse getCloudAssetSummary() throws Exception {
+    public GetCloudAssetSummaryResponse getCloudAssetSummary(GetCloudAssetSummaryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getCloudAssetSummaryWithOptions(runtime);
+        return this.getCloudAssetSummaryWithOptions(request, runtime);
     }
 
     public GetClusterCheckItemWarningStatisticsResponse getClusterCheckItemWarningStatisticsWithOptions(GetClusterCheckItemWarningStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -24584,6 +24596,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.config)) {
             query.put("Config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.noTargetAsOn)) {
+            query.put("NoTargetAsOn", request.noTargetAsOn);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {

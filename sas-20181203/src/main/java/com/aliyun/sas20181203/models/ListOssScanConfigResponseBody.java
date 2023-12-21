@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListOssScanConfigResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListOssScanConfigResponseBodyData> data;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListOssScanConfigResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,39 +52,78 @@ public class ListOssScanConfigResponseBody extends TeaModel {
     }
 
     public static class ListOssScanConfigResponseBodyData extends TeaModel {
+        /**
+         * <p>Whether to match all file prefixes.</p>
+         */
         @NameInMap("AllKeyPrefix")
         public Boolean allKeyPrefix;
 
+        /**
+         * <p>The number of the buckets.</p>
+         */
         @NameInMap("BucketCount")
         public Integer bucketCount;
 
+        /**
+         * <p>The name of the bucket.</p>
+         */
         @NameInMap("BucketNameList")
         public java.util.List<String> bucketNameList;
 
+        /**
+         * <p>Indicates whether the check policy is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **1**: enabled.</p>
+         * <p>*   **0**: disabled.</p>
+         */
         @NameInMap("Enable")
         public Integer enable;
 
+        /**
+         * <p>The end time of the check. The time is in the HH:mm:ss format.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The ID of the policy.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The prefix of the object that you want to check.</p>
+         */
         @NameInMap("KeyPrefixList")
         public java.util.List<String> keyPrefixList;
 
+        /**
+         * <p>The suffix of the object that is checked.</p>
+         */
         @NameInMap("KeySuffixList")
         public java.util.List<String> keySuffixList;
 
+        /**
+         * <p>The time when the policy last update.</p>
+         */
         @NameInMap("LastUpdateTime")
         public Long lastUpdateTime;
 
+        /**
+         * <p>The name of the policy.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The day when the check is performed. The value indicates the day of the week.</p>
+         */
         @NameInMap("ScanDayList")
         public java.util.List<Integer> scanDayList;
 
+        /**
+         * <p>The start time of the check. The time is in the HH:mm:ss format.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -183,12 +231,21 @@ public class ListOssScanConfigResponseBody extends TeaModel {
     }
 
     public static class ListOssScanConfigResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

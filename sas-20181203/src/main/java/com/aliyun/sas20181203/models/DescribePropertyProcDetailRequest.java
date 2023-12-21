@@ -55,7 +55,7 @@ public class DescribePropertyProcDetailRequest extends TeaModel {
     /**
      * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
      * <br>
-     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.</p>
+     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the account ID.</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;

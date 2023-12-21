@@ -19,6 +19,9 @@ public class GetCheckSummaryRequest extends TeaModel {
     @NameInMap("ResourceDirectoryAccountId")
     public String resourceDirectoryAccountId;
 
+    @NameInMap("Vendors")
+    public java.util.List<String> vendors;
+
     public static GetCheckSummaryRequest build(java.util.Map<String, ?> map) throws Exception {
         GetCheckSummaryRequest self = new GetCheckSummaryRequest();
         return TeaModel.build(map, self);
@@ -38,6 +41,14 @@ public class GetCheckSummaryRequest extends TeaModel {
     }
     public String getResourceDirectoryAccountId() {
         return this.resourceDirectoryAccountId;
+    }
+
+    public GetCheckSummaryRequest setVendors(java.util.List<String> vendors) {
+        this.vendors = vendors;
+        return this;
+    }
+    public java.util.List<String> getVendors() {
+        return this.vendors;
     }
 
 }

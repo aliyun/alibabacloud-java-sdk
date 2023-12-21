@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetCheckSummaryResponseBody extends TeaModel {
+    @NameInMap("OverallStatistic")
+    public GetCheckSummaryResponseBodyOverallStatistic overallStatistic;
+
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      */
@@ -21,6 +24,14 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetCheckSummaryResponseBody setOverallStatistic(GetCheckSummaryResponseBodyOverallStatistic overallStatistic) {
+        this.overallStatistic = overallStatistic;
+        return this;
+    }
+    public GetCheckSummaryResponseBodyOverallStatistic getOverallStatistic() {
+        return this.overallStatistic;
+    }
+
     public GetCheckSummaryResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -35,6 +46,286 @@ public class GetCheckSummaryResponseBody extends TeaModel {
     }
     public java.util.List<GetCheckSummaryResponseBodySummarys> getSummarys() {
         return this.summarys;
+    }
+
+    public static class GetCheckSummaryResponseBodyOverallStatistic extends TeaModel {
+        @NameInMap("NotCheckCount")
+        public Integer notCheckCount;
+
+        @NameInMap("NotCheckHighCount")
+        public Integer notCheckHighCount;
+
+        @NameInMap("NotCheckLowCount")
+        public Integer notCheckLowCount;
+
+        @NameInMap("NotCheckMediumCount")
+        public Integer notCheckMediumCount;
+
+        @NameInMap("NotPassCount")
+        public Integer notPassCount;
+
+        @NameInMap("NotPassHighCount")
+        public Integer notPassHighCount;
+
+        @NameInMap("NotPassLowCount")
+        public Integer notPassLowCount;
+
+        @NameInMap("NotPassMediumCount")
+        public Integer notPassMediumCount;
+
+        @NameInMap("PassCount")
+        public Integer passCount;
+
+        @NameInMap("PassHighCount")
+        public Integer passHighCount;
+
+        @NameInMap("PassLowCount")
+        public Integer passLowCount;
+
+        @NameInMap("PassMediumCount")
+        public Integer passMediumCount;
+
+        public static GetCheckSummaryResponseBodyOverallStatistic build(java.util.Map<String, ?> map) throws Exception {
+            GetCheckSummaryResponseBodyOverallStatistic self = new GetCheckSummaryResponseBodyOverallStatistic();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCheckSummaryResponseBodyOverallStatistic setNotCheckCount(Integer notCheckCount) {
+            this.notCheckCount = notCheckCount;
+            return this;
+        }
+        public Integer getNotCheckCount() {
+            return this.notCheckCount;
+        }
+
+        public GetCheckSummaryResponseBodyOverallStatistic setNotCheckHighCount(Integer notCheckHighCount) {
+            this.notCheckHighCount = notCheckHighCount;
+            return this;
+        }
+        public Integer getNotCheckHighCount() {
+            return this.notCheckHighCount;
+        }
+
+        public GetCheckSummaryResponseBodyOverallStatistic setNotCheckLowCount(Integer notCheckLowCount) {
+            this.notCheckLowCount = notCheckLowCount;
+            return this;
+        }
+        public Integer getNotCheckLowCount() {
+            return this.notCheckLowCount;
+        }
+
+        public GetCheckSummaryResponseBodyOverallStatistic setNotCheckMediumCount(Integer notCheckMediumCount) {
+            this.notCheckMediumCount = notCheckMediumCount;
+            return this;
+        }
+        public Integer getNotCheckMediumCount() {
+            return this.notCheckMediumCount;
+        }
+
+        public GetCheckSummaryResponseBodyOverallStatistic setNotPassCount(Integer notPassCount) {
+            this.notPassCount = notPassCount;
+            return this;
+        }
+        public Integer getNotPassCount() {
+            return this.notPassCount;
+        }
+
+        public GetCheckSummaryResponseBodyOverallStatistic setNotPassHighCount(Integer notPassHighCount) {
+            this.notPassHighCount = notPassHighCount;
+            return this;
+        }
+        public Integer getNotPassHighCount() {
+            return this.notPassHighCount;
+        }
+
+        public GetCheckSummaryResponseBodyOverallStatistic setNotPassLowCount(Integer notPassLowCount) {
+            this.notPassLowCount = notPassLowCount;
+            return this;
+        }
+        public Integer getNotPassLowCount() {
+            return this.notPassLowCount;
+        }
+
+        public GetCheckSummaryResponseBodyOverallStatistic setNotPassMediumCount(Integer notPassMediumCount) {
+            this.notPassMediumCount = notPassMediumCount;
+            return this;
+        }
+        public Integer getNotPassMediumCount() {
+            return this.notPassMediumCount;
+        }
+
+        public GetCheckSummaryResponseBodyOverallStatistic setPassCount(Integer passCount) {
+            this.passCount = passCount;
+            return this;
+        }
+        public Integer getPassCount() {
+            return this.passCount;
+        }
+
+        public GetCheckSummaryResponseBodyOverallStatistic setPassHighCount(Integer passHighCount) {
+            this.passHighCount = passHighCount;
+            return this;
+        }
+        public Integer getPassHighCount() {
+            return this.passHighCount;
+        }
+
+        public GetCheckSummaryResponseBodyOverallStatistic setPassLowCount(Integer passLowCount) {
+            this.passLowCount = passLowCount;
+            return this;
+        }
+        public Integer getPassLowCount() {
+            return this.passLowCount;
+        }
+
+        public GetCheckSummaryResponseBodyOverallStatistic setPassMediumCount(Integer passMediumCount) {
+            this.passMediumCount = passMediumCount;
+            return this;
+        }
+        public Integer getPassMediumCount() {
+            return this.passMediumCount;
+        }
+
+    }
+
+    public static class GetCheckSummaryResponseBodySummarysStandardsStandardStatistic extends TeaModel {
+        @NameInMap("NotCheckCount")
+        public Integer notCheckCount;
+
+        @NameInMap("NotCheckHighCount")
+        public Integer notCheckHighCount;
+
+        @NameInMap("NotCheckLowCount")
+        public Integer notCheckLowCount;
+
+        @NameInMap("NotCheckMediumCount")
+        public Integer notCheckMediumCount;
+
+        @NameInMap("NotPassCount")
+        public Integer notPassCount;
+
+        @NameInMap("NotPassHighCount")
+        public Integer notPassHighCount;
+
+        @NameInMap("NotPassLowCount")
+        public Integer notPassLowCount;
+
+        @NameInMap("NotPassMediumCount")
+        public Integer notPassMediumCount;
+
+        @NameInMap("PassCount")
+        public Integer passCount;
+
+        @NameInMap("PassHighCount")
+        public Integer passHighCount;
+
+        @NameInMap("PassLowCount")
+        public Integer passLowCount;
+
+        @NameInMap("PassMediumCount")
+        public Integer passMediumCount;
+
+        public static GetCheckSummaryResponseBodySummarysStandardsStandardStatistic build(java.util.Map<String, ?> map) throws Exception {
+            GetCheckSummaryResponseBodySummarysStandardsStandardStatistic self = new GetCheckSummaryResponseBodySummarysStandardsStandardStatistic();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCheckSummaryResponseBodySummarysStandardsStandardStatistic setNotCheckCount(Integer notCheckCount) {
+            this.notCheckCount = notCheckCount;
+            return this;
+        }
+        public Integer getNotCheckCount() {
+            return this.notCheckCount;
+        }
+
+        public GetCheckSummaryResponseBodySummarysStandardsStandardStatistic setNotCheckHighCount(Integer notCheckHighCount) {
+            this.notCheckHighCount = notCheckHighCount;
+            return this;
+        }
+        public Integer getNotCheckHighCount() {
+            return this.notCheckHighCount;
+        }
+
+        public GetCheckSummaryResponseBodySummarysStandardsStandardStatistic setNotCheckLowCount(Integer notCheckLowCount) {
+            this.notCheckLowCount = notCheckLowCount;
+            return this;
+        }
+        public Integer getNotCheckLowCount() {
+            return this.notCheckLowCount;
+        }
+
+        public GetCheckSummaryResponseBodySummarysStandardsStandardStatistic setNotCheckMediumCount(Integer notCheckMediumCount) {
+            this.notCheckMediumCount = notCheckMediumCount;
+            return this;
+        }
+        public Integer getNotCheckMediumCount() {
+            return this.notCheckMediumCount;
+        }
+
+        public GetCheckSummaryResponseBodySummarysStandardsStandardStatistic setNotPassCount(Integer notPassCount) {
+            this.notPassCount = notPassCount;
+            return this;
+        }
+        public Integer getNotPassCount() {
+            return this.notPassCount;
+        }
+
+        public GetCheckSummaryResponseBodySummarysStandardsStandardStatistic setNotPassHighCount(Integer notPassHighCount) {
+            this.notPassHighCount = notPassHighCount;
+            return this;
+        }
+        public Integer getNotPassHighCount() {
+            return this.notPassHighCount;
+        }
+
+        public GetCheckSummaryResponseBodySummarysStandardsStandardStatistic setNotPassLowCount(Integer notPassLowCount) {
+            this.notPassLowCount = notPassLowCount;
+            return this;
+        }
+        public Integer getNotPassLowCount() {
+            return this.notPassLowCount;
+        }
+
+        public GetCheckSummaryResponseBodySummarysStandardsStandardStatistic setNotPassMediumCount(Integer notPassMediumCount) {
+            this.notPassMediumCount = notPassMediumCount;
+            return this;
+        }
+        public Integer getNotPassMediumCount() {
+            return this.notPassMediumCount;
+        }
+
+        public GetCheckSummaryResponseBodySummarysStandardsStandardStatistic setPassCount(Integer passCount) {
+            this.passCount = passCount;
+            return this;
+        }
+        public Integer getPassCount() {
+            return this.passCount;
+        }
+
+        public GetCheckSummaryResponseBodySummarysStandardsStandardStatistic setPassHighCount(Integer passHighCount) {
+            this.passHighCount = passHighCount;
+            return this;
+        }
+        public Integer getPassHighCount() {
+            return this.passHighCount;
+        }
+
+        public GetCheckSummaryResponseBodySummarysStandardsStandardStatistic setPassLowCount(Integer passLowCount) {
+            this.passLowCount = passLowCount;
+            return this;
+        }
+        public Integer getPassLowCount() {
+            return this.passLowCount;
+        }
+
+        public GetCheckSummaryResponseBodySummarysStandardsStandardStatistic setPassMediumCount(Integer passMediumCount) {
+            this.passMediumCount = passMediumCount;
+            return this;
+        }
+        public Integer getPassMediumCount() {
+            return this.passMediumCount;
+        }
+
     }
 
     public static class GetCheckSummaryResponseBodySummarysStandards extends TeaModel {
@@ -79,6 +370,9 @@ public class GetCheckSummaryResponseBody extends TeaModel {
          */
         @NameInMap("ShowName")
         public String showName;
+
+        @NameInMap("StandardStatistic")
+        public GetCheckSummaryResponseBodySummarysStandardsStandardStatistic standardStatistic;
 
         public static GetCheckSummaryResponseBodySummarysStandards build(java.util.Map<String, ?> map) throws Exception {
             GetCheckSummaryResponseBodySummarysStandards self = new GetCheckSummaryResponseBodySummarysStandards();
@@ -141,6 +435,154 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             return this.showName;
         }
 
+        public GetCheckSummaryResponseBodySummarysStandards setStandardStatistic(GetCheckSummaryResponseBodySummarysStandardsStandardStatistic standardStatistic) {
+            this.standardStatistic = standardStatistic;
+            return this;
+        }
+        public GetCheckSummaryResponseBodySummarysStandardsStandardStatistic getStandardStatistic() {
+            return this.standardStatistic;
+        }
+
+    }
+
+    public static class GetCheckSummaryResponseBodySummarysTypeStatistic extends TeaModel {
+        @NameInMap("NotCheckCount")
+        public Integer notCheckCount;
+
+        @NameInMap("NotCheckHighCount")
+        public Integer notCheckHighCount;
+
+        @NameInMap("NotCheckLowCount")
+        public Integer notCheckLowCount;
+
+        @NameInMap("NotCheckMediumCount")
+        public Integer notCheckMediumCount;
+
+        @NameInMap("NotPassCount")
+        public Integer notPassCount;
+
+        @NameInMap("NotPassHighCount")
+        public Integer notPassHighCount;
+
+        @NameInMap("NotPassLowCount")
+        public Integer notPassLowCount;
+
+        @NameInMap("NotPassMediumCount")
+        public Integer notPassMediumCount;
+
+        @NameInMap("PassCount")
+        public Integer passCount;
+
+        @NameInMap("PassHighCount")
+        public Integer passHighCount;
+
+        @NameInMap("PassLowCount")
+        public Integer passLowCount;
+
+        @NameInMap("PassMediumCount")
+        public Integer passMediumCount;
+
+        public static GetCheckSummaryResponseBodySummarysTypeStatistic build(java.util.Map<String, ?> map) throws Exception {
+            GetCheckSummaryResponseBodySummarysTypeStatistic self = new GetCheckSummaryResponseBodySummarysTypeStatistic();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCheckSummaryResponseBodySummarysTypeStatistic setNotCheckCount(Integer notCheckCount) {
+            this.notCheckCount = notCheckCount;
+            return this;
+        }
+        public Integer getNotCheckCount() {
+            return this.notCheckCount;
+        }
+
+        public GetCheckSummaryResponseBodySummarysTypeStatistic setNotCheckHighCount(Integer notCheckHighCount) {
+            this.notCheckHighCount = notCheckHighCount;
+            return this;
+        }
+        public Integer getNotCheckHighCount() {
+            return this.notCheckHighCount;
+        }
+
+        public GetCheckSummaryResponseBodySummarysTypeStatistic setNotCheckLowCount(Integer notCheckLowCount) {
+            this.notCheckLowCount = notCheckLowCount;
+            return this;
+        }
+        public Integer getNotCheckLowCount() {
+            return this.notCheckLowCount;
+        }
+
+        public GetCheckSummaryResponseBodySummarysTypeStatistic setNotCheckMediumCount(Integer notCheckMediumCount) {
+            this.notCheckMediumCount = notCheckMediumCount;
+            return this;
+        }
+        public Integer getNotCheckMediumCount() {
+            return this.notCheckMediumCount;
+        }
+
+        public GetCheckSummaryResponseBodySummarysTypeStatistic setNotPassCount(Integer notPassCount) {
+            this.notPassCount = notPassCount;
+            return this;
+        }
+        public Integer getNotPassCount() {
+            return this.notPassCount;
+        }
+
+        public GetCheckSummaryResponseBodySummarysTypeStatistic setNotPassHighCount(Integer notPassHighCount) {
+            this.notPassHighCount = notPassHighCount;
+            return this;
+        }
+        public Integer getNotPassHighCount() {
+            return this.notPassHighCount;
+        }
+
+        public GetCheckSummaryResponseBodySummarysTypeStatistic setNotPassLowCount(Integer notPassLowCount) {
+            this.notPassLowCount = notPassLowCount;
+            return this;
+        }
+        public Integer getNotPassLowCount() {
+            return this.notPassLowCount;
+        }
+
+        public GetCheckSummaryResponseBodySummarysTypeStatistic setNotPassMediumCount(Integer notPassMediumCount) {
+            this.notPassMediumCount = notPassMediumCount;
+            return this;
+        }
+        public Integer getNotPassMediumCount() {
+            return this.notPassMediumCount;
+        }
+
+        public GetCheckSummaryResponseBodySummarysTypeStatistic setPassCount(Integer passCount) {
+            this.passCount = passCount;
+            return this;
+        }
+        public Integer getPassCount() {
+            return this.passCount;
+        }
+
+        public GetCheckSummaryResponseBodySummarysTypeStatistic setPassHighCount(Integer passHighCount) {
+            this.passHighCount = passHighCount;
+            return this;
+        }
+        public Integer getPassHighCount() {
+            return this.passHighCount;
+        }
+
+        public GetCheckSummaryResponseBodySummarysTypeStatistic setPassLowCount(Integer passLowCount) {
+            this.passLowCount = passLowCount;
+            return this;
+        }
+        public Integer getPassLowCount() {
+            return this.passLowCount;
+        }
+
+        public GetCheckSummaryResponseBodySummarysTypeStatistic setPassMediumCount(Integer passMediumCount) {
+            this.passMediumCount = passMediumCount;
+            return this;
+        }
+        public Integer getPassMediumCount() {
+            return this.passMediumCount;
+        }
+
     }
 
     public static class GetCheckSummaryResponseBodySummarys extends TeaModel {
@@ -171,6 +613,9 @@ public class GetCheckSummaryResponseBody extends TeaModel {
          */
         @NameInMap("Type")
         public String type;
+
+        @NameInMap("TypeStatistic")
+        public GetCheckSummaryResponseBodySummarysTypeStatistic typeStatistic;
 
         public static GetCheckSummaryResponseBodySummarys build(java.util.Map<String, ?> map) throws Exception {
             GetCheckSummaryResponseBodySummarys self = new GetCheckSummaryResponseBodySummarys();
@@ -207,6 +652,14 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public GetCheckSummaryResponseBodySummarys setTypeStatistic(GetCheckSummaryResponseBodySummarysTypeStatistic typeStatistic) {
+            this.typeStatistic = typeStatistic;
+            return this;
+        }
+        public GetCheckSummaryResponseBodySummarysTypeStatistic getTypeStatistic() {
+            return this.typeStatistic;
         }
 
     }

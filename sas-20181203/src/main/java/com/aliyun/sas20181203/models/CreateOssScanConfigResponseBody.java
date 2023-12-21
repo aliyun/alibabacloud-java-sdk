@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateOssScanConfigResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the policy.</p>
+     */
     @NameInMap("Id")
     public Long id;
 

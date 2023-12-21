@@ -4,24 +4,48 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
+    /**
+     * <p>The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The rules.</p>
+     */
     @NameInMap("List")
     public java.util.List<ListOpaClusterStrategyNewResponseBodyList> list;
 
+    /**
+     * <p>The message that shows the export task result. The value is fixed as **success**, which indicates that the export task is successful.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListOpaClusterStrategyNewResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,33 +111,73 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
     }
 
     public static class ListOpaClusterStrategyNewResponseBodyList extends TeaModel {
+        /**
+         * <p>The action of the rule. Valid values:</p>
+         * <br>
+         * <p>*   **1**: trigger alerts</p>
+         * <p>*   **2**: block</p>
+         * <p>*   **3**: allow</p>
+         */
         @NameInMap("Action")
         public Integer action;
 
+        /**
+         * <p>The number of clusters on which the rule takes effect.</p>
+         */
         @NameInMap("ClusterCount")
         public Integer clusterCount;
 
+        /**
+         * <p>The clusters on which the rule takes effect.</p>
+         */
         @NameInMap("ClusterIdList")
         public java.util.List<String> clusterIdList;
 
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The image names.</p>
+         */
         @NameInMap("ImageName")
         public java.util.List<String> imageName;
 
+        /**
+         * <p>The tags that are added to the container.</p>
+         */
         @NameInMap("Label")
         public java.util.List<String> label;
 
+        /**
+         * <p>Indicates whether the rule supports malicious Internet images. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("MaliciousImage")
         public Boolean maliciousImage;
 
+        /**
+         * <p>The rule ID.</p>
+         */
         @NameInMap("StrategyId")
         public Long strategyId;
 
+        /**
+         * <p>The rule name.</p>
+         */
         @NameInMap("StrategyName")
         public String strategyName;
 
+        /**
+         * <p>Indicates whether the rule supports unscanned images. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("UnScanedImage")
         public Boolean unScanedImage;
 
@@ -205,15 +269,27 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
     }
 
     public static class ListOpaClusterStrategyNewResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
