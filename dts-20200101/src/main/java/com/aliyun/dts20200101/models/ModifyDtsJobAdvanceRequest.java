@@ -30,6 +30,9 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
+    @NameInMap("DtsJobId")
+    public String dtsJobId;
+
     /**
      * <p>The operator that is related to the extract, transform, and load (ETL) feature and dedicated to T+1 business.</p>
      */
@@ -125,6 +128,14 @@ public class ModifyDtsJobAdvanceRequest extends TeaModel {
     }
     public String getDtsInstanceId() {
         return this.dtsInstanceId;
+    }
+
+    public ModifyDtsJobAdvanceRequest setDtsJobId(String dtsJobId) {
+        this.dtsJobId = dtsJobId;
+        return this;
+    }
+    public String getDtsJobId() {
+        return this.dtsJobId;
     }
 
     public ModifyDtsJobAdvanceRequest setEtlOperatorColumnReference(String etlOperatorColumnReference) {

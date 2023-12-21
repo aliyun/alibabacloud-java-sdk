@@ -1653,6 +1653,110 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus extends TeaModel {
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("Percent")
+        public String percent;
+
+        @NameInMap("Progress")
+        public String progress;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus self = new DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus setPercent(String percent) {
+            this.percent = percent;
+            return this;
+        }
+        public String getPercent() {
+            return this.percent;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus setProgress(String progress) {
+            this.progress = progress;
+            return this;
+        }
+        public String getProgress() {
+            return this.progress;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
+    public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobIncDataCheckStatus extends TeaModel {
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("Percent")
+        public String percent;
+
+        @NameInMap("Progress")
+        public String progress;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeDtsJobsResponseBodyDtsJobListReverseJobIncDataCheckStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDtsJobsResponseBodyDtsJobListReverseJobIncDataCheckStatus self = new DescribeDtsJobsResponseBodyDtsJobListReverseJobIncDataCheckStatus();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobIncDataCheckStatus setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobIncDataCheckStatus setPercent(String percent) {
+            this.percent = percent;
+            return this;
+        }
+        public String getPercent() {
+            return this.percent;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobIncDataCheckStatus setProgress(String progress) {
+            this.progress = progress;
+            return this;
+        }
+        public String getProgress() {
+            return this.progress;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobIncDataCheckStatus setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobMigrationMode extends TeaModel {
         /**
          * <p>Indicates whether initial full data synchronization is performed. Valid values:</p>
@@ -1670,6 +1774,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
          */
         @NameInMap("DataSynchronization")
         public Boolean dataSynchronization;
+
+        @NameInMap("FullDataCheck")
+        public Boolean fullDataCheck;
+
+        @NameInMap("IncDataCheck")
+        public Boolean incDataCheck;
 
         /**
          * <p>Indicates whether initial schema synchronization is performed. Valid values:</p>
@@ -1698,6 +1808,22 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public Boolean getDataSynchronization() {
             return this.dataSynchronization;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobMigrationMode setFullDataCheck(Boolean fullDataCheck) {
+            this.fullDataCheck = fullDataCheck;
+            return this;
+        }
+        public Boolean getFullDataCheck() {
+            return this.fullDataCheck;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobMigrationMode setIncDataCheck(Boolean incDataCheck) {
+            this.incDataCheck = incDataCheck;
+            return this;
+        }
+        public Boolean getIncDataCheck() {
+            return this.incDataCheck;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobMigrationMode setStructureInitialization(Boolean structureInitialization) {
@@ -2240,6 +2366,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        @NameInMap("FullDataCheckStatus")
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus fullDataCheckStatus;
+
+        @NameInMap("IncDataCheckStatus")
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobIncDataCheckStatus incDataCheckStatus;
+
         /**
          * <p>The memory that has been used. Unit: MB.</p>
          */
@@ -2452,6 +2584,22 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public String getExpireTime() {
             return this.expireTime;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setFullDataCheckStatus(DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus fullDataCheckStatus) {
+            this.fullDataCheckStatus = fullDataCheckStatus;
+            return this;
+        }
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus getFullDataCheckStatus() {
+            return this.fullDataCheckStatus;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setIncDataCheckStatus(DescribeDtsJobsResponseBodyDtsJobListReverseJobIncDataCheckStatus incDataCheckStatus) {
+            this.incDataCheckStatus = incDataCheckStatus;
+            return this;
+        }
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobIncDataCheckStatus getIncDataCheckStatus() {
+            return this.incDataCheckStatus;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJob setMemUsage(String memUsage) {
