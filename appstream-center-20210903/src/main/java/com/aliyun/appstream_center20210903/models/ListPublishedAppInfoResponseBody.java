@@ -4,12 +4,18 @@ package com.aliyun.appstream_center20210903.models;
 import com.aliyun.tea.*;
 
 public class ListPublishedAppInfoResponseBody extends TeaModel {
+    /**
+     * <p>appModels</p>
+     */
     @NameInMap("AppModels")
     public java.util.List<ListPublishedAppInfoResponseBodyAppModels> appModels;
 
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -52,11 +58,17 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("AppThemeColor")
+        public String appThemeColor;
+
         @NameInMap("AppVersion")
         public String appVersion;
 
         @NameInMap("AppVersionName")
         public String appVersionName;
+
+        @NameInMap("AuthTime")
+        public String authTime;
 
         @NameInMap("CategoryId")
         public Long categoryId;
@@ -102,6 +114,14 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
             return this.appName;
         }
 
+        public ListPublishedAppInfoResponseBodyAppModels setAppThemeColor(String appThemeColor) {
+            this.appThemeColor = appThemeColor;
+            return this;
+        }
+        public String getAppThemeColor() {
+            return this.appThemeColor;
+        }
+
         public ListPublishedAppInfoResponseBodyAppModels setAppVersion(String appVersion) {
             this.appVersion = appVersion;
             return this;
@@ -116,6 +136,14 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
         }
         public String getAppVersionName() {
             return this.appVersionName;
+        }
+
+        public ListPublishedAppInfoResponseBodyAppModels setAuthTime(String authTime) {
+            this.authTime = authTime;
+            return this;
+        }
+        public String getAuthTime() {
+            return this.authTime;
         }
 
         public ListPublishedAppInfoResponseBodyAppModels setCategoryId(Long categoryId) {
