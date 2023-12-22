@@ -68,12 +68,23 @@ public class VerifyIntelligentCaptchaResponseBody extends TeaModel {
     }
 
     public static class VerifyIntelligentCaptchaResponseBodyResult extends TeaModel {
+        @NameInMap("VerifyCode")
+        public String verifyCode;
+
         @NameInMap("VerifyResult")
         public Boolean verifyResult;
 
         public static VerifyIntelligentCaptchaResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             VerifyIntelligentCaptchaResponseBodyResult self = new VerifyIntelligentCaptchaResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public VerifyIntelligentCaptchaResponseBodyResult setVerifyCode(String verifyCode) {
+            this.verifyCode = verifyCode;
+            return this;
+        }
+        public String getVerifyCode() {
+            return this.verifyCode;
         }
 
         public VerifyIntelligentCaptchaResponseBodyResult setVerifyResult(Boolean verifyResult) {
