@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteRepositoryResponseBody extends TeaModel {
     /**
-     * <p>The return value.</p>
+     * <p>Return values</p>
      */
     @NameInMap("Code")
     public String code;
@@ -20,7 +20,7 @@ public class DeleteRepositoryResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

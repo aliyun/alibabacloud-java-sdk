@@ -4,15 +4,27 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class CreateArtifactBuildRuleResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the accelerated image building rule.</p>
+     */
     @NameInMap("BuildRuleId")
     public String buildRuleId;
 
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

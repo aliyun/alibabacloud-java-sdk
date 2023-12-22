@@ -1,3 +1,6 @@
+2023-12-22 Version: 1.2.0
+- Generated java 2018-12-01 for cr.
+
 2023-11-23 Version: 1.1.2
 - Generated java 2018-12-01 for cr.
 

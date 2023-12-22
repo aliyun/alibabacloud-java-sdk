@@ -16,9 +16,15 @@ public class DeleteRepositoryRequest extends TeaModel {
     @NameInMap("RepoId")
     public String repoId;
 
+    /**
+     * <p>The name of the repository.</p>
+     */
     @NameInMap("RepoName")
     public String repoName;
 
+    /**
+     * <p>The name of the namespace to which the repository belongs.</p>
+     */
     @NameInMap("RepoNamespaceName")
     public String repoNamespaceName;
 
