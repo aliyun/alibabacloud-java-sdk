@@ -62,6 +62,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NewResourceGroupId", request.newResourceGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.regionCode)) {
+            query.put("RegionCode", request.regionCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
             query.put("ResourceId", request.resourceId);
         }
