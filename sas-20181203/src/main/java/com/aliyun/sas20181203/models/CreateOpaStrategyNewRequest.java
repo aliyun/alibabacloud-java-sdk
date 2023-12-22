@@ -301,6 +301,66 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
 
     }
 
+    public static class CreateOpaStrategyNewRequestAlarmDetailBuildRiskItem extends TeaModel {
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static CreateOpaStrategyNewRequestAlarmDetailBuildRiskItem build(java.util.Map<String, ?> map) throws Exception {
+            CreateOpaStrategyNewRequestAlarmDetailBuildRiskItem self = new CreateOpaStrategyNewRequestAlarmDetailBuildRiskItem();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateOpaStrategyNewRequestAlarmDetailBuildRiskItem setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public CreateOpaStrategyNewRequestAlarmDetailBuildRiskItem setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class CreateOpaStrategyNewRequestAlarmDetailBuildRisk extends TeaModel {
+        @NameInMap("Item")
+        public java.util.List<CreateOpaStrategyNewRequestAlarmDetailBuildRiskItem> item;
+
+        @NameInMap("RiskLevel")
+        public java.util.List<String> riskLevel;
+
+        public static CreateOpaStrategyNewRequestAlarmDetailBuildRisk build(java.util.Map<String, ?> map) throws Exception {
+            CreateOpaStrategyNewRequestAlarmDetailBuildRisk self = new CreateOpaStrategyNewRequestAlarmDetailBuildRisk();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateOpaStrategyNewRequestAlarmDetailBuildRisk setItem(java.util.List<CreateOpaStrategyNewRequestAlarmDetailBuildRiskItem> item) {
+            this.item = item;
+            return this;
+        }
+        public java.util.List<CreateOpaStrategyNewRequestAlarmDetailBuildRiskItem> getItem() {
+            return this.item;
+        }
+
+        public CreateOpaStrategyNewRequestAlarmDetailBuildRisk setRiskLevel(java.util.List<String> riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public java.util.List<String> getRiskLevel() {
+            return this.riskLevel;
+        }
+
+    }
+
     public static class CreateOpaStrategyNewRequestAlarmDetailMaliciousFileItem extends TeaModel {
         /**
          * <p>The ID of the malicious sample.</p>
@@ -377,6 +437,66 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
 
     }
 
+    public static class CreateOpaStrategyNewRequestAlarmDetailSensitiveFileItem extends TeaModel {
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static CreateOpaStrategyNewRequestAlarmDetailSensitiveFileItem build(java.util.Map<String, ?> map) throws Exception {
+            CreateOpaStrategyNewRequestAlarmDetailSensitiveFileItem self = new CreateOpaStrategyNewRequestAlarmDetailSensitiveFileItem();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateOpaStrategyNewRequestAlarmDetailSensitiveFileItem setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public CreateOpaStrategyNewRequestAlarmDetailSensitiveFileItem setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class CreateOpaStrategyNewRequestAlarmDetailSensitiveFile extends TeaModel {
+        @NameInMap("Item")
+        public java.util.List<CreateOpaStrategyNewRequestAlarmDetailSensitiveFileItem> item;
+
+        @NameInMap("RiskLevel")
+        public java.util.List<String> riskLevel;
+
+        public static CreateOpaStrategyNewRequestAlarmDetailSensitiveFile build(java.util.Map<String, ?> map) throws Exception {
+            CreateOpaStrategyNewRequestAlarmDetailSensitiveFile self = new CreateOpaStrategyNewRequestAlarmDetailSensitiveFile();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateOpaStrategyNewRequestAlarmDetailSensitiveFile setItem(java.util.List<CreateOpaStrategyNewRequestAlarmDetailSensitiveFileItem> item) {
+            this.item = item;
+            return this;
+        }
+        public java.util.List<CreateOpaStrategyNewRequestAlarmDetailSensitiveFileItem> getItem() {
+            return this.item;
+        }
+
+        public CreateOpaStrategyNewRequestAlarmDetailSensitiveFile setRiskLevel(java.util.List<String> riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public java.util.List<String> getRiskLevel() {
+            return this.riskLevel;
+        }
+
+    }
+
     public static class CreateOpaStrategyNewRequestAlarmDetailVulItem extends TeaModel {
         /**
          * <p>The ID of the vulnerability.</p>
@@ -417,12 +537,45 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
 
     }
 
+    public static class CreateOpaStrategyNewRequestAlarmDetailVulRiskClass extends TeaModel {
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static CreateOpaStrategyNewRequestAlarmDetailVulRiskClass build(java.util.Map<String, ?> map) throws Exception {
+            CreateOpaStrategyNewRequestAlarmDetailVulRiskClass self = new CreateOpaStrategyNewRequestAlarmDetailVulRiskClass();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateOpaStrategyNewRequestAlarmDetailVulRiskClass setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public CreateOpaStrategyNewRequestAlarmDetailVulRiskClass setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class CreateOpaStrategyNewRequestAlarmDetailVul extends TeaModel {
         /**
          * <p>The vulnerabilities.</p>
          */
         @NameInMap("Item")
         public java.util.List<CreateOpaStrategyNewRequestAlarmDetailVulItem> item;
+
+        @NameInMap("RiskClass")
+        public java.util.List<CreateOpaStrategyNewRequestAlarmDetailVulRiskClass> riskClass;
 
         /**
          * <p>The risk levels.</p>
@@ -443,6 +596,14 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
             return this.item;
         }
 
+        public CreateOpaStrategyNewRequestAlarmDetailVul setRiskClass(java.util.List<CreateOpaStrategyNewRequestAlarmDetailVulRiskClass> riskClass) {
+            this.riskClass = riskClass;
+            return this;
+        }
+        public java.util.List<CreateOpaStrategyNewRequestAlarmDetailVulRiskClass> getRiskClass() {
+            return this.riskClass;
+        }
+
         public CreateOpaStrategyNewRequestAlarmDetailVul setRiskLevel(java.util.List<String> riskLevel) {
             this.riskLevel = riskLevel;
             return this;
@@ -460,11 +621,17 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
         @NameInMap("Baseline")
         public CreateOpaStrategyNewRequestAlarmDetailBaseline baseline;
 
+        @NameInMap("BuildRisk")
+        public CreateOpaStrategyNewRequestAlarmDetailBuildRisk buildRisk;
+
         /**
          * <p>The malicious sample risks.</p>
          */
         @NameInMap("MaliciousFile")
         public CreateOpaStrategyNewRequestAlarmDetailMaliciousFile maliciousFile;
+
+        @NameInMap("SensitiveFile")
+        public CreateOpaStrategyNewRequestAlarmDetailSensitiveFile sensitiveFile;
 
         /**
          * <p>The vulnerability risks.</p>
@@ -485,12 +652,28 @@ public class CreateOpaStrategyNewRequest extends TeaModel {
             return this.baseline;
         }
 
+        public CreateOpaStrategyNewRequestAlarmDetail setBuildRisk(CreateOpaStrategyNewRequestAlarmDetailBuildRisk buildRisk) {
+            this.buildRisk = buildRisk;
+            return this;
+        }
+        public CreateOpaStrategyNewRequestAlarmDetailBuildRisk getBuildRisk() {
+            return this.buildRisk;
+        }
+
         public CreateOpaStrategyNewRequestAlarmDetail setMaliciousFile(CreateOpaStrategyNewRequestAlarmDetailMaliciousFile maliciousFile) {
             this.maliciousFile = maliciousFile;
             return this;
         }
         public CreateOpaStrategyNewRequestAlarmDetailMaliciousFile getMaliciousFile() {
             return this.maliciousFile;
+        }
+
+        public CreateOpaStrategyNewRequestAlarmDetail setSensitiveFile(CreateOpaStrategyNewRequestAlarmDetailSensitiveFile sensitiveFile) {
+            this.sensitiveFile = sensitiveFile;
+            return this;
+        }
+        public CreateOpaStrategyNewRequestAlarmDetailSensitiveFile getSensitiveFile() {
+            return this.sensitiveFile;
         }
 
         public CreateOpaStrategyNewRequestAlarmDetail setVul(CreateOpaStrategyNewRequestAlarmDetailVul vul) {
