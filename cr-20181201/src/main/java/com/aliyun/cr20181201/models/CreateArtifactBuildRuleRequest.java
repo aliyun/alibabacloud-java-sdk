@@ -4,18 +4,39 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class CreateArtifactBuildRuleRequest extends TeaModel {
+    /**
+     * <p>The type of the artifact.</p>
+     * <br>
+     * <p>*   `ACCELERATED_IMAGE`: accelerated images.</p>
+     */
     @NameInMap("ArtifactType")
     public String artifactType;
 
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Additional parameters.</p>
+     */
     @NameInMap("Parameters")
     public java.util.Map<String, ?> parameters;
 
+    /**
+     * <p>The ID of the effective range of the rule.</p>
+     * <br>
+     * <p>*   Set the value to the ID of the image repository.</p>
+     */
     @NameInMap("ScopeId")
     public String scopeId;
 
+    /**
+     * <p>The effective range of the rule. Valid values:</p>
+     * <br>
+     * <p>*   `REPOSITORY`</p>
+     */
     @NameInMap("ScopeType")
     public String scopeType;
 

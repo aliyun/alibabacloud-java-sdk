@@ -4,6 +4,9 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -13,6 +16,9 @@ public class ChangeResourceGroupRequest extends TeaModel {
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <p>The region ID of the resource group.</p>
+     */
     @NameInMap("ResourceRegionId")
     public String resourceRegionId;
 
