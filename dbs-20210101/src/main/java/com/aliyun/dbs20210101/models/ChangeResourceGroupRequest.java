@@ -16,6 +16,9 @@ public class ChangeResourceGroupRequest extends TeaModel {
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
+    @NameInMap("RegionCode")
+    public String regionCode;
+
     /**
      * <p>The ID of the resource.</p>
      */
@@ -47,6 +50,14 @@ public class ChangeResourceGroupRequest extends TeaModel {
     }
     public String getNewResourceGroupId() {
         return this.newResourceGroupId;
+    }
+
+    public ChangeResourceGroupRequest setRegionCode(String regionCode) {
+        this.regionCode = regionCode;
+        return this;
+    }
+    public String getRegionCode() {
+        return this.regionCode;
     }
 
     public ChangeResourceGroupRequest setResourceId(String resourceId) {
