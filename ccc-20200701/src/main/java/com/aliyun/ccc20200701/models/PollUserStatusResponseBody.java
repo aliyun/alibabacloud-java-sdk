@@ -311,6 +311,195 @@ public class PollUserStatusResponseBody extends TeaModel {
 
     }
 
+    public static class PollUserStatusResponseBodyDataChatContextsMembers extends TeaModel {
+        @NameInMap("Index")
+        public Integer index;
+
+        @NameInMap("ReleaseInitiator")
+        public String releaseInitiator;
+
+        @NameInMap("ReleaseReason")
+        public String releaseReason;
+
+        @NameInMap("SkillGroupId")
+        public String skillGroupId;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("UserType")
+        public String userType;
+
+        public static PollUserStatusResponseBodyDataChatContextsMembers build(java.util.Map<String, ?> map) throws Exception {
+            PollUserStatusResponseBodyDataChatContextsMembers self = new PollUserStatusResponseBodyDataChatContextsMembers();
+            return TeaModel.build(map, self);
+        }
+
+        public PollUserStatusResponseBodyDataChatContextsMembers setIndex(Integer index) {
+            this.index = index;
+            return this;
+        }
+        public Integer getIndex() {
+            return this.index;
+        }
+
+        public PollUserStatusResponseBodyDataChatContextsMembers setReleaseInitiator(String releaseInitiator) {
+            this.releaseInitiator = releaseInitiator;
+            return this;
+        }
+        public String getReleaseInitiator() {
+            return this.releaseInitiator;
+        }
+
+        public PollUserStatusResponseBodyDataChatContextsMembers setReleaseReason(String releaseReason) {
+            this.releaseReason = releaseReason;
+            return this;
+        }
+        public String getReleaseReason() {
+            return this.releaseReason;
+        }
+
+        public PollUserStatusResponseBodyDataChatContextsMembers setSkillGroupId(String skillGroupId) {
+            this.skillGroupId = skillGroupId;
+            return this;
+        }
+        public String getSkillGroupId() {
+            return this.skillGroupId;
+        }
+
+        public PollUserStatusResponseBodyDataChatContextsMembers setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public PollUserStatusResponseBodyDataChatContextsMembers setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public PollUserStatusResponseBodyDataChatContextsMembers setUserType(String userType) {
+            this.userType = userType;
+            return this;
+        }
+        public String getUserType() {
+            return this.userType;
+        }
+
+    }
+
+    public static class PollUserStatusResponseBodyDataChatContexts extends TeaModel {
+        @NameInMap("CallVariables")
+        public String callVariables;
+
+        @NameInMap("ChatType")
+        public String chatType;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("JobId")
+        public String jobId;
+
+        @NameInMap("Members")
+        public java.util.List<PollUserStatusResponseBodyDataChatContextsMembers> members;
+
+        public static PollUserStatusResponseBodyDataChatContexts build(java.util.Map<String, ?> map) throws Exception {
+            PollUserStatusResponseBodyDataChatContexts self = new PollUserStatusResponseBodyDataChatContexts();
+            return TeaModel.build(map, self);
+        }
+
+        public PollUserStatusResponseBodyDataChatContexts setCallVariables(String callVariables) {
+            this.callVariables = callVariables;
+            return this;
+        }
+        public String getCallVariables() {
+            return this.callVariables;
+        }
+
+        public PollUserStatusResponseBodyDataChatContexts setChatType(String chatType) {
+            this.chatType = chatType;
+            return this;
+        }
+        public String getChatType() {
+            return this.chatType;
+        }
+
+        public PollUserStatusResponseBodyDataChatContexts setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public PollUserStatusResponseBodyDataChatContexts setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public PollUserStatusResponseBodyDataChatContexts setMembers(java.util.List<PollUserStatusResponseBodyDataChatContextsMembers> members) {
+            this.members = members;
+            return this;
+        }
+        public java.util.List<PollUserStatusResponseBodyDataChatContextsMembers> getMembers() {
+            return this.members;
+        }
+
+    }
+
+    public static class PollUserStatusResponseBodyDataUserContextParallelJobList extends TeaModel {
+        @NameInMap("JobId")
+        public String jobId;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Timestamp")
+        public Long timestamp;
+
+        public static PollUserStatusResponseBodyDataUserContextParallelJobList build(java.util.Map<String, ?> map) throws Exception {
+            PollUserStatusResponseBodyDataUserContextParallelJobList self = new PollUserStatusResponseBodyDataUserContextParallelJobList();
+            return TeaModel.build(map, self);
+        }
+
+        public PollUserStatusResponseBodyDataUserContextParallelJobList setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public PollUserStatusResponseBodyDataUserContextParallelJobList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public PollUserStatusResponseBodyDataUserContextParallelJobList setTimestamp(Long timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public Long getTimestamp() {
+            return this.timestamp;
+        }
+
+    }
+
     public static class PollUserStatusResponseBodyDataUserContext extends TeaModel {
         @NameInMap("BreakCode")
         public String breakCode;
@@ -335,6 +524,9 @@ public class PollUserStatusResponseBody extends TeaModel {
 
         @NameInMap("OutboundScenario")
         public Boolean outboundScenario;
+
+        @NameInMap("ParallelJobList")
+        public java.util.List<PollUserStatusResponseBodyDataUserContextParallelJobList> parallelJobList;
 
         @NameInMap("Reserved")
         public Long reserved;
@@ -420,6 +612,14 @@ public class PollUserStatusResponseBody extends TeaModel {
             return this.outboundScenario;
         }
 
+        public PollUserStatusResponseBodyDataUserContext setParallelJobList(java.util.List<PollUserStatusResponseBodyDataUserContextParallelJobList> parallelJobList) {
+            this.parallelJobList = parallelJobList;
+            return this;
+        }
+        public java.util.List<PollUserStatusResponseBodyDataUserContextParallelJobList> getParallelJobList() {
+            return this.parallelJobList;
+        }
+
         public PollUserStatusResponseBodyDataUserContext setReserved(Long reserved) {
             this.reserved = reserved;
             return this;
@@ -466,6 +666,9 @@ public class PollUserStatusResponseBody extends TeaModel {
         @NameInMap("CallContext")
         public PollUserStatusResponseBodyDataCallContext callContext;
 
+        @NameInMap("ChatContexts")
+        public java.util.List<PollUserStatusResponseBodyDataChatContexts> chatContexts;
+
         @NameInMap("ContextId")
         public Long contextId;
 
@@ -483,6 +686,14 @@ public class PollUserStatusResponseBody extends TeaModel {
         }
         public PollUserStatusResponseBodyDataCallContext getCallContext() {
             return this.callContext;
+        }
+
+        public PollUserStatusResponseBodyData setChatContexts(java.util.List<PollUserStatusResponseBodyDataChatContexts> chatContexts) {
+            this.chatContexts = chatContexts;
+            return this;
+        }
+        public java.util.List<PollUserStatusResponseBodyDataChatContexts> getChatContexts() {
+            return this.chatContexts;
         }
 
         public PollUserStatusResponseBodyData setContextId(Long contextId) {

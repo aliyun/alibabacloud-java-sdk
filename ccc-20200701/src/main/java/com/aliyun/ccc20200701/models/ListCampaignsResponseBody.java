@@ -94,6 +94,9 @@ public class ListCampaignsResponseBody extends TeaModel {
         @NameInMap("CasesUncompleted")
         public Long casesUncompleted;
 
+        @NameInMap("CompletionRate")
+        public Float completionRate;
+
         @NameInMap("MaxAttemptCount")
         public Long maxAttemptCount;
 
@@ -181,6 +184,14 @@ public class ListCampaignsResponseBody extends TeaModel {
         }
         public Long getCasesUncompleted() {
             return this.casesUncompleted;
+        }
+
+        public ListCampaignsResponseBodyDataList setCompletionRate(Float completionRate) {
+            this.completionRate = completionRate;
+            return this;
+        }
+        public Float getCompletionRate() {
+            return this.completionRate;
         }
 
         public ListCampaignsResponseBodyDataList setMaxAttemptCount(Long maxAttemptCount) {

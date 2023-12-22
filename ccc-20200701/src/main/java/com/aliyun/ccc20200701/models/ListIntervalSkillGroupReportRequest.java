@@ -13,6 +13,9 @@ public class ListIntervalSkillGroupReportRequest extends TeaModel {
     @NameInMap("Interval")
     public String interval;
 
+    @NameInMap("MediaType")
+    public String mediaType;
+
     @NameInMap("SkillGroupId")
     public String skillGroupId;
 
@@ -46,6 +49,14 @@ public class ListIntervalSkillGroupReportRequest extends TeaModel {
     }
     public String getInterval() {
         return this.interval;
+    }
+
+    public ListIntervalSkillGroupReportRequest setMediaType(String mediaType) {
+        this.mediaType = mediaType;
+        return this;
+    }
+    public String getMediaType() {
+        return this.mediaType;
     }
 
     public ListIntervalSkillGroupReportRequest setSkillGroupId(String skillGroupId) {

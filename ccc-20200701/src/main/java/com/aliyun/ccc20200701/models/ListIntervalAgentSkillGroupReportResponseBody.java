@@ -68,6 +68,9 @@ public class ListIntervalAgentSkillGroupReportResponseBody extends TeaModel {
         @NameInMap("AgentAnswerRate")
         public Float agentAnswerRate;
 
+        @NameInMap("AgentHandleRate")
+        public Float agentHandleRate;
+
         @NameInMap("AnswerRate")
         public Float answerRate;
 
@@ -80,14 +83,23 @@ public class ListIntervalAgentSkillGroupReportResponseBody extends TeaModel {
         @NameInMap("AverageTalkTime")
         public Long averageTalkTime;
 
+        @NameInMap("CallsAgentHandled")
+        public Long callsAgentHandled;
+
         @NameInMap("CallsAnswered")
         public Long callsAnswered;
+
+        @NameInMap("CallsCustomerAnswered")
+        public Long callsCustomerAnswered;
 
         @NameInMap("CallsCustomerHandled")
         public Long callsCustomerHandled;
 
         @NameInMap("CallsDialed")
         public Long callsDialed;
+
+        @NameInMap("CustomerAnswerRate")
+        public Float customerAnswerRate;
 
         @NameInMap("CustomerHandleRate")
         public Float customerHandleRate;
@@ -123,6 +135,14 @@ public class ListIntervalAgentSkillGroupReportResponseBody extends TeaModel {
             return this.agentAnswerRate;
         }
 
+        public ListIntervalAgentSkillGroupReportResponseBodyDataBack2Back setAgentHandleRate(Float agentHandleRate) {
+            this.agentHandleRate = agentHandleRate;
+            return this;
+        }
+        public Float getAgentHandleRate() {
+            return this.agentHandleRate;
+        }
+
         public ListIntervalAgentSkillGroupReportResponseBodyDataBack2Back setAnswerRate(Float answerRate) {
             this.answerRate = answerRate;
             return this;
@@ -155,12 +175,28 @@ public class ListIntervalAgentSkillGroupReportResponseBody extends TeaModel {
             return this.averageTalkTime;
         }
 
+        public ListIntervalAgentSkillGroupReportResponseBodyDataBack2Back setCallsAgentHandled(Long callsAgentHandled) {
+            this.callsAgentHandled = callsAgentHandled;
+            return this;
+        }
+        public Long getCallsAgentHandled() {
+            return this.callsAgentHandled;
+        }
+
         public ListIntervalAgentSkillGroupReportResponseBodyDataBack2Back setCallsAnswered(Long callsAnswered) {
             this.callsAnswered = callsAnswered;
             return this;
         }
         public Long getCallsAnswered() {
             return this.callsAnswered;
+        }
+
+        public ListIntervalAgentSkillGroupReportResponseBodyDataBack2Back setCallsCustomerAnswered(Long callsCustomerAnswered) {
+            this.callsCustomerAnswered = callsCustomerAnswered;
+            return this;
+        }
+        public Long getCallsCustomerAnswered() {
+            return this.callsCustomerAnswered;
         }
 
         public ListIntervalAgentSkillGroupReportResponseBodyDataBack2Back setCallsCustomerHandled(Long callsCustomerHandled) {
@@ -177,6 +213,14 @@ public class ListIntervalAgentSkillGroupReportResponseBody extends TeaModel {
         }
         public Long getCallsDialed() {
             return this.callsDialed;
+        }
+
+        public ListIntervalAgentSkillGroupReportResponseBodyDataBack2Back setCustomerAnswerRate(Float customerAnswerRate) {
+            this.customerAnswerRate = customerAnswerRate;
+            return this;
+        }
+        public Float getCustomerAnswerRate() {
+            return this.customerAnswerRate;
         }
 
         public ListIntervalAgentSkillGroupReportResponseBodyDataBack2Back setCustomerHandleRate(Float customerHandleRate) {
@@ -238,8 +282,14 @@ public class ListIntervalAgentSkillGroupReportResponseBody extends TeaModel {
     }
 
     public static class ListIntervalAgentSkillGroupReportResponseBodyDataInbound extends TeaModel {
+        @NameInMap("AverageFirstResponseTime")
+        public Float averageFirstResponseTime;
+
         @NameInMap("AverageHoldTime")
         public Float averageHoldTime;
+
+        @NameInMap("AverageResponseTime")
+        public Float averageResponseTime;
 
         @NameInMap("AverageRingTime")
         public Float averageRingTime;
@@ -304,6 +354,15 @@ public class ListIntervalAgentSkillGroupReportResponseBody extends TeaModel {
         @NameInMap("TotalHoldTime")
         public Long totalHoldTime;
 
+        @NameInMap("TotalMessagesSent")
+        public Long totalMessagesSent;
+
+        @NameInMap("TotalMessagesSentByAgent")
+        public Long totalMessagesSentByAgent;
+
+        @NameInMap("TotalMessagesSentByCustomer")
+        public Long totalMessagesSentByCustomer;
+
         @NameInMap("TotalRingTime")
         public Long totalRingTime;
 
@@ -318,12 +377,28 @@ public class ListIntervalAgentSkillGroupReportResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListIntervalAgentSkillGroupReportResponseBodyDataInbound setAverageFirstResponseTime(Float averageFirstResponseTime) {
+            this.averageFirstResponseTime = averageFirstResponseTime;
+            return this;
+        }
+        public Float getAverageFirstResponseTime() {
+            return this.averageFirstResponseTime;
+        }
+
         public ListIntervalAgentSkillGroupReportResponseBodyDataInbound setAverageHoldTime(Float averageHoldTime) {
             this.averageHoldTime = averageHoldTime;
             return this;
         }
         public Float getAverageHoldTime() {
             return this.averageHoldTime;
+        }
+
+        public ListIntervalAgentSkillGroupReportResponseBodyDataInbound setAverageResponseTime(Float averageResponseTime) {
+            this.averageResponseTime = averageResponseTime;
+            return this;
+        }
+        public Float getAverageResponseTime() {
+            return this.averageResponseTime;
         }
 
         public ListIntervalAgentSkillGroupReportResponseBodyDataInbound setAverageRingTime(Float averageRingTime) {
@@ -494,6 +569,30 @@ public class ListIntervalAgentSkillGroupReportResponseBody extends TeaModel {
             return this.totalHoldTime;
         }
 
+        public ListIntervalAgentSkillGroupReportResponseBodyDataInbound setTotalMessagesSent(Long totalMessagesSent) {
+            this.totalMessagesSent = totalMessagesSent;
+            return this;
+        }
+        public Long getTotalMessagesSent() {
+            return this.totalMessagesSent;
+        }
+
+        public ListIntervalAgentSkillGroupReportResponseBodyDataInbound setTotalMessagesSentByAgent(Long totalMessagesSentByAgent) {
+            this.totalMessagesSentByAgent = totalMessagesSentByAgent;
+            return this;
+        }
+        public Long getTotalMessagesSentByAgent() {
+            return this.totalMessagesSentByAgent;
+        }
+
+        public ListIntervalAgentSkillGroupReportResponseBodyDataInbound setTotalMessagesSentByCustomer(Long totalMessagesSentByCustomer) {
+            this.totalMessagesSentByCustomer = totalMessagesSentByCustomer;
+            return this;
+        }
+        public Long getTotalMessagesSentByCustomer() {
+            return this.totalMessagesSentByCustomer;
+        }
+
         public ListIntervalAgentSkillGroupReportResponseBodyDataInbound setTotalRingTime(Long totalRingTime) {
             this.totalRingTime = totalRingTime;
             return this;
@@ -538,6 +637,9 @@ public class ListIntervalAgentSkillGroupReportResponseBody extends TeaModel {
 
         @NameInMap("CallsTalk")
         public Long callsTalk;
+
+        @NameInMap("CallsTalked")
+        public Long callsTalked;
 
         @NameInMap("MaxTalkTime")
         public Long maxTalkTime;
@@ -596,6 +698,14 @@ public class ListIntervalAgentSkillGroupReportResponseBody extends TeaModel {
         }
         public Long getCallsTalk() {
             return this.callsTalk;
+        }
+
+        public ListIntervalAgentSkillGroupReportResponseBodyDataInternal setCallsTalked(Long callsTalked) {
+            this.callsTalked = callsTalked;
+            return this;
+        }
+        public Long getCallsTalked() {
+            return this.callsTalked;
         }
 
         public ListIntervalAgentSkillGroupReportResponseBodyDataInternal setMaxTalkTime(Long maxTalkTime) {
@@ -995,6 +1105,9 @@ public class ListIntervalAgentSkillGroupReportResponseBody extends TeaModel {
         @NameInMap("FirstCheckInTime")
         public Long firstCheckInTime;
 
+        @NameInMap("LastCheckOutTime")
+        public Long lastCheckOutTime;
+
         @NameInMap("LastCheckoutTime")
         public Long lastCheckoutTime;
 
@@ -1039,6 +1152,18 @@ public class ListIntervalAgentSkillGroupReportResponseBody extends TeaModel {
 
         @NameInMap("TotalLoggedInTime")
         public Long totalLoggedInTime;
+
+        @NameInMap("TotalOffSiteLoggedInTime")
+        public String totalOffSiteLoggedInTime;
+
+        @NameInMap("TotalOfficePhoneLoggedInTime")
+        public String totalOfficePhoneLoggedInTime;
+
+        @NameInMap("TotalOnSiteLoggedInTime")
+        public String totalOnSiteLoggedInTime;
+
+        @NameInMap("TotalOutboundScenarioLoggedInTime")
+        public Long totalOutboundScenarioLoggedInTime;
 
         @NameInMap("TotalOutboundScenarioReadyTime")
         public Long totalOutboundScenarioReadyTime;
@@ -1114,6 +1239,14 @@ public class ListIntervalAgentSkillGroupReportResponseBody extends TeaModel {
         }
         public Long getFirstCheckInTime() {
             return this.firstCheckInTime;
+        }
+
+        public ListIntervalAgentSkillGroupReportResponseBodyDataOverall setLastCheckOutTime(Long lastCheckOutTime) {
+            this.lastCheckOutTime = lastCheckOutTime;
+            return this;
+        }
+        public Long getLastCheckOutTime() {
+            return this.lastCheckOutTime;
         }
 
         public ListIntervalAgentSkillGroupReportResponseBodyDataOverall setLastCheckoutTime(Long lastCheckoutTime) {
@@ -1234,6 +1367,38 @@ public class ListIntervalAgentSkillGroupReportResponseBody extends TeaModel {
         }
         public Long getTotalLoggedInTime() {
             return this.totalLoggedInTime;
+        }
+
+        public ListIntervalAgentSkillGroupReportResponseBodyDataOverall setTotalOffSiteLoggedInTime(String totalOffSiteLoggedInTime) {
+            this.totalOffSiteLoggedInTime = totalOffSiteLoggedInTime;
+            return this;
+        }
+        public String getTotalOffSiteLoggedInTime() {
+            return this.totalOffSiteLoggedInTime;
+        }
+
+        public ListIntervalAgentSkillGroupReportResponseBodyDataOverall setTotalOfficePhoneLoggedInTime(String totalOfficePhoneLoggedInTime) {
+            this.totalOfficePhoneLoggedInTime = totalOfficePhoneLoggedInTime;
+            return this;
+        }
+        public String getTotalOfficePhoneLoggedInTime() {
+            return this.totalOfficePhoneLoggedInTime;
+        }
+
+        public ListIntervalAgentSkillGroupReportResponseBodyDataOverall setTotalOnSiteLoggedInTime(String totalOnSiteLoggedInTime) {
+            this.totalOnSiteLoggedInTime = totalOnSiteLoggedInTime;
+            return this;
+        }
+        public String getTotalOnSiteLoggedInTime() {
+            return this.totalOnSiteLoggedInTime;
+        }
+
+        public ListIntervalAgentSkillGroupReportResponseBodyDataOverall setTotalOutboundScenarioLoggedInTime(Long totalOutboundScenarioLoggedInTime) {
+            this.totalOutboundScenarioLoggedInTime = totalOutboundScenarioLoggedInTime;
+            return this;
+        }
+        public Long getTotalOutboundScenarioLoggedInTime() {
+            return this.totalOutboundScenarioLoggedInTime;
         }
 
         public ListIntervalAgentSkillGroupReportResponseBodyDataOverall setTotalOutboundScenarioReadyTime(Long totalOutboundScenarioReadyTime) {

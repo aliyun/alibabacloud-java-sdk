@@ -64,7 +64,40 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetRealtimeInstanceStatesResponseBodyDataBreakCodeDetailList extends TeaModel {
+        @NameInMap("BreakCode")
+        public String breakCode;
+
+        @NameInMap("Count")
+        public Long count;
+
+        public static GetRealtimeInstanceStatesResponseBodyDataBreakCodeDetailList build(java.util.Map<String, ?> map) throws Exception {
+            GetRealtimeInstanceStatesResponseBodyDataBreakCodeDetailList self = new GetRealtimeInstanceStatesResponseBodyDataBreakCodeDetailList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRealtimeInstanceStatesResponseBodyDataBreakCodeDetailList setBreakCode(String breakCode) {
+            this.breakCode = breakCode;
+            return this;
+        }
+        public String getBreakCode() {
+            return this.breakCode;
+        }
+
+        public GetRealtimeInstanceStatesResponseBodyDataBreakCodeDetailList setCount(Long count) {
+            this.count = count;
+            return this;
+        }
+        public Long getCount() {
+            return this.count;
+        }
+
+    }
+
     public static class GetRealtimeInstanceStatesResponseBodyData extends TeaModel {
+        @NameInMap("BreakCodeDetailList")
+        public java.util.List<GetRealtimeInstanceStatesResponseBodyDataBreakCodeDetailList> breakCodeDetailList;
+
         @NameInMap("BreakingAgents")
         public Long breakingAgents;
 
@@ -98,6 +131,14 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         public static GetRealtimeInstanceStatesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetRealtimeInstanceStatesResponseBodyData self = new GetRealtimeInstanceStatesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetRealtimeInstanceStatesResponseBodyData setBreakCodeDetailList(java.util.List<GetRealtimeInstanceStatesResponseBodyDataBreakCodeDetailList> breakCodeDetailList) {
+            this.breakCodeDetailList = breakCodeDetailList;
+            return this;
+        }
+        public java.util.List<GetRealtimeInstanceStatesResponseBodyDataBreakCodeDetailList> getBreakCodeDetailList() {
+            return this.breakCodeDetailList;
         }
 
         public GetRealtimeInstanceStatesResponseBodyData setBreakingAgents(Long breakingAgents) {

@@ -4,11 +4,17 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class RemoveUsersRequest extends TeaModel {
+    @NameInMap("FilePath")
+    public String filePath;
+
     @NameInMap("Force")
     public Boolean force;
 
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("NotificationEmail")
+    public String notificationEmail;
 
     @NameInMap("UserIdList")
     public String userIdList;
@@ -16,6 +22,14 @@ public class RemoveUsersRequest extends TeaModel {
     public static RemoveUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveUsersRequest self = new RemoveUsersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RemoveUsersRequest setFilePath(String filePath) {
+        this.filePath = filePath;
+        return this;
+    }
+    public String getFilePath() {
+        return this.filePath;
     }
 
     public RemoveUsersRequest setForce(Boolean force) {
@@ -32,6 +46,14 @@ public class RemoveUsersRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public RemoveUsersRequest setNotificationEmail(String notificationEmail) {
+        this.notificationEmail = notificationEmail;
+        return this;
+    }
+    public String getNotificationEmail() {
+        return this.notificationEmail;
     }
 
     public RemoveUsersRequest setUserIdList(String userIdList) {

@@ -74,6 +74,9 @@ public class ListBriefSkillGroupsResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("MediaType")
+        public String mediaType;
+
         @NameInMap("PhoneNumberCount")
         public Integer phoneNumberCount;
 
@@ -113,6 +116,14 @@ public class ListBriefSkillGroupsResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListBriefSkillGroupsResponseBodyDataList setMediaType(String mediaType) {
+            this.mediaType = mediaType;
+            return this;
+        }
+        public String getMediaType() {
+            return this.mediaType;
         }
 
         public ListBriefSkillGroupsResponseBodyDataList setPhoneNumberCount(Integer phoneNumberCount) {

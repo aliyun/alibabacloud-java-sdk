@@ -16,6 +16,9 @@ public class CreateAudioFileRequest extends TeaModel {
     @NameInMap("OssFileKey")
     public String ossFileKey;
 
+    @NameInMap("Usage")
+    public String usage;
+
     public static CreateAudioFileRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAudioFileRequest self = new CreateAudioFileRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class CreateAudioFileRequest extends TeaModel {
     }
     public String getOssFileKey() {
         return this.ossFileKey;
+    }
+
+    public CreateAudioFileRequest setUsage(String usage) {
+        this.usage = usage;
+        return this;
+    }
+    public String getUsage() {
+        return this.usage;
     }
 
 }

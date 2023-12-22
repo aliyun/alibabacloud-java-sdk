@@ -72,8 +72,14 @@ public class GetCampaignResponseBody extends TeaModel {
         @NameInMap("CasesUncompleted")
         public Long casesUncompleted;
 
+        @NameInMap("CasesUncompletedAfterAttempt")
+        public String casesUncompletedAfterAttempt;
+
         @NameInMap("CasesUncompletedAfterAttempted")
         public Long casesUncompletedAfterAttempted;
+
+        @NameInMap("CompletionRate")
+        public Float completionRate;
 
         @NameInMap("MaxAttemptCount")
         public Long maxAttemptCount;
@@ -167,12 +173,28 @@ public class GetCampaignResponseBody extends TeaModel {
             return this.casesUncompleted;
         }
 
+        public GetCampaignResponseBodyData setCasesUncompletedAfterAttempt(String casesUncompletedAfterAttempt) {
+            this.casesUncompletedAfterAttempt = casesUncompletedAfterAttempt;
+            return this;
+        }
+        public String getCasesUncompletedAfterAttempt() {
+            return this.casesUncompletedAfterAttempt;
+        }
+
         public GetCampaignResponseBodyData setCasesUncompletedAfterAttempted(Long casesUncompletedAfterAttempted) {
             this.casesUncompletedAfterAttempted = casesUncompletedAfterAttempted;
             return this;
         }
         public Long getCasesUncompletedAfterAttempted() {
             return this.casesUncompletedAfterAttempted;
+        }
+
+        public GetCampaignResponseBodyData setCompletionRate(Float completionRate) {
+            this.completionRate = completionRate;
+            return this;
+        }
+        public Float getCompletionRate() {
+            return this.completionRate;
         }
 
         public GetCampaignResponseBodyData setMaxAttemptCount(Long maxAttemptCount) {

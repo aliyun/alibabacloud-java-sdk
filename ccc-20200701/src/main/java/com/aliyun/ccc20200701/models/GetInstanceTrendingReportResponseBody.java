@@ -190,12 +190,45 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
 
     }
 
+    public static class GetInstanceTrendingReportResponseBodyDataOverall extends TeaModel {
+        @NameInMap("MaxLoggedInAgents")
+        public Long maxLoggedInAgents;
+
+        @NameInMap("StatsTime")
+        public Long statsTime;
+
+        public static GetInstanceTrendingReportResponseBodyDataOverall build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceTrendingReportResponseBodyDataOverall self = new GetInstanceTrendingReportResponseBodyDataOverall();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceTrendingReportResponseBodyDataOverall setMaxLoggedInAgents(Long maxLoggedInAgents) {
+            this.maxLoggedInAgents = maxLoggedInAgents;
+            return this;
+        }
+        public Long getMaxLoggedInAgents() {
+            return this.maxLoggedInAgents;
+        }
+
+        public GetInstanceTrendingReportResponseBodyDataOverall setStatsTime(Long statsTime) {
+            this.statsTime = statsTime;
+            return this;
+        }
+        public Long getStatsTime() {
+            return this.statsTime;
+        }
+
+    }
+
     public static class GetInstanceTrendingReportResponseBodyData extends TeaModel {
         @NameInMap("Inbound")
         public java.util.List<GetInstanceTrendingReportResponseBodyDataInbound> inbound;
 
         @NameInMap("Outbound")
         public java.util.List<GetInstanceTrendingReportResponseBodyDataOutbound> outbound;
+
+        @NameInMap("Overall")
+        public java.util.List<GetInstanceTrendingReportResponseBodyDataOverall> overall;
 
         public static GetInstanceTrendingReportResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceTrendingReportResponseBodyData self = new GetInstanceTrendingReportResponseBodyData();
@@ -216,6 +249,14 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         }
         public java.util.List<GetInstanceTrendingReportResponseBodyDataOutbound> getOutbound() {
             return this.outbound;
+        }
+
+        public GetInstanceTrendingReportResponseBodyData setOverall(java.util.List<GetInstanceTrendingReportResponseBodyDataOverall> overall) {
+            this.overall = overall;
+            return this;
+        }
+        public java.util.List<GetInstanceTrendingReportResponseBodyDataOverall> getOverall() {
+            return this.overall;
         }
 
     }

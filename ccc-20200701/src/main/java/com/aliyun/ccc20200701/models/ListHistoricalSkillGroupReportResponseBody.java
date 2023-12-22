@@ -64,9 +64,215 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListHistoricalSkillGroupReportResponseBodyDataListBack2Back extends TeaModel {
+        @NameInMap("AgentHandleRate")
+        public Float agentHandleRate;
+
+        @NameInMap("AnswerRate")
+        public Float answerRate;
+
+        @NameInMap("AverageCustomerRingTime")
+        public Float averageCustomerRingTime;
+
+        @NameInMap("AverageRingTime")
+        public Float averageRingTime;
+
+        @NameInMap("AverageTalkTime")
+        public Float averageTalkTime;
+
+        @NameInMap("CallsAnswered")
+        public Long callsAnswered;
+
+        @NameInMap("CallsCustomerAnswered")
+        public Long callsCustomerAnswered;
+
+        @NameInMap("CallsDialed")
+        public Long callsDialed;
+
+        @NameInMap("CustomerAnswerRate")
+        public Float customerAnswerRate;
+
+        @NameInMap("MaxCustomerRingTime")
+        public Long maxCustomerRingTime;
+
+        @NameInMap("MaxRingTime")
+        public Long maxRingTime;
+
+        @NameInMap("MaxTalkTime")
+        public Long maxTalkTime;
+
+        @NameInMap("TotalCustomerRingTime")
+        public Long totalCustomerRingTime;
+
+        @NameInMap("TotalRingTime")
+        public Long totalRingTime;
+
+        @NameInMap("TotalTalkTime")
+        public Long totalTalkTime;
+
+        public static ListHistoricalSkillGroupReportResponseBodyDataListBack2Back build(java.util.Map<String, ?> map) throws Exception {
+            ListHistoricalSkillGroupReportResponseBodyDataListBack2Back self = new ListHistoricalSkillGroupReportResponseBodyDataListBack2Back();
+            return TeaModel.build(map, self);
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListBack2Back setAgentHandleRate(Float agentHandleRate) {
+            this.agentHandleRate = agentHandleRate;
+            return this;
+        }
+        public Float getAgentHandleRate() {
+            return this.agentHandleRate;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListBack2Back setAnswerRate(Float answerRate) {
+            this.answerRate = answerRate;
+            return this;
+        }
+        public Float getAnswerRate() {
+            return this.answerRate;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListBack2Back setAverageCustomerRingTime(Float averageCustomerRingTime) {
+            this.averageCustomerRingTime = averageCustomerRingTime;
+            return this;
+        }
+        public Float getAverageCustomerRingTime() {
+            return this.averageCustomerRingTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListBack2Back setAverageRingTime(Float averageRingTime) {
+            this.averageRingTime = averageRingTime;
+            return this;
+        }
+        public Float getAverageRingTime() {
+            return this.averageRingTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListBack2Back setAverageTalkTime(Float averageTalkTime) {
+            this.averageTalkTime = averageTalkTime;
+            return this;
+        }
+        public Float getAverageTalkTime() {
+            return this.averageTalkTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListBack2Back setCallsAnswered(Long callsAnswered) {
+            this.callsAnswered = callsAnswered;
+            return this;
+        }
+        public Long getCallsAnswered() {
+            return this.callsAnswered;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListBack2Back setCallsCustomerAnswered(Long callsCustomerAnswered) {
+            this.callsCustomerAnswered = callsCustomerAnswered;
+            return this;
+        }
+        public Long getCallsCustomerAnswered() {
+            return this.callsCustomerAnswered;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListBack2Back setCallsDialed(Long callsDialed) {
+            this.callsDialed = callsDialed;
+            return this;
+        }
+        public Long getCallsDialed() {
+            return this.callsDialed;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListBack2Back setCustomerAnswerRate(Float customerAnswerRate) {
+            this.customerAnswerRate = customerAnswerRate;
+            return this;
+        }
+        public Float getCustomerAnswerRate() {
+            return this.customerAnswerRate;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListBack2Back setMaxCustomerRingTime(Long maxCustomerRingTime) {
+            this.maxCustomerRingTime = maxCustomerRingTime;
+            return this;
+        }
+        public Long getMaxCustomerRingTime() {
+            return this.maxCustomerRingTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListBack2Back setMaxRingTime(Long maxRingTime) {
+            this.maxRingTime = maxRingTime;
+            return this;
+        }
+        public Long getMaxRingTime() {
+            return this.maxRingTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListBack2Back setMaxTalkTime(Long maxTalkTime) {
+            this.maxTalkTime = maxTalkTime;
+            return this;
+        }
+        public Long getMaxTalkTime() {
+            return this.maxTalkTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListBack2Back setTotalCustomerRingTime(Long totalCustomerRingTime) {
+            this.totalCustomerRingTime = totalCustomerRingTime;
+            return this;
+        }
+        public Long getTotalCustomerRingTime() {
+            return this.totalCustomerRingTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListBack2Back setTotalRingTime(Long totalRingTime) {
+            this.totalRingTime = totalRingTime;
+            return this;
+        }
+        public Long getTotalRingTime() {
+            return this.totalRingTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListBack2Back setTotalTalkTime(Long totalTalkTime) {
+            this.totalTalkTime = totalTalkTime;
+            return this;
+        }
+        public Long getTotalTalkTime() {
+            return this.totalTalkTime;
+        }
+
+    }
+
+    public static class ListHistoricalSkillGroupReportResponseBodyDataListInboundAccessChannelTypeDetails extends TeaModel {
+        @NameInMap("AccessChannelType")
+        public String accessChannelType;
+
+        @NameInMap("CallsOffered")
+        public Long callsOffered;
+
+        public static ListHistoricalSkillGroupReportResponseBodyDataListInboundAccessChannelTypeDetails build(java.util.Map<String, ?> map) throws Exception {
+            ListHistoricalSkillGroupReportResponseBodyDataListInboundAccessChannelTypeDetails self = new ListHistoricalSkillGroupReportResponseBodyDataListInboundAccessChannelTypeDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInboundAccessChannelTypeDetails setAccessChannelType(String accessChannelType) {
+            this.accessChannelType = accessChannelType;
+            return this;
+        }
+        public String getAccessChannelType() {
+            return this.accessChannelType;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInboundAccessChannelTypeDetails setCallsOffered(Long callsOffered) {
+            this.callsOffered = callsOffered;
+            return this;
+        }
+        public Long getCallsOffered() {
+            return this.callsOffered;
+        }
+
+    }
+
     public static class ListHistoricalSkillGroupReportResponseBodyDataListInbound extends TeaModel {
         @NameInMap("AbandonRate")
         public Float abandonRate;
+
+        @NameInMap("AccessChannelTypeDetails")
+        public java.util.List<ListHistoricalSkillGroupReportResponseBodyDataListInboundAccessChannelTypeDetails> accessChannelTypeDetails;
 
         @NameInMap("AverageAbandonTime")
         public Float averageAbandonTime;
@@ -77,8 +283,14 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         @NameInMap("AverageAbandonedInRingTime")
         public Float averageAbandonedInRingTime;
 
+        @NameInMap("AverageFirstResponseTime")
+        public Float averageFirstResponseTime;
+
         @NameInMap("AverageHoldTime")
         public Float averageHoldTime;
+
+        @NameInMap("AverageResponseTime")
+        public Float averageResponseTime;
 
         @NameInMap("AverageRingTime")
         public Float averageRingTime;
@@ -128,6 +340,15 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         @NameInMap("CallsQueued")
         public Long callsQueued;
 
+        @NameInMap("CallsQueuingFailed")
+        public Long callsQueuingFailed;
+
+        @NameInMap("CallsQueuingOverflow")
+        public Long callsQueuingOverflow;
+
+        @NameInMap("CallsQueuingTimeout")
+        public Long callsQueuingTimeout;
+
         @NameInMap("CallsRinged")
         public Long callsRinged;
 
@@ -173,8 +394,14 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         @NameInMap("SatisfactionSurveysResponded")
         public Long satisfactionSurveysResponded;
 
+        @NameInMap("ServiceLevel15")
+        public Float serviceLevel15;
+
         @NameInMap("ServiceLevel20")
         public Float serviceLevel20;
+
+        @NameInMap("ServiceLevel30")
+        public Float serviceLevel30;
 
         @NameInMap("TotalAbandonTime")
         public Long totalAbandonTime;
@@ -187,6 +414,15 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
 
         @NameInMap("TotalHoldTime")
         public Long totalHoldTime;
+
+        @NameInMap("TotalMessagesSent")
+        public Long totalMessagesSent;
+
+        @NameInMap("TotalMessagesSentByAgent")
+        public Long totalMessagesSentByAgent;
+
+        @NameInMap("TotalMessagesSentByCustomer")
+        public Long totalMessagesSentByCustomer;
 
         @NameInMap("TotalRingTime")
         public Long totalRingTime;
@@ -213,6 +449,14 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
             return this.abandonRate;
         }
 
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setAccessChannelTypeDetails(java.util.List<ListHistoricalSkillGroupReportResponseBodyDataListInboundAccessChannelTypeDetails> accessChannelTypeDetails) {
+            this.accessChannelTypeDetails = accessChannelTypeDetails;
+            return this;
+        }
+        public java.util.List<ListHistoricalSkillGroupReportResponseBodyDataListInboundAccessChannelTypeDetails> getAccessChannelTypeDetails() {
+            return this.accessChannelTypeDetails;
+        }
+
         public ListHistoricalSkillGroupReportResponseBodyDataListInbound setAverageAbandonTime(Float averageAbandonTime) {
             this.averageAbandonTime = averageAbandonTime;
             return this;
@@ -237,12 +481,28 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
             return this.averageAbandonedInRingTime;
         }
 
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setAverageFirstResponseTime(Float averageFirstResponseTime) {
+            this.averageFirstResponseTime = averageFirstResponseTime;
+            return this;
+        }
+        public Float getAverageFirstResponseTime() {
+            return this.averageFirstResponseTime;
+        }
+
         public ListHistoricalSkillGroupReportResponseBodyDataListInbound setAverageHoldTime(Float averageHoldTime) {
             this.averageHoldTime = averageHoldTime;
             return this;
         }
         public Float getAverageHoldTime() {
             return this.averageHoldTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setAverageResponseTime(Float averageResponseTime) {
+            this.averageResponseTime = averageResponseTime;
+            return this;
+        }
+        public Float getAverageResponseTime() {
+            return this.averageResponseTime;
         }
 
         public ListHistoricalSkillGroupReportResponseBodyDataListInbound setAverageRingTime(Float averageRingTime) {
@@ -373,6 +633,30 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
             return this.callsQueued;
         }
 
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsQueuingFailed(Long callsQueuingFailed) {
+            this.callsQueuingFailed = callsQueuingFailed;
+            return this;
+        }
+        public Long getCallsQueuingFailed() {
+            return this.callsQueuingFailed;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsQueuingOverflow(Long callsQueuingOverflow) {
+            this.callsQueuingOverflow = callsQueuingOverflow;
+            return this;
+        }
+        public Long getCallsQueuingOverflow() {
+            return this.callsQueuingOverflow;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsQueuingTimeout(Long callsQueuingTimeout) {
+            this.callsQueuingTimeout = callsQueuingTimeout;
+            return this;
+        }
+        public Long getCallsQueuingTimeout() {
+            return this.callsQueuingTimeout;
+        }
+
         public ListHistoricalSkillGroupReportResponseBodyDataListInbound setCallsRinged(Long callsRinged) {
             this.callsRinged = callsRinged;
             return this;
@@ -493,12 +777,28 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
             return this.satisfactionSurveysResponded;
         }
 
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setServiceLevel15(Float serviceLevel15) {
+            this.serviceLevel15 = serviceLevel15;
+            return this;
+        }
+        public Float getServiceLevel15() {
+            return this.serviceLevel15;
+        }
+
         public ListHistoricalSkillGroupReportResponseBodyDataListInbound setServiceLevel20(Float serviceLevel20) {
             this.serviceLevel20 = serviceLevel20;
             return this;
         }
         public Float getServiceLevel20() {
             return this.serviceLevel20;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setServiceLevel30(Float serviceLevel30) {
+            this.serviceLevel30 = serviceLevel30;
+            return this;
+        }
+        public Float getServiceLevel30() {
+            return this.serviceLevel30;
         }
 
         public ListHistoricalSkillGroupReportResponseBodyDataListInbound setTotalAbandonTime(Long totalAbandonTime) {
@@ -531,6 +831,30 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         }
         public Long getTotalHoldTime() {
             return this.totalHoldTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setTotalMessagesSent(Long totalMessagesSent) {
+            this.totalMessagesSent = totalMessagesSent;
+            return this;
+        }
+        public Long getTotalMessagesSent() {
+            return this.totalMessagesSent;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setTotalMessagesSentByAgent(Long totalMessagesSentByAgent) {
+            this.totalMessagesSentByAgent = totalMessagesSentByAgent;
+            return this;
+        }
+        public Long getTotalMessagesSentByAgent() {
+            return this.totalMessagesSentByAgent;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListInbound setTotalMessagesSentByCustomer(Long totalMessagesSentByCustomer) {
+            this.totalMessagesSentByCustomer = totalMessagesSentByCustomer;
+            return this;
+        }
+        public Long getTotalMessagesSentByCustomer() {
+            return this.totalMessagesSentByCustomer;
         }
 
         public ListHistoricalSkillGroupReportResponseBodyDataListInbound setTotalRingTime(Long totalRingTime) {
@@ -883,6 +1207,47 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
 
     }
 
+    public static class ListHistoricalSkillGroupReportResponseBodyDataListOverallBreakCodeDetailList extends TeaModel {
+        @NameInMap("BreakCode")
+        public String breakCode;
+
+        @NameInMap("Count")
+        public Long count;
+
+        @NameInMap("Duration")
+        public Long duration;
+
+        public static ListHistoricalSkillGroupReportResponseBodyDataListOverallBreakCodeDetailList build(java.util.Map<String, ?> map) throws Exception {
+            ListHistoricalSkillGroupReportResponseBodyDataListOverallBreakCodeDetailList self = new ListHistoricalSkillGroupReportResponseBodyDataListOverallBreakCodeDetailList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOverallBreakCodeDetailList setBreakCode(String breakCode) {
+            this.breakCode = breakCode;
+            return this;
+        }
+        public String getBreakCode() {
+            return this.breakCode;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOverallBreakCodeDetailList setCount(Long count) {
+            this.count = count;
+            return this;
+        }
+        public Long getCount() {
+            return this.count;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOverallBreakCodeDetailList setDuration(Long duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Long getDuration() {
+            return this.duration;
+        }
+
+    }
+
     public static class ListHistoricalSkillGroupReportResponseBodyDataListOverall extends TeaModel {
         @NameInMap("AverageBreakTime")
         public Float averageBreakTime;
@@ -898,6 +1263,9 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
 
         @NameInMap("AverageWorkTime")
         public Float averageWorkTime;
+
+        @NameInMap("BreakCodeDetailList")
+        public java.util.List<ListHistoricalSkillGroupReportResponseBodyDataListOverallBreakCodeDetailList> breakCodeDetailList;
 
         @NameInMap("MaxBreakTime")
         public Long maxBreakTime;
@@ -993,6 +1361,14 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         }
         public Float getAverageWorkTime() {
             return this.averageWorkTime;
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataListOverall setBreakCodeDetailList(java.util.List<ListHistoricalSkillGroupReportResponseBodyDataListOverallBreakCodeDetailList> breakCodeDetailList) {
+            this.breakCodeDetailList = breakCodeDetailList;
+            return this;
+        }
+        public java.util.List<ListHistoricalSkillGroupReportResponseBodyDataListOverallBreakCodeDetailList> getBreakCodeDetailList() {
+            return this.breakCodeDetailList;
         }
 
         public ListHistoricalSkillGroupReportResponseBodyDataListOverall setMaxBreakTime(Long maxBreakTime) {
@@ -1134,6 +1510,9 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
     }
 
     public static class ListHistoricalSkillGroupReportResponseBodyDataList extends TeaModel {
+        @NameInMap("Back2Back")
+        public ListHistoricalSkillGroupReportResponseBodyDataListBack2Back back2Back;
+
         @NameInMap("Inbound")
         public ListHistoricalSkillGroupReportResponseBodyDataListInbound inbound;
 
@@ -1152,6 +1531,14 @@ public class ListHistoricalSkillGroupReportResponseBody extends TeaModel {
         public static ListHistoricalSkillGroupReportResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListHistoricalSkillGroupReportResponseBodyDataList self = new ListHistoricalSkillGroupReportResponseBodyDataList();
             return TeaModel.build(map, self);
+        }
+
+        public ListHistoricalSkillGroupReportResponseBodyDataList setBack2Back(ListHistoricalSkillGroupReportResponseBodyDataListBack2Back back2Back) {
+            this.back2Back = back2Back;
+            return this;
+        }
+        public ListHistoricalSkillGroupReportResponseBodyDataListBack2Back getBack2Back() {
+            return this.back2Back;
         }
 
         public ListHistoricalSkillGroupReportResponseBodyDataList setInbound(ListHistoricalSkillGroupReportResponseBodyDataListInbound inbound) {

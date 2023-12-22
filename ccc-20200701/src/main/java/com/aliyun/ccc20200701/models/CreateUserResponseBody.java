@@ -16,6 +16,9 @@ public class CreateUserResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("Params")
+    public java.util.List<String> params;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -56,6 +59,14 @@ public class CreateUserResponseBody extends TeaModel {
         return this.message;
     }
 
+    public CreateUserResponseBody setParams(java.util.List<String> params) {
+        this.params = params;
+        return this;
+    }
+    public java.util.List<String> getParams() {
+        return this.params;
+    }
+
     public CreateUserResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -65,6 +76,9 @@ public class CreateUserResponseBody extends TeaModel {
     }
 
     public static class CreateUserResponseBodyData extends TeaModel {
+        @NameInMap("AvatarUrl")
+        public String avatarUrl;
+
         @NameInMap("DisplayName")
         public String displayName;
 
@@ -80,6 +94,9 @@ public class CreateUserResponseBody extends TeaModel {
         @NameInMap("Mobile")
         public String mobile;
 
+        @NameInMap("Nickname")
+        public String nickname;
+
         @NameInMap("UserId")
         public String userId;
 
@@ -89,6 +106,14 @@ public class CreateUserResponseBody extends TeaModel {
         public static CreateUserResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateUserResponseBodyData self = new CreateUserResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public CreateUserResponseBodyData setAvatarUrl(String avatarUrl) {
+            this.avatarUrl = avatarUrl;
+            return this;
+        }
+        public String getAvatarUrl() {
+            return this.avatarUrl;
         }
 
         public CreateUserResponseBodyData setDisplayName(String displayName) {
@@ -129,6 +154,14 @@ public class CreateUserResponseBody extends TeaModel {
         }
         public String getMobile() {
             return this.mobile;
+        }
+
+        public CreateUserResponseBodyData setNickname(String nickname) {
+            this.nickname = nickname;
+            return this;
+        }
+        public String getNickname() {
+            return this.nickname;
         }
 
         public CreateUserResponseBodyData setUserId(String userId) {

@@ -4,6 +4,9 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class CreateUserRequest extends TeaModel {
+    @NameInMap("AvatarUrl")
+    public String avatarUrl;
+
     @NameInMap("DisplayId")
     public String displayId;
 
@@ -22,6 +25,9 @@ public class CreateUserRequest extends TeaModel {
     @NameInMap("Mobile")
     public String mobile;
 
+    @NameInMap("Nickname")
+    public String nickname;
+
     @NameInMap("ResetPassword")
     public Boolean resetPassword;
 
@@ -37,6 +43,14 @@ public class CreateUserRequest extends TeaModel {
     public static CreateUserRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateUserRequest self = new CreateUserRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateUserRequest setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
+        return this;
+    }
+    public String getAvatarUrl() {
+        return this.avatarUrl;
     }
 
     public CreateUserRequest setDisplayId(String displayId) {
@@ -85,6 +99,14 @@ public class CreateUserRequest extends TeaModel {
     }
     public String getMobile() {
         return this.mobile;
+    }
+
+    public CreateUserRequest setNickname(String nickname) {
+        this.nickname = nickname;
+        return this;
+    }
+    public String getNickname() {
+        return this.nickname;
     }
 
     public CreateUserRequest setResetPassword(Boolean resetPassword) {
