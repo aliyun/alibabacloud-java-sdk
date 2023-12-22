@@ -214,6 +214,12 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("over_apply_id")
         public String overApplyId;
 
+        @NameInMap("payment_department_id")
+        public String paymentDepartmentId;
+
+        @NameInMap("payment_department_name")
+        public String paymentDepartmentName;
+
         @NameInMap("person_settle_fee")
         public Double personSettleFee;
 
@@ -664,6 +670,22 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getOverApplyId() {
             return this.overApplyId;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setPaymentDepartmentId(String paymentDepartmentId) {
+            this.paymentDepartmentId = paymentDepartmentId;
+            return this;
+        }
+        public String getPaymentDepartmentId() {
+            return this.paymentDepartmentId;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setPaymentDepartmentName(String paymentDepartmentName) {
+            this.paymentDepartmentName = paymentDepartmentName;
+            return this;
+        }
+        public String getPaymentDepartmentName() {
+            return this.paymentDepartmentName;
         }
 
         public CarBillSettlementQueryResponseBodyModuleDataList setPersonSettleFee(Double personSettleFee) {

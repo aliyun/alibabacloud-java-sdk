@@ -270,6 +270,12 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("over_apply_id")
         public String overApplyId;
 
+        @NameInMap("payment_department_id")
+        public String paymentDepartmentId;
+
+        @NameInMap("payment_department_name")
+        public String paymentDepartmentName;
+
         @NameInMap("primary_id")
         public Long primaryId;
 
@@ -831,6 +837,22 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getOverApplyId() {
             return this.overApplyId;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setPaymentDepartmentId(String paymentDepartmentId) {
+            this.paymentDepartmentId = paymentDepartmentId;
+            return this;
+        }
+        public String getPaymentDepartmentId() {
+            return this.paymentDepartmentId;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setPaymentDepartmentName(String paymentDepartmentName) {
+            this.paymentDepartmentName = paymentDepartmentName;
+            return this;
+        }
+        public String getPaymentDepartmentName() {
+            return this.paymentDepartmentName;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setPrimaryId(Long primaryId) {
