@@ -28,6 +28,9 @@ public class FailoverDBClusterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("RollBackForDisaster")
+    public Boolean rollBackForDisaster;
+
     /**
      * <p>The ID of the read-only node that you want to promote to the primary node. You can call the [DescribeDBClusters](~~98094~~) operation to query node information, such as node IDs.</p>
      * <br>
@@ -88,6 +91,14 @@ public class FailoverDBClusterRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public FailoverDBClusterRequest setRollBackForDisaster(Boolean rollBackForDisaster) {
+        this.rollBackForDisaster = rollBackForDisaster;
+        return this;
+    }
+    public Boolean getRollBackForDisaster() {
+        return this.rollBackForDisaster;
     }
 
     public FailoverDBClusterRequest setTargetDBNodeId(String targetDBNodeId) {

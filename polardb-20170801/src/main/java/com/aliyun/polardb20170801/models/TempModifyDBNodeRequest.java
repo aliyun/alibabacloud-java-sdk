@@ -31,7 +31,6 @@ public class TempModifyDBNodeRequest extends TeaModel {
     /**
      * <p>The type of operation performed on the cluster. Valid values:</p>
      * <br>
-     * <p>*   **Add**: add one or more nodes to the cluster.</p>
      * <p>*   **Modify**: temporarily upgrade the configuration of the cluster.</p>
      */
     @NameInMap("OperationType")

@@ -929,6 +929,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("ServerlessType")
         public String serverlessType;
 
+        @NameInMap("SubCluster")
+        public String subCluster;
+
         /**
          * <p>The ID of the zone.</p>
          */
@@ -1074,6 +1077,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getServerlessType() {
             return this.serverlessType;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBNodes setSubCluster(String subCluster) {
+            this.subCluster = subCluster;
+            return this;
+        }
+        public String getSubCluster() {
+            return this.subCluster;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBNodes setZoneId(String zoneId) {
