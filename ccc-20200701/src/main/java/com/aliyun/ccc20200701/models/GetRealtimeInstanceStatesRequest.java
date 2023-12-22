@@ -7,6 +7,9 @@ public class GetRealtimeInstanceStatesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MediaType")
+    public String mediaType;
+
     public static GetRealtimeInstanceStatesRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRealtimeInstanceStatesRequest self = new GetRealtimeInstanceStatesRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class GetRealtimeInstanceStatesRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetRealtimeInstanceStatesRequest setMediaType(String mediaType) {
+        this.mediaType = mediaType;
+        return this;
+    }
+    public String getMediaType() {
+        return this.mediaType;
     }
 
 }

@@ -13,6 +13,12 @@ public class ListAudioFilesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Status")
+    public String status;
+
+    @NameInMap("Usage")
+    public String usage;
+
     public static ListAudioFilesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAudioFilesRequest self = new ListAudioFilesRequest();
         return TeaModel.build(map, self);
@@ -40,6 +46,22 @@ public class ListAudioFilesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAudioFilesRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public ListAudioFilesRequest setUsage(String usage) {
+        this.usage = usage;
+        return this;
+    }
+    public String getUsage() {
+        return this.usage;
     }
 
 }

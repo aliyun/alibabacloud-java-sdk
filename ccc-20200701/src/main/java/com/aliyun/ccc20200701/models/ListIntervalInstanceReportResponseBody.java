@@ -65,6 +65,9 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
     }
 
     public static class ListIntervalInstanceReportResponseBodyDataInbound extends TeaModel {
+        @NameInMap("AbandonRate")
+        public Float abandonRate;
+
         @NameInMap("AbandonedRate")
         public Float abandonedRate;
 
@@ -80,8 +83,14 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         @NameInMap("AverageAbandonedInRingTime")
         public Float averageAbandonedInRingTime;
 
+        @NameInMap("AverageFirstResponseTime")
+        public Float averageFirstResponseTime;
+
         @NameInMap("AverageHoldTime")
         public Float averageHoldTime;
+
+        @NameInMap("AverageResponseTime")
+        public Float averageResponseTime;
 
         @NameInMap("AverageRingTime")
         public Float averageRingTime;
@@ -116,6 +125,9 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         @NameInMap("CallsBlindTransferred")
         public Long callsBlindTransferred;
 
+        @NameInMap("CallsCausedIVRException")
+        public Long callsCausedIVRException;
+
         @NameInMap("CallsForwardToOutsideNumber")
         public Long callsForwardToOutsideNumber;
 
@@ -145,6 +157,9 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
 
         @NameInMap("CallsRinged")
         public Long callsRinged;
+
+        @NameInMap("CallsToVoicemail")
+        public Long callsToVoicemail;
 
         @NameInMap("CallsVoicemail")
         public Long callsVoicemail;
@@ -209,6 +224,15 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         @NameInMap("TotalHoldTime")
         public Long totalHoldTime;
 
+        @NameInMap("TotalMessagesSent")
+        public Long totalMessagesSent;
+
+        @NameInMap("TotalMessagesSentByAgent")
+        public Long totalMessagesSentByAgent;
+
+        @NameInMap("TotalMessagesSentByCustomer")
+        public Long totalMessagesSentByCustomer;
+
         @NameInMap("TotalRingTime")
         public Long totalRingTime;
 
@@ -224,6 +248,14 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         public static ListIntervalInstanceReportResponseBodyDataInbound build(java.util.Map<String, ?> map) throws Exception {
             ListIntervalInstanceReportResponseBodyDataInbound self = new ListIntervalInstanceReportResponseBodyDataInbound();
             return TeaModel.build(map, self);
+        }
+
+        public ListIntervalInstanceReportResponseBodyDataInbound setAbandonRate(Float abandonRate) {
+            this.abandonRate = abandonRate;
+            return this;
+        }
+        public Float getAbandonRate() {
+            return this.abandonRate;
         }
 
         public ListIntervalInstanceReportResponseBodyDataInbound setAbandonedRate(Float abandonedRate) {
@@ -266,12 +298,28 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             return this.averageAbandonedInRingTime;
         }
 
+        public ListIntervalInstanceReportResponseBodyDataInbound setAverageFirstResponseTime(Float averageFirstResponseTime) {
+            this.averageFirstResponseTime = averageFirstResponseTime;
+            return this;
+        }
+        public Float getAverageFirstResponseTime() {
+            return this.averageFirstResponseTime;
+        }
+
         public ListIntervalInstanceReportResponseBodyDataInbound setAverageHoldTime(Float averageHoldTime) {
             this.averageHoldTime = averageHoldTime;
             return this;
         }
         public Float getAverageHoldTime() {
             return this.averageHoldTime;
+        }
+
+        public ListIntervalInstanceReportResponseBodyDataInbound setAverageResponseTime(Float averageResponseTime) {
+            this.averageResponseTime = averageResponseTime;
+            return this;
+        }
+        public Float getAverageResponseTime() {
+            return this.averageResponseTime;
         }
 
         public ListIntervalInstanceReportResponseBodyDataInbound setAverageRingTime(Float averageRingTime) {
@@ -362,6 +410,14 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
             return this.callsBlindTransferred;
         }
 
+        public ListIntervalInstanceReportResponseBodyDataInbound setCallsCausedIVRException(Long callsCausedIVRException) {
+            this.callsCausedIVRException = callsCausedIVRException;
+            return this;
+        }
+        public Long getCallsCausedIVRException() {
+            return this.callsCausedIVRException;
+        }
+
         public ListIntervalInstanceReportResponseBodyDataInbound setCallsForwardToOutsideNumber(Long callsForwardToOutsideNumber) {
             this.callsForwardToOutsideNumber = callsForwardToOutsideNumber;
             return this;
@@ -440,6 +496,14 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         }
         public Long getCallsRinged() {
             return this.callsRinged;
+        }
+
+        public ListIntervalInstanceReportResponseBodyDataInbound setCallsToVoicemail(Long callsToVoicemail) {
+            this.callsToVoicemail = callsToVoicemail;
+            return this;
+        }
+        public Long getCallsToVoicemail() {
+            return this.callsToVoicemail;
         }
 
         public ListIntervalInstanceReportResponseBodyDataInbound setCallsVoicemail(Long callsVoicemail) {
@@ -608,6 +672,30 @@ public class ListIntervalInstanceReportResponseBody extends TeaModel {
         }
         public Long getTotalHoldTime() {
             return this.totalHoldTime;
+        }
+
+        public ListIntervalInstanceReportResponseBodyDataInbound setTotalMessagesSent(Long totalMessagesSent) {
+            this.totalMessagesSent = totalMessagesSent;
+            return this;
+        }
+        public Long getTotalMessagesSent() {
+            return this.totalMessagesSent;
+        }
+
+        public ListIntervalInstanceReportResponseBodyDataInbound setTotalMessagesSentByAgent(Long totalMessagesSentByAgent) {
+            this.totalMessagesSentByAgent = totalMessagesSentByAgent;
+            return this;
+        }
+        public Long getTotalMessagesSentByAgent() {
+            return this.totalMessagesSentByAgent;
+        }
+
+        public ListIntervalInstanceReportResponseBodyDataInbound setTotalMessagesSentByCustomer(Long totalMessagesSentByCustomer) {
+            this.totalMessagesSentByCustomer = totalMessagesSentByCustomer;
+            return this;
+        }
+        public Long getTotalMessagesSentByCustomer() {
+            return this.totalMessagesSentByCustomer;
         }
 
         public ListIntervalInstanceReportResponseBodyDataInbound setTotalRingTime(Long totalRingTime) {

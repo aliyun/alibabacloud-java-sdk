@@ -68,6 +68,9 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
         @NameInMap("BreakAgents")
         public Long breakAgents;
 
+        @NameInMap("BreakingAgents")
+        public Long breakingAgents;
+
         @NameInMap("Concurrency")
         public Long concurrency;
 
@@ -77,14 +80,35 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
         @NameInMap("LoggedInAgents")
         public Long loggedInAgents;
 
+        @NameInMap("OutboundScenarioBreakingAgents")
+        public Long outboundScenarioBreakingAgents;
+
+        @NameInMap("OutboundScenarioReadyAgents")
+        public Long outboundScenarioReadyAgents;
+
+        @NameInMap("OutboundScenarioTalkingAgents")
+        public Long outboundScenarioTalkingAgents;
+
+        @NameInMap("OutboundScenarioWorkingAgents")
+        public Long outboundScenarioWorkingAgents;
+
         @NameInMap("ReadyAgents")
         public Long readyAgents;
+
+        @NameInMap("StatsTime")
+        public Long statsTime;
 
         @NameInMap("TalkAgents")
         public Long talkAgents;
 
+        @NameInMap("TalkingAgents")
+        public Long talkingAgents;
+
         @NameInMap("WorkAgents")
         public Long workAgents;
+
+        @NameInMap("WorkingAgents")
+        public Long workingAgents;
 
         public static ListCampaignTrendingReportResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListCampaignTrendingReportResponseBodyData self = new ListCampaignTrendingReportResponseBodyData();
@@ -97,6 +121,14 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
         }
         public Long getBreakAgents() {
             return this.breakAgents;
+        }
+
+        public ListCampaignTrendingReportResponseBodyData setBreakingAgents(Long breakingAgents) {
+            this.breakingAgents = breakingAgents;
+            return this;
+        }
+        public Long getBreakingAgents() {
+            return this.breakingAgents;
         }
 
         public ListCampaignTrendingReportResponseBodyData setConcurrency(Long concurrency) {
@@ -123,12 +155,52 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
             return this.loggedInAgents;
         }
 
+        public ListCampaignTrendingReportResponseBodyData setOutboundScenarioBreakingAgents(Long outboundScenarioBreakingAgents) {
+            this.outboundScenarioBreakingAgents = outboundScenarioBreakingAgents;
+            return this;
+        }
+        public Long getOutboundScenarioBreakingAgents() {
+            return this.outboundScenarioBreakingAgents;
+        }
+
+        public ListCampaignTrendingReportResponseBodyData setOutboundScenarioReadyAgents(Long outboundScenarioReadyAgents) {
+            this.outboundScenarioReadyAgents = outboundScenarioReadyAgents;
+            return this;
+        }
+        public Long getOutboundScenarioReadyAgents() {
+            return this.outboundScenarioReadyAgents;
+        }
+
+        public ListCampaignTrendingReportResponseBodyData setOutboundScenarioTalkingAgents(Long outboundScenarioTalkingAgents) {
+            this.outboundScenarioTalkingAgents = outboundScenarioTalkingAgents;
+            return this;
+        }
+        public Long getOutboundScenarioTalkingAgents() {
+            return this.outboundScenarioTalkingAgents;
+        }
+
+        public ListCampaignTrendingReportResponseBodyData setOutboundScenarioWorkingAgents(Long outboundScenarioWorkingAgents) {
+            this.outboundScenarioWorkingAgents = outboundScenarioWorkingAgents;
+            return this;
+        }
+        public Long getOutboundScenarioWorkingAgents() {
+            return this.outboundScenarioWorkingAgents;
+        }
+
         public ListCampaignTrendingReportResponseBodyData setReadyAgents(Long readyAgents) {
             this.readyAgents = readyAgents;
             return this;
         }
         public Long getReadyAgents() {
             return this.readyAgents;
+        }
+
+        public ListCampaignTrendingReportResponseBodyData setStatsTime(Long statsTime) {
+            this.statsTime = statsTime;
+            return this;
+        }
+        public Long getStatsTime() {
+            return this.statsTime;
         }
 
         public ListCampaignTrendingReportResponseBodyData setTalkAgents(Long talkAgents) {
@@ -139,12 +211,28 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
             return this.talkAgents;
         }
 
+        public ListCampaignTrendingReportResponseBodyData setTalkingAgents(Long talkingAgents) {
+            this.talkingAgents = talkingAgents;
+            return this;
+        }
+        public Long getTalkingAgents() {
+            return this.talkingAgents;
+        }
+
         public ListCampaignTrendingReportResponseBodyData setWorkAgents(Long workAgents) {
             this.workAgents = workAgents;
             return this;
         }
         public Long getWorkAgents() {
             return this.workAgents;
+        }
+
+        public ListCampaignTrendingReportResponseBodyData setWorkingAgents(Long workingAgents) {
+            this.workingAgents = workingAgents;
+            return this;
+        }
+        public Long getWorkingAgents() {
+            return this.workingAgents;
         }
 
     }

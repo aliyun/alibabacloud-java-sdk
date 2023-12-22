@@ -4,6 +4,9 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class ModifyUserRequest extends TeaModel {
+    @NameInMap("AvatarUrl")
+    public String avatarUrl;
+
     @NameInMap("DisplayId")
     public String displayId;
 
@@ -19,6 +22,9 @@ public class ModifyUserRequest extends TeaModel {
     @NameInMap("Mobile")
     public String mobile;
 
+    @NameInMap("Nickname")
+    public String nickname;
+
     @NameInMap("RoleId")
     public String roleId;
 
@@ -31,6 +37,14 @@ public class ModifyUserRequest extends TeaModel {
     public static ModifyUserRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyUserRequest self = new ModifyUserRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyUserRequest setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
+        return this;
+    }
+    public String getAvatarUrl() {
+        return this.avatarUrl;
     }
 
     public ModifyUserRequest setDisplayId(String displayId) {
@@ -71,6 +85,14 @@ public class ModifyUserRequest extends TeaModel {
     }
     public String getMobile() {
         return this.mobile;
+    }
+
+    public ModifyUserRequest setNickname(String nickname) {
+        this.nickname = nickname;
+        return this;
+    }
+    public String getNickname() {
+        return this.nickname;
     }
 
     public ModifyUserRequest setRoleId(String roleId) {

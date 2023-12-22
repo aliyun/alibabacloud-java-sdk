@@ -16,6 +16,9 @@ public class ListIntervalAgentReportRequest extends TeaModel {
     @NameInMap("Interval")
     public String interval;
 
+    @NameInMap("MediaType")
+    public String mediaType;
+
     @NameInMap("StartTime")
     public Long startTime;
 
@@ -54,6 +57,14 @@ public class ListIntervalAgentReportRequest extends TeaModel {
     }
     public String getInterval() {
         return this.interval;
+    }
+
+    public ListIntervalAgentReportRequest setMediaType(String mediaType) {
+        this.mediaType = mediaType;
+        return this;
+    }
+    public String getMediaType() {
+        return this.mediaType;
     }
 
     public ListIntervalAgentReportRequest setStartTime(Long startTime) {

@@ -71,6 +71,9 @@ public class ListAudioFilesResponseBody extends TeaModel {
         @NameInMap("AudioResourceId")
         public String audioResourceId;
 
+        @NameInMap("AuditResult")
+        public String auditResult;
+
         @NameInMap("CreatedTime")
         public String createdTime;
 
@@ -83,8 +86,14 @@ public class ListAudioFilesResponseBody extends TeaModel {
         @NameInMap("OssFileKey")
         public String ossFileKey;
 
+        @NameInMap("Status")
+        public String status;
+
         @NameInMap("UpdatedTime")
         public String updatedTime;
+
+        @NameInMap("Usage")
+        public String usage;
 
         public static ListAudioFilesResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListAudioFilesResponseBodyDataList self = new ListAudioFilesResponseBodyDataList();
@@ -105,6 +114,14 @@ public class ListAudioFilesResponseBody extends TeaModel {
         }
         public String getAudioResourceId() {
             return this.audioResourceId;
+        }
+
+        public ListAudioFilesResponseBodyDataList setAuditResult(String auditResult) {
+            this.auditResult = auditResult;
+            return this;
+        }
+        public String getAuditResult() {
+            return this.auditResult;
         }
 
         public ListAudioFilesResponseBodyDataList setCreatedTime(String createdTime) {
@@ -139,12 +156,28 @@ public class ListAudioFilesResponseBody extends TeaModel {
             return this.ossFileKey;
         }
 
+        public ListAudioFilesResponseBodyDataList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
         public ListAudioFilesResponseBodyDataList setUpdatedTime(String updatedTime) {
             this.updatedTime = updatedTime;
             return this;
         }
         public String getUpdatedTime() {
             return this.updatedTime;
+        }
+
+        public ListAudioFilesResponseBodyDataList setUsage(String usage) {
+            this.usage = usage;
+            return this;
+        }
+        public String getUsage() {
+            return this.usage;
         }
 
     }

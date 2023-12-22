@@ -129,6 +129,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddNumbersToSkillGroupResponse addNumbersToSkillGroupWithOptions(AddNumbersToSkillGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instNumberGroupIdList)) {
+            query.put("InstNumberGroupIdList", request.instNumberGroupIdList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -442,6 +446,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.appendCasesWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated : AssignUsers is deprecated, please use CCC::2020-07-01::ImportRamUsers instead.
+      *
+      * @param request AssignUsersRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AssignUsersResponse
+     */
+    // Deprecated
     public AssignUsersResponse assignUsersWithOptions(AssignUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -482,6 +494,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AssignUsersResponse());
     }
 
+    /**
+      * @deprecated : AssignUsers is deprecated, please use CCC::2020-07-01::ImportRamUsers instead.
+      *
+      * @param request AssignUsersRequest
+      * @return AssignUsersResponse
+     */
+    // Deprecated
     public AssignUsersResponse assignUsers(AssignUsersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.assignUsersWithOptions(request, runtime);
@@ -543,6 +562,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CallPriority", request.callPriority);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.contactFlowVariables)) {
+            query.put("ContactFlowVariables", request.contactFlowVariables);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
             query.put("DeviceId", request.deviceId);
         }
@@ -569,6 +592,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.transferee)) {
             query.put("Transferee", request.transferee);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transfereeType)) {
+            query.put("TransfereeType", request.transfereeType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.transferor)) {
@@ -701,6 +728,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CancelAttendedTransferResponse cancelAttendedTransfer(CancelAttendedTransferRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelAttendedTransferWithOptions(request, runtime);
+    }
+
+    public ChangeVisibilityResponse changeVisibilityWithOptions(ChangeVisibilityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.invisible)) {
+            query.put("Invisible", request.invisible);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ChangeVisibility"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeVisibilityResponse());
+    }
+
+    public ChangeVisibilityResponse changeVisibility(ChangeVisibilityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.changeVisibilityWithOptions(request, runtime);
     }
 
     public ChangeWorkModeResponse changeWorkModeWithOptions(ChangeWorkModeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -904,6 +968,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ossFileKey)) {
             query.put("OssFileKey", request.ossFileKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usage)) {
+            query.put("Usage", request.usage);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1227,6 +1295,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateUserResponse createUserWithOptions(CreateUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.avatarUrl)) {
+            query.put("AvatarUrl", request.avatarUrl);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.displayId)) {
             query.put("DisplayId", request.displayId);
         }
@@ -1249,6 +1321,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
             query.put("Mobile", request.mobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nickname)) {
+            query.put("Nickname", request.nickname);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resetPassword)) {
@@ -1532,6 +1608,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.endConferenceWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated : ExportCustomCallTagging is deprecated, please use CCC::2020-07-01::ExportCustomCallTaggings instead.
+      *
+      * @param request ExportCustomCallTaggingRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ExportCustomCallTaggingResponse
+     */
+    // Deprecated
     public ExportCustomCallTaggingResponse exportCustomCallTaggingWithOptions(ExportCustomCallTaggingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1556,6 +1640,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ExportCustomCallTaggingResponse());
     }
 
+    /**
+      * @deprecated : ExportCustomCallTagging is deprecated, please use CCC::2020-07-01::ExportCustomCallTaggings instead.
+      *
+      * @param request ExportCustomCallTaggingRequest
+      * @return ExportCustomCallTaggingResponse
+     */
+    // Deprecated
     public ExportCustomCallTaggingResponse exportCustomCallTagging(ExportCustomCallTaggingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.exportCustomCallTaggingWithOptions(request, runtime);
@@ -2067,6 +2158,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaType)) {
+            query.put("MediaType", request.mediaType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("StartTime", request.startTime);
         }
@@ -2133,6 +2228,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaType)) {
+            query.put("MediaType", request.mediaType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("StartTime", request.startTime);
         }
@@ -2162,6 +2261,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetLoginDetailsResponse getLoginDetailsWithOptions(GetLoginDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.chatDeviceId)) {
+            query.put("ChatDeviceId", request.chatDeviceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -2325,6 +2428,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaType)) {
+            query.put("MediaType", request.mediaType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2646,6 +2753,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.importAdminsWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated : ImportCustomCallTagging is deprecated, please use CCC::2020-07-01::ImportCustomCallTaggings instead.
+      *
+      * @param request ImportCustomCallTaggingRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ImportCustomCallTaggingResponse
+     */
+    // Deprecated
     public ImportCustomCallTaggingResponse importCustomCallTaggingWithOptions(ImportCustomCallTaggingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2674,6 +2789,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ImportCustomCallTaggingResponse());
     }
 
+    /**
+      * @deprecated : ImportCustomCallTagging is deprecated, please use CCC::2020-07-01::ImportCustomCallTaggings instead.
+      *
+      * @param request ImportCustomCallTaggingRequest
+      * @return ImportCustomCallTaggingResponse
+     */
+    // Deprecated
     public ImportCustomCallTaggingResponse importCustomCallTagging(ImportCustomCallTaggingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.importCustomCallTaggingWithOptions(request, runtime);
@@ -2981,6 +3103,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listAgentStateLogsWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated : ListAgentStates is deprecated, please use CCC::2020-07-01::ListRealtimeAgentStates instead.
+      *
+      * @param request ListAgentStatesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListAgentStatesResponse
+     */
+    // Deprecated
     public ListAgentStatesResponse listAgentStatesWithOptions(ListAgentStatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3029,11 +3159,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListAgentStatesResponse());
     }
 
+    /**
+      * @deprecated : ListAgentStates is deprecated, please use CCC::2020-07-01::ListRealtimeAgentStates instead.
+      *
+      * @param request ListAgentStatesRequest
+      * @return ListAgentStatesResponse
+     */
+    // Deprecated
     public ListAgentStatesResponse listAgentStates(ListAgentStatesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAgentStatesWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated : ListAgentSummaryReportsSinceMidnight is deprecated, please use CCC::2020-07-01::ListHistoricalAgentReport instead.
+      *
+      * @param request ListAgentSummaryReportsSinceMidnightRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListAgentSummaryReportsSinceMidnightResponse
+     */
+    // Deprecated
     public ListAgentSummaryReportsSinceMidnightResponse listAgentSummaryReportsSinceMidnightWithOptions(ListAgentSummaryReportsSinceMidnightRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -3054,6 +3199,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListAgentSummaryReportsSinceMidnightResponse());
     }
 
+    /**
+      * @deprecated : ListAgentSummaryReportsSinceMidnight is deprecated, please use CCC::2020-07-01::ListHistoricalAgentReport instead.
+      *
+      * @param request ListAgentSummaryReportsSinceMidnightRequest
+      * @return ListAgentSummaryReportsSinceMidnightResponse
+     */
+    // Deprecated
     public ListAgentSummaryReportsSinceMidnightResponse listAgentSummaryReportsSinceMidnight(ListAgentSummaryReportsSinceMidnightRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAgentSummaryReportsSinceMidnightWithOptions(request, runtime);
@@ -3099,6 +3251,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usage)) {
+            query.put("Usage", request.usage);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -3126,6 +3286,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaType)) {
+            query.put("MediaType", request.mediaType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
@@ -3533,6 +3697,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listContactFlowsWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated : ListCustomCallTagging is deprecated, please use CCC::2020-07-01::ListCustomCallTaggings instead.
+      *
+      * @param request ListCustomCallTaggingRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListCustomCallTaggingResponse
+     */
+    // Deprecated
     public ListCustomCallTaggingResponse listCustomCallTaggingWithOptions(ListCustomCallTaggingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3573,6 +3745,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListCustomCallTaggingResponse());
     }
 
+    /**
+      * @deprecated : ListCustomCallTagging is deprecated, please use CCC::2020-07-01::ListCustomCallTaggings instead.
+      *
+      * @param request ListCustomCallTaggingRequest
+      * @return ListCustomCallTaggingResponse
+     */
+    // Deprecated
     public ListCustomCallTaggingResponse listCustomCallTagging(ListCustomCallTaggingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCustomCallTaggingWithOptions(request, runtime);
@@ -3663,12 +3842,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaType)) {
+            query.put("MediaType", request.mediaType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillGroupId)) {
+            query.put("SkillGroupId", request.skillGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
@@ -3716,6 +3903,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaType)) {
+            query.put("MediaType", request.mediaType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
@@ -3771,6 +3962,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaType)) {
+            query.put("MediaType", request.mediaType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
@@ -3898,6 +4093,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Interval", request.interval);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaType)) {
+            query.put("MediaType", request.mediaType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("StartTime", request.startTime);
         }
@@ -4003,6 +4202,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
             query.put("Interval", request.interval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaType)) {
+            query.put("MediaType", request.mediaType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.skillGroupId)) {
@@ -4794,6 +4997,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listRolesWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated : ListSkillGroupStates is deprecated, please use CCC::2020-07-01::ListRealtimeSkillGroupStates instead.
+      *
+      * @param request ListSkillGroupStatesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListSkillGroupStatesResponse
+     */
+    // Deprecated
     public ListSkillGroupStatesResponse listSkillGroupStatesWithOptions(ListSkillGroupStatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -4814,11 +5025,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListSkillGroupStatesResponse());
     }
 
+    /**
+      * @deprecated : ListSkillGroupStates is deprecated, please use CCC::2020-07-01::ListRealtimeSkillGroupStates instead.
+      *
+      * @param request ListSkillGroupStatesRequest
+      * @return ListSkillGroupStatesResponse
+     */
+    // Deprecated
     public ListSkillGroupStatesResponse listSkillGroupStates(ListSkillGroupStatesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listSkillGroupStatesWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated : ListSkillGroupSummaryReportsSinceMidnight is deprecated, please use CCC::2020-07-01::ListHistoricalSkillGroupReport instead.
+      *
+      * @param request ListSkillGroupSummaryReportsSinceMidnightRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListSkillGroupSummaryReportsSinceMidnightResponse
+     */
+    // Deprecated
     public ListSkillGroupSummaryReportsSinceMidnightResponse listSkillGroupSummaryReportsSinceMidnightWithOptions(ListSkillGroupSummaryReportsSinceMidnightRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -4839,6 +5065,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListSkillGroupSummaryReportsSinceMidnightResponse());
     }
 
+    /**
+      * @deprecated : ListSkillGroupSummaryReportsSinceMidnight is deprecated, please use CCC::2020-07-01::ListHistoricalSkillGroupReport instead.
+      *
+      * @param request ListSkillGroupSummaryReportsSinceMidnightRequest
+      * @return ListSkillGroupSummaryReportsSinceMidnightResponse
+     */
+    // Deprecated
     public ListSkillGroupSummaryReportsSinceMidnightResponse listSkillGroupSummaryReportsSinceMidnight(ListSkillGroupSummaryReportsSinceMidnightRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listSkillGroupSummaryReportsSinceMidnightWithOptions(request, runtime);
@@ -5043,6 +5276,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SearchPattern", request.searchPattern);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.skillGroupId)) {
+            query.put("SkillGroupId", request.skillGroupId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -5200,6 +5437,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ossFileKey)) {
             query.put("OssFileKey", request.ossFileKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usage)) {
+            query.put("Usage", request.usage);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -5420,6 +5661,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyUserResponse modifyUserWithOptions(ModifyUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.avatarUrl)) {
+            query.put("AvatarUrl", request.avatarUrl);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.displayId)) {
             query.put("DisplayId", request.displayId);
         }
@@ -5438,6 +5683,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
             query.put("Mobile", request.mobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nickname)) {
+            query.put("Nickname", request.nickname);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.roleId)) {
@@ -6228,12 +6477,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RemoveUsersResponse removeUsersWithOptions(RemoveUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filePath)) {
+            query.put("FilePath", request.filePath);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.force)) {
             query.put("Force", request.force);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationEmail)) {
+            query.put("NotificationEmail", request.notificationEmail);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userIdList)) {
@@ -6740,6 +6997,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SignInGroupResponse signInGroupWithOptions(SignInGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.additivity)) {
+            query.put("Additivity", request.additivity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chatDeviceId)) {
+            query.put("ChatDeviceId", request.chatDeviceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
             query.put("DeviceId", request.deviceId);
         }

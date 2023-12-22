@@ -4,6 +4,12 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class SignInGroupRequest extends TeaModel {
+    @NameInMap("Additivity")
+    public Boolean additivity;
+
+    @NameInMap("ChatDeviceId")
+    public String chatDeviceId;
+
     @NameInMap("DeviceId")
     public String deviceId;
 
@@ -19,6 +25,22 @@ public class SignInGroupRequest extends TeaModel {
     public static SignInGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         SignInGroupRequest self = new SignInGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SignInGroupRequest setAdditivity(Boolean additivity) {
+        this.additivity = additivity;
+        return this;
+    }
+    public Boolean getAdditivity() {
+        return this.additivity;
+    }
+
+    public SignInGroupRequest setChatDeviceId(String chatDeviceId) {
+        this.chatDeviceId = chatDeviceId;
+        return this;
+    }
+    public String getChatDeviceId() {
+        return this.chatDeviceId;
     }
 
     public SignInGroupRequest setDeviceId(String deviceId) {

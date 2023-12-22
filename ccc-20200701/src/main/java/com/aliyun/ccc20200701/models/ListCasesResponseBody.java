@@ -65,6 +65,9 @@ public class ListCasesResponseBody extends TeaModel {
     }
 
     public static class ListCasesResponseBodyDataList extends TeaModel {
+        @NameInMap("AbandonPhase")
+        public String abandonPhase;
+
         @NameInMap("AbandonType")
         public String abandonType;
 
@@ -89,6 +92,14 @@ public class ListCasesResponseBody extends TeaModel {
         public static ListCasesResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListCasesResponseBodyDataList self = new ListCasesResponseBodyDataList();
             return TeaModel.build(map, self);
+        }
+
+        public ListCasesResponseBodyDataList setAbandonPhase(String abandonPhase) {
+            this.abandonPhase = abandonPhase;
+            return this;
+        }
+        public String getAbandonPhase() {
+            return this.abandonPhase;
         }
 
         public ListCasesResponseBodyDataList setAbandonType(String abandonType) {

@@ -10,11 +10,17 @@ public class ListHistoricalAgentReportRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MediaType")
+    public String mediaType;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("SkillGroupId")
+    public String skillGroupId;
 
     @NameInMap("StartTime")
     public Long startTime;
@@ -43,6 +49,14 @@ public class ListHistoricalAgentReportRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public ListHistoricalAgentReportRequest setMediaType(String mediaType) {
+        this.mediaType = mediaType;
+        return this;
+    }
+    public String getMediaType() {
+        return this.mediaType;
+    }
+
     public ListHistoricalAgentReportRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -57,6 +71,14 @@ public class ListHistoricalAgentReportRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListHistoricalAgentReportRequest setSkillGroupId(String skillGroupId) {
+        this.skillGroupId = skillGroupId;
+        return this;
+    }
+    public String getSkillGroupId() {
+        return this.skillGroupId;
     }
 
     public ListHistoricalAgentReportRequest setStartTime(Long startTime) {

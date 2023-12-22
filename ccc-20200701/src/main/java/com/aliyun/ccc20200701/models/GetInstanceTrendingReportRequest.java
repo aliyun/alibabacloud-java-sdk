@@ -10,6 +10,9 @@ public class GetInstanceTrendingReportRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MediaType")
+    public String mediaType;
+
     @NameInMap("StartTime")
     public Long startTime;
 
@@ -32,6 +35,14 @@ public class GetInstanceTrendingReportRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetInstanceTrendingReportRequest setMediaType(String mediaType) {
+        this.mediaType = mediaType;
+        return this;
+    }
+    public String getMediaType() {
+        return this.mediaType;
     }
 
     public GetInstanceTrendingReportRequest setStartTime(Long startTime) {

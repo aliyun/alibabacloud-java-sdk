@@ -7,6 +7,9 @@ public class ModifySkillLevelsOfUserResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public String data;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -27,6 +30,14 @@ public class ModifySkillLevelsOfUserResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ModifySkillLevelsOfUserResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
     public ModifySkillLevelsOfUserResponseBody setHttpStatusCode(Integer httpStatusCode) {

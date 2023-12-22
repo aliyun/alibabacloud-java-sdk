@@ -64,9 +64,42 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetHistoricalInstanceReportResponseBodyDataInboundAccessChannelTypeDetailList extends TeaModel {
+        @NameInMap("AccessChannelType")
+        public String accessChannelType;
+
+        @NameInMap("CallsOffered")
+        public Long callsOffered;
+
+        public static GetHistoricalInstanceReportResponseBodyDataInboundAccessChannelTypeDetailList build(java.util.Map<String, ?> map) throws Exception {
+            GetHistoricalInstanceReportResponseBodyDataInboundAccessChannelTypeDetailList self = new GetHistoricalInstanceReportResponseBodyDataInboundAccessChannelTypeDetailList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetHistoricalInstanceReportResponseBodyDataInboundAccessChannelTypeDetailList setAccessChannelType(String accessChannelType) {
+            this.accessChannelType = accessChannelType;
+            return this;
+        }
+        public String getAccessChannelType() {
+            return this.accessChannelType;
+        }
+
+        public GetHistoricalInstanceReportResponseBodyDataInboundAccessChannelTypeDetailList setCallsOffered(Long callsOffered) {
+            this.callsOffered = callsOffered;
+            return this;
+        }
+        public Long getCallsOffered() {
+            return this.callsOffered;
+        }
+
+    }
+
     public static class GetHistoricalInstanceReportResponseBodyDataInbound extends TeaModel {
         @NameInMap("AbandonRate")
         public Float abandonRate;
+
+        @NameInMap("AccessChannelTypeDetailList")
+        public java.util.List<GetHistoricalInstanceReportResponseBodyDataInboundAccessChannelTypeDetailList> accessChannelTypeDetailList;
 
         @NameInMap("AverageAbandonTime")
         public Float averageAbandonTime;
@@ -80,8 +113,14 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         @NameInMap("AverageAbandonedInRingTime")
         public Float averageAbandonedInRingTime;
 
+        @NameInMap("AverageFirstResponseTime")
+        public Float averageFirstResponseTime;
+
         @NameInMap("AverageHoldTime")
         public Float averageHoldTime;
+
+        @NameInMap("AverageResponseTime")
+        public Float averageResponseTime;
 
         @NameInMap("AverageRingTime")
         public Float averageRingTime;
@@ -116,6 +155,9 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         @NameInMap("CallsBlindTransferred")
         public Long callsBlindTransferred;
 
+        @NameInMap("CallsCausedIVRException")
+        public Long callsCausedIVRException;
+
         @NameInMap("CallsForwardToOutsideNumber")
         public Long callsForwardToOutsideNumber;
 
@@ -145,6 +187,9 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
 
         @NameInMap("CallsRinged")
         public Long callsRinged;
+
+        @NameInMap("CallsToVoicemail")
+        public Long callsToVoicemail;
 
         @NameInMap("CallsVoicemail")
         public Long callsVoicemail;
@@ -191,8 +236,14 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         @NameInMap("SatisfactionSurveysResponded")
         public Long satisfactionSurveysResponded;
 
+        @NameInMap("ServiceLevel15")
+        public Float serviceLevel15;
+
         @NameInMap("ServiceLevel20")
         public Float serviceLevel20;
+
+        @NameInMap("ServiceLevel30")
+        public Float serviceLevel30;
 
         @NameInMap("TotalAbandonTime")
         public Long totalAbandonTime;
@@ -208,6 +259,15 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
 
         @NameInMap("TotalHoldTime")
         public Long totalHoldTime;
+
+        @NameInMap("TotalMessagesSent")
+        public Long totalMessagesSent;
+
+        @NameInMap("TotalMessagesSentByAgent")
+        public Long totalMessagesSentByAgent;
+
+        @NameInMap("TotalMessagesSentByCustomer")
+        public Long totalMessagesSentByCustomer;
 
         @NameInMap("TotalRingTime")
         public Long totalRingTime;
@@ -232,6 +292,14 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         }
         public Float getAbandonRate() {
             return this.abandonRate;
+        }
+
+        public GetHistoricalInstanceReportResponseBodyDataInbound setAccessChannelTypeDetailList(java.util.List<GetHistoricalInstanceReportResponseBodyDataInboundAccessChannelTypeDetailList> accessChannelTypeDetailList) {
+            this.accessChannelTypeDetailList = accessChannelTypeDetailList;
+            return this;
+        }
+        public java.util.List<GetHistoricalInstanceReportResponseBodyDataInboundAccessChannelTypeDetailList> getAccessChannelTypeDetailList() {
+            return this.accessChannelTypeDetailList;
         }
 
         public GetHistoricalInstanceReportResponseBodyDataInbound setAverageAbandonTime(Float averageAbandonTime) {
@@ -266,12 +334,28 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
             return this.averageAbandonedInRingTime;
         }
 
+        public GetHistoricalInstanceReportResponseBodyDataInbound setAverageFirstResponseTime(Float averageFirstResponseTime) {
+            this.averageFirstResponseTime = averageFirstResponseTime;
+            return this;
+        }
+        public Float getAverageFirstResponseTime() {
+            return this.averageFirstResponseTime;
+        }
+
         public GetHistoricalInstanceReportResponseBodyDataInbound setAverageHoldTime(Float averageHoldTime) {
             this.averageHoldTime = averageHoldTime;
             return this;
         }
         public Float getAverageHoldTime() {
             return this.averageHoldTime;
+        }
+
+        public GetHistoricalInstanceReportResponseBodyDataInbound setAverageResponseTime(Float averageResponseTime) {
+            this.averageResponseTime = averageResponseTime;
+            return this;
+        }
+        public Float getAverageResponseTime() {
+            return this.averageResponseTime;
         }
 
         public GetHistoricalInstanceReportResponseBodyDataInbound setAverageRingTime(Float averageRingTime) {
@@ -362,6 +446,14 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
             return this.callsBlindTransferred;
         }
 
+        public GetHistoricalInstanceReportResponseBodyDataInbound setCallsCausedIVRException(Long callsCausedIVRException) {
+            this.callsCausedIVRException = callsCausedIVRException;
+            return this;
+        }
+        public Long getCallsCausedIVRException() {
+            return this.callsCausedIVRException;
+        }
+
         public GetHistoricalInstanceReportResponseBodyDataInbound setCallsForwardToOutsideNumber(Long callsForwardToOutsideNumber) {
             this.callsForwardToOutsideNumber = callsForwardToOutsideNumber;
             return this;
@@ -440,6 +532,14 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         }
         public Long getCallsRinged() {
             return this.callsRinged;
+        }
+
+        public GetHistoricalInstanceReportResponseBodyDataInbound setCallsToVoicemail(Long callsToVoicemail) {
+            this.callsToVoicemail = callsToVoicemail;
+            return this;
+        }
+        public Long getCallsToVoicemail() {
+            return this.callsToVoicemail;
         }
 
         public GetHistoricalInstanceReportResponseBodyDataInbound setCallsVoicemail(Long callsVoicemail) {
@@ -562,12 +662,28 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
             return this.satisfactionSurveysResponded;
         }
 
+        public GetHistoricalInstanceReportResponseBodyDataInbound setServiceLevel15(Float serviceLevel15) {
+            this.serviceLevel15 = serviceLevel15;
+            return this;
+        }
+        public Float getServiceLevel15() {
+            return this.serviceLevel15;
+        }
+
         public GetHistoricalInstanceReportResponseBodyDataInbound setServiceLevel20(Float serviceLevel20) {
             this.serviceLevel20 = serviceLevel20;
             return this;
         }
         public Float getServiceLevel20() {
             return this.serviceLevel20;
+        }
+
+        public GetHistoricalInstanceReportResponseBodyDataInbound setServiceLevel30(Float serviceLevel30) {
+            this.serviceLevel30 = serviceLevel30;
+            return this;
+        }
+        public Float getServiceLevel30() {
+            return this.serviceLevel30;
         }
 
         public GetHistoricalInstanceReportResponseBodyDataInbound setTotalAbandonTime(Long totalAbandonTime) {
@@ -610,6 +726,30 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
             return this.totalHoldTime;
         }
 
+        public GetHistoricalInstanceReportResponseBodyDataInbound setTotalMessagesSent(Long totalMessagesSent) {
+            this.totalMessagesSent = totalMessagesSent;
+            return this;
+        }
+        public Long getTotalMessagesSent() {
+            return this.totalMessagesSent;
+        }
+
+        public GetHistoricalInstanceReportResponseBodyDataInbound setTotalMessagesSentByAgent(Long totalMessagesSentByAgent) {
+            this.totalMessagesSentByAgent = totalMessagesSentByAgent;
+            return this;
+        }
+        public Long getTotalMessagesSentByAgent() {
+            return this.totalMessagesSentByAgent;
+        }
+
+        public GetHistoricalInstanceReportResponseBodyDataInbound setTotalMessagesSentByCustomer(Long totalMessagesSentByCustomer) {
+            this.totalMessagesSentByCustomer = totalMessagesSentByCustomer;
+            return this;
+        }
+        public Long getTotalMessagesSentByCustomer() {
+            return this.totalMessagesSentByCustomer;
+        }
+
         public GetHistoricalInstanceReportResponseBodyDataInbound setTotalRingTime(Long totalRingTime) {
             this.totalRingTime = totalRingTime;
             return this;
@@ -640,6 +780,36 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         }
         public Long getTotalWorkTime() {
             return this.totalWorkTime;
+        }
+
+    }
+
+    public static class GetHistoricalInstanceReportResponseBodyDataInternal extends TeaModel {
+        @NameInMap("CallsAnswered")
+        public Long callsAnswered;
+
+        @NameInMap("CallsDialed")
+        public Long callsDialed;
+
+        public static GetHistoricalInstanceReportResponseBodyDataInternal build(java.util.Map<String, ?> map) throws Exception {
+            GetHistoricalInstanceReportResponseBodyDataInternal self = new GetHistoricalInstanceReportResponseBodyDataInternal();
+            return TeaModel.build(map, self);
+        }
+
+        public GetHistoricalInstanceReportResponseBodyDataInternal setCallsAnswered(Long callsAnswered) {
+            this.callsAnswered = callsAnswered;
+            return this;
+        }
+        public Long getCallsAnswered() {
+            return this.callsAnswered;
+        }
+
+        public GetHistoricalInstanceReportResponseBodyDataInternal setCallsDialed(Long callsDialed) {
+            this.callsDialed = callsDialed;
+            return this;
+        }
+        public Long getCallsDialed() {
+            return this.callsDialed;
         }
 
     }
@@ -960,6 +1130,9 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         @NameInMap("MaxHoldTime")
         public Long maxHoldTime;
 
+        @NameInMap("MaxLoggedInAgents")
+        public Long maxLoggedInAgents;
+
         @NameInMap("MaxReadyTime")
         public Long maxReadyTime;
 
@@ -1064,6 +1237,14 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         }
         public Long getMaxHoldTime() {
             return this.maxHoldTime;
+        }
+
+        public GetHistoricalInstanceReportResponseBodyDataOverall setMaxLoggedInAgents(Long maxLoggedInAgents) {
+            this.maxLoggedInAgents = maxLoggedInAgents;
+            return this;
+        }
+        public Long getMaxLoggedInAgents() {
+            return this.maxLoggedInAgents;
         }
 
         public GetHistoricalInstanceReportResponseBodyDataOverall setMaxReadyTime(Long maxReadyTime) {
@@ -1192,6 +1373,9 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         @NameInMap("Inbound")
         public GetHistoricalInstanceReportResponseBodyDataInbound inbound;
 
+        @NameInMap("Internal")
+        public GetHistoricalInstanceReportResponseBodyDataInternal internal;
+
         @NameInMap("Outbound")
         public GetHistoricalInstanceReportResponseBodyDataOutbound outbound;
 
@@ -1209,6 +1393,14 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         }
         public GetHistoricalInstanceReportResponseBodyDataInbound getInbound() {
             return this.inbound;
+        }
+
+        public GetHistoricalInstanceReportResponseBodyData setInternal(GetHistoricalInstanceReportResponseBodyDataInternal internal) {
+            this.internal = internal;
+            return this;
+        }
+        public GetHistoricalInstanceReportResponseBodyDataInternal getInternal() {
+            return this.internal;
         }
 
         public GetHistoricalInstanceReportResponseBodyData setOutbound(GetHistoricalInstanceReportResponseBodyDataOutbound outbound) {

@@ -4,6 +4,9 @@ package com.aliyun.ccc20200701.models;
 import com.aliyun.tea.*;
 
 public class AddNumbersToSkillGroupRequest extends TeaModel {
+    @NameInMap("InstNumberGroupIdList")
+    public String instNumberGroupIdList;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,6 +19,14 @@ public class AddNumbersToSkillGroupRequest extends TeaModel {
     public static AddNumbersToSkillGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         AddNumbersToSkillGroupRequest self = new AddNumbersToSkillGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddNumbersToSkillGroupRequest setInstNumberGroupIdList(String instNumberGroupIdList) {
+        this.instNumberGroupIdList = instNumberGroupIdList;
+        return this;
+    }
+    public String getInstNumberGroupIdList() {
+        return this.instNumberGroupIdList;
     }
 
     public AddNumbersToSkillGroupRequest setInstanceId(String instanceId) {

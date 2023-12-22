@@ -10,6 +10,9 @@ public class ListHistoricalSkillGroupReportRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MediaType")
+    public String mediaType;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -41,6 +44,14 @@ public class ListHistoricalSkillGroupReportRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListHistoricalSkillGroupReportRequest setMediaType(String mediaType) {
+        this.mediaType = mediaType;
+        return this;
+    }
+    public String getMediaType() {
+        return this.mediaType;
     }
 
     public ListHistoricalSkillGroupReportRequest setPageNumber(Integer pageNumber) {

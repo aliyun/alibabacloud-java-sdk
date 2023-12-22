@@ -16,6 +16,9 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("Params")
+    public java.util.List<String> params;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -56,6 +59,14 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
         return this.message;
     }
 
+    public ListDoNotCallNumbersResponseBody setParams(java.util.List<String> params) {
+        this.params = params;
+        return this;
+    }
+    public java.util.List<String> getParams() {
+        return this.params;
+    }
+
     public ListDoNotCallNumbersResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -67,6 +78,9 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
     public static class ListDoNotCallNumbersResponseBodyDataList extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
+
+        @NameInMap("CreatedTime")
+        public Long createdTime;
 
         @NameInMap("Creator")
         public String creator;
@@ -91,6 +105,14 @@ public class ListDoNotCallNumbersResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public ListDoNotCallNumbersResponseBodyDataList setCreatedTime(Long createdTime) {
+            this.createdTime = createdTime;
+            return this;
+        }
+        public Long getCreatedTime() {
+            return this.createdTime;
         }
 
         public ListDoNotCallNumbersResponseBodyDataList setCreator(String creator) {

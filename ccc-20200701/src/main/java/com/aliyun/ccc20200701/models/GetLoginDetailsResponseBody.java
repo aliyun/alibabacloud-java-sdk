@@ -79,6 +79,27 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         @NameInMap("AgentServerUrl")
         public String agentServerUrl;
 
+        @NameInMap("AvatarUrl")
+        public String avatarUrl;
+
+        @NameInMap("ChatAppId")
+        public String chatAppId;
+
+        @NameInMap("ChatAppKey")
+        public String chatAppKey;
+
+        @NameInMap("ChatDeviceId")
+        public String chatDeviceId;
+
+        @NameInMap("ChatLoginToken")
+        public String chatLoginToken;
+
+        @NameInMap("ChatServerUrl")
+        public String chatServerUrl;
+
+        @NameInMap("ChatUserId")
+        public String chatUserId;
+
         @NameInMap("DeviceExt")
         public String deviceExt;
 
@@ -93,6 +114,9 @@ public class GetLoginDetailsResponseBody extends TeaModel {
 
         @NameInMap("Extension")
         public String extension;
+
+        @NameInMap("Nickname")
+        public String nickname;
 
         @NameInMap("Signature")
         public String signature;
@@ -126,6 +150,62 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         }
         public String getAgentServerUrl() {
             return this.agentServerUrl;
+        }
+
+        public GetLoginDetailsResponseBodyData setAvatarUrl(String avatarUrl) {
+            this.avatarUrl = avatarUrl;
+            return this;
+        }
+        public String getAvatarUrl() {
+            return this.avatarUrl;
+        }
+
+        public GetLoginDetailsResponseBodyData setChatAppId(String chatAppId) {
+            this.chatAppId = chatAppId;
+            return this;
+        }
+        public String getChatAppId() {
+            return this.chatAppId;
+        }
+
+        public GetLoginDetailsResponseBodyData setChatAppKey(String chatAppKey) {
+            this.chatAppKey = chatAppKey;
+            return this;
+        }
+        public String getChatAppKey() {
+            return this.chatAppKey;
+        }
+
+        public GetLoginDetailsResponseBodyData setChatDeviceId(String chatDeviceId) {
+            this.chatDeviceId = chatDeviceId;
+            return this;
+        }
+        public String getChatDeviceId() {
+            return this.chatDeviceId;
+        }
+
+        public GetLoginDetailsResponseBodyData setChatLoginToken(String chatLoginToken) {
+            this.chatLoginToken = chatLoginToken;
+            return this;
+        }
+        public String getChatLoginToken() {
+            return this.chatLoginToken;
+        }
+
+        public GetLoginDetailsResponseBodyData setChatServerUrl(String chatServerUrl) {
+            this.chatServerUrl = chatServerUrl;
+            return this;
+        }
+        public String getChatServerUrl() {
+            return this.chatServerUrl;
+        }
+
+        public GetLoginDetailsResponseBodyData setChatUserId(String chatUserId) {
+            this.chatUserId = chatUserId;
+            return this;
+        }
+        public String getChatUserId() {
+            return this.chatUserId;
         }
 
         public GetLoginDetailsResponseBodyData setDeviceExt(String deviceExt) {
@@ -166,6 +246,14 @@ public class GetLoginDetailsResponseBody extends TeaModel {
         }
         public String getExtension() {
             return this.extension;
+        }
+
+        public GetLoginDetailsResponseBodyData setNickname(String nickname) {
+            this.nickname = nickname;
+            return this;
+        }
+        public String getNickname() {
+            return this.nickname;
         }
 
         public GetLoginDetailsResponseBodyData setSignature(String signature) {

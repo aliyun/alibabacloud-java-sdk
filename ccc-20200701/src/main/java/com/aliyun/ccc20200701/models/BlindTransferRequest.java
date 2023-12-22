@@ -7,6 +7,9 @@ public class BlindTransferRequest extends TeaModel {
     @NameInMap("CallPriority")
     public Integer callPriority;
 
+    @NameInMap("ContactFlowVariables")
+    public String contactFlowVariables;
+
     @NameInMap("DeviceId")
     public String deviceId;
 
@@ -28,6 +31,9 @@ public class BlindTransferRequest extends TeaModel {
     @NameInMap("Transferee")
     public String transferee;
 
+    @NameInMap("TransfereeType")
+    public String transfereeType;
+
     @NameInMap("Transferor")
     public String transferor;
 
@@ -45,6 +51,14 @@ public class BlindTransferRequest extends TeaModel {
     }
     public Integer getCallPriority() {
         return this.callPriority;
+    }
+
+    public BlindTransferRequest setContactFlowVariables(String contactFlowVariables) {
+        this.contactFlowVariables = contactFlowVariables;
+        return this;
+    }
+    public String getContactFlowVariables() {
+        return this.contactFlowVariables;
     }
 
     public BlindTransferRequest setDeviceId(String deviceId) {
@@ -101,6 +115,14 @@ public class BlindTransferRequest extends TeaModel {
     }
     public String getTransferee() {
         return this.transferee;
+    }
+
+    public BlindTransferRequest setTransfereeType(String transfereeType) {
+        this.transfereeType = transfereeType;
+        return this;
+    }
+    public String getTransfereeType() {
+        return this.transfereeType;
     }
 
     public BlindTransferRequest setTransferor(String transferor) {

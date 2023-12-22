@@ -64,7 +64,40 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListRealtimeSkillGroupStatesResponseBodyDataListBreakCodeDetailList extends TeaModel {
+        @NameInMap("BreakCode")
+        public String breakCode;
+
+        @NameInMap("Count")
+        public Long count;
+
+        public static ListRealtimeSkillGroupStatesResponseBodyDataListBreakCodeDetailList build(java.util.Map<String, ?> map) throws Exception {
+            ListRealtimeSkillGroupStatesResponseBodyDataListBreakCodeDetailList self = new ListRealtimeSkillGroupStatesResponseBodyDataListBreakCodeDetailList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListRealtimeSkillGroupStatesResponseBodyDataListBreakCodeDetailList setBreakCode(String breakCode) {
+            this.breakCode = breakCode;
+            return this;
+        }
+        public String getBreakCode() {
+            return this.breakCode;
+        }
+
+        public ListRealtimeSkillGroupStatesResponseBodyDataListBreakCodeDetailList setCount(Long count) {
+            this.count = count;
+            return this;
+        }
+        public Long getCount() {
+            return this.count;
+        }
+
+    }
+
     public static class ListRealtimeSkillGroupStatesResponseBodyDataList extends TeaModel {
+        @NameInMap("BreakCodeDetailList")
+        public java.util.List<ListRealtimeSkillGroupStatesResponseBodyDataListBreakCodeDetailList> breakCodeDetailList;
+
         @NameInMap("BreakingAgents")
         public Long breakingAgents;
 
@@ -92,6 +125,9 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         @NameInMap("TalkingAgents")
         public Long talkingAgents;
 
+        @NameInMap("TotalAgents")
+        public Long totalAgents;
+
         @NameInMap("WaitingCalls")
         public Long waitingCalls;
 
@@ -101,6 +137,14 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         public static ListRealtimeSkillGroupStatesResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListRealtimeSkillGroupStatesResponseBodyDataList self = new ListRealtimeSkillGroupStatesResponseBodyDataList();
             return TeaModel.build(map, self);
+        }
+
+        public ListRealtimeSkillGroupStatesResponseBodyDataList setBreakCodeDetailList(java.util.List<ListRealtimeSkillGroupStatesResponseBodyDataListBreakCodeDetailList> breakCodeDetailList) {
+            this.breakCodeDetailList = breakCodeDetailList;
+            return this;
+        }
+        public java.util.List<ListRealtimeSkillGroupStatesResponseBodyDataListBreakCodeDetailList> getBreakCodeDetailList() {
+            return this.breakCodeDetailList;
         }
 
         public ListRealtimeSkillGroupStatesResponseBodyDataList setBreakingAgents(Long breakingAgents) {
@@ -173,6 +217,14 @@ public class ListRealtimeSkillGroupStatesResponseBody extends TeaModel {
         }
         public Long getTalkingAgents() {
             return this.talkingAgents;
+        }
+
+        public ListRealtimeSkillGroupStatesResponseBodyDataList setTotalAgents(Long totalAgents) {
+            this.totalAgents = totalAgents;
+            return this;
+        }
+        public Long getTotalAgents() {
+            return this.totalAgents;
         }
 
         public ListRealtimeSkillGroupStatesResponseBodyDataList setWaitingCalls(Long waitingCalls) {

@@ -16,6 +16,9 @@ public class ModifyUserResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("Params")
+    public java.util.List<String> params;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +57,14 @@ public class ModifyUserResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public ModifyUserResponseBody setParams(java.util.List<String> params) {
+        this.params = params;
+        return this;
+    }
+    public java.util.List<String> getParams() {
+        return this.params;
     }
 
     public ModifyUserResponseBody setRequestId(String requestId) {

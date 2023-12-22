@@ -16,6 +16,9 @@ public class ListUsersRequest extends TeaModel {
     @NameInMap("SearchPattern")
     public String searchPattern;
 
+    @NameInMap("SkillGroupId")
+    public String skillGroupId;
+
     public static ListUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListUsersRequest self = new ListUsersRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class ListUsersRequest extends TeaModel {
     }
     public String getSearchPattern() {
         return this.searchPattern;
+    }
+
+    public ListUsersRequest setSkillGroupId(String skillGroupId) {
+        this.skillGroupId = skillGroupId;
+        return this;
+    }
+    public String getSkillGroupId() {
+        return this.skillGroupId;
     }
 
 }

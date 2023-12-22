@@ -3,12 +3,12 @@ package com.aliyun.ccc20200701.models;
 
 import com.aliyun.tea.*;
 
-public class SignInGroupResponseBody extends TeaModel {
+public class ChangeVisibilityResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
-    public SignInGroupResponseBodyData data;
+    public ChangeVisibilityResponseBodyData data;
 
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -22,12 +22,12 @@ public class SignInGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static SignInGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        SignInGroupResponseBody self = new SignInGroupResponseBody();
+    public static ChangeVisibilityResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ChangeVisibilityResponseBody self = new ChangeVisibilityResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public SignInGroupResponseBody setCode(String code) {
+    public ChangeVisibilityResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -35,15 +35,15 @@ public class SignInGroupResponseBody extends TeaModel {
         return this.code;
     }
 
-    public SignInGroupResponseBody setData(SignInGroupResponseBodyData data) {
+    public ChangeVisibilityResponseBody setData(ChangeVisibilityResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public SignInGroupResponseBodyData getData() {
+    public ChangeVisibilityResponseBodyData getData() {
         return this.data;
     }
 
-    public SignInGroupResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public ChangeVisibilityResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -51,7 +51,7 @@ public class SignInGroupResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public SignInGroupResponseBody setMessage(String message) {
+    public ChangeVisibilityResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -59,7 +59,7 @@ public class SignInGroupResponseBody extends TeaModel {
         return this.message;
     }
 
-    public SignInGroupResponseBody setParams(java.util.List<String> params) {
+    public ChangeVisibilityResponseBody setParams(java.util.List<String> params) {
         this.params = params;
         return this;
     }
@@ -67,7 +67,7 @@ public class SignInGroupResponseBody extends TeaModel {
         return this.params;
     }
 
-    public SignInGroupResponseBody setRequestId(String requestId) {
+    public ChangeVisibilityResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -75,12 +75,9 @@ public class SignInGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class SignInGroupResponseBodyData extends TeaModel {
+    public static class ChangeVisibilityResponseBodyData extends TeaModel {
         @NameInMap("BreakCode")
         public String breakCode;
-
-        @NameInMap("ChatDeviceId")
-        public String chatDeviceId;
 
         @NameInMap("DeviceId")
         public String deviceId;
@@ -109,12 +106,12 @@ public class SignInGroupResponseBody extends TeaModel {
         @NameInMap("WorkMode")
         public String workMode;
 
-        public static SignInGroupResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            SignInGroupResponseBodyData self = new SignInGroupResponseBodyData();
+        public static ChangeVisibilityResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            ChangeVisibilityResponseBodyData self = new ChangeVisibilityResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public SignInGroupResponseBodyData setBreakCode(String breakCode) {
+        public ChangeVisibilityResponseBodyData setBreakCode(String breakCode) {
             this.breakCode = breakCode;
             return this;
         }
@@ -122,15 +119,7 @@ public class SignInGroupResponseBody extends TeaModel {
             return this.breakCode;
         }
 
-        public SignInGroupResponseBodyData setChatDeviceId(String chatDeviceId) {
-            this.chatDeviceId = chatDeviceId;
-            return this;
-        }
-        public String getChatDeviceId() {
-            return this.chatDeviceId;
-        }
-
-        public SignInGroupResponseBodyData setDeviceId(String deviceId) {
+        public ChangeVisibilityResponseBodyData setDeviceId(String deviceId) {
             this.deviceId = deviceId;
             return this;
         }
@@ -138,7 +127,7 @@ public class SignInGroupResponseBody extends TeaModel {
             return this.deviceId;
         }
 
-        public SignInGroupResponseBodyData setExtension(String extension) {
+        public ChangeVisibilityResponseBodyData setExtension(String extension) {
             this.extension = extension;
             return this;
         }
@@ -146,7 +135,7 @@ public class SignInGroupResponseBody extends TeaModel {
             return this.extension;
         }
 
-        public SignInGroupResponseBodyData setInstanceId(String instanceId) {
+        public ChangeVisibilityResponseBodyData setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -154,7 +143,7 @@ public class SignInGroupResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public SignInGroupResponseBodyData setJobId(String jobId) {
+        public ChangeVisibilityResponseBodyData setJobId(String jobId) {
             this.jobId = jobId;
             return this;
         }
@@ -162,7 +151,7 @@ public class SignInGroupResponseBody extends TeaModel {
             return this.jobId;
         }
 
-        public SignInGroupResponseBodyData setOutboundScenario(Boolean outboundScenario) {
+        public ChangeVisibilityResponseBodyData setOutboundScenario(Boolean outboundScenario) {
             this.outboundScenario = outboundScenario;
             return this;
         }
@@ -170,7 +159,7 @@ public class SignInGroupResponseBody extends TeaModel {
             return this.outboundScenario;
         }
 
-        public SignInGroupResponseBodyData setSignedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
+        public ChangeVisibilityResponseBodyData setSignedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
             this.signedSkillGroupIdList = signedSkillGroupIdList;
             return this;
         }
@@ -178,7 +167,7 @@ public class SignInGroupResponseBody extends TeaModel {
             return this.signedSkillGroupIdList;
         }
 
-        public SignInGroupResponseBodyData setUserId(String userId) {
+        public ChangeVisibilityResponseBodyData setUserId(String userId) {
             this.userId = userId;
             return this;
         }
@@ -186,7 +175,7 @@ public class SignInGroupResponseBody extends TeaModel {
             return this.userId;
         }
 
-        public SignInGroupResponseBodyData setUserState(String userState) {
+        public ChangeVisibilityResponseBodyData setUserState(String userState) {
             this.userState = userState;
             return this;
         }
@@ -194,7 +183,7 @@ public class SignInGroupResponseBody extends TeaModel {
             return this.userState;
         }
 
-        public SignInGroupResponseBodyData setWorkMode(String workMode) {
+        public ChangeVisibilityResponseBodyData setWorkMode(String workMode) {
             this.workMode = workMode;
             return this;
         }

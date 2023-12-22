@@ -74,6 +74,18 @@ public class GetRealtimeCampaignStatsResponseBody extends TeaModel {
         @NameInMap("LoggedInAgents")
         public Long loggedInAgents;
 
+        @NameInMap("OutboundScenarioBreakingAgents")
+        public Long outboundScenarioBreakingAgents;
+
+        @NameInMap("OutboundScenarioReadyAgents")
+        public Long outboundScenarioReadyAgents;
+
+        @NameInMap("OutboundScenarioTalkingAgents")
+        public Long outboundScenarioTalkingAgents;
+
+        @NameInMap("OutboundScenarioWorkingAgents")
+        public Long outboundScenarioWorkingAgents;
+
         @NameInMap("ReadyAgents")
         public Long readyAgents;
 
@@ -113,6 +125,38 @@ public class GetRealtimeCampaignStatsResponseBody extends TeaModel {
         }
         public Long getLoggedInAgents() {
             return this.loggedInAgents;
+        }
+
+        public GetRealtimeCampaignStatsResponseBodyData setOutboundScenarioBreakingAgents(Long outboundScenarioBreakingAgents) {
+            this.outboundScenarioBreakingAgents = outboundScenarioBreakingAgents;
+            return this;
+        }
+        public Long getOutboundScenarioBreakingAgents() {
+            return this.outboundScenarioBreakingAgents;
+        }
+
+        public GetRealtimeCampaignStatsResponseBodyData setOutboundScenarioReadyAgents(Long outboundScenarioReadyAgents) {
+            this.outboundScenarioReadyAgents = outboundScenarioReadyAgents;
+            return this;
+        }
+        public Long getOutboundScenarioReadyAgents() {
+            return this.outboundScenarioReadyAgents;
+        }
+
+        public GetRealtimeCampaignStatsResponseBodyData setOutboundScenarioTalkingAgents(Long outboundScenarioTalkingAgents) {
+            this.outboundScenarioTalkingAgents = outboundScenarioTalkingAgents;
+            return this;
+        }
+        public Long getOutboundScenarioTalkingAgents() {
+            return this.outboundScenarioTalkingAgents;
+        }
+
+        public GetRealtimeCampaignStatsResponseBodyData setOutboundScenarioWorkingAgents(Long outboundScenarioWorkingAgents) {
+            this.outboundScenarioWorkingAgents = outboundScenarioWorkingAgents;
+            return this;
+        }
+        public Long getOutboundScenarioWorkingAgents() {
+            return this.outboundScenarioWorkingAgents;
         }
 
         public GetRealtimeCampaignStatsResponseBodyData setReadyAgents(Long readyAgents) {

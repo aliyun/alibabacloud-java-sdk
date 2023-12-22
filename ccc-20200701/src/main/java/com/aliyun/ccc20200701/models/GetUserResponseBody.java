@@ -16,6 +16,9 @@ public class GetUserResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("Params")
+    public java.util.List<String> params;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -56,6 +59,14 @@ public class GetUserResponseBody extends TeaModel {
         return this.message;
     }
 
+    public GetUserResponseBody setParams(java.util.List<String> params) {
+        this.params = params;
+        return this;
+    }
+    public java.util.List<String> getParams() {
+        return this.params;
+    }
+
     public GetUserResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -65,6 +76,9 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyData extends TeaModel {
+        @NameInMap("AvatarUrl")
+        public String avatarUrl;
+
         @NameInMap("DeviceExt")
         public String deviceExt;
 
@@ -95,6 +109,9 @@ public class GetUserResponseBody extends TeaModel {
         @NameInMap("Mobile")
         public String mobile;
 
+        @NameInMap("Nickname")
+        public String nickname;
+
         @NameInMap("RoleId")
         public String roleId;
 
@@ -110,6 +127,14 @@ public class GetUserResponseBody extends TeaModel {
         public static GetUserResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetUserResponseBodyData self = new GetUserResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetUserResponseBodyData setAvatarUrl(String avatarUrl) {
+            this.avatarUrl = avatarUrl;
+            return this;
+        }
+        public String getAvatarUrl() {
+            return this.avatarUrl;
         }
 
         public GetUserResponseBodyData setDeviceExt(String deviceExt) {
@@ -190,6 +215,14 @@ public class GetUserResponseBody extends TeaModel {
         }
         public String getMobile() {
             return this.mobile;
+        }
+
+        public GetUserResponseBodyData setNickname(String nickname) {
+            this.nickname = nickname;
+            return this;
+        }
+        public String getNickname() {
+            return this.nickname;
         }
 
         public GetUserResponseBodyData setRoleId(String roleId) {

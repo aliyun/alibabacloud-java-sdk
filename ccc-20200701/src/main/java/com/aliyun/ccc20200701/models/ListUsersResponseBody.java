@@ -16,6 +16,9 @@ public class ListUsersResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("Params")
+    public java.util.List<String> params;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +57,14 @@ public class ListUsersResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public ListUsersResponseBody setParams(java.util.List<String> params) {
+        this.params = params;
+        return this;
+    }
+    public java.util.List<String> getParams() {
+        return this.params;
     }
 
     public ListUsersResponseBody setRequestId(String requestId) {
@@ -199,6 +210,9 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("PersonalOutboundNumberList")
         public java.util.List<ListUsersResponseBodyDataListPersonalOutboundNumberList> personalOutboundNumberList;
 
+        @NameInMap("Primary")
+        public Boolean primary;
+
         @NameInMap("PrimaryAccount")
         public Boolean primaryAccount;
 
@@ -303,6 +317,14 @@ public class ListUsersResponseBody extends TeaModel {
         }
         public java.util.List<ListUsersResponseBodyDataListPersonalOutboundNumberList> getPersonalOutboundNumberList() {
             return this.personalOutboundNumberList;
+        }
+
+        public ListUsersResponseBodyDataList setPrimary(Boolean primary) {
+            this.primary = primary;
+            return this;
+        }
+        public Boolean getPrimary() {
+            return this.primary;
         }
 
         public ListUsersResponseBodyDataList setPrimaryAccount(Boolean primaryAccount) {
