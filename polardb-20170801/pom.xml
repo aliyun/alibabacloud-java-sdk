@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>polardb20170801</artifactId>
-  <version>4.0.1</version>
+  <version>4.1.0</version>
   <packaging>jar</packaging>
   <name>polardb20170801</name>
   <description>Alibaba Cloud ApsaraDB for POLARDB (20170801) SDK for Java
@@ -67,7 +67,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.8</version>
+      <version>0.3.1</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

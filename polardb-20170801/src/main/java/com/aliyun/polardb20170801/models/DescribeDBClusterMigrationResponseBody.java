@@ -361,6 +361,9 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         @NameInMap("EndpointType")
         public String endpointType;
 
+        @NameInMap("ReadWriteMode")
+        public String readWriteMode;
+
         public static DescribeDBClusterMigrationResponseBodyDBClusterEndpointList build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClusterMigrationResponseBodyDBClusterEndpointList self = new DescribeDBClusterMigrationResponseBodyDBClusterEndpointList();
             return TeaModel.build(map, self);
@@ -388,6 +391,14 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
         public String getEndpointType() {
             return this.endpointType;
+        }
+
+        public DescribeDBClusterMigrationResponseBodyDBClusterEndpointList setReadWriteMode(String readWriteMode) {
+            this.readWriteMode = readWriteMode;
+            return this;
+        }
+        public String getReadWriteMode() {
+            return this.readWriteMode;
         }
 
     }
@@ -512,6 +523,9 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         @NameInMap("AddressItems")
         public java.util.List<DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems> addressItems;
 
+        @NameInMap("CustinsType")
+        public String custinsType;
+
         /**
          * <p>The ID of the endpoint.</p>
          */
@@ -538,6 +552,14 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
         public java.util.List<DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems> getAddressItems() {
             return this.addressItems;
+        }
+
+        public DescribeDBClusterMigrationResponseBodyRdsEndpointList setCustinsType(String custinsType) {
+            this.custinsType = custinsType;
+            return this;
+        }
+        public String getCustinsType() {
+            return this.custinsType;
         }
 
         public DescribeDBClusterMigrationResponseBodyRdsEndpointList setDBEndpointId(String DBEndpointId) {
