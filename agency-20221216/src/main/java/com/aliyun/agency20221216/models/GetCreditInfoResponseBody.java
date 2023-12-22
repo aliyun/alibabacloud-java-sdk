@@ -74,6 +74,9 @@ public class GetCreditInfoResponseBody extends TeaModel {
         @NameInMap("AvailableCredit")
         public String availableCredit;
 
+        @NameInMap("ConsumedUndeductedValue")
+        public String consumedUndeductedValue;
+
         @NameInMap("CreditLine")
         public String creditLine;
 
@@ -113,6 +116,14 @@ public class GetCreditInfoResponseBody extends TeaModel {
         }
         public String getAvailableCredit() {
             return this.availableCredit;
+        }
+
+        public GetCreditInfoResponseBodyData setConsumedUndeductedValue(String consumedUndeductedValue) {
+            this.consumedUndeductedValue = consumedUndeductedValue;
+            return this;
+        }
+        public String getConsumedUndeductedValue() {
+            return this.consumedUndeductedValue;
         }
 
         public GetCreditInfoResponseBodyData setCreditLine(String creditLine) {

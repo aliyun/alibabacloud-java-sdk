@@ -4,9 +4,15 @@ package com.aliyun.agency20221216.models;
 import com.aliyun.tea.*;
 
 public class SetWarningThresholdRequest extends TeaModel {
+    /**
+     * <p>The UID of the partner‘s customer.</p>
+     */
     @NameInMap("Uid")
     public Long uid;
 
+    /**
+     * <p>Percentage, 1 to 100. When the available credit limit is lower than the credit limit percentage, an email is sent to the main account.</p>
+     */
     @NameInMap("WarningValue")
     public String warningValue;
 
