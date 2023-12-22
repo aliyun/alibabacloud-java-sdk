@@ -202,6 +202,12 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("over_apply_id")
         public String overApplyId;
 
+        @NameInMap("payment_department_id")
+        public String paymentDepartmentId;
+
+        @NameInMap("payment_department_name")
+        public String paymentDepartmentName;
+
         @NameInMap("primary_id")
         public Long primaryId;
 
@@ -629,6 +635,22 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getOverApplyId() {
             return this.overApplyId;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setPaymentDepartmentId(String paymentDepartmentId) {
+            this.paymentDepartmentId = paymentDepartmentId;
+            return this;
+        }
+        public String getPaymentDepartmentId() {
+            return this.paymentDepartmentId;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setPaymentDepartmentName(String paymentDepartmentName) {
+            this.paymentDepartmentName = paymentDepartmentName;
+            return this;
+        }
+        public String getPaymentDepartmentName() {
+            return this.paymentDepartmentName;
         }
 
         public TrainBillSettlementQueryResponseBodyModuleDataList setPrimaryId(Long primaryId) {

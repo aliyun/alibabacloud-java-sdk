@@ -220,6 +220,12 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("over_apply_id")
         public String overApplyId;
 
+        @NameInMap("payment_department_id")
+        public String paymentDepartmentId;
+
+        @NameInMap("payment_department_name")
+        public String paymentDepartmentName;
+
         @NameInMap("person_refund_fee")
         public Double personRefundFee;
 
@@ -683,6 +689,22 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getOverApplyId() {
             return this.overApplyId;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setPaymentDepartmentId(String paymentDepartmentId) {
+            this.paymentDepartmentId = paymentDepartmentId;
+            return this;
+        }
+        public String getPaymentDepartmentId() {
+            return this.paymentDepartmentId;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setPaymentDepartmentName(String paymentDepartmentName) {
+            this.paymentDepartmentName = paymentDepartmentName;
+            return this;
+        }
+        public String getPaymentDepartmentName() {
+            return this.paymentDepartmentName;
         }
 
         public HotelBillSettlementQueryResponseBodyModuleDataList setPersonRefundFee(Double personRefundFee) {

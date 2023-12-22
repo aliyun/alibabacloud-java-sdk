@@ -139,6 +139,9 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         @NameInMap("start_time")
         public String startTime;
 
+        @NameInMap("ticket_entrance")
+        public String ticketEntrance;
+
         @NameInMap("ticket_no")
         public String ticketNo;
 
@@ -312,6 +315,14 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         }
         public String getStartTime() {
             return this.startTime;
+        }
+
+        public TrainOrderQueryV2ResponseBodyModuleChangeTicketInfoList setTicketEntrance(String ticketEntrance) {
+            this.ticketEntrance = ticketEntrance;
+            return this;
+        }
+        public String getTicketEntrance() {
+            return this.ticketEntrance;
         }
 
         public TrainOrderQueryV2ResponseBodyModuleChangeTicketInfoList setTicketNo(String ticketNo) {
@@ -964,6 +975,9 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         @NameInMap("start_time")
         public String startTime;
 
+        @NameInMap("ticket_entrance")
+        public String ticketEntrance;
+
         @NameInMap("ticket_no")
         public String ticketNo;
 
@@ -1097,6 +1111,14 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         }
         public String getStartTime() {
             return this.startTime;
+        }
+
+        public TrainOrderQueryV2ResponseBodyModuleTrainOrderInfoTrainInfoListTrainTicketInfos setTicketEntrance(String ticketEntrance) {
+            this.ticketEntrance = ticketEntrance;
+            return this;
+        }
+        public String getTicketEntrance() {
+            return this.ticketEntrance;
         }
 
         public TrainOrderQueryV2ResponseBodyModuleTrainOrderInfoTrainInfoListTrainTicketInfos setTicketNo(String ticketNo) {
