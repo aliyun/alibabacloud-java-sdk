@@ -10,6 +10,9 @@ public class GetConnectionTicketRequest extends TeaModel {
     @NameInMap("AppInstanceGroupId")
     public String appInstanceGroupId;
 
+    @NameInMap("AppInstanceId")
+    public String appInstanceId;
+
     @NameInMap("AppVersion")
     public String appVersion;
 
@@ -28,6 +31,9 @@ public class GetConnectionTicketRequest extends TeaModel {
     @NameInMap("ClientVersion")
     public String clientVersion;
 
+    @NameInMap("ConnectionProperties")
+    public String connectionProperties;
+
     @NameInMap("EndUserId")
     public String endUserId;
 
@@ -42,6 +48,9 @@ public class GetConnectionTicketRequest extends TeaModel {
 
     @NameInMap("ProductType")
     public String productType;
+
+    @NameInMap("ResourceId")
+    public String resourceId;
 
     @NameInMap("SessionId")
     public String sessionId;
@@ -74,6 +83,14 @@ public class GetConnectionTicketRequest extends TeaModel {
     }
     public String getAppInstanceGroupId() {
         return this.appInstanceGroupId;
+    }
+
+    public GetConnectionTicketRequest setAppInstanceId(String appInstanceId) {
+        this.appInstanceId = appInstanceId;
+        return this;
+    }
+    public String getAppInstanceId() {
+        return this.appInstanceId;
     }
 
     public GetConnectionTicketRequest setAppVersion(String appVersion) {
@@ -124,6 +141,14 @@ public class GetConnectionTicketRequest extends TeaModel {
         return this.clientVersion;
     }
 
+    public GetConnectionTicketRequest setConnectionProperties(String connectionProperties) {
+        this.connectionProperties = connectionProperties;
+        return this;
+    }
+    public String getConnectionProperties() {
+        return this.connectionProperties;
+    }
+
     public GetConnectionTicketRequest setEndUserId(String endUserId) {
         this.endUserId = endUserId;
         return this;
@@ -162,6 +187,14 @@ public class GetConnectionTicketRequest extends TeaModel {
     }
     public String getProductType() {
         return this.productType;
+    }
+
+    public GetConnectionTicketRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
     }
 
     public GetConnectionTicketRequest setSessionId(String sessionId) {

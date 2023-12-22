@@ -37,14 +37,17 @@ public class ListPublishedAppInfoRequest extends TeaModel {
     @NameInMap("LoginToken")
     public String loginToken;
 
+    @NameInMap("OrderParam")
+    public String orderParam;
+
     @NameInMap("ProductType")
     public String productType;
 
     @NameInMap("SessionId")
     public String sessionId;
 
-    @NameInMap("TenantId")
-    public String tenantId;
+    @NameInMap("SortType")
+    public String sortType;
 
     public static ListPublishedAppInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPublishedAppInfoRequest self = new ListPublishedAppInfoRequest();
@@ -139,6 +142,14 @@ public class ListPublishedAppInfoRequest extends TeaModel {
         return this.loginToken;
     }
 
+    public ListPublishedAppInfoRequest setOrderParam(String orderParam) {
+        this.orderParam = orderParam;
+        return this;
+    }
+    public String getOrderParam() {
+        return this.orderParam;
+    }
+
     public ListPublishedAppInfoRequest setProductType(String productType) {
         this.productType = productType;
         return this;
@@ -155,12 +166,12 @@ public class ListPublishedAppInfoRequest extends TeaModel {
         return this.sessionId;
     }
 
-    public ListPublishedAppInfoRequest setTenantId(String tenantId) {
-        this.tenantId = tenantId;
+    public ListPublishedAppInfoRequest setSortType(String sortType) {
+        this.sortType = sortType;
         return this;
     }
-    public String getTenantId() {
-        return this.tenantId;
+    public String getSortType() {
+        return this.sortType;
     }
 
 }

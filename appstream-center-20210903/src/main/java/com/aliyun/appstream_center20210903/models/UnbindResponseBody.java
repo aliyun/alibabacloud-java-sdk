@@ -4,6 +4,9 @@ package com.aliyun.appstream_center20210903.models;
 import com.aliyun.tea.*;
 
 public class UnbindResponseBody extends TeaModel {
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

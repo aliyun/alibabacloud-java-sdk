@@ -10,6 +10,9 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     @NameInMap("AppInstanceId")
     public String appInstanceId;
 
+    @NameInMap("AppInstancePersistentId")
+    public String appInstancePersistentId;
+
     @NameInMap("Code")
     public String code;
 
@@ -22,9 +25,15 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     @NameInMap("OsType")
     public String osType;
 
+    @NameInMap("Policy")
+    public GetConnectionTicketResponseBodyPolicy policy;
+
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -36,6 +45,9 @@ public class GetConnectionTicketResponseBody extends TeaModel {
 
     @NameInMap("TaskStatus")
     public String taskStatus;
+
+    @NameInMap("TenantId")
+    public Long tenantId;
 
     @NameInMap("Ticket")
     public String ticket;
@@ -59,6 +71,14 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     }
     public String getAppInstanceId() {
         return this.appInstanceId;
+    }
+
+    public GetConnectionTicketResponseBody setAppInstancePersistentId(String appInstancePersistentId) {
+        this.appInstancePersistentId = appInstancePersistentId;
+        return this;
+    }
+    public String getAppInstancePersistentId() {
+        return this.appInstancePersistentId;
     }
 
     public GetConnectionTicketResponseBody setCode(String code) {
@@ -91,6 +111,14 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     }
     public String getOsType() {
         return this.osType;
+    }
+
+    public GetConnectionTicketResponseBody setPolicy(GetConnectionTicketResponseBodyPolicy policy) {
+        this.policy = policy;
+        return this;
+    }
+    public GetConnectionTicketResponseBodyPolicy getPolicy() {
+        return this.policy;
     }
 
     public GetConnectionTicketResponseBody setRegionId(String regionId) {
@@ -133,12 +161,61 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         return this.taskStatus;
     }
 
+    public GetConnectionTicketResponseBody setTenantId(Long tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public Long getTenantId() {
+        return this.tenantId;
+    }
+
     public GetConnectionTicketResponseBody setTicket(String ticket) {
         this.ticket = ticket;
         return this;
     }
     public String getTicket() {
         return this.ticket;
+    }
+
+    public static class GetConnectionTicketResponseBodyPolicy extends TeaModel {
+        @NameInMap("ResolutionAdaptive")
+        public String resolutionAdaptive;
+
+        @NameInMap("ResolutionHeight")
+        public Integer resolutionHeight;
+
+        @NameInMap("ResolutionWidth")
+        public Integer resolutionWidth;
+
+        public static GetConnectionTicketResponseBodyPolicy build(java.util.Map<String, ?> map) throws Exception {
+            GetConnectionTicketResponseBodyPolicy self = new GetConnectionTicketResponseBodyPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public GetConnectionTicketResponseBodyPolicy setResolutionAdaptive(String resolutionAdaptive) {
+            this.resolutionAdaptive = resolutionAdaptive;
+            return this;
+        }
+        public String getResolutionAdaptive() {
+            return this.resolutionAdaptive;
+        }
+
+        public GetConnectionTicketResponseBodyPolicy setResolutionHeight(Integer resolutionHeight) {
+            this.resolutionHeight = resolutionHeight;
+            return this;
+        }
+        public Integer getResolutionHeight() {
+            return this.resolutionHeight;
+        }
+
+        public GetConnectionTicketResponseBodyPolicy setResolutionWidth(Integer resolutionWidth) {
+            this.resolutionWidth = resolutionWidth;
+            return this;
+        }
+        public Integer getResolutionWidth() {
+            return this.resolutionWidth;
+        }
+
     }
 
 }
