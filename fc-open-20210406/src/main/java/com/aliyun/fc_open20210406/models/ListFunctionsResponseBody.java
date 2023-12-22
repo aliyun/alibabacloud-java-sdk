@@ -74,11 +74,17 @@ public class ListFunctionsResponseBody extends TeaModel {
         @NameInMap("customContainerConfig")
         public CustomContainerConfig customContainerConfig;
 
+        @NameInMap("customDNS")
+        public CustomDNS customDNS;
+
         /**
          * <p>The custom health check configuration of the function. This parameter is applicable only to custom runtimes and custom containers.</p>
          */
         @NameInMap("customHealthCheckConfig")
         public CustomHealthCheckConfig customHealthCheckConfig;
+
+        @NameInMap("customRuntimeConfig")
+        public CustomRuntimeConfig customRuntimeConfig;
 
         /**
          * <p>The description of the function.</p>
@@ -180,6 +186,9 @@ public class ListFunctionsResponseBody extends TeaModel {
         @NameInMap("layers")
         public java.util.List<String> layers;
 
+        @NameInMap("layersArnV2")
+        public java.util.List<String> layersArnV2;
+
         /**
          * <p>The memory size that is configured for the function. Unit: MB.</p>
          */
@@ -251,12 +260,28 @@ public class ListFunctionsResponseBody extends TeaModel {
             return this.customContainerConfig;
         }
 
+        public ListFunctionsResponseBodyFunctions setCustomDNS(CustomDNS customDNS) {
+            this.customDNS = customDNS;
+            return this;
+        }
+        public CustomDNS getCustomDNS() {
+            return this.customDNS;
+        }
+
         public ListFunctionsResponseBodyFunctions setCustomHealthCheckConfig(CustomHealthCheckConfig customHealthCheckConfig) {
             this.customHealthCheckConfig = customHealthCheckConfig;
             return this;
         }
         public CustomHealthCheckConfig getCustomHealthCheckConfig() {
             return this.customHealthCheckConfig;
+        }
+
+        public ListFunctionsResponseBodyFunctions setCustomRuntimeConfig(CustomRuntimeConfig customRuntimeConfig) {
+            this.customRuntimeConfig = customRuntimeConfig;
+            return this;
+        }
+        public CustomRuntimeConfig getCustomRuntimeConfig() {
+            return this.customRuntimeConfig;
         }
 
         public ListFunctionsResponseBodyFunctions setDescription(String description) {
@@ -377,6 +402,14 @@ public class ListFunctionsResponseBody extends TeaModel {
         }
         public java.util.List<String> getLayers() {
             return this.layers;
+        }
+
+        public ListFunctionsResponseBodyFunctions setLayersArnV2(java.util.List<String> layersArnV2) {
+            this.layersArnV2 = layersArnV2;
+            return this;
+        }
+        public java.util.List<String> getLayersArnV2() {
+            return this.layersArnV2;
         }
 
         public ListFunctionsResponseBodyFunctions setMemorySize(Integer memorySize) {
