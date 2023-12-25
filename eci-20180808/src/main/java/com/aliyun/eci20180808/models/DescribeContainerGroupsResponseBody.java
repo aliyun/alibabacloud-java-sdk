@@ -2653,6 +2653,9 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeContainerGroupsResponseBodyContainerGroups extends TeaModel {
+        @NameInMap("ComputeCategory")
+        public String computeCategory;
+
         /**
          * <p>The instance ID.</p>
          */
@@ -2905,6 +2908,14 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         public static DescribeContainerGroupsResponseBodyContainerGroups build(java.util.Map<String, ?> map) throws Exception {
             DescribeContainerGroupsResponseBodyContainerGroups self = new DescribeContainerGroupsResponseBodyContainerGroups();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeContainerGroupsResponseBodyContainerGroups setComputeCategory(String computeCategory) {
+            this.computeCategory = computeCategory;
+            return this;
+        }
+        public String getComputeCategory() {
+            return this.computeCategory;
         }
 
         public DescribeContainerGroupsResponseBodyContainerGroups setContainerGroupId(String containerGroupId) {
