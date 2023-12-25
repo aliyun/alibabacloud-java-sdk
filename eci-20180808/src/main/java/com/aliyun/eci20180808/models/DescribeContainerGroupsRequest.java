@@ -56,6 +56,9 @@ public class DescribeContainerGroupsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SecurityGroupId")
+    public String securityGroupId;
+
     /**
      * <p>The status of the elastic container instance. Valid values:</p>
      * <br>
@@ -182,6 +185,14 @@ public class DescribeContainerGroupsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeContainerGroupsRequest setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
     }
 
     public DescribeContainerGroupsRequest setStatus(String status) {
