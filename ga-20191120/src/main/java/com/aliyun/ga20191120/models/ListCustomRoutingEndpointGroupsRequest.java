@@ -10,6 +10,9 @@ public class ListCustomRoutingEndpointGroupsRequest extends TeaModel {
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    @NameInMap("AccessLogSwitch")
+    public String accessLogSwitch;
+
     /**
      * <p>The ID of the endpoint group.</p>
      */
@@ -51,6 +54,14 @@ public class ListCustomRoutingEndpointGroupsRequest extends TeaModel {
     }
     public String getAcceleratorId() {
         return this.acceleratorId;
+    }
+
+    public ListCustomRoutingEndpointGroupsRequest setAccessLogSwitch(String accessLogSwitch) {
+        this.accessLogSwitch = accessLogSwitch;
+        return this;
+    }
+    public String getAccessLogSwitch() {
+        return this.accessLogSwitch;
     }
 
     public ListCustomRoutingEndpointGroupsRequest setEndpointGroupId(String endpointGroupId) {

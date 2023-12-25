@@ -35,19 +35,19 @@ public class DescribeLogStoreOfEndpointGroupResponseBody extends TeaModel {
     public String slsLogStoreName;
 
     /**
-     * <p>The name of the Log Service project.</p>
+     * <p>The name of the Simple Log Service project.</p>
      */
     @NameInMap("SlsProjectName")
     public String slsProjectName;
 
     /**
-     * <p>The region ID of the Log Service project.</p>
+     * <p>The ID of the region to which the Simple Log Service project belongs.</p>
      */
     @NameInMap("SlsRegionId")
     public String slsRegionId;
 
     /**
-     * <p>The status of the log.</p>
+     * <p>Indicates whether the GA instance is associated with the project.</p>
      */
     @NameInMap("Status")
     public String status;

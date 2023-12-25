@@ -17,71 +17,18 @@ public class DescribeAcceleratorServiceStatusResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The status of the GA instance.</p>
+     * <p>The status of the GA instance. Valid values:</p>
      * <br>
-     * <p>Valid values:</p>
-     * <br>
-     * <p>*   Released</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    The instance was released due to overdue payments</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    .</p>
-     * <br>
-     * <p>*   Expired</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    The instance expired due to overdue payments</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    .</p>
-     * <br>
-     * <p>*   NotOpened</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    The instance is not activated</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    .</p>
-     * <br>
-     * <p>*   Normal</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    The instance is activated</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    .</p>
+     * <p>*   Released: The instance was released due to overdue payments.</p>
+     * <p>*   Expired: The instance expired due to overdue payments.</p>
+     * <p>*   NotOpened: The instance is not activated.</p>
+     * <p>*   Normal: The instance is activated.</p>
      */
     @NameInMap("Status")
     public String status;
