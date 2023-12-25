@@ -22,6 +22,9 @@ public class DataDisk extends TeaModel {
     @NameInMap("file_system")
     public String fileSystem;
 
+    @NameInMap("kms_key_id")
+    public String kmsKeyId;
+
     @NameInMap("mount_target")
     public String mountTarget;
 
@@ -85,6 +88,14 @@ public class DataDisk extends TeaModel {
     }
     public String getFileSystem() {
         return this.fileSystem;
+    }
+
+    public DataDisk setKmsKeyId(String kmsKeyId) {
+        this.kmsKeyId = kmsKeyId;
+        return this;
+    }
+    public String getKmsKeyId() {
+        return this.kmsKeyId;
     }
 
     public DataDisk setMountTarget(String mountTarget) {

@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class RemoveNodePoolNodesShrinkRequest extends TeaModel {
+    @NameInMap("concurrency")
+    public Boolean concurrency;
+
     /**
      * <p>Specifies whether to drain the nodes that you want to remove. Valid values:</p>
      * <br>
@@ -37,6 +40,14 @@ public class RemoveNodePoolNodesShrinkRequest extends TeaModel {
     public static RemoveNodePoolNodesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveNodePoolNodesShrinkRequest self = new RemoveNodePoolNodesShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RemoveNodePoolNodesShrinkRequest setConcurrency(Boolean concurrency) {
+        this.concurrency = concurrency;
+        return this;
+    }
+    public Boolean getConcurrency() {
+        return this.concurrency;
     }
 
     public RemoveNodePoolNodesShrinkRequest setDrainNode(Boolean drainNode) {

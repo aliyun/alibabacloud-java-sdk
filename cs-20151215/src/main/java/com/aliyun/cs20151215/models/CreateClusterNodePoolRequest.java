@@ -54,6 +54,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     @NameInMap("max_nodes")
     public Long maxNodes;
 
+    @NameInMap("node_config")
+    public CreateClusterNodePoolRequestNodeConfig nodeConfig;
+
     /**
      * <p>The configurations of the node pool.</p>
      */
@@ -131,6 +134,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
     public Long getMaxNodes() {
         return this.maxNodes;
+    }
+
+    public CreateClusterNodePoolRequest setNodeConfig(CreateClusterNodePoolRequestNodeConfig nodeConfig) {
+        this.nodeConfig = nodeConfig;
+        return this;
+    }
+    public CreateClusterNodePoolRequestNodeConfig getNodeConfig() {
+        return this.nodeConfig;
     }
 
     public CreateClusterNodePoolRequest setNodepoolInfo(CreateClusterNodePoolRequestNodepoolInfo nodepoolInfo) {
@@ -437,6 +448,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         @NameInMap("taints")
         public java.util.List<Taint> taints;
 
+        @NameInMap("unschedulable")
+        public Boolean unschedulable;
+
         /**
          * <p>The user data on the node.</p>
          */
@@ -502,6 +516,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public java.util.List<Taint> getTaints() {
             return this.taints;
+        }
+
+        public CreateClusterNodePoolRequestKubernetesConfig setUnschedulable(Boolean unschedulable) {
+            this.unschedulable = unschedulable;
+            return this;
+        }
+        public Boolean getUnschedulable() {
+            return this.unschedulable;
         }
 
         public CreateClusterNodePoolRequestKubernetesConfig setUserData(String userData) {
@@ -689,6 +711,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>The configurations about auto update. The configurations take effect only when you specify `enable=true`.</p>
          */
         @NameInMap("upgrade_config")
+        @Deprecated
         public CreateClusterNodePoolRequestManagementUpgradeConfig upgradeConfig;
 
         public static CreateClusterNodePoolRequestManagement build(java.util.Map<String, ?> map) throws Exception {
@@ -758,6 +781,25 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public CreateClusterNodePoolRequestManagementUpgradeConfig getUpgradeConfig() {
             return this.upgradeConfig;
+        }
+
+    }
+
+    public static class CreateClusterNodePoolRequestNodeConfig extends TeaModel {
+        @NameInMap("kubelet_configuration")
+        public KubeletConfig kubeletConfiguration;
+
+        public static CreateClusterNodePoolRequestNodeConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterNodePoolRequestNodeConfig self = new CreateClusterNodePoolRequestNodeConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterNodePoolRequestNodeConfig setKubeletConfiguration(KubeletConfig kubeletConfiguration) {
+            this.kubeletConfiguration = kubeletConfiguration;
+            return this;
+        }
+        public KubeletConfig getKubeletConfiguration() {
+            return this.kubeletConfiguration;
         }
 
     }
@@ -949,6 +991,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         @NameInMap("auto_renew_period")
         public Long autoRenewPeriod;
 
+        @NameInMap("cis_enabled")
+        public Boolean cisEnabled;
+
         /**
          * <p>Specifies whether to automatically create pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created due to reasons such as the cost or insufficient inventory. This parameter takes effect when you set `multi_az_policy` to `COST_OPTIMIZED`. Valid values:</p>
          * <br>
@@ -1037,6 +1082,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         @NameInMap("key_pair")
         public String keyPair;
 
+        @NameInMap("login_as_non_root")
+        public Boolean loginAsNonRoot;
+
         /**
          * <p>The password for SSH logon. You must set this parameter or the `key_pair` parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
          */
@@ -1098,6 +1146,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>Default value: `AliyunLinux`.</p>
          */
         @NameInMap("platform")
+        @Deprecated
         public String platform;
 
         /**
@@ -1134,6 +1183,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          */
         @NameInMap("security_group_ids")
         public java.util.List<String> securityGroupIds;
+
+        @NameInMap("soc_enabled")
+        public Boolean socEnabled;
 
         /**
          * <p>The number of instance types that are available for creating preemptible instances. Auto Scaling creates preemptible instances of multiple instance types that are available at the lowest cost. Valid values: 1 to 10.</p>
@@ -1178,6 +1230,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         @NameInMap("system_disk_bursting_enabled")
         public Boolean systemDiskBurstingEnabled;
 
+        @NameInMap("system_disk_categories")
+        public java.util.List<String> systemDiskCategories;
+
         /**
          * <p>The type of system disk. Valid values:</p>
          * <br>
@@ -1189,6 +1244,15 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          */
         @NameInMap("system_disk_category")
         public String systemDiskCategory;
+
+        @NameInMap("system_disk_encrypt_algorithm")
+        public String systemDiskEncryptAlgorithm;
+
+        @NameInMap("system_disk_encrypted")
+        public Boolean systemDiskEncrypted;
+
+        @NameInMap("system_disk_kms_key_id")
+        public String systemDiskKmsKeyId;
 
         /**
          * <p>The performance level (PL) of the system disk that you want to use for the node. This parameter takes effect only for ESSDs.</p>
@@ -1252,6 +1316,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public Long getAutoRenewPeriod() {
             return this.autoRenewPeriod;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setCisEnabled(Boolean cisEnabled) {
+            this.cisEnabled = cisEnabled;
+            return this;
+        }
+        public Boolean getCisEnabled() {
+            return this.cisEnabled;
         }
 
         public CreateClusterNodePoolRequestScalingGroup setCompensateWithOnDemand(Boolean compensateWithOnDemand) {
@@ -1340,6 +1412,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public String getKeyPair() {
             return this.keyPair;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setLoginAsNonRoot(Boolean loginAsNonRoot) {
+            this.loginAsNonRoot = loginAsNonRoot;
+            return this;
+        }
+        public Boolean getLoginAsNonRoot() {
+            return this.loginAsNonRoot;
         }
 
         public CreateClusterNodePoolRequestScalingGroup setLoginPassword(String loginPassword) {
@@ -1438,6 +1518,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
             return this.securityGroupIds;
         }
 
+        public CreateClusterNodePoolRequestScalingGroup setSocEnabled(Boolean socEnabled) {
+            this.socEnabled = socEnabled;
+            return this;
+        }
+        public Boolean getSocEnabled() {
+            return this.socEnabled;
+        }
+
         public CreateClusterNodePoolRequestScalingGroup setSpotInstancePools(Long spotInstancePools) {
             this.spotInstancePools = spotInstancePools;
             return this;
@@ -1478,12 +1566,44 @@ public class CreateClusterNodePoolRequest extends TeaModel {
             return this.systemDiskBurstingEnabled;
         }
 
+        public CreateClusterNodePoolRequestScalingGroup setSystemDiskCategories(java.util.List<String> systemDiskCategories) {
+            this.systemDiskCategories = systemDiskCategories;
+            return this;
+        }
+        public java.util.List<String> getSystemDiskCategories() {
+            return this.systemDiskCategories;
+        }
+
         public CreateClusterNodePoolRequestScalingGroup setSystemDiskCategory(String systemDiskCategory) {
             this.systemDiskCategory = systemDiskCategory;
             return this;
         }
         public String getSystemDiskCategory() {
             return this.systemDiskCategory;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setSystemDiskEncryptAlgorithm(String systemDiskEncryptAlgorithm) {
+            this.systemDiskEncryptAlgorithm = systemDiskEncryptAlgorithm;
+            return this;
+        }
+        public String getSystemDiskEncryptAlgorithm() {
+            return this.systemDiskEncryptAlgorithm;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setSystemDiskEncrypted(Boolean systemDiskEncrypted) {
+            this.systemDiskEncrypted = systemDiskEncrypted;
+            return this;
+        }
+        public Boolean getSystemDiskEncrypted() {
+            return this.systemDiskEncrypted;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setSystemDiskKmsKeyId(String systemDiskKmsKeyId) {
+            this.systemDiskKmsKeyId = systemDiskKmsKeyId;
+            return this;
+        }
+        public String getSystemDiskKmsKeyId() {
+            return this.systemDiskKmsKeyId;
         }
 
         public CreateClusterNodePoolRequestScalingGroup setSystemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
