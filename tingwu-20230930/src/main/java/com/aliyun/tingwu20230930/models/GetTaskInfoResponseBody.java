@@ -53,7 +53,84 @@ public class GetTaskInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetTaskInfoResponseBodyDataResult extends TeaModel {
+        @NameInMap("AutoChapters")
+        public String autoChapters;
+
+        @NameInMap("MeetingAssistance")
+        public String meetingAssistance;
+
+        @NameInMap("PptExtraction")
+        public String pptExtraction;
+
+        @NameInMap("Summarization")
+        public String summarization;
+
+        @NameInMap("Transcription")
+        public String transcription;
+
+        @NameInMap("Translation")
+        public String translation;
+
+        public static GetTaskInfoResponseBodyDataResult build(java.util.Map<String, ?> map) throws Exception {
+            GetTaskInfoResponseBodyDataResult self = new GetTaskInfoResponseBodyDataResult();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTaskInfoResponseBodyDataResult setAutoChapters(String autoChapters) {
+            this.autoChapters = autoChapters;
+            return this;
+        }
+        public String getAutoChapters() {
+            return this.autoChapters;
+        }
+
+        public GetTaskInfoResponseBodyDataResult setMeetingAssistance(String meetingAssistance) {
+            this.meetingAssistance = meetingAssistance;
+            return this;
+        }
+        public String getMeetingAssistance() {
+            return this.meetingAssistance;
+        }
+
+        public GetTaskInfoResponseBodyDataResult setPptExtraction(String pptExtraction) {
+            this.pptExtraction = pptExtraction;
+            return this;
+        }
+        public String getPptExtraction() {
+            return this.pptExtraction;
+        }
+
+        public GetTaskInfoResponseBodyDataResult setSummarization(String summarization) {
+            this.summarization = summarization;
+            return this;
+        }
+        public String getSummarization() {
+            return this.summarization;
+        }
+
+        public GetTaskInfoResponseBodyDataResult setTranscription(String transcription) {
+            this.transcription = transcription;
+            return this;
+        }
+        public String getTranscription() {
+            return this.transcription;
+        }
+
+        public GetTaskInfoResponseBodyDataResult setTranslation(String translation) {
+            this.translation = translation;
+            return this;
+        }
+        public String getTranslation() {
+            return this.translation;
+        }
+
+    }
+
     public static class GetTaskInfoResponseBodyData extends TeaModel {
+        @NameInMap("Result")
+        public GetTaskInfoResponseBodyDataResult result;
+
         @NameInMap("TaskId")
         public String taskId;
 
@@ -66,6 +143,14 @@ public class GetTaskInfoResponseBody extends TeaModel {
         public static GetTaskInfoResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetTaskInfoResponseBodyData self = new GetTaskInfoResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetTaskInfoResponseBodyData setResult(GetTaskInfoResponseBodyDataResult result) {
+            this.result = result;
+            return this;
+        }
+        public GetTaskInfoResponseBodyDataResult getResult() {
+            return this.result;
         }
 
         public GetTaskInfoResponseBodyData setTaskId(String taskId) {
