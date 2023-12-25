@@ -13,6 +13,12 @@ public class CreateMeetingRoomResponseBody extends TeaModel {
     @NameInMap("result")
     public String result;
 
+    @NameInMap("vendorRequestId")
+    public String vendorRequestId;
+
+    @NameInMap("vendorType")
+    public String vendorType;
+
     public static CreateMeetingRoomResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateMeetingRoomResponseBody self = new CreateMeetingRoomResponseBody();
         return TeaModel.build(map, self);
@@ -32,6 +38,22 @@ public class CreateMeetingRoomResponseBody extends TeaModel {
     }
     public String getResult() {
         return this.result;
+    }
+
+    public CreateMeetingRoomResponseBody setVendorRequestId(String vendorRequestId) {
+        this.vendorRequestId = vendorRequestId;
+        return this;
+    }
+    public String getVendorRequestId() {
+        return this.vendorRequestId;
+    }
+
+    public CreateMeetingRoomResponseBody setVendorType(String vendorType) {
+        this.vendorType = vendorType;
+        return this;
+    }
+    public String getVendorType() {
+        return this.vendorType;
     }
 
 }

@@ -1326,6 +1326,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.reservationAuthority)) {
+            request.reservationAuthorityShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.reservationAuthority, "ReservationAuthority", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.roomLabelIds)) {
             request.roomLabelIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.roomLabelIds, "RoomLabelIds", "json");
         }
@@ -1339,12 +1343,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableCycleReservation)) {
+            body.put("EnableCycleReservation", request.enableCycleReservation);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
             body.put("GroupId", request.groupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.isvRoomId)) {
             body.put("IsvRoomId", request.isvRoomId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reservationAuthorityShrink)) {
+            body.put("ReservationAuthority", request.reservationAuthorityShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.roomCapacity)) {
@@ -9220,6 +9232,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.reservationAuthority)) {
+            request.reservationAuthorityShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.reservationAuthority, "ReservationAuthority", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.roomLabelIds)) {
             request.roomLabelIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.roomLabelIds, "RoomLabelIds", "json");
         }
@@ -9233,12 +9249,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableCycleReservation)) {
+            body.put("EnableCycleReservation", request.enableCycleReservation);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
             body.put("GroupId", request.groupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.isvRoomId)) {
             body.put("IsvRoomId", request.isvRoomId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reservationAuthorityShrink)) {
+            body.put("ReservationAuthority", request.reservationAuthorityShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.roomCapacity)) {
