@@ -4,11 +4,17 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class UpdateMeetingRoomShrinkRequest extends TeaModel {
+    @NameInMap("EnableCycleReservation")
+    public Boolean enableCycleReservation;
+
     @NameInMap("GroupId")
     public Long groupId;
 
     @NameInMap("IsvRoomId")
     public String isvRoomId;
+
+    @NameInMap("ReservationAuthority")
+    public String reservationAuthorityShrink;
 
     @NameInMap("RoomCapacity")
     public Integer roomCapacity;
@@ -39,6 +45,14 @@ public class UpdateMeetingRoomShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateMeetingRoomShrinkRequest setEnableCycleReservation(Boolean enableCycleReservation) {
+        this.enableCycleReservation = enableCycleReservation;
+        return this;
+    }
+    public Boolean getEnableCycleReservation() {
+        return this.enableCycleReservation;
+    }
+
     public UpdateMeetingRoomShrinkRequest setGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -53,6 +67,14 @@ public class UpdateMeetingRoomShrinkRequest extends TeaModel {
     }
     public String getIsvRoomId() {
         return this.isvRoomId;
+    }
+
+    public UpdateMeetingRoomShrinkRequest setReservationAuthorityShrink(String reservationAuthorityShrink) {
+        this.reservationAuthorityShrink = reservationAuthorityShrink;
+        return this;
+    }
+    public String getReservationAuthorityShrink() {
+        return this.reservationAuthorityShrink;
     }
 
     public UpdateMeetingRoomShrinkRequest setRoomCapacity(Integer roomCapacity) {

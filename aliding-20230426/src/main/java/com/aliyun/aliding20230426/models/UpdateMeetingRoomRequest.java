@@ -4,11 +4,17 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class UpdateMeetingRoomRequest extends TeaModel {
+    @NameInMap("EnableCycleReservation")
+    public Boolean enableCycleReservation;
+
     @NameInMap("GroupId")
     public Long groupId;
 
     @NameInMap("IsvRoomId")
     public String isvRoomId;
+
+    @NameInMap("ReservationAuthority")
+    public UpdateMeetingRoomRequestReservationAuthority reservationAuthority;
 
     @NameInMap("RoomCapacity")
     public Integer roomCapacity;
@@ -39,6 +45,14 @@ public class UpdateMeetingRoomRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateMeetingRoomRequest setEnableCycleReservation(Boolean enableCycleReservation) {
+        this.enableCycleReservation = enableCycleReservation;
+        return this;
+    }
+    public Boolean getEnableCycleReservation() {
+        return this.enableCycleReservation;
+    }
+
     public UpdateMeetingRoomRequest setGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -53,6 +67,14 @@ public class UpdateMeetingRoomRequest extends TeaModel {
     }
     public String getIsvRoomId() {
         return this.isvRoomId;
+    }
+
+    public UpdateMeetingRoomRequest setReservationAuthority(UpdateMeetingRoomRequestReservationAuthority reservationAuthority) {
+        this.reservationAuthority = reservationAuthority;
+        return this;
+    }
+    public UpdateMeetingRoomRequestReservationAuthority getReservationAuthority() {
+        return this.reservationAuthority;
     }
 
     public UpdateMeetingRoomRequest setRoomCapacity(Integer roomCapacity) {
@@ -117,6 +139,66 @@ public class UpdateMeetingRoomRequest extends TeaModel {
     }
     public UpdateMeetingRoomRequestTenantContext getTenantContext() {
         return this.tenantContext;
+    }
+
+    public static class UpdateMeetingRoomRequestReservationAuthorityAuthorizedMembers extends TeaModel {
+        @NameInMap("MemberId")
+        public String memberId;
+
+        @NameInMap("MemberName")
+        public String memberName;
+
+        @NameInMap("MemberType")
+        public String memberType;
+
+        public static UpdateMeetingRoomRequestReservationAuthorityAuthorizedMembers build(java.util.Map<String, ?> map) throws Exception {
+            UpdateMeetingRoomRequestReservationAuthorityAuthorizedMembers self = new UpdateMeetingRoomRequestReservationAuthorityAuthorizedMembers();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateMeetingRoomRequestReservationAuthorityAuthorizedMembers setMemberId(String memberId) {
+            this.memberId = memberId;
+            return this;
+        }
+        public String getMemberId() {
+            return this.memberId;
+        }
+
+        public UpdateMeetingRoomRequestReservationAuthorityAuthorizedMembers setMemberName(String memberName) {
+            this.memberName = memberName;
+            return this;
+        }
+        public String getMemberName() {
+            return this.memberName;
+        }
+
+        public UpdateMeetingRoomRequestReservationAuthorityAuthorizedMembers setMemberType(String memberType) {
+            this.memberType = memberType;
+            return this;
+        }
+        public String getMemberType() {
+            return this.memberType;
+        }
+
+    }
+
+    public static class UpdateMeetingRoomRequestReservationAuthority extends TeaModel {
+        @NameInMap("AuthorizedMembers")
+        public java.util.List<UpdateMeetingRoomRequestReservationAuthorityAuthorizedMembers> authorizedMembers;
+
+        public static UpdateMeetingRoomRequestReservationAuthority build(java.util.Map<String, ?> map) throws Exception {
+            UpdateMeetingRoomRequestReservationAuthority self = new UpdateMeetingRoomRequestReservationAuthority();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateMeetingRoomRequestReservationAuthority setAuthorizedMembers(java.util.List<UpdateMeetingRoomRequestReservationAuthorityAuthorizedMembers> authorizedMembers) {
+            this.authorizedMembers = authorizedMembers;
+            return this;
+        }
+        public java.util.List<UpdateMeetingRoomRequestReservationAuthorityAuthorizedMembers> getAuthorizedMembers() {
+            return this.authorizedMembers;
+        }
+
     }
 
     public static class UpdateMeetingRoomRequestRoomLocation extends TeaModel {
