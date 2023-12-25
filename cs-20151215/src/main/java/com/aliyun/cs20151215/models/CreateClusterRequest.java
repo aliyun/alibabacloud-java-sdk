@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClusterRequest extends TeaModel {
     /**
-     * <p>注册集群 API Server SLB 访问控制列表。</p>
+     * <p>The network access control list (ACL) of the SLB instance associated with the API server if the cluster is a registered cluster.</p>
      */
     @NameInMap("access_control_list")
     public java.util.List<String> accessControlList;
@@ -18,24 +18,24 @@ public class CreateClusterRequest extends TeaModel {
      * <p>*   Specify the Flannel plug-in in the following format: \[{"name":"flannel","config":""}].</p>
      * <p>*   Specify the Terway plug-in in the following format: \[{"name": "terway-eniip","config": ""}].</p>
      * <br>
-     * <p>**Volume plug-in**: required. The `csi` and `flexvolume` volume plug-ins are supported.</p>
+     * <p>**Volume plug-in**: required. The `CSI` and `FlexVolume` volume plug-ins are supported.</p>
      * <br>
      * <p>*   Specify the `CSI` plug-in in the following format: \[{"name":"csi-plugin","config": ""},{"name": "csi-provisioner","config": ""}].</p>
-     * <p>*   Specify the `FlexVolume plug-in` in the following format: \[{"name": "flexvolume","config": ""}].</p>
+     * <p>*   Specify the `FlexVolume` plug-in in the following format: \[{"name": "flexvolume","config": ""}].</p>
      * <br>
-     * <p>**Simple Log Service component**: optional. We recommend that you enable Simple Log Service. If Log Service is disabled, you cannot use the cluster auditing feature.</p>
+     * <p>**Simple Log Service component**: optional. We recommend that you enable Simple Log Service. If Simple Log Service is disabled, you cannot use the cluster auditing feature.</p>
      * <br>
      * <p>*   Use an existing `Simple Log Service project`: \[{"name": "logtail-ds","config": "{"IngressDashboardEnabled":"true","sls_project_name":"your_sls_project_name"}"}].</p>
      * <p>*   To create a `Simple Log Service project`, specify the component in the following format: \[{"name": "logtail-ds","config": "{"IngressDashboardEnabled":"true"}"}].</p>
      * <br>
-     * <p>**Ingress controller**`: optional. By default, the nginx-ingress-controller component is installed in ACK dedicated clusters.`</p>
+     * <p>**Ingress controller**: optional. By default, the `nginx-ingress-controller` component is installed in ACK dedicated clusters.</p>
      * <br>
      * <p>*   To install nginx-ingress-controller and enable Internet access, specify the Ingress controller in the following format: \[{"name":"nginx-ingress-controller","config":"{"IngressSlbNetworkType":"internet"}"}].</p>
      * <p>*   If you do not want to install nginx-ingress-controller, specify the component in the following format: \[{"name": "nginx-ingress-controller","config": "","disabled": true}].</p>
      * <br>
-     * <p>**Event center**: Optional. By default, the event center feature is enabled.</p>
+     * <p>**Event center**: optional. By default, the event center feature is enabled.</p>
      * <br>
-     * <p>You can use Kubernetes event centers to store and query events, and configure alert rules. You can use the Logstores that are associated with Kubernetes event centers for free within 90 days. For more information, see [Create and use a Kubernetes event center](https://help.aliyun.com/document_detail/150476.html#task-2389213).</p>
+     * <p>You can use Kubernetes event centers to store and query events, and configure alert rules. You can use the Logstores that are associated with Kubernetes event centers for free within 90 days. For more information, see [Create and use an event center](https://help.aliyun.com/document_detail/150476.html#task-2389213).</p>
      * <br>
      * <p>Enable the ack-node-problem-detector component in the following format: \[{"name":"ack-node-problem-detector","config":"{"sls_project_name":"your_sls_project_name"}"}].</p>
      */
@@ -91,23 +91,23 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The type of ACK managed cluster. Valid values:</p>
      * <br>
-     * <p>*   `ack.pro.small`: ACK Pro clusters</p>
-     * <p>*   `ack.standard`: ACK Basic clusters</p>
+     * <p>*   `ack.pro.small`: ACK Pro cluster.</p>
+     * <p>*   `ack.standard`: ACK Basic cluster.</p>
      * <br>
-     * <p>Default value: `ack.standard`. If you leave this property empty, an ACK Basic cluster is created.</p>
+     * <p>Default value: `ack.standard`. If you leave this property empty, an ACK Basic cluster.is created.</p>
      * <br>
-     * <p>For more information, see [Introduction to ACK managed clusters](https://help.aliyun.com/document_detail/173290.html).</p>
+     * <p>For more information, see [Overview of ACK Pro clusters](https://help.aliyun.com/document_detail/173290.html).</p>
      */
     @NameInMap("cluster_spec")
     public String clusterSpec;
 
     /**
-     * <p>The type of the cluster. Valid values:</p>
+     * <p>The cluster type. Valid values:</p>
      * <br>
-     * <p>*   `Kubernetes`: ACK dedicated clusters</p>
-     * <p>*   `ManagedKubernetes`: ACK managed clusters or ACK Edge clusters</p>
-     * <p>*   `Ask`: ACK Serverless Basic clusters</p>
-     * <p>*   `ExternalKubernetes`: external clusters that are registered to ACK</p>
+     * <p>*   `Kubernetes`: ACK dedicated cluster.</p>
+     * <p>*   `ManagedKubernetes`: ACK Basic cluster or ACK Edge cluster.</p>
+     * <p>*   `Ask`: ACK Serverless Basic cluster.</p>
+     * <p>*   `ExternalKubernetes`: external cluster that is registered to ACK.</p>
      */
     @NameInMap("cluster_type")
     public String clusterType;
@@ -117,7 +117,7 @@ public class CreateClusterRequest extends TeaModel {
      * <br>
      * <p>For more information about subnetting for ACK clusters, see [Plan CIDR blocks for an ACK cluster that is deployed in a VPC](~~86500~~).</p>
      * <br>
-     * <p>> If the cluster uses Flannel, this parameter is required.</p>
+     * <p>>  This parameter is required if the cluster uses the Flannel plug-in.</p>
      */
     @NameInMap("container_cidr")
     public String containerCidr;
@@ -131,7 +131,7 @@ public class CreateClusterRequest extends TeaModel {
     public java.util.List<String> controlplaneLogComponents;
 
     /**
-     * <p>The Simple Log Service project that is used to store the log of control plane components. You can use an existing project or create one. If you choose to create a Simple Log Service project, the created project is named in the `k8s-log-{ClusterID}` format.</p>
+     * <p>The Simple Log Service project that is used to store the logs of control plane components. You can use an existing project or create one. If you choose to create a Simple Log Service project, the created project is named in the `k8s-log-{ClusterID}` format.</p>
      */
     @NameInMap("controlplane_log_project")
     public String controlplaneLogProject;
@@ -143,7 +143,7 @@ public class CreateClusterRequest extends TeaModel {
     public String controlplaneLogTtl;
 
     /**
-     * <p>The CPU management policy. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later.</p>
+     * <p>The CPU management policy of the nodes in a node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later.</p>
      * <br>
      * <p>*   `static`: allows pods with specific resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.</p>
      * <p>*   `none`: specifies that the default CPU affinity is used.</p>
@@ -173,8 +173,8 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a rollback if the cluster fails to be created. Valid values:</p>
      * <br>
-     * <p>*   `true`: performs a rollback if the system fails to create the cluster</p>
-     * <p>*   `false`: does not perform a rollback if the system fails to create the cluster</p>
+     * <p>*   `true`: performs a rollback if the system fails to create the cluster.</p>
+     * <p>*   `false`: does not perform a rollback if the system fails to create the cluster.</p>
      * <br>
      * <p>Default value: `true`.</p>
      */
@@ -190,7 +190,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The ID of a key that is managed by Key Management Service (KMS). The key is used to encrypt data disks. For more information, see [KMS](~~28935~~).</p>
      * <br>
-     * <p>> This feature supports only ACK Pro clusters.</p>
+     * <p>>  This feature supports only ACK Pro clusters.</p>
      */
     @NameInMap("encryption_provider_key")
     public String encryptionProviderKey;
@@ -247,9 +247,9 @@ public class CreateClusterRequest extends TeaModel {
     public String imageType;
 
     /**
-     * <p>The list of existing Elastic Compute Service (ECS) instances that are specified as worker nodes for the cluster.</p>
+     * <p>The list of existing ECS instances that are specified as worker nodes for the cluster.</p>
      * <br>
-     * <p>> This parameter is required when you create worker nodes on existing ECS instances.</p>
+     * <p>>  This parameter is required when you create worker nodes on existing ECS instances.</p>
      */
     @NameInMap("instances")
     public java.util.List<String> instances;
@@ -263,7 +263,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>Specifies whether to create an advanced security group. This parameter takes effect only if `security_group_id` is left empty.</p>
      * <br>
-     * <p>> To use a basic security group, make sure that the sum of the number of cluster nodes and the number of pods that use Terway does not exceed 2,000. Therefore, if the cluster uses Terway, we recommend that you use an advanced security group.</p>
+     * <p>>  To use a basic security group, make sure that the sum of the number of nodes in the cluster and the number of pods that use Terway does not exceed 2,000. Therefore, if the cluster uses Terway, we recommend that you use an advanced security group.</p>
      * <br>
      * <p>*   `true`: creates an advanced security group.</p>
      * <p>*   `false`: does not create an advanced security group.</p>
@@ -326,7 +326,7 @@ public class CreateClusterRequest extends TeaModel {
     public String loginPassword;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for master nodes. This parameter takes effect and is required only if `master_instance_charge_type` is set to `PrePaid`.</p>
+     * <p>Specifies whether to enable auto-renewal for master nodes. This parameter takes effect only if `master_instance_charge_type` is set to `PrePaid`. Valid values:</p>
      * <br>
      * <p>*   `true`: enables auto-renewal.</p>
      * <p>*   `false`: disables auto-renewal.</p>
@@ -384,7 +384,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The billing cycle of master nodes. This parameter is required if master_instance_charge_type is set to `PrePaid`.</p>
      * <br>
-     * <p>Set the value to `Month`. Resources are billed only on a monthly basis.</p>
+     * <p>Set the value to `Month`. Master nodes are billed only on a monthly basis.</p>
      */
     @NameInMap("master_period_unit")
     public String masterPeriodUnit;
@@ -394,7 +394,7 @@ public class CreateClusterRequest extends TeaModel {
      * <br>
      * <p>*   `cloud_efficiency`: ultra disk.</p>
      * <p>*   `cloud_ssd`: standard SSD.</p>
-     * <p>*   `cloud_essd`: enhanced SSD (ESSD).</p>
+     * <p>*   `cloud_essd`: ESSD.</p>
      * <br>
      * <p>Default value: `cloud_ssd`. The default value may vary in different zones.</p>
      */
@@ -402,7 +402,7 @@ public class CreateClusterRequest extends TeaModel {
     public String masterSystemDiskCategory;
 
     /**
-     * <p>The performance level (PL) of the system disk that you want to use for master nodes. This parameter takes effect only for ESSDs. For more information about the relationship between disk PLs and disk sizes, see [ESSDs](~~122389~~).</p>
+     * <p>The performance level (PL) of the system disk that you want to use for master nodes. This parameter takes effect only for enhanced SSDs. For more information about the relationship between disk PLs and disk sizes, see [ESSDs](~~122389~~).</p>
      */
     @NameInMap("master_system_disk_performance_level")
     public String masterSystemDiskPerformanceLevel;
@@ -430,9 +430,9 @@ public class CreateClusterRequest extends TeaModel {
     public java.util.List<String> masterVswitchIds;
 
     /**
-     * <p>The name of the cluster.</p>
+     * <p>The cluster name.</p>
      * <br>
-     * <p>The name must be 1 to 63 characters in length and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
+     * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
      */
     @NameInMap("name")
     public String name;
@@ -449,7 +449,7 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean natGateway;
 
     /**
-     * <p>The maximum number of IP addresses that can be assigned to nodes. This number is determined by the node CIDR block. This parameter takes effect only if the cluster uses Flannel.</p>
+     * <p>The maximum number of IP addresses that can be assigned to nodes. This number is determined by the node CIDR block. This parameter takes effect only if the cluster uses Flannel as the network plug-in.</p>
      * <br>
      * <p>Default value: `26`.</p>
      */
@@ -478,7 +478,7 @@ public class CreateClusterRequest extends TeaModel {
     public String nodePortRange;
 
     /**
-     * <p>节点池列表。</p>
+     * <p>The list of node pools.</p>
      */
     @NameInMap("nodepools")
     public java.util.List<Nodepool> nodepools;
@@ -529,9 +529,9 @@ public class CreateClusterRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p>The list of pod vSwiches. You need to specify at least one pod vSwitch for each node vSwitch and the pod vSwitches must not be the same as the node vSwitches (`vswitch`). We recommend that you specify pod vSwitches whose mask lengths are no greater than 19.</p>
+     * <p>The list of pod vSwitches. You need to specify at least one pod vSwitch for each node vSwitch and the pod vSwitches must not be the same as the node vSwitches (`vswitch`). We recommend that you specify pod vSwitches whose mask lengths are no greater than 19.</p>
      * <br>
-     * <p>> When the cluster uses Terway, the `pod_vswitch_ids` parameter is required.</p>
+     * <p>>  The `pod_vswitch_ids` parameter is required if the cluster uses Terway as the network plug-in.</p>
      */
     @NameInMap("pod_vswitch_ids")
     public java.util.List<String> podVswitchIds;
@@ -548,8 +548,8 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The kube-proxy mode. Valid values:</p>
      * <br>
-     * <p>*   `iptables`: iptables is a kube-proxy mode. It uses iptables rules to conduct Service discovery and load balancing. The performance of this mode is limited by the size of the cluster. This mode is suitable for clusters that run a small number of Services.</p>
-     * <p>*   `ipvs`: a high-performance kube-proxy mode. It uses Linux IP Virtual Server (IPVS) to conduct Service discovery and load balancing. This mode is suitable for clusters that run a large number of Services. We recommend that you use this mode in scenarios where high-performance load balancing is required.</p>
+     * <p>*   `iptables`: iptables is a mature and stable kube-proxy mode. It uses iptables rules to conduct service discovery and load balancing. The performance of this mode is restricted by the size of the Kubernetes cluster. This mode is suitable for Kubernetes clusters that manage a small number of Services.</p>
+     * <p>*   `ipvs`: IPVS is a high-performance kube-proxy mode. It uses Linux Virtual Server (LVS) to conduct service discovery and load balancing. This mode is suitable for clusters that manage a large number of Services. We recommend that you use this mode in scenarios where high-performance load balancing is required.</p>
      * <br>
      * <p>Default value: `ipvs`.</p>
      */
@@ -563,13 +563,13 @@ public class CreateClusterRequest extends TeaModel {
     public java.util.List<String> rdsInstances;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The ID of the region in which you want to deploy the cluster.</p>
      */
     @NameInMap("region_id")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the cluster belongs. You can use this parameter to isolate different clusters.</p>
+     * <p>The ID of the resource group to which the cluster belongs. You can use resource groups to isolate clusters.</p>
      */
     @NameInMap("resource_group_id")
     public String resourceGroupId;
@@ -577,7 +577,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The container runtime. The default container runtime is Docker. containerd and Sandboxed-Container are also supported.</p>
      * <br>
-     * <p>For more information about how to select a proper container runtime, see [How to select between Docker and Sandboxed-Container](https://help.aliyun.com/document_detail/160313.html).</p>
+     * <p>For more information about how to select a proper container runtime, see [Comparison of Docker, containerd, and Sandboxed-Container](https://help.aliyun.com/document_detail/160313.html).</p>
      */
     @NameInMap("runtime")
     public Runtime runtime;
@@ -607,7 +607,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The type of service discovery that is implemented in the `ACK Serverless` cluster.</p>
      * <br>
-     * <p>*   `CoreDNS`:a standard service discovery plug-in provided by open source Kubernetes. To use the Domain Name System (DNS) resolution, you must provision pods. By default, two elastic container instances are used. The specification of each instance is 0.25 CPU cores and 512 MiB of memory.</p>
+     * <p>*   `CoreDNS`: a standard service discovery plug-in provided by open source Kubernetes. To use the Domain Name System (DNS) resolution, you must provision pods. By default, two elastic container instances are used. The specification of each instance is 0.25 CPU cores and 512 MiB of memory.</p>
      * <p>*   `PrivateZone`: a DNS resolution service provided by Alibaba Cloud. You must activate Alibaba Cloud DNS PrivateZone before you can use it for service discovery.</p>
      * <br>
      * <p>By default, this parameter is not specified.</p>
@@ -621,7 +621,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>*   `true`: automatically creates a NAT gateway and configures SNAT rules. Set this parameter to `true` if nodes and applications in the cluster need to access the Internet.</p>
      * <p>*   `false`: does not create a NAT gateway or configure SNAT rules. In this case, nodes and applications in the cluster cannot access the Internet.</p>
      * <br>
-     * <p>> If this feature is disabled when you create the cluster, you can manually enable this feature after you create the cluster. For more information, see [Manually create a NAT gateway and configure SNAT rules](~~178480~~).</p>
+     * <p>>  If this feature is disabled when you create the cluster, you can also manually enable this feature after you create the cluster. For more information, see [Manually create a NAT gateway and configure SNAT rules](~~178480~~).</p>
      * <br>
      * <p>Default value: `true`.</p>
      */
@@ -629,12 +629,12 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean snatEntry;
 
     /**
-     * <p>Reinforcement based on Multi-Level Protection Scheme (MLPS). For more information, see [ACK reinforcement based on MLPS](~~196148~~).</p>
+     * <p>Reinforcement based on classified protection. For more information, see [ACK reinforcement based on classified protection](~~196148~~).</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>*   `true`: enables reinforcement based on MLPS.</p>
-     * <p>*   `false`: disables reinforcement based on MLPS.</p>
+     * <p>*   `true`: enables reinforcement based on classified protection.</p>
+     * <p>*   `false`: disables reinforcement based on classified protection.</p>
      * <br>
      * <p>Default value: `false`.</p>
      */
@@ -653,7 +653,7 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean sshFlags;
 
     /**
-     * <p>The labels that you want to add to nodes. You must add labels based on the following rules:</p>
+     * <p>The labels that you want to add to nodes. You must add tags based on the following rules:</p>
      * <br>
      * <p>*   Each label is a case-sensitive key-value pair. You can add up to 20 labels.</p>
      * <p>*   A key must be unique and cannot exceed 64 characters in length. A value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set).</p>
@@ -662,7 +662,7 @@ public class CreateClusterRequest extends TeaModel {
     public java.util.List<Tag> tags;
 
     /**
-     * <p>The taints that you want to add to nodes. Taints are added to nodes to prevent pods from being scheduled to inappropriate nodes. However, tolerations allow pods to be scheduled to nodes with matching taints. For more information, see [taint-and-toleration](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).</p>
+     * <p>The taints of the nodes in the node pool. Taints are added to nodes to prevent pods from being scheduled to inappropriate nodes. However, tolerations allow pods to be scheduled to nodes with matching taints. For more information, see [Taints and Tolerations](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).</p>
      */
     @NameInMap("taints")
     public java.util.List<Taint> taints;
@@ -694,7 +694,7 @@ public class CreateClusterRequest extends TeaModel {
     public String userData;
 
     /**
-     * <p>The virtual private cloud (VPC) in which you want to deploy the cluster. You must specify a VPC when you create the cluster.</p>
+     * <p>The virtual private cloud (VPC) in which you want to deploy the cluster. This parameter is required.</p>
      */
     @NameInMap("vpcid")
     public String vpcid;
@@ -773,7 +773,7 @@ public class CreateClusterRequest extends TeaModel {
     public String workerPeriodUnit;
 
     /**
-     * <p>The category of the system disk that you attach to the worker node. For more information, see [Elastic Block Storage overview](~~63136~~).</p>
+     * <p>The category of the system disk that you attach to the worker node. For more information, see [Elastic Block Storage devices](~~63136~~).</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
@@ -803,7 +803,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The size of the system disk that you want to use for worker nodes. Unit: GiB.</p>
      * <br>
-     * <p>Valid values: 40 to 500</p>
+     * <p>Valid values: 40 to 500.</p>
      * <br>
      * <p>The value of this parameter must be at least 40 and no less than the image size.</p>
      * <br>
@@ -823,7 +823,7 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The list of vSwitches that are specified for nodes. Each node is allocated a vSwitch.</p>
      * <br>
-     * <p>The ` worker_vswitch_ids  `parameter is optional but the `vswitch_ids` parameter is required when you create an ACK managed cluster that does not contain nodes.</p>
+     * <p>The `worker_vswitch_ids` parameter is optional but the `vswitch_ids` parameter is required when you create an ACK managed cluster that does not contain nodes.</p>
      */
     @NameInMap("worker_vswitch_ids")
     @Deprecated
@@ -1570,7 +1570,7 @@ public class CreateClusterRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>Specifies whether to encrypt the data disks. Valid values:</p>
+         * <p>Specifies whether to encrypt a data disk. Valid values:</p>
          * <br>
          * <p>*   `true`: encrypts a data disk.</p>
          * <p>*   `false`: does not encrypt a data disk.</p>
@@ -1581,7 +1581,7 @@ public class CreateClusterRequest extends TeaModel {
         public String encrypted;
 
         /**
-         * <p>The PL of a data disk. This parameter takes effect only for ESSDs. You can specify a higher PL if you increase the size of a data disk. For more information, see [ESSDs](~~122389~~).</p>
+         * <p>The performance level (PL) of a data disk. This parameter takes effect only on ESSDs. You can specify a higher PL if you increase the size of a data disk. For more information, see [ESSDs](~~122389~~).</p>
          */
         @NameInMap("performance_level")
         public String performanceLevel;

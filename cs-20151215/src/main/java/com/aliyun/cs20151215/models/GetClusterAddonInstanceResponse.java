@@ -3,7 +3,7 @@ package com.aliyun.cs20151215.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateControlPlaneLogResponse extends TeaModel {
+public class GetClusterAddonInstanceResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class UpdateControlPlaneLogResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public UpdateControlPlaneLogResponseBody body;
+    public GetClusterAddonInstanceResponseBody body;
 
-    public static UpdateControlPlaneLogResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateControlPlaneLogResponse self = new UpdateControlPlaneLogResponse();
+    public static GetClusterAddonInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetClusterAddonInstanceResponse self = new GetClusterAddonInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateControlPlaneLogResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetClusterAddonInstanceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class UpdateControlPlaneLogResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateControlPlaneLogResponse setStatusCode(Integer statusCode) {
+    public GetClusterAddonInstanceResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class UpdateControlPlaneLogResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdateControlPlaneLogResponse setBody(UpdateControlPlaneLogResponseBody body) {
+    public GetClusterAddonInstanceResponse setBody(GetClusterAddonInstanceResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdateControlPlaneLogResponseBody getBody() {
+    public GetClusterAddonInstanceResponseBody getBody() {
         return this.body;
     }
 

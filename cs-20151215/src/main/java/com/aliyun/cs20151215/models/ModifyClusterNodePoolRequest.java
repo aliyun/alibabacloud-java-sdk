@@ -10,6 +10,9 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
     @NameInMap("auto_scaling")
     public ModifyClusterNodePoolRequestAutoScaling autoScaling;
 
+    @NameInMap("concurrency")
+    public Boolean concurrency;
+
     /**
      * <p>The configurations about the cluster.</p>
      */
@@ -57,6 +60,14 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
     }
     public ModifyClusterNodePoolRequestAutoScaling getAutoScaling() {
         return this.autoScaling;
+    }
+
+    public ModifyClusterNodePoolRequest setConcurrency(Boolean concurrency) {
+        this.concurrency = concurrency;
+        return this;
+    }
+    public Boolean getConcurrency() {
+        return this.concurrency;
     }
 
     public ModifyClusterNodePoolRequest setKubernetesConfig(ModifyClusterNodePoolRequestKubernetesConfig kubernetesConfig) {
@@ -539,6 +550,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
          * <p>The configurations about auto update. The configurations take effect only when you specify `enable=true`.</p>
          */
         @NameInMap("upgrade_config")
+        @Deprecated
         public ModifyClusterNodePoolRequestManagementUpgradeConfig upgradeConfig;
 
         public static ModifyClusterNodePoolRequestManagement build(java.util.Map<String, ?> map) throws Exception {
@@ -775,6 +787,9 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         @NameInMap("image_id")
         public String imageId;
 
+        @NameInMap("image_type")
+        public String imageType;
+
         /**
          * <p>The billing method of the nodes in the node pool. Valid values:</p>
          * <br>
@@ -876,6 +891,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
          * <p>*   `WindowsCore`</p>
          */
         @NameInMap("platform")
+        @Deprecated
         public String platform;
 
         /**
@@ -932,6 +948,12 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         @NameInMap("spot_strategy")
         public String spotStrategy;
 
+        @NameInMap("system_disk_bursting_enabled")
+        public Boolean systemDiskBurstingEnabled;
+
+        @NameInMap("system_disk_categories")
+        public java.util.List<String> systemDiskCategories;
+
         /**
          * <p>The type of system disk. Valid values:</p>
          * <br>
@@ -943,11 +965,23 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         @NameInMap("system_disk_category")
         public String systemDiskCategory;
 
+        @NameInMap("system_disk_encrypt_algorithm")
+        public String systemDiskEncryptAlgorithm;
+
+        @NameInMap("system_disk_encrypted")
+        public Boolean systemDiskEncrypted;
+
+        @NameInMap("system_disk_kms_key_id")
+        public String systemDiskKmsKeyId;
+
         /**
          * <p>The performance level (PL) of the system disk that you want to use for the node. This parameter takes effect only for enhanced SSDs. You can specify a higher PL if you increase the size of the system disk. For more information, see [ESSDs](~~122389~~).</p>
          */
         @NameInMap("system_disk_performance_level")
         public String systemDiskPerformanceLevel;
+
+        @NameInMap("system_disk_provisioned_iops")
+        public Long systemDiskProvisionedIops;
 
         /**
          * <p>The system disk size of a node. Unit: GiB.</p>
@@ -1028,6 +1062,14 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         }
         public String getImageId() {
             return this.imageId;
+        }
+
+        public ModifyClusterNodePoolRequestScalingGroup setImageType(String imageType) {
+            this.imageType = imageType;
+            return this;
+        }
+        public String getImageType() {
+            return this.imageType;
         }
 
         public ModifyClusterNodePoolRequestScalingGroup setInstanceChargeType(String instanceChargeType) {
@@ -1182,6 +1224,22 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
             return this.spotStrategy;
         }
 
+        public ModifyClusterNodePoolRequestScalingGroup setSystemDiskBurstingEnabled(Boolean systemDiskBurstingEnabled) {
+            this.systemDiskBurstingEnabled = systemDiskBurstingEnabled;
+            return this;
+        }
+        public Boolean getSystemDiskBurstingEnabled() {
+            return this.systemDiskBurstingEnabled;
+        }
+
+        public ModifyClusterNodePoolRequestScalingGroup setSystemDiskCategories(java.util.List<String> systemDiskCategories) {
+            this.systemDiskCategories = systemDiskCategories;
+            return this;
+        }
+        public java.util.List<String> getSystemDiskCategories() {
+            return this.systemDiskCategories;
+        }
+
         public ModifyClusterNodePoolRequestScalingGroup setSystemDiskCategory(String systemDiskCategory) {
             this.systemDiskCategory = systemDiskCategory;
             return this;
@@ -1190,12 +1248,44 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
             return this.systemDiskCategory;
         }
 
+        public ModifyClusterNodePoolRequestScalingGroup setSystemDiskEncryptAlgorithm(String systemDiskEncryptAlgorithm) {
+            this.systemDiskEncryptAlgorithm = systemDiskEncryptAlgorithm;
+            return this;
+        }
+        public String getSystemDiskEncryptAlgorithm() {
+            return this.systemDiskEncryptAlgorithm;
+        }
+
+        public ModifyClusterNodePoolRequestScalingGroup setSystemDiskEncrypted(Boolean systemDiskEncrypted) {
+            this.systemDiskEncrypted = systemDiskEncrypted;
+            return this;
+        }
+        public Boolean getSystemDiskEncrypted() {
+            return this.systemDiskEncrypted;
+        }
+
+        public ModifyClusterNodePoolRequestScalingGroup setSystemDiskKmsKeyId(String systemDiskKmsKeyId) {
+            this.systemDiskKmsKeyId = systemDiskKmsKeyId;
+            return this;
+        }
+        public String getSystemDiskKmsKeyId() {
+            return this.systemDiskKmsKeyId;
+        }
+
         public ModifyClusterNodePoolRequestScalingGroup setSystemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
             this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
             return this;
         }
         public String getSystemDiskPerformanceLevel() {
             return this.systemDiskPerformanceLevel;
+        }
+
+        public ModifyClusterNodePoolRequestScalingGroup setSystemDiskProvisionedIops(Long systemDiskProvisionedIops) {
+            this.systemDiskProvisionedIops = systemDiskProvisionedIops;
+            return this;
+        }
+        public Long getSystemDiskProvisionedIops() {
+            return this.systemDiskProvisionedIops;
         }
 
         public ModifyClusterNodePoolRequestScalingGroup setSystemDiskSize(Long systemDiskSize) {

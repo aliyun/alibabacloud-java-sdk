@@ -418,6 +418,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("taints")
         public java.util.List<Taint> taints;
 
+        @NameInMap("unschedulable")
+        public Boolean unschedulable;
+
         /**
          * <p>The user data of the node pool. For more information, see [Generate user data](~~49121~~).</p>
          */
@@ -483,6 +486,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
         public java.util.List<Taint> getTaints() {
             return this.taints;
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyKubernetesConfig setUnschedulable(Boolean unschedulable) {
+            this.unschedulable = unschedulable;
+            return this;
+        }
+        public Boolean getUnschedulable() {
+            return this.unschedulable;
         }
 
         public DescribeClusterNodePoolDetailResponseBodyKubernetesConfig setUserData(String userData) {
@@ -1010,6 +1021,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("auto_renew_period")
         public Long autoRenewPeriod;
 
+        @NameInMap("cis_enabled")
+        public Boolean cisEnabled;
+
         /**
          * <p>Indicates whether pay-as-you-go instances are automatically created to meet the required number of ECS instances if preemptible instances cannot be created due to reasons such as cost or insufficient inventory. This parameter takes effect when `multi_az_policy` is set to `COST_OPTIMIZED`. Valid values:</p>
          * <br>
@@ -1043,6 +1057,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("image_id")
         public String imageId;
 
+        @NameInMap("image_type")
+        public String imageType;
+
         /**
          * <p>The billing method of the nodes in the node pool. Valid values:</p>
          * <br>
@@ -1075,6 +1092,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
          */
         @NameInMap("key_pair")
         public String keyPair;
+
+        @NameInMap("login_as_non_root")
+        public Boolean loginAsNonRoot;
 
         /**
          * <p>The password for SSH logon. You must set this parameter or the `key_pair` parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
@@ -1186,6 +1206,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("security_group_ids")
         public java.util.List<String> securityGroupIds;
 
+        @NameInMap("soc_enabled")
+        public Boolean socEnabled;
+
         /**
          * <p>The number of instance types that are available for creating preemptible instances. Auto Scaling creates preemptible instances of multiple instance types that are available at the lowest cost. Valid values: 1 to 10.</p>
          */
@@ -1219,6 +1242,12 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("spot_strategy")
         public String spotStrategy;
 
+        @NameInMap("system_disk_bursting_enabled")
+        public Boolean systemDiskBurstingEnabled;
+
+        @NameInMap("system_disk_categories")
+        public java.util.List<String> systemDiskCategories;
+
         /**
          * <p>The type of system disk. Valid values:</p>
          * <br>
@@ -1228,11 +1257,23 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("system_disk_category")
         public String systemDiskCategory;
 
+        @NameInMap("system_disk_encrypt_algorithm")
+        public String systemDiskEncryptAlgorithm;
+
+        @NameInMap("system_disk_encrypted")
+        public Boolean systemDiskEncrypted;
+
+        @NameInMap("system_disk_kms_key_id")
+        public String systemDiskKmsKeyId;
+
         /**
          * <p>The performance level (PL) of the system disk that you want to use for the node. This parameter takes effect only for enhanced SSDs (ESSDs).</p>
          */
         @NameInMap("system_disk_performance_level")
         public String systemDiskPerformanceLevel;
+
+        @NameInMap("system_disk_provisioned_iops")
+        public Long systemDiskProvisionedIops;
 
         /**
          * <p>The system disk size of a node. Unit: GiB.</p>
@@ -1279,6 +1320,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             return this.autoRenewPeriod;
         }
 
+        public DescribeClusterNodePoolDetailResponseBodyScalingGroup setCisEnabled(Boolean cisEnabled) {
+            this.cisEnabled = cisEnabled;
+            return this;
+        }
+        public Boolean getCisEnabled() {
+            return this.cisEnabled;
+        }
+
         public DescribeClusterNodePoolDetailResponseBodyScalingGroup setCompensateWithOnDemand(Boolean compensateWithOnDemand) {
             this.compensateWithOnDemand = compensateWithOnDemand;
             return this;
@@ -1319,6 +1368,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             return this.imageId;
         }
 
+        public DescribeClusterNodePoolDetailResponseBodyScalingGroup setImageType(String imageType) {
+            this.imageType = imageType;
+            return this;
+        }
+        public String getImageType() {
+            return this.imageType;
+        }
+
         public DescribeClusterNodePoolDetailResponseBodyScalingGroup setInstanceChargeType(String instanceChargeType) {
             this.instanceChargeType = instanceChargeType;
             return this;
@@ -1357,6 +1414,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
         public String getKeyPair() {
             return this.keyPair;
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyScalingGroup setLoginAsNonRoot(Boolean loginAsNonRoot) {
+            this.loginAsNonRoot = loginAsNonRoot;
+            return this;
+        }
+        public Boolean getLoginAsNonRoot() {
+            return this.loginAsNonRoot;
         }
 
         public DescribeClusterNodePoolDetailResponseBodyScalingGroup setLoginPassword(String loginPassword) {
@@ -1471,6 +1536,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             return this.securityGroupIds;
         }
 
+        public DescribeClusterNodePoolDetailResponseBodyScalingGroup setSocEnabled(Boolean socEnabled) {
+            this.socEnabled = socEnabled;
+            return this;
+        }
+        public Boolean getSocEnabled() {
+            return this.socEnabled;
+        }
+
         public DescribeClusterNodePoolDetailResponseBodyScalingGroup setSpotInstancePools(Long spotInstancePools) {
             this.spotInstancePools = spotInstancePools;
             return this;
@@ -1503,6 +1576,22 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             return this.spotStrategy;
         }
 
+        public DescribeClusterNodePoolDetailResponseBodyScalingGroup setSystemDiskBurstingEnabled(Boolean systemDiskBurstingEnabled) {
+            this.systemDiskBurstingEnabled = systemDiskBurstingEnabled;
+            return this;
+        }
+        public Boolean getSystemDiskBurstingEnabled() {
+            return this.systemDiskBurstingEnabled;
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyScalingGroup setSystemDiskCategories(java.util.List<String> systemDiskCategories) {
+            this.systemDiskCategories = systemDiskCategories;
+            return this;
+        }
+        public java.util.List<String> getSystemDiskCategories() {
+            return this.systemDiskCategories;
+        }
+
         public DescribeClusterNodePoolDetailResponseBodyScalingGroup setSystemDiskCategory(String systemDiskCategory) {
             this.systemDiskCategory = systemDiskCategory;
             return this;
@@ -1511,12 +1600,44 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             return this.systemDiskCategory;
         }
 
+        public DescribeClusterNodePoolDetailResponseBodyScalingGroup setSystemDiskEncryptAlgorithm(String systemDiskEncryptAlgorithm) {
+            this.systemDiskEncryptAlgorithm = systemDiskEncryptAlgorithm;
+            return this;
+        }
+        public String getSystemDiskEncryptAlgorithm() {
+            return this.systemDiskEncryptAlgorithm;
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyScalingGroup setSystemDiskEncrypted(Boolean systemDiskEncrypted) {
+            this.systemDiskEncrypted = systemDiskEncrypted;
+            return this;
+        }
+        public Boolean getSystemDiskEncrypted() {
+            return this.systemDiskEncrypted;
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyScalingGroup setSystemDiskKmsKeyId(String systemDiskKmsKeyId) {
+            this.systemDiskKmsKeyId = systemDiskKmsKeyId;
+            return this;
+        }
+        public String getSystemDiskKmsKeyId() {
+            return this.systemDiskKmsKeyId;
+        }
+
         public DescribeClusterNodePoolDetailResponseBodyScalingGroup setSystemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
             this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
             return this;
         }
         public String getSystemDiskPerformanceLevel() {
             return this.systemDiskPerformanceLevel;
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyScalingGroup setSystemDiskProvisionedIops(Long systemDiskProvisionedIops) {
+            this.systemDiskProvisionedIops = systemDiskProvisionedIops;
+            return this;
+        }
+        public Long getSystemDiskProvisionedIops() {
+            return this.systemDiskProvisionedIops;
         }
 
         public DescribeClusterNodePoolDetailResponseBodyScalingGroup setSystemDiskSize(Long systemDiskSize) {

@@ -27,6 +27,9 @@ public class Nodepool extends TeaModel {
     @NameInMap("max_nodes")
     public Long maxNodes;
 
+    @NameInMap("node_config")
+    public NodepoolNodeConfig nodeConfig;
+
     @NameInMap("nodepool_info")
     public NodepoolNodepoolInfo nodepoolInfo;
 
@@ -95,6 +98,14 @@ public class Nodepool extends TeaModel {
     }
     public Long getMaxNodes() {
         return this.maxNodes;
+    }
+
+    public Nodepool setNodeConfig(NodepoolNodeConfig nodeConfig) {
+        this.nodeConfig = nodeConfig;
+        return this;
+    }
+    public NodepoolNodeConfig getNodeConfig() {
+        return this.nodeConfig;
     }
 
     public Nodepool setNodepoolInfo(NodepoolNodepoolInfo nodepoolInfo) {
@@ -373,6 +384,74 @@ public class Nodepool extends TeaModel {
 
     }
 
+    public static class NodepoolManagementAutoRepairPolicy extends TeaModel {
+        @NameInMap("restart_node")
+        public Boolean restartNode;
+
+        public static NodepoolManagementAutoRepairPolicy build(java.util.Map<String, ?> map) throws Exception {
+            NodepoolManagementAutoRepairPolicy self = new NodepoolManagementAutoRepairPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public NodepoolManagementAutoRepairPolicy setRestartNode(Boolean restartNode) {
+            this.restartNode = restartNode;
+            return this;
+        }
+        public Boolean getRestartNode() {
+            return this.restartNode;
+        }
+
+    }
+
+    public static class NodepoolManagementAutoUpgradePolicy extends TeaModel {
+        @NameInMap("auto_upgrade_kubelet")
+        public Boolean autoUpgradeKubelet;
+
+        public static NodepoolManagementAutoUpgradePolicy build(java.util.Map<String, ?> map) throws Exception {
+            NodepoolManagementAutoUpgradePolicy self = new NodepoolManagementAutoUpgradePolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public NodepoolManagementAutoUpgradePolicy setAutoUpgradeKubelet(Boolean autoUpgradeKubelet) {
+            this.autoUpgradeKubelet = autoUpgradeKubelet;
+            return this;
+        }
+        public Boolean getAutoUpgradeKubelet() {
+            return this.autoUpgradeKubelet;
+        }
+
+    }
+
+    public static class NodepoolManagementAutoVulFixPolicy extends TeaModel {
+        @NameInMap("restart_node")
+        public Boolean restartNode;
+
+        @NameInMap("vul_level")
+        public String vulLevel;
+
+        public static NodepoolManagementAutoVulFixPolicy build(java.util.Map<String, ?> map) throws Exception {
+            NodepoolManagementAutoVulFixPolicy self = new NodepoolManagementAutoVulFixPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public NodepoolManagementAutoVulFixPolicy setRestartNode(Boolean restartNode) {
+            this.restartNode = restartNode;
+            return this;
+        }
+        public Boolean getRestartNode() {
+            return this.restartNode;
+        }
+
+        public NodepoolManagementAutoVulFixPolicy setVulLevel(String vulLevel) {
+            this.vulLevel = vulLevel;
+            return this;
+        }
+        public String getVulLevel() {
+            return this.vulLevel;
+        }
+
+    }
+
     public static class NodepoolManagementUpgradeConfig extends TeaModel {
         @NameInMap("auto_upgrade")
         public Boolean autoUpgrade;
@@ -429,10 +508,26 @@ public class Nodepool extends TeaModel {
         @NameInMap("auto_repair")
         public Boolean autoRepair;
 
+        @NameInMap("auto_repair_policy")
+        public NodepoolManagementAutoRepairPolicy autoRepairPolicy;
+
+        @NameInMap("auto_upgrade")
+        public Boolean autoUpgrade;
+
+        @NameInMap("auto_upgrade_policy")
+        public NodepoolManagementAutoUpgradePolicy autoUpgradePolicy;
+
+        @NameInMap("auto_vul_fix")
+        public Boolean autoVulFix;
+
+        @NameInMap("auto_vul_fix_policy")
+        public NodepoolManagementAutoVulFixPolicy autoVulFixPolicy;
+
         @NameInMap("enable")
         public Boolean enable;
 
         @NameInMap("upgrade_config")
+        @Deprecated
         public NodepoolManagementUpgradeConfig upgradeConfig;
 
         public static NodepoolManagement build(java.util.Map<String, ?> map) throws Exception {
@@ -446,6 +541,46 @@ public class Nodepool extends TeaModel {
         }
         public Boolean getAutoRepair() {
             return this.autoRepair;
+        }
+
+        public NodepoolManagement setAutoRepairPolicy(NodepoolManagementAutoRepairPolicy autoRepairPolicy) {
+            this.autoRepairPolicy = autoRepairPolicy;
+            return this;
+        }
+        public NodepoolManagementAutoRepairPolicy getAutoRepairPolicy() {
+            return this.autoRepairPolicy;
+        }
+
+        public NodepoolManagement setAutoUpgrade(Boolean autoUpgrade) {
+            this.autoUpgrade = autoUpgrade;
+            return this;
+        }
+        public Boolean getAutoUpgrade() {
+            return this.autoUpgrade;
+        }
+
+        public NodepoolManagement setAutoUpgradePolicy(NodepoolManagementAutoUpgradePolicy autoUpgradePolicy) {
+            this.autoUpgradePolicy = autoUpgradePolicy;
+            return this;
+        }
+        public NodepoolManagementAutoUpgradePolicy getAutoUpgradePolicy() {
+            return this.autoUpgradePolicy;
+        }
+
+        public NodepoolManagement setAutoVulFix(Boolean autoVulFix) {
+            this.autoVulFix = autoVulFix;
+            return this;
+        }
+        public Boolean getAutoVulFix() {
+            return this.autoVulFix;
+        }
+
+        public NodepoolManagement setAutoVulFixPolicy(NodepoolManagementAutoVulFixPolicy autoVulFixPolicy) {
+            this.autoVulFixPolicy = autoVulFixPolicy;
+            return this;
+        }
+        public NodepoolManagementAutoVulFixPolicy getAutoVulFixPolicy() {
+            return this.autoVulFixPolicy;
         }
 
         public NodepoolManagement setEnable(Boolean enable) {
@@ -462,6 +597,25 @@ public class Nodepool extends TeaModel {
         }
         public NodepoolManagementUpgradeConfig getUpgradeConfig() {
             return this.upgradeConfig;
+        }
+
+    }
+
+    public static class NodepoolNodeConfig extends TeaModel {
+        @NameInMap("kubelet_configuration")
+        public KubeletConfig kubeletConfiguration;
+
+        public static NodepoolNodeConfig build(java.util.Map<String, ?> map) throws Exception {
+            NodepoolNodeConfig self = new NodepoolNodeConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public NodepoolNodeConfig setKubeletConfiguration(KubeletConfig kubeletConfiguration) {
+            this.kubeletConfiguration = kubeletConfiguration;
+            return this;
+        }
+        public KubeletConfig getKubeletConfiguration() {
+            return this.kubeletConfiguration;
         }
 
     }
@@ -637,6 +791,9 @@ public class Nodepool extends TeaModel {
         @NameInMap("key_pair")
         public String keyPair;
 
+        @NameInMap("login_as_non_root")
+        public Boolean loginAsNonRoot;
+
         @NameInMap("login_password")
         public String loginPassword;
 
@@ -656,6 +813,7 @@ public class Nodepool extends TeaModel {
         public String periodUnit;
 
         @NameInMap("platform")
+        @Deprecated
         public String platform;
 
         @NameInMap("private_pool_options")
@@ -688,8 +846,20 @@ public class Nodepool extends TeaModel {
         @NameInMap("system_disk_bursting_enabled")
         public Boolean systemDiskBurstingEnabled;
 
+        @NameInMap("system_disk_categories")
+        public java.util.List<String> systemDiskCategories;
+
         @NameInMap("system_disk_category")
         public String systemDiskCategory;
+
+        @NameInMap("system_disk_encrypt_algorithm")
+        public String systemDiskEncryptAlgorithm;
+
+        @NameInMap("system_disk_encrypted")
+        public Boolean systemDiskEncrypted;
+
+        @NameInMap("system_disk_kms_key_id")
+        public String systemDiskKmsKeyId;
 
         @NameInMap("system_disk_performance_level")
         public String systemDiskPerformanceLevel;
@@ -813,6 +983,14 @@ public class Nodepool extends TeaModel {
         }
         public String getKeyPair() {
             return this.keyPair;
+        }
+
+        public NodepoolScalingGroup setLoginAsNonRoot(Boolean loginAsNonRoot) {
+            this.loginAsNonRoot = loginAsNonRoot;
+            return this;
+        }
+        public Boolean getLoginAsNonRoot() {
+            return this.loginAsNonRoot;
         }
 
         public NodepoolScalingGroup setLoginPassword(String loginPassword) {
@@ -951,12 +1129,44 @@ public class Nodepool extends TeaModel {
             return this.systemDiskBurstingEnabled;
         }
 
+        public NodepoolScalingGroup setSystemDiskCategories(java.util.List<String> systemDiskCategories) {
+            this.systemDiskCategories = systemDiskCategories;
+            return this;
+        }
+        public java.util.List<String> getSystemDiskCategories() {
+            return this.systemDiskCategories;
+        }
+
         public NodepoolScalingGroup setSystemDiskCategory(String systemDiskCategory) {
             this.systemDiskCategory = systemDiskCategory;
             return this;
         }
         public String getSystemDiskCategory() {
             return this.systemDiskCategory;
+        }
+
+        public NodepoolScalingGroup setSystemDiskEncryptAlgorithm(String systemDiskEncryptAlgorithm) {
+            this.systemDiskEncryptAlgorithm = systemDiskEncryptAlgorithm;
+            return this;
+        }
+        public String getSystemDiskEncryptAlgorithm() {
+            return this.systemDiskEncryptAlgorithm;
+        }
+
+        public NodepoolScalingGroup setSystemDiskEncrypted(Boolean systemDiskEncrypted) {
+            this.systemDiskEncrypted = systemDiskEncrypted;
+            return this;
+        }
+        public Boolean getSystemDiskEncrypted() {
+            return this.systemDiskEncrypted;
+        }
+
+        public NodepoolScalingGroup setSystemDiskKmsKeyId(String systemDiskKmsKeyId) {
+            this.systemDiskKmsKeyId = systemDiskKmsKeyId;
+            return this;
+        }
+        public String getSystemDiskKmsKeyId() {
+            return this.systemDiskKmsKeyId;
         }
 
         public NodepoolScalingGroup setSystemDiskPerformanceLevel(String systemDiskPerformanceLevel) {

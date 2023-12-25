@@ -3,25 +3,22 @@ package com.aliyun.cs20151215.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteClusterResponseBody extends TeaModel {
+public class UpdateControlPlaneLogResponseBody extends TeaModel {
     @NameInMap("cluster_id")
     public String clusterId;
 
     @NameInMap("request_id")
     public String requestId;
 
-    /**
-     * <p>The task ID.</p>
-     */
     @NameInMap("task_id")
     public String taskId;
 
-    public static DeleteClusterResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteClusterResponseBody self = new DeleteClusterResponseBody();
+    public static UpdateControlPlaneLogResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateControlPlaneLogResponseBody self = new UpdateControlPlaneLogResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteClusterResponseBody setClusterId(String clusterId) {
+    public UpdateControlPlaneLogResponseBody setClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
@@ -29,7 +26,7 @@ public class DeleteClusterResponseBody extends TeaModel {
         return this.clusterId;
     }
 
-    public DeleteClusterResponseBody setRequestId(String requestId) {
+    public UpdateControlPlaneLogResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -37,7 +34,7 @@ public class DeleteClusterResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteClusterResponseBody setTaskId(String taskId) {
+    public UpdateControlPlaneLogResponseBody setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
