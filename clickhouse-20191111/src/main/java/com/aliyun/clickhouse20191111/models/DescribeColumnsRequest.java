@@ -4,6 +4,9 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeColumnsRequest extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -19,9 +22,15 @@ public class DescribeColumnsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The database name. You can call the [DescribeSchemas](~~350931~~) operation to query database names.</p>
+     */
     @NameInMap("SchemaName")
     public String schemaName;
 
+    /**
+     * <p>The table name. You can call the [DescribeTables](~~350932~~) operation to query table names.</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 

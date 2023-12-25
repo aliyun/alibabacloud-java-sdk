@@ -4,12 +4,21 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeConfigVersionDifferenceResponseBody extends TeaModel {
+    /**
+     * <p>The values of the configuration parameters after the values of the configuration parameters are changed.</p>
+     */
     @NameInMap("NewConfigXML")
     public String newConfigXML;
 
+    /**
+     * <p>The values of the configuration parameters before the values of the configuration parameters are changed.</p>
+     */
     @NameInMap("OldConfigXML")
     public String oldConfigXML;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

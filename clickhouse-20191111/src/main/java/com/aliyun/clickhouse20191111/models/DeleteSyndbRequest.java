@@ -4,6 +4,9 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DeleteSyndbRequest extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DbClusterId")
     public String dbClusterId;
 
@@ -19,6 +22,9 @@ public class DeleteSyndbRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The name of the database in the ApsaraDB RDS for MySQL instance. The database is used for data synchronization.</p>
+     */
     @NameInMap("SynDb")
     public String synDb;
 

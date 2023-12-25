@@ -4,9 +4,15 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeProcessListResponseBody extends TeaModel {
+    /**
+     * <p>The queries.</p>
+     */
     @NameInMap("ProcessList")
     public DescribeProcessListResponseBodyProcessList processList;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,39 @@ public class DescribeProcessListResponseBody extends TeaModel {
     }
 
     public static class DescribeProcessListResponseBodyProcessListDataResultSet extends TeaModel {
+        /**
+         * <p>The IP address of the client that initiates the query.</p>
+         */
         @NameInMap("InitialAddress")
         public String initialAddress;
 
+        /**
+         * <p>The query ID.</p>
+         */
         @NameInMap("InitialQueryId")
         public String initialQueryId;
 
+        /**
+         * <p>The database account.</p>
+         */
         @NameInMap("InitialUser")
         public String initialUser;
 
+        /**
+         * <p>The SQL statement that is executed in the query.</p>
+         */
         @NameInMap("Query")
         public String query;
 
+        /**
+         * <p>The execution duration of the query. Unit: milliseconds.</p>
+         */
         @NameInMap("QueryDurationMs")
         public String queryDurationMs;
 
+        /**
+         * <p>The beginning of the time range to query. The value is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in Coordinated Universal Time (UTC).</p>
+         */
         @NameInMap("QueryStartTime")
         public String queryStartTime;
 
@@ -125,12 +149,21 @@ public class DescribeProcessListResponseBody extends TeaModel {
     }
 
     public static class DescribeProcessListResponseBodyProcessListStatistics extends TeaModel {
+        /**
+         * <p>The size of the data that was scanned. Unit: bytes.</p>
+         */
         @NameInMap("BytesRead")
         public Integer bytesRead;
 
+        /**
+         * <p>The average response time.</p>
+         */
         @NameInMap("ElapsedTime")
         public Float elapsedTime;
 
+        /**
+         * <p>The number of scanned rows.</p>
+         */
         @NameInMap("RowsRead")
         public Integer rowsRead;
 
@@ -166,9 +199,15 @@ public class DescribeProcessListResponseBody extends TeaModel {
     }
 
     public static class DescribeProcessListResponseBodyProcessListTableSchemaResultSet extends TeaModel {
+        /**
+         * <p>The column name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The column type.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -215,18 +254,33 @@ public class DescribeProcessListResponseBody extends TeaModel {
     }
 
     public static class DescribeProcessListResponseBodyProcessList extends TeaModel {
+        /**
+         * <p>The details of the query.</p>
+         */
         @NameInMap("Data")
         public DescribeProcessListResponseBodyProcessListData data;
 
+        /**
+         * <p>The number of rows returned for the query.</p>
+         */
         @NameInMap("Rows")
         public String rows;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("RowsBeforeLimitAtLeast")
         public String rowsBeforeLimitAtLeast;
 
+        /**
+         * <p>The statistics of the results.</p>
+         */
         @NameInMap("Statistics")
         public DescribeProcessListResponseBodyProcessListStatistics statistics;
 
+        /**
+         * <p>Details of the columns.</p>
+         */
         @NameInMap("TableSchema")
         public DescribeProcessListResponseBodyProcessListTableSchema tableSchema;
 

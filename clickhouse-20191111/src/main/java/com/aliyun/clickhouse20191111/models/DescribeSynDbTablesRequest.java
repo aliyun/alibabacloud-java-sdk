@@ -4,6 +4,9 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeSynDbTablesRequest extends TeaModel {
+    /**
+     * <p>The ID of the ApsaraDB for ClickHouse cluster.</p>
+     */
     @NameInMap("DbClusterId")
     public String dbClusterId;
 
@@ -19,6 +22,9 @@ public class DescribeSynDbTablesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The name of the ApsaraDB RDS for MySQL instance.</p>
+     */
     @NameInMap("SynDb")
     public String synDb;
 

@@ -4,9 +4,15 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterResponseBody extends TeaModel {
+    /**
+     * <p>The information about the cluster.</p>
+     */
     @NameInMap("DBCluster")
     public ModifyDBClusterResponseBodyDBCluster DBCluster;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class ModifyDBClusterResponseBody extends TeaModel {
     }
 
     public static class ModifyDBClusterResponseBodyDBCluster extends TeaModel {
+        /**
+         * <p>The cluster ID.</p>
+         */
         @NameInMap("dbClusterId")
         public String dbClusterId;
 
+        /**
+         * <p>The order ID.</p>
+         */
         @NameInMap("orderId")
         public String orderId;
 

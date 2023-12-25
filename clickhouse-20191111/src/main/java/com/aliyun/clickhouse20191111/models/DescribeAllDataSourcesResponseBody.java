@@ -4,15 +4,27 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeAllDataSourcesResponseBody extends TeaModel {
+    /**
+     * <p>Details of the columns.</p>
+     */
     @NameInMap("Columns")
     public DescribeAllDataSourcesResponseBodyColumns columns;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the databases.</p>
+     */
     @NameInMap("Schemas")
     public DescribeAllDataSourcesResponseBodySchemas schemas;
 
+    /**
+     * <p>The information about the tables.</p>
+     */
     @NameInMap("Tables")
     public DescribeAllDataSourcesResponseBodyTables tables;
 
@@ -54,24 +66,51 @@ public class DescribeAllDataSourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeAllDataSourcesResponseBodyColumnsColumn extends TeaModel {
+        /**
+         * <p>Indicates whether the column is an auto-increment column. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("AutoIncrementColumn")
         public Boolean autoIncrementColumn;
 
+        /**
+         * <p>The column name.</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <p>The cluster ID.</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <p>Indicates whether the column is the primary key of the table. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The column is the primary key of the table.</p>
+         * <p>*   **false**: The column is not the primary key of the table.</p>
+         */
         @NameInMap("PrimaryKey")
         public Boolean primaryKey;
 
+        /**
+         * <p>The database name.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
+        /**
+         * <p>The table name.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <p>The column type.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -158,9 +197,15 @@ public class DescribeAllDataSourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeAllDataSourcesResponseBodySchemasSchema extends TeaModel {
+        /**
+         * <p>The cluster ID.</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <p>The database name.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
@@ -207,12 +252,21 @@ public class DescribeAllDataSourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeAllDataSourcesResponseBodyTablesTable extends TeaModel {
+        /**
+         * <p>The cluster ID.</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <p>The database name.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
+        /**
+         * <p>The table name.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 

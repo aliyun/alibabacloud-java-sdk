@@ -4,15 +4,52 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterRequest extends TeaModel {
+    /**
+     * <p>The specifications of the cluster.</p>
+     * <br>
+     * <p>*   Valid values when the cluster is of Single-replica Edition:</p>
+     * <br>
+     * <p>    *   **S4-NEW**</p>
+     * <p>    *   **S8**</p>
+     * <p>    *   **S16**</p>
+     * <p>    *   **S32**</p>
+     * <p>    *   **S64**</p>
+     * <p>    *   **S104**</p>
+     * <br>
+     * <p>*   Valid values when the cluster is of Double-replica Edition:</p>
+     * <br>
+     * <p>    *   **C4-NEW**</p>
+     * <p>    *   **C8**</p>
+     * <p>    *   **C16**</p>
+     * <p>    *   **C32**</p>
+     * <p>    *   **C64**</p>
+     * <p>    *   **C104**</p>
+     */
     @NameInMap("DBClusterClass")
     public String DBClusterClass;
 
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The number of nodes in the cluster.</p>
+     * <br>
+     * <p>*   If the cluster is of Single-replica Edition, the value must be an integer that ranges from 1 to 48.</p>
+     * <p>*   If the cluster is of Double-replica Edition, the value must be an integer that ranges from 1 to 24.</p>
+     */
     @NameInMap("DBNodeGroupCount")
     public String DBNodeGroupCount;
 
+    /**
+     * <p>The storage capacity of a single node of the cluster. Unit: GB.</p>
+     * <br>
+     * <p>Valid values: 100 to 32000.</p>
+     * <br>
+     * <p>>  This value is a multiple of 100.</p>
+     */
     @NameInMap("DBNodeStorage")
     public String DBNodeStorage;
 
@@ -22,6 +59,9 @@ public class ModifyDBClusterRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

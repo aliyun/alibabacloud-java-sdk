@@ -4,9 +4,17 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class KillProcessRequest extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The query statement or query statements that you want to stop executing. If you want to stop executing multiple query statements, separate the statements with commas (,).</p>
+     * <br>
+     * <p>>  If you do not set this parameter, all query statements are stopped by default.</p>
+     */
     @NameInMap("InitialQueryId")
     public String initialQueryId;
 
@@ -16,6 +24,9 @@ public class KillProcessRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

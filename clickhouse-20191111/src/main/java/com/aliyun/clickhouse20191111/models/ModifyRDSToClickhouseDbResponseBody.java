@@ -4,15 +4,31 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class ModifyRDSToClickhouseDbResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public Long errorCode;
 
+    /**
+     * <p>*   If the value **1** is returned for the **Status** parameter, the system does not return the ErrorMsg parameter.</p>
+     * <p>*   If the value **0** is returned for the **Status** parameter, the ErrorMsg parameter returns the cause for the modification failure.</p>
+     */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the modification was successful. Valid values:</p>
+     * <br>
+     * <p>*   **1**: The modification was successful.</p>
+     * <p>*   **0**: The modification failed.</p>
+     */
     @NameInMap("Status")
     public Long status;
 

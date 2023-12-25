@@ -4,21 +4,50 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The retention period for the backup data. By default, the backup data is retained for seven days. Valid values: 7 to 730. Unit: day.</p>
+     */
     @NameInMap("BackupRetentionPeriod")
     public Integer backupRetentionPeriod;
 
+    /**
+     * <p>The size of the backup data. Unit: MB.</p>
+     */
     @NameInMap("BackupSize")
     public String backupSize;
 
+    /**
+     * <p>The day of a week when the system regularly backs up data. Valid values:</p>
+     * <br>
+     * <p>*   **Monday**</p>
+     * <p>*   **Tuesday**</p>
+     * <p>*   **Wednesday**</p>
+     * <p>*   **Thursday**</p>
+     * <p>*   **Friday**</p>
+     * <p>*   **Saturday**</p>
+     * <p>*   **Sunday**</p>
+     */
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
 
+    /**
+     * <p>The backup window. The time is displayed in Coordinated Universal Time (UTC).</p>
+     */
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the backup feature is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Switch")
     public String _switch;
 

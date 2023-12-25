@@ -4,12 +4,29 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClustersRequest extends TeaModel {
+    /**
+     * <p>The description of the cluster.</p>
+     */
     @NameInMap("DBClusterDescription")
     public String DBClusterDescription;
 
+    /**
+     * <p>The cluster ID.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, the information about all clusters is queried.</p>
+     */
     @NameInMap("DBClusterIds")
     public String DBClusterIds;
 
+    /**
+     * <p>The state of the cluster. Valid values:</p>
+     * <br>
+     * <p>*   **Preparing**: The cluster is being prepared.</p>
+     * <p>*   **Creating**: The cluster is being created.</p>
+     * <p>*   **Running**: The cluster is running.</p>
+     * <p>*   **Deleting**: The cluster is being deleted.</p>
+     * <p>*   **SCALING_OUT**: The storage capacity of the cluster is being expanded.</p>
+     */
     @NameInMap("DBClusterStatus")
     public String DBClusterStatus;
 
@@ -19,15 +36,31 @@ public class DescribeDBClustersRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page. Valid values:</p>
+     * <br>
+     * <p>*   **30** (default)</p>
+     * <p>*   **50**</p>
+     * <p>*   **100**</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID. You can call the [DescribeRegions](~~170875~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the cluster belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -37,6 +70,9 @@ public class DescribeDBClustersRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeDBClustersRequestTag> tag;
 
@@ -142,9 +178,15 @@ public class DescribeDBClustersRequest extends TeaModel {
     }
 
     public static class DescribeDBClustersRequestTag extends TeaModel {
+        /**
+         * <p>The tag name.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

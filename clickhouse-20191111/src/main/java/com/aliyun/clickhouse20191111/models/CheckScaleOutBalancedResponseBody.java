@@ -4,24 +4,52 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class CheckScaleOutBalancedResponseBody extends TeaModel {
+    /**
+     * <p>The check result. Valid values:</p>
+     * <br>
+     * <p>*   **400**: The cluster failed the check.</p>
+     * <p>*   **200**: The cluster passed the check.</p>
+     */
     @NameInMap("CheckCode")
     public String checkCode;
 
+    /**
+     * <p>The total number of returned pages.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page. Valid values:</p>
+     * <br>
+     * <p>*   **30** (default)</p>
+     * <p>*   **50**</p>
+     * <p>*   **100**</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The error information returned for a check failure.</p>
+     */
     @NameInMap("TableDetails")
     public CheckScaleOutBalancedResponseBodyTableDetails tableDetails;
 
+    /**
+     * <p>The amount of time that is required for the migration and scale-out. Unit: minutes.</p>
+     */
     @NameInMap("TimeDuration")
     public String timeDuration;
 
+    /**
+     * <p>The total number of entries that are returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -87,15 +115,30 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
     }
 
     public static class CheckScaleOutBalancedResponseBodyTableDetailsTableDetail extends TeaModel {
+        /**
+         * <p>The cluster. The value is fixed as **default**.</p>
+         */
         @NameInMap("Cluster")
         public String cluster;
 
+        /**
+         * <p>The database name.</p>
+         */
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <p>The error details. Valid values:</p>
+         * <br>
+         * <p>*   **1**: The unique distributed table is missing.</p>
+         * <p>*   **2**: More than one distributed table exists for the local table.</p>
+         */
         @NameInMap("Detail")
         public Integer detail;
 
+        /**
+         * <p>The name of the local table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 

@@ -4,27 +4,57 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountAuthorityResponseBody extends TeaModel {
+    /**
+     * <p>The name of the database account.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>Databases to which permissions have been granted.</p>
+     */
     @NameInMap("AllowDatabases")
     public java.util.List<String> allowDatabases;
 
+    /**
+     * <p>Dictionaries to which permissions have been granted.</p>
+     */
     @NameInMap("AllowDictionaries")
     public java.util.List<String> allowDictionaries;
 
+    /**
+     * <p>Indicates whether the database account has DDL permissions. Valid values:</p>
+     * <br>
+     * <p>*   **true**: has DDL permissions.</p>
+     * <p>*   **false**: does not have DDL permissions.</p>
+     */
     @NameInMap("DdlAuthority")
     public Boolean ddlAuthority;
 
+    /**
+     * <p>Indicates whether the database account has DML permissions. Valid values:</p>
+     * <br>
+     * <p>*   **all**</p>
+     * <p>*   **readOnly,modify**</p>
+     */
     @NameInMap("DmlAuthority")
     public String dmlAuthority;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>All databases.</p>
+     */
     @NameInMap("TotalDatabases")
     public java.util.List<String> totalDatabases;
 
+    /**
+     * <p>All dictionaries.</p>
+     */
     @NameInMap("TotalDictionaries")
     public java.util.List<String> totalDictionaries;
 

@@ -4,6 +4,9 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DeleteDBClusterRequest extends TeaModel {
+    /**
+     * <p>The ID of the pay-as-you-go ApsaraDB for ClickHouse cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 

@@ -4,18 +4,33 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class CreateRDSToClickhouseDbRequest extends TeaModel {
+    /**
+     * <p>The password of the account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</p>
+     */
     @NameInMap("CkPassword")
     public String ckPassword;
 
+    /**
+     * <p>The account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</p>
+     */
     @NameInMap("CkUserName")
     public String ckUserName;
 
+    /**
+     * <p>The port number of the ApsaraDB for ClickHouse cluster.</p>
+     */
     @NameInMap("ClickhousePort")
     public Long clickhousePort;
 
+    /**
+     * <p>The ID of the ApsaraDB for ClickHouse cluster.</p>
+     */
     @NameInMap("DbClusterId")
     public String dbClusterId;
 
+    /**
+     * <p>The maximum number of rows that can be synchronized per second.</p>
+     */
     @NameInMap("LimitUpper")
     public Long limitUpper;
 
@@ -25,21 +40,39 @@ public class CreateRDSToClickhouseDbRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the ApsaraDB RDS for MySQL instance.</p>
+     */
     @NameInMap("RdsId")
     public String rdsId;
 
+    /**
+     * <p>The password of the account that is used to log on to the ApsaraDB RDS for MySQL instance.</p>
+     */
     @NameInMap("RdsPassword")
     public String rdsPassword;
 
+    /**
+     * <p>The port number of the ApsaraDB RDS for MySQL instance.</p>
+     */
     @NameInMap("RdsPort")
     public Long rdsPort;
 
+    /**
+     * <p>The account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</p>
+     */
     @NameInMap("RdsUserName")
     public String rdsUserName;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC) to which the ApsaraDB RDS for MySQL instance belongs.</p>
+     */
     @NameInMap("RdsVpcId")
     public String rdsVpcId;
 
+    /**
+     * <p>The private endpoint of the ApsaraDB RDS for MySQL instance.</p>
+     */
     @NameInMap("RdsVpcUrl")
     public String rdsVpcUrl;
 
@@ -49,9 +82,18 @@ public class CreateRDSToClickhouseDbRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>Specifies whether to ignore the table schemas that do not support synchronization. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("SkipUnsupported")
     public Boolean skipUnsupported;
 
+    /**
+     * <p>The tables whose data you want to synchronize.</p>
+     */
     @NameInMap("SynDbTables")
     public String synDbTables;
 

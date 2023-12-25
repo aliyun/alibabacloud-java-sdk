@@ -4,15 +4,27 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class CheckClickhouseToRDSRequest extends TeaModel {
+    /**
+     * <p>The password of the account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</p>
+     */
     @NameInMap("CkPassword")
     public String ckPassword;
 
+    /**
+     * <p>The account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</p>
+     */
     @NameInMap("CkUserName")
     public String ckUserName;
 
+    /**
+     * <p>The port number of the ApsaraDB for ClickHouse cluster.</p>
+     */
     @NameInMap("ClickhousePort")
     public Long clickhousePort;
 
+    /**
+     * <p>The ID of the ApsaraDB for ClickHouse cluster.</p>
+     */
     @NameInMap("DbClusterId")
     public String dbClusterId;
 
@@ -22,21 +34,39 @@ public class CheckClickhouseToRDSRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the ApsaraDB RDS for MySQL instance.</p>
+     */
     @NameInMap("RdsId")
     public String rdsId;
 
+    /**
+     * <p>The password of the account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</p>
+     */
     @NameInMap("RdsPassword")
     public String rdsPassword;
 
+    /**
+     * <p>The port number of the ApsaraDB RDS for MySQL instance.</p>
+     */
     @NameInMap("RdsPort")
     public Long rdsPort;
 
+    /**
+     * <p>The account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</p>
+     */
     @NameInMap("RdsUserName")
     public String rdsUserName;
 
+    /**
+     * <p>The ID of the VPC in which the ApsaraDB RDS for MySQL instance is deployed.</p>
+     */
     @NameInMap("RdsVpcId")
     public String rdsVpcId;
 
+    /**
+     * <p>The internal endpoint of the ApsaraDB RDS for MySQL instance.</p>
+     */
     @NameInMap("RdsVpcUrl")
     public String rdsVpcUrl;
 
