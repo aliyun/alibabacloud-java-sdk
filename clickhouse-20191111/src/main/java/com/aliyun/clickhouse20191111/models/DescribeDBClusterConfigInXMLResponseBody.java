@@ -4,9 +4,15 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterConfigInXMLResponseBody extends TeaModel {
+    /**
+     * <p>The values of the configuration parameters.</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

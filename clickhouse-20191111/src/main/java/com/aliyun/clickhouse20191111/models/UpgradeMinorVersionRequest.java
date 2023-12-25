@@ -4,6 +4,9 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class UpgradeMinorVersionRequest extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -19,12 +22,30 @@ public class UpgradeMinorVersionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>Specifies whether to update the minor engine version of the ApsaraDB for ClickHouse cluster immediately. Valid values:</p>
+     * <br>
+     * <p>*   **true**: updates the minor engine version of the ApsaraDB for ClickHouse cluster immediately.</p>
+     * <p>*   **false**: updates the minor engine version of the ApsaraDB for ClickHouse cluster at the specified time or within the specified maintenance window.</p>
+     * <br>
+     * <p>>  If you want to update the minor engine version of the ApsaraDB for ClickHouse cluster at the specified time, **UpgradeTime** is required.</p>
+     */
     @NameInMap("UpgradeImmediately")
     public Boolean upgradeImmediately;
 
+    /**
+     * <p>The update time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in Coordinated Universal Time (UTC).</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the minor engine version of an ApsaraDB for ClickHouse cluster is updated within the specified maintenance window.</p>
+     */
     @NameInMap("UpgradeTime")
     public String upgradeTime;
 
+    /**
+     * <p>The minor engine version to which you want to update.</p>
+     * <br>
+     * <p>>  By default, UpgradeVersion is not set and the minor engine version of the ApsaraDB for ClickHouse cluster is updated to the latest version.</p>
+     */
     @NameInMap("UpgradeVersion")
     public String upgradeVersion;
 

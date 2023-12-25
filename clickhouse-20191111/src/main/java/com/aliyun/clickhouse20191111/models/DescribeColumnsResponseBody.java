@@ -4,9 +4,15 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeColumnsResponseBody extends TeaModel {
+    /**
+     * <p>Details of the columns.</p>
+     */
     @NameInMap("Items")
     public DescribeColumnsResponseBodyItems items;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +38,51 @@ public class DescribeColumnsResponseBody extends TeaModel {
     }
 
     public static class DescribeColumnsResponseBodyItemsColumn extends TeaModel {
+        /**
+         * <p>Indicates whether the column is an auto-increment column. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("AutoIncrementColumn")
         public Boolean autoIncrementColumn;
 
+        /**
+         * <p>The column name.</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <p>The cluster ID.</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <p>Indicates whether the column is the primary key of the table. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("PrimaryKey")
         public Boolean primaryKey;
 
+        /**
+         * <p>The database name.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
+        /**
+         * <p>The table name.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <p>The column type.</p>
+         */
         @NameInMap("Type")
         public String type;
 

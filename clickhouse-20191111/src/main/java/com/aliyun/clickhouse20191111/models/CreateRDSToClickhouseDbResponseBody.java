@@ -4,15 +4,31 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class CreateRDSToClickhouseDbResponseBody extends TeaModel {
+    /**
+     * <p>If -1 is returned for the **Status** parameter, the cause of the creation failure is returned.</p>
+     */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <p>Duplicate tables in the synchronization task.</p>
+     */
     @NameInMap("RepeatedDbs")
     public java.util.List<String> repeatedDbs;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the synchronization task was created. Valid values:</p>
+     * <br>
+     * <p>*   **1**: Created.</p>
+     * <p>*   **0**: Creation failed. The tables in the synchronization task are duplicate. The duplicate tables are returned for the **RepeatedDbs** parameter.</p>
+     * <p>*   **1**: Creation failed. The cause why the creation failed is returned for the **ErrorMsg** parameter.</p>
+     */
     @NameInMap("Status")
     public Long status;
 

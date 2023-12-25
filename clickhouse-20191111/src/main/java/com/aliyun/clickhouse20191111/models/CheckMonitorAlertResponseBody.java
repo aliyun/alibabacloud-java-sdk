@@ -4,12 +4,24 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class CheckMonitorAlertResponseBody extends TeaModel {
+    /**
+     * <p>The parameters that are used to configure the monitoring and alerting feature.</p>
+     */
     @NameInMap("Parameter")
     public String parameter;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the monitoring and alerting feature is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **enable**: The monitoring and alerting feature is enabled.</p>
+     * <p>*   **disable**: The monitoring and alerting feature is disabled.</p>
+     */
     @NameInMap("State")
     public String state;
 

@@ -4,9 +4,15 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBConfigResponseBody extends TeaModel {
+    /**
+     * <p>The configuration information about the cluster.</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

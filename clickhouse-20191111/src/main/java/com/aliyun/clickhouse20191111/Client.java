@@ -202,6 +202,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.checkClickhouseToRDSWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+      *
+      * @param request CheckModifyConfigNeedRestartRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CheckModifyConfigNeedRestartResponse
+     */
     public CheckModifyConfigNeedRestartResponse checkModifyConfigNeedRestartWithOptions(CheckModifyConfigNeedRestartRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -230,6 +237,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CheckModifyConfigNeedRestartResponse());
     }
 
+    /**
+      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+      *
+      * @param request CheckModifyConfigNeedRestartRequest
+      * @return CheckModifyConfigNeedRestartResponse
+     */
     public CheckModifyConfigNeedRestartResponse checkModifyConfigNeedRestart(CheckModifyConfigNeedRestartRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.checkModifyConfigNeedRestartWithOptions(request, runtime);
@@ -788,6 +801,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createMonitorDataReportWithOptions(request, runtime);
     }
 
+    /**
+      * Only an ApsaraDB for ClickHouse cluster of V20.8 or later supports tiered storage of hot data and cold data. If your data is in an ApsaraDB for ClickHouse cluster of a version earlier than V20.8 and you want to use tiered storage of hot data and cold data to store the data, you can migrate the data to an ApsaraDB for ClickHouse cluster of V20.8 or later and use tiered storage of hot data and cold data. For more information about how to migrate data between ApsaraDB for ClickHouse clusters, see [Migrate data between ApsaraDB for ClickHouse clusters](~~276926~~).
+      *
+      * @param request CreateOSSStorageRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateOSSStorageResponse
+     */
     public CreateOSSStorageResponse createOSSStorageWithOptions(CreateOSSStorageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -832,11 +852,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateOSSStorageResponse());
     }
 
+    /**
+      * Only an ApsaraDB for ClickHouse cluster of V20.8 or later supports tiered storage of hot data and cold data. If your data is in an ApsaraDB for ClickHouse cluster of a version earlier than V20.8 and you want to use tiered storage of hot data and cold data to store the data, you can migrate the data to an ApsaraDB for ClickHouse cluster of V20.8 or later and use tiered storage of hot data and cold data. For more information about how to migrate data between ApsaraDB for ClickHouse clusters, see [Migrate data between ApsaraDB for ClickHouse clusters](~~276926~~).
+      *
+      * @param request CreateOSSStorageRequest
+      * @return CreateOSSStorageResponse
+     */
     public CreateOSSStorageResponse createOSSStorage(CreateOSSStorageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createOSSStorageWithOptions(request, runtime);
     }
 
+    /**
+      * >  For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created before December 1, 2021, you must manually enable the MySQL port. For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created after December 1, 2021, the MySQL port is automatically enabled.
+      *
+      * @param request CreatePortsForClickHouseRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreatePortsForClickHouseResponse
+     */
     public CreatePortsForClickHouseResponse createPortsForClickHouseWithOptions(CreatePortsForClickHouseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -885,11 +918,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePortsForClickHouseResponse());
     }
 
+    /**
+      * >  For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created before December 1, 2021, you must manually enable the MySQL port. For an ApsaraDB for ClickHouse cluster of V20.8 or later that was created after December 1, 2021, the MySQL port is automatically enabled.
+      *
+      * @param request CreatePortsForClickHouseRequest
+      * @return CreatePortsForClickHouseResponse
+     */
     public CreatePortsForClickHouseResponse createPortsForClickHouse(CreatePortsForClickHouseRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createPortsForClickHouseWithOptions(request, runtime);
     }
 
+    /**
+      * >  This operation is only applicable to ApsaraDB for ClickHouse clusters.
+      *
+      * @param request CreateRDSToClickhouseDbRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateRDSToClickhouseDbResponse
+     */
     public CreateRDSToClickhouseDbResponse createRDSToClickhouseDbWithOptions(CreateRDSToClickhouseDbRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -978,11 +1024,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRDSToClickhouseDbResponse());
     }
 
+    /**
+      * >  This operation is only applicable to ApsaraDB for ClickHouse clusters.
+      *
+      * @param request CreateRDSToClickhouseDbRequest
+      * @return CreateRDSToClickhouseDbResponse
+     */
     public CreateRDSToClickhouseDbResponse createRDSToClickhouseDb(CreateRDSToClickhouseDbRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRDSToClickhouseDbWithOptions(request, runtime);
     }
 
+    /**
+      * >  This operation is applicable only to ApsaraDB for ClickHouse clusters of V20.8 or later that were created after December 1, 2021,
+      *
+      * @param request CreateSQLAccountRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateSQLAccountResponse
+     */
     public CreateSQLAccountResponse createSQLAccountWithOptions(CreateSQLAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1039,6 +1098,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSQLAccountResponse());
     }
 
+    /**
+      * >  This operation is applicable only to ApsaraDB for ClickHouse clusters of V20.8 or later that were created after December 1, 2021,
+      *
+      * @param request CreateSQLAccountRequest
+      * @return CreateSQLAccountResponse
+     */
     public CreateSQLAccountResponse createSQLAccount(CreateSQLAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSQLAccountWithOptions(request, runtime);
@@ -1085,6 +1150,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createServiceLinkedRoleWithOptions(request, runtime);
     }
 
+    /**
+      * >  After you delete a database account, you cannot use the account to log on to the ApsaraDB for ClickHouse cluster. Exercise caution when performing this operation.
+      *
+      * @param request DeleteAccountRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteAccountResponse
+     */
     public DeleteAccountResponse deleteAccountWithOptions(DeleteAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1129,11 +1201,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAccountResponse());
     }
 
+    /**
+      * >  After you delete a database account, you cannot use the account to log on to the ApsaraDB for ClickHouse cluster. Exercise caution when performing this operation.
+      *
+      * @param request DeleteAccountRequest
+      * @return DeleteAccountResponse
+     */
     public DeleteAccountResponse deleteAccount(DeleteAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAccountWithOptions(request, runtime);
     }
 
+    /**
+      * **
+      * **Warning** After an ApsaraDB for ClickHouse cluster is deleted, all data in the cluster is deleted and cannot be recovered. Exercise caution when performing this operation.
+      *
+      * @param request DeleteDBClusterRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDBClusterResponse
+     */
     public DeleteDBClusterResponse deleteDBClusterWithOptions(DeleteDBClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1174,6 +1260,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDBClusterResponse());
     }
 
+    /**
+      * **
+      * **Warning** After an ApsaraDB for ClickHouse cluster is deleted, all data in the cluster is deleted and cannot be recovered. Exercise caution when performing this operation.
+      *
+      * @param request DeleteDBClusterRequest
+      * @return DeleteDBClusterResponse
+     */
     public DeleteDBClusterResponse deleteDBCluster(DeleteDBClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDBClusterWithOptions(request, runtime);
@@ -1444,6 +1537,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeAllDataSourcesWithOptions(request, runtime);
     }
 
+    /**
+      * >  This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.
+      *
+      * @param request DescribeBackupPolicyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeBackupPolicyResponse
+     */
     public DescribeBackupPolicyResponse describeBackupPolicyWithOptions(DescribeBackupPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1484,6 +1584,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeBackupPolicyResponse());
     }
 
+    /**
+      * >  This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.
+      *
+      * @param request DescribeBackupPolicyRequest
+      * @return DescribeBackupPolicyResponse
+     */
     public DescribeBackupPolicyResponse describeBackupPolicy(DescribeBackupPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeBackupPolicyWithOptions(request, runtime);
@@ -1607,6 +1713,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeColumnsWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+      *
+      * @param request DescribeConfigHistoryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeConfigHistoryResponse
+     */
     public DescribeConfigHistoryResponse describeConfigHistoryWithOptions(DescribeConfigHistoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1627,11 +1740,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeConfigHistoryResponse());
     }
 
+    /**
+      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+      *
+      * @param request DescribeConfigHistoryRequest
+      * @return DescribeConfigHistoryResponse
+     */
     public DescribeConfigHistoryResponse describeConfigHistory(DescribeConfigHistoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeConfigHistoryWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+      *
+      * @param request DescribeConfigVersionDifferenceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeConfigVersionDifferenceResponse
+     */
     public DescribeConfigVersionDifferenceResponse describeConfigVersionDifferenceWithOptions(DescribeConfigVersionDifferenceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1652,6 +1778,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeConfigVersionDifferenceResponse());
     }
 
+    /**
+      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+      *
+      * @param request DescribeConfigVersionDifferenceRequest
+      * @return DescribeConfigVersionDifferenceResponse
+     */
     public DescribeConfigVersionDifferenceResponse describeConfigVersionDifference(DescribeConfigVersionDifferenceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeConfigVersionDifferenceWithOptions(request, runtime);
@@ -1796,6 +1928,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDBClusterConfigWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+      *
+      * @param request DescribeDBClusterConfigInXMLRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDBClusterConfigInXMLResponse
+     */
     public DescribeDBClusterConfigInXMLResponse describeDBClusterConfigInXMLWithOptions(DescribeDBClusterConfigInXMLRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1824,6 +1963,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBClusterConfigInXMLResponse());
     }
 
+    /**
+      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+      *
+      * @param request DescribeDBClusterConfigInXMLRequest
+      * @return DescribeDBClusterConfigInXMLResponse
+     */
     public DescribeDBClusterConfigInXMLResponse describeDBClusterConfigInXML(DescribeDBClusterConfigInXMLRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDBClusterConfigInXMLWithOptions(request, runtime);
@@ -1874,6 +2019,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDBClusterNetInfoItemsWithOptions(request, runtime);
     }
 
+    /**
+      * You can query the performance data of a specified cluster over a specific time range based on the performance metrics. The data is collected every 30 seconds.
+      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created before December 1, 2021.
+      *
+      * @param request DescribeDBClusterPerformanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDBClusterPerformanceResponse
+     */
     public DescribeDBClusterPerformanceResponse describeDBClusterPerformanceWithOptions(DescribeDBClusterPerformanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1926,6 +2079,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBClusterPerformanceResponse());
     }
 
+    /**
+      * You can query the performance data of a specified cluster over a specific time range based on the performance metrics. The data is collected every 30 seconds.
+      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created before December 1, 2021.
+      *
+      * @param request DescribeDBClusterPerformanceRequest
+      * @return DescribeDBClusterPerformanceResponse
+     */
     public DescribeDBClusterPerformanceResponse describeDBClusterPerformance(DescribeDBClusterPerformanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDBClusterPerformanceWithOptions(request, runtime);
@@ -2485,6 +2645,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeTablesWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation to query information about only data migration from an ApsaraDB for ClickHouse cluster of an earlier version to an ApsaraDB for ClickHouse cluster of a later version.
+      *
+      * @param request DescribeTransferHistoryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeTransferHistoryResponse
+     */
     public DescribeTransferHistoryResponse describeTransferHistoryWithOptions(DescribeTransferHistoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2525,6 +2692,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTransferHistoryResponse());
     }
 
+    /**
+      * >  You can call this operation to query information about only data migration from an ApsaraDB for ClickHouse cluster of an earlier version to an ApsaraDB for ClickHouse cluster of a later version.
+      *
+      * @param request DescribeTransferHistoryRequest
+      * @return DescribeTransferHistoryResponse
+     */
     public DescribeTransferHistoryResponse describeTransferHistory(DescribeTransferHistoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeTransferHistoryWithOptions(request, runtime);
@@ -2713,6 +2886,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyAccountDescriptionWithOptions(request, runtime);
     }
 
+    /**
+      * >  This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.
+      *
+      * @param request ModifyBackupPolicyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyBackupPolicyResponse
+     */
     public ModifyBackupPolicyResponse modifyBackupPolicyWithOptions(ModifyBackupPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2765,6 +2945,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyBackupPolicyResponse());
     }
 
+    /**
+      * >  This operation is available only for the ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8.
+      *
+      * @param request ModifyBackupPolicyRequest
+      * @return ModifyBackupPolicyResponse
+     */
     public ModifyBackupPolicyResponse modifyBackupPolicy(ModifyBackupPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyBackupPolicyWithOptions(request, runtime);
@@ -2949,6 +3135,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyDBClusterConfigWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+      *
+      * @param request ModifyDBClusterConfigInXMLRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDBClusterConfigInXMLResponse
+     */
     public ModifyDBClusterConfigInXMLResponse modifyDBClusterConfigInXMLWithOptions(ModifyDBClusterConfigInXMLRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2985,6 +3178,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBClusterConfigInXMLResponse());
     }
 
+    /**
+      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were created after December 1, 2021.
+      *
+      * @param request ModifyDBClusterConfigInXMLRequest
+      * @return ModifyDBClusterConfigInXMLResponse
+     */
     public ModifyDBClusterConfigInXMLResponse modifyDBClusterConfigInXML(ModifyDBClusterConfigInXMLRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDBClusterConfigInXMLWithOptions(request, runtime);
@@ -3190,6 +3389,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyMinorVersionGreadeTypeWithOptions(request, runtime);
     }
 
+    /**
+      * >  This operation is applicable only to ApsaraDB for ClickHouse clusters.
+      *
+      * @param request ModifyRDSToClickhouseDbRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyRDSToClickhouseDbResponse
+     */
     public ModifyRDSToClickhouseDbResponse modifyRDSToClickhouseDbWithOptions(ModifyRDSToClickhouseDbRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3278,6 +3484,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyRDSToClickhouseDbResponse());
     }
 
+    /**
+      * >  This operation is applicable only to ApsaraDB for ClickHouse clusters.
+      *
+      * @param request ModifyRDSToClickhouseDbRequest
+      * @return ModifyRDSToClickhouseDbResponse
+     */
     public ModifyRDSToClickhouseDbResponse modifyRDSToClickhouseDb(ModifyRDSToClickhouseDbRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyRDSToClickhouseDbWithOptions(request, runtime);
@@ -3442,6 +3654,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.restartInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * ## [](#)Prerequisites
+      * *   The IP address of the source ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the destination ApsaraDB for ClickHouse cluster.
+      * *   The IP address of the destination ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the source ApsaraDB for ClickHouse cluster.
+      * >  You can execute the `select * from system.clusters;` statement to query the IP address of an ApsaraDB for ClickHouse cluster.
+      *
+      * @param request TransferVersionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return TransferVersionResponse
+     */
     public TransferVersionResponse transferVersionWithOptions(TransferVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3514,11 +3736,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TransferVersionResponse());
     }
 
+    /**
+      * ## [](#)Prerequisites
+      * *   The IP address of the source ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the destination ApsaraDB for ClickHouse cluster.
+      * *   The IP address of the destination ApsaraDB for ClickHouse cluster is added to the IP address whitelist of the source ApsaraDB for ClickHouse cluster.
+      * >  You can execute the `select * from system.clusters;` statement to query the IP address of an ApsaraDB for ClickHouse cluster.
+      *
+      * @param request TransferVersionRequest
+      * @return TransferVersionResponse
+     */
     public TransferVersionResponse transferVersion(TransferVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.transferVersionWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were purchased after December 1, 2021.
+      *
+      * @param request UpgradeMinorVersionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpgradeMinorVersionResponse
+     */
     public UpgradeMinorVersionResponse upgradeMinorVersionWithOptions(UpgradeMinorVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3571,6 +3809,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradeMinorVersionResponse());
     }
 
+    /**
+      * >  You can call this operation only for ApsaraDB for ClickHouse clusters that were purchased after December 1, 2021.
+      *
+      * @param request UpgradeMinorVersionRequest
+      * @return UpgradeMinorVersionResponse
+     */
     public UpgradeMinorVersionResponse upgradeMinorVersion(UpgradeMinorVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.upgradeMinorVersionWithOptions(request, runtime);

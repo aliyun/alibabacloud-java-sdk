@@ -4,9 +4,15 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details about the slow query logs.</p>
+     */
     @NameInMap("SlowLogRecords")
     public DescribeSlowLogRecordsResponseBodySlowLogRecords slowLogRecords;
 
@@ -32,36 +38,72 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogRecordsResponseBodySlowLogRecordsDataResultSet extends TeaModel {
+        /**
+         * <p>The IP address of the client that initiated the query.</p>
+         */
         @NameInMap("InitialAddress")
         public String initialAddress;
 
+        /**
+         * <p>The query ID.</p>
+         */
         @NameInMap("InitialQueryId")
         public String initialQueryId;
 
+        /**
+         * <p>The username that is used to initiate the query.</p>
+         */
         @NameInMap("InitialUser")
         public String initialUser;
 
+        /**
+         * <p>The peak memory usage for the query. Unit: bytes.</p>
+         */
         @NameInMap("MemoryUsage")
         public String memoryUsage;
 
+        /**
+         * <p>The statement that was executed in the query.</p>
+         */
         @NameInMap("Query")
         public String query;
 
+        /**
+         * <p>The duration of the query. Unit: milliseconds.</p>
+         */
         @NameInMap("QueryDurationMs")
         public String queryDurationMs;
 
+        /**
+         * <p>The beginning of the time range to query. The time is in the yyyy-MM-dd hh:mm:ss format. The time is displayed in UTC.</p>
+         */
         @NameInMap("QueryStartTime")
         public String queryStartTime;
 
+        /**
+         * <p>The size of the data read by executing the statement. Unit: bytes.</p>
+         */
         @NameInMap("ReadBytes")
         public String readBytes;
 
+        /**
+         * <p>The number of rows read by executing the statement.</p>
+         */
         @NameInMap("ReadRows")
         public String readRows;
 
+        /**
+         * <p>The size of the result data. Unit: bytes.</p>
+         */
         @NameInMap("ResultBytes")
         public String resultBytes;
 
+        /**
+         * <p>The query status. Valid values:</p>
+         * <br>
+         * <p>*   **QueryFinish**: The query is complete.</p>
+         * <p>*   **Processing**: The query is running.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -180,12 +222,21 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogRecordsResponseBodySlowLogRecordsStatistics extends TeaModel {
+        /**
+         * <p>The total size of data that were read. Unit: bytes.</p>
+         */
         @NameInMap("BytesRead")
         public Integer bytesRead;
 
+        /**
+         * <p>The time consumed by the slow query. Unit: milliseconds.</p>
+         */
         @NameInMap("ElapsedTime")
         public Float elapsedTime;
 
+        /**
+         * <p>The total number of rows that were read.</p>
+         */
         @NameInMap("RowsRead")
         public Integer rowsRead;
 
@@ -221,9 +272,15 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogRecordsResponseBodySlowLogRecordsTableSchemaResultSet extends TeaModel {
+        /**
+         * <p>The name of the column.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The type of the column.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -270,18 +327,33 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogRecordsResponseBodySlowLogRecords extends TeaModel {
+        /**
+         * <p>Details about the slow query logs.</p>
+         */
         @NameInMap("Data")
         public DescribeSlowLogRecordsResponseBodySlowLogRecordsData data;
 
+        /**
+         * <p>The number of rows in the result set.</p>
+         */
         @NameInMap("Rows")
         public String rows;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("RowsBeforeLimitAtLeast")
         public String rowsBeforeLimitAtLeast;
 
+        /**
+         * <p>The statistics of the results.</p>
+         */
         @NameInMap("Statistics")
         public DescribeSlowLogRecordsResponseBodySlowLogRecordsStatistics statistics;
 
+        /**
+         * <p>The schema of the table in the database.</p>
+         */
         @NameInMap("TableSchema")
         public DescribeSlowLogRecordsResponseBodySlowLogRecordsTableSchema tableSchema;
 

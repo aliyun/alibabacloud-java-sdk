@@ -4,15 +4,30 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
+    /**
+     * <p>The network type of the cluster. Only VPC is supported.</p>
+     */
     @NameInMap("ClusterNetworkType")
     public String clusterNetworkType;
 
+    /**
+     * <p>Indicates whether Server Load Balancer (SLB) is activated in the VPC. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("EnableSLB")
     public Boolean enableSLB;
 
+    /**
+     * <p>The network information about the cluster.</p>
+     */
     @NameInMap("NetInfoItems")
     public DescribeDBClusterNetInfoItemsResponseBodyNetInfoItems netInfoItems;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,30 +69,64 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterNetInfoItemsResponseBodyNetInfoItemsNetInfoItem extends TeaModel {
+        /**
+         * <p>The endpoint that is used to connect to the database.</p>
+         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <p>The HTTP port number.</p>
+         */
         @NameInMap("HttpPort")
         public String httpPort;
 
+        /**
+         * <p>The HTTPS port number.</p>
+         */
         @NameInMap("HttpsPort")
         public String httpsPort;
 
+        /**
+         * <p>The IP address.</p>
+         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
+        /**
+         * <p>The port number that is used in Java Database Connectivity (JDBC).</p>
+         */
         @NameInMap("JdbcPort")
         public String jdbcPort;
 
+        /**
+         * <p>The port of the MySQL instance.</p>
+         */
         @NameInMap("MySQLPort")
         public String mySQLPort;
 
+        /**
+         * <p>The network type of the endpoint. Valid values:</p>
+         * <br>
+         * <p>*   Public: public endpoint</p>
+         * <p>*   VPC: VPC</p>
+         */
         @NameInMap("NetType")
         public String netType;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         * <br>
+         * <p>>  If the value of the NetType parameter is set to Public, an empty string is returned.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The virtual private cloud (VPC) ID.</p>
+         * <br>
+         * <p>>  If the value of the NetType parameter is set to Public, an empty string is returned.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

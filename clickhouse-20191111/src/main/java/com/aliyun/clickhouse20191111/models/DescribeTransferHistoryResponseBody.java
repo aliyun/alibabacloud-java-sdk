@@ -4,9 +4,15 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeTransferHistoryResponseBody extends TeaModel {
+    /**
+     * <p>The migration information.</p>
+     */
     @NameInMap("HistoryDetails")
     public DescribeTransferHistoryResponseBodyHistoryDetails historyDetails;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,30 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeTransferHistoryResponseBodyHistoryDetailsHistoryDetail extends TeaModel {
+        /**
+         * <p>The progress of the data migration.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The ID of the source cluster.</p>
+         */
         @NameInMap("SourceDBCluster")
         public String sourceDBCluster;
 
+        /**
+         * <p>The status of the data migration task. Valid values:</p>
+         * <br>
+         * <p>*   **Finished**: The data migration task is complete.</p>
+         * <p>*   **Processing**: The data migration task is in progress.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the destination cluster.</p>
+         */
         @NameInMap("TargetDBCluster")
         public String targetDBCluster;
 

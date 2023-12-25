@@ -4,9 +4,15 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class CheckModifyConfigNeedRestartRequest extends TeaModel {
+    /**
+     * <p>The configuration parameters whose settings are modified.</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <p>The cluster ID. You can call the [DescribeDBClusters](~~170879~~) operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 

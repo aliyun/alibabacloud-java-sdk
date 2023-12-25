@@ -4,9 +4,15 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeConfigHistoryResponseBody extends TeaModel {
+    /**
+     * <p>The change records of the configuration parameters.</p>
+     */
     @NameInMap("ConfigHistoryItems")
     public java.util.List<DescribeConfigHistoryResponseBodyConfigHistoryItems> configHistoryItems;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,36 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeConfigHistoryResponseBodyConfigHistoryItems extends TeaModel {
+        /**
+         * <p>The ID of the change record.</p>
+         */
         @NameInMap("ChangeId")
         public String changeId;
 
+        /**
+         * <p>The user ID (UID) of the Alibaba Cloud account.</p>
+         */
         @NameInMap("OwnerId")
         public String ownerId;
 
+        /**
+         * <p>The reason for the setting modification of the configuration parameters.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <p>Indicates whether the setting modification of the configuration parameters took effect. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 
+        /**
+         * <p>The time when the values of the configuration parameters were changed. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("Time")
         public String time;
 
