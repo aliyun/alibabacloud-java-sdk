@@ -52,15 +52,22 @@ public class CreateListenerRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The endpoint group that is associated with the intelligent routing listener.</p>
+     * <p>The endpoint groups that are associated with the intelligent routing listener.</p>
      * <br>
-     * <p>You can configure at most 10 endpoint groups for an intelligent routing listener.</p>
+     * <p>You can configure up to 10 endpoint groups for an intelligent routing listener.</p>
      * <br>
-     * <p>> You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.</p>
+     * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
      */
     @NameInMap("EndpointGroupConfigurations")
     public java.util.List<CreateListenerRequestEndpointGroupConfigurations> endpointGroupConfigurations;
 
+    /**
+     * <p>The timeout period of idle connections. Unit: seconds.</p>
+     * <br>
+     * <p>*   TCP: 10-900. Default value: 900. Unit: seconds.</p>
+     * <p>*   UDP: 10-20. Default value: 20. Unit: seconds.</p>
+     * <p>*   HTTP/HTTPS: 1-60. Default value: 15. Unit: seconds.</p>
+     */
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 
@@ -106,6 +113,13 @@ public class CreateListenerRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The timeout period for HTTP or HTTPS requests. Unit: seconds.</p>
+     * <br>
+     * <p>Valid values: 1 to 180. Default value: 60. Unit: seconds.</p>
+     * <br>
+     * <p>>  This parameter takes effect only for HTTP or HTTPS listeners. If the backend server does not respond within the timeout period, GA returns an HTTP 504 error code to the client.</p>
+     */
     @NameInMap("RequestTimeout")
     public Integer requestTimeout;
 
@@ -148,11 +162,8 @@ public class CreateListenerRequest extends TeaModel {
      * <p>*   **Standard** (default): intelligent routing</p>
      * <p>*   **CustomRouting**: custom routing</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager.</p>
-     * <br>
-     * <p>*   You can create only listeners of the same routing type for a standard GA instance. You cannot change the routing types of listeners. For more information, see [Listener overview](~~153216~~).</p>
+     * <p>> *   Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager.</p>
+     * <p>> *   You can create only listeners of the same routing type for a standard GA instance. You cannot change the routing types of listeners. For more information, see [Listener overview](~~153216~~).</p>
      */
     @NameInMap("Type")
     public String type;
@@ -684,16 +695,21 @@ public class CreateListenerRequest extends TeaModel {
          * <br>
          * <p>You can specify up to 100 endpoint IP addresses or domain names for an endpoint group of an intelligent routing listener.</p>
          * <br>
-         * <p>> If the **Type** parameter is set to **Standard**, you can configure endpoint groups and endpoints for an intelligent routing listener, and this parameter is required.</p>
+         * <p>>  If you set **Type** to **Standard**, you can configure endpoint groups and endpoints, and this parameter is required.</p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <p>The private IP address of the elastic network interface (ENI).</p>
+         * <br>
+         * <p>>  If the endpoint type is **ENI**, you can specify this parameter. If you do not specify this parameter, the primary private IP address of the ENI is used.</p>
+         */
         @NameInMap("SubAddress")
         public String subAddress;
 
         /**
-         * <p>The endpoint type of the intelligent routing listener. Valid values:</p>
+         * <p>The type of the endpoint that is associated with the intelligent routing listener. Valid values:</p>
          * <br>
          * <p>*   **Domain**: a custom domain name</p>
          * <p>*   **Ip**: a custom IP address</p>
@@ -705,15 +721,11 @@ public class CreateListenerRequest extends TeaModel {
          * <br>
          * <p>You can specify up to 100 endpoint types for an endpoint group of an intelligent routing listener.</p>
          * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   If the **Type** parameter is set to **Standard**, you can configure endpoint groups and endpoints for an intelligent routing listener, and this parameter is required.</p>
-         * <br>
-         * <p>*   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system creates the service-linked role.</p>
-         * <p>*   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.</p>
-         * <p>*   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.</p>
-         * <br>
-         * <p>For more information, see [Service-linked roles](~~178360~~).</p>
+         * <p>> *   If you set **Type** to **Standard**, you can configure endpoint groups and endpoints for an intelligent routing listener, and this parameter is required.</p>
+         * <p>>*   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.</p>
+         * <p>>*   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.</p>
+         * <p>>*   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.  </p>
+         * <p>> For more information, see [Service linked roles](~~178360~~).</p>
          */
         @NameInMap("Type")
         public String type;
@@ -723,13 +735,10 @@ public class CreateListenerRequest extends TeaModel {
          * <br>
          * <p>Valid values: **0** to **255**.</p>
          * <br>
-         * <p>You can set the weights of up to 100 endpoints for an endpoint group of an intelligent routing listener.</p>
+         * <p>You can specify the weights of up to 100 endpoints for an endpoint group of an intelligent routing listener.</p>
          * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   If the **Type** parameter is set to **Standard**, you can configure endpoint groups and endpoints for an intelligent routing listener, and this parameter is required.</p>
-         * <br>
-         * <p>*   If the weight of an endpoint is set to 0, GA stops distributing network traffic to the endpoint. Proceed with caution.</p>
+         * <p>> *   If you set **Type** to **Standard**, you can configure endpoint groups and endpoints for an intelligent routing listener, and this parameter is required.</p>
+         * <p>>*   If you set the weight of an endpoint to 0, GA does not route network traffic to the endpoint. Make sure that you are aware of the impact on your business before you set the endpoint weight to 0.</p>
          */
         @NameInMap("Weight")
         public Long weight;
@@ -779,11 +788,8 @@ public class CreateListenerRequest extends TeaModel {
          * <br>
          * <p>You can specify up to five endpoint ports.</p>
          * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.</p>
-         * <br>
-         * <p>*   Only HTTP intelligent routing listeners and HTTPS intelligent routing listeners support port mappings.</p>
+         * <p>>*   You can configure endpoint groups and endpoints for an intelligent routing listener only if you set **Type** to **Standard**.</p>
+         * <p>>*   Only HTTP and HTTPS intelligent routing listeners support port mappings.</p>
          */
         @NameInMap("EndpointPort")
         public Long endpointPort;
@@ -793,12 +799,9 @@ public class CreateListenerRequest extends TeaModel {
          * <br>
          * <p>You can specify up to five listener ports.</p>
          * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.</p>
-         * <br>
-         * <p>*   Only HTTP intelligent routing listeners and HTTPS intelligent routing listeners support port mappings.</p>
-         * <p>*   The listener port in a port mapping must be the port that is used by the current listener.</p>
+         * <p>> *   You can configure endpoint groups and endpoints for an intelligent routing listener only if you set **Type** to **Standard**.</p>
+         * <p>>*   Only HTTP and HTTPS intelligent routing listeners support port mappings.</p>
+         * <p>>*   The listener port in a port mapping must be the port that is used by the current listener.</p>
          */
         @NameInMap("ListenerPort")
         public Long listenerPort;
@@ -830,25 +833,25 @@ public class CreateListenerRequest extends TeaModel {
         /**
          * <p>Specifies whether to use the proxy protocol to preserve client IP addresses. Valid values:</p>
          * <br>
-         * <p>*   **true**: uses the proxy protocol to preserve client IP addresses.</p>
-         * <p>*   **false** (default): does not use the proxy protocol to preserve client IP addresses.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false** (default)</p>
          * <br>
-         * <p>You can set this parameter for up to 10 endpoint groups.</p>
+         * <p>You can specify this parameter for up to 10 endpoint groups.</p>
          * <br>
-         * <p>> You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.</p>
+         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
          */
         @NameInMap("EnableClientIPPreservationProxyProtocol")
         public Boolean enableClientIPPreservationProxyProtocol;
 
         /**
-         * <p>Specifies whether to obtain and preserve the IP addresses of clients that access the endpoint by using the TCP Option Address (TOA) module. Valid values:</p>
+         * <p>Specifies whether to preserve client IP addresses by using the TCP Option Address (TOA) module. Valid values:</p>
          * <br>
-         * <p>*   **true**: preserves client IP addresses by using the TOA module.</p>
-         * <p>*   **false** (default): does not preserve client IP addresses by using the TOA module.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false** (default)</p>
          * <br>
-         * <p>You can set this parameter for up to 10 endpoint groups.</p>
+         * <p>You can specify this parameter for up to 10 endpoint groups.</p>
          * <br>
-         * <p>> You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.</p>
+         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
          */
         @NameInMap("EnableClientIPPreservationToa")
         public Boolean enableClientIPPreservationToa;
@@ -862,11 +865,11 @@ public class CreateListenerRequest extends TeaModel {
         /**
          * <p>The description of the endpoint group that is associated with the intelligent routing listener.</p>
          * <br>
-         * <p>The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.</p>
+         * <p>The description can be up to 256 characters in length and cannot contain `http://` or `https://`.</p>
          * <br>
          * <p>You can enter the descriptions of up to 10 endpoint groups.</p>
          * <br>
-         * <p>> You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.</p>
+         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
          */
         @NameInMap("EndpointGroupDescription")
         public String endpointGroupDescription;
@@ -878,7 +881,7 @@ public class CreateListenerRequest extends TeaModel {
          * <br>
          * <p>You can enter the names of up to 10 endpoint groups.</p>
          * <br>
-         * <p>> You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.</p>
+         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
          */
         @NameInMap("EndpointGroupName")
         public String endpointGroupName;
@@ -888,65 +891,59 @@ public class CreateListenerRequest extends TeaModel {
          * <br>
          * <p>You can enter the region IDs of up to 10 endpoint groups.</p>
          * <br>
-         * <p>> You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.</p>
+         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
          */
         @NameInMap("EndpointGroupRegion")
         public String endpointGroupRegion;
 
         /**
-         * <p>The endpoint group type of the intelligent routing listener. Valid values:</p>
+         * <p>The type of the endpoint group associated with the intelligent routing listener. Valid values:</p>
          * <br>
-         * <p>*   **default** (default): a default endpoint group.</p>
-         * <p>*   **virtual**: a virtual endpoint group.</p>
+         * <p>*   **default** (default)</p>
+         * <p>*   **virtual**</p>
          * <br>
-         * <p>You can specify the types of up to 10 endpoint groups.</p>
+         * <p>You can specify up to 10 endpoint group types.</p>
          * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.</p>
-         * <br>
-         * <p>*   Only HTTP intelligent routing listeners and HTTPS intelligent routing listeners support virtual endpoint groups.</p>
+         * <p>> *   You can configure endpoint groups and endpoints for an intelligent routing listener only if you set **Type** to **Standard**.</p>
+         * <p>>*   Only HTTP intelligent routing listeners and HTTPS intelligent routing listeners support virtual endpoint groups.</p>
          */
         @NameInMap("EndpointGroupType")
         public String endpointGroupType;
 
         /**
-         * <p>The protocol used by the endpoint that is associated with the intelligent routing listener. Valid values:</p>
+         * <p>The backend service protocol of the endpoint that is associated with the intelligent routing listener. Valid values:</p>
          * <br>
-         * <p>*   **HTTP** (default): HTTP</p>
-         * <p>*   **HTTPS**: HTTPS</p>
+         * <p>*   **HTTP** (default)</p>
+         * <p>*   **HTTPS**</p>
          * <br>
-         * <p>You can specify at most 10 protocols.</p>
+         * <p>You can specify up to 10 backend service protocols.</p>
          * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.</p>
-         * <br>
-         * <p>*   You can set this parameter only for HTTP intelligent routing listeners and HTTPS intelligent routing listeners.</p>
-         * <p>*   For an HTTP listener, the protocol must be **HTTP**.</p>
+         * <p>> *   You can configure endpoint groups and endpoints for an intelligent routing listener only if you set **Type** to **Standard**.</p>
+         * <p>>*   You can specify this parameter only for HTTP and HTTPS intelligent routing listeners.</p>
+         * <p>>*   For an HTTP listener, the protocol must be **HTTP**.</p>
          */
         @NameInMap("EndpointRequestProtocol")
         public String endpointRequestProtocol;
 
         /**
-         * <p>Specifies whether to enable health checks for the endpoint group that is associated with the intelligent routing listener. Valid values:</p>
+         * <p>Specifies whether to enable health checks for the endpoint group. Valid values:</p>
          * <br>
-         * <p>*   **true**: enables the health check feature.</p>
-         * <p>*   **false** (default): disables the health check feature.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false** (default)</p>
          * <br>
          * <p>You can enable the health check feature for up to 10 endpoint groups.</p>
          * <br>
-         * <p>> You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.</p>
+         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
          */
         @NameInMap("HealthCheckEnabled")
         public Boolean healthCheckEnabled;
 
         /**
-         * <p>The interval at which you want to perform health checks. Unit: seconds.</p>
+         * <p>The interval at which health checks are performed. Unit: seconds.</p>
          * <br>
          * <p>You can specify up to 10 health check intervals.</p>
          * <br>
-         * <p>> You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.</p>
+         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
          */
         @NameInMap("HealthCheckIntervalSeconds")
         public Long healthCheckIntervalSeconds;
@@ -956,7 +953,7 @@ public class CreateListenerRequest extends TeaModel {
          * <br>
          * <p>You can specify up to 10 health check paths.</p>
          * <br>
-         * <p>> You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.</p>
+         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
          */
         @NameInMap("HealthCheckPath")
         public String healthCheckPath;
@@ -964,9 +961,9 @@ public class CreateListenerRequest extends TeaModel {
         /**
          * <p>The port that is used for health checks. Valid values: **1** to **65535**.</p>
          * <br>
-         * <p>You can specify up to 10 ports for health checks.</p>
+         * <p>You can specify up to 10 health check ports.</p>
          * <br>
-         * <p>> You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.</p>
+         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
          */
         @NameInMap("HealthCheckPort")
         public Long healthCheckPort;
@@ -974,19 +971,19 @@ public class CreateListenerRequest extends TeaModel {
         /**
          * <p>The protocol over which health check requests are sent. Valid values:</p>
          * <br>
-         * <p>*   **tcp**: TCP</p>
-         * <p>*   **http**: HTTP</p>
-         * <p>*   **https**: HTTPS</p>
+         * <p>*   **tcp**</p>
+         * <p>*   **http**</p>
+         * <p>*   **https**</p>
          * <br>
          * <p>You can specify up to 10 health check protocols.</p>
          * <br>
-         * <p>> You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.</p>
+         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
          */
         @NameInMap("HealthCheckProtocol")
         public String healthCheckProtocol;
 
         /**
-         * <p>The mappings between ports.</p>
+         * <p>The port mapping.</p>
          */
         @NameInMap("PortOverrides")
         public java.util.List<CreateListenerRequestEndpointGroupConfigurationsPortOverrides> portOverrides;
@@ -994,21 +991,21 @@ public class CreateListenerRequest extends TeaModel {
         /**
          * <p>The number of consecutive health check failures that must occur before a healthy endpoint group is considered unhealthy, or the number of consecutive health check successes that must occur before an unhealthy endpoint group is considered healthy. Valid values: **2** to **10**. Default value: **3**.</p>
          * <br>
-         * <p>You can specify the number of consecutive health check successes or failures for at most 10 endpoint groups.</p>
+         * <p>You can specify the number of successful consecutive health checks or failed consecutive health checks for up to 10 endpoint groups.</p>
          * <br>
-         * <p>> You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.</p>
+         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
          */
         @NameInMap("ThresholdCount")
         public Long thresholdCount;
 
         /**
-         * <p>The traffic distribution ratio. If an intelligent routing listener is associated with multiple endpoint groups, you can use this parameter to specify the ratio of traffic that you want to distribute to each endpoint group.</p>
+         * <p>The traffic distribution ratio. If an intelligent routing listener is associated with multiple endpoint groups, you can configure this parameter to specify the ratio of traffic distributed to each endpoint group.</p>
          * <br>
          * <p>Valid values: **1** to **100**. Default value: **100**.</p>
          * <br>
-         * <p>You can specify the traffic distribution ratios for up to 10 endpoint groups.</p>
+         * <p>You can specify traffic distribution ratios for up to 10 endpoint groups.</p>
          * <br>
-         * <p>> You can configure endpoint groups and endpoints for an intelligent routing listener only if the **Type** parameter is set to **Standard**.</p>
+         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
          */
         @NameInMap("TrafficPercentage")
         public Long trafficPercentage;

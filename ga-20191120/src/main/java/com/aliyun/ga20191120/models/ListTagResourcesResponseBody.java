@@ -20,7 +20,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array of information about the resources to which tags are added.</p>
+     * <p>The information about the resources to which tags are added.</p>
      */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
@@ -78,23 +78,23 @@ public class ListTagResourcesResponseBody extends TeaModel {
         /**
          * <p>The type of the resource.</p>
          * <br>
-         * <p>*   **accelerator:** a standard GA instance.</p>
-         * <p>*   **basicaccelerator:** a basic GA instance.</p>
-         * <p>*   **bandwidthpackage:** a bandwidth plan.</p>
-         * <p>*   **acl:** an ACL.</p>
-         * <p>*   **endpointgroup:** an EndpointGroup.</p>
+         * <p>*   **accelerator**: a standard GA instance</p>
+         * <p>*   **basicaccelerator**: a basic GA instance</p>
+         * <p>*   **bandwidthpackage**: a bandwidth plan</p>
+         * <p>*   **acl**: an ACL</p>
+         * <p>*   **endpointgroup**: an endpoint group</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

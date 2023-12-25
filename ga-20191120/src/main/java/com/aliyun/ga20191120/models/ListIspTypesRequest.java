@@ -4,6 +4,9 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ListIspTypesRequest extends TeaModel {
+    /**
+     * <p>The ID of the GA instance that you want to query.</p>
+     */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 

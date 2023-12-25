@@ -7,9 +7,9 @@ public class UpdateServiceManagedControlRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -27,17 +27,17 @@ public class UpdateServiceManagedControlRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The type of the resource whose control mode you want to change.</p>
+     * <p>The type of the resource whose control mode you want to change. Valid values:</p>
      * <br>
-     * <p>*   Set the value to **Accelerator**, which specifies a standard GA instance.</p>
+     * <p>**Accelerator**: standard GA instance.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The control mode of the resource.</p>
+     * <p>The control mode of the resource. Valid values:</p>
      * <br>
-     * <p>*   Set the value to false, which changes the control mode of the resource from managed mode to unmanaged mode.</p>
+     * <p>**false**: changes the control mode of the resource from managed mode to unmanaged mode.</p>
      * <br>
      * <p>>  You can change the control mode only from managed mode to unmanaged mode.</p>
      */

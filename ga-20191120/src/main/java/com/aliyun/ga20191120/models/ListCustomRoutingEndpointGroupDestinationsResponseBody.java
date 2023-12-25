@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaModel {
     /**
-     * <p>The details about the endpoint group mapping configurations.</p>
+     * <p>The details about the endpoint group mappings.</p>
      */
     @NameInMap("Destinations")
     public java.util.List<ListCustomRoutingEndpointGroupDestinationsResponseBodyDestinations> destinations;
@@ -94,27 +94,26 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         public String action;
 
         /**
-         * <p>Sub resource type, Valid values:</p>
+         * <p>The type of the child resource. Valid values:</p>
          * <br>
-         * <p>Listener</p>
-         * <p>IpSet</p>
-         * <p>EndpointGroup</p>
-         * <p>ForwardingRule</p>
-         * <p>Endpoint</p>
-         * <p>EndpointGroupDestination</p>
-         * <p>EndpointPolicy</p>
+         * <p>*   **Listener**: listener.</p>
+         * <p>*   **IpSet**: acceleration region.</p>
+         * <p>*   **EndpointGroup**: endpoint group.</p>
+         * <p>*   **ForwardingRule**: forwarding rule.</p>
+         * <p>*   **Endpoint**: endpoint.</p>
+         * <p>*   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener.</p>
+         * <p>*   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener.</p>
          * <br>
-         * <p>> Only valid when the Action parameter is CreateChild.</p>
+         * <p>>  This parameter takes effect only if **Action** is set to **CreateChild**.</p>
          */
         @NameInMap("ChildType")
         public String childType;
 
         /**
-         * <p>Is the managed policy action managed, Valid values:</p>
+         * <p>Indicates whether the specified actions are managed. Valid values:</p>
          * <br>
-         * <p>- **true**: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.</p>
-         * <br>
-         * <p>- **false**: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.</p>
+         * <p>*   **true**: The specified actions are managed, and you cannot perform the specified actions on the managed instance.</p>
+         * <p>*   **false**: The specified actions are not managed, and you can perform the specified actions on the managed instance.</p>
          */
         @NameInMap("IsManaged")
         public Boolean isManaged;
@@ -152,71 +151,74 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
 
     public static class ListCustomRoutingEndpointGroupDestinationsResponseBodyDestinations extends TeaModel {
         /**
-         * <p>The ID of the GA instance.</p>
+         * <p>The GA instance ID.</p>
          */
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
         /**
-         * <p>The ID of the endpoint group mapping configuration.</p>
+         * <p>The ID of the endpoint group mapping.</p>
          */
         @NameInMap("DestinationId")
         public String destinationId;
 
         /**
-         * <p>The ID of the endpoint group.</p>
+         * <p>The endpoint group ID.</p>
          */
         @NameInMap("EndpointGroupId")
         public String endpointGroupId;
 
         /**
-         * <p>The start port of the backend service port range of the endpoint group.</p>
+         * <p>The first port of the backend service port range.</p>
          */
         @NameInMap("FromPort")
         public Integer fromPort;
 
         /**
-         * <p>The ID of the listener.</p>
+         * <p>The listener ID.</p>
          */
         @NameInMap("ListenerId")
         public String listenerId;
 
         /**
-         * <p>The backend service protocol of the endpoint group.</p>
+         * <p>The backend service protocols of the endpoint group. Valid values:</p>
          * <br>
-         * <p>*   **TCP**: TCP</p>
-         * <p>*   **UDP**: UDP</p>
-         * <p>*   **TCP,UDP**: TCP and UDP</p>
+         * <p>*   **TCP**</p>
+         * <p>*   **UDP**</p>
+         * <p>*   **TCP,UDP**</p>
          */
         @NameInMap("Protocols")
         public java.util.List<String> protocols;
 
         /**
-         * <p>The service ID to which the managed instance belongs.</p>
+         * <p>The ID of the service that manages the GA instance.</p>
          * <br>
-         * <p>>  Valid only when the ServiceManaged parameter is True.</p>
+         * <p>>  This parameter takes effect only if **ServiceManaged** is set to **True**.</p>
          */
         @NameInMap("ServiceId")
         public String serviceId;
 
         /**
-         * <p>Is it a managed instance. Valid values:</p>
+         * <p>Indicates whether the GA instance is managed. Valid values:</p>
          * <br>
-         * <p>- **true**</p>
-         * <br>
-         * <p>- **false**</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("ServiceManaged")
         public Boolean serviceManaged;
 
         /**
-         * <p>A list of action policies that users can execute on this managed instance.</p>
+         * <p>The actions that you can perform on the managed instance.</p>
+         * <br>
+         * <p>>  This parameter takes effect only if **ServiceManaged** is set to **True**.</p>
+         * <br>
+         * <p>*   You can perform only specific actions on a managed instance.</p>
          */
         @NameInMap("ServiceManagedInfos")
         public java.util.List<ListCustomRoutingEndpointGroupDestinationsResponseBodyDestinationsServiceManagedInfos> serviceManagedInfos;
 
         /**
-         * <p>The end port of the backend service port range of the endpoint group.</p>
+         * <p>The last port of the backend service port range.</p>
          */
         @NameInMap("ToPort")
         public Integer toPort;

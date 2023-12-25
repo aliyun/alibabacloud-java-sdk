@@ -45,7 +45,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public String localName;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID. Only **cn-hangzhou** is returned.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

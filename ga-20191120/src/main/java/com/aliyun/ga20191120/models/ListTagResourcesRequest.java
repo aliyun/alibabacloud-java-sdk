@@ -30,13 +30,13 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>An array of IDs of resources whose tag information you want to query.</p>
+     * <p>The IDs of the resources whose tag information you want to query.</p>
      * <br>
-     * <p>*   If you set the **ResourceType** parameter to **accelerator**, set the value of ResourceId to the ID of a standard GA instance.</p>
-     * <p>*   If you set the **ResourceType** parameter to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.</p>
-     * <p>*   If you set the **ResourceType** parameter to **bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.</p>
-     * <p>*   If you set the **ResourceType** parameter to **acl**, set the value of ResourceId to the ID of an ACL.</p>
-     * <p>*   If **ResourceType** is set to **endpointgroup**, set the value of ResourceId to the ID of an EndpointGroup.</p>
+     * <p>*   If you set **ResourceType** to **accelerator**, set the value of ResourceId to the ID of a standard GA instance.</p>
+     * <p>*   If you set **ResourceType** to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.</p>
+     * <p>*   If you set **ResourceType** to **bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.</p>
+     * <p>*   If you set **ResourceType** to **acl**, set the value of ResourceId to the ID of an ACL.</p>
+     * <p>*   If you set **ResourceType** to **endpointgroup**, set the value of ResourceId to the ID of an endpoint group.</p>
      * <br>
      * <p>You can specify up to 50 GA resource IDs.</p>
      */
@@ -46,11 +46,11 @@ public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The type of the resource whose tag information you want to query. Valid values:</p>
      * <br>
-     * <p>*   **accelerator:** a standard GA instance.</p>
-     * <p>*   **basicaccelerator:** a basic GA instance.</p>
-     * <p>*   **bandwidthpackage:** a bandwidth plan.</p>
-     * <p>*   **acl:** an access control list (ACL).</p>
-     * <p>*   **endpointgroup:** an endpoint group (EndpointGroup).</p>
+     * <p>*   **accelerator**: a standard GA instance</p>
+     * <p>*   **basicaccelerator**: a basic GA instance</p>
+     * <p>*   **bandwidthpackage**: a bandwidth plan</p>
+     * <p>*   **acl**: an access control list (ACL).</p>
+     * <p>*   **endpointgroup**: an endpoint group</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

@@ -29,7 +29,7 @@ public class CreateEndpointGroupRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The configurations of the endpoints in the endpoint group.</p>
+     * <p>The configurations of endpoints in the endpoint group.</p>
      */
     @NameInMap("EndpointConfigurations")
     public java.util.List<CreateEndpointGroupRequestEndpointConfigurations> endpointConfigurations;
@@ -307,7 +307,7 @@ public class CreateEndpointGroupRequest extends TeaModel {
 
     public static class CreateEndpointGroupRequestEndpointConfigurations extends TeaModel {
         /**
-         * <p>Specifies whether to preserve client IP addresses by using the TCP Option Address (TOA) module. Valid values:</p>
+         * <p>Specifies whether to use the TCP Option Address (TOA) module to preserve client IP addresses. Valid values:</p>
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false** (default)</p>
@@ -325,14 +325,15 @@ public class CreateEndpointGroupRequest extends TeaModel {
         public Boolean enableProxyProtocol;
 
         /**
-         * <p>The IP address, domain name, or instance ID based on the value of Type.</p>
+         * <p>Enter the IP address, domain name, or instance ID based on the value of the Type parameter.</p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
 
         /**
          * <p>The private IP address of the ENI.</p>
-         * <p>> - When the Endpoint type is **ENI**, this parameter can be configured. If not configured, it defaults to the primary private IP address of ENI.</p>
+         * <br>
+         * <p>>  If you set the endpoint type to ENI, you can specify this parameter. If you leave this parameter empty, the primary private IP address of the ENI is used.</p>
          */
         @NameInMap("SubAddress")
         public String subAddress;
@@ -340,21 +341,19 @@ public class CreateEndpointGroupRequest extends TeaModel {
         /**
          * <p>The type of the endpoint. Valid values:</p>
          * <br>
-         * <p>*   **Domain**: a custom domain name</p>
-         * <p>*   **Ip**: a custom IP address</p>
-         * <p>*   **PublicIp**: a public IP address provided by Alibaba Cloud</p>
-         * <p>*   **ECS**: an Elastic Compute Service (ECS) instance</p>
-         * <p>*   **SLB**: a Server Load Balancer (SLB) instance</p>
-         * <p>*   **ALB**: an Application Load Balancer (ALB) instance</p>
-         * <p>*   **OSS**: an Object Storage Service (OSS) bucket</p>
+         * <p>*   **Domain:** a custom domain name.</p>
+         * <p>*   **Ip:** a custom IP address.</p>
+         * <p>*   **PublicIp:** a public IP address provided by Alibaba Cloud.</p>
+         * <p>*   **ECS:** an Elastic Compute Service (ECS) instance.</p>
+         * <p>*   **SLB:** a Server Load Balancer (SLB) instance.</p>
+         * <p>*   **ALB:** an Application Load Balancer (ALB) instance.</p>
+         * <p>*   **OSS:** an Object Storage Service (OSS) bucket.</p>
+         * <p>*   **ENI:** an elastic network interface (ENI).</p>
+         * <p>*   **NLB:** a Network Load Balancer (NLB) instance.</p>
          * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.</p>
-         * <br>
-         * <p>*   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.</p>
-         * <br>
-         * <p>*   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.</p>
+         * <p>>*   If you set this parameter to **ECS** or **SLB** and the AliyunServiceRoleForGaVpcEndpoint service-linked role does not exist, the system automatically creates the service-linked role.</p>
+         * <p>> *   If you set this parameter to **ALB** and the AliyunServiceRoleForGaAlb service-linked role does not exist, the system automatically creates the service-linked role.</p>
+         * <p>> *   If you set this parameter to **OSS** and the AliyunServiceRoleForGaOss service-linked role does not exist, the system automatically creates the service-linked role.</p>
          * <br>
          * <p>For more information, see [Service-linked roles](~~178360~~).</p>
          */
