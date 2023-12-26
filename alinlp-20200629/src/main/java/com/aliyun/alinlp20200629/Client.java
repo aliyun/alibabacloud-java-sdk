@@ -2233,6 +2233,101 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.postMSConvSearchTokenGeneratedWithOptions(runtime);
     }
 
+    public PostMSSearchEnhanceResponse postMSSearchEnhanceWithOptions(PostMSSearchEnhanceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        PostMSSearchEnhanceShrinkRequest request = new PostMSSearchEnhanceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.customConfigInfo)) {
+            request.customConfigInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.customConfigInfo, "CustomConfigInfo", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.fields)) {
+            request.fieldsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.fields, "Fields", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.rankModelInfo)) {
+            request.rankModelInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rankModelInfo, "RankModelInfo", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sort)) {
+            request.sortShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sort, "Sort", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
+            body.put("Body", request.body);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customConfigInfoShrink)) {
+            body.put("CustomConfigInfo", request.customConfigInfoShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.debug)) {
+            body.put("Debug", request.debug);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fieldsShrink)) {
+            body.put("Fields", request.fieldsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filters)) {
+            body.put("Filters", request.filters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            body.put("Page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queries)) {
+            body.put("Queries", request.queries);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rankModelInfoShrink)) {
+            body.put("RankModelInfo", request.rankModelInfoShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rows)) {
+            body.put("Rows", request.rows);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
+            body.put("ServiceId", request.serviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortShrink)) {
+            body.put("Sort", request.sortShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uq)) {
+            body.put("Uq", request.uq);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PostMSSearchEnhance"),
+            new TeaPair("version", "2020-06-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PostMSSearchEnhanceResponse());
+    }
+
+    public PostMSSearchEnhanceResponse postMSSearchEnhance(PostMSSearchEnhanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.postMSSearchEnhanceWithOptions(request, runtime);
+    }
+
     public RequestTableQAResponse requestTableQAWithOptions(RequestTableQARequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
