@@ -4,12 +4,21 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
+    /**
+     * <p>The private gateway ID.</p>
+     */
     @NameInMap("GatewayId")
     public String gatewayId;
 
+    /**
+     * <p>The internal endpoints.</p>
+     */
     @NameInMap("IntranetLinkedVpcList")
     public java.util.List<ListGatewayIntranetLinkedVpcResponseBodyIntranetLinkedVpcList> intranetLinkedVpcList;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,18 +52,59 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
     }
 
     public static class ListGatewayIntranetLinkedVpcResponseBodyIntranetLinkedVpcList extends TeaModel {
+        /**
+         * <p>The IP address.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The security group ID.</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The state of the private gateway.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Creating</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    The private gateway is being created.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Running</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    The private gateway is running.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The virtual private cloud (VPC) ID.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

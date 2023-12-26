@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DeleteServiceLabelRequest extends TeaModel {
+    /**
+     * <p>The service tags that you want to delete.</p>
+     */
     @NameInMap("Keys")
     public java.util.List<String> keys;
 

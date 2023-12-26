@@ -4,24 +4,45 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class CreateAppServiceResponseBody extends TeaModel {
+    /**
+     * <p>The public endpoint of the service.</p>
+     */
     @NameInMap("InternetEndpoint")
     public String internetEndpoint;
 
+    /**
+     * <p>The internal endpoint of the service.</p>
+     */
     @NameInMap("IntranetEndpoint")
     public String intranetEndpoint;
 
+    /**
+     * <p>The region ID of the service.</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The service ID.</p>
+     */
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <p>The service name.</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The service state.</p>
+     */
     @NameInMap("Status")
     public String status;
 

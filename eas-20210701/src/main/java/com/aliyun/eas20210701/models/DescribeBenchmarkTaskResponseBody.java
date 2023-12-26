@@ -4,62 +4,154 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeBenchmarkTaskResponseBody extends TeaModel {
+    /**
+     * <p>The number of instances that you can test.</p>
+     */
     @NameInMap("AvailableAgent")
     public Long availableAgent;
 
     /**
-     * <p>压测任务的状态。</p>
+     * <p>The ID of the operation caller.</p>
      */
     @NameInMap("CallerUid")
     public String callerUid;
 
     /**
-     * <p>预期的压测实例个数。</p>
+     * <p>The number of instances that you want to test.</p>
      */
     @NameInMap("DesiredAgent")
     public Long desiredAgent;
 
+    /**
+     * <p>The endpoint of the service gateway.</p>
+     */
     @NameInMap("Endpoint")
     public String endpoint;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account that is used to call the operation.</p>
+     */
     @NameInMap("ParentUid")
     public String parentUid;
 
+    /**
+     * <p>The event or reason that causes the current state of the stress testing task.</p>
+     */
     @NameInMap("Reason")
     public String reason;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>访问eas服务的鉴权token。</p>
+     * <p>The name of the service that you want to test.</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The state of the stress testing task.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   Creating</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Starting</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   DeleteFailed</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Running</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Stopping</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Error</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Updating</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Deleting</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   CreateFailed</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>压测任务ID。</p>
+     * <p>The ID of the stress testing task.</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
-     * <p>当前压测任务状态产生的原因。</p>
+     * <p>The name of the stress testing task.</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
-     * <p>资源拥有者的UID。</p>
+     * <p>The token for authentication when a stress testing task is created.</p>
      */
     @NameInMap("Token")
     public String token;

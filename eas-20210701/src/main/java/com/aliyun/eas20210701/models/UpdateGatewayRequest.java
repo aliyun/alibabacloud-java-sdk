@@ -4,15 +4,45 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable Internet access. Default value: false.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   false</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     */
     @NameInMap("EnableInternet")
     public Boolean enableInternet;
 
+    /**
+     * <p>Specifies whether to enable internal network access. Default value: true.</p>
+     */
     @NameInMap("EnableIntranet")
     public Boolean enableIntranet;
 
+    /**
+     * <p>The instance type used for the private gateway.</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>The private gateway alias.</p>
+     */
     @NameInMap("Name")
     public String name;
 

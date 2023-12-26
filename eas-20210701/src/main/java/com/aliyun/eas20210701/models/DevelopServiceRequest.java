@@ -4,6 +4,12 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DevelopServiceRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to exit development mode. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false (default)</p>
+     */
     @NameInMap("Exit")
     public String exit;
 

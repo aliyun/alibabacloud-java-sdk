@@ -4,15 +4,27 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class CreateBenchmarkTaskResponseBody extends TeaModel {
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the region where the stress testing task is performed.</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The name of the stress testing task.</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 

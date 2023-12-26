@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListServiceContainersResponseBody extends TeaModel {
+    /**
+     * <p>The containers of the service.</p>
+     */
     @NameInMap("Containers")
     public java.util.List<ContainerInfo> containers;
 

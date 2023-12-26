@@ -25,6 +25,29 @@ public class ListServiceInstancesRequest extends TeaModel {
     @NameInMap("IsSpot")
     public Boolean isSpot;
 
+    /**
+     * <p>The sorting order.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   asc: The instances are sorted in ascending order.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   desc</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    : The instances are sorted in descending order.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     */
     @NameInMap("Order")
     public String order;
 

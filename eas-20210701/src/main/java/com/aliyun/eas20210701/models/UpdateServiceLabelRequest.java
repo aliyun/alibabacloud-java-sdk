@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceLabelRequest extends TeaModel {
+    /**
+     * <p>The custom service tags.</p>
+     */
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;
 

@@ -31,6 +31,9 @@ public class DescribeGatewayResponseBody extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>The Internet access control policies.</p>
+     */
     @NameInMap("InternetAclPolicyList")
     public java.util.List<DescribeGatewayResponseBodyInternetAclPolicyList> internetAclPolicyList;
 
@@ -224,12 +227,39 @@ public class DescribeGatewayResponseBody extends TeaModel {
     }
 
     public static class DescribeGatewayResponseBodyInternetAclPolicyList extends TeaModel {
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The accessible CIDR block.</p>
+         */
         @NameInMap("Entry")
         public String entry;
 
+        /**
+         * <p>The state of the private gateway.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Creating</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Running</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -265,18 +295,51 @@ public class DescribeGatewayResponseBody extends TeaModel {
     }
 
     public static class DescribeGatewayResponseBodyIntranetLinkedVpcList extends TeaModel {
+        /**
+         * <p>The IP address.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The ID of the security group.</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The state of the private gateway.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Creating</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Running</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

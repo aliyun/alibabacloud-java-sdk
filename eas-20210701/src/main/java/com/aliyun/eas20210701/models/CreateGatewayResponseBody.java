@@ -4,15 +4,27 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class CreateGatewayResponseBody extends TeaModel {
+    /**
+     * <p>The region ID of the private gateway.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The private gateway ID.</p>
+     */
     @NameInMap("GatewayId")
     public String gatewayId;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
