@@ -206,9 +206,19 @@ public class GetTaskResponseBody extends TeaModel {
     }
 
     public static class GetTaskResponseBodyTaskDetailTaskTags extends TeaModel {
+        /**
+         * <p>The custom tag key.</p>
+         * <br>
+         * <p>The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The custom tag value.</p>
+         * <br>
+         * <p>The value must be 1 to 128 characters in length. It cannot start with `acs:` and cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -245,7 +255,7 @@ public class GetTaskResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The logs of the product instance.</p>
+         * <p>The logs of the instance.</p>
          */
         @NameInMap("Log")
         public GetTaskResponseBodyTaskDetailLog log;
@@ -257,7 +267,7 @@ public class GetTaskResponseBody extends TeaModel {
         public java.util.List<GetTaskResponseBodyTaskDetailOutputs> outputs;
 
         /**
-         * <p>The input parameters of the template.</p>
+         * <p>The parameters that are specified in the template.</p>
          */
         @NameInMap("Parameters")
         public java.util.List<GetTaskResponseBodyTaskDetailParameters> parameters;
@@ -328,6 +338,9 @@ public class GetTaskResponseBody extends TeaModel {
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The custom tags.</p>
+         */
         @NameInMap("TaskTags")
         public java.util.List<GetTaskResponseBodyTaskDetailTaskTags> taskTags;
 
