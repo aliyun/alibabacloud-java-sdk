@@ -139,7 +139,7 @@ public class GetProvisionedProductPlanResponseBody extends TeaModel {
          * <p>*   Submit: submits the plan.</p>
          * <p>*   Cancel: cancels the plan.</p>
          * <p>*   Approve: approves the plan.</p>
-         * <p>*   reject: rejectes the plan.</p>
+         * <p>*   reject: rejects the plan.</p>
          */
         @NameInMap("ApprovalAction")
         public String approvalAction;
@@ -925,7 +925,7 @@ public class GetProvisionedProductPlanResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the product version is visible to end users. Valid values:</p>
          * <br>
-         * <p>*   true (defaut)</p>
+         * <p>*   true (default)</p>
          * <p>*   false</p>
          */
         @NameInMap("Active")
