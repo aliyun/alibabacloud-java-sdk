@@ -4,9 +4,15 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeKmsKeysResponseBody extends TeaModel {
+    /**
+     * <p>The KMS keys.</p>
+     */
     @NameInMap("KmsKeys")
     public java.util.List<DescribeKmsKeysResponseBodyKmsKeys> kmsKeys;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
     }
 
     public static class DescribeKmsKeysResponseBodyKmsKeys extends TeaModel {
+        /**
+         * <p>The alias of the key.</p>
+         */
         @NameInMap("KeyAlias")
         public String keyAlias;
 
+        /**
+         * <p>The key ID.</p>
+         */
         @NameInMap("KeyId")
         public String keyId;
 

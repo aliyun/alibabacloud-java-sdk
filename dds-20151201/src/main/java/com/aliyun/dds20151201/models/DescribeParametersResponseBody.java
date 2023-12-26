@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeParametersResponseBody extends TeaModel {
     /**
-     * <p>The settings of parameters that are being configured.</p>
+     * <p>The parameter settings in the configuration template.</p>
      */
     @NameInMap("ConfigParameters")
     public DescribeParametersResponseBodyConfigParameters configParameters;
@@ -198,11 +198,11 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     public static class DescribeParametersResponseBodyRunningParametersParameter extends TeaModel {
         /**
-         * <p>The role of the instance. Valid values:</p>
+         * <p>实例的角色类型，取值说明：</p>
          * <br>
-         * <p>*   **db**: a shard node.</p>
-         * <p>*   **cs**: a Configserver node.</p>
-         * <p>*   **mongos**: a mongos node.</p>
+         * <p>- **db**：shard角色。</p>
+         * <p>- **cs**：config server角色。</p>
+         * <p>- **mongos**：mongos角色。</p>
          */
         @NameInMap("CharacterType")
         public String characterType;

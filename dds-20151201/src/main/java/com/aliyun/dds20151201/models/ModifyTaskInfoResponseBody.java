@@ -4,15 +4,27 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ModifyTaskInfoResponseBody extends TeaModel {
+    /**
+     * <p>The error code for the failed task. It is the same as that of the ModifyTaskInfo operation.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The ID of the failed task. The operation returns results after a task fails.</p>
+     */
     @NameInMap("ErrorTaskId")
     public String errorTaskId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of successful tasks.</p>
+     */
     @NameInMap("SuccessCount")
     public String successCount;
 

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyAuditLogFilterRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The type of the audit log entries to be collected. Valid values:</p>
+     * <p>The type of logs collected by the audit log feature of the instance. Separate multiple types with commas (,). Valid values:</p>
      * <br>
      * <p>*   **admin**: O\&M and management operations</p>
      * <p>*   **slow**: slow query logs</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailabilityZonesRequest extends TeaModel {
     /**
-     * <p>Specifies the language of the returned values of the **RegionName** and **ZoneName** parameters. Default value: zh. Valid values:</p>
+     * <p>The language of the returned values of the **RegionName** and **ZoneName** parameters. Default value: zh. Valid values:</p>
      * <br>
      * <p>*   **zh**: Chinese.</p>
      * <p>*   **en**: English</p>
@@ -13,6 +13,9 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The instance type of the instance.</p>
+     */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
@@ -25,12 +28,21 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     @NameInMap("DbType")
     public String dbType;
 
+    /**
+     * <p>The database engine version of the instance.</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    /**
+     * <p>The ID of the secondary zone that you want to exclude from the query results. You can configure both the ExcludeSecondaryZoneId and ExcludeZoneId parameters to filter multiple zones that you want to exclude from the query results.</p>
+     */
     @NameInMap("ExcludeSecondaryZoneId")
     public String excludeSecondaryZoneId;
 
+    /**
+     * <p>The ID of the zone that you want to exclude from the query results.</p>
+     */
     @NameInMap("ExcludeZoneId")
     public String excludeZoneId;
 
@@ -87,11 +99,8 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
      * <p>*   **cloud_essd3**: PL3 ESSD.</p>
      * <p>*   **local_ssd**: local SSD.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   Instances of MongoDB 4.4 and later only support cloud disks. **cloud_essd1** is selected if you leave this parameter empty.</p>
-     * <br>
-     * <p>*   Instances of MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.</p>
+     * <p>> *   Instances of MongoDB 4.4 and later only support cloud disks. **cloud_essd1** is selected if you leave this parameter empty.</p>
+     * <p>> *   Instances of MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.</p>
      */
     @NameInMap("StorageType")
     public String storageType;

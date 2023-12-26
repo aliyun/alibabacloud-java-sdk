@@ -7,16 +7,15 @@ public class ModifyParametersRequest extends TeaModel {
     /**
      * <p>The role of the instance. Valid values:</p>
      * <br>
-     * <p>*   **db**: a shard node</p>
-     * <p>*   **cs**: a Configserver node</p>
-     * <p>*   **mongos**: a mongos node</p>
-     * <p>*   **logic**: a sharded cluster instance</p>
+     * <p>*   **db**: a shard node.</p>
+     * <p>*   **cs**: a Configserver node.</p>
+     * <p>*   **mongos**: a mongos node.</p>
      */
     @NameInMap("CharacterType")
     public String characterType;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <br>
      * <p>>  If you set this parameter to the ID of a sharded cluster instance, you must also specify the NodeId parameter.</p>
      */

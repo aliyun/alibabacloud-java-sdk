@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetAccountPasswordResponseBody extends TeaModel {
     /**
-     * <p>The account for which you want to reset the password. Set the value to **root**.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

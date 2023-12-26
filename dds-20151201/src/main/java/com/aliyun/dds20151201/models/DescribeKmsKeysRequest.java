@@ -7,6 +7,9 @@ public class DescribeKmsKeysRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    /**
+     * <p>The region ID. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

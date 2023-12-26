@@ -31,7 +31,7 @@ public class DescribeParametersRequest extends TeaModel {
     /**
      * <p>The ID of the mongos or shard node in the specified sharded cluster instance.</p>
      * <br>
-     * <p>>  This parameter is valid only when you specify the **DBInstanceId** parameter to the ID of a sharded cluster instance.</p>
+     * <p>>  This parameter is valid when the **DBInstanceId** parameter is set to the ID of a sharded cluster instance.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
