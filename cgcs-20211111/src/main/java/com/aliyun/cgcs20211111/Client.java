@@ -933,6 +933,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listAppVersionWithOptions(request, runtime);
     }
 
+    public ListInstancesResponse listInstancesWithOptions(ListInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInstances"),
+            new TeaPair("version", "2021-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstancesResponse());
+    }
+
+    public ListInstancesResponse listInstances(ListInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listInstancesWithOptions(request, runtime);
+    }
+
     public ModifyAppResponse modifyAppWithOptions(ModifyAppRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1071,6 +1096,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ReleaseCapacityByBatchResponse releaseCapacityByBatch(ReleaseCapacityByBatchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.releaseCapacityByBatchWithOptions(request, runtime);
+    }
+
+    public ReleaseInstancesResponse releaseInstancesWithOptions(ReleaseInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.amount)) {
+            body.put("Amount", request.amount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.districtId)) {
+            body.put("DistrictId", request.districtId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
+            body.put("InstanceType", request.instanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReleaseInstances"),
+            new TeaPair("version", "2021-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReleaseInstancesResponse());
+    }
+
+    public ReleaseInstancesResponse releaseInstances(ReleaseInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.releaseInstancesWithOptions(request, runtime);
+    }
+
+    public ReserveInstancesResponse reserveInstancesWithOptions(ReserveInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.amount)) {
+            body.put("Amount", request.amount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.districtId)) {
+            body.put("DistrictId", request.districtId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
+            body.put("InstanceType", request.instanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReserveInstances"),
+            new TeaPair("version", "2021-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReserveInstancesResponse());
+    }
+
+    public ReserveInstancesResponse reserveInstances(ReserveInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.reserveInstancesWithOptions(request, runtime);
     }
 
     public SendBizCocChangeCallbackResponse sendBizCocChangeCallbackWithOptions(SendBizCocChangeCallbackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
