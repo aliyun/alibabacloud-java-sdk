@@ -4,9 +4,15 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class CreateGatewayIntranetLinkedVpcRequest extends TeaModel {
+    /**
+     * <p>The vSwitch ID.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The virtual private cloud (VPC) ID.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

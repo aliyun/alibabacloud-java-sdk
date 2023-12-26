@@ -4,18 +4,33 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListBenchmarkTaskResponseBody extends TeaModel {
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The time when the stress testing task was updated.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<ListBenchmarkTaskResponseBodyTasks> tasks;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

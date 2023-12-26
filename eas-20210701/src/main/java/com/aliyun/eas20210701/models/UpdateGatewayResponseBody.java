@@ -4,12 +4,21 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class UpdateGatewayResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the gateway.</p>
+     */
     @NameInMap("GatewayId")
     public String gatewayId;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

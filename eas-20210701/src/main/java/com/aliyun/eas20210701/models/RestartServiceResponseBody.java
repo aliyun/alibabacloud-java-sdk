@@ -4,9 +4,15 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class RestartServiceResponseBody extends TeaModel {
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,27 +4,61 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class CreateAppServiceRequest extends TeaModel {
+    /**
+     * <p>The quota ID.</p>
+     */
     @NameInMap("QuotaId")
     public String quotaId;
 
+    /**
+     * <p>The workspace ID.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
+    /**
+     * <p>The application service type.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   LLM</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <p>The application version.</p>
+     */
     @NameInMap("AppVersion")
     public String appVersion;
 
+    /**
+     * <p>Additional configurations that are required for the service deployment.</p>
+     */
     @NameInMap("Config")
     public java.util.Map<String, ?> config;
 
+    /**
+     * <p>The number of instances.</p>
+     */
     @NameInMap("Replicas")
     public Integer replicas;
 
+    /**
+     * <p>The service name.</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The service specifications.</p>
+     */
     @NameInMap("ServiceSpec")
     public String serviceSpec;
 

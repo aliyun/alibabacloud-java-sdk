@@ -4,9 +4,6 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceLogRequest extends TeaModel {
-    /**
-     * <p>服务实例的容器名称。</p>
-     */
     @NameInMap("ContainerName")
     public String containerName;
 

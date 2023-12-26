@@ -4,15 +4,27 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceAutoScalerRequest extends TeaModel {
+    /**
+     * <p>The Autoscaler operation.</p>
+     */
     @NameInMap("behavior")
     public CreateServiceAutoScalerRequestBehavior behavior;
 
+    /**
+     * <p>The maximum number of instances. The value must be greater than that of the min parameter.</p>
+     */
     @NameInMap("max")
     public Integer max;
 
+    /**
+     * <p>The minimum number of instances. The value must be greater than 0.</p>
+     */
     @NameInMap("min")
     public Integer min;
 
+    /**
+     * <p>The Autoscaler strategies.</p>
+     */
     @NameInMap("scaleStrategies")
     public java.util.List<CreateServiceAutoScalerRequestScaleStrategies> scaleStrategies;
 
@@ -54,9 +66,15 @@ public class CreateServiceAutoScalerRequest extends TeaModel {
     }
 
     public static class CreateServiceAutoScalerRequestBehaviorOnZero extends TeaModel {
+        /**
+         * <p>The time window that is required before the number of instances is reduced to 0. The number of instances can be reduced to 0 only if no request is available or no traffic exists in the specified time window. Default value: 600.</p>
+         */
         @NameInMap("scaleDownGracePeriodSeconds")
         public Integer scaleDownGracePeriodSeconds;
 
+        /**
+         * <p>The number of instances that you want to create at a time if the number of instances is scaled out from 0. Default value: 1.</p>
+         */
         @NameInMap("scaleUpActivationReplicas")
         public Integer scaleUpActivationReplicas;
 
@@ -84,6 +102,9 @@ public class CreateServiceAutoScalerRequest extends TeaModel {
     }
 
     public static class CreateServiceAutoScalerRequestBehaviorScaleDown extends TeaModel {
+        /**
+         * <p>The time window that is required before the scale-in operation is performed. The scale-in operation can be performed only if the specified metric drops below the specified threshold in the specified time window. Default value: 300.</p>
+         */
         @NameInMap("stabilizationWindowSeconds")
         public Integer stabilizationWindowSeconds;
 
@@ -103,6 +124,9 @@ public class CreateServiceAutoScalerRequest extends TeaModel {
     }
 
     public static class CreateServiceAutoScalerRequestBehaviorScaleUp extends TeaModel {
+        /**
+         * <p>The time window that is required before the scale-out operation is performed. The scale-out operation can be performed only if the specified metric exceeds the specified threshold in the specified time window. Default value: 0.</p>
+         */
         @NameInMap("stabilizationWindowSeconds")
         public Integer stabilizationWindowSeconds;
 
@@ -122,12 +146,21 @@ public class CreateServiceAutoScalerRequest extends TeaModel {
     }
 
     public static class CreateServiceAutoScalerRequestBehavior extends TeaModel {
+        /**
+         * <p>The operation that reduces the number of instances to 0.</p>
+         */
         @NameInMap("onZero")
         public CreateServiceAutoScalerRequestBehaviorOnZero onZero;
 
+        /**
+         * <p>The scale-in operation.</p>
+         */
         @NameInMap("scaleDown")
         public CreateServiceAutoScalerRequestBehaviorScaleDown scaleDown;
 
+        /**
+         * <p>The scale-out operation.</p>
+         */
         @NameInMap("scaleUp")
         public CreateServiceAutoScalerRequestBehaviorScaleUp scaleUp;
 
@@ -163,12 +196,27 @@ public class CreateServiceAutoScalerRequest extends TeaModel {
     }
 
     public static class CreateServiceAutoScalerRequestScaleStrategies extends TeaModel {
+        /**
+         * <p>The name of the metric for triggering auto scaling. Valid values:</p>
+         * <br>
+         * <p>*   QPS: the queries per second (QPS) for an individual instance.</p>
+         * <p>*   CPU: the CPU utilization.</p>
+         */
         @NameInMap("metricName")
         public String metricName;
 
+        /**
+         * <p>The service for which the metric is specified. If you do not set this parameter, the current service is specified by default.</p>
+         */
         @NameInMap("service")
         public String service;
 
+        /**
+         * <p>The threshold of the metric that triggers auto scaling.</p>
+         * <br>
+         * <p>*   If you set metricName to QPS, scale-out is triggered when the average QPS for a single instance is greater than this threshold.</p>
+         * <p>*   If you set metricName to CPU, scale-out is triggered when the average CPU utilization for a single instance is greater than this threshold.</p>
+         */
         @NameInMap("threshold")
         public Float threshold;
 

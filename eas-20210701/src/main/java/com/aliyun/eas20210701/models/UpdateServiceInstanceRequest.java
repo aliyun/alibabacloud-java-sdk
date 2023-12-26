@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceInstanceRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to isolate the service instance.</p>
+     */
     @NameInMap("Isolate")
     public Boolean isolate;
 

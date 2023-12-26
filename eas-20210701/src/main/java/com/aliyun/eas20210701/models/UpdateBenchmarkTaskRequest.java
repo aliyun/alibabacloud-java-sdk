@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class UpdateBenchmarkTaskRequest extends TeaModel {
+    /**
+     * <p>The request body. The body includes the parameters that are set to create a stress testing task.</p>
+     */
     @NameInMap("body")
     public String body;
 

@@ -4,51 +4,102 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the cluster to which the resource group belongs.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The total number of CPU cores.</p>
+     */
     @NameInMap("CpuCount")
     public Integer cpuCount;
 
+    /**
+     * <p>The time when the resource group was created.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The additional information, such as the connection status of a virtual private cloud (VPC) and the log status of Log Service.</p>
+     */
     @NameInMap("ExtraData")
     public String extraData;
 
+    /**
+     * <p>The total number of GPUs.</p>
+     */
     @NameInMap("GpuCount")
     public Integer gpuCount;
 
+    /**
+     * <p>The total number of instances in the resource group.</p>
+     */
     @NameInMap("InstanceCount")
     public Integer instanceCount;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the resource group owner.</p>
+     */
     @NameInMap("OwnerUid")
     public String ownerUid;
 
+    /**
+     * <p>The total number of pay-as-you-go instances in the resource group.</p>
+     */
     @NameInMap("PostPaidInstanceCount")
     public Integer postPaidInstanceCount;
 
+    /**
+     * <p>The total number of subscription instances in the resource group.</p>
+     */
     @NameInMap("PrePaidInstanceCount")
     public Integer prePaidInstanceCount;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the Elastic Algorithm Service (EAS) resource.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <p>The name of the EAS resource.</p>
+     */
     @NameInMap("ResourceName")
     public String resourceName;
 
+    /**
+     * <p>The type of the resource. Valid values:</p>
+     * <br>
+     * <p>- Dedicated</p>
+     * <p>- SelfManaged</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The state of the resource group.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The time when the resource group was last updated.</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 

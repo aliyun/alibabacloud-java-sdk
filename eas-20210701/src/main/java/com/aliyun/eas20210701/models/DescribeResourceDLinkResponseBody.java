@@ -7,6 +7,9 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
     @NameInMap("AuxVSwitchList")
     public java.util.List<String> auxVSwitchList;
 
+    /**
+     * <p>The CIDR blocks of the clients that you want to connect to. The CIDR blocks are added to the back-to-origin route of the server.</p>
+     */
     @NameInMap("DestinationCIDRs")
     public String destinationCIDRs;
 

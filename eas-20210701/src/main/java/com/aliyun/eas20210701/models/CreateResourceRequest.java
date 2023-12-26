@@ -4,27 +4,53 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class CreateResourceRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable auto-renewal. Valid values: false (default)</p>
+     * <br>
+     * <p>*   true</p>
+     */
     @NameInMap("AutoRenewal")
     public Boolean autoRenewal;
 
+    /**
+     * <p>The billing method of the instance. Valid values:</p>
+     * <br>
+     * <p>*   PrePaid: the subscription billing method.</p>
+     * <p>*   PostPaid: the pay-as-you-go billing method.</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The number of ECS instances.</p>
+     */
     @NameInMap("EcsInstanceCount")
     public Integer ecsInstanceCount;
 
+    /**
+     * <p>The type of the Elastic Compute Service (ECS) instance.</p>
+     */
     @NameInMap("EcsInstanceType")
     public String ecsInstanceType;
 
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>自运维资源组配置选项</p>
+     */
     @NameInMap("SelfManagedResourceOptions")
     public CreateResourceRequestSelfManagedResourceOptions selfManagedResourceOptions;
 
+    /**
+     * <p>The size of the system disk. Unit: GiB. Valid values: 200 to 2000. Default value: 200.</p>
+     */
     @NameInMap("SystemDiskSize")
     public Integer systemDiskSize;
 
+    /**
+     * <p>The zone to which the instance belongs.</p>
+     */
     @NameInMap("Zone")
     public String zone;
 
@@ -98,15 +124,27 @@ public class CreateResourceRequest extends TeaModel {
     }
 
     public static class CreateResourceRequestSelfManagedResourceOptionsNodeTolerations extends TeaModel {
+        /**
+         * <p>效果</p>
+         */
         @NameInMap("effect")
         public String effect;
 
+        /**
+         * <p>键名</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>键名和键值的关系</p>
+         */
         @NameInMap("operator")
         public String operator;
 
+        /**
+         * <p>键值</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -150,15 +188,27 @@ public class CreateResourceRequest extends TeaModel {
     }
 
     public static class CreateResourceRequestSelfManagedResourceOptions extends TeaModel {
+        /**
+         * <p>自运维集群Id</p>
+         */
         @NameInMap("ExternalClusterId")
         public String externalClusterId;
 
+        /**
+         * <p>节点的标签键值对集合</p>
+         */
         @NameInMap("NodeMatchLabels")
         public java.util.Map<String, String> nodeMatchLabels;
 
+        /**
+         * <p>节点污点的容忍度列表</p>
+         */
         @NameInMap("NodeTolerations")
         public java.util.List<CreateResourceRequestSelfManagedResourceOptionsNodeTolerations> nodeTolerations;
 
+        /**
+         * <p>授予云服务PAI-EAS相关权限的RAM角色名称</p>
+         */
         @NameInMap("RoleName")
         public String roleName;
 

@@ -4,12 +4,21 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DeleteGatewayIntranetLinkedVpcResponseBody extends TeaModel {
+    /**
+     * <p>The private gateway ID.</p>
+     */
     @NameInMap("GatewayId")
     public String gatewayId;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
