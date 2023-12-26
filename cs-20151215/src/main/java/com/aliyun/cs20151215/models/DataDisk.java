@@ -16,6 +16,9 @@ public class DataDisk extends TeaModel {
     @NameInMap("category")
     public String category;
 
+    @NameInMap("device")
+    public String device;
+
     @NameInMap("encrypted")
     public String encrypted;
 
@@ -28,6 +31,9 @@ public class DataDisk extends TeaModel {
     @NameInMap("mount_target")
     public String mountTarget;
 
+    @NameInMap("name")
+    public String name;
+
     @NameInMap("performance_level")
     public String performanceLevel;
 
@@ -36,6 +42,9 @@ public class DataDisk extends TeaModel {
 
     @NameInMap("size")
     public Long size;
+
+    @NameInMap("snapshot_id")
+    public String snapshotId;
 
     public static DataDisk build(java.util.Map<String, ?> map) throws Exception {
         DataDisk self = new DataDisk();
@@ -74,6 +83,14 @@ public class DataDisk extends TeaModel {
         return this.category;
     }
 
+    public DataDisk setDevice(String device) {
+        this.device = device;
+        return this;
+    }
+    public String getDevice() {
+        return this.device;
+    }
+
     public DataDisk setEncrypted(String encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -106,6 +123,14 @@ public class DataDisk extends TeaModel {
         return this.mountTarget;
     }
 
+    public DataDisk setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
     public DataDisk setPerformanceLevel(String performanceLevel) {
         this.performanceLevel = performanceLevel;
         return this;
@@ -128,6 +153,14 @@ public class DataDisk extends TeaModel {
     }
     public Long getSize() {
         return this.size;
+    }
+
+    public DataDisk setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+    }
+    public String getSnapshotId() {
+        return this.snapshotId;
     }
 
 }
