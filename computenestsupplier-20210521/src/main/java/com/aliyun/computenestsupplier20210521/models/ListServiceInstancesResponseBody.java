@@ -298,6 +298,9 @@ public class ListServiceInstancesResponseBody extends TeaModel {
     }
 
     public static class ListServiceInstancesResponseBodyServiceInstances extends TeaModel {
+        @NameInMap("BizStatus")
+        public String bizStatus;
+
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -367,6 +370,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         public static ListServiceInstancesResponseBodyServiceInstances build(java.util.Map<String, ?> map) throws Exception {
             ListServiceInstancesResponseBodyServiceInstances self = new ListServiceInstancesResponseBodyServiceInstances();
             return TeaModel.build(map, self);
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstances setBizStatus(String bizStatus) {
+            this.bizStatus = bizStatus;
+            return this;
+        }
+        public String getBizStatus() {
+            return this.bizStatus;
         }
 
         public ListServiceInstancesResponseBodyServiceInstances setCreateTime(String createTime) {

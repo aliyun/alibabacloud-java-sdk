@@ -1443,8 +1443,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateServiceInstanceAttributeWithOptions(request, runtime);
     }
 
-    public UpgradeServiceInstanceResponse upgradeServiceInstanceWithOptions(UpgradeServiceInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpgradeServiceInstanceResponse upgradeServiceInstanceWithOptions(UpgradeServiceInstanceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpgradeServiceInstanceShrinkRequest request = new UpgradeServiceInstanceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.parameters)) {
+            request.parametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.parameters, "Parameters", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
@@ -1452,6 +1458,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parametersShrink)) {
+            query.put("Parameters", request.parametersShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
