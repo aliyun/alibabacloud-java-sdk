@@ -174,7 +174,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String insName;
 
         /**
-         * <p>The time when the task was modified. The time is displayed in the *yyyy-mm-dd*t*hh:mm:ss*z format. The time is displayed in UTC.</p>
+         * <p>The time when the task was modified. The time is displayed in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
@@ -198,7 +198,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String resultInfo;
 
         /**
-         * <p>The start time of the task. The time is displayed in the *yyyy-mm-dd*t*hh:mm:ss*z format. The time is displayed in UTC.</p>
+         * <p>The start time of the task. The time is displayed in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -216,7 +216,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public java.util.List<String> subInsNames;
 
         /**
-         * <p>The time when the task was interrupted. The time is displayed in the *yyyy-mm-dd*t*hh:mm:ss*z format. The time is displayed in Coordinated Universal Time (UTC).</p>
+         * <p>The time when the task was interrupted. The time is displayed in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in Coordinated Universal Time (UTC).</p>
          */
         @NameInMap("SwitchTime")
         public String switchTime;

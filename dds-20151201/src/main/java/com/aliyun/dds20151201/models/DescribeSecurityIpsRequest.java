@@ -22,6 +22,9 @@ public class DescribeSecurityIpsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("ShowHDMIps")
+    public Boolean showHDMIps;
+
     public static DescribeSecurityIpsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecurityIpsRequest self = new DescribeSecurityIpsRequest();
         return TeaModel.build(map, self);
@@ -65,6 +68,14 @@ public class DescribeSecurityIpsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeSecurityIpsRequest setShowHDMIps(Boolean showHDMIps) {
+        this.showHDMIps = showHDMIps;
+        return this;
+    }
+    public Boolean getShowHDMIps() {
+        return this.showHDMIps;
     }
 
 }

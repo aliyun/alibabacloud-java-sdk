@@ -11,17 +11,17 @@ public class ModifyDBInstanceDescriptionRequest extends TeaModel {
      * <br>
      * <p>*   The name cannot start with `http://` or `https://`.</p>
      * <br>
-     * <p>*   The name must start with a letter.</p>
+     * <p>*   It must start with a letter.</p>
      * <br>
-     * <p>*   The name must be 2 to 256 characters in length, and can contain letters, underscores (\_), hyphens (-), and digits.</p>
+     * <p>*   It must be 2 to 256 characters in length, and can contain letters, underscores (\_), hyphens (-), and digits.</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
     /**
-     * <p>The ID of the instance</p>
+     * <p>The instance ID.</p>
      * <br>
-     * <p>> To modify the name of a shard or mongos node in a sharded cluster instance, you must also specify the **NodeId** parameter.</p>
+     * <p>>  To modify the name of a shard or mongos node in a sharded cluster instance, you must also specify the **NodeId** parameter.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -29,7 +29,7 @@ public class ModifyDBInstanceDescriptionRequest extends TeaModel {
     /**
      * <p>The ID of the shard or mongos node in the sharded cluster instance.</p>
      * <br>
-     * <p>> This parameter is valid only if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.</p>
+     * <p>>  This parameter is valid only if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;

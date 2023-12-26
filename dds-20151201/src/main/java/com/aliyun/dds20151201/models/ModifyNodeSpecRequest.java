@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyNodeSpecRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <br>
-     * <p>*   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.</p>
-     * <p>*   **false**: disables automatic payment.</p>
+     * <p>*   **true** (default): enables automatic payment. Make sure that you have sufficient balance within your account.</p>
+     * <p>*   **false**: disables automatic payment. In this case, you must manually pay for the instance.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
@@ -38,9 +38,9 @@ public class ModifyNodeSpecRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The time when the changed configurations take effect. Default value: Immediately. Valid values:</p>
+     * <p>The time when the changed configurations take effect. Valid values:</p>
      * <br>
-     * <p>*   **Immediately**: The new configurations immediately take effect.</p>
+     * <p>*   **Immediately** (default): The new configurations immediately take effect</p>
      * <p>*   **MaintainTime**: The new configurations take effect during the maintenance window of the instance.</p>
      */
     @NameInMap("EffectiveTime")

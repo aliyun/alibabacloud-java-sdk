@@ -4,12 +4,21 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class CreateAccountRequest extends TeaModel {
+    /**
+     * <p>The name of the database account. The name must be 4 to 16 characters in length. It can contain lowercase letters, digits, and underscores (\_). It must start with a lowercase letter. The account is granted read-only permissions.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>The password of the database account. The password must be 8 to 32 characters in length. It can contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters. Special characters include ! # $ % ^ & \* ( ) \_ + - =</p>
+     */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

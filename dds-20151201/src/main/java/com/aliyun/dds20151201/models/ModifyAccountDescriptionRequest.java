@@ -21,7 +21,7 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

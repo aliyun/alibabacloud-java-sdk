@@ -802,9 +802,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <p>*   **order_wait_for_produce**: Orders are being delivered for production.</p>
          * <br>
          * <p>>  The order production process includes the following steps: place an order, pay for an order, deliver an order for production, produce an order, and complete the production.</p>
-         * <br>
-         * <p>*   If an order is in the **order_wait_for_produce** state for a long time, an error occurs when the order is being delivered for production. The system will automatically retry.</p>
-         * <p>*   The instance status changes only when the order is in the producing and complete state, such as changing configurations and running.</p>
+         * <p>> *   If an order is in the **order_wait_for_produce** state for a long time, an error occurs when the order is being delivered for production. The system will automatically retry.</p>
+         * <p>> *   The instance status changes only when the order is in the producing and complete state, such as changing configurations and running.</p>
          */
         @NameInMap("DBInstanceOrderStatus")
         public String DBInstanceOrderStatus;
@@ -905,11 +904,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <p>*   **eu-central-1b**: Frankfurt Zone B</p>
          * <p>*   **eu-central-1c**: Frankfurt Zone C</p>
          * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.</p>
-         * <br>
-         * <p>*   This parameter is returned only if you use the China site (aliyun.com).</p>
+         * <p>> *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.</p>
+         * <p>> *   This parameter is returned only if you use the China site (aliyun.com).</p>
          */
         @NameInMap("HiddenZoneId")
         public String hiddenZoneId;
@@ -1076,11 +1072,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <p>*   **eu-central-1b**: Frankfurt Zone B</p>
          * <p>*   **eu-central-1c**: Frankfurt Zone C</p>
          * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.</p>
-         * <br>
-         * <p>*   This parameter is returned only if you use the China site (aliyun.com).</p>
+         * <p>> *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.</p>
+         * <p>> *   This parameter is returned only if you use the China site (aliyun.com).</p>
          */
         @NameInMap("SecondaryZoneId")
         public String secondaryZoneId;

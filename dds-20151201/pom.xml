@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>dds20151201</artifactId>
-  <version>5.0.0</version>
+  <version>5.0.1</version>
   <packaging>jar</packaging>
   <name>dds20151201</name>
   <description>Alibaba Cloud Dds (20151201) SDK for Java

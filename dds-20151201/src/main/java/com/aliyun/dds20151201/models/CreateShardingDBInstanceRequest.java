@@ -31,7 +31,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
      * <p>*   **PostPaid** (default): pay-as-you-go</p>
      * <p>*   **PrePaid**: subscription</p>
      * <br>
-     * <p>> **Period** is required if you set the value of this parameter to **PrePaid**.</p>
+     * <p>>  If you set this parameter to **PrePaid**, you must also specify the **Period** parameter.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
@@ -59,12 +59,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public String DBInstanceDescription;
 
     /**
-     * <p>Specifies whether to encrypt the disk. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
-     * <p>Default value: false.</p>
+     * <p>Specifies whether to enable disk encryption.</p>
      */
     @NameInMap("Encrypted")
     public Boolean encrypted;
@@ -91,17 +86,14 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
      * <p>*   **4.0**</p>
      * <p>*   **3.4**</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).</p>
-     * <br>
-     * <p>*   If you call this operation to clone an instance, set the value of this parameter to the engine version of the source instance.</p>
+     * <p>> *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).</p>
+     * <p>> *   If you call this operation to clone an instance, set the value of this parameter to the engine version of the source instance.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
-     * <p>实例的全局IP白名单模板，多个IP白名单模板请用英文逗号（,）分隔，不可重复。</p>
+     * <p>The global IP address whitelist template of the instance. Separate multiple templates with commas (,). The template name must be globally unique.</p>
      */
     @NameInMap("GlobalSecurityGroupIds")
     public String globalSecurityGroupIds;
@@ -128,13 +120,9 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
      * <p>*   **eu-central-1b**: Frankfurt Zone B</p>
      * <p>*   **eu-central-1c**: Frankfurt Zone C</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   This parameter is available and required if you set the value of **EngineVersion** to **4.4** or **5.0**.</p>
-     * <br>
-     * <p>*   The value of this parameter cannot be the same as the value of **ZoneId** or **SecondaryZoneId**.</p>
-     * <br>
-     * <p>*   For more information about the multi-zone deployment policy of a sharded cluster instance, see [Create a multi-zone sharded cluster instance](~~117865~~).</p>
+     * <p>> *   This parameter is available and required if you set the value of **EngineVersion** to **4.4** or **5.0**.</p>
+     * <p>> *   The value of this parameter cannot be the same as the value of **ZoneId** or **SecondaryZoneId**.</p>
+     * <p>> *   For more information about the multi-zone deployment policy of a sharded cluster instance, see [Create a multi-zone sharded cluster instance](~~117865~~).</p>
      */
     @NameInMap("HiddenZoneId")
     public String hiddenZoneId;
@@ -147,8 +135,6 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The network type of the instance. Set the value to VPC.</p>
-     * <br>
-     * <p>****</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
@@ -160,11 +146,11 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The subscription period of the instance. Unit: month.</p>
+     * <p>The subscription period of the instance. Unit: months.</p>
      * <br>
-     * <p>Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, and 60************************</p>
+     * <p>Valid values: **1** to **9**, **12**, **24**, **36**, and **60**.</p>
      * <br>
-     * <p>> This parameter is available and required if you set the value of **ChargeType** to **PrePaid**.</p>
+     * <p>> When you set the **ChargeType** parameter to **PrePaid**, this parameter is valid and required.</p>
      */
     @NameInMap("Period")
     public Integer period;
@@ -178,6 +164,9 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     @NameInMap("ProtocolType")
     public String protocolType;
 
+    /**
+     * <p>The provisioned IOPS. Valid values: 0 to 50000.</p>
+     */
     @NameInMap("ProvisionedIops")
     public Long provisionedIops;
 
@@ -188,7 +177,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The shard nodes of the instance.</p>
+     * <p>The information of the shard node.</p>
      */
     @NameInMap("ReplicaSet")
     public java.util.List<CreateShardingDBInstanceRequestReplicaSet> replicaSet;
@@ -235,12 +224,9 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
      * <p>*   **eu-central-1b**: Frankfurt Zone B</p>
      * <p>*   **eu-central-1c**: Frankfurt Zone C</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   This parameter is available and required if you set the value of **EngineVersion** to **4.4** or **5.0**.</p>
-     * <br>
-     * <p>*   The value of this parameter cannot be the same as the value of **ZoneId** or **HiddenZoneId**.</p>
-     * <p>*   For more information about the multi-zone deployment policy of a sharded cluster instance, see [Create a multi-zone sharded cluster instance](~~117865~~).</p>
+     * <p>> *   This parameter is available and required if you set the value of **EngineVersion** to **4.4** or **5.0**.</p>
+     * <p>> *   The value of this parameter cannot be the same as the value of **ZoneId** or **HiddenZoneId**.</p>
+     * <p>> *   For more information about the multi-zone deployment policy of a sharded cluster instance, see [Create a multi-zone sharded cluster instance](~~117865~~).</p>
      */
     @NameInMap("SecondaryZoneId")
     public String secondaryZoneId;
@@ -252,11 +238,8 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
      * <p>*   IP addresses, such as 10.23.12.24.</p>
      * <p>*   CIDR blocks, such as 10.23.12.0/24. In this case, 24 indicates that the prefix of each IP address is 24-bit long. You can replace 24 with a value within the range of 1 to 32.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   A maximum of 1,000 IP addresses and CIDR blocks can be configured for each instance.</p>
-     * <br>
-     * <p>*   If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance. Proceed with caution.</p>
+     * <p>> *   A maximum of 1,000 IP addresses and CIDR blocks can be configured for each instance.</p>
+     * <p>> *   If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance. Proceed with caution.</p>
      */
     @NameInMap("SecurityIPList")
     public String securityIPList;
@@ -272,11 +255,8 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     /**
      * <p>The storage engine of the instance. Set the value to **WiredTiger**.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If you call this operation to clone an instance, set the value of this parameter to the storage engine of the source instance.</p>
-     * <br>
-     * <p>*   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).</p>
+     * <p>> *   If you call this operation to clone an instance, set the value of this parameter to the storage engine of the source instance.</p>
+     * <p>> *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).</p>
      */
     @NameInMap("StorageEngine")
     public String storageEngine;
@@ -289,26 +269,26 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
      * <p>*   **cloud_essd3**: ESSD PL3</p>
      * <p>*   **local_ssd**: local SSD</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   Instances of MongoDB 4.4 and later support only cloud disks. **cloud_essd1** is selected if you leave this parameter empty.</p>
-     * <br>
-     * <p>*   Instances of MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.</p>
+     * <p>> *   Instances of MongoDB 4.4 and later support only cloud disks. **cloud_essd1** is selected if you leave this parameter empty.</p>
+     * <p>> *   Instances of MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.</p>
      */
     @NameInMap("StorageType")
     public String storageType;
 
+    /**
+     * <p>The custom tags added to the instance.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateShardingDBInstanceRequestTag> tag;
 
     /**
-     * <p>The vSwitch ID.</p>
+     * <p>The vSwitch ID of the instance.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC).</p>
+     * <p>The ID of the VPC.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -641,11 +621,8 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
         /**
          * <p>The instance type of the mongos node. For more information, see [Sharded cluster instance types](~~311414~~).</p>
          * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   **N** specifies the serial number of the mongos node for which the instance type is specified. For example, **Mongos.2.Class** specifies the instance type of the second mongos node.</p>
-         * <br>
-         * <p>*   Valid values for **N**: **2** to **32**.</p>
+         * <p>> *   **N** specifies the serial number of the mongos node for which the instance type is specified. For example, **Mongos.2.Class** specifies the instance type of the second mongos node.</p>
+         * <p>> *   Valid values for **N**: **2** to **32**.</p>
          */
         @NameInMap("Class")
         public String _class;
@@ -669,11 +646,8 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
         /**
          * <p>The instance type of the shard node. For more information, see [Sharded cluster instance types](~~311414~~).</p>
          * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   **N** specifies the serial number of the shard node for which the instance type is specified. For example, **ReplicaSet.2.Class** specifies the instance type of the second shard node.</p>
-         * <br>
-         * <p>*   Valid values for **N**: **2** to **32**.</p>
+         * <p>> *   **N** specifies the serial number of the shard node for which the instance type is specified. For example, **ReplicaSet.2.Class** specifies the instance type of the second shard node.</p>
+         * <p>> *   Valid values for **N**: **2** to **32**.</p>
          */
         @NameInMap("Class")
         public String _class;
@@ -681,9 +655,9 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
         /**
          * <p>The number of read-only nodes in shard node N.</p>
          * <br>
-         * <p>Valid values: **0** to **5**. Default value: **0**.</p>
+         * <p>Valid values: **0**, 1, 2, 3, 4, and **5**. Default value: **0**.</p>
          * <br>
-         * <p>> **N** specifies the serial number of the shard node for which you want to set the number of read-only nodes. For example, **ReplicaSet.2.ReadonlyReplicas** specifies the number of read-only nodes in the second shard node.</p>
+         * <p>>  **N** specifies the serial number of the shard node for which you want to set the number of read-only nodes. For example, **ReplicaSet.2.ReadonlyReplicas** specifies the number of read-only nodes in the second shard node.</p>
          */
         @NameInMap("ReadonlyReplicas")
         public Integer readonlyReplicas;
@@ -691,11 +665,8 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
         /**
          * <p>The storage space of the shard node. Unit: GB.</p>
          * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   The values that can be specified for this parameter vary based on the instance types. For more information, see [Sharded cluster instance types](~~311414~~).</p>
-         * <br>
-         * <p>*   **N** specifies the serial number of the shard node for which the storage space is specified. For example, **ReplicaSet.2.Storage** specifies the storage space of the second shard node.</p>
+         * <p>> *   The values that can be specified for this parameter vary based on the instance types. For more information, see [Sharded cluster instance types](~~311414~~).</p>
+         * <p>> *   **N** specifies the serial number of the shard node for which the storage space is specified. For example, **ReplicaSet.2.Storage** specifies the storage space of the second shard node.</p>
          */
         @NameInMap("Storage")
         public Integer storage;
@@ -732,9 +703,19 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     }
 
     public static class CreateShardingDBInstanceRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * <br>
+         * <p>> **N** specifies the serial number of the tag. For example, **Tag.1.Key** specifies the key of the first tag and **Tag.2.Key** specifies the key of the second tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * <br>
+         * <p>> **N** specifies the serial number of the tag. For example, **Tag.1.Value** specifies the value of the first tag and **Tag.2.Value** specifies the value of the second tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -275,7 +275,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to check whether an ApsaraDB for MongoDB instance meets the data recovery conditions.
+      * This operation is applicable to replica set instances or sharded cluster instances.
+      * >  After you confirm that the data recovery conditions are met by calling this operation, you can call the [CreateDBInstance](~~61763~~) operation to restore data to a new instance.
       *
       * @param request CheckRecoveryConditionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -342,7 +343,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to check whether an ApsaraDB for MongoDB instance meets the data recovery conditions.
+      * This operation is applicable to replica set instances or sharded cluster instances.
+      * >  After you confirm that the data recovery conditions are met by calling this operation, you can call the [CreateDBInstance](~~61763~~) operation to restore data to a new instance.
       *
       * @param request CheckRecoveryConditionRequest
       * @return CheckRecoveryConditionResponse
@@ -352,6 +354,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.checkRecoveryConditionWithOptions(request, runtime);
     }
 
+    /**
+      * Database accounts can be created only for shards in sharded cluster instances that use cloud disks.
+      *
+      * @param request CreateAccountRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateAccountResponse
+     */
     public CreateAccountResponse createAccountWithOptions(CreateAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -400,6 +409,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAccountResponse());
     }
 
+    /**
+      * Database accounts can be created only for shards in sharded cluster instances that use cloud disks.
+      *
+      * @param request CreateAccountRequest
+      * @return CreateAccountResponse
+     */
     public CreateAccountResponse createAccount(CreateAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createAccountWithOptions(request, runtime);
@@ -2631,6 +2646,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDBInstanceSSLWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+      * *   The instance is a replica set or sharded cluster instance.
+      * *   The instance uses local physical disks to store data.
+      *
+      * @param request DescribeDBInstanceSwitchLogRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDBInstanceSwitchLogResponse
+     */
     public DescribeDBInstanceSwitchLogResponse describeDBInstanceSwitchLogWithOptions(DescribeDBInstanceSwitchLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2675,6 +2699,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBInstanceSwitchLogResponse());
     }
 
+    /**
+      * Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+      * *   The instance is a replica set or sharded cluster instance.
+      * *   The instance uses local physical disks to store data.
+      *
+      * @param request DescribeDBInstanceSwitchLogRequest
+      * @return DescribeDBInstanceSwitchLogResponse
+     */
     public DescribeDBInstanceSwitchLogResponse describeDBInstanceSwitchLog(DescribeDBInstanceSwitchLogRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDBInstanceSwitchLogWithOptions(request, runtime);
@@ -3403,6 +3435,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeKernelReleaseNotesWithOptions(request, runtime);
     }
 
+    /**
+      * Queried keys are available only for disk encryption.
+      *
+      * @param request DescribeKmsKeysRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeKmsKeysResponse
+     */
     public DescribeKmsKeysResponse describeKmsKeysWithOptions(DescribeKmsKeysRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3439,6 +3478,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeKmsKeysResponse());
     }
 
+    /**
+      * Queried keys are available only for disk encryption.
+      *
+      * @param request DescribeKmsKeysRequest
+      * @return DescribeKmsKeysResponse
+     */
     public DescribeKmsKeysResponse describeKmsKeys(DescribeKmsKeysRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeKmsKeysWithOptions(request, runtime);
@@ -4168,6 +4213,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.showHDMIps)) {
+            query.put("ShowHDMIps", request.showHDMIps);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4901,7 +4950,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * *   The instance must be in the running state when you call this operation.
-      * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
+      * *   This operation is applicable only to **general-purpose local-disk** or **dedicated local-disk** instances.
       * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
       *
       * @param request ModifyAuditLogFilterRequest
@@ -4958,7 +5007,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * *   The instance must be in the running state when you call this operation.
-      * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
+      * *   This operation is applicable only to **general-purpose local-disk** or **dedicated local-disk** instances.
       * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
       *
       * @param request ModifyAuditLogFilterRequest
@@ -6005,7 +6054,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to enable or disable password-free access from the same VPC as an ApsaraDB for MongoDB instance.
+      * Before you call this operation, make sure that the following requirements are met:
+      * *   A replica set or sharded cluster instance is used.
+      * *   The database version of the instance is 4.0 (with the minor version of mongodb\\_20190408\\_3.0.11 or later) or 4.2. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the database engine version of the instance. If necessary, you can call the [UpgradeDBInstanceEngineVersion](~~67608~~) operation to upgrade the database engine.
+      * *   The instance is in a VPC. If the network type is Classic Network, you can call the [ModifyDBInstanceNetworkType](~~62138~~) operation to switch the network type to VPC.
       *
       * @param request ModifyInstanceVpcAuthModeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6060,7 +6112,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to enable or disable password-free access from the same VPC as an ApsaraDB for MongoDB instance.
+      * Before you call this operation, make sure that the following requirements are met:
+      * *   A replica set or sharded cluster instance is used.
+      * *   The database version of the instance is 4.0 (with the minor version of mongodb\\_20190408\\_3.0.11 or later) or 4.2. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the database engine version of the instance. If necessary, you can call the [UpgradeDBInstanceEngineVersion](~~67608~~) operation to upgrade the database engine.
+      * *   The instance is in a VPC. If the network type is Classic Network, you can call the [ModifyDBInstanceNetworkType](~~62138~~) operation to switch the network type to VPC.
       *
       * @param request ModifyInstanceVpcAuthModeRequest
       * @return ModifyInstanceVpcAuthModeResponse
@@ -6271,7 +6326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Precautions
+      * ### Precautions
       * *   The instance must be in the Running state when you call this operation.
       * *   If you call this operation to modify specific instance parameters and the modification for part of the parameters can take effect only after an instance restart, the instance is automatically restarted after this operation is called. You can call the [DescribeParameterTemplates](~~67618~~) operation to query the parameters that take effect only after the instance is restarted.
       *
@@ -6336,7 +6391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Precautions
+      * ### Precautions
       * *   The instance must be in the Running state when you call this operation.
       * *   If you call this operation to modify specific instance parameters and the modification for part of the parameters can take effect only after an instance restart, the instance is automatically restarted after this operation is called. You can call the [DescribeParameterTemplates](~~67618~~) operation to query the parameters that take effect only after the instance is restarted.
       *
@@ -6537,6 +6592,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifySecurityIpsWithOptions(request, runtime);
     }
 
+    /**
+      * The actions performed by this operation for a task vary based on the current state of the task. The supported actions for a task can be obtained from the value of the actionInfo parameter in the DescribeHistoryTasks operation.
+      *
+      * @param request ModifyTaskInfoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyTaskInfoResponse
+     */
     public ModifyTaskInfoResponse modifyTaskInfoWithOptions(ModifyTaskInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6585,6 +6647,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyTaskInfoResponse());
     }
 
+    /**
+      * The actions performed by this operation for a task vary based on the current state of the task. The supported actions for a task can be obtained from the value of the actionInfo parameter in the DescribeHistoryTasks operation.
+      *
+      * @param request ModifyTaskInfoRequest
+      * @return ModifyTaskInfoResponse
+     */
     public ModifyTaskInfoResponse modifyTaskInfo(ModifyTaskInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyTaskInfoWithOptions(request, runtime);
