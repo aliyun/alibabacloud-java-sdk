@@ -7,6 +7,9 @@ public class ModelVersion extends TeaModel {
     @NameInMap("ApprovalStatus")
     public String approvalStatus;
 
+    @NameInMap("EvaluationSpec")
+    public java.util.Map<String, ?> evaluationSpec;
+
     @NameInMap("ExtraInfo")
     public java.util.Map<String, ?> extraInfo;
 
@@ -69,6 +72,14 @@ public class ModelVersion extends TeaModel {
     }
     public String getApprovalStatus() {
         return this.approvalStatus;
+    }
+
+    public ModelVersion setEvaluationSpec(java.util.Map<String, ?> evaluationSpec) {
+        this.evaluationSpec = evaluationSpec;
+        return this;
+    }
+    public java.util.Map<String, ?> getEvaluationSpec() {
+        return this.evaluationSpec;
     }
 
     public ModelVersion setExtraInfo(java.util.Map<String, ?> extraInfo) {

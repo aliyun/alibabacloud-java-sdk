@@ -457,6 +457,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ApprovalStatus", request.approvalStatus);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.evaluationSpec)) {
+            body.put("EvaluationSpec", request.evaluationSpec);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.extraInfo)) {
             body.put("ExtraInfo", request.extraInfo);
         }
@@ -2312,6 +2316,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.approvalStatus)) {
             body.put("ApprovalStatus", request.approvalStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.evaluationSpec)) {
+            body.put("EvaluationSpec", request.evaluationSpec);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.extraInfo)) {
