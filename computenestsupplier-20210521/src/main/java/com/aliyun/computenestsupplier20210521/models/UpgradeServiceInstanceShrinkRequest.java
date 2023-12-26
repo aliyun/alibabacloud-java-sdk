@@ -3,7 +3,7 @@ package com.aliyun.computenestsupplier20210521.models;
 
 import com.aliyun.tea.*;
 
-public class UpgradeServiceInstanceRequest extends TeaModel {
+public class UpgradeServiceInstanceShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -11,7 +11,7 @@ public class UpgradeServiceInstanceRequest extends TeaModel {
     public String dryRun;
 
     @NameInMap("Parameters")
-    public java.util.Map<String, ?> parameters;
+    public String parametersShrink;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -22,12 +22,12 @@ public class UpgradeServiceInstanceRequest extends TeaModel {
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 
-    public static UpgradeServiceInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpgradeServiceInstanceRequest self = new UpgradeServiceInstanceRequest();
+    public static UpgradeServiceInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpgradeServiceInstanceShrinkRequest self = new UpgradeServiceInstanceShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpgradeServiceInstanceRequest setClientToken(String clientToken) {
+    public UpgradeServiceInstanceShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -35,7 +35,7 @@ public class UpgradeServiceInstanceRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public UpgradeServiceInstanceRequest setDryRun(String dryRun) {
+    public UpgradeServiceInstanceShrinkRequest setDryRun(String dryRun) {
         this.dryRun = dryRun;
         return this;
     }
@@ -43,15 +43,15 @@ public class UpgradeServiceInstanceRequest extends TeaModel {
         return this.dryRun;
     }
 
-    public UpgradeServiceInstanceRequest setParameters(java.util.Map<String, ?> parameters) {
-        this.parameters = parameters;
+    public UpgradeServiceInstanceShrinkRequest setParametersShrink(String parametersShrink) {
+        this.parametersShrink = parametersShrink;
         return this;
     }
-    public java.util.Map<String, ?> getParameters() {
-        return this.parameters;
+    public String getParametersShrink() {
+        return this.parametersShrink;
     }
 
-    public UpgradeServiceInstanceRequest setRegionId(String regionId) {
+    public UpgradeServiceInstanceShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -59,7 +59,7 @@ public class UpgradeServiceInstanceRequest extends TeaModel {
         return this.regionId;
     }
 
-    public UpgradeServiceInstanceRequest setServiceInstanceId(String serviceInstanceId) {
+    public UpgradeServiceInstanceShrinkRequest setServiceInstanceId(String serviceInstanceId) {
         this.serviceInstanceId = serviceInstanceId;
         return this;
     }
@@ -67,7 +67,7 @@ public class UpgradeServiceInstanceRequest extends TeaModel {
         return this.serviceInstanceId;
     }
 
-    public UpgradeServiceInstanceRequest setServiceVersion(String serviceVersion) {
+    public UpgradeServiceInstanceShrinkRequest setServiceVersion(String serviceVersion) {
         this.serviceVersion = serviceVersion;
         return this;
     }

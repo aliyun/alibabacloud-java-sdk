@@ -171,6 +171,9 @@ public class ListServicesResponseBody extends TeaModel {
         @NameInMap("DeployType")
         public String deployType;
 
+        @NameInMap("HasBeta")
+        public Boolean hasBeta;
+
         @NameInMap("HasDraft")
         public Boolean hasDraft;
 
@@ -316,6 +319,14 @@ public class ListServicesResponseBody extends TeaModel {
         }
         public String getDeployType() {
             return this.deployType;
+        }
+
+        public ListServicesResponseBodyServices setHasBeta(Boolean hasBeta) {
+            this.hasBeta = hasBeta;
+            return this;
+        }
+        public Boolean getHasBeta() {
+            return this.hasBeta;
         }
 
         public ListServicesResponseBodyServices setHasDraft(Boolean hasDraft) {

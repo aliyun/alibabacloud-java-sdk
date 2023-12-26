@@ -607,6 +607,9 @@ public class GetServiceResponseBody extends TeaModel {
         @NameInMap("BillCode")
         public String billCode;
 
+        @NameInMap("Entity")
+        public String entity;
+
         @NameInMap("MeteringAssist")
         public String meteringAssist;
 
@@ -621,6 +624,14 @@ public class GetServiceResponseBody extends TeaModel {
         }
         public String getBillCode() {
             return this.billCode;
+        }
+
+        public GetServiceResponseBodyBillEntityMappingsMappingConfigMappings setEntity(String entity) {
+            this.entity = entity;
+            return this;
+        }
+        public String getEntity() {
+            return this.entity;
         }
 
         public GetServiceResponseBodyBillEntityMappingsMappingConfigMappings setMeteringAssist(String meteringAssist) {
