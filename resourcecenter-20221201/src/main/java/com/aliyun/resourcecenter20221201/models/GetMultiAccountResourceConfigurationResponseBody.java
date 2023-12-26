@@ -22,9 +22,15 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The time when the resource expires.</p>
+     */
     @NameInMap("ExpireTime")
     public String expireTime;
 
+    /**
+     * <p>The attributes of the IP address.</p>
+     */
     @NameInMap("IpAddressAttributes")
     public java.util.List<GetMultiAccountResourceConfigurationResponseBodyIpAddressAttributes> ipAddressAttributes;
 
@@ -202,12 +208,24 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetMultiAccountResourceConfigurationResponseBodyIpAddressAttributes extends TeaModel {
+        /**
+         * <p>The IP address.</p>
+         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
+        /**
+         * <p>The network type. Valid values:</p>
+         * <br>
+         * <p>*   **Public**: the Internet</p>
+         * <p>*   **Private**: internal network</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <p>The version.</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -244,13 +262,13 @@ public class GetMultiAccountResourceConfigurationResponseBody extends TeaModel {
 
     public static class GetMultiAccountResourceConfigurationResponseBodyTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The key of tag N.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The value of tag N.</p>
          */
         @NameInMap("Value")
         public String value;
