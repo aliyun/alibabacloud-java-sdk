@@ -7,6 +7,9 @@ public class GetModelVersionResponseBody extends TeaModel {
     @NameInMap("ApprovalStatus")
     public String approvalStatus;
 
+    @NameInMap("EvaluationSpec")
+    public java.util.Map<String, ?> evaluationSpec;
+
     @NameInMap("ExtraInfo")
     public java.util.Map<String, ?> extraInfo;
 
@@ -72,6 +75,14 @@ public class GetModelVersionResponseBody extends TeaModel {
     }
     public String getApprovalStatus() {
         return this.approvalStatus;
+    }
+
+    public GetModelVersionResponseBody setEvaluationSpec(java.util.Map<String, ?> evaluationSpec) {
+        this.evaluationSpec = evaluationSpec;
+        return this;
+    }
+    public java.util.Map<String, ?> getEvaluationSpec() {
+        return this.evaluationSpec;
     }
 
     public GetModelVersionResponseBody setExtraInfo(java.util.Map<String, ?> extraInfo) {
