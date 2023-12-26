@@ -22,9 +22,15 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The time when the resource expires.</p>
+     */
     @NameInMap("ExpireTime")
     public String expireTime;
 
+    /**
+     * <p>The attributes of the IP address.</p>
+     */
     @NameInMap("IpAddressAttributes")
     public java.util.List<GetResourceConfigurationResponseBodyIpAddressAttributes> ipAddressAttributes;
 
@@ -202,12 +208,24 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetResourceConfigurationResponseBodyIpAddressAttributes extends TeaModel {
+        /**
+         * <p>The IP address.</p>
+         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
+        /**
+         * <p>The network type. Valid values:</p>
+         * <br>
+         * <p>*   **Public**: the Internet</p>
+         * <p>*   **Private**: internal network</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <p>The version.</p>
+         */
         @NameInMap("Version")
         public String version;
 

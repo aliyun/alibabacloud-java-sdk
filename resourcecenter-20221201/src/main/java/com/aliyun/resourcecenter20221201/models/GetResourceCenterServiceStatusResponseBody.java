@@ -7,7 +7,7 @@ public class GetResourceCenterServiceStatusResponseBody extends TeaModel {
     /**
      * <p>The initialization status of the service. Valid values:</p>
      * <br>
-     * <p>*   Pending: The service being initialized.</p>
+     * <p>*   Pending: The service is being initialized.</p>
      * <p>*   Finished: The service is initialized.</p>
      */
     @NameInMap("InitialStatus")
