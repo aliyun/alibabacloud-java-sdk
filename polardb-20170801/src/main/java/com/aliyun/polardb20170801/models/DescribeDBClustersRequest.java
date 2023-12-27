@@ -51,6 +51,12 @@ public class DescribeDBClustersRequest extends TeaModel {
     public String DBVersion;
 
     /**
+     * <p>查询方式，当取值为Simple时，将返回简略版参数</p>
+     */
+    @NameInMap("DescribeType")
+    public String describeType;
+
+    /**
      * <p>Specifies whether the cluster has expired. Valid values:</p>
      * <br>
      * <p>*   **true**</p>
@@ -185,6 +191,14 @@ public class DescribeDBClustersRequest extends TeaModel {
     }
     public String getDBVersion() {
         return this.DBVersion;
+    }
+
+    public DescribeDBClustersRequest setDescribeType(String describeType) {
+        this.describeType = describeType;
+        return this;
+    }
+    public String getDescribeType() {
+        return this.describeType;
     }
 
     public DescribeDBClustersRequest setExpired(Boolean expired) {
