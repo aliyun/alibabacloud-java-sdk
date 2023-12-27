@@ -45,6 +45,9 @@ public class CreateLogStoreRequest extends TeaModel {
     @NameInMap("hot_ttl")
     public Integer hotTtl;
 
+    @NameInMap("infrequentAccessTTL")
+    public Integer infrequentAccessTTL;
+
     /**
      * <p>The name of the Logstore. The name must meet the following requirements:</p>
      * <br>
@@ -139,6 +142,14 @@ public class CreateLogStoreRequest extends TeaModel {
     }
     public Integer getHotTtl() {
         return this.hotTtl;
+    }
+
+    public CreateLogStoreRequest setInfrequentAccessTTL(Integer infrequentAccessTTL) {
+        this.infrequentAccessTTL = infrequentAccessTTL;
+        return this;
+    }
+    public Integer getInfrequentAccessTTL() {
+        return this.infrequentAccessTTL;
     }
 
     public CreateLogStoreRequest setLogstoreName(String logstoreName) {

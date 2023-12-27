@@ -22,6 +22,9 @@ public class Logstore extends TeaModel {
     @NameInMap("hot_ttl")
     public Integer hotTtl;
 
+    @NameInMap("infrequentAccessTTL")
+    public Integer infrequentAccessTTL;
+
     @NameInMap("lastModifyTime")
     public Integer lastModifyTime;
 
@@ -97,6 +100,14 @@ public class Logstore extends TeaModel {
     }
     public Integer getHotTtl() {
         return this.hotTtl;
+    }
+
+    public Logstore setInfrequentAccessTTL(Integer infrequentAccessTTL) {
+        this.infrequentAccessTTL = infrequentAccessTTL;
+        return this;
+    }
+    public Integer getInfrequentAccessTTL() {
+        return this.infrequentAccessTTL;
     }
 
     public Logstore setLastModifyTime(Integer lastModifyTime) {
