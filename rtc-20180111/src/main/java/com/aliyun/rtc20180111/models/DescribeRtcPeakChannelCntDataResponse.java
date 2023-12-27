@@ -3,7 +3,7 @@ package com.aliyun.rtc20180111.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeRecordTemplatesResponse extends TeaModel {
+public class DescribeRtcPeakChannelCntDataResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeRecordTemplatesResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeRecordTemplatesResponseBody body;
+    public DescribeRtcPeakChannelCntDataResponseBody body;
 
-    public static DescribeRecordTemplatesResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeRecordTemplatesResponse self = new DescribeRecordTemplatesResponse();
+    public static DescribeRtcPeakChannelCntDataResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeRtcPeakChannelCntDataResponse self = new DescribeRtcPeakChannelCntDataResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRecordTemplatesResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeRtcPeakChannelCntDataResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeRecordTemplatesResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeRecordTemplatesResponse setStatusCode(Integer statusCode) {
+    public DescribeRtcPeakChannelCntDataResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeRecordTemplatesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeRecordTemplatesResponse setBody(DescribeRecordTemplatesResponseBody body) {
+    public DescribeRtcPeakChannelCntDataResponse setBody(DescribeRtcPeakChannelCntDataResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeRecordTemplatesResponseBody getBody() {
+    public DescribeRtcPeakChannelCntDataResponseBody getBody() {
         return this.body;
     }
 

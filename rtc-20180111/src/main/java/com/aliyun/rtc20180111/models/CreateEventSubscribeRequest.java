@@ -25,6 +25,9 @@ public class CreateEventSubscribeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("Role")
+    public Long role;
+
     @NameInMap("Users")
     public java.util.List<String> users;
 
@@ -87,6 +90,14 @@ public class CreateEventSubscribeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateEventSubscribeRequest setRole(Long role) {
+        this.role = role;
+        return this;
+    }
+    public Long getRole() {
+        return this.role;
     }
 
     public CreateEventSubscribeRequest setUsers(java.util.List<String> users) {

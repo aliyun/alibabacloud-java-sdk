@@ -10,8 +10,14 @@ public class UpdateRecordTaskRequest extends TeaModel {
     @NameInMap("ChannelId")
     public String channelId;
 
+    @NameInMap("CropMode")
+    public Long cropMode;
+
     @NameInMap("LayoutIds")
     public java.util.List<Long> layoutIds;
+
+    @NameInMap("MediaEncode")
+    public Long mediaEncode;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -30,6 +36,9 @@ public class UpdateRecordTaskRequest extends TeaModel {
 
     @NameInMap("TaskId")
     public String taskId;
+
+    @NameInMap("TaskProfile")
+    public String taskProfile;
 
     @NameInMap("TemplateId")
     public String templateId;
@@ -67,12 +76,28 @@ public class UpdateRecordTaskRequest extends TeaModel {
         return this.channelId;
     }
 
+    public UpdateRecordTaskRequest setCropMode(Long cropMode) {
+        this.cropMode = cropMode;
+        return this;
+    }
+    public Long getCropMode() {
+        return this.cropMode;
+    }
+
     public UpdateRecordTaskRequest setLayoutIds(java.util.List<Long> layoutIds) {
         this.layoutIds = layoutIds;
         return this;
     }
     public java.util.List<Long> getLayoutIds() {
         return this.layoutIds;
+    }
+
+    public UpdateRecordTaskRequest setMediaEncode(Long mediaEncode) {
+        this.mediaEncode = mediaEncode;
+        return this;
+    }
+    public Long getMediaEncode() {
+        return this.mediaEncode;
     }
 
     public UpdateRecordTaskRequest setOwnerId(Long ownerId) {
@@ -121,6 +146,14 @@ public class UpdateRecordTaskRequest extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public UpdateRecordTaskRequest setTaskProfile(String taskProfile) {
+        this.taskProfile = taskProfile;
+        return this;
+    }
+    public String getTaskProfile() {
+        return this.taskProfile;
     }
 
     public UpdateRecordTaskRequest setTemplateId(String templateId) {
