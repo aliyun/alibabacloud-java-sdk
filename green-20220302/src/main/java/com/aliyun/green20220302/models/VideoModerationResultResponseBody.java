@@ -56,6 +56,36 @@ public class VideoModerationResultResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class VideoModerationResultResponseBodyDataAudioResultAudioSummarys extends TeaModel {
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("LabelSum")
+        public Integer labelSum;
+
+        public static VideoModerationResultResponseBodyDataAudioResultAudioSummarys build(java.util.Map<String, ?> map) throws Exception {
+            VideoModerationResultResponseBodyDataAudioResultAudioSummarys self = new VideoModerationResultResponseBodyDataAudioResultAudioSummarys();
+            return TeaModel.build(map, self);
+        }
+
+        public VideoModerationResultResponseBodyDataAudioResultAudioSummarys setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public VideoModerationResultResponseBodyDataAudioResultAudioSummarys setLabelSum(Integer labelSum) {
+            this.labelSum = labelSum;
+            return this;
+        }
+        public Integer getLabelSum() {
+            return this.labelSum;
+        }
+
+    }
+
     public static class VideoModerationResultResponseBodyDataAudioResultSliceDetails extends TeaModel {
         @NameInMap("EndTime")
         public Long endTime;
@@ -186,6 +216,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResultResponseBodyDataAudioResult extends TeaModel {
+        @NameInMap("AudioSummarys")
+        public java.util.List<VideoModerationResultResponseBodyDataAudioResultAudioSummarys> audioSummarys;
+
         @NameInMap("SliceDetails")
         public java.util.List<VideoModerationResultResponseBodyDataAudioResultSliceDetails> sliceDetails;
 
@@ -194,12 +227,50 @@ public class VideoModerationResultResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public VideoModerationResultResponseBodyDataAudioResult setAudioSummarys(java.util.List<VideoModerationResultResponseBodyDataAudioResultAudioSummarys> audioSummarys) {
+            this.audioSummarys = audioSummarys;
+            return this;
+        }
+        public java.util.List<VideoModerationResultResponseBodyDataAudioResultAudioSummarys> getAudioSummarys() {
+            return this.audioSummarys;
+        }
+
         public VideoModerationResultResponseBodyDataAudioResult setSliceDetails(java.util.List<VideoModerationResultResponseBodyDataAudioResultSliceDetails> sliceDetails) {
             this.sliceDetails = sliceDetails;
             return this;
         }
         public java.util.List<VideoModerationResultResponseBodyDataAudioResultSliceDetails> getSliceDetails() {
             return this.sliceDetails;
+        }
+
+    }
+
+    public static class VideoModerationResultResponseBodyDataFrameResultFrameSummarys extends TeaModel {
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("LabelSum")
+        public Integer labelSum;
+
+        public static VideoModerationResultResponseBodyDataFrameResultFrameSummarys build(java.util.Map<String, ?> map) throws Exception {
+            VideoModerationResultResponseBodyDataFrameResultFrameSummarys self = new VideoModerationResultResponseBodyDataFrameResultFrameSummarys();
+            return TeaModel.build(map, self);
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFrameSummarys setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFrameSummarys setLabelSum(Integer labelSum) {
+            this.labelSum = labelSum;
+            return this;
+        }
+        public Integer getLabelSum() {
+            return this.labelSum;
         }
 
     }
@@ -274,6 +345,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @NameInMap("TempUrl")
         public String tempUrl;
 
+        @NameInMap("Timestamp")
+        public Long timestamp;
+
         public static VideoModerationResultResponseBodyDataFrameResultFrames build(java.util.Map<String, ?> map) throws Exception {
             VideoModerationResultResponseBodyDataFrameResultFrames self = new VideoModerationResultResponseBodyDataFrameResultFrames();
             return TeaModel.build(map, self);
@@ -303,11 +377,22 @@ public class VideoModerationResultResponseBody extends TeaModel {
             return this.tempUrl;
         }
 
+        public VideoModerationResultResponseBodyDataFrameResultFrames setTimestamp(Long timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public Long getTimestamp() {
+            return this.timestamp;
+        }
+
     }
 
     public static class VideoModerationResultResponseBodyDataFrameResult extends TeaModel {
         @NameInMap("FrameNum")
         public Integer frameNum;
+
+        @NameInMap("FrameSummarys")
+        public java.util.List<VideoModerationResultResponseBodyDataFrameResultFrameSummarys> frameSummarys;
 
         @NameInMap("Frames")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFrames> frames;
@@ -323,6 +408,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
         public Integer getFrameNum() {
             return this.frameNum;
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResult setFrameSummarys(java.util.List<VideoModerationResultResponseBodyDataFrameResultFrameSummarys> frameSummarys) {
+            this.frameSummarys = frameSummarys;
+            return this;
+        }
+        public java.util.List<VideoModerationResultResponseBodyDataFrameResultFrameSummarys> getFrameSummarys() {
+            return this.frameSummarys;
         }
 
         public VideoModerationResultResponseBodyDataFrameResult setFrames(java.util.List<VideoModerationResultResponseBodyDataFrameResultFrames> frames) {
