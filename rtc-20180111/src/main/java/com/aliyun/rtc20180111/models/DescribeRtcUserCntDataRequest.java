@@ -1,0 +1,78 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.rtc20180111.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeRtcUserCntDataRequest extends TeaModel {
+    @NameInMap("AppId")
+    public String appId;
+
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("Interval")
+    public String interval;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ServiceArea")
+    public String serviceArea;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
+    public static DescribeRtcUserCntDataRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeRtcUserCntDataRequest self = new DescribeRtcUserCntDataRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeRtcUserCntDataRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
+    }
+
+    public DescribeRtcUserCntDataRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeRtcUserCntDataRequest setInterval(String interval) {
+        this.interval = interval;
+        return this;
+    }
+    public String getInterval() {
+        return this.interval;
+    }
+
+    public DescribeRtcUserCntDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeRtcUserCntDataRequest setServiceArea(String serviceArea) {
+        this.serviceArea = serviceArea;
+        return this;
+    }
+    public String getServiceArea() {
+        return this.serviceArea;
+    }
+
+    public DescribeRtcUserCntDataRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+}

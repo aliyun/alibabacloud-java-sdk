@@ -46,6 +46,9 @@ public class AddRecordTemplateRequest extends TeaModel {
     @NameInMap("OssBucket")
     public String ossBucket;
 
+    @NameInMap("OssEndpoint")
+    public String ossEndpoint;
+
     @NameInMap("OssFilePrefix")
     public String ossFilePrefix;
 
@@ -173,6 +176,14 @@ public class AddRecordTemplateRequest extends TeaModel {
     }
     public String getOssBucket() {
         return this.ossBucket;
+    }
+
+    public AddRecordTemplateRequest setOssEndpoint(String ossEndpoint) {
+        this.ossEndpoint = ossEndpoint;
+        return this;
+    }
+    public String getOssEndpoint() {
+        return this.ossEndpoint;
     }
 
     public AddRecordTemplateRequest setOssFilePrefix(String ossFilePrefix) {

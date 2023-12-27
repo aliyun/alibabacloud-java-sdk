@@ -4,6 +4,9 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppKeyResponseBody extends TeaModel {
+    /**
+     * <p>AppKey。</p>
+     */
     @NameInMap("AppKey")
     public String appKey;
 
