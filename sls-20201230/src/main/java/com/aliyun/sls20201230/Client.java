@@ -463,6 +463,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("hot_ttl", request.hotTtl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.infrequentAccessTTL)) {
+            body.put("infrequentAccessTTL", request.infrequentAccessTTL);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.logstoreName)) {
             body.put("logstoreName", request.logstoreName);
         }
@@ -4369,6 +4373,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.hotTtl)) {
             body.put("hot_ttl", request.hotTtl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.infrequentAccessTTL)) {
+            body.put("infrequentAccessTTL", request.infrequentAccessTTL);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.logstoreName)) {

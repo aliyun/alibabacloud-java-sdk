@@ -43,6 +43,9 @@ public class UpdateLogStoreRequest extends TeaModel {
     @NameInMap("hot_ttl")
     public Integer hotTtl;
 
+    @NameInMap("infrequentAccessTTL")
+    public Integer infrequentAccessTTL;
+
     /**
      * <p>The name of the Logstore.</p>
      */
@@ -72,6 +75,7 @@ public class UpdateLogStoreRequest extends TeaModel {
      * <p>> You cannot call the UpdateLogstore operation to change the number of shards. You can call the SplitShard or MergeShards operation to change the number of shards.</p>
      */
     @NameInMap("shardCount")
+    @Deprecated
     public Integer shardCount;
 
     /**
@@ -81,6 +85,7 @@ public class UpdateLogStoreRequest extends TeaModel {
      * <p>*   Metrics: metrics.</p>
      */
     @NameInMap("telemetryType")
+    @Deprecated
     public String telemetryType;
 
     /**
@@ -132,6 +137,14 @@ public class UpdateLogStoreRequest extends TeaModel {
     }
     public Integer getHotTtl() {
         return this.hotTtl;
+    }
+
+    public UpdateLogStoreRequest setInfrequentAccessTTL(Integer infrequentAccessTTL) {
+        this.infrequentAccessTTL = infrequentAccessTTL;
+        return this;
+    }
+    public Integer getInfrequentAccessTTL() {
+        return this.infrequentAccessTTL;
     }
 
     public UpdateLogStoreRequest setLogstoreName(String logstoreName) {
