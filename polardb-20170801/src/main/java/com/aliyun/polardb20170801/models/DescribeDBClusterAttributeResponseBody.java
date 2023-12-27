@@ -47,6 +47,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("CompressStorageMode")
     public String compressStorageMode;
 
+    @NameInMap("CompressStorageUsed")
+    public Long compressStorageUsed;
+
     /**
      * <p>The time when the cluster was created.</p>
      */
@@ -426,6 +429,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
     public String getCompressStorageMode() {
         return this.compressStorageMode;
+    }
+
+    public DescribeDBClusterAttributeResponseBody setCompressStorageUsed(Long compressStorageUsed) {
+        this.compressStorageUsed = compressStorageUsed;
+        return this;
+    }
+    public Long getCompressStorageUsed() {
+        return this.compressStorageUsed;
     }
 
     public DescribeDBClusterAttributeResponseBody setCreationTime(String creationTime) {

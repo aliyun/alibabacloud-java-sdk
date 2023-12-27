@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterRequest extends TeaModel {
+    @NameInMap("CompressStorage")
+    public String compressStorage;
+
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -37,6 +40,14 @@ public class ModifyDBClusterRequest extends TeaModel {
     public static ModifyDBClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBClusterRequest self = new ModifyDBClusterRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBClusterRequest setCompressStorage(String compressStorage) {
+        this.compressStorage = compressStorage;
+        return this;
+    }
+    public String getCompressStorage() {
+        return this.compressStorage;
     }
 
     public ModifyDBClusterRequest setDBClusterId(String DBClusterId) {
