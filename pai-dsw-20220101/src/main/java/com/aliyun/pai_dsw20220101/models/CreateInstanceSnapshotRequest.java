@@ -4,11 +4,17 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceSnapshotRequest extends TeaModel {
+    @NameInMap("ExcludePaths")
+    public java.util.List<String> excludePaths;
+
     @NameInMap("ImageUrl")
     public String imageUrl;
 
     @NameInMap("Labels")
     public java.util.List<CreateInstanceSnapshotRequestLabels> labels;
+
+    @NameInMap("Overwrite")
+    public Boolean overwrite;
 
     @NameInMap("SnapshotDescription")
     public String snapshotDescription;
@@ -19,6 +25,14 @@ public class CreateInstanceSnapshotRequest extends TeaModel {
     public static CreateInstanceSnapshotRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceSnapshotRequest self = new CreateInstanceSnapshotRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateInstanceSnapshotRequest setExcludePaths(java.util.List<String> excludePaths) {
+        this.excludePaths = excludePaths;
+        return this;
+    }
+    public java.util.List<String> getExcludePaths() {
+        return this.excludePaths;
     }
 
     public CreateInstanceSnapshotRequest setImageUrl(String imageUrl) {
@@ -35,6 +49,14 @@ public class CreateInstanceSnapshotRequest extends TeaModel {
     }
     public java.util.List<CreateInstanceSnapshotRequestLabels> getLabels() {
         return this.labels;
+    }
+
+    public CreateInstanceSnapshotRequest setOverwrite(Boolean overwrite) {
+        this.overwrite = overwrite;
+        return this;
+    }
+    public Boolean getOverwrite() {
+        return this.overwrite;
     }
 
     public CreateInstanceSnapshotRequest setSnapshotDescription(String snapshotDescription) {
