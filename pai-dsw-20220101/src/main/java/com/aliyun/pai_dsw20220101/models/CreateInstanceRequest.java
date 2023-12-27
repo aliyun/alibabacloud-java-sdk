@@ -13,6 +13,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("Datasets")
     public java.util.List<CreateInstanceRequestDatasets> datasets;
 
+    @NameInMap("Driver")
+    public String driver;
+
     @NameInMap("EcsSpec")
     public String ecsSpec;
 
@@ -79,6 +82,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public java.util.List<CreateInstanceRequestDatasets> getDatasets() {
         return this.datasets;
+    }
+
+    public CreateInstanceRequest setDriver(String driver) {
+        this.driver = driver;
+        return this;
+    }
+    public String getDriver() {
+        return this.driver;
     }
 
     public CreateInstanceRequest setEcsSpec(String ecsSpec) {
@@ -367,6 +378,9 @@ public class CreateInstanceRequest extends TeaModel {
         @NameInMap("ExtendedCIDRs")
         public java.util.List<String> extendedCIDRs;
 
+        @NameInMap("ForwardInfos")
+        public java.util.List<ForwardInfo> forwardInfos;
+
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
@@ -395,6 +409,14 @@ public class CreateInstanceRequest extends TeaModel {
         }
         public java.util.List<String> getExtendedCIDRs() {
             return this.extendedCIDRs;
+        }
+
+        public CreateInstanceRequestUserVpc setForwardInfos(java.util.List<ForwardInfo> forwardInfos) {
+            this.forwardInfos = forwardInfos;
+            return this;
+        }
+        public java.util.List<ForwardInfo> getForwardInfos() {
+            return this.forwardInfos;
         }
 
         public CreateInstanceRequestUserVpc setSecurityGroupId(String securityGroupId) {

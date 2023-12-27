@@ -22,6 +22,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("Datasets")
     public java.util.List<GetInstanceResponseBodyDatasets> datasets;
 
+    @NameInMap("Driver")
+    public String driver;
+
     @NameInMap("EcsSpec")
     public String ecsSpec;
 
@@ -187,6 +190,14 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public java.util.List<GetInstanceResponseBodyDatasets> getDatasets() {
         return this.datasets;
+    }
+
+    public GetInstanceResponseBody setDriver(String driver) {
+        this.driver = driver;
+        return this;
+    }
+    public String getDriver() {
+        return this.driver;
     }
 
     public GetInstanceResponseBody setEcsSpec(String ecsSpec) {
@@ -1035,6 +1046,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("ExtendedCIDRs")
         public java.util.List<String> extendedCIDRs;
 
+        @NameInMap("ForwardInfos")
+        public java.util.List<ForwardInfoResponse> forwardInfos;
+
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
@@ -1066,6 +1080,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public java.util.List<String> getExtendedCIDRs() {
             return this.extendedCIDRs;
+        }
+
+        public GetInstanceResponseBodyUserVpc setForwardInfos(java.util.List<ForwardInfoResponse> forwardInfos) {
+            this.forwardInfos = forwardInfos;
+            return this;
+        }
+        public java.util.List<ForwardInfoResponse> getForwardInfos() {
+            return this.forwardInfos;
         }
 
         public GetInstanceResponseBodyUserVpc setSecurityGroupId(String securityGroupId) {

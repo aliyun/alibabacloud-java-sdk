@@ -80,6 +80,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Datasets", request.datasets);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.driver)) {
+            body.put("Driver", request.driver);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ecsSpec)) {
             body.put("EcsSpec", request.ecsSpec);
         }
@@ -194,12 +198,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateInstanceSnapshotResponse createInstanceSnapshotWithOptions(String InstanceId, CreateInstanceSnapshotRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.excludePaths)) {
+            body.put("ExcludePaths", request.excludePaths);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
             body.put("ImageUrl", request.imageUrl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.labels)) {
             body.put("Labels", request.labels);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.overwrite)) {
+            body.put("Overwrite", request.overwrite);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.snapshotDescription)) {
@@ -884,8 +896,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DisassociateDatasets", request.disassociateDatasets);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.disassociateDriver)) {
+            body.put("DisassociateDriver", request.disassociateDriver);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.disassociateVpc)) {
             body.put("DisassociateVpc", request.disassociateVpc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.driver)) {
+            body.put("Driver", request.driver);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ecsSpec)) {
@@ -902,6 +922,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
             body.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            body.put("Priority", request.priority);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.requestedResource)) {

@@ -13,8 +13,14 @@ public class UpdateInstanceRequest extends TeaModel {
     @NameInMap("DisassociateDatasets")
     public Boolean disassociateDatasets;
 
+    @NameInMap("DisassociateDriver")
+    public Boolean disassociateDriver;
+
     @NameInMap("DisassociateVpc")
     public Boolean disassociateVpc;
+
+    @NameInMap("Driver")
+    public String driver;
 
     @NameInMap("EcsSpec")
     public String ecsSpec;
@@ -27,6 +33,9 @@ public class UpdateInstanceRequest extends TeaModel {
 
     @NameInMap("InstanceName")
     public String instanceName;
+
+    @NameInMap("Priority")
+    public Long priority;
 
     @NameInMap("RequestedResource")
     public UpdateInstanceRequestRequestedResource requestedResource;
@@ -69,12 +78,28 @@ public class UpdateInstanceRequest extends TeaModel {
         return this.disassociateDatasets;
     }
 
+    public UpdateInstanceRequest setDisassociateDriver(Boolean disassociateDriver) {
+        this.disassociateDriver = disassociateDriver;
+        return this;
+    }
+    public Boolean getDisassociateDriver() {
+        return this.disassociateDriver;
+    }
+
     public UpdateInstanceRequest setDisassociateVpc(Boolean disassociateVpc) {
         this.disassociateVpc = disassociateVpc;
         return this;
     }
     public Boolean getDisassociateVpc() {
         return this.disassociateVpc;
+    }
+
+    public UpdateInstanceRequest setDriver(String driver) {
+        this.driver = driver;
+        return this;
+    }
+    public String getDriver() {
+        return this.driver;
     }
 
     public UpdateInstanceRequest setEcsSpec(String ecsSpec) {
@@ -107,6 +132,14 @@ public class UpdateInstanceRequest extends TeaModel {
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public UpdateInstanceRequest setPriority(Long priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Long getPriority() {
+        return this.priority;
     }
 
     public UpdateInstanceRequest setRequestedResource(UpdateInstanceRequestRequestedResource requestedResource) {
@@ -241,6 +274,9 @@ public class UpdateInstanceRequest extends TeaModel {
         @NameInMap("ExtendedCIDRs")
         public java.util.List<String> extendedCIDRs;
 
+        @NameInMap("ForwardInfos")
+        public java.util.List<ForwardInfo> forwardInfos;
+
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
@@ -269,6 +305,14 @@ public class UpdateInstanceRequest extends TeaModel {
         }
         public java.util.List<String> getExtendedCIDRs() {
             return this.extendedCIDRs;
+        }
+
+        public UpdateInstanceRequestUserVpc setForwardInfos(java.util.List<ForwardInfo> forwardInfos) {
+            this.forwardInfos = forwardInfos;
+            return this;
+        }
+        public java.util.List<ForwardInfo> getForwardInfos() {
+            return this.forwardInfos;
         }
 
         public UpdateInstanceRequestUserVpc setSecurityGroupId(String securityGroupId) {

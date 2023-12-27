@@ -117,6 +117,9 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
     }
 
     public static class ListInstanceSnapshotResponseBodySnapshots extends TeaModel {
+        @NameInMap("ExcludePaths")
+        public java.util.List<String> excludePaths;
+
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
@@ -153,6 +156,14 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
         public static ListInstanceSnapshotResponseBodySnapshots build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceSnapshotResponseBodySnapshots self = new ListInstanceSnapshotResponseBodySnapshots();
             return TeaModel.build(map, self);
+        }
+
+        public ListInstanceSnapshotResponseBodySnapshots setExcludePaths(java.util.List<String> excludePaths) {
+            this.excludePaths = excludePaths;
+            return this;
+        }
+        public java.util.List<String> getExcludePaths() {
+            return this.excludePaths;
         }
 
         public ListInstanceSnapshotResponseBodySnapshots setGmtCreateTime(String gmtCreateTime) {

@@ -7,6 +7,9 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("ExcludePaths")
+    public java.util.List<String> excludePaths;
+
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
@@ -24,6 +27,9 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
 
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("Labels")
+    public java.util.List<GetInstanceSnapshotResponseBodyLabels> labels;
 
     @NameInMap("Message")
     public String message;
@@ -60,6 +66,14 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetInstanceSnapshotResponseBody setExcludePaths(java.util.List<String> excludePaths) {
+        this.excludePaths = excludePaths;
+        return this;
+    }
+    public java.util.List<String> getExcludePaths() {
+        return this.excludePaths;
     }
 
     public GetInstanceSnapshotResponseBody setGmtCreateTime(String gmtCreateTime) {
@@ -108,6 +122,14 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetInstanceSnapshotResponseBody setLabels(java.util.List<GetInstanceSnapshotResponseBodyLabels> labels) {
+        this.labels = labels;
+        return this;
+    }
+    public java.util.List<GetInstanceSnapshotResponseBodyLabels> getLabels() {
+        return this.labels;
     }
 
     public GetInstanceSnapshotResponseBody setMessage(String message) {
@@ -172,6 +194,36 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class GetInstanceSnapshotResponseBodyLabels extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetInstanceSnapshotResponseBodyLabels build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceSnapshotResponseBodyLabels self = new GetInstanceSnapshotResponseBodyLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceSnapshotResponseBodyLabels setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetInstanceSnapshotResponseBodyLabels setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
