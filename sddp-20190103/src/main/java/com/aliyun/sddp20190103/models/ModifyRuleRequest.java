@@ -88,6 +88,13 @@ public class ModifyRuleRequest extends TeaModel {
     @NameInMap("RuleType")
     public Integer ruleType;
 
+    /**
+     * <p>The data assets supported by the sensitive data detection rule. Valid values:</p>
+     * <br>
+     * <p>*   **0**: all data assets</p>
+     * <p>*   **1**: structured data assets</p>
+     * <p>*   **2**: unstructured data assets</p>
+     */
     @NameInMap("SupportForm")
     public Integer supportForm;
 

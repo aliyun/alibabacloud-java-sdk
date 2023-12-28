@@ -20,6 +20,9 @@ public class CreateConfigRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("FeatureType")
+    public Integer featureType;
+
     /**
      * <p>The language of the content within the request and response. Default value: **zh_cn**. Valid values:</p>
      * <br>
@@ -28,6 +31,9 @@ public class CreateConfigRequest extends TeaModel {
      */
     @NameInMap("Lang")
     public String lang;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     /**
      * <p>The value of the common configuration item. The meaning of this parameter varies with the value of the Code parameter.</p>
@@ -60,12 +66,28 @@ public class CreateConfigRequest extends TeaModel {
         return this.description;
     }
 
+    public CreateConfigRequest setFeatureType(Integer featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    public Integer getFeatureType() {
+        return this.featureType;
+    }
+
     public CreateConfigRequest setLang(String lang) {
         this.lang = lang;
         return this;
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public CreateConfigRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public CreateConfigRequest setValue(String value) {

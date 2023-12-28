@@ -61,6 +61,9 @@ public class DescribeDataLimitsRequest extends TeaModel {
     @NameInMap("EngineType")
     public String engineType;
 
+    @NameInMap("FeatureType")
+    public Integer featureType;
+
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
      * <br>
@@ -170,6 +173,14 @@ public class DescribeDataLimitsRequest extends TeaModel {
     }
     public String getEngineType() {
         return this.engineType;
+    }
+
+    public DescribeDataLimitsRequest setFeatureType(Integer featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     public DescribeDataLimitsRequest setLang(String lang) {

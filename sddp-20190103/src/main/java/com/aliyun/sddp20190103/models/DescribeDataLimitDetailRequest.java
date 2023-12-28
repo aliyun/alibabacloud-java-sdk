@@ -4,6 +4,9 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataLimitDetailRequest extends TeaModel {
+    @NameInMap("FeatureType")
+    public Integer featureType;
+
     /**
      * <p>The unique ID of the data asset that you want to query.</p>
      * <br>
@@ -33,6 +36,14 @@ public class DescribeDataLimitDetailRequest extends TeaModel {
     public static DescribeDataLimitDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDataLimitDetailRequest self = new DescribeDataLimitDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDataLimitDetailRequest setFeatureType(Integer featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     public DescribeDataLimitDetailRequest setId(Long id) {

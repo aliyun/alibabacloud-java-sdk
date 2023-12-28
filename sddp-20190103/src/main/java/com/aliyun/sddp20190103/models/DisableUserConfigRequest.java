@@ -10,6 +10,9 @@ public class DisableUserConfigRequest extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("FeatureType")
+    public Integer featureType;
+
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
      * <br>
@@ -30,6 +33,14 @@ public class DisableUserConfigRequest extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DisableUserConfigRequest setFeatureType(Integer featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     public DisableUserConfigRequest setLang(String lang) {

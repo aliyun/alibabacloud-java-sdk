@@ -7,6 +7,9 @@ public class DescribeDataObjectColumnDetailV2Request extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("FeatureType")
+    public Integer featureType;
+
     @NameInMap("Id")
     public String id;
 
@@ -33,6 +36,14 @@ public class DescribeDataObjectColumnDetailV2Request extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribeDataObjectColumnDetailV2Request setFeatureType(Integer featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     public DescribeDataObjectColumnDetailV2Request setId(String id) {

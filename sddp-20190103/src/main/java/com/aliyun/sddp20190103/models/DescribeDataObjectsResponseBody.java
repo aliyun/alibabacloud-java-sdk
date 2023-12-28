@@ -179,6 +179,9 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("ObjectFileCategory")
+        public String objectFileCategory;
+
         @NameInMap("ObjectType")
         public String objectType;
 
@@ -262,6 +265,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeDataObjectsResponseBodyItems setObjectFileCategory(String objectFileCategory) {
+            this.objectFileCategory = objectFileCategory;
+            return this;
+        }
+        public String getObjectFileCategory() {
+            return this.objectFileCategory;
         }
 
         public DescribeDataObjectsResponseBodyItems setObjectType(String objectType) {

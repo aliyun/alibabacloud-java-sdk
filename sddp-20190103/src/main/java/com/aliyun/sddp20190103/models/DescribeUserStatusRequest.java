@@ -4,6 +4,9 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserStatusRequest extends TeaModel {
+    @NameInMap("FeatureType")
+    public Integer featureType;
+
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
      * <br>
@@ -16,6 +19,14 @@ public class DescribeUserStatusRequest extends TeaModel {
     public static DescribeUserStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeUserStatusRequest self = new DescribeUserStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeUserStatusRequest setFeatureType(Integer featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     public DescribeUserStatusRequest setLang(String lang) {

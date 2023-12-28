@@ -4,6 +4,9 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class ModifyReportTaskStatusRequest extends TeaModel {
+    @NameInMap("FeatureType")
+    public Integer featureType;
+
     /**
      * <p>The language of the content within the request and response. Default value: **zh_cn**. Valid values:</p>
      * <br>
@@ -27,6 +30,14 @@ public class ModifyReportTaskStatusRequest extends TeaModel {
     public static ModifyReportTaskStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyReportTaskStatusRequest self = new ModifyReportTaskStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyReportTaskStatusRequest setFeatureType(Integer featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     public ModifyReportTaskStatusRequest setLang(String lang) {

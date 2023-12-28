@@ -7,6 +7,9 @@ public class DescribeCategoryTemplateListRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("FeatureType")
+    public Integer featureType;
+
     @NameInMap("Lang")
     public String lang;
 
@@ -27,6 +30,14 @@ public class DescribeCategoryTemplateListRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribeCategoryTemplateListRequest setFeatureType(Integer featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     public DescribeCategoryTemplateListRequest setLang(String lang) {

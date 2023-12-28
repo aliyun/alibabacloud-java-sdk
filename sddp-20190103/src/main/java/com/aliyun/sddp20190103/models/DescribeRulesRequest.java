@@ -35,6 +35,12 @@ public class DescribeRulesRequest extends TeaModel {
     public Integer customType;
 
     /**
+     * <p>This parameter is deprecated.</p>
+     */
+    @NameInMap("FeatureType")
+    public Integer featureType;
+
+    /**
      * <p>The parent group type of the rule.</p>
      */
     @NameInMap("GroupId")
@@ -182,6 +188,14 @@ public class DescribeRulesRequest extends TeaModel {
     }
     public Integer getCustomType() {
         return this.customType;
+    }
+
+    public DescribeRulesRequest setFeatureType(Integer featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     public DescribeRulesRequest setGroupId(String groupId) {

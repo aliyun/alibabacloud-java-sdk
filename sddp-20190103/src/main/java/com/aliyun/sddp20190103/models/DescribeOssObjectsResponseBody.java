@@ -154,6 +154,12 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         @NameInMap("CategoryName")
         public String categoryName;
 
+        @NameInMap("FileCategoryCode")
+        public Long fileCategoryCode;
+
+        @NameInMap("FileCategoryName")
+        public String fileCategoryName;
+
         /**
          * <p>The file ID of the OSS object.</p>
          */
@@ -253,6 +259,22 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         }
         public String getCategoryName() {
             return this.categoryName;
+        }
+
+        public DescribeOssObjectsResponseBodyItems setFileCategoryCode(Long fileCategoryCode) {
+            this.fileCategoryCode = fileCategoryCode;
+            return this;
+        }
+        public Long getFileCategoryCode() {
+            return this.fileCategoryCode;
+        }
+
+        public DescribeOssObjectsResponseBodyItems setFileCategoryName(String fileCategoryName) {
+            this.fileCategoryName = fileCategoryName;
+            return this;
+        }
+        public String getFileCategoryName() {
+            return this.fileCategoryName;
         }
 
         public DescribeOssObjectsResponseBodyItems setFileId(String fileId) {

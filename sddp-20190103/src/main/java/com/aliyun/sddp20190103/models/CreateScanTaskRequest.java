@@ -10,6 +10,9 @@ public class CreateScanTaskRequest extends TeaModel {
     @NameInMap("DataLimitId")
     public Long dataLimitId;
 
+    @NameInMap("FeatureType")
+    public Integer featureType;
+
     /**
      * <p>The interval between two consecutive custom scan tasks. Unit: days. Valid values: 1 to 2147483648.</p>
      */
@@ -66,6 +69,9 @@ public class CreateScanTaskRequest extends TeaModel {
     @NameInMap("ScanRangeContent")
     public String scanRangeContent;
 
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     /**
      * <p>The name of the scan task.</p>
      */
@@ -89,6 +95,14 @@ public class CreateScanTaskRequest extends TeaModel {
     }
     public Long getDataLimitId() {
         return this.dataLimitId;
+    }
+
+    public CreateScanTaskRequest setFeatureType(Integer featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     public CreateScanTaskRequest setIntervalDay(Integer intervalDay) {
@@ -153,6 +167,14 @@ public class CreateScanTaskRequest extends TeaModel {
     }
     public String getScanRangeContent() {
         return this.scanRangeContent;
+    }
+
+    public CreateScanTaskRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public CreateScanTaskRequest setTaskName(String taskName) {

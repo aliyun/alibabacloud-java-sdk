@@ -80,9 +80,23 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyItemsModelTags extends TeaModel {
+        /**
+         * <p>The ID of the tag. Valid values:</p>
+         * <br>
+         * <p>*   **101**: personal sensitive information</p>
+         * <p>*   **102**: personal information</p>
+         * <p>*   **107**: general information</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the tag. Valid values:</p>
+         * <br>
+         * <p>*   Personal sensitive information</p>
+         * <p>*   Personal information</p>
+         * <p>*   General information</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -111,7 +125,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyItems extends TeaModel {
         /**
-         * <p>The point in time when the data asset was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the data asset was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
          */
         @NameInMap("CreationTime")
         public Long creationTime;
@@ -123,7 +137,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String departName;
 
         /**
-         * <p>The unique ID of the data asset.</p>
+         * <p>The unique ID of the data asset in DSC.</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -144,11 +158,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean labelsec;
 
         /**
-         * <p>The point in time when the data asset was last scanned. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the data asset was last scanned. The value is a UNIX timestamp. Unit: milliseconds.</p>
          */
         @NameInMap("LastFinishTime")
         public Long lastFinishTime;
 
+        /**
+         * <p>A list of tags.</p>
+         */
         @NameInMap("ModelTags")
         public java.util.List<DescribeInstancesResponseBodyItemsModelTags> modelTags;
 
@@ -171,7 +188,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The name of the service to which the data asset belongs, such as MaxCompute, OSS, and ApsaraDB RDS. For more information about the types of data assets from which DSC can scan for sensitive data, see [Supported data assets](~~212906~~).</p>
+         * <p>The name of the service to which the data asset belongs, such as MaxCompute, OSS, and ApsaraDB RDS. For more information about the types of data assets that DSC can scan to detect sensitive data, see [Supported data assets](~~212906~~).</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
@@ -192,12 +209,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean protection;
 
         /**
-         * <p>The sensitivity level of the data asset. A higher sensitivity level indicates that the identified data is more sensitive.</p>
+         * <p>The ID of the sensitivity level for the data asset. A higher sensitivity level ID indicates that the identified data is more sensitive.</p>
          * <br>
-         * <p>*   **1**: No sensitive data is identified.</p>
+         * <p>*   **1**: No sensitive data is detected.</p>
          * <p>*   **2**: sensitive data at level 1.</p>
          * <p>*   **3**: sensitive data at level 2.</p>
-         * <p>*   **4**: sensitive data at level 3</p>
+         * <p>*   **4**: sensitive data at level 3.</p>
          * <p>*   **5**: sensitive data at level 4.</p>
          * <p>*   **6**: sensitive data at level 5.</p>
          * <p>*   **7**: sensitive data at level 6.</p>
@@ -224,14 +241,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the data asset contains sensitive data. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("Sensitive")
         public Boolean sensitive;
 
         /**
-         * <p>The total number of sensitive data objects in the data asset. For example, if the data asset is an ApsaraDB RDS instance, the value indicates the total number of sensitive tables in all databases of the instance.</p>
+         * <p>The number of sensitive data objects in the data asset. For example, if the data asset is an ApsaraDB RDS instance, the value indicates the number of sensitive tables in all databases of the instance.</p>
          */
         @NameInMap("SensitiveCount")
         public Integer sensitiveCount;
