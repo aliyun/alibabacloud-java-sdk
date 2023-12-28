@@ -5624,9 +5624,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * *   This operation is intended for API providers.
-      * *   This operation is used to query the ACLs in a Region. Region is a system parameter.
+      * *   This operation is used to query the ACLs in a region. Region is a system parameter.
       * *   You can filter the query results by ACL ID, name, or type.
-      * *   This operation cannot be used to query specific policies. If you want to query specific policies, use the DescribeIpControlPolicyItems operation.
+      * *   This operation cannot be used to query specific policies. If you want to query specific policies, call the [DescribeIpControlPolicyItems](~~DescribeIpControlPolicyItems~~) operation.
       *
       * @param request DescribeIpControlsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5678,9 +5678,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * *   This operation is intended for API providers.
-      * *   This operation is used to query the ACLs in a Region. Region is a system parameter.
+      * *   This operation is used to query the ACLs in a region. Region is a system parameter.
       * *   You can filter the query results by ACL ID, name, or type.
-      * *   This operation cannot be used to query specific policies. If you want to query specific policies, use the DescribeIpControlPolicyItems operation.
+      * *   This operation cannot be used to query specific policies. If you want to query specific policies, call the [DescribeIpControlPolicyItems](~~DescribeIpControlPolicyItems~~) operation.
       *
       * @param request DescribeIpControlsRequest
       * @return DescribeIpControlsResponse
