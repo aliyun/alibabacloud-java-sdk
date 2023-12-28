@@ -122,6 +122,384 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstanceResponseBodyInstanceReadOnlyResourceCapacityUnit extends TeaModel {
+        @NameInMap("MaxCapacityUnit")
+        public Integer maxCapacityUnit;
+
+        @NameInMap("MinCapacityUnit")
+        public Integer minCapacityUnit;
+
+        @NameInMap("UsedCapacityUnit")
+        public String usedCapacityUnit;
+
+        public static DescribeInstanceResponseBodyInstanceReadOnlyResourceCapacityUnit build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceResponseBodyInstanceReadOnlyResourceCapacityUnit self = new DescribeInstanceResponseBodyInstanceReadOnlyResourceCapacityUnit();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceCapacityUnit setMaxCapacityUnit(Integer maxCapacityUnit) {
+            this.maxCapacityUnit = maxCapacityUnit;
+            return this;
+        }
+        public Integer getMaxCapacityUnit() {
+            return this.maxCapacityUnit;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceCapacityUnit setMinCapacityUnit(Integer minCapacityUnit) {
+            this.minCapacityUnit = minCapacityUnit;
+            return this;
+        }
+        public Integer getMinCapacityUnit() {
+            return this.minCapacityUnit;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceCapacityUnit setUsedCapacityUnit(String usedCapacityUnit) {
+            this.usedCapacityUnit = usedCapacityUnit;
+            return this;
+        }
+        public String getUsedCapacityUnit() {
+            return this.usedCapacityUnit;
+        }
+
+    }
+
+    public static class DescribeInstanceResponseBodyInstanceReadOnlyResourceCpu extends TeaModel {
+        @NameInMap("OriginalTotalCpu")
+        public Long originalTotalCpu;
+
+        @NameInMap("TotalCpu")
+        public Long totalCpu;
+
+        @NameInMap("UnitCpu")
+        public Long unitCpu;
+
+        @NameInMap("UsedCpu")
+        public Long usedCpu;
+
+        public static DescribeInstanceResponseBodyInstanceReadOnlyResourceCpu build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceResponseBodyInstanceReadOnlyResourceCpu self = new DescribeInstanceResponseBodyInstanceReadOnlyResourceCpu();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceCpu setOriginalTotalCpu(Long originalTotalCpu) {
+            this.originalTotalCpu = originalTotalCpu;
+            return this;
+        }
+        public Long getOriginalTotalCpu() {
+            return this.originalTotalCpu;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceCpu setTotalCpu(Long totalCpu) {
+            this.totalCpu = totalCpu;
+            return this;
+        }
+        public Long getTotalCpu() {
+            return this.totalCpu;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceCpu setUnitCpu(Long unitCpu) {
+            this.unitCpu = unitCpu;
+            return this;
+        }
+        public Long getUnitCpu() {
+            return this.unitCpu;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceCpu setUsedCpu(Long usedCpu) {
+            this.usedCpu = usedCpu;
+            return this;
+        }
+        public Long getUsedCpu() {
+            return this.usedCpu;
+        }
+
+    }
+
+    public static class DescribeInstanceResponseBodyInstanceReadOnlyResourceDiskSize extends TeaModel {
+        @NameInMap("DataUsedSize")
+        public Double dataUsedSize;
+
+        @NameInMap("MaxDiskSize")
+        public Double maxDiskSize;
+
+        @NameInMap("MaxDiskUsedObServer")
+        public java.util.List<String> maxDiskUsedObServer;
+
+        @NameInMap("MaxDiskUsedPercent")
+        public Double maxDiskUsedPercent;
+
+        @NameInMap("OriginalTotalDiskSize")
+        public Long originalTotalDiskSize;
+
+        @NameInMap("TotalDiskSize")
+        public Long totalDiskSize;
+
+        @NameInMap("UnitDiskSize")
+        public Long unitDiskSize;
+
+        @NameInMap("UsedDiskSize")
+        public Long usedDiskSize;
+
+        public static DescribeInstanceResponseBodyInstanceReadOnlyResourceDiskSize build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceResponseBodyInstanceReadOnlyResourceDiskSize self = new DescribeInstanceResponseBodyInstanceReadOnlyResourceDiskSize();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceDiskSize setDataUsedSize(Double dataUsedSize) {
+            this.dataUsedSize = dataUsedSize;
+            return this;
+        }
+        public Double getDataUsedSize() {
+            return this.dataUsedSize;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceDiskSize setMaxDiskSize(Double maxDiskSize) {
+            this.maxDiskSize = maxDiskSize;
+            return this;
+        }
+        public Double getMaxDiskSize() {
+            return this.maxDiskSize;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceDiskSize setMaxDiskUsedObServer(java.util.List<String> maxDiskUsedObServer) {
+            this.maxDiskUsedObServer = maxDiskUsedObServer;
+            return this;
+        }
+        public java.util.List<String> getMaxDiskUsedObServer() {
+            return this.maxDiskUsedObServer;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceDiskSize setMaxDiskUsedPercent(Double maxDiskUsedPercent) {
+            this.maxDiskUsedPercent = maxDiskUsedPercent;
+            return this;
+        }
+        public Double getMaxDiskUsedPercent() {
+            return this.maxDiskUsedPercent;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceDiskSize setOriginalTotalDiskSize(Long originalTotalDiskSize) {
+            this.originalTotalDiskSize = originalTotalDiskSize;
+            return this;
+        }
+        public Long getOriginalTotalDiskSize() {
+            return this.originalTotalDiskSize;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceDiskSize setTotalDiskSize(Long totalDiskSize) {
+            this.totalDiskSize = totalDiskSize;
+            return this;
+        }
+        public Long getTotalDiskSize() {
+            return this.totalDiskSize;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceDiskSize setUnitDiskSize(Long unitDiskSize) {
+            this.unitDiskSize = unitDiskSize;
+            return this;
+        }
+        public Long getUnitDiskSize() {
+            return this.unitDiskSize;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceDiskSize setUsedDiskSize(Long usedDiskSize) {
+            this.usedDiskSize = usedDiskSize;
+            return this;
+        }
+        public Long getUsedDiskSize() {
+            return this.usedDiskSize;
+        }
+
+    }
+
+    public static class DescribeInstanceResponseBodyInstanceReadOnlyResourceLogDiskSize extends TeaModel {
+        @NameInMap("LogAssignedSize")
+        public String logAssignedSize;
+
+        @NameInMap("MaxLogAssignedObServer")
+        public java.util.List<String> maxLogAssignedObServer;
+
+        @NameInMap("MaxLogAssignedPercent")
+        public String maxLogAssignedPercent;
+
+        @NameInMap("TotalDiskSize")
+        public Long totalDiskSize;
+
+        @NameInMap("UnitDiskSize")
+        public Long unitDiskSize;
+
+        public static DescribeInstanceResponseBodyInstanceReadOnlyResourceLogDiskSize build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceResponseBodyInstanceReadOnlyResourceLogDiskSize self = new DescribeInstanceResponseBodyInstanceReadOnlyResourceLogDiskSize();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceLogDiskSize setLogAssignedSize(String logAssignedSize) {
+            this.logAssignedSize = logAssignedSize;
+            return this;
+        }
+        public String getLogAssignedSize() {
+            return this.logAssignedSize;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceLogDiskSize setMaxLogAssignedObServer(java.util.List<String> maxLogAssignedObServer) {
+            this.maxLogAssignedObServer = maxLogAssignedObServer;
+            return this;
+        }
+        public java.util.List<String> getMaxLogAssignedObServer() {
+            return this.maxLogAssignedObServer;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceLogDiskSize setMaxLogAssignedPercent(String maxLogAssignedPercent) {
+            this.maxLogAssignedPercent = maxLogAssignedPercent;
+            return this;
+        }
+        public String getMaxLogAssignedPercent() {
+            return this.maxLogAssignedPercent;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceLogDiskSize setTotalDiskSize(Long totalDiskSize) {
+            this.totalDiskSize = totalDiskSize;
+            return this;
+        }
+        public Long getTotalDiskSize() {
+            return this.totalDiskSize;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceLogDiskSize setUnitDiskSize(Long unitDiskSize) {
+            this.unitDiskSize = unitDiskSize;
+            return this;
+        }
+        public Long getUnitDiskSize() {
+            return this.unitDiskSize;
+        }
+
+    }
+
+    public static class DescribeInstanceResponseBodyInstanceReadOnlyResourceMemory extends TeaModel {
+        @NameInMap("OriginalTotalMemory")
+        public Long originalTotalMemory;
+
+        @NameInMap("TotalMemory")
+        public Long totalMemory;
+
+        @NameInMap("UnitMemory")
+        public Long unitMemory;
+
+        @NameInMap("UsedMemory")
+        public Long usedMemory;
+
+        public static DescribeInstanceResponseBodyInstanceReadOnlyResourceMemory build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceResponseBodyInstanceReadOnlyResourceMemory self = new DescribeInstanceResponseBodyInstanceReadOnlyResourceMemory();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceMemory setOriginalTotalMemory(Long originalTotalMemory) {
+            this.originalTotalMemory = originalTotalMemory;
+            return this;
+        }
+        public Long getOriginalTotalMemory() {
+            return this.originalTotalMemory;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceMemory setTotalMemory(Long totalMemory) {
+            this.totalMemory = totalMemory;
+            return this;
+        }
+        public Long getTotalMemory() {
+            return this.totalMemory;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceMemory setUnitMemory(Long unitMemory) {
+            this.unitMemory = unitMemory;
+            return this;
+        }
+        public Long getUnitMemory() {
+            return this.unitMemory;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceMemory setUsedMemory(Long usedMemory) {
+            this.usedMemory = usedMemory;
+            return this;
+        }
+        public Long getUsedMemory() {
+            return this.usedMemory;
+        }
+
+    }
+
+    public static class DescribeInstanceResponseBodyInstanceReadOnlyResource extends TeaModel {
+        @NameInMap("CapacityUnit")
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceCapacityUnit capacityUnit;
+
+        @NameInMap("Cpu")
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceCpu cpu;
+
+        @NameInMap("DiskSize")
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceDiskSize diskSize;
+
+        @NameInMap("LogDiskSize")
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceLogDiskSize logDiskSize;
+
+        @NameInMap("Memory")
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceMemory memory;
+
+        @NameInMap("UnitCount")
+        public Long unitCount;
+
+        public static DescribeInstanceResponseBodyInstanceReadOnlyResource build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceResponseBodyInstanceReadOnlyResource self = new DescribeInstanceResponseBodyInstanceReadOnlyResource();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResource setCapacityUnit(DescribeInstanceResponseBodyInstanceReadOnlyResourceCapacityUnit capacityUnit) {
+            this.capacityUnit = capacityUnit;
+            return this;
+        }
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceCapacityUnit getCapacityUnit() {
+            return this.capacityUnit;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResource setCpu(DescribeInstanceResponseBodyInstanceReadOnlyResourceCpu cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceCpu getCpu() {
+            return this.cpu;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResource setDiskSize(DescribeInstanceResponseBodyInstanceReadOnlyResourceDiskSize diskSize) {
+            this.diskSize = diskSize;
+            return this;
+        }
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceDiskSize getDiskSize() {
+            return this.diskSize;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResource setLogDiskSize(DescribeInstanceResponseBodyInstanceReadOnlyResourceLogDiskSize logDiskSize) {
+            this.logDiskSize = logDiskSize;
+            return this;
+        }
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceLogDiskSize getLogDiskSize() {
+            return this.logDiskSize;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResource setMemory(DescribeInstanceResponseBodyInstanceReadOnlyResourceMemory memory) {
+            this.memory = memory;
+            return this;
+        }
+        public DescribeInstanceResponseBodyInstanceReadOnlyResourceMemory getMemory() {
+            return this.memory;
+        }
+
+        public DescribeInstanceResponseBodyInstanceReadOnlyResource setUnitCount(Long unitCount) {
+            this.unitCount = unitCount;
+            return this;
+        }
+        public Long getUnitCount() {
+            return this.unitCount;
+        }
+
+    }
+
     public static class DescribeInstanceResponseBodyInstanceResourceCapacityUnit extends TeaModel {
         @NameInMap("MaxCapacityUnit")
         public Integer maxCapacityUnit;
@@ -361,6 +739,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("MaxLogAssignedPercent")
         public String maxLogAssignedPercent;
 
+        @NameInMap("OriginalTotalDiskSize")
+        public Integer originalTotalDiskSize;
+
         /**
          * <p>The ID of the region.</p>
          */
@@ -400,6 +781,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public String getMaxLogAssignedPercent() {
             return this.maxLogAssignedPercent;
+        }
+
+        public DescribeInstanceResponseBodyInstanceResourceLogDiskSize setOriginalTotalDiskSize(Integer originalTotalDiskSize) {
+            this.originalTotalDiskSize = originalTotalDiskSize;
+            return this;
+        }
+        public Integer getOriginalTotalDiskSize() {
+            return this.originalTotalDiskSize;
         }
 
         public DescribeInstanceResponseBodyInstanceResourceLogDiskSize setTotalDiskSize(Long totalDiskSize) {
@@ -732,6 +1121,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("ProxyServiceStatus")
         public String proxyServiceStatus;
 
+        @NameInMap("ReadOnlyResource")
+        public DescribeInstanceResponseBodyInstanceReadOnlyResource readOnlyResource;
+
         @NameInMap("ReplicaMode")
         public String replicaMode;
 
@@ -1000,6 +1392,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public String getProxyServiceStatus() {
             return this.proxyServiceStatus;
+        }
+
+        public DescribeInstanceResponseBodyInstance setReadOnlyResource(DescribeInstanceResponseBodyInstanceReadOnlyResource readOnlyResource) {
+            this.readOnlyResource = readOnlyResource;
+            return this;
+        }
+        public DescribeInstanceResponseBodyInstanceReadOnlyResource getReadOnlyResource() {
+            return this.readOnlyResource;
         }
 
         public DescribeInstanceResponseBodyInstance setReplicaMode(String replicaMode) {

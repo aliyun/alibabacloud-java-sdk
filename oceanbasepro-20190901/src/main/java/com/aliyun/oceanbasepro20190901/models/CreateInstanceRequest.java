@@ -96,6 +96,12 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    @NameInMap("PrimaryInstance")
+    public String primaryInstance;
+
+    @NameInMap("PrimaryRegion")
+    public String primaryRegion;
+
     @NameInMap("ReplicaMode")
     public String replicaMode;
 
@@ -220,6 +226,22 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getPeriodUnit() {
         return this.periodUnit;
+    }
+
+    public CreateInstanceRequest setPrimaryInstance(String primaryInstance) {
+        this.primaryInstance = primaryInstance;
+        return this;
+    }
+    public String getPrimaryInstance() {
+        return this.primaryInstance;
+    }
+
+    public CreateInstanceRequest setPrimaryRegion(String primaryRegion) {
+        this.primaryRegion = primaryRegion;
+        return this;
+    }
+    public String getPrimaryRegion() {
+        return this.primaryRegion;
     }
 
     public CreateInstanceRequest setReplicaMode(String replicaMode) {

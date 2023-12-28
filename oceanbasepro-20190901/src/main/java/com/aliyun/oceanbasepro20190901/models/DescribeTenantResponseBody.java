@@ -37,12 +37,261 @@ public class DescribeTenantResponseBody extends TeaModel {
         return this.tenant;
     }
 
+    public static class DescribeTenantResponseBodyTenantReadOnlyResourceCapacityUnit extends TeaModel {
+        @NameInMap("MaxCapacityUnit")
+        public Integer maxCapacityUnit;
+
+        @NameInMap("MinCapacityUnit")
+        public Integer minCapacityUnit;
+
+        @NameInMap("UsedCapacit")
+        public Integer usedCapacit;
+
+        public static DescribeTenantResponseBodyTenantReadOnlyResourceCapacityUnit build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTenantResponseBodyTenantReadOnlyResourceCapacityUnit self = new DescribeTenantResponseBodyTenantReadOnlyResourceCapacityUnit();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeTenantResponseBodyTenantReadOnlyResourceCapacityUnit setMaxCapacityUnit(Integer maxCapacityUnit) {
+            this.maxCapacityUnit = maxCapacityUnit;
+            return this;
+        }
+        public Integer getMaxCapacityUnit() {
+            return this.maxCapacityUnit;
+        }
+
+        public DescribeTenantResponseBodyTenantReadOnlyResourceCapacityUnit setMinCapacityUnit(Integer minCapacityUnit) {
+            this.minCapacityUnit = minCapacityUnit;
+            return this;
+        }
+        public Integer getMinCapacityUnit() {
+            return this.minCapacityUnit;
+        }
+
+        public DescribeTenantResponseBodyTenantReadOnlyResourceCapacityUnit setUsedCapacit(Integer usedCapacit) {
+            this.usedCapacit = usedCapacit;
+            return this;
+        }
+        public Integer getUsedCapacit() {
+            return this.usedCapacit;
+        }
+
+    }
+
+    public static class DescribeTenantResponseBodyTenantReadOnlyResourceCpu extends TeaModel {
+        @NameInMap("TotalCpu")
+        public Float totalCpu;
+
+        @NameInMap("UnitCpu")
+        public Float unitCpu;
+
+        @NameInMap("UsedCpu")
+        public Float usedCpu;
+
+        public static DescribeTenantResponseBodyTenantReadOnlyResourceCpu build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTenantResponseBodyTenantReadOnlyResourceCpu self = new DescribeTenantResponseBodyTenantReadOnlyResourceCpu();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeTenantResponseBodyTenantReadOnlyResourceCpu setTotalCpu(Float totalCpu) {
+            this.totalCpu = totalCpu;
+            return this;
+        }
+        public Float getTotalCpu() {
+            return this.totalCpu;
+        }
+
+        public DescribeTenantResponseBodyTenantReadOnlyResourceCpu setUnitCpu(Float unitCpu) {
+            this.unitCpu = unitCpu;
+            return this;
+        }
+        public Float getUnitCpu() {
+            return this.unitCpu;
+        }
+
+        public DescribeTenantResponseBodyTenantReadOnlyResourceCpu setUsedCpu(Float usedCpu) {
+            this.usedCpu = usedCpu;
+            return this;
+        }
+        public Float getUsedCpu() {
+            return this.usedCpu;
+        }
+
+    }
+
+    public static class DescribeTenantResponseBodyTenantReadOnlyResourceDiskSize extends TeaModel {
+        @NameInMap("UsedDiskSize")
+        public Float usedDiskSize;
+
+        public static DescribeTenantResponseBodyTenantReadOnlyResourceDiskSize build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTenantResponseBodyTenantReadOnlyResourceDiskSize self = new DescribeTenantResponseBodyTenantReadOnlyResourceDiskSize();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeTenantResponseBodyTenantReadOnlyResourceDiskSize setUsedDiskSize(Float usedDiskSize) {
+            this.usedDiskSize = usedDiskSize;
+            return this;
+        }
+        public Float getUsedDiskSize() {
+            return this.usedDiskSize;
+        }
+
+    }
+
+    public static class DescribeTenantResponseBodyTenantReadOnlyResourceLogDiskSize extends TeaModel {
+        @NameInMap("TotalLogDisk")
+        public Integer totalLogDisk;
+
+        @NameInMap("UnitLogDisk")
+        public Integer unitLogDisk;
+
+        public static DescribeTenantResponseBodyTenantReadOnlyResourceLogDiskSize build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTenantResponseBodyTenantReadOnlyResourceLogDiskSize self = new DescribeTenantResponseBodyTenantReadOnlyResourceLogDiskSize();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeTenantResponseBodyTenantReadOnlyResourceLogDiskSize setTotalLogDisk(Integer totalLogDisk) {
+            this.totalLogDisk = totalLogDisk;
+            return this;
+        }
+        public Integer getTotalLogDisk() {
+            return this.totalLogDisk;
+        }
+
+        public DescribeTenantResponseBodyTenantReadOnlyResourceLogDiskSize setUnitLogDisk(Integer unitLogDisk) {
+            this.unitLogDisk = unitLogDisk;
+            return this;
+        }
+        public Integer getUnitLogDisk() {
+            return this.unitLogDisk;
+        }
+
+    }
+
+    public static class DescribeTenantResponseBodyTenantReadOnlyResourceMemory extends TeaModel {
+        @NameInMap("TotalMemory")
+        public Float totalMemory;
+
+        @NameInMap("UnitMemory")
+        public Float unitMemory;
+
+        @NameInMap("UsedMemory")
+        public Float usedMemory;
+
+        public static DescribeTenantResponseBodyTenantReadOnlyResourceMemory build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTenantResponseBodyTenantReadOnlyResourceMemory self = new DescribeTenantResponseBodyTenantReadOnlyResourceMemory();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeTenantResponseBodyTenantReadOnlyResourceMemory setTotalMemory(Float totalMemory) {
+            this.totalMemory = totalMemory;
+            return this;
+        }
+        public Float getTotalMemory() {
+            return this.totalMemory;
+        }
+
+        public DescribeTenantResponseBodyTenantReadOnlyResourceMemory setUnitMemory(Float unitMemory) {
+            this.unitMemory = unitMemory;
+            return this;
+        }
+        public Float getUnitMemory() {
+            return this.unitMemory;
+        }
+
+        public DescribeTenantResponseBodyTenantReadOnlyResourceMemory setUsedMemory(Float usedMemory) {
+            this.usedMemory = usedMemory;
+            return this;
+        }
+        public Float getUsedMemory() {
+            return this.usedMemory;
+        }
+
+    }
+
+    public static class DescribeTenantResponseBodyTenantReadOnlyResource extends TeaModel {
+        @NameInMap("CapacityUnit")
+        public DescribeTenantResponseBodyTenantReadOnlyResourceCapacityUnit capacityUnit;
+
+        @NameInMap("Cpu")
+        public DescribeTenantResponseBodyTenantReadOnlyResourceCpu cpu;
+
+        @NameInMap("DiskSize")
+        public DescribeTenantResponseBodyTenantReadOnlyResourceDiskSize diskSize;
+
+        @NameInMap("LogDiskSize")
+        public DescribeTenantResponseBodyTenantReadOnlyResourceLogDiskSize logDiskSize;
+
+        @NameInMap("Memory")
+        public DescribeTenantResponseBodyTenantReadOnlyResourceMemory memory;
+
+        @NameInMap("UnitNum")
+        public Integer unitNum;
+
+        public static DescribeTenantResponseBodyTenantReadOnlyResource build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTenantResponseBodyTenantReadOnlyResource self = new DescribeTenantResponseBodyTenantReadOnlyResource();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeTenantResponseBodyTenantReadOnlyResource setCapacityUnit(DescribeTenantResponseBodyTenantReadOnlyResourceCapacityUnit capacityUnit) {
+            this.capacityUnit = capacityUnit;
+            return this;
+        }
+        public DescribeTenantResponseBodyTenantReadOnlyResourceCapacityUnit getCapacityUnit() {
+            return this.capacityUnit;
+        }
+
+        public DescribeTenantResponseBodyTenantReadOnlyResource setCpu(DescribeTenantResponseBodyTenantReadOnlyResourceCpu cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public DescribeTenantResponseBodyTenantReadOnlyResourceCpu getCpu() {
+            return this.cpu;
+        }
+
+        public DescribeTenantResponseBodyTenantReadOnlyResource setDiskSize(DescribeTenantResponseBodyTenantReadOnlyResourceDiskSize diskSize) {
+            this.diskSize = diskSize;
+            return this;
+        }
+        public DescribeTenantResponseBodyTenantReadOnlyResourceDiskSize getDiskSize() {
+            return this.diskSize;
+        }
+
+        public DescribeTenantResponseBodyTenantReadOnlyResource setLogDiskSize(DescribeTenantResponseBodyTenantReadOnlyResourceLogDiskSize logDiskSize) {
+            this.logDiskSize = logDiskSize;
+            return this;
+        }
+        public DescribeTenantResponseBodyTenantReadOnlyResourceLogDiskSize getLogDiskSize() {
+            return this.logDiskSize;
+        }
+
+        public DescribeTenantResponseBodyTenantReadOnlyResource setMemory(DescribeTenantResponseBodyTenantReadOnlyResourceMemory memory) {
+            this.memory = memory;
+            return this;
+        }
+        public DescribeTenantResponseBodyTenantReadOnlyResourceMemory getMemory() {
+            return this.memory;
+        }
+
+        public DescribeTenantResponseBodyTenantReadOnlyResource setUnitNum(Integer unitNum) {
+            this.unitNum = unitNum;
+            return this;
+        }
+        public Integer getUnitNum() {
+            return this.unitNum;
+        }
+
+    }
+
     public static class DescribeTenantResponseBodyTenantTenantConnections extends TeaModel {
         /**
          * <p>The primary zone of the tenant.</p>
          */
         @NameInMap("AddressType")
         public String addressType;
+
+        @NameInMap("ConnectionReplicaType")
+        public String connectionReplicaType;
 
         /**
          * <p>The Internet address for accessing the tenant.</p>
@@ -145,6 +394,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
         public String getAddressType() {
             return this.addressType;
+        }
+
+        public DescribeTenantResponseBodyTenantTenantConnections setConnectionReplicaType(String connectionReplicaType) {
+            this.connectionReplicaType = connectionReplicaType;
+            return this;
+        }
+        public String getConnectionReplicaType() {
+            return this.connectionReplicaType;
         }
 
         public DescribeTenantResponseBodyTenantTenantConnections setConnectionZones(java.util.List<String> connectionZones) {
@@ -571,6 +828,80 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeTenantResponseBodyTenantTenantZonesTenantZoneReplicas extends TeaModel {
+        @NameInMap("FullCopyId")
+        public Integer fullCopyId;
+
+        @NameInMap("LogicZoneName")
+        public String logicZoneName;
+
+        @NameInMap("ReadOnlyCopyId")
+        public String readOnlyCopyId;
+
+        @NameInMap("ZoneCopyId")
+        public Integer zoneCopyId;
+
+        @NameInMap("ZoneNodes")
+        public String zoneNodes;
+
+        @NameInMap("ZoneReplicaType")
+        public String zoneReplicaType;
+
+        public static DescribeTenantResponseBodyTenantTenantZonesTenantZoneReplicas build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTenantResponseBodyTenantTenantZonesTenantZoneReplicas self = new DescribeTenantResponseBodyTenantTenantZonesTenantZoneReplicas();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeTenantResponseBodyTenantTenantZonesTenantZoneReplicas setFullCopyId(Integer fullCopyId) {
+            this.fullCopyId = fullCopyId;
+            return this;
+        }
+        public Integer getFullCopyId() {
+            return this.fullCopyId;
+        }
+
+        public DescribeTenantResponseBodyTenantTenantZonesTenantZoneReplicas setLogicZoneName(String logicZoneName) {
+            this.logicZoneName = logicZoneName;
+            return this;
+        }
+        public String getLogicZoneName() {
+            return this.logicZoneName;
+        }
+
+        public DescribeTenantResponseBodyTenantTenantZonesTenantZoneReplicas setReadOnlyCopyId(String readOnlyCopyId) {
+            this.readOnlyCopyId = readOnlyCopyId;
+            return this;
+        }
+        public String getReadOnlyCopyId() {
+            return this.readOnlyCopyId;
+        }
+
+        public DescribeTenantResponseBodyTenantTenantZonesTenantZoneReplicas setZoneCopyId(Integer zoneCopyId) {
+            this.zoneCopyId = zoneCopyId;
+            return this;
+        }
+        public Integer getZoneCopyId() {
+            return this.zoneCopyId;
+        }
+
+        public DescribeTenantResponseBodyTenantTenantZonesTenantZoneReplicas setZoneNodes(String zoneNodes) {
+            this.zoneNodes = zoneNodes;
+            return this;
+        }
+        public String getZoneNodes() {
+            return this.zoneNodes;
+        }
+
+        public DescribeTenantResponseBodyTenantTenantZonesTenantZoneReplicas setZoneReplicaType(String zoneReplicaType) {
+            this.zoneReplicaType = zoneReplicaType;
+            return this;
+        }
+        public String getZoneReplicaType() {
+            return this.zoneReplicaType;
+        }
+
+    }
+
     public static class DescribeTenantResponseBodyTenantTenantZones extends TeaModel {
         /**
          * <p>是否允许开启读写分离地址</p>
@@ -583,6 +914,9 @@ public class DescribeTenantResponseBody extends TeaModel {
          */
         @NameInMap("TenantZoneId")
         public String tenantZoneId;
+
+        @NameInMap("TenantZoneReplicas")
+        public java.util.List<DescribeTenantResponseBodyTenantTenantZonesTenantZoneReplicas> tenantZoneReplicas;
 
         /**
          * <p>The character set.</p>
@@ -609,6 +943,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
         public String getTenantZoneId() {
             return this.tenantZoneId;
+        }
+
+        public DescribeTenantResponseBodyTenantTenantZones setTenantZoneReplicas(java.util.List<DescribeTenantResponseBodyTenantTenantZonesTenantZoneReplicas> tenantZoneReplicas) {
+            this.tenantZoneReplicas = tenantZoneReplicas;
+            return this;
+        }
+        public java.util.List<DescribeTenantResponseBodyTenantTenantZonesTenantZoneReplicas> getTenantZoneReplicas() {
+            return this.tenantZoneReplicas;
         }
 
         public DescribeTenantResponseBodyTenantTenantZones setTenantZoneRole(String tenantZoneRole) {
@@ -651,6 +993,9 @@ public class DescribeTenantResponseBody extends TeaModel {
          */
         @NameInMap("CreateTime")
         public String createTime;
+
+        @NameInMap("DataMergeTime")
+        public String dataMergeTime;
 
         /**
          * <p>The list of zones.</p>
@@ -790,6 +1135,9 @@ public class DescribeTenantResponseBody extends TeaModel {
          */
         @NameInMap("PrimaryZoneDeployType")
         public String primaryZoneDeployType;
+
+        @NameInMap("ReadOnlyResource")
+        public DescribeTenantResponseBodyTenantReadOnlyResource readOnlyResource;
 
         /**
          * <p><DescribeTenantResponse></p>
@@ -954,6 +1302,14 @@ public class DescribeTenantResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public DescribeTenantResponseBodyTenant setDataMergeTime(String dataMergeTime) {
+            this.dataMergeTime = dataMergeTime;
+            return this;
+        }
+        public String getDataMergeTime() {
+            return this.dataMergeTime;
+        }
+
         public DescribeTenantResponseBodyTenant setDeployMode(String deployMode) {
             this.deployMode = deployMode;
             return this;
@@ -1072,6 +1428,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
         public String getPrimaryZoneDeployType() {
             return this.primaryZoneDeployType;
+        }
+
+        public DescribeTenantResponseBodyTenant setReadOnlyResource(DescribeTenantResponseBodyTenantReadOnlyResource readOnlyResource) {
+            this.readOnlyResource = readOnlyResource;
+            return this;
+        }
+        public DescribeTenantResponseBodyTenantReadOnlyResource getReadOnlyResource() {
+            return this.readOnlyResource;
         }
 
         public DescribeTenantResponseBodyTenant setSeries(String series) {

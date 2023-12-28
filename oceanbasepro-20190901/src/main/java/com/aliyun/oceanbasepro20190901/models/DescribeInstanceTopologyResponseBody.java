@@ -63,6 +63,9 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         @NameInMap("NodeId")
         public String nodeId;
 
+        @NameInMap("ReplicaType")
+        public String replicaType;
+
         /**
          * <p>Alibaba Cloud CLI</p>
          */
@@ -129,6 +132,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
         public String getNodeId() {
             return this.nodeId;
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyTenantsTenantZonesUnits setReplicaType(String replicaType) {
+            this.replicaType = replicaType;
+            return this;
+        }
+        public String getReplicaType() {
+            return this.replicaType;
         }
 
         public DescribeInstanceTopologyResponseBodyInstanceTopologyTenantsTenantZonesUnits setUnitCpu(Float unitCpu) {
@@ -555,6 +566,9 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodes extends TeaModel {
+        @NameInMap("FullCopyId")
+        public Long fullCopyId;
+
         /**
          * <p>The information of zones.</p>
          */
@@ -579,9 +593,23 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         @NameInMap("NodeStatus")
         public String nodeStatus;
 
+        @NameInMap("ReadOnlyCopyId")
+        public Long readOnlyCopyId;
+
+        @NameInMap("ReplicaType")
+        public String replicaType;
+
         public static DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodes build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodes self = new DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodes();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodes setFullCopyId(Long fullCopyId) {
+            this.fullCopyId = fullCopyId;
+            return this;
+        }
+        public Long getFullCopyId() {
+            return this.fullCopyId;
         }
 
         public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodes setNodeCopyId(Long nodeCopyId) {
@@ -614,6 +642,22 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
         public String getNodeStatus() {
             return this.nodeStatus;
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodes setReadOnlyCopyId(Long readOnlyCopyId) {
+            this.readOnlyCopyId = readOnlyCopyId;
+            return this;
+        }
+        public Long getReadOnlyCopyId() {
+            return this.readOnlyCopyId;
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodes setReplicaType(String replicaType) {
+            this.replicaType = replicaType;
+            return this;
+        }
+        public String getReplicaType() {
+            return this.replicaType;
         }
 
     }

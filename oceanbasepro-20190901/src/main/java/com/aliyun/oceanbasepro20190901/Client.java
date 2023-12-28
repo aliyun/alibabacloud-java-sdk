@@ -130,6 +130,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("PeriodUnit", request.periodUnit);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.primaryInstance)) {
+            body.put("PrimaryInstance", request.primaryInstance);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.primaryRegion)) {
+            body.put("PrimaryRegion", request.primaryRegion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.replicaMode)) {
             body.put("ReplicaMode", request.replicaMode);
         }
@@ -1857,8 +1865,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StartTime", request.startTime);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.replicaType)) {
+            body.put("ReplicaType", request.replicaType);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeMetricsData"),
@@ -4203,6 +4217,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DiskSize", request.diskSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.diskType)) {
+            body.put("DiskType", request.diskType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             body.put("DryRun", request.dryRun);
         }
@@ -4273,6 +4291,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyInstanceTemporaryCapacityResponse modifyInstanceTemporaryCapacityWithOptions(ModifyInstanceTemporaryCapacityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            body.put("AcceptLanguage", request.acceptLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.diskSize)) {
             body.put("DiskSize", request.diskSize);
         }
@@ -4441,12 +4463,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("PrimaryZone", request.primaryZone);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantEndpointDirectId)) {
+            body.put("TenantEndpointDirectId", request.tenantEndpointDirectId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tenantEndpointId)) {
             body.put("TenantEndpointId", request.tenantEndpointId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
             body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userDirectVSwitchId)) {
+            body.put("UserDirectVSwitchId", request.userDirectVSwitchId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userVSwitchId)) {
