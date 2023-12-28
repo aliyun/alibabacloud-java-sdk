@@ -90,6 +90,9 @@ public class CreateRuleRequest extends TeaModel {
     @NameInMap("RuleType")
     public Integer ruleType;
 
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     /**
      * <p>The statistical expression.</p>
      */
@@ -105,6 +108,15 @@ public class CreateRuleRequest extends TeaModel {
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>The type of the data asset. Valid values:</p>
+     * <br>
+     * <p>*   **0**: all data assets</p>
+     * <p>*   **1**: structured data asset</p>
+     * <p>*   **2**: unstructured data asset</p>
+     * <br>
+     * <p>> If you set the parameter to 1 or 2, rules that support all data assets and rules that support the queried data asset type are returned.</p>
+     */
     @NameInMap("SupportForm")
     public Integer supportForm;
 
@@ -215,6 +227,14 @@ public class CreateRuleRequest extends TeaModel {
     }
     public Integer getRuleType() {
         return this.ruleType;
+    }
+
+    public CreateRuleRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public CreateRuleRequest setStatExpress(String statExpress) {

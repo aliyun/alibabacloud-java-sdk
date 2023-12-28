@@ -10,6 +10,9 @@ public class DescribeCategoryTemplateRuleListRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("FeatureType")
+    public Integer featureType;
+
     /**
      * <p>The language of the content within the request and response. Default value: **zh_cn**. Valid values:</p>
      * <br>
@@ -65,6 +68,14 @@ public class DescribeCategoryTemplateRuleListRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribeCategoryTemplateRuleListRequest setFeatureType(Integer featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     public DescribeCategoryTemplateRuleListRequest setLang(String lang) {

@@ -4,6 +4,9 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataLimitSetRequest extends TeaModel {
+    @NameInMap("FeatureType")
+    public Integer featureType;
+
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
      * <br>
@@ -36,6 +39,14 @@ public class DescribeDataLimitSetRequest extends TeaModel {
     public static DescribeDataLimitSetRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDataLimitSetRequest self = new DescribeDataLimitSetRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDataLimitSetRequest setFeatureType(Integer featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     public DescribeDataLimitSetRequest setLang(String lang) {

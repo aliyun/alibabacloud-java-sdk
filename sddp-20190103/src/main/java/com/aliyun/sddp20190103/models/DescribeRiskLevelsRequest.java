@@ -4,6 +4,9 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeRiskLevelsRequest extends TeaModel {
+    @NameInMap("FeatureType")
+    public Integer featureType;
+
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
      * <br>
@@ -22,6 +25,14 @@ public class DescribeRiskLevelsRequest extends TeaModel {
     public static DescribeRiskLevelsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRiskLevelsRequest self = new DescribeRiskLevelsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeRiskLevelsRequest setFeatureType(Integer featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     public DescribeRiskLevelsRequest setLang(String lang) {

@@ -33,6 +33,9 @@ public class ModifyDataLimitRequest extends TeaModel {
     @NameInMap("EngineType")
     public String engineType;
 
+    @NameInMap("FeatureType")
+    public Integer featureType;
+
     /**
      * <p>The unique ID of the data asset for which you want to modify configuration items.</p>
      * <br>
@@ -169,6 +172,14 @@ public class ModifyDataLimitRequest extends TeaModel {
     }
     public String getEngineType() {
         return this.engineType;
+    }
+
+    public ModifyDataLimitRequest setFeatureType(Integer featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     public ModifyDataLimitRequest setId(Long id) {

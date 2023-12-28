@@ -116,6 +116,9 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         @NameInMap("OssTotalSize")
         public Long ossTotalSize;
 
+        @NameInMap("ProtectionDays")
+        public Integer protectionDays;
+
         /**
          * <p>Indicates whether DSC is purchased. Valid values:</p>
          * <br>
@@ -151,6 +154,9 @@ public class DescribeUserStatusResponseBody extends TeaModel {
          */
         @NameInMap("Trail")
         public Boolean trail;
+
+        @NameInMap("UseAgentAudit")
+        public Boolean useAgentAudit;
 
         /**
          * <p>The number of instances that are used.</p>
@@ -257,6 +263,14 @@ public class DescribeUserStatusResponseBody extends TeaModel {
             return this.ossTotalSize;
         }
 
+        public DescribeUserStatusResponseBodyUserStatus setProtectionDays(Integer protectionDays) {
+            this.protectionDays = protectionDays;
+            return this;
+        }
+        public Integer getProtectionDays() {
+            return this.protectionDays;
+        }
+
         public DescribeUserStatusResponseBodyUserStatus setPurchased(Boolean purchased) {
             this.purchased = purchased;
             return this;
@@ -295,6 +309,14 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         }
         public Boolean getTrail() {
             return this.trail;
+        }
+
+        public DescribeUserStatusResponseBodyUserStatus setUseAgentAudit(Boolean useAgentAudit) {
+            this.useAgentAudit = useAgentAudit;
+            return this;
+        }
+        public Boolean getUseAgentAudit() {
+            return this.useAgentAudit;
         }
 
         public DescribeUserStatusResponseBodyUserStatus setUseInstanceNum(Integer useInstanceNum) {

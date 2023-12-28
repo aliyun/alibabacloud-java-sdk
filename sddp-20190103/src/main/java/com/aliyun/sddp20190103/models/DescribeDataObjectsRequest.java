@@ -10,6 +10,12 @@ public class DescribeDataObjectsRequest extends TeaModel {
     @NameInMap("DomainId")
     public Long domainId;
 
+    @NameInMap("FeatureType")
+    public Integer featureType;
+
+    @NameInMap("FileCategoryCode")
+    public Long fileCategoryCode;
+
     @NameInMap("FileType")
     public Long fileType;
 
@@ -65,6 +71,22 @@ public class DescribeDataObjectsRequest extends TeaModel {
     }
     public Long getDomainId() {
         return this.domainId;
+    }
+
+    public DescribeDataObjectsRequest setFeatureType(Integer featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    public Integer getFeatureType() {
+        return this.featureType;
+    }
+
+    public DescribeDataObjectsRequest setFileCategoryCode(Long fileCategoryCode) {
+        this.fileCategoryCode = fileCategoryCode;
+        return this;
+    }
+    public Long getFileCategoryCode() {
+        return this.fileCategoryCode;
     }
 
     public DescribeDataObjectsRequest setFileType(Long fileType) {

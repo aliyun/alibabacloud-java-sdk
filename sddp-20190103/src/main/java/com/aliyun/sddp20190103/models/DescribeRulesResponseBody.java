@@ -97,6 +97,8 @@ public class DescribeRulesResponseBody extends TeaModel {
 
         /**
          * <p>The content in the sensitive data detection rule.</p>
+         * <br>
+         * <p>>  A built-in detection rule whose CustomType is 0 does not return the content of the rule.</p>
          */
         @NameInMap("Content")
         public String content;
@@ -212,7 +214,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         /**
          * <p>The sensitivity level of data that hits the sensitive data detection rule. Valid values:</p>
          * <br>
-         * <p>*   **N/A**: No sensitive data is detected.</p>
+         * <p>*   **N/A**: indicates that no sensitive data is detected.</p>
          * <p>*   **S1**: indicates the low sensitivity level.</p>
          * <p>*   **S2**: indicates the medium sensitivity level.</p>
          * <p>*   **S3**: indicates the high sensitivity level.</p>
@@ -236,6 +238,13 @@ public class DescribeRulesResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The data asset type that is supported by the sensitive data detection rule. Valid values:</p>
+         * <br>
+         * <p>*   **0**: all data assets</p>
+         * <p>*   **1**: structured data assets</p>
+         * <p>*   **2**: unstructured data assets</p>
+         */
         @NameInMap("SupportForm")
         public Integer supportForm;
 
@@ -252,7 +261,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         public Long userId;
 
         /**
-         * <p>The severity level of the alert. Valid values:</p>
+         * <p>The severity level. Valid values:</p>
          * <br>
          * <p>*   **1**: low</p>
          * <p>*   **2**: medium</p>

@@ -4,6 +4,9 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DeleteRuleRequest extends TeaModel {
+    @NameInMap("FeatureType")
+    public Integer featureType;
+
     /**
      * <p>The ID of the sensitive data detection rule.</p>
      */
@@ -16,9 +19,20 @@ public class DeleteRuleRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     public static DeleteRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteRuleRequest self = new DeleteRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteRuleRequest setFeatureType(Integer featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     public DeleteRuleRequest setId(Long id) {
@@ -35,6 +49,14 @@ public class DeleteRuleRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DeleteRuleRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

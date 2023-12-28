@@ -10,6 +10,9 @@ public class DescribeOssObjectsRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("FileCategoryCode")
+    public Long fileCategoryCode;
+
     /**
      * <p>The ID of the instance to which the OSS object belongs.</p>
      * <br>
@@ -94,6 +97,14 @@ public class DescribeOssObjectsRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribeOssObjectsRequest setFileCategoryCode(Long fileCategoryCode) {
+        this.fileCategoryCode = fileCategoryCode;
+        return this;
+    }
+    public Long getFileCategoryCode() {
+        return this.fileCategoryCode;
     }
 
     public DescribeOssObjectsRequest setInstanceId(String instanceId) {

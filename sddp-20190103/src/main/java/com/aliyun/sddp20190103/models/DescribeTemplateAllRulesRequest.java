@@ -4,6 +4,9 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeTemplateAllRulesRequest extends TeaModel {
+    @NameInMap("FeatureType")
+    public Integer featureType;
+
     @NameInMap("Lang")
     public String lang;
 
@@ -13,6 +16,14 @@ public class DescribeTemplateAllRulesRequest extends TeaModel {
     public static DescribeTemplateAllRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTemplateAllRulesRequest self = new DescribeTemplateAllRulesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeTemplateAllRulesRequest setFeatureType(Integer featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     public DescribeTemplateAllRulesRequest setLang(String lang) {

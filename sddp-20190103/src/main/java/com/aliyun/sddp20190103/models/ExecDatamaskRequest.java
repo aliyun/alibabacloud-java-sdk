@@ -14,6 +14,9 @@ public class ExecDatamaskRequest extends TeaModel {
     @NameInMap("Data")
     public String data;
 
+    @NameInMap("FeatureType")
+    public Integer featureType;
+
     /**
      * <p>The language of the content within the request and response. Default value: **zh_cn**. Valid values:</p>
      * <br>
@@ -43,6 +46,14 @@ public class ExecDatamaskRequest extends TeaModel {
     }
     public String getData() {
         return this.data;
+    }
+
+    public ExecDatamaskRequest setFeatureType(Integer featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     public ExecDatamaskRequest setLang(String lang) {

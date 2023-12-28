@@ -4,6 +4,9 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DeleteDataLimitRequest extends TeaModel {
+    @NameInMap("FeatureType")
+    public Integer featureType;
+
     /**
      * <p>The ID of the data asset.</p>
      * <br>
@@ -21,9 +24,20 @@ public class DeleteDataLimitRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     public static DeleteDataLimitRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDataLimitRequest self = new DeleteDataLimitRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteDataLimitRequest setFeatureType(Integer featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     public DeleteDataLimitRequest setId(Long id) {
@@ -40,6 +54,14 @@ public class DeleteDataLimitRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DeleteDataLimitRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

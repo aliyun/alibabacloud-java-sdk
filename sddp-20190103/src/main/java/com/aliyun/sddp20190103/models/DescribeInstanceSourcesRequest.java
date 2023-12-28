@@ -34,6 +34,9 @@ public class DescribeInstanceSourcesRequest extends TeaModel {
     @NameInMap("EngineType")
     public String engineType;
 
+    @NameInMap("FeatureType")
+    public Integer featureType;
+
     /**
      * <p>The ID of the instance.</p>
      */
@@ -124,6 +127,14 @@ public class DescribeInstanceSourcesRequest extends TeaModel {
     }
     public String getEngineType() {
         return this.engineType;
+    }
+
+    public DescribeInstanceSourcesRequest setFeatureType(Integer featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     public DescribeInstanceSourcesRequest setInstanceId(String instanceId) {

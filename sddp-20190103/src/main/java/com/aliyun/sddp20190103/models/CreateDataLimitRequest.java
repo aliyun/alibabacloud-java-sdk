@@ -62,6 +62,9 @@ public class CreateDataLimitRequest extends TeaModel {
     @NameInMap("EventStatus")
     public Integer eventStatus;
 
+    @NameInMap("FeatureType")
+    public Integer featureType;
+
     /**
      * <p>The language of the content within the request and response. Default value: **zh_cn**. Valid values:</p>
      * <br>
@@ -145,6 +148,9 @@ public class CreateDataLimitRequest extends TeaModel {
     @NameInMap("ServiceRegionId")
     public String serviceRegionId;
 
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     /**
      * <p>The username that is used to access the database.</p>
      */
@@ -202,6 +208,14 @@ public class CreateDataLimitRequest extends TeaModel {
     }
     public Integer getEventStatus() {
         return this.eventStatus;
+    }
+
+    public CreateDataLimitRequest setFeatureType(Integer featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    public Integer getFeatureType() {
+        return this.featureType;
     }
 
     public CreateDataLimitRequest setLang(String lang) {
@@ -274,6 +288,14 @@ public class CreateDataLimitRequest extends TeaModel {
     }
     public String getServiceRegionId() {
         return this.serviceRegionId;
+    }
+
+    public CreateDataLimitRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public CreateDataLimitRequest setUserName(String userName) {
