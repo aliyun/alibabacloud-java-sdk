@@ -4,6 +4,9 @@ package com.aliyun.eci20180808.models;
 import com.aliyun.tea.*;
 
 public class DescribeContainerGroupPriceRequest extends TeaModel {
+    @NameInMap("ComputeCategory")
+    public String computeCategory;
+
     /**
      * <p>The number of vCPUs. For information about the vCPU and memory specifications that are supported by Elastic Container Instance, see [vCPU and memory specifications](~~114662~~).</p>
      */
@@ -81,6 +84,14 @@ public class DescribeContainerGroupPriceRequest extends TeaModel {
     public static DescribeContainerGroupPriceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeContainerGroupPriceRequest self = new DescribeContainerGroupPriceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeContainerGroupPriceRequest setComputeCategory(String computeCategory) {
+        this.computeCategory = computeCategory;
+        return this;
+    }
+    public String getComputeCategory() {
+        return this.computeCategory;
     }
 
     public DescribeContainerGroupPriceRequest setCpu(Float cpu) {

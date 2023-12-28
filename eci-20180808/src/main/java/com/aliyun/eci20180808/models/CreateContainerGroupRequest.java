@@ -43,6 +43,9 @@ public class CreateContainerGroupRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("ComputeCategory")
+    public java.util.List<String> computeCategory;
+
     /**
      * <p>The information about the containers.</p>
      */
@@ -519,6 +522,14 @@ public class CreateContainerGroupRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateContainerGroupRequest setComputeCategory(java.util.List<String> computeCategory) {
+        this.computeCategory = computeCategory;
+        return this;
+    }
+    public java.util.List<String> getComputeCategory() {
+        return this.computeCategory;
     }
 
     public CreateContainerGroupRequest setContainer(java.util.List<CreateContainerGroupRequestContainer> container) {

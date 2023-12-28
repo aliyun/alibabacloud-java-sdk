@@ -280,6 +280,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.computeCategory)) {
+            query.put("ComputeCategory", request.computeCategory);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.container)) {
             query.put("Container", request.container);
         }
@@ -1640,6 +1644,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeContainerGroupPriceResponse describeContainerGroupPriceWithOptions(DescribeContainerGroupPriceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.computeCategory)) {
+            query.put("ComputeCategory", request.computeCategory);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cpu)) {
             query.put("Cpu", request.cpu);
         }
@@ -1801,6 +1809,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeContainerGroupsResponse describeContainerGroupsWithOptions(DescribeContainerGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.computeCategory)) {
+            query.put("ComputeCategory", request.computeCategory);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.containerGroupIds)) {
             query.put("ContainerGroupIds", request.containerGroupIds);
         }

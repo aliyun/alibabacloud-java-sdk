@@ -4,6 +4,9 @@ package com.aliyun.eci20180808.models;
 import com.aliyun.tea.*;
 
 public class DescribeContainerGroupsRequest extends TeaModel {
+    @NameInMap("ComputeCategory")
+    public String computeCategory;
+
     /**
      * <p>The IDs of the elastic container instances in JSON format. You can specify up to 20 IDs.</p>
      */
@@ -105,6 +108,14 @@ public class DescribeContainerGroupsRequest extends TeaModel {
     public static DescribeContainerGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeContainerGroupsRequest self = new DescribeContainerGroupsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeContainerGroupsRequest setComputeCategory(String computeCategory) {
+        this.computeCategory = computeCategory;
+        return this;
+    }
+    public String getComputeCategory() {
+        return this.computeCategory;
     }
 
     public DescribeContainerGroupsRequest setContainerGroupIds(String containerGroupIds) {
