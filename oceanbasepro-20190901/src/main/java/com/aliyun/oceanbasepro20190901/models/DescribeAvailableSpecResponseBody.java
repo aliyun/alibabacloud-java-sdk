@@ -117,6 +117,9 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
         @NameInMap("DiskSizeRange")
         public DescribeAvailableSpecResponseBodyDataAvailableSpecificationsDiskSizeRange diskSizeRange;
 
+        @NameInMap("DiskTypes")
+        public java.util.List<String> diskTypes;
+
         @NameInMap("InstanceClass")
         public String instanceClass;
 
@@ -140,6 +143,14 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
         }
         public DescribeAvailableSpecResponseBodyDataAvailableSpecificationsDiskSizeRange getDiskSizeRange() {
             return this.diskSizeRange;
+        }
+
+        public DescribeAvailableSpecResponseBodyDataAvailableSpecifications setDiskTypes(java.util.List<String> diskTypes) {
+            this.diskTypes = diskTypes;
+            return this;
+        }
+        public java.util.List<String> getDiskTypes() {
+            return this.diskTypes;
         }
 
         public DescribeAvailableSpecResponseBodyDataAvailableSpecifications setInstanceClass(String instanceClass) {

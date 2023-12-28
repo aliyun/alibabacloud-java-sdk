@@ -4,18 +4,38 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceTemporaryCapacityRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
+    /**
+     * <p>The disk size. Unit: GB.</p>
+     */
     @NameInMap("DiskSize")
     public String diskSize;
 
+    /**
+     * <p>The ID of the OceanBase cluster.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Specification.</p>
+     */
     @NameInMap("Spec")
     public String spec;
 
     public static ModifyInstanceTemporaryCapacityRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceTemporaryCapacityRequest self = new ModifyInstanceTemporaryCapacityRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyInstanceTemporaryCapacityRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public ModifyInstanceTemporaryCapacityRequest setDiskSize(String diskSize) {

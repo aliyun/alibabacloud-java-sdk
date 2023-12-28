@@ -22,6 +22,9 @@ public class DescribeMetricsDataRequest extends TeaModel {
     @NameInMap("Metrics")
     public String metrics;
 
+    @NameInMap("ReplicaType")
+    public String replicaType;
+
     @NameInMap("SortMetricKey")
     public String sortMetricKey;
 
@@ -82,6 +85,14 @@ public class DescribeMetricsDataRequest extends TeaModel {
     }
     public String getMetrics() {
         return this.metrics;
+    }
+
+    public DescribeMetricsDataRequest setReplicaType(String replicaType) {
+        this.replicaType = replicaType;
+        return this;
+    }
+    public String getReplicaType() {
+        return this.replicaType;
     }
 
     public DescribeMetricsDataRequest setSortMetricKey(String sortMetricKey) {

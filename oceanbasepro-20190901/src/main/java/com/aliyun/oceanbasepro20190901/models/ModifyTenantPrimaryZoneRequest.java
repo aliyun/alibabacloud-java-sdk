@@ -29,6 +29,9 @@ public class ModifyTenantPrimaryZoneRequest extends TeaModel {
     @NameInMap("PrimaryZone")
     public String primaryZone;
 
+    @NameInMap("TenantEndpointDirectId")
+    public String tenantEndpointDirectId;
+
     @NameInMap("TenantEndpointId")
     public String tenantEndpointId;
 
@@ -37,6 +40,9 @@ public class ModifyTenantPrimaryZoneRequest extends TeaModel {
      */
     @NameInMap("TenantId")
     public String tenantId;
+
+    @NameInMap("UserDirectVSwitchId")
+    public String userDirectVSwitchId;
 
     /**
      * <p>The request ID.</p>
@@ -73,6 +79,14 @@ public class ModifyTenantPrimaryZoneRequest extends TeaModel {
         return this.primaryZone;
     }
 
+    public ModifyTenantPrimaryZoneRequest setTenantEndpointDirectId(String tenantEndpointDirectId) {
+        this.tenantEndpointDirectId = tenantEndpointDirectId;
+        return this;
+    }
+    public String getTenantEndpointDirectId() {
+        return this.tenantEndpointDirectId;
+    }
+
     public ModifyTenantPrimaryZoneRequest setTenantEndpointId(String tenantEndpointId) {
         this.tenantEndpointId = tenantEndpointId;
         return this;
@@ -87,6 +101,14 @@ public class ModifyTenantPrimaryZoneRequest extends TeaModel {
     }
     public String getTenantId() {
         return this.tenantId;
+    }
+
+    public ModifyTenantPrimaryZoneRequest setUserDirectVSwitchId(String userDirectVSwitchId) {
+        this.userDirectVSwitchId = userDirectVSwitchId;
+        return this;
+    }
+    public String getUserDirectVSwitchId() {
+        return this.userDirectVSwitchId;
     }
 
     public ModifyTenantPrimaryZoneRequest setUserVSwitchId(String userVSwitchId) {
