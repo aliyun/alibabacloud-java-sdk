@@ -50,15 +50,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.cancelTaskWithOptions(taskId, headers, runtime);
     }
 
-    /**
-      * POST /api/v1/providers/{provider}/products/{product}/resources/{parentResourcePath}/{resourceTypeCode}。
-      *
-      * @param requestPath the whole path of resource string
-      * @param request CreateResourceRequest
-      * @param headers map
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateResourceResponse
-     */
     public CreateResourceResponse createResourceWithOptions(String requestPath, CreateResourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -89,28 +80,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateResourceResponse());
     }
 
-    /**
-      * POST /api/v1/providers/{provider}/products/{product}/resources/{parentResourcePath}/{resourceTypeCode}。
-      *
-      * @param requestPath the whole path of resource string
-      * @param request CreateResourceRequest
-      * @return CreateResourceResponse
-     */
     public CreateResourceResponse createResource(String requestPath, CreateResourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createResourceWithOptions(requestPath, request, headers, runtime);
     }
 
-    /**
-      * DELETE /api/v1/providers/{provider}/products/{product}/resources/{parentResourcePath}/{resourceTypeCode}/{resourceId}。
-      *
-      * @param requestPath the whole path of resource string
-      * @param request DeleteResourceRequest
-      * @param headers map
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteResourceResponse
-     */
     public DeleteResourceResponse deleteResourceWithOptions(String requestPath, DeleteResourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -140,17 +115,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteResourceResponse());
     }
 
-    /**
-      * DELETE /api/v1/providers/{provider}/products/{product}/resources/{parentResourcePath}/{resourceTypeCode}/{resourceId}。
-      *
-      * @param requestPath the whole path of resource string
-      * @param request DeleteResourceRequest
-      * @return DeleteResourceResponse
-     */
     public DeleteResourceResponse deleteResource(String requestPath, DeleteResourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteResourceWithOptions(requestPath, request, headers, runtime);
+    }
+
+    public GetPriceResponse getPriceWithOptions(String requestPath, GetPriceRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetPriceShrinkRequest request = new GetPriceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceAttributes)) {
+            request.resourceAttributesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceAttributes, "resourceAttributes", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceAttributesShrink)) {
+            query.put("resourceAttributes", request.resourceAttributesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPrice"),
+            new TeaPair("version", "2022-08-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "" + requestPath + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPriceResponse());
+    }
+
+    public GetPriceResponse getPrice(String requestPath, GetPriceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getPriceWithOptions(requestPath, request, headers, runtime);
     }
 
     public GetResourceTypeResponse getResourceTypeWithOptions(String requestPath, GetResourceTypeHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -271,15 +280,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getTaskWithOptions(taskId, headers, runtime);
     }
 
-    /**
-      * GET /api/v1/providers/{provider}/products/{product}/dataSources/{resourceType}。
-      *
-      * @param requestPath the whole path of resource string
-      * @param tmpReq ListDataSourcesRequest
-      * @param headers map
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListDataSourcesResponse
-     */
     public ListDataSourcesResponse listDataSourcesWithOptions(String requestPath, ListDataSourcesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListDataSourcesShrinkRequest request = new ListDataSourcesShrinkRequest();
@@ -315,13 +315,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListDataSourcesResponse());
     }
 
-    /**
-      * GET /api/v1/providers/{provider}/products/{product}/dataSources/{resourceType}。
-      *
-      * @param requestPath the whole path of resource string
-      * @param request ListDataSourcesRequest
-      * @return ListDataSourcesResponse
-     */
     public ListDataSourcesResponse listDataSources(String requestPath, ListDataSourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
