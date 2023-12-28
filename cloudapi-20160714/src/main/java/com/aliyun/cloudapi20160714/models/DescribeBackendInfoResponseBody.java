@@ -185,6 +185,47 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigZookeeperConfig extends TeaModel {
+        @NameInMap("ConnectString")
+        public String connectString;
+
+        @NameInMap("Namespace")
+        public String namespace;
+
+        @NameInMap("ServiceName")
+        public String serviceName;
+
+        public static DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigZookeeperConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigZookeeperConfig self = new DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigZookeeperConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigZookeeperConfig setConnectString(String connectString) {
+            this.connectString = connectString;
+            return this;
+        }
+        public String getConnectString() {
+            return this.connectString;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigZookeeperConfig setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigZookeeperConfig setServiceName(String serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
+    }
+
     public static class DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfig extends TeaModel {
         /**
          * <p>The Nacos configurations.</p>
@@ -197,6 +238,9 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
          */
         @NameInMap("RcType")
         public String rcType;
+
+        @NameInMap("ZookeeperConfig")
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigZookeeperConfig zookeeperConfig;
 
         public static DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfig self = new DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfig();
@@ -217,6 +261,14 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
         }
         public String getRcType() {
             return this.rcType;
+        }
+
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfig setZookeeperConfig(DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigZookeeperConfig zookeeperConfig) {
+            this.zookeeperConfig = zookeeperConfig;
+            return this;
+        }
+        public DescribeBackendInfoResponseBodyBackendInfoBackendModelsBackendConfigDiscoveryConfigZookeeperConfig getZookeeperConfig() {
+            return this.zookeeperConfig;
         }
 
     }
