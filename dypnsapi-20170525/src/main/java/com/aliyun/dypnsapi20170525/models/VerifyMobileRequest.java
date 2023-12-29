@@ -4,15 +4,24 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class VerifyMobileRequest extends TeaModel {
+    /**
+     * <p>The token obtained by the SDK for your app.</p>
+     */
     @NameInMap("AccessCode")
     public String accessCode;
 
+    /**
+     * <p>The external ID.</p>
+     */
     @NameInMap("OutId")
     public String outId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The phone number.</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 

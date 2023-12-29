@@ -4,42 +4,81 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CreateVerifySchemeRequest extends TeaModel {
+    /**
+     * <p>The app name.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The verification type. You can select multiple types only when the phone number verification is supported. Separate multiple types with commas (,).</p>
+     * <br>
+     * <p>*   **1**: phone number verification</p>
+     * <p>*   **2**: SMS verification</p>
+     */
     @NameInMap("AuthType")
     public String authType;
 
+    /**
+     * <p>The bundle ID. This parameter is required when OsType is set to iOS. The bundle ID must be 1 to 128 characters in length and can contain digits, letters, hyphens (-), underscores (\_), and periods (.).</p>
+     */
     @NameInMap("BundleId")
     public String bundleId;
 
+    /**
+     * <p>The channel code of China Mobile.</p>
+     */
     @NameInMap("CmApiCode")
     public Long cmApiCode;
 
+    /**
+     * <p>The channel code of China Telecom.</p>
+     */
     @NameInMap("CtApiCode")
     public Long ctApiCode;
 
+    /**
+     * <p>The channel code of China Unicom.</p>
+     */
     @NameInMap("CuApiCode")
     public Long cuApiCode;
 
+    /**
+     * <p>The email address that receives the key.</p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <p>The IP address whitelist.</p>
+     */
     @NameInMap("IpWhiteList")
     public String ipWhiteList;
 
+    /**
+     * <p>The source URL of the HTML5 app page. We recommend that you specify this parameter as a domain name.</p>
+     */
     @NameInMap("Origin")
     public String origin;
 
+    /**
+     * <p>The type of the operating system for the terminal. Valid values: iOS and Android.</p>
+     */
     @NameInMap("OsType")
     public String osType;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The package name. This parameter is required when OsType is set to Android. The name must be 1 to 128 characters in length and can contain digits, letters, hyphens (-), underscores (\_), and periods (.).</p>
+     */
     @NameInMap("PackName")
     public String packName;
 
+    /**
+     * <p>The package signature. This parameter is required when OsType is set to Android. The signature must be 32 characters in length and can contain digits and letters.</p>
+     */
     @NameInMap("PackSign")
     public String packSign;
 
@@ -49,15 +88,27 @@ public class CreateVerifySchemeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The service type.</p>
+     */
     @NameInMap("SceneType")
     public String sceneType;
 
+    /**
+     * <p>The service name.</p>
+     */
     @NameInMap("SchemeName")
     public String schemeName;
 
+    /**
+     * <p>The bound SMS signature. This parameter is valid only when AuthType is set to 2. The signature must be approved.</p>
+     */
     @NameInMap("SmsSignName")
     public String smsSignName;
 
+    /**
+     * <p>The URL of the HTML5 app page.</p>
+     */
     @NameInMap("Url")
     public String url;
 

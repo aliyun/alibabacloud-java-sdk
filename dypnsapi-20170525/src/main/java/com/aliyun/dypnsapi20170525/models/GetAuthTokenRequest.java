@@ -4,6 +4,9 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetAuthTokenRequest extends TeaModel {
+    /**
+     * <p>The requested domain name.</p>
+     */
     @NameInMap("Origin")
     public String origin;
 
@@ -16,6 +19,12 @@ public class GetAuthTokenRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SceneCode")
+    public String sceneCode;
+
+    /**
+     * <p>The URL of the requested web page.</p>
+     */
     @NameInMap("Url")
     public String url;
 
@@ -54,6 +63,14 @@ public class GetAuthTokenRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public GetAuthTokenRequest setSceneCode(String sceneCode) {
+        this.sceneCode = sceneCode;
+        return this;
+    }
+    public String getSceneCode() {
+        return this.sceneCode;
     }
 
     public GetAuthTokenRequest setUrl(String url) {

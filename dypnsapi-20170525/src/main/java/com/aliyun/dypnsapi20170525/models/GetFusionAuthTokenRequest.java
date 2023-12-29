@@ -4,21 +4,36 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetFusionAuthTokenRequest extends TeaModel {
+    /**
+     * <p>The bundle ID of the app. This parameter is required when Platform is set to iOS.</p>
+     */
     @NameInMap("BundleId")
     public String bundleId;
 
+    /**
+     * <p>The validity period of the token. Unit: seconds. Valid values: 900 to 43200.</p>
+     */
     @NameInMap("DurationSeconds")
     public Long durationSeconds;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The package name of the app. This parameter is required when Platform is set to Android.</p>
+     */
     @NameInMap("PackageName")
     public String packageName;
 
+    /**
+     * <p>The package signature of the app. This parameter is required when Platform is set to Android.</p>
+     */
     @NameInMap("PackageSign")
     public String packageSign;
 
+    /**
+     * <p>The platform type. Valid values: Android and iOS.</p>
+     */
     @NameInMap("Platform")
     public String platform;
 
@@ -28,6 +43,9 @@ public class GetFusionAuthTokenRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The service code.</p>
+     */
     @NameInMap("SchemeCode")
     public String schemeCode;
 

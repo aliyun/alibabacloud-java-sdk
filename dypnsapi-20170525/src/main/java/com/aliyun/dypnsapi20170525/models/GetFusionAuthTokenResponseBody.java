@@ -4,18 +4,33 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetFusionAuthTokenResponseBody extends TeaModel {
+    /**
+     * <p>The response code. If OK is returned, the request is successful. Other values indicate that the request failed. For more information, see Error codes.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The authentication code. The value of this parameter is a string.</p>
+     */
     @NameInMap("Model")
     public String model;
 
+    /**
+     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values: true false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

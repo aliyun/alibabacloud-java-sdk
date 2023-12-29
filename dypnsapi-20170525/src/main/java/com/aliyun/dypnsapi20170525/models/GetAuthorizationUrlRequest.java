@@ -4,12 +4,18 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetAuthorizationUrlRequest extends TeaModel {
+    /**
+     * <p>The authorization end date, which is in the yyyy-MM-dd format. This parameter is required for services of contract type.</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The phone number.</p>
+     */
     @NameInMap("PhoneNo")
     public String phoneNo;
 
@@ -19,6 +25,9 @@ public class GetAuthorizationUrlRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the authorization scenario. You can view the ID of the authorization scenario on the **Authorization Scenario Management** page in the **Phone Number Verification Service console**.</p>
+     */
     @NameInMap("SchemeId")
     public Long schemeId;
 

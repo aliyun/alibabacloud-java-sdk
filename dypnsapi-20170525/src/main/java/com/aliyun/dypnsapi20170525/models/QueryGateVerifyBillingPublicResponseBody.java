@@ -4,15 +4,30 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
+    /**
+     * <p>The response code. Valid values:</p>
+     * <br>
+     * <p>*   If OK is returned, the request is successful.</p>
+     * <p>*   For more information about other error codes, see [API response codes](~~85198~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The billing information about each verification service.</p>
+     */
     @NameInMap("Data")
     public QueryGateVerifyBillingPublicResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,24 +69,45 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
     }
 
     public static class QueryGateVerifyBillingPublicResponseBodyDataSceneBillingList extends TeaModel {
+        /**
+         * <p>The billable items.</p>
+         */
         @NameInMap("Add")
         public String add;
 
+        /**
+         * <p>The fees generated for the verification service. Unitrogen: CNY.</p>
+         */
         @NameInMap("Amount")
         public String amount;
 
+        /**
+         * <p>The application name.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The verification method.</p>
+         */
         @NameInMap("ItemName")
         public String itemName;
 
+        /**
+         * <p>The service code.</p>
+         */
         @NameInMap("SceneCode")
         public String sceneCode;
 
+        /**
+         * <p>The service name.</p>
+         */
         @NameInMap("SceneName")
         public String sceneName;
 
+        /**
+         * <p>The unit price. Unit: CNY.</p>
+         */
         @NameInMap("SinglePrice")
         public String singlePrice;
 
@@ -139,9 +175,15 @@ public class QueryGateVerifyBillingPublicResponseBody extends TeaModel {
     }
 
     public static class QueryGateVerifyBillingPublicResponseBodyData extends TeaModel {
+        /**
+         * <p>The fees generated for all verification services. Unitrogen: CNY.</p>
+         */
         @NameInMap("AmountSum")
         public String amountSum;
 
+        /**
+         * <p>The details of fees.</p>
+         */
         @NameInMap("SceneBillingList")
         public java.util.List<QueryGateVerifyBillingPublicResponseBodyDataSceneBillingList> sceneBillingList;
 

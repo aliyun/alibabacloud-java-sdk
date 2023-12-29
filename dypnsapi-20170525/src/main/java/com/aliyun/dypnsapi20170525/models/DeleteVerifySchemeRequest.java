@@ -4,6 +4,9 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class DeleteVerifySchemeRequest extends TeaModel {
+    /**
+     * <p>The user ID.</p>
+     */
     @NameInMap("CustomerId")
     public Long customerId;
 
@@ -16,6 +19,9 @@ public class DeleteVerifySchemeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The service code.</p>
+     */
     @NameInMap("SchemeCode")
     public String schemeCode;
 

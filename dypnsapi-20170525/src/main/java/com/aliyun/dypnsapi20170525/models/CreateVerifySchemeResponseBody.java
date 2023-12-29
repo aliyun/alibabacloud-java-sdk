@@ -4,21 +4,45 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CreateVerifySchemeResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * <br>
+     * <p>*   If OK is returned, the request is successful.</p>
+     * <p>*   For more information about other error codes, see [API response codes](~~85198~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("GateVerifySchemeDTO")
     public CreateVerifySchemeResponseBodyGateVerifySchemeDTO gateVerifySchemeDTO;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Long httpStatusCode;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,6 +100,9 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
     }
 
     public static class CreateVerifySchemeResponseBodyGateVerifySchemeDTO extends TeaModel {
+        /**
+         * <p>The service code.</p>
+         */
         @NameInMap("SchemeCode")
         public String schemeCode;
 
