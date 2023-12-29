@@ -106,6 +106,12 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
 
     public static class ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessions extends TeaModel {
         /**
+         * <p>The time when the session is created.</p>
+         */
+        @NameInMap("CreationTime")
+        public String creationTime;
+
+        /**
          * <p>Indicates whether the traffic mirror session was enabled.</p>
          * <br>
          * <p>*   **false**: the traffic mirror session was disabled. This is the default value.</p>
@@ -214,6 +220,14 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
         public static ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessions build(java.util.Map<String, ?> map) throws Exception {
             ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessions self = new ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessions();
             return TeaModel.build(map, self);
+        }
+
+        public ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessions setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         public ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessions setEnabled(Boolean enabled) {

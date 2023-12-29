@@ -24,7 +24,7 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public String associatedInstanceId;
 
     /**
-     * <p>The type of the cloud resource with which you want to associate the EIP. Valid values:</p>
+     * <p>The type of the cloud resource with which you want to associate the elastic IP address (EIP). Valid values:</p>
      * <br>
      * <p>*   **EcsInstance** (default): an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC).</p>
      * <p>*   **SlbInstance**: a Server Load Balancer (SLB) instance in a VPC.</p>
@@ -33,7 +33,7 @@ public class DescribeEipAddressesRequest extends TeaModel {
      * <p>*   **NetworkInterface**: a secondary elastic network interface (ENI).</p>
      * <p>*   **IpAddress**: an IP address.</p>
      * <br>
-     * <p>>  You can associate only one EIP with each ECS instance, SLB instance, HAVIP, or IP address. You can associate multiple EIPs with each NAT gateway. The number of EIPs that you can associate with a secondary ENI depends on the association mode. For more information, see [Associate EIPs with and disassociate EIPs from cloud resources](~~72125~~).</p>
+     * <p>>  Each ECS instance, CLB instance, HAVIP, and IP address can be associated with only one EIP. A NAT gateway can be associated with multiple EIPs. The number of EIPs that you can associate with a secondary ENI depends on the association mode. For more information, see [EIP overview](~~72125~~).</p>
      */
     @NameInMap("AssociatedInstanceType")
     public String associatedInstanceType;
@@ -159,9 +159,9 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to enable Anti-DDoS Pro/Premium. Valid values:</p>
+     * <p>Specifies whether Anti-DDoS Pro/Premium is activated. Valid value:</p>
      * <br>
-     * <p>*   **false** (default)</p>
+     * <p>*   **false**</p>
      * <p>*   **true**</p>
      */
     @NameInMap("SecurityProtectionEnabled")

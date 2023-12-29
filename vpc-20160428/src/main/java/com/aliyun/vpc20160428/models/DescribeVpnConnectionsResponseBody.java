@@ -108,7 +108,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String ikeMode;
 
         /**
-         * <p>The Diffie-Hellman (DH) group in the IKE phase.</p>
+         * <p>The DH group in the IKE phase.</p>
          */
         @NameInMap("IkePfs")
         public String ikePfs;
@@ -344,20 +344,20 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         /**
          * <p>The negotiation state of BGP. Valid values:</p>
          * <br>
-         * <p>*   **success**: normal</p>
-         * <p>*   **false**: abnormal</p>
+         * <p>*   **success**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("BgpStatus")
         public String bgpStatus;
 
         /**
-         * <p>The ASN of the tunnel on the Alibaba Cloud side.</p>
+         * <p>The ASN on the Alibaba Cloud side.</p>
          */
         @NameInMap("LocalAsn")
         public String localAsn;
 
         /**
-         * <p>The BGP IP address of the tunnel on the Alibaba Cloud side.</p>
+         * <p>The BGP address on the Alibaba Cloud side.</p>
          */
         @NameInMap("LocalBgpIp")
         public String localBgpIp;
@@ -670,7 +670,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         /**
          * <p>The CA certificate of the tunnel peer.</p>
          * <br>
-         * <p>This parameter is returned only if the VPN gateway is of the ShangMi (SM) type.</p>
+         * <p>This parameter is returned only if the VPN gateway is of the SM type.</p>
          */
         @NameInMap("RemoteCaCertificate")
         public String remoteCaCertificate;
@@ -689,7 +689,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
          * <br>
          * <p>*   **active**</p>
          * <p>*   **updating**</p>
-         * <p>*   **deleted**</p>
+         * <p>*   **deleting**</p>
          */
         @NameInMap("State")
         public String state;
@@ -706,7 +706,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The BGP configuration.</p>
+         * <p>The BGP configurations.</p>
          */
         @NameInMap("TunnelBgpConfig")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig tunnelBgpConfig;
@@ -724,7 +724,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelIkeConfig tunnelIkeConfig;
 
         /**
-         * <p>The configuration of Phase 2 negotiations.</p>
+         * <p>The configurations of Phase 2 negotiations.</p>
          */
         @NameInMap("TunnelIpsecConfig")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelIpsecConfig tunnelIpsecConfig;
@@ -888,7 +888,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public Integer interval;
 
         /**
-         * <p>Indicates whether advertised routes are withdrawn when the health check fails. Valid values:</p>
+         * <p>Indicates whether advertised routes are withdrawn when the health check fails.</p>
          * <br>
          * <p>*   **revoke_route**: Advertised routes are withdrawn.</p>
          * <p>*   **reserve_route**: Advertised routes are not withdrawn.</p>
@@ -911,8 +911,8 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         /**
          * <p>The state of the health check. Valid values:</p>
          * <br>
-         * <p>*   **success**: normal</p>
-         * <p>*   **failed**: abnormal</p>
+         * <p>*   **success**</p>
+         * <p>*   **failed**</p>
          */
         @NameInMap("Status")
         public String status;
@@ -1000,7 +1000,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String localBgpIp;
 
         /**
-         * <p>The autonomous system number (ASN) of the peer.</p>
+         * <p>The ASN of the peer.</p>
          */
         @NameInMap("PeerAsn")
         public Long peerAsn;
@@ -1014,8 +1014,8 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         /**
          * <p>The negotiation state of the BGP routing protocol. Valid values:</p>
          * <br>
-         * <p>*   **success**: normal</p>
-         * <p>*   **false**: abnormal</p>
+         * <p>*   **success**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("Status")
         public String status;
@@ -1097,7 +1097,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String attachInstanceId;
 
         /**
-         * <p>The type of the resource that is associated with the IPsec-VPN connection. Valid values:</p>
+         * <p>The type of resource that is associated with the IPsec-VPN connection. Valid values:</p>
          * <br>
          * <p>*   **CEN**: indicates that the IPsec-VPN connection is associated with a transit router of a Cloud Enterprise Network (CEN) instance.</p>
          * <p>*   **NO_ASSOCIATED**: indicates that the IPsec-VPN connection is not associated with any resource.</p>
@@ -1130,7 +1130,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String customerGatewayId;
 
         /**
-         * <p>Indicates whether IPsec negotiations immediately start after the configuration takes effect. Valid values:</p>
+         * <p>Indicates whether IPsec negotiations immediately start.</p>
          * <br>
          * <p>*   **true**: Negotiations are reinitiated after the configuration is changed.</p>
          * <p>*   **false**: Negotiations are reinitiated after traffic is detected.</p>
@@ -1139,19 +1139,19 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public Boolean effectImmediately;
 
         /**
-         * <p>Indicates whether the dead peer detection (DPD) feature is enabled for the IPsec-VPN connection. Valid values:</p>
+         * <p>Indicates whether dead peer detection (DPD) is enabled for the IPsec-VPN connection. Valid values:</p>
          * <br>
-         * <p>*   **true**: The DPD feature is enabled.</p>
+         * <p>*   **true**</p>
          * <br>
          * <p>    The initiator of the IPsec-VPN connection sends DPD packets to check the existence and availability of the peer. If no feedback is received from the peer within a specific period of time, the connection fails. Then, the ISAKMP security association (SA), IPsec SA, and IPsec tunnel are deleted.</p>
          * <br>
-         * <p>*   **false**: The DPD feature is disabled. The initiator of the IPsec-VPN connection does not send DPD packets.</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("EnableDpd")
         public Boolean enableDpd;
 
         /**
-         * <p>Indicates whether NAT traversal is enabled for the IPsec-VPN connection. Valid values:</p>
+         * <p>Indicates whether NAT traversal is enabled for the IPsec-VPN connection.</p>
          * <br>
          * <p>*   **true**</p>
          * <br>
@@ -1172,7 +1172,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public Boolean enableTunnelsBgp;
 
         /**
-         * <p>The configuration of Phase 1 negotiations.</p>
+         * <p>The configurations of Phase 1 negotiations.</p>
          */
         @NameInMap("IkeConfig")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionIkeConfig ikeConfig;
@@ -1186,7 +1186,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String internetIp;
 
         /**
-         * <p>The configuration of Phase 2 negotiations.</p>
+         * <p>The configurations of Phase 2 negotiations.</p>
          */
         @NameInMap("IpsecConfig")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionIpsecConfig ipsecConfig;
@@ -1208,8 +1208,8 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         /**
          * <p>The network type of the IPsec-VPN connection. Valid values:</p>
          * <br>
-         * <p>*   **public**: an encrypted connection over the Internet</p>
-         * <p>*   **private**: an encrypted connection over private networks</p>
+         * <p>*   **public**</p>
+         * <p>*   **private**</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
@@ -1221,13 +1221,18 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String remoteCaCertificate;
 
         /**
-         * <p>The CIDR block on the data center side.</p>
+         * <p>The CIDR block of the data center.</p>
          * <br>
          * <p>Multiple CIDR blocks are separated by commas (,).</p>
          */
         @NameInMap("RemoteSubnet")
         public String remoteSubnet;
 
+        /**
+         * <p>The ID of the resource group to which the IPsec-VPN connection belongs.</p>
+         * <br>
+         * <p>You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -1255,7 +1260,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The state of the IPsec-VPN connection. Valid values:</p>
+         * <p>The status of the IPsec-VPN connection. Valid values:</p>
          * <br>
          * <p>*   **ike_sa_not_established**: Phase 1 negotiations failed.</p>
          * <p>*   **ike_sa_established**: Phase 1 negotiations succeeded.</p>
@@ -1266,7 +1271,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The list of tags added to the IPsec-VPN connection.</p>
+         * <p>The list of tags to be added to the IPsec-VPN connection.</p>
          */
         @NameInMap("Tag")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTag tag;

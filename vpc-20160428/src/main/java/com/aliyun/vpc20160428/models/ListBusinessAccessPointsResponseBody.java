@@ -11,7 +11,7 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
     public java.util.List<ListBusinessAccessPointsResponseBodyBusinessAccessPoints> businessAccessPoints;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,7 +53,7 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
         /**
          * <p>The ID of the cloud box.</p>
          * <br>
-         * <p>>  This parameter is available if the Express Connect circuit supports cloud boxes and the access point supports cloud boxes.</p>
+         * <p>>  You can query this parameter if the Express Connect circuits and access points are of the cloud box type.</p>
          */
         @NameInMap("CloudBoxInstanceIds")
         public String cloudBoxInstanceIds;
@@ -73,12 +73,12 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
         /**
          * <p>The connectivity provider of the Express Connect circuit. Valid values:</p>
          * <br>
-         * <p>*   **CT**: China Telecom</p>
-         * <p>*   **CU**: China Unicom</p>
-         * <p>*   **CM**: China Mobile</p>
-         * <p>*   **CO**: other connectivity providers in the Chinese mainland</p>
-         * <p>*   **Equinix**: Equinix</p>
-         * <p>*   **Other**: other connectivity providers outside the Chinese mainland</p>
+         * <p>*   **CT**: China Telecom.</p>
+         * <p>*   **CU**: China Unicom.</p>
+         * <p>*   **CM**: China Mobile.</p>
+         * <p>*   **CO**: other connectivity providers in the Chinese mainland.</p>
+         * <p>*   **Equinix**: Equinix.</p>
+         * <p>*   **Other**: other connectivity providers outside the Chinese mainland.</p>
          */
         @NameInMap("SupportLineOperator")
         public String supportLineOperator;
@@ -90,11 +90,11 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
          * <p>*   **1000Base-T**: 1,000 Mbit/s copper Ethernet port</p>
          * <p>*   **1000Base-LX**: 1,000 Mbit/s single-mode optical port (10 km)</p>
          * <p>*   **10GBase-T**: 10,000 Mbit/s copper Ethernet port</p>
-         * <p>*   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 kilometers)</p>
+         * <p>*   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 km)</p>
          * <p>*   **40GBase-LR**: 40,000 Mbit/s single-mode optical port</p>
          * <p>*   **100GBase-LR**: 100,000 Mbit/s single-mode optical port</p>
          * <br>
-         * <p>>  If you want to use the 40GBase-LR or 100GBase-LR port for an Express Connect circuit, you must first contact your account manager to obtain information about resource supplies.</p>
+         * <p>>  To use ports 40GBase-LR and 100GBase-LR, you must first contact your account manager.</p>
          */
         @NameInMap("SupportPortTypes")
         public String supportPortTypes;

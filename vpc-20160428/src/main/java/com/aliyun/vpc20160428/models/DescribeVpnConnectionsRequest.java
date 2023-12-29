@@ -36,6 +36,11 @@ public class DescribeVpnConnectionsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>IPsec连接所属的资源组ID。</p>
+     * <br>
+     * <p>您可以调用[ListResourceGroups](~~158855~~)接口查询资源组ID。</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

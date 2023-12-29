@@ -144,6 +144,11 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group to which the IPsec-VPN connection belongs.</p>
+     * <br>
+     * <p>You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -700,13 +705,13 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
 
     public static class DescribeVpnConnectionResponseBodyTagsTag extends TeaModel {
         /**
-         * <p>The tag key of the IPsec-VPN connection.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value of the IPsec-VPN connection.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -757,20 +762,20 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         /**
          * <p>The negotiation state of BGP. Valid values:</p>
          * <br>
-         * <p>*   **success**: normal</p>
-         * <p>*   **false**: abnormal</p>
+         * <p>*   **success**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("BgpStatus")
         public String bgpStatus;
 
         /**
-         * <p>The ASN of the tunnel on the Alibaba Cloud side.</p>
+         * <p>The ASN on the Alibaba Cloud side.</p>
          */
         @NameInMap("LocalAsn")
         public String localAsn;
 
         /**
-         * <p>The BGP IP address of the tunnel on the Alibaba Cloud side.</p>
+         * <p>The BGP address on the Alibaba Cloud side.</p>
          */
         @NameInMap("LocalBgpIp")
         public String localBgpIp;
@@ -877,7 +882,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public String ikeMode;
 
         /**
-         * <p>The DH group in the IKE phase.</p>
+         * <p>The Diffie-Hellman (DH) group in the IKE phase.</p>
          */
         @NameInMap("IkePfs")
         public String ikePfs;
@@ -1098,11 +1103,11 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public String role;
 
         /**
-         * <p>The tunnel status. Valid values: </p>
+         * <p>The tunnel status. Valid values:</p>
          * <br>
          * <p>*   **active**</p>
          * <p>*   **updating**</p>
-         * <p>*   **deleted**</p>
+         * <p>*   **deleting**</p>
          */
         @NameInMap("State")
         public String state;
@@ -1119,7 +1124,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The BGP configuration.</p>
+         * <p>The BGP configurations.</p>
          */
         @NameInMap("TunnelBgpConfig")
         public DescribeVpnConnectionResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig tunnelBgpConfig;
@@ -1137,15 +1142,15 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         public DescribeVpnConnectionResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelIkeConfig tunnelIkeConfig;
 
         /**
-         * <p>The configuration of Phase 2 negotiations.</p>
+         * <p>The configurations of Phase 2 negotiations.</p>
          */
         @NameInMap("TunnelIpsecConfig")
         public DescribeVpnConnectionResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelIpsecConfig tunnelIpsecConfig;
 
         /**
-         * <p>The zone of the tunnel.</p>
+         * <p>The zone where the tunnel is deployed.</p>
          * <br>
-         * <p>You can call [DescribeZones](~~36064~~) to query zone IDs and mapping between zone IDs and zone names.</p>
+         * <p>You can call [DescribeZones](~~36064~~) to query zone IDs.</p>
          */
         @NameInMap("ZoneNo")
         public String zoneNo;

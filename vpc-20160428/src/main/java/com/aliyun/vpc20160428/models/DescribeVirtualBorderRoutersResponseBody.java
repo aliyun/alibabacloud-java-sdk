@@ -545,6 +545,12 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         @NameInMap("EccId")
         public String eccId;
 
+        @NameInMap("EcrAttatchStatus")
+        public String ecrAttatchStatus;
+
+        @NameInMap("EcrId")
+        public String ecrId;
+
         /**
          * <p>Indicates whether IPv6 is enabled. Valid values:</p>
          * <br>
@@ -678,6 +684,9 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
          */
         @NameInMap("RouteTableId")
         public String routeTableId;
+
+        @NameInMap("SitelinkEnable")
+        public Boolean sitelinkEnable;
 
         /**
          * <p>The status of the VBR. Valid values:</p>
@@ -819,6 +828,22 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         }
         public String getEccId() {
             return this.eccId;
+        }
+
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setEcrAttatchStatus(String ecrAttatchStatus) {
+            this.ecrAttatchStatus = ecrAttatchStatus;
+            return this;
+        }
+        public String getEcrAttatchStatus() {
+            return this.ecrAttatchStatus;
+        }
+
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setEcrId(String ecrId) {
+            this.ecrId = ecrId;
+            return this;
+        }
+        public String getEcrId() {
+            return this.ecrId;
         }
 
         public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setEnableIpv6(Boolean enableIpv6) {
@@ -971,6 +996,14 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         }
         public String getRouteTableId() {
             return this.routeTableId;
+        }
+
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setSitelinkEnable(Boolean sitelinkEnable) {
+            this.sitelinkEnable = sitelinkEnable;
+            return this;
+        }
+        public Boolean getSitelinkEnable() {
+            return this.sitelinkEnable;
         }
 
         public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setStatus(String status) {

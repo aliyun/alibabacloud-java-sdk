@@ -45,7 +45,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tag information.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -121,7 +121,7 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag that is added to the resource. You can specify at most 20 tag keys. </p>
+         * <p>The key of the tag that is added to the resource. You can specify at most 20 tag keys.</p>
          * <br>
          * <p>The key cannot exceed 128 characters in length. The key cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.</p>
          * <br>
@@ -131,9 +131,9 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag that is added to the resource. You can specify at most 20 tag values. </p>
+         * <p>The value of the tag that is added to the resource. You can specify at most 20 tag values.</p>
          * <br>
-         * <p>The tag value cannot exceed 128 characters in length. The key cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         * <p>The tag value cannot exceed 128 characters in length. The value cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
          * <br>
          * <p>> When you call this operation, the **Tag.N.Value** parameter is required and can be an empty string.</p>
          */

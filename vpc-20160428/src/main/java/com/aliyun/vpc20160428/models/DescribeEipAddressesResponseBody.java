@@ -229,7 +229,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         public String bandwidthPackageId;
 
         /**
-         * <p>The type of the bandwidth. Only **CommonBandwidthPackage** may be returned, which indicates Internet Shared Bandwidth.</p>
+         * <p>The bandwidth type. Only **CommonBandwidthPackage** may be returned, which indicates Internet Shared Bandwidth.</p>
          */
         @NameInMap("BandwidthPackageType")
         public String bandwidthPackageType;
@@ -244,7 +244,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         public String bizType;
 
         /**
-         * <p>The service state of the EIP. Valid values:</p>
+         * <p>The service status of the EIP. Valid values:</p>
          * <br>
          * <p>*   **Normal**</p>
          * <p>*   **FinancialLocked**</p>
@@ -309,8 +309,8 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         /**
          * <p>The line type. Valid values:</p>
          * <br>
-         * <p>*   **BGP**: BGP (Multi-ISP) lines. All regions support BGP (Multi-ISP) EIPs.</p>
-         * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro lines. Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).</p>
+         * <p>*   **BGP**: BGP (Multi-ISP). All regions support BGP (Multi-ISP) EIPs.</p>
+         * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro. BGP (Multi-ISP) Pro is supported only in the China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.</p>
          * <br>
          * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the [Line types](~~32321~~) section of the "What is EIP?" topic.</p>
          * <br>
@@ -344,7 +344,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
          * <p>The type of the associated instance. Valid values:</p>
          * <br>
          * <p>*   **EcsInstance**: an ECS instance in a VPC.</p>
-         * <p>*   **SlbInstance**: an SLB instance in a VPC.</p>
+         * <p>*   **SlbInstance**: a CLB instance in a VPC.</p>
          * <p>*   **Nat**: a NAT gateway.</p>
          * <p>*   **HaVip**: an HAVIP.</p>
          * <p>*   **NetworkInterface**: a secondary ENI.</p>
@@ -356,17 +356,27 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         /**
          * <p>The metering method of the EIP. Valid values:</p>
          * <br>
-         * <p>*   **PayByBandwidth**: pay-by-bandwidth.</p>
-         * <p>*   **PayByTraffic**: pay-by-traffic.</p>
+         * <p>*   **PayByBandwidth**</p>
+         * <p>*   **PayByTraffic**</p>
          */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
         /**
-         * <p>The EIP.</p>
+         * <p>The IP address of the EIP.</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
+
+        /**
+         * <p>The association mode. Valid values:</p>
+         * <br>
+         * <p>*   **NAT**: NAT mode</p>
+         * <p>*   **MULTI_BINDED**: multi-EIP-to-ENI mode</p>
+         * <p>*   **BINDED**: cut-through mode</p>
+         */
+        @NameInMap("Mode")
+        public String mode;
 
         /**
          * <p>The name of the EIP.</p>
@@ -385,6 +395,12 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
          */
         @NameInMap("OperationLocks")
         public DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocks operationLocks;
+
+        /**
+         * <p>The private IP address of the secondary ENI with which the EIP is associated.</p>
+         */
+        @NameInMap("PrivateIpAddress")
+        public String privateIpAddress;
 
         /**
          * <p>The ID of the IP address pool to which the EIP belongs.</p>
@@ -413,8 +429,8 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         /**
          * <p>The metering method that is used after the renewal takes effect. Valid values:</p>
          * <br>
-         * <p>*   **PayByBandwidth**: pay-by-bandwidth.</p>
-         * <p>*   **PayByTraffic**: pay-by-traffic.</p>
+         * <p>*   **PayByBandwidth**</p>
+         * <p>*   **PayByTraffic**</p>
          */
         @NameInMap("ReservationInternetChargeType")
         public String reservationInternetChargeType;
@@ -430,7 +446,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         public String reservationOrderType;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -454,7 +470,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         public DescribeEipAddressesResponseBodyEipAddressesEipAddressSecurityProtectionTypes securityProtectionTypes;
 
         /**
-         * <p>The ID of the contiguous EIP group.</p>
+         * <p>The IDs of contiguous EIPs.</p>
          * <br>
          * <p>This value is returned only when you query contiguous EIPs.</p>
          */
@@ -464,14 +480,14 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the resource is created by the service account. Valid values:</p>
          * <br>
-         * <p>*   **0**: The resource is not created by the service account.</p>
-         * <p>*   **1**: The resource is created by the service account.</p>
+         * <p>*   **0**: no</p>
+         * <p>*   **1**: yes</p>
          */
         @NameInMap("ServiceManaged")
         public Integer serviceManaged;
 
         /**
-         * <p>The state of the EIP. Valid values:</p>
+         * <p>The status of the EIP. Valid values:</p>
          * <br>
          * <p>*   **Associating**</p>
          * <p>*   **Unassociating**</p>
@@ -679,6 +695,14 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             return this.ipAddress;
         }
 
+        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
         public DescribeEipAddressesResponseBodyEipAddressesEipAddress setName(String name) {
             this.name = name;
             return this;
@@ -701,6 +725,14 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
         public DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocks getOperationLocks() {
             return this.operationLocks;
+        }
+
+        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setPrivateIpAddress(String privateIpAddress) {
+            this.privateIpAddress = privateIpAddress;
+            return this;
+        }
+        public String getPrivateIpAddress() {
+            return this.privateIpAddress;
         }
 
         public DescribeEipAddressesResponseBodyEipAddressesEipAddress setPublicIpAddressPoolId(String publicIpAddressPoolId) {

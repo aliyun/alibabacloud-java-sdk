@@ -41,6 +41,13 @@ public class ListIpsecServersRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the IPsec server belongs.</p>
+     * <br>
+     * <p>The IPsec server has the same resource group as its associated VPN gateway instance.</p>
+     * <br>
+     * <p>You can call the [DescribeVpnGateway](~~2526915~~) operation to query the ID of the resource group to which the VPN gateway instance belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

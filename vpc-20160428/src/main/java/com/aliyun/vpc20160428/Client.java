@@ -2866,10 +2866,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The **CopyNetworkAclEntries** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+      * ## [](#)Description
+      * *   **CopyNetworkAclEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of the task.
       *     *   If the network ACL is in the **Modifying** state, the rules of the network ACL are being copied.
       *     *   If the network ACL is in the **Available** state, the rules of the network ACL are copied.
-      * *   You cannot repeatedly call the **CopyNetworkAclEntries** operation to copy the rules of a network ACL within the specified period of time.
+      * *   You cannot repeatedly call the **CopyNetworkAclEntries** operation within the specified period of time.
       *
       * @param request CopyNetworkAclEntriesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2936,10 +2937,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The **CopyNetworkAclEntries** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+      * ## [](#)Description
+      * *   **CopyNetworkAclEntries** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of the task.
       *     *   If the network ACL is in the **Modifying** state, the rules of the network ACL are being copied.
       *     *   If the network ACL is in the **Available** state, the rules of the network ACL are copied.
-      * *   You cannot repeatedly call the **CopyNetworkAclEntries** operation to copy the rules of a network ACL within the specified period of time.
+      * *   You cannot repeatedly call the **CopyNetworkAclEntries** operation within the specified period of time.
       *
       * @param request CopyNetworkAclEntriesRequest
       * @return CopyNetworkAclEntriesResponse
@@ -3293,13 +3295,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
-      * When you call this operation, take note of the following items:
-      * *   The first IP address and last three IP addresses of a default vSwitch CIDR block are reserved. For example, if the CIDR block of a vSwitch is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.
+      * When you call this operation, take note of the following limits:
+      * *   The first IP address and last three IP addresses of a vSwitch CIDR block are reserved. For example, if the CIDR block of a vSwitch is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.
       * *   The number of instances in the default vSwitch cannot exceed the remaining number of instances supported by the VPC (15,000 minus the number of existing instances).
       * *   Default vSwitches do not support multicasting or broadcasting.
       * *   After you create a default vSwitch, you cannot modify its CIDR block.
-      * *   **CreateDefaultVSwitch** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a default vSwitch:
+      * *   **CreateDefaultVSwitch** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a default vSwitch:
       *     *   If a default vSwitch is in the **Pending** state, it is being configured.
       *     *   If a default vSwitch is in the **Available** state, it is available.
       * *   If a default vSwitch already exists in a region, you cannot call this operation to create a default vSwitch in this region.
@@ -3362,13 +3363,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
-      * When you call this operation, take note of the following items:
-      * *   The first IP address and last three IP addresses of a default vSwitch CIDR block are reserved. For example, if the CIDR block of a vSwitch is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.
+      * When you call this operation, take note of the following limits:
+      * *   The first IP address and last three IP addresses of a vSwitch CIDR block are reserved. For example, if the CIDR block of a vSwitch is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.
       * *   The number of instances in the default vSwitch cannot exceed the remaining number of instances supported by the VPC (15,000 minus the number of existing instances).
       * *   Default vSwitches do not support multicasting or broadcasting.
       * *   After you create a default vSwitch, you cannot modify its CIDR block.
-      * *   **CreateDefaultVSwitch** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a default vSwitch:
+      * *   **CreateDefaultVSwitch** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a default vSwitch:
       *     *   If a default vSwitch is in the **Pending** state, it is being configured.
       *     *   If a default vSwitch is in the **Available** state, it is available.
       * *   If a default vSwitch already exists in a region, you cannot call this operation to create a default vSwitch in this region.
@@ -4071,6 +4071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * @deprecated
       * ## Usage notes
       * You can call this operation to create only pay-as-you-go GA instances.
       *
@@ -4078,6 +4079,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * @param runtime runtime options for this request RuntimeOptions
       * @return CreateGlobalAccelerationInstanceResponse
      */
+    // Deprecated
     public CreateGlobalAccelerationInstanceResponse createGlobalAccelerationInstanceWithOptions(CreateGlobalAccelerationInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4143,12 +4145,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * @deprecated
       * ## Usage notes
       * You can call this operation to create only pay-as-you-go GA instances.
       *
       * @param request CreateGlobalAccelerationInstanceRequest
       * @return CreateGlobalAccelerationInstanceResponse
      */
+    // Deprecated
     public CreateGlobalAccelerationInstanceResponse createGlobalAccelerationInstance(CreateGlobalAccelerationInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createGlobalAccelerationInstanceWithOptions(request, runtime);
@@ -6232,10 +6236,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to add SNAT entries to Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways. In this topic, a **NAT gateway** refers to both gateway types.
+      * You can call this operation to add SNAT entries to Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways. In this topic, a **NAT** gateway refers to both gateway types.
       * Before you call this operation, take note of the following limits:
       * *   **CreateSnatEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of the task.
-      *     *   If the SNAT entry is in the **Pending** state, the system is adding the SNAT entry. You can only query the status of the SNAT entry, but cannot perform other operations.
+      *     *   If the SNAT entry is in the **Pending** state, the system is adding the SNAT entry. You can only query the status of the SNAT entry, and cannot perform other operations.
       *     *   If the SNAT entry is in the **Available** state, the SNAT entry is added.
       * *   You cannot repeatedly call the **CreateSnatEntry** operation to add an SNAT entry to an SNAT table within the specified period of time.
       * *   The vSwitch and Elastic Compute Service (ECS) instance specified in an SNAT entry must be created in the VPC where the NAT gateway is deployed.
@@ -6315,10 +6319,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to add SNAT entries to Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways. In this topic, a **NAT gateway** refers to both gateway types.
+      * You can call this operation to add SNAT entries to Internet NAT gateways and Virtual Private Cloud (VPC) NAT gateways. In this topic, a **NAT** gateway refers to both gateway types.
       * Before you call this operation, take note of the following limits:
       * *   **CreateSnatEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeSnatTableEntries](~~42677~~) operation to query the status of the task.
-      *     *   If the SNAT entry is in the **Pending** state, the system is adding the SNAT entry. You can only query the status of the SNAT entry, but cannot perform other operations.
+      *     *   If the SNAT entry is in the **Pending** state, the system is adding the SNAT entry. You can only query the status of the SNAT entry, and cannot perform other operations.
       *     *   If the SNAT entry is in the **Available** state, the SNAT entry is added.
       * *   You cannot repeatedly call the **CreateSnatEntry** operation to add an SNAT entry to an SNAT table within the specified period of time.
       * *   The vSwitch and Elastic Compute Service (ECS) instance specified in an SNAT entry must be created in the VPC where the NAT gateway is deployed.
@@ -6806,7 +6810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   Each instance can belong to only one vSwitch.
       * *   vSwitches do not support multicast or broadcast.
       * *   After you create a vSwitch, you cannot modify its CIDR block.
-      * *   The **CreateVSwitch** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+      * *   **CreateVSwitch** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVSwitchAttributes](~~94567~~) to query the status of the task.
       *     *   If the vSwitch is in the **Pending** state, the vSwitch is being configured.
       *     *   If the vSwitch is in the **Available** state, the vSwitch is available.
       * *   You cannot repeatedly call the **CreateVSwitch** operation to create a vSwitch in a VPC within the specified period of time.
@@ -6899,7 +6903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   Each instance can belong to only one vSwitch.
       * *   vSwitches do not support multicast or broadcast.
       * *   After you create a vSwitch, you cannot modify its CIDR block.
-      * *   The **CreateVSwitch** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+      * *   **CreateVSwitch** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVSwitchAttributes](~~94567~~) to query the status of the task.
       *     *   If the vSwitch is in the **Pending** state, the vSwitch is being configured.
       *     *   If the vSwitch is in the **Available** state, the vSwitch is available.
       * *   You cannot repeatedly call the **CreateVSwitch** operation to create a vSwitch in a VPC within the specified period of time.
@@ -10079,7 +10083,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You cannot repeatedly call the **DeleteNetworkAcl** operation to delete a network ACL within the specified period of time.
+      * ## [](#)Description
+      * You cannot repeatedly call the **DeleteNetworkAcl** operation within the specified period of time.
       *
       * @param request DeleteNetworkAclRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -10142,7 +10147,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You cannot repeatedly call the **DeleteNetworkAcl** operation to delete a network ACL within the specified period of time.
+      * ## [](#)Description
+      * You cannot repeatedly call the **DeleteNetworkAcl** operation within the specified period of time.
       *
       * @param request DeleteNetworkAclRequest
       * @return DeleteNetworkAclResponse
@@ -10461,13 +10467,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, take note of the following rules:
+      * When you call this operation, take note of the following items:
       * *   You can delete only routes that are in the **Available** state.
-      * *   You cannot delete a route of a virtual private cloud (VPC) in which a vSwitch or a route is being created.
+      * *   You cannot delete a route entry of a virtual private cloud (VPC) in which a vSwitch or another route entry is being created or deleted.
       * *   Before you call this operation to delete a route of a VBR route table, call the [DescribeRouteEntryList](~~138148~~) operation to query the **NextHopId** of the route first.
-      * *   The **DeleteRouteEntry** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route:
+      * *   **DeleteRouteEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task.
       *     *   If the route is in the **Deleting** state, the route is being deleted.
-      *     *   If you cannot query the route, the route is deleted.
+      *     *   If you cannot query the route entry, the route entry is deleted.
       * *   You cannot repeatedly call the **DeleteRouteEntry** operation to delete a route from the route table of a vRouter or a VBR within the specified period of time.
       *
       * @param request DeleteRouteEntryRequest
@@ -10535,13 +10541,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, take note of the following rules:
+      * When you call this operation, take note of the following items:
       * *   You can delete only routes that are in the **Available** state.
-      * *   You cannot delete a route of a virtual private cloud (VPC) in which a vSwitch or a route is being created.
+      * *   You cannot delete a route entry of a virtual private cloud (VPC) in which a vSwitch or another route entry is being created or deleted.
       * *   Before you call this operation to delete a route of a VBR route table, call the [DescribeRouteEntryList](~~138148~~) operation to query the **NextHopId** of the route first.
-      * *   The **DeleteRouteEntry** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route:
+      * *   **DeleteRouteEntry** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of the task.
       *     *   If the route is in the **Deleting** state, the route is being deleted.
-      *     *   If you cannot query the route, the route is deleted.
+      *     *   If you cannot query the route entry, the route entry is deleted.
       * *   You cannot repeatedly call the **DeleteRouteEntry** operation to delete a route from the route table of a vRouter or a VBR within the specified period of time.
       *
       * @param request DeleteRouteEntryRequest
@@ -16707,6 +16713,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeVpnGatewayWithOptions(request, runtime);
     }
 
+    public DescribeVpnGatewayAvailableZonesResponse describeVpnGatewayAvailableZonesWithOptions(DescribeVpnGatewayAvailableZonesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVpnGatewayAvailableZones"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVpnGatewayAvailableZonesResponse());
+    }
+
+    public DescribeVpnGatewayAvailableZonesResponse describeVpnGatewayAvailableZones(DescribeVpnGatewayAvailableZonesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVpnGatewayAvailableZonesWithOptions(request, runtime);
+    }
+
     public DescribeVpnGatewaysResponse describeVpnGatewaysWithOptions(DescribeVpnGatewaysRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -17112,6 +17143,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DetachDhcpOptionsSetFromVpcResponse detachDhcpOptionsSetFromVpc(DetachDhcpOptionsSetFromVpcRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detachDhcpOptionsSetFromVpcWithOptions(request, runtime);
+    }
+
+    public DiagnoseVpnConnectionsResponse diagnoseVpnConnectionsWithOptions(DiagnoseVpnConnectionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tunnelIds)) {
+            query.put("TunnelIds", request.tunnelIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpnConnectionIds)) {
+            query.put("VpnConnectionIds", request.vpnConnectionIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpnGatewayId)) {
+            query.put("VpnGatewayId", request.vpnGatewayId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DiagnoseVpnConnections"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DiagnoseVpnConnectionsResponse());
+    }
+
+    public DiagnoseVpnConnectionsResponse diagnoseVpnConnections(DiagnoseVpnConnectionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.diagnoseVpnConnectionsWithOptions(request, runtime);
     }
 
     /**
@@ -18710,6 +18794,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AcceptLanguage", request.acceptLanguage);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("Filter", request.filter);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -18791,6 +18879,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.natGatewayId)) {
             query.put("NatGatewayId", request.natGatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.natIp)) {
+            query.put("NatIp", request.natIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.natIpPort)) {
+            query.put("NatIpPort", request.natIpPort);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.networkInterfaceIds)) {
@@ -22450,7 +22546,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)References
       * You cannot repeatedly call the **ModifyRouteTableAttributes** operation to modify the name and description of a route table within the specified period of time.
       *
       * @param request ModifyRouteTableAttributesRequest
@@ -22510,7 +22605,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## [](#)References
       * You cannot repeatedly call the **ModifyRouteTableAttributes** operation to modify the name and description of a route table within the specified period of time.
       *
       * @param request ModifyRouteTableAttributesRequest
@@ -23075,9 +23169,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The **ModifyVSwitchAttribute** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
-      *     *   If the vSwitch is in the **Pending** state, the vSwitch is being modified.
-      *     *   If the vSwitch is in the **Available** state, the vSwitch is available.
+      * *   **ModifyVSwitchAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of the task:
+      *     *   If the vSwitch is in the **Pending** state, the name and description of the vSwitch are being modified.
+      *     *   If the vSwitch is in the **Available** state, the name and description of the vSwitch are modified.
       * *   You cannot repeatedly call the **ModifyVSwitchAttribute** operation to modify the name and description of a vSwitch within the specified period of time.
       *
       * @param request ModifyVSwitchAttributeRequest
@@ -23149,9 +23243,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The **ModifyVSwitchAttribute** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
-      *     *   If the vSwitch is in the **Pending** state, the vSwitch is being modified.
-      *     *   If the vSwitch is in the **Available** state, the vSwitch is available.
+      * *   **ModifyVSwitchAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of the task:
+      *     *   If the vSwitch is in the **Pending** state, the name and description of the vSwitch are being modified.
+      *     *   If the vSwitch is in the **Available** state, the name and description of the vSwitch are modified.
       * *   You cannot repeatedly call the **ModifyVSwitchAttribute** operation to modify the name and description of a vSwitch within the specified period of time.
       *
       * @param request ModifyVSwitchAttributeRequest
@@ -23420,6 +23514,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sitelinkEnable)) {
+            query.put("SitelinkEnable", request.sitelinkEnable);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vbrId)) {
