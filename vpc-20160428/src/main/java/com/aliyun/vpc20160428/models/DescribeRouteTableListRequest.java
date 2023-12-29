@@ -54,6 +54,11 @@ public class DescribeRouteTableListRequest extends TeaModel {
     @NameInMap("RouteTableName")
     public String routeTableName;
 
+    /**
+     * <p>The type of the route table. Valid values:</p>
+     * <p>- **System**</p>
+     * <p>- **Custom**</p>
+     */
     @NameInMap("RouteTableType")
     public String routeTableType;
 

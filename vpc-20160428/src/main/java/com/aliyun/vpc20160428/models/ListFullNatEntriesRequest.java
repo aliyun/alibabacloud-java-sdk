@@ -60,6 +60,18 @@ public class ListFullNatEntriesRequest extends TeaModel {
     public String natGatewayId;
 
     /**
+     * <p>The NAT IP address that provides address translation in FULLNAT entries.</p>
+     */
+    @NameInMap("NatIp")
+    public String natIp;
+
+    /**
+     * <p>The frontend port to be modified in the mapping of FULLNAT port. Valid values: **1** to **65535**.</p>
+     */
+    @NameInMap("NatIpPort")
+    public String natIpPort;
+
+    /**
      * <p>The ID of the elastic network interface (ENI) that you want to query.</p>
      */
     @NameInMap("NetworkInterfaceIds")
@@ -153,6 +165,22 @@ public class ListFullNatEntriesRequest extends TeaModel {
     }
     public String getNatGatewayId() {
         return this.natGatewayId;
+    }
+
+    public ListFullNatEntriesRequest setNatIp(String natIp) {
+        this.natIp = natIp;
+        return this;
+    }
+    public String getNatIp() {
+        return this.natIp;
+    }
+
+    public ListFullNatEntriesRequest setNatIpPort(String natIpPort) {
+        this.natIpPort = natIpPort;
+        return this;
+    }
+    public String getNatIpPort() {
+        return this.natIpPort;
     }
 
     public ListFullNatEntriesRequest setNetworkInterfaceIds(java.util.List<String> networkInterfaceIds) {

@@ -37,6 +37,9 @@ public class CreateRouteEntryRequest extends TeaModel {
     @NameInMap("NextHopId")
     public String nextHopId;
 
+    /**
+     * <p>The next hop list.</p>
+     */
     @NameInMap("NextHopList")
     public java.util.List<CreateRouteEntryRequestNextHopList> nextHopList;
 

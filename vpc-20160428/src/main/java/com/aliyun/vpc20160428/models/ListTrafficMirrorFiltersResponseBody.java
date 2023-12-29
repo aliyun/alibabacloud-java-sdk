@@ -490,6 +490,12 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
 
     public static class ListTrafficMirrorFiltersResponseBodyTrafficMirrorFilters extends TeaModel {
         /**
+         * <p>The time when the filter is created.</p>
+         */
+        @NameInMap("CreationTime")
+        public String creationTime;
+
+        /**
          * <p>The details about the outbound rules.</p>
          */
         @NameInMap("EgressRules")
@@ -545,6 +551,14 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         public static ListTrafficMirrorFiltersResponseBodyTrafficMirrorFilters build(java.util.Map<String, ?> map) throws Exception {
             ListTrafficMirrorFiltersResponseBodyTrafficMirrorFilters self = new ListTrafficMirrorFiltersResponseBodyTrafficMirrorFilters();
             return TeaModel.build(map, self);
+        }
+
+        public ListTrafficMirrorFiltersResponseBodyTrafficMirrorFilters setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         public ListTrafficMirrorFiltersResponseBodyTrafficMirrorFilters setEgressRules(java.util.List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersEgressRules> egressRules) {

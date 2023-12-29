@@ -19,6 +19,9 @@ public class DeleteRouteEntryRequest extends TeaModel {
     @NameInMap("NextHopId")
     public String nextHopId;
 
+    /**
+     * <p>The list of the next hop of the ECMP route.</p>
+     */
     @NameInMap("NextHopList")
     public java.util.List<DeleteRouteEntryRequestNextHopList> nextHopList;
 

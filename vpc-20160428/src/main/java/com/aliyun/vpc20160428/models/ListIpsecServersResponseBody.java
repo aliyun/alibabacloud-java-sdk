@@ -375,6 +375,11 @@ public class ListIpsecServersResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group to which the IPsec server belongs.</p>
+         * <br>
+         * <p>You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 

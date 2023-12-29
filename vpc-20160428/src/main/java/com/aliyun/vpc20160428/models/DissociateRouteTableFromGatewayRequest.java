@@ -29,6 +29,9 @@ public class DissociateRouteTableFromGatewayRequest extends TeaModel {
     @NameInMap("GatewayId")
     public String gatewayId;
 
+    /**
+     * <p>The type of a gateway to be disassociated from a route table.</p>
+     */
     @NameInMap("GatewayType")
     public String gatewayType;
 

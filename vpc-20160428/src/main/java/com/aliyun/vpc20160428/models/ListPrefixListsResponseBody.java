@@ -182,6 +182,9 @@ public class ListPrefixListsResponseBody extends TeaModel {
         @NameInMap("PrefixListStatus")
         public String prefixListStatus;
 
+        @NameInMap("PrefixListType")
+        public String prefixListType;
+
         /**
          * <p>The region ID of the prefix list.</p>
          */
@@ -294,6 +297,14 @@ public class ListPrefixListsResponseBody extends TeaModel {
         }
         public String getPrefixListStatus() {
             return this.prefixListStatus;
+        }
+
+        public ListPrefixListsResponseBodyPrefixLists setPrefixListType(String prefixListType) {
+            this.prefixListType = prefixListType;
+            return this;
+        }
+        public String getPrefixListType() {
+            return this.prefixListType;
         }
 
         public ListPrefixListsResponseBodyPrefixLists setRegionId(String regionId) {

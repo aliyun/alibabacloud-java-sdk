@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeRouterInterfacesResponseBody extends TeaModel {
     /**
-     * <p>The number of the returned page. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -29,7 +29,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
     public DescribeRouterInterfacesResponseBodyRouterInterfaceSet routerInterfaceSet;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -80,9 +80,19 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
     }
 
     public static class DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTagsTags extends TeaModel {
+        /**
+         * <p>The key of the resource tag. At least one tag key must be entered, and a maximum of 20 tag keys are supported. If this value needs to be passed in, it cannot be an empty string.</p>
+         * <br>
+         * <p>A tag key can support up to 128 characters, cannot start with \"aliyun\" or \"acs:\", and cannot contain \"http://\" or \"https://\".</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the resource tag. A maximum of 20 tag values can be entered. If this value needs to be passed in, an empty string can be entered.</p>
+         * <br>
+         * <p>A maximum of 128 characters are supported, it cannot start with \"aliyun\" or \"acs:\", and it cannot contain \"http://\" or \"https://\".</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -144,15 +154,15 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         /**
          * <p>The service status of the router interface. Valid values:</p>
          * <br>
-         * <p>*   **Normal**: normal</p>
-         * <p>*   **FinancialLocked**: locked due to overdue payments</p>
-         * <p>*   **SecurityLocked**: locked due to security reasons</p>
+         * <p>*   **Normal**</p>
+         * <p>*   **FinancialLocked**</p>
+         * <p>*   **SecurityLocked**</p>
          */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
         /**
-         * <p>The metering method.</p>
+         * <p>The billing method.</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
@@ -186,7 +196,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The end of the time range queried.</p>
+         * <p>The end of the time range during which data was queried.</p>
          * <br>
          * <p>The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.</p>
          */
@@ -194,10 +204,10 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>Indicates whether the VBR that is created in the Fast Link mode is uplinked to the router interface. The Fast Link mode helps automatically connect router interfaces that are created for the VBR and its peer VPC. Default value: false. Valid values:</p>
+         * <p>Indicates whether the VBR that is created in the Fast Link mode is uplinked to the router interface. The Fast Link mode helps automatically connect router interfaces that are created for the VBR and its peer VPC. Valid values:</p>
          * <br>
          * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <p>*   **false** (default)</p>
          */
         @NameInMap("FastLinkMode")
         public Boolean fastLinkMode;
@@ -209,7 +219,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         public String hasReservationData;
 
         /**
-         * <p>The rate of the heath check.</p>
+         * <p>The rate of heath checks.</p>
          */
         @NameInMap("HcRate")
         public Integer hcRate;
@@ -323,23 +333,28 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         public String reservationActiveTime;
 
         /**
-         * <p>The bandwidth after the renewal takes effect. Unit: Mbit/s.</p>
+         * <p>The maximum bandwidth after the renewal takes effect. Unit: Mbit/s.</p>
          */
         @NameInMap("ReservationBandwidth")
         public String reservationBandwidth;
 
         /**
-         * <p>The metering method that is used after the renewal takes effect.</p>
+         * <p>The metering method that is used after the renewal takes effect. Valid values:</p>
          */
         @NameInMap("ReservationInternetChargeType")
         public String reservationInternetChargeType;
 
         /**
-         * <p>The type of the renewal order.</p>
+         * <p>The type of the renewal order. Valid values:</p>
          */
         @NameInMap("ReservationOrderType")
         public String reservationOrderType;
 
+        /**
+         * <p>Resource Group ID.</p>
+         * <br>
+         * <p>For more information about resource groups, please refer to [What is a Resource Group?](~~94475~~)</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -382,6 +397,9 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags of the resource.</p>
+         */
         @NameInMap("Tags")
         public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTags tags;
 

@@ -108,6 +108,11 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group to which the SSL client certificate belongs.</p>
+         * <br>
+         * <p>You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 

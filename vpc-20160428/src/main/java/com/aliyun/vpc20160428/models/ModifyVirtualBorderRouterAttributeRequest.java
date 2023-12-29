@@ -152,6 +152,9 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SitelinkEnable")
+    public Boolean sitelinkEnable;
+
     /**
      * <p>The VBR ID.</p>
      */
@@ -337,6 +340,14 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ModifyVirtualBorderRouterAttributeRequest setSitelinkEnable(Boolean sitelinkEnable) {
+        this.sitelinkEnable = sitelinkEnable;
+        return this;
+    }
+    public Boolean getSitelinkEnable() {
+        return this.sitelinkEnable;
     }
 
     public ModifyVirtualBorderRouterAttributeRequest setVbrId(String vbrId) {

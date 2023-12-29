@@ -127,10 +127,10 @@ public class CreateNatGatewayRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the firewall feature. Valid values:</p>
      * <br>
-     * <p>*   **false** (default)</p>
-     * <p>*   **true**</p>
+     * <p>*   **false** (default)><notice>This parameter is deprecated.></notice></p>
      */
     @NameInMap("SecurityProtectionEnabled")
+    @Deprecated
     public Boolean securityProtectionEnabled;
 
     /**
