@@ -4,9 +4,15 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetMobileRequest extends TeaModel {
+    /**
+     * <p>The logon token obtained by the SDK for your app.</p>
+     */
     @NameInMap("AccessToken")
     public String accessToken;
 
+    /**
+     * <p>The external ID.</p>
+     */
     @NameInMap("OutId")
     public String outId;
 

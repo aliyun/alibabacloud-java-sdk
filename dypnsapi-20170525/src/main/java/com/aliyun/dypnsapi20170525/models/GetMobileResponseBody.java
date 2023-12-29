@@ -4,15 +4,30 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetMobileResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * <br>
+     * <p>*   If OK is returned, the request is successful.</p>
+     * <p>*   For more information about other error codes, see [API response codes](~~85198~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("GetMobileResultDTO")
     public GetMobileResponseBodyGetMobileResultDTO getMobileResultDTO;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +69,9 @@ public class GetMobileResponseBody extends TeaModel {
     }
 
     public static class GetMobileResponseBodyGetMobileResultDTO extends TeaModel {
+        /**
+         * <p>The phone number,</p>
+         */
         @NameInMap("Mobile")
         public String mobile;
 

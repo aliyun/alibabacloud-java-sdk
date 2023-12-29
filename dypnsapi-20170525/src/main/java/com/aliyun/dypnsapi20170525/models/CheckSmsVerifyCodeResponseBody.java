@@ -4,18 +4,39 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CheckSmsVerifyCodeResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The response code.</p>
+     * <br>
+     * <p>*   If OK is returned, the request is successful.</p>
+     * <p>*   For more information about other error codes, see [Response codes](https://help.aliyun.com/zh/pnvs/developer-reference/api-return-code?spm=a2c4g.11174283.0.0.70c5616bkj38Wa).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Model")
     public CheckSmsVerifyCodeResponseBodyModel model;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +86,18 @@ public class CheckSmsVerifyCodeResponseBody extends TeaModel {
     }
 
     public static class CheckSmsVerifyCodeResponseBodyModel extends TeaModel {
+        /**
+         * <p>The external ID.</p>
+         */
         @NameInMap("OutId")
         public String outId;
 
+        /**
+         * <p>The verification results. Valid values:</p>
+         * <br>
+         * <p>*   PASS: The verification is successful.</p>
+         * <p>*   UNKNOWN: The verification failed.</p>
+         */
         @NameInMap("VerifyResult")
         public String verifyResult;
 

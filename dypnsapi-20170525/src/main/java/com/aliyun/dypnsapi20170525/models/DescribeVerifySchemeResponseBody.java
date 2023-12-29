@@ -4,15 +4,27 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class DescribeVerifySchemeResponseBody extends TeaModel {
+    /**
+     * <p>The response code. OK indicates that the request is successful. For more information about other error codes, see [API response codes](~~85198~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("SchemeQueryResultDTO")
     public DescribeVerifySchemeResponseBodySchemeQueryResultDTO schemeQueryResultDTO;
 
@@ -54,6 +66,9 @@ public class DescribeVerifySchemeResponseBody extends TeaModel {
     }
 
     public static class DescribeVerifySchemeResponseBodySchemeQueryResultDTO extends TeaModel {
+        /**
+         * <p>The key generated when you create a service in the console.</p>
+         */
         @NameInMap("AppEncryptInfo")
         public String appEncryptInfo;
 

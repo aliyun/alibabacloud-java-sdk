@@ -3,7 +3,7 @@ package com.aliyun.dypnsapi20170525.models;
 
 import com.aliyun.tea.*;
 
-public class VerifyWithFusionAuthTokenRequest extends TeaModel {
+public class JyQueryAppInfoBySceneCodeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +13,15 @@ public class VerifyWithFusionAuthTokenRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The unified verification token that is returned by the client SDKs.</p>
-     */
-    @NameInMap("VerifyToken")
-    public String verifyToken;
+    @NameInMap("SceneCode")
+    public String sceneCode;
 
-    public static VerifyWithFusionAuthTokenRequest build(java.util.Map<String, ?> map) throws Exception {
-        VerifyWithFusionAuthTokenRequest self = new VerifyWithFusionAuthTokenRequest();
+    public static JyQueryAppInfoBySceneCodeRequest build(java.util.Map<String, ?> map) throws Exception {
+        JyQueryAppInfoBySceneCodeRequest self = new JyQueryAppInfoBySceneCodeRequest();
         return TeaModel.build(map, self);
     }
 
-    public VerifyWithFusionAuthTokenRequest setOwnerId(Long ownerId) {
+    public JyQueryAppInfoBySceneCodeRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -32,7 +29,7 @@ public class VerifyWithFusionAuthTokenRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public VerifyWithFusionAuthTokenRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public JyQueryAppInfoBySceneCodeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -40,7 +37,7 @@ public class VerifyWithFusionAuthTokenRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public VerifyWithFusionAuthTokenRequest setResourceOwnerId(Long resourceOwnerId) {
+    public JyQueryAppInfoBySceneCodeRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -48,12 +45,12 @@ public class VerifyWithFusionAuthTokenRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public VerifyWithFusionAuthTokenRequest setVerifyToken(String verifyToken) {
-        this.verifyToken = verifyToken;
+    public JyQueryAppInfoBySceneCodeRequest setSceneCode(String sceneCode) {
+        this.sceneCode = sceneCode;
         return this;
     }
-    public String getVerifyToken() {
-        return this.verifyToken;
+    public String getSceneCode() {
+        return this.sceneCode;
     }
 
 }

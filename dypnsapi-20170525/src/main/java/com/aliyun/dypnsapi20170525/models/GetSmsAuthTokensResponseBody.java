@@ -4,15 +4,30 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetSmsAuthTokensResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * <br>
+     * <p>*   If OK is returned, the request is successful.</p>
+     * <p>*   For more information about other error codes, see [API response codes](~~85198~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public GetSmsAuthTokensResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,18 +69,33 @@ public class GetSmsAuthTokensResponseBody extends TeaModel {
     }
 
     public static class GetSmsAuthTokensResponseBodyData extends TeaModel {
+        /**
+         * <p>The business token.</p>
+         */
         @NameInMap("BizToken")
         public String bizToken;
 
+        /**
+         * <p>The time when the token expired. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
+        /**
+         * <p>The AccessKey ID.</p>
+         */
         @NameInMap("StsAccessKeyId")
         public String stsAccessKeyId;
 
+        /**
+         * <p>The AccessKey secret.</p>
+         */
         @NameInMap("StsAccessKeySecret")
         public String stsAccessKeySecret;
 
+        /**
+         * <p>The security token.</p>
+         */
         @NameInMap("StsToken")
         public String stsToken;
 

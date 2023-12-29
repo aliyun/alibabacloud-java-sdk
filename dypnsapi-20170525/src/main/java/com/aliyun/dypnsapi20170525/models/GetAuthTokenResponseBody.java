@@ -4,15 +4,30 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetAuthTokenResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * <br>
+     * <p>*   If OK is returned, the request is successful.</p>
+     * <p>*   For more information about other error codes, see [API response codes](~~85198~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("TokenInfo")
     public GetAuthTokenResponseBodyTokenInfo tokenInfo;
 
@@ -54,9 +69,19 @@ public class GetAuthTokenResponseBody extends TeaModel {
     }
 
     public static class GetAuthTokenResponseBodyTokenInfo extends TeaModel {
+        /**
+         * <p>The business authentication token.</p>
+         * <br>
+         * <p>>  AccessToken is valid for 10 minutes and can be used repeatedly within its validity period.</p>
+         */
         @NameInMap("AccessToken")
         public String accessToken;
 
+        /**
+         * <p>The API authentication token.</p>
+         * <br>
+         * <p>>  JwtToken is valid for 1 hour and can be used repeatedly within its validity period.</p>
+         */
         @NameInMap("JwtToken")
         public String jwtToken;
 

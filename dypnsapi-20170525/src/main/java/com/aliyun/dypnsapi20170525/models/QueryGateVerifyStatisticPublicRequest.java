@@ -4,12 +4,29 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryGateVerifyStatisticPublicRequest extends TeaModel {
+    /**
+     * <p>The verification method. Valid values:</p>
+     * <br>
+     * <p>*   **1**: one-click logon</p>
+     * <p>*   **2**: phone number verification, including the verification of the phone number used in HTML5 pages</p>
+     * <p>*   **3**: SMS verification</p>
+     * <p>*   **4**: facial recognition</p>
+     */
     @NameInMap("AuthenticationType")
     public Integer authenticationType;
 
+    /**
+     * <p>The end date. Specify this parameter in the YYYYMMDD format. Example: 20220106.</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <p>The type of the operating system. Valid values:</p>
+     * <br>
+     * <p>*   **Android**</p>
+     * <p>*   **iOS**</p>
+     */
     @NameInMap("OsType")
     public String osType;
 
@@ -19,9 +36,15 @@ public class QueryGateVerifyStatisticPublicRequest extends TeaModel {
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The service code.</p>
+     */
     @NameInMap("SceneCode")
     public String sceneCode;
 
+    /**
+     * <p>The start date. Specify this parameter in the YYYYMMDD format. Example: 20220101.</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
 

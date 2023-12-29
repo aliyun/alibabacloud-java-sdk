@@ -4,9 +4,21 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryGateVerifyBillingPublicRequest extends TeaModel {
+    /**
+     * <p>The verification method. Valid values:</p>
+     * <br>
+     * <p>*   **0**: phone number verification</p>
+     * <p>*   **1**: one-click logon</p>
+     * <p>*   **2**: all</p>
+     * <p>*   **3**: facial recognition</p>
+     * <p>*   **4**: SMS verification</p>
+     */
     @NameInMap("AuthenticationType")
     public Integer authenticationType;
 
+    /**
+     * <p>The month in which the bill is generated. Specify this parameter in the YYYYMM format. Example: 202111.</p>
+     */
     @NameInMap("Month")
     public String month;
 

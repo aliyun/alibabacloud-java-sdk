@@ -4,15 +4,30 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
+    /**
+     * <p>The response code. Valid values:</p>
+     * <br>
+     * <p>*   If OK is returned, the request is successful.</p>
+     * <p>*   For more information about other error codes, see [API response codes](~~85198~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The information about the calls of Phone Number Verification Service, including the total calls, the successful calls, failed calls, unknown calls, and daily calls within the statistical date range.</p>
+     */
     @NameInMap("Data")
     public QueryGateVerifyStatisticPublicResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,15 +69,27 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
     }
 
     public static class QueryGateVerifyStatisticPublicResponseBodyDataDayStatistic extends TeaModel {
+        /**
+         * <p>The date. This field is accurate to the day. The value of this field is in the YYYYMMDD format. Example: 20220103.</p>
+         */
         @NameInMap("StatisticDateStr")
         public String statisticDateStr;
 
+        /**
+         * <p>The failed calls on the day.</p>
+         */
         @NameInMap("TotalFail")
         public Long totalFail;
 
+        /**
+         * <p>The successful calls on the day.</p>
+         */
         @NameInMap("TotalSuccess")
         public Long totalSuccess;
 
+        /**
+         * <p>The unknown calls on the day.</p>
+         */
         @NameInMap("TotalUnknown")
         public Long totalUnknown;
 
@@ -106,18 +133,33 @@ public class QueryGateVerifyStatisticPublicResponseBody extends TeaModel {
     }
 
     public static class QueryGateVerifyStatisticPublicResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the daily calls.</p>
+         */
         @NameInMap("DayStatistic")
         public java.util.List<QueryGateVerifyStatisticPublicResponseBodyDataDayStatistic> dayStatistic;
 
+        /**
+         * <p>The total calls.</p>
+         */
         @NameInMap("Total")
         public Long total;
 
+        /**
+         * <p>The failed calls.</p>
+         */
         @NameInMap("TotalFail")
         public Long totalFail;
 
+        /**
+         * <p>The successful calls.</p>
+         */
         @NameInMap("TotalSuccess")
         public Long totalSuccess;
 
+        /**
+         * <p>The unknown calls.</p>
+         */
         @NameInMap("TotalUnknown")
         public Long totalUnknown;
 

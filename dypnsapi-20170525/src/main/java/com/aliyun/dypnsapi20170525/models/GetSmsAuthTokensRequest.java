@@ -4,18 +4,30 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetSmsAuthTokensRequest extends TeaModel {
+    /**
+     * <p>The ID of the iOS application. This parameter is required if OsType is set to **iOS**.</p>
+     */
     @NameInMap("BundleId")
     public String bundleId;
 
+    /**
+     * <p>The validity period of the token. Unit: seconds. Valid values: 900 to 43200.</p>
+     */
     @NameInMap("Expire")
     public Long expire;
 
+    /**
+     * <p>The type of the operating system. Valid values: **Android** and **iOS**.</p>
+     */
     @NameInMap("OsType")
     public String osType;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The package name. This parameter is required if OsType is set to **Android**.</p>
+     */
     @NameInMap("PackageName")
     public String packageName;
 
@@ -25,15 +37,27 @@ public class GetSmsAuthTokensRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The service code.</p>
+     */
     @NameInMap("SceneCode")
     public String sceneCode;
 
+    /**
+     * <p>The signature. This parameter is required if OsType is set to **Android**.</p>
+     */
     @NameInMap("SignName")
     public String signName;
 
+    /**
+     * <p>The validity period of the SMS verification code. Unit: seconds. Default value: 180.</p>
+     */
     @NameInMap("SmsCodeExpire")
     public Integer smsCodeExpire;
 
+    /**
+     * <p>The code of the text message template.</p>
+     */
     @NameInMap("SmsTemplateCode")
     public String smsTemplateCode;
 

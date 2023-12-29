@@ -4,18 +4,30 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QuerySendDetailsRequest extends TeaModel {
+    /**
+     * <p>The unique ID of the business, which is provided by Alibaba Cloud.</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>The number of the page on which you are reading the text message. Pages start from page 1. The value of this parameter cannot exceed the maximum page number.</p>
+     */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The phone number.</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
@@ -25,6 +37,11 @@ public class QuerySendDetailsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The date when the text message was sent. You can query text messages that were sent within the last 30 days.</p>
+     * <br>
+     * <p>Specify the date in the yyyyMMdd format. Example: 20181225.</p>
+     */
     @NameInMap("SendDate")
     public String sendDate;
 

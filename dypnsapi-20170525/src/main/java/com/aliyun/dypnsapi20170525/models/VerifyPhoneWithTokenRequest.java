@@ -7,6 +7,9 @@ public class VerifyPhoneWithTokenRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The phone number.</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
@@ -16,6 +19,9 @@ public class VerifyPhoneWithTokenRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The token for phone number verification that is obtained by the JavaScript SDK.</p>
+     */
     @NameInMap("SpToken")
     public String spToken;
 
