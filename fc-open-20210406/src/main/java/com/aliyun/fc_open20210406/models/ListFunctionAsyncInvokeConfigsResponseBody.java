@@ -39,19 +39,19 @@ public class ListFunctionAsyncInvokeConfigsResponseBody extends TeaModel {
 
     public static class ListFunctionAsyncInvokeConfigsResponseBodyConfigs extends TeaModel {
         /**
-         * <p>The time when the desktop group was created.</p>
+         * <p>The time when the application was created.</p>
          */
         @NameInMap("createdTime")
         public String createdTime;
 
         /**
-         * <p>The configuration structure of the destination for asynchronous invocations. If you have not configured this parameter, this parameter is null.</p>
+         * <p>The configuration structure of the destination for the asynchronous invocation. If you have not configured this parameter, this parameter is null.</p>
          */
         @NameInMap("destinationConfig")
         public DestinationConfig destinationConfig;
 
         /**
-         * <p>The name of the function.</p>
+         * <p>The function name.</p>
          */
         @NameInMap("function")
         public String function;
@@ -63,7 +63,7 @@ public class ListFunctionAsyncInvokeConfigsResponseBody extends TeaModel {
         public String lastModifiedTime;
 
         /**
-         * <p>The maximum validity period of a message. If you have not configured this parameter, this parameter is null.</p>
+         * <p>The maximum validity period of messages. If you have not configured this parameter, this parameter is null.</p>
          */
         @NameInMap("maxAsyncEventAgeInSeconds")
         public Long maxAsyncEventAgeInSeconds;
@@ -87,10 +87,10 @@ public class ListFunctionAsyncInvokeConfigsResponseBody extends TeaModel {
         public String service;
 
         /**
-         * <p>Indicates whether the asynchronous task feature is enabled.</p>
+         * <p>Specifies whether to enable the asynchronous task feature.</p>
          * <br>
-         * <p>*   **true**: The asynchronous task feature is enabled.</p>
-         * <p>*   **false**: The asynchronous task feature is disabled.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          * <br>
          * <p>If you have not configured this parameter, this parameter is null.</p>
          */

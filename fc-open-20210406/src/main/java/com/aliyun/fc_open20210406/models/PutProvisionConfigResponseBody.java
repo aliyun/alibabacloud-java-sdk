@@ -29,7 +29,7 @@ public class PutProvisionConfigResponseBody extends TeaModel {
     public java.util.List<ScheduledActions> scheduledActions;
 
     /**
-     * <p>The expected number of provisioned instances.</p>
+     * <p>The number of target provisioned instances.</p>
      */
     @NameInMap("target")
     public Long target;

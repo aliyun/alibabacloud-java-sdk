@@ -46,6 +46,12 @@ public class UpdateTriggerResponseBody extends TeaModel {
     @NameInMap("sourceArn")
     public String sourceArn;
 
+    @NameInMap("status")
+    public String status;
+
+    @NameInMap("targetArn")
+    public String targetArn;
+
     /**
      * <p>The configurations of the trigger. The configurations vary based on the trigger type.</p>
      */
@@ -141,6 +147,22 @@ public class UpdateTriggerResponseBody extends TeaModel {
     }
     public String getSourceArn() {
         return this.sourceArn;
+    }
+
+    public UpdateTriggerResponseBody setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public UpdateTriggerResponseBody setTargetArn(String targetArn) {
+        this.targetArn = targetArn;
+        return this;
+    }
+    public String getTargetArn() {
+        return this.targetArn;
     }
 
     public UpdateTriggerResponseBody setTriggerConfig(String triggerConfig) {

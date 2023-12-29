@@ -65,7 +65,7 @@ public class CreateTriggerResponseBody extends TeaModel {
     public String triggerName;
 
     /**
-     * <p>The trigger type, such as **oss**, **log**, **tablestore**, **timer**, **http**, **cdn_events**, and **mns_topic**.</p>
+     * <p>The trigger type. Valid values: **oss**, **log**, **tablestore**, **timer**, **http**, **cdn_events**, **mns_topic**, and **eventbridge**.</p>
      */
     @NameInMap("triggerType")
     public String triggerType;

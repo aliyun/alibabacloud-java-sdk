@@ -17,7 +17,7 @@ public class PutProvisionConfigRequest extends TeaModel {
     public java.util.List<ScheduledActions> scheduledActions;
 
     /**
-     * <p>The number of provisioned instances. Value range: [1,100000].</p>
+     * <p>The number of target provisioned instances. Valid values: \[0,10000].</p>
      */
     @NameInMap("target")
     public Long target;
@@ -29,7 +29,7 @@ public class PutProvisionConfigRequest extends TeaModel {
     public java.util.List<TargetTrackingPolicies> targetTrackingPolicies;
 
     /**
-     * <p>The name of the alias.</p>
+     * <p>The service alias or latest version. Other versions are not supported.</p>
      */
     @NameInMap("qualifier")
     public String qualifier;

@@ -20,10 +20,12 @@ public class InvokeFunctionHeaders extends TeaModel {
     public String xFcDate;
 
     /**
-     * <p>The method used to invoke the function. Valid values:</p>
+     * <p>The invocation method. Valid values:</p>
      * <br>
-     * <p>*   **Sync**: synchronous</p>
-     * <p>*   **Async**: asynchronous</p>
+     * <p>*   **Sync**: synchronous invocations</p>
+     * <p>*   **Async**: asynchronous invocations</p>
+     * <br>
+     * <p>Default value: Sync</p>
      */
     @NameInMap("X-Fc-Invocation-Type")
     public String xFcInvocationType;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLayerVersionResponseBody extends TeaModel {
     /**
-     * <p>The access mode of the layer.</p>
+     * <p>The access mode of the layer. Digit 0 specifies that the layer is private and digit 1 specifies that the layer is public. By default, public layers are public. Custom layers can be set to private or public.</p>
      */
     @NameInMap("acl")
     public Integer acl;
@@ -35,7 +35,7 @@ public class CreateLayerVersionResponseBody extends TeaModel {
     public Long codesize;
 
     /**
-     * <p>The runtime environments that are supported by the layer.</p>
+     * <p>The runtimes that are supported by the layer.</p>
      */
     @NameInMap("compatibleRuntime")
     public java.util.List<String> compatibleRuntime;

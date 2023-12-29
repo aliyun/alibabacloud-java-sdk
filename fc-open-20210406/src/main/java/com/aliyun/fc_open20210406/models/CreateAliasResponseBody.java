@@ -37,6 +37,12 @@ public class CreateAliasResponseBody extends TeaModel {
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
+    @NameInMap("resolvePolicy")
+    public String resolvePolicy;
+
+    @NameInMap("routePolicy")
+    public RoutePolicy routePolicy;
+
     /**
      * <p>The ID of the version to which the alias points.</p>
      */
@@ -86,6 +92,22 @@ public class CreateAliasResponseBody extends TeaModel {
     }
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
+    }
+
+    public CreateAliasResponseBody setResolvePolicy(String resolvePolicy) {
+        this.resolvePolicy = resolvePolicy;
+        return this;
+    }
+    public String getResolvePolicy() {
+        return this.resolvePolicy;
+    }
+
+    public CreateAliasResponseBody setRoutePolicy(RoutePolicy routePolicy) {
+        this.routePolicy = routePolicy;
+        return this;
+    }
+    public RoutePolicy getRoutePolicy() {
+        return this.routePolicy;
     }
 
     public CreateAliasResponseBody setVersionId(String versionId) {

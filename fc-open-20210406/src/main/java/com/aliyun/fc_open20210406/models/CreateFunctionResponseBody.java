@@ -153,7 +153,7 @@ public class CreateFunctionResponseBody extends TeaModel {
     /**
      * <p>An array that consists of the information of layers.</p>
      * <br>
-     * <p>> Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name as a layer with a larger subscript.</p>
+     * <p>>  If multiple layers exist, the layers are merged based on the array subscripts in descending order. The content of a layer with a smaller subscript overwrites that of a larger subscript.</p>
      */
     @NameInMap("layers")
     public java.util.List<String> layers;

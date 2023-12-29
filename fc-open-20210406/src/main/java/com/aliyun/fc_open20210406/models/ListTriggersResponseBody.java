@@ -57,7 +57,7 @@ public class ListTriggersResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>The ARN of the RAM role that is used by the event source to invoke the function.</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that is used by the event source to invoke the function.</p>
          */
         @NameInMap("invocationRole")
         public String invocationRole;
@@ -83,14 +83,14 @@ public class ListTriggersResponseBody extends TeaModel {
         /**
          * <p>The configurations of the trigger. The configurations vary based on the trigger type. For more information about the format, see the following topics:</p>
          * <br>
-         * <p>*   Object Storage Service (OSS) trigger: [OSSTriggerConfig](~~415697~~)).</p>
+         * <p>*   Object Storage Service (OSS) trigger: [OSSTriggerConfig](~~415697~~).</p>
          * <p>*   Simple Log Service trigger: [LogTriggerConfig](~~415694~~).</p>
          * <p>*   Time trigger: [TimeTriggerConfig](~~415712~~).</p>
          * <p>*   HTTP trigger: [HTTPTriggerConfig](~~415685~~).</p>
          * <p>*   Tablestore trigger: Specify the **SourceArn** parameter and leave this parameter empty.</p>
-         * <p>*   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](~~415674~~).</p>
+         * <p>*   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](javascript:void\(0\)).</p>
          * <p>*   MNS topic trigger: [MnsTopicTriggerConfig](~~415695~~).</p>
-         * <p>*   EventBridge triggers: [EventBridgeTriggerConfig](~~2508622~~).</p>
+         * <p>*   EventBridge triggers: [EventBridgeTriggerConfig](javascript:void\(0\)).</p>
          */
         @NameInMap("triggerConfig")
         public String triggerConfig;

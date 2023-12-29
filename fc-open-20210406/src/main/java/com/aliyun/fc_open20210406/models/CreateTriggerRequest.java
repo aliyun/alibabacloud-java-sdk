@@ -11,7 +11,7 @@ public class CreateTriggerRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The role that is used by the event source such as OSS to invoke the function. For more information, see [Overview](~~53102~~).</p>
+     * <p>The role that is used by the event source such as Object Storage Service (OSS) to invoke the function. For more information, see [Overview](~~53102~~).</p>
      */
     @NameInMap("invocationRole")
     public String invocationRole;
@@ -31,13 +31,14 @@ public class CreateTriggerRequest extends TeaModel {
     /**
      * <p>The configurations of the trigger. The configurations vary based on the trigger type. For more information about the format, see the following topics:</p>
      * <br>
-     * <p>* OSS trigger: [OSSTriggerConfig](~~415697~~).</p>
-     * <p>* Log Service trigger: [LogTriggerConfig](~~415694~~).</p>
-     * <p>* Time trigger: [TimeTriggerConfig](~~415712~~).</p>
-     * <p>* HTTP trigger: [HTTPTriggerConfig](~~415685~~).</p>
-     * <p>* Tablestore trigger: Specify the **SourceArn** parameter and leave this parameter empty.</p>
-     * <p>* Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](~~415674~~).</p>
-     * <p>* MNS topic trigger: [MnsTopicTriggerConfig](~~415695~~).</p>
+     * <p>*   Object Storage Service (OSS) trigger: [OSSTriggerConfig](~~415697~~).</p>
+     * <p>*   Simple Log Service trigger: [LogTriggerConfig](~~415694~~).</p>
+     * <p>*   Time trigger: [TimeTriggerConfig](~~415712~~).</p>
+     * <p>*   HTTP trigger: [HTTPTriggerConfig](~~415685~~).</p>
+     * <p>*   Tablestore trigger: Specify the **SourceArn** parameter and leave this parameter empty.</p>
+     * <p>*   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](~~415674~~).</p>
+     * <p>*   Message Service (MNS) topic trigger: [MnsTopicTriggerConfig](~~415695~~).</p>
+     * <p>*   EventBridge triggers: [EventBridgeTriggerConfig](~~2508622~~).</p>
      */
     @NameInMap("triggerConfig")
     public String triggerConfig;
@@ -52,12 +53,13 @@ public class CreateTriggerRequest extends TeaModel {
      * <p>The type of the trigger. Valid values:</p>
      * <br>
      * <p>*   **oss**: OSS event trigger. For more information, see [Overview](~~62922~~).</p>
-     * <p>*   **log**: Log Service trigger. For more information, see [Overview](~~84386~~).</p>
+     * <p>*   **log**: Simple Log Service trigger. For more information, see [Overview](~~84386~~).</p>
      * <p>*   **timer**: time trigger. For more information, see [Overview](~~68172~~).</p>
      * <p>*   **http**: HTTP trigger. For more information, see [Overview](~~71229~~).</p>
      * <p>*   **tablestore**: Tablestore trigger. For more information, see [Overview](~~100092~~).</p>
      * <p>*   **cdn_events**: CDN event trigger. For more information, see [Overview](~~73333~~).</p>
      * <p>*   **mns_topic**: MNS topic trigger. For more information, see [Overview](~~97032~~).</p>
+     * <p>*   **eventbridge**: EventBridge triggers.</p>
      */
     @NameInMap("triggerType")
     public String triggerType;

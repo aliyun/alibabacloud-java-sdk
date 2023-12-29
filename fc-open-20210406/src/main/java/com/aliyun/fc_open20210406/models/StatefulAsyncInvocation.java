@@ -10,6 +10,9 @@ public class StatefulAsyncInvocation extends TeaModel {
     @NameInMap("destinationStatus")
     public String destinationStatus;
 
+    @NameInMap("durationMs")
+    public Long durationMs;
+
     @NameInMap("endTime")
     public Long endTime;
 
@@ -36,6 +39,9 @@ public class StatefulAsyncInvocation extends TeaModel {
 
     @NameInMap("requestId")
     public String requestId;
+
+    @NameInMap("returnPayload")
+    public String returnPayload;
 
     @NameInMap("serviceName")
     public String serviceName;
@@ -65,6 +71,14 @@ public class StatefulAsyncInvocation extends TeaModel {
     }
     public String getDestinationStatus() {
         return this.destinationStatus;
+    }
+
+    public StatefulAsyncInvocation setDurationMs(Long durationMs) {
+        this.durationMs = durationMs;
+        return this;
+    }
+    public Long getDurationMs() {
+        return this.durationMs;
     }
 
     public StatefulAsyncInvocation setEndTime(Long endTime) {
@@ -137,6 +151,14 @@ public class StatefulAsyncInvocation extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public StatefulAsyncInvocation setReturnPayload(String returnPayload) {
+        this.returnPayload = returnPayload;
+        return this;
+    }
+    public String getReturnPayload() {
+        return this.returnPayload;
     }
 
     public StatefulAsyncInvocation setServiceName(String serviceName) {
