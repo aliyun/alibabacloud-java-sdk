@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateAliasRequest extends TeaModel {
     /**
-     * <p>The additional version to which the alias points and the weight of the additional version.</p>
+     * <p>The canary release version to which the alias points and the weight of the canary release version.</p>
      * <br>
-     * <p>*   The additional version takes effect only when the function is invoked.</p>
+     * <p>*   The canary release version takes effect only when the function is invoked.</p>
      * <p>*   The value consists of a version number and a specific weight. For example, 2:0.05 indicates that when a function is invoked, Version 2 is the canary release version, 5% of the traffic is distributed to the canary release version, and 95% of the traffic is distributed to the major version.</p>
      */
     @NameInMap("additionalVersionWeight")
@@ -26,10 +26,10 @@ public class CreateAliasRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The canary release mode. Valid values:</p>
+     * <p>The canary release mode. Default values: off. Valid values:</p>
      * <br>
-     * <p>*   **Random**: random canary release. This is the default value.</p>
-     * <p>*   **Content**: rule-based canary release.</p>
+     * <p>*   **Random**: random canary release.</p>
+     * <p>*   **Content**: rule-based canary release. By default, this parameter is empty.</p>
      */
     @NameInMap("resolvePolicy")
     public String resolvePolicy;

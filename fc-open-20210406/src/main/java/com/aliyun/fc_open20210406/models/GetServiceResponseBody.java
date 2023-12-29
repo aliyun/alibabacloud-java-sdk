@@ -76,6 +76,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("tracingConfig")
     public TracingConfig tracingConfig;
 
+    @NameInMap("useSLRAuthentication")
+    public Boolean useSLRAuthentication;
+
     /**
      * <p>The VPC configuration. The configuration allows a function to access the specified VPC.</p>
      */
@@ -173,6 +176,14 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public TracingConfig getTracingConfig() {
         return this.tracingConfig;
+    }
+
+    public GetServiceResponseBody setUseSLRAuthentication(Boolean useSLRAuthentication) {
+        this.useSLRAuthentication = useSLRAuthentication;
+        return this;
+    }
+    public Boolean getUseSLRAuthentication() {
+        return this.useSLRAuthentication;
     }
 
     public GetServiceResponseBody setVpcConfig(VPCConfig vpcConfig) {

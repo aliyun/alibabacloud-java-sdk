@@ -11,13 +11,13 @@ public class ClaimGPUInstanceRequest extends TeaModel {
     public String diskPerformanceLevel;
 
     /**
-     * <p>The system disk space of the GPU rendering instance.</p>
+     * <p>The system disk space of the GPU rendering instance. Unit: GB.</p>
      */
     @NameInMap("diskSizeGigabytes")
     public String diskSizeGigabytes;
 
     /**
-     * <p>The image ID of the GPU-rendered instance.</p>
+     * <p>The image ID of the GPU rendering instance.</p>
      */
     @NameInMap("imageId")
     public String imageId;
@@ -41,13 +41,13 @@ public class ClaimGPUInstanceRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The role of the user.</p>
+     * <p>The user role.</p>
      */
     @NameInMap("role")
     public String role;
 
     /**
-     * <p>The ID of the security group.</p>
+     * <p>The security group ID.</p>
      */
     @NameInMap("sgId")
     public String sgId;
@@ -77,7 +77,7 @@ public class ClaimGPUInstanceRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The vSwitch ID of the instance.</p>
      */
     @NameInMap("vswId")
     public String vswId;

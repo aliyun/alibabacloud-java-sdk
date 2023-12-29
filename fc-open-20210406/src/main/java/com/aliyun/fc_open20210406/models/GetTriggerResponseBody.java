@@ -55,7 +55,7 @@ public class GetTriggerResponseBody extends TeaModel {
      * <p>*   HTTP trigger: [HTTPTriggerConfig](~~415685~~).</p>
      * <p>*   Tablestore trigger: Specify the **SourceArn** parameter and leave this parameter empty.</p>
      * <p>*   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](~~415674~~).</p>
-     * <p>*   MNS topic trigger: [MnsTopicTriggerConfig](~~415695~~).</p>
+     * <p>*   Message Service (MNS) topic trigger: [MnsTopicTriggerConfig](~~415695~~).</p>
      * <p>*   EventBridge triggers: [EventBridgeTriggerConfig](~~2508622~~).</p>
      */
     @NameInMap("triggerConfig")

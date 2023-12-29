@@ -11,7 +11,7 @@ public class CreateLayerVersionRequest extends TeaModel {
     public Code code;
 
     /**
-     * <p>The runtime environments that are supported by the layer.</p>
+     * <p>The runtimes that are supported by the layer.</p>
      */
     @NameInMap("compatibleRuntime")
     public java.util.List<String> compatibleRuntime;
