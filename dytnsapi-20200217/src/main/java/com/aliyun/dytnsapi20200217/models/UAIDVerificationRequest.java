@@ -19,6 +19,9 @@ public class UAIDVerificationRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("Province")
+    public String province;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -74,6 +77,14 @@ public class UAIDVerificationRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public UAIDVerificationRequest setProvince(String province) {
+        this.province = province;
+        return this;
+    }
+    public String getProvince() {
+        return this.province;
     }
 
     public UAIDVerificationRequest setResourceOwnerAccount(String resourceOwnerAccount) {

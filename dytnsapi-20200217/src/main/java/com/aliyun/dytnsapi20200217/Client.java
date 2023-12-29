@@ -1948,6 +1948,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.province)) {
+            query.put("Province", request.province);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
