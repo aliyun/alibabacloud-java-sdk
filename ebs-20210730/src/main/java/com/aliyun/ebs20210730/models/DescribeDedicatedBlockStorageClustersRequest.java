@@ -30,9 +30,15 @@ public class DescribeDedicatedBlockStorageClustersRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -42,12 +48,28 @@ public class DescribeDedicatedBlockStorageClustersRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the dedicated block storage cluster belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The states of dedicated block storage clusters. Valid values:</p>
+     * <br>
+     * <p>*   Preparing</p>
+     * <p>*   Running</p>
+     * <p>*   Expired</p>
+     * <p>*   Offline</p>
+     * <br>
+     * <p>Multiple states can be specified. Valid values of N: 1, 2, 3, and 4.</p>
+     */
     @NameInMap("Status")
     public java.util.List<String> status;
 
+    /**
+     * <p>The tags. Up to 20 tags are supported.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeDedicatedBlockStorageClustersRequestTag> tag;
 
@@ -153,9 +175,15 @@ public class DescribeDedicatedBlockStorageClustersRequest extends TeaModel {
     }
 
     public static class DescribeDedicatedBlockStorageClustersRequestTag extends TeaModel {
+        /**
+         * <p>The tag key of the dedicated block storage cluster.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the dedicated block storage cluster.</p>
+         */
         @NameInMap("Value")
         public String value;
 

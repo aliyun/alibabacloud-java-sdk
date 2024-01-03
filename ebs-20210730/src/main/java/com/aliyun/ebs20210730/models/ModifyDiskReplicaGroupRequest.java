@@ -7,13 +7,13 @@ public class ModifyDiskReplicaGroupRequest extends TeaModel {
     /**
      * <p>The bandwidth value. Unit: Kbit/s.</p>
      * <br>
-     * <p>>  This parameter is unavailable.</p>
+     * <p>>  This parameter is not publicly available.</p>
      */
     @NameInMap("Bandwidth")
     public Long bandwidth;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -25,7 +25,7 @@ public class ModifyDiskReplicaGroupRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the replication pair-consistent group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the replication pair-consistent group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("GroupName")
     public String groupName;

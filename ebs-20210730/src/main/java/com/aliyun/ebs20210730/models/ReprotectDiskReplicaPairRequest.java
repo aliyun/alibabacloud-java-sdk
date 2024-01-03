@@ -4,17 +4,28 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class ReprotectDiskReplicaPairRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The region ID of the secondary disk in the replication pair. You can call the [DescribeDiskReplicaPairs](~~354206~~) operation to query region IDs of secondary disks in replication pairs.</p>
+     * <br>
+     * <p>>  The reverse replication feature must be enabled from the region where the secondary disk is located.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the replication pair.</p>
+     */
     @NameInMap("ReplicaPairId")
     public String replicaPairId;
 
     /**
-     * <p>反向复制开关：false代表恢复原方向，true代表反向复制。默认值是true。</p>
+     * <p>Specifies whether to enable the reverse replication sub-feature. Valid values: true and false. Default value: true.</p>
      */
     @NameInMap("ReverseReplicate")
     public Boolean reverseReplicate;

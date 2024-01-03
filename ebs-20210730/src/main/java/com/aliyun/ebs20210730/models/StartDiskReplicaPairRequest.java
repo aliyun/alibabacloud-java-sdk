@@ -4,18 +4,32 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class StartDiskReplicaPairRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to immediately synchronize data. Valid values:</p>
+     * <br>
+     * <p>*   true: immediately synchronizes data.</p>
+     * <p>*   false: synchronizes data based on the recovery point objective (RPO).</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("OneShot")
     public Boolean oneShot;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The region ID of the primary or secondary disk in the replication pair. You can call the [DescribeDiskReplicaPairs](~~354206~~) operation to query the region information of replication pairs.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the replication pair.</p>
+     */
     @NameInMap("ReplicaPairId")
     public String replicaPairId;
 
