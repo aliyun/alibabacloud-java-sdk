@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetApplicationResponseBody extends TeaModel {
     /**
-     * <p>The deployment result.</p>
+     * <p>The response code.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -92,43 +92,43 @@ public class GetApplicationResponseBody extends TeaModel {
 
     public static class GetApplicationResponseBodyDataChecklist extends TeaModel {
         /**
-         * <p>The message returned for verification.</p>
+         * <p>The resource tag.</p>
          */
         @NameInMap("Lifecycle")
         public String lifecycle;
 
         /**
-         * <p>The verification results returned.</p>
+         * <p>The region in which the instance resides.</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The message returned for verification.</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
-         * <p>The error message that is returned when a price query fails.</p>
+         * <p>The service code.</p>
          */
         @NameInMap("ResourceCode")
         public String resourceCode;
 
         /**
-         * <p>ECS instance sold out</p>
+         * <p>The name of the instance.</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
-         * <p>The service code.</p>
+         * <p>The verification result.</p>
          */
         @NameInMap("Result")
         public String result;
 
         /**
-         * <p>The verification result.</p>
+         * <p>The resource specifications.</p>
          */
         @NameInMap("Specification")
         public String specification;
@@ -198,87 +198,87 @@ public class GetApplicationResponseBody extends TeaModel {
 
     public static class GetApplicationResponseBodyDataPriceList extends TeaModel {
         /**
-         * <p>The price unit.</p>
+         * <p>The billing method.</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
-         * <p>The original price.</p>
+         * <p>The quantity.</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The ID of the resource group to which the application belongs.</p>
+         * <p>The name of the instance.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>Resource Fill Labels.</p>
          */
         @NameInMap("Lifecycle")
         public String lifecycle;
 
         /**
-         * <p>The service code.</p>
+         * <p>The unit price of the instance.</p>
          */
         @NameInMap("OnePrice")
         public Double onePrice;
 
         /**
-         * <p>The billing results.</p>
+         * <p>The original price of the instance.</p>
          */
         @NameInMap("OriginalPrice")
         public Double originalPrice;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The service duration.</p>
          */
         @NameInMap("Period")
         public Integer period;
 
         /**
-         * <p>The quantity.</p>
+         * <p>The total price.</p>
          */
         @NameInMap("Price")
         public Double price;
 
         /**
-         * <p>The unit price.</p>
+         * <p>Unit: USD per hour</p>
          */
         @NameInMap("PriceUnit")
         public String priceUnit;
 
         /**
-         * <p>USD/Hour</p>
+         * <p>The region in which the instance resides.</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
-         * <p>The instance type.</p>
+         * <p>The error message that is returned when a price query fails.</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
-         * <p>The time when the application was created.</p>
+         * <p>The service code.</p>
          */
         @NameInMap("ResourceCode")
         public String resourceCode;
 
         /**
-         * <p>The instance type. This parameter indicates the information about the instance type. For example, 192.168.0.0/16 may be returned for a virtual private cloud (VPC), ecs.g5.large may be returned for an Elastic Compute Service (ECS) instance, and slb.s1.small may be returned for a Server Load Balancer (SLB) instance. If the resource does not have a specific type, an empty value is returned.</p>
+         * <p>The instance type. This parameter indicates the information about the instance type. For example, 192.168.0.0/16 may be returned for a Virtual Private Cloud (VPC) instance, ecs.g5.large may be returned for an Elastic Compute Service (ECS) instance, and slb.s1.small may be returned for a Server Load Balancer (SLB) instance. If the resource does not have a specific type, an empty value is returned.</p>
          */
         @NameInMap("Specification")
         public String specification;
 
         /**
-         * <p>创建类型：</p>
-         * <p></br>新建-1</p>
-         * <p></br>导入-2</p>
+         * <p>The creation mode. Valid values:\</p>
+         * <p>1: creates a new instance.\</p>
+         * <p>2: imports an instance.</p>
          */
         @NameInMap("type")
         public String type;
@@ -404,49 +404,49 @@ public class GetApplicationResponseBody extends TeaModel {
 
     public static class GetApplicationResponseBodyDataResourceList extends TeaModel {
         /**
-         * <p>The service code.</p>
+         * <p>The billing method.</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
-         * <p>The billing method.</p>
+         * <p>The resource tag.</p>
          */
         @NameInMap("Lifecycle")
         public String lifecycle;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The deployment result.</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
-         * <p>The status of the application.</p>
+         * <p>The service code.</p>
          */
         @NameInMap("ResourceCode")
         public String resourceCode;
 
         /**
-         * <p>The resource deployment result.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The resources.</p>
+         * <p>The name of the instance.</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The type of the resource.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The resource tag.</p>
+         * <p>The resource deployment result.</p>
          */
         @NameInMap("Status")
         public String status;
