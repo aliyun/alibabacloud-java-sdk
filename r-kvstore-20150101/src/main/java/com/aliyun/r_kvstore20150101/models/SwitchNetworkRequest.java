@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class SwitchNetworkRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **SwitchNetwork**.</p>
+     * <p>The retention period of the endpoint for the classic network. Valid values: **14**, **30**, **60**, and **120**. Unit: days.</p>
+     * <br>
+     * <p>> *   This parameter is required when **RetainClassic** is set to **True**.</p>
+     * <p>> *   After you complete the switchover operation, you can also call the [ModifyInstanceNetExpireTime](~~ModifyInstanceNetExpireTime~~) operation to modify the retention period of the endpoint for the classic network.</p>
      */
     @NameInMap("ClassicExpiredDays")
     public String classicExpiredDays;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The ID of the instance. You can call the [DescribeInstances](~~DescribeInstances~~) operation to query instance IDs.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -29,7 +32,12 @@ public class SwitchNetworkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Specifies whether to retain the original endpoint for the classic network after you switch the instance from classic network to VPC. Valid values:</p>
+     * <br>
+     * <p>*   **True**: retains the original endpoint.</p>
+     * <p>*   **False**: does not retain the original endpoint. This is the default value.</p>
+     * <br>
+     * <p>>  This parameter can be used only when the network type of the instance is classic network.</p>
      */
     @NameInMap("RetainClassic")
     public String retainClassic;
@@ -39,25 +47,23 @@ public class SwitchNetworkRequest extends TeaModel {
 
     /**
      * <p>The network type to which you want to switch. Set the value to **VPC**.</p>
-     * <br>
-     * <p>Valid values:</p>
-     * <br>
-     * <p>*   CLASSIC</p>
-     * <p>*   VPC</p>
      */
     @NameInMap("TargetNetworkType")
     public String targetNetworkType;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.</p>
+     * <p>The ID of the vSwitch that belongs to the VPC to which you want to switch. You can call the [DescribeVpcs](~~DescribeVpcs~~) operation to query vSwitch IDs.</p>
+     * <br>
+     * <p>>  The vSwitch and the ApsaraDB for Redis instance must belong to the same zone.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>The ID of the vSwitch that belongs to the VPC to which you want to switch. You can call the [DescribeVpcs](~~35739~~) operation to query vSwitch IDs.</p>
+     * <p>The ID of the VPC to which you want to switch. You can call the [DescribeVpcs](~~DescribeVpcs~~) operation to query VPC IDs.</p>
      * <br>
-     * <p>>  The vSwitch and the ApsaraDB for Redis instance must belong to the same zone.</p>
+     * <p>> *   The VPC and the ApsaraDB for Redis instance must be deployed in the same region.</p>
+     * <p>> *   After you set this parameter, you must also set the **VSwitchId** parameter.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

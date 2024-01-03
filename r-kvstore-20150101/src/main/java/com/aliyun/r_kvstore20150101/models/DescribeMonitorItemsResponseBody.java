@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeMonitorItemsResponseBody extends TeaModel {
     /**
-     * <p>The unit of the metric.</p>
+     * <p>The returned metrics.</p>
+     * <br>
+     * <p>> *   **memoryUsage**, **GetQps**, and **PutQps** are supported only by ApsaraDB for Redis instances that use Redis 4.0 or later. **GetQps** and **PutQps** require the latest minor version. You can upgrade the major version or minor version of the instance as needed. For more information, see [Upgrade the major version](~~101764~~) and [Upgrade the minor version](~~56450~~).</p>
+     * <p>> *   When you use instances of Redis 2.8, if the **hit_rate** metric is not displayed, you must upgrade the minor version of the instance. For more information, see [Upgrade the minor version](~~56450~~).</p>
      */
     @NameInMap("MonitorItems")
     public DescribeMonitorItemsResponseBodyMonitorItems monitorItems;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeMonitorItems**.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +42,13 @@ public class DescribeMonitorItemsResponseBody extends TeaModel {
 
     public static class DescribeMonitorItemsResponseBodyMonitorItemsKVStoreMonitorItem extends TeaModel {
         /**
-         * <p>DescribeMonitorItems</p>
+         * <p>The metric.</p>
          */
         @NameInMap("MonitorKey")
         public String monitorKey;
 
         /**
-         * <p>Queries the metrics of an ApsaraDB for Redis instance.</p>
+         * <p>The unit of the metric.</p>
          */
         @NameInMap("Unit")
         public String unit;

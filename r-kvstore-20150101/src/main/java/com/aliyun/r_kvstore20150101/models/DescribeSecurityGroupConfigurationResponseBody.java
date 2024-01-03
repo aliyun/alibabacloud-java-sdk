@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
     /**
-     * <p>The network type of the security group. Valid values:</p>
-     * <br>
-     * <p>*   **classic**: the classic network.</p>
-     * <p>*   **vpc**: the virtual private cloud (VPC).</p>
+     * <p>The list of security groups.</p>
      */
     @NameInMap("Items")
     public DescribeSecurityGroupConfigurationResponseBodyItems items;
 
     /**
-     * <p>The ID of the security group.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -42,22 +39,22 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
 
     public static class DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation extends TeaModel {
         /**
-         * <p>The network type of the ECS security group. Valid values:</p>
+         * <p>The network type of the security group. Valid values:</p>
          * <br>
-         * <p>*   **vpc**</p>
-         * <p>*   **classic**</p>
+         * <p>*   **classic**: the classic network.</p>
+         * <p>*   **vpc**: the virtual private cloud (VPC).</p>
          */
         @NameInMap("NetType")
         public String netType;
 
         /**
-         * <p>Queries the security groups that are included in the whitelist of an ApsaraDB for Redis instance.</p>
+         * <p>The ID of the region where the instance is deployed.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The operation that you want to perform. Set the value to **DescribeSecurityGroupConfiguration**.</p>
+         * <p>The ID of the security group.</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;

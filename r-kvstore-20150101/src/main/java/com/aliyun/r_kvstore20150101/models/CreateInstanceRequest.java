@@ -181,6 +181,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Parameter template ID.</p>
+     */
     @NameInMap("ParamGroupId")
     public String paramGroupId;
 

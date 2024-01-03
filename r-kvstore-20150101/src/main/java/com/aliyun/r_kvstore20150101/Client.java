@@ -246,7 +246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * r-bp1zxszhcgatnx****
+      * You can also apply for public endpoints in the ApsaraDB for Redis console. For more information, see [Use a public endpoint to connect to an ApsaraDB for Redis instance](~~43850~~).
       *
       * @param request AllocateInstancePublicConnectionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -305,7 +305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * r-bp1zxszhcgatnx****
+      * You can also apply for public endpoints in the ApsaraDB for Redis console. For more information, see [Use a public endpoint to connect to an ApsaraDB for Redis instance](~~43850~~).
       *
       * @param request AllocateInstancePublicConnectionRequest
       * @return AllocateInstancePublicConnectionResponse
@@ -1324,6 +1324,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteAccountWithOptions(request, runtime);
     }
 
+    /**
+      * Before you delete an IP whitelist template, you must unbind (disassociate) the instances that are currently associated with the template.
+      *
+      * @param request DeleteGlobalSecurityIPGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteGlobalSecurityIPGroupResponse
+     */
     public DeleteGlobalSecurityIPGroupResponse deleteGlobalSecurityIPGroupWithOptions(DeleteGlobalSecurityIPGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1380,6 +1387,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteGlobalSecurityIPGroupResponse());
     }
 
+    /**
+      * Before you delete an IP whitelist template, you must unbind (disassociate) the instances that are currently associated with the template.
+      *
+      * @param request DeleteGlobalSecurityIPGroupRequest
+      * @return DeleteGlobalSecurityIPGroupResponse
+     */
     public DeleteGlobalSecurityIPGroupResponse deleteGlobalSecurityIPGroup(DeleteGlobalSecurityIPGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteGlobalSecurityIPGroupWithOptions(request, runtime);
@@ -1540,7 +1553,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Details about returned accounts of the instance.
+      * >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
       *
       * @param request DescribeAccountsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1595,7 +1608,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Details about returned accounts of the instance.
+      * >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
       *
       * @param request DescribeAccountsRequest
       * @return DescribeAccountsResponse
@@ -2077,6 +2090,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BackupId", request.backupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.backupJobId)) {
+            query.put("BackupJobId", request.backupJobId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
         }
@@ -2441,6 +2458,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDBInstanceNetInfoWithOptions(request, runtime);
     }
 
+    public DescribeDBNodeDirectVipInfoResponse describeDBNodeDirectVipInfoWithOptions(DescribeDBNodeDirectVipInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDBNodeDirectVipInfo"),
+            new TeaPair("version", "2015-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBNodeDirectVipInfoResponse());
+    }
+
+    public DescribeDBNodeDirectVipInfoResponse describeDBNodeDirectVipInfo(DescribeDBNodeDirectVipInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDBNodeDirectVipInfoWithOptions(request, runtime);
+    }
+
     /**
       * > If you want to query the information about ApsaraDB for Redis instances that are not deployed in a dedicated cluster, call the [DescribeInstanceAttribute](~~60996~~) operation.
       *
@@ -2675,6 +2737,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeEncryptionKeyListWithOptions(request, runtime);
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeEngineVersion\\&type=RPC\\&version=2015-01-01)
+      *
+      * @param request DescribeEngineVersionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeEngineVersionResponse
+     */
     public DescribeEngineVersionResponse describeEngineVersionWithOptions(DescribeEngineVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2719,11 +2789,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeEngineVersionResponse());
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeEngineVersion\\&type=RPC\\&version=2015-01-01)
+      *
+      * @param request DescribeEngineVersionRequest
+      * @return DescribeEngineVersionResponse
+     */
     public DescribeEngineVersionResponse describeEngineVersion(DescribeEngineVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeEngineVersionWithOptions(request, runtime);
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeGlobalDistributeCache\\&type=RPC\\&version=2015-01-01)
+      *
+      * @param request DescribeGlobalDistributeCacheRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeGlobalDistributeCacheResponse
+     */
     public DescribeGlobalDistributeCacheResponse describeGlobalDistributeCacheWithOptions(DescribeGlobalDistributeCacheRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2780,6 +2865,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeGlobalDistributeCacheResponse());
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=R-kvstore\\&api=DescribeGlobalDistributeCache\\&type=RPC\\&version=2015-01-01)
+      *
+      * @param request DescribeGlobalDistributeCacheRequest
+      * @return DescribeGlobalDistributeCacheResponse
+     */
     public DescribeGlobalDistributeCacheResponse describeGlobalDistributeCache(DescribeGlobalDistributeCacheRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeGlobalDistributeCacheWithOptions(request, runtime);
@@ -3693,7 +3785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * >  ApsaraDB for Redis has upgraded the monitoring metrics. The DescribeMonitorItems operation is phased out. For more information, see [The DescribeMonitorItems operation supported by ApsaraDB for Redis is phased out](~~189893~~).
-      * After you call this operation to retrieve a list of metrics for a specified ApsaraDB for Redis instance, you can call the [DescribeHistoryMonitorValues](~~61107~~) operation to query monitoring history of the instance.
+      * After you call this operation to retrieve a list of metrics for a specified ApsaraDB for Redis instance, you can call the [DescribeHistoryMonitorValues](~~DescribeHistoryMonitorValues~~) operation to query monitoring history of the instance.
       *
       * @param request DescribeMonitorItemsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3741,7 +3833,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * >  ApsaraDB for Redis has upgraded the monitoring metrics. The DescribeMonitorItems operation is phased out. For more information, see [The DescribeMonitorItems operation supported by ApsaraDB for Redis is phased out](~~189893~~).
-      * After you call this operation to retrieve a list of metrics for a specified ApsaraDB for Redis instance, you can call the [DescribeHistoryMonitorValues](~~61107~~) operation to query monitoring history of the instance.
+      * After you call this operation to retrieve a list of metrics for a specified ApsaraDB for Redis instance, you can call the [DescribeHistoryMonitorValues](~~DescribeHistoryMonitorValues~~) operation to query monitoring history of the instance.
       *
       * @param request DescribeMonitorItemsRequest
       * @return DescribeMonitorItemsResponse
@@ -4490,7 +4582,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The progress of the task. Unit: %.
+      * You can call this operation to query the progress of a task when you perform time-consuming operations. You can also log on to the ApsaraDB for Redis console and click the Tasks icon in the upper-right corner of the **Instance Information** page to view the progress of the current task.
       *
       * @param request DescribeTasksRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4561,7 +4653,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The progress of the task. Unit: %.
+      * You can call this operation to query the progress of a task when you perform time-consuming operations. You can also log on to the ApsaraDB for Redis console and click the Tasks icon in the upper-right corner of the **Instance Information** page to view the progress of the current task.
       *
       * @param request DescribeTasksRequest
       * @return DescribeTasksResponse
@@ -4725,10 +4817,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The time when the minor version is upgraded. Valid values:
-      * *   **Immediately**: immediately deletes expired keys.
-      * *   **MaintainTime:**deletes expired key in the maintenance window.
-      * >  You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.
+      * For more information about how to clear the expired keys in the ApsaraDB for Redis console, see [Clear data](~~43881~~).
+      * >  Expired keys cannot be recovered after they are deleted. Exercise caution when you call this operation.
       *
       * @param request FlushExpireKeysRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4783,10 +4873,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The time when the minor version is upgraded. Valid values:
-      * *   **Immediately**: immediately deletes expired keys.
-      * *   **MaintainTime:**deletes expired key in the maintenance window.
-      * >  You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.
+      * For more information about how to clear the expired keys in the ApsaraDB for Redis console, see [Clear data](~~43881~~).
+      * >  Expired keys cannot be recovered after they are deleted. Exercise caution when you call this operation.
       *
       * @param request FlushExpireKeysRequest
       * @return FlushExpireKeysResponse
@@ -4796,13 +4884,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.flushExpireKeysWithOptions(request, runtime);
     }
 
-    /**
-      * The ID of the instance.
-      *
-      * @param request FlushInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return FlushInstanceResponse
-     */
     public FlushInstanceResponse flushInstanceWithOptions(FlushInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4847,12 +4928,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new FlushInstanceResponse());
     }
 
-    /**
-      * The ID of the instance.
-      *
-      * @param request FlushInstanceRequest
-      * @return FlushInstanceResponse
-     */
     public FlushInstanceResponse flushInstance(FlushInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.flushInstanceWithOptions(request, runtime);
@@ -4923,7 +4998,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The name of the account. You can call the [DescribeAccounts](~~95802~~) operation to obtain the name of the account.
+      * > 
+      * *   Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
+      * *   The ApsaraDB for Redis instance must be in the running state.
       *
       * @param request GrantAccountPrivilegeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4982,7 +5059,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The name of the account. You can call the [DescribeAccounts](~~95802~~) operation to obtain the name of the account.
+      * > 
+      * *   Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
+      * *   The ApsaraDB for Redis instance must be in the running state.
       *
       * @param request GrantAccountPrivilegeRequest
       * @return GrantAccountPrivilegeResponse
@@ -4993,7 +5072,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request.
+      * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis](~~184337~~).
       *
       * @param request InitializeKvstorePermissionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5044,7 +5123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request.
+      * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis](~~184337~~).
       *
       * @param request InitializeKvstorePermissionRequest
       * @return InitializeKvstorePermissionResponse
@@ -6405,10 +6484,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Modifies SSL encryption configurations. Valid values:
-      * *   **Disable**: The SSL encryption is disabled.
-      * *   **Enable**: The SSL encryption is enabled.
-      * *   **Update**: The SSL certificate is updated.
+      * You can also modify SSL encryption configurations in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](~~84898~~).
+      * >  To specify the earliest supported SSL version, you can call the [ModifyInstanceConfig](~~ModifyInstanceConfig~~) operation to modify the required parameter.
       *
       * @param request ModifyInstanceSSLRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6463,10 +6540,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Modifies SSL encryption configurations. Valid values:
-      * *   **Disable**: The SSL encryption is disabled.
-      * *   **Enable**: The SSL encryption is enabled.
-      * *   **Update**: The SSL certificate is updated.
+      * You can also modify SSL encryption configurations in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](~~84898~~).
+      * >  To specify the earliest supported SSL version, you can call the [ModifyInstanceConfig](~~ModifyInstanceConfig~~) operation to modify the required parameter.
       *
       * @param request ModifyInstanceSSLRequest
       * @return ModifyInstanceSSLResponse
@@ -7091,7 +7166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request.
+      * For more information about how to perform the API operation in the ApsaraDB for Redis console, see [Release public endpoints](~~125424~~).
       *
       * @param request ReleaseInstancePublicConnectionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7146,7 +7221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request.
+      * For more information about how to perform the API operation in the ApsaraDB for Redis console, see [Release public endpoints](~~125424~~).
       *
       * @param request ReleaseInstancePublicConnectionRequest
       * @return ReleaseInstancePublicConnectionResponse
@@ -7395,7 +7470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * r-bp1zxszhcgatnx****
+      * >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
       *
       * @param request ResetAccountPasswordRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7454,7 +7529,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * r-bp1zxszhcgatnx****
+      * >  Only ApsaraDB for Redis instances of Redis 4.0 or later are supported.
       *
       * @param request ResetAccountPasswordRequest
       * @return ResetAccountPasswordResponse
@@ -7968,7 +8043,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * 1
+      * Before you call this operation, make sure that you understand relevant precautions and billing rules. For more information, see the following topics:
+      * *   [Change the billing method to subscription](~~54542~~).
+      * *   [Change the billing method to pay-as-you-go](~~211549~~).
       *
       * @param request TransformInstanceChargeTypeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8039,7 +8116,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * 1
+      * Before you call this operation, make sure that you understand relevant precautions and billing rules. For more information, see the following topics:
+      * *   [Change the billing method to subscription](~~54542~~).
+      * *   [Change the billing method to pay-as-you-go](~~211549~~).
       *
       * @param request TransformInstanceChargeTypeRequest
       * @return TransformInstanceChargeTypeResponse
@@ -8050,7 +8129,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
+      * For more information about how to change the billing method in the ApsaraDB for Redis console, see [Switch to subscription](~~54542~~).
+      * >  You cannot change the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go.
       *
       * @param request TransformToPrePaidRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8109,7 +8189,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
+      * For more information about how to change the billing method in the ApsaraDB for Redis console, see [Switch to subscription](~~54542~~).
+      * >  You cannot change the billing method of an ApsaraDB for Redis instance from subscription to pay-as-you-go.
       *
       * @param request TransformToPrePaidRequest
       * @return TransformToPrePaidResponse

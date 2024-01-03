@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupConfigurationRequest extends TeaModel {
     /**
-     * <p>The list of security groups.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

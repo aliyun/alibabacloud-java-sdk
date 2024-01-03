@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRoleZoneInfoRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than **0** and less than or equal to the maximum value supported by the integer data type. Default value: **1**.</p>
+     * <p>The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -17,7 +17,7 @@ public class DescribeRoleZoneInfoRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.</p>
+     * <p>The number of the page to return. The value must be an integer that is greater than **0** and less than or equal to the maximum value supported by the integer data type. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -29,13 +29,11 @@ public class DescribeRoleZoneInfoRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The type of the node to query. Default value: 1. Valid values:</p>
+     * <p>The type of node to query. Default value: 1. Valid values:</p>
      * <br>
      * <p>*   **0**: proxy node</p>
      * <br>
-     * <p>    **</p>
-     * <br>
-     * <p>    **Note**This parameter is supported only for cluster and read/write splitting instances.</p>
+     * <p>> This parameter is supported only for cluster and read/write splitting instances.</p>
      * <br>
      * <p>*   **1**: data node</p>
      */

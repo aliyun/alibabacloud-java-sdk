@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class AllocateInstancePublicConnectionRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **AllocateInstancePublicConnection**.</p>
+     * <p>The prefix of the public endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix can be 8 to 40 characters in length.</p>
+     * <br>
+     * <p>>  The endpoint is in the `<prefix>.redis.rds.aliyuncs.com` format.</p>
      */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -23,9 +25,7 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The prefix of the public endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix can be 8 to 40 characters in length.</p>
-     * <br>
-     * <p>>  The endpoint is in the `<prefix>.redis.rds.aliyuncs.com` format.</p>
+     * <p>The service port number of the instance. Valid values: **1024** to **65535**.</p>
      */
     @NameInMap("Port")
     public String port;

@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     /**
-     * <p>The ID of the vSwitch.</p>
-     */
-    @NameInMap("InstanceNetworkType")
-    public String instanceNetworkType;
-
-    /**
      * <p>The network type. Valid values:</p>
      * <br>
      * <p>*   **CLASSIC**: The instance runs in a classic network.</p>
      * <p>*   **VPC**: The instance runs in a virtual private cloud (VPC).</p>
      */
+    @NameInMap("InstanceNetworkType")
+    public String instanceNetworkType;
+
+    /**
+     * <p>The list of network information about the instance.</p>
+     */
     @NameInMap("NetInfoItems")
     public DescribeDBInstanceNetInfoResponseBodyNetInfoItems netInfoItems;
 
     /**
-     * <p>The IP address.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -56,22 +56,26 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceNetInfoResponseBodyNetInfoItemsInstanceNetInfo extends TeaModel {
         /**
-         * <p>Indicates whether the address is a private endpoint. Valid values:</p>
-         * <br>
-         * <p>*   **0**: no.</p>
-         * <p>*   **1**: yes.</p>
+         * <p>The endpoint of the instance.</p>
          */
         @NameInMap("ConnectionString")
         public String connectionString;
 
         /**
-         * <p>The endpoint of the instance.</p>
+         * <p>The network type of the endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **0**: the Internet.</p>
+         * <p>*   **1**: classic network.</p>
+         * <p>*   **2**: VPC.</p>
          */
         @NameInMap("DBInstanceNetType")
         public String DBInstanceNetType;
 
         /**
-         * <p>The operation that you want to perform. Set the value to **DescribeDBInstanceNetInfo**.</p>
+         * <p>Indicates whether the address is a private endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **0**: no.</p>
+         * <p>*   **1**: yes.</p>
          */
         @NameInMap("DirectConnection")
         public Integer directConnection;
@@ -83,7 +87,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>The IP address of the instance in the classic network.</p>
+         * <p>The IP address.</p>
          */
         @NameInMap("IPAddress")
         public String IPAddress;
@@ -98,36 +102,37 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         @NameInMap("IPType")
         public String IPType;
 
+        @NameInMap("IsSlaveProxy")
+        public Integer isSlaveProxy;
+
         /**
-         * <p>The network type of the endpoint. Valid values:</p>
-         * <br>
-         * <p>*   **0**: the Internet.</p>
-         * <p>*   **1**: classic network.</p>
-         * <p>*   **2**: VPC.</p>
+         * <p>The service port of the ApsaraDB for Redis instance.</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The remaining validity period of the endpoint of the classic network. Unit: seconds.</p>
+         * <br>
+         * <p>>  A value of **0** indicates that the endpoint never expires.</p>
          */
         @NameInMap("Upgradeable")
         public String upgradeable;
 
         /**
-         * <p>Queries the network information about an ApsaraDB for Redis instance.</p>
+         * <p>The ID of the VPC where the instance is deployed.</p>
          */
         @NameInMap("VPCId")
         public String VPCId;
 
         /**
-         * <p>The list of network information about the instance.</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("VPCInstanceId")
         public String VPCInstanceId;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the vSwitch.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -183,6 +188,14 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         }
         public String getIPType() {
             return this.IPType;
+        }
+
+        public DescribeDBInstanceNetInfoResponseBodyNetInfoItemsInstanceNetInfo setIsSlaveProxy(Integer isSlaveProxy) {
+            this.isSlaveProxy = isSlaveProxy;
+            return this;
+        }
+        public Integer getIsSlaveProxy() {
+            return this.isSlaveProxy;
         }
 
         public DescribeDBInstanceNetInfoResponseBodyNetInfoItemsInstanceNetInfo setPort(String port) {

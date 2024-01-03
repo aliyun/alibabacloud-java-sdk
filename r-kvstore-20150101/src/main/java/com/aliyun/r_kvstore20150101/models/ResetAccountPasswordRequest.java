@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ResetAccountPasswordRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **ResetAccountPassword**.</p>
+     * <p>The name of the account. You can call the [DescribeAccounts](~~DescribeAccounts~~) operation to obtain the name of the account.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
-     * <p>The name of the account. You can call the [DescribeAccounts](~~95802~~) operation to obtain the name of the account.</p>
+     * <p>The new password for the account. The password must be 8 to 32 characters in length. It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include `!@ # $ % ^ & * ( ) _ + - =`</p>
      */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the instance to which the account belongs.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

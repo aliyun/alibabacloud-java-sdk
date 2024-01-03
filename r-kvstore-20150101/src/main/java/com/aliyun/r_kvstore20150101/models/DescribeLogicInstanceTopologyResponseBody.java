@@ -11,7 +11,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The detailed proxy information, including information about proxy nodes.</p>
+     * <p>The information about proxy nodes.</p>
      */
     @NameInMap("RedisProxyList")
     public DescribeLogicInstanceTopologyResponseBodyRedisProxyList redisProxyList;
@@ -85,7 +85,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         public String connection;
 
         /**
-         * <p>The node ID.</p>
+         * <p>The ID of the node.</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
@@ -93,8 +93,8 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         /**
          * <p>The node type. Valid values:</p>
          * <br>
-         * <p>*   **proxy**: proxy node</p>
-         * <p>*   **db**: data node</p>
+         * <p>*   **db**: a data node.</p>
+         * <p>*   **normal**: a management node, which can be a proxy node or a Configserver node. For specific instances, the return value of this parameter is proxy or cs, instead of normal.</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
@@ -185,7 +185,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         public String connection;
 
         /**
-         * <p>The node ID.</p>
+         * <p>The ID of the node.</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
