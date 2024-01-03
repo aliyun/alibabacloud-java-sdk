@@ -74,6 +74,9 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         @NameInMap("Timeline")
         public String timeline;
 
+        @NameInMap("UserData")
+        public String userData;
+
         @NameInMap("VodMediaId")
         public String vodMediaId;
 
@@ -192,6 +195,14 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         }
         public String getTimeline() {
             return this.timeline;
+        }
+
+        public GetMediaProducingJobResponseBodyMediaProducingJob setUserData(String userData) {
+            this.userData = userData;
+            return this;
+        }
+        public String getUserData() {
+            return this.userData;
         }
 
         public GetMediaProducingJobResponseBodyMediaProducingJob setVodMediaId(String vodMediaId) {
