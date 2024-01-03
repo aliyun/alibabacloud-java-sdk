@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
     /**
-     * <p>The query token returned in this call.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page. Valid values: 1 to 100.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -95,13 +95,13 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
 
     public static class DescribeDiskReplicaPairsResponseBodyReplicaPairsTags extends TeaModel {
         /**
-         * <p>The tag key of the replication pair.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value of the replication pair.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -137,9 +137,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         public Long bandwidth;
 
         /**
-         * <p>The billing method of the replication pair.</p>
-         * <br>
-         * <p>Valid values:</p>
+         * <p>The billing method of the replication pair. Valid values:</p>
          * <br>
          * <p>*   PREPAY: subscription</p>
          * <p>*   POSTPAY: pay-as-you-go</p>
@@ -184,7 +182,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         public Long expiredTime;
 
         /**
-         * <p>The time when data was last replicated from the primary disk to the secondary disk in the replication pair. The value of this parameter is a timestamp. Unit: seconds.</p>
+         * <p>The time when data was last replicated from the primary disk to the secondary disk in the replication pair. The value of this parameter is a timestamp. Unit: seconds. 86,400 seconds is equivalent to 24 hours.</p>
          */
         @NameInMap("LastRecoverPoint")
         public Long lastRecoverPoint;
@@ -238,7 +236,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The type of the site from which the information of the replication pair and replication pair-consistent group is obtained. Valid values:</p>
+         * <p>The type of the site from which the information about the replication pairs and replication pair-consistent group was obtained. Valid values:</p>
          * <br>
          * <p>*   production: primary site</p>
          * <p>*   backup: secondary site</p>
@@ -277,27 +275,27 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         public String standbyZone;
 
         /**
-         * <p>The state of the replication pair. Valid values:</p>
+         * <p>The status of the replication pair. Valid values:</p>
          * <br>
-         * <p>*   invalid: The replication pair is invalid. When a replication pair becomes abnormal, it enters this state.</p>
-         * <p>*   creating: The replication pair is being created.</p>
-         * <p>*   created: The replication pair is created.</p>
-         * <p>*   create_failed: The replication pair cannot be created.</p>
-         * <p>*   initial_syncing: Data is synchronized from the primary disk to the secondary disk for the first time. After a replication pair is created and activated, the replication pair is in this state the first time data is synchronized from the primary disk to the secondary disk.</p>
-         * <p>*   manual_syncing: Data is being manually synchronized from the primary disk to the secondary disk. After data is manually synchronized from the primary disk to the secondary disk, the replication pair returns to the Stopped state. The first time data is manually synchronized from the primary disk to the secondary disk, the replication pair is in the manual_syncing state during the synchronization.</p>
-         * <p>*   syncing: Data is being synchronized from the primary disk to the secondary disk. While data is being asynchronously replicated from the primary disk to the secondary disk not for the first time, the replication pair is in this state.</p>
-         * <p>*   normal: The replication pair is working as expected. When the system finishes replicating data from the primary disk to the secondary disk within the current replication cycle, the replication pair enters this state.</p>
-         * <p>*   stopping: The replication pair is being stopped.</p>
-         * <p>*   stopped: The replication pair is stopped.</p>
-         * <p>*   stop_failed: The replication pair cannot be stopped.</p>
-         * <p>*   failovering: A failover is being performed.</p>
-         * <p>*   failovered: A failover is performed.</p>
-         * <p>*   failover_failed: A failover cannot be performed.</p>
-         * <p>*   reprotecting: A reverse replication is being performed.</p>
-         * <p>*   reprotect_failed: A reverse replication cannot be performed.</p>
-         * <p>*   deleting: The replication pair is being deleted.</p>
-         * <p>*   delete_failed: The replication pair cannot be deleted.</p>
-         * <p>*   deleted: The replication pair is deleted.</p>
+         * <p>*   invalid: The replication pair was invalid. When a replication pair becomes abnormal, it enters this state.</p>
+         * <p>*   creating: The replication pair was being created.</p>
+         * <p>*   created: The replication pair was created.</p>
+         * <p>*   create_failed: The replication pair failed to be created.</p>
+         * <p>*   initial_syncing: Data was synchronized from the primary disk to the secondary disk for the first time. After a replication pair is created and activated, the replication pair is in this state the first time data is synchronized from the primary disk to the secondary disk.</p>
+         * <p>*   manual_syncing: Data was being manually synchronized from the primary disk to the secondary disk. After data is manually synchronized from the primary disk to the secondary disk, the replication pair returns to the stopped state. The first time data is manually synchronized from the primary disk to the secondary disk, the replication pair is in the manual_syncing state during the synchronization.</p>
+         * <p>*   syncing: Data was being synchronized from the primary disk to the secondary disk. When data is being asynchronously replicated from the primary disk to the secondary disk again in subsequent operations, the replication pair is in this state.</p>
+         * <p>*   normal: The replication pair was working as expected. When the system finishes replicating data from the primary disk to the secondary disk within the current replication cycle, the replication pair enters this state.</p>
+         * <p>*   stopping: The replication pair was being stopped.</p>
+         * <p>*   stopped: The replication pair was stopped.</p>
+         * <p>*   stop_failed: The replication pair failed to be stopped.</p>
+         * <p>*   failovering: A failover was being performed.</p>
+         * <p>*   failovered: A failover was performed.</p>
+         * <p>*   failover_failed: A failover failed to be performed.</p>
+         * <p>*   reprotecting: A reverse replication was being performed.</p>
+         * <p>*   reprotect_failed: A reverse replication failed to be performed.</p>
+         * <p>*   deleting: The replication pair was being deleted.</p>
+         * <p>*   delete_failed: The replication pair failed to be deleted.</p>
+         * <p>*   deleted: The replication pair was deleted.</p>
          */
         @NameInMap("Status")
         public String status;

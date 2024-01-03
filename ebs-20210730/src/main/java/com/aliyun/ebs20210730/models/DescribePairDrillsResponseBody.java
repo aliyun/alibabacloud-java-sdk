@@ -4,21 +4,39 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class DescribePairDrillsResponseBody extends TeaModel {
+    /**
+     * <p>The information of disaster recovery drills that were performed on the replication pair.</p>
+     */
     @NameInMap("Drills")
     public java.util.List<DescribePairDrillsResponseBodyDrills> drills;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,24 +94,58 @@ public class DescribePairDrillsResponseBody extends TeaModel {
     }
 
     public static class DescribePairDrillsResponseBodyDrills extends TeaModel {
+        /**
+         * <p>The ID of the drill disk.</p>
+         */
         @NameInMap("DrillDiskId")
         public String drillDiskId;
 
+        /**
+         * <p>The status of the drill disk. Valid values:</p>
+         * <br>
+         * <p>*   created</p>
+         * <p>*   deleted</p>
+         * <p>*   creating</p>
+         * <p>*   deleting</p>
+         * <br>
+         * <p>>  This parameter can also display error code details if your drill disk fails to be created or deleted.</p>
+         */
         @NameInMap("DrillDiskStatus")
         public String drillDiskStatus;
 
+        /**
+         * <p>The ID of the drill.</p>
+         */
         @NameInMap("DrillId")
         public String drillId;
 
+        /**
+         * <p>The recovery point of the drill. The value of this parameter is a timestamp. Unit: seconds.</p>
+         */
         @NameInMap("RecoverPoint")
         public Long recoverPoint;
 
+        /**
+         * <p>The beginning time of the drill. The value of this parameter is a timestamp. Unit: seconds.</p>
+         */
         @NameInMap("StartAt")
         public Long startAt;
 
+        /**
+         * <p>The status of the drill. Valid values:</p>
+         * <br>
+         * <p>*   execute_failed</p>
+         * <p>*   executed</p>
+         * <p>*   executing</p>
+         * <p>*   clear_failed</p>
+         * <p>*   clearing</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The error message that was displayed if the drill failed to be executed.</p>
+         */
         @NameInMap("StatusMessage")
         public String statusMessage;
 

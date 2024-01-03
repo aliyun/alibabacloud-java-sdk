@@ -5,29 +5,38 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel {
     /**
-     * <p>Details about the dedicated block storage clusters.</p>
+     * <p>The queried dedicated block storage clusters.</p>
      */
     @NameInMap("DedicatedBlockStorageClusters")
     public java.util.List<DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters> dedicatedBlockStorageClusters;
 
     /**
-     * <p>The query token returned in this call.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -91,18 +100,33 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         @NameInMap("AvailableCapacity")
         public Long availableCapacity;
 
+        /**
+         * <p>The total capacity of the dedicated block storage cluster that was delivered in disk creation orders. Unit: GB.</p>
+         */
         @NameInMap("AvailableDeviceCapacity")
         public Long availableDeviceCapacity;
 
+        /**
+         * <p>This parameter is displayed only if Thin Provision is enabled.</p>
+         */
         @NameInMap("AvailableSpaceCapacity")
         public Double availableSpaceCapacity;
 
+        /**
+         * <p>The capacity of the dedicated block storage cluster that was delivered in orders. Unit: GB.</p>
+         */
         @NameInMap("ClusterAvailableCapacity")
         public Long clusterAvailableCapacity;
 
+        /**
+         * <p>The capacity of the dedicated block storage cluster that is to be delivered in orders. Unit: GB.</p>
+         */
         @NameInMap("ClusterDeliveryCapacity")
         public Long clusterDeliveryCapacity;
 
+        /**
+         * <p>The to-be-delivered capacity of the dedicated block storage cluster. Unit: GB.</p>
+         */
         @NameInMap("DeliveryCapacity")
         public Long deliveryCapacity;
 
@@ -112,18 +136,33 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         @NameInMap("TotalCapacity")
         public Long totalCapacity;
 
+        /**
+         * <p>The total capacity of the dedicated block storage cluster that is to be delivered in disk creation orders. Unit: GB.</p>
+         */
         @NameInMap("TotalDeviceCapacity")
         public Long totalDeviceCapacity;
 
+        /**
+         * <p>This parameter is displayed only if Thin Provision is enabled.</p>
+         */
         @NameInMap("TotalSpaceCapacity")
         public Long totalSpaceCapacity;
 
+        /**
+         * <p>The used capacity of the dedicated block storage cluster. Unit: GB.</p>
+         */
         @NameInMap("UsedCapacity")
         public Long usedCapacity;
 
+        /**
+         * <p>The capacity of the dedicated block storage cluster that was used to create disks. Unit: GB.</p>
+         */
         @NameInMap("UsedDeviceCapacity")
         public Long usedDeviceCapacity;
 
+        /**
+         * <p>This parameter is displayed only if Thin Provision is enabled.</p>
+         */
         @NameInMap("UsedSpaceCapacity")
         public Double usedSpaceCapacity;
 
@@ -231,9 +270,15 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
     }
 
     public static class DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersTags extends TeaModel {
+        /**
+         * <p>The tag key of the dedicated block storage cluster.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value of the dedicated block storage cluster.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -277,7 +322,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         public String createTime;
 
         /**
-         * <p>Details about the storage capacity of the dedicated block storage cluster.</p>
+         * <p>The storage capacity of the dedicated block storage cluster.</p>
          */
         @NameInMap("DedicatedBlockStorageClusterCapacity")
         public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersDedicatedBlockStorageClusterCapacity dedicatedBlockStorageClusterCapacity;
@@ -317,7 +362,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
          * <p>*   PL2</p>
          * <p>*   PL3</p>
          * <br>
-         * <p>>  This parameter is valid only when SupportedCategory is set to cloud_essd.</p>
+         * <p>>  This parameter takes effect only if Category is set to cloud_essd.</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
@@ -328,6 +373,9 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group to which the dedicated block storage cluster belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -337,10 +385,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         /**
          * <p>The state of the dedicated block storage cluster. Valid values:</p>
          * <br>
-         * <p>*   Preparing: The cluster is pending delivery.</p>
-         * <p>*   Running: The cluster is running.</p>
-         * <p>*   Expired: The cluster has expired.</p>
-         * <p>*   Offline: The cluster is offline.</p>
+         * <p>*   Preparing</p>
+         * <p>*   Running</p>
+         * <p>*   Expired</p>
+         * <p>*   Offline</p>
          */
         @NameInMap("Status")
         public String status;
@@ -354,14 +402,17 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         @NameInMap("SupportedCategory")
         public String supportedCategory;
 
+        /**
+         * <p>The tags of the dedicated block storage cluster.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersTags> tags;
 
         /**
          * <p>The type of the dedicated block storage cluster. Valid values:</p>
          * <br>
-         * <p>*   Standard: a standard dedicated block storage cluster. ESSDs at performance level 0 (PL0 ESSDs) can be created in standard dedicated block storage clusters.</p>
-         * <p>*   Premium: a performance dedicated block storage cluster. ESSDs at performance level 1 (PL1 ESSDs) can be created in performance dedicated block storage clusters.</p>
+         * <p>*   Standard: basic dedicated block storage cluster. ESSDs at performance level 0 (PL0 ESSDs) can be created in basic dedicated block storage clusters.</p>
+         * <p>*   Premium: performance dedicated block storage cluster. ESSDs at performance level 1 (PL1 ESSDs) can be created in performance dedicated block storage clusters.</p>
          */
         @NameInMap("Type")
         public String type;

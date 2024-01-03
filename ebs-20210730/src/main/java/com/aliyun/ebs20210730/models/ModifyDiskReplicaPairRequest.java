@@ -4,42 +4,46 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class ModifyDiskReplicaPairRequest extends TeaModel {
+    /**
+     * <p>The bandwidth value. Unit: Kbit/s.</p>
+     * <br>
+     * <p>>  This parameter is not publicly available.</p>
+     */
     @NameInMap("Bandwidth")
     public Long bandwidth;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The description of the replication pair.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The recovery point objective (RPO) of the replication pair. Unit: seconds. Set the value to 900.</p>
+     * <p>The name of the replication pair.</p>
      */
     @NameInMap("PairName")
     public String pairName;
 
+    /**
+     * <p>The recovery point objective (RPO) of the replication pair-consistent group. Unit: seconds. Valid value: 900.</p>
+     */
     @NameInMap("RPO")
     public Long RPO;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure idempotence ](~~25693~~).</p>
+     * <p>The region ID of the primary or secondary disk in the replication pair. You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which async replication is supported.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The bandwidth used to asynchronously replicate data between the primary and secondary disks. Unit: Kbit/s. Valid values:</p>
-     * <br>
-     * <p>*   10240: equal to 10 Mbit/s</p>
-     * <p>*   20480: equal to 20 Mbit/s</p>
-     * <p>*   51200: equal to 50 Mbit/s</p>
-     * <p>*   102400: equal to 100 Mbit/s</p>
-     * <br>
-     * <p>Default value: 10240.</p>
+     * <p>The ID of the replication pair.</p>
      */
     @NameInMap("ReplicaPairId")
     public String replicaPairId;
