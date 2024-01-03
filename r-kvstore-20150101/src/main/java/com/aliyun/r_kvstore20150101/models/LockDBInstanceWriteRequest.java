@@ -4,9 +4,15 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class LockDBInstanceWriteRequest extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The reason why write operations on the instance are locked.</p>
+     */
     @NameInMap("LockReason")
     public String lockReason;
 

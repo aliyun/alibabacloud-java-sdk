@@ -31,7 +31,9 @@ public class ModifyInstanceVpcAuthModeRequest extends TeaModel {
      * <p>*   **Open**: disables password-free access.</p>
      * <p>*   **Close**: enables password-free access.</p>
      * <br>
-     * <p>> The default value is **Open**.</p>
+     * <p>**</p>
+     * <br>
+     * <p>**Description** Default value: **Open**.</p>
      */
     @NameInMap("VpcAuthMode")
     public String vpcAuthMode;

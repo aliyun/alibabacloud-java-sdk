@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountsRequest extends TeaModel {
     /**
-     * <p>r-bp1zxszhcgatnx****</p>
+     * <p>The name of the account that you want to query.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
-     * <p>The name of the account.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

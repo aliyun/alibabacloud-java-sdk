@@ -3,10 +3,7 @@ package com.aliyun.r_kvstore20150101.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeSecurityIpsRequest extends TeaModel {
-    /**
-     * <p>The ID of the instance.</p>
-     */
+public class DescribeDBNodeDirectVipInfoRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -22,15 +19,12 @@ public class DescribeSecurityIpsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    public static DescribeSecurityIpsRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeSecurityIpsRequest self = new DescribeSecurityIpsRequest();
+    public static DescribeDBNodeDirectVipInfoRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDBNodeDirectVipInfoRequest self = new DescribeDBNodeDirectVipInfoRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSecurityIpsRequest setInstanceId(String instanceId) {
+    public DescribeDBNodeDirectVipInfoRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -38,7 +32,7 @@ public class DescribeSecurityIpsRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeSecurityIpsRequest setOwnerAccount(String ownerAccount) {
+    public DescribeDBNodeDirectVipInfoRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -46,7 +40,7 @@ public class DescribeSecurityIpsRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeSecurityIpsRequest setOwnerId(Long ownerId) {
+    public DescribeDBNodeDirectVipInfoRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -54,7 +48,7 @@ public class DescribeSecurityIpsRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeSecurityIpsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public DescribeDBNodeDirectVipInfoRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -62,20 +56,12 @@ public class DescribeSecurityIpsRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DescribeSecurityIpsRequest setResourceOwnerId(Long resourceOwnerId) {
+    public DescribeDBNodeDirectVipInfoRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeSecurityIpsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

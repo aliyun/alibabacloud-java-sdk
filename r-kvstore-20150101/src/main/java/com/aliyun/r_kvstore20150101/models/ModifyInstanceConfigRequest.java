@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceConfigRequest extends TeaModel {
     /**
-     * <p>The configuration parameters of the instance in the JSON format.</p>
+     * <p>The instance parameter settings that you want to modify. Specify this parameter in the JSON format. The new value of a parameter overwrites the original value.</p>
      * <br>
-     * <p>> For more information, see [Supported parameters](~~259681~~).</p>
+     * <p>**</p>
+     * <br>
+     * <p>**Description** For more information, see [Supported parameters](~~259681~~).</p>
      */
     @NameInMap("Config")
     public String config;

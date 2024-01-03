@@ -4,6 +4,11 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
+    /**
+     * <p>The display language of the response. Default value: zh-CN. Valid values:</p>
+     * <p>* **zh-C**N: Chinese</p>
+     * <p>* **en-US**: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 

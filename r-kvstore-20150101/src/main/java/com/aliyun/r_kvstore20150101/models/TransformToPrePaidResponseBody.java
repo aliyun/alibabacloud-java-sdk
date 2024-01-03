@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class TransformToPrePaidResponseBody extends TeaModel {
     /**
-     * <p>Specifies whether to enable auto-renewal. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no. In this case, you can renew your instance in the ApsaraDB for Redis console. For more information, see [Manually renew an instance](~~26352~~).</p>
+     * <p>The time when the instance expires after the billing method of the instance is changed from pay-as-you-go to subscription.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **TransformToPrePaid**.</p>
+     * <p>The ID of the order.</p>
      */
     @NameInMap("OrderId")
     public String orderId;

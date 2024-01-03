@@ -11,7 +11,7 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **ModifyInstanceSSL**.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

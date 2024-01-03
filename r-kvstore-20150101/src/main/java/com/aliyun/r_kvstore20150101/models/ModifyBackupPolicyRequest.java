@@ -7,10 +7,12 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     /**
      * <p>Enables or disables the data flashback feature for the instance. Valid values:</p>
      * <br>
-     * <p>*   **1**: enables the data flashback feature. Before you can use data flashback, you must make sure that AOF persistence is enabled for the instance (`appendonly` set to `yes`).</p>
+     * <p>*   **1**: enables the data flashback feature. You must also enable AOF persistence by setting `appendonly` to `yes` in the parameter settings of the instance. Then, you can use the data flashback feature.</p>
      * <p>*   **0** (default): disables the data flashback feature.</p>
      * <br>
-     * <p>> This parameter is available only for Tair DRAM-based and persistent memory-optimized instances. For more information, see [Data flashback](~~443784~~).</p>
+     * <p>**</p>
+     * <br>
+     * <p>**Description** This parameter is available only for ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based and persistent memory-optimized instances. For more information, see [Data flashback](~~443784~~).</p>
      */
     @NameInMap("EnableBackupLog")
     public Integer enableBackupLog;

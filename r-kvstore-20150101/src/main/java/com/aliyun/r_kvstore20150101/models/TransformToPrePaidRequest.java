@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class TransformToPrePaidRequest extends TeaModel {
     /**
-     * <p>true</p>
+     * <p>Specifies whether to enable auto-renewal. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no. In this case, you can renew your instance in the ApsaraDB for Redis console. For more information, see [Manually renew an instance](~~26352~~).</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
-     * <p>r-bp1zxszhcgatnx****</p>
+     * <p>The ID of the instance. You can call the [DescribeInstances](~~DescribeInstances~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

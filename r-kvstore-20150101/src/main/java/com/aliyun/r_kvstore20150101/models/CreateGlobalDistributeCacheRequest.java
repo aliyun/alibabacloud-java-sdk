@@ -10,6 +10,13 @@ public class CreateGlobalDistributeCacheRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * <br>
+     * <p>**</p>
+     * <br>
+     * <p>**Description** You can query resource group IDs by using the ApsaraDB for Redis console or by calling the [ListResourceGroups](~~158855~~) operation. For more information, see [View basic information of a resource group](~~151181~~).</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

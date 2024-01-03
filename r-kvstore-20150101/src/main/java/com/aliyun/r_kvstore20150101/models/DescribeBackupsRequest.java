@@ -10,6 +10,9 @@ public class DescribeBackupsRequest extends TeaModel {
     @NameInMap("BackupId")
     public Integer backupId;
 
+    @NameInMap("BackupJobId")
+    public Integer backupJobId;
+
     /**
      * <p>The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.</p>
      */
@@ -77,6 +80,14 @@ public class DescribeBackupsRequest extends TeaModel {
     }
     public Integer getBackupId() {
         return this.backupId;
+    }
+
+    public DescribeBackupsRequest setBackupJobId(Integer backupJobId) {
+        this.backupJobId = backupJobId;
+        return this;
+    }
+    public Integer getBackupJobId() {
+        return this.backupJobId;
     }
 
     public DescribeBackupsRequest setEndTime(String endTime) {

@@ -5,28 +5,42 @@ import com.aliyun.tea.*;
 
 public class TransformInstanceChargeTypeRequest extends TeaModel {
     /**
-     * <p>true</p>
-     */
-    @NameInMap("AutoPay")
-    public Boolean autoPay;
-
-    @NameInMap("AutoRenew")
-    public String autoRenew;
-
-    @NameInMap("AutoRenewPeriod")
-    public Long autoRenewPeriod;
-
-    /**
      * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
      * <br>
      * <p>*   **true**: Automatic payment is enabled.</p>
      * <p>*   **false**: Automatic payment is disabled. If automatic payment is disabled, you must perform the following steps to complete the payment: In the top navigation bar of the ApsaraDB for Redis console, choose **Expenses** > **Renewal Management**. In the left-side navigation pane of the Billing Management console, click **Orders**. On the **Orders** page, find the order and complete the payment.</p>
      */
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
+    /**
+     * <p>Specifies whether to enable auto-renewal for the instance. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   **true**: enables auto-renewal.</p>
+     * <p>*   **false**: disables auto-renewal.</p>
+     */
+    @NameInMap("AutoRenew")
+    public String autoRenew;
+
+    /**
+     * <p>The subscription duration that is supported by auto-renewal. Unit: months. Valid values: **1**, **2**, **3**, **6**, and **12**.</p>
+     * <br>
+     * <p>> This parameter is required only if the **AutoRenew** parameter is set to **true**.</p>
+     */
+    @NameInMap("AutoRenewPeriod")
+    public Long autoRenewPeriod;
+
+    /**
+     * <p>The new billing method. Valid values:</p>
+     * <br>
+     * <p>*   **PrePaid**: subscription. If you set this parameter to PrePaid, you must also set the **Period** parameter.</p>
+     * <p>*   **PostPaid**: pay-as-you-go.</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>r-bp1zxszhcgatnx****</p>
+     * <p>The ID of the instance. You can call the [DescribeInstances](~~DescribeInstances~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

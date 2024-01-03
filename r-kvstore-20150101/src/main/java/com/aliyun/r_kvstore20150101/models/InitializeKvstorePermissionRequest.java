@@ -11,7 +11,7 @@ public class InitializeKvstorePermissionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **InitializeKvstorePermission**.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

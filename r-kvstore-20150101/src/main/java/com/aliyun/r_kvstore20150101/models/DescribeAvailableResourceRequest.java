@@ -42,11 +42,9 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Redis产品系列，取值如下：</p>
+     * <p>The edition of the instance. Valid values:</p>
      * <br>
-     * <p>- **professional**：标准版，支持单副本、主备、读写分离、集群四种架构，扩展性强。</p>
-     * <p> <props="china"></p>
-     * <p>-  **economical**：仅支持主备架构，具有价格优势，更多信息请参见[经济版实例](~~2489678~~)。</props></p>
+     * <p>*   **professional**: Standard Edition. This edition supports the standalone, master-replica, read /write splitting, and cluster architectures and provides high scalability.</p>
      */
     @NameInMap("InstanceScene")
     public String instanceScene;
@@ -76,13 +74,13 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The instance series. Valid values:</p>
+     * <p>The series of the instance. Valid values:</p>
      * <br>
-     * <p>*   **Local**: ApsaraDB for Redis Community Edition instance that uses local disks or ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance that uses local disks</p>
-     * <p>*   **Tair_rdb**: ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance that uses cloud disks</p>
+     * <p>*   **Local**: classic ApsaraDB for Redis Community Edition instance or classic ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance</p>
+     * <p>*   **Tair_rdb**: cloud-native ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance</p>
      * <p>*   **Tair_scm**: ApsaraDB for Redis Enhanced Edition (Tair) persistent memory-optimized instance</p>
      * <p>*   **Tair_essd**: ApsaraDB for Redis Enhanced Edition (Tair) ESSD-based instance</p>
-     * <p>*   **OnECS**: ApsaraDB for Redis Community Edition instance that uses cloud disks</p>
+     * <p>*   **OnECS**: cloud-native ApsaraDB for Redis Community Edition instance</p>
      */
     @NameInMap("ProductType")
     public String productType;

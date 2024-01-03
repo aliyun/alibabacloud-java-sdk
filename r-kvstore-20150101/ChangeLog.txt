@@ -1,3 +1,6 @@
+2024-01-03 Version: 2.24.0
+- Generated java 2015-01-01 for R-kvstore.
+
 2023-11-21 Version: 2.23.2
 - Generated java 2015-01-01 for R-kvstore.
 

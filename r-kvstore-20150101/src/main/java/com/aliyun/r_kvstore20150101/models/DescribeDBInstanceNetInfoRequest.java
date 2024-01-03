@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceNetInfoRequest extends TeaModel {
     /**
-     * <p>r-bp1zxszhcgatnx****</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
