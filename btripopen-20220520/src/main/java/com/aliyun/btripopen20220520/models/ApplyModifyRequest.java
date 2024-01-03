@@ -401,6 +401,9 @@ public class ApplyModifyRequest extends TeaModel {
         @NameInMap("user_name")
         public String userName;
 
+        @NameInMap("user_name_en")
+        public String userNameEn;
+
         public static ApplyModifyRequestExternalTravelerList build(java.util.Map<String, ?> map) throws Exception {
             ApplyModifyRequestExternalTravelerList self = new ApplyModifyRequestExternalTravelerList();
             return TeaModel.build(map, self);
@@ -412,6 +415,14 @@ public class ApplyModifyRequest extends TeaModel {
         }
         public String getUserName() {
             return this.userName;
+        }
+
+        public ApplyModifyRequestExternalTravelerList setUserNameEn(String userNameEn) {
+            this.userNameEn = userNameEn;
+            return this;
+        }
+        public String getUserNameEn() {
+            return this.userNameEn;
         }
 
     }
