@@ -19,6 +19,9 @@ public class DataDisk extends TeaModel {
     @NameInMap("device")
     public String device;
 
+    @NameInMap("disk_name")
+    public String diskName;
+
     @NameInMap("encrypted")
     public String encrypted;
 
@@ -30,9 +33,6 @@ public class DataDisk extends TeaModel {
 
     @NameInMap("mount_target")
     public String mountTarget;
-
-    @NameInMap("name")
-    public String name;
 
     @NameInMap("performance_level")
     public String performanceLevel;
@@ -91,6 +91,14 @@ public class DataDisk extends TeaModel {
         return this.device;
     }
 
+    public DataDisk setDiskName(String diskName) {
+        this.diskName = diskName;
+        return this;
+    }
+    public String getDiskName() {
+        return this.diskName;
+    }
+
     public DataDisk setEncrypted(String encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -121,14 +129,6 @@ public class DataDisk extends TeaModel {
     }
     public String getMountTarget() {
         return this.mountTarget;
-    }
-
-    public DataDisk setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
     }
 
     public DataDisk setPerformanceLevel(String performanceLevel) {
