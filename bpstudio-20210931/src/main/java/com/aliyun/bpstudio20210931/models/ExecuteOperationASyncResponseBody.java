@@ -4,6 +4,9 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class ExecuteOperationASyncResponseBody extends TeaModel {
+    /**
+     * <p>Result code, 200 for success; Other representatives fail.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
@@ -13,9 +16,15 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>Error message</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Request ID</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

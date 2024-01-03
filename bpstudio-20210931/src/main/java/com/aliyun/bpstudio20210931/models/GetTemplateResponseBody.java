@@ -4,6 +4,9 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
@@ -13,9 +16,15 @@ public class GetTemplateResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetTemplateResponseBodyData data;
 
+    /**
+     * <p>The interface returns information</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Request ID</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -57,15 +66,27 @@ public class GetTemplateResponseBody extends TeaModel {
     }
 
     public static class GetTemplateResponseBodyDataVariables extends TeaModel {
+        /**
+         * <p>The name of the variable.</p>
+         */
         @NameInMap("Attribute")
         public String attribute;
 
+        /**
+         * <p>The type of the variable.</p>
+         */
         @NameInMap("DataType")
         public String dataType;
 
+        /**
+         * <p>The default value of the variable.</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <p>The value of the variable.</p>
+         */
         @NameInMap("Variable")
         public String variable;
 
@@ -109,24 +130,45 @@ public class GetTemplateResponseBody extends TeaModel {
     }
 
     public static class GetTemplateResponseBodyData extends TeaModel {
+        /**
+         * <p>The time when the template was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Template DescriptionD</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The path to the template schema image file</p>
+         */
         @NameInMap("ImageURL")
         public String imageURL;
 
+        /**
+         * <p>The name of the template</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>Template ID</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <p>The details of the template variables.</p>
+         */
         @NameInMap("Variables")
         public java.util.List<GetTemplateResponseBodyDataVariables> variables;
 

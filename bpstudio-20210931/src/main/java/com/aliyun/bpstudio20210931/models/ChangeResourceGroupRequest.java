@@ -17,7 +17,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The resource type.</p>
+     * <p>The type of the resource for which you want to change the resource group. Valid values: APPLICATION and TEMPLATE.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

@@ -4,15 +4,27 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class ValuateTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The result of the inquiry.</p>
+     */
     @NameInMap("Data")
     public ValuateTemplateResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,30 +66,60 @@ public class ValuateTemplateResponseBody extends TeaModel {
     }
 
     public static class ValuateTemplateResponseBodyDataResourceListPriceList extends TeaModel {
+        /**
+         * <p>The discount amount.</p>
+         */
         @NameInMap("DiscountAmount")
         public Float discountAmount;
 
+        /**
+         * <p>The error message that is returned.</p>
+         */
         @NameInMap("Error")
         public String error;
 
+        /**
+         * <p>The resource type.</p>
+         */
         @NameInMap("NodeType")
         public String nodeType;
 
+        /**
+         * <p>The original price.</p>
+         */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
+        /**
+         * <p>The pricing unit.</p>
+         */
         @NameInMap("PriceUnit")
         public String priceUnit;
 
+        /**
+         * <p>The discount information.</p>
+         */
         @NameInMap("PromotionName")
         public String promotionName;
 
+        /**
+         * <p>The resource ID.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The price at which the transaction is made.</p>
+         */
         @NameInMap("TradePrice")
         public Float tradePrice;
 
+        /**
+         * <p>Indicates whether the instance is newly created. Valid values:\</p>
+         * <p>1: The instance is newly created.\</p>
+         * <p>2: The instance already exists.\</p>
+         * <p>0: The price of the instance is not included.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -161,27 +203,51 @@ public class ValuateTemplateResponseBody extends TeaModel {
     }
 
     public static class ValuateTemplateResponseBodyDataResourceList extends TeaModel {
+        /**
+         * <p>The discount amount.</p>
+         */
         @NameInMap("DiscountAmount")
         public Double discountAmount;
 
+        /**
+         * <p>The error message that is returned.</p>
+         */
         @NameInMap("Error")
         public String error;
 
+        /**
+         * <p>The resource type.</p>
+         */
         @NameInMap("NodeType")
         public String nodeType;
 
+        /**
+         * <p>The original price.</p>
+         */
         @NameInMap("OriginalPrice")
         public Double originalPrice;
 
+        /**
+         * <p>The information about the price.</p>
+         */
         @NameInMap("PriceList")
         public java.util.List<ValuateTemplateResponseBodyDataResourceListPriceList> priceList;
 
+        /**
+         * <p>The pricing unit.</p>
+         */
         @NameInMap("PriceUnit")
         public String priceUnit;
 
+        /**
+         * <p>The discount information.</p>
+         */
         @NameInMap("PromotionName")
         public String promotionName;
 
+        /**
+         * <p>The price at which the transaction is made.</p>
+         */
         @NameInMap("TradePrice")
         public Double tradePrice;
 
@@ -257,6 +323,9 @@ public class ValuateTemplateResponseBody extends TeaModel {
     }
 
     public static class ValuateTemplateResponseBodyData extends TeaModel {
+        /**
+         * <p>The result set of the inquiry.</p>
+         */
         @NameInMap("ResourceList")
         public java.util.List<ValuateTemplateResponseBodyDataResourceList> resourceList;
 

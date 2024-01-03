@@ -135,7 +135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation to delete an application, make sure that the application is in the `Destroyed_Success` state. Otherwise, the application fails to be deleted.`` You can call the [GetApplication](https://www.alibabacloud.com/help/zh/bp-studio/latest/api-doc-bpstudio-2021-09-31-api-doc-getapplication) operation to query the status of an application.
+      * Before you call this operation to delete an application, make sure that the application is in the `Destroyed_Success` state. Otherwise, the application fails to be deleted.`` You can call the [GetApplication](https://www.alibabacloud.com/help/en/bp-studio/latest/api-bpstudio-2021-09-31-getapplication) operation to query the status of an application.
       *
       * @param request DeleteApplicationRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -170,7 +170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation to delete an application, make sure that the application is in the `Destroyed_Success` state. Otherwise, the application fails to be deleted.`` You can call the [GetApplication](https://www.alibabacloud.com/help/zh/bp-studio/latest/api-doc-bpstudio-2021-09-31-api-doc-getapplication) operation to query the status of an application.
+      * Before you call this operation to delete an application, make sure that the application is in the `Destroyed_Success` state. Otherwise, the application fails to be deleted.`` You can call the [GetApplication](https://www.alibabacloud.com/help/en/bp-studio/latest/api-bpstudio-2021-09-31-getapplication) operation to query the status of an application.
       *
       * @param request DeleteApplicationRequest
       * @return DeleteApplicationResponse
@@ -369,6 +369,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getTemplateWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated : GetToken is deprecated, please use BPStudio::2021-09-31::GetApplication instead.
+      * ><danger> This API is no longer recommended, and the image related to the Application has included access authorization in the GetApplication property.></danger>
+      *
+      * @param request GetTokenRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetTokenResponse
+     */
+    // Deprecated
     public GetTokenResponse getTokenWithOptions(GetTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -393,6 +402,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTokenResponse());
     }
 
+    /**
+      * @deprecated : GetToken is deprecated, please use BPStudio::2021-09-31::GetApplication instead.
+      * ><danger> This API is no longer recommended, and the image related to the Application has included access authorization in the GetApplication property.></danger>
+      *
+      * @param request GetTokenRequest
+      * @return GetTokenResponse
+     */
+    // Deprecated
     public GetTokenResponse getToken(GetTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTokenWithOptions(request, runtime);
@@ -445,6 +462,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListApplicationResponse listApplication(ListApplicationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listApplicationWithOptions(request, runtime);
+    }
+
+    public ListFoCreatedAppsResponse listFoCreatedAppsWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListFoCreatedApps"),
+            new TeaPair("version", "2021-09-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFoCreatedAppsResponse());
+    }
+
+    public ListFoCreatedAppsResponse listFoCreatedApps() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listFoCreatedAppsWithOptions(runtime);
     }
 
     public ListTagResourcesResponse listTagResourcesWithOptions(ListTagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
