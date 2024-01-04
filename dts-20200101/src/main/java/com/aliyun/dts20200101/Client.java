@@ -217,6 +217,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("JobType", request.jobType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.maxDu)) {
+            query.put("MaxDu", request.maxDu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minDu)) {
+            query.put("MinDu", request.minDu);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
         }
@@ -601,6 +609,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.errorPhone)) {
             query.put("ErrorPhone", request.errorPhone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxDu)) {
+            query.put("MaxDu", request.maxDu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minDu)) {
+            query.put("MinDu", request.minDu);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -1354,6 +1370,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
             query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxDu)) {
+            query.put("MaxDu", request.maxDu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minDu)) {
+            query.put("MinDu", request.minDu);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.payType)) {

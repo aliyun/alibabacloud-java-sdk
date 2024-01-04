@@ -241,11 +241,17 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     @NameInMap("LastUpdateTime")
     public String lastUpdateTime;
 
+    @NameInMap("MaxDu")
+    public Double maxDu;
+
     /**
      * <p>The type of the destination instance.</p>
      */
     @NameInMap("MigrationMode")
     public DescribeDtsJobDetailResponseBodyMigrationMode migrationMode;
+
+    @NameInMap("MinDu")
+    public Double minDu;
 
     /**
      * <p>The error message returned if the task failed.</p>
@@ -642,12 +648,28 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         return this.lastUpdateTime;
     }
 
+    public DescribeDtsJobDetailResponseBody setMaxDu(Double maxDu) {
+        this.maxDu = maxDu;
+        return this;
+    }
+    public Double getMaxDu() {
+        return this.maxDu;
+    }
+
     public DescribeDtsJobDetailResponseBody setMigrationMode(DescribeDtsJobDetailResponseBodyMigrationMode migrationMode) {
         this.migrationMode = migrationMode;
         return this;
     }
     public DescribeDtsJobDetailResponseBodyMigrationMode getMigrationMode() {
         return this.migrationMode;
+    }
+
+    public DescribeDtsJobDetailResponseBody setMinDu(Double minDu) {
+        this.minDu = minDu;
+        return this;
+    }
+    public Double getMinDu() {
+        return this.minDu;
     }
 
     public DescribeDtsJobDetailResponseBody setPayType(String payType) {
@@ -3198,8 +3220,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("JobType")
         public String jobType;
 
+        @NameInMap("MaxDu")
+        public Double maxDu;
+
         @NameInMap("MigrationMode")
         public DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobMigrationMode migrationMode;
+
+        @NameInMap("MinDu")
+        public Double minDu;
 
         @NameInMap("OriginType")
         public String originType;
@@ -3470,12 +3498,28 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             return this.jobType;
         }
 
+        public DescribeDtsJobDetailResponseBodySubDistributedJobReverseJob setMaxDu(Double maxDu) {
+            this.maxDu = maxDu;
+            return this;
+        }
+        public Double getMaxDu() {
+            return this.maxDu;
+        }
+
         public DescribeDtsJobDetailResponseBodySubDistributedJobReverseJob setMigrationMode(DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobMigrationMode migrationMode) {
             this.migrationMode = migrationMode;
             return this;
         }
         public DescribeDtsJobDetailResponseBodySubDistributedJobReverseJobMigrationMode getMigrationMode() {
             return this.migrationMode;
+        }
+
+        public DescribeDtsJobDetailResponseBodySubDistributedJobReverseJob setMinDu(Double minDu) {
+            this.minDu = minDu;
+            return this;
+        }
+        public Double getMinDu() {
+            return this.minDu;
         }
 
         public DescribeDtsJobDetailResponseBodySubDistributedJobReverseJob setOriginType(String originType) {
@@ -4121,8 +4165,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("JobType")
         public String jobType;
 
+        @NameInMap("MaxDu")
+        public Double maxDu;
+
         @NameInMap("MigrationMode")
         public DescribeDtsJobDetailResponseBodySubDistributedJobMigrationMode migrationMode;
+
+        @NameInMap("MinDu")
+        public Double minDu;
 
         @NameInMap("OriginType")
         public String originType;
@@ -4396,12 +4446,28 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             return this.jobType;
         }
 
+        public DescribeDtsJobDetailResponseBodySubDistributedJob setMaxDu(Double maxDu) {
+            this.maxDu = maxDu;
+            return this;
+        }
+        public Double getMaxDu() {
+            return this.maxDu;
+        }
+
         public DescribeDtsJobDetailResponseBodySubDistributedJob setMigrationMode(DescribeDtsJobDetailResponseBodySubDistributedJobMigrationMode migrationMode) {
             this.migrationMode = migrationMode;
             return this;
         }
         public DescribeDtsJobDetailResponseBodySubDistributedJobMigrationMode getMigrationMode() {
             return this.migrationMode;
+        }
+
+        public DescribeDtsJobDetailResponseBodySubDistributedJob setMinDu(Double minDu) {
+            this.minDu = minDu;
+            return this;
+        }
+        public Double getMinDu() {
+            return this.minDu;
         }
 
         public DescribeDtsJobDetailResponseBodySubDistributedJob setOriginType(String originType) {
@@ -7228,8 +7294,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("JobType")
         public String jobType;
 
+        @NameInMap("MaxDu")
+        public Double maxDu;
+
         @NameInMap("MigrationMode")
         public DescribeDtsJobDetailResponseBodySubSyncJobMigrationMode migrationMode;
+
+        @NameInMap("MinDu")
+        public Double minDu;
 
         @NameInMap("OriginType")
         public String originType;
@@ -7503,12 +7575,28 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             return this.jobType;
         }
 
+        public DescribeDtsJobDetailResponseBodySubSyncJob setMaxDu(Double maxDu) {
+            this.maxDu = maxDu;
+            return this;
+        }
+        public Double getMaxDu() {
+            return this.maxDu;
+        }
+
         public DescribeDtsJobDetailResponseBodySubSyncJob setMigrationMode(DescribeDtsJobDetailResponseBodySubSyncJobMigrationMode migrationMode) {
             this.migrationMode = migrationMode;
             return this;
         }
         public DescribeDtsJobDetailResponseBodySubSyncJobMigrationMode getMigrationMode() {
             return this.migrationMode;
+        }
+
+        public DescribeDtsJobDetailResponseBodySubSyncJob setMinDu(Double minDu) {
+            this.minDu = minDu;
+            return this;
+        }
+        public Double getMinDu() {
+            return this.minDu;
         }
 
         public DescribeDtsJobDetailResponseBodySubSyncJob setOriginType(String originType) {

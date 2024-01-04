@@ -273,6 +273,12 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     @NameInMap("JobType")
     public String jobType;
 
+    @NameInMap("MaxDu")
+    public Double maxDu;
+
+    @NameInMap("MinDu")
+    public Double minDu;
+
     @NameInMap("OwnerId")
     public String ownerId;
 
@@ -729,6 +735,22 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     }
     public String getJobType() {
         return this.jobType;
+    }
+
+    public ConfigureDtsJobAdvanceRequest setMaxDu(Double maxDu) {
+        this.maxDu = maxDu;
+        return this;
+    }
+    public Double getMaxDu() {
+        return this.maxDu;
+    }
+
+    public ConfigureDtsJobAdvanceRequest setMinDu(Double minDu) {
+        this.minDu = minDu;
+        return this;
+    }
+    public Double getMinDu() {
+        return this.minDu;
     }
 
     public ConfigureDtsJobAdvanceRequest setOwnerId(String ownerId) {

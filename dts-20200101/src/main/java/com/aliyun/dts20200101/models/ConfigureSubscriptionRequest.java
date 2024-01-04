@@ -93,6 +93,12 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     @NameInMap("ErrorPhone")
     public String errorPhone;
 
+    @NameInMap("MaxDu")
+    public Double maxDu;
+
+    @NameInMap("MinDu")
+    public Double minDu;
+
     /**
      * <p>The ID of the region in which the Data Transmission Service (DTS) instance resides. For more information, see [List of supported regions](~~141033~~).</p>
      */
@@ -347,6 +353,22 @@ public class ConfigureSubscriptionRequest extends TeaModel {
     }
     public String getErrorPhone() {
         return this.errorPhone;
+    }
+
+    public ConfigureSubscriptionRequest setMaxDu(Double maxDu) {
+        this.maxDu = maxDu;
+        return this;
+    }
+    public Double getMaxDu() {
+        return this.maxDu;
+    }
+
+    public ConfigureSubscriptionRequest setMinDu(Double minDu) {
+        this.minDu = minDu;
+        return this;
+    }
+    public Double getMinDu() {
+        return this.minDu;
     }
 
     public ConfigureSubscriptionRequest setRegionId(String regionId) {
