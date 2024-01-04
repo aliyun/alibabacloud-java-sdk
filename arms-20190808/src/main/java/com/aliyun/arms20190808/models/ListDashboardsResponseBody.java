@@ -10,6 +10,9 @@ public class ListDashboardsResponseBody extends TeaModel {
     @NameInMap("DashboardVos")
     public java.util.List<ListDashboardsResponseBodyDashboardVos> dashboardVos;
 
+    @NameInMap("EnvironmentId")
+    public String environmentId;
+
     /**
      * <p>The indicators of whether the Prometheus service has been activated.</p>
      */
@@ -33,6 +36,14 @@ public class ListDashboardsResponseBody extends TeaModel {
     }
     public java.util.List<ListDashboardsResponseBodyDashboardVos> getDashboardVos() {
         return this.dashboardVos;
+    }
+
+    public ListDashboardsResponseBody setEnvironmentId(String environmentId) {
+        this.environmentId = environmentId;
+        return this;
+    }
+    public String getEnvironmentId() {
+        return this.environmentId;
     }
 
     public ListDashboardsResponseBody setPrometheusServiceOpened(String prometheusServiceOpened) {

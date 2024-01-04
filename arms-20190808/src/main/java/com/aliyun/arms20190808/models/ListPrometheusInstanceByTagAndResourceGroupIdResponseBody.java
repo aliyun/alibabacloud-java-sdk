@@ -102,6 +102,9 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
     }
 
     public static class ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances extends TeaModel {
+        /**
+         * <p>Auth Token string.</p>
+         */
         @NameInMap("AuthToken")
         public String authToken;
 
@@ -135,9 +138,15 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         @NameInMap("GrafanaInstanceId")
         public String grafanaInstanceId;
 
+        /**
+         * <p>HTTP Api internet url.</p>
+         */
         @NameInMap("HttpApiInterUrl")
         public String httpApiInterUrl;
 
+        /**
+         * <p>HTTP Api intranet url.</p>
+         */
         @NameInMap("HttpApiIntraUrl")
         public String httpApiIntraUrl;
 
@@ -150,9 +159,15 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         @NameInMap("PaymentType")
         public String paymentType;
 
+        /**
+         * <p>Push Gateway internet url.</p>
+         */
         @NameInMap("PushGatewayInterUrl")
         public String pushGatewayInterUrl;
 
+        /**
+         * <p>Push Gateway intranet url.</p>
+         */
         @NameInMap("PushGatewayIntraUrl")
         public String pushGatewayIntraUrl;
 
@@ -162,15 +177,27 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Remote Read internet url.</p>
+         */
         @NameInMap("RemoteReadInterUrl")
         public String remoteReadInterUrl;
 
+        /**
+         * <p>Remote Read intranet url.</p>
+         */
         @NameInMap("RemoteReadIntraUrl")
         public String remoteReadIntraUrl;
 
+        /**
+         * <p>Remote Write internet url.</p>
+         */
         @NameInMap("RemoteWriteInterUrl")
         public String remoteWriteInterUrl;
 
+        /**
+         * <p>Remote Write intranet url.</p>
+         */
         @NameInMap("RemoteWriteIntraUrl")
         public String remoteWriteIntraUrl;
 
@@ -181,7 +208,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         public String resourceGroupId;
 
         /**
-         * <p>资源类型</p>
+         * <p>Resource type.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

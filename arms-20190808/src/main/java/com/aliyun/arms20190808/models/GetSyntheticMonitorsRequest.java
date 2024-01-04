@@ -4,9 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetSyntheticMonitorsRequest extends TeaModel {
+    /**
+     * <p>The query conditions.</p>
+     */
     @NameInMap("Filter")
     public GetSyntheticMonitorsRequestFilter filter;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -32,12 +38,23 @@ public class GetSyntheticMonitorsRequest extends TeaModel {
     }
 
     public static class GetSyntheticMonitorsRequestFilter extends TeaModel {
+        /**
+         * <p>The type of the monitoring point. Valid values: 1: PC. 2: mobile device.</p>
+         */
         @NameInMap("MonitorCategory")
         public Integer monitorCategory;
 
+        /**
+         * <p>The network type. Valid values: 1: private network. 2: Internet.</p>
+         */
         @NameInMap("Network")
         public Integer network;
 
+        /**
+         * <p>The type of the monitoring task. Valid values:</p>
+         * <br>
+         * <p>1: ICMP. 2: TCP. 3: DNS. 4: HTTP. 5: website speed. 6: file download.</p>
+         */
         @NameInMap("TaskType")
         public Integer taskType;
 

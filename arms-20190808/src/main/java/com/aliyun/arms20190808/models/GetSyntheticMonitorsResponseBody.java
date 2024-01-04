@@ -4,15 +4,27 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetSyntheticMonitorsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The list of monitoring points.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetSyntheticMonitorsResponseBodyData> data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,33 +66,63 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
     }
 
     public static class GetSyntheticMonitorsResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the monitoring point is available. Valid values: true and false.</p>
+         */
         @NameInMap("Available")
         public String available;
 
+        /**
+         * <p>Indicates whether the monitoring point is selected. Valid values: true and false.</p>
+         */
         @NameInMap("CanBeSelected")
         public Boolean canBeSelected;
 
+        /**
+         * <p>The city.</p>
+         */
         @NameInMap("City")
         public String city;
 
+        /**
+         * <p>The city code.</p>
+         */
         @NameInMap("CityCode")
         public String cityCode;
 
+        /**
+         * <p>The client type of the monitoring point. Valid values: 1: data center. 2: Internet. 3: mobile device. 4: ECS instance.</p>
+         */
         @NameInMap("ClientType")
         public Integer clientType;
 
+        /**
+         * <p>The country.</p>
+         */
         @NameInMap("Country")
         public String country;
 
+        /**
+         * <p>Indicates whether IPv6 is supported. Valid values: 0: IPv6 is not supported. 1: IPv6 is supported.</p>
+         */
         @NameInMap("Ipv6")
         public Integer ipv6;
 
+        /**
+         * <p>The carrier.</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>The carrier code.</p>
+         */
         @NameInMap("OperatorCode")
         public String operatorCode;
 
+        /**
+         * <p>The region.</p>
+         */
         @NameInMap("Region")
         public String region;
 

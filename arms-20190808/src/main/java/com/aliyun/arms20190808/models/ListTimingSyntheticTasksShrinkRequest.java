@@ -4,15 +4,27 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListTimingSyntheticTasksShrinkRequest extends TeaModel {
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The search keyword.</p>
+     */
     @NameInMap("Search")
     public String searchShrink;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public String tagsShrink;
 

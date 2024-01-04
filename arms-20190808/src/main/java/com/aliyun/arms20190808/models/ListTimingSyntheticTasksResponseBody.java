@@ -4,15 +4,27 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListTimingSyntheticTasksResponseBody extends TeaModel {
+    /**
+     * <p>The status code. The status code 200 indicates that the request was successful.</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The returned struct.</p>
+     */
     @NameInMap("Data")
     public ListTimingSyntheticTasksResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,15 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
     }
 
     public static class ListTimingSyntheticTasksResponseBodyDataItemsTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -84,42 +102,83 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
     }
 
     public static class ListTimingSyntheticTasksResponseBodyDataItems extends TeaModel {
+        /**
+         * <p>The detection frequency. Valid values: 1m, 5m, 10m, 15m, 20m, 30m, 1h, 2h, 3h, 4h, 6h, 8h, 12h, and 24h.</p>
+         */
         @NameInMap("Frequency")
         public String frequency;
 
+        /**
+         * <p>The time when the task was created.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the task was modified.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The detection point type. 1: PC. 2: mobile device.</p>
+         */
         @NameInMap("MonitorCategory")
         public Integer monitorCategory;
 
+        /**
+         * <p>The number of detection points.</p>
+         */
         @NameInMap("MonitorNum")
         public String monitorNum;
 
+        /**
+         * <p>The task name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The task status. CREATING: The task is being created. RUNNING: The task is running. PARTIAL_RUNNING: The task is partially running. STOP: The task is stopped. LIMIT_STOP: The task is stopped due to quota limit. EXCEPTION: The task is abnormal. DELETE: The task is deleted. DELETE_EXCEPTION: An exception occurs while deleting the task.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListTimingSyntheticTasksResponseBodyDataItemsTags> tags;
 
+        /**
+         * <p>The ID of the synthetic monitoring task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The type of the task. Valid values:</p>
+         * <br>
+         * <p>1: ICMP. 2: TCP. 3: DNS. 4: HTTP. 5: website speed. 6: file download.</p>
+         */
         @NameInMap("TaskType")
         public Integer taskType;
 
+        /**
+         * <p>The URL for synthetic monitoring.</p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -235,15 +294,27 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
     }
 
     public static class ListTimingSyntheticTasksResponseBodyData extends TeaModel {
+        /**
+         * <p>The queried tasks.</p>
+         */
         @NameInMap("Items")
         public java.util.List<ListTimingSyntheticTasksResponseBodyDataItems> items;
 
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("Page")
         public Integer page;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of tasks.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
