@@ -3276,6 +3276,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listUserMessageWithOptions(request, headers, runtime);
     }
 
+    public MobileRecommendResponse mobileRecommendWithOptions(MobileRecommendRequest tmpReq, MobileRecommendHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        MobileRecommendShrinkRequest request = new MobileRecommendShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.deviceInfo)) {
+            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deviceInfo, "DeviceInfo", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userInfo)) {
+            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userInfo, "UserInfo", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.botId)) {
+            query.put("BotId", request.botId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.count)) {
+            query.put("Count", request.count);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceInfoShrink)) {
+            query.put("DeviceInfo", request.deviceInfoShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.style)) {
+            query.put("Style", request.style);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userInfoShrink)) {
+            query.put("UserInfo", request.userInfoShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MobileRecommend"),
+            new TeaPair("version", "ssp_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1.0/ssp/mobile/recommend/music"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MobileRecommendResponse());
+    }
+
+    public MobileRecommendResponse mobileRecommend(MobileRecommendRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        MobileRecommendHeaders headers = new MobileRecommendHeaders();
+        return this.mobileRecommendWithOptions(request, headers, runtime);
+    }
+
     public PlayAndPauseControlResponse playAndPauseControlWithOptions(PlayAndPauseControlRequest tmpReq, PlayAndPauseControlHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         PlayAndPauseControlShrinkRequest request = new PlayAndPauseControlShrinkRequest();
