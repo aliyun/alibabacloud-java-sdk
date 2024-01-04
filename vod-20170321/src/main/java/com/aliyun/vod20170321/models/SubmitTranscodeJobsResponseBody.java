@@ -11,14 +11,15 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The transcoding jobs.</p>
-     * <p>> This parameter is not returned for HLS packaging tasks. You must asynchronously receive the transcoding result.</p>
+     * <p>The information about the transcoding job.</p>
+     * <br>
+     * <p>>  This parameter is not returned for HLS packaging tasks. You must asynchronously receive the transcoding result.</p>
      */
     @NameInMap("TranscodeJobs")
     public SubmitTranscodeJobsResponseBodyTranscodeJobs transcodeJobs;
 
     /**
-     * <p>The ID of the transcoding job that was submitted.</p>
+     * <p>The ID of the transcoding task that was submitted.</p>
      */
     @NameInMap("TranscodeTaskId")
     public String transcodeTaskId;
@@ -54,7 +55,9 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
 
     public static class SubmitTranscodeJobsResponseBodyTranscodeJobsTranscodeJob extends TeaModel {
         /**
-         * <p>The ID of the job.</p>
+         * <p>The ID of the transcoding job.</p>
+         * <br>
+         * <p>>  This parameter is not returned for HLS packaging tasks. You must asynchronously receive the transcoding result.</p>
          */
         @NameInMap("JobId")
         public String jobId;

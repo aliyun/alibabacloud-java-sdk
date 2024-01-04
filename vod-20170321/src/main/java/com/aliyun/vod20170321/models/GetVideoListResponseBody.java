@@ -17,7 +17,7 @@ public class GetVideoListResponseBody extends TeaModel {
     public Integer total;
 
     /**
-     * <p>The period of time in which the object remains in the restored state.</p>
+     * <p>The information about the audio or video files. Information about a maximum of 5,000 audio or video files can be returned.</p>
      */
     @NameInMap("VideoList")
     public GetVideoListResponseBodyVideoList videoList;
@@ -78,7 +78,7 @@ public class GetVideoListResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The category ID of the media file.</p>
+         * <p>The category ID of the audio or video file.</p>
          */
         @NameInMap("CateId")
         public Long cateId;
@@ -90,47 +90,47 @@ public class GetVideoListResponseBody extends TeaModel {
         public String cateName;
 
         /**
-         * <p>The thumbnail URL of the media file.</p>
+         * <p>The thumbnail URL of the audio or video file.</p>
          */
         @NameInMap("CoverURL")
         public String coverURL;
 
         /**
-         * <p>The time when the media file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the audio or video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The description of the media file.</p>
+         * <p>The description of the audio or video file.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The duration of the media file. Unit: seconds.</p>
+         * <p>The duration of the audio or video file. Unit: seconds. 86,400 seconds is equivalent to 24 hours.</p>
          */
         @NameInMap("Duration")
         public Float duration;
 
         /**
-         * <p>The time when the video was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the video was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
         /**
-         * <p>The period of time in which the object remains in the restored state.</p>
+         * <p>The period of time in which the audio or video file remains in the restored state.</p>
          */
         @NameInMap("RestoreExpiration")
         public String restoreExpiration;
 
         /**
-         * <p>The restoration status of the media file. Valid values:</p>
+         * <p>The restoration status of the audio or video file. Valid values:</p>
          * <br>
-         * <p>- **Processing**</p>
-         * <p>- **Success**</p>
-         * <p>- **Failed**</p>
+         * <p>*   **Processing**</p>
+         * <p>*   **Success**</p>
+         * <p>*   **Failed**</p>
          */
         @NameInMap("RestoreStatus")
         public String restoreStatus;
@@ -142,17 +142,17 @@ public class GetVideoListResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>The video snapshot URLs.</p>
+         * <p>The URL array of video snapshots.</p>
          */
         @NameInMap("Snapshots")
         public GetVideoListResponseBodyVideoListVideoSnapshots snapshots;
 
         /**
-         * <p>The status of the video. Valid values:</p>
+         * <p>The status of the audio or video file. Valid values:</p>
          * <br>
          * <p>*   **Uploading**: The video is being uploaded.</p>
          * <p>*   **UploadFail**: The video failed to be uploaded.</p>
-         * <p>*   **UploadSucc**: The video has been uploaded.</p>
+         * <p>*   **UploadSucc**: The video is uploaded.</p>
          * <p>*   **Transcoding**: The video is being transcoded.</p>
          * <p>*   **TranscodeFail**: The video failed to be transcoded.</p>
          * <p>*   **checking**: The video is being reviewed.</p>
@@ -166,40 +166,41 @@ public class GetVideoListResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The storage class of the media file. Valid values:</p>
+         * <p>The storage class of the audio or video file. Valid values:</p>
          * <br>
-         * <p>- **Standard**: All media resources are stored as Standard objects.</p>
-         * <p>- **IA**: All media resources are stored as IA objects.</p>
-         * <p>- **Archive**: All media resources are stored as Archive objects.</p>
-         * <p>- **ColdArchive**: All media resources are stored as Cold Archive objects.</p>
-         * <p>- **SourceIA**: Only the source files are IA objects.</p>
-         * <p>- **SourceArchive**: Only the source files are Archive objects.</p>
-         * <p>- **SourceColdArchive**: Only the source files are Cold Archive objects.</p>
-         * <p>- **Changing**: The storage class is being modified.</p>
+         * <p>*   **Standard**: All media resources are stored as Standard objects.</p>
+         * <p>*   **IA**: All media resources are stored as IA objects.</p>
+         * <p>*   **Archive**: All media resources are stored as Archive objects.</p>
+         * <p>*   **ColdArchive**: All media resources are stored as Cold Archive objects.</p>
+         * <p>*   **SourceIA**: Only the source files are IA objects.</p>
+         * <p>*   **SourceArchive**: Only the source files are Archive objects.</p>
+         * <p>*   **SourceColdArchive**: Only the source files are Cold Archive objects.</p>
+         * <p>*   **Changing**: The storage class of the audio or video file is being changed.</p>
+         * <p>*   **SourceChanging**: The storage class of the source file is being changed.</p>
          */
         @NameInMap("StorageClass")
         public String storageClass;
 
         /**
-         * <p>The storage address of the media file.</p>
+         * <p>The storage address of the audio or video file.</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
         /**
-         * <p>The tags of the media file. Multiple tags are separated by commas (,).</p>
+         * <p>The tags of the audio or video file. Multiple tags are separated by commas (,).</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
-         * <p>The title of the media file.</p>
+         * <p>The title of the audio or video file.</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
-         * <p>The ID of the media file.</p>
+         * <p>The ID of the audio or video file.</p>
          */
         @NameInMap("VideoId")
         public String videoId;

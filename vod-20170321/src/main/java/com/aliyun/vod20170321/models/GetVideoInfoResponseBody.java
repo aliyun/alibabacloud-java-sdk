@@ -178,7 +178,8 @@ public class GetVideoInfoResponseBody extends TeaModel {
          * <p>*   **SourceIA**: Only the source files are IA objects.</p>
          * <p>*   **SourceArchive**: Only the source files are Archive objects.</p>
          * <p>*   **SourceColdArchive**: Only the source files are Cold Archive objects.</p>
-         * <p>*   **Changing**: The storage class is being modified.</p>
+         * <p>*   **Changing**: The storage class of the audio or video file is being changed.</p>
+         * <p>*   **SourceChanging**: The storage class of the source file is being changed.</p>
          */
         @NameInMap("StorageClass")
         public String storageClass;
