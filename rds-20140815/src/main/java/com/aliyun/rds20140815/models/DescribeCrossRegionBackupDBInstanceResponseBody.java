@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of instances and their cross-region backup settings.</p>
+     * <p>The cross-region backup settings.</p>
      */
     @NameInMap("Items")
     public DescribeCrossRegionBackupDBInstanceResponseBodyItems items;
@@ -17,7 +17,7 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
     public Integer itemsNumbers;
 
     /**
-     * <p>The page number of the returned page. Valid values: any non-zero positive integer.</p>
+     * <p>The page number. Pages start from page 1.</p>
      * <br>
      * <p>Default value: **1**.</p>
      */
@@ -25,25 +25,25 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page. Default value: 30.</p>
+     * <p>The number of entries per page. Default value: 30.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalRecords")
     public Integer totalRecords;
@@ -126,7 +126,7 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         public String backupEnabledTime;
 
         /**
-         * <p>The ID of the region in which the cross-region data backup file is stored.</p>
+         * <p>The ID of the destination region within which the cross-region backup file is stored.</p>
          */
         @NameInMap("CrossBackupRegion")
         public String crossBackupRegion;
@@ -138,21 +138,21 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         public String crossBackupType;
 
         /**
-         * <p>The name of the instance. It must be 2 to 256 characters in length. The name can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+         * <p>The name of the instance. It must be 2 to 256 characters in length. The value can contain letters, digits, underscores (\_), and hyphens (-), and must start with a letter.</p>
          * <br>
-         * <p>> The value cannot start with http:// or https://.</p>
+         * <p>>  The value cannot start with http:// or https://.</p>
          */
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
-         * <p>The status of the instance. For more information, see [Instance states](~~26315~~).</p>
+         * <p>The instance status. For more information, see [Instance statuses](~~26315~~).</p>
          */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;
@@ -164,7 +164,7 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The database engine version of the instance.</p>
+         * <p>The database engine version.</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
@@ -191,7 +191,7 @@ public class DescribeCrossRegionBackupDBInstanceResponseBody extends TeaModel {
         public String logBackupEnabled;
 
         /**
-         * <p>The time when cross-region log backup was enabled on the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the cross-region log backup feature was enabled on the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("LogBackupEnabledTime")
         public String logBackupEnabledTime;

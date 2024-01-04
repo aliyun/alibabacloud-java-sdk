@@ -169,6 +169,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("Category")
         public String category;
 
+        @NameInMap("ColdDataEnabled")
+        public Boolean coldDataEnabled;
+
         /**
          * <p>The connection mode of the instance. Valid values:</p>
          * <br>
@@ -362,6 +365,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceNetworkType")
         public String instanceNetworkType;
 
+        @NameInMap("IoAccelerationEnabled")
+        public String ioAccelerationEnabled;
+
         /**
          * <p>The lock mode of the instance. Valid values:</p>
          * <br>
@@ -512,6 +518,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public String getCategory() {
             return this.category;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setColdDataEnabled(Boolean coldDataEnabled) {
+            this.coldDataEnabled = coldDataEnabled;
+            return this;
+        }
+        public Boolean getColdDataEnabled() {
+            return this.coldDataEnabled;
         }
 
         public DescribeDBInstancesResponseBodyItemsDBInstance setConnectionMode(String connectionMode) {
@@ -744,6 +758,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public String getInstanceNetworkType() {
             return this.instanceNetworkType;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setIoAccelerationEnabled(String ioAccelerationEnabled) {
+            this.ioAccelerationEnabled = ioAccelerationEnabled;
+            return this;
+        }
+        public String getIoAccelerationEnabled() {
+            return this.ioAccelerationEnabled;
         }
 
         public DescribeDBInstancesResponseBodyItemsDBInstance setLockMode(String lockMode) {

@@ -13,13 +13,13 @@ public class CreateDBNodesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.</p>
+     * <p>The instance ID You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>An array that consists of the details of the node.</p>
+     * <p>The details of the node.</p>
      */
     @NameInMap("DBNode")
     public java.util.List<CreateDBNodesRequestDBNode> DBNode;
@@ -31,7 +31,7 @@ public class CreateDBNodesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to obtain the ID of the resource group.</p>
+     * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

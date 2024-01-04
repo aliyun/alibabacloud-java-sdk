@@ -303,7 +303,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         public String DBProxyVpcId;
 
         /**
-         * <p>The ID of the proxy instance.</p>
+         * <p>The proxy instance ID.</p>
          */
         @NameInMap("DBProxyVpcInstanceId")
         public String DBProxyVpcInstanceId;
@@ -420,13 +420,13 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         public String dbProxyEndpointAliases;
 
         /**
-         * <p>The ID of the proxy terminal.</p>
+         * <p>The proxy terminal ID.</p>
          */
         @NameInMap("DbProxyEndpointName")
         public String dbProxyEndpointName;
 
         /**
-         * <p>The type of the proxy terminal.</p>
+         * <p>The proxy terminal type. Valid values:</p>
          * <br>
          * <p>*   Custom: custom proxy terminal</p>
          * <p>*   RWSplit: default proxy terminal</p>
@@ -435,7 +435,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         public String dbProxyEndpointType;
 
         /**
-         * <p>The read and write attributes of the proxy terminal.</p>
+         * <p>The read and write attributes of the proxy terminal. Valid values:</p>
          * <br>
          * <p>*   ReadOnly: The proxy terminal supports only read requests.</p>
          * <p>*   ReadWrite: The proxy terminal supports read and write requests.</p>

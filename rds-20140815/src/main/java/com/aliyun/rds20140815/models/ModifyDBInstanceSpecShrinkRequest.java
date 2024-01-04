@@ -40,26 +40,29 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     @NameInMap("Category")
     public String category;
 
+    @NameInMap("ColdDataEnabled")
+    public Boolean coldDataEnabled;
+
     /**
-     * <p>The new instance type of the instance. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the [DescribeAvailableClasses](~~610393~~) operation to query the instance types that are supported by an instance.</p>
+     * <p>The new instance type of the instance. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the DescribeAvailableClasses operation to query the instance types that are supported by an instance.</p>
      * <br>
-     * <p>- You must specify at least one of DBInstanceClass and **DBInstanceStorage**.</p>
-     * <p>- You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the current instance type of the instance.</p>
+     * <p>> *   You must specify at least one of DBInstanceClass and **DBInstanceStorage**.</p>
+     * <p>> *   You can call the DescribeDBInstanceAttribute operation to query the current instance type of the instance.</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The new storage capacity of the instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can call the [DescribeAvailableClasses](~~610393~~) operation to query the storage capacity range that is supported by the new instance type.</p>
+     * <p>The new storage capacity of the instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the DescribeAvailableClasses operation to query the storage capacity range that is that is supported by the new instance type.</p>
      * <br>
-     * <p>*   You must specify at least one of the DBInstanceStorage and **DBInstanceClass** parameters.</p>
-     * <p>*   You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the current storage capacity of the instance.</p>
+     * <p>> *   You must specify at least one of the DBInstanceStorage and **DBInstanceClass**.</p>
+     * <p>> *   You can call the DescribeDBInstanceAttribute to query the current storage capacity of the instance.</p>
      */
     @NameInMap("DBInstanceStorage")
     public Integer DBInstanceStorage;
@@ -103,7 +106,7 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
      * <p>The time when you want the change to take effect. Valid values:</p>
      * <br>
      * <p>*   **Immediate**: This is the default value.</p>
-     * <p>*   **MaintainTime**: The effective time is within the maintenance window. For more information, see [ModifyDBInstanceMaintainTime](~~610402~~).</p>
+     * <p>*   **MaintainTime**: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</p>
      */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
@@ -128,6 +131,9 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
+
+    @NameInMap("IoAccelerationEnabled")
+    public String ioAccelerationEnabled;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -235,6 +241,14 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
         return this.category;
     }
 
+    public ModifyDBInstanceSpecShrinkRequest setColdDataEnabled(Boolean coldDataEnabled) {
+        this.coldDataEnabled = coldDataEnabled;
+        return this;
+    }
+    public Boolean getColdDataEnabled() {
+        return this.coldDataEnabled;
+    }
+
     public ModifyDBInstanceSpecShrinkRequest setDBInstanceClass(String DBInstanceClass) {
         this.DBInstanceClass = DBInstanceClass;
         return this;
@@ -297,6 +311,14 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     }
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    public ModifyDBInstanceSpecShrinkRequest setIoAccelerationEnabled(String ioAccelerationEnabled) {
+        this.ioAccelerationEnabled = ioAccelerationEnabled;
+        return this;
+    }
+    public String getIoAccelerationEnabled() {
+        return this.ioAccelerationEnabled;
     }
 
     public ModifyDBInstanceSpecShrinkRequest setOwnerAccount(String ownerAccount) {

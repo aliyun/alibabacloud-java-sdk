@@ -50,6 +50,9 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
+    @NameInMap("IoAccelerationEnabled")
+    public String ioAccelerationEnabled;
+
     /**
      * <p>Specifies whether to change the specifications of the instance during the cross-zone migration. Valid values:</p>
      * <br>
@@ -164,6 +167,14 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     }
     public String getEffectiveTime() {
         return this.effectiveTime;
+    }
+
+    public MigrateToOtherZoneRequest setIoAccelerationEnabled(String ioAccelerationEnabled) {
+        this.ioAccelerationEnabled = ioAccelerationEnabled;
+        return this;
+    }
+    public String getIoAccelerationEnabled() {
+        return this.ioAccelerationEnabled;
     }
 
     public MigrateToOtherZoneRequest setIsModifySpec(String isModifySpec) {

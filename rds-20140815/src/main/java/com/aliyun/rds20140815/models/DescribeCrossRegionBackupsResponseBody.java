@@ -194,9 +194,9 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         /**
          * <p>The RDS edition of the instance. Valid values:</p>
          * <br>
-         * <p>*   **Basic**: RDS Basic Edition</p>
-         * <p>*   **HighAvailability**: RDS High-availability Edition</p>
-         * <p>*   **Finance**: Enterprise Edition. This edition is supported only by the China site (aliyun.com).</p>
+         * <p>*   **Basic**: RDS Basic Edition.</p>
+         * <p>*   **HighAvailability**: RDS High-availability Edition.</p>
+         * <p>*   **Finance**: RDS Enterprise Edition. This edition is available only for the China site (aliyun.com).</p>
          */
         @NameInMap("Category")
         public String category;
@@ -246,9 +246,9 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         /**
          * <p>The storage type. Valid values:</p>
          * <br>
-         * <p>*   **local_ssd**: local SSD. This is the recommended storage type.</p>
+         * <p>*   **local_ssd**: local SSDs. This is the recommended storage type.</p>
          * <p>*   **cloud_ssd**: standard SSD.</p>
-         * <p>*   **cloud_essd**: enhanced SSD (ESSD)</p>
+         * <p>*   **cloud_essd**: enhanced SSD (ESSD).</p>
          */
         @NameInMap("DBInstanceStorageType")
         public String DBInstanceStorageType;
@@ -260,19 +260,19 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The database engine version of the instance.</p>
+         * <p>The database engine version.</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
         /**
-         * <p>The ID of the instance. This parameter is used to determine whether the instance that generates the cross-region data backup file is a primary or secondary instance.</p>
+         * <p>The instance ID. This parameter is used to determine whether the instance that generates the cross-region data backup file is a primary or secondary instance.</p>
          */
         @NameInMap("InstanceId")
         public Integer instanceId;
 
         /**
-         * <p>An array that consists of the regions to which the cross-region data backup file can be restored.</p>
+         * <p>The regions to which the cross-region data backup file can be restored.</p>
          */
         @NameInMap("RestoreRegions")
         public DescribeCrossRegionBackupsResponseBodyItemsItemRestoreRegions restoreRegions;

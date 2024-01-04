@@ -58,7 +58,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance type of the read-only instance. For more information, see [Read-only ApsaraDB RDS instance types](~~145759~~). We recommend that you specify an instance type whose specifications are higher than or equal to the specifications of the instance type of the primary instance. If the specifications of the read-only instance are lower than the specifications of the primary instance, the read-only instance may encounter issues such as high latency and heavy load.</p>
+     * <p>The instance type of the read-only instance. For more information, see [Read-only instance types](~~145759~~). We recommend that you specify an instance type whose specifications are higher than or equal to the specifications of the instance type of the primary instance. If the specifications of the read-only instance are lower than the specifications of the primary instance, the read-only instance may encounter issues such as high latency and heavy load.</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
@@ -72,13 +72,13 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String DBInstanceDescription;
 
     /**
-     * <p>The ID of the primary instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance IDs.</p>
+     * <p>The primary instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The storage capacity of the read-only instance. For more information, see the **Storage space** column in [Read-only instance types](~~145759~~). This value must be a multiple of 5 GB. Unit: GB.</p>
+     * <p>The storage capacity of the read-only instance. The storage capacity of the read-only instance must be greater than or equal to that of the primary instance. For more information, see the **Storage capacity** column in [Read-only instance types](~~145759~~). This value must be a multiple of 5. Unit: GB.</p>
      */
     @NameInMap("DBInstanceStorage")
     public Integer DBInstanceStorage;
@@ -150,6 +150,9 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     @NameInMap("InstructionSetArch")
     public String instructionSetArch;
 
+    @NameInMap("IoAccelerationEnabled")
+    public String ioAccelerationEnabled;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -189,7 +192,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>The region ID. The read-only instance and the primary instance must reside in the same region. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
+     * <p>The region ID. The read-only instance and the primary instance must reside in the same region. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -251,7 +254,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The zone ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID. You can call the DescribeRegions operation to query the zone ID.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -395,6 +398,14 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     }
     public String getInstructionSetArch() {
         return this.instructionSetArch;
+    }
+
+    public CreateReadOnlyDBInstanceRequest setIoAccelerationEnabled(String ioAccelerationEnabled) {
+        this.ioAccelerationEnabled = ioAccelerationEnabled;
+        return this;
+    }
+    public String getIoAccelerationEnabled() {
+        return this.ioAccelerationEnabled;
     }
 
     public CreateReadOnlyDBInstanceRequest setOwnerAccount(String ownerAccount) {

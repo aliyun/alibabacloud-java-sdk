@@ -1,3 +1,6 @@
+2024-01-04 Version: 2.0.2
+- Generated java 2014-08-15 for Rds.
+
 2023-12-20 Version: 2.0.1
 - Generated java 2014-08-15 for Rds.
 
