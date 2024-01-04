@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteContactGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the alert contact group.</p>
+     */
     @NameInMap("ContactGroupId")
     public Long contactGroupId;
 

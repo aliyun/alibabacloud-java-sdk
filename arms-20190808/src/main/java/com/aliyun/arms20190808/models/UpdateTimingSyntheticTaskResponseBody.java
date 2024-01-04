@@ -4,18 +4,36 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UpdateTimingSyntheticTaskResponseBody extends TeaModel {
+    /**
+     * <p>The status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The struct returned.</p>
+     */
     @NameInMap("Data")
     public UpdateTimingSyntheticTaskResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`</p>
+     * <p>*   `false`</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +83,9 @@ public class UpdateTimingSyntheticTaskResponseBody extends TeaModel {
     }
 
     public static class UpdateTimingSyntheticTaskResponseBodyData extends TeaModel {
+        /**
+         * <p>The task ID.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

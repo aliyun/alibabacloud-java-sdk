@@ -4,9 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetSyntheticMonitorsShrinkRequest extends TeaModel {
+    /**
+     * <p>The query conditions.</p>
+     */
     @NameInMap("Filter")
     public String filterShrink;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,15 +4,27 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListTimingSyntheticTasksRequest extends TeaModel {
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The search keyword.</p>
+     */
     @NameInMap("Search")
     public ListTimingSyntheticTasksRequestSearch search;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListTimingSyntheticTasksRequestTags> tags;
 
@@ -54,27 +66,51 @@ public class ListTimingSyntheticTasksRequest extends TeaModel {
     }
 
     public static class ListTimingSyntheticTasksRequestSearch extends TeaModel {
+        /**
+         * <p>The task name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The order by which tasks are sorted. 1: ascending order. -1: descending order.</p>
+         */
         @NameInMap("Order")
         public Integer order;
 
+        /**
+         * <p>The condition by which tasks are sorted. You can sort tasks by gmtCreate, gmtModified, status, or monitorCount.</p>
+         */
         @NameInMap("OrderField")
         public String orderField;
 
+        /**
+         * <p>The page number. This parameter is required.</p>
+         */
         @NameInMap("Page")
         public Integer page;
 
+        /**
+         * <p>The number of entries per page. This parameter is required.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The task status. CREATING: The task is being created. RUNNING: The task is running. PARTIAL_RUNNING: The task is partially running. STOP: The task is stopped. LIMIT_STOP: The task is stopped due to quota limit. EXCEPTION: The task is abnormal. DELETE: The task is deleted. DELETE_EXCEPTION: An exception occurs while deleting the task.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The task IDs.</p>
+         */
         @NameInMap("TaskIds")
         public java.util.List<String> taskIds;
 
+        /**
+         * <p>The task types.</p>
+         */
         @NameInMap("TaskTypes")
         public java.util.List<Integer> taskTypes;
 
@@ -150,9 +186,15 @@ public class ListTimingSyntheticTasksRequest extends TeaModel {
     }
 
     public static class ListTimingSyntheticTasksRequestTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -3,18 +3,18 @@ package com.aliyun.arms20190808.models;
 
 import com.aliyun.tea.*;
 
-public class InstallEnvironmentFeatureResponseBody extends TeaModel {
+public class QueryAppTopologyResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
      */
     @NameInMap("Code")
-    public Integer code;
+    public Long code;
 
     /**
-     * <p>The release ID.</p>
+     * <p>The returned struct.</p>
      */
     @NameInMap("Data")
-    public String data;
+    public Object data;
 
     /**
      * <p>The returned message.</p>
@@ -29,36 +29,36 @@ public class InstallEnvironmentFeatureResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
-    public static InstallEnvironmentFeatureResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        InstallEnvironmentFeatureResponseBody self = new InstallEnvironmentFeatureResponseBody();
+    public static QueryAppTopologyResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        QueryAppTopologyResponseBody self = new QueryAppTopologyResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public InstallEnvironmentFeatureResponseBody setCode(Integer code) {
+    public QueryAppTopologyResponseBody setCode(Long code) {
         this.code = code;
         return this;
     }
-    public Integer getCode() {
+    public Long getCode() {
         return this.code;
     }
 
-    public InstallEnvironmentFeatureResponseBody setData(String data) {
+    public QueryAppTopologyResponseBody setData(Object data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public Object getData() {
         return this.data;
     }
 
-    public InstallEnvironmentFeatureResponseBody setMessage(String message) {
+    public QueryAppTopologyResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -66,7 +66,7 @@ public class InstallEnvironmentFeatureResponseBody extends TeaModel {
         return this.message;
     }
 
-    public InstallEnvironmentFeatureResponseBody setRequestId(String requestId) {
+    public QueryAppTopologyResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -74,7 +74,7 @@ public class InstallEnvironmentFeatureResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public InstallEnvironmentFeatureResponseBody setSuccess(Boolean success) {
+    public QueryAppTopologyResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

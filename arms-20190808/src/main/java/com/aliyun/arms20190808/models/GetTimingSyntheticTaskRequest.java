@@ -4,9 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetTimingSyntheticTaskRequest extends TeaModel {
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the synthetic monitoring task.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

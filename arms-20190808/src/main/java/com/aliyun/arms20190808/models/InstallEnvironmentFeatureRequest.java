@@ -5,37 +5,55 @@ import com.aliyun.tea.*;
 
 public class InstallEnvironmentFeatureRequest extends TeaModel {
     /**
-     * <p>Language,the default language is Chinese.</p>
+     * <p>The language. Valid values: zh and en. Default value: zh.</p>
      */
     @NameInMap("AliyunLang")
     public String aliyunLang;
 
     /**
-     * <p>Config information of Feature.</p>
+     * <p>The metadata of the feature.</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
-     * <p>Environment ID.</p>
+     * <p>The environment ID.</p>
      */
     @NameInMap("EnvironmentId")
     public String environmentId;
 
     /**
-     * <p>Name of Feature.</p>
+     * <p>The name of the feature.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   app-agent-pilot</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   metric-agent</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("FeatureName")
     public String featureName;
 
     /**
-     * <p>Version of Feature.</p>
+     * <p>The version of the feature.</p>
      */
     @NameInMap("FeatureVersion")
     public String featureVersion;
 
     /**
-     * <p>Region of Feature.</p>
+     * <p>The region ID of the feature.</p>
      */
     @NameInMap("Region")
     public String region;
