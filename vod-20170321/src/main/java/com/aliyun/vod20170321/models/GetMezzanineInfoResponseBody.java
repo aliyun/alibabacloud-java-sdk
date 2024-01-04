@@ -47,8 +47,8 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         /**
          * <p>The output layout of the sound channels. Valid values:</p>
          * <br>
-         * <p>*   **mono**: mono sound channel</p>
-         * <p>*   **stereo**: two sound channels</p>
+         * <p>*   **mono**</p>
+         * <p>*   **stereo**</p>
          */
         @NameInMap("ChannelLayout")
         public String channelLayout;
@@ -60,25 +60,25 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String channels;
 
         /**
-         * <p>The full name of the codec format.</p>
+         * <p>The full name of the encoding format.</p>
          */
         @NameInMap("CodecLongName")
         public String codecLongName;
 
         /**
-         * <p>The short name of the codec format.</p>
+         * <p>The short name of the encoding format.</p>
          */
         @NameInMap("CodecName")
         public String codecName;
 
         /**
-         * <p>The tag of the codec format.</p>
+         * <p>The tag of the encoding format.</p>
          */
         @NameInMap("CodecTag")
         public String codecTag;
 
         /**
-         * <p>The tag string of the codec format.</p>
+         * <p>The tag string of the encoding format.</p>
          */
         @NameInMap("CodecTagString")
         public String codecTagString;
@@ -90,13 +90,13 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String codecTimeBase;
 
         /**
-         * <p>The duration of the audio stream.</p>
+         * <p>The duration of the audio file.</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
-         * <p>The sequence number of the audio stream, which specifies the position of the audio stream in all audio streams.</p>
+         * <p>The sequence number of the audio stream. The value indicates the position of the audio stream in all audio streams.</p>
          */
         @NameInMap("Index")
         public String index;
@@ -120,19 +120,19 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String sampleFmt;
 
         /**
-         * <p>The sample rate.</p>
+         * <p>The sampling rate of the audio stream.</p>
          */
         @NameInMap("SampleRate")
         public String sampleRate;
 
         /**
-         * <p>The beginning of the time range that was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The beginning of the time range during which the data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
-         * <p>The time base.</p>
+         * <p>The time base of the audio stream.</p>
          */
         @NameInMap("Timebase")
         public String timebase;
@@ -280,31 +280,31 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String avgFPS;
 
         /**
-         * <p>The bitrate of the file. Unit: Kbit/s.</p>
+         * <p>The bitrate. Unit: Kbit/s.</p>
          */
         @NameInMap("Bitrate")
         public String bitrate;
 
         /**
-         * <p>The full name of the codec format.</p>
+         * <p>The full name of the encoding format.</p>
          */
         @NameInMap("CodecLongName")
         public String codecLongName;
 
         /**
-         * <p>The short name of the codec format.</p>
+         * <p>The short name of the encoding format.</p>
          */
         @NameInMap("CodecName")
         public String codecName;
 
         /**
-         * <p>The tag of the codec format.</p>
+         * <p>The tag of the encoding format.</p>
          */
         @NameInMap("CodecTag")
         public String codecTag;
 
         /**
-         * <p>The tag string of the codec format.</p>
+         * <p>The tag string of the encoding format.</p>
          */
         @NameInMap("CodecTagString")
         public String codecTagString;
@@ -316,43 +316,43 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String codecTimeBase;
 
         /**
-         * <p>The display aspect ratio.</p>
+         * <p>The display aspect ratio (DAR) of the video stream.</p>
          */
         @NameInMap("Dar")
         public String dar;
 
         /**
-         * <p>The duration of the video stream.</p>
+         * <p>The duration of the audio file.</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
-         * <p>The target frame rate.</p>
+         * <p>The frame rate of the output file.</p>
          */
         @NameInMap("Fps")
         public String fps;
 
         /**
-         * <p>The HDR type.</p>
+         * <p>The HDR type of the video stream.</p>
          */
         @NameInMap("HDRType")
         public String HDRType;
 
         /**
-         * <p>Indicates whether the video stream contains bidirectional frames (B-frames).</p>
+         * <p>Indicates whether the video stream contains B-frames.</p>
          */
         @NameInMap("HasBFrames")
         public String hasBFrames;
 
         /**
-         * <p>The height of the video resolution.</p>
+         * <p>The height of the video stream.</p>
          */
         @NameInMap("Height")
         public String height;
 
         /**
-         * <p>The sequence number of the video stream, which indicates the position of the video stream in all video streams.</p>
+         * <p>The sequence number of the video stream. The value indicates the position of the video stream in all video streams.</p>
          */
         @NameInMap("Index")
         public String index;
@@ -388,31 +388,31 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String profile;
 
         /**
-         * <p>The rotation angle of the video. Valid values: **\[0, 360)**.</p>
+         * <p>The rotation angle of the video. Valid values: **\[0,360)**.</p>
          */
         @NameInMap("Rotate")
         public String rotate;
 
         /**
-         * <p>The sample aspect ratio.</p>
+         * <p>The sample aspect ratio (SAR) of the video stream.</p>
          */
         @NameInMap("Sar")
         public String sar;
 
         /**
-         * <p>The beginning of the time range that was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The beginning of the time range during which the data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
-         * <p>The time base.</p>
+         * <p>The time base of the audio stream.</p>
          */
         @NameInMap("Timebase")
         public String timebase;
 
         /**
-         * <p>The width of the video resolution.</p>
+         * <p>The width of the video in pixels.</p>
          */
         @NameInMap("Width")
         public String width;
@@ -710,7 +710,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The storage class of the audio or video file. Valid values:</p>
+         * <p>The storage class of the audio file. Valid values:</p>
          * <br>
          * <p>*   **Standard**: All media resources are stored as Standard objects.</p>
          * <p>*   **IA**: All media resources are stored as IA objects.</p>
@@ -719,7 +719,8 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
          * <p>*   **SourceIA**: Only the source files are IA objects.</p>
          * <p>*   **SourceArchive**: Only the source files are Archive objects.</p>
          * <p>*   **SourceColdArchive**: Only the source files are Cold Archive objects.</p>
-         * <p>*   **Changing**: The storage class is being modified.</p>
+         * <p>*   **Changing**: The storage class of the audio file is being changed.</p>
+         * <p>*   **SourceChanging**: The storage class of the source file is being changed.</p>
          */
         @NameInMap("StorageClass")
         public String storageClass;

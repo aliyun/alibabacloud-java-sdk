@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SubmitAIMediaAuditJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the task.</p>
+     * <p>The ID of the job.</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
-     * <p>The ID of the video.</p>
+     * <p>The ID of the media file.</p>
      */
     @NameInMap("MediaId")
     public String mediaId;
