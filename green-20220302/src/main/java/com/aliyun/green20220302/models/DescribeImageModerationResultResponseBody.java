@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageModerationResultResponseBody extends TeaModel {
     @NameInMap("Code")
-    public String code;
+    public Integer code;
 
     @NameInMap("Data")
     public DescribeImageModerationResultResponseBodyData data;
@@ -21,11 +21,11 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeImageModerationResultResponseBody setCode(String code) {
+    public DescribeImageModerationResultResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
-    public String getCode() {
+    public Integer getCode() {
         return this.code;
     }
 
