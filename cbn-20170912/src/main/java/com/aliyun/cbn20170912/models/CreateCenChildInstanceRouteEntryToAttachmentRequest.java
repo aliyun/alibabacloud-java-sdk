@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends TeaModel {
     /**
-     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * <p>The CEN instance ID.</p>
      */
     @NameInMap("CenId")
     public String cenId;

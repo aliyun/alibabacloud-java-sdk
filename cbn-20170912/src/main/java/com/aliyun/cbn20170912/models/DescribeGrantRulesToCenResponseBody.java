@@ -125,6 +125,9 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         @NameInMap("ChildInstanceType")
         public String childInstanceType;
 
+        @NameInMap("CreateTime")
+        public Long createTime;
+
         /**
          * <p>The entity that pays the fees of the network instance. Valid values:</p>
          * <br>
@@ -185,6 +188,14 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         }
         public String getChildInstanceType() {
             return this.childInstanceType;
+        }
+
+        public DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule setOrderType(String orderType) {

@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeCenRegionDomainRouteEntriesRequest extends TeaModel {
     /**
-     * <p>The status of the routes that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **Active** (default value): active routes</p>
-     * <p>*   **Candidate**: standby routes</p>
-     * <p>*   **Rejected**: rejected routes</p>
-     * <p>*   **Prohibited**: prohibited routes</p>
-     * <p>*   **All**: all routes</p>
+     * <p>The ID of the CEN instance.</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The ID of the region that you want to query.</p>
+     * <br>
+     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
      */
     @NameInMap("CenRegionId")
     public String cenRegionId;
@@ -29,16 +25,13 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the route map is applied.</p>
+     * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>Whether the route can be advertised to other regions. Valid values: </p>
-     * <br>
-     * <p>- **Active**: The route can be advertised to other regions.</p>
-     * <p>- **Prohibited**: The route cannot be advertised to other regions.</p>
+     * <p>The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -50,9 +43,13 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the region that you want to query.</p>
+     * <p>The status of the routes that you want to query. Valid values:</p>
      * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>*   **Active** (default value): active routes</p>
+     * <p>*   **Candidate**: standby routes</p>
+     * <p>*   **Rejected**: rejected routes</p>
+     * <p>*   **Prohibited**: prohibited routes</p>
+     * <p>*   **All**: all routes</p>
      */
     @NameInMap("Status")
     public String status;

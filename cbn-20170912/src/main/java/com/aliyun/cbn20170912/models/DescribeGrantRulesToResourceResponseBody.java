@@ -96,6 +96,9 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
         @NameInMap("CenOwnerId")
         public Long cenOwnerId;
 
+        @NameInMap("CreateTime")
+        public String createTime;
+
         /**
          * <p>The entity that pays the fees of the network instance. Valid values: Valid values:</p>
          * <br>
@@ -124,6 +127,14 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
         }
         public Long getCenOwnerId() {
             return this.cenOwnerId;
+        }
+
+        public DescribeGrantRulesToResourceResponseBodyGrantRules setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeGrantRulesToResourceResponseBodyGrantRules setOrderType(String orderType) {

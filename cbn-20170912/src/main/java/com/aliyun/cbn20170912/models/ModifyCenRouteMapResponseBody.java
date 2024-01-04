@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCenRouteMapResponseBody extends TeaModel {
     /**
-     * <p>The action that is performed on the community. Valid values:</p>
-     * <br>
-     * <p>*   **Additive**: adds the community to the route.</p>
-     * <p>*   **Replace**: replaces the original community of the route.</p>
-     * <br>
-     * <p>This parameter specifies the action to be performed when a route meets the match condition.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

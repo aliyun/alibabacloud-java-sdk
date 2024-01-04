@@ -5,36 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
     /**
-     * <p>The status of the route. Valid values: </p>
-     * <br>
-     * <p>- **Active**: The route is active.</p>
-     * <p>- **Candidate**: The route is a standby route.</p>
-     * <p>- **Rejected**: The route is rejected.</p>
-     * <p>- **Prohibited**: The route is prohibited.</p>
+     * <p>The array of routes.</p>
      */
     @NameInMap("CenRouteEntries")
     public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries cenRouteEntries;
 
     /**
-     * <p>The route maps that the routes match in the outbound direction.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The ID of the route map.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the instance specified as the next hop in the route.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -105,13 +100,13 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
 
     public static class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecordsCenOutRouteMapRecord extends TeaModel {
         /**
-         * <p>312501</p>
+         * <p>The ID of the region where the route map is applied.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>DescribeCenRegionDomainRouteEntries</p>
+         * <p>The ID of the route map.</p>
          */
         @NameInMap("RouteMapId")
         public String routeMapId;
@@ -160,13 +155,13 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
 
     public static class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord extends TeaModel {
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of the region where the route map is applied.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the region where the network instance specified as the next hop in the route belongs.</p>
+         * <p>The ID of the route map.</p>
          */
         @NameInMap("RouteMapId")
         public String routeMapId;
@@ -233,37 +228,47 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
     }
 
     public static class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry extends TeaModel {
+        /**
+         * <p>The AS paths of the routes.</p>
+         */
         @NameInMap("AsPaths")
         public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths asPaths;
 
         /**
-         * <p>Queries the routes of a Cloud Enterprise Network (CEN) instance in a specified region.</p>
+         * <p>The route maps that the routes match in the outbound direction.</p>
          */
         @NameInMap("CenOutRouteMapRecords")
         public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecords cenOutRouteMapRecords;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The route maps that the routes match in the inbound direction.</p>
          */
         @NameInMap("CenRouteMapRecords")
         public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecords cenRouteMapRecords;
 
+        /**
+         * <p>The community attributes of the routes.</p>
+         */
         @NameInMap("Communities")
         public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities communities;
 
         /**
-         * <p>The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.</p>
+         * <p>The destination CIDR block of the route.</p>
          */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
         /**
-         * <p>The priority of the route. </p>
-         * <br>
-         * <p>> A smaller value indicates a higher priority.</p>
+         * <p>The ID of the instance specified as the next hop in the route.</p>
          */
         @NameInMap("NextHopInstanceId")
         public String nextHopInstanceId;
+
+        /**
+         * <p>The ID of the region where the network instance specified as the next hop in the route belongs.</p>
+         */
+        @NameInMap("NextHopRegionId")
+        public String nextHopRegionId;
 
         /**
          * <p>The type of the network instance specified as the next hop in the route. </p>
@@ -273,8 +278,36 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
          * <p>- **CCN**</p>
          * <p>- **local_service**: system route. No next hop is specified.</p>
          */
-        @NameInMap("NextHopRegionId")
-        public String nextHopRegionId;
+        @NameInMap("NextHopType")
+        public String nextHopType;
+
+        /**
+         * <p>The priority of the route. </p>
+         * <br>
+         * <p>> A smaller value indicates a higher priority.</p>
+         */
+        @NameInMap("Preference")
+        public Integer preference;
+
+        /**
+         * <p>The status of the route. Valid values: </p>
+         * <br>
+         * <p>- **Active**: The route is active.</p>
+         * <p>- **Candidate**: The route is a standby route.</p>
+         * <p>- **Rejected**: The route is rejected.</p>
+         * <p>- **Prohibited**: The route is prohibited.</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        /**
+         * <p>Whether the route can be advertised to other regions. Valid values: </p>
+         * <br>
+         * <p>- **Active**: The route can be advertised to other regions.</p>
+         * <p>- **Prohibited**: The route cannot be advertised to other regions.</p>
+         */
+        @NameInMap("ToOtherRegionStatus")
+        public String toOtherRegionStatus;
 
         /**
          * <p>The type of the route. Valid values: </p>
@@ -282,30 +315,6 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
          * <p>- **CEN**: route that is advertised through CEN</p>
          * <p>- **Custom**: custom route</p>
          * <p>- **System**: system route</p>
-         */
-        @NameInMap("NextHopType")
-        public String nextHopType;
-
-        /**
-         * <p>The page number of the returned page.</p>
-         */
-        @NameInMap("Preference")
-        public Integer preference;
-
-        /**
-         * <p>The AS paths of the routes.</p>
-         */
-        @NameInMap("Status")
-        public String status;
-
-        /**
-         * <p>The ID of the route map.</p>
-         */
-        @NameInMap("ToOtherRegionStatus")
-        public String toOtherRegionStatus;
-
-        /**
-         * <p>The destination CIDR block of the route.</p>
          */
         @NameInMap("Type")
         public String type;
