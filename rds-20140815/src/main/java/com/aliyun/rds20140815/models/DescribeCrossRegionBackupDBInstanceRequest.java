@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCrossRegionBackupDBInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. Up to 30 instance IDs are allowed in a single request. If you enter more than one instance ID, separate them with commas (,).</p>
+     * <p>The instance ID. Up to 30 instance IDs are allowed in a single request. If you enter more than one instance ID, separate them with commas (,).</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

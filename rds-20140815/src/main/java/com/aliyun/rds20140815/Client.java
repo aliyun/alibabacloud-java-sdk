@@ -1182,6 +1182,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceNetworkType", request.instanceNetworkType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ioAccelerationEnabled)) {
+            query.put("IoAccelerationEnabled", request.ioAccelerationEnabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.payType)) {
             query.put("PayType", request.payType);
         }
@@ -1972,6 +1976,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.coldDataEnabled)) {
+            query.put("ColdDataEnabled", request.coldDataEnabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.connectionMode)) {
             query.put("ConnectionMode", request.connectionMode);
         }
@@ -2042,6 +2050,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceNetworkType)) {
             query.put("InstanceNetworkType", request.instanceNetworkType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ioAccelerationEnabled)) {
+            query.put("IoAccelerationEnabled", request.ioAccelerationEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.payType)) {
@@ -3852,6 +3864,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instructionSetArch)) {
             query.put("InstructionSetArch", request.instructionSetArch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ioAccelerationEnabled)) {
+            query.put("IoAccelerationEnabled", request.ioAccelerationEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -7171,10 +7187,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that the instance runs one of the following database engines:
-      * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
-      * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
-      * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * ### [](#)References
+      * > Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](~~120824~~)
+      * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
+      * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
       *
       * @param request DescribeCrossRegionBackupDBInstanceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7229,10 +7250,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that the instance runs one of the following database engines:
-      * *   MySQL. For more information, see [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~).
-      * *   SQL Server. For more information, see [Back up an ApsaraDB RDS for SQL Server instance across regions](~~187923~~).
-      * *   PostgreSQL. For more information, see [Enable cross-region backups for an ApsaraDB RDS for PostgreSQL instance](~~206671~~).
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * ### [](#)References
+      * > Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Use the cross-region backup feature of an ApsaraDB RDS for MySQL instance](~~120824~~)
+      * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
+      * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
       *
       * @param request DescribeCrossRegionBackupDBInstanceRequest
       * @return DescribeCrossRegionBackupDBInstanceResponse
@@ -7248,6 +7274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   PostgreSQL
       * *   SQL Server
       * ### [](#)References
+      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
       * *   [Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance](~~120824~~)
       * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
       * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
@@ -7335,6 +7362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   PostgreSQL
       * *   SQL Server
       * ### [](#)References
+      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
       * *   [Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance](~~120824~~)
       * *   [Use the cross-region backup feature for an ApsaraDB RDS for SQL Server instance](~~187923~~)
       * *   [Use the cross-region backup feature for an ApsaraDB RDS for PostgreSQL instance](~~206671~~)
@@ -14912,15 +14940,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * We recommend that you use Data Transmission Service (DTS). DTS provides data migration, subscription, and synchronization features that allow you to establish stable, secure transmission links. For more information, see [DTS API overview](~~49456~~).
       * ### [](#)Precautions
       * *   During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
-      * *   Before you call this operation, make sure that the following requirements are met:
+      * *   Before you call this operation, **make sure that the following conditions are met**:
       *     *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
-      *     *   The source and destination instances must be created by using the same user credentials.
+      *     *   The source and destination instances must be created by using the same user.
       *     *   The instance is in the Running state.
       *     *   The source and destination databases must be in the Running state.
       *     *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
-      * > 
-      * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
-      * *   You can migrate the data of multiple databases at a time.
+      * > *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+      * > *   You can migrate the data of multiple databases at a time.
       *
       * @param request ImportDatabaseBetweenInstancesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -14981,15 +15008,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * We recommend that you use Data Transmission Service (DTS). DTS provides data migration, subscription, and synchronization features that allow you to establish stable, secure transmission links. For more information, see [DTS API overview](~~49456~~).
       * ### [](#)Precautions
       * *   During the migration, the source instance is in the **Migrating** state, and the destination instance is in the **Importing** state.
-      * *   Before you call this operation, make sure that the following requirements are met:
+      * *   Before you call this operation, **make sure that the following conditions are met**:
       *     *   The source and destination instances must run SQL Server and belong to the dedicated or dedicated host instance family. For more information about the supported instance types, see [Primary instance types](~~26312~~).
-      *     *   The source and destination instances must be created by using the same user credentials.
+      *     *   The source and destination instances must be created by using the same user.
       *     *   The instance is in the Running state.
       *     *   The source and destination databases must be in the Running state.
       *     *   The remaining storage of the destination instance must be greater than the storage capacity of the source instance.
-      * > 
-      * *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
-      * *   You can migrate the data of multiple databases at a time.
+      * > *   This operation is not supported for instances that run SQL Server 2017 on RDS Cluster Edition.
+      * > *   You can migrate the data of multiple databases at a time.
       *
       * @param request ImportDatabaseBetweenInstancesRequest
       * @return ImportDatabaseBetweenInstancesResponse
@@ -15673,6 +15699,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.effectiveTime)) {
             query.put("EffectiveTime", request.effectiveTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ioAccelerationEnabled)) {
+            query.put("IoAccelerationEnabled", request.ioAccelerationEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.isModifySpec)) {
@@ -17880,6 +17910,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Category", request.category);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.coldDataEnabled)) {
+            query.put("ColdDataEnabled", request.coldDataEnabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceClass)) {
             query.put("DBInstanceClass", request.DBInstanceClass);
         }
@@ -17910,6 +17944,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.engineVersion)) {
             query.put("EngineVersion", request.engineVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ioAccelerationEnabled)) {
+            query.put("IoAccelerationEnabled", request.ioAccelerationEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {

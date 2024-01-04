@@ -134,6 +134,9 @@ public class CloneDBInstanceRequest extends TeaModel {
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
+    @NameInMap("IoAccelerationEnabled")
+    public String ioAccelerationEnabled;
+
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <br>
@@ -359,6 +362,14 @@ public class CloneDBInstanceRequest extends TeaModel {
     }
     public String getInstanceNetworkType() {
         return this.instanceNetworkType;
+    }
+
+    public CloneDBInstanceRequest setIoAccelerationEnabled(String ioAccelerationEnabled) {
+        this.ioAccelerationEnabled = ioAccelerationEnabled;
+        return this;
+    }
+    public String getIoAccelerationEnabled() {
+        return this.ioAccelerationEnabled;
     }
 
     public CloneDBInstanceRequest setPayType(String payType) {

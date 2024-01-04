@@ -53,9 +53,9 @@ public class DescribePriceShrinkRequest extends TeaModel {
      * <br>
      * <p>*   **local_ssd**: local SSD</p>
      * <p>*   **cloud_ssd**: standard SSD</p>
-     * <p>*   **cloud_essd**: enhanced SSD (ESSD) of performance level 1 (PL1)</p>
-     * <p>*   **cloud_essd2**: ESSD of PL2</p>
-     * <p>*   **cloud_essd3**: ESSD of PL3</p>
+     * <p>*   **cloud_essd**: PL1 ESSD</p>
+     * <p>*   **cloud_essd2**: PL2 ESSD</p>
+     * <p>*   **cloud_essd3**: PL3 ESSD</p>
      */
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
