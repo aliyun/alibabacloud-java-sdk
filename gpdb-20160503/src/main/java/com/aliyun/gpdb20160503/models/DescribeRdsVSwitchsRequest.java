@@ -19,7 +19,7 @@ public class DescribeRdsVSwitchsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs.</p>
+     * <p>This parameter is no longer used.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -34,10 +34,13 @@ public class DescribeRdsVSwitchsRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The ID of virtual private cloud (VPC).</p>
+     * <p>The virtual private cloud (VPC) ID of the instance.</p>
      * <br>
-     * <p>> *   You can call the [DescribeRdsVpcs](~~208327~~) operation to query the available VPCs.</p>
-     * <p>> *   This parameter is required.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   You can call the [DescribeRdsVpcs](~~208327~~) operation to query the available VPC IDs.</p>
+     * <br>
+     * <p>*   This parameter must be specified.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

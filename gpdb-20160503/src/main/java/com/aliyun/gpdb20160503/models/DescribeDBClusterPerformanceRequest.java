@@ -50,6 +50,9 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     @NameInMap("Nodes")
     public String nodes;
 
+    @NameInMap("ResourceGroupName")
+    public String resourceGroupName;
+
     /**
      * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDTHH:mmZ` format.</p>
      * <br>
@@ -101,6 +104,14 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     }
     public String getNodes() {
         return this.nodes;
+    }
+
+    public DescribeDBClusterPerformanceRequest setResourceGroupName(String resourceGroupName) {
+        this.resourceGroupName = resourceGroupName;
+        return this;
+    }
+    public String getResourceGroupName() {
+        return this.resourceGroupName;
     }
 
     public DescribeDBClusterPerformanceRequest setStartTime(String startTime) {

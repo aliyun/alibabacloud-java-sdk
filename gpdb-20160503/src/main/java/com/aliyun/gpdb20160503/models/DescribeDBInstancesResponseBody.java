@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancesResponseBody extends TeaModel {
     /**
-     * <p>The type of the Serverless mode. Valid values:</p>
-     * <br>
-     * <p>*   **Manual**: manual scheduling.</p>
-     * <p>*   **Auto**: automatic scheduling.</p>
-     * <br>
-     * <p>> This parameter is returned only for instances in Serverless mode.</p>
+     * <p>The queried instances.</p>
      */
     @NameInMap("Items")
     public DescribeDBInstancesResponseBodyItems items;
@@ -86,13 +81,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesResponseBodyItemsDBInstanceTagsTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The key of tag N.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The value of tag N.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -157,9 +152,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The edition of the instance. Valid values:</p>
          * <br>
-         * <p>*   **Basic**: Basic Edition</p>
-         * <p>*   **HighAvailability**: High-availability Edition</p>
-         * <p>*   **Finance**: Enterprise Edition</p>
+         * <p>*   **Basic**: Basic Edition.</p>
+         * <p>*   **HighAvailability**: High-availability Edition.</p>
+         * <p>*   **Finance**: Enterprise Edition.</p>
          */
         @NameInMap("DBInstanceCategory")
         public String DBInstanceCategory;
@@ -171,7 +166,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String DBInstanceDescription;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
@@ -179,9 +174,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The resource type of the instance. Valid values:</p>
          * <br>
-         * <p>*   **Serverless**: Serverless mode</p>
-         * <p>*   **StorageElastic**: elastic storage mode</p>
-         * <p>*   **Classic**: reserved storage mode</p>
+         * <p>*   **Serverless**: Serverless mode.</p>
+         * <p>*   **StorageElastic**: elastic storage mode.</p>
+         * <p>*   **Classic**: reserved storage mode.</p>
          */
         @NameInMap("DBInstanceMode")
         public String DBInstanceMode;
@@ -189,9 +184,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The type of the network interface card (NIC) that is used by the instance. Valid values:</p>
          * <br>
-         * <p>*   **0**: Internet</p>
-         * <p>*   **1**: internal network</p>
-         * <p>*   **2**: VPC</p>
+         * <p>*   **0**: Internet.</p>
+         * <p>*   **1**: internal network.</p>
+         * <p>*   **2**: VPC.</p>
          */
         @NameInMap("DBInstanceNetType")
         public String DBInstanceNetType;
@@ -203,7 +198,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String DBInstanceStatus;
 
         /**
-         * <p>The database engine that the instance runs.</p>
+         * <p>The database engine of the instance.</p>
          */
         @NameInMap("Engine")
         public String engine;
@@ -217,7 +212,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The expiration time of the instance. The time is displayed in UTC.</p>
          * <br>
-         * <p>>  For pay-as-you-go instances, `2999-09-08T16:00:00Z` is returned.</p>
+         * <p>> The expiration time of a pay-as-you-go instance is `2999-09-08T16:00:00Z`.</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
@@ -225,8 +220,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The resource type of the instance. Valid values:</p>
          * <br>
-         * <p>*   **cluster**: elastic storage mode or Serverless mode</p>
-         * <p>*   **replicaSet**: reserved storage mode</p>
+         * <p>*   **cluster**: Serverless mode or elastic storage mode.</p>
+         * <p>*   **replicaSet**: reserved storage mode.</p>
          */
         @NameInMap("InstanceDeployType")
         public String instanceDeployType;
@@ -234,8 +229,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The network type of the instance. Valid values:</p>
          * <br>
-         * <p>*   **Classic**</p>
-         * <p>*   **VPC**</p>
+         * <p>*   **Classic**: classic network.</p>
+         * <p>*   **VPC**: VPC.</p>
          */
         @NameInMap("InstanceNetworkType")
         public String instanceNetworkType;
@@ -254,9 +249,15 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String lockMode;
 
         /**
-         * <p>The reason why the cluster is locked.</p>
+         * <p>The reason why the instance is locked. Valid values:</p>
          * <br>
-         * <p>>  This parameter is returned only when the cluster is locked. The value is **instance_expire**.</p>
+         * <p>*   **0**: The instance is not locked.</p>
+         * <p>*   **1**: The instance is manually locked.</p>
+         * <p>*   **2**: The instance is automatically locked due to instance expiration.</p>
+         * <p>*   **3**: The instance is automatically locked due to instance restoration.</p>
+         * <p>*   **4**: The instance is automatically locked due to exhausted storage.</p>
+         * <br>
+         * <p>> If the instance is in reserved storage mode and unlocked, null is returned.</p>
          */
         @NameInMap("LockReason")
         public String lockReason;
@@ -270,14 +271,17 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <br>
-         * <p>*   **Postpaid**: pay-as-you-go</p>
-         * <p>*   **Prepaid**: subscription</p>
+         * <p>*   **Postpaid**: pay-as-you-go.</p>
+         * <p>*   **Prepaid**: subscription.</p>
          */
         @NameInMap("PayType")
         public String payType;
 
+        @NameInMap("ProdType")
+        public String prodType;
+
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -297,16 +301,16 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The type of the Serverless mode. Valid values:</p>
          * <br>
-         * <p>*   **Manual**: manual scheduling</p>
-         * <p>*   **Auto**: automatic scheduling</p>
+         * <p>*   **Manual**: manual scheduling.</p>
+         * <p>*   **Auto**: automatic scheduling.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances in Serverless mode.</p>
+         * <p>> This parameter is returned only for instances in Serverless mode.</p>
          */
         @NameInMap("ServerlessMode")
         public String serverlessMode;
 
         /**
-         * <p>The storage capacity. Unit: GB.</p>
+         * <p>The storage capacity of the instance. Unit: GB.</p>
          */
         @NameInMap("StorageSize")
         public String storageSize;
@@ -314,32 +318,32 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The storage type of the instance. Valid values:</p>
          * <br>
-         * <p>*   **cloud_essd**: enhanced SSD (ESSD)</p>
-         * <p>*   **cloud_efficiency**: ultra disk</p>
+         * <p>*   **cloud_essd**: enhanced SSD (ESSD).</p>
+         * <p>*   **cloud_efficiency**: ultra disk.</p>
          */
         @NameInMap("StorageType")
         public String storageType;
 
         /**
-         * <p>The tags of the instance. Each tag is a key-value pair.</p>
+         * <p>The tags that are added to the instance.</p>
          */
         @NameInMap("Tags")
         public DescribeDBInstancesResponseBodyItemsDBInstanceTags tags;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The ID of virtual private cloud (VPC).</p>
+         * <p>The VPC ID.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
-         * <p>The zone ID of the instance.</p>
+         * <p>The zone ID.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -483,6 +487,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public String getPayType() {
             return this.payType;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setProdType(String prodType) {
+            this.prodType = prodType;
+            return this;
+        }
+        public String getProdType() {
+            return this.prodType;
         }
 
         public DescribeDBInstancesResponseBodyItemsDBInstance setRegionId(String regionId) {

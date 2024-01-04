@@ -13,9 +13,15 @@ public class UpdateCollectionDataMetadataRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    /**
+     * <p>The row IDs of the data that you want to update. You must specify one of the Ids and Filter parameters.</p>
+     */
     @NameInMap("Ids")
     public java.util.List<String> ids;
 
+    /**
+     * <p>The data that you want to update, which is a JSON string in the MAP format. In the JSON string, key specifies the field name and value specifies the new data value.</p>
+     */
     @NameInMap("Metadata")
     public java.util.Map<String, ?> metadata;
 
@@ -28,6 +34,9 @@ public class UpdateCollectionDataMetadataRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
     /**
-     * <p>The attribute of the IP address whitelist. By default, this parameter is empty. A whitelist with the `hidden` attribute does not appear in the console.</p>
+     * <p>The queried IP address whitelists.</p>
      */
     @NameInMap("Items")
     public DescribeDBInstanceIPArrayListResponseBodyItems items;
@@ -39,7 +39,7 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray extends TeaModel {
         /**
-         * <p>The attribute of the IP address whitelist. By default, this parameter is empty. A whitelist with the `hidden` attribute does not appear in the console.</p>
+         * <p>The attribute of the IP address whitelist. By default, this parameter is empty. A whitelist with the `hidden` attribute is not displayed in the console.</p>
          */
         @NameInMap("DBInstanceIPArrayAttribute")
         public String DBInstanceIPArrayAttribute;
@@ -51,7 +51,7 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
         public String DBInstanceIPArrayName;
 
         /**
-         * <p>The IP addresses listed in the whitelist. You can add up to 1,000 IP addresses to the whitelist. Separate multiple IP addresses with commas (,). The IP addresses must use one of the following formats:</p>
+         * <p>The IP addresses listed in the whitelist. Up to 1,000 IP addresses are contained in a whitelist and separated by commas (,). The IP addresses must use one of the following formats:</p>
          * <br>
          * <p>*   0.0.0.0/0</p>
          * <p>*   10.23.12.24. This is a standard IP address.</p>

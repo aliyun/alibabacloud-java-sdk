@@ -224,11 +224,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String DBInstanceMode;
 
         /**
-         * <p>The type of the network interface card (NIC) that is used by the instance. Valid values:</p>
-         * <br>
-         * <p>*   **0**: Internet.</p>
-         * <p>*   **1**: internal network.</p>
-         * <p>*   **2**: VPC.</p>
+         * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
          */
         @NameInMap("DBInstanceNetType")
         public String DBInstanceNetType;
@@ -406,6 +402,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("Port")
         public String port;
 
+        @NameInMap("ProdType")
+        public String prodType;
+
         /**
          * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
          */
@@ -431,7 +430,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String runningTime;
 
         /**
-         * <p>The IP address whitelist of the instance.</p>
+         * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
          */
         @NameInMap("SecurityIPList")
         public String securityIPList;
@@ -515,13 +514,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <p>*   **TB SSD**</p>
          * <p>*   **GB HDD**</p>
          * <br>
-         * <p>>  This parameter is returned only for instances in reserved storage mode or Serverless mode.</p>
+         * <p>>  This parameter is returned only for instances in reserved storage mode.</p>
          */
         @NameInMap("StorageUnit")
         public String storageUnit;
 
         /**
-         * <p>Indicates whether the instance supports backup and restoration.</p>
+         * <p>Indicates whether the instance supports backup and restoration. Valid values:</p>
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false**</p>
@@ -893,6 +892,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getPort() {
             return this.port;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setProdType(String prodType) {
+            this.prodType = prodType;
+            return this;
+        }
+        public String getProdType() {
+            return this.prodType;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setReadDelayTime(String readDelayTime) {
