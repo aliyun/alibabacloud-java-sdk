@@ -4,18 +4,35 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBVersionInfosRequest extends TeaModel {
+    /**
+     * <p>The resource type of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **StorageElastic**: elastic storage mode.</p>
+     * <p>*   **Serverless**: Serverless mode.</p>
+     */
     @NameInMap("DBInstanceMode")
     public String DBInstanceMode;
 
+    /**
+     * <p>The minor version number that does not include the prefix.</p>
+     */
     @NameInMap("DBVersion")
     public String DBVersion;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see [View basic information of a resource group](~~151181~~).</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

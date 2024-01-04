@@ -4,27 +4,52 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DeleteCollectionDataRequest extends TeaModel {
+    /**
+     * <p>The name of the collection.</p>
+     */
     @NameInMap("Collection")
     public String collection;
 
+    /**
+     * <p>The data that you want to delete.</p>
+     */
     @NameInMap("CollectionData")
     public String collectionData;
 
+    /**
+     * <p>The data filter to delete.</p>
+     */
     @NameInMap("CollectionDataFilter")
     public String collectionDataFilter;
 
+    /**
+     * <p>The instance ID.</p>
+     * <br>
+     * <p>> You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The name of the namespace.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The password of the namespace.</p>
+     */
     @NameInMap("NamespacePassword")
     public String namespacePassword;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     * <br>
+     * <p>> You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

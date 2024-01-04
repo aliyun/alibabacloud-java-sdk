@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeModifyParameterLogResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the modification takes effect.</p>
+     * <p>The queried parameter modification logs.</p>
      */
     @NameInMap("Changelogs")
     public java.util.List<DescribeModifyParameterLogResponseBodyChangelogs> changelogs;
@@ -39,7 +39,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
 
     public static class DescribeModifyParameterLogResponseBodyChangelogs extends TeaModel {
         /**
-         * <p>The time when the configuration change takes effect.</p>
+         * <p>The effective time.</p>
          */
         @NameInMap("EffectTime")
         public String effectTime;
@@ -51,7 +51,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         public String parameterName;
 
         /**
-         * <p>Indicates whether the configuration change takes effect.</p>
+         * <p>Indicates whether the modification takes effect.</p>
          */
         @NameInMap("ParameterValid")
         public String parameterValid;

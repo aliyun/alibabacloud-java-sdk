@@ -4,9 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBVersionInfosResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The queried minor versions.</p>
+     */
     @NameInMap("VersionDetails")
     public DescribeDBVersionInfosResponseBodyVersionDetails versionDetails;
 
@@ -32,9 +38,15 @@ public class DescribeDBVersionInfosResponseBody extends TeaModel {
     }
 
     public static class DescribeDBVersionInfosResponseBodyVersionDetails extends TeaModel {
+        /**
+         * <p>The queried minor version information about the instance in Serverless mode.</p>
+         */
         @NameInMap("Serverless")
         public Object serverless;
 
+        /**
+         * <p>The queried minor version information about the instance in elastic storage mode.</p>
+         */
         @NameInMap("StorageElastic")
         public Object storageElastic;
 

@@ -107,13 +107,13 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         public String nodeAddress;
 
         /**
-         * <p>The ID of the node group.</p>
+         * <p>The node group ID.</p>
          */
         @NameInMap("NodeCID")
         public String nodeCID;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
          */
         @NameInMap("NodeID")
         public String nodeID;
@@ -133,10 +133,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         /**
          * <p>The initial role of the node. Valid values:</p>
          * <br>
-         * <p>*   **primary**: primary node</p>
-         * <p>*   **mirror**: secondary node</p>
+         * <p>*   **primary**: primary node.</p>
+         * <p>*   **mirror**: secondary node.</p>
          * <br>
-         * <p>If the value of this parameter is the same as that of **NodeRole**, no primary/secondary switchover occurs. If the value of this parameter is not the same as that of **NodeRole**, a primary/secondary switchover occurs.</p>
+         * <p>If the value of this parameter is the same as that of **NodeRole**, no primary/secondary switchover occurs. If the value of this parameter is different from that of **NodeRole**, a primary/secondary switchover occurs.</p>
          */
         @NameInMap("NodePreferredRole")
         public String nodePreferredRole;
@@ -154,8 +154,8 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         /**
          * <p>The current role of the node. Valid values:</p>
          * <br>
-         * <p>*   **primary**: primary node</p>
-         * <p>*   **mirror**: secondary node</p>
+         * <p>*   **primary**: primary node.</p>
+         * <p>*   **mirror**: secondary node.</p>
          */
         @NameInMap("NodeRole")
         public String nodeRole;
@@ -172,9 +172,9 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         /**
          * <p>The type of the node. Valid values:</p>
          * <br>
-         * <p>*   **master**: primary coordinator node</p>
-         * <p>*   **slave**: standby coordinator node</p>
-         * <p>*   **segment**: compute node</p>
+         * <p>*   **master**: primary coordinator node.</p>
+         * <p>*   **slave**: standby coordinator node.</p>
+         * <p>*   **segment**: compute node.</p>
          */
         @NameInMap("NodeType")
         public String nodeType;

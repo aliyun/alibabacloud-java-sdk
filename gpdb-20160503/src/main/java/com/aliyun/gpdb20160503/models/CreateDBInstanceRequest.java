@@ -74,6 +74,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("DBInstanceMode")
     public String DBInstanceMode;
 
+    @NameInMap("EnableSSL")
+    public Boolean enableSSL;
+
     /**
      * <p>The ID of the encryption key.</p>
      * <br>
@@ -169,9 +172,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Integer masterCU;
 
     /**
-     * <p>The number of coordinator nodes. Valid values: 1 and 2.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, 1 is used.</p>
+     * <p>This parameter is no longer used.</p>
      */
     @NameInMap("MasterNodeNum")
     public String masterNodeNum;
@@ -209,6 +210,9 @@ public class CreateDBInstanceRequest extends TeaModel {
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
+
+    @NameInMap("ProdType")
+    public String prodType;
 
     /**
      * <p>The ID of the region. You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
@@ -437,6 +441,14 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.DBInstanceMode;
     }
 
+    public CreateDBInstanceRequest setEnableSSL(Boolean enableSSL) {
+        this.enableSSL = enableSSL;
+        return this;
+    }
+    public Boolean getEnableSSL() {
+        return this.enableSSL;
+    }
+
     public CreateDBInstanceRequest setEncryptionKey(String encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -539,6 +551,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
+    }
+
+    public CreateDBInstanceRequest setProdType(String prodType) {
+        this.prodType = prodType;
+        return this;
+    }
+    public String getProdType() {
+        return this.prodType;
     }
 
     public CreateDBInstanceRequest setRegionId(String regionId) {

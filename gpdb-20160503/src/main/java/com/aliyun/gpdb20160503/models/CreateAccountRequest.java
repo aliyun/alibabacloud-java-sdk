@@ -49,7 +49,7 @@ public class CreateAccountRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs.</p>
+     * <p>This parameter is no longer used.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

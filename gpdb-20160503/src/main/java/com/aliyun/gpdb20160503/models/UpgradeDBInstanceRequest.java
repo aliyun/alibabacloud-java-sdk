@@ -33,9 +33,7 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     public String instanceSpec;
 
     /**
-     * <p>The number of coordinator nodes. Valid values: 1 and 2.</p>
-     * <br>
-     * <p>> This parameter is available only for China site (aliyun.com).</p>
+     * <p>This parameter is no longer used.</p>
      */
     @NameInMap("MasterNodeNum")
     public String masterNodeNum;

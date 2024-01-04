@@ -21,11 +21,11 @@ public class DescribeDBInstanceIndexUsageRequest extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values:</p>
      * <br>
-     * <p>*   **20**</p>
+     * <p>*   **30**</p>
      * <p>*   **50**</p>
      * <p>*   **100**</p>
      * <br>
-     * <p>Default value: **20**.</p>
+     * <p>Default value: **30**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

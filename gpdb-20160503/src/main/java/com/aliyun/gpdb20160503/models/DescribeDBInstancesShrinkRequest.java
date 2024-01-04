@@ -92,6 +92,9 @@ public class DescribeDBInstancesShrinkRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<DescribeDBInstancesShrinkRequestTag> tag;
 
+    @NameInMap("VpcId")
+    public String vpcId;
+
     public static DescribeDBInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstancesShrinkRequest self = new DescribeDBInstancesShrinkRequest();
         return TeaModel.build(map, self);
@@ -199,6 +202,14 @@ public class DescribeDBInstancesShrinkRequest extends TeaModel {
     }
     public java.util.List<DescribeDBInstancesShrinkRequestTag> getTag() {
         return this.tag;
+    }
+
+    public DescribeDBInstancesShrinkRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
     public static class DescribeDBInstancesShrinkRequestTag extends TeaModel {

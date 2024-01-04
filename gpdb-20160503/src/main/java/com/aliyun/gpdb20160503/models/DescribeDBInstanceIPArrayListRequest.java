@@ -4,6 +4,11 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceIPArrayListRequest extends TeaModel {
+    /**
+     * <p>The name of the IP address whitelist. If you do not specify this parameter, the default whitelist is queried.</p>
+     * <br>
+     * <p>>  Each instance supports up to 50 IP address whitelists.</p>
+     */
     @NameInMap("DBInstanceIPArrayName")
     public String DBInstanceIPArrayName;
 
