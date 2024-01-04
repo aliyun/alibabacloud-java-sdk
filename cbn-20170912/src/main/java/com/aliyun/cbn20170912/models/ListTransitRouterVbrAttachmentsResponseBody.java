@@ -139,6 +139,9 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        @NameInMap("OrderType")
+        public String orderType;
+
         /**
          * <p>The type of resource to which the transit router is connected. Valid values:</p>
          * <br>
@@ -236,6 +239,14 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public ListTransitRouterVbrAttachmentsResponseBodyTransitRouterAttachments setOrderType(String orderType) {
+            this.orderType = orderType;
+            return this;
+        }
+        public String getOrderType() {
+            return this.orderType;
         }
 
         public ListTransitRouterVbrAttachmentsResponseBodyTransitRouterAttachments setResourceType(String resourceType) {

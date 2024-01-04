@@ -87,6 +87,12 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         public String cenId;
 
         /**
+         * <p>The description of the health check.</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
          * <p>The time interval at which probe packets are sent during the health check. Unit: seconds.</p>
          */
         @NameInMap("HealthCheckInterval")
@@ -147,6 +153,14 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         }
         public String getCenId() {
             return this.cenId;
+        }
+
+        public DescribeCenVbrHealthCheckResponseBodyVbrHealthChecksVbrHealthCheck setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeCenVbrHealthCheckResponseBodyVbrHealthChecksVbrHealthCheck setHealthCheckInterval(Integer healthCheckInterval) {

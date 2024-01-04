@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeRouteServicesInCenResponseBody extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The ID of the region where the cloud service is deployed.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the cloud service is accessed.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the region where the cloud service is accessed.</p>
+     * <p>The information about the cloud services.</p>
      */
     @NameInMap("RouteServiceEntries")
     public DescribeRouteServicesInCenResponseBodyRouteServiceEntries routeServiceEntries;
 
     /**
-     * <p>The ID of the VPC that is associated with the cloud service.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -100,45 +100,53 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
 
     public static class DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry extends TeaModel {
         /**
-         * <p>Queries the cloud services that are configured on a Cloud Enterprise Network (CEN) instance.</p>
+         * <p>The ID of the region where the cloud service is accessed.</p>
          */
         @NameInMap("AccessRegionId")
         public String accessRegionId;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of the CEN instance.</p>
          */
         @NameInMap("CenId")
         public String cenId;
 
+        /**
+         * <p>The service addresses of the cloud service.</p>
+         */
         @NameInMap("Cidrs")
         public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntryCidrs cidrs;
 
         /**
-         * <p>The service address of the cloud service.</p>
+         * <p>The description of the cloud service.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The number of the returned page.</p>
+         * <p>The service address of the cloud service.</p>
          */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>The ID of the region where the cloud service is deployed.</p>
+         */
         @NameInMap("HostRegionId")
         public String hostRegionId;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The ID of the VPC that is associated with the cloud service.</p>
          */
         @NameInMap("HostVpcId")
         public String hostVpcId;
 
         /**
-         * <p>The service address of the cloud service.</p>
+         * <p>The status of the cloud service. Valid values:</p>
          * <br>
-         * <p>You can enter a domain name, an IP address, or a CIDR block.</p>
+         * <p>*   **Creating**: The cloud service is being created.</p>
+         * <p>*   **Active**: The cloud service is available.</p>
+         * <p>*   **Deleting**: The cloud service is being deleted.</p>
          */
         @NameInMap("Status")
         public String status;

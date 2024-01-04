@@ -10,6 +10,9 @@ public class EnableCenVbrHealthCheckRequest extends TeaModel {
     @NameInMap("CenId")
     public String cenId;
 
+    @NameInMap("Description")
+    public String description;
+
     /**
      * <p>The time interval at which probe packets are sent during a health check. Unit: seconds. Default value: **2**. Valid values: **2 to 3**.</p>
      */
@@ -100,6 +103,14 @@ public class EnableCenVbrHealthCheckRequest extends TeaModel {
     }
     public String getCenId() {
         return this.cenId;
+    }
+
+    public EnableCenVbrHealthCheckRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public EnableCenVbrHealthCheckRequest setHealthCheckInterval(Integer healthCheckInterval) {

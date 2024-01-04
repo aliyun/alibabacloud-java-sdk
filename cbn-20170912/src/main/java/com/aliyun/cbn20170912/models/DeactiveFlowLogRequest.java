@@ -15,7 +15,7 @@ public class DeactiveFlowLogRequest extends TeaModel {
      * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request is different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;

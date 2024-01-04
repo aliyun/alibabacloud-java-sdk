@@ -49,6 +49,11 @@ public class UpdateTransitRouterPeerAttachmentAttributeRequest extends TeaModel 
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The default link type. Valid values:</p>
+     * <p>- **Platinum**: only available for the **Pay-By-Data-Transfer** bandwidth.</p>
+     * <p>- **Gold** (default)</p>
+     */
     @NameInMap("DefaultLinkType")
     public String defaultLinkType;
 

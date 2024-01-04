@@ -26,11 +26,9 @@ public class ListTransitRouterMulticastGroupsRequest extends TeaModel {
      * <p>*   **false**: no</p>
      * <p>*   **true**: yes</p>
      * <br>
-     * <p>> This parameter can be set together with the IsGroupMember parameter.</p>
-     * <br>
-     * <p>*   If you do not set IsGroupMember or IsGroupSource, both the multicast sources and members are queried.</p>
-     * <br>
-     * <p>*   If you set only one of them or both of them, the specified values prevail.</p>
+     * <p>>- This parameter can be set together with the IsGroupMember parameter.</p>
+     * <p>>- If you do not set IsGroupMember or IsGroupSource, both the multicast sources and members are queried.</p>
+     * <p>>- If you set only one of them or both of them, the specified values prevail.</p>
      */
     @NameInMap("IsGroupMember")
     public Boolean isGroupMember;
@@ -41,11 +39,9 @@ public class ListTransitRouterMulticastGroupsRequest extends TeaModel {
      * <p>*   **false**: no</p>
      * <p>*   **true**: yes</p>
      * <br>
-     * <p>> This parameter can be set together with the IsGroupMember parameter.</p>
-     * <br>
-     * <p>*   If you do not set IsGroupSource or IsGroupMember, both the multicast sources and members are queried.</p>
-     * <br>
-     * <p>*   If you set only one of them or both of them, the specified values prevail.</p>
+     * <p>>- This parameter can be set together with the IsGroupMember parameter.</p>
+     * <p>>- If you do not set IsGroupSource or IsGroupMember, both the multicast sources and members are queried.</p>
+     * <p>>- If you set only one of them or both of them, the specified values prevail.</p>
      */
     @NameInMap("IsGroupSource")
     public Boolean isGroupSource;

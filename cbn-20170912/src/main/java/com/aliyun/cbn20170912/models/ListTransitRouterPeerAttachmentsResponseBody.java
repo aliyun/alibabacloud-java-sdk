@@ -167,6 +167,11 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The default link type. Valid values:</p>
+         * <p>- **Gold**</p>
+         * <p>- **Platinum**</p>
+         */
         @NameInMap("DefaultLinkType")
         public String defaultLinkType;
 

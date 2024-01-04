@@ -62,7 +62,7 @@ public class ListTransitRouterCidrAllocationRequest extends TeaModel {
      * <br>
      * <p>*   If a value is specified for **MaxResults**, it indicates that you need to query results in batches. Valid values: **1** to **100**. We recommend that you set **MaxResults** to **20**.</p>
      * <br>
-     * <p>        The value of **MaxResults** in the response indicates the number of entries in the current batch.</p>
+     * <p>    The value of **MaxResults** in the response indicates the number of entries in the current batch.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;

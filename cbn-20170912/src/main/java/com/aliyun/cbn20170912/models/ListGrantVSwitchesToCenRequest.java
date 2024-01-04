@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGrantVSwitchesToCenRequest extends TeaModel {
     /**
-     * <p>The ID of the CEN instance.</p>
+     * <p>The CEN instance ID.</p>
      */
     @NameInMap("CenId")
     public String cenId;
@@ -43,7 +43,7 @@ public class ListGrantVSwitchesToCenRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The VPC ID.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
