@@ -110,6 +110,12 @@ public class CreateDtsInstanceRequest extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
+    @NameInMap("MaxDu")
+    public Double maxDu;
+
+    @NameInMap("MinDu")
+    public Double minDu;
+
     /**
      * <p>The billing method. Valid values:</p>
      * <br>
@@ -308,6 +314,22 @@ public class CreateDtsInstanceRequest extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public CreateDtsInstanceRequest setMaxDu(Double maxDu) {
+        this.maxDu = maxDu;
+        return this;
+    }
+    public Double getMaxDu() {
+        return this.maxDu;
+    }
+
+    public CreateDtsInstanceRequest setMinDu(Double minDu) {
+        this.minDu = minDu;
+        return this;
+    }
+    public Double getMinDu() {
+        return this.minDu;
     }
 
     public CreateDtsInstanceRequest setPayType(String payType) {

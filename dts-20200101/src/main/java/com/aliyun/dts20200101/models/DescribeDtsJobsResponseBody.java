@@ -2372,6 +2372,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("IncDataCheckStatus")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobIncDataCheckStatus incDataCheckStatus;
 
+        @NameInMap("MaxDu")
+        public Double maxDu;
+
         /**
          * <p>The memory that has been used. Unit: MB.</p>
          */
@@ -2383,6 +2386,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
          */
         @NameInMap("MigrationMode")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobMigrationMode migrationMode;
+
+        @NameInMap("MinDu")
+        public Double minDu;
 
         /**
          * <p>The billing method of the DTS instance. Valid values:</p>
@@ -2602,6 +2608,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.incDataCheckStatus;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setMaxDu(Double maxDu) {
+            this.maxDu = maxDu;
+            return this;
+        }
+        public Double getMaxDu() {
+            return this.maxDu;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobListReverseJob setMemUsage(String memUsage) {
             this.memUsage = memUsage;
             return this;
@@ -2616,6 +2630,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobMigrationMode getMigrationMode() {
             return this.migrationMode;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setMinDu(Double minDu) {
+            this.minDu = minDu;
+            return this;
+        }
+        public Double getMinDu() {
+            return this.minDu;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJob setPayType(String payType) {
@@ -3126,6 +3148,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("JobType")
         public String jobType;
 
+        @NameInMap("MaxDu")
+        public Double maxDu;
+
         /**
          * <p>The memory that has been used. Unit: MB.</p>
          */
@@ -3173,6 +3198,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
          */
         @NameInMap("MigrationMode")
         public DescribeDtsJobsResponseBodyDtsJobListMigrationMode migrationMode;
+
+        @NameInMap("MinDu")
+        public Double minDu;
 
         /**
          * <p>The source of the task. Valid values:</p>
@@ -3506,6 +3534,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.jobType;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobList setMaxDu(Double maxDu) {
+            this.maxDu = maxDu;
+            return this;
+        }
+        public Double getMaxDu() {
+            return this.maxDu;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobList setMemUsage(String memUsage) {
             this.memUsage = memUsage;
             return this;
@@ -3568,6 +3604,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public DescribeDtsJobsResponseBodyDtsJobListMigrationMode getMigrationMode() {
             return this.migrationMode;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setMinDu(Double minDu) {
+            this.minDu = minDu;
+            return this;
+        }
+        public Double getMinDu() {
+            return this.minDu;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobList setOriginType(String originType) {
