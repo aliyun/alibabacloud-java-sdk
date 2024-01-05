@@ -723,6 +723,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getPromptWithOptions(request, runtime);
     }
 
+    public GetText2ImageJobResponse getText2ImageJobWithOptions(GetText2ImageJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetText2ImageJob"),
+            new TeaPair("version", "2023-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetText2ImageJobResponse());
+    }
+
+    public GetText2ImageJobResponse getText2ImageJob(GetText2ImageJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getText2ImageJobWithOptions(request, runtime);
+    }
+
     public ImportEnterpriseDocumentResponse importEnterpriseDocumentWithOptions(ImportEnterpriseDocumentRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ImportEnterpriseDocumentShrinkRequest request = new ImportEnterpriseDocumentShrinkRequest();
@@ -1130,6 +1155,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SearchEnterpriseDataResponse searchEnterpriseData(SearchEnterpriseDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.searchEnterpriseDataWithOptions(request, runtime);
+    }
+
+    public SubmitText2ImageJobResponse submitText2ImageJobWithOptions(SubmitText2ImageJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.n)) {
+            query.put("N", request.n);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.negativePrompt)) {
+            query.put("NegativePrompt", request.negativePrompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            query.put("Prompt", request.prompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.seed)) {
+            query.put("Seed", request.seed);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("Size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.style)) {
+            query.put("Style", request.style);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitText2ImageJob"),
+            new TeaPair("version", "2023-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitText2ImageJobResponse());
+    }
+
+    public SubmitText2ImageJobResponse submitText2ImageJob(SubmitText2ImageJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitText2ImageJobWithOptions(request, runtime);
     }
 
     public UpdateEnterpriseDataInfoResponse updateEnterpriseDataInfoWithOptions(UpdateEnterpriseDataInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
