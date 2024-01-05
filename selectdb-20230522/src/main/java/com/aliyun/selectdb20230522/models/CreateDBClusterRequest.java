@@ -43,9 +43,6 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("StorageSize")
-    public String storageSize;
-
     @NameInMap("UsedTime")
     public String usedTime;
 
@@ -152,14 +149,6 @@ public class CreateDBClusterRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CreateDBClusterRequest setStorageSize(String storageSize) {
-        this.storageSize = storageSize;
-        return this;
-    }
-    public String getStorageSize() {
-        return this.storageSize;
     }
 
     public CreateDBClusterRequest setUsedTime(String usedTime) {

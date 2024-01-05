@@ -43,9 +43,6 @@ public class CheckCreateDBInstanceRequest extends TeaModel {
     @NameInMap("SecurityIPList")
     public String securityIPList;
 
-    @NameInMap("StorageSize")
-    public String storageSize;
-
     @NameInMap("UsedTime")
     public Integer usedTime;
 
@@ -168,14 +165,6 @@ public class CheckCreateDBInstanceRequest extends TeaModel {
     }
     public String getSecurityIPList() {
         return this.securityIPList;
-    }
-
-    public CheckCreateDBInstanceRequest setStorageSize(String storageSize) {
-        this.storageSize = storageSize;
-        return this;
-    }
-    public String getStorageSize() {
-        return this.storageSize;
     }
 
     public CheckCreateDBInstanceRequest setUsedTime(Integer usedTime) {

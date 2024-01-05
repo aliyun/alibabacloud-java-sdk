@@ -126,10 +126,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SecurityIPList", request.securityIPList);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.storageSize)) {
-            query.put("StorageSize", request.storageSize);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.usedTime)) {
             query.put("UsedTime", request.usedTime);
         }
@@ -240,10 +236,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.storageSize)) {
-            query.put("StorageSize", request.storageSize);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.usedTime)) {
             query.put("UsedTime", request.usedTime);
         }
@@ -341,10 +333,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityIPList)) {
             query.put("SecurityIPList", request.securityIPList);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.storageSize)) {
-            query.put("StorageSize", request.storageSize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.usedTime)) {
