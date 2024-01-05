@@ -1,3 +1,6 @@
+2024-01-05 Version: 1.6.0
+- Generated java 2023-06-01 for bailian.
+
 2023-12-14 Version: 1.5.0
 - Generated java 2023-06-01 for bailian.
 
