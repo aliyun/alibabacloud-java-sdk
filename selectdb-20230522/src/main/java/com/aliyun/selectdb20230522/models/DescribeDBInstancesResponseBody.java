@@ -64,146 +64,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         return this.totalRecordCount;
     }
 
-    public static class DescribeDBInstancesResponseBodyItemsDBClusterList extends TeaModel {
-        @NameInMap("CacheStorageSizeGiB")
-        public Long cacheStorageSizeGiB;
-
-        @NameInMap("CacheStorageType")
-        public String cacheStorageType;
-
-        @NameInMap("CpuCores")
-        public Long cpuCores;
-
-        @NameInMap("CreatedTime")
-        public String createdTime;
-
-        @NameInMap("DBInstanceId")
-        public String DBInstanceId;
-
-        @NameInMap("DbClusterClass")
-        public String dbClusterClass;
-
-        @NameInMap("DbClusterId")
-        public String dbClusterId;
-
-        @NameInMap("DbClusterName")
-        public String dbClusterName;
-
-        @NameInMap("Memory")
-        public Long memory;
-
-        @NameInMap("PerformanceLevel")
-        public String performanceLevel;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("objectStoreSizeGiB")
-        public Long objectStoreSizeGiB;
-
-        public static DescribeDBInstancesResponseBodyItemsDBClusterList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDBInstancesResponseBodyItemsDBClusterList self = new DescribeDBInstancesResponseBodyItemsDBClusterList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBClusterList setCacheStorageSizeGiB(Long cacheStorageSizeGiB) {
-            this.cacheStorageSizeGiB = cacheStorageSizeGiB;
-            return this;
-        }
-        public Long getCacheStorageSizeGiB() {
-            return this.cacheStorageSizeGiB;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBClusterList setCacheStorageType(String cacheStorageType) {
-            this.cacheStorageType = cacheStorageType;
-            return this;
-        }
-        public String getCacheStorageType() {
-            return this.cacheStorageType;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBClusterList setCpuCores(Long cpuCores) {
-            this.cpuCores = cpuCores;
-            return this;
-        }
-        public Long getCpuCores() {
-            return this.cpuCores;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBClusterList setCreatedTime(String createdTime) {
-            this.createdTime = createdTime;
-            return this;
-        }
-        public String getCreatedTime() {
-            return this.createdTime;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBClusterList setDBInstanceId(String DBInstanceId) {
-            this.DBInstanceId = DBInstanceId;
-            return this;
-        }
-        public String getDBInstanceId() {
-            return this.DBInstanceId;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBClusterList setDbClusterClass(String dbClusterClass) {
-            this.dbClusterClass = dbClusterClass;
-            return this;
-        }
-        public String getDbClusterClass() {
-            return this.dbClusterClass;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBClusterList setDbClusterId(String dbClusterId) {
-            this.dbClusterId = dbClusterId;
-            return this;
-        }
-        public String getDbClusterId() {
-            return this.dbClusterId;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBClusterList setDbClusterName(String dbClusterName) {
-            this.dbClusterName = dbClusterName;
-            return this;
-        }
-        public String getDbClusterName() {
-            return this.dbClusterName;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBClusterList setMemory(Long memory) {
-            this.memory = memory;
-            return this;
-        }
-        public Long getMemory() {
-            return this.memory;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBClusterList setPerformanceLevel(String performanceLevel) {
-            this.performanceLevel = performanceLevel;
-            return this;
-        }
-        public String getPerformanceLevel() {
-            return this.performanceLevel;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBClusterList setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBClusterList setObjectStoreSizeGiB(Long objectStoreSizeGiB) {
-            this.objectStoreSizeGiB = objectStoreSizeGiB;
-            return this;
-        }
-        public Long getObjectStoreSizeGiB() {
-            return this.objectStoreSizeGiB;
-        }
-
-    }
-
     public static class DescribeDBInstancesResponseBodyItemsTags extends TeaModel {
         @NameInMap("Key")
         public String key;
@@ -244,12 +104,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("ClusterCount")
         public Integer clusterCount;
 
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("DBClusterList")
-        public java.util.List<DescribeDBInstancesResponseBodyItemsDBClusterList> DBClusterList;
-
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
@@ -270,9 +124,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
         @NameInMap("GmtModified")
         public String gmtModified;
-
-        @NameInMap("InstanceClass")
-        public String instanceClass;
 
         @NameInMap("InstanceUsedType")
         public String instanceUsedType;
@@ -390,22 +241,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             return this.clusterCount;
         }
 
-        public DescribeDBInstancesResponseBodyItems setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public DescribeDBInstancesResponseBodyItems setDBClusterList(java.util.List<DescribeDBInstancesResponseBodyItemsDBClusterList> DBClusterList) {
-            this.DBClusterList = DBClusterList;
-            return this;
-        }
-        public java.util.List<DescribeDBInstancesResponseBodyItemsDBClusterList> getDBClusterList() {
-            return this.DBClusterList;
-        }
-
         public DescribeDBInstancesResponseBodyItems setDBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
             return this;
@@ -460,14 +295,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public String getGmtModified() {
             return this.gmtModified;
-        }
-
-        public DescribeDBInstancesResponseBodyItems setInstanceClass(String instanceClass) {
-            this.instanceClass = instanceClass;
-            return this;
-        }
-        public String getInstanceClass() {
-            return this.instanceClass;
         }
 
         public DescribeDBInstancesResponseBodyItems setInstanceUsedType(String instanceUsedType) {

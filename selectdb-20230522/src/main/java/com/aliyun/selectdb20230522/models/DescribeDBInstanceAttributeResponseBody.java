@@ -244,9 +244,6 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("CacheStorageSizeGB")
         public String cacheStorageSizeGB;
 
-        @NameInMap("CacheStorageSizeGiB")
-        public Long cacheStorageSizeGiB;
-
         @NameInMap("CacheStorageType")
         public String cacheStorageType;
 
@@ -274,9 +271,6 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("Memory")
         public Long memory;
 
-        @NameInMap("ObjectStoreSizeGiB")
-        public Long objectStoreSizeGiB;
-
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
@@ -297,14 +291,6 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getCacheStorageSizeGB() {
             return this.cacheStorageSizeGB;
-        }
-
-        public DescribeDBInstanceAttributeResponseBodyDBClusterList setCacheStorageSizeGiB(Long cacheStorageSizeGiB) {
-            this.cacheStorageSizeGiB = cacheStorageSizeGiB;
-            return this;
-        }
-        public Long getCacheStorageSizeGiB() {
-            return this.cacheStorageSizeGiB;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBClusterList setCacheStorageType(String cacheStorageType) {
@@ -377,14 +363,6 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public Long getMemory() {
             return this.memory;
-        }
-
-        public DescribeDBInstanceAttributeResponseBodyDBClusterList setObjectStoreSizeGiB(Long objectStoreSizeGiB) {
-            this.objectStoreSizeGiB = objectStoreSizeGiB;
-            return this;
-        }
-        public Long getObjectStoreSizeGiB() {
-            return this.objectStoreSizeGiB;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBClusterList setPerformanceLevel(String performanceLevel) {
