@@ -32,6 +32,9 @@ public class UpdatePublicTemplateResponseBody extends TeaModel {
     }
 
     public static class UpdatePublicTemplateResponseBodyTemplate extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
         @NameInMap("CreatedBy")
         public String createdBy;
 
@@ -71,6 +74,14 @@ public class UpdatePublicTemplateResponseBody extends TeaModel {
         public static UpdatePublicTemplateResponseBodyTemplate build(java.util.Map<String, ?> map) throws Exception {
             UpdatePublicTemplateResponseBodyTemplate self = new UpdatePublicTemplateResponseBodyTemplate();
             return TeaModel.build(map, self);
+        }
+
+        public UpdatePublicTemplateResponseBodyTemplate setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
         }
 
         public UpdatePublicTemplateResponseBodyTemplate setCreatedBy(String createdBy) {

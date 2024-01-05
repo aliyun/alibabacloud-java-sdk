@@ -4,6 +4,9 @@ package com.aliyun.oosops20190601.models;
 import com.aliyun.tea.*;
 
 public class UpdatePublicTemplateRequest extends TeaModel {
+    @NameInMap("Category")
+    public String category;
+
     @NameInMap("Content")
     public String content;
 
@@ -22,6 +25,14 @@ public class UpdatePublicTemplateRequest extends TeaModel {
     public static UpdatePublicTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdatePublicTemplateRequest self = new UpdatePublicTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdatePublicTemplateRequest setCategory(String category) {
+        this.category = category;
+        return this;
+    }
+    public String getCategory() {
+        return this.category;
     }
 
     public UpdatePublicTemplateRequest setContent(String content) {
