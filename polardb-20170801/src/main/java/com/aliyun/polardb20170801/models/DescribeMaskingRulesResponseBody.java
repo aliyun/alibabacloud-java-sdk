@@ -91,6 +91,9 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         @NameInMap("RuleList")
         public java.util.List<String> ruleList;
 
+        @NameInMap("RuleVersion")
+        public String ruleVersion;
+
         public static DescribeMaskingRulesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeMaskingRulesResponseBodyData self = new DescribeMaskingRulesResponseBodyData();
             return TeaModel.build(map, self);
@@ -102,6 +105,14 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         }
         public java.util.List<String> getRuleList() {
             return this.ruleList;
+        }
+
+        public DescribeMaskingRulesResponseBodyData setRuleVersion(String ruleVersion) {
+            this.ruleVersion = ruleVersion;
+            return this;
+        }
+        public String getRuleVersion() {
+            return this.ruleVersion;
         }
 
     }

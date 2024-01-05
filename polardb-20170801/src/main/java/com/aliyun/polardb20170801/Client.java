@@ -8099,6 +8099,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RuleNameList", request.ruleNameList);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleVersion)) {
+            query.put("RuleVersion", request.ruleVersion);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
