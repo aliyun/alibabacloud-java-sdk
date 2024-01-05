@@ -58,6 +58,9 @@ public class ModifyMaskingRulesRequest extends TeaModel {
     @NameInMap("RuleNameList")
     public String ruleNameList;
 
+    @NameInMap("RuleVersion")
+    public String ruleVersion;
+
     public static ModifyMaskingRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyMaskingRulesRequest self = new ModifyMaskingRulesRequest();
         return TeaModel.build(map, self);
@@ -101,6 +104,14 @@ public class ModifyMaskingRulesRequest extends TeaModel {
     }
     public String getRuleNameList() {
         return this.ruleNameList;
+    }
+
+    public ModifyMaskingRulesRequest setRuleVersion(String ruleVersion) {
+        this.ruleVersion = ruleVersion;
+        return this;
+    }
+    public String getRuleVersion() {
+        return this.ruleVersion;
     }
 
 }
