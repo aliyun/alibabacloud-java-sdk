@@ -1,3 +1,6 @@
+2024-01-08 Version: 2.4.0
+- Generated java 2018-01-20 for Linkvisual.
+
 2023-12-20 Version: 2.3.0
 - Generated java 2018-01-20 for Linkvisual.
 

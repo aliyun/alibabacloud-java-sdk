@@ -662,6 +662,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createEventRecordPlanWithOptions(request, runtime);
     }
 
+    public CreateGbDeviceResponse createGbDeviceWithOptions(CreateGbDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceType)) {
+            query.put("DeviceType", request.deviceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gbId)) {
+            query.put("GbId", request.gbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
+            query.put("IotInstanceId", request.iotInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaNetProtocol)) {
+            query.put("MediaNetProtocol", request.mediaNetProtocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            query.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
+            query.put("ProductKey", request.productKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subProductKey)) {
+            query.put("SubProductKey", request.subProductKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateGbDevice"),
+            new TeaPair("version", "2018-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateGbDeviceResponse());
+    }
+
+    public CreateGbDeviceResponse createGbDevice(CreateGbDeviceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createGbDeviceWithOptions(request, runtime);
+    }
+
     public CreateLocalFileUploadJobResponse createLocalFileUploadJobWithOptions(CreateLocalFileUploadJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
