@@ -13,14 +13,20 @@ public class ListResourceShareInvitationsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The IDs of the resource shares.</p>
+     */
     @NameInMap("ResourceShareIds")
     public java.util.List<String> resourceShareIds;
 
+    /**
+     * <p>The IDs of the resource sharing invitations.</p>
+     */
     @NameInMap("ResourceShareInvitationIds")
     public java.util.List<String> resourceShareInvitationIds;
 

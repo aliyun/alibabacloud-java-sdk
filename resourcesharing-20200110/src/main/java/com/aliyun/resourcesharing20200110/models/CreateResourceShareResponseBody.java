@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateResourceShareResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information of the resource share.</p>
+     * <p>The information about the resource share.</p>
      */
     @NameInMap("ResourceShare")
     public CreateResourceShareResponseBodyResourceShare resourceShare;
@@ -79,7 +79,7 @@ public class CreateResourceShareResponseBody extends TeaModel {
          * <p>*   Deleting: The resource share is being deleted.</p>
          * <p>*   Deleted: The resource share is deleted.</p>
          * <br>
-         * <p>>  The system deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.</p>
+         * <p>>  The system automatically deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.</p>
          */
         @NameInMap("ResourceShareStatus")
         public String resourceShareStatus;

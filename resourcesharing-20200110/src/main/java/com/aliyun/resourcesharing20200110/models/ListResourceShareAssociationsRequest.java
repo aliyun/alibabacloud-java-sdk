@@ -49,6 +49,9 @@ public class ListResourceShareAssociationsRequest extends TeaModel {
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <p>The IDs of the resource shares.</p>
+     */
     @NameInMap("ResourceShareIds")
     public java.util.List<String> resourceShareIds;
 

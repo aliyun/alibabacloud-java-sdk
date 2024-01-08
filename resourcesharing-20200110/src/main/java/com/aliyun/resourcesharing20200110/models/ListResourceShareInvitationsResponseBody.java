@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListResourceShareInvitationsResponseBody extends TeaModel {
     /**
-     * <p>The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information of the resource sharing invitations.</p>
+     * <p>The information about the resource sharing invitations.</p>
      */
     @NameInMap("ResourceShareInvitations")
     public java.util.List<ListResourceShareInvitationsResponseBodyResourceShareInvitations> resourceShareInvitations;
@@ -51,12 +51,107 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
         return this.resourceShareInvitations;
     }
 
+    public static class ListResourceShareInvitationsResponseBodyResourceShareInvitationsInvitationFailedDetails extends TeaModel {
+        /**
+         * <p>The type of the sharing operation. Valid values:</p>
+         * <br>
+         * <p>*   Associate</p>
+         * <p>*   Disassociate</p>
+         */
+        @NameInMap("AssociateType")
+        public String associateType;
+
+        /**
+         * <p>The ID of the shared resource.</p>
+         */
+        @NameInMap("ResourceId")
+        public String resourceId;
+
+        /**
+         * <p>The type of the shared resource.</p>
+         * <br>
+         * <p>For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).</p>
+         */
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        /**
+         * <p>The failure status. Valid values:</p>
+         * <br>
+         * <p>*   Unavailable: The resource cannot be shared.</p>
+         * <p>*   LimitExceeded: The number of shared resources within the Alibaba Cloud account exceeds the upper limit.</p>
+         * <p>*   ZonalResourceInaccessible: The resource is unavailable in this region.</p>
+         * <p>*   UnsupportedOperation: The operation is not allowed because another association exists.</p>
+         * <p>*   InternalError: An internal error occurred during the check.</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        /**
+         * <p>The failure cause.</p>
+         */
+        @NameInMap("StatusMessage")
+        public String statusMessage;
+
+        public static ListResourceShareInvitationsResponseBodyResourceShareInvitationsInvitationFailedDetails build(java.util.Map<String, ?> map) throws Exception {
+            ListResourceShareInvitationsResponseBodyResourceShareInvitationsInvitationFailedDetails self = new ListResourceShareInvitationsResponseBodyResourceShareInvitationsInvitationFailedDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public ListResourceShareInvitationsResponseBodyResourceShareInvitationsInvitationFailedDetails setAssociateType(String associateType) {
+            this.associateType = associateType;
+            return this;
+        }
+        public String getAssociateType() {
+            return this.associateType;
+        }
+
+        public ListResourceShareInvitationsResponseBodyResourceShareInvitationsInvitationFailedDetails setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        public ListResourceShareInvitationsResponseBodyResourceShareInvitationsInvitationFailedDetails setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public ListResourceShareInvitationsResponseBodyResourceShareInvitationsInvitationFailedDetails setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListResourceShareInvitationsResponseBodyResourceShareInvitationsInvitationFailedDetails setStatusMessage(String statusMessage) {
+            this.statusMessage = statusMessage;
+            return this;
+        }
+        public String getStatusMessage() {
+            return this.statusMessage;
+        }
+
+    }
+
     public static class ListResourceShareInvitationsResponseBodyResourceShareInvitations extends TeaModel {
         /**
          * <p>The time when the invitation was created. The time is displayed in UTC.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
+
+        /**
+         * <p>The information about the failure.</p>
+         */
+        @NameInMap("InvitationFailedDetails")
+        public java.util.List<ListResourceShareInvitationsResponseBodyResourceShareInvitationsInvitationFailedDetails> invitationFailedDetails;
 
         /**
          * <p>The Alibaba Cloud account ID of the invitee.</p>
@@ -91,11 +186,12 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
         /**
          * <p>The status of the invitation. Valid values:</p>
          * <br>
-         * <p>*   Pending: The invitation is waiting for confirmation.</p>
-         * <p>*   Accepted: The invitation is accepted.</p>
-         * <p>*   Cancelled: The invitation is canceled.</p>
-         * <p>*   Rejected: The invitation is rejected.</p>
-         * <p>*   Expired: The invitation has expired.</p>
+         * <p>*   Pending</p>
+         * <p>*   Accepted</p>
+         * <p>*   Cancelled</p>
+         * <p>*   Rejected</p>
+         * <p>*   Expired</p>
+         * <p>*   AcceptFailed</p>
          */
         @NameInMap("Status")
         public String status;
@@ -111,6 +207,14 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public ListResourceShareInvitationsResponseBodyResourceShareInvitations setInvitationFailedDetails(java.util.List<ListResourceShareInvitationsResponseBodyResourceShareInvitationsInvitationFailedDetails> invitationFailedDetails) {
+            this.invitationFailedDetails = invitationFailedDetails;
+            return this;
+        }
+        public java.util.List<ListResourceShareInvitationsResponseBodyResourceShareInvitationsInvitationFailedDetails> getInvitationFailedDetails() {
+            return this.invitationFailedDetails;
         }
 
         public ListResourceShareInvitationsResponseBodyResourceShareInvitations setReceiverAccountId(String receiverAccountId) {

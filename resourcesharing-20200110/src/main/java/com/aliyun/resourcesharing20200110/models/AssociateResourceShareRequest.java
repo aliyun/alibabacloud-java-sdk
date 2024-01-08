@@ -4,6 +4,9 @@ package com.aliyun.resourcesharing20200110.models;
 import com.aliyun.tea.*;
 
 public class AssociateResourceShareRequest extends TeaModel {
+    /**
+     * <p>The information about the permissions. If you do not configure this parameter, the system automatically associates the default permission for the specified resource type with the resource share. For more information, see [Permission library](~~465474~~).</p>
+     */
     @NameInMap("PermissionNames")
     public java.util.List<String> permissionNames;
 
@@ -13,9 +16,15 @@ public class AssociateResourceShareRequest extends TeaModel {
     @NameInMap("ResourceShareId")
     public String resourceShareId;
 
+    /**
+     * <p>The information about the resources.</p>
+     */
     @NameInMap("Resources")
     public java.util.List<AssociateResourceShareRequestResources> resources;
 
+    /**
+     * <p>The information about the principals.</p>
+     */
     @NameInMap("Targets")
     public java.util.List<String> targets;
 

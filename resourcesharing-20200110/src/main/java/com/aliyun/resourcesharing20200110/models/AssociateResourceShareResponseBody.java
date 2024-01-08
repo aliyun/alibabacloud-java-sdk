@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AssociateResourceShareResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information of the entities that are associated with the resource share.</p>
+     * <p>The information about the entities that are associated with the resource share.</p>
      */
     @NameInMap("ResourceShareAssociations")
     public java.util.List<AssociateResourceShareResponseBodyResourceShareAssociations> resourceShareAssociations;
@@ -106,6 +106,9 @@ public class AssociateResourceShareResponseBody extends TeaModel {
         @NameInMap("ResourceShareName")
         public String resourceShareName;
 
+        @NameInMap("TargetProperty")
+        public String targetProperty;
+
         /**
          * <p>The time when the association of the entity was updated. The value of this parameter depends on the value of the AssociationType parameter:</p>
          * <br>
@@ -182,6 +185,14 @@ public class AssociateResourceShareResponseBody extends TeaModel {
         }
         public String getResourceShareName() {
             return this.resourceShareName;
+        }
+
+        public AssociateResourceShareResponseBodyResourceShareAssociations setTargetProperty(String targetProperty) {
+            this.targetProperty = targetProperty;
+            return this;
+        }
+        public String getTargetProperty() {
+            return this.targetProperty;
         }
 
         public AssociateResourceShareResponseBodyResourceShareAssociations setUpdateTime(String updateTime) {

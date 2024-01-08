@@ -7,12 +7,15 @@ public class CreateResourceShareRequest extends TeaModel {
     /**
      * <p>Specifies whether resources in the resource share can be shared with accounts outside the resource directory. Valid values:</p>
      * <br>
-     * <p>*   false: Resources in the resource share can be shared only with accounts in the resource directory. This is the default value.</p>
+     * <p>*   false (default): Resources in the resource share can be shared only with accounts in the resource directory.</p>
      * <p>*   true: Resources in the resource share can be shared with both accounts in the resource directory and accounts outside the resource directory.</p>
      */
     @NameInMap("AllowExternalTargets")
     public Boolean allowExternalTargets;
 
+    /**
+     * <p>The information about the permissions. If you do not configure this parameter, the system automatically associates the default permission for the specified resource type with the resource share. For more information, see [Permission library](~~465474~~).</p>
+     */
     @NameInMap("PermissionNames")
     public java.util.List<String> permissionNames;
 
@@ -26,9 +29,15 @@ public class CreateResourceShareRequest extends TeaModel {
     @NameInMap("ResourceShareName")
     public String resourceShareName;
 
+    /**
+     * <p>The information about the shared resources.</p>
+     */
     @NameInMap("Resources")
     public java.util.List<CreateResourceShareRequestResources> resources;
 
+    /**
+     * <p>The information about the principals.</p>
+     */
     @NameInMap("Targets")
     public java.util.List<String> targets;
 

@@ -106,6 +106,9 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
         @NameInMap("ResourceShareName")
         public String resourceShareName;
 
+        @NameInMap("TargetProperty")
+        public String targetProperty;
+
         /**
          * <p>The time when the disassociation of the entity was updated. The value of this parameter depends on the value of the AssociationType parameter:</p>
          * <br>
@@ -182,6 +185,14 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
         }
         public String getResourceShareName() {
             return this.resourceShareName;
+        }
+
+        public DisassociateResourceShareResponseBodyResourceShareAssociations setTargetProperty(String targetProperty) {
+            this.targetProperty = targetProperty;
+            return this;
+        }
+        public String getTargetProperty() {
+            return this.targetProperty;
         }
 
         public DisassociateResourceShareResponseBodyResourceShareAssociations setUpdateTime(String updateTime) {
