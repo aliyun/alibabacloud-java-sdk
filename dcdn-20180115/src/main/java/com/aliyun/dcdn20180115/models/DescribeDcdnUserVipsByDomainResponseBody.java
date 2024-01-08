@@ -4,12 +4,21 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnUserVipsByDomainResponseBody extends TeaModel {
+    /**
+     * <p>The domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of VIPs.</p>
+     */
     @NameInMap("Vips")
     public DescribeDcdnUserVipsByDomainResponseBodyVips vips;
 

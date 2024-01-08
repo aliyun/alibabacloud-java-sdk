@@ -4,6 +4,9 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DeleteDcdnUserConfigRequest extends TeaModel {
+    /**
+     * <p>The name of the user feature that you want to delete. Currently, only DCDN Web Application Firewall (WAF) can be deleted. Default value: waf.</p>
+     */
     @NameInMap("FunctionName")
     public String functionName;
 

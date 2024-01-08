@@ -4,18 +4,33 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of WAF rule groups.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The list of WAF rule groups.</p>
+     */
     @NameInMap("WafGroups")
     public java.util.List<DescribeDcdnWafGroupsResponseBodyWafGroups> wafGroups;
 
@@ -65,12 +80,24 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafGroupsResponseBodyWafGroupsPolicies extends TeaModel {
+        /**
+         * <p>The ID of the policy.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the policy.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The type of the policy. Valid values:</p>
+         * <br>
+         * <p>*   **custom**: a custom policy</p>
+         * <p>*   **default**: the default policy</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -106,24 +133,48 @@ public class DescribeDcdnWafGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafGroupsResponseBodyWafGroups extends TeaModel {
+        /**
+         * <p>The time when the WAF rule group was modified.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the custom WAF rule group.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the WAF rule.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The policy that is associated with the WAF rule group.</p>
+         */
         @NameInMap("Policies")
         public java.util.List<DescribeDcdnWafGroupsResponseBodyWafGroupsPolicies> policies;
 
+        /**
+         * <p>The number of WAF rules.</p>
+         */
         @NameInMap("RuleCount")
         public Integer ruleCount;
 
+        /**
+         * <p>Indicates whether to enable subscription. Valid values:</p>
+         * <br>
+         * <p>*   **on**</p>
+         * <p>*   **off**</p>
+         */
         @NameInMap("Subscribe")
         public String subscribe;
 
+        /**
+         * <p>The ID of the template.</p>
+         */
         @NameInMap("TemplateId")
         public Long templateId;
 

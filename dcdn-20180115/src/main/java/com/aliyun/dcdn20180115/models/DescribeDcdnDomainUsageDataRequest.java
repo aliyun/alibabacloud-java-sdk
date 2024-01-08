@@ -24,12 +24,12 @@ public class DescribeDcdnDomainUsageDataRequest extends TeaModel {
     public String area;
 
     /**
-     * <p>The protocol by which the data is queried. Valid values:</p>
+     * <p>The protocol of the data to query. Valid values:</p>
      * <br>
      * <p>*   **quic**: Quick UDP Internet Connections (QUIC)</p>
      * <p>*   **https**: HTTPS</p>
      * <p>*   **http**: HTTP</p>
-     * <p>*   **all**: HTTP, HTTPS, and QUIC</p>
+     * <p>*   **all**: all the preceding protocols</p>
      * <br>
      * <p>Default value: **all**</p>
      */
@@ -39,7 +39,7 @@ public class DescribeDcdnDomainUsageDataRequest extends TeaModel {
     /**
      * <p>The accelerated domain name. You can specify up to 100 domain names in each request. Separate multiple domain names with commas (,).</p>
      * <br>
-     * <p>> If you do not specify this parameter, the usage data of all accelerated domain names that belong to your Alibaba Cloud account is returned.</p>
+     * <p>>  If you do not specify this parameter, the usage data of all accelerated domain names that belong to your Alibaba Cloud account is returned.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -47,7 +47,7 @@ public class DescribeDcdnDomainUsageDataRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>> The end time must be later than the start time. The maximum time range that can be queried is 31 days.</p>
+     * <p>>  The end time must be later than the start time. The maximum time range that can be queried is 31 days.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -59,7 +59,7 @@ public class DescribeDcdnDomainUsageDataRequest extends TeaModel {
      * <p>*   **traf**: traffic</p>
      * <p>*   **acc**: requests</p>
      * <br>
-     * <p>> If the value is set to **acc**, the **Area** parameter is not supported.</p>
+     * <p>>  **acc** does not support the **Area** parameter.</p>
      */
     @NameInMap("Field")
     public String field;
@@ -75,19 +75,19 @@ public class DescribeDcdnDomainUsageDataRequest extends TeaModel {
     /**
      * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>> The minimum time granularity at which the data is queried is 5 minutes.</p>
+     * <p>>  The minimum time granularity at which the data is queried is 5 minutes.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>请求数类型，取值：</p>
+     * <p>The type of the requests. Valid values:</p>
      * <br>
-     * <p>- **static**：静态。</p>
-     * <p>- **dynamic**：动态。</p>
-     * <p>- **all**：全部。</p>
+     * <p>*   **static**: static requests</p>
+     * <p>*   **dynamic**: dynamic requests</p>
+     * <p>*   **all**: all requests</p>
      * <br>
-     * <p>默认为**all**。</p>
+     * <p>Default value: **all**</p>
      */
     @NameInMap("Type")
     public String type;

@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
+    /**
+     * <p>The configurations of the rule.</p>
+     */
     @NameInMap("Content")
     public java.util.List<DescribeDcdnWafDefaultRulesResponseBodyContent> content;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,45 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafDefaultRulesResponseBodyContentRules extends TeaModel {
+        /**
+         * <p>The default action of the rule. Valid values:</p>
+         * <br>
+         * <p>*   **monitor**: monitors requests.</p>
+         * <p>*   **deny**: denies requests.</p>
+         * <p>*   **block**: blocks requests.</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The default configuration of the rule.</p>
+         */
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <p>The default name of the rule.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The default status of the rule. Valid values:</p>
+         * <br>
+         * <p>*   **on**</p>
+         * <p>*   **off**</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The rule type. Valid values:</p>
+         * <br>
+         * <p>*   **waf_group**: basic web protection</p>
+         * <p>*   **high_frequency**: high-frequency scanning blocking</p>
+         * <p>*   **directory_traversal**: directory traversal blocking</p>
+         * <p>*   **scan_tools**: scanner blocking</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -95,9 +128,18 @@ public class DescribeDcdnWafDefaultRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafDefaultRulesResponseBodyContent extends TeaModel {
+        /**
+         * <p>The protection scenario. Valid values:</p>
+         * <br>
+         * <p>*   **waf_group**: basic web protection</p>
+         * <p>*   **anti_scan**: scan protection</p>
+         */
         @NameInMap("DefenseScene")
         public String defenseScene;
 
+        /**
+         * <p>The configurations of the rule.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<DescribeDcdnWafDefaultRulesResponseBodyContentRules> rules;
 

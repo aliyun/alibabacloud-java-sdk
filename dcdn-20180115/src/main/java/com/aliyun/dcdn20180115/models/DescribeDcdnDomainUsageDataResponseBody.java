@@ -17,7 +17,7 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
     public String dataInterval;
 
     /**
-     * <p>The accelerated domain name.</p>
+     * <p>The accelerated domain name that was queried.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -41,13 +41,13 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The type of the content returned.</p>
+     * <p>The type of the returned data.</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
-     * <p>The network traffic that was collected at each interval.</p>
+     * <p>The traffic that was collected at each interval.</p>
      */
     @NameInMap("UsageDataPerInterval")
     public DescribeDcdnDomainUsageDataResponseBodyUsageDataPerInterval usageDataPerInterval;
@@ -131,7 +131,7 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         /**
          * <p>The data usage in a specific scenario.</p>
          * <br>
-         * <p>> SpecialValue indicates the data usage in a specific scenario. If no special billable item is specified, ignore this parameter.</p>
+         * <p>>  This parameter indicates the data usage in a specific scenario. If no special billable item is specified, ignore this parameter.</p>
          */
         @NameInMap("SpecialValue")
         public String specialValue;
@@ -143,7 +143,7 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         public String timeStamp;
 
         /**
-         * <p>The amount of resource usage.</p>
+         * <p>The usage.</p>
          */
         @NameInMap("Value")
         public String value;
