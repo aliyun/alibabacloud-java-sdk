@@ -1021,6 +1021,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.commitStagingRoutineCodeWithOptions(request, runtime);
     }
 
+    public CreateDcdnCertificateSigningRequestResponse createDcdnCertificateSigningRequestWithOptions(CreateDcdnCertificateSigningRequestRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.city)) {
+            query.put("City", request.city);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.commonName)) {
+            query.put("CommonName", request.commonName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.country)) {
+            query.put("Country", request.country);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organization)) {
+            query.put("Organization", request.organization);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationUnit)) {
+            query.put("OrganizationUnit", request.organizationUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.SANs)) {
+            query.put("SANs", request.SANs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.state)) {
+            query.put("State", request.state);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDcdnCertificateSigningRequest"),
+            new TeaPair("version", "2018-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDcdnCertificateSigningRequestResponse());
+    }
+
+    public CreateDcdnCertificateSigningRequestResponse createDcdnCertificateSigningRequest(CreateDcdnCertificateSigningRequestRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDcdnCertificateSigningRequestWithOptions(request, runtime);
+    }
+
     /**
       * > You can call this operation up to three times per second per account.
       *
@@ -4935,7 +4992,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * * You can call this operation up to 10 times per second per account.
       * * Usage data includes traffic (measured in bytes), bandwidth values (measured in bit/s), and the number of requests.
-      * **Time granularity**:
+      * **Time granularity**
       * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
       * |Time granularity|Maximum time range per query|Historical data available|Data delay|
       * |---|---|---|---|
@@ -5002,7 +5059,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * * You can call this operation up to 10 times per second per account.
       * * Usage data includes traffic (measured in bytes), bandwidth values (measured in bit/s), and the number of requests.
-      * **Time granularity**:
+      * **Time granularity**
       * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
       * |Time granularity|Maximum time range per query|Historical data available|Data delay|
       * |---|---|---|---|
@@ -7486,6 +7543,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDcdnUserTagsWithOptions(runtime);
     }
 
+    /**
+      * You can call this operation up to 30 times per second per account.
+      *
+      * @param request DescribeDcdnUserVipsByDomainRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDcdnUserVipsByDomainResponse
+     */
     public DescribeDcdnUserVipsByDomainResponse describeDcdnUserVipsByDomainWithOptions(DescribeDcdnUserVipsByDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7514,6 +7578,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnUserVipsByDomainResponse());
     }
 
+    /**
+      * You can call this operation up to 30 times per second per account.
+      *
+      * @param request DescribeDcdnUserVipsByDomainRequest
+      * @return DescribeDcdnUserVipsByDomainResponse
+     */
     public DescribeDcdnUserVipsByDomainResponse describeDcdnUserVipsByDomain(DescribeDcdnUserVipsByDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnUserVipsByDomainWithOptions(request, runtime);
@@ -10098,6 +10168,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RollbackDcdnStagingConfigResponse rollbackDcdnStagingConfig(RollbackDcdnStagingConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.rollbackDcdnStagingConfigWithOptions(request, runtime);
+    }
+
+    public SetDcdnDomainCSRCertificateResponse setDcdnDomainCSRCertificateWithOptions(SetDcdnDomainCSRCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverCertificate)) {
+            query.put("ServerCertificate", request.serverCertificate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetDcdnDomainCSRCertificate"),
+            new TeaPair("version", "2018-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetDcdnDomainCSRCertificateResponse());
+    }
+
+    public SetDcdnDomainCSRCertificateResponse setDcdnDomainCSRCertificate(SetDcdnDomainCSRCertificateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setDcdnDomainCSRCertificateWithOptions(request, runtime);
     }
 
     /**

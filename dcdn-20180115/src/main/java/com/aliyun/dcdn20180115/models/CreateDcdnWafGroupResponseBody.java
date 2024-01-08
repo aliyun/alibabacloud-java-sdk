@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class CreateDcdnWafGroupResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the created WAF rule group.</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
