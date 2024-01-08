@@ -33,6 +33,9 @@ public class ListSharedTargetsRequest extends TeaModel {
     @NameInMap("ResourceOwner")
     public String resourceOwner;
 
+    /**
+     * <p>The ID of a resource share.</p>
+     */
     @NameInMap("ResourceShareIds")
     public java.util.List<String> resourceShareIds;
 
@@ -44,6 +47,9 @@ public class ListSharedTargetsRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The ID of a principal.</p>
+     */
     @NameInMap("Targets")
     public java.util.List<String> targets;
 

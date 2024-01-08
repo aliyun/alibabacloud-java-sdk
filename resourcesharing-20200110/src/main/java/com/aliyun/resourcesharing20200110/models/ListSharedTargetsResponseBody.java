@@ -82,6 +82,9 @@ public class ListSharedTargetsResponseBody extends TeaModel {
         @NameInMap("TargetId")
         public String targetId;
 
+        @NameInMap("TargetProperty")
+        public String targetProperty;
+
         /**
          * <p>The time when the association of the principal was updated.</p>
          */
@@ -123,6 +126,14 @@ public class ListSharedTargetsResponseBody extends TeaModel {
         }
         public String getTargetId() {
             return this.targetId;
+        }
+
+        public ListSharedTargetsResponseBodySharedTargets setTargetProperty(String targetProperty) {
+            this.targetProperty = targetProperty;
+            return this;
+        }
+        public String getTargetProperty() {
+            return this.targetProperty;
         }
 
         public ListSharedTargetsResponseBodySharedTargets setUpdateTime(String updateTime) {

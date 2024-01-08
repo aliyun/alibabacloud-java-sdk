@@ -19,9 +19,15 @@ public class DisassociateResourceShareRequest extends TeaModel {
     @NameInMap("ResourceShareId")
     public String resourceShareId;
 
+    /**
+     * <p>The shared resource.</p>
+     */
     @NameInMap("Resources")
     public java.util.List<DisassociateResourceShareRequestResources> resources;
 
+    /**
+     * <p>The ID of a principal.</p>
+     */
     @NameInMap("Targets")
     public java.util.List<String> targets;
 
