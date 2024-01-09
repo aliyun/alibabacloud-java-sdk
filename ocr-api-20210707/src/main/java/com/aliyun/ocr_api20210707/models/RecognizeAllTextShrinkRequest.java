@@ -10,6 +10,9 @@ public class RecognizeAllTextShrinkRequest extends TeaModel {
     @NameInMap("IdCardConfig")
     public String idCardConfigShrink;
 
+    @NameInMap("InternationalBusinessLicenseConfig")
+    public String internationalBusinessLicenseConfigShrink;
+
     @NameInMap("InternationalIdCardConfig")
     public String internationalIdCardConfigShrink;
 
@@ -40,6 +43,9 @@ public class RecognizeAllTextShrinkRequest extends TeaModel {
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    @NameInMap("TableConfig")
+    public String tableConfigShrink;
+
     @NameInMap("Type")
     public String type;
 
@@ -68,6 +74,14 @@ public class RecognizeAllTextShrinkRequest extends TeaModel {
     }
     public String getIdCardConfigShrink() {
         return this.idCardConfigShrink;
+    }
+
+    public RecognizeAllTextShrinkRequest setInternationalBusinessLicenseConfigShrink(String internationalBusinessLicenseConfigShrink) {
+        this.internationalBusinessLicenseConfigShrink = internationalBusinessLicenseConfigShrink;
+        return this;
+    }
+    public String getInternationalBusinessLicenseConfigShrink() {
+        return this.internationalBusinessLicenseConfigShrink;
     }
 
     public RecognizeAllTextShrinkRequest setInternationalIdCardConfigShrink(String internationalIdCardConfigShrink) {
@@ -148,6 +162,14 @@ public class RecognizeAllTextShrinkRequest extends TeaModel {
     }
     public Integer getPageNo() {
         return this.pageNo;
+    }
+
+    public RecognizeAllTextShrinkRequest setTableConfigShrink(String tableConfigShrink) {
+        this.tableConfigShrink = tableConfigShrink;
+        return this;
+    }
+    public String getTableConfigShrink() {
+        return this.tableConfigShrink;
     }
 
     public RecognizeAllTextShrinkRequest setType(String type) {

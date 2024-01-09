@@ -132,12 +132,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.idCardConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.idCardConfig, "IdCardConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.internationalBusinessLicenseConfig)) {
+            request.internationalBusinessLicenseConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.internationalBusinessLicenseConfig, "InternationalBusinessLicenseConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.internationalIdCardConfig)) {
             request.internationalIdCardConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.internationalIdCardConfig, "InternationalIdCardConfig", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.multiLanConfig)) {
             request.multiLanConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.multiLanConfig, "MultiLanConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tableConfig)) {
+            request.tableConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tableConfig, "TableConfig", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -147,6 +155,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.idCardConfigShrink)) {
             query.put("IdCardConfig", request.idCardConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.internationalBusinessLicenseConfigShrink)) {
+            query.put("InternationalBusinessLicenseConfig", request.internationalBusinessLicenseConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.internationalIdCardConfigShrink)) {
@@ -187,6 +199,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
             query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableConfigShrink)) {
+            query.put("TableConfig", request.tableConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
