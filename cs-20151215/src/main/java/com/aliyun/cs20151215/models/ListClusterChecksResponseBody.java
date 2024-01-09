@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ListClusterChecksResponseBody extends TeaModel {
+    /**
+     * <p>The list of check items.</p>
+     */
     @NameInMap("checks")
     public java.util.List<ListClusterChecksResponseBodyChecks> checks;
 
@@ -21,21 +24,39 @@ public class ListClusterChecksResponseBody extends TeaModel {
     }
 
     public static class ListClusterChecksResponseBodyChecks extends TeaModel {
+        /**
+         * <p>The ID of the cluster check task.</p>
+         */
         @NameInMap("check_id")
         public String checkId;
 
+        /**
+         * <p>The time when the cluster check task was created.</p>
+         */
         @NameInMap("created_at")
         public String createdAt;
 
+        /**
+         * <p>The time when the cluster check task was completed.</p>
+         */
         @NameInMap("finished_at")
         public String finishedAt;
 
+        /**
+         * <p>The message that indicates the status of the cluster check task.</p>
+         */
         @NameInMap("message")
         public String message;
 
+        /**
+         * <p>The status of the cluster check.</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The check method.</p>
+         */
         @NameInMap("type")
         public String type;
 

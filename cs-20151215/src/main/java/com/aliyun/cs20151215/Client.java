@@ -415,6 +415,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createAutoscalingConfigWithOptions(ClusterId, request, headers, runtime);
     }
 
+    /**
+      * This topic describes all parameters for creating an ACK cluster. You can create the following types of ACK clusters.
+      * *   [Create an ACK managed cluster](~~90776~~)
+      * *   [Create an ACK dedicated cluster](~~197620~~)
+      * *   [Create an ACK Serverless cluster](~~144246~~)
+      * *   [Create an ACK Edge cluster](128204)
+      * *   [Create an ACK Basic cluster that supports sandboxed containers](~~196321~~)
+      * *   [Create an ACK Pro cluster that supports sandboxed containers](140623)
+      *
+      * @param request CreateClusterRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateClusterResponse
+     */
     public CreateClusterResponse createClusterWithOptions(CreateClusterRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -796,6 +810,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateClusterResponse());
     }
 
+    /**
+      * This topic describes all parameters for creating an ACK cluster. You can create the following types of ACK clusters.
+      * *   [Create an ACK managed cluster](~~90776~~)
+      * *   [Create an ACK dedicated cluster](~~197620~~)
+      * *   [Create an ACK Serverless cluster](~~144246~~)
+      * *   [Create an ACK Edge cluster](128204)
+      * *   [Create an ACK Basic cluster that supports sandboxed containers](~~196321~~)
+      * *   [Create an ACK Pro cluster that supports sandboxed containers](140623)
+      *
+      * @param request CreateClusterRequest
+      * @return CreateClusterResponse
+     */
     public CreateClusterResponse createCluster(CreateClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1962,6 +1988,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeClusterTasksWithOptions(clusterId, request, headers, runtime);
     }
 
+    /**
+      * **
+      * ****The default validity period of a kubeconfig file is 3 years. Two months before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the secret is valid for 3 years. The previous kubeconfig secret remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.
+      *
+      * @param request DescribeClusterUserKubeconfigRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeClusterUserKubeconfigResponse
+     */
     public DescribeClusterUserKubeconfigResponse describeClusterUserKubeconfigWithOptions(String ClusterId, DescribeClusterUserKubeconfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1991,6 +2026,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterUserKubeconfigResponse());
     }
 
+    /**
+      * **
+      * ****The default validity period of a kubeconfig file is 3 years. Two months before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the secret is valid for 3 years. The previous kubeconfig secret remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.
+      *
+      * @param request DescribeClusterUserKubeconfigRequest
+      * @return DescribeClusterUserKubeconfigResponse
+     */
     public DescribeClusterUserKubeconfigResponse describeClusterUserKubeconfig(String ClusterId, DescribeClusterUserKubeconfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3655,7 +3697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation progressively modifies the kubelet configuration of the nodes in a node pool and restarts the kubelet process, which may affect your businesses.
+      * >  Container Service for Kubernetes (ACK) allows you to modify the kubelet configuration of nodes in a node pool. After you modify the kubelet configuration, the new configuration immediately takes effect on existing nodes in the node pool and is automatically applied to newly added nodes.
       *
       * @param request ModifyNodePoolNodeConfigRequest
       * @param headers map
@@ -3692,7 +3734,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation progressively modifies the kubelet configuration of the nodes in a node pool and restarts the kubelet process, which may affect your businesses.
+      * >  Container Service for Kubernetes (ACK) allows you to modify the kubelet configuration of nodes in a node pool. After you modify the kubelet configuration, the new configuration immediately takes effect on existing nodes in the node pool and is automatically applied to newly added nodes.
       *
       * @param request ModifyNodePoolNodeConfigRequest
       * @return ModifyNodePoolNodeConfigResponse

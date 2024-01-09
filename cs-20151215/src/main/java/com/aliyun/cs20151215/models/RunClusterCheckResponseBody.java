@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class RunClusterCheckResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the cluster check task.</p>
+     */
     @NameInMap("check_id")
     public String checkId;
 

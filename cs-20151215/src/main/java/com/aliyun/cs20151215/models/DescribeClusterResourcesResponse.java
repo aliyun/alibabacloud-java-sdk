@@ -88,7 +88,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
 
     public static class DescribeClusterResourcesResponseBody extends TeaModel {
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          */
         @NameInMap("cluster_id")
         public String clusterId;
@@ -100,7 +100,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String created;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          */
         @NameInMap("instance_id")
         public String instanceId;
@@ -112,13 +112,13 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String resourceInfo;
 
         /**
-         * <p>The type of resource.</p>
+         * <p>The resource type.</p>
          */
         @NameInMap("resource_type")
         public String resourceType;
 
         /**
-         * <p>The status of the resource. Valid values:</p>
+         * <p>The resource status. Valid values:</p>
          * <br>
          * <p>*   `CREATE_COMPLETE`: The resource is created.</p>
          * <p>*   `CREATE_FAILED`: The resource failed to be created.</p>
