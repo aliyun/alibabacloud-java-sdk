@@ -119,6 +119,9 @@ public class DescribeServersResponseBody extends TeaModel {
         @NameInMap("CrashConsistentPointPolicy")
         public String crashConsistentPointPolicy;
 
+        @NameInMap("Disks")
+        public String disks;
+
         @NameInMap("Errno")
         public String errno;
 
@@ -146,6 +149,9 @@ public class DescribeServersResponseBody extends TeaModel {
         @NameInMap("IpAddress")
         public String ipAddress;
 
+        @NameInMap("LatestRecoveryPointTime")
+        public Long latestRecoveryPointTime;
+
         @NameInMap("Memory")
         public Long memory;
 
@@ -167,6 +173,9 @@ public class DescribeServersResponseBody extends TeaModel {
         @NameInMap("RecoveredInstanceId")
         public String recoveredInstanceId;
 
+        /**
+         * <p>-</p>
+         */
         @NameInMap("RecoveredInstanceName")
         public String recoveredInstanceName;
 
@@ -175,6 +184,9 @@ public class DescribeServersResponseBody extends TeaModel {
 
         @NameInMap("RecoveryCpu")
         public Integer recoveryCpu;
+
+        @NameInMap("RecoveryEssdPerformanceLevel")
+        public String recoveryEssdPerformanceLevel;
 
         @NameInMap("RecoveryInstanceName")
         public String recoveryInstanceName;
@@ -324,6 +336,14 @@ public class DescribeServersResponseBody extends TeaModel {
             return this.crashConsistentPointPolicy;
         }
 
+        public DescribeServersResponseBodyServersServer setDisks(String disks) {
+            this.disks = disks;
+            return this;
+        }
+        public String getDisks() {
+            return this.disks;
+        }
+
         public DescribeServersResponseBodyServersServer setErrno(String errno) {
             this.errno = errno;
             return this;
@@ -394,6 +414,14 @@ public class DescribeServersResponseBody extends TeaModel {
         }
         public String getIpAddress() {
             return this.ipAddress;
+        }
+
+        public DescribeServersResponseBodyServersServer setLatestRecoveryPointTime(Long latestRecoveryPointTime) {
+            this.latestRecoveryPointTime = latestRecoveryPointTime;
+            return this;
+        }
+        public Long getLatestRecoveryPointTime() {
+            return this.latestRecoveryPointTime;
         }
 
         public DescribeServersResponseBodyServersServer setMemory(Long memory) {
@@ -474,6 +502,14 @@ public class DescribeServersResponseBody extends TeaModel {
         }
         public Integer getRecoveryCpu() {
             return this.recoveryCpu;
+        }
+
+        public DescribeServersResponseBodyServersServer setRecoveryEssdPerformanceLevel(String recoveryEssdPerformanceLevel) {
+            this.recoveryEssdPerformanceLevel = recoveryEssdPerformanceLevel;
+            return this;
+        }
+        public String getRecoveryEssdPerformanceLevel() {
+            return this.recoveryEssdPerformanceLevel;
         }
 
         public DescribeServersResponseBodyServersServer setRecoveryInstanceName(String recoveryInstanceName) {

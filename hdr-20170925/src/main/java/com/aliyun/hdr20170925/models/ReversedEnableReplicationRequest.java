@@ -4,42 +4,72 @@ package com.aliyun.hdr20170925.models;
 import com.aliyun.tea.*;
 
 public class ReversedEnableReplicationRequest extends TeaModel {
+    /**
+     * <p>-</p>
+     */
     @NameInMap("AppConsistentPointPolicy")
     public String appConsistentPointPolicy;
 
+    /**
+     * <p>-</p>
+     */
     @NameInMap("CrashConsistentPointPolicy")
     public String crashConsistentPointPolicy;
 
     @NameInMap("RecoveryNetwork")
     public String recoveryNetwork;
 
+    /**
+     * <p>-</p>
+     */
     @NameInMap("ReplicationComputeResource")
     public String replicationComputeResource;
 
+    /**
+     * <p>-</p>
+     */
     @NameInMap("ReplicationDatastore")
     public String replicationDatastore;
 
+    /**
+     * <p>-</p>
+     */
     @NameInMap("ReplicationDns")
     public String replicationDns;
 
+    /**
+     * <p>-</p>
+     */
     @NameInMap("ReplicationGateway")
     public String replicationGateway;
 
     @NameInMap("ReplicationInfrastructureId")
     public String replicationInfrastructureId;
 
+    /**
+     * <p>-</p>
+     */
     @NameInMap("ReplicationIpAddress")
     public String replicationIpAddress;
 
+    /**
+     * <p>-</p>
+     */
     @NameInMap("ReplicationLocation")
     public String replicationLocation;
 
+    /**
+     * <p>-</p>
+     */
     @NameInMap("ReplicationNetMask")
     public String replicationNetMask;
 
     @NameInMap("ReplicationNetwork")
     public String replicationNetwork;
 
+    /**
+     * <p>-</p>
+     */
     @NameInMap("ReplicationUseDhcp")
     public Boolean replicationUseDhcp;
 
@@ -52,6 +82,9 @@ public class ReversedEnableReplicationRequest extends TeaModel {
     @NameInMap("ServerId")
     public String serverId;
 
+    /**
+     * <p>-</p>
+     */
     @NameInMap("ShadowInstanceType")
     public String shadowInstanceType;
 

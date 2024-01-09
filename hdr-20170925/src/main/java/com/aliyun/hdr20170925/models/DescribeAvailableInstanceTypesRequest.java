@@ -10,6 +10,9 @@ public class DescribeAvailableInstanceTypesRequest extends TeaModel {
     @NameInMap("DiskType")
     public String diskType;
 
+    /**
+     * <p>-</p>
+     */
     @NameInMap("Filter")
     public String filter;
 

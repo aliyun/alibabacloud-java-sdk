@@ -4,7 +4,6 @@ package com.aliyun.hdr20170925.models;
 import com.aliyun.tea.*;
 
 public class DisableReplicationRequest extends TeaModel {
-    // 受保护服务器ID
     @NameInMap("ServerId")
     public String serverId;
 

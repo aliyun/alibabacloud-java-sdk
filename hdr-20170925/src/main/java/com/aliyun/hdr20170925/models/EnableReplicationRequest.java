@@ -4,27 +4,21 @@ package com.aliyun.hdr20170925.models;
 import com.aliyun.tea.*;
 
 public class EnableReplicationRequest extends TeaModel {
-    // 恢复点策略
     @NameInMap("CrashConsistentPointPolicy")
     public String crashConsistentPointPolicy;
 
-    // 恢复网络VSwitch ID
     @NameInMap("RecoveryNetwork")
     public String recoveryNetwork;
 
-    // 复制网络VSwitch ID
     @NameInMap("ReplicationNetwork")
     public String replicationNetwork;
 
-    // 复影实例是否使用ESSD云盘
     @NameInMap("ReplicationUseEssd")
     public Boolean replicationUseEssd;
 
-    // 复影实例是否使用SSD云盘
     @NameInMap("ReplicationUseSsd")
     public Boolean replicationUseSsd;
 
-    // 受保护服务器ID
     @NameInMap("ServerId")
     public String serverId;
 

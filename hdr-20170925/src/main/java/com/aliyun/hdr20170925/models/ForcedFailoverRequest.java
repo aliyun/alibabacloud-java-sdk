@@ -10,6 +10,9 @@ public class ForcedFailoverRequest extends TeaModel {
     @NameInMap("RecoveryCpu")
     public Integer recoveryCpu;
 
+    @NameInMap("RecoveryEssdPerformanceLevel")
+    public String recoveryEssdPerformanceLevel;
+
     @NameInMap("RecoveryInstanceName")
     public String recoveryInstanceName;
 
@@ -74,6 +77,14 @@ public class ForcedFailoverRequest extends TeaModel {
     }
     public Integer getRecoveryCpu() {
         return this.recoveryCpu;
+    }
+
+    public ForcedFailoverRequest setRecoveryEssdPerformanceLevel(String recoveryEssdPerformanceLevel) {
+        this.recoveryEssdPerformanceLevel = recoveryEssdPerformanceLevel;
+        return this;
+    }
+    public String getRecoveryEssdPerformanceLevel() {
+        return this.recoveryEssdPerformanceLevel;
     }
 
     public ForcedFailoverRequest setRecoveryInstanceName(String recoveryInstanceName) {
