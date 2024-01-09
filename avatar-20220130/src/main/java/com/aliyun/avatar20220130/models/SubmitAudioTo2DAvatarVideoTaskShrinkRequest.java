@@ -7,6 +7,9 @@ public class SubmitAudioTo2DAvatarVideoTaskShrinkRequest extends TeaModel {
     @NameInMap("App")
     public String appShrink;
 
+    @NameInMap("AudioInfo")
+    public String audioInfoShrink;
+
     @NameInMap("AvatarInfo")
     public String avatarInfoShrink;
 
@@ -42,6 +45,14 @@ public class SubmitAudioTo2DAvatarVideoTaskShrinkRequest extends TeaModel {
     }
     public String getAppShrink() {
         return this.appShrink;
+    }
+
+    public SubmitAudioTo2DAvatarVideoTaskShrinkRequest setAudioInfoShrink(String audioInfoShrink) {
+        this.audioInfoShrink = audioInfoShrink;
+        return this;
+    }
+    public String getAudioInfoShrink() {
+        return this.audioInfoShrink;
     }
 
     public SubmitAudioTo2DAvatarVideoTaskShrinkRequest setAvatarInfoShrink(String avatarInfoShrink) {

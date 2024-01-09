@@ -7,6 +7,9 @@ public class SubmitAudioTo3DAvatarVideoTaskRequest extends TeaModel {
     @NameInMap("App")
     public SubmitAudioTo3DAvatarVideoTaskRequestApp app;
 
+    @NameInMap("AudioInfo")
+    public SubmitAudioTo3DAvatarVideoTaskRequestAudioInfo audioInfo;
+
     @NameInMap("AvatarInfo")
     public SubmitAudioTo3DAvatarVideoTaskRequestAvatarInfo avatarInfo;
 
@@ -42,6 +45,14 @@ public class SubmitAudioTo3DAvatarVideoTaskRequest extends TeaModel {
     }
     public SubmitAudioTo3DAvatarVideoTaskRequestApp getApp() {
         return this.app;
+    }
+
+    public SubmitAudioTo3DAvatarVideoTaskRequest setAudioInfo(SubmitAudioTo3DAvatarVideoTaskRequestAudioInfo audioInfo) {
+        this.audioInfo = audioInfo;
+        return this;
+    }
+    public SubmitAudioTo3DAvatarVideoTaskRequestAudioInfo getAudioInfo() {
+        return this.audioInfo;
     }
 
     public SubmitAudioTo3DAvatarVideoTaskRequest setAvatarInfo(SubmitAudioTo3DAvatarVideoTaskRequestAvatarInfo avatarInfo) {
@@ -123,6 +134,25 @@ public class SubmitAudioTo3DAvatarVideoTaskRequest extends TeaModel {
         }
         public String getAppId() {
             return this.appId;
+        }
+
+    }
+
+    public static class SubmitAudioTo3DAvatarVideoTaskRequestAudioInfo extends TeaModel {
+        @NameInMap("SampleRate")
+        public Integer sampleRate;
+
+        public static SubmitAudioTo3DAvatarVideoTaskRequestAudioInfo build(java.util.Map<String, ?> map) throws Exception {
+            SubmitAudioTo3DAvatarVideoTaskRequestAudioInfo self = new SubmitAudioTo3DAvatarVideoTaskRequestAudioInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitAudioTo3DAvatarVideoTaskRequestAudioInfo setSampleRate(Integer sampleRate) {
+            this.sampleRate = sampleRate;
+            return this;
+        }
+        public Integer getSampleRate() {
+            return this.sampleRate;
         }
 
     }
