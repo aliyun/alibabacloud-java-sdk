@@ -142,6 +142,9 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends TeaModel {
         @NameInMap("PitchRate")
         public Integer pitchRate;
 
+        @NameInMap("SampleRate")
+        public Integer sampleRate;
+
         @NameInMap("SpeechRate")
         public Integer speechRate;
 
@@ -162,6 +165,14 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends TeaModel {
         }
         public Integer getPitchRate() {
             return this.pitchRate;
+        }
+
+        public SubmitTextTo2DAvatarVideoTaskRequestAudioInfo setSampleRate(Integer sampleRate) {
+            this.sampleRate = sampleRate;
+            return this;
+        }
+        public Integer getSampleRate() {
+            return this.sampleRate;
         }
 
         public SubmitTextTo2DAvatarVideoTaskRequestAudioInfo setSpeechRate(Integer speechRate) {
@@ -253,6 +264,69 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends TeaModel {
 
     }
 
+    public static class SubmitTextTo2DAvatarVideoTaskRequestVideoInfoSubtitleStyle extends TeaModel {
+        @NameInMap("Color")
+        public String color;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("OutlineColor")
+        public String outlineColor;
+
+        @NameInMap("Size")
+        public Integer size;
+
+        @NameInMap("Y")
+        public Integer y;
+
+        public static SubmitTextTo2DAvatarVideoTaskRequestVideoInfoSubtitleStyle build(java.util.Map<String, ?> map) throws Exception {
+            SubmitTextTo2DAvatarVideoTaskRequestVideoInfoSubtitleStyle self = new SubmitTextTo2DAvatarVideoTaskRequestVideoInfoSubtitleStyle();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitTextTo2DAvatarVideoTaskRequestVideoInfoSubtitleStyle setColor(String color) {
+            this.color = color;
+            return this;
+        }
+        public String getColor() {
+            return this.color;
+        }
+
+        public SubmitTextTo2DAvatarVideoTaskRequestVideoInfoSubtitleStyle setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public SubmitTextTo2DAvatarVideoTaskRequestVideoInfoSubtitleStyle setOutlineColor(String outlineColor) {
+            this.outlineColor = outlineColor;
+            return this;
+        }
+        public String getOutlineColor() {
+            return this.outlineColor;
+        }
+
+        public SubmitTextTo2DAvatarVideoTaskRequestVideoInfoSubtitleStyle setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public SubmitTextTo2DAvatarVideoTaskRequestVideoInfoSubtitleStyle setY(Integer y) {
+            this.y = y;
+            return this;
+        }
+        public Integer getY() {
+            return this.y;
+        }
+
+    }
+
     public static class SubmitTextTo2DAvatarVideoTaskRequestVideoInfo extends TeaModel {
         @NameInMap("AlphaFormat")
         public Integer alphaFormat;
@@ -272,6 +346,9 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends TeaModel {
 
         @NameInMap("SubtitleEmbedded")
         public Boolean subtitleEmbedded;
+
+        @NameInMap("SubtitleStyle")
+        public SubmitTextTo2DAvatarVideoTaskRequestVideoInfoSubtitleStyle subtitleStyle;
 
         public static SubmitTextTo2DAvatarVideoTaskRequestVideoInfo build(java.util.Map<String, ?> map) throws Exception {
             SubmitTextTo2DAvatarVideoTaskRequestVideoInfo self = new SubmitTextTo2DAvatarVideoTaskRequestVideoInfo();
@@ -324,6 +401,14 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends TeaModel {
         }
         public Boolean getSubtitleEmbedded() {
             return this.subtitleEmbedded;
+        }
+
+        public SubmitTextTo2DAvatarVideoTaskRequestVideoInfo setSubtitleStyle(SubmitTextTo2DAvatarVideoTaskRequestVideoInfoSubtitleStyle subtitleStyle) {
+            this.subtitleStyle = subtitleStyle;
+            return this;
+        }
+        public SubmitTextTo2DAvatarVideoTaskRequestVideoInfoSubtitleStyle getSubtitleStyle() {
+            return this.subtitleStyle;
         }
 
     }
