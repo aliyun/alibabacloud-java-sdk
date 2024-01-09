@@ -3,7 +3,7 @@ package com.aliyun.hdr20170925.models;
 
 import com.aliyun.tea.*;
 
-public class EnableReplicationResponse extends TeaModel {
+public class CreateRecoveryPlanResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class EnableReplicationResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public EnableReplicationResponseBody body;
+    public CreateRecoveryPlanResponseBody body;
 
-    public static EnableReplicationResponse build(java.util.Map<String, ?> map) throws Exception {
-        EnableReplicationResponse self = new EnableReplicationResponse();
+    public static CreateRecoveryPlanResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateRecoveryPlanResponse self = new CreateRecoveryPlanResponse();
         return TeaModel.build(map, self);
     }
 
-    public EnableReplicationResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateRecoveryPlanResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class EnableReplicationResponse extends TeaModel {
         return this.headers;
     }
 
-    public EnableReplicationResponse setStatusCode(Integer statusCode) {
+    public CreateRecoveryPlanResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class EnableReplicationResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public EnableReplicationResponse setBody(EnableReplicationResponseBody body) {
+    public CreateRecoveryPlanResponse setBody(CreateRecoveryPlanResponseBody body) {
         this.body = body;
         return this;
     }
-    public EnableReplicationResponseBody getBody() {
+    public CreateRecoveryPlanResponseBody getBody() {
         return this.body;
     }
 

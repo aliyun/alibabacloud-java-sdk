@@ -4,69 +4,57 @@ package com.aliyun.hdr20170925.models;
 import com.aliyun.tea.*;
 
 public class TestFailoverRequest extends TeaModel {
-    // 演练实例绑定的弹性公网IP ID
     @NameInMap("EipAddressId")
     public String eipAddressId;
 
-    // 演练实例的CPU核数
     @NameInMap("RecoveryCpu")
     public Integer recoveryCpu;
 
-    // 演练的实例名称
+    @NameInMap("RecoveryEssdPerformanceLevel")
+    public String recoveryEssdPerformanceLevel;
+
     @NameInMap("RecoveryInstanceName")
     public String recoveryInstanceName;
 
-    // 演练的实例规格，未指定时按照指定的CPU核数、内存大小自动寻找可用规格
     @NameInMap("RecoveryInstanceType")
     public String recoveryInstanceType;
 
-    // 演练实例的IP
     @NameInMap("RecoveryIpAddress")
     public String recoveryIpAddress;
 
-    // 演练实例的内存大小，单位MB
     @NameInMap("RecoveryMemory")
     public Long recoveryMemory;
 
-    // 演练实例所在的VSwitch ID
     @NameInMap("RecoveryNetwork")
     public String recoveryNetwork;
 
-    // 演练实例使用的恢复点ID
     @NameInMap("RecoveryPointId")
     public String recoveryPointId;
 
     @NameInMap("RecoveryPointTime")
     public Long recoveryPointTime;
 
-    // 演练实例启动后执行脚本
     @NameInMap("RecoveryPostScriptContent")
     public String recoveryPostScriptContent;
 
-    // 演练实例启动后执行脚本类型，可选项：SHELL
     @NameInMap("RecoveryPostScriptType")
     public String recoveryPostScriptType;
 
-    // 演练实例是否保留源机的IP（需要演练所在的VSwitch包含相应网段）
     @NameInMap("RecoveryReserveIp")
     public Boolean recoveryReserveIp;
 
-    // 演练实例是否使用DHCP指定IP
     @NameInMap("RecoveryUseDhcp")
     public Boolean recoveryUseDhcp;
 
-    // 演练实例是否使用ESSD类型的云盘
     @NameInMap("RecoveryUseEssd")
     public Boolean recoveryUseEssd;
 
-    // 演练实例是否使用SSD类型的云盘
     @NameInMap("RecoveryUseSsd")
     public Boolean recoveryUseSsd;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    // 受保护服务器ID
     @NameInMap("ServerId")
     public String serverId;
 
@@ -89,6 +77,14 @@ public class TestFailoverRequest extends TeaModel {
     }
     public Integer getRecoveryCpu() {
         return this.recoveryCpu;
+    }
+
+    public TestFailoverRequest setRecoveryEssdPerformanceLevel(String recoveryEssdPerformanceLevel) {
+        this.recoveryEssdPerformanceLevel = recoveryEssdPerformanceLevel;
+        return this;
+    }
+    public String getRecoveryEssdPerformanceLevel() {
+        return this.recoveryEssdPerformanceLevel;
     }
 
     public TestFailoverRequest setRecoveryInstanceName(String recoveryInstanceName) {

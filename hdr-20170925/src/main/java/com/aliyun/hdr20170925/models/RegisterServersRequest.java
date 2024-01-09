@@ -4,15 +4,12 @@ package com.aliyun.hdr20170925.models;
 import com.aliyun.tea.*;
 
 public class RegisterServersRequest extends TeaModel {
-    // 代理服务端口，默认9080
     @NameInMap("AgentPort")
     public Integer agentPort;
 
-    // 注册服务器信息
     @NameInMap("ServerInstancesInfo")
     public String serverInstancesInfo;
 
-    // 站点对ID
     @NameInMap("SitePairId")
     public String sitePairId;
 
