@@ -7,6 +7,12 @@ public class GetDocStructureResultRequest extends TeaModel {
     @NameInMap("Id")
     public String id;
 
+    @NameInMap("ImageStrategy")
+    public String imageStrategy;
+
+    @NameInMap("RevealMarkdown")
+    public Boolean revealMarkdown;
+
     public static GetDocStructureResultRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDocStructureResultRequest self = new GetDocStructureResultRequest();
         return TeaModel.build(map, self);
@@ -18,6 +24,22 @@ public class GetDocStructureResultRequest extends TeaModel {
     }
     public String getId() {
         return this.id;
+    }
+
+    public GetDocStructureResultRequest setImageStrategy(String imageStrategy) {
+        this.imageStrategy = imageStrategy;
+        return this;
+    }
+    public String getImageStrategy() {
+        return this.imageStrategy;
+    }
+
+    public GetDocStructureResultRequest setRevealMarkdown(Boolean revealMarkdown) {
+        this.revealMarkdown = revealMarkdown;
+        return this;
+    }
+    public Boolean getRevealMarkdown() {
+        return this.revealMarkdown;
     }
 
 }
