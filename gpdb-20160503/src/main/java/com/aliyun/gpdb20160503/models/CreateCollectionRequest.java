@@ -13,6 +13,9 @@ public class CreateCollectionRequest extends TeaModel {
     @NameInMap("Dimension")
     public Long dimension;
 
+    @NameInMap("ExternalStorage")
+    public Integer externalStorage;
+
     @NameInMap("FullTextRetrievalFields")
     public String fullTextRetrievalFields;
 
@@ -73,6 +76,14 @@ public class CreateCollectionRequest extends TeaModel {
     }
     public Long getDimension() {
         return this.dimension;
+    }
+
+    public CreateCollectionRequest setExternalStorage(Integer externalStorage) {
+        this.externalStorage = externalStorage;
+        return this;
+    }
+    public Integer getExternalStorage() {
+        return this.externalStorage;
     }
 
     public CreateCollectionRequest setFullTextRetrievalFields(String fullTextRetrievalFields) {
