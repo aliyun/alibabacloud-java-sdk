@@ -227,6 +227,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Dimension", request.dimension);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.externalStorage)) {
+            query.put("ExternalStorage", request.externalStorage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fullTextRetrievalFields)) {
             query.put("FullTextRetrievalFields", request.fullTextRetrievalFields);
         }
@@ -590,6 +594,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EmbeddingModel", request.embeddingModel);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.externalStorage)) {
+            query.put("ExternalStorage", request.externalStorage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fullTextRetrievalFields)) {
             query.put("FullTextRetrievalFields", request.fullTextRetrievalFields);
         }
@@ -815,6 +823,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dimension)) {
             query.put("Dimension", request.dimension);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.externalStorage)) {
+            query.put("ExternalStorage", request.externalStorage);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.hnswM)) {
@@ -1343,6 +1355,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAccountsResponse describeAccounts(DescribeAccountsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAccountsWithOptions(request, runtime);
+    }
+
+    public DescribeActiveSQLRecordsResponse describeActiveSQLRecordsWithOptions(DescribeActiveSQLRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.database)) {
+            query.put("Database", request.database);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxDuration)) {
+            query.put("MaxDuration", request.maxDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minDuration)) {
+            query.put("MinDuration", request.minDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.user)) {
+            query.put("User", request.user);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeActiveSQLRecords"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeActiveSQLRecordsResponse());
+    }
+
+    public DescribeActiveSQLRecordsResponse describeActiveSQLRecords(DescribeActiveSQLRecordsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeActiveSQLRecordsWithOptions(request, runtime);
     }
 
     /**

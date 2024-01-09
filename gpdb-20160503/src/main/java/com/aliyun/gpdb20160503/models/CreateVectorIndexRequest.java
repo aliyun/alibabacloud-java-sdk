@@ -13,6 +13,9 @@ public class CreateVectorIndexRequest extends TeaModel {
     @NameInMap("Dimension")
     public Integer dimension;
 
+    @NameInMap("ExternalStorage")
+    public Integer externalStorage;
+
     @NameInMap("HnswM")
     public Integer hnswM;
 
@@ -67,6 +70,14 @@ public class CreateVectorIndexRequest extends TeaModel {
     }
     public Integer getDimension() {
         return this.dimension;
+    }
+
+    public CreateVectorIndexRequest setExternalStorage(Integer externalStorage) {
+        this.externalStorage = externalStorage;
+        return this;
+    }
+    public Integer getExternalStorage() {
+        return this.externalStorage;
     }
 
     public CreateVectorIndexRequest setHnswM(Integer hnswM) {

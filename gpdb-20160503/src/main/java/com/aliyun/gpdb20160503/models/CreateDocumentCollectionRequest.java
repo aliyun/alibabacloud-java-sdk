@@ -13,6 +13,9 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     @NameInMap("EmbeddingModel")
     public String embeddingModel;
 
+    @NameInMap("ExternalStorage")
+    public Integer externalStorage;
+
     @NameInMap("FullTextRetrievalFields")
     public String fullTextRetrievalFields;
 
@@ -73,6 +76,14 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     }
     public String getEmbeddingModel() {
         return this.embeddingModel;
+    }
+
+    public CreateDocumentCollectionRequest setExternalStorage(Integer externalStorage) {
+        this.externalStorage = externalStorage;
+        return this;
+    }
+    public Integer getExternalStorage() {
+        return this.externalStorage;
     }
 
     public CreateDocumentCollectionRequest setFullTextRetrievalFields(String fullTextRetrievalFields) {
