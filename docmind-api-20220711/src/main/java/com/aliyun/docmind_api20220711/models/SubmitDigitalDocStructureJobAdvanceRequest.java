@@ -13,6 +13,12 @@ public class SubmitDigitalDocStructureJobAdvanceRequest extends TeaModel {
     @NameInMap("FileUrl")
     public java.io.InputStream fileUrlObject;
 
+    @NameInMap("ImageStrategy")
+    public String imageStrategy;
+
+    @NameInMap("RevealMarkdown")
+    public Boolean revealMarkdown;
+
     public static SubmitDigitalDocStructureJobAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitDigitalDocStructureJobAdvanceRequest self = new SubmitDigitalDocStructureJobAdvanceRequest();
         return TeaModel.build(map, self);
@@ -40,6 +46,22 @@ public class SubmitDigitalDocStructureJobAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getFileUrlObject() {
         return this.fileUrlObject;
+    }
+
+    public SubmitDigitalDocStructureJobAdvanceRequest setImageStrategy(String imageStrategy) {
+        this.imageStrategy = imageStrategy;
+        return this;
+    }
+    public String getImageStrategy() {
+        return this.imageStrategy;
+    }
+
+    public SubmitDigitalDocStructureJobAdvanceRequest setRevealMarkdown(Boolean revealMarkdown) {
+        this.revealMarkdown = revealMarkdown;
+        return this;
+    }
+    public Boolean getRevealMarkdown() {
+        return this.revealMarkdown;
     }
 
 }
