@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ListClusterChecksRequest extends TeaModel {
+    /**
+     * <p>The check method.</p>
+     */
     @NameInMap("type")
     public String type;
 

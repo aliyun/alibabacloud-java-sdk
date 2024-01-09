@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClustersV1Request extends TeaModel {
+    /**
+     * <p>集群ID。</p>
+     */
     @NameInMap("cluster_id")
     public String clusterId;
 
@@ -19,14 +22,11 @@ public class DescribeClustersV1Request extends TeaModel {
     public String clusterSpec;
 
     /**
-     * <p>The type of cluster. Valid values:</p>
+     * <p>The cluster type. Valid values:</p>
      * <br>
-     * <p>*   `Kubernetes`: ACK dedicated cluster</p>
-     * <p>*   `ManagedKubernetes`: ACK managed cluster, ACK Serverless cluster, or ACK Edge cluster</p>
-     * <p>*   `Ask`: ACK Serverless cluster</p>
-     * <p>*   `ExternalKubernetes`: registered cluster</p>
-     * <br>
-     * <p>If you want to query ACK Serverless clusters, specify ManagedKubernetes or Ask based on the value that you specified when you created the ACK Serverless clusters.</p>
+     * <p>*   `Kubernetes`: ACK dedicated cluster.</p>
+     * <p>*   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.</p>
+     * <p>*   `ExternalKubernetes`: registered cluster.</p>
      */
     @NameInMap("cluster_type")
     public String clusterType;
@@ -52,13 +52,17 @@ public class DescribeClustersV1Request extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The cluster identifier, which is available only when the cluster type is set to `ManagedKubernetes`. Valid values:</p>
+     * <p>The identifier of the cluster. Valid values when the cluster_type parameter is set to `ManagedKubernetes`:</p>
      * <br>
      * <p>*   `Default`: ACK managed cluster</p>
      * <p>*   `Serverless`: ACK Serverless cluster</p>
      * <p>*   `Edge`: ACK Edge cluster</p>
      * <br>
-     * <p>By default, this parameter is left empty, which means that ACK clusters are not filtered by this parameter.</p>
+     * <p>Valid values when the cluster_type parameter is set to `Ask`:</p>
+     * <br>
+     * <p>`ask.v2`: ACK Serverless cluster</p>
+     * <br>
+     * <p>By default, this parameter is left empty. If you leave this parameter empty, ACK clusters are not filtered by identifier.</p>
      */
     @NameInMap("profile")
     public String profile;

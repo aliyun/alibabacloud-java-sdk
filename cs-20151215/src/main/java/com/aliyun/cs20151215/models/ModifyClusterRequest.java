@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyClusterRequest extends TeaModel {
     /**
-     * <p>注册集群 API Server SLB 访问控制列表。</p>
+     * <p>The network access control list (ACL) of the SLB instance associated with the API server if the cluster is a registered cluster.</p>
      */
     @NameInMap("access_control_list")
     public java.util.List<String> accessControlList;
@@ -25,6 +25,11 @@ public class ModifyClusterRequest extends TeaModel {
     @NameInMap("api_server_eip_id")
     public String apiServerEipId;
 
+    /**
+     * <p>The cluster name.</p>
+     * <br>
+     * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
+     */
     @NameInMap("cluster_name")
     public String clusterName;
 
@@ -88,6 +93,9 @@ public class ModifyClusterRequest extends TeaModel {
     @NameInMap("resource_group_id")
     public String resourceGroupId;
 
+    /**
+     * <p>系统事件存储配置。</p>
+     */
     @NameInMap("system_events_logging")
     public ModifyClusterRequestSystemEventsLogging systemEventsLogging;
 
@@ -193,9 +201,15 @@ public class ModifyClusterRequest extends TeaModel {
     }
 
     public static class ModifyClusterRequestSystemEventsLogging extends TeaModel {
+        /**
+         * <p>是否开启系统事件存储。</p>
+         */
         @NameInMap("enabled")
         public Boolean enabled;
 
+        /**
+         * <p>系统事件存储的LogProject名称。</p>
+         */
         @NameInMap("logging_project")
         public String loggingProject;
 

@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class RemoveNodePoolNodesShrinkRequest extends TeaModel {
+    /**
+     * <p>是否并发移除。</p>
+     */
     @NameInMap("concurrency")
     public Boolean concurrency;
 

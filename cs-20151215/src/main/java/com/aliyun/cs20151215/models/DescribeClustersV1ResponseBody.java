@@ -92,7 +92,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String dockerVersion;
 
         /**
-         * <p>The ID of the Server Load Balancer (SLB) instance that is used for the Ingress of the cluster.</p>
+         * <p>The ID of the Server Load Balancer (SLB) instance that is used by the Ingress of the cluster.</p>
          * <br>
          * <p>The default SLB specification is slb.s1.small, which belongs to the high-performance instance type.</p>
          */
@@ -102,7 +102,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         /**
          * <p>The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the versions of open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not specify this parameter, the latest Kubernetes version is used.</p>
          * <br>
-         * <p>You can create clusters of the latest two Kubernetes versions in the ACK console. You can call a specific ACK API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](~~185269~~).</p>
+         * <p>You can create clusters of the latest two Kubernetes versions in the ACK console. You can call the corresponding ACK API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](~~185269~~).</p>
          */
         @NameInMap("init_version")
         public String initVersion;
@@ -126,9 +126,9 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String metaData;
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The cluster name.</p>
          * <br>
-         * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
+         * <p>The name must be 1 to 63 characters in length and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
          */
         @NameInMap("name")
         public String name;
@@ -139,7 +139,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
          * <p>*   `classic`: classic network</p>
          * <p>*   `vpc`: virtual private cloud (VPC)</p>
          * <p>*   `overlay`: overlay network</p>
-         * <p>*   `calico`: network powered by Calico</p>
+         * <p>*   `calico`: network powered by Calico.</p>
          */
         @NameInMap("network_mode")
         public String networkMode;
@@ -162,14 +162,14 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         /**
          * <p>The cluster identifier. Valid values:</p>
          * <br>
-         * <p>*   `Edge`: ACK Edge cluster</p>
-         * <p>*   `Default`: non-ACK Edge cluster</p>
+         * <p>*   `Edge`: The cluster is an ACK Edge cluster.</p>
+         * <p>*   `Default`: The cluster is not an ACK Edge cluster.</p>
          */
         @NameInMap("profile")
         public String profile;
 
         /**
-         * <p>The region ID of the associated cluster.</p>
+         * <p>The region ID of the cluster.</p>
          */
         @NameInMap("region_id")
         public String regionId;
@@ -181,7 +181,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The ID of the security group to which the cluster belongs.</p>
+         * <p>The ID of the security group to which the instances of the cluster belong.</p>
          */
         @NameInMap("security_group_id")
         public String securityGroupId;
@@ -224,7 +224,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String subnetCidr;
 
         /**
-         * <p>The labels of the cluster.</p>
+         * <p>The resource labels of the cluster.</p>
          */
         @NameInMap("tags")
         public java.util.List<Tag> tags;
@@ -248,7 +248,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String vswitchId;
 
         /**
-         * <p>The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage ECS instances.</p>
+         * <p>The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage Elastic Compute Service (ECS) instances.</p>
          */
         @NameInMap("worker_ram_role_name")
         public String workerRamRoleName;

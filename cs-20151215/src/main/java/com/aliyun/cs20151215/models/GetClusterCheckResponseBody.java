@@ -10,21 +10,39 @@ public class GetClusterCheckResponseBody extends TeaModel {
     @NameInMap("check_id")
     public String checkId;
 
+    /**
+     * <p>The list of check items.</p>
+     */
     @NameInMap("check_items")
     public java.util.Map<String, java.util.List<java.util.Map<String, ?>>> checkItems;
 
+    /**
+     * <p>The time when the cluster check task was created.</p>
+     */
     @NameInMap("created_at")
     public String createdAt;
 
+    /**
+     * <p>The time when the cluster check task was completed.</p>
+     */
     @NameInMap("finished_at")
     public String finishedAt;
 
+    /**
+     * <p>The message that indicates the status of the cluster check task.</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The status of the cluster check.</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The check method.</p>
+     */
     @NameInMap("type")
     public String type;
 

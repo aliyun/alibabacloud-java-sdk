@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeNodePoolVulsResponseBody extends TeaModel {
+    /**
+     * <p>The node pool vulnerabilities.</p>
+     */
     @NameInMap("vul_records")
     public java.util.List<DescribeNodePoolVulsResponseBodyVulRecords> vulRecords;
 
@@ -32,15 +35,71 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
     }
 
     public static class DescribeNodePoolVulsResponseBodyVulRecordsVulList extends TeaModel {
+        /**
+         * <p>The alias of the vulnerability.</p>
+         */
         @NameInMap("alias_name")
         public String aliasName;
 
+        /**
+         * <p>A list of CVE names corresponding to the vulnerabilities.</p>
+         */
         @NameInMap("cve_list")
         public java.util.List<String> cveList;
 
+        /**
+         * <p>The name of the vulnerability.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The severity level of the vulnerability.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   nntf</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    You can ignore the vulnerability</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   later</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    You can fix the vulnerability later</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   asap</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    You need to fix the vulnerability at the earliest opportunity</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         */
         @NameInMap("necessity")
         public String necessity;
 
@@ -84,12 +143,21 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
     }
 
     public static class DescribeNodePoolVulsResponseBodyVulRecords extends TeaModel {
+        /**
+         * <p>The node ID.</p>
+         */
         @NameInMap("instance_id")
         public String instanceId;
 
+        /**
+         * <p>The node name. This name is the identifier of the node in the cluster.</p>
+         */
         @NameInMap("node_name")
         public String nodeName;
 
+        /**
+         * <p>A list of vulnerabilities.</p>
+         */
         @NameInMap("vul_list")
         public java.util.List<DescribeNodePoolVulsResponseBodyVulRecordsVulList> vulList;
 

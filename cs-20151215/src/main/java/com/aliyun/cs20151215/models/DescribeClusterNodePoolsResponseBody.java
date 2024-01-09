@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterNodePoolsResponseBody extends TeaModel {
     /**
-     * <p>The list of the returned node pools.</p>
+     * <p>A list of node pools.</p>
      */
     @NameInMap("nodepools")
     public java.util.List<DescribeClusterNodePoolsResponseBodyNodepools> nodepools;
@@ -25,7 +25,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsAutoScaling extends TeaModel {
         /**
-         * <p>The maximum bandwidth of the elastic IP address (EIP).</p>
+         * <p>The maximum bandwidth of the EIP.</p>
          */
         @NameInMap("eip_bandwidth")
         public Long eipBandwidth;
@@ -34,7 +34,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
          * <p>The metering method of the EIP. Valid values:</p>
          * <br>
          * <p>*   `PayByBandwidth`: pay-by-bandwidth.</p>
-         * <p>*   `PayByTraffic`: pay-by-data-transfer.</p>
+         * <p>*   `PayByTraffic`: pay-by-traffic.</p>
          */
         @NameInMap("eip_internet_charge_type")
         public String eipInternetChargeType;
@@ -64,13 +64,13 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public Long maxInstances;
 
         /**
-         * <p>The minimum number of ECS instances that must be kept in the node pool.</p>
+         * <p>The minimum number of ECS instances that must be retained in the node pool.</p>
          */
         @NameInMap("min_instances")
         public Long minInstances;
 
         /**
-         * <p>The instance types that can be used for the auto scaling of the node pool. Valid values:</p>
+         * <p>The instance types that can be used for the auto scaling of a node pool. Valid values:</p>
          * <br>
          * <p>*   `cpu`: regular instance.</p>
          * <p>*   `gpu`: GPU-accelerated instance.</p>
@@ -145,30 +145,40 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsInterconnectConfig extends TeaModel {
         /**
-         * <p>The bandwidth of the enhanced edge node pool. Unit: M.</p>
+         * <p>This parameter is deprecated.</p>
+         * <br>
+         * <p>The bandwidth of the enhanced edge node pool. Unit: Mbit/s.</p>
          */
         @NameInMap("bandwidth")
         public Long bandwidth;
 
         /**
+         * <p>This parameter is deprecated.</p>
+         * <br>
          * <p>The ID of the Cloud Connect Network (CCN) instance that is associated with the enhanced edge node pool.</p>
          */
         @NameInMap("ccn_id")
         public String ccnId;
 
         /**
-         * <p>The region to which the CCN instance that is associated with the enhanced edge node pool belongs.</p>
+         * <p>This parameter is deprecated.</p>
+         * <br>
+         * <p>The region to which the CCN instance that is with the enhanced edge node pool belongs.</p>
          */
         @NameInMap("ccn_region_id")
         public String ccnRegionId;
 
         /**
+         * <p>This parameter is deprecated.</p>
+         * <br>
          * <p>The ID of the Cloud Enterprise Network (CEN) instance that is associated with the enhanced edge node pool.</p>
          */
         @NameInMap("cen_id")
         public String cenId;
 
         /**
+         * <p>This parameter is deprecated.</p>
+         * <br>
          * <p>The subscription duration of the enhanced edge node pool. The duration is measured in months.</p>
          */
         @NameInMap("improved_period")
@@ -232,9 +242,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public Boolean cmsEnabled;
 
         /**
-         * <p>The CPU management policy of the nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later.</p>
+         * <p>The CPU management policy. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later.</p>
          * <br>
-         * <p>*   `static`: allows pods with specific resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.</p>
+         * <p>*   `static`: This policy allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.</p>
          * <p>*   `none`: indicates that the default CPU affinity is used.</p>
          */
         @NameInMap("cpu_policy")
@@ -243,8 +253,8 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         /**
          * <p>The labels of the nodes in the node pool. You can add labels to the nodes in the cluster. You must add labels based on the following rules:</p>
          * <br>
-         * <p>*   Each label is a case-sensitive key-value pair. You can add up to 20 labels.</p>
-         * <p>*   A key must be unique and cannot exceed 64 characters in length. A value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with `aliyun`, `acs:`, `https://`, or `http://`. For more information, see [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set).</p>
+         * <p>*   Each label is a case-sensitive key-value pair. You can add at most 20 labels.</p>
+         * <p>*   The key must be unique and cannot exceed 64 characters in length. The value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with `aliyun`, `acs:`, `https://`, or `http://`. For more information, see [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set).</p>
          */
         @NameInMap("labels")
         public java.util.List<Tag> labels;
@@ -273,16 +283,19 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public String runtimeVersion;
 
         /**
-         * <p>The taints of the nodes in the node pool. Taints are added to nodes to prevent pods from being scheduled to inappropriate nodes. However, tolerations allow pods to be scheduled to nodes with matching taints. For more information, see [taint-and-toleration](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).</p>
+         * <p>The taints that you want to add to nodes. Taints are added to nodes to prevent pods from being scheduled to inappropriate nodes. However, tolerations allow pods to be scheduled to nodes with matching taints. For more information, see [taint-and-toleration](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).</p>
          */
         @NameInMap("taints")
         public java.util.List<Taint> taints;
 
+        /**
+         * <p>扩容后的节点是否可调度。</p>
+         */
         @NameInMap("unschedulable")
         public Boolean unschedulable;
 
         /**
-         * <p>The user data of the node pool. For more information, see [Generate user data](~~49121~~).</p>
+         * <p>The user data of the node pool. For more information, see [Generate user-defined data](~~49121~~).</p>
          */
         @NameInMap("user_data")
         public String userData;
@@ -457,7 +470,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public Boolean autoUpgrade;
 
         /**
-         * <p>The maximum number of nodes that can be in the Unavailable state. Valid values: 1 to 1000.</p>
+         * <p>The maximum number of nodes that can be in the unschedulable state. Valid values: 1 to 1000.</p>
          * <br>
          * <p>Default value: 1.</p>
          */
@@ -471,9 +484,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public Long surge;
 
         /**
-         * <p>The percentage of additional nodes to the nodes in the node pool. You must set this parameter or `surge`.</p>
+         * <p>The percentage of temporary nodes to the nodes in the node pool. You must set this parameter or `surge`.</p>
          * <br>
-         * <p>The number of additional nodes = The percentage of additional nodes × The number of nodes in the node pool. For example, the percentage of additional nodes is set to 50% and the number of nodes in the node pool is six. The number of additional nodes will be three.</p>
+         * <p>The number of extra nodes = The percentage of extra nodes × The number of nodes in the node pool. For example, the percentage of extra nodes is set to 50% and the number of nodes in the node pool is six. The number of extra nodes will be three.</p>
          */
         @NameInMap("surge_percentage")
         public Long surgePercentage;
@@ -567,7 +580,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The configuration of auto update. The configuration takes effect only when `enable=true` is specified.</p>
+         * <p>The configuration of auto update. The configuration take effects only when `enable=true` is specified.</p>
          */
         @NameInMap("upgrade_config")
         public DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig upgradeConfig;
@@ -645,7 +658,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsNodeConfig extends TeaModel {
         /**
-         * <p>Kubelet参数配置。</p>
+         * <p>The kubelet configuration.</p>
          */
         @NameInMap("kubelet_configuration")
         public KubeletConfig kubeletConfiguration;
@@ -673,7 +686,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public String created;
 
         /**
-         * <p>Indicates whether the node pool is a default node pool. An ACK cluster usually has only one default node pool. Valid values:</p>
+         * <p>Indicates whether the node pool is a default node pool. A Container Service for Kubernetes (ACK) cluster usually has only one default node pool. Valid values:</p>
          * <br>
          * <p>*   `true`: The node pool is a default node pool.</p>
          * <p>*   `false`: The node pool is not a default node pool.</p>
@@ -684,7 +697,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         /**
          * <p>The name of the node pool.</p>
          * <br>
-         * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). It cannot start with a hyphen (-).</p>
+         * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
          */
         @NameInMap("name")
         public String name;
@@ -702,7 +715,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the resource group to which the node pool belongs.</p>
          */
         @NameInMap("resource_group_id")
         public String resourceGroupId;
@@ -710,7 +723,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         /**
          * <p>The type of node pool. Valid values:</p>
          * <br>
-         * <p>*   `edge`: edge node pool.</p>
+         * <p>*   `edge`: edge node pool</p>
          * <p>*   `ess`: node pool in the cloud.</p>
          */
         @NameInMap("type")
@@ -795,7 +808,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroupPrivatePoolOptions extends TeaModel {
         /**
-         * <p>The ID of the private node pool. The ID of a private node pool is the same as the ID of the elasticity assurance or capacity reservation for which the private node pool is generated.</p>
+         * <p>The private pool ID. The ID of a private pool is the same as the ID of the elasticity assurance or capacity reservation for which the private pool is generated.</p>
          */
         @NameInMap("id")
         public String id;
@@ -803,9 +816,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         /**
          * <p>The type of private node pool. This parameter specifies the type of private node pool that you want to use to create instances. A private node pool is generated when an elasticity assurance or a capacity reservation service takes effect. The system selects a private node pool to launch instances. Valid values:</p>
          * <br>
-         * <p>*   `Open`: open private pool. The system selects an open private node pool to launch instances. If no matching open private node pool is available, the resources in the public node pool are used.</p>
-         * <p>*   `Target`: specific private pool. The system uses the resources of the specified private node pool to launch instances. If the specified private node pool is unavailable, instances cannot be launched.</p>
-         * <p>*   `None`: no private node pool is used. The resources of private node pools are not used to launch the instances.</p>
+         * <p>*   `Open`: open private node pool. The system selects an open private node pool to launch instances. If no matching open private node pool is available, the resources in the public node pool are used.</p>
+         * <p>*   `Target`: specific private pool. The system uses the resources of the specified private node pool to launch instances. If the specified private node pool is unavailable, instances cannot be started.</p>
+         * <p>*   `None`: no private node pool is used. The resources of private node pools are not used to lancuh instances.</p>
          */
         @NameInMap("match_criteria")
         public String matchCriteria;
@@ -889,6 +902,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("auto_renew_period")
         public Long autoRenewPeriod;
 
+        /**
+         * <p>是否开启CIS加固，仅当系统镜像选择Alibaba Cloud Linux 2或Alibaba Cloud Linux 3时，可为节点开启CIS加固。</p>
+         */
         @NameInMap("cis_enabled")
         public Boolean cisEnabled;
 
@@ -914,7 +930,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public String deploymentsetId;
 
         /**
-         * <p>The expected number of nodes in the node pool.</p>
+         * <p>You can now specify the desired number of nodes for a node pool.</p>
          */
         @NameInMap("desired_size")
         public Long desiredSize;
@@ -925,11 +941,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("image_id")
         public String imageId;
 
+        /**
+         * <p>操作系统镜像类型。</p>
+         */
         @NameInMap("image_type")
         public String imageType;
 
         /**
-         * <p>The billing method of the nodes in the node pool. Valid values:</p>
+         * <p>The billing method of the nodes in a node pool. Valid values:</p>
          * <br>
          * <p>*   `PrePaid`: the subscription billing method.</p>
          * <p>*   `PostPaid`: the pay-as-you-go billing method.</p>
@@ -938,7 +957,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public String instanceChargeType;
 
         /**
-         * <p>A list of instance types. You can select multiple instance types. When the system needs to create a node, it starts from the first instance type until the node is created. The instance type that is used to create the node varies based on the actual instance stock.</p>
+         * <p>A list of instance types. You can select multiple instance types. When the system needs to create a node, it starts from the first instance type until the node is created. The actual instance types used to create nodes are subject to inventory availability.</p>
          */
         @NameInMap("instance_types")
         public java.util.List<String> instanceTypes;
@@ -963,6 +982,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("key_pair")
         public String keyPair;
 
+        /**
+         * <p>弹出的ECS实例是否使用以非root用户登陆。</p>
+         */
         @NameInMap("login_as_non_root")
         public Boolean loginAsNonRoot;
 
@@ -983,7 +1005,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
          * <br>
          * <p>    **</p>
          * <br>
-         * <p>    **Note**The `COST_OPTIMIZED` setting takes effect only when multiple instance types are specified or at least one instance type is specified for preemptible instances.</p>
+         * <p>    **Note** `COST_OPTIMIZED` takes effect only when multiple instance types or preemptible instances are specified in the auto scaling conflagrations.</p>
          * <br>
          * <p>*   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to insufficient inventory, you can call the `RebalanceInstances` operation of Auto Scaling to balance the instance distribution among zones. For more information, see [RebalanceInstances](~~71516~~).</p>
          */
@@ -1013,7 +1035,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         /**
          * <p>The billing cycle of the nodes. This parameter takes effect only when `instance_charge_type` is set to `PrePaid`.</p>
          * <br>
-         * <p>Valid value: `Month`.</p>
+         * <p>Valid value: `Month`</p>
          */
         @NameInMap("period_unit")
         public String periodUnit;
@@ -1036,13 +1058,13 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroupPrivatePoolOptions privatePoolOptions;
 
         /**
-         * <p>The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage ECS instances.</p>
+         * <p>The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes that are created on Elastic Compute Service (ECS) instances.</p>
          */
         @NameInMap("ram_policy")
         public String ramPolicy;
 
         /**
-         * <p>After you specify the list of RDS instances, the ECS instances in the cluster are automatically added to the whitelist of the RDS instances.</p>
+         * <p>After you specify a list of ApsaraDB RDS instances, the ECS instances in the cluster are automatically added to the whitelists of the ApsaraDB RDS instances.</p>
          */
         @NameInMap("rds_instances")
         public java.util.List<String> rdsInstances;
@@ -1057,7 +1079,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
          * <p>The scaling mode of the scaling group. Valid values:</p>
          * <br>
          * <p>*   `release`: the standard mode. ECS instances are created and released based on resource usage.</p>
-         * <p>*   `recycle`: the swift mode. ECS instances are created, stopped, or started during scaling events. This reduces the time required for the next scale-out event. When the instance is stopped, you are charged only for the storage service. This does not apply to ECS instances that are attached with local disks.</p>
+         * <p>*   `recycle`: the swift mode. ECS instances are created, stopped, or started during scaling events. This reduces the time required for the next scale-out event. When the instance is stopped, you are charged only for the storage service. This does not apply to ECS instances attached with local disks.</p>
          */
         @NameInMap("scaling_policy")
         public String scalingPolicy;
@@ -1074,6 +1096,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("security_group_ids")
         public java.util.List<String> securityGroupIds;
 
+        /**
+         * <p>是否开启等保加固，仅当系统镜像选择Alibaba Cloud Linux 2或Alibaba Cloud Linux 3时，可为节点开启等保加固。阿里云为Alibaba Cloud Linux 2和Alibaba Cloud Linux 3等保2.0三级版镜像提供等保合规的基线检查标准和扫描程序。</p>
+         */
         @NameInMap("soc_enabled")
         public Boolean socEnabled;
 
@@ -1084,7 +1109,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public Long spotInstancePools;
 
         /**
-         * <p>Indicates whether preemptible instances are supplemented when the number of preemptible instances drops below the specified minimum number. If this parameter is set to true, when the scaling group receives a system message that a preemptible instance is to be reclaimed, the scaling group attempts to create a new instance to replace this instance. Valid values: Valid values:</p>
+         * <p>Indicates whether preemptible instances are supplemented when the number of preemptible instances drops below the specified minimum number. If this parameter is set to true, when the scaling group receives a system message that a preemptible instance is to be reclaimed, the scaling group attempts to create a new instance to replace this instance. Valid values:</p>
          * <br>
          * <p>*   `true`: Supplementation of preemptible instances is enabled.</p>
          * <p>*   `false`: Supplementation of preemptible instances is disabled.</p>
@@ -1110,9 +1135,15 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("spot_strategy")
         public String spotStrategy;
 
+        /**
+         * <p>节点系统盘是否开启Burst（性能突发），磁盘类型为cloud_auto时配置。</p>
+         */
         @NameInMap("system_disk_bursting_enabled")
         public Boolean systemDiskBurstingEnabled;
 
+        /**
+         * <p>系统盘的多磁盘类型。当无法使用高优先级的磁盘类型时，自动尝试下一优先级的磁盘类型创建系统盘。取值范围：cloud：普通云盘。cloud_efficiency：高效云盘。cloud_ssd：SSD云盘。cloud_essd：ESSD云盘。</p>
+         */
         @NameInMap("system_disk_categories")
         public java.util.List<String> systemDiskCategories;
 
@@ -1125,12 +1156,21 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("system_disk_category")
         public String systemDiskCategory;
 
+        /**
+         * <p>系统盘采用的加密算法。取值范围：aes-256。</p>
+         */
         @NameInMap("system_disk_encrypt_algorithm")
         public String systemDiskEncryptAlgorithm;
 
+        /**
+         * <p>是否加密系统盘。取值范围：true：加密。false：不加密。</p>
+         */
         @NameInMap("system_disk_encrypted")
         public Boolean systemDiskEncrypted;
 
+        /**
+         * <p>系统盘使用的KMS密钥ID。</p>
+         */
         @NameInMap("system_disk_kms_key_id")
         public String systemDiskKmsKeyId;
 
@@ -1140,13 +1180,16 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("system_disk_performance_level")
         public String systemDiskPerformanceLevel;
 
+        /**
+         * <p>节点系统盘预配置的读写IOPS，磁盘类型为cloud_auto时配置。</p>
+         */
         @NameInMap("system_disk_provisioned_iops")
         public Long systemDiskProvisionedIops;
 
         /**
          * <p>The system disk size of a node. Unit: GiB.</p>
          * <br>
-         * <p>Valid values: 20 to 500.</p>
+         * <p>Valid values: 20 to 500</p>
          */
         @NameInMap("system_disk_size")
         public Long systemDiskSize;
@@ -1154,15 +1197,15 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         /**
          * <p>The labels that you want to add to the ECS instances.</p>
          * <br>
-         * <p>A key must be unique and cannot exceed 128 characters in length. Neither keys nor values can start with aliyun or acs:. Neither keys nor values can contain https:// or http://.</p>
+         * <p>The key must be unique and cannot exceed 128 characters in length. Neither keys nor values can start with aliyun or acs:. Neither keys nor values can contain https:// or http://.</p>
          */
         @NameInMap("tags")
         public java.util.List<Tag> tags;
 
         /**
-         * <p>The IDs of vSwitches. You can specify 1 to 20 vSwitches.</p>
+         * <p>The vSwitch IDs. You can specify 1 to 20 vSwitches.</p>
          * <br>
-         * <p>> We recommend that you select vSwitches in different zones to ensure high availability.</p>
+         * <p>>  To ensure high availability, we recommend that you select vSwitches in different zones.</p>
          */
         @NameInMap("vswitch_ids")
         public java.util.List<String> vswitchIds;
@@ -1693,25 +1736,27 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public DescribeClusterNodePoolsResponseBodyNodepoolsAutoScaling autoScaling;
 
         /**
+         * <p>This parameter is deprecated.</p>
+         * <br>
          * <p>The network configuration of the edge node pool. This parameter takes effect only for edge node pools.</p>
          */
         @NameInMap("interconnect_config")
         public DescribeClusterNodePoolsResponseBodyNodepoolsInterconnectConfig interconnectConfig;
 
         /**
-         * <p>The network type of the edge node pool. Valid values: basic and enhanced. This parameter takes effect only for edge node pools.</p>
+         * <p>The network type of the edge node pool. basic: basic edge node pools. dedicated: dedicated edge node pools. This parameter takes effect only for edge node pools.</p>
          */
         @NameInMap("interconnect_mode")
         public String interconnectMode;
 
         /**
-         * <p>The configuration of the cluster where the node pool is deployed.</p>
+         * <p>The configurations of the cluster where the node pool is deployed.</p>
          */
         @NameInMap("kubernetes_config")
         public DescribeClusterNodePoolsResponseBodyNodepoolsKubernetesConfig kubernetesConfig;
 
         /**
-         * <p>The configuration of the managed node pool feature. The configuration takes effect only for ACK Pro managed clusters.</p>
+         * <p>The configurations of managed node pools. Managed node pools are available only in professional managed Kubernetes clusters.</p>
          */
         @NameInMap("management")
         public DescribeClusterNodePoolsResponseBodyNodepoolsManagement management;
@@ -1723,7 +1768,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public Long maxNodes;
 
         /**
-         * <p>节点配置。</p>
+         * <p>The configurations of nodes.</p>
          */
         @NameInMap("node_config")
         public DescribeClusterNodePoolsResponseBodyNodepoolsNodeConfig nodeConfig;
@@ -1747,7 +1792,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public DescribeClusterNodePoolsResponseBodyNodepoolsStatus status;
 
         /**
-         * <p>The configuration of confidential computing.</p>
+         * <p>The configurations of confidential computing.</p>
          */
         @NameInMap("tee_config")
         public DescribeClusterNodePoolsResponseBodyNodepoolsTeeConfig teeConfig;

@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeExternalAgentRequest extends TeaModel {
     /**
-     * <p>The agent mode.</p>
+     * <p>The permission mode of the agent. Valid values:</p>
+     * <br>
+     * <p>admin: the admin mode, which provides full permissions. restricted: the restricted mode, which provides partial permissions. Default value: admin.</p>
      */
     @NameInMap("AgentMode")
     public String agentMode;

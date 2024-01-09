@@ -11,7 +11,7 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
     public String nodepoolId;
 
     /**
-     * <p>任务ID</p>
+     * <p>The ID of the task.</p>
      */
     @NameInMap("task_id")
     public String taskId;

@@ -4,9 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class RunClusterCheckRequest extends TeaModel {
+    /**
+     * <p>The cluster check items.</p>
+     */
     @NameInMap("options")
     public java.util.Map<String, String> options;
 
+    /**
+     * <p>The check method.</p>
+     */
     @NameInMap("type")
     public String type;
 
