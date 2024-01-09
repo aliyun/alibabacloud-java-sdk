@@ -1,3 +1,6 @@
+2024-01-09 Version: 1.1.2
+- Generated java 2024-01-18 for IntelligentCreation.
+
 2024-01-05 Version: 1.1.1
 - Generated java 2024-01-18 for IntelligentCreation.
 

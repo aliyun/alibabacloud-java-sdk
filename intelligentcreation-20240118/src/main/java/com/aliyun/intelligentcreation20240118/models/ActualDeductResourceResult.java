@@ -4,11 +4,11 @@ package com.aliyun.intelligentcreation20240118.models;
 import com.aliyun.tea.*;
 
 public class ActualDeductResourceResult extends TeaModel {
+    @NameInMap("errorCode")
+    public String errorCode;
+
     @NameInMap("errorMessage")
     public String errorMessage;
-
-    @NameInMap("errorcode")
-    public String errorcode;
 
     @NameInMap("requestId")
     public String requestId;
@@ -21,20 +21,20 @@ public class ActualDeductResourceResult extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ActualDeductResourceResult setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
     public ActualDeductResourceResult setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     public String getErrorMessage() {
         return this.errorMessage;
-    }
-
-    public ActualDeductResourceResult setErrorcode(String errorcode) {
-        this.errorcode = errorcode;
-        return this;
-    }
-    public String getErrorcode() {
-        return this.errorcode;
     }
 
     public ActualDeductResourceResult setRequestId(String requestId) {
