@@ -10,6 +10,9 @@ public class RecognizeAllTextRequest extends TeaModel {
     @NameInMap("IdCardConfig")
     public RecognizeAllTextRequestIdCardConfig idCardConfig;
 
+    @NameInMap("InternationalBusinessLicenseConfig")
+    public RecognizeAllTextRequestInternationalBusinessLicenseConfig internationalBusinessLicenseConfig;
+
     @NameInMap("InternationalIdCardConfig")
     public RecognizeAllTextRequestInternationalIdCardConfig internationalIdCardConfig;
 
@@ -40,6 +43,9 @@ public class RecognizeAllTextRequest extends TeaModel {
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    @NameInMap("TableConfig")
+    public RecognizeAllTextRequestTableConfig tableConfig;
+
     @NameInMap("Type")
     public String type;
 
@@ -68,6 +74,14 @@ public class RecognizeAllTextRequest extends TeaModel {
     }
     public RecognizeAllTextRequestIdCardConfig getIdCardConfig() {
         return this.idCardConfig;
+    }
+
+    public RecognizeAllTextRequest setInternationalBusinessLicenseConfig(RecognizeAllTextRequestInternationalBusinessLicenseConfig internationalBusinessLicenseConfig) {
+        this.internationalBusinessLicenseConfig = internationalBusinessLicenseConfig;
+        return this;
+    }
+    public RecognizeAllTextRequestInternationalBusinessLicenseConfig getInternationalBusinessLicenseConfig() {
+        return this.internationalBusinessLicenseConfig;
     }
 
     public RecognizeAllTextRequest setInternationalIdCardConfig(RecognizeAllTextRequestInternationalIdCardConfig internationalIdCardConfig) {
@@ -148,6 +162,14 @@ public class RecognizeAllTextRequest extends TeaModel {
     }
     public Integer getPageNo() {
         return this.pageNo;
+    }
+
+    public RecognizeAllTextRequest setTableConfig(RecognizeAllTextRequestTableConfig tableConfig) {
+        this.tableConfig = tableConfig;
+        return this;
+    }
+    public RecognizeAllTextRequestTableConfig getTableConfig() {
+        return this.tableConfig;
     }
 
     public RecognizeAllTextRequest setType(String type) {
@@ -289,6 +311,25 @@ public class RecognizeAllTextRequest extends TeaModel {
 
     }
 
+    public static class RecognizeAllTextRequestInternationalBusinessLicenseConfig extends TeaModel {
+        @NameInMap("Country")
+        public String country;
+
+        public static RecognizeAllTextRequestInternationalBusinessLicenseConfig build(java.util.Map<String, ?> map) throws Exception {
+            RecognizeAllTextRequestInternationalBusinessLicenseConfig self = new RecognizeAllTextRequestInternationalBusinessLicenseConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public RecognizeAllTextRequestInternationalBusinessLicenseConfig setCountry(String country) {
+            this.country = country;
+            return this;
+        }
+        public String getCountry() {
+            return this.country;
+        }
+
+    }
+
     public static class RecognizeAllTextRequestInternationalIdCardConfig extends TeaModel {
         @NameInMap("Country")
         public String country;
@@ -323,6 +364,58 @@ public class RecognizeAllTextRequest extends TeaModel {
         }
         public String getLanguages() {
             return this.languages;
+        }
+
+    }
+
+    public static class RecognizeAllTextRequestTableConfig extends TeaModel {
+        @NameInMap("IsHandWritingTable")
+        public Boolean isHandWritingTable;
+
+        @NameInMap("IsLineLessTable")
+        public Boolean isLineLessTable;
+
+        @NameInMap("OutputTableExcel")
+        public Boolean outputTableExcel;
+
+        @NameInMap("OutputTableHtml")
+        public Boolean outputTableHtml;
+
+        public static RecognizeAllTextRequestTableConfig build(java.util.Map<String, ?> map) throws Exception {
+            RecognizeAllTextRequestTableConfig self = new RecognizeAllTextRequestTableConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public RecognizeAllTextRequestTableConfig setIsHandWritingTable(Boolean isHandWritingTable) {
+            this.isHandWritingTable = isHandWritingTable;
+            return this;
+        }
+        public Boolean getIsHandWritingTable() {
+            return this.isHandWritingTable;
+        }
+
+        public RecognizeAllTextRequestTableConfig setIsLineLessTable(Boolean isLineLessTable) {
+            this.isLineLessTable = isLineLessTable;
+            return this;
+        }
+        public Boolean getIsLineLessTable() {
+            return this.isLineLessTable;
+        }
+
+        public RecognizeAllTextRequestTableConfig setOutputTableExcel(Boolean outputTableExcel) {
+            this.outputTableExcel = outputTableExcel;
+            return this;
+        }
+        public Boolean getOutputTableExcel() {
+            return this.outputTableExcel;
+        }
+
+        public RecognizeAllTextRequestTableConfig setOutputTableHtml(Boolean outputTableHtml) {
+            this.outputTableHtml = outputTableHtml;
+            return this;
+        }
+        public Boolean getOutputTableHtml() {
+            return this.outputTableHtml;
         }
 
     }
