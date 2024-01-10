@@ -55,6 +55,9 @@ public class BatchImportVehicleDeviceRequest extends TeaModel {
         @NameInMap("DeviceName")
         public String deviceName;
 
+        @NameInMap("DeviceSecret")
+        public String deviceSecret;
+
         @NameInMap("Manufacturer")
         public String manufacturer;
 
@@ -85,6 +88,14 @@ public class BatchImportVehicleDeviceRequest extends TeaModel {
         }
         public String getDeviceName() {
             return this.deviceName;
+        }
+
+        public BatchImportVehicleDeviceRequestDeviceList setDeviceSecret(String deviceSecret) {
+            this.deviceSecret = deviceSecret;
+            return this;
+        }
+        public String getDeviceSecret() {
+            return this.deviceSecret;
         }
 
         public BatchImportVehicleDeviceRequestDeviceList setManufacturer(String manufacturer) {

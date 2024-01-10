@@ -59,6 +59,9 @@ public class ListOTAUnfinishedTaskByDeviceRequest extends TeaModel {
     @NameInMap("TaskStatus")
     public String taskStatus;
 
+    @NameInMap("TaskStatusList")
+    public java.util.List<String> taskStatusList;
+
     public static ListOTAUnfinishedTaskByDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         ListOTAUnfinishedTaskByDeviceRequest self = new ListOTAUnfinishedTaskByDeviceRequest();
         return TeaModel.build(map, self);
@@ -110,6 +113,14 @@ public class ListOTAUnfinishedTaskByDeviceRequest extends TeaModel {
     }
     public String getTaskStatus() {
         return this.taskStatus;
+    }
+
+    public ListOTAUnfinishedTaskByDeviceRequest setTaskStatusList(java.util.List<String> taskStatusList) {
+        this.taskStatusList = taskStatusList;
+        return this;
+    }
+    public java.util.List<String> getTaskStatusList() {
+        return this.taskStatusList;
     }
 
 }
