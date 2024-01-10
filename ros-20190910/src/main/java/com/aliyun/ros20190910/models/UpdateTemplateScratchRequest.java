@@ -32,15 +32,17 @@ public class UpdateTemplateScratchRequest extends TeaModel {
     /**
      * <p>The policy based on which the logical ID is generated. Valid values:</p>
      * <br>
-     * <p>*   LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix</p>
+     * <p>*   LongTypePrefixAndIndexSuffix: long-type prefix + index-type suffix</p>
      * <p>*   LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</p>
      * <p>*   ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</p>
+     * <br>
+     * <p>>  If you set TemplateScratchType to ArchitectureDetection, the default value of LogicalIdStrategy is LongTypePrefixAndHashSuffix. In other cases, the default value of LogicalIdStrategy is LongTypePrefixAndIndexSuffix.</p>
      */
     @NameInMap("LogicalIdStrategy")
     public String logicalIdStrategy;
 
     /**
-     * <p>The preference parameters of the scenario.</p>
+     * <p>The parameters that you want to configure for the scenario.</p>
      */
     @NameInMap("PreferenceParameters")
     public java.util.List<UpdateTemplateScratchRequestPreferenceParameters> preferenceParameters;
@@ -53,6 +55,9 @@ public class UpdateTemplateScratchRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -64,6 +69,10 @@ public class UpdateTemplateScratchRequest extends TeaModel {
 
     /**
      * <p>The source resources.</p>
+     * <br>
+     * <p>If you specify source resources as the value of SourceResources when TemplateScratchType is set to ArchitectureDetection, the system detects the schema data of all resources that are associated with the specified source resources. For example, if you specify the ID of a Classic Load Balancer (CLB) instance as the value of SourceResources, the system detects the schema data of resources, such as Elastic Compute Service (ECS) instances, vSwitches, and VPCs, that are associated with the CLB instance.</p>
+     * <br>
+     * <p>If you set TemplateScratchType to ArchitectureDetection, you can specify up to 20 source resources for SourceResources. In other cases, you can specify up to 200 source resources.</p>
      */
     @NameInMap("SourceResources")
     public java.util.List<UpdateTemplateScratchRequestSourceResources> sourceResources;
@@ -175,11 +184,11 @@ public class UpdateTemplateScratchRequest extends TeaModel {
 
     public static class UpdateTemplateScratchRequestPreferenceParameters extends TeaModel {
         /**
-         * <p>The key of the parameter.</p>
+         * <p>The name of the parameter.</p>
          * <br>
-         * <p>For more information about the valid values of ParameterKey, see the **Additional information about request parameters** section of this topic.</p>
+         * <p>For more information about the valid values of ParameterKey, see the "**Additional information about request parameters**" section of this topic.</p>
          * <br>
-         * <p>> -  PreferenceParameters is optional. If you want to specify PreferenceParameters, you must specify ParameterKey and ParameterValue.</p>
+         * <p>> - PreferenceParameters is optional. If you specify PreferenceParameters, you must specify both ParameterKey and ParameterValue.</p>
          * <p>> - If you set TemplateScratchType to ResourceImport, you must set ParameterKey to DeletionPolicy.</p>
          */
         @NameInMap("ParameterKey")
@@ -188,9 +197,9 @@ public class UpdateTemplateScratchRequest extends TeaModel {
         /**
          * <p>The value of the parameter. The value of ParameterValue varies based on the value of ParameterKey.</p>
          * <br>
-         * <p>For more information about the valid values of ParameterValue, see the **Additional information about request parameters** section of this topic.</p>
+         * <p>For more information about the valid values of ParameterValue, see the "**Additional information about request parameters**" section of this topic.</p>
          * <br>
-         * <p>> PreferenceParameters is optional. If you want to specify PreferenceParameters, you must specify ParameterKey and ParameterValue.</p>
+         * <p>>  PreferenceParameters is optional. If you specify PreferenceParameters, you must specify both ParameterKey and ParameterValue.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -256,13 +265,13 @@ public class UpdateTemplateScratchRequest extends TeaModel {
 
     public static class UpdateTemplateScratchRequestSourceResources extends TeaModel {
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The resource type.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -296,13 +305,13 @@ public class UpdateTemplateScratchRequest extends TeaModel {
          * <br>
          * <p>If you want to specify only the tag key, you must set the tag value to an empty string. Example: {"TagKey": ""}.</p>
          * <br>
-         * <p>You can add up to 10 source tags.</p>
+         * <p>If you set TemplateScratchType to ArchitectureDetection, you can add up to five source tags. In other cases, you can add up to 10 source tags.</p>
          */
         @NameInMap("ResourceTags")
         public java.util.Map<String, ?> resourceTags;
 
         /**
-         * <p>The resource types.</p>
+         * <p>The filters for resource types.</p>
          */
         @NameInMap("ResourceTypeFilter")
         public java.util.List<String> resourceTypeFilter;

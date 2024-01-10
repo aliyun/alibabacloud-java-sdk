@@ -84,6 +84,9 @@ public class GetStackResponseBody extends TeaModel {
     @NameInMap("OperationInfo")
     public GetStackResponseBodyOperationInfo operationInfo;
 
+    /**
+     * <p>The ID of the order. This parameter is returned only if you set the ChargeType parameter to PrePaid.</p>
+     */
     @NameInMap("OrderIds")
     public java.util.List<String> orderIds;
 

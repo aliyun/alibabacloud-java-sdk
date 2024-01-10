@@ -192,6 +192,9 @@ public class DeleteStackInstancesRequest extends TeaModel {
     }
 
     public static class DeleteStackInstancesRequestDeploymentTargets extends TeaModel {
+        @NameInMap("AccountIds")
+        public java.util.List<String> accountIds;
+
         /**
          * <p>The IDs of the folders in the resource directory. You can add up to five folder IDs.</p>
          * <br>
@@ -205,6 +208,14 @@ public class DeleteStackInstancesRequest extends TeaModel {
         public static DeleteStackInstancesRequestDeploymentTargets build(java.util.Map<String, ?> map) throws Exception {
             DeleteStackInstancesRequestDeploymentTargets self = new DeleteStackInstancesRequestDeploymentTargets();
             return TeaModel.build(map, self);
+        }
+
+        public DeleteStackInstancesRequestDeploymentTargets setAccountIds(java.util.List<String> accountIds) {
+            this.accountIds = accountIds;
+            return this;
+        }
+        public java.util.List<String> getAccountIds() {
+            return this.accountIds;
         }
 
         public DeleteStackInstancesRequestDeploymentTargets setRdFolderIds(java.util.List<String> rdFolderIds) {

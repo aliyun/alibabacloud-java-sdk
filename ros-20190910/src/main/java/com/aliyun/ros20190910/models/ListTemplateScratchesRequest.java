@@ -32,6 +32,9 @@ public class ListTemplateScratchesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -60,8 +63,10 @@ public class ListTemplateScratchesRequest extends TeaModel {
     /**
      * <p>The type of the scenario. Valid values:</p>
      * <br>
-     * <p>*   ResourceImport: resource management</p>
      * <p>*   ArchitectureReplication: resource replication</p>
+     * <p>*   ArchitectureDetection: resource detection</p>
+     * <p>*   ResourceImport: resource management</p>
+     * <p>*   ResourceMigration: resource migration</p>
      */
     @NameInMap("TemplateScratchType")
     public String templateScratchType;

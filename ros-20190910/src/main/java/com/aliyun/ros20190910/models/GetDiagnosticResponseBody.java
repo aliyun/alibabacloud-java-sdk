@@ -4,45 +4,94 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetDiagnosticResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The keyword in the diagnosis.</p>
+     */
     @NameInMap("DiagnosticKey")
     public String diagnosticKey;
 
+    /**
+     * <p>The name of the diagnostic item.</p>
+     */
     @NameInMap("DiagnosticProduct")
     public String diagnosticProduct;
 
+    /**
+     * <p>The diagnosis result.</p>
+     */
     @NameInMap("DiagnosticResult")
     public GetDiagnosticResponseBodyDiagnosticResult diagnosticResult;
 
+    /**
+     * <p>The time when the diagnosis was performed.</p>
+     */
     @NameInMap("DiagnosticTime")
     public String diagnosticTime;
 
+    /**
+     * <p>The HTTP status code</p>
+     */
     @NameInMap("HttpCode")
     public String httpCode;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The suggestion for the diagnosis.</p>
+     */
     @NameInMap("Recommends")
     public java.util.Map<String, ?> recommends;
 
+    /**
+     * <p>The ID of the diagnostic report.</p>
+     */
     @NameInMap("ReportId")
     public String reportId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The diagnosis status. Valid values:</p>
+     * <br>
+     * <p>*   Running: The diagnosis is in progress.</p>
+     * <p>*   Complete: The diagnosis is complete.</p>
+     * <p>*   Failed: The diagnosis failed.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The reason for the diagnosis status.</p>
+     */
     @NameInMap("StatusReason")
     public String statusReason;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -164,12 +213,21 @@ public class GetDiagnosticResponseBody extends TeaModel {
     }
 
     public static class GetDiagnosticResponseBodyDiagnosticResult extends TeaModel {
+        /**
+         * <p>The resources that failed to be diagnosed.</p>
+         */
         @NameInMap("FailedResources")
         public java.util.Map<String, ?> failedResources;
 
+        /**
+         * <p>The information about Resource Orchestration Service (ROS) calling.</p>
+         */
         @NameInMap("RosActionMessages")
         public java.util.Map<String, ?> rosActionMessages;
 
+        /**
+         * <p>The stack information.</p>
+         */
         @NameInMap("StackMessages")
         public java.util.Map<String, ?> stackMessages;
 

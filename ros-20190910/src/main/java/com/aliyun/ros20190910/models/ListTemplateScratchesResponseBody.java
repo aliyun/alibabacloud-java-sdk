@@ -23,7 +23,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of scenarios.</p>
+     * <p>The scenarios.</p>
      */
     @NameInMap("TemplateScratches")
     public java.util.List<ListTemplateScratchesResponseBodyTemplateScratches> templateScratches;
@@ -81,7 +81,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
 
     public static class ListTemplateScratchesResponseBodyTemplateScratchesPreferenceParameters extends TeaModel {
         /**
-         * <p>The key of the parameter.</p>
+         * <p>The name of the parameter.</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
@@ -123,7 +123,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The resource types.</p>
+         * <p>The filters for resource types.</p>
          */
         @NameInMap("ResourceTypeFilter")
         public java.util.List<String> resourceTypeFilter;
@@ -153,13 +153,13 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
 
     public static class ListTemplateScratchesResponseBodyTemplateScratchesSourceResources extends TeaModel {
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The resource type.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -195,7 +195,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         public java.util.Map<String, ?> resourceTags;
 
         /**
-         * <p>The resource types.</p>
+         * <p>The filters for resource types.</p>
          */
         @NameInMap("ResourceTypeFilter")
         public java.util.List<String> resourceTypeFilter;
@@ -261,7 +261,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
 
     public static class ListTemplateScratchesResponseBodyTemplateScratches extends TeaModel {
         /**
-         * <p>The time at which the scenario was created.</p>
+         * <p>The time when the scenario was created.</p>
          * <br>
          * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
          */
@@ -275,9 +275,9 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The status code of the scenario that fails to be created.</p>
+         * <p>The status code that is returned if the scenario failed to be generated.</p>
          * <br>
-         * <p>> This parameter is returned only if you set Status to GENERATE_FAILED.</p>
+         * <p>>  This parameter is returned only if Status is set to GENERATE_FAILED.</p>
          */
         @NameInMap("FailedCode")
         public String failedCode;
@@ -293,11 +293,14 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         public String logicalIdStrategy;
 
         /**
-         * <p>The preference parameters of the scenario.</p>
+         * <p>The parameters that are configured for the scenario.</p>
          */
         @NameInMap("PreferenceParameters")
         public java.util.List<ListTemplateScratchesResponseBodyTemplateScratchesPreferenceParameters> preferenceParameters;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -320,15 +323,15 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         public ListTemplateScratchesResponseBodyTemplateScratchesSourceTag sourceTag;
 
         /**
-         * <p>The status of the scenario.</p>
+         * <p>The state of the scenario.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The reason why the scenario fails to be created.</p>
+         * <p>The reason why the scenario failed to be generated.</p>
          * <br>
-         * <p>> This parameter is returned only if you set Status to GENERATE_FAILED.</p>
+         * <p>>  This parameter is returned only if Status is set to GENERATE_FAILED.</p>
          */
         @NameInMap("StatusReason")
         public String statusReason;
@@ -340,7 +343,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         public java.util.List<ListTemplateScratchesResponseBodyTemplateScratchesTags> tags;
 
         /**
-         * <p>The ID of the scenario.</p>
+         * <p>The scenario ID.</p>
          */
         @NameInMap("TemplateScratchId")
         public String templateScratchId;
@@ -355,7 +358,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         public String templateScratchType;
 
         /**
-         * <p>The time at which the scenario was updated.</p>
+         * <p>The time when the scenario was updated.</p>
          * <br>
          * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
          */

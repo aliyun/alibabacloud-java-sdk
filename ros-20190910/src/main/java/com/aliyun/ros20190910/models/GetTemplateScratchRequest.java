@@ -15,13 +15,14 @@ public class GetTemplateScratchRequest extends TeaModel {
     /**
      * <p>The data display option. Valid values:</p>
      * <br>
-     * <p>*   Source: displays only the data of source nodes.</p>
-     * <p>*   Provisions: displays only the data of new nodes.</p>
-     * <p>*   All: displays the data of all nodes.</p>
+     * <p>*   Sources: displays only the data of source nodes. This setting takes effect only when TemplateScratchType is set to ArchitectureDetection.</p>
+     * <p>*   Source: displays only the data of the source node. This setting takes effect only when TemplateScratchType is not set to ArchitectureDetection.</p>
+     * <p>*   Provisions: displays only the data of new nodes. This setting takes effect only when TemplateScratchType is not set to ArchitectureDetection.</p>
+     * <p>*   All: displays all data.</p>
      * <br>
      * <p>For more information about source nodes and new nodes, see [Overview](~~352074~~).</p>
      * <br>
-     * <p>> If you do not specify this parameter, the node data is not displayed.</p>
+     * <p>>  If you do not specify this parameter, the node data is not displayed.</p>
      */
     @NameInMap("ShowDataOption")
     public String showDataOption;

@@ -32,15 +32,17 @@ public class UpdateTemplateScratchShrinkRequest extends TeaModel {
     /**
      * <p>The policy based on which the logical ID is generated. Valid values:</p>
      * <br>
-     * <p>*   LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix</p>
+     * <p>*   LongTypePrefixAndIndexSuffix: long-type prefix + index-type suffix</p>
      * <p>*   LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</p>
      * <p>*   ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</p>
+     * <br>
+     * <p>>  If you set TemplateScratchType to ArchitectureDetection, the default value of LogicalIdStrategy is LongTypePrefixAndHashSuffix. In other cases, the default value of LogicalIdStrategy is LongTypePrefixAndIndexSuffix.</p>
      */
     @NameInMap("LogicalIdStrategy")
     public String logicalIdStrategy;
 
     /**
-     * <p>The preference parameters of the scenario.</p>
+     * <p>The parameters that you want to configure for the scenario.</p>
      */
     @NameInMap("PreferenceParameters")
     public String preferenceParametersShrink;
@@ -53,6 +55,9 @@ public class UpdateTemplateScratchShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -64,6 +69,10 @@ public class UpdateTemplateScratchShrinkRequest extends TeaModel {
 
     /**
      * <p>The source resources.</p>
+     * <br>
+     * <p>If you specify source resources as the value of SourceResources when TemplateScratchType is set to ArchitectureDetection, the system detects the schema data of all resources that are associated with the specified source resources. For example, if you specify the ID of a Classic Load Balancer (CLB) instance as the value of SourceResources, the system detects the schema data of resources, such as Elastic Compute Service (ECS) instances, vSwitches, and VPCs, that are associated with the CLB instance.</p>
+     * <br>
+     * <p>If you set TemplateScratchType to ArchitectureDetection, you can specify up to 20 source resources for SourceResources. In other cases, you can specify up to 200 source resources.</p>
      */
     @NameInMap("SourceResources")
     public String sourceResourcesShrink;

@@ -4,12 +4,21 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class CreateDiagnosticRequest extends TeaModel {
+    /**
+     * <p>The keyword in the diagnosis.</p>
+     */
     @NameInMap("DiagnosticKey")
     public String diagnosticKey;
 
+    /**
+     * <p>The type of the item that is diagnosed. Set the value to Stack, which specifies that the stack is diagnosed.</p>
+     */
     @NameInMap("DiagnosticType")
     public String diagnosticType;
 
+    /**
+     * <p>The name of the product that is diagonosed.</p>
+     */
     @NameInMap("Product")
     public String product;
 

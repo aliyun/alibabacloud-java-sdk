@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetDiagnosticRequest extends TeaModel {
+    /**
+     * <p>The ID of the diagnostic report.</p>
+     */
     @NameInMap("ReportId")
     public String reportId;
 
