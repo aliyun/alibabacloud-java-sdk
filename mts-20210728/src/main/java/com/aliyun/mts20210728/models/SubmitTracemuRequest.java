@@ -13,6 +13,9 @@ public class SubmitTracemuRequest extends TeaModel {
     @NameInMap("Output")
     public String output;
 
+    @NameInMap("Params")
+    public String params;
+
     @NameInMap("Trace")
     public String trace;
 
@@ -43,6 +46,14 @@ public class SubmitTracemuRequest extends TeaModel {
     }
     public String getOutput() {
         return this.output;
+    }
+
+    public SubmitTracemuRequest setParams(String params) {
+        this.params = params;
+        return this;
+    }
+    public String getParams() {
+        return this.params;
     }
 
     public SubmitTracemuRequest setTrace(String trace) {
