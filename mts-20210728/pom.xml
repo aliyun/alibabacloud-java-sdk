@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>mts20210728</artifactId>
-  <version>3.3.10</version>
+  <version>3.3.11</version>
   <packaging>jar</packaging>
   <name>mts20210728</name>
   <description>Alibaba Cloud ApsaraVideo for Media Processing (20210728) SDK for Java

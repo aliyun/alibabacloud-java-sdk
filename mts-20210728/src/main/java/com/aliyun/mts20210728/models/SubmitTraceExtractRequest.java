@@ -10,6 +10,9 @@ public class SubmitTraceExtractRequest extends TeaModel {
     @NameInMap("Input")
     public String input;
 
+    @NameInMap("Params")
+    public String params;
+
     @NameInMap("Url")
     public String url;
 
@@ -35,6 +38,14 @@ public class SubmitTraceExtractRequest extends TeaModel {
     }
     public String getInput() {
         return this.input;
+    }
+
+    public SubmitTraceExtractRequest setParams(String params) {
+        this.params = params;
+        return this;
+    }
+    public String getParams() {
+        return this.params;
     }
 
     public SubmitTraceExtractRequest setUrl(String url) {
