@@ -25,6 +25,14 @@ public class DeleteApplicationRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Specifies whether to retain resources created by application manager when deleting the application. Valid values:</p>
+     * <p>- true</p>
+     * <p>- false</p>
+     */
+    @NameInMap("RetainResource")
+    public Boolean retainResource;
+
     public static DeleteApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteApplicationRequest self = new DeleteApplicationRequest();
         return TeaModel.build(map, self);
@@ -52,6 +60,14 @@ public class DeleteApplicationRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DeleteApplicationRequest setRetainResource(Boolean retainResource) {
+        this.retainResource = retainResource;
+        return this;
+    }
+    public Boolean getRetainResource() {
+        return this.retainResource;
     }
 
 }

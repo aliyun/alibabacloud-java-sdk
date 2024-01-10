@@ -4,15 +4,27 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class DescribeApplicationGroupBillResponseBody extends TeaModel {
+    /**
+     * <p>The consume of application group.</p>
+     */
     @NameInMap("ApplicationGroupConsume")
     public java.util.List<DescribeApplicationGroupBillResponseBodyApplicationGroupConsume> applicationGroupConsume;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,33 +66,63 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationGroupBillResponseBodyApplicationGroupConsume extends TeaModel {
+        /**
+         * <p>The amount consumed by the instance.</p>
+         */
         @NameInMap("Amount")
         public Float amount;
 
+        /**
+         * <p>The time when the instance was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The currency unit.</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The instance type.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>Optimization suggestions.</p>
+         */
         @NameInMap("Optimization")
         public String optimization;
 
+        /**
+         * <p>The peak type.</p>
+         */
         @NameInMap("PeakType")
         public String peakType;
 
+        /**
+         * <p>The performance of the data synchronization instance.</p>
+         */
         @NameInMap("Performance")
         public String performance;
 
+        /**
+         * <p>The status of instance.</p>
+         */
         @NameInMap("Status")
         public String status;
 

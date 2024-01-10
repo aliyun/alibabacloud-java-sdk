@@ -72,6 +72,9 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The constraints of template</p>
+         */
         @NameInMap("Constraints")
         public String constraints;
 
@@ -105,6 +108,9 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("Hash")
         public String hash;
 
+        /**
+         * <p>The template is favorite or not.</p>
+         */
         @NameInMap("IsFavorite")
         public Boolean isFavorite;
 
@@ -116,6 +122,9 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("Popularity")
         public Integer popularity;
 
+        /**
+         * <p>The publisher of template.</p>
+         */
         @NameInMap("Publisher")
         public String publisher;
 
