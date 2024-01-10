@@ -4,9 +4,19 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CheckCommercialStatusRequest extends TeaModel {
+    /**
+     * <p>The region ID. Default value: cn-hangzhou.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Sub-services:</p>
+     * <p>- apm: Application Monitoring</p>
+     * <p>- rum: Real User Monitoring</p>
+     * <p>- prometheus: Managed Service for Prometheus</p>
+     * <p>- xtrace: Managed Service for OpenTelemetry</p>
+     */
     @NameInMap("Service")
     public String service;
 

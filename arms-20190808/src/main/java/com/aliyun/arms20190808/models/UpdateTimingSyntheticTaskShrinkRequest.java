@@ -29,12 +29,6 @@ public class UpdateTimingSyntheticTaskShrinkRequest extends TeaModel {
     public String frequency;
 
     /**
-     * <p>The detection point type. 1: PC. 2: mobile device.</p>
-     */
-    @NameInMap("MonitorCategory")
-    public Integer monitorCategory;
-
-    /**
      * <p>The monitoring configurations.</p>
      */
     @NameInMap("MonitorConf")
@@ -76,14 +70,6 @@ public class UpdateTimingSyntheticTaskShrinkRequest extends TeaModel {
     @NameInMap("TaskId")
     public String taskId;
 
-    /**
-     * <p>The type of the task. Valid values:</p>
-     * <br>
-     * <p>1: ICMP. 2: TCP. 3: DNS. 4: HTTP. 5: website speed measurement. 6: file download.</p>
-     */
-    @NameInMap("TaskType")
-    public Integer taskType;
-
     public static UpdateTimingSyntheticTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTimingSyntheticTaskShrinkRequest self = new UpdateTimingSyntheticTaskShrinkRequest();
         return TeaModel.build(map, self);
@@ -119,14 +105,6 @@ public class UpdateTimingSyntheticTaskShrinkRequest extends TeaModel {
     }
     public String getFrequency() {
         return this.frequency;
-    }
-
-    public UpdateTimingSyntheticTaskShrinkRequest setMonitorCategory(Integer monitorCategory) {
-        this.monitorCategory = monitorCategory;
-        return this;
-    }
-    public Integer getMonitorCategory() {
-        return this.monitorCategory;
     }
 
     public UpdateTimingSyntheticTaskShrinkRequest setMonitorConfShrink(String monitorConfShrink) {
@@ -183,14 +161,6 @@ public class UpdateTimingSyntheticTaskShrinkRequest extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
-    }
-
-    public UpdateTimingSyntheticTaskShrinkRequest setTaskType(Integer taskType) {
-        this.taskType = taskType;
-        return this;
-    }
-    public Integer getTaskType() {
-        return this.taskType;
     }
 
 }

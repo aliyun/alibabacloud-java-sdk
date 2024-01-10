@@ -4,6 +4,12 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListTraceAppsRequest extends TeaModel {
+    /**
+     * <p>The type of the application that is associated with the alert rule. Valid values:</p>
+     * <br>
+     * <p>*   `TRACE`: Application Monitoring</p>
+     * <p>*   `EBPF`: Application Monitoring eBPF Edition</p>
+     */
     @NameInMap("AppType")
     public String appType;
 

@@ -37,7 +37,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The list of Application Monitoring tasks.</p>
+     * <p>The queried application monitoring tasks.</p>
      */
     @NameInMap("TraceApps")
     public java.util.List<ListTraceAppsResponseBodyTraceApps> traceApps;
@@ -136,6 +136,9 @@ public class ListTraceAppsResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The cluster ID.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
@@ -146,14 +149,20 @@ public class ListTraceAppsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The labels of the application.</p>
+         * <p>The tags of the application.</p>
          */
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
+        /**
+         * <p>The language.</p>
+         */
         @NameInMap("Language")
         public String language;
 
+        /**
+         * <p>The namespace.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
@@ -185,7 +194,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
         public Boolean show;
 
         /**
-         * <p>The application source.</p>
+         * <p>The source of the application.</p>
          */
         @NameInMap("Source")
         public String source;
@@ -217,9 +226,15 @@ public class ListTraceAppsResponseBody extends TeaModel {
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The type of the workload.</p>
+         */
         @NameInMap("WorkloadKind")
         public String workloadKind;
 
+        /**
+         * <p>The name of the workload.</p>
+         */
         @NameInMap("WorkloadName")
         public String workloadName;
 
