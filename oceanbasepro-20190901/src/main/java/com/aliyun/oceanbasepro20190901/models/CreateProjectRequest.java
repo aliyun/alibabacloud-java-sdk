@@ -207,9 +207,42 @@ public class CreateProjectRequest extends TeaModel {
         return this.workerGradeId;
     }
 
+    public static class CreateProjectRequestCommonTransferConfigCustomColumns extends TeaModel {
+        @NameInMap("ColumnName")
+        public String columnName;
+
+        @NameInMap("Expression")
+        public String expression;
+
+        public static CreateProjectRequestCommonTransferConfigCustomColumns build(java.util.Map<String, ?> map) throws Exception {
+            CreateProjectRequestCommonTransferConfigCustomColumns self = new CreateProjectRequestCommonTransferConfigCustomColumns();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateProjectRequestCommonTransferConfigCustomColumns setColumnName(String columnName) {
+            this.columnName = columnName;
+            return this;
+        }
+        public String getColumnName() {
+            return this.columnName;
+        }
+
+        public CreateProjectRequestCommonTransferConfigCustomColumns setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
+        }
+
+    }
+
     public static class CreateProjectRequestCommonTransferConfig extends TeaModel {
         @NameInMap("ActiveActive")
         public Boolean activeActive;
+
+        @NameInMap("CustomColumns")
+        public java.util.List<CreateProjectRequestCommonTransferConfigCustomColumns> customColumns;
 
         @NameInMap("DataWorksBusinessName")
         public String dataWorksBusinessName;
@@ -238,6 +271,12 @@ public class CreateProjectRequest extends TeaModel {
         @NameInMap("RocketMqSendMsgTimeout")
         public Long rocketMqSendMsgTimeout;
 
+        @NameInMap("SyncSchema")
+        public Boolean syncSchema;
+
+        @NameInMap("SyncSchemaColumnName")
+        public String syncSchemaColumnName;
+
         @NameInMap("TableCategory")
         public String tableCategory;
 
@@ -252,6 +291,14 @@ public class CreateProjectRequest extends TeaModel {
         }
         public Boolean getActiveActive() {
             return this.activeActive;
+        }
+
+        public CreateProjectRequestCommonTransferConfig setCustomColumns(java.util.List<CreateProjectRequestCommonTransferConfigCustomColumns> customColumns) {
+            this.customColumns = customColumns;
+            return this;
+        }
+        public java.util.List<CreateProjectRequestCommonTransferConfigCustomColumns> getCustomColumns() {
+            return this.customColumns;
         }
 
         public CreateProjectRequestCommonTransferConfig setDataWorksBusinessName(String dataWorksBusinessName) {
@@ -324,6 +371,22 @@ public class CreateProjectRequest extends TeaModel {
         }
         public Long getRocketMqSendMsgTimeout() {
             return this.rocketMqSendMsgTimeout;
+        }
+
+        public CreateProjectRequestCommonTransferConfig setSyncSchema(Boolean syncSchema) {
+            this.syncSchema = syncSchema;
+            return this;
+        }
+        public Boolean getSyncSchema() {
+            return this.syncSchema;
+        }
+
+        public CreateProjectRequestCommonTransferConfig setSyncSchemaColumnName(String syncSchemaColumnName) {
+            this.syncSchemaColumnName = syncSchemaColumnName;
+            return this;
+        }
+        public String getSyncSchemaColumnName() {
+            return this.syncSchemaColumnName;
         }
 
         public CreateProjectRequestCommonTransferConfig setTableCategory(String tableCategory) {
