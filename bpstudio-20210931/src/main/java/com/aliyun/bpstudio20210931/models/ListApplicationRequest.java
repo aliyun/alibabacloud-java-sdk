@@ -4,6 +4,9 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationRequest extends TeaModel {
+    /**
+     * <p>Keywords in the app name</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
@@ -19,9 +22,15 @@ public class ListApplicationRequest extends TeaModel {
     @NameInMap("NextToken")
     public Integer nextToken;
 
+    /**
+     * <p>1 update time,<br>2 creation time</p>
+     */
     @NameInMap("OrderType")
     public Long orderType;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
