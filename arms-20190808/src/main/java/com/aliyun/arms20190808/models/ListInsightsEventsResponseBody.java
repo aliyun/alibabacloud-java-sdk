@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInsightsEventsResponseBody extends TeaModel {
     /**
-     * <p>The description of the event.</p>
+     * <p>The event details.</p>
      */
     @NameInMap("InsightsEvents")
     public java.util.List<ListInsightsEventsResponseBodyInsightsEvents> insightsEvents;
@@ -39,40 +39,43 @@ public class ListInsightsEventsResponseBody extends TeaModel {
 
     public static class ListInsightsEventsResponseBodyInsightsEvents extends TeaModel {
         /**
-         * <p>The time at which the event occurred. The value is a timestamp.</p>
+         * <p>The time when the event occurred. The value is a timestamp.</p>
          */
         @NameInMap("Date")
         public Long date;
 
         /**
-         * <p>The ID of the application associated with the event.</p>
+         * <p>The description of the event.</p>
          */
         @NameInMap("Desc")
         public String desc;
 
         /**
-         * <p>Queries the abnormal Insights events within a specified period of time.</p>
+         * <p>The severity of the event.</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
-         * <p>auditing</p>
+         * <p>The ID of the application associated with the event.</p>
          */
         @NameInMap("Pid")
         public String pid;
 
+        /**
+         * <p>Problem identification.</p>
+         */
         @NameInMap("ProblemId")
         public String problemId;
 
         /**
-         * <p>The overall response time of the \[HTTP] service of the application \[sd] spikes at \[2022-07-27 10:57:00]</p>
+         * <p>The title of the event.</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
-         * <p>The time at which the event occurred. The value is a timestamp.</p>
+         * <p>The type of the event.</p>
          */
         @NameInMap("Type")
         public String type;

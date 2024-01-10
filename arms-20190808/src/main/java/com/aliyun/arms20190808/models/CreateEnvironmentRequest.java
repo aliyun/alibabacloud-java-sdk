@@ -12,6 +12,7 @@ public class CreateEnvironmentRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource associated with the environment, such as the ACK cluster ID or VPC ID.</p>
+     * <p>For Cloud type environments, the current field value is RegionId.</p>
      */
     @NameInMap("BindResourceId")
     public String bindResourceId;
@@ -26,7 +27,7 @@ public class CreateEnvironmentRequest extends TeaModel {
      * <p>The subtype of the environment. Valid values:</p>
      * <br>
      * <p>*   CS: Container Service for Kubernetes (ACK)</p>
-     * <p>*   ECS: ECS</p>
+     * <p>*   ECS: Elastic Compute Service (ECS)</p>
      * <p>*   Cloud: cloud service</p>
      */
     @NameInMap("EnvironmentSubType")

@@ -17,7 +17,41 @@ public class InstallManagedPrometheusRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The type of the monitoring object. Valid values: ask and ecs.</p>
+     * <p>The cluster type.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   ecs</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   one</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   ask</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   pro</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("ClusterType")
     public String clusterType;

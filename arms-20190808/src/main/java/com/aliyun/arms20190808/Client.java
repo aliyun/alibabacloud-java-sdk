@@ -746,6 +746,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.changeResourceGroupWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to check whether ARMS is available for commercial use in a region.
+      *
+      * @param request CheckCommercialStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CheckCommercialStatusResponse
+     */
     public CheckCommercialStatusResponse checkCommercialStatusWithOptions(CheckCommercialStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -766,6 +773,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CheckCommercialStatusResponse());
     }
 
+    /**
+      * You can call this operation to check whether ARMS is available for commercial use in a region.
+      *
+      * @param request CheckCommercialStatusRequest
+      * @return CheckCommercialStatusResponse
+     */
     public CheckCommercialStatusResponse checkCommercialStatus(CheckCommercialStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.checkCommercialStatusWithOptions(request, runtime);
@@ -9794,10 +9807,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Frequency", request.frequency);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.monitorCategory)) {
-            query.put("MonitorCategory", request.monitorCategory);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.monitorConfShrink)) {
             query.put("MonitorConf", request.monitorConfShrink);
         }
@@ -9824,10 +9833,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             query.put("TaskId", request.taskId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.taskType)) {
-            query.put("TaskType", request.taskType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
