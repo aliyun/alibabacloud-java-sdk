@@ -77,9 +77,15 @@ public class GetStackResourceResponseBody extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The ID of the stack.</p>
+     */
     @NameInMap("StackId")
     public String stackId;
 
+    /**
+     * <p>The name of the stack.</p>
+     */
     @NameInMap("StackName")
     public String stackName;
 

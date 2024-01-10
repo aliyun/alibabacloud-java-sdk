@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class DeleteDiagnosticRequest extends TeaModel {
+    /**
+     * <p>The report ID. You can troubleshoot issues based on the report.</p>
+     */
     @NameInMap("ReportId")
     public String reportId;
 

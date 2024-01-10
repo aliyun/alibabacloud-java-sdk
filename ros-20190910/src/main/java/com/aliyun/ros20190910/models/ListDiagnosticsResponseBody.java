@@ -4,21 +4,42 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListDiagnosticsResponseBody extends TeaModel {
+    /**
+     * <p>The items that are diagnosed.</p>
+     */
     @NameInMap("Diagnostics")
     public java.util.List<ListDiagnosticsResponseBodyDiagnostics> diagnostics;
 
+    /**
+     * <p>The HTTP status code returned. The value 200 indicates that the request was successful.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -76,18 +97,33 @@ public class ListDiagnosticsResponseBody extends TeaModel {
     }
 
     public static class ListDiagnosticsResponseBodyDiagnostics extends TeaModel {
+        /**
+         * <p>The time when the diagnostic report was generated.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The keyword in the diagnosis.</p>
+         */
         @NameInMap("DiagnosticKey")
         public String diagnosticKey;
 
+        /**
+         * <p>The product that is diagnosed.</p>
+         */
         @NameInMap("DiagnosticProduct")
         public String diagnosticProduct;
 
+        /**
+         * <p>The ID of the diagnostic report.</p>
+         */
         @NameInMap("ReportId")
         public String reportId;
 
+        /**
+         * <p>The diagnosis status.</p>
+         */
         @NameInMap("Status")
         public String status;
 

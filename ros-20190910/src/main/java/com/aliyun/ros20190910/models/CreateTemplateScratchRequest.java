@@ -53,6 +53,9 @@ public class CreateTemplateScratchRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -272,6 +275,9 @@ public class CreateTemplateScratchRequest extends TeaModel {
     }
 
     public static class CreateTemplateScratchRequestSourceResources extends TeaModel {
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

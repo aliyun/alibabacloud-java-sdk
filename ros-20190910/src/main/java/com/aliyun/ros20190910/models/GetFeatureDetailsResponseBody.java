@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetFeatureDetailsResponseBody extends TeaModel {
+    /**
+     * <p>Details of the drift detection feature.</p>
+     */
     @NameInMap("DriftDetection")
     public GetFeatureDetailsResponseBodyDriftDetection driftDetection;
 
@@ -19,6 +22,9 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     @NameInMap("ResourceCleaner")
     public GetFeatureDetailsResponseBodyResourceCleaner resourceCleaner;
 
+    /**
+     * <p>Details of the resource import feature.</p>
+     */
     @NameInMap("ResourceImport")
     public GetFeatureDetailsResponseBodyResourceImport resourceImport;
 
@@ -102,6 +108,9 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     }
 
     public static class GetFeatureDetailsResponseBodyDriftDetection extends TeaModel {
+        /**
+         * <p>The resource types that are supported by the drift detection feature.</p>
+         */
         @NameInMap("SupportedResourceTypes")
         public java.util.List<String> supportedResourceTypes;
 
@@ -122,26 +131,19 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
     public static class GetFeatureDetailsResponseBodyResourceCleanerSupportedResourceTypes extends TeaModel {
         /**
-         * <p>The resource type that can be cleaned up.</p>
+         * <p>The resource type that supports the resource cleaner feature.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The names of the side effects. The StopInstance value indicates that an instance that is related to the specified resource is stopped.</p>
+         * <p>The names of the side effects that may be caused by the cleanup operation performed on the resources of the specified type.</p>
          */
         @NameInMap("SideEffects")
         public java.util.List<String> sideEffects;
 
         /**
-         * <p>The filters that are used to filter resources. Valid values:</p>
-         * <br>
-         * <p>*   RegionId: the ID of the region.</p>
-         * <p>*   ResourceId: the ID of the resource.</p>
-         * <p>*   ResourceName: the name of the resource.</p>
-         * <p>*   Tags: the tags of the resource.</p>
-         * <p>*   ResourceGroupId: the ID of the resource group.</p>
-         * <p>*   DeletionProtection: the deletion protection feature.</p>
+         * <p>The names of the filters that are supported by the resource type.</p>
          */
         @NameInMap("SupportedFilters")
         public java.util.List<String> supportedFilters;
@@ -200,9 +202,15 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     }
 
     public static class GetFeatureDetailsResponseBodyResourceImportSupportedResourceTypes extends TeaModel {
+        /**
+         * <p>The resource identifiers.</p>
+         */
         @NameInMap("ResourceIdentifiers")
         public java.util.List<String> resourceIdentifiers;
 
+        /**
+         * <p>The resource type.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -230,6 +238,9 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     }
 
     public static class GetFeatureDetailsResponseBodyResourceImport extends TeaModel {
+        /**
+         * <p>The resource types that are supported by the resource import feature.</p>
+         */
         @NameInMap("SupportedResourceTypes")
         public java.util.List<GetFeatureDetailsResponseBodyResourceImportSupportedResourceTypes> supportedResourceTypes;
 
@@ -314,41 +325,44 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>Indicates whether the resource scope can be specified by resource group. Valid values:</p>
+         * <p>Indicates whether the resource scope can be specified by source resource group. Valid values:</p>
          * <br>
-         * <p>- true</p>
-         * <p>- false</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("SourceResourceGroupSupported")
         public Boolean sourceResourceGroupSupported;
 
         /**
-         * <p>Indicates whether the resource scope can be specified by tag, resource group, or resource. Valid values:</p>
+         * <p>Indicates whether the resource scope can be specified by source resource. Valid values:</p>
          * <br>
-         * <p>- true</p>
-         * <p>- false</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("SourceResourcesSupported")
         public Boolean sourceResourcesSupported;
 
         /**
-         * <p>Indicates whether the resource scope can be specified by resource. Valid values:</p>
+         * <p>Indicates whether the resource scope can be specified by source tag, resource group, or resource. Valid values:</p>
          * <br>
-         * <p>- true</p>
-         * <p>- false</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("SourceSupported")
         public Boolean sourceSupported;
 
         /**
-         * <p>Indicates whether the resource scope can be specified by tag. Valid values:</p>
+         * <p>Indicates whether the resource scope can be specified by source tag. Valid values:</p>
          * <br>
-         * <p>- true</p>
-         * <p>- false</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("SourceTagSupported")
         public Boolean sourceTagSupported;
 
+        /**
+         * <p>The scenario types that are supported.</p>
+         */
         @NameInMap("SupportedTemplateScratchTypes")
         public java.util.List<String> supportedTemplateScratchTypes;
 
@@ -409,7 +423,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
     public static class GetFeatureDetailsResponseBodyTemplateScratch extends TeaModel {
         /**
-         * <p>The resource types that support the scenario feature.</p>
+         * <p>The resource types that are supported by the scenario feature.</p>
          */
         @NameInMap("SupportedResourceTypes")
         public java.util.List<GetFeatureDetailsResponseBodyTemplateScratchSupportedResourceTypes> supportedResourceTypes;
@@ -537,7 +551,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         public String providerName;
 
         /**
-         * <p>The versions of the provider.</p>
+         * <p>The provider versions.</p>
          */
         @NameInMap("SupportedVersions")
         public java.util.List<String> supportedVersions;
@@ -585,7 +599,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         public String transform;
 
         /**
-         * <p>The versions to which Terraform can be updated in ROS.</p>
+         * <p>The Terraform versions that can be updated in ROS.</p>
          */
         @NameInMap("UpdateAllowedTransforms")
         public java.util.List<String> updateAllowedTransforms;

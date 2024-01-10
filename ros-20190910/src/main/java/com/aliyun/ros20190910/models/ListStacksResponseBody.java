@@ -27,7 +27,7 @@ public class ListStacksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The stacks.</p>
+     * <p>Details of the stacks.</p>
      */
     @NameInMap("Stacks")
     public java.util.List<ListStacksResponseBodyStacks> stacks;
@@ -177,13 +177,13 @@ public class ListStacksResponseBody extends TeaModel {
 
     public static class ListStacksResponseBodyStacksTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key of the stack.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value of the stack.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -218,6 +218,14 @@ public class ListStacksResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Indicates whether deletion protection is enabled for the stack. Valid values:</p>
+         * <br>
+         * <p>*   Enabled: Deletion protection is enabled for the stack.</p>
+         * <p>*   Disabled: Deletion protection is disabled for the stack. In this case, you can delete the stack by using the console or calling the [DeleteStack](~~610812~~) operation.</p>
+         * <br>
+         * <p>>  Deletion protection of a nested stack is the same as that of its root stack.</p>
+         */
         @NameInMap("DeletionProtection")
         public String deletionProtection;
 
@@ -237,9 +245,9 @@ public class ListStacksResponseBody extends TeaModel {
         public String driftDetectionTime;
 
         /**
-         * <p>The supplementary information that is returned when an error occurs on a stack operation.</p>
+         * <p>The supplementary information that is returned if an error occurs on a stack operation.</p>
          * <br>
-         * <p>> This parameter is returned only if an error occurs on a stack operation. The system returns at least one sub-property. For example, an error occurred when an API operation of another Alibaba Cloud service was called.</p>
+         * <p>>  This parameter is returned only under specific conditions, and is returned together with at least one sub-parameter. For example, an error occurred when an API operation of another Alibaba Cloud service was called.</p>
          */
         @NameInMap("OperationInfo")
         public ListStacksResponseBodyStacksOperationInfo operationInfo;
@@ -302,7 +310,7 @@ public class ListStacksResponseBody extends TeaModel {
         /**
          * <p>The stack type. Valid values:</p>
          * <br>
-         * <p>*   ROS: Resource Orchestration Service (ROS) stack. The stack is created by using a ROS template.</p>
+         * <p>*   ROS: ROS stack. The stack is created by using a ROS template.</p>
          * <p>*   Terraform: Terraform stack. The stack is created by using a Terraform template.</p>
          */
         @NameInMap("StackType")
@@ -327,7 +335,7 @@ public class ListStacksResponseBody extends TeaModel {
         public java.util.List<ListStacksResponseBodyStacksTags> tags;
 
         /**
-         * <p>The timeout period that is allowed to create the stack. Unit: minutes.</p>
+         * <p>The timeout period for creating the stack. Unit: minutes.</p>
          */
         @NameInMap("TimeoutInMinutes")
         public Integer timeoutInMinutes;

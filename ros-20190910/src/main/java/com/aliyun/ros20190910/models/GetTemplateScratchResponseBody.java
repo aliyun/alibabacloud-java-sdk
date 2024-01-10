@@ -11,7 +11,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The scenario.</p>
+     * <p>The resource scenario.</p>
      */
     @NameInMap("TemplateScratch")
     public GetTemplateScratchResponseBodyTemplateScratch templateScratch;
@@ -39,13 +39,13 @@ public class GetTemplateScratchResponseBody extends TeaModel {
 
     public static class GetTemplateScratchResponseBodyTemplateScratchPreferenceParameters extends TeaModel {
         /**
-         * <p>The key of the parameter.</p>
+         * <p>The parameter name.</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
-         * <p>The value of the parameter.</p>
+         * <p>The parameter value.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -111,13 +111,13 @@ public class GetTemplateScratchResponseBody extends TeaModel {
 
     public static class GetTemplateScratchResponseBodyTemplateScratchSourceResources extends TeaModel {
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The resource type.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -231,7 +231,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the stack.</p>
+         * <p>The stack ID.</p>
          */
         @NameInMap("StackId")
         public String stackId;
@@ -315,6 +315,9 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         @NameInMap("PreferenceParameters")
         public java.util.List<GetTemplateScratchResponseBodyTemplateScratchPreferenceParameters> preferenceParameters;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
