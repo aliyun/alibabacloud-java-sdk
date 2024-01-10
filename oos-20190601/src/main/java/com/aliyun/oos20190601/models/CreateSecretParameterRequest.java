@@ -58,7 +58,7 @@ public class CreateSecretParameterRequest extends TeaModel {
     public java.util.Map<String, ?> tags;
 
     /**
-     * <p>The data type of the parameter. Set the value to Secret.</p>
+     * <p>The type of the parameter. Set the value to Secret.</p>
      */
     @NameInMap("Type")
     public String type;

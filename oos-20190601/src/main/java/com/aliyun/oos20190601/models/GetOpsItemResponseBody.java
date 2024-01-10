@@ -63,12 +63,6 @@ public class GetOpsItemResponseBody extends TeaModel {
         public String createDate;
 
         /**
-         * <p>The duplicated string.</p>
-         */
-        @NameInMap("DedupString")
-        public String dedupString;
-
-        /**
          * <p>The description.</p>
          */
         @NameInMap("Description")
@@ -181,14 +175,6 @@ public class GetOpsItemResponseBody extends TeaModel {
         }
         public String getCreateDate() {
             return this.createDate;
-        }
-
-        public GetOpsItemResponseBodyOpsItem setDedupString(String dedupString) {
-            this.dedupString = dedupString;
-            return this;
-        }
-        public String getDedupString() {
-            return this.dedupString;
         }
 
         public GetOpsItemResponseBodyOpsItem setDescription(String description) {

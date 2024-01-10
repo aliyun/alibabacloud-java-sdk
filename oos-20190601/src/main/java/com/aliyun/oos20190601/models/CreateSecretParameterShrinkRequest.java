@@ -58,7 +58,7 @@ public class CreateSecretParameterShrinkRequest extends TeaModel {
     public String tagsShrink;
 
     /**
-     * <p>The data type of the parameter. Set the value to Secret.</p>
+     * <p>The type of the parameter. Set the value to Secret.</p>
      */
     @NameInMap("Type")
     public String type;

@@ -41,6 +41,9 @@ public class ListTemplatesShrinkRequest extends TeaModel {
     @NameInMap("HasTrigger")
     public Boolean hasTrigger;
 
+    /**
+     * <p>The template is favorite or not.</p>
+     */
     @NameInMap("IsFavorite")
     public Boolean isFavorite;
 
@@ -78,13 +81,13 @@ public class ListTemplatesShrinkRequest extends TeaModel {
     public String shareType;
 
     /**
-     * <p>The field that is used to sort the templates to be returned. Valid values:</p>
+     * <p>The field that is used to sort the templates to be queried. Valid values:</p>
      * <br>
-     * <p>*   **TotalExecutionCounts**: The system sorts the returned templates based on the total number of execution times of the template. This is the default value.</p>
-     * <p>*   **Popularity**: The system sorts the returned templates based on the popularity of the template.</p>
-     * <p>*   **TemplateName**: The system sorts the returned templates based on the name of the template.</p>
-     * <p>*   **CreatedDate**: The system sorts the returned templates based on the creation time of the template.</p>
-     * <p>*   **UpdateDate**: The system sorts the returned templates based on the update time of the template.</p>
+     * <p>*   **TotalExecutionCount** (default): The system sorts the returned templates based on the total number of times that the templates are used.</p>
+     * <p>*   **Popularity**: The system sorts the returned templates based on the popularity of the templates.</p>
+     * <p>*   **TemplateName**: The system sorts the returned templates based on the names of the templates.</p>
+     * <p>*   **CreatedDate**: The system sorts the returned templates based on the points in time when the templates are created.</p>
+     * <p>*   **UpdatedDate**: The system sorts the returned templates based on the points in time when the templates are updated.</p>
      */
     @NameInMap("SortField")
     public String sortField;
@@ -120,33 +123,11 @@ public class ListTemplatesShrinkRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The type of the template.</p>
+     * <p>The type of the template. Valid values:</p>
      * <br>
-     * <p>Valid values:</p>
-     * <br>
-     * <p>*   Automation</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   State</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Package</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <p>*   Automation: the template for automated tasks.</p>
+     * <p>*   State: the template for configuration inventories.</p>
+     * <p>*   Package: the template for software packages.</p>
      */
     @NameInMap("TemplateType")
     public String templateType;

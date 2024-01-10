@@ -4,24 +4,45 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class DescribeApplicationGroupBillRequest extends TeaModel {
+    /**
+     * <p>The application name.</p>
+     */
     @NameInMap("ApplicationName")
     public String applicationName;
 
+    /**
+     * <p>The billing cycle, in the YYYY-MM format.</p>
+     */
     @NameInMap("BillingCycle")
     public String billingCycle;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The application group name.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The type of the cloud resource.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
