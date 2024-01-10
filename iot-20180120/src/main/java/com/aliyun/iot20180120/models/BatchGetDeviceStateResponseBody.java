@@ -126,6 +126,9 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Timestamp")
+        public Long timestamp;
+
         public static BatchGetDeviceStateResponseBodyDeviceStatusListDeviceStatus build(java.util.Map<String, ?> map) throws Exception {
             BatchGetDeviceStateResponseBodyDeviceStatusListDeviceStatus self = new BatchGetDeviceStateResponseBodyDeviceStatusListDeviceStatus();
             return TeaModel.build(map, self);
@@ -177,6 +180,14 @@ public class BatchGetDeviceStateResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public BatchGetDeviceStateResponseBodyDeviceStatusListDeviceStatus setTimestamp(Long timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public Long getTimestamp() {
+            return this.timestamp;
         }
 
     }

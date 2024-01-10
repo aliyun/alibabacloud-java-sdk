@@ -64,6 +64,36 @@ public class QueryMessageInfoResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class QueryMessageInfoResponseBodyMessageMqttProperties extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static QueryMessageInfoResponseBodyMessageMqttProperties build(java.util.Map<String, ?> map) throws Exception {
+            QueryMessageInfoResponseBodyMessageMqttProperties self = new QueryMessageInfoResponseBodyMessageMqttProperties();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMessageInfoResponseBodyMessageMqttProperties setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public QueryMessageInfoResponseBodyMessageMqttProperties setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class QueryMessageInfoResponseBodyMessageUserProperties extends TeaModel {
         @NameInMap("Key")
         public String key;
@@ -101,8 +131,17 @@ public class QueryMessageInfoResponseBody extends TeaModel {
         @NameInMap("MessageContent")
         public String messageContent;
 
+        @NameInMap("MqttProperties")
+        public java.util.List<QueryMessageInfoResponseBodyMessageMqttProperties> mqttProperties;
+
         @NameInMap("TopicFullName")
         public String topicFullName;
+
+        @NameInMap("TransformedMessageContent")
+        public String transformedMessageContent;
+
+        @NameInMap("TransformedTopicFullName")
+        public String transformedTopicFullName;
 
         @NameInMap("UniMsgId")
         public String uniMsgId;
@@ -131,12 +170,36 @@ public class QueryMessageInfoResponseBody extends TeaModel {
             return this.messageContent;
         }
 
+        public QueryMessageInfoResponseBodyMessage setMqttProperties(java.util.List<QueryMessageInfoResponseBodyMessageMqttProperties> mqttProperties) {
+            this.mqttProperties = mqttProperties;
+            return this;
+        }
+        public java.util.List<QueryMessageInfoResponseBodyMessageMqttProperties> getMqttProperties() {
+            return this.mqttProperties;
+        }
+
         public QueryMessageInfoResponseBodyMessage setTopicFullName(String topicFullName) {
             this.topicFullName = topicFullName;
             return this;
         }
         public String getTopicFullName() {
             return this.topicFullName;
+        }
+
+        public QueryMessageInfoResponseBodyMessage setTransformedMessageContent(String transformedMessageContent) {
+            this.transformedMessageContent = transformedMessageContent;
+            return this;
+        }
+        public String getTransformedMessageContent() {
+            return this.transformedMessageContent;
+        }
+
+        public QueryMessageInfoResponseBodyMessage setTransformedTopicFullName(String transformedTopicFullName) {
+            this.transformedTopicFullName = transformedTopicFullName;
+            return this;
+        }
+        public String getTransformedTopicFullName() {
+            return this.transformedTopicFullName;
         }
 
         public QueryMessageInfoResponseBodyMessage setUniMsgId(String uniMsgId) {

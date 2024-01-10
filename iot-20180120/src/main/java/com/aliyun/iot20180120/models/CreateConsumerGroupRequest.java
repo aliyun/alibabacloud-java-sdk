@@ -21,12 +21,6 @@ public class CreateConsumerGroupRequest extends TeaModel {
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
-    @NameInMap("SubBizCode")
-    public String subBizCode;
-
-    @NameInMap("Type")
-    public String type;
-
     public static CreateConsumerGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateConsumerGroupRequest self = new CreateConsumerGroupRequest();
         return TeaModel.build(map, self);
@@ -46,22 +40,6 @@ public class CreateConsumerGroupRequest extends TeaModel {
     }
     public String getIotInstanceId() {
         return this.iotInstanceId;
-    }
-
-    public CreateConsumerGroupRequest setSubBizCode(String subBizCode) {
-        this.subBizCode = subBizCode;
-        return this;
-    }
-    public String getSubBizCode() {
-        return this.subBizCode;
-    }
-
-    public CreateConsumerGroupRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
     }
 
 }
