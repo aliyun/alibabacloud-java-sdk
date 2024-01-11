@@ -165,6 +165,9 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        @NameInMap("reviewTime")
+        public String reviewTime;
+
         @NameInMap("state")
         public String state;
 
@@ -209,6 +212,14 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListMergeRequestsResponseBodyResultReviewers setReviewTime(String reviewTime) {
+            this.reviewTime = reviewTime;
+            return this;
+        }
+        public String getReviewTime() {
+            return this.reviewTime;
         }
 
         public ListMergeRequestsResponseBodyResultReviewers setState(String state) {
