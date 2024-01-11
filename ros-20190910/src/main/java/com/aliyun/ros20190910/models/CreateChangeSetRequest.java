@@ -190,12 +190,6 @@ public class CreateChangeSetRequest extends TeaModel {
     @NameInMap("StackPolicyURL")
     public String stackPolicyURL;
 
-    /**
-     * <p>The structure of the template body. The template body must be 1 to 524,288 bytes in length.\</p>
-     * <p>If the length of the template body is longer than required, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessive length of URLs.</p>
-     * <br>
-     * <p>You can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</p>
-     */
     @NameInMap("TemplateBody")
     public String templateBody;
 
