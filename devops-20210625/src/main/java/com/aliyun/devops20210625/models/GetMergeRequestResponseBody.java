@@ -157,6 +157,9 @@ public class GetMergeRequestResponseBody extends TeaModel {
         @NameInMap("reviewOpinionStatus")
         public String reviewOpinionStatus;
 
+        @NameInMap("reviewTime")
+        public String reviewTime;
+
         @NameInMap("state")
         public String state;
 
@@ -214,6 +217,14 @@ public class GetMergeRequestResponseBody extends TeaModel {
         }
         public String getReviewOpinionStatus() {
             return this.reviewOpinionStatus;
+        }
+
+        public GetMergeRequestResponseBodyResultReviewers setReviewTime(String reviewTime) {
+            this.reviewTime = reviewTime;
+            return this;
+        }
+        public String getReviewTime() {
+            return this.reviewTime;
         }
 
         public GetMergeRequestResponseBodyResultReviewers setState(String state) {

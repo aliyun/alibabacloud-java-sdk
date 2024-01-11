@@ -71,6 +71,9 @@ public class GetProjectMemberResponseBody extends TeaModel {
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
+        @NameInMap("email")
+        public String email;
+
         @NameInMap("id")
         public Long id;
 
@@ -96,6 +99,14 @@ public class GetProjectMemberResponseBody extends TeaModel {
         }
         public String getAvatarUrl() {
             return this.avatarUrl;
+        }
+
+        public GetProjectMemberResponseBodyResult setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
         }
 
         public GetProjectMemberResponseBodyResult setId(Long id) {
