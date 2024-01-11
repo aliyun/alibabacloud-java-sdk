@@ -213,6 +213,12 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         @NameInMap("RiskStatus")
         public String riskStatus;
 
+        @NameInMap("SyncOpen")
+        public Integer syncOpen;
+
+        @NameInMap("SyncStatus")
+        public Integer syncStatus;
+
         /**
          * <p>The number of vulnerabilities that are detected from the current pod, application, namespace, or cluster.</p>
          */
@@ -414,6 +420,22 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         }
         public String getRiskStatus() {
             return this.riskStatus;
+        }
+
+        public DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList setSyncOpen(Integer syncOpen) {
+            this.syncOpen = syncOpen;
+            return this;
+        }
+        public Integer getSyncOpen() {
+            return this.syncOpen;
+        }
+
+        public DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList setSyncStatus(Integer syncStatus) {
+            this.syncStatus = syncStatus;
+            return this;
+        }
+        public Integer getSyncStatus() {
+            return this.syncStatus;
         }
 
         public DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList setVulCount(Integer vulCount) {

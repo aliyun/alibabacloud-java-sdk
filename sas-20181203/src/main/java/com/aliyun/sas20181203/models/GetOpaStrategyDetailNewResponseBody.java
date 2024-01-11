@@ -134,7 +134,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
 
     public static class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBaseline extends TeaModel {
         /**
-         * <p>The baseline information.</p>
+         * <p>The information about the baseline check item.</p>
          */
         @NameInMap("Item")
         public java.util.List<GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBaselineItem> item;
@@ -169,9 +169,19 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
     }
 
     public static class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBuildRiskItem extends TeaModel {
+        /**
+         * <p>The ID of the image build risk.</p>
+         * <br>
+         * <p>>  You can call the [ListImageBuildRiskItem](~~ListImageBuildRiskItem~~) operation to query the ID of the malicious sample.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the image build risk.</p>
+         * <br>
+         * <p>>  You can call the [ListImageBuildRiskItem](~~ListImageBuildRiskItem~~) operation to query the ID of the malicious sample.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -199,9 +209,15 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
     }
 
     public static class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBuildRisk extends TeaModel {
+        /**
+         * <p>The configuration of image build risk.</p>
+         */
         @NameInMap("Item")
         public java.util.List<GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBuildRiskItem> item;
 
+        /**
+         * <p>The risk levels.</p>
+         */
         @NameInMap("RiskLevel")
         public java.util.List<String> riskLevel;
 
@@ -266,7 +282,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
 
     public static class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailMaliciousFile extends TeaModel {
         /**
-         * <p>The information about the malicious samples.</p>
+         * <p>The information about the malicious sample.</p>
          */
         @NameInMap("Item")
         public java.util.List<GetOpaStrategyDetailNewResponseBodyDataAlarmDetailMaliciousFileItem> item;
@@ -301,9 +317,19 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
     }
 
     public static class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailSensitiveFileItem extends TeaModel {
+        /**
+         * <p>The ID of the sensitive files.</p>
+         * <br>
+         * <p>>  You can call the [GetSensitiveDefineRuleConfig](~~GetSensitiveDefineRuleConfig~~) operation to query the ID of the malicious sample.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the sensitive files.</p>
+         * <br>
+         * <p>>  You can call the [GetSensitiveDefineRuleConfig](~~4576877~~) operation to query the ID of the malicious sample.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -331,9 +357,15 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
     }
 
     public static class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailSensitiveFile extends TeaModel {
+        /**
+         * <p>The configuration of sensitive file.</p>
+         */
         @NameInMap("Item")
         public java.util.List<GetOpaStrategyDetailNewResponseBodyDataAlarmDetailSensitiveFileItem> item;
 
+        /**
+         * <p>The risk levels.</p>
+         */
         @NameInMap("RiskLevel")
         public java.util.List<String> riskLevel;
 
@@ -397,9 +429,21 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
     }
 
     public static class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVulRiskClass extends TeaModel {
+        /**
+         * <p>The ID of the vulnerability types. Valid values:</p>
+         * <br>
+         * <p>*   **cve**: system vulnerability</p>
+         * <p>*   **app**: application vulnerability</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the vulnerability. Valid values:</p>
+         * <br>
+         * <p>*   **system vulnerability**</p>
+         * <p>*   **application vulnerability**</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -428,11 +472,14 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
 
     public static class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVul extends TeaModel {
         /**
-         * <p>The vulnerability information.</p>
+         * <p>The information about the vulnerability.</p>
          */
         @NameInMap("Item")
         public java.util.List<GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVulItem> item;
 
+        /**
+         * <p>Risk type of vulnerability.</p>
+         */
         @NameInMap("RiskClass")
         public java.util.List<GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVulRiskClass> riskClass;
 
@@ -475,25 +522,31 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
 
     public static class GetOpaStrategyDetailNewResponseBodyDataAlarmDetail extends TeaModel {
         /**
-         * <p>The baseline configuration information.</p>
+         * <p>The baseline check configuration.</p>
          */
         @NameInMap("Baseline")
         public GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBaseline baseline;
 
+        /**
+         * <p>The configuration of image build risk.</p>
+         */
         @NameInMap("BuildRisk")
         public GetOpaStrategyDetailNewResponseBodyDataAlarmDetailBuildRisk buildRisk;
 
         /**
-         * <p>The configuration information about the malicious sample.</p>
+         * <p>The configuration of malicious samples.</p>
          */
         @NameInMap("MaliciousFile")
         public GetOpaStrategyDetailNewResponseBodyDataAlarmDetailMaliciousFile maliciousFile;
 
+        /**
+         * <p>The configuration of sensitive file.</p>
+         */
         @NameInMap("SensitiveFile")
         public GetOpaStrategyDetailNewResponseBodyDataAlarmDetailSensitiveFile sensitiveFile;
 
         /**
-         * <p>The vulnerability configuration information.</p>
+         * <p>The vulnerability configuration.</p>
          */
         @NameInMap("Vul")
         public GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVul vul;
@@ -547,13 +600,13 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
 
     public static class GetOpaStrategyDetailNewResponseBodyDataScopes extends TeaModel {
         /**
-         * <p>The ID of the rule in the cluster.</p>
+         * <p>The ID of the cluster node to which the rule is applied.</p>
          */
         @NameInMap("AckPolicyInstanceId")
         public String ackPolicyInstanceId;
 
         /**
-         * <p>Specifies whether all namespaces are included. Valid values:</p>
+         * <p>Indicates whether all namespaces are included. Valid values:</p>
          * <br>
          * <p>*   **1**: All namespaces are included.</p>
          * <p>*   **0**: Not all namespaces are included.</p>
@@ -614,7 +667,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
 
     public static class GetOpaStrategyDetailNewResponseBodyData extends TeaModel {
         /**
-         * <p>The rule configuration information.</p>
+         * <p>The rule configuration.</p>
          */
         @NameInMap("AlarmDetail")
         public GetOpaStrategyDetailNewResponseBodyDataAlarmDetail alarmDetail;
@@ -638,7 +691,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The rule description.</p>
+         * <p>The description.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -665,7 +718,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         public String lang;
 
         /**
-         * <p>Indicates whether the rule applies to malicious Internet images. Valid values:</p>
+         * <p>Indicates whether the rule supports malicious Internet images. Valid values:</p>
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false**</p>
@@ -690,7 +743,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         public Integer ruleAction;
 
         /**
-         * <p>The scope.</p>
+         * <p>The application scope.</p>
          */
         @NameInMap("Scopes")
         public java.util.List<GetOpaStrategyDetailNewResponseBodyDataScopes> scopes;
@@ -714,7 +767,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         public Long strategyTemplateId;
 
         /**
-         * <p>Indicates whether the rule applies to unscanned images. Valid values:</p>
+         * <p>Indicates whether the rule supports unscanned images. Valid values:</p>
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false**</p>

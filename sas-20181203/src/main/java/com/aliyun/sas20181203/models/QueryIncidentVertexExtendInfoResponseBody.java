@@ -4,15 +4,30 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("Count")
     public String count;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The returned extended information about the node.</p>
+     */
     @NameInMap("VertexExtendInfo")
     public java.util.List<QueryIncidentVertexExtendInfoResponseBodyVertexExtendInfo> vertexExtendInfo;
 
@@ -54,9 +69,15 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
     }
 
     public static class QueryIncidentVertexExtendInfoResponseBodyVertexExtendInfoDisplayInfo extends TeaModel {
+        /**
+         * <p>The display name of the property.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The display value of the property.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -84,12 +105,30 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
     }
 
     public static class QueryIncidentVertexExtendInfoResponseBodyVertexExtendInfoNeighborList extends TeaModel {
+        /**
+         * <p>The number of nodes.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>Indicates whether more neighboring nodes exist. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("HasMore")
         public Boolean hasMore;
 
+        /**
+         * <p>The node type. Valid values include but are not limited to:</p>
+         * <br>
+         * <p>*   **process**</p>
+         * <p>*   **file**</p>
+         * <p>*   **alert**</p>
+         * <p>*   **ip**</p>
+         * <p>*   **domain**</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -125,75 +164,151 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
     }
 
     public static class QueryIncidentVertexExtendInfoResponseBodyVertexExtendInfoProperty extends TeaModel {
+        /**
+         * <p>The alert description.</p>
+         */
         @NameInMap("AlertDesc")
         public String alertDesc;
 
+        /**
+         * <p>The details of the alert.</p>
+         */
         @NameInMap("AlertDetail")
         public String alertDetail;
 
+        /**
+         * <p>The alert level. Valid values:</p>
+         * <br>
+         * <p>*   **serious**</p>
+         * <p>*   **suspicious**</p>
+         * <p>*   **remind**</p>
+         */
         @NameInMap("AlertLevel")
         public String alertLevel;
 
+        /**
+         * <p>The alert name.</p>
+         */
         @NameInMap("AlertName")
         public String alertName;
 
+        /**
+         * <p>The code of the alert name.</p>
+         */
         @NameInMap("AlertNameCode")
         public String alertNameCode;
 
+        /**
+         * <p>The alert name. The value is in English.</p>
+         */
         @NameInMap("AlertNameEn")
         public String alertNameEn;
 
+        /**
+         * <p>The service that generates the alert.</p>
+         */
         @NameInMap("AlertSrcProd")
         public String alertSrcProd;
 
+        /**
+         * <p>The module of the service that generates the alert.</p>
+         */
         @NameInMap("AlertSrcProdModule")
         public String alertSrcProdModule;
 
+        /**
+         * <p>The alert title.</p>
+         */
         @NameInMap("AlertTitle")
         public String alertTitle;
 
+        /**
+         * <p>The alert type.</p>
+         */
         @NameInMap("AlertType")
         public String alertType;
 
+        /**
+         * <p>The code of the alert type.</p>
+         */
         @NameInMap("AlertTypeCode")
         public String alertTypeCode;
 
+        /**
+         * <p>The alert type. The value is in English.</p>
+         */
         @NameInMap("AlertTypeEn")
         public String alertTypeEn;
 
+        /**
+         * <p>The alert ID.</p>
+         */
         @NameInMap("AlertUuid")
         public String alertUuid;
 
+        /**
+         * <p>The assets.</p>
+         */
         @NameInMap("AssetList")
         public String assetList;
 
+        /**
+         * <p>ATT\&CK</p>
+         */
         @NameInMap("AttCk")
         public String attCk;
 
+        /**
+         * <p>The code of the cloud service provider.</p>
+         */
         @NameInMap("CloudCode")
         public String cloudCode;
 
+        /**
+         * <p>The instance.</p>
+         */
         @NameInMap("EntityList")
         public String entityList;
 
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The modification time.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The time when the log was generated.</p>
+         */
         @NameInMap("LogTime")
         public String logTime;
 
+        /**
+         * <p>The log ID.</p>
+         */
         @NameInMap("LogUuid")
         public String logUuid;
 
+        /**
+         * <p>The ID of the master account.</p>
+         */
         @NameInMap("MainUserId")
         public String mainUserId;
 
+        /**
+         * <p>The time when the alert was generated.</p>
+         */
         @NameInMap("OccurTime")
         public String occurTime;
 
+        /**
+         * <p>The ID of the sub-account.</p>
+         */
         @NameInMap("SubUserId")
         public String subUserId;
 
@@ -398,46 +513,88 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
 
     public static class QueryIncidentVertexExtendInfoResponseBodyVertexExtendInfo extends TeaModel {
         /**
-         * <p>AliUid</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          */
         @NameInMap("Aliuid")
         public String aliuid;
 
+        /**
+         * <p>The display information.</p>
+         */
         @NameInMap("DisplayInfo")
         public java.util.List<QueryIncidentVertexExtendInfoResponseBodyVertexExtendInfoDisplayInfo> displayInfo;
 
+        /**
+         * <p>The node ID.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The language of the content within the response. Valid values:</p>
+         * <br>
+         * <p>*   **zh**: Chinese</p>
+         * <p>*   **en**: English</p>
+         */
         @NameInMap("Lang")
         public String lang;
 
+        /**
+         * <p>The node name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The neighboring nodes.</p>
+         */
         @NameInMap("NeighborList")
         public java.util.List<QueryIncidentVertexExtendInfoResponseBodyVertexExtendInfoNeighborList> neighborList;
 
+        /**
+         * <p>The node properties. The value is in the text format.</p>
+         */
         @NameInMap("Properties")
         public String properties;
 
+        /**
+         * <p>The node property.</p>
+         */
         @NameInMap("Property")
         public QueryIncidentVertexExtendInfoResponseBodyVertexExtendInfoProperty property;
 
+        /**
+         * <p>The ID of the rule for which the node was created.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The time when the node was created.</p>
+         */
         @NameInMap("Time")
         public String time;
 
+        /**
+         * <p>The UNIX timestamp when the node was created. Unit: milliseconds.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        /**
+         * <p>The node type. Valid values include but are not limited to:</p>
+         * <br>
+         * <p>*   **process**</p>
+         * <p>*   **file**</p>
+         * <p>*   **alert**</p>
+         * <p>*   **ip**</p>
+         * <p>*   **domain**</p>
+         */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>UUID</p>
+         * <p>The node UUID.</p>
          */
         @NameInMap("Uuid")
         public String uuid;

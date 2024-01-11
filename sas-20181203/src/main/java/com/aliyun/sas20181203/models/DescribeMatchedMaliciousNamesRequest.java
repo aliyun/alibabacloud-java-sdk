@@ -5,20 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeMatchedMaliciousNamesRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <p>设置请求和接收消息的语言类型，默认为**zh**。取值：</p>
      * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>- **zh**：中文</p>
+     * <p>- **en**：英文</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The severity of the malicious image sample that you want to query. You can enter multiple severities. Separate the severities with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **serious**</p>
-     * <p>*   **suspicious**</p>
-     * <p>*   **remind**</p>
+     * <p>要查询的镜像恶意样本的危险程度。可输入多个值，多个值之间使用英文逗号（,）分隔。取值：</p>
+     * <p>- **serious**：紧急</p>
+     * <p>- **suspicious**：可疑</p>
+     * <p>- **remind**：提醒</p>
      */
     @NameInMap("Levels")
     public String levels;

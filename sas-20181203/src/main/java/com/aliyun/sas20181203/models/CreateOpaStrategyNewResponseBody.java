@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateOpaStrategyNewResponseBody extends TeaModel {
     /**
-     * <p>The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The IDs of the clusters for which the rule fails to be created.</p>
+     * <p>The IDs of the clusters that failed to be saved.</p>
      */
     @NameInMap("Data")
     public java.util.List<String> data;

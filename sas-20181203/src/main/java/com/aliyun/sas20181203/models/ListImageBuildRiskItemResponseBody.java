@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListImageBuildRiskItemResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListImageBuildRiskItemResponseBodyData> data;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class ListImageBuildRiskItemResponseBody extends TeaModel {
     }
 
     public static class ListImageBuildRiskItemResponseBodyData extends TeaModel {
+        /**
+         * <p>The key of the name for the image build risk item.</p>
+         */
         @NameInMap("ItemKey")
         public String itemKey;
 
+        /**
+         * <p>The name of the name for the image build risk item.</p>
+         */
         @NameInMap("ItemName")
         public String itemName;
 

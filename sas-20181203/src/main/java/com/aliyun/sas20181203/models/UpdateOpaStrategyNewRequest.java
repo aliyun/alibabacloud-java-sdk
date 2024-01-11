@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class UpdateOpaStrategyNewRequest extends TeaModel {
     /**
-     * <p>The risks that you want to detect by using the rule on images.</p>
+     * <p>The rule configuration.</p>
      */
     @NameInMap("AlarmDetail")
     public UpdateOpaStrategyNewRequestAlarmDetail alarmDetail;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <br>
-     * <p>> This parameter is deprecated. We recommend that you use the Scopes parameter to specify the clusters in which the rule takes effect.</p>
+     * <p>> This parameter is deprecated. You can use the Scopes parameter to specify a scope in which cluster parameters take effect.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The name of the cluster.</p>
+     * <p>The cluster name.</p>
      * <br>
      * <p>> This parameter is deprecated.</p>
      */
@@ -27,19 +27,19 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The description of the rule.</p>
+     * <p>The rule description.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The names of the images in the rule.</p>
+     * <p>The image names.</p>
      */
     @NameInMap("ImageName")
     public java.util.List<String> imageName;
 
     /**
-     * <p>The tags that are added to the images in the rule.</p>
+     * <p>The image tags.</p>
      */
     @NameInMap("Label")
     public java.util.List<String> label;
@@ -56,7 +56,7 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     /**
      * <p>The action that is performed when the rule is hit. Valid values:</p>
      * <br>
-     * <p>*   **1**: trigger alerts</p>
+     * <p>*   **1**: alert</p>
      * <p>*   **2**: block</p>
      * <p>*   **3**: allow</p>
      */
@@ -64,21 +64,21 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     public Integer ruleAction;
 
     /**
-     * <p>The effective scope of the rule.</p>
+     * <p>The application scope.</p>
      */
     @NameInMap("Scopes")
     public java.util.List<UpdateOpaStrategyNewRequestScopes> scopes;
 
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The rule ID.</p>
      * <br>
-     * <p>>  You can call the \[ListOpaClusterStrategyNew]\(~~2623574~~) operation to query the IDs of rules.</p>
+     * <p>>  You can call the [ListOpaClusterStrategyNew](~~2623574~~) operation to query the rule ID.</p>
      */
     @NameInMap("StrategyId")
     public Long strategyId;
 
     /**
-     * <p>The name of the rule.</p>
+     * <p>The rule name.</p>
      */
     @NameInMap("StrategyName")
     public String strategyName;
@@ -86,7 +86,7 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     /**
      * <p>The ID of the rule template.</p>
      * <br>
-     * <p>>  You can call the [GetOpaStrategyTemplateSummary](~~2539952~~) operation to query the IDs of rule templates.</p>
+     * <p>>  You can call the [GetOpaStrategyTemplateSummary](~~2539952~~) operation to query the ID of the rule template.</p>
      */
     @NameInMap("StrategyTemplateId")
     public Long strategyTemplateId;
@@ -101,7 +101,7 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     public Boolean unScanedImage;
 
     /**
-     * <p>The whitelist.</p>
+     * <p>The whitelists.</p>
      */
     @NameInMap("WhiteList")
     public java.util.List<String> whiteList;
@@ -227,7 +227,7 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
         /**
          * <p>The ID of the baseline check item.</p>
          * <br>
-         * <p>>  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the IDs of check items.</p>
+         * <p>>  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the ID of the baseline check item.</p>
          */
         @NameInMap("Id")
         public String id;
@@ -235,7 +235,7 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
         /**
          * <p>The name of the baseline check item.</p>
          * <br>
-         * <p>>  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the names of check items.</p>
+         * <p>>  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the name of the baseline check item.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -265,7 +265,7 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
 
     public static class UpdateOpaStrategyNewRequestAlarmDetailBaseline extends TeaModel {
         /**
-         * <p>The baseline check items.</p>
+         * <p>The baseline check configuration.</p>
          */
         @NameInMap("Item")
         public java.util.List<UpdateOpaStrategyNewRequestAlarmDetailBaselineItem> item;
@@ -300,9 +300,19 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     }
 
     public static class UpdateOpaStrategyNewRequestAlarmDetailBuildRiskItem extends TeaModel {
+        /**
+         * <p>The ID of the image build risk.</p>
+         * <br>
+         * <p>>  You can call the [ListImageBuildRiskItem](~~ListImageBuildRiskItem~~) operation to query the ID of the malicious sample.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the image build risk.</p>
+         * <br>
+         * <p>>  You can call the [ListImageBuildRiskItem](~~ListImageBuildRiskItem~~) operation to query the ID of the malicious sample.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -330,9 +340,15 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     }
 
     public static class UpdateOpaStrategyNewRequestAlarmDetailBuildRisk extends TeaModel {
+        /**
+         * <p>The configuration of image build risk.</p>
+         */
         @NameInMap("Item")
         public java.util.List<UpdateOpaStrategyNewRequestAlarmDetailBuildRiskItem> item;
 
+        /**
+         * <p>The risk levels.</p>
+         */
         @NameInMap("RiskLevel")
         public java.util.List<String> riskLevel;
 
@@ -363,7 +379,7 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
         /**
          * <p>The ID of the malicious sample.</p>
          * <br>
-         * <p>>  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the IDs of malicious samples.</p>
+         * <p>>  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the ID of the malicious sample.</p>
          */
         @NameInMap("Id")
         public String id;
@@ -371,7 +387,7 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
         /**
          * <p>The name of the malicious sample.</p>
          * <br>
-         * <p>>  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the names of malicious samples.</p>
+         * <p>>  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the name of the malicious sample.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -401,7 +417,7 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
 
     public static class UpdateOpaStrategyNewRequestAlarmDetailMaliciousFile extends TeaModel {
         /**
-         * <p>The malicious samples.</p>
+         * <p>The configuration of malicious samples.</p>
          */
         @NameInMap("Item")
         public java.util.List<UpdateOpaStrategyNewRequestAlarmDetailMaliciousFileItem> item;
@@ -436,9 +452,19 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     }
 
     public static class UpdateOpaStrategyNewRequestAlarmDetailSensitiveFileItem extends TeaModel {
+        /**
+         * <p>The ID of the sensitive files.</p>
+         * <br>
+         * <p>>  You can call the [GetSensitiveDefineRuleConfig](~~GetSensitiveDefineRuleConfig~~) operation to query the ID of the malicious sample.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the sensitive files.</p>
+         * <br>
+         * <p>>  You can call the [GetSensitiveDefineRuleConfig](~~GetSensitiveDefineRuleConfig~~) operation to query the ID of the malicious sample.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -466,9 +492,15 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     }
 
     public static class UpdateOpaStrategyNewRequestAlarmDetailSensitiveFile extends TeaModel {
+        /**
+         * <p>The configuration of sensitive file.</p>
+         */
         @NameInMap("Item")
         public java.util.List<UpdateOpaStrategyNewRequestAlarmDetailSensitiveFileItem> item;
 
+        /**
+         * <p>The risk levels.</p>
+         */
         @NameInMap("RiskLevel")
         public java.util.List<String> riskLevel;
 
@@ -497,17 +529,17 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
 
     public static class UpdateOpaStrategyNewRequestAlarmDetailVulItem extends TeaModel {
         /**
-         * <p>The ID of the vulnerability.</p>
+         * <p>The vulnerability ID.</p>
          * <br>
-         * <p>>  You can call the [DescribeVulListPage](~~471928~~) operation to query the IDs of vulnerabilities.</p>
+         * <p>>  You can call the [DescribeVulListPage](~~471928~~) operation to query the vulnerability ID.</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The name of the vulnerability.</p>
+         * <p>The vulnerability name.</p>
          * <br>
-         * <p>>  You can call the [DescribeVulListPage](~~471928~~) operation to query the names of vulnerabilities.</p>
+         * <p>>  You can call the [DescribeVulListPage](~~471928~~) operation to query the vulnerability name.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -536,9 +568,21 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
     }
 
     public static class UpdateOpaStrategyNewRequestAlarmDetailVulRiskClass extends TeaModel {
+        /**
+         * <p>The ID of the vulnerability types. Valid values:</p>
+         * <br>
+         * <p>*   **cve**: system vulnerability</p>
+         * <p>*   **app**: application vulnerability</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the vulnerability. Valid values:</p>
+         * <br>
+         * <p>*   **system vulnerability**</p>
+         * <p>*   **application vulnerability**</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -567,11 +611,14 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
 
     public static class UpdateOpaStrategyNewRequestAlarmDetailVul extends TeaModel {
         /**
-         * <p>The vulnerabilities.</p>
+         * <p>The information about the vulnerability.</p>
          */
         @NameInMap("Item")
         public java.util.List<UpdateOpaStrategyNewRequestAlarmDetailVulItem> item;
 
+        /**
+         * <p>Risk type of vulnerability.</p>
+         */
         @NameInMap("RiskClass")
         public java.util.List<UpdateOpaStrategyNewRequestAlarmDetailVulRiskClass> riskClass;
 
@@ -614,25 +661,31 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
 
     public static class UpdateOpaStrategyNewRequestAlarmDetail extends TeaModel {
         /**
-         * <p>The baseline risks.</p>
+         * <p>The baseline check configuration.</p>
          */
         @NameInMap("Baseline")
         public UpdateOpaStrategyNewRequestAlarmDetailBaseline baseline;
 
+        /**
+         * <p>The configuration of image build risk.</p>
+         */
         @NameInMap("BuildRisk")
         public UpdateOpaStrategyNewRequestAlarmDetailBuildRisk buildRisk;
 
         /**
-         * <p>The malicious sample risks.</p>
+         * <p>The configuration of malicious samples.</p>
          */
         @NameInMap("MaliciousFile")
         public UpdateOpaStrategyNewRequestAlarmDetailMaliciousFile maliciousFile;
 
+        /**
+         * <p>The configuration of sensitive file.</p>
+         */
         @NameInMap("SensitiveFile")
         public UpdateOpaStrategyNewRequestAlarmDetailSensitiveFile sensitiveFile;
 
         /**
-         * <p>The vulnerability risks.</p>
+         * <p>The vulnerability configuration.</p>
          */
         @NameInMap("Vul")
         public UpdateOpaStrategyNewRequestAlarmDetailVul vul;
@@ -686,26 +739,26 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
 
     public static class UpdateOpaStrategyNewRequestScopes extends TeaModel {
         /**
-         * <p>The instance ID of the rule in the cluster.</p>
+         * <p>The ID of the cluster node to which the rule is applied.</p>
          * <br>
-         * <p>>  You can call the [GetOpaStrategyDetailNew](~~GetOpaStrategyDetailNew~~) operation to query the instance IDs of rules.</p>
+         * <p>>  You can call the [GetOpaStrategyDetailNew](~~GetOpaStrategyDetailNew~~) operation to query the ID of the cluster node to which the rule is applied.</p>
          */
         @NameInMap("AckPolicyInstanceId")
         public String ackPolicyInstanceId;
 
         /**
-         * <p>Specifies whether to include all namespaces.</p>
+         * <p>Specifies whether all namespaces are included. Valid values:</p>
          * <br>
-         * <p>*   **0**: no</p>
-         * <p>*   **1**: yes</p>
+         * <p>*   **0**: Not all namespaces are included.</p>
+         * <p>*   **1**: All namespaces are included.</p>
          */
         @NameInMap("AllNamespace")
         public Integer allNamespace;
 
         /**
-         * <p>The ID of the container cluster.</p>
+         * <p>The cluster ID.</p>
          * <br>
-         * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
+         * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the cluster ID.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
@@ -713,7 +766,7 @@ public class UpdateOpaStrategyNewRequest extends TeaModel {
         /**
          * <p>The namespaces.</p>
          * <br>
-         * <p>> This parameter is valid only when AllNamespace is set to 0.</p>
+         * <p>> This parameter is valid only when the AllNamespace parameter is set to 0.</p>
          */
         @NameInMap("NamespaceList")
         public java.util.List<String> namespaceList;
