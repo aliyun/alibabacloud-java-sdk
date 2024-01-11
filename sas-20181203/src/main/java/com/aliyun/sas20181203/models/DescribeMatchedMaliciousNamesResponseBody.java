@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeMatchedMaliciousNamesResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>分页查询时，当前页显示的数据条数。</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
-     * <p>The returned data.</p>
+     * <p>返回数据。</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeMatchedMaliciousNamesResponseBodyData> data;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>本次调用请求的ID，是由阿里云为该请求生成的唯一标识符，可用于排查和定位问题。</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,13 +53,13 @@ public class DescribeMatchedMaliciousNamesResponseBody extends TeaModel {
 
     public static class DescribeMatchedMaliciousNamesResponseBodyData extends TeaModel {
         /**
-         * <p>The display name of the malicious file type.</p>
+         * <p>恶意样本类型显示名称。</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
-         * <p>The key of the malicious file type.</p>
+         * <p>恶意样本类型Key。</p>
          */
         @NameInMap("Key")
         public String key;

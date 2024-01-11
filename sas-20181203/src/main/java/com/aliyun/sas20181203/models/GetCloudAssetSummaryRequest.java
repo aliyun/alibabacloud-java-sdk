@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetCloudAssetSummaryRequest extends TeaModel {
+    /**
+     * <p>The asset type by service provider.</p>
+     */
     @NameInMap("Vendors")
     public java.util.List<Integer> vendors;
 

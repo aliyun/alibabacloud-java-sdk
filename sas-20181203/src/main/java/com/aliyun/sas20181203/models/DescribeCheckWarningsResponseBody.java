@@ -139,6 +139,9 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         @NameInMap("Item")
         public String item;
 
+        @NameInMap("LastHandleTime")
+        public Long lastHandleTime;
+
         /**
          * <p>The severity level of a risk item. Valid values:</p>
          * <br>
@@ -238,6 +241,14 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         }
         public String getItem() {
             return this.item;
+        }
+
+        public DescribeCheckWarningsResponseBodyCheckWarnings setLastHandleTime(Long lastHandleTime) {
+            this.lastHandleTime = lastHandleTime;
+            return this;
+        }
+        public Long getLastHandleTime() {
+            return this.lastHandleTime;
         }
 
         public DescribeCheckWarningsResponseBodyCheckWarnings setLevel(String level) {

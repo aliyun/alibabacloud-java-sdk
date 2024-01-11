@@ -7,7 +7,7 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
     /**
      * <p>The handling status for the exception. Valid values:</p>
      * <br>
-     * <p>*   **processing**: in progress</p>
+     * <p>*   **exporting**: in progress</p>
      * <p>*   **success**: successful</p>
      * <p>*   **failed**: failed</p>
      * <p>*   **pending**: pending</p>

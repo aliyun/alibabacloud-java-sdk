@@ -4,12 +4,24 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class QueryIncidentVertexNodesResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The results that are returned.</p>
+     */
     @NameInMap("VertexNodes")
     public QueryIncidentVertexNodesResponseBodyVertexNodes vertexNodes;
 
@@ -44,61 +56,115 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
 
     public static class QueryIncidentVertexNodesResponseBodyVertexNodesEdgeList extends TeaModel {
         /**
-         * <p>Aliuid</p>
+         * <p>The ID of the Alibaba Cloud account to which the edge belongs.</p>
          */
         @NameInMap("Aliuid")
         public String aliuid;
 
+        /**
+         * <p>The ID of the end node for the edge.</p>
+         */
         @NameInMap("EndId")
         public String endId;
 
+        /**
+         * <p>The type of the end node for the edge. Valid values include but are not limited to:</p>
+         * <br>
+         * <p>*   **process**</p>
+         * <p>*   **file**</p>
+         * <p>*   **alert**</p>
+         * <p>*   **ip**</p>
+         * <p>*   **domain**</p>
+         */
         @NameInMap("EndType")
         public String endType;
 
+        /**
+         * <p>The name of the edge.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Origin</p>
+         * <p>The original name of the edge.</p>
          */
         @NameInMap("Origin")
         public String origin;
 
+        /**
+         * <p>The edge properties. The value is in the text format.</p>
+         */
         @NameInMap("Properties")
         public String properties;
 
+        /**
+         * <p>The property of the edge.</p>
+         */
         @NameInMap("Property")
         public java.util.Map<String, ?> property;
 
+        /**
+         * <p>The ID of the rule for which the edge was created.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The display type of the edge.</p>
+         */
         @NameInMap("ShowType")
         public String showType;
 
+        /**
+         * <p>The ID of the start node for the edge.</p>
+         */
         @NameInMap("StartId")
         public String startId;
 
+        /**
+         * <p>The type of the start node for the edge. Valid values include but are not limited to:</p>
+         * <br>
+         * <p>*   **process**</p>
+         * <p>*   **file**</p>
+         * <p>*   **alert**</p>
+         * <p>*   **ip**</p>
+         * <p>*   **domain**</p>
+         */
         @NameInMap("StartType")
         public String startType;
 
+        /**
+         * <p>The time when the edge was created.</p>
+         */
         @NameInMap("Time")
         public String time;
 
+        /**
+         * <p>The UNIX timestamp when the edge was created. Unit: milliseconds.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        /**
+         * <p>The type of the edge.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The type name of the edge.</p>
+         */
         @NameInMap("TypeName")
         public String typeName;
 
+        /**
+         * <p>The time when the edge was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
         /**
-         * <p>UUID</p>
+         * <p>The UUID of the edge.</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -247,48 +313,84 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
     }
 
     public static class QueryIncidentVertexNodesResponseBodyVertexNodesEntityTypeList extends TeaModel {
+        /**
+         * <p>The version of the entity.</p>
+         */
         @NameInMap("CurrentVersionId")
         public String currentVersionId;
 
+        /**
+         * <p>The display color of the entity.</p>
+         */
         @NameInMap("DisplayColor")
         public String displayColor;
 
+        /**
+         * <p>The display icon of the entity.</p>
+         */
         @NameInMap("DisplayIcon")
         public String displayIcon;
 
+        /**
+         * <p>The display order of the entity.</p>
+         */
         @NameInMap("DisplayOrder")
         public Integer displayOrder;
 
+        /**
+         * <p>The display template of the entity.</p>
+         */
         @NameInMap("DisplayTemplate")
         public String displayTemplate;
 
+        /**
+         * <p>The time when the entity was created.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the entity was updated.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
-         * <p>ID</p>
+         * <p>The ID of the entity.</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>Indicates whether the entity is a virtual node.</p>
+         */
         @NameInMap("IsVirtualNode")
         public Integer isVirtualNode;
 
+        /**
+         * <p>The name of the entity.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The namespace of the entity.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
-         * <p>SyncId</p>
+         * <p>The synchronization ID of the entity.</p>
          */
         @NameInMap("SyncId")
         public Integer syncId;
 
+        /**
+         * <p>Indicates whether the entity is traced. Valid values:</p>
+         * <br>
+         * <p>*   **1**: The entity is traced.</p>
+         * <p>*   **0**: The entity fails to be traced.</p>
+         */
         @NameInMap("TraceSuccessFlag")
         public Integer traceSuccessFlag;
 
@@ -404,44 +506,77 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
     }
 
     public static class QueryIncidentVertexNodesResponseBodyVertexNodesRelationTypeList extends TeaModel {
+        /**
+         * <p>The version of the relationship.</p>
+         */
         @NameInMap("CurrentVersionId")
         public String currentVersionId;
 
         /**
-         * <p>ICON</p>
+         * <p>The display icon of the relationship.</p>
          */
         @NameInMap("DIsplayIcon")
         public String DIsplayIcon;
 
+        /**
+         * <p>The direction of the relationship. Valid values:</p>
+         * <br>
+         * <p>*   **1**: forward</p>
+         * <p>*   **0**: reverse</p>
+         */
         @NameInMap("Directed")
         public Integer directed;
 
+        /**
+         * <p>The display color of the relationship.</p>
+         */
         @NameInMap("DisplayColor")
         public String displayColor;
 
+        /**
+         * <p>The display template of the relationship.</p>
+         */
         @NameInMap("DisplayTemplate")
         public String displayTemplate;
 
+        /**
+         * <p>The time when the relationship was created.</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the relationship was updated.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the relationship.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the relationship.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The namespace of the relationship.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The display type of the relationship.</p>
+         */
         @NameInMap("ShowType")
         public String showType;
 
         /**
-         * <p>SyncId</p>
+         * <p>The synchronization ID of the relationship.</p>
          */
         @NameInMap("SyncId")
         public Integer syncId;
@@ -550,9 +685,15 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
     }
 
     public static class QueryIncidentVertexNodesResponseBodyVertexNodesVertexListDisplayInfo extends TeaModel {
+        /**
+         * <p>The display name of the property.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The display value of the property.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -580,12 +721,30 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
     }
 
     public static class QueryIncidentVertexNodesResponseBodyVertexNodesVertexListNeighborList extends TeaModel {
+        /**
+         * <p>The number of neighboring nodes.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>Indicates whether more neighboring nodes exist. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("HasMore")
         public Boolean hasMore;
 
+        /**
+         * <p>The type of the neighboring node. Valid values include but are not limited to:</p>
+         * <br>
+         * <p>*   **process**</p>
+         * <p>*   **file**</p>
+         * <p>*   **alert**</p>
+         * <p>*   **ip**</p>
+         * <p>*   **domain**</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -622,49 +781,94 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
 
     public static class QueryIncidentVertexNodesResponseBodyVertexNodesVertexList extends TeaModel {
         /**
-         * <p>AliUid</p>
+         * <p>The ID of the Alibaba Cloud account to which the node belongs.</p>
          */
         @NameInMap("Aliuid")
         public String aliuid;
 
+        /**
+         * <p>The display information about the node.</p>
+         */
         @NameInMap("DisplayInfo")
         public java.util.List<QueryIncidentVertexNodesResponseBodyVertexNodesVertexListDisplayInfo> displayInfo;
 
+        /**
+         * <p>The node ID.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The display language of the neighboring node. Valid values:</p>
+         * <br>
+         * <p>*   **zh**: Chinese</p>
+         * <p>*   **en**: English</p>
+         */
         @NameInMap("Lang")
         public String lang;
 
+        /**
+         * <p>The node name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The neighboring nodes of the node.</p>
+         */
         @NameInMap("NeighborList")
         public java.util.List<QueryIncidentVertexNodesResponseBodyVertexNodesVertexListNeighborList> neighborList;
 
+        /**
+         * <p>The node properties. The value is in the text format.</p>
+         */
         @NameInMap("Properties")
         public String properties;
 
+        /**
+         * <p>The node property.</p>
+         */
         @NameInMap("Property")
         public java.util.Map<String, ?> property;
 
+        /**
+         * <p>The ID of the rule for which the node was created.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The time when the node was created.</p>
+         */
         @NameInMap("Time")
         public String time;
 
+        /**
+         * <p>The UNIX timestamp when the node was created. Unit: milliseconds.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        /**
+         * <p>The node type. Valid values include but are not limited to:</p>
+         * <br>
+         * <p>*   **process**</p>
+         * <p>*   **file**</p>
+         * <p>*   **alert**</p>
+         * <p>*   **ip**</p>
+         * <p>*   **domain**</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The time when the node was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
         /**
-         * <p>UUID</p>
+         * <p>The node UUID.</p>
          */
         @NameInMap("Uuid")
         public String uuid;
@@ -789,18 +993,36 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
     }
 
     public static class QueryIncidentVertexNodesResponseBodyVertexNodes extends TeaModel {
+        /**
+         * <p>The edges that are returned.</p>
+         */
         @NameInMap("EdgeList")
         public java.util.List<QueryIncidentVertexNodesResponseBodyVertexNodesEdgeList> edgeList;
 
+        /**
+         * <p>The entities that are returned.</p>
+         */
         @NameInMap("EntityTypeList")
         public java.util.List<QueryIncidentVertexNodesResponseBodyVertexNodesEntityTypeList> entityTypeList;
 
+        /**
+         * <p>The language of the content within the request. Valid values:</p>
+         * <br>
+         * <p>*   **zh**: Chinese</p>
+         * <p>*   **en**: English</p>
+         */
         @NameInMap("Lang")
         public String lang;
 
+        /**
+         * <p>The relationships that are returned.</p>
+         */
         @NameInMap("RelationTypeList")
         public java.util.List<QueryIncidentVertexNodesResponseBodyVertexNodesRelationTypeList> relationTypeList;
 
+        /**
+         * <p>The detailed information about the node.</p>
+         */
         @NameInMap("VertexList")
         public java.util.List<QueryIncidentVertexNodesResponseBodyVertexNodesVertexList> vertexList;
 

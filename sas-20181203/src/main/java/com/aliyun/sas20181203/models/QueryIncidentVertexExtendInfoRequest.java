@@ -4,18 +4,45 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class QueryIncidentVertexExtendInfoRequest extends TeaModel {
+    /**
+     * <p>The page number. Valid values start from 1.</p>
+     */
     @NameInMap("Offset")
     public Long offset;
 
+    /**
+     * <p>The type of the edge that you want to query. Valid values include but are not limited to:</p>
+     * <br>
+     * <p>*   **process_exec_file:** A process executes a file.</p>
+     * <p>*   **process_connect_ip:** A process connects to an IP address.</p>
+     * <p>*   **domain_trgger_alert:** A domain name triggers an alert.</p>
+     */
     @NameInMap("RelationType")
     public String relationType;
 
+    /**
+     * <p>The number of entries per page. Valid values start from 1.</p>
+     */
     @NameInMap("Size")
     public Integer size;
 
+    /**
+     * <p>The ID of the node that you want to query.</p>
+     * <br>
+     * <p>>  You can call the [QueryIncidentTracingDetail](~~QueryIncidentTracingDetail~~) operation to query the node ID.</p>
+     */
     @NameInMap("VertexId")
     public String vertexId;
 
+    /**
+     * <p>The node label. Valid values include but are not limited to:</p>
+     * <br>
+     * <p>*   **process**</p>
+     * <p>*   **file**</p>
+     * <p>*   **alert**</p>
+     * <p>*   **ip**</p>
+     * <p>*   **domain**</p>
+     */
     @NameInMap("VertexLabel")
     public String vertexLabel;
 

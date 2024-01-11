@@ -19,6 +19,9 @@ public class GetCheckSummaryRequest extends TeaModel {
     @NameInMap("ResourceDirectoryAccountId")
     public String resourceDirectoryAccountId;
 
+    /**
+     * <p>The service provider (SP) of the cloud asset.</p>
+     */
     @NameInMap("Vendors")
     public java.util.List<String> vendors;
 
