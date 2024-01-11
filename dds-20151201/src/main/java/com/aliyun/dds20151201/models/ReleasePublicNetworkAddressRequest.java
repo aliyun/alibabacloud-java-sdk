@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReleasePublicNetworkAddressRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <br>
      * <p>>  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.</p>
      */
@@ -13,10 +13,10 @@ public class ReleasePublicNetworkAddressRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>A sharded cluster instance consists of three components: mongos, shard, and Configserver.</p>
+     * <p>The ID of the mongos, shard, or Configserver node in the sharded cluster instance.</p>
      * <br>
-     * <p>> * This parameter is valid only if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.</p>
-     * <p>> * You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the ID of the mongos, shard, or Configserver node.</p>
+     * <p>> *   This parameter is valid only if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.</p>
+     * <p>> *   You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the ID of the mongos, shard, or Configserver node.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;

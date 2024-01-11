@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskTypeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return all O\&M tasks. Valid values:</p>
+     * <p>Specifies whether to return historical O\&M tasks. Valid values:</p>
      * <br>
-     * <p>*   **0**: returns only pending tasks.</p>
-     * <p>*   **1**: returns all tasks.</p>
-     * <br>
-     * <p>Default value: **0**.</p>
+     * <p>*   **0** (default): The system returns only pending O\&M tasks.</p>
+     * <p>*   **1**: The system returns historical O\&M tasks.</p>
      */
     @NameInMap("IsHistory")
     public Integer isHistory;
@@ -22,7 +20,7 @@ public class DescribeActiveOperationTaskTypeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID. You can call the [DescribeSecurityGroupConfiguration](~~146130~~) operation to query the resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

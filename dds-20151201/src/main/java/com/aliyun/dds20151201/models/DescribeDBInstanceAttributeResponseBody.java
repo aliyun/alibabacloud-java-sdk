@@ -526,6 +526,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public Integer maxConnections;
 
         /**
+         * <p>The maximum  MBPS of the shard node, Unit: MB/s.</p>
+         */
+        @NameInMap("MaxDiskMbps")
+        public String maxDiskMbps;
+
+        /**
          * <p>The maximum IOPS of the shard node.</p>
          */
         @NameInMap("MaxIOPS")
@@ -592,6 +598,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public Integer getMaxConnections() {
             return this.maxConnections;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardListShardAttribute setMaxDiskMbps(String maxDiskMbps) {
+            this.maxDiskMbps = maxDiskMbps;
+            return this;
+        }
+        public String getMaxDiskMbps() {
+            return this.maxDiskMbps;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardListShardAttribute setMaxIOPS(Integer maxIOPS) {
@@ -963,6 +977,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         @NameInMap("MaxIOPS")
         public Integer maxIOPS;
+
+        /**
+         * <p>The maximum MBPS of the instance, Unit: MB/s.</p>
+         */
+        @NameInMap("MaxMBPS")
+        public Integer maxMBPS;
 
         /**
          * <p>The information of the mongos nodes.</p>
@@ -1388,6 +1408,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public Integer getMaxIOPS() {
             return this.maxIOPS;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setMaxMBPS(Integer maxMBPS) {
+            this.maxMBPS = maxMBPS;
+            return this;
+        }
+        public Integer getMaxMBPS() {
+            return this.maxMBPS;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setMongosList(DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceMongosList mongosList) {

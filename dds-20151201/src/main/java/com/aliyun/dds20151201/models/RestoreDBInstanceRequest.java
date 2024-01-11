@@ -13,7 +13,7 @@ public class RestoreDBInstanceRequest extends TeaModel {
     public Integer backupId;
 
     /**
-     * <p>The ID of an instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

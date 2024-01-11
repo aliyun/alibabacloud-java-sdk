@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeShardingNetworkAddressRequest extends TeaModel {
     /**
-     * <p>The ID of an instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>A sharded cluster instance consists of three components: mongos, shard, and Configserver.</p>
+     * <p>The ID of the mongos, shard, or Configserver node in the sharded cluster instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the ID of the mongos, shard, or Configserverr node.</p>
+     * <p>>  You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the ID of the mongos, shard, or Configserver node.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;

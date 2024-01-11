@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of tasks.</p>
+     * <p>The O\&M tasks.</p>
      */
     @NameInMap("TypeList")
     public java.util.List<DescribeActiveOperationTaskTypeResponseBodyTypeList> typeList;
@@ -47,20 +47,20 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
         /**
          * <p>The type of the task. Valid values:</p>
          * <br>
-         * <p>*   **rds\_apsaradb\_transfer**: instance migration</p>
-         * <p>*   **rds\_apsaradb\_upgrade**: minor version update</p>
+         * <p>*   \*\*rds_apsaradb_transfer\*\*: data migration</p>
+         * <p>*   \*\*rds_apsaradb_upgrade\*\*: minor version update</p>
          */
         @NameInMap("TaskType")
         public String taskType;
 
         /**
-         * <p>The task type (English).</p>
+         * <p>The task type in English.</p>
          */
         @NameInMap("TaskTypeInfoEn")
         public String taskTypeInfoEn;
 
         /**
-         * <p>The task type (Chinese).</p>
+         * <p>The task type in Chinese.</p>
          */
         @NameInMap("TaskTypeInfoZh")
         public String taskTypeInfoZh;

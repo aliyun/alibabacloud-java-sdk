@@ -165,7 +165,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public String protocolType;
 
     /**
-     * <p>The provisioned IOPS. Valid values: 0 to 50000.</p>
+     * <p>The provisioned IOPS of the instance:</p>
      */
     @NameInMap("ProvisionedIops")
     public Long provisionedIops;
@@ -276,7 +276,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The custom tags added to the instance.</p>
+     * <p>The custom tags that you want to add to the instance.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateShardingDBInstanceRequestTag> tag;
@@ -704,17 +704,17 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
 
     public static class CreateShardingDBInstanceRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * <br>
-         * <p>> **N** specifies the serial number of the tag. For example, **Tag.1.Key** specifies the key of the first tag and **Tag.2.Key** specifies the key of the second tag.</p>
+         * <p>>  **N** specifies the serial number of the tag. For example, **Tag.1.Key** specifies the key of the first tag and **Tag.2.Key** specifies the key of the second tag.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * <br>
-         * <p>> **N** specifies the serial number of the tag. For example, **Tag.1.Value** specifies the value of the first tag and **Tag.2.Value** specifies the value of the second tag.</p>
+         * <p>>  **N** specifies the serial number of the tag. For example, **Tag.1.Value** specifies the value of the first tag and Tag.2.Value specifies the value of the second tag.</p>
          */
         @NameInMap("Value")
         public String value;

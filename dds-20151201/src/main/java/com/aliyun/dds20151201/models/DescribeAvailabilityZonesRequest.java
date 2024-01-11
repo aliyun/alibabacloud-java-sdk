@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailabilityZonesRequest extends TeaModel {
     /**
-     * <p>The language of the returned values of the **RegionName** and **ZoneName** parameters. Default value: zh. Valid values:</p>
+     * <p>The language of the values of the returned **RegionName** and **ZoneName** parameters. Valid values:</p>
      * <br>
-     * <p>*   **zh**: Chinese.</p>
+     * <p>*   **zh** (default): Chinese</p>
      * <p>*   **en**: English</p>
      */
     @NameInMap("AcceptLanguage")
@@ -20,7 +20,7 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>The database engine type of the instance. Valid values:</p>
+     * <p>The architecture of the instance. Valid values:</p>
      * <br>
      * <p>*   **normal**: replica set instance</p>
      * <p>*   **sharding**: sharded cluster instance</p>
@@ -35,28 +35,28 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The ID of the secondary zone that you want to exclude from the query results. You can configure both the ExcludeSecondaryZoneId and ExcludeZoneId parameters to filter multiple zones that you want to exclude from the query results.</p>
+     * <p>The secondary zone ID that is excluded from the query results. You can configure the ExcludeZoneId and ExcludeSecondaryZoneId parameters to specify the IDs of multiple zones that are excluded from the query results.</p>
      */
     @NameInMap("ExcludeSecondaryZoneId")
     public String excludeSecondaryZoneId;
 
     /**
-     * <p>The ID of the zone that you want to exclude from the query results.</p>
+     * <p>The zone ID that is excluded from the query results.</p>
      */
     @NameInMap("ExcludeZoneId")
     public String excludeZoneId;
 
     /**
-     * <p>The billing method of the instance. Default value: PrePaid. Valid values:</p>
+     * <p>The billing method. Valid values:</p>
      * <br>
-     * <p>*   **PrePaid**: subscription</p>
+     * <p>*   **PrePaid** (default): subscription</p>
      * <p>*   **PostPaid**: pay-as-you-go</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     /**
-     * <p>The edition of the ApsaraDB for MongoDB instance. The instance can be of a high-availability edition or beta edition.</p>
+     * <p>The edition of the instance. High-Available Edition and Preview Edition (dbfs) are supported.</p>
      */
     @NameInMap("MongoType")
     public String mongoType;
@@ -74,6 +74,12 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>节点数，只适用于副本集。</p>
+     */
+    @NameInMap("ReplicationFactor")
+    public String replicationFactor;
+
+    /**
      * <p>The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).</p>
      */
     @NameInMap("ResourceGroupId")
@@ -86,7 +92,7 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The zones to be displayed. The values include the zones in which you can create an instance that uses cloud disks, the zones in which you can create an instance that uses local disks, and the zones in which you can create an instance that uses cloud disks and local disks.</p>
+     * <p>The storage type of the instance. cloud: The system displays only zones in which cloud disk-based instances can be deployed. local: The system displays only zones in which local disk-based instances can be deployed. default or null: The system displays only zones in which cloud disk-based and local disk-based instances can be deployed.</p>
      */
     @NameInMap("StorageSupport")
     public String storageSupport;
@@ -94,13 +100,16 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     /**
      * <p>The storage type of the instance. Valid values:</p>
      * <br>
-     * <p>*   **cloud_essd1**: PL1.enhanced SSD (ESSD)</p>
-     * <p>*   **cloud_essd2**: PL2 ESSD.</p>
-     * <p>*   **cloud_essd3**: PL3 ESSD.</p>
-     * <p>*   **local_ssd**: local SSD.</p>
+     * <p>*   **cloud_essd1**: PL1 enhanced SSD (ESSD)</p>
+     * <p>*   **cloud_essd2**: PL2 ESSD</p>
+     * <p>*   **cloud_essd3**: PL3 ESSD</p>
+     * <p>*   **local_ssd**: Local SSD</p>
      * <br>
-     * <p>> *   Instances of MongoDB 4.4 and later only support cloud disks. **cloud_essd1** is selected if you leave this parameter empty.</p>
-     * <p>> *   Instances of MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   Instances that run MongoDB 4.4 or later support only cloud disks. **cloud_essd1** is selected if you leave this parameter empty.</p>
+     * <br>
+     * <p>*   Instances that run MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.</p>
      */
     @NameInMap("StorageType")
     public String storageType;
@@ -202,6 +211,14 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeAvailabilityZonesRequest setReplicationFactor(String replicationFactor) {
+        this.replicationFactor = replicationFactor;
+        return this;
+    }
+    public String getReplicationFactor() {
+        return this.replicationFactor;
     }
 
     public DescribeAvailabilityZonesRequest setResourceGroupId(String resourceGroupId) {

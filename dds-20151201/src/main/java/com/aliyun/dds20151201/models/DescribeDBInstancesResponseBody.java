@@ -81,7 +81,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesResponseBodyDBInstancesDBInstanceMongosListMongosAttribute extends TeaModel {
         /**
-         * <p>The type of the mongos node.</p>
+         * <p>The instance type of the mongos node.</p>
          */
         @NameInMap("NodeClass")
         public String nodeClass;
@@ -150,7 +150,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesResponseBodyDBInstancesDBInstanceShardListShardAttribute extends TeaModel {
         /**
-         * <p>The type of the shard node.</p>
+         * <p>The instance type of the shard node.</p>
          */
         @NameInMap("NodeClass")
         public String nodeClass;
@@ -304,7 +304,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The read and write throughput consumed by the instance.</p>
          * <br>
-         * <p>> This parameter is returned when the instance is a serverless instance.</p>
+         * <p>>  This parameter is returned when the instance is a serverless instance.</p>
          */
         @NameInMap("CapacityUnit")
         public String capacityUnit;
@@ -312,20 +312,20 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <br>
-         * <p>*   **PrePaid**: subscription</p>
-         * <p>*   **PostPaid**: pay-as-you-go</p>
+         * <p>*   **PrePaid**: subscription.</p>
+         * <p>*   **PostPaid**: pay-as-you-go.</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
-         * <p>The time when the instance was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the instance was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The instance type.</p>
+         * <p>The instance type of the instance.</p>
          */
         @NameInMap("DBInstanceClass")
         public String DBInstanceClass;
@@ -337,7 +337,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String DBInstanceDescription;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The instance ID</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
@@ -357,20 +357,17 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The architecture of the instance. Valid values:</p>
          * <br>
-         * <p>*   **sharding**: sharded cluster instance</p>
-         * <p>*   **replicate**: replica set or standalone instance</p>
+         * <p>*   **sharding**: sharded cluster instance.</p>
+         * <p>*   **replicate**: replica set or standalone instance.</p>
          */
         @NameInMap("DBInstanceType")
         public String DBInstanceType;
 
         /**
-         * <p>The time when the instance data was destroyed. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the instance data was destroyed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   Subscription instances are released 15 days after expiration. After the instances are released, the data of the instances is deleted and cannot be restored.</p>
-         * <br>
-         * <p>*   Pay-as-you-go instances are locked after the payments have been overdue for longer than 24 hours. The instances are released after the payments have been overdue for longer than 15 days. The data of released instances is deleted and cannot be restored.</p>
+         * <p>> *   Subscription instances are released 15 days after expiration. After the instances are released, the data of the instances is deleted and cannot be restored.</p>
+         * <p>> *   Pay-as-you-go instances are locked after the payments have been overdue for longer than 24 hours. The instances are released after the payments have been overdue for longer than 15 days. The data of released instances is deleted and cannot be restored.</p>
          */
         @NameInMap("DestroyTime")
         public String destroyTime;
@@ -382,7 +379,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The database engine version of the instance. Valid values:</p>
+         * <p>The database engine version of the instance.</p>
          * <br>
          * <p>*   **5.0**</p>
          * <p>*   **4.4**</p>
@@ -394,7 +391,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
-         * <p>The time when the instance expires. The time is in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
@@ -402,30 +399,27 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The ID of the secondary zone 2 of the instance. Valid values:</p>
          * <br>
-         * <p>*   **cn-hangzhou-g**: Hangzhou Zone G</p>
-         * <p>*   **cn-hangzhou-h**: Hangzhou Zone H</p>
-         * <p>*   **cn-hangzhou-i**: Hangzhou Zone I</p>
-         * <p>*   **cn-hongkong-b**: Hongkong Zone B</p>
-         * <p>*   **cn-hongkong-c**: Hongkong Zone C</p>
-         * <p>*   **cn-hongkong-d**: Hongkong Zone D</p>
-         * <p>*   **cn-wulanchabu-a**: Ulanqab Zone A</p>
-         * <p>*   **cn-wulanchabu-b**: Ulanqab Zone B</p>
-         * <p>*   **cn-wulanchabu-c**: Ulanqab Zone C</p>
-         * <p>*   **ap-southeast-1a**: Singapore Zone A</p>
-         * <p>*   **ap-southeast-1b**: Singapore Zone B</p>
-         * <p>*   **ap-southeast-1c**: Singapore Zone C</p>
-         * <p>*   **ap-southeast-5a**: Jakarta Zone A</p>
-         * <p>*   **ap-southeast-5b**: Jakarta Zone B</p>
-         * <p>*   **ap-southeast-5c**: Jakarta Zone C</p>
-         * <p>*   **eu-central-1a**: Frankfurt Zone A</p>
-         * <p>*   **eu-central-1b**: Frankfurt Zone B</p>
-         * <p>*   **eu-central-1c**: Frankfurt Zone C</p>
+         * <p>*   **cn-hangzhou-g**: Hangzhou Zone G.</p>
+         * <p>*   **cn-hangzhou-h**: Hangzhou Zone H.</p>
+         * <p>*   **cn-hangzhou-i**: Hangzhou Zone I.</p>
+         * <p>*   **cn-hongkong-b**: Hong Kong Zone B.</p>
+         * <p>*   **cn-hongkong-c**: Hong Kong Zone C.</p>
+         * <p>*   **cn-hongkong-d**: Hong Kong Zone D.</p>
+         * <p>*   **cn-wulanchabu-a**: Ulanqab Zone A.</p>
+         * <p>*   **cn-wulanchabu-b**: Ulanqab Zone B.</p>
+         * <p>*   **cn-wulanchabu-c**: Ulanqab Zone C.</p>
+         * <p>*   **ap-southeast-1a**: Singapore Zone A.</p>
+         * <p>*   **ap-southeast-1b**: Singapore Zone B.</p>
+         * <p>*   **ap-southeast-1c**: Singapore Zone C.</p>
+         * <p>*   **ap-southeast-5a**: Jakarta Zone A.</p>
+         * <p>*   **ap-southeast-5b**: Jakarta Zone B.</p>
+         * <p>*   **ap-southeast-5c**: Jakarta Zone C.</p>
+         * <p>*   **eu-central-1a**: Frankfurt Zone A.</p>
+         * <p>*   **eu-central-1b**: Frankfurt Zone B.</p>
+         * <p>*   **eu-central-1c**: Frankfurt Zone C.</p>
          * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.</p>
-         * <br>
-         * <p>*   This parameter is returned only if you use the Chine site (aliyun.com).</p>
+         * <p>> *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.</p>
+         * <p>> *   This parameter is returned only if you use the Chine site (aliyun.com).</p>
          */
         @NameInMap("HiddenZoneId")
         public String hiddenZoneId;
@@ -433,10 +427,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The kind code of the instance. Valid values:</p>
          * <br>
-         * <p>*   **0**: physical machine</p>
-         * <p>*   **1**: ECS instance</p>
-         * <p>*   **2**: Docker cluster</p>
-         * <p>*   **18**: Kubernetes cluster</p>
+         * <p>*   **0**: physical machine.</p>
+         * <p>*   **1**: Elastic Compute Service (ECS) instance.</p>
+         * <p>*   **2**: Docker cluster.</p>
+         * <p>*   **18**: Kubernetes cluster.</p>
          */
         @NameInMap("KindCode")
         public String kindCode;
@@ -448,22 +442,22 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String lastDowngradeTime;
 
         /**
-         * <p>The lock state of the instance. Valid values:</p>
+         * <p>The lock status of the instance. Valid values:</p>
          * <br>
-         * <p>*   **Unlock**: The cluster is not locked.</p>
+         * <p>*   **Unlock**: The instance is not locked.</p>
          * <p>*   **ManualLock**: The instance is manually locked.</p>
          * <p>*   **LockByExpiration**: The instance is automatically locked due to instance expiration.</p>
-         * <p>*   **LockByRestoration**: The instance is automatically locked before it is rolled back.</p>
-         * <p>*   **LockByDiskQuota**: The instance is automatically locked due to exhausted storage capacity.</p>
+         * <p>*   **LockByRestoration**: The instance is automatically locked before the instance is rolled back.</p>
+         * <p>*   **LockByDiskQuota**: The instance is automatically locked after the storage space is exhausted.</p>
          * <p>*   **Released**: The instance is released. After an instance is released, the instance cannot be unlocked. You can only restore the backup data of the instance to a new instance. This process requires a long period of time.</p>
          */
         @NameInMap("LockMode")
         public String lockMode;
 
         /**
-         * <p>The details of the mongos nodes.</p>
+         * <p>The details of the mongos node.</p>
          * <br>
-         * <p>> This parameter is returned if the instance is a sharded cluster instance.</p>
+         * <p>>  This parameter is returned if the instance is a sharded cluster instance.</p>
          */
         @NameInMap("MongosList")
         public DescribeDBInstancesResponseBodyDBInstancesDBInstanceMongosList mongosList;
@@ -471,8 +465,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The network type of the instance. Valid values:</p>
          * <br>
-         * <p>*   **Classic**</p>
-         * <p>*   **VPC**</p>
+         * <p>*   **Classic**: classic network.</p>
+         * <p>*   **VPC**: VPC.</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
@@ -486,13 +480,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The number of nodes in the instance.</p>
          * <br>
-         * <p>> This parameter is returned if the instance is a replica set instance.</p>
+         * <p>>  This parameter is returned if the instance is a replica set instance.</p>
          */
         @NameInMap("ReplicationFactor")
         public String replicationFactor;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the resource group to which the instance belongs.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -500,38 +494,35 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The ID of the secondary zone 1 of the instance. Valid values:</p>
          * <br>
-         * <p>*   **cn-hangzhou-g**: Hangzhou Zone G</p>
-         * <p>*   **cn-hangzhou-h**: Hangzhou Zone H</p>
-         * <p>*   **cn-hangzhou-i**: Hangzhou Zone I</p>
-         * <p>*   **cn-hongkong-b**: Hongkong Zone B</p>
-         * <p>*   **cn-hongkong-c**: Hongkong Zone C</p>
-         * <p>*   **cn-hongkong-d**: Hongkong Zone D</p>
-         * <p>*   **cn-wulanchabu-a**: Ulanqab Zone A</p>
-         * <p>*   **cn-wulanchabu-b**: Ulanqab Zone B</p>
-         * <p>*   **cn-wulanchabu-c**: Ulanqab Zone C</p>
-         * <p>*   **ap-southeast-1a**: Singapore Zone A</p>
-         * <p>*   **ap-southeast-1b**: Singapore Zone B</p>
-         * <p>*   **ap-southeast-1c**: Singapore Zone C</p>
-         * <p>*   **ap-southeast-5a**: Jakarta Zone A</p>
-         * <p>*   **ap-southeast-5b**: Jakarta Zone B</p>
-         * <p>*   **ap-southeast-5c**: Jakarta Zone C</p>
-         * <p>*   **eu-central-1a**: Frankfurt Zone A</p>
-         * <p>*   **eu-central-1b**: Frankfurt Zone B</p>
-         * <p>*   **eu-central-1c**: Frankfurt Zone C</p>
+         * <p>*   **cn-hangzhou-g**: Hangzhou Zone G.</p>
+         * <p>*   **cn-hangzhou-h**: Hangzhou Zone H.</p>
+         * <p>*   **cn-hangzhou-i**: Hangzhou Zone I.</p>
+         * <p>*   **cn-hongkong-b**: Hong Kong Zone B.</p>
+         * <p>*   **cn-hongkong-c**: Hong Kong Zone C.</p>
+         * <p>*   **cn-hongkong-d**: Hong Kong Zone D.</p>
+         * <p>*   **cn-wulanchabu-a**: Ulanqab Zone A.</p>
+         * <p>*   **cn-wulanchabu-b**: Ulanqab Zone B.</p>
+         * <p>*   **cn-wulanchabu-c**: Ulanqab Zone C.</p>
+         * <p>*   **ap-southeast-1a**: Singapore Zone A.</p>
+         * <p>*   **ap-southeast-1b**: Singapore Zone B.</p>
+         * <p>*   **ap-southeast-1c**: Singapore Zone C.</p>
+         * <p>*   **ap-southeast-5a**: Jakarta Zone A.</p>
+         * <p>*   **ap-southeast-5b**: Jakarta Zone B.</p>
+         * <p>*   **ap-southeast-5c**: Jakarta Zone C.</p>
+         * <p>*   **eu-central-1a**: Frankfurt Zone A.</p>
+         * <p>*   **eu-central-1b**: Frankfurt Zone B.</p>
+         * <p>*   **eu-central-1c**: Frankfurt Zone C.</p>
          * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.</p>
-         * <br>
-         * <p>*   This parameter is returned only if you use the Chine site (aliyun.com).</p>
+         * <p>> *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.</p>
+         * <p>> *   This parameter is returned only if you use the Chine site (aliyun.com).</p>
          */
         @NameInMap("SecondaryZoneId")
         public String secondaryZoneId;
 
         /**
-         * <p>The details of the shard nodes.</p>
+         * <p>The details of the shard node.</p>
          * <br>
-         * <p>> This parameter is returned if the instance is a sharded cluster instance.</p>
+         * <p>>  This parameter is returned if the instance is a sharded cluster instance.</p>
          */
         @NameInMap("ShardList")
         public DescribeDBInstancesResponseBodyDBInstancesDBInstanceShardList shardList;
@@ -539,8 +530,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The storage type of the instance. Valid values:</p>
          * <br>
-         * <p>*   **cloud_essd**: enhanced SSD (ESSD)</p>
-         * <p>*   **local_ssd**: local SSD</p>
+         * <p>*   **cloud_essd**: enhanced SSD (ESSD).</p>
+         * <p>*   **local_ssd**: local SSD.</p>
          */
         @NameInMap("StorageType")
         public String storageType;
@@ -552,16 +543,16 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public DescribeDBInstancesResponseBodyDBInstancesDBInstanceTags tags;
 
         /**
-         * <p>Indicates whether password-free access within a VPC is enabled. Valid values:</p>
+         * <p>Indicates whether password-free access within a virtual private cloud (VPC) is enabled. Valid values:</p>
          * <br>
-         * <p>*   **Open**: Password-free access is enabled.</p>
-         * <p>*   **Close**: Password-free access is disabled.</p>
+         * <p>*   **Open**</p>
+         * <p>*   **Close**</p>
          */
         @NameInMap("VpcAuthMode")
         public String vpcAuthMode;
 
         /**
-         * <p>The zone ID of the instance.</p>
+         * <p>The ID of the zone in which the instance resides.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

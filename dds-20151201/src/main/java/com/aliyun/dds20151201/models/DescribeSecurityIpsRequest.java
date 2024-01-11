@@ -22,6 +22,9 @@ public class DescribeSecurityIpsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>Whether to display DAS whitelist information.</p>
+     */
     @NameInMap("ShowHDMIps")
     public Boolean showHDMIps;
 
