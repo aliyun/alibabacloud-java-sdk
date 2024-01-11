@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether to enable the audit log feature is enabled.</p>
+     * <p>Indicates whether the audit log feature is enabled. Valid values:</p>
      * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <p>*   **true**: The audit log feature is enabled.</p>
+     * <p>*   **false**: The audit log feature is disabled.</p>
      */
     @NameInMap("EnableAudit")
     public Boolean enableAudit;
@@ -23,28 +23,28 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
     public Integer isEtlMetaExist;
 
     /**
-     * <p>Indicates whether a Log Service project exists in the current region. Valid values:</p>
+     * <p>Indicates whether a project exists in the current region. Valid values:</p>
      * <br>
-     * <p>*   **1**: A Log Service project exists in the current region.</p>
-     * <p>*   **0** or **null**: A Log Service project does not exist in the current region.</p>
+     * <p>*   **1**: A logging project exists in the current region.</p>
+     * <p>*   **0** or **null**: A logging project does not exist in the current region.</p>
      */
     @NameInMap("IsUserProjectLogstoreExist")
     public Integer isUserProjectLogstoreExist;
 
     /**
-     * <p>The maximum storage space for the formal edition of the audit log feature. If the value is **-1**, no maximum is set.</p>
+     * <p>The maximum storage capacity for the formal edition of the audit log feature. If the value is -1, no maximum storage capacity is set.</p>
      */
     @NameInMap("PreserveStorageForStandard")
     public Long preserveStorageForStandard;
 
     /**
-     * <p>The maximum storage space for the free trial edition of the audit log feature. Unit: bytes. You can set the maximum up to 107,374,182,400 bytes.</p>
+     * <p>The maximum storage capacity for the free trial edition of the audit log feature. Unit: bytes. You can set the maximum storage capacity to 107,374,182,400 bytes.</p>
      */
     @NameInMap("PreserveStorageForTrail")
     public Long preserveStorageForTrail;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -59,7 +59,7 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
     public String serviceType;
 
     /**
-     * <p>The retention period for the official edition of the audit log feature. Valid values: 1 to 365 days.</p>
+     * <p>The retention period for the official edition of the audit log feature. Valid values: 1 to 365. Unit: day.</p>
      */
     @NameInMap("TtlForStandard")
     public Long ttlForStandard;
@@ -71,19 +71,19 @@ public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
     public Long ttlForTrail;
 
     /**
-     * <p>The used storage space for the formal edition of the audit log feature. Unit: bytes.</p>
+     * <p>The used storage capacity for the formal edition of the audit log feature. Unit: bytes.</p>
      */
     @NameInMap("UsedStorageForStandard")
     public Long usedStorageForStandard;
 
     /**
-     * <p>The used storage space for the free trial edition of the audit log feature. Unit: bytes.</p>
+     * <p>The used storage capacity for the free trial edition of the audit log feature. Unit: bytes.</p>
      */
     @NameInMap("UsedStorageForTrail")
     public Long usedStorageForTrail;
 
     /**
-     * <p>The name of the Log Service project.</p>
+     * <p>The name of the project.</p>
      */
     @NameInMap("UserProjectName")
     public String userProjectName;

@@ -5,19 +5,23 @@ import com.aliyun.tea.*;
 
 public class AllocateNodePrivateNetworkAddressRequest extends TeaModel {
     /**
-     * <p>The name of the account.</p>
+     * <p>The username of the account.</p>
      * <br>
-     * <p>> * The name must be 4 to 16 characters in length and can contain lowercase letters, digits, and underscores (\_). It must start with a lowercase letter.</p>
-     * <p>> * You need to set the account name and password only when you apply for an endpoint for a shard or Configserver node for the first time. In this case, the account name and password are used for all shard and Configserver nodes.</p>
-     * <p>> * The permissions of this account are fixed to read-only.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   The username must be 4 to 16 characters in length and can contain lowercase letters, digits, and underscores (\_). The username must start with a lowercase letter.</p>
+     * <br>
+     * <p>*   You must configure the account and password only when you apply for the endpoint of a shard or Configserver node for the first time. The account and password are required for all shard and Configserver nodes.</p>
+     * <br>
+     * <p>*   The permissions of this account are fixed to read-only.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
-     * <p>The password of the account.</p>
+     * <p>The password for the account.</p>
      * <br>
-     * <p>*   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include `!#$%^&*()_+-=`</p>
+     * <p>*   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include `! # $ % ^ & * ( ) _ + - =`</p>
      * <p>*   The password must be 8 to 32 characters in length.</p>
      */
     @NameInMap("AccountPassword")
@@ -50,7 +54,7 @@ public class AllocateNodePrivateNetworkAddressRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The zone ID of the instance.</p>
+     * <p>The ID of the zone to which the instance belongs.</p>
      * <br>
      * <p>>  You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the zone ID of the instance.</p>
      */

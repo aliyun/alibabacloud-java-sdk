@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the endpoints of DynamoDB instances.</p>
+     * <p>The endpoints of DynamoDB-compatible instances.</p>
      */
     @NameInMap("CompatibleConnections")
     public DescribeShardingNetworkAddressResponseBodyCompatibleConnections compatibleConnections;
 
     /**
-     * <p>An array that consists of the endpoints of ApsaraDB for MongoDB instances.</p>
+     * <p>The endpoints of ApsaraDB for MongoDB instances.</p>
      */
     @NameInMap("NetworkAddresses")
     public DescribeShardingNetworkAddressResponseBodyNetworkAddresses networkAddresses;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,7 +53,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
 
     public static class DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection extends TeaModel {
         /**
-         * <p>The remaining duration of the classic network address. Unit: seconds.</p>
+         * <p>The remaining duration of the classic network endpoint. Unit: seconds.</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
@@ -71,23 +71,23 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         public String networkAddress;
 
         /**
-         * <p>The network type. Valid values:</p>
+         * <p>The network type of the instance.</p>
          * <br>
-         * <p>*   **VPC**</p>
-         * <p>*   **Classic**</p>
-         * <p>*   **Public**: pubic endpoint</p>
+         * <p>*   **VPC**: virtual private cloud</p>
+         * <p>*   **Classic**: classic network</p>
+         * <p>*   **Public**: the Internet</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
-         * <p>The port number.</p>
+         * <p>The port that is used to connect to the instance.</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID of the instance.</p>
          * <br>
          * <p>>  This parameter is returned when the network type is **VPC**.</p>
          */
@@ -95,7 +95,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         public String VPCId;
 
         /**
-         * <p>The vSwitch ID of the VPC.</p>
+         * <p>The ID of the vSwitch in the Virtual Private Cloud (VPC).</p>
          * <br>
          * <p>>  This parameter is returned when the network type is **VPC**.</p>
          */
@@ -186,7 +186,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
 
     public static class DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress extends TeaModel {
         /**
-         * <p>The remaining duration of the classic network address. Unit: seconds.</p>
+         * <p>The remaining duration of the classic network endpoint. Unit: seconds.</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
@@ -198,23 +198,23 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         public String IPAddress;
 
         /**
-         * <p>The endpoint of the instance.</p>
+         * <p>The connection string of the instance.</p>
          */
         @NameInMap("NetworkAddress")
         public String networkAddress;
 
         /**
-         * <p>The network type. Valid values:</p>
+         * <p>The network type of the instance.</p>
          * <br>
-         * <p>- **VPC**</p>
-         * <p>- **Classic**</p>
-         * <p>- **Public**: pubic endpoint</p>
+         * <p>*   **VPC**: virtual private cloud</p>
+         * <p>*   **Classic**: classic network</p>
+         * <p>*   **Public**: the Internet</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
-         * <p>The ID of the mongos.</p>
+         * <p>The ID of the mongos node.</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
@@ -222,15 +222,15 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         /**
          * <p>The type of the node. Valid values:</p>
          * <br>
-         * <p>- **mongos**</p>
-         * <p>- **shard**</p>
-         * <p>- **configserver**</p>
+         * <p>*   **mongos**: mongos node</p>
+         * <p>*   **shard**: shard node</p>
+         * <p>*   **configserver**: Configserver node</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
 
         /**
-         * <p>The port number.</p>
+         * <p>The port that is used to connect to the instance.</p>
          */
         @NameInMap("Port")
         public String port;
@@ -238,14 +238,14 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         /**
          * <p>The role of the node. Valid values:</p>
          * <br>
-         * <p>- Primary</p>
-         * <p>- Secondary</p>
+         * <p>*   Primary</p>
+         * <p>*   Secondary</p>
          */
         @NameInMap("Role")
         public String role;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID of the instance.</p>
          * <br>
          * <p>>  This parameter is returned when the network type is **VPC**.</p>
          */
@@ -253,7 +253,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         public String VPCId;
 
         /**
-         * <p>The vSwitch ID of the VPC.</p>
+         * <p>The ID of the vSwitch in the VPC.</p>
          * <br>
          * <p>>  This parameter is returned when the network type is **VPC**.</p>
          */

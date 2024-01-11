@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class CheckRecoveryConditionRequest extends TeaModel {
     /**
-     * <p>The ID of the backup.</p>
+     * <p>The backup ID.</p>
      * <br>
-     * <p>> * You can call the [DescribeBackups](~~62172~~) operation to query the ID of the backup.</p>
-     * <p>> * You must specify one of the **RestoreTime** and BackupId parameters.</p>
-     * <p>> * This parameter is not applicable to sharded cluster instances.</p>
+     * <p>> *   You can call the [DescribeBackups](~~62172~~) operation to query the backup ID.</p>
+     * <p>> *   You must specify one of the **RestoreTime** and BackupId parameters.</p>
+     * <p>> *   This parameter is not applicable to sharded cluster instances.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
@@ -17,7 +17,7 @@ public class CheckRecoveryConditionRequest extends TeaModel {
     /**
      * <p>The name of the source database. The value is a JSON array.</p>
      * <br>
-     * <p>>  If you do not specify this parameter, all databases are restored.</p>
+     * <p>>  If you do not specify this parameter, all databases are restored by default.</p>
      */
     @NameInMap("DatabaseNames")
     public String databaseNames;
@@ -29,7 +29,7 @@ public class CheckRecoveryConditionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the resource group to which the instance belongs.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -41,10 +41,10 @@ public class CheckRecoveryConditionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The point in time to which the instance is restored. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The point in time to which the instance is restored. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>> * The value can be any time within the past seven days. The time must be earlier than the current time, but later than the time when the instance was created.</p>
-     * <p>> * You must specify one of the RestoreTime and **BackupId** parameters.</p>
+     * <p>> *   The time can be a point in time within the past seven days. The time must be earlier than the current time, but later than the time when the instance was created.</p>
+     * <p>> *   You must specify one of the RestoreTime and **BackupId** parameters.</p>
      */
     @NameInMap("RestoreTime")
     public String restoreTime;

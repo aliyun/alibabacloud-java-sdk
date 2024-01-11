@@ -13,8 +13,8 @@ public class ReleaseNodePrivateNetworkAddressRequest extends TeaModel {
     /**
      * <p>The network type of the internal endpoint. Valid values:</p>
      * <br>
-     * <p>*   **VPC**</p>
-     * <p>*   **Classic**</p>
+     * <p>*   **VPC**: virtual private cloud (VPC).</p>
+     * <p>*   **Classic**: classic network.</p>
      * <br>
      * <p>>  You can call the [DescribeShardingNetworkAddress](~~62135~~) operation to query the network type of the internal endpoint.</p>
      */

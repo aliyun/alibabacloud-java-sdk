@@ -167,7 +167,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String hiddenZoneId;
 
     /**
-     * <p>The network type of the instance. Set the value to VPC.</p>
+     * <p>The network type of the instance. Valid value:</p>
+     * <br>
+     * <p>**VPC**: Virtual Private Cloud (VPC)</p>
      */
     @NameInMap("NetworkType")
     public String networkType;

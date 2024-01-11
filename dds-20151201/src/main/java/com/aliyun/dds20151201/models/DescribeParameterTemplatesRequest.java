@@ -40,6 +40,24 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The role of the instance. Valid values:</p>
+     * <br>
+     * <p>1. db:  a shard node.</p>
+     * <br>
+     * <p>1. cs:  a Configserver node.</p>
+     * <br>
+     * <p>1. mongos:  a mongos node.</p>
+     * <br>
+     * <p>1. normal: a replica set node.</p>
+     * <br>
+     * <p>1. physical: a standalone node.</p>
+     * <br>
+     * <p>default: normal</p>
+     */
+    @NameInMap("Role")
+    public String role;
+
     public static DescribeParameterTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeParameterTemplatesRequest self = new DescribeParameterTemplatesRequest();
         return TeaModel.build(map, self);
@@ -99,6 +117,14 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeParameterTemplatesRequest setRole(String role) {
+        this.role = role;
+        return this;
+    }
+    public String getRole() {
+        return this.role;
     }
 
 }

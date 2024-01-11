@@ -73,8 +73,9 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The database engine version of the instance. Valid values:</p>
+     * <p>The database engine version of the instance.</p>
      * <br>
+     * <p>*   **6.0**</p>
      * <p>*   **5.0**</p>
      * <p>*   **4.4**</p>
      * <p>*   **4.2**</p>

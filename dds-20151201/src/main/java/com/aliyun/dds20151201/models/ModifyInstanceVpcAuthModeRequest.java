@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceVpcAuthModeRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The ID of the mongos node in the specified sharded cluster instance.</p>
+     * <p>The ID of the mongos node in the sharded cluster instance.</p>
      * <br>
      * <p>>  This parameter can be used only when the instance type is sharded cluster.</p>
      */
@@ -31,10 +31,7 @@ public class ModifyInstanceVpcAuthModeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to enable authentication to allow access within a VPC. Valid values:</p>
-     * <br>
-     * <p>*   **Open**: enables password-free access.</p>
-     * <p>*   **Close**: disables password-free access.</p>
+     * <p>Specify whether to disable password-free access over VPC. Set the value to **Close**.</p>
      */
     @NameInMap("VpcAuthMode")
     public String vpcAuthMode;

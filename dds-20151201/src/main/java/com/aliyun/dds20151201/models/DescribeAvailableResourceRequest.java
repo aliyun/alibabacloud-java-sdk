@@ -20,7 +20,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String dbType;
 
     /**
-     * <p>The database engine version of the instance.</p>
+     * <p>The major engine version of the instance.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -47,6 +47,12 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The number of nodes, only applicable to replica sets.</p>
+     */
+    @NameInMap("ReplicationFactor")
+    public String replicationFactor;
+
+    /**
      * <p>The ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
@@ -61,13 +67,13 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     /**
      * <p>The storage type of the instance. Valid values:</p>
      * <br>
-     * <p>- **local_ssd**: local SSD </p>
-     * <p>- **cloud_essd1**: PL1 enhanced SSD (ESSD) </p>
-     * <p>- **cloud_essd2**: PL2 ESSD </p>
-     * <p>- **cloud_essd3**: PL3 ESSD </p>
-     * <p>- **cloud_auto**: ESSD AutoPL </p>
+     * <p>*   local_ssd: local SSD</p>
+     * <p>*   cloud_essd1: PL1 enhanced SSD (ESSD)</p>
+     * <p>*   cloud_essd2: PL2 ESSD</p>
+     * <p>*   cloud_essd3: PL3 ESSD</p>
+     * <p>*   cloud_auto: ESSD AutoPL disk</p>
      * <br>
-     * <p>By default, this parameter is empty, which indicates that all types of storage resources are queried.</p>
+     * <p>This parameter is empty by default, which indicates all types of storage resources are queried.</p>
      */
     @NameInMap("StorageType")
     public String storageType;
@@ -137,6 +143,14 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeAvailableResourceRequest setReplicationFactor(String replicationFactor) {
+        this.replicationFactor = replicationFactor;
+        return this;
+    }
+    public String getReplicationFactor() {
+        return this.replicationFactor;
     }
 
     public DescribeAvailableResourceRequest setResourceGroupId(String resourceGroupId) {
