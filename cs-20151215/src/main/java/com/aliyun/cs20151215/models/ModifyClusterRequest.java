@@ -87,6 +87,9 @@ public class ModifyClusterRequest extends TeaModel {
     @NameInMap("maintenance_window")
     public MaintenanceWindow maintenanceWindow;
 
+    @NameInMap("operation_policy")
+    public ModifyClusterRequestOperationPolicy operationPolicy;
+
     /**
      * <p>The ID of the resource group to which the cluster belongs.</p>
      */
@@ -184,6 +187,14 @@ public class ModifyClusterRequest extends TeaModel {
         return this.maintenanceWindow;
     }
 
+    public ModifyClusterRequest setOperationPolicy(ModifyClusterRequestOperationPolicy operationPolicy) {
+        this.operationPolicy = operationPolicy;
+        return this;
+    }
+    public ModifyClusterRequestOperationPolicy getOperationPolicy() {
+        return this.operationPolicy;
+    }
+
     public ModifyClusterRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -198,6 +209,55 @@ public class ModifyClusterRequest extends TeaModel {
     }
     public ModifyClusterRequestSystemEventsLogging getSystemEventsLogging() {
         return this.systemEventsLogging;
+    }
+
+    public static class ModifyClusterRequestOperationPolicyClusterAutoUpgrade extends TeaModel {
+        @NameInMap("channel")
+        public String channel;
+
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        public static ModifyClusterRequestOperationPolicyClusterAutoUpgrade build(java.util.Map<String, ?> map) throws Exception {
+            ModifyClusterRequestOperationPolicyClusterAutoUpgrade self = new ModifyClusterRequestOperationPolicyClusterAutoUpgrade();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyClusterRequestOperationPolicyClusterAutoUpgrade setChannel(String channel) {
+            this.channel = channel;
+            return this;
+        }
+        public String getChannel() {
+            return this.channel;
+        }
+
+        public ModifyClusterRequestOperationPolicyClusterAutoUpgrade setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+    }
+
+    public static class ModifyClusterRequestOperationPolicy extends TeaModel {
+        @NameInMap("cluster_auto_upgrade")
+        public ModifyClusterRequestOperationPolicyClusterAutoUpgrade clusterAutoUpgrade;
+
+        public static ModifyClusterRequestOperationPolicy build(java.util.Map<String, ?> map) throws Exception {
+            ModifyClusterRequestOperationPolicy self = new ModifyClusterRequestOperationPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyClusterRequestOperationPolicy setClusterAutoUpgrade(ModifyClusterRequestOperationPolicyClusterAutoUpgrade clusterAutoUpgrade) {
+            this.clusterAutoUpgrade = clusterAutoUpgrade;
+            return this;
+        }
+        public ModifyClusterRequestOperationPolicyClusterAutoUpgrade getClusterAutoUpgrade() {
+            return this.clusterAutoUpgrade;
+        }
+
     }
 
     public static class ModifyClusterRequestSystemEventsLogging extends TeaModel {
