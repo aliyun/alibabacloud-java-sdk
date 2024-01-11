@@ -13,6 +13,7 @@ public class DeleteClusterShrinkRequest extends TeaModel {
      * <p>Default value: `false`.</p>
      */
     @NameInMap("keep_slb")
+    @Deprecated
     public Boolean keepSlb;
 
     /**

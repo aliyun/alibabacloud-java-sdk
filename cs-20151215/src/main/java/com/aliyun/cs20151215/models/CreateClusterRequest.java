@@ -96,18 +96,14 @@ public class CreateClusterRequest extends TeaModel {
      * <br>
      * <p>Default value: `ack.standard`. If you leave this property empty, an ACK Basic cluster.is created.</p>
      * <br>
-     * <p>For more information, see [Overview of ACK Pro clusters](https://help.aliyun.com/document_detail/173290.html).</p>
+     * <p>For more information, see [Overview of ACK Pro clusters](~~173290~~).</p>
      */
     @NameInMap("cluster_spec")
     public String clusterSpec;
 
     /**
-     * <p>The cluster type. Valid values:</p>
-     * <br>
-     * <p>*   `Kubernetes`: ACK dedicated cluster.</p>
-     * <p>*   `ManagedKubernetes`: ACK Basic cluster or ACK Edge cluster.</p>
-     * <p>*   `Ask`: ACK Serverless Basic cluster.</p>
-     * <p>*   `ExternalKubernetes`: external cluster that is registered to ACK.</p>
+     * <p>The cluster type. Valid value: ManagedKubernetes. </p>
+     * <p>You can create ACK managed clusters, ACK Serverless clusters, and ACK Edge clusters.</p>
      */
     @NameInMap("cluster_type")
     public String clusterType;

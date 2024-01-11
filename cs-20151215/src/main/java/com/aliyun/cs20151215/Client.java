@@ -3497,6 +3497,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("maintenance_window", request.maintenanceWindow);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.operationPolicy)) {
+            body.put("operation_policy", request.operationPolicy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             body.put("resource_group_id", request.resourceGroupId);
         }

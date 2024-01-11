@@ -9,7 +9,6 @@ public class OpenAckServiceRequest extends TeaModel {
      * <br>
      * <p>*   `propayasgo`: ACK Pro</p>
      * <p>*   `edgepayasgo`: ACK Edge</p>
-     * <p>*   `gspayasgo`: ACK for Alibaba Cloud Genomics Service (AGS)</p>
      */
     @NameInMap("type")
     public String type;
