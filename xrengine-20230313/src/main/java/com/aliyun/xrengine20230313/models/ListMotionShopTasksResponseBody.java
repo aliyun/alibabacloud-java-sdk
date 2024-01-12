@@ -108,6 +108,47 @@ public class ListMotionShopTasksResponseBody extends TeaModel {
         return this.total;
     }
 
+    public static class ListMotionShopTasksResponseBodyDataMaterial extends TeaModel {
+        @NameInMap("AvatarId")
+        public String avatarId;
+
+        @NameInMap("Box")
+        public java.util.List<Double> box;
+
+        @NameInMap("CoverUrl")
+        public String coverUrl;
+
+        public static ListMotionShopTasksResponseBodyDataMaterial build(java.util.Map<String, ?> map) throws Exception {
+            ListMotionShopTasksResponseBodyDataMaterial self = new ListMotionShopTasksResponseBodyDataMaterial();
+            return TeaModel.build(map, self);
+        }
+
+        public ListMotionShopTasksResponseBodyDataMaterial setAvatarId(String avatarId) {
+            this.avatarId = avatarId;
+            return this;
+        }
+        public String getAvatarId() {
+            return this.avatarId;
+        }
+
+        public ListMotionShopTasksResponseBodyDataMaterial setBox(java.util.List<Double> box) {
+            this.box = box;
+            return this;
+        }
+        public java.util.List<Double> getBox() {
+            return this.box;
+        }
+
+        public ListMotionShopTasksResponseBodyDataMaterial setCoverUrl(String coverUrl) {
+            this.coverUrl = coverUrl;
+            return this;
+        }
+        public String getCoverUrl() {
+            return this.coverUrl;
+        }
+
+    }
+
     public static class ListMotionShopTasksResponseBodyDataResult extends TeaModel {
         @NameInMap("CoverUrl")
         public String coverUrl;
@@ -150,6 +191,9 @@ public class ListMotionShopTasksResponseBody extends TeaModel {
     }
 
     public static class ListMotionShopTasksResponseBodyData extends TeaModel {
+        @NameInMap("Material")
+        public ListMotionShopTasksResponseBodyDataMaterial material;
+
         @NameInMap("Result")
         public ListMotionShopTasksResponseBodyDataResult result;
 
@@ -162,6 +206,14 @@ public class ListMotionShopTasksResponseBody extends TeaModel {
         public static ListMotionShopTasksResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListMotionShopTasksResponseBodyData self = new ListMotionShopTasksResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListMotionShopTasksResponseBodyData setMaterial(ListMotionShopTasksResponseBodyDataMaterial material) {
+            this.material = material;
+            return this;
+        }
+        public ListMotionShopTasksResponseBodyDataMaterial getMaterial() {
+            return this.material;
         }
 
         public ListMotionShopTasksResponseBodyData setResult(ListMotionShopTasksResponseBodyDataResult result) {
