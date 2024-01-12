@@ -146,6 +146,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.batchQueryMotionShopTaskStatusWithOptions(request, runtime);
     }
 
+    public CreateAvatarTalkProjectResponse createAvatarTalkProjectWithOptions(CreateAvatarTalkProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jwtToken)) {
+            query.put("JwtToken", request.jwtToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.avatarProjectId)) {
+            body.put("AvatarProjectId", request.avatarProjectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            body.put("Title", request.title);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttsVoice)) {
+            body.put("TtsVoice", request.ttsVoice);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.txtContent)) {
+            body.put("TxtContent", request.txtContent);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAvatarTalkProject"),
+            new TeaPair("version", "2023-03-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAvatarTalkProjectResponse());
+    }
+
+    public CreateAvatarTalkProjectResponse createAvatarTalkProject(CreateAvatarTalkProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAvatarTalkProjectWithOptions(request, runtime);
+    }
+
     public CreateDigitalHumanProjectResponse createDigitalHumanProjectWithOptions(CreateDigitalHumanProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
