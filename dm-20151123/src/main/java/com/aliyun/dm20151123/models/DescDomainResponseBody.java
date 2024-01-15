@@ -28,6 +28,18 @@ public class DescDomainResponseBody extends TeaModel {
     @NameInMap("DkimRR")
     public String dkimRR;
 
+    @NameInMap("DmarcAuthStatus")
+    public Integer dmarcAuthStatus;
+
+    @NameInMap("DmarcHostRecord")
+    public String dmarcHostRecord;
+
+    @NameInMap("DmarcRecord")
+    public String dmarcRecord;
+
+    @NameInMap("DnsDmarc")
+    public String dnsDmarc;
+
     @NameInMap("DnsMx")
     public String dnsMx;
 
@@ -146,6 +158,38 @@ public class DescDomainResponseBody extends TeaModel {
     }
     public String getDkimRR() {
         return this.dkimRR;
+    }
+
+    public DescDomainResponseBody setDmarcAuthStatus(Integer dmarcAuthStatus) {
+        this.dmarcAuthStatus = dmarcAuthStatus;
+        return this;
+    }
+    public Integer getDmarcAuthStatus() {
+        return this.dmarcAuthStatus;
+    }
+
+    public DescDomainResponseBody setDmarcHostRecord(String dmarcHostRecord) {
+        this.dmarcHostRecord = dmarcHostRecord;
+        return this;
+    }
+    public String getDmarcHostRecord() {
+        return this.dmarcHostRecord;
+    }
+
+    public DescDomainResponseBody setDmarcRecord(String dmarcRecord) {
+        this.dmarcRecord = dmarcRecord;
+        return this;
+    }
+    public String getDmarcRecord() {
+        return this.dmarcRecord;
+    }
+
+    public DescDomainResponseBody setDnsDmarc(String dnsDmarc) {
+        this.dnsDmarc = dnsDmarc;
+        return this;
+    }
+    public String getDnsDmarc() {
+        return this.dnsDmarc;
     }
 
     public DescDomainResponseBody setDnsMx(String dnsMx) {
