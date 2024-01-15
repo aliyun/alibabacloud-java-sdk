@@ -4,12 +4,21 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class PutAnnotationDataRequest extends TeaModel {
+    /**
+     * <p>The unique identifier of the data.</p>
+     */
     @NameInMap("annotationdataId")
     public String annotationdataId;
 
+    /**
+     * <p>The data structure of the request.</p>
+     */
     @NameInMap("mlDataParam")
     public MLDataParam mlDataParam;
 
+    /**
+     * <p>The raw log data.</p>
+     */
     @NameInMap("rawLog")
     public java.util.List<java.util.Map<String, String>> rawLog;
 

@@ -4,12 +4,21 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The ID of the resource.</p>
+     */
     @NameInMap("resourceId")
     public String resourceId;
 
+    /**
+     * <p>The type of the resource. Only PROJECT is supported. Set the value to PROJECT.</p>
+     */
     @NameInMap("resourceType")
     public String resourceType;
 

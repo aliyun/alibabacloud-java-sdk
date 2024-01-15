@@ -4,9 +4,15 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListAnnotationDataSetsRequest extends TeaModel {
+    /**
+     * <p>The line from which the query starts.</p>
+     */
     @NameInMap("offset")
     public Integer offset;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("size")
     public Integer size;
 

@@ -4,9 +4,15 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class CreateAnnotationDataSetRequest extends TeaModel {
+    /**
+     * <p>The data structure of the request.</p>
+     */
     @NameInMap("body")
     public MLDataSetParam body;
 
+    /**
+     * <p>The unique identifier of the dataset.</p>
+     */
     @NameInMap("datasetId")
     public String datasetId;
 

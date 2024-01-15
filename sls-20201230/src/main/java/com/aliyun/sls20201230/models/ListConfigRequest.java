@@ -4,15 +4,27 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListConfigRequest extends TeaModel {
+    /**
+     * <p>The name of the Logtail configuration.</p>
+     */
     @NameInMap("configName")
     public String configName;
 
+    /**
+     * <p>The name of the Logstore.</p>
+     */
     @NameInMap("logstoreName")
     public String logstoreName;
 
+    /**
+     * <p>The line from which the query starts. Default value: 0.</p>
+     */
     @NameInMap("offset")
     public Long offset;
 
+    /**
+     * <p>The number of entries per page. Maximum value: 500.</p>
+     */
     @NameInMap("size")
     public Long size;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLogStoresResponseBody extends TeaModel {
     /**
-     * <p>The number of entries that are returned on the current page.</p>
+     * <p>The number of entries returned on the current page.</p>
      */
     @NameInMap("count")
     public Integer count;
