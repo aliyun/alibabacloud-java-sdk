@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class CreateDashboardRequest extends TeaModel {
+    /**
+     * <p>The data structure of the dashboard.</p>
+     */
     @NameInMap("body")
     public Dashboard body;
 

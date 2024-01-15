@@ -4,24 +4,45 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class CreateLogtailPipelineConfigRequest extends TeaModel {
+    /**
+     * <p>The aggregation plug-ins.</p>
+     */
     @NameInMap("aggregators")
     public java.util.List<java.util.Map<String, ?>> aggregators;
 
+    /**
+     * <p>The name of the configuration.</p>
+     */
     @NameInMap("configName")
     public String configName;
 
+    /**
+     * <p>The data output plug-ins.</p>
+     */
     @NameInMap("flushers")
     public java.util.List<java.util.Map<String, ?>> flushers;
 
+    /**
+     * <p>The global configuration.</p>
+     */
     @NameInMap("global")
     public java.util.Map<String, ?> global;
 
+    /**
+     * <p>The data source plug-ins.</p>
+     */
     @NameInMap("inputs")
     public java.util.List<java.util.Map<String, ?>> inputs;
 
+    /**
+     * <p>The sample log.</p>
+     */
     @NameInMap("logSample")
     public String logSample;
 
+    /**
+     * <p>The processing plug-ins.</p>
+     */
     @NameInMap("processors")
     public java.util.List<java.util.Map<String, ?>> processors;
 

@@ -107,19 +107,19 @@ public class CreateOssExternalStoreRequest extends TeaModel {
         public String bucket;
 
         /**
-         * <p>The associated fields.</p>
+         * <p>The fields that are associated to the external store.</p>
          */
         @NameInMap("columns")
         public java.util.List<CreateOssExternalStoreRequestParameterColumns> columns;
 
         /**
-         * <p>The OSS endpoint.</p>
+         * <p>The Object Storage Service (OSS) endpoint.</p>
          */
         @NameInMap("endpoint")
         public String endpoint;
 
         /**
-         * <p>The associated objects.</p>
+         * <p>The names of the OSS objects that are associated to the external store.</p>
          */
         @NameInMap("objects")
         public java.util.List<String> objects;

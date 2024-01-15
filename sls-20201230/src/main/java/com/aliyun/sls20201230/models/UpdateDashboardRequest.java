@@ -4,18 +4,33 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class UpdateDashboardRequest extends TeaModel {
+    /**
+     * <p>The attributes of the dashboard.</p>
+     */
     @NameInMap("attribute")
     public java.util.Map<String, String> attribute;
 
+    /**
+     * <p>The charts on the dashboard.</p>
+     */
     @NameInMap("charts")
     public java.util.List<Chart> charts;
 
+    /**
+     * <p>The name of the dashboard.</p>
+     */
     @NameInMap("dashboardName")
     public String dashboardName;
 
+    /**
+     * <p>The description of the dashboard.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The display name of the dashboard.</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 

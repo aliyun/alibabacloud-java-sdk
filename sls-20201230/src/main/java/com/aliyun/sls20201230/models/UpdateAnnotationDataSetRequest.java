@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class UpdateAnnotationDataSetRequest extends TeaModel {
+    /**
+     * <p>The data structure of the request.</p>
+     */
     @NameInMap("body")
     public MLDataSetParam body;
 

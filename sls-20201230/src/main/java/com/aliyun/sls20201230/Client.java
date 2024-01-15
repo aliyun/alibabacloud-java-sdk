@@ -96,6 +96,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.changeResourceGroupWithOptions(project, request, headers, runtime);
     }
 
+    /**
+      * ### Usage notes
+      * *   Connections between consumers and servers are established by sending heartbeats at regular intervals. If a server does not receive heartbeats from a consumer on schedule, the server deletes the consumer.
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request ConsumerGroupHeartBeatRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ConsumerGroupHeartBeatResponse
+     */
     public ConsumerGroupHeartBeatResponse consumerGroupHeartBeatWithOptions(String project, String logstore, String consumerGroup, ConsumerGroupHeartBeatRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -125,10 +135,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ConsumerGroupHeartBeatResponse());
     }
 
+    /**
+      * ### Usage notes
+      * *   Connections between consumers and servers are established by sending heartbeats at regular intervals. If a server does not receive heartbeats from a consumer on schedule, the server deletes the consumer.
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request ConsumerGroupHeartBeatRequest
+      * @return ConsumerGroupHeartBeatResponse
+     */
     public ConsumerGroupHeartBeatResponse consumerGroupHeartBeat(String project, String logstore, String consumerGroup, ConsumerGroupHeartBeatRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.consumerGroupHeartBeatWithOptions(project, logstore, consumerGroup, request, headers, runtime);
+    }
+
+    public CreateAlertResponse createAlertWithOptions(String project, CreateAlertRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAlert"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/alerts"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "any")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new CreateAlertResponse());
+    }
+
+    public CreateAlertResponse createAlert(String project, CreateAlertRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAlertWithOptions(project, request, headers, runtime);
     }
 
     public CreateAnnotationDataSetResponse createAnnotationDataSetWithOptions(CreateAnnotationDataSetRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -189,6 +236,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createAnnotationLabelWithOptions(request, headers, runtime);
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see [Manage a project](~~48984~~).
+      * *   You can create up to 100 Logtail configurations in a project.
+      * *   The Logtail configuration is planned out. For more information, see [Logtail configurations](~~29058~~).
+      *
+      * @param request CreateConfigRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateConfigResponse
+     */
     public CreateConfigResponse createConfigWithOptions(String project, CreateConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -212,6 +273,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateConfigResponse());
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see [Manage a project](~~48984~~).
+      * *   You can create up to 100 Logtail configurations in a project.
+      * *   The Logtail configuration is planned out. For more information, see [Logtail configurations](~~29058~~).
+      *
+      * @param request CreateConfigRequest
+      * @return CreateConfigResponse
+     */
     public CreateConfigResponse createConfig(String project, CreateConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -280,6 +353,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createConsumerGroupWithOptions(project, logstore, request, headers, runtime);
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      *
+      * @param request CreateDashboardRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDashboardResponse
+     */
     public CreateDashboardResponse createDashboardWithOptions(String project, CreateDashboardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -303,6 +388,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateDashboardResponse());
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      *
+      * @param request CreateDashboardRequest
+      * @return CreateDashboardResponse
+     */
     public CreateDashboardResponse createDashboard(String project, CreateDashboardRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -575,6 +670,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createLoggingWithOptions(project, request, headers, runtime);
     }
 
+    /**
+      * The UK (London) region is supported. Supported regions are constantly updated.
+      *
+      * @param request CreateLogtailPipelineConfigRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateLogtailPipelineConfigResponse
+     */
     public CreateLogtailPipelineConfigResponse createLogtailPipelineConfigWithOptions(String project, CreateLogtailPipelineConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -627,6 +730,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateLogtailPipelineConfigResponse());
     }
 
+    /**
+      * The UK (London) region is supported. Supported regions are constantly updated.
+      *
+      * @param request CreateLogtailPipelineConfigRequest
+      * @return CreateLogtailPipelineConfigResponse
+     */
     public CreateLogtailPipelineConfigResponse createLogtailPipelineConfig(String project, CreateLogtailPipelineConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -700,6 +809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ### [](#)Usage notes
       * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
       *
       * @param request CreateOssExternalStoreRequest
@@ -744,6 +854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ### [](#)Usage notes
       * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
       *
       * @param request CreateOssExternalStoreRequest
@@ -944,6 +1055,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createTicketWithOptions(headers, runtime);
     }
 
+    public DeleteAlertResponse deleteAlertWithOptions(String project, String alertName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAlert"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/alerts/" + alertName + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "any")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteAlertResponse());
+    }
+
+    public DeleteAlertResponse deleteAlert(String project, String alertName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteAlertWithOptions(project, alertName, headers, runtime);
+    }
+
     public DeleteAnnotationDataResponse deleteAnnotationDataWithOptions(String datasetId, String annotationdataId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -968,6 +1106,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteAnnotationDataWithOptions(datasetId, annotationdataId, headers, runtime);
     }
 
+    /**
+      * You can delete a dataset only if no data exists in the dataset.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteAnnotationDataSetResponse
+     */
     public DeleteAnnotationDataSetResponse deleteAnnotationDataSetWithOptions(String datasetId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -986,12 +1131,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteAnnotationDataSetResponse());
     }
 
+    /**
+      * You can delete a dataset only if no data exists in the dataset.
+      *
+      * @return DeleteAnnotationDataSetResponse
+     */
     public DeleteAnnotationDataSetResponse deleteAnnotationDataSet(String datasetId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteAnnotationDataSetWithOptions(datasetId, headers, runtime);
     }
 
+    /**
+      * Only non-built-in tags can be deleted.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteAnnotationLabelResponse
+     */
     public DeleteAnnotationLabelResponse deleteAnnotationLabelWithOptions(String labelId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1010,6 +1167,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteAnnotationLabelResponse());
     }
 
+    /**
+      * Only non-built-in tags can be deleted.
+      *
+      * @return DeleteAnnotationLabelResponse
+     */
     public DeleteAnnotationLabelResponse deleteAnnotationLabel(String labelId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1051,6 +1213,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteCollectionPolicyWithOptions(policyName, request, headers, runtime);
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   If a Logtail configuration is applied to a machine group, you cannot collect data from the machine group after you delete the Logtail configuration.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      * *   The name of the required Logtail configuration is obtained. For more information, see [ListConfig](~~29043~~).
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteConfigResponse
+     */
     public DeleteConfigResponse deleteConfigWithOptions(String project, String configName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -1072,6 +1247,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteConfigResponse());
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   If a Logtail configuration is applied to a machine group, you cannot collect data from the machine group after you delete the Logtail configuration.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      * *   The name of the required Logtail configuration is obtained. For more information, see [ListConfig](~~29043~~).
+      *
+      * @return DeleteConfigResponse
+     */
     public DeleteConfigResponse deleteConfig(String project, String configName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1117,6 +1303,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteConsumerGroupWithOptions(project, logstore, consumerGroup, headers, runtime);
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDashboardResponse
+     */
     public DeleteDashboardResponse deleteDashboardWithOptions(String project, String dashboardName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -1138,6 +1335,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteDashboardResponse());
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      *
+      * @return DeleteDashboardResponse
+     */
     public DeleteDashboardResponse deleteDashboard(String project, String dashboardName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1331,6 +1537,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteLoggingWithOptions(project, headers, runtime);
     }
 
+    /**
+      * The UK (London) region is supported. Supported regions are constantly updated.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteLogtailPipelineConfigResponse
+     */
     public DeleteLogtailPipelineConfigResponse deleteLogtailPipelineConfigWithOptions(String project, String configName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -1352,6 +1565,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteLogtailPipelineConfigResponse());
     }
 
+    /**
+      * The UK (London) region is supported. Supported regions are constantly updated.
+      *
+      * @return DeleteLogtailPipelineConfigResponse
+     */
     public DeleteLogtailPipelineConfigResponse deleteLogtailPipelineConfig(String project, String configName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1545,6 +1763,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteShipperWithOptions(project, logstore, shipperName, headers, runtime);
+    }
+
+    public DisableAlertResponse disableAlertWithOptions(String project, String alertName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableAlert"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/alerts/" + alertName + "?action=disable"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "any")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new DisableAlertResponse());
+    }
+
+    public DisableAlertResponse disableAlert(String project, String alertName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.disableAlertWithOptions(project, alertName, headers, runtime);
+    }
+
+    public EnableAlertResponse enableAlertWithOptions(String project, String alertName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableAlert"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/alerts/" + alertName + "?action=enable"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "any")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new EnableAlertResponse());
+    }
+
+    public EnableAlertResponse enableAlert(String project, String alertName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.enableAlertWithOptions(project, alertName, headers, runtime);
+    }
+
+    public GetAlertResponse getAlertWithOptions(String project, String alertName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAlert"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/alerts/" + alertName + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetAlertResponse());
+    }
+
+    public GetAlertResponse getAlert(String project, String alertName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAlertWithOptions(project, alertName, headers, runtime);
     }
 
     public GetAnnotationDataResponse getAnnotationDataWithOptions(String datasetId, String annotationdataId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1780,6 +2079,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getCollectionPolicyWithOptions(policyName, request, headers, runtime);
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      * *   The name of the required Logtail configuration is obtained. For more information, see [ListConfig](~~29043~~).
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetConfigResponse
+     */
     public GetConfigResponse getConfigWithOptions(String project, String configName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -1801,6 +2112,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetConfigResponse());
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      * *   The name of the required Logtail configuration is obtained. For more information, see [ListConfig](~~29043~~).
+      *
+      * @return GetConfigResponse
+     */
     public GetConfigResponse getConfig(String project, String configName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1965,6 +2286,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getCursorTimeWithOptions(project, logstore, shardId, request, headers, runtime);
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetDashboardResponse
+     */
     public GetDashboardResponse getDashboardWithOptions(String project, String dashboardName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -1986,6 +2318,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetDashboardResponse());
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      *
+      * @return GetDashboardResponse
+     */
     public GetDashboardResponse getDashboard(String project, String dashboardName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -2458,6 +2799,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getLogsV2WithOptions(project, logstore, request, headers, runtime);
     }
 
+    /**
+      * The UK (London) region is supported. Supported regions are constantly updated.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetLogtailPipelineConfigResponse
+     */
     public GetLogtailPipelineConfigResponse getLogtailPipelineConfigWithOptions(String project, String configName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
@@ -2479,6 +2827,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetLogtailPipelineConfigResponse());
     }
 
+    /**
+      * The UK (London) region is supported. Supported regions are constantly updated.
+      *
+      * @return GetLogtailPipelineConfigResponse
+     */
     public GetLogtailPipelineConfigResponse getLogtailPipelineConfig(String project, String configName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -2805,6 +3158,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getShipperStatusWithOptions(project, logstore, shipperName, request, headers, runtime);
     }
 
+    public ListAlertsResponse listAlertsWithOptions(String project, ListAlertsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.logstore)) {
+            query.put("logstore", request.logstore);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAlerts"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/alerts"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListAlertsResponse());
+    }
+
+    public ListAlertsResponse listAlerts(String project, ListAlertsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAlertsWithOptions(project, request, headers, runtime);
+    }
+
     public ListAnnotationDataResponse listAnnotationDataWithOptions(String datasetId, ListAnnotationDataRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2971,6 +3366,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listCollectionPoliciesWithOptions(request, headers, runtime);
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      *
+      * @param request ListConfigRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListConfigResponse
+     */
     public ListConfigResponse listConfigWithOptions(String project, ListConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -3011,6 +3418,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListConfigResponse());
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      *
+      * @param request ListConfigRequest
+      * @return ListConfigResponse
+     */
     public ListConfigResponse listConfig(String project, ListConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3058,6 +3475,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listConsumerGroupWithOptions(project, logstore, headers, runtime);
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      *
+      * @param request ListDashboardRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListDashboardResponse
+     */
     public ListDashboardResponse listDashboardWithOptions(String project, ListDashboardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -3090,6 +3519,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListDashboardResponse());
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      *
+      * @param request ListDashboardRequest
+      * @return ListDashboardResponse
+     */
     public ListDashboardResponse listDashboard(String project, ListDashboardRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3212,7 +3651,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ### Usage notes
-      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * * An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * * The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      * ### Authentication resources
+      * The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.
+      * |Action|Resource|
+      * |:---|:---|
+      * |`log:ListLogStores`|`acs:log:{#regionId}:{#accountId}:project/{#ProjectName}/logstore/*`|
       *
       * @param request ListLogStoresRequest
       * @param headers map
@@ -3265,7 +3712,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ### Usage notes
-      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * * An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * * The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      * ### Authentication resources
+      * The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.
+      * |Action|Resource|
+      * |:---|:---|
+      * |`log:ListLogStores`|`acs:log:{#regionId}:{#accountId}:project/{#ProjectName}/logstore/*`|
       *
       * @param request ListLogStoresRequest
       * @return ListLogStoresResponse
@@ -3276,6 +3731,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listLogStoresWithOptions(project, request, headers, runtime);
     }
 
+    /**
+      * The UK (London) region is supported. Supported regions are constantly updated.
+      *
+      * @param request ListLogtailPipelineConfigRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListLogtailPipelineConfigResponse
+     */
     public ListLogtailPipelineConfigResponse listLogtailPipelineConfigWithOptions(String project, ListLogtailPipelineConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -3316,6 +3779,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListLogtailPipelineConfigResponse());
     }
 
+    /**
+      * The UK (London) region is supported. Supported regions are constantly updated.
+      *
+      * @param request ListLogtailPipelineConfigRequest
+      * @return ListLogtailPipelineConfigResponse
+     */
     public ListLogtailPipelineConfigResponse listLogtailPipelineConfig(String project, ListLogtailPipelineConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3431,7 +3900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### Usage notes
+      * ### [](#)Usage notes
       * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
       *
       * @param request ListProjectRequest
@@ -3477,7 +3946,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### Usage notes
+      * ### [](#)Usage notes
       * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
       *
       * @param request ListProjectRequest
@@ -3802,6 +4271,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.putProjectTransferAccelerationWithOptions(project, request, headers, runtime);
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see [Manage a project](~~48984~~) and [Manage a Logstore](~~48990~~).
+      * *   You can call this operation to collect logs from web pages or clients.
+      * *   If you use web tracking to collect logs and you do not call this operation, you can send only one log to Simple Log Service in a request. For more information, see [Use web tracking to collect logs](~~31752~~).
+      * *   If you want to collect a large amount of log data, you can call this operation to send multiple logs to Simple Log Service in one request.
+      * *   Before you can call this operation to send logs to a Logstore, you must enable web tracking for the Logstore. For more information, see [Use web tracking to collect logs](~~31752~~).
+      * *   You cannot call this operation to send the logs of multiple topics to Simple Log Service at a time.
+      * *   If you call this operation, anonymous users from the Internet are granted the write permissions on the Logstore. This may generate dirty data because AccessKey pair-based authentication is not performed.
+      *
+      * @param request PutWebtrackingRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return PutWebtrackingResponse
+     */
     public PutWebtrackingResponse putWebtrackingWithOptions(String project, String logstoreName, PutWebtrackingRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -3842,6 +4326,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PutWebtrackingResponse());
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see [Manage a project](~~48984~~) and [Manage a Logstore](~~48990~~).
+      * *   You can call this operation to collect logs from web pages or clients.
+      * *   If you use web tracking to collect logs and you do not call this operation, you can send only one log to Simple Log Service in a request. For more information, see [Use web tracking to collect logs](~~31752~~).
+      * *   If you want to collect a large amount of log data, you can call this operation to send multiple logs to Simple Log Service in one request.
+      * *   Before you can call this operation to send logs to a Logstore, you must enable web tracking for the Logstore. For more information, see [Use web tracking to collect logs](~~31752~~).
+      * *   You cannot call this operation to send the logs of multiple topics to Simple Log Service at a time.
+      * *   If you call this operation, anonymous users from the Internet are granted the write permissions on the Logstore. This may generate dirty data because AccessKey pair-based authentication is not performed.
+      *
+      * @param request PutWebtrackingRequest
+      * @return PutWebtrackingResponse
+     */
     public PutWebtrackingResponse putWebtracking(String project, String logstoreName, PutWebtrackingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -4105,6 +4602,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.untagResourcesWithOptions(request, headers, runtime);
     }
 
+    public UpdateAlertResponse updateAlertWithOptions(String project, String alertName, UpdateAlertRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAlert"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/alerts/" + alertName + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "any")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new UpdateAlertResponse());
+    }
+
+    public UpdateAlertResponse updateAlert(String project, String alertName, UpdateAlertRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAlertWithOptions(project, alertName, request, headers, runtime);
+    }
+
     public UpdateAnnotationDataSetResponse updateAnnotationDataSetWithOptions(String datasetId, UpdateAnnotationDataSetRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4131,6 +4657,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateAnnotationDataSetWithOptions(datasetId, request, headers, runtime);
     }
 
+    /**
+      * You can update only the names of the tags in a tag set.
+      *
+      * @param request UpdateAnnotationLabelRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateAnnotationLabelResponse
+     */
     public UpdateAnnotationLabelResponse updateAnnotationLabelWithOptions(UpdateAnnotationLabelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4151,12 +4685,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateAnnotationLabelResponse());
     }
 
+    /**
+      * You can update only the names of the tags in a tag set.
+      *
+      * @param request UpdateAnnotationLabelRequest
+      * @return UpdateAnnotationLabelResponse
+     */
     public UpdateAnnotationLabelResponse updateAnnotationLabel(UpdateAnnotationLabelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateAnnotationLabelWithOptions(request, headers, runtime);
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   After you update a Logtail configuration that is applied to a machine group, the new configuration immediately takes effect.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      * *   The Logtail configuration is planned out. For more information, see [Logtail configurations](~~29058~~).
+      *
+      * @param request UpdateConfigRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateConfigResponse
+     */
     public UpdateConfigResponse updateConfigWithOptions(String project, String configName, UpdateConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -4180,6 +4734,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateConfigResponse());
     }
 
+    /**
+      * ### [](#)Usage notes
+      * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      * *   After you update a Logtail configuration that is applied to a machine group, the new configuration immediately takes effect.
+      * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](~~29009~~).
+      * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](~~47664~~).
+      * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](~~48984~~).
+      * *   The Logtail configuration is planned out. For more information, see [Logtail configurations](~~29058~~).
+      *
+      * @param request UpdateConfigRequest
+      * @return UpdateConfigResponse
+     */
     public UpdateConfigResponse updateConfig(String project, String configName, UpdateConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -4240,6 +4806,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateConsumerGroupWithOptions(project, logstore, consumerGroup, request, headers, runtime);
     }
 
+    /**
+      * ### [](#)Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request UpdateDashboardRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateDashboardResponse
+     */
     public UpdateDashboardResponse updateDashboardWithOptions(String project, String dashboardName, UpdateDashboardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -4284,6 +4859,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateDashboardResponse());
     }
 
+    /**
+      * ### [](#)Usage notes
+      * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
+      *
+      * @param request UpdateDashboardRequest
+      * @return UpdateDashboardResponse
+     */
     public UpdateDashboardResponse updateDashboard(String project, String dashboardName, UpdateDashboardRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -4546,6 +5128,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateLoggingWithOptions(project, request, headers, runtime);
     }
 
+    /**
+      * The UK (London) region is supported. Supported regions are constantly updated.
+      *
+      * @param request UpdateLogtailPipelineConfigRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateLogtailPipelineConfigResponse
+     */
     public UpdateLogtailPipelineConfigResponse updateLogtailPipelineConfigWithOptions(String project, String configName, UpdateLogtailPipelineConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
@@ -4598,6 +5188,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new UpdateLogtailPipelineConfigResponse());
     }
 
+    /**
+      * The UK (London) region is supported. Supported regions are constantly updated.
+      *
+      * @param request UpdateLogtailPipelineConfigRequest
+      * @return UpdateLogtailPipelineConfigResponse
+     */
     public UpdateLogtailPipelineConfigResponse updateLogtailPipelineConfig(String project, String configName, UpdateLogtailPipelineConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -4718,6 +5314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ### [](#)Usage notes
       * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
       *
       * @param request UpdateOssExternalStoreRequest
@@ -4762,6 +5359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ### [](#)Usage notes
       * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
       *
       * @param request UpdateOssExternalStoreRequest

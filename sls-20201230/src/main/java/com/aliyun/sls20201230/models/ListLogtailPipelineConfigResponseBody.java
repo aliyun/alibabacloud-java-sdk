@@ -4,12 +4,21 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListLogtailPipelineConfigResponseBody extends TeaModel {
+    /**
+     * <p>The Logtail pipeline configurations that are returned on the current page.</p>
+     */
     @NameInMap("configs")
     public java.util.List<String> configs;
 
+    /**
+     * <p>The number of Logtail pipeline configurations that are returned on the current page.</p>
+     */
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <p>The total number of Logtail pipeline configurations in the current project.</p>
+     */
     @NameInMap("total")
     public Integer total;
 

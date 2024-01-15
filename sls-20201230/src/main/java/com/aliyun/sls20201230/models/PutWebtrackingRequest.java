@@ -4,15 +4,29 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class PutWebtrackingRequest extends TeaModel {
+    /**
+     * <p>The logs. Each element is a JSON object that indicates a log.</p>
+     * <br>
+     * <p>>  **Note**: The time in a log that is collected by using the web tracking feature is the time at which Simple Log Service receives the log. You do not need to configure the \__time\_\_ field for each log. If this field exists, it is overwritten by the time at which Simple Log Service receives the log.</p>
+     */
     @NameInMap("__logs__")
     public java.util.List<java.util.Map<String, String>> logs;
 
+    /**
+     * <p>The source of the logs.</p>
+     */
     @NameInMap("__source__")
     public String source;
 
+    /**
+     * <p>The tags of the logs.</p>
+     */
     @NameInMap("__tags__")
     public java.util.Map<String, String> tags;
 
+    /**
+     * <p>The topic of the logs.</p>
+     */
     @NameInMap("__topic__")
     public String topic;
 

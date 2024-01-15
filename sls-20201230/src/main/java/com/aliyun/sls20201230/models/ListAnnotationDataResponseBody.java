@@ -4,9 +4,15 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListAnnotationDataResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("data")
     public java.util.List<MLDataParam> data;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("total")
     public Integer total;
 
