@@ -13,6 +13,9 @@ public class ModifyTagRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("TagDescription")
+    public String tagDescription;
+
     /**
      * <p>The ID of the tag.</p>
      */
@@ -52,6 +55,14 @@ public class ModifyTagRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ModifyTagRequest setTagDescription(String tagDescription) {
+        this.tagDescription = tagDescription;
+        return this;
+    }
+    public String getTagDescription() {
+        return this.tagDescription;
     }
 
     public ModifyTagRequest setTagId(Integer tagId) {

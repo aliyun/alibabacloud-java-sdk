@@ -10,6 +10,9 @@ public class DescDomainRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RequireRealTimeDnsRecords")
+    public Boolean requireRealTimeDnsRecords;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -35,6 +38,14 @@ public class DescDomainRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescDomainRequest setRequireRealTimeDnsRecords(Boolean requireRealTimeDnsRecords) {
+        this.requireRealTimeDnsRecords = requireRealTimeDnsRecords;
+        return this;
+    }
+    public Boolean getRequireRealTimeDnsRecords() {
+        return this.requireRealTimeDnsRecords;
     }
 
     public DescDomainRequest setResourceOwnerAccount(String resourceOwnerAccount) {

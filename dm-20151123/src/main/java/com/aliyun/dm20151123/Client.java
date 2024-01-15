@@ -421,6 +421,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tagDescription)) {
+            query.put("TagDescription", request.tagDescription);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tagName)) {
             query.put("TagName", request.tagName);
         }
@@ -790,6 +794,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.requireRealTimeDnsRecords)) {
+            query.put("RequireRealTimeDnsRecords", request.requireRealTimeDnsRecords);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
@@ -1147,6 +1155,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagDescription)) {
+            query.put("TagDescription", request.tagDescription);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tagId)) {
