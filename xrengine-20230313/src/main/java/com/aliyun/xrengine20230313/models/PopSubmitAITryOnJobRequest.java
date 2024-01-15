@@ -10,6 +10,9 @@ public class PopSubmitAITryOnJobRequest extends TeaModel {
     @NameInMap("ClothingType")
     public String clothingType;
 
+    @NameInMap("GeneratePictureNum")
+    public Integer generatePictureNum;
+
     @NameInMap("JwtToken")
     public String jwtToken;
 
@@ -44,6 +47,14 @@ public class PopSubmitAITryOnJobRequest extends TeaModel {
     }
     public String getClothingType() {
         return this.clothingType;
+    }
+
+    public PopSubmitAITryOnJobRequest setGeneratePictureNum(Integer generatePictureNum) {
+        this.generatePictureNum = generatePictureNum;
+        return this;
+    }
+    public Integer getGeneratePictureNum() {
+        return this.generatePictureNum;
     }
 
     public PopSubmitAITryOnJobRequest setJwtToken(String jwtToken) {
