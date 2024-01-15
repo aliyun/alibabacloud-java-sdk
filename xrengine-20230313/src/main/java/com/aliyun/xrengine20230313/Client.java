@@ -2185,6 +2185,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClothingType", request.clothingType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.generatePictureNum)) {
+            query.put("GeneratePictureNum", request.generatePictureNum);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jwtToken)) {
             query.put("JwtToken", request.jwtToken);
         }
