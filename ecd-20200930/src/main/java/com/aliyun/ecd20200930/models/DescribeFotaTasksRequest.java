@@ -11,6 +11,15 @@ public class DescribeFotaTasksRequest extends TeaModel {
     public String fotaStatus;
 
     /**
+     * <p>The language of the image version to update. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
+    @NameInMap("Lang")
+    public String lang;
+
+    /**
      * <p>The number of entries per page.</p>
      * <br>
      * <p>*   Valid values: 1 to 100</p>
@@ -80,6 +89,14 @@ public class DescribeFotaTasksRequest extends TeaModel {
     }
     public String getFotaStatus() {
         return this.fotaStatus;
+    }
+
+    public DescribeFotaTasksRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public DescribeFotaTasksRequest setMaxResults(Integer maxResults) {

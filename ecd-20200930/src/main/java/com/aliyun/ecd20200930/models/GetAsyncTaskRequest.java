@@ -4,9 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class GetAsyncTaskRequest extends TeaModel {
+    /**
+     * <p>The asynchronous task ID. This parameter is not returned if you copy files. This parameter is returned if you copy folders in the backend in an asynchronous manner. You can call the GetAsyncTask operation to obtain the ID and information about an asynchronous task.</p>
+     */
     @NameInMap("AsyncTaskId")
     public String asyncTaskId;
 
+    /**
+     * <p>The ID of the cloud disk.</p>
+     */
     @NameInMap("CdsId")
     public String cdsId;
 

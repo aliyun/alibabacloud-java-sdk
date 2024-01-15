@@ -11,7 +11,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Details of the workspaces.</p>
+     * <p>Details about the workspaces.</p>
      */
     @NameInMap("OfficeSites")
     public java.util.List<DescribeOfficeSitesResponseBodyOfficeSites> officeSites;
@@ -60,6 +60,54 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
         /**
          * <p>The state of the AD connector.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   CONNECT_ERROR: A connection error occurs.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   RUNNING: The AD connector is running</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   CONNECTING: The AD connector is being connected.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    The AD domain for the connector needs to be configured.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   EXPIRED: The AD connector expired due to overdue payments.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   CREATING: The consumer group is being created</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
          */
         @NameInMap("ConnectorStatus")
         public String connectorStatus;
@@ -71,7 +119,25 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String networkInterfaceId;
 
         /**
-         * <p>The type of the AD connector.</p>
+         * <p>The AD connector type.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   1: General</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   2: Advanced</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("Specification")
         public String specification;
@@ -146,6 +212,32 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
     public static class DescribeOfficeSitesResponseBodyOfficeSitesLogs extends TeaModel {
         /**
          * <p>The log level.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   ERROR: errors</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   INFO: information</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   WARN: warnings</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("Level")
         public String level;
@@ -209,19 +301,19 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
     public static class DescribeOfficeSitesResponseBodyOfficeSites extends TeaModel {
         /**
-         * <p>Details of the AD connectors.</p>
+         * <p>Details about AD connectors.</p>
          */
         @NameInMap("ADConnectors")
         public java.util.List<DescribeOfficeSitesResponseBodyOfficeSitesADConnectors> ADConnectors;
 
         /**
-         * <p>The hostname of the domain controller. The hostname must comply with the naming conventions for hostnames in Windows.</p>
+         * <p>The hostname of the domain controller. The hostname must comply with the naming conventions for Windows hosts.</p>
          */
         @NameInMap("AdHostname")
         public String adHostname;
 
         /**
-         * <p>The maximum public bandwidth of the Internet access package. Valid values: 0 to 1000.\</p>
+         * <p>The maximum public bandwidth value. Valid values: 0 to 1000.\</p>
          * <p>If the value of this parameter is 0, Internet access is disabled.</p>
          */
         @NameInMap("Bandwidth")
@@ -243,7 +335,25 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
-         * <p>Indicates whether the workspace is created for cloud desktops on a cloud box.</p>
+         * <p>Specifies whether the workspace is a cloud box-based workspace.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   True: a cloud box-based workspace</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   False: an Internet-based workspace</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("CloudBoxOfficeSite")
         public Boolean cloudBoxOfficeSite;
@@ -261,7 +371,35 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String customSecurityGroupId;
 
         /**
-         * <p>The method used to connect the Alibaba Cloud Workspace client to cloud desktops.</p>
+         * <p>The method that is used to connect an Alibaba Cloud Workspace client to cloud desktops.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   INTERNET: allows clients to connect to cloud desktops only over the Internet.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   VPC: allows only clients in VPCs to connect to a cloud desktop.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   ANY: connects the client to cloud desktops over the Internet or a VPC.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    Configure the Connection Method parameter based on your business requirements.</p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("DesktopAccessType")
         public String desktopAccessType;
@@ -285,7 +423,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public java.util.List<String> dnsAddress;
 
         /**
-         * <p>The username of the DNS account.</p>
+         * <p>The username of the Domain Name System (DNS) user.</p>
          */
         @NameInMap("DnsUserName")
         public String dnsUserName;
@@ -309,13 +447,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String domainUserName;
 
         /**
-         * <p>Indicates whether the permissions of the desktop administrator are granted to the user of the cloud desktop.</p>
+         * <p>Indicates whether the Local Administrator permissions are granted for users of the cloud desktop.</p>
          */
         @NameInMap("EnableAdminAccess")
         public Boolean enableAdminAccess;
 
         /**
-         * <p>Indicates whether the desktop communication feature is enabled for cloud desktops in the same workspace. If the feature is enabled, cloud desktops in the same workspace can access each other.</p>
+         * <p>Indicates whether the cross-desktop access feature is enabled for cloud desktops in the same workspace. If the feature is enabled, cloud desktops in the same workspace can access each other.</p>
          */
         @NameInMap("EnableCrossDesktopAccess")
         public Boolean enableCrossDesktopAccess;
@@ -333,13 +471,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public java.util.List<String> fileSystemIds;
 
         /**
-         * <p>Details of the registration logs.</p>
+         * <p>Details about registration logs.</p>
          */
         @NameInMap("Logs")
         public java.util.List<DescribeOfficeSitesResponseBodyOfficeSitesLogs> logs;
 
         /**
-         * <p>Indicates whether multi-factor authentication (MFA) is enabled.</p>
+         * <p>Specifies whether to enable multi-factor authentication (MFA).</p>
          */
         @NameInMap("MfaEnabled")
         public Boolean mfaEnabled;
@@ -351,14 +489,32 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether two-factor verification for logons is enabled. This parameter is returned only for workspaces of the convenience account type.\</p>
+         * <p>Indicates whether two-step verification for logons is enabled. This parameter is returned only for workspaces of the convenience account type.\</p>
          * <p>If two-factor verification is enabled, the system checks whether security risks exist within the logon account when a convenience user logs on to an Alibaba Cloud Workspace client. If risks are detected, the system sends a verification code to the email address that is associated with the account. Then, the convenience user can log on to the client only after the user enters the correct verification code.</p>
          */
         @NameInMap("NeedVerifyLoginRisk")
         public Boolean needVerifyLoginRisk;
 
         /**
-         * <p>Indicates whether trusted device verification is enabled.</p>
+         * <p>Specifies whether to enable trusted device verification.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   true: enables device verification.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   false: disables device verification.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("NeedVerifyZeroDevice")
         public Boolean needVerifyZeroDevice;
@@ -370,13 +526,31 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String networkPackageId;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
         /**
          * <p>The account type of the workspace.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   SIMPLE: the convenience account</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   AD_CONNECTOR: the enterprise AD account</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("OfficeSiteType")
         public String officeSiteType;
@@ -388,7 +562,25 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String ouName;
 
         /**
-         * <p>The type of the protocol.</p>
+         * <p>The workspace protocol.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   HDX: the third-party protocol</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   ASP: the protocol developed by Alibaba Cloud</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
@@ -416,6 +608,80 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
         /**
          * <p>The state of the workspace.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   REGISTERING: The workspace is being registered.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   DEREGISTERING: The workspace is being deregistered.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   REGISTERED: The workspace is registered.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   NEEDCONFIGTRUST: A trust relationship needs to be configured.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   CONFIGTRUSTFAILED: A trust relationship fails to be configured.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   DEREGISTERED: The workspace is deregistered.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   ERROR: The configurations of the workspace are invalid.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   CONFIGTRUSTING: A trust relationship is being configured.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   NEEDCONFIGUSER: Users need to be configured.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("Status")
         public String status;
@@ -458,6 +724,32 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
         /**
          * <p>The VPC type.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Basic</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Customized</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Standard</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("VpcType")
         public String vpcType;

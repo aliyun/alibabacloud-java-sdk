@@ -4,23 +4,26 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyImageAttributeRequest extends TeaModel {
+    /**
+     * <p>The image description. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The image ID.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to ModifyImageAttribute.</p>
+     * <p>The name of the image. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The description of the image.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

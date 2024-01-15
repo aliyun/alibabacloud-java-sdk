@@ -4,9 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyDesktopTimerResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of cloud desktops whose scheduled tasks are configured.</p>
+     */
     @NameInMap("DesktopIds")
     public java.util.List<String> desktopIds;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

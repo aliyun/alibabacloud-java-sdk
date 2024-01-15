@@ -11,13 +11,13 @@ public class DisableDesktopsInGroupRequest extends TeaModel {
     public String desktopGroupId;
 
     /**
-     * <p>DisableDesktopsInGroup</p>
+     * <p>The IDs of the cloud desktops.</p>
      */
     @NameInMap("DesktopIds")
     public java.util.List<String> desktopIds;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

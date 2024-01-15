@@ -4,11 +4,14 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DetachCenRequest extends TeaModel {
+    /**
+     * <p>The workspace ID.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

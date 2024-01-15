@@ -17,6 +17,20 @@ public class CreateBundleRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The type of the cloud desktop. You can call the DescribeBundles operation to query the cloud desktop templates and obtain the supported desktop type from the value of the DesktopType parameter.</p>
+     * <br>
+     * <p>>  You can select GPU-accelerated desktop types only when you use GPU-accelerated images.</p>
+     */
+    @NameInMap("DesktopType")
+    public String desktopType;
+
+    /**
+     * <p>The ID of the image.</p>
+     */
+    @NameInMap("ImageId")
+    public String imageId;
+
+    /**
      * <p>The language of the OS. This parameter is available only for system images. Valid values:</p>
      * <br>
      * <p>*   zh-CN: Simplified Chinese</p>
@@ -24,16 +38,14 @@ public class CreateBundleRequest extends TeaModel {
      * <p>*   en-US: English</p>
      * <p>*   ja-JP: Japanese</p>
      */
-    @NameInMap("DesktopType")
-    public String desktopType;
+    @NameInMap("Language")
+    public String language;
 
     /**
-     * <p>The type of the cloud desktop. You can call the DescribeBundles operation to query the cloud desktop templates and obtain the supported desktop type from the value of the DesktopType parameter.</p>
-     * <br>
-     * <p>>  You can select GPU-accelerated desktop types only when you use GPU-accelerated images.</p>
+     * <p>The ID of the region.</p>
      */
-    @NameInMap("ImageId")
-    public String imageId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     /**
      * <p>The performance level (PL) of the system disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the system disk. Valid values:</p>
@@ -45,35 +57,26 @@ public class CreateBundleRequest extends TeaModel {
      * <br>
      * <p>For more information about the differences between disks at different PLs, see [Enhanced SSDs](~~122389~~).</p>
      */
-    @NameInMap("Language")
-    public String language;
-
-    /**
-     * <p>The size of data disk N. You can configure only one data disk. Unit: GiB.</p>
-     * <br>
-     * <p>The value of this parameter must be consistent with the data disk size supported by the cloud desktop type. For more information, see [Cloud desktop types](~~188609~~).</p>
-     * <br>
-     * <p>>  The value of the UserDiskSizeGib parameter in the template must be greater than that of the DataDiskSize parameter in the image.</p>
-     */
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("RootDiskPerformanceLevel")
+    public String rootDiskPerformanceLevel;
 
     /**
      * <p>The size of the system disk. Unit: GiB.</p>
      * <br>
      * <p>The value of this parameter must be consistent with the system disk size supported by the cloud desktop type. For more information, see [Cloud desktop types](~~188609~~).</p>
      */
-    @NameInMap("RootDiskPerformanceLevel")
-    public String rootDiskPerformanceLevel;
-
-    /**
-     * <p>The operation that you want to perform. Set the value to **CreateBundle**.</p>
-     */
     @NameInMap("RootDiskSizeGib")
     public Integer rootDiskSizeGib;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The PL of the data disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the data disk. Valid values:</p>
+     * <br>
+     * <p>*   PL0</p>
+     * <p>*   PL1</p>
+     * <p>*   PL2</p>
+     * <p>*   PL3</p>
+     * <br>
+     * <p>For more information about the differences between disks at different PLs, see [Enhanced SSDs](~~122389~~).</p>
      */
     @NameInMap("UserDiskPerformanceLevel")
     public String userDiskPerformanceLevel;

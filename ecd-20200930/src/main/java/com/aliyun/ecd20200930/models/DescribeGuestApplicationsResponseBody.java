@@ -4,9 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeGuestApplicationsResponseBody extends TeaModel {
+    /**
+     * <p>The application details.</p>
+     */
     @NameInMap("Applications")
     public java.util.List<DescribeGuestApplicationsResponseBodyApplications> applications;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +38,51 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
     }
 
     public static class DescribeGuestApplicationsResponseBodyApplicationsProcessData extends TeaModel {
+        /**
+         * <p>The application name.</p>
+         */
         @NameInMap("ApplicationName")
         public String applicationName;
 
+        /**
+         * <p>The application version.</p>
+         */
         @NameInMap("ApplicationVersion")
         public String applicationVersion;
 
+        /**
+         * <p>The CPU usage.</p>
+         */
         @NameInMap("CpuPercent")
         public Double cpuPercent;
 
+        /**
+         * <p>The GPU usage.</p>
+         */
         @NameInMap("GpuPercent")
         public Double gpuPercent;
 
+        /**
+         * <p>The I/O read and write performance.</p>
+         */
         @NameInMap("Iospeed")
         public Double iospeed;
 
+        /**
+         * <p>The memory usage.</p>
+         */
         @NameInMap("MemPercent")
         public Double memPercent;
 
+        /**
+         * <p>The process ID.</p>
+         */
         @NameInMap("Pid")
         public Integer pid;
 
+        /**
+         * <p>The path to the process.</p>
+         */
         @NameInMap("ProcessPath")
         public String processPath;
 
@@ -128,36 +158,69 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
     }
 
     public static class DescribeGuestApplicationsResponseBodyApplications extends TeaModel {
+        /**
+         * <p>The application name.</p>
+         */
         @NameInMap("ApplicationName")
         public String applicationName;
 
+        /**
+         * <p>The application version.</p>
+         */
         @NameInMap("ApplicationVersion")
         public String applicationVersion;
 
+        /**
+         * <p>The CPU usage.</p>
+         */
         @NameInMap("CpuPercent")
         public Double cpuPercent;
 
+        /**
+         * <p>The GPU usage.</p>
+         */
         @NameInMap("GpuPercent")
         public Double gpuPercent;
 
+        /**
+         * <p>The icon address of the application.</p>
+         */
         @NameInMap("IconUrl")
         public String iconUrl;
 
+        /**
+         * <p>The I/O read and write performance.</p>
+         */
         @NameInMap("IoSpeed")
         public Double ioSpeed;
 
+        /**
+         * <p>The memory usage.</p>
+         */
         @NameInMap("MemPercent")
         public Double memPercent;
 
+        /**
+         * <p>The process ID.</p>
+         */
         @NameInMap("Pid")
         public Integer pid;
 
+        /**
+         * <p>The process information.</p>
+         */
         @NameInMap("ProcessData")
         public java.util.List<DescribeGuestApplicationsResponseBodyApplicationsProcessData> processData;
 
+        /**
+         * <p>The path to the process.</p>
+         */
         @NameInMap("ProcessPath")
         public String processPath;
 
+        /**
+         * <p>The application status.</p>
+         */
         @NameInMap("Status")
         public String status;
 

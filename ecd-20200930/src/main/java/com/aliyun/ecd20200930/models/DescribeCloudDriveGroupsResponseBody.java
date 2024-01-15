@@ -79,9 +79,42 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos extends TeaModel {
+        @NameInMap("EndUserId")
+        public String endUserId;
+
+        @NameInMap("NickName")
+        public String nickName;
+
+        public static DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos self = new DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos setEndUserId(String endUserId) {
+            this.endUserId = endUserId;
+            return this;
+        }
+        public String getEndUserId() {
+            return this.endUserId;
+        }
+
+        public DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos setNickName(String nickName) {
+            this.nickName = nickName;
+            return this;
+        }
+        public String getNickName() {
+            return this.nickName;
+        }
+
+    }
+
     public static class DescribeCloudDriveGroupsResponseBodyCloudDriveGroups extends TeaModel {
         @NameInMap("AdminUserIds")
         public String adminUserIds;
+
+        @NameInMap("AdminUserInfos")
+        public java.util.List<DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos> adminUserInfos;
 
         /**
          * <p>The time when the team space was created.</p>
@@ -150,6 +183,14 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         }
         public String getAdminUserIds() {
             return this.adminUserIds;
+        }
+
+        public DescribeCloudDriveGroupsResponseBodyCloudDriveGroups setAdminUserInfos(java.util.List<DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos> adminUserInfos) {
+            this.adminUserInfos = adminUserInfos;
+            return this;
+        }
+        public java.util.List<DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos> getAdminUserInfos() {
+            return this.adminUserInfos;
         }
 
         public DescribeCloudDriveGroupsResponseBodyCloudDriveGroups setCreateTime(String createTime) {

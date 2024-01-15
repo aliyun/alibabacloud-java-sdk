@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSimpleOfficeSiteRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable trusted device verification.</p>
+     * <p>The maximum public bandwidth. Value range: 10 to 200. Unit: Mbit/s. This parameter is available if you set `EnableInternetAccess` to `true`.</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
@@ -19,64 +19,66 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The name of the workspace. The name must be 2 to 255 characters in length. It must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The ID of the Alibaba Cloud account to which the Cloud Enterprise Network (CEN) instance belongs.</p>
+     * <br>
+     * <p>- If you do not specify the CenId parameter, or the CEN instance that is specified by the CenId parameter belongs to the current Alibaba Cloud account, skip this parameter.</p>
+     * <p>- If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, enter the ID of the Alibaba Cloud account.</p>
      */
     @NameInMap("CenOwnerId")
     public Long cenOwnerId;
 
     /**
-     * <p>Specifies whether the workspace is a CloudBox-based workspace.</p>
+     * <p>The IPv4 CIDR block in the secure office network of the workspace. The IPv4 CIDR block that the system uses to create a virtual private cloud (VPC) for the workspace. We recommend that you set the IPv4 CIDR block to 10.0.0.0/12, 172.16.0.0/12, 192.168.0.0/16, or a subnet of these CIDR blocks. If you set the IPv4 CIDR block to 10.0.0.0/12 or 172.16.0.0/12, the mask is 1224 bits in length. If you set the IPv4 CIDR block to 192.168.0.0/16, the mask is 1624 bits in length.</p>
      */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
     /**
-     * <p>Creates a workspace of the convenience account type.</p>
+     * <p>Specifies whether the workspace is a CloudBox-based workspace.</p>
      */
     @NameInMap("CloudBoxOfficeSite")
     public Boolean cloudBoxOfficeSite;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The method that is used to connect the client to cloud desktops.</p>
+     * <br>
+     * <p>> VPC connections are established by using Alibaba Cloud PrivateLink. You can use PrivateLink for free. When you set this parameter to VPC or Any, PrivateLink is automatically activated.</p>
      */
     @NameInMap("DesktopAccessType")
     public String desktopAccessType;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>Specifies whether to grant the permissions of the local administrator to the regular user of the cloud desktop.</p>
      */
     @NameInMap("EnableAdminAccess")
     public Boolean enableAdminAccess;
 
     /**
-     * <p>Specifies whether to grant the permissions of the local administrator to the regular user of the cloud desktop.</p>
+     * <p>Specifies whether to enable Internet access. By default, Internet access is not enabled.</p>
      */
     @NameInMap("EnableInternetAccess")
     public Boolean enableInternetAccess;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the Cloud Enterprise Network (CEN) instance belongs.</p>
-     * <br>
-     * <p>*   If you do not specify the CenId parameter, or the CEN instance that is specified by the CenId parameter belongs to the current Alibaba Cloud account, skip this parameter.</p>
-     * <p>*   If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, enter the ID of the Alibaba Cloud account.</p>
+     * <p>Specifies whether to enable trusted device verification.</p>
      */
     @NameInMap("NeedVerifyZeroDevice")
     public Boolean needVerifyZeroDevice;
 
     /**
-     * <p>The maximum public bandwidth. Value range: 10 to 200. Unit: Mbit/s. This parameter is available if you set `EnableInternetAccess` to `true`.</p>
+     * <p>The name of the workspace. The name must be 2 to 255 characters in length. It must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("OfficeSiteName")
     public String officeSiteName;
 
     /**
-     * <p>The IPv4 CIDR block in the secure office network of the workspace. The IPv4 CIDR block that the system uses to create a virtual private cloud (VPC) for the workspace. We recommend that you set the IPv4 CIDR block to 10.0.0.0/12, 172.16.0.0/12, 192.168.0.0/16, or a subnet of these CIDR blocks. If you set the IPv4 CIDR block to 10.0.0.0/12 or 172.16.0.0/12, the mask is 1224 bits in length. If you set the IPv4 CIDR block to 192.168.0.0/16, the mask is 1624 bits in length.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The IDs of the vSwitches in the VPC. This parameter is required when you create a CloudBox-based workspace.</p>
      */
     @NameInMap("VSwitchId")
     public java.util.List<String> vSwitchId;
@@ -86,6 +88,9 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
      */
     @NameInMap("VerifyCode")
     public String verifyCode;
+
+    @NameInMap("VpcType")
+    public String vpcType;
 
     public static CreateSimpleOfficeSiteRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSimpleOfficeSiteRequest self = new CreateSimpleOfficeSiteRequest();
@@ -194,6 +199,14 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     }
     public String getVerifyCode() {
         return this.verifyCode;
+    }
+
+    public CreateSimpleOfficeSiteRequest setVpcType(String vpcType) {
+        this.vpcType = vpcType;
+        return this;
+    }
+    public String getVpcType() {
+        return this.vpcType;
     }
 
 }

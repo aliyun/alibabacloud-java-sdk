@@ -4,21 +4,43 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ListDirectoryUsersRequest extends TeaModel {
+    /**
+     * <p>The ID of the AD directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The query string for fuzzy match. If you specify this parameter, the system returns all results that contain the string.</p>
+     */
     @NameInMap("Filter")
     public String filter;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: 1 to 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token used to start the next query. If the value of this parameter is empty, all results are returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The organizational unit (OU) in the specified AD domain.</p>
+     */
     @NameInMap("OUPath")
     public String OUPath;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -23,6 +23,12 @@ public class ListFilePermissionRequest extends TeaModel {
     public String fileId;
 
     /**
+     * <p>The group ID.</p>
+     */
+    @NameInMap("GroupId")
+    public String groupId;
+
+    /**
      * <p>The region ID of the cloud disk. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
@@ -55,6 +61,14 @@ public class ListFilePermissionRequest extends TeaModel {
     }
     public String getFileId() {
         return this.fileId;
+    }
+
+    public ListFilePermissionRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public ListFilePermissionRequest setRegionId(String regionId) {

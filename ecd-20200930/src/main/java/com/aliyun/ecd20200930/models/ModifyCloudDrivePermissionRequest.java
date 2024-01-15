@@ -4,15 +4,27 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyCloudDrivePermissionRequest extends TeaModel {
+    /**
+     * <p>The ID of the cloud disk in Cloud Drive Service.</p>
+     */
     @NameInMap("CdsId")
     public String cdsId;
 
+    /**
+     * <p>The IDs of the users who have the download permissions.</p>
+     */
     @NameInMap("DownloadEndUserIds")
     public java.util.List<String> downloadEndUserIds;
 
+    /**
+     * <p>The IDs of the users who have the upload and download permissions.</p>
+     */
     @NameInMap("DownloadUploadEndUserIds")
     public java.util.List<String> downloadUploadEndUserIds;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

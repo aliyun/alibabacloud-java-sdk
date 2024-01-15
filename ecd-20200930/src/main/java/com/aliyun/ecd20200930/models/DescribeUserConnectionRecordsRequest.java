@@ -4,42 +4,84 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserConnectionRecordsRequest extends TeaModel {
+    /**
+     * <p>The duration when the cloud desktop is connected, which is the minimum value for condition filtering.</p>
+     */
     @NameInMap("ConnectDurationFrom")
     public Long connectDurationFrom;
 
+    /**
+     * <p>The duration when the cloud desktop is connected, which is the maximum value for condition filtering.</p>
+     */
     @NameInMap("ConnectDurationTo")
     public Long connectDurationTo;
 
+    /**
+     * <p>The time when the cloud desktop stops to be connected, which is the minimum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     */
     @NameInMap("ConnectEndTimeFrom")
     public Long connectEndTimeFrom;
 
+    /**
+     * <p>The time when the cloud desktop stops to be connected, which is the maximum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     */
     @NameInMap("ConnectEndTimeTo")
     public Long connectEndTimeTo;
 
+    /**
+     * <p>The time when the cloud desktop starts to be connected, which is the minimum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     */
     @NameInMap("ConnectStartTimeFrom")
     public Long connectStartTimeFrom;
 
+    /**
+     * <p>The time when the cloud desktop starts to be connected, which is the maximum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     */
     @NameInMap("ConnectStartTimeTo")
     public Long connectStartTimeTo;
 
+    /**
+     * <p>The ID of the desktop group.</p>
+     */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
+    /**
+     * <p>The ID of the cloud desktop.</p>
+     */
     @NameInMap("DesktopId")
     public String desktopId;
 
+    /**
+     * <p>The user that you want to authorize to use the desktop group.</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <p>The account type of the user. Valid values:</p>
+     * <br>
+     * <p>*   SIMPLE: the convenience account type</p>
+     * <p>*   AD_CONNECTOR: the enterprise Active Directory (AD) account type</p>
+     */
     @NameInMap("EndUserType")
     public String endUserType;
 
+    /**
+     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -148,6 +148,9 @@ public class CreateCdsFileShareLinkRequest extends TeaModel {
     @NameInMap("FileIds")
     public java.util.List<String> fileIds;
 
+    @NameInMap("GroupId")
+    public String groupId;
+
     /**
      * <p>The limit on the number of times that the shared files can be previewed. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be previewed.</p>
      */
@@ -247,6 +250,14 @@ public class CreateCdsFileShareLinkRequest extends TeaModel {
     }
     public java.util.List<String> getFileIds() {
         return this.fileIds;
+    }
+
+    public CreateCdsFileShareLinkRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public CreateCdsFileShareLinkRequest setPreviewLimit(Long previewLimit) {

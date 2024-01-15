@@ -19,7 +19,7 @@ public class ModifyOfficeSiteAttributeRequest extends TeaModel {
     public String desktopAccessType;
 
     /**
-     * <p>是否为使用云桌面的用户赋予本地管理员权限。</p>
+     * <p>Specifies whether to grant the local administrator permissions to end users.</p>
      */
     @NameInMap("EnableAdminAccess")
     public Boolean enableAdminAccess;

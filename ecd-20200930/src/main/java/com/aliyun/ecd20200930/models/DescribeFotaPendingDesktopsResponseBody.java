@@ -7,15 +7,24 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Details about the cloud desktops whose images can be but are not yet updated to the version that is described in an image update task (TaskUid).</p>
+     */
     @NameInMap("FotaPendingDesktops")
     public java.util.List<DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktops> fotaPendingDesktops;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -84,18 +93,30 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
     }
 
     public static class DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktops extends TeaModel {
+        /**
+         * <p>The current version of the image used by the cloud desktop.</p>
+         */
         @NameInMap("CurrentAppVersion")
         public String currentAppVersion;
 
+        /**
+         * <p>The cloud desktop ID.</p>
+         */
         @NameInMap("DesktopId")
         public String desktopId;
 
+        /**
+         * <p>The cloud desktop name.</p>
+         */
         @NameInMap("DesktopName")
         public String desktopName;
 
         @NameInMap("FotaProject")
         public String fotaProject;
 
+        /**
+         * <p>The workspace ID.</p>
+         */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 

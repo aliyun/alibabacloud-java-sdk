@@ -4,12 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSessionStatisticResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The statistics.</p>
+     */
     @NameInMap("Statistic")
     public java.util.List<DescribeSessionStatisticResponseBodyStatistic> statistic;
 
+    /**
+     * <p>The total number of sessions returned.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -43,9 +52,15 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
     }
 
     public static class DescribeSessionStatisticResponseBodyStatistic extends TeaModel {
+        /**
+         * <p>The total number of sessions in the time range.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The point in time.</p>
+         */
         @NameInMap("TimePoint")
         public Long timePoint;
 

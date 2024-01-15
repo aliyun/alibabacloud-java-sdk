@@ -23,6 +23,12 @@ public class DeleteCdsFileRequest extends TeaModel {
     public String fileId;
 
     /**
+     * <p>The group ID.</p>
+     */
+    @NameInMap("GroupId")
+    public String groupId;
+
+    /**
      * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
@@ -55,6 +61,14 @@ public class DeleteCdsFileRequest extends TeaModel {
     }
     public String getFileId() {
         return this.fileId;
+    }
+
+    public DeleteCdsFileRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public DeleteCdsFileRequest setRegionId(String regionId) {

@@ -10,6 +10,9 @@ public class DescribeImagesRequest extends TeaModel {
     @NameInMap("DesktopInstanceType")
     public String desktopInstanceType;
 
+    /**
+     * <p>The image version.</p>
+     */
     @NameInMap("FotaVersion")
     public String fotaVersion;
 
@@ -31,6 +34,9 @@ public class DescribeImagesRequest extends TeaModel {
     @NameInMap("ImageId")
     public java.util.List<String> imageId;
 
+    /**
+     * <p>The image name.</p>
+     */
     @NameInMap("ImageName")
     public String imageName;
 

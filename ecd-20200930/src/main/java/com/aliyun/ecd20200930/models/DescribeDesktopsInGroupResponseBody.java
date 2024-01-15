@@ -64,6 +64,9 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     @NameInMap("StopedPrePaidDesktopsCount")
     public Integer stopedPrePaidDesktopsCount;
 
+    /**
+     * <p>The number of subscription cloud desktops that are stopped.</p>
+     */
     @NameInMap("StoppedPrePaidDesktopsCount")
     public Integer stoppedPrePaidDesktopsCount;
 
@@ -162,7 +165,33 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
     public static class DescribeDesktopsInGroupResponseBodyPaidDesktops extends TeaModel {
         /**
-         * <p>The connection status of the cloud desktop.</p>
+         * <p>The connection state.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Unknown</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Connected</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Disconnected</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
@@ -181,12 +210,102 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
         /**
          * <p>The state of the cloud desktop.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Stopped</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Starting</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Rebuilding</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Running</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Stopping</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Expired</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Deleted</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Pending</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("DesktopStatus")
         public String desktopStatus;
 
         /**
          * <p>The disk type.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   SYSTEM</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    the system disk</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   DATA:</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    the data disk</p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("DiskType")
         public String diskType;
@@ -210,7 +329,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String endUserName;
 
         /**
-         * <p>The usernames of users that are connected to cloud desktops. If no users are connected, null is returned.</p>
+         * <p>The names of users that are connected to cloud desktops. If no users are connected, null is returned.</p>
          */
         @NameInMap("EndUserNames")
         public java.util.List<String> endUserNames;
@@ -241,6 +360,24 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
         /**
          * <p>The flag that is used for management.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Updating: The configurations of the cloud desktop are being changed.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   NoFlag: No flags are available.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("ManagementFlag")
         public String managementFlag;
@@ -258,7 +395,25 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String memberEniIp;
 
         /**
-         * <p>The OS type.</p>
+         * <p>The OS.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Linux</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Windows</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("OsType")
         public String osType;
@@ -270,7 +425,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String primaryEniIp;
 
         /**
-         * <p>The protocol. Valid values:</p>
+         * <p>The protocol type. Valid values:</p>
          * <br>
          * <p>*   ASP</p>
          * <p>*   HDX</p>
@@ -467,7 +622,33 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
     public static class DescribeDesktopsInGroupResponseBodyPostPaidDesktops extends TeaModel {
         /**
-         * <p>The connection status of the cloud desktop.</p>
+         * <p>The connection state.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Unknown</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Connected</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Disconnected</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
@@ -479,7 +660,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String createDuration;
 
         /**
-         * <p>The time when the cloud desktop was created.</p>
+         * <p>The time when the auxiliary media asset was created.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -498,12 +679,102 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
         /**
          * <p>The state of the cloud desktop.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Stopped</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Starting</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Rebuilding</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Running</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Stopping</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Expired</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Deleted</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Pending</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("DesktopStatus")
         public String desktopStatus;
 
         /**
          * <p>The disk type.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   SYSTEM</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    the system disk</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   DATA:</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    the data disk</p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("DiskType")
         public String diskType;
@@ -527,7 +798,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String endUserName;
 
         /**
-         * <p>The usernames of users that are connected to cloud desktops. If no users are connected, null is returned.</p>
+         * <p>The names of users that are connected to cloud desktops. If no users are connected, null is returned.</p>
          */
         @NameInMap("EndUserNames")
         public java.util.List<String> endUserNames;
@@ -558,6 +829,24 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
         /**
          * <p>The flag that is used for management.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Updating: The configurations of the cloud desktop are being changed.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   NoFlag: No flags are available.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("ManagementFlag")
         public String managementFlag;
@@ -575,7 +864,25 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String memberEniIp;
 
         /**
-         * <p>The OS type.</p>
+         * <p>The OS.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Linux</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Windows</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("OsType")
         public String osType;
@@ -587,7 +894,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         public String primaryEniIp;
 
         /**
-         * <p>The protocol. Valid values:</p>
+         * <p>The protocol type. Valid values:</p>
          * <br>
          * <p>*   ASP</p>
          * <p>*   HDX</p>

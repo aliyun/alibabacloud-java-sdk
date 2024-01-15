@@ -4,15 +4,30 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageModifiedRecordsRequest extends TeaModel {
+    /**
+     * <p>The ID of the cloud desktop.</p>
+     */
     @NameInMap("DesktopId")
     public String desktopId;
 
+    /**
+     * <p>The maximum number of entries to return on each page.</p>
+     * <br>
+     * <p>*   Maximum value: 100.</p>
+     * <p>*   Default value: 10.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

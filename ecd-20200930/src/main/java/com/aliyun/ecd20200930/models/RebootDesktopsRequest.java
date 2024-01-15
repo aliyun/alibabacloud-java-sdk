@@ -4,11 +4,14 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class RebootDesktopsRequest extends TeaModel {
+    /**
+     * <p>The cloud desktop ID. You can specify one or more desktop IDs. Valid values of N: 1 to 100.</p>
+     */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>RebootDesktops</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

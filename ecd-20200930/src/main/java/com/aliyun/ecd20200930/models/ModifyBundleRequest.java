@@ -5,34 +5,47 @@ import com.aliyun.tea.*;
 
 public class ModifyBundleRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The desktop template ID.</p>
      */
     @NameInMap("BundleId")
     public String bundleId;
 
     /**
-     * <p>The description of the new desktop template.</p>
+     * <p>The name of the new desktop template.</p>
      */
     @NameInMap("BundleName")
     public String bundleName;
 
     /**
-     * <p>ModifyBundle</p>
+     * <p>The description of the new desktop template.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The operation that you want to perform. Set the value to ModifyBundle.</p>
+     * <p>The new image ID. The new image must meet the following conditions:</p>
+     * <br>
+     * <p>*   The new image must be in the Available state.</p>
+     * <p>*   The operating system of the new image must be the same as that of the original image.</p>
+     * <p>*   The required disk size for the new image cannot be greater than that for the original image.</p>
+     * <p>*   The GPU type of the new image must be the same as that of the original image.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The language of the OS. This parameter is available only for system images. Valid values:</p>
+     * <br>
+     * <p>*   zh-CN: Simplified Chinese</p>
+     * <p>*   zh-HK: Traditional Chinese (Hong Kong)</p>
+     * <p>*   en-US: English</p>
+     * <p>*   ja-JP: Japanese</p>
+     */
     @NameInMap("Language")
     public String language;
 
     /**
-     * <p>The name of the new desktop template.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

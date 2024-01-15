@@ -4,27 +4,54 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopSessionsRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the end user.</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <p>The workspace ID.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The session status. Valid values:</p>
+     * <br>
+     * <p>*   Connected</p>
+     * <p>*   Disconnected</p>
+     */
     @NameInMap("SessionStatus")
     public String sessionStatus;
 
+    /**
+     * <p>The start of the time range to query.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

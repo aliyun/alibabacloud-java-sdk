@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeVirtualMFADevicesRequest extends TeaModel {
     /**
-     * <p>>  This parameter is in invitational preview and unavailable for public use.</p>
+     * <p>The names of the AD users.</p>
      */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
     /**
-     * <p>The number of consecutive failures to bind the virtual MFA device, or the number of MFA failures based on the virtual MFA device.</p>
+     * <p>The number of entries per page. Valid values: 1 to 500. Default value: 100.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The name of the AD user.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The operation that you want to perform. Set the value to DescribeVirtualMFADevices.</p>
+     * <p>The ID of the workspace.</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The token that determines the start point of the query. Set the value to the NextToken value returned in the last call.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

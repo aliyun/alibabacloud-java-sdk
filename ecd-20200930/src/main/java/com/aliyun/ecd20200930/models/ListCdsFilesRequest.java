@@ -22,6 +22,9 @@ public class ListCdsFilesRequest extends TeaModel {
     @NameInMap("FileIds")
     public java.util.List<String> fileIds;
 
+    @NameInMap("GroupId")
+    public String groupId;
+
     /**
      * <p>The number of entries to return on each page. Default value: 100.</p>
      */
@@ -209,6 +212,14 @@ public class ListCdsFilesRequest extends TeaModel {
     }
     public java.util.List<String> getFileIds() {
         return this.fileIds;
+    }
+
+    public ListCdsFilesRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public ListCdsFilesRequest setMaxResults(Integer maxResults) {

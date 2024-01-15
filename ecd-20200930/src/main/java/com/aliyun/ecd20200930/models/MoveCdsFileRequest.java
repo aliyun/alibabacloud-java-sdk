@@ -71,6 +71,12 @@ public class MoveCdsFileRequest extends TeaModel {
     public String fileId;
 
     /**
+     * <p>The group ID.</p>
+     */
+    @NameInMap("GroupId")
+    public String groupId;
+
+    /**
      * <p>The ID of the parent folder that you want to move. If you want to remove the root folder, set the value to root.</p>
      */
     @NameInMap("ParentFolderId")
@@ -117,6 +123,14 @@ public class MoveCdsFileRequest extends TeaModel {
     }
     public String getFileId() {
         return this.fileId;
+    }
+
+    public MoveCdsFileRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public MoveCdsFileRequest setParentFolderId(String parentFolderId) {

@@ -11,7 +11,7 @@ public class AddFilePermissionRequest extends TeaModel {
     public String cdsId;
 
     /**
-     * <p>The ID of the end user who uses the cloud disk of the folder.</p>
+     * <p>The ID of the end user who uses the cloud disk.</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
@@ -21,6 +21,12 @@ public class AddFilePermissionRequest extends TeaModel {
      */
     @NameInMap("FileId")
     public String fileId;
+
+    /**
+     * <p>The group ID.</p>
+     */
+    @NameInMap("GroupId")
+    public String groupId;
 
     /**
      * <p>The members who are granted the folder permissions.</p>
@@ -61,6 +67,14 @@ public class AddFilePermissionRequest extends TeaModel {
     }
     public String getFileId() {
         return this.fileId;
+    }
+
+    public AddFilePermissionRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public AddFilePermissionRequest setMemberList(java.util.List<AddFilePermissionRequestMemberList> memberList) {

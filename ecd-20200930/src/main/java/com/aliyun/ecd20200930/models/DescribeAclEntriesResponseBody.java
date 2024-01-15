@@ -4,12 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeAclEntriesResponseBody extends TeaModel {
+    /**
+     * <p>The ACL entry.</p>
+     */
     @NameInMap("AclEntries")
     public java.util.List<DescribeAclEntriesResponseBodyAclEntries> aclEntries;
 
+    /**
+     * <p>The token that is used to start the next query. If the value of this parameter is empty, all results are returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +52,27 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
     }
 
     public static class DescribeAclEntriesResponseBodyAclEntries extends TeaModel {
+        /**
+         * <p>The ACL policy.</p>
+         * <br>
+         * <p>*   **allow**: allows access.</p>
+         * <p>*   **drop**: denies access.</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
+        /**
+         * <p>The ID of the instance corresponding to the ACL.</p>
+         */
         @NameInMap("SourceId")
         public String sourceId;
 
+        /**
+         * <p>The object on which the ACL takes effect.</p>
+         * <br>
+         * <p>*   **vpc**: workspace.</p>
+         * <p>*   **desktop**: cloud desktop.</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 

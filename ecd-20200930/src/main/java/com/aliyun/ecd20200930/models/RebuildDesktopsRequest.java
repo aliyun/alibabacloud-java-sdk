@@ -5,22 +5,42 @@ import com.aliyun.tea.*;
 
 public class RebuildDesktopsRequest extends TeaModel {
     /**
-     * <p>The ID of cloud desktop N. You can specify one or more cloud desktop IDs. Valid values of N: 1 to 20.</p>
+     * <p>The IDs of the cloud desktops.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **RebuildDesktops**.</p>
+     * <p>The ID of the new image.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The operation type on the data disk.</p>
+     * <br>
+     * <p>> For cloud desktops that do not have data disks, when you call this operation, you do not need to configure this parameter.</p>
+     * <br>
+     * <p>*   Cloud desktops do not have data disks\</p>
+     * <p>    The values that you configured have no impacts.</p>
+     * <br>
+     * <p>*   Cloud desktops have data disks</p>
+     * <br>
+     * <p>    1.  If the OS of the cloud desktop is the same as the OS of a destination image:</p>
+     * <br>
+     * <p>        *   The value replace indicates that the data disk of the cloud desktop is replaced.</p>
+     * <p>        *   If you do not specify this parameter, the data disk of the cloud desktop is retained.</p>
+     * <br>
+     * <p>    2.  If the OS of the cloud desktop is the different from the OS of a destination image:</p>
+     * <br>
+     * <p>        *   The value replace indicates that the data disk of the cloud desktop is replaced.</p>
+     * <p>        *   If you do not specify this parameter, the data disk of the cloud desktop is cleared.</p>
+     */
     @NameInMap("OperateType")
     public String operateType;
 
     /**
-     * <p>The ID of the new image.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

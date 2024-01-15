@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreatePolicyGroupRequest extends TeaModel {
+    @NameInMap("AdminAccess")
+    public String adminAccess;
+
     /**
      * <p>Specifies whether to enable the anti-screenshot feature.</p>
      * <br>
@@ -117,9 +120,33 @@ public class CreatePolicyGroupRequest extends TeaModel {
     @NameInMap("DomainList")
     public String domainList;
 
+    /**
+     * <p>The details of the domain name resolution policy.</p>
+     */
     @NameInMap("DomainResolveRule")
     public java.util.List<CreatePolicyGroupRequestDomainResolveRule> domainResolveRule;
 
+    /**
+     * <p>The type of the domain name resolution policy.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   OFF</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   ON</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     */
     @NameInMap("DomainResolveRuleType")
     public String domainResolveRuleType;
 
@@ -278,9 +305,11 @@ public class CreatePolicyGroupRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the network redirection feature.</p>
      * <br>
+     * <p>> This feature is in invitational preview and is not available to the public.</p>
+     * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>*   off: Network redirection is disabled. This value is the default value.</p>
+     * <p>*   off (default): The network redirection feature is disabled.</p>
      * <br>
      * <p>    <!-- --></p>
      * <br>
@@ -288,7 +317,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
      * <br>
      * <p>    <!-- --></p>
      * <br>
-     * <p>*   on: Network redirection is enabled.</p>
+     * <p>*   on: The network redirection feature is enabled.</p>
      * <br>
      * <p>    <!-- --></p>
      * <br>
@@ -644,6 +673,12 @@ public class CreatePolicyGroupRequest extends TeaModel {
     public Integer watermarkRowAmount;
 
     /**
+     * <p>The security priority for invisible watermarks. Valid values: on and off.</p>
+     */
+    @NameInMap("WatermarkSecurity")
+    public String watermarkSecurity;
+
+    /**
      * <p>The transparency of the watermark.</p>
      * <br>
      * <p>Valid values:</p>
@@ -708,6 +743,14 @@ public class CreatePolicyGroupRequest extends TeaModel {
     public static CreatePolicyGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePolicyGroupRequest self = new CreatePolicyGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreatePolicyGroupRequest setAdminAccess(String adminAccess) {
+        this.adminAccess = adminAccess;
+        return this;
+    }
+    public String getAdminAccess() {
+        return this.adminAccess;
     }
 
     public CreatePolicyGroupRequest setAppContentProtection(String appContentProtection) {
@@ -1060,6 +1103,14 @@ public class CreatePolicyGroupRequest extends TeaModel {
     }
     public Integer getWatermarkRowAmount() {
         return this.watermarkRowAmount;
+    }
+
+    public CreatePolicyGroupRequest setWatermarkSecurity(String watermarkSecurity) {
+        this.watermarkSecurity = watermarkSecurity;
+        return this;
+    }
+    public String getWatermarkSecurity() {
+        return this.watermarkSecurity;
     }
 
     public CreatePolicyGroupRequest setWatermarkTransparency(String watermarkTransparency) {
@@ -1428,12 +1479,39 @@ public class CreatePolicyGroupRequest extends TeaModel {
     }
 
     public static class CreatePolicyGroupRequestDomainResolveRule extends TeaModel {
+        /**
+         * <p>The description of the policy.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The domain name.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>Specifies whether to allow the policy.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   allow</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   block</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("Policy")
         public String policy;
 

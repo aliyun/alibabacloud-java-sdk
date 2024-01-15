@@ -7,20 +7,20 @@ public class ModifyOfficeSiteMfaEnabledRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable MFA. Valid values:</p>
      * <br>
-     * <p>*   true: enables MFA</p>
-     * <p>*   false: disables MFA</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("MfaEnabled")
     public Boolean mfaEnabled;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The workspace ID.</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

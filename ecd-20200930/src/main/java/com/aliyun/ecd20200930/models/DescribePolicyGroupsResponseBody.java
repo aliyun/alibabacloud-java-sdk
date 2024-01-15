@@ -672,6 +672,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGroupsResponseBodyDescribePolicyGroups extends TeaModel {
+        @NameInMap("AdminAccess")
+        public String adminAccess;
+
         /**
          * <p>Indicates whether the anti-screenshot feature is enabled. Valid values:</p>
          * <br>
@@ -1388,6 +1391,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("WatermarkRowAmount")
         public Integer watermarkRowAmount;
 
+        @NameInMap("WatermarkSecurity")
+        public String watermarkSecurity;
+
         /**
          * <p>The watermark transparency.</p>
          * <br>
@@ -1469,6 +1475,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public static DescribePolicyGroupsResponseBodyDescribePolicyGroups build(java.util.Map<String, ?> map) throws Exception {
             DescribePolicyGroupsResponseBodyDescribePolicyGroups self = new DescribePolicyGroupsResponseBodyDescribePolicyGroups();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setAdminAccess(String adminAccess) {
+            this.adminAccess = adminAccess;
+            return this;
+        }
+        public String getAdminAccess() {
+            return this.adminAccess;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setAppContentProtection(String appContentProtection) {
@@ -1957,6 +1971,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public Integer getWatermarkRowAmount() {
             return this.watermarkRowAmount;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setWatermarkSecurity(String watermarkSecurity) {
+            this.watermarkSecurity = watermarkSecurity;
+            return this;
+        }
+        public String getWatermarkSecurity() {
+            return this.watermarkSecurity;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setWatermarkTransparency(String watermarkTransparency) {
