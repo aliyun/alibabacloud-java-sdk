@@ -26,6 +26,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+      * To improve resource utilization, the system automatically locks a workspace of the convenience account type to release virtual private cloud (VPC) resources, and the workspace has been no longer used for a long time. If you want to continue using the locked workspace, you can call this operation to activate it. When you activate the locked workspace, the system recreates VPC resources based on the original configurations.
+      *
+      * @param request ActivateOfficeSiteRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ActivateOfficeSiteResponse
+     */
     public ActivateOfficeSiteResponse activateOfficeSiteWithOptions(ActivateOfficeSiteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -54,9 +61,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ActivateOfficeSiteResponse());
     }
 
+    /**
+      * To improve resource utilization, the system automatically locks a workspace of the convenience account type to release virtual private cloud (VPC) resources, and the workspace has been no longer used for a long time. If you want to continue using the locked workspace, you can call this operation to activate it. When you activate the locked workspace, the system recreates VPC resources based on the original configurations.
+      *
+      * @param request ActivateOfficeSiteRequest
+      * @return ActivateOfficeSiteResponse
+     */
     public ActivateOfficeSiteResponse activateOfficeSite(ActivateOfficeSiteRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.activateOfficeSiteWithOptions(request, runtime);
+    }
+
+    public AddDesktopOversoldUserGroupResponse addDesktopOversoldUserGroupWithOptions(AddDesktopOversoldUserGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            query.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldGroupId)) {
+            query.put("OversoldGroupId", request.oversoldGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyGroupId)) {
+            query.put("PolicyGroupId", request.policyGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddDesktopOversoldUserGroup"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddDesktopOversoldUserGroupResponse());
+    }
+
+    public AddDesktopOversoldUserGroupResponse addDesktopOversoldUserGroup(AddDesktopOversoldUserGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addDesktopOversoldUserGroupWithOptions(request, runtime);
     }
 
     /**
@@ -135,6 +189,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileId)) {
             query.put("FileId", request.fileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.memberListShrink)) {
@@ -216,6 +274,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddUserToDesktopGroupResponse addUserToDesktopGroup(AddUserToDesktopGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addUserToDesktopGroupWithOptions(request, runtime);
+    }
+
+    public AddUserToDesktopOversoldUserGroupResponse addUserToDesktopOversoldUserGroupWithOptions(AddUserToDesktopOversoldUserGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addUserAmount)) {
+            query.put("AddUserAmount", request.addUserAmount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
+            query.put("EndUserId", request.endUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldGroupId)) {
+            query.put("OversoldGroupId", request.oversoldGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupId)) {
+            query.put("UserGroupId", request.userGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddUserToDesktopOversoldUserGroup"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddUserToDesktopOversoldUserGroupResponse());
+    }
+
+    public AddUserToDesktopOversoldUserGroupResponse addUserToDesktopOversoldUserGroup(AddUserToDesktopOversoldUserGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addUserToDesktopOversoldUserGroupWithOptions(request, runtime);
     }
 
     /**
@@ -439,7 +538,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the CEN instance.
+      * Prerequisites
+      * *   A CEN instance is created.
+      * *   A workspace of the convenience account type is created.
+      * > Workspaces of the Active Directory (AD) account type are automatically attached to CEN instances when you create the workspaces. You can attach the secure office network of a workspace to only one CEN instance.
       *
       * @param request AttachCenRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -486,7 +588,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the CEN instance.
+      * Prerequisites
+      * *   A CEN instance is created.
+      * *   A workspace of the convenience account type is created.
+      * > Workspaces of the Active Directory (AD) account type are automatically attached to CEN instances when you create the workspaces. You can attach the secure office network of a workspace to only one CEN instance.
       *
       * @param request AttachCenRequest
       * @return AttachCenResponse
@@ -745,6 +850,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FileId", request.fileId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -888,6 +997,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FileReceiverType", request.fileReceiverType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.parentFolderId)) {
             query.put("ParentFolderId", request.parentFolderId);
         }
@@ -964,7 +1077,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the vSwitch.
+      * AD directories are used to connect to enterprise AD systems and are suitable for large-scale desktop deployments. You are charged for AD directories that are used to connect to enterprise AD systems. For more information, see [Billing overview](~~188395~~).
       *
       * @param request CreateADConnectorDirectoryRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1043,7 +1156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the vSwitch.
+      * AD directories are used to connect to enterprise AD systems and are suitable for large-scale desktop deployments. You are charged for AD directories that are used to connect to enterprise AD systems. For more information, see [Billing overview](~~188395~~).
       *
       * @param request CreateADConnectorDirectoryRequest
       * @return CreateADConnectorDirectoryResponse
@@ -1291,12 +1404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The PL of the data disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the data disk. Valid values:
-      * *   PL0
-      * *   PL1
-      * *   PL2
-      * *   PL3
-      * For more information about the differences between disks at different PLs, see [Enhanced SSDs](~~122389~~).
+      * Desktop templates are categorized into system templates and custom templates. System templates are the templates provided by Alibaba Cloud. You can call this operation to create a custom template.
       *
       * @param request CreateBundleRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1363,12 +1471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The PL of the data disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the data disk. Valid values:
-      * *   PL0
-      * *   PL1
-      * *   PL2
-      * *   PL3
-      * For more information about the differences between disks at different PLs, see [Enhanced SSDs](~~122389~~).
+      * Desktop templates are categorized into system templates and custom templates. System templates are the templates provided by Alibaba Cloud. You can call this operation to create a custom template.
       *
       * @param request CreateBundleRequest
       * @return CreateBundleResponse
@@ -1414,6 +1517,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileType)) {
             query.put("FileType", request.fileType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.parentFileId)) {
@@ -1491,6 +1598,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FileIds", request.fileIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.previewLimit)) {
             query.put("PreviewLimit", request.previewLimit);
         }
@@ -1527,6 +1638,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateCdsFileShareLinkResponse createCdsFileShareLink(CreateCdsFileShareLinkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createCdsFileShareLinkWithOptions(request, runtime);
+    }
+
+    public CreateCloudDriveServiceResponse createCloudDriveServiceWithOptions(CreateCloudDriveServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cenId)) {
+            query.put("CenId", request.cenId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
+            query.put("EndUserId", request.endUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxSize)) {
+            query.put("MaxSize", request.maxSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
+            query.put("OfficeSiteId", request.officeSiteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteType)) {
+            query.put("OfficeSiteType", request.officeSiteType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.solutionId)) {
+            query.put("SolutionId", request.solutionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userMaxSize)) {
+            query.put("UserMaxSize", request.userMaxSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCloudDriveService"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCloudDriveServiceResponse());
+    }
+
+    public CreateCloudDriveServiceResponse createCloudDriveService(CreateCloudDriveServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCloudDriveServiceWithOptions(request, runtime);
     }
 
     public CreateCloudDriveUsersResponse createCloudDriveUsersWithOptions(CreateCloudDriveUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1766,6 +1946,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createDesktopGroupWithOptions(request, runtime);
     }
 
+    public CreateDesktopOversoldGroupResponse createDesktopOversoldGroupWithOptions(CreateDesktopOversoldGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.concurrenceCount)) {
+            query.put("ConcurrenceCount", request.concurrenceCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataDiskSize)) {
+            query.put("DataDiskSize", request.dataDiskSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopType)) {
+            query.put("DesktopType", request.desktopType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            query.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldUserCount)) {
+            query.put("OversoldUserCount", request.oversoldUserCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldWarn)) {
+            query.put("OversoldWarn", request.oversoldWarn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            query.put("PeriodUnit", request.periodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyGroupId)) {
+            query.put("PolicyGroupId", request.policyGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stopDuration)) {
+            query.put("StopDuration", request.stopDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.systemDiskSize)) {
+            query.put("SystemDiskSize", request.systemDiskSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDesktopOversoldGroup"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDesktopOversoldGroupResponse());
+    }
+
+    public CreateDesktopOversoldGroupResponse createDesktopOversoldGroup(CreateDesktopOversoldGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDesktopOversoldGroupWithOptions(request, runtime);
+    }
+
     /**
       * 1\\. Before you create a cloud desktop in Elastic Desktop Service (EDS), make sure that the following operations are complete:
       * *   A workspace and a user are created. For more information, see the following topics:
@@ -1804,6 +2065,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
             query.put("ChargeType", request.chargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopMemberIp)) {
+            query.put("DesktopMemberIp", request.desktopMemberIp);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.desktopName)) {
@@ -2134,6 +2399,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreatePolicyGroupResponse createPolicyGroupWithOptions(CreatePolicyGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.adminAccess)) {
+            query.put("AdminAccess", request.adminAccess);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appContentProtection)) {
             query.put("AppContentProtection", request.appContentProtection);
         }
@@ -2310,6 +2579,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("WatermarkRowAmount", request.watermarkRowAmount);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkSecurity)) {
+            query.put("WatermarkSecurity", request.watermarkSecurity);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.watermarkTransparency)) {
             query.put("WatermarkTransparency", request.watermarkTransparency);
         }
@@ -2351,8 +2624,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The name of the directory. The name must be 2 to 255 characters in length and can contain letters, digits, colons (:), underscores (\\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.
-      * This parameter is empty by default.
+      * Before you create a RAM directory, make sure that you have completed the following operations:
+      * *   You have created a virtual private cloud (VPC) by calling the [CreateVpc](~~35737~~) operation in a region where EDS is available.
+      * *   You have created a vSwitch in the VPC by calling the [CreateVSwitch](~~35745~~) operation, and the vSwitch resides in a zone where EDS is available.
       *
       * @param request CreateRAMDirectoryRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2403,8 +2677,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The name of the directory. The name must be 2 to 255 characters in length and can contain letters, digits, colons (:), underscores (\\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.
-      * This parameter is empty by default.
+      * Before you create a RAM directory, make sure that you have completed the following operations:
+      * *   You have created a virtual private cloud (VPC) by calling the [CreateVpc](~~35737~~) operation in a region where EDS is available.
+      * *   You have created a vSwitch in the VPC by calling the [CreateVSwitch](~~35745~~) operation, and the vSwitch resides in a zone where EDS is available.
       *
       * @param request CreateRAMDirectoryRequest
       * @return CreateRAMDirectoryResponse
@@ -2467,6 +2742,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.verifyCode)) {
             query.put("VerifyCode", request.verifyCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcType)) {
+            query.put("VpcType", request.vpcType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2628,6 +2907,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileId)) {
             query.put("FileId", request.fileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -2851,7 +3134,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of directory N. You can specify one or more directory IDs.
+      * You cannot delete directories that are in use by cloud desktops.
       *
       * @param request DeleteDirectoriesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2886,7 +3169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of directory N. You can specify one or more directory IDs.
+      * You cannot delete directories that are in use by cloud desktops.
       *
       * @param request DeleteDirectoriesRequest
       * @return DeleteDirectoriesResponse
@@ -2930,7 +3213,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The IDs of the images that you want to delete. You can configure one or more image IDs. Valid values of N: 1 to 100.
+      * *   Images include system images and custom images. System images cannot be deleted.
+      * *   If an image to delete is referenced by a desktop template, you must first delete the template by calling the DeleteBundles operation.
       *
       * @param request DeleteImagesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2969,7 +3253,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The IDs of the images that you want to delete. You can configure one or more image IDs. Valid values of N: 1 to 100.
+      * *   Images include system images and custom images. System images cannot be deleted.
+      * *   If an image to delete is referenced by a desktop template, you must first delete the template by calling the DeleteBundles operation.
       *
       * @param request DeleteImagesRequest
       * @return DeleteImagesResponse
@@ -3196,7 +3481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request.
+      * If an MFA device is deleted, the device is unbound, reset, and disabled. When the Active Directory (AD) user wants to log on to the cloud desktop, the AD user must bind a new MFA device.
       *
       * @param request DeleteVirtualMFADeviceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3231,7 +3516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request.
+      * If an MFA device is deleted, the device is unbound, reset, and disabled. When the Active Directory (AD) user wants to log on to the cloud desktop, the AD user must bind a new MFA device.
       *
       * @param request DeleteVirtualMFADeviceRequest
       * @return DeleteVirtualMFADeviceResponse
@@ -3284,51 +3569,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAclEntriesResponse describeAclEntries(DescribeAclEntriesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAclEntriesWithOptions(request, runtime);
-    }
-
-    public DescribeAlarmEventStackInfoResponse describeAlarmEventStackInfoWithOptions(DescribeAlarmEventStackInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
-            query.put("DesktopId", request.desktopId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.eventName)) {
-            query.put("EventName", request.eventName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
-            query.put("Lang", request.lang);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.uniqueInfo)) {
-            query.put("UniqueInfo", request.uniqueInfo);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeAlarmEventStackInfo"),
-            new TeaPair("version", "2020-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAlarmEventStackInfoResponse());
-    }
-
-    public DescribeAlarmEventStackInfoResponse describeAlarmEventStackInfo(DescribeAlarmEventStackInfoRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeAlarmEventStackInfoWithOptions(request, runtime);
     }
 
     /**
@@ -3955,51 +4195,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDesktopGroupsWithOptions(request, runtime);
     }
 
-    public DescribeDesktopIdsByVulNamesResponse describeDesktopIdsByVulNamesWithOptions(DescribeDesktopIdsByVulNamesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.necessity)) {
-            query.put("Necessity", request.necessity);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
-            query.put("OfficeSiteId", request.officeSiteId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
-            query.put("Type", request.type);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.vulName)) {
-            query.put("VulName", request.vulName);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeDesktopIdsByVulNames"),
-            new TeaPair("version", "2020-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDesktopIdsByVulNamesResponse());
-    }
-
-    public DescribeDesktopIdsByVulNamesResponse describeDesktopIdsByVulNames(DescribeDesktopIdsByVulNamesRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeDesktopIdsByVulNamesWithOptions(request, runtime);
-    }
-
     public DescribeDesktopInfoResponse describeDesktopInfoWithOptions(DescribeDesktopInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4033,6 +4228,144 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDesktopInfoWithOptions(request, runtime);
     }
 
+    public DescribeDesktopOversoldGroupResponse describeDesktopOversoldGroupWithOptions(DescribeDesktopOversoldGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldGroupIds)) {
+            query.put("OversoldGroupIds", request.oversoldGroupIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDesktopOversoldGroup"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDesktopOversoldGroupResponse());
+    }
+
+    public DescribeDesktopOversoldGroupResponse describeDesktopOversoldGroup(DescribeDesktopOversoldGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDesktopOversoldGroupWithOptions(request, runtime);
+    }
+
+    public DescribeDesktopOversoldUserResponse describeDesktopOversoldUserWithOptions(DescribeDesktopOversoldUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
+            query.put("EndUserId", request.endUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldGroupId)) {
+            query.put("OversoldGroupId", request.oversoldGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userDesktopIds)) {
+            query.put("UserDesktopIds", request.userDesktopIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupId)) {
+            query.put("UserGroupId", request.userGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDesktopOversoldUser"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDesktopOversoldUserResponse());
+    }
+
+    public DescribeDesktopOversoldUserResponse describeDesktopOversoldUser(DescribeDesktopOversoldUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDesktopOversoldUserWithOptions(request, runtime);
+    }
+
+    public DescribeDesktopOversoldUserGroupResponse describeDesktopOversoldUserGroupWithOptions(DescribeDesktopOversoldUserGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldGroupId)) {
+            query.put("OversoldGroupId", request.oversoldGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupIds)) {
+            query.put("UserGroupIds", request.userGroupIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDesktopOversoldUserGroup"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDesktopOversoldUserGroupResponse());
+    }
+
+    public DescribeDesktopOversoldUserGroupResponse describeDesktopOversoldUserGroup(DescribeDesktopOversoldUserGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDesktopOversoldUserGroupWithOptions(request, runtime);
+    }
+
+    /**
+      * You can query data within the last 30 days.
+      *
+      * @param request DescribeDesktopSessionsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDesktopSessionsResponse
+     */
     public DescribeDesktopSessionsResponse describeDesktopSessionsWithOptions(DescribeDesktopSessionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4085,11 +4418,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDesktopSessionsResponse());
     }
 
+    /**
+      * You can query data within the last 30 days.
+      *
+      * @param request DescribeDesktopSessionsRequest
+      * @return DescribeDesktopSessionsResponse
+     */
     public DescribeDesktopSessionsResponse describeDesktopSessions(DescribeDesktopSessionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDesktopSessionsWithOptions(request, runtime);
     }
 
+    /**
+      * When no values are specified for the `InstanceTypeFamily` and `DesktopTypeId` parameters for a cloud desktop, all types of cloud desktops are queried.
+      *
+      * @param request DescribeDesktopTypesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDesktopTypesResponse
+     */
     public DescribeDesktopTypesResponse describeDesktopTypesWithOptions(DescribeDesktopTypesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4150,6 +4496,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDesktopTypesResponse());
     }
 
+    /**
+      * When no values are specified for the `InstanceTypeFamily` and `DesktopTypeId` parameters for a cloud desktop, all types of cloud desktops are queried.
+      *
+      * @param request DescribeDesktopTypesRequest
+      * @return DescribeDesktopTypesResponse
+     */
     public DescribeDesktopTypesResponse describeDesktopTypes(DescribeDesktopTypesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDesktopTypesWithOptions(request, runtime);
@@ -4602,6 +4954,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FotaStatus", request.fotaStatus);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
         }
@@ -4642,117 +4998,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeFotaTasksResponse describeFotaTasks(DescribeFotaTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeFotaTasksWithOptions(request, runtime);
-    }
-
-    public DescribeFrontVulPatchListResponse describeFrontVulPatchListWithOptions(DescribeFrontVulPatchListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.operateType)) {
-            query.put("OperateType", request.operateType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
-            query.put("Type", request.type);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.vulInfo)) {
-            query.put("VulInfo", request.vulInfo);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeFrontVulPatchList"),
-            new TeaPair("version", "2020-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeFrontVulPatchListResponse());
-    }
-
-    public DescribeFrontVulPatchListResponse describeFrontVulPatchList(DescribeFrontVulPatchListRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeFrontVulPatchListWithOptions(request, runtime);
-    }
-
-    /**
-      * The number of vulnerabilities processed.
-      *
-      * @param request DescribeGroupedVulRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeGroupedVulResponse
-     */
-    public DescribeGroupedVulResponse describeGroupedVulWithOptions(DescribeGroupedVulRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
-            query.put("CurrentPage", request.currentPage);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.dealed)) {
-            query.put("Dealed", request.dealed);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
-            query.put("Lang", request.lang);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.necessity)) {
-            query.put("Necessity", request.necessity);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
-            query.put("OfficeSiteId", request.officeSiteId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
-            query.put("Type", request.type);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeGroupedVul"),
-            new TeaPair("version", "2020-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeGroupedVulResponse());
-    }
-
-    /**
-      * The number of vulnerabilities processed.
-      *
-      * @param request DescribeGroupedVulRequest
-      * @return DescribeGroupedVulResponse
-     */
-    public DescribeGroupedVulResponse describeGroupedVul(DescribeGroupedVulRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeGroupedVulWithOptions(request, runtime);
     }
 
     public DescribeGuestApplicationsResponse describeGuestApplicationsWithOptions(DescribeGuestApplicationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -4833,6 +5078,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeImageModifiedRecordsWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the ModifyImagePermission operation to share images with other Alibaba Cloud accounts or unshare images. You can call the DescribeImagePermission operation to obtain the list of Alibaba Cloud accounts that have received shared images.
+      *
+      * @param request DescribeImagePermissionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeImagePermissionResponse
+     */
     public DescribeImagePermissionResponse describeImagePermissionWithOptions(DescribeImagePermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4861,6 +5113,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeImagePermissionResponse());
     }
 
+    /**
+      * You can call the ModifyImagePermission operation to share images with other Alibaba Cloud accounts or unshare images. You can call the DescribeImagePermission operation to obtain the list of Alibaba Cloud accounts that have received shared images.
+      *
+      * @param request DescribeImagePermissionRequest
+      * @return DescribeImagePermissionResponse
+     */
     public DescribeImagePermissionResponse describeImagePermission(DescribeImagePermissionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeImagePermissionWithOptions(request, runtime);
@@ -4952,21 +5210,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The error message that is returned if the command failed to be sent or run.
-      * *   If null is returned, the command is run normally.
-      * *   If "the specified instance does not exist" is returned, the specified cloud desktop does not exist or is released.
-      * *   If "the instance has released when create task" is returned, the specified cloud desktop is released during the command execution.
-      * *   If "the instance is not running when create task" is returned, the specified cloud desktop is not in the Running state when the execution is created.
-      * *   If "the command is not applicable" is returned, the command cannot be run on the specified cloud desktop.
-      * *   If "the aliyun service is not running on the instance" is returned, Cloud Assistant is not running.
-      * *   If "the aliyun service in the instance does not response" is returned, Cloud Assistant does not respond to your request.
-      * *   If "the aliyun service in the instance is upgrading now" is returned, Cloud Assistant is being upgraded.
-      * *   If "the aliyun service in the instance need upgrade" is returned, you must upgrade Cloud Assistant.
-      * *   If "the command delivery has been timeout" is returned, the operation to send the command times out.
-      * *   If "the command execution has been timeout" is returned, the command execution times out.
-      * *   If "the command execution got an exception" is returned, an exception occurs during the command execution.
-      * *   If "the command execution has been interrupted" is returned, the command execution is interrupted.
-      * *   If "the command execution exit code is not zero" is returned, the command execution is complete, but the exit code is not 0.
+      * *   After you run a command, it may not succeed. You can call this operation to query the execution result.
+      * *   You can query the information about execution in the last two weeks. A maximum of 100,000 lines of execution information can be retained.
       *
       * @param request DescribeInvocationsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5037,21 +5282,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The error message that is returned if the command failed to be sent or run.
-      * *   If null is returned, the command is run normally.
-      * *   If "the specified instance does not exist" is returned, the specified cloud desktop does not exist or is released.
-      * *   If "the instance has released when create task" is returned, the specified cloud desktop is released during the command execution.
-      * *   If "the instance is not running when create task" is returned, the specified cloud desktop is not in the Running state when the execution is created.
-      * *   If "the command is not applicable" is returned, the command cannot be run on the specified cloud desktop.
-      * *   If "the aliyun service is not running on the instance" is returned, Cloud Assistant is not running.
-      * *   If "the aliyun service in the instance does not response" is returned, Cloud Assistant does not respond to your request.
-      * *   If "the aliyun service in the instance is upgrading now" is returned, Cloud Assistant is being upgraded.
-      * *   If "the aliyun service in the instance need upgrade" is returned, you must upgrade Cloud Assistant.
-      * *   If "the command delivery has been timeout" is returned, the operation to send the command times out.
-      * *   If "the command execution has been timeout" is returned, the command execution times out.
-      * *   If "the command execution got an exception" is returned, an exception occurs during the command execution.
-      * *   If "the command execution has been interrupted" is returned, the command execution is interrupted.
-      * *   If "the command execution exit code is not zero" is returned, the command execution is complete, but the exit code is not 0.
+      * *   After you run a command, it may not succeed. You can call this operation to query the execution result.
+      * *   You can query the information about execution in the last two weeks. A maximum of 100,000 lines of execution information can be retained.
       *
       * @param request DescribeInvocationsRequest
       * @return DescribeInvocationsResponse
@@ -5305,6 +5537,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BundleModels", request.bundleModels);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.eduCdsEnable)) {
+            query.put("EduCdsEnable", request.eduCdsEnable);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.eduCdsSize)) {
             query.put("EduCdsSize", request.eduCdsSize);
         }
@@ -5355,6 +5591,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.internetChargeType)) {
             query.put("InternetChargeType", request.internetChargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkType)) {
+            query.put("NetworkType", request.networkType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.osType)) {
@@ -5446,6 +5686,133 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describePriceWithOptions(request, runtime);
     }
 
+    public DescribePriceForCreateDesktopOversoldGroupResponse describePriceForCreateDesktopOversoldGroupWithOptions(DescribePriceForCreateDesktopOversoldGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.concurrenceCount)) {
+            query.put("ConcurrenceCount", request.concurrenceCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataDiskSize)) {
+            query.put("DataDiskSize", request.dataDiskSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopType)) {
+            query.put("DesktopType", request.desktopType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldUserCount)) {
+            query.put("OversoldUserCount", request.oversoldUserCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            query.put("PeriodUnit", request.periodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.systemDiskSize)) {
+            query.put("SystemDiskSize", request.systemDiskSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePriceForCreateDesktopOversoldGroup"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePriceForCreateDesktopOversoldGroupResponse());
+    }
+
+    public DescribePriceForCreateDesktopOversoldGroupResponse describePriceForCreateDesktopOversoldGroup(DescribePriceForCreateDesktopOversoldGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePriceForCreateDesktopOversoldGroupWithOptions(request, runtime);
+    }
+
+    public DescribePriceForModifyDesktopOversoldGroupSaleResponse describePriceForModifyDesktopOversoldGroupSaleWithOptions(DescribePriceForModifyDesktopOversoldGroupSaleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.concurrenceCount)) {
+            query.put("ConcurrenceCount", request.concurrenceCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldGroupId)) {
+            query.put("OversoldGroupId", request.oversoldGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldUserCount)) {
+            query.put("OversoldUserCount", request.oversoldUserCount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePriceForModifyDesktopOversoldGroupSale"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePriceForModifyDesktopOversoldGroupSaleResponse());
+    }
+
+    public DescribePriceForModifyDesktopOversoldGroupSaleResponse describePriceForModifyDesktopOversoldGroupSale(DescribePriceForModifyDesktopOversoldGroupSaleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePriceForModifyDesktopOversoldGroupSaleWithOptions(request, runtime);
+    }
+
+    public DescribePriceForRenewDesktopOversoldGroupResponse describePriceForRenewDesktopOversoldGroupWithOptions(DescribePriceForRenewDesktopOversoldGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldGroupId)) {
+            query.put("OversoldGroupId", request.oversoldGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            query.put("PeriodUnit", request.periodUnit);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePriceForRenewDesktopOversoldGroup"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePriceForRenewDesktopOversoldGroupResponse());
+    }
+
+    public DescribePriceForRenewDesktopOversoldGroupResponse describePriceForRenewDesktopOversoldGroup(DescribePriceForRenewDesktopOversoldGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePriceForRenewDesktopOversoldGroupWithOptions(request, runtime);
+    }
+
     public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5479,109 +5846,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeRegionsWithOptions(request, runtime);
     }
 
-    public DescribeScanTaskProgressResponse describeScanTaskProgressWithOptions(DescribeScanTaskProgressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
-            query.put("TaskId", request.taskId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeScanTaskProgress"),
-            new TeaPair("version", "2020-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScanTaskProgressResponse());
-    }
-
-    public DescribeScanTaskProgressResponse describeScanTaskProgress(DescribeScanTaskProgressRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeScanTaskProgressWithOptions(request, runtime);
-    }
-
-    public DescribeSecurityEventOperationStatusResponse describeSecurityEventOperationStatusWithOptions(DescribeSecurityEventOperationStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.securityEventId)) {
-            query.put("SecurityEventId", request.securityEventId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
-            query.put("TaskId", request.taskId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeSecurityEventOperationStatus"),
-            new TeaPair("version", "2020-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSecurityEventOperationStatusResponse());
-    }
-
-    public DescribeSecurityEventOperationStatusResponse describeSecurityEventOperationStatus(DescribeSecurityEventOperationStatusRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeSecurityEventOperationStatusWithOptions(request, runtime);
-    }
-
-    public DescribeSecurityEventOperationsResponse describeSecurityEventOperationsWithOptions(DescribeSecurityEventOperationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.securityEventId)) {
-            query.put("SecurityEventId", request.securityEventId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeSecurityEventOperations"),
-            new TeaPair("version", "2020-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSecurityEventOperationsResponse());
-    }
-
-    public DescribeSecurityEventOperationsResponse describeSecurityEventOperations(DescribeSecurityEventOperationsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeSecurityEventOperationsWithOptions(request, runtime);
-    }
-
+    /**
+      * *   This is a central operation and can be called only by using services in the China (Shanghai) region.
+      * *   You can query session statistics for the past hour.
+      *
+      * @param request DescribeSessionStatisticRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeSessionStatisticResponse
+     */
     public DescribeSessionStatisticResponse describeSessionStatisticWithOptions(DescribeSessionStatisticRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5626,6 +5898,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSessionStatisticResponse());
     }
 
+    /**
+      * *   This is a central operation and can be called only by using services in the China (Shanghai) region.
+      * *   You can query session statistics for the past hour.
+      *
+      * @param request DescribeSessionStatisticRequest
+      * @return DescribeSessionStatisticResponse
+     */
     public DescribeSessionStatisticResponse describeSessionStatistic(DescribeSessionStatisticRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSessionStatisticWithOptions(request, runtime);
@@ -5704,18 +5983,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeSnapshotsWithOptions(request, runtime);
     }
 
-    public DescribeSuspEventOverviewResponse describeSuspEventOverviewWithOptions(DescribeSuspEventOverviewRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeUserConnectTimeResponse describeUserConnectTimeWithOptions(DescribeUserConnectTimeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
+            query.put("EndUserId", request.endUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldGroupId)) {
+            query.put("OversoldGroupId", request.oversoldGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userDesktopId)) {
+            query.put("UserDesktopId", request.userDesktopId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupId)) {
+            query.put("UserGroupId", request.userGroupId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeSuspEventOverview"),
+            new TeaPair("action", "DescribeUserConnectTime"),
             new TeaPair("version", "2020-09-30"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
@@ -5725,131 +6032,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSuspEventOverviewResponse());
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUserConnectTimeResponse());
     }
 
-    public DescribeSuspEventOverviewResponse describeSuspEventOverview(DescribeSuspEventOverviewRequest request) throws Exception {
+    public DescribeUserConnectTimeResponse describeUserConnectTime(DescribeUserConnectTimeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeSuspEventOverviewWithOptions(request, runtime);
-    }
-
-    /**
-      * The path where the quarantined file is stored on the cloud desktop.
-      *
-      * @param request DescribeSuspEventQuaraFilesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeSuspEventQuaraFilesResponse
-     */
-    public DescribeSuspEventQuaraFilesResponse describeSuspEventQuaraFilesWithOptions(DescribeSuspEventQuaraFilesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
-            query.put("CurrentPage", request.currentPage);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
-            query.put("OfficeSiteId", request.officeSiteId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
-            query.put("Status", request.status);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeSuspEventQuaraFiles"),
-            new TeaPair("version", "2020-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSuspEventQuaraFilesResponse());
-    }
-
-    /**
-      * The path where the quarantined file is stored on the cloud desktop.
-      *
-      * @param request DescribeSuspEventQuaraFilesRequest
-      * @return DescribeSuspEventQuaraFilesResponse
-     */
-    public DescribeSuspEventQuaraFilesResponse describeSuspEventQuaraFiles(DescribeSuspEventQuaraFilesRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeSuspEventQuaraFilesWithOptions(request, runtime);
-    }
-
-    public DescribeSuspEventsResponse describeSuspEventsWithOptions(DescribeSuspEventsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.alarmUniqueInfo)) {
-            query.put("AlarmUniqueInfo", request.alarmUniqueInfo);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
-            query.put("CurrentPage", request.currentPage);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.dealed)) {
-            query.put("Dealed", request.dealed);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
-            query.put("Lang", request.lang);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.levels)) {
-            query.put("Levels", request.levels);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
-            query.put("OfficeSiteId", request.officeSiteId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.parentEventType)) {
-            query.put("ParentEventType", request.parentEventType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeSuspEvents"),
-            new TeaPair("version", "2020-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSuspEventsResponse());
-    }
-
-    public DescribeSuspEventsResponse describeSuspEvents(DescribeSuspEventsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeSuspEventsWithOptions(request, runtime);
+        return this.describeUserConnectTimeWithOptions(request, runtime);
     }
 
     public DescribeUserConnectionRecordsResponse describeUserConnectionRecordsWithOptions(DescribeUserConnectionRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -6107,145 +6295,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeVirtualMFADevicesResponse describeVirtualMFADevices(DescribeVirtualMFADevicesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeVirtualMFADevicesWithOptions(request, runtime);
-    }
-
-    public DescribeVulDetailsResponse describeVulDetailsWithOptions(DescribeVulDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.aliasName)) {
-            query.put("AliasName", request.aliasName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
-            query.put("Lang", request.lang);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
-            query.put("Name", request.name);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
-            query.put("Type", request.type);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeVulDetails"),
-            new TeaPair("version", "2020-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVulDetailsResponse());
-    }
-
-    public DescribeVulDetailsResponse describeVulDetails(DescribeVulDetailsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeVulDetailsWithOptions(request, runtime);
-    }
-
-    public DescribeVulListResponse describeVulListWithOptions(DescribeVulListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.aliasName)) {
-            query.put("AliasName", request.aliasName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
-            query.put("CurrentPage", request.currentPage);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.dealed)) {
-            query.put("Dealed", request.dealed);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
-            query.put("Lang", request.lang);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
-            query.put("Name", request.name);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.necessity)) {
-            query.put("Necessity", request.necessity);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
-            query.put("OfficeSiteId", request.officeSiteId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
-            query.put("Type", request.type);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeVulList"),
-            new TeaPair("version", "2020-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVulListResponse());
-    }
-
-    public DescribeVulListResponse describeVulList(DescribeVulListRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeVulListWithOptions(request, runtime);
-    }
-
-    public DescribeVulOverviewResponse describeVulOverviewWithOptions(DescribeVulOverviewRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeVulOverview"),
-            new TeaPair("version", "2020-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVulOverviewResponse());
-    }
-
-    public DescribeVulOverviewResponse describeVulOverview(DescribeVulOverviewRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeVulOverviewWithOptions(request, runtime);
     }
 
     public DescribeZonesResponse describeZonesWithOptions(DescribeZonesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -6575,6 +6624,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.exportDesktopGroupInfoWithOptions(request, runtime);
     }
 
+    /**
+      * The list of cloud desktops that are exported by calling the ExportDesktopListInfo operation is saved in a CSV file. The CSV file contains the information about each cloud desktop, including the IDs and names of cloud desktops, IDs and names of workspaces, IDs and names of desktop groups, vCPUs, memory, protocols, system disk capacity, data disk capacity, OSs, running status, current user, tags, IP addresses, billing methods, and creation time.
+      *
+      * @param request ExportDesktopListInfoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ExportDesktopListInfoResponse
+     */
     public ExportDesktopListInfoResponse exportDesktopListInfoWithOptions(ExportDesktopListInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6655,6 +6711,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ExportDesktopListInfoResponse());
     }
 
+    /**
+      * The list of cloud desktops that are exported by calling the ExportDesktopListInfo operation is saved in a CSV file. The CSV file contains the information about each cloud desktop, including the IDs and names of cloud desktops, IDs and names of workspaces, IDs and names of desktop groups, vCPUs, memory, protocols, system disk capacity, data disk capacity, OSs, running status, current user, tags, IP addresses, billing methods, and creation time.
+      *
+      * @param request ExportDesktopListInfoRequest
+      * @return ExportDesktopListInfoResponse
+     */
     public ExportDesktopListInfoResponse exportDesktopListInfo(ExportDesktopListInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.exportDesktopListInfoWithOptions(request, runtime);
@@ -6919,47 +6981,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getSpMetadataWithOptions(request, runtime);
     }
 
-    public HandleSecurityEventsResponse handleSecurityEventsWithOptions(HandleSecurityEventsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.operationCode)) {
-            query.put("OperationCode", request.operationCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.operationParams)) {
-            query.put("OperationParams", request.operationParams);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.securityEvent)) {
-            query.put("SecurityEvent", request.securityEvent);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "HandleSecurityEvents"),
-            new TeaPair("version", "2020-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new HandleSecurityEventsResponse());
-    }
-
-    public HandleSecurityEventsResponse handleSecurityEvents(HandleSecurityEventsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.handleSecurityEventsWithOptions(request, runtime);
-    }
-
+    /**
+      * Hibernating a cloud desktop is in private preview. If you want to try this feature, submit a ticket.
+      *
+      * @param request HibernateDesktopsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return HibernateDesktopsResponse
+     */
     public HibernateDesktopsResponse hibernateDesktopsWithOptions(HibernateDesktopsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6988,6 +7016,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new HibernateDesktopsResponse());
     }
 
+    /**
+      * Hibernating a cloud desktop is in private preview. If you want to try this feature, submit a ticket.
+      *
+      * @param request HibernateDesktopsRequest
+      * @return HibernateDesktopsResponse
+     */
     public HibernateDesktopsResponse hibernateDesktops(HibernateDesktopsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.hibernateDesktopsWithOptions(request, runtime);
@@ -7012,6 +7046,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileIdsShrink)) {
             query.put("FileIds", request.fileIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
@@ -7060,6 +7098,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listCdsFilesWithOptions(request, runtime);
     }
 
+    /**
+      * If you use an AD directory to connect to an AD system, you can call this operation to obtain the user information in the AD system.
+      *
+      * @param request ListDirectoryUsersRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListDirectoryUsersResponse
+     */
     public ListDirectoryUsersResponse listDirectoryUsersWithOptions(ListDirectoryUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7104,6 +7149,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListDirectoryUsersResponse());
     }
 
+    /**
+      * If you use an AD directory to connect to an AD system, you can call this operation to obtain the user information in the AD system.
+      *
+      * @param request ListDirectoryUsersRequest
+      * @return ListDirectoryUsersResponse
+     */
     public ListDirectoryUsersResponse listDirectoryUsers(ListDirectoryUsersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDirectoryUsersWithOptions(request, runtime);
@@ -7122,6 +7173,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileId)) {
             query.put("FileId", request.fileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -7249,7 +7304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The tag key of the resource.
+      * You must specify at least one of the ResourceId.N, Tag.N.Key, and Tag.N.Value parameters in the request to specify the query objects.
       *
       * @param request ListTagResourcesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7300,7 +7355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The tag key of the resource.
+      * You must specify at least one of the ResourceId.N, Tag.N.Key, and Tag.N.Value parameters in the request to specify the query objects.
       *
       * @param request ListTagResourcesRequest
       * @return ListTagResourcesResponse
@@ -7356,7 +7411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request.
+      * After a virtual MFA device is locked, its status changes to LOCKED. The AD user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](~~206212~~) operation to unlock the device.
       *
       * @param request LockVirtualMFADeviceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7391,7 +7446,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request.
+      * After a virtual MFA device is locked, its status changes to LOCKED. The AD user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the [UnlockVirtualMFADevice](~~206212~~) operation to unlock the device.
       *
       * @param request LockVirtualMFADeviceRequest
       * @return LockVirtualMFADeviceResponse
@@ -7436,6 +7491,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public MigrateDesktopsResponse migrateDesktops(MigrateDesktopsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.migrateDesktopsWithOptions(request, runtime);
+    }
+
+    public MigrateImageProtocolResponse migrateImageProtocolWithOptions(MigrateImageProtocolRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            query.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetProtocolType)) {
+            query.put("TargetProtocolType", request.targetProtocolType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MigrateImageProtocol"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MigrateImageProtocolResponse());
+    }
+
+    public MigrateImageProtocolResponse migrateImageProtocol(MigrateImageProtocolRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.migrateImageProtocolWithOptions(request, runtime);
     }
 
     public ModifyADConnectorDirectoryResponse modifyADConnectorDirectoryWithOptions(ModifyADConnectorDirectoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -7671,7 +7763,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the desktop template.
+      * Only custom desktop templates can be modified.
       *
       * @param request ModifyBundleRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7722,7 +7814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the desktop template.
+      * Only custom desktop templates can be modified.
       *
       * @param request ModifyBundleRequest
       * @return ModifyBundleResponse
@@ -7753,6 +7845,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
             query.put("FileName", request.fileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -8047,7 +8143,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The new billing method that you want to use for the desktop group.
+      * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops. For more information, see [Billing overview](~~188395~~).
+      * *   Before you call this operation, make sure that the cloud desktop that you want to manage is in the Running or Stopped state and no overdue payments of the cloud desktop are generated.
+      * *   After the order payment is completed, the system starts to change the billing method of the cloud desktop. During the change, you cannot perform operations, such as starting or stopping the cloud desktop, and changing configurations of the cloud desktop.
       *
       * @param request ModifyDesktopChargeTypeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8106,7 +8204,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The new billing method that you want to use for the desktop group.
+      * *   Before you call this operation, make sure that you are familiar with the billing methods of cloud desktops. For more information, see [Billing overview](~~188395~~).
+      * *   Before you call this operation, make sure that the cloud desktop that you want to manage is in the Running or Stopped state and no overdue payments of the cloud desktop are generated.
+      * *   After the order payment is completed, the system starts to change the billing method of the cloud desktop. During the change, you cannot perform operations, such as starting or stopping the cloud desktop, and changing configurations of the cloud desktop.
       *
       * @param request ModifyDesktopChargeTypeRequest
       * @return ModifyDesktopChargeTypeResponse
@@ -8267,7 +8367,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region.
+      * You can only change the hostname of a Windows cloud desktop in the Active Directory (AD) workspace. After the hostname is changed, the cloud desktop is recreated.
       *
       * @param request ModifyDesktopHostNameRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8306,7 +8406,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region.
+      * You can only change the hostname of a Windows cloud desktop in the Active Directory (AD) workspace. After the hostname is changed, the cloud desktop is recreated.
       *
       * @param request ModifyDesktopHostNameRequest
       * @return ModifyDesktopHostNameResponse
@@ -8351,6 +8451,149 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyDesktopNameResponse modifyDesktopName(ModifyDesktopNameRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDesktopNameWithOptions(request, runtime);
+    }
+
+    public ModifyDesktopOversoldGroupResponse modifyDesktopOversoldGroupWithOptions(ModifyDesktopOversoldGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.concurrenceCount)) {
+            query.put("ConcurrenceCount", request.concurrenceCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            query.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldGroupId)) {
+            query.put("OversoldGroupId", request.oversoldGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldUserCount)) {
+            query.put("OversoldUserCount", request.oversoldUserCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldWarn)) {
+            query.put("OversoldWarn", request.oversoldWarn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyGroupId)) {
+            query.put("PolicyGroupId", request.policyGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stopDuration)) {
+            query.put("StopDuration", request.stopDuration);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDesktopOversoldGroup"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDesktopOversoldGroupResponse());
+    }
+
+    public ModifyDesktopOversoldGroupResponse modifyDesktopOversoldGroup(ModifyDesktopOversoldGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDesktopOversoldGroupWithOptions(request, runtime);
+    }
+
+    public ModifyDesktopOversoldGroupSaleResponse modifyDesktopOversoldGroupSaleWithOptions(ModifyDesktopOversoldGroupSaleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.concurrenceCount)) {
+            query.put("ConcurrenceCount", request.concurrenceCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldGroupId)) {
+            query.put("OversoldGroupId", request.oversoldGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldUserCount)) {
+            query.put("OversoldUserCount", request.oversoldUserCount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDesktopOversoldGroupSale"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDesktopOversoldGroupSaleResponse());
+    }
+
+    public ModifyDesktopOversoldGroupSaleResponse modifyDesktopOversoldGroupSale(ModifyDesktopOversoldGroupSaleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDesktopOversoldGroupSaleWithOptions(request, runtime);
+    }
+
+    public ModifyDesktopOversoldUserGroupResponse modifyDesktopOversoldUserGroupWithOptions(ModifyDesktopOversoldUserGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            query.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldGroupId)) {
+            query.put("OversoldGroupId", request.oversoldGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyGroupId)) {
+            query.put("PolicyGroupId", request.policyGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupId)) {
+            query.put("UserGroupId", request.userGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDesktopOversoldUserGroup"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDesktopOversoldUserGroupResponse());
+    }
+
+    public ModifyDesktopOversoldUserGroupResponse modifyDesktopOversoldUserGroup(ModifyDesktopOversoldUserGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDesktopOversoldUserGroupWithOptions(request, runtime);
     }
 
     /**
@@ -8482,6 +8725,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyDesktopTimerWithOptions(request, runtime);
     }
 
+    /**
+      * The cloud desktop must be in the Running (Running) state.
+      *
+      * @param request ModifyDesktopsPolicyGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDesktopsPolicyGroupResponse
+     */
     public ModifyDesktopsPolicyGroupResponse modifyDesktopsPolicyGroupWithOptions(ModifyDesktopsPolicyGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8518,6 +8768,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDesktopsPolicyGroupResponse());
     }
 
+    /**
+      * The cloud desktop must be in the Running (Running) state.
+      *
+      * @param request ModifyDesktopsPolicyGroupRequest
+      * @return ModifyDesktopsPolicyGroupResponse
+     */
     public ModifyDesktopsPolicyGroupResponse modifyDesktopsPolicyGroup(ModifyDesktopsPolicyGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDesktopsPolicyGroupWithOptions(request, runtime);
@@ -8604,7 +8860,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The cloud desktop must be in the Running state.
+      * The cloud desktops to which you want to assign users must be in the Running state.
       *
       * @param request ModifyEntitlementRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8643,7 +8899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The cloud desktop must be in the Running state.
+      * The cloud desktops to which you want to assign users must be in the Running state.
       *
       * @param request ModifyEntitlementRequest
       * @return ModifyEntitlementResponse
@@ -8654,7 +8910,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the image.
+      * You can call this operation to modify the attributes of only custom images that are in the Available state.
       *
       * @param request ModifyImageAttributeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8697,7 +8953,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the image.
+      * You can call this operation to modify the attributes of only custom images that are in the Available state.
       *
       * @param request ModifyImageAttributeRequest
       * @return ModifyImageAttributeResponse
@@ -8749,7 +9005,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region.
+      * When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the [CreateMountTarget](~~62621~~) operation to create a mount target.
       *
       * @param request ModifyNASDefaultMountTargetRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8788,7 +9044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region.
+      * When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the [CreateMountTarget](~~62621~~) operation to create a mount target.
       *
       * @param request ModifyNASDefaultMountTargetRequest
       * @return ModifyNASDefaultMountTargetResponse
@@ -8844,7 +9100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region.
+      * If you want to temporarily disable Internet access for a cloud desktop, you can disable the Internet access package. You can restore the package when you require Internet access for the cloud desktop.
       *
       * @param request ModifyNetworkPackageEnabledRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8883,7 +9139,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region.
+      * If you want to temporarily disable Internet access for a cloud desktop, you can disable the Internet access package. You can restore the package when you require Internet access for the cloud desktop.
       *
       * @param request ModifyNetworkPackageEnabledRequest
       * @return ModifyNetworkPackageEnabledResponse
@@ -9020,54 +9276,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyOfficeSiteMfaEnabledWithOptions(request, runtime);
     }
 
-    public ModifyOperateVulResponse modifyOperateVulWithOptions(ModifyOperateVulRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.operateType)) {
-            query.put("OperateType", request.operateType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.reason)) {
-            query.put("Reason", request.reason);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
-            query.put("Type", request.type);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.vulInfo)) {
-            query.put("VulInfo", request.vulInfo);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ModifyOperateVul"),
-            new TeaPair("version", "2020-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyOperateVulResponse());
-    }
-
-    public ModifyOperateVulResponse modifyOperateVul(ModifyOperateVulRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.modifyOperateVulWithOptions(request, runtime);
-    }
-
     public ModifyPolicyGroupResponse modifyPolicyGroupWithOptions(ModifyPolicyGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.adminAccess)) {
+            query.put("AdminAccess", request.adminAccess);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appContentProtection)) {
             query.put("AppContentProtection", request.appContentProtection);
         }
@@ -9256,6 +9471,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("WatermarkRowAmount", request.watermarkRowAmount);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkSecurity)) {
+            query.put("WatermarkSecurity", request.watermarkSecurity);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.watermarkTransparency)) {
             query.put("WatermarkTransparency", request.watermarkTransparency);
         }
@@ -9291,7 +9510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The IDs of regular users.
+      * You can modify user permissions on cloud desktops that are only in the Running state.
       *
       * @param request ModifyUserEntitlementRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9334,7 +9553,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The IDs of regular users.
+      * You can modify user permissions on cloud desktops that are only in the Running state.
       *
       * @param request ModifyUserEntitlementRequest
       * @return ModifyUserEntitlementResponse
@@ -9404,6 +9623,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FileId", request.fileId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.parentFolderId)) {
             query.put("ParentFolderId", request.parentFolderId);
         }
@@ -9434,61 +9657,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.moveCdsFileWithOptions(request, runtime);
     }
 
-    public OperateVulsResponse operateVulsWithOptions(OperateVulsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
-            query.put("DesktopId", request.desktopId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.operateType)) {
-            query.put("OperateType", request.operateType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.precondition)) {
-            query.put("Precondition", request.precondition);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.reason)) {
-            query.put("Reason", request.reason);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
-            query.put("Type", request.type);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.vulName)) {
-            query.put("VulName", request.vulName);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "OperateVuls"),
-            new TeaPair("version", "2020-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new OperateVulsResponse());
-    }
-
-    public OperateVulsResponse operateVuls(OperateVulsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.operateVulsWithOptions(request, runtime);
-    }
-
     /**
-      * The ID of the request.
+      * The cloud desktops that you want to restart by calling this operation must be in the Running state.
       *
       * @param request RebootDesktopsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9523,7 +9693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request.
+      * The cloud desktops that you want to restart by calling this operation must be in the Running state.
       *
       * @param request RebootDesktopsRequest
       * @return RebootDesktopsResponse
@@ -9534,7 +9704,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The error message. This parameter is not returned if the value of Code is success.
+      * Before you change the image of a cloud desktop, take note of the following limits:
+      * *   You can select the OS of an image during image change. However, this operation is unavailable in the following regions: China (Hong Kong), Australia (Sydney), Singapore (Singapore), and Japan (Tokyo).
+      * *   Image change between GPU and non-GPU images is not supported. If a cloud desktop is of the Graphics type, you can use only a GPU image. If the cloud desktop is of a non-Graphics type, you can use only a non-GPU image.
+      * After you change the image of the cloud desktop, the system uses the new image to initialize the system disk of the cloud desktop. Take note of the following impacts:
+      * *   The system deletes data from the original system disk. The snapshots that are created from the original system disk of the cloud desktop become unavailable and are automatically deleted.
+      * *   If you change the OS of the image, the system deletes data from the original data disk of the cloud desktop. The system also deletes snapshots that are created from the original data disk of the cloud desktop because original snapshots become unavailable. If you do not change the OS of the image, data on the original data disk is retained, and snapshots that are created from the data disk are still available.
       *
       * @param request RebuildDesktopsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9577,7 +9752,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The error message. This parameter is not returned if the value of Code is success.
+      * Before you change the image of a cloud desktop, take note of the following limits:
+      * *   You can select the OS of an image during image change. However, this operation is unavailable in the following regions: China (Hong Kong), Australia (Sydney), Singapore (Singapore), and Japan (Tokyo).
+      * *   Image change between GPU and non-GPU images is not supported. If a cloud desktop is of the Graphics type, you can use only a GPU image. If the cloud desktop is of a non-Graphics type, you can use only a non-GPU image.
+      * After you change the image of the cloud desktop, the system uses the new image to initialize the system disk of the cloud desktop. Take note of the following impacts:
+      * *   The system deletes data from the original system disk. The snapshots that are created from the original system disk of the cloud desktop become unavailable and are automatically deleted.
+      * *   If you change the OS of the image, the system deletes data from the original data disk of the cloud desktop. The system also deletes snapshots that are created from the original data disk of the cloud desktop because original snapshots become unavailable. If you do not change the OS of the image, data on the original data disk is retained, and snapshots that are created from the data disk are still available.
       *
       * @param request RebuildDesktopsRequest
       * @return RebuildDesktopsResponse
@@ -9606,6 +9786,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileId)) {
             query.put("FileId", request.fileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.memberListShrink)) {
@@ -9677,6 +9861,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RemoveUserFromDesktopGroupResponse removeUserFromDesktopGroup(RemoveUserFromDesktopGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeUserFromDesktopGroupWithOptions(request, runtime);
+    }
+
+    public RemoveUserFromDesktopOversoldUserGroupResponse removeUserFromDesktopOversoldUserGroupWithOptions(RemoveUserFromDesktopOversoldUserGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
+            query.put("EndUserId", request.endUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldGroupId)) {
+            query.put("OversoldGroupId", request.oversoldGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userDesktopId)) {
+            query.put("UserDesktopId", request.userDesktopId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupId)) {
+            query.put("UserGroupId", request.userGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveUserFromDesktopOversoldUserGroup"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveUserFromDesktopOversoldUserGroupResponse());
+    }
+
+    public RemoveUserFromDesktopOversoldUserGroupResponse removeUserFromDesktopOversoldUserGroup(RemoveUserFromDesktopOversoldUserGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removeUserFromDesktopOversoldUserGroupWithOptions(request, runtime);
+    }
+
+    public RenewDesktopOversoldGroupResponse renewDesktopOversoldGroupWithOptions(RenewDesktopOversoldGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldGroupId)) {
+            query.put("OversoldGroupId", request.oversoldGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            query.put("PeriodUnit", request.periodUnit);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RenewDesktopOversoldGroup"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RenewDesktopOversoldGroupResponse());
+    }
+
+    public RenewDesktopOversoldGroupResponse renewDesktopOversoldGroup(RenewDesktopOversoldGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.renewDesktopOversoldGroupWithOptions(request, runtime);
     }
 
     public RenewDesktopsResponse renewDesktopsWithOptions(RenewDesktopsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -9840,7 +10102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request.
+      * When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.
       *
       * @param request ResetNASDefaultMountTargetRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9875,7 +10137,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request.
+      * When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.
       *
       * @param request ResetNASDefaultMountTargetRequest
       * @return ResetNASDefaultMountTargetResponse
@@ -9985,55 +10247,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region.
+      * You can use the RunCommand operation to run scripts only on Windows cloud desktops.
       *
-      * @param request RollbackSuspEventQuaraFileRequest
+      * @param request RunCommandRequest
       * @param runtime runtime options for this request RuntimeOptions
-      * @return RollbackSuspEventQuaraFileResponse
+      * @return RunCommandResponse
      */
-    public RollbackSuspEventQuaraFileResponse rollbackSuspEventQuaraFileWithOptions(RollbackSuspEventQuaraFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
-            query.put("DesktopId", request.desktopId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.quaraFieldId)) {
-            query.put("QuaraFieldId", request.quaraFieldId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "RollbackSuspEventQuaraFile"),
-            new TeaPair("version", "2020-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RollbackSuspEventQuaraFileResponse());
-    }
-
-    /**
-      * The ID of the region.
-      *
-      * @param request RollbackSuspEventQuaraFileRequest
-      * @return RollbackSuspEventQuaraFileResponse
-     */
-    public RollbackSuspEventQuaraFileResponse rollbackSuspEventQuaraFile(RollbackSuspEventQuaraFileRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.rollbackSuspEventQuaraFileWithOptions(request, runtime);
-    }
-
     public RunCommandResponse runCommandWithOptions(RunCommandRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10082,6 +10301,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RunCommandResponse());
     }
 
+    /**
+      * You can use the RunCommand operation to run scripts only on Windows cloud desktops.
+      *
+      * @param request RunCommandRequest
+      * @return RunCommandResponse
+     */
     public RunCommandResponse runCommand(RunCommandRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.runCommandWithOptions(request, runtime);
@@ -10455,7 +10680,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request.
+      * The cloud desktop that you want to start must be in the Stopped state.
       *
       * @param request StartDesktopsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -10490,7 +10715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request.
+      * The cloud desktop that you want to start must be in the Stopped state.
       *
       * @param request StartDesktopsRequest
       * @return StartDesktopsResponse
@@ -10500,48 +10725,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.startDesktopsWithOptions(request, runtime);
     }
 
-    public StartVirusScanTaskResponse startVirusScanTaskWithOptions(StartVirusScanTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
-            query.put("DesktopId", request.desktopId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
-            query.put("OfficeSiteId", request.officeSiteId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "StartVirusScanTask"),
-            new TeaPair("version", "2020-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StartVirusScanTaskResponse());
-    }
-
-    public StartVirusScanTaskResponse startVirusScanTask(StartVirusScanTaskRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.startVirusScanTaskWithOptions(request, runtime);
-    }
-
     /**
-      * The billing mode after you stop the cloud desktop.
-      * *   StopCharging: Computing resources are not billed after you stop the cloud desktop. After the cloud desktop is stopped, the system automatically reclaims computing resources. From this point on, you are no longer charged for computing resources. However, you are still charged for storage resources.
-      * *   KeepCharging: The billing continues after you stop the cloud desktop. After the cloud desktop is stopped, the system does not reclaim resources to avoid startup failures due to insufficient resources. You are still charged for the resources.
-      * Default value: StopCharging
+      * The cloud desktops that you want to stop must be in the Running state.
       *
       * @param request StopDesktopsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -10580,10 +10765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The billing mode after you stop the cloud desktop.
-      * *   StopCharging: Computing resources are not billed after you stop the cloud desktop. After the cloud desktop is stopped, the system automatically reclaims computing resources. From this point on, you are no longer charged for computing resources. However, you are still charged for storage resources.
-      * *   KeepCharging: The billing continues after you stop the cloud desktop. After the cloud desktop is stopped, the system does not reclaim resources to avoid startup failures due to insufficient resources. You are still charged for the resources.
-      * Default value: StopCharging
+      * The cloud desktops that you want to stop must be in the Running state.
       *
       * @param request StopDesktopsRequest
       * @return StopDesktopsResponse
@@ -10812,6 +10994,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateFotaTaskWithOptions(request, runtime);
     }
 
+    /**
+      * > You can call this operation to upload custom Windows images.
+      *
+      * @param request UploadImageRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UploadImageResponse
+     */
     public UploadImageResponse uploadImageWithOptions(UploadImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10876,6 +11065,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UploadImageResponse());
     }
 
+    /**
+      * > You can call this operation to upload custom Windows images.
+      *
+      * @param request UploadImageRequest
+      * @return UploadImageResponse
+     */
     public UploadImageResponse uploadImage(UploadImageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.uploadImageWithOptions(request, runtime);

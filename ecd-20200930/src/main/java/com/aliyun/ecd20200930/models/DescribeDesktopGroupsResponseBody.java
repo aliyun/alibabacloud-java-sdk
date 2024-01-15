@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopGroupsResponseBody extends TeaModel {
     /**
-     * <p>Details about desktop groups.</p>
+     * <p>Details of the desktop groups.</p>
      */
     @NameInMap("DesktopGroups")
     public java.util.List<DescribeDesktopGroupsResponseBodyDesktopGroups> desktopGroups;
@@ -95,7 +95,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public Integer buyDesktopsCount;
 
         /**
-         * <p>The remarks.</p>
+         * <p>The remarks of the desktop group.</p>
          */
         @NameInMap("Comments")
         public String comments;
@@ -164,7 +164,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
          * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>    ehhanced SSD (ESSD)</p>
+         * <p>    ESSD</p>
          * <br>
          * <p>    <!-- --></p>
          */
@@ -181,13 +181,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public Integer desktopCount;
 
         /**
-         * <p>The desktop group ID.</p>
+         * <p>The ID of the desktop group.</p>
          */
         @NameInMap("DesktopGroupId")
         public String desktopGroupId;
 
         /**
-         * <p>The desktop group name.</p>
+         * <p>The name of the desktop group.</p>
          */
         @NameInMap("DesktopGroupName")
         public String desktopGroupName;
@@ -196,7 +196,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public String desktopType;
 
         /**
-         * <p>The number of users that are authorized to use the desktop group.</p>
+         * <p>The number of end users that are authorized to use the desktop group.</p>
          */
         @NameInMap("EndUserCount")
         public Integer endUserCount;
@@ -229,13 +229,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public Long idleDisconnectDuration;
 
         /**
-         * <p>The image ID.</p>
+         * <p>The ID of the image.</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
-         * <p>The keep-alive duration of the cloud desktop after the end user disconnects from the cloud desktop. Unit: milliseconds.</p>
+         * <p>The retention period of the cloud desktop after the end user is disconnected from the cloud desktop. Unit: milliseconds.</p>
          */
         @NameInMap("KeepDuration")
         public Long keepDuration;
@@ -291,19 +291,19 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public Integer minDesktopsCount;
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The ID of the workspace.</p>
          */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the workspace.</p>
          */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
         /**
-         * <p>The account type of the workspace.</p>
+         * <p>The account type of the workspace. Possible values: -simple: convenience account type. -ad_connector: enterprise Active Directory (AD) account.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
@@ -341,7 +341,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
          * <br>
          * <p>    <!-- --></p>
          * <br>
-         * <p>    workspace of the enterprise AD account type</p>
+         * <p>    enterprise AD account type</p>
          * <br>
          * <p>    <!-- --></p>
          * <br>
@@ -372,19 +372,19 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The desktop template ID.</p>
+         * <p>The ID of the desktop template.</p>
          */
         @NameInMap("OwnBundleId")
         public String ownBundleId;
 
         /**
-         * <p>The desktop template name.</p>
+         * <p>The name of the desktop template.</p>
          */
         @NameInMap("OwnBundleName")
         public String ownBundleName;
 
         /**
-         * <p>The desktop group type.</p>
+         * <p>The type of the desktop group.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
@@ -432,6 +432,8 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
          * <br>
          * <p>    <!-- --></p>
          * <br>
+         * <p>    .</p>
+         * <br>
          * <p>*   PrePaid</p>
          * <br>
          * <p>    <!-- --></p>
@@ -443,24 +445,26 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
          * <p>    subscription</p>
          * <br>
          * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
          */
         @NameInMap("PayType")
         public String payType;
 
         /**
-         * <p>The policy ID.</p>
+         * <p>The ID of the policy.</p>
          */
         @NameInMap("PolicyGroupId")
         public String policyGroupId;
 
         /**
-         * <p>The policy name.</p>
+         * <p>The name of the policy.</p>
          */
         @NameInMap("PolicyGroupName")
         public String policyGroupName;
 
         /**
-         * <p>The protocol. Valid values:</p>
+         * <p>The type of the protocol. Valid values:</p>
          * <br>
          * <p>*   ASP</p>
          * <p>*   HDX</p>

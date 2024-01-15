@@ -58,6 +58,9 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        @NameInMap("BusinessStatus")
+        public String businessStatus;
+
         /**
          * <p>The time when the Internet access package was created.</p>
          */
@@ -168,6 +171,14 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         }
         public Integer getBandwidth() {
             return this.bandwidth;
+        }
+
+        public DescribeNetworkPackagesResponseBodyNetworkPackages setBusinessStatus(String businessStatus) {
+            this.businessStatus = businessStatus;
+            return this;
+        }
+        public String getBusinessStatus() {
+            return this.businessStatus;
         }
 
         public DescribeNetworkPackagesResponseBodyNetworkPackages setCreateTime(String createTime) {

@@ -18,18 +18,72 @@ public class ModifyCdsFileShareLinkRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to prohibit the download of the files that are being shared.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   false</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   true</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("DisableDownload")
     public Boolean disableDownload;
 
     /**
      * <p>Specifies whether to prohibit the preview of the files that are being shared.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   false</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("DisablePreview")
     public Boolean disablePreview;
 
     /**
      * <p>Specifies whether to prohibit the dump of the files that are being shared.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   false</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   true</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("DisableSave")
     public Boolean disableSave;
@@ -59,7 +113,7 @@ public class ModifyCdsFileShareLinkRequest extends TeaModel {
     public Long previewCount;
 
     /**
-     * <p>The limit on the number of times that the shared files can be previewed. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be previewed.</p>
+     * <p>The limit on the number of times that the shared files can be previewed. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be downloaded.</p>
      */
     @NameInMap("PreviewLimit")
     public Long previewLimit;
@@ -77,7 +131,7 @@ public class ModifyCdsFileShareLinkRequest extends TeaModel {
     public Long saveCount;
 
     /**
-     * <p>The limit on the number of times that the shared files can be dumped. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be dumped.</p>
+     * <p>The limit on the number of times that the shared files can be dumped. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be downloaded.</p>
      */
     @NameInMap("SaveLimit")
     public Long saveLimit;
@@ -89,7 +143,9 @@ public class ModifyCdsFileShareLinkRequest extends TeaModel {
     public String shareId;
 
     /**
-     * <p>The name of the file sharing task. If you leave this parameter empty, the file name that corresponds to the first ID in the file ID list is used. The name must be 0 to 128 characters in length.</p>
+     * <p>The name of the file sharing task. If you do not configure this parameter, the sharing task name is the first ID that is returned in the file_id_list value.</p>
+     * <br>
+     * <p>>  The sharing task name must be 0 to 128 characters in length.</p>
      */
     @NameInMap("ShareName")
     public String shareName;
@@ -101,7 +157,25 @@ public class ModifyCdsFileShareLinkRequest extends TeaModel {
     public String sharePwd;
 
     /**
-     * <p>The status of the file sharing link. Valid values: ● disabled: The file sharing link is canceled. ● enabled: The file sharing link is available.</p>
+     * <p>The sharing status.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   disabled: The sharing task is canceled.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   enabled: The sharing task is valid.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("Status")
     public String status;

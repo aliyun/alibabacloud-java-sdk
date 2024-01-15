@@ -5,41 +5,40 @@ import com.aliyun.tea.*;
 
 public class ListOfficeSiteUsersRequest extends TeaModel {
     /**
-     * <p>The ID of the workspace. Only workspaces of the enterprise AD account type are supported.</p>
+     * <p>The query string for fuzzy query.</p>
      */
     @NameInMap("Filter")
     public String filter;
 
     /**
-     * <p>The organizational unit (OU) in the specified AD domain.</p>
+     * <p>The number of entries per page.</p>
+     * <br>
+     * <p>*   Valid values: 1 to 100.</p>
+     * <p>*   Default value: 10.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>Maximum value: 100</p>
-     * <br>
-     * <p>Default value: 10</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if no next query exists. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The organizational unit (OU) of the specified AD domain.</p>
      */
     @NameInMap("OUPath")
     public String OUPath;
 
     /**
-     * <p>The operation that you want to perform. Set the value to ListOfficeSiteUsers.</p>
+     * <p>The workspace ID. Only workspaces of the enterprise AD account type are supported.</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The character string for fuzzy search.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -50,6 +50,9 @@ public class ModifyDesktopChargeTypeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>>  This parameter is in invitational preview and not available to the public.</p>
+     */
     @NameInMap("UseDuration")
     public Integer useDuration;
 

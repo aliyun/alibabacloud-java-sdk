@@ -5,46 +5,82 @@ import com.aliyun.tea.*;
 
 public class RenewDesktopsRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Specifies whether to enable the automatic payment feature.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   true (default): enables the auto-payment feature.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    Make sure that your account has sufficient balance. Otherwise, no order is generated.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   false: disables the auto-payment feature. In this case, an order is generated, and no payment is automatically made.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    You can log on to the EDS console and complete the payment based on the order number.</p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
-     * <p>The operation that you want to perform. Set the value to RenewDesktops.</p>
+     * <p>The cloud desktop ID. Only subscription cloud desktops can be renewed.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>Specifies whether to enable automatic payment. Valid values:</p>
+     * <p>The renewal duration. Valid values of this parameter are determined by the value of the `PeriodUnit` parameter.</p>
      * <br>
-     * <p>*   true: enables automatic payment. Make sure that you have sufficient balance in your account. Otherwise, abnormal orders are generated.</p>
-     * <p>*   false: generates the order with no payment made. You can log on to the EDS console and complete the payment based on the order number.</p>
+     * <p>*   Valid values if you set the `PeriodUnit` parameter to `Month`: 1, 2, 3, and 6</p>
+     * <p>*   Valid values if you set the `PeriodUnit` parameter to `Year`: 1, 2, 3, 4, 5, and 6</p>
      * <br>
-     * <p>Default value: true.</p>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
-     * <p>The ID of cloud desktop N.</p>
+     * <p>The unit of the renewal duration that is specified by the Period parameter.</p>
      * <br>
-     * <p>Only subscription cloud desktops can be renewed by calling this operation.</p>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   Month (default)</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Year</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <p>The ID of the sales promotion.</p>
+     */
     @NameInMap("PromotionId")
     public String promotionId;
 
     /**
-     * <p>The unit of the renewal duration specified by the Period parameter. Valid values:</p>
-     * <br>
-     * <p>*   Month</p>
-     * <p>*   Year</p>
-     * <br>
-     * <p>Default value: Month.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

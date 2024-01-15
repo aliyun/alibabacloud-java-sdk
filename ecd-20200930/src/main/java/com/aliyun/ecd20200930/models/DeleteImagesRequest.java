@@ -4,14 +4,20 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteImagesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to delete the associated template.</p>
+     */
     @NameInMap("DeleteCascadedBundle")
     public Boolean deleteCascadedBundle;
 
+    /**
+     * <p>The image IDs. You can specify 1 to 100 image IDs.</p>
+     */
     @NameInMap("ImageId")
     public java.util.List<String> imageId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to DeleteImages.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

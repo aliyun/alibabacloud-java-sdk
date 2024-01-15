@@ -122,6 +122,9 @@ public class CreateCdsFileRequest extends TeaModel {
     @NameInMap("FileType")
     public String fileType;
 
+    @NameInMap("GroupId")
+    public String groupId;
+
     /**
      * <p>The ID of the parent folder.</p>
      */
@@ -193,6 +196,14 @@ public class CreateCdsFileRequest extends TeaModel {
     }
     public String getFileType() {
         return this.fileType;
+    }
+
+    public CreateCdsFileRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public CreateCdsFileRequest setParentFileId(String parentFileId) {

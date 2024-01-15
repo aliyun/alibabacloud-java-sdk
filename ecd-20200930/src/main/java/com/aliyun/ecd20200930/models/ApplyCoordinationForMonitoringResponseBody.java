@@ -4,9 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
+    /**
+     * <p>The list of stream collaboration models.</p>
+     */
     @NameInMap("CoordinateFlowModels")
     public java.util.List<ApplyCoordinationForMonitoringResponseBodyCoordinateFlowModels> coordinateFlowModels;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +38,147 @@ public class ApplyCoordinationForMonitoringResponseBody extends TeaModel {
     }
 
     public static class ApplyCoordinationForMonitoringResponseBodyCoordinateFlowModels extends TeaModel {
+        /**
+         * <p>The ID of the stream collaboration.</p>
+         */
         @NameInMap("CoId")
         public String coId;
 
+        /**
+         * <p>The current status of the collaboration task.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   COORDINATING</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    The collaboration task is being executed</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   TERMINATING</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    The collaboration task is being terminated</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   TERMINATED</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    The collaboration task is terminated</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   PENDING</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    The collaboration task is pending to be executed</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         */
         @NameInMap("CoordinateStatus")
         public String coordinateStatus;
 
+        /**
+         * <p>The ticket that is used to establish the Adaptive Streaming Protocol (ASP)-based connection.</p>
+         */
         @NameInMap("CoordinateTicket")
         public String coordinateTicket;
 
+        /**
+         * <p>The type of the initiator.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   ADMIN_INITIATE_FORCE</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    The administrator forcibly initiates the collaboration request</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   ADMIN_INITIATE</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    The administrator initiates the collaboration request</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   COORDINATOR_INITIATE_FORCE</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    The coordinator forcibly initiates the collaboration request</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         */
         @NameInMap("InitiatorType")
         public String initiatorType;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account of the end user.</p>
+         */
         @NameInMap("OwnerUserId")
         public String ownerUserId;
 
+        /**
+         * <p>The ID of the cloud desktop.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The name of the cloud desktop.</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 

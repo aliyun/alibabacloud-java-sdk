@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class StartDesktopsRequest extends TeaModel {
     /**
-     * <p>StartDesktops</p>
+     * <p>The cloud desktop IDs. You can specify 1 to 20 IDs.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The IDs of the cloud desktops. You can specify up to 100 IDs.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

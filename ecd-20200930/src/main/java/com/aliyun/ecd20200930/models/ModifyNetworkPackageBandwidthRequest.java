@@ -4,18 +4,38 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyNetworkPackageBandwidthRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to automatically complete the payment. Valid values:</p>
+     * <br>
+     * <p>*   `true`: automatically completes the payment. Make sure that your Alibaba Cloud account has sufficient balance. If your Alibaba Cloud account does not have sufficient balance, abnormal orders are generated.</p>
+     * <p>*   `false`: does not complete the payment. In this case, an order is generated, but no payment is made. You can log on to the Elastic Desktop Service (EDS) console and complete the payment based on the order ID on the **Orders** page.</p>
+     * <br>
+     * <p>Default value: `true`.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>The bandwidth of the network packet. Unit: Mbps. Value range: 10 to 1000.</p>
+     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
+    /**
+     * <p>The ID of the Internet access package.</p>
+     */
     @NameInMap("NetworkPackageId")
     public String networkPackageId;
 
+    /**
+     * <p>The ID of the promotion. You can call the `GetResourcePrice` operation to query the promotion ID.</p>
+     */
     @NameInMap("PromotionId")
     public String promotionId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

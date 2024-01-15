@@ -4,48 +4,108 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ExportDesktopListInfoRequest extends TeaModel {
+    /**
+     * <p>The billing method of the cloud desktop. Valid values:</p>
+     * <br>
+     * <p>*   PostPaid: pay-as-you-go</p>
+     * <p>*   PrePaid: subscription</p>
+     * <br>
+     * <p>Default value: PostPaid.</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The ID of the cloud desktop.</p>
+     */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    /**
+     * <p>The name of the cloud desktop.</p>
+     */
     @NameInMap("DesktopName")
     public String desktopName;
 
+    /**
+     * <p>The status of the cloud desktop. Valid values:</p>
+     * <br>
+     * <p>*   Pending</p>
+     * <p>*   Starting</p>
+     * <p>*   Running</p>
+     * <p>*   Stopping</p>
+     * <p>*   Rebuilding</p>
+     * <p>*   Stopped</p>
+     * <p>*   Expired</p>
+     * <p>*   Deleted</p>
+     */
     @NameInMap("DesktopStatus")
     public String desktopStatus;
 
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
+    /**
+     * <p>The time when the subscription cloud desktop expires.</p>
+     */
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
+    /**
+     * <p>The ID of the group to which the cloud desktop belongs.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The language that you want to use.</p>
+     */
     @NameInMap("LangType")
     public String langType;
 
+    /**
+     * <p>The maximum number of entries to return on each page.</p>
+     * <br>
+     * <p>Maximum value: 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used for the next query. If this parameter is empty, all results are returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the workspace.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    /**
+     * <p>The ID of the policy that is associated with the cloud desktop.</p>
+     */
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The tags that you want to add to the cloud desktop.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ExportDesktopListInfoRequestTag> tag;
 
+    /**
+     * <p>The username of the current user of the cloud desktop.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 
@@ -175,9 +235,15 @@ public class ExportDesktopListInfoRequest extends TeaModel {
     }
 
     public static class ExportDesktopListInfoRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag. You can specify 1 to 20 keys for a tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag. You can specify 1 to 20 values for a tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 

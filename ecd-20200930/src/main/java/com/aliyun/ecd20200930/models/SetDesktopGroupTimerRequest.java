@@ -35,7 +35,7 @@ public class SetDesktopGroupTimerRequest extends TeaModel {
     public Integer resetType;
 
     /**
-     * <p>The type of the scheduled task. Valid values:</p>
+     * <p>The type of the scheduled task.</p>
      */
     @NameInMap("TimerType")
     public Integer timerType;

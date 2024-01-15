@@ -4,12 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopSessionsResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details of the session.</p>
+     */
     @NameInMap("Sessions")
     public java.util.List<DescribeDesktopSessionsResponseBodySessions> sessions;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,54 +52,114 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
     }
 
     public static class DescribeDesktopSessionsResponseBodySessions extends TeaModel {
+        /**
+         * <p>The IP address of the client.</p>
+         */
         @NameInMap("ClientIp")
         public String clientIp;
 
+        /**
+         * <p>The OS that the client runs.</p>
+         */
         @NameInMap("ClientOS")
         public String clientOS;
 
+        /**
+         * <p>The client version.</p>
+         */
         @NameInMap("ClientVersion")
         public String clientVersion;
 
+        /**
+         * <p>The cloud desktop ID.</p>
+         */
         @NameInMap("DesktopId")
         public String desktopId;
 
+        /**
+         * <p>The cloud desktop name.</p>
+         */
         @NameInMap("DesktopName")
         public String desktopName;
 
+        /**
+         * <p>The duration of the remote assistance. Unit: seconds.</p>
+         */
         @NameInMap("EndUserApplyCoordinateTime")
         public Long endUserApplyCoordinateTime;
 
+        /**
+         * <p>The ID of the end user.</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
+        /**
+         * <p>The duration of the latest session. Unit: seconds.</p>
+         */
         @NameInMap("LatestConnectionTime")
         public Long latestConnectionTime;
 
+        /**
+         * <p>The workspace ID.</p>
+         */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
+        /**
+         * <p>The workspace name.</p>
+         */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
+        /**
+         * <p>The OS. Valid values:</p>
+         * <br>
+         * <p>*   Windows</p>
+         * <p>*   Linux</p>
+         */
         @NameInMap("OsType")
         public String osType;
 
+        /**
+         * <p>The protocol type that is supported by the cloud desktop. Valid values:</p>
+         * <br>
+         * <p>*   HDX</p>
+         * <p>*   ASP</p>
+         */
         @NameInMap("ProtocolType")
         public String protocolType;
 
+        /**
+         * <p>The end time of the session.</p>
+         */
         @NameInMap("SessionEndTime")
         public String sessionEndTime;
 
+        /**
+         * <p>The idle duration of the session. Unit: seconds.</p>
+         */
         @NameInMap("SessionIdleTime")
         public Long sessionIdleTime;
 
+        /**
+         * <p>The start time of the session.</p>
+         */
         @NameInMap("SessionStartTime")
         public String sessionStartTime;
 
+        /**
+         * <p>The session status. Valid values:</p>
+         * <br>
+         * <p>*   Connected</p>
+         * <p>*   Disconnected</p>
+         */
         @NameInMap("SessionStatus")
         public String sessionStatus;
 
+        /**
+         * <p>The total session duration. Unit: seconds.</p>
+         */
         @NameInMap("TotalConnectionTime")
         public Long totalConnectionTime;
 

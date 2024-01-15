@@ -5,13 +5,51 @@ import com.aliyun.tea.*;
 
 public class ModifyCdsFileRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud disk.</p>
+     * <p>The cloud disk ID.</p>
      */
     @NameInMap("CdsId")
     public String cdsId;
 
     /**
-     * <p>The processing method that is used if the file that you want to create has the same name as an existing file in the cloud. Valid values: ignore: allows you to create the file by using the same name as an existing file in the cloud. auto_rename: automatically renames the file that you want to create if a file that has the same name exists in the cloud. By default, the current point in time is added to the end of the file name. Example: xxx\_20060102\_150405. refuse: denies creating the file if a file that has the same name exists in the cloud. Default value: refuse.</p>
+     * <p>The processing mode of files that have the same name.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   refuse</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    refuses to create a file that has the same name as the file in the cloud.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   auto_rename</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    automatically renames a file if the file has the same name as another file. By default, the current point in time is appended. Example: xxx20060102\_150405.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   ignore</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    allows files with the same name.</p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("ConflictPolicy")
     public String conflictPolicy;
@@ -33,6 +71,12 @@ public class ModifyCdsFileRequest extends TeaModel {
      */
     @NameInMap("FileName")
     public String fileName;
+
+    /**
+     * <p>The group ID.</p>
+     */
+    @NameInMap("GroupId")
+    public String groupId;
 
     /**
      * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
@@ -83,6 +127,14 @@ public class ModifyCdsFileRequest extends TeaModel {
     }
     public String getFileName() {
         return this.fileName;
+    }
+
+    public ModifyCdsFileRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public ModifyCdsFileRequest setRegionId(String regionId) {

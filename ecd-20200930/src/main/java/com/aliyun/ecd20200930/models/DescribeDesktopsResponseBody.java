@@ -11,7 +11,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
     public java.util.List<DescribeDesktopsResponseBodyDesktops> desktops;
 
     /**
-     * <p>The token that is used for the next query. If this parameter is empty, all results are returned.</p>
+     * <p>The token that is used for the next query. If this parameter is left empty, all results are returned.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -63,80 +63,6 @@ public class DescribeDesktopsResponseBody extends TeaModel {
     }
     public Integer getTotalCount() {
         return this.totalCount;
-    }
-
-    public static class DescribeDesktopsResponseBodyDesktopsDesktopDurationList extends TeaModel {
-        @NameInMap("PackageCreationTime")
-        public String packageCreationTime;
-
-        @NameInMap("PackageExpiredTime")
-        public String packageExpiredTime;
-
-        @NameInMap("PackageId")
-        public String packageId;
-
-        @NameInMap("PackageStatus")
-        public String packageStatus;
-
-        @NameInMap("TotalDuration")
-        public Long totalDuration;
-
-        @NameInMap("UsedDuration")
-        public Long usedDuration;
-
-        public static DescribeDesktopsResponseBodyDesktopsDesktopDurationList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDesktopsResponseBodyDesktopsDesktopDurationList self = new DescribeDesktopsResponseBodyDesktopsDesktopDurationList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setPackageCreationTime(String packageCreationTime) {
-            this.packageCreationTime = packageCreationTime;
-            return this;
-        }
-        public String getPackageCreationTime() {
-            return this.packageCreationTime;
-        }
-
-        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setPackageExpiredTime(String packageExpiredTime) {
-            this.packageExpiredTime = packageExpiredTime;
-            return this;
-        }
-        public String getPackageExpiredTime() {
-            return this.packageExpiredTime;
-        }
-
-        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setPackageId(String packageId) {
-            this.packageId = packageId;
-            return this;
-        }
-        public String getPackageId() {
-            return this.packageId;
-        }
-
-        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setPackageStatus(String packageStatus) {
-            this.packageStatus = packageStatus;
-            return this;
-        }
-        public String getPackageStatus() {
-            return this.packageStatus;
-        }
-
-        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setTotalDuration(Long totalDuration) {
-            this.totalDuration = totalDuration;
-            return this;
-        }
-        public Long getTotalDuration() {
-            return this.totalDuration;
-        }
-
-        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setUsedDuration(Long usedDuration) {
-            this.usedDuration = usedDuration;
-            return this;
-        }
-        public Long getUsedDuration() {
-            return this.usedDuration;
-        }
-
     }
 
     public static class DescribeDesktopsResponseBodyDesktopsDisks extends TeaModel {
@@ -229,9 +155,15 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("ReleaseNote")
         public String releaseNote;
 
+        /**
+         * <p>The description of the version that can be upgraded in English.</p>
+         */
         @NameInMap("ReleaseNoteEn")
         public String releaseNoteEn;
 
+        /**
+         * <p>The description of the version that can be upgraded in Japanese.</p>
+         */
         @NameInMap("ReleaseNoteJp")
         public String releaseNoteJp;
 
@@ -298,7 +230,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
     public static class DescribeDesktopsResponseBodyDesktopsSessions extends TeaModel {
         /**
-         * <p>The ID of the user that logged on to the cloud desktop.</p>
+         * <p>The ID of the end user that logged on to the cloud desktop.</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
@@ -408,7 +340,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The connection status of the user.</p>
+         * <p>The connection status of the end user.</p>
          */
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
@@ -426,22 +358,21 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>> This parameter is in invitational preview and is unavailable to the public.</p>
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
          */
         @NameInMap("DataDiskCategory")
         public String dataDiskCategory;
 
         /**
-         * <p>> This parameter is in invitational preview and is unavailable to the public.</p>
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
          */
         @NameInMap("DataDiskSize")
         public String dataDiskSize;
 
-        @NameInMap("DesktopDurationList")
-        public java.util.List<DescribeDesktopsResponseBodyDesktopsDesktopDurationList> desktopDurationList;
-
         /**
-         * <p>The ID of the group to which the cloud desktop belongs. Default value: null.</p>
+         * <p>The ID of the desktop group. Default value: null.</p>
+         * <br>
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
          */
         @NameInMap("DesktopGroupId")
         public String desktopGroupId;
@@ -459,7 +390,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public String desktopName;
 
         /**
-         * <p>The state of the cloud desktop.</p>
+         * <p>The status of the cloud desktop.</p>
          */
         @NameInMap("DesktopStatus")
         public String desktopStatus;
@@ -471,13 +402,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public String desktopType;
 
         /**
-         * <p>The ID is the same as the workspace ID that is indicated by the value of the OfficeSiteId parameter.</p>
+         * <p>The ID of the directory. The ID is the same as the workspace ID that is indicated by the OfficeSiteId parameter.</p>
          */
         @NameInMap("DirectoryId")
         public String directoryId;
 
         /**
-         * <p>This parameter is in invitational preview and unavailable for general users.</p>
+         * <p>This parameter is in invitational preview and is unavailable.</p>
          */
         @NameInMap("DirectoryType")
         public String directoryType;
@@ -495,19 +426,19 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public Long downgradeQuota;
 
         /**
-         * <p>The number of times for which the cloud desktop is downgraded.</p>
+         * <p>The number of times for which the cloud desktop has been downgraded.</p>
          */
         @NameInMap("DowngradedTimes")
         public Long downgradedTimes;
 
         /**
-         * <p>The IDs of the users that have the permissions to connect to the cloud desktops.</p>
+         * <p>The IDs of the end users that have the permissions to connect to the cloud desktops.</p>
          */
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
 
         /**
-         * <p>The time when the subscription cloud desktop expires.</p>
+         * <p>The time when the subscription cloud desktop expired.</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
@@ -537,16 +468,19 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public String gpuDriverVersion;
 
         /**
-         * <p>The GPU model.</p>
+         * <p>The GPU specifications.</p>
          */
         @NameInMap("GpuSpec")
         public String gpuSpec;
 
+        /**
+         * <p>> This parameter is in invitational preview and is not available for use.</p>
+         */
         @NameInMap("HibernationBeta")
         public Boolean hibernationBeta;
 
         /**
-         * <p>> This parameter is in invitational preview and is unavailable to the public.</p>
+         * <p>> This parameter is in invitational preview and is not available for use.</p>
          */
         @NameInMap("HibernationOptionsConfigured")
         public Boolean hibernationOptionsConfigured;
@@ -564,11 +498,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The flag that is used for management.</p>
+         * <p>The flag that is used to manage the cloud desktops.</p>
          */
         @NameInMap("ManagementFlag")
         public String managementFlag;
 
+        /**
+         * <p>The flag that is used to manage the cloud desktops.</p>
+         */
         @NameInMap("ManagementFlags")
         public java.util.List<String> managementFlags;
 
@@ -639,7 +576,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public String policyGroupId;
 
         /**
-         * <p>The IDs of the policies.</p>
+         * <p>The policies IDs.</p>
          */
         @NameInMap("PolicyGroupIdList")
         public java.util.List<String> policyGroupIdList;
@@ -651,7 +588,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public String policyGroupName;
 
         /**
-         * <p>The names of the policies.</p>
+         * <p>The policy names.</p>
          */
         @NameInMap("PolicyGroupNameList")
         public java.util.List<String> policyGroupNameList;
@@ -669,13 +606,19 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public String protocolType;
 
         /**
-         * <p>The type of the session.</p>
+         * <p>The session type.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>* **SINGLE_SESSION**</p>
+         * <br>
+         * <p>* **MULTIPLE_SESSION**</p>
          */
         @NameInMap("SessionType")
         public String sessionType;
 
         /**
-         * <p>Details of the desktop sessions that users hold.</p>
+         * <p>Details of the desktop sessions that end users hold.</p>
          */
         @NameInMap("Sessions")
         public java.util.List<DescribeDesktopsResponseBodyDesktopsSessions> sessions;
@@ -705,13 +648,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         public Boolean supportHibernation;
 
         /**
-         * <p>> This parameter is in invitational preview and is unavailable to the public.</p>
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
          */
         @NameInMap("SystemDiskCategory")
         public String systemDiskCategory;
 
         /**
-         * <p>> This parameter is in invitational preview and is unavailable to the public.</p>
+         * <p>> This parameter is in invitational preview and is unavailable.</p>
          */
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
@@ -815,14 +758,6 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public String getDataDiskSize() {
             return this.dataDiskSize;
-        }
-
-        public DescribeDesktopsResponseBodyDesktops setDesktopDurationList(java.util.List<DescribeDesktopsResponseBodyDesktopsDesktopDurationList> desktopDurationList) {
-            this.desktopDurationList = desktopDurationList;
-            return this;
-        }
-        public java.util.List<DescribeDesktopsResponseBodyDesktopsDesktopDurationList> getDesktopDurationList() {
-            return this.desktopDurationList;
         }
 
         public DescribeDesktopsResponseBodyDesktops setDesktopGroupId(String desktopGroupId) {

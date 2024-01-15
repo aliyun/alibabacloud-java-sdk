@@ -11,7 +11,27 @@ public class ModifyCdsFileResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The value true returned if the request is successful.</p>
+     * <p>Specifies whether data is returned.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   false: Data fails to be returned.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   true</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    : Data is returned.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("Data")
     public String data;
@@ -29,7 +49,25 @@ public class ModifyCdsFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values: true: The request is successful. false: The request failed.</p>
+     * <p>Indicates whether the request was successful.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   true: The request is successful.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   false: The request fails.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("Success")
     public Boolean success;

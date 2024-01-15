@@ -4,33 +4,66 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeUsersInGroupRequest extends TeaModel {
+    /**
+     * <p>The status of the desktop connection for the end user.</p>
+     */
     @NameInMap("ConnectState")
     public Integer connectState;
 
+    /**
+     * <p>The ID of the desktop group.</p>
+     */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
+    /**
+     * <p>The ID of the authorized user.</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <p>The IDs of the end users.</p>
+     */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
+    /**
+     * <p>The query string for fuzzy match. If you specify this parameter, the system returns all results that contain the string.</p>
+     */
     @NameInMap("Filter")
     public String filter;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>*   Maximum value: 100.</p>
+     * <p>*   Default value: 10.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the organization to which the end user belongs.</p>
+     */
     @NameInMap("OrgId")
     public String orgId;
 
+    /**
+     * <p>Specifies whether to query the details about the end user.</p>
+     */
     @NameInMap("QueryUserDetail")
     public Boolean queryUserDetail;
 
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The ID of the resource, which is the ID of the cloud desktop. Valid values of N: 1 to 50.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The ID of the resource, which is the ID of the cloud desktop.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The type of the resource. Set the value to ALIYUN::GWS::INSTANCE.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to ListTagResources.</p>
+     * <p>The resource IDs, namely the cloud desktop IDs. You can specify 1 to 50 IDs of cloud desktops.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The resource type. Valid value: ALIYUN::GWS::INSTANCE.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The region ID of the resource.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -95,13 +95,13 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The token used to start the next query.</p>
+         * <p>The tag key. You can specify 1 to 20 keys.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The key of tag N. Valid values of N: 1 to 20.</p>
+         * <p>The tag value. You can specify 1 to 20 values.</p>
          */
         @NameInMap("Value")
         public String value;

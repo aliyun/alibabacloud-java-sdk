@@ -4,18 +4,47 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class GetCoordinateTicketRequest extends TeaModel {
+    /**
+     * <p>The ID of the stream collaboration. You can obtain the value of this parameter based on the value of `Coid` that is returned by the `ApplyCoordinationForMonitoring` operation.</p>
+     */
     @NameInMap("CoId")
     public String coId;
 
+    /**
+     * <p>The name of the convenience user account. If you initiate the request as an administrator, you do not need to specify this parameter.</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <p>The region ID. You can call the [DescribeRegions](~~436773~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the cloud computer connection task. The first time you initiate the request, you do not need to specify the ID of the cloud computer connection task. If no ticket is returned after you initiate the first request, you must specify the value of taskId that is returned for the first request in the subsequent request.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>The type of the user.</p>
+     * <br>
+     * <p>Set the value to TENANT_ADMIN.</p>
+     * <br>
+     * <p>*   The value of</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    TENANT_ADMIN</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    specifies an administrator.</p>
+     */
     @NameInMap("UserType")
     public String userType;
 

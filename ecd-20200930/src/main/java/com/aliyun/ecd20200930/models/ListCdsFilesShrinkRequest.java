@@ -22,6 +22,9 @@ public class ListCdsFilesShrinkRequest extends TeaModel {
     @NameInMap("FileIds")
     public String fileIdsShrink;
 
+    @NameInMap("GroupId")
+    public String groupId;
+
     /**
      * <p>The number of entries to return on each page. Default value: 100.</p>
      */
@@ -209,6 +212,14 @@ public class ListCdsFilesShrinkRequest extends TeaModel {
     }
     public String getFileIdsShrink() {
         return this.fileIdsShrink;
+    }
+
+    public ListCdsFilesShrinkRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public ListCdsFilesShrinkRequest setMaxResults(Integer maxResults) {

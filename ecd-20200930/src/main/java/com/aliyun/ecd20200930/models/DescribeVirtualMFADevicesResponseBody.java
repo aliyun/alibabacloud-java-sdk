@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
     /**
-     * <p>The name of the AD user who uses the virtual MFA device.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.If NextToken is empty, no next page exists.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>Details of the virtual MFA devices.</p>
      */
     @NameInMap("VirtualMFADevices")
     public java.util.List<DescribeVirtualMFADevicesResponseBodyVirtualMFADevices> virtualMFADevices;
@@ -53,35 +53,37 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
 
     public static class DescribeVirtualMFADevicesResponseBodyVirtualMFADevices extends TeaModel {
         /**
-         * <p>The time when the virtual MFA device is automatically unlocked after being locked. The time follows the [ISO 8601 standard](~~25696~~) in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The number of consecutive failures to bind the virtual MFA device, or the number of failures on the verification of the virtual MFA device.</p>
          */
         @NameInMap("ConsecutiveFails")
         public Integer consecutiveFails;
 
+        /**
+         * <p>> This parameter is in invitational preview and is not publicly available.</p>
+         */
         @NameInMap("DirectoryId")
         public String directoryId;
 
         /**
-         * <p>The status of the virtual MFA device. The valid values include:</p>
-         * <br>
-         * <p>*   UNBOUND: The virtual MFA device is not bound.</p>
-         * <p>*   NORMAL: The virtual MFA device is normal.</p>
-         * <p>*   LOCKED: The virtual MFA device is locked.</p>
+         * <p>The name of the AD user who uses the virtual MFA device.</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
+        /**
+         * <p>The time when the virtual MFA device was started. The time follows the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("GmtEnabled")
         public String gmtEnabled;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The time when a locked virtual MFA device was automatically unlocked. The time follows the [ISO 8601](~~25696~~) standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("GmtUnlock")
         public String gmtUnlock;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of the workspace.</p>
          */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
@@ -93,7 +95,33 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
         public String serialNumber;
 
         /**
-         * <p>DescribeVirtualMFADevices</p>
+         * <p>The status of the virtual MFA device.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   LOCKED</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   UNBOUND</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   NORMAL</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("status")
         public String status;

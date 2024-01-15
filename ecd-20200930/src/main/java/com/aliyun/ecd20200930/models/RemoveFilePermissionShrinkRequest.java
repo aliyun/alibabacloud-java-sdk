@@ -23,6 +23,12 @@ public class RemoveFilePermissionShrinkRequest extends TeaModel {
     public String fileId;
 
     /**
+     * <p>The group ID.</p>
+     */
+    @NameInMap("GroupId")
+    public String groupId;
+
+    /**
      * <p>The users that you want to authorize.</p>
      */
     @NameInMap("MemberList")
@@ -61,6 +67,14 @@ public class RemoveFilePermissionShrinkRequest extends TeaModel {
     }
     public String getFileId() {
         return this.fileId;
+    }
+
+    public RemoveFilePermissionShrinkRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public RemoveFilePermissionShrinkRequest setMemberListShrink(String memberListShrink) {

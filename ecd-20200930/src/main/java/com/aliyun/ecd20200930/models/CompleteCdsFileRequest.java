@@ -22,6 +22,9 @@ public class CompleteCdsFileRequest extends TeaModel {
     @NameInMap("FileId")
     public String fileId;
 
+    @NameInMap("GroupId")
+    public String groupId;
+
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      */
@@ -61,6 +64,14 @@ public class CompleteCdsFileRequest extends TeaModel {
     }
     public String getFileId() {
         return this.fileId;
+    }
+
+    public CompleteCdsFileRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public CompleteCdsFileRequest setRegionId(String regionId) {

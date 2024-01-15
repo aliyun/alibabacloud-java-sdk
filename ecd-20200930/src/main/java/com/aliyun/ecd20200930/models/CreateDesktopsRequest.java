@@ -40,6 +40,9 @@ public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    @NameInMap("DesktopMemberIp")
+    public String desktopMemberIp;
+
     /**
      * <p>The name of the cloud desktop. The name must meet the following requirements:</p>
      * <br>
@@ -242,6 +245,14 @@ public class CreateDesktopsRequest extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    public CreateDesktopsRequest setDesktopMemberIp(String desktopMemberIp) {
+        this.desktopMemberIp = desktopMemberIp;
+        return this;
+    }
+    public String getDesktopMemberIp() {
+        return this.desktopMemberIp;
     }
 
     public CreateDesktopsRequest setDesktopName(String desktopName) {
@@ -644,19 +655,63 @@ public class CreateDesktopsRequest extends TeaModel {
 
     public static class CreateDesktopsRequestUserCommands extends TeaModel {
         /**
-         * <p>The content of the command.</p>
+         * <p>The command content.</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The encoding mode of the command content (CommandContent).</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Base64: encodes the command content in Base64.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   PlainText: does not encode the command content.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("ContentEncoding")
         public String contentEncoding;
 
         /**
-         * <p>The language type of the command.</p>
+         * <p>The command language.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   RunPowerShellScript: PowerShell command (applicable to Windows cloud desktops).</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   RunShellScript: shell command (applicable to Linux cloud desktops).</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   RunBatScript: batch command (applicable to Windows cloud desktops).</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("ContentType")
         public String contentType;

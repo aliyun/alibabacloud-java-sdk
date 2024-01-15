@@ -13,9 +13,41 @@ public class ModifyCloudDriveUsersRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The status of Cloud Drive Service users.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   disabled</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    unavailable</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   enabled</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    available</p>
+     * <br>
+     * <p>    <!-- --></p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The maximum storage space of a user. Unit: bytes.</p>
+     */
     @NameInMap("UserMaxSize")
     public Long userMaxSize;
 

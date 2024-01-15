@@ -11,13 +11,13 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The ID of the desktop group. If you specify the `DesktopId` parameter, ignore the `DesktopGroupId` parameter. If you do not specify the `DesktopId` parameter, specify the `DesktopGroupId` parameter in the call to request all IDs of the cloud desktops in the specified desktop group.``</p>
+     * <p>The ID of the desktop group. If you specify the `DesktopId` parameter, ignore the `DesktopGroupId` parameter. If you do not specify the `DesktopId` parameter, specify the `DesktopGroupId` parameter in the call to request all IDs of the cloud desktops in the specified desktop group.</p>
      */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
     /**
-     * <p>The IDs of the cloud desktops. You can specify 1 to 100 IDs of cloud desktops.</p>
+     * <p>The IDs of the cloud desktops. You can specify 1 to 100 cloud desktop IDs.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
@@ -29,36 +29,39 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String desktopName;
 
     /**
-     * <p>The state of the cloud desktop.</p>
+     * <p>The status of the cloud desktop.</p>
      */
     @NameInMap("DesktopStatus")
     public String desktopStatus;
 
+    /**
+     * <p>The list of desktop status.</p>
+     */
     @NameInMap("DesktopStatusList")
     public java.util.List<String> desktopStatusList;
 
     /**
-     * <p>The new desktop type. You can call the [DescribeDesktopTypes](~~188882~~) operation to query the IDs of supported desktop types.</p>
+     * <p>The new desktop type. You can call the [DescribeDesktopTypes](~~DescribeDesktopTypes~~) operation to query the IDs of supported desktop types.</p>
      */
     @NameInMap("DesktopType")
     public String desktopType;
 
     /**
-     * <p>The ID of the directory. The ID is the same as the workspace ID.</p>
+     * <p>The ID of the directory, The ID is the same as the workspace ID.</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
-     * <p>The IDs of the users that are assigned the cloud desktop. You can specify IDs of 1 to 100 users.</p>
+     * <p>The IDs of the end users that are assigned the cloud desktop. You can specify 1 to 100 end user IDs.</p>
      * <br>
-     * <p>> Only one user can use the cloud desktop at a time.</p>
+     * <p>> Only one end user can use the cloud desktop at a time.</p>
      */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
     /**
-     * <p>The IDs of the users that are excluded from the users that are assigned the cloud desktop. You can specify IDs of 1 to 100 users.</p>
+     * <p>The IDs of the end users that are excluded from the end users that are assigned the cloud desktop. You can specify 1 to 100 end user IDs.</p>
      */
     @NameInMap("ExcludedEndUserId")
     public java.util.List<String> excludedEndUserId;
@@ -77,27 +80,29 @@ public class DescribeDesktopsRequest extends TeaModel {
 
     /**
      * <p>The ID of the desktop group.</p>
+     * <br>
+     * <p>> The desktop group feature is in invitational preview. If you want to use this feature, submit a ticket.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>镜像ID列表。</p>
+     * <p>The IDs of the images.</p>
      */
     @NameInMap("ImageId")
     public java.util.List<String> imageId;
 
     /**
-     * <p>The flag that is used for management.</p>
+     * <p>The flag that is used to manage the cloud desktops.</p>
      */
     @NameInMap("ManagementFlag")
     public String managementFlag;
 
     /**
-     * <p>The maximum number of entries to return on each page.</p>
+     * <p>The number of entries to return on each page.</p>
      * <br>
-     * <p>*   Maximum value: 100</p>
-     * <p>*   Default value: 10</p>
+     * <p>*   Maximum value: 100.</p>
+     * <p>*   Default value: 10.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -121,7 +126,7 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String officeSiteName;
 
     /**
-     * <p>Specifies whether to query cloud desktops in the desktop group.</p>
+     * <p>The progress when the cloud desktop was created.</p>
      */
     @NameInMap("OnlyDesktopGroup")
     public Boolean onlyDesktopGroup;
@@ -145,31 +150,31 @@ public class DescribeDesktopsRequest extends TeaModel {
     public String protocolType;
 
     /**
-     * <p>Specifies whether to query the information about image version of the cloud desktop.</p>
+     * <p>Specifies whether to query the information about image update of the cloud desktop.</p>
      */
     @NameInMap("QueryFotaUpdate")
     public Boolean queryFotaUpdate;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the automatic snapshot policy.</p>
+     * <p>The ID of the snapshot policy.</p>
      */
     @NameInMap("SnapshotPolicyId")
     public String snapshotPolicyId;
 
     /**
-     * <p>The tags that you want to add. A tag is a key-value pair that consists of a tag key and a tag value. Tags are used to identify resources. You can use tags to manage cloud desktops by group for easy searching and batch operations. For more information, see [Use tags to manage cloud desktops](~~203781~~).</p>
+     * <p>The tags. A tag is a key-value pair that consists of a tag key and a tag value. Tags are used to identify resources. You can use tags to manage cloud desktops by group for easy searching and batch operations. For more information, see [Use tags to manage cloud desktops](~~203781~~).</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDesktopsRequestTag> tag;
 
     /**
-     * <p>The name of the user.</p>
+     * <p>The name of the end user.</p>
      */
     @NameInMap("UserName")
     public String userName;

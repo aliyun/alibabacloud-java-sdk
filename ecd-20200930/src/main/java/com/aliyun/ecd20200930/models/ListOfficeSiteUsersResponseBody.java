@@ -5,21 +5,20 @@ import com.aliyun.tea.*;
 
 public class ListOfficeSiteUsersResponseBody extends TeaModel {
     /**
-     * <p>The token that specifies the start point of the next query.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The usernames of AD users.</p>
-     * <br>
-     * <p>This parameter is empty if the AD users include only Administrator and Guest.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Queries the details about Active Directory (AD) users in an AD workspace after the workspace is connected to an AD domain.</p>
+     * <p>The usernames of AD users.\</p>
+     * <p>If the only Administrator and Guest users exist in the enterprise AD, an empty User array is returned.</p>
      */
     @NameInMap("Users")
     public java.util.List<ListOfficeSiteUsersResponseBodyUsers> users;
@@ -54,9 +53,15 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
     }
 
     public static class ListOfficeSiteUsersResponseBodyUsers extends TeaModel {
+        /**
+         * <p>The display name of the user.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The name of the AD user.</p>
+         */
         @NameInMap("EndUser")
         public String endUser;
 

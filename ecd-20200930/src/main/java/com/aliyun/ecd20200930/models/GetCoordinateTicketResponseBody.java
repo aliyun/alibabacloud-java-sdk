@@ -4,18 +4,59 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class GetCoordinateTicketResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the stream collaboration.</p>
+     */
     @NameInMap("CoId")
     public String coId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the cloud computer connection task.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>The task status.</p>
+     * <br>
+     * <p>Possible values:</p>
+     * <br>
+     * <p>*   Finished</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Failed</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Running</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     */
     @NameInMap("TaskStatus")
     public String taskStatus;
 
+    /**
+     * <p>The credentials of the stream collaboration.</p>
+     */
     @NameInMap("Ticket")
     public String ticket;
 

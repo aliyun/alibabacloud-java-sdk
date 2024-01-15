@@ -60,6 +60,9 @@ public class CopyCdsFileRequest extends TeaModel {
     @NameInMap("FileReceiverType")
     public String fileReceiverType;
 
+    @NameInMap("GroupId")
+    public String groupId;
+
     /**
      * <p>The ID of the parent folder of the folder to which you want to copy the file. If you want to copy the file to the root directory, set this parameter to root.</p>
      */
@@ -123,6 +126,14 @@ public class CopyCdsFileRequest extends TeaModel {
     }
     public String getFileReceiverType() {
         return this.fileReceiverType;
+    }
+
+    public CopyCdsFileRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public CopyCdsFileRequest setParentFolderId(String parentFolderId) {

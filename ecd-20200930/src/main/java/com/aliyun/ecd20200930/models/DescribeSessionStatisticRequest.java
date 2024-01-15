@@ -4,21 +4,42 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSessionStatisticRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The workspace ID.</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    /**
+     * <p>The query interval. Unit: seconds. Valid values:</p>
+     * <br>
+     * <p>*   60</p>
+     * <p>*   120</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Specifies to search for session information by region ID. This parameter is used to filter desktop information of a specific region.</p>
+     */
     @NameInMap("SearchRegionId")
     public String searchRegionId;
 
+    /**
+     * <p>The beginning of the time range to query.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

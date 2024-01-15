@@ -4,6 +4,12 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyNetworkPackageEnabledRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to restore or disable Internet access for the cloud desktop. Valid values:</p>
+     * <br>
+     * <p>*   true: restores Internet access.</p>
+     * <p>*   false: disables Internet access.</p>
+     */
     @NameInMap("Enabled")
     public Boolean enabled;
 
@@ -14,7 +20,7 @@ public class ModifyNetworkPackageEnabledRequest extends TeaModel {
     public String networkPackageId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to ModifyNetworkPackageEnabled.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

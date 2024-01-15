@@ -4,9 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ExportDesktopGroupInfoResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The download URL of the exported file that contains the monitoring data of sessions in the desktop group.</p>
+     */
     @NameInMap("Url")
     public String url;
 

@@ -22,6 +22,9 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("BundleModels")
     public java.util.List<DescribePriceRequestBundleModels> bundleModels;
 
+    @NameInMap("EduCdsEnable")
+    public String eduCdsEnable;
+
     @NameInMap("EduCdsSize")
     public Integer eduCdsSize;
 
@@ -97,6 +100,9 @@ public class DescribePriceRequest extends TeaModel {
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
+
+    @NameInMap("NetworkType")
+    public String networkType;
 
     /**
      * <p>The OS. Valid values:</p>
@@ -226,6 +232,14 @@ public class DescribePriceRequest extends TeaModel {
         return this.bundleModels;
     }
 
+    public DescribePriceRequest setEduCdsEnable(String eduCdsEnable) {
+        this.eduCdsEnable = eduCdsEnable;
+        return this;
+    }
+    public String getEduCdsEnable() {
+        return this.eduCdsEnable;
+    }
+
     public DescribePriceRequest setEduCdsSize(Integer eduCdsSize) {
         this.eduCdsSize = eduCdsSize;
         return this;
@@ -328,6 +342,14 @@ public class DescribePriceRequest extends TeaModel {
     }
     public String getInternetChargeType() {
         return this.internetChargeType;
+    }
+
+    public DescribePriceRequest setNetworkType(String networkType) {
+        this.networkType = networkType;
+        return this;
+    }
+    public String getNetworkType() {
+        return this.networkType;
     }
 
     public DescribePriceRequest setOsType(String osType) {

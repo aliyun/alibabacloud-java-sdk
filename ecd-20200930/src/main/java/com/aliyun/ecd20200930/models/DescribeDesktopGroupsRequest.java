@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopGroupsRequest extends TeaModel {
+    /**
+     * <p>The IDs of the desktop templates.</p>
+     */
     @NameInMap("BundleId")
     public java.util.List<String> bundleId;
 
@@ -31,6 +34,9 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     @NameInMap("ExcludedEndUserIds")
     public java.util.List<String> excludedEndUserIds;
 
+    /**
+     * <p>The IDs of the images.</p>
+     */
     @NameInMap("ImageId")
     public java.util.List<String> imageId;
 
