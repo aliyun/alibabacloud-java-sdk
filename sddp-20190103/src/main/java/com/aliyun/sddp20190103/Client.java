@@ -662,8 +662,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * You can call this operation to query the data in columns of a table that may contain sensitive data. This helps you analyze sensitive data.
-      * # Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * ## [](#)Precautions
+      * The DescribeColumns operation is changed to DescribeColumnsV2. We recommend that you call the DescribeColumnsV2 operation when you develop your applications.
+      * ## [](#qps)Limits
+      * Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request DescribeColumnsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -743,8 +745,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * You can call this operation to query the data in columns of a table that may contain sensitive data. This helps you analyze sensitive data.
-      * # Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * ## [](#)Precautions
+      * The DescribeColumns operation is changed to DescribeColumnsV2. We recommend that you call the DescribeColumnsV2 operation when you develop your applications.
+      * ## [](#qps)Limits
+      * Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request DescribeColumnsRequest
       * @return DescribeColumnsResponse
@@ -1623,6 +1627,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("UserName", request.userName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.warnLevel)) {
+            query.put("WarnLevel", request.warnLevel);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1830,9 +1838,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the details of an OSS object. This helps you locate sensitive data detected in OSS.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation to query the details of an Object Storage Service (OSS) object. This helps you locate sensitive data detected in OSS.
+      * ## [](#)Precautions
+      * The DescribeOssObjectDetail operation is chagned to DescribeOssObjectDetailV2. We recommend that you call the DescribeOssObjectDetailV2 operation when you develop your applications.
+      * ## [](#qps)Limits
+      * Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request DescribeOssObjectDetailRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1867,9 +1877,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the details of an OSS object. This helps you locate sensitive data detected in OSS.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation to query the details of an Object Storage Service (OSS) object. This helps you locate sensitive data detected in OSS.
+      * ## [](#)Precautions
+      * The DescribeOssObjectDetail operation is chagned to DescribeOssObjectDetailV2. We recommend that you call the DescribeOssObjectDetailV2 operation when you develop your applications.
+      * ## [](#qps)Limits
+      * Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request DescribeOssObjectDetailRequest
       * @return DescribeOssObjectDetailResponse

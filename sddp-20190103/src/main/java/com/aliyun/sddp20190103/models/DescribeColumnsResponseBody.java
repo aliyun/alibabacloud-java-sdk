@@ -11,7 +11,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>An array that consists of data in the column of the table.</p>
+     * <p>A list of columns.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeColumnsResponseBodyItems> items;
@@ -80,9 +80,23 @@ public class DescribeColumnsResponseBody extends TeaModel {
     }
 
     public static class DescribeColumnsResponseBodyItemsModelTags extends TeaModel {
+        /**
+         * <p>The tag ID.</p>
+         * <br>
+         * <p>*   **101**: sensitive personal information</p>
+         * <p>*   **102**: personal information</p>
+         * <p>*   **103**: important information</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The tag name.</p>
+         * <br>
+         * <p>*   Sensitive personal information</p>
+         * <p>*   Personal information</p>
+         * <p>*   Important information</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -111,7 +125,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
 
     public static class DescribeColumnsResponseBodyItems extends TeaModel {
         /**
-         * <p>The beginning of the time range during which data in the column of the table is created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the data in the column of the table is created. Unit: milliseconds.</p>
          */
         @NameInMap("CreationTime")
         public Long creationTime;
@@ -140,6 +154,9 @@ public class DescribeColumnsResponseBody extends TeaModel {
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>A list of tags for data that hits the recognition model.</p>
+         */
         @NameInMap("ModelTags")
         public java.util.List<DescribeColumnsResponseBodyItemsModelTags> modelTags;
 
@@ -150,9 +167,9 @@ public class DescribeColumnsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The name of the sensitivity level for data in the column of the table. Valid values:</p>
+         * <p>The name of the sensitivity level for asset. Valid values:</p>
          * <br>
-         * <p>*   **N/A**: No sensitive data is detected.</p>
+         * <p>*   **N/A**: indicates that no sensitive data is detected.</p>
          * <p>*   **S1**: indicates the low sensitivity level.</p>
          * <p>*   **S2**: indicates the medium sensitivity level.</p>
          * <p>*   **S3**: indicates the high sensitivity level.</p>
@@ -162,7 +179,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
         public String odpsRiskLevelName;
 
         /**
-         * <p>The ID of the sensitivity level for data in the column of the table. Valid values:</p>
+         * <p>The ID of the sensitivity level of the asset. Valid values:</p>
          * <br>
          * <p>*   **1**: N/A</p>
          * <p>*   **2**: S1</p>
@@ -209,7 +226,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
         /**
          * <p>The name of the sensitivity level for data in the column of the table. Valid values:</p>
          * <br>
-         * <p>*   **N/A**: No sensitive data is detected.</p>
+         * <p>*   **N/A**: indicates that no sensitive data is detected.</p>
          * <p>*   **S1**: indicates the low sensitivity level.</p>
          * <p>*   **S2**: indicates the medium sensitivity level.</p>
          * <p>*   **S3**: indicates the high sensitivity level.</p>
@@ -231,9 +248,9 @@ public class DescribeColumnsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The name of the sensitivity level of the data that hits the sensitive data detection rule. Valid values:</p>
+         * <p>The name of the sensitivity level. Valid values:</p>
          * <br>
-         * <p>*   **N/A**: No sensitive data is detected.</p>
+         * <p>*   **N/A**: indicates that no sensitive data is detected.</p>
          * <p>*   **S1**: indicates the low sensitivity level.</p>
          * <p>*   **S2**: indicates the medium sensitivity level.</p>
          * <p>*   **S3**: indicates the high sensitivity level.</p>
@@ -245,8 +262,8 @@ public class DescribeColumnsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the column contains sensitive data. Valid values:</p>
          * <br>
-         * <p>*   true: the column contains sensitive data.</p>
-         * <p>*   false: the column does not contain sensitive data.</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("Sensitive")
         public Boolean sensitive;

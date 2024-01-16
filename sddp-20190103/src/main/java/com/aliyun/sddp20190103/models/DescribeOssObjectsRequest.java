@@ -10,6 +10,9 @@ public class DescribeOssObjectsRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The code of the file type.</p>
+     */
     @NameInMap("FileCategoryCode")
     public Long fileCategoryCode;
 
