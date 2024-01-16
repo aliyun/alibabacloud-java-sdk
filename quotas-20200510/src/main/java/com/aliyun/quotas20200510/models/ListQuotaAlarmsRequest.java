@@ -11,7 +11,7 @@ public class ListQuotaAlarmsRequest extends TeaModel {
     public String alarmName;
 
     /**
-     * <p>The maximum number of records that can be returned for the query.</p>
+     * <p>The maximum number of records that you want to return for the query.</p>
      * <br>
      * <p>Valid values: 1 to 200. Default value: 30.</p>
      */

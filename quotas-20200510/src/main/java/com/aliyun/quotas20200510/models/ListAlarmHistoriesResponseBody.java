@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAlarmHistoriesResponseBody extends TeaModel {
     /**
-     * <p>The details of the alert records.</p>
+     * <p>The details of the quota alert records.</p>
      */
     @NameInMap("AlarmHistories")
     public java.util.List<ListAlarmHistoriesResponseBodyAlarmHistories> alarmHistories;
@@ -87,16 +87,19 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         public String alarmName;
 
         /**
-         * <p>The time when the quota alert was created.</p>
+         * <p>The time when the quota alert rule was created.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The notification methods of the quota alert.</p>
+         */
         @NameInMap("NotifyChannels")
         public java.util.List<String> notifyChannels;
 
         /**
-         * <p>The alert contact.</p>
+         * <p>The quota alert contact.</p>
          */
         @NameInMap("NotifyTarget")
         public String notifyTarget;
@@ -108,7 +111,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The ID of the quota.</p>
+         * <p>The quota ID.</p>
          */
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
@@ -120,13 +123,13 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         public Float quotaUsage;
 
         /**
-         * <p>The numeric value of the alert threshold.</p>
+         * <p>The threshold to trigger quota alerts.</p>
          */
         @NameInMap("Threshold")
         public Float threshold;
 
         /**
-         * <p>The percentage of the alert threshold.</p>
+         * <p>The percentage of the quota alert threshold.</p>
          */
         @NameInMap("ThresholdPercent")
         public Float thresholdPercent;

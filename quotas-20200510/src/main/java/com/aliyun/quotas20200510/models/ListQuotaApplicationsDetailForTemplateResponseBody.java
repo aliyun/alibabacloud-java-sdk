@@ -4,18 +4,33 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The maximum number of records that can be returned for the query.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that marks the position from which you want to start the query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The details of the quota increase application.</p>
+     */
     @NameInMap("QuotaApplications")
     public java.util.List<ListQuotaApplicationsDetailForTemplateResponseBodyQuotaApplications> quotaApplications;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of records that are returned for the query.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +80,15 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
     }
 
     public static class ListQuotaApplicationsDetailForTemplateResponseBodyQuotaApplicationsPeriod extends TeaModel {
+        /**
+         * <p>The unit of the calculation cycle of the quota.</p>
+         */
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
+        /**
+         * <p>The value of the calculation cycle of the quota.</p>
+         */
         @NameInMap("PeriodValue")
         public Integer periodValue;
 
@@ -95,69 +116,150 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
     }
 
     public static class ListQuotaApplicationsDetailForTemplateResponseBodyQuotaApplications extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         */
         @NameInMap("AliyunUid")
         public String aliyunUid;
 
+        /**
+         * <p>The ID of the quota increase application.</p>
+         */
         @NameInMap("ApplicationId")
         public String applicationId;
 
+        /**
+         * <p>The time when the quota increase application was submitted. The value is displayed in UTC.</p>
+         */
         @NameInMap("ApplyTime")
         public String applyTime;
 
+        /**
+         * <p>The quota value that is approved.</p>
+         */
         @NameInMap("ApproveValue")
         public Double approveValue;
 
+        /**
+         * <p>The approval result of the quota increase application.</p>
+         */
         @NameInMap("AuditReason")
         public String auditReason;
 
+        /**
+         * <p>The ID of the quota application batch.</p>
+         */
         @NameInMap("BatchQuotaApplicationId")
         public String batchQuotaApplicationId;
 
+        /**
+         * <p>The requested value of the quota.</p>
+         */
         @NameInMap("DesireValue")
         public Double desireValue;
 
+        /**
+         * <p>The start time of the validity period of the quota. The value is displayed in UTC.</p>
+         */
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
+        /**
+         * <p>The language of the quota alert notification. Valid values:</p>
+         * <br>
+         * <p>*   zh: Chinese</p>
+         * <p>*   en: English</p>
+         */
         @NameInMap("EnvLanguage")
         public String envLanguage;
 
+        /**
+         * <p>The end time of the validity period of the quota. The value is displayed in UTC.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>Indicates whether Quota Center sends a notification about the application result. Valid values:</p>
+         * <br>
+         * <p>*   0: no</p>
+         * <p>*   3: yes</p>
+         */
         @NameInMap("NoticeType")
         public Integer noticeType;
 
+        /**
+         * <p>The calculation cycle of the quota.</p>
+         */
         @NameInMap("Period")
         public ListQuotaApplicationsDetailForTemplateResponseBodyQuotaApplicationsPeriod period;
 
+        /**
+         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The quota ID.</p>
+         */
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
 
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the quota.</p>
+         */
         @NameInMap("QuotaArn")
         public String quotaArn;
 
+        /**
+         * <p>The quota type. Valid values:</p>
+         * <br>
+         * <p>*   CommonQuota (default): general quota</p>
+         * <p>*   WhiteListLabel: privilege</p>
+         * <p>*   FlowControl: API rate limit</p>
+         */
         @NameInMap("QuotaCategory")
         public String quotaCategory;
 
+        /**
+         * <p>The description of the quota.</p>
+         */
         @NameInMap("QuotaDescription")
         public String quotaDescription;
 
+        /**
+         * <p>The quota dimensions.</p>
+         */
         @NameInMap("QuotaDimension")
         public java.util.Map<String, String> quotaDimension;
 
+        /**
+         * <p>The quota name.</p>
+         */
         @NameInMap("QuotaName")
         public String quotaName;
 
+        /**
+         * <p>The unit of the quota.</p>
+         */
         @NameInMap("QuotaUnit")
         public String quotaUnit;
 
+        /**
+         * <p>The reason for the quota increase application.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <p>The approval status of the quota increase application. Valid values:</p>
+         * <br>
+         * <p>*   Disagree: The application is rejected.</p>
+         * <p>*   Agree: The application is approved.</p>
+         * <p>*   Process: The application is pending approval.</p>
+         * <p>*   Cancel: The application is canceled.</p>
+         */
         @NameInMap("Status")
         public String status;
 

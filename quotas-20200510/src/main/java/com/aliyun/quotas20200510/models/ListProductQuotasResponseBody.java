@@ -17,7 +17,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The details of the quotas.</p>
+     * <p>The queried quotas.</p>
      */
     @NameInMap("Quotas")
     public java.util.List<ListProductQuotasResponseBodyQuotas> quotas;
@@ -123,17 +123,15 @@ public class ListProductQuotasResponseBody extends TeaModel {
 
     public static class ListProductQuotasResponseBodyQuotasQuotaItems extends TeaModel {
         /**
-         * <p>The value of the quota.</p>
+         * <p>The quota value.</p>
          */
         @NameInMap("Quota")
         public String quota;
 
         /**
-         * <p>The unit of the new quota value.</p>
+         * <p>The unit of the quota.</p>
          * <br>
-         * <p>**</p>
-         * <br>
-         * <p>**The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of ACK clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.</p>
+         * <p>>  The unit of each quota is unique. For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.</p>
          */
         @NameInMap("QuotaUnit")
         public String quotaUnit;
@@ -148,7 +146,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The used quota.</p>
+         * <p>The quota usage.</p>
          */
         @NameInMap("Usage")
         public String usage;
@@ -203,7 +201,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
         public Boolean adjustable;
 
         /**
-         * <p>None</p>
+         * <p>None.</p>
          */
         @NameInMap("ApplicableRange")
         public java.util.List<Float> applicableRange;
@@ -217,6 +215,9 @@ public class ListProductQuotasResponseBody extends TeaModel {
         @NameInMap("ApplicableType")
         public String applicableType;
 
+        /**
+         * <p>The reason for submitting a quota increase request.</p>
+         */
         @NameInMap("ApplyReasonTips")
         public String applyReasonTips;
 
@@ -230,22 +231,31 @@ public class ListProductQuotasResponseBody extends TeaModel {
         public Boolean consumable;
 
         /**
-         * <p>The quota dimension. Format: `{"regionId":"Region"}`.</p>
+         * <p>The quota dimensions. Format: `{"regionId":"Region"}`.</p>
          */
         @NameInMap("Dimensions")
         public java.util.Map<String, ?> dimensions;
 
         /**
-         * <p>The start time of the validity period of the quota. Specify the value in UTC.</p>
+         * <p>The start time of the validity period of the quota. The value is displayed in UTC.</p>
          */
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
         /**
-         * <p>The end time of the validity period of the quota. Specify the value in UTC.</p>
+         * <p>The end time of the validity period of the quota. The value is displayed in UTC.</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
+
+        /**
+         * <p>Indicates whether the quota is a global quota. Valid values:</p>
+         * <br>
+         * <p>*   true: The quota is shared in all regions.</p>
+         * <p>*   false: The quota is independently used in a region.</p>
+         */
+        @NameInMap("GlobalQuota")
+        public Boolean globalQuota;
 
         /**
          * <p>The calculation cycle of the quota.</p>
@@ -260,7 +270,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The ID of the quota.</p>
+         * <p>The quota ID.</p>
          */
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
@@ -272,11 +282,11 @@ public class ListProductQuotasResponseBody extends TeaModel {
         public String quotaArn;
 
         /**
-         * <p>The type of the quota.</p>
+         * <p>The type of the quota. Valid values:</p>
          * <br>
          * <p>*   CommonQuota: general quota</p>
          * <p>*   FlowControl: API rate limit</p>
-         * <p>*   WhiteListLabel: whitelist quota</p>
+         * <p>*   WhiteListLabel: privilege</p>
          */
         @NameInMap("QuotaCategory")
         public String quotaCategory;
@@ -288,13 +298,13 @@ public class ListProductQuotasResponseBody extends TeaModel {
         public String quotaDescription;
 
         /**
-         * <p>The details of the quotas.</p>
+         * <p>The details of the quota.</p>
          */
         @NameInMap("QuotaItems")
         public java.util.List<ListProductQuotasResponseBodyQuotasQuotaItems> quotaItems;
 
         /**
-         * <p>The name of the quota.</p>
+         * <p>The quota name.</p>
          */
         @NameInMap("QuotaName")
         public String quotaName;
@@ -309,29 +319,27 @@ public class ListProductQuotasResponseBody extends TeaModel {
         public String quotaType;
 
         /**
-         * <p>The unit of the new quota value.</p>
+         * <p>The unit of the quota.</p>
          * <br>
-         * <p>**</p>
-         * <br>
-         * <p>**The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.</p>
+         * <p>>  The unit of each quota is unique. For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.</p>
          */
         @NameInMap("QuotaUnit")
         public String quotaUnit;
 
         /**
-         * <p>None</p>
+         * <p>None.</p>
          */
         @NameInMap("SupportedRange")
         public java.util.List<Float> supportedRange;
 
         /**
-         * <p>The value of the quota.</p>
+         * <p>The quota value.</p>
          */
         @NameInMap("TotalQuota")
         public Float totalQuota;
 
         /**
-         * <p>The used quota.</p>
+         * <p>The quota usage.</p>
          */
         @NameInMap("TotalUsage")
         public Float totalUsage;
@@ -413,6 +421,14 @@ public class ListProductQuotasResponseBody extends TeaModel {
         }
         public String getExpireTime() {
             return this.expireTime;
+        }
+
+        public ListProductQuotasResponseBodyQuotas setGlobalQuota(Boolean globalQuota) {
+            this.globalQuota = globalQuota;
+            return this;
+        }
+        public Boolean getGlobalQuota() {
+            return this.globalQuota;
         }
 
         public ListProductQuotasResponseBodyQuotas setPeriod(ListProductQuotasResponseBodyQuotasPeriod period) {

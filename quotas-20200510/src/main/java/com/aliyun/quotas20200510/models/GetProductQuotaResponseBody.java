@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetProductQuotaResponseBody extends TeaModel {
     /**
-     * <p>The details of the quotas.</p>
+     * <p>The details of the quota.</p>
      */
     @NameInMap("Quota")
     public GetProductQuotaResponseBodyQuota quota;
@@ -87,11 +87,9 @@ public class GetProductQuotaResponseBody extends TeaModel {
         public String quota;
 
         /**
-         * <p>The unit of the new quota value.</p>
+         * <p>The unit of the quota.</p>
          * <br>
-         * <p>**</p>
-         * <br>
-         * <p>**The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of ACK clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.</p>
+         * <p>>  The unit of each quota is unique. For example, the quota whose ID is `q_cbdch3` represents the maximum number of ACK clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.</p>
          */
         @NameInMap("QuotaUnit")
         public String quotaUnit;
@@ -99,8 +97,8 @@ public class GetProductQuotaResponseBody extends TeaModel {
         /**
          * <p>The category of the quota. Valid values:</p>
          * <br>
-         * <p>*   BaseQuota: base quota</p>
-         * <p>*   ReservedQuota: reserved quota</p>
+         * <p>*   BaseQuota: base quota.</p>
+         * <p>*   ReservedQuota: reserved quota.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -175,6 +173,9 @@ public class GetProductQuotaResponseBody extends TeaModel {
         @NameInMap("ApplicableType")
         public String applicableType;
 
+        /**
+         * <p>The reason for submitting a quota increase request.</p>
+         */
         @NameInMap("ApplyReasonTips")
         public String applyReasonTips;
 
@@ -204,6 +205,15 @@ public class GetProductQuotaResponseBody extends TeaModel {
          */
         @NameInMap("ExpireTime")
         public String expireTime;
+
+        /**
+         * <p>Indicates whether the quota is a global quota. Valid values:</p>
+         * <br>
+         * <p>*   true: The quota is shared in all regions.</p>
+         * <p>*   false: The quota is independently used in a region.</p>
+         */
+        @NameInMap("GlobalQuota")
+        public Boolean globalQuota;
 
         /**
          * <p>The calculation cycle of the quota.</p>
@@ -269,9 +279,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
         /**
          * <p>The unit of the new quota value.</p>
          * <br>
-         * <p>**</p>
-         * <br>
-         * <p>**The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.</p>
+         * <p>> The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.</p>
          */
         @NameInMap("QuotaUnit")
         public String quotaUnit;
@@ -372,6 +380,14 @@ public class GetProductQuotaResponseBody extends TeaModel {
         }
         public String getExpireTime() {
             return this.expireTime;
+        }
+
+        public GetProductQuotaResponseBodyQuota setGlobalQuota(Boolean globalQuota) {
+            this.globalQuota = globalQuota;
+            return this;
+        }
+        public Boolean getGlobalQuota() {
+            return this.globalQuota;
         }
 
         public GetProductQuotaResponseBodyQuota setPeriod(GetProductQuotaResponseBodyQuotaPeriod period) {

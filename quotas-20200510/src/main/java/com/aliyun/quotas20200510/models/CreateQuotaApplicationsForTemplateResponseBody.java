@@ -4,12 +4,27 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class CreateQuotaApplicationsForTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The Alibaba Cloud accounts for which the quotas are applied.</p>
+     */
     @NameInMap("AliyunUids")
     public java.util.List<String> aliyunUids;
 
+    /**
+     * <p>The ID of the quota application batch.</p>
+     */
     @NameInMap("BatchQuotaApplicationId")
     public String batchQuotaApplicationId;
 
+    /**
+     * <p>The Alibaba Cloud accounts of the members in a resource directory whose quota increase request is rejected, and the reason for the rejection.</p>
+     */
+    @NameInMap("FailResults")
+    public java.util.List<CreateQuotaApplicationsForTemplateResponseBodyFailResults> failResults;
+
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,12 +49,56 @@ public class CreateQuotaApplicationsForTemplateResponseBody extends TeaModel {
         return this.batchQuotaApplicationId;
     }
 
+    public CreateQuotaApplicationsForTemplateResponseBody setFailResults(java.util.List<CreateQuotaApplicationsForTemplateResponseBodyFailResults> failResults) {
+        this.failResults = failResults;
+        return this;
+    }
+    public java.util.List<CreateQuotaApplicationsForTemplateResponseBodyFailResults> getFailResults() {
+        return this.failResults;
+    }
+
     public CreateQuotaApplicationsForTemplateResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class CreateQuotaApplicationsForTemplateResponseBodyFailResults extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud account of the members in a resource directory whose quota increase request is rejected.</p>
+         */
+        @NameInMap("AliyunUid")
+        public String aliyunUid;
+
+        /**
+         * <p>The reason for the rejection.</p>
+         */
+        @NameInMap("Reason")
+        public String reason;
+
+        public static CreateQuotaApplicationsForTemplateResponseBodyFailResults build(java.util.Map<String, ?> map) throws Exception {
+            CreateQuotaApplicationsForTemplateResponseBodyFailResults self = new CreateQuotaApplicationsForTemplateResponseBodyFailResults();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateQuotaApplicationsForTemplateResponseBodyFailResults setAliyunUid(String aliyunUid) {
+            this.aliyunUid = aliyunUid;
+            return this;
+        }
+        public String getAliyunUid() {
+            return this.aliyunUid;
+        }
+
+        public CreateQuotaApplicationsForTemplateResponseBodyFailResults setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
+        }
+
     }
 
 }
