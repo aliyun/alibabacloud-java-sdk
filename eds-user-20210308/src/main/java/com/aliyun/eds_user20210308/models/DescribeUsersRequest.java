@@ -4,6 +4,9 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class DescribeUsersRequest extends TeaModel {
+    @NameInMap("BizType")
+    public String bizType;
+
     /**
      * <p>The list of usernames that must be exactly matched.</p>
      */
@@ -47,9 +50,20 @@ public class DescribeUsersRequest extends TeaModel {
     @NameInMap("OrgId")
     public String orgId;
 
+    @NameInMap("SolutionId")
+    public String solutionId;
+
     public static DescribeUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeUsersRequest self = new DescribeUsersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeUsersRequest setBizType(String bizType) {
+        this.bizType = bizType;
+        return this;
+    }
+    public String getBizType() {
+        return this.bizType;
     }
 
     public DescribeUsersRequest setEndUserIds(java.util.List<String> endUserIds) {
@@ -106,6 +120,14 @@ public class DescribeUsersRequest extends TeaModel {
     }
     public String getOrgId() {
         return this.orgId;
+    }
+
+    public DescribeUsersRequest setSolutionId(String solutionId) {
+        this.solutionId = solutionId;
+        return this;
+    }
+    public String getSolutionId() {
+        return this.solutionId;
     }
 
 }

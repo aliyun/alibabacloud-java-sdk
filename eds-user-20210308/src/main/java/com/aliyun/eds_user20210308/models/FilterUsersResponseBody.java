@@ -338,6 +338,9 @@ public class FilterUsersResponseBody extends TeaModel {
         @NameInMap("Phone")
         public String phone;
 
+        @NameInMap("RealNickName")
+        public String realNickName;
+
         /**
          * <p>The remarks.</p>
          */
@@ -457,6 +460,14 @@ public class FilterUsersResponseBody extends TeaModel {
         }
         public String getPhone() {
             return this.phone;
+        }
+
+        public FilterUsersResponseBodyUsers setRealNickName(String realNickName) {
+            this.realNickName = realNickName;
+            return this;
+        }
+        public String getRealNickName() {
+            return this.realNickName;
         }
 
         public FilterUsersResponseBodyUsers setRemark(String remark) {
