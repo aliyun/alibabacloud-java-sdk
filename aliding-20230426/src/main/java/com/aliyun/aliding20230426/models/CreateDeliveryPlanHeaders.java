@@ -32,20 +32,20 @@ public class CreateDeliveryPlanHeaders extends TeaModel {
     }
 
     public static class CreateDeliveryPlanHeadersAccountContext extends TeaModel {
-        @NameInMap("accountId")
-        public String accountId;
+        @NameInMap("userToken")
+        public String userToken;
 
         public static CreateDeliveryPlanHeadersAccountContext build(java.util.Map<String, ?> map) throws Exception {
             CreateDeliveryPlanHeadersAccountContext self = new CreateDeliveryPlanHeadersAccountContext();
             return TeaModel.build(map, self);
         }
 
-        public CreateDeliveryPlanHeadersAccountContext setAccountId(String accountId) {
-            this.accountId = accountId;
+        public CreateDeliveryPlanHeadersAccountContext setUserToken(String userToken) {
+            this.userToken = userToken;
             return this;
         }
-        public String getAccountId() {
-            return this.accountId;
+        public String getUserToken() {
+            return this.userToken;
         }
 
     }
