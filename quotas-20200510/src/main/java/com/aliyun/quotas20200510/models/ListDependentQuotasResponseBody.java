@@ -38,6 +38,9 @@ public class ListDependentQuotasResponseBody extends TeaModel {
     }
 
     public static class ListDependentQuotasResponseBodyQuotasDimensions extends TeaModel {
+        /**
+         * <p>The dimensions of the quotas on which the specified quota depends.</p>
+         */
         @NameInMap("DependentDimension")
         public java.util.List<String> dependentDimension;
 
@@ -47,6 +50,9 @@ public class ListDependentQuotasResponseBody extends TeaModel {
         @NameInMap("DimensionKey")
         public String dimensionKey;
 
+        /**
+         * <p>The dimension values.</p>
+         */
         @NameInMap("DimensionValues")
         public java.util.List<String> dimensionValues;
 

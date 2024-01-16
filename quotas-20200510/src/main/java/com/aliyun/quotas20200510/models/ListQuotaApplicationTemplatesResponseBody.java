@@ -19,7 +19,7 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The returned quota templates.</p>
+     * <p>The queried quota templates.</p>
      */
     @NameInMap("QuotaApplicationTemplates")
     public java.util.List<ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates> quotaApplicationTemplates;
@@ -125,7 +125,7 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
 
     public static class ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates extends TeaModel {
         /**
-         * <p>N/A</p>
+         * <p>None</p>
          */
         @NameInMap("ApplicableRange")
         public java.util.List<Float> applicableRange;
@@ -208,9 +208,10 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         public String quotaActionCode;
 
         /**
-         * <p>The type of the quota.</p>
+         * <p>The type of the quota. Valid values:</p>
          * <br>
          * <p>*   CommonQuota: general quota</p>
+         * <p>*   FlowControl: API rate limit</p>
          * <p>*   WhiteListLabel: privilege</p>
          */
         @NameInMap("QuotaCategory")

@@ -109,6 +109,9 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
         @NameInMap("ExceedThreshold")
         public Boolean exceedThreshold;
 
+        /**
+         * <p>The alert notification methods.</p>
+         */
         @NameInMap("NotifyChannels")
         public java.util.List<String> notifyChannels;
 

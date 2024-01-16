@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetQuotaAlarmResponseBody extends TeaModel {
     /**
-     * <p>The percentage of the alert threshold.</p>
+     * <p>The details of the quota alert rule.</p>
      */
     @NameInMap("QuotaAlarm")
     public GetQuotaAlarmResponseBodyQuotaAlarm quotaAlarm;
@@ -56,6 +56,9 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The alert notification methods.</p>
+         */
         @NameInMap("NotifyChannels")
         public java.util.List<String> notifyChannels;
 
@@ -65,6 +68,9 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
         @NameInMap("NotifyTarget")
         public String notifyTarget;
 
+        /**
+         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
@@ -113,6 +119,9 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
         @NameInMap("ThresholdType")
         public String thresholdType;
 
+        /**
+         * <p>The webhook URL. Quota Center sends alert notifications to the specified URL by using HTTP POST requests.</p>
+         */
         @NameInMap("Webhook")
         public String webhook;
 

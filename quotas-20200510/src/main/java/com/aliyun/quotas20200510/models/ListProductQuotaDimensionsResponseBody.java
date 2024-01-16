@@ -17,7 +17,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The information about quota dimensions.</p>
+     * <p>The quota dimensions.</p>
      */
     @NameInMap("QuotaDimensions")
     public java.util.List<ListProductQuotaDimensionsResponseBodyQuotaDimensions> quotaDimensions;
@@ -81,13 +81,13 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
 
     public static class ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail extends TeaModel {
         /**
-         * <p>The name of the quota dimension value.</p>
+         * <p>The name of the quota dimension.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The quota dimension value.</p>
+         * <p>The value of the quota dimension.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -116,6 +116,9 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
     }
 
     public static class ListProductQuotaDimensionsResponseBodyQuotaDimensions extends TeaModel {
+        /**
+         * <p>The quota dimensions on which the quota dimension that you want to query is dependent.</p>
+         */
         @NameInMap("DependentDimensions")
         public java.util.List<String> dependentDimensions;
 
@@ -131,11 +134,14 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         public String dimensionKey;
 
         /**
-         * <p>The details of the quota dimension value.</p>
+         * <p>The details about the dimension value.</p>
          */
         @NameInMap("DimensionValueDetail")
         public java.util.List<ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail> dimensionValueDetail;
 
+        /**
+         * <p>The dimension values.</p>
+         */
         @NameInMap("DimensionValues")
         public java.util.List<String> dimensionValues;
 

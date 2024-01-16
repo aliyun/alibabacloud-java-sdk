@@ -39,13 +39,13 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
 
     public static class GetProductQuotaDimensionResponseBodyQuotaDimensionDimensionValueDetail extends TeaModel {
         /**
-         * <p>The name of the quota dimension value.</p>
+         * <p>The name of the quota dimension.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The quota dimension value.</p>
+         * <p>The value of the quota dimension.</p>
          */
         @NameInMap("Value")
         public String value;
