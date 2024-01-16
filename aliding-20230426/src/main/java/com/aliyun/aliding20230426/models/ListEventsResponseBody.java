@@ -19,6 +19,12 @@ public class ListEventsResponseBody extends TeaModel {
     @NameInMap("syncToken")
     public String syncToken;
 
+    @NameInMap("vendorRequestId")
+    public String vendorRequestId;
+
+    @NameInMap("vendorType")
+    public String vendorType;
+
     public static ListEventsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListEventsResponseBody self = new ListEventsResponseBody();
         return TeaModel.build(map, self);
@@ -54,6 +60,22 @@ public class ListEventsResponseBody extends TeaModel {
     }
     public String getSyncToken() {
         return this.syncToken;
+    }
+
+    public ListEventsResponseBody setVendorRequestId(String vendorRequestId) {
+        this.vendorRequestId = vendorRequestId;
+        return this;
+    }
+    public String getVendorRequestId() {
+        return this.vendorRequestId;
+    }
+
+    public ListEventsResponseBody setVendorType(String vendorType) {
+        this.vendorType = vendorType;
+        return this;
+    }
+    public String getVendorType() {
+        return this.vendorType;
     }
 
     public static class ListEventsResponseBodyEventsAttendees extends TeaModel {
