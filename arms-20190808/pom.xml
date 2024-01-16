@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>arms20190808</artifactId>
-  <version>6.0.0</version>
+  <version>6.1.0</version>
   <packaging>jar</packaging>
   <name>arms20190808</name>
   <description>Alibaba Cloud Application Real-Time Monitoring Service (20190808) SDK for Java

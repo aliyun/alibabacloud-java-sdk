@@ -44,6 +44,15 @@ public class CreateEnvironmentRequest extends TeaModel {
     public String environmentType;
 
     /**
+     * <p>type of managed：</p>
+     * <p>- none： not managed. default value of prometheus for ACK.</p>
+     * <p>- agent：managed agent. default value of  promehtues for ASK/ACS/AckOne.</p>
+     * <p>- agent-exproter： maanged agent and exporter. default of prometheus for Cloud.</p>
+     */
+    @NameInMap("ManagedType")
+    public String managedType;
+
+    /**
      * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
@@ -104,6 +113,14 @@ public class CreateEnvironmentRequest extends TeaModel {
     }
     public String getEnvironmentType() {
         return this.environmentType;
+    }
+
+    public CreateEnvironmentRequest setManagedType(String managedType) {
+        this.managedType = managedType;
+        return this;
+    }
+    public String getManagedType() {
+        return this.managedType;
     }
 
     public CreateEnvironmentRequest setRegionId(String regionId) {

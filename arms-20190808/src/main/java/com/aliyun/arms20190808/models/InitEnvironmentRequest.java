@@ -16,6 +16,9 @@ public class InitEnvironmentRequest extends TeaModel {
     @NameInMap("EnvironmentId")
     public String environmentId;
 
+    @NameInMap("ManagedType")
+    public String managedType;
+
     /**
      * <p>The region ID.</p>
      */
@@ -41,6 +44,14 @@ public class InitEnvironmentRequest extends TeaModel {
     }
     public String getEnvironmentId() {
         return this.environmentId;
+    }
+
+    public InitEnvironmentRequest setManagedType(String managedType) {
+        this.managedType = managedType;
+        return this;
+    }
+    public String getManagedType() {
+        return this.managedType;
     }
 
     public InitEnvironmentRequest setRegionId(String regionId) {
