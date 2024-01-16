@@ -1249,6 +1249,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EnvironmentType", request.environmentType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.managedType)) {
+            query.put("ManagedType", request.managedType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -1281,6 +1285,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateEnvironmentResponse createEnvironment(CreateEnvironmentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createEnvironmentWithOptions(request, runtime);
+    }
+
+    public CreateGrafanaWorkspaceResponse createGrafanaWorkspaceWithOptions(CreateGrafanaWorkspaceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateGrafanaWorkspaceShrinkRequest request = new CreateGrafanaWorkspaceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aliyunLang)) {
+            query.put("AliyunLang", request.aliyunLang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.grafanaVersion)) {
+            query.put("GrafanaVersion", request.grafanaVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.grafanaWorkspaceEdition)) {
+            query.put("GrafanaWorkspaceEdition", request.grafanaWorkspaceEdition);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.grafanaWorkspaceName)) {
+            query.put("GrafanaWorkspaceName", request.grafanaWorkspaceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            query.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("Tags", request.tagsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateGrafanaWorkspace"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateGrafanaWorkspaceResponse());
+    }
+
+    public CreateGrafanaWorkspaceResponse createGrafanaWorkspace(CreateGrafanaWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createGrafanaWorkspaceWithOptions(request, runtime);
     }
 
     public CreateIntegrationResponse createIntegrationWithOptions(CreateIntegrationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3000,6 +3071,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteGrafanaResourceWithOptions(request, runtime);
     }
 
+    public DeleteGrafanaWorkspaceResponse deleteGrafanaWorkspaceWithOptions(DeleteGrafanaWorkspaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.grafanaWorkspaceId)) {
+            query.put("GrafanaWorkspaceId", request.grafanaWorkspaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteGrafanaWorkspace"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteGrafanaWorkspaceResponse());
+    }
+
+    public DeleteGrafanaWorkspaceResponse deleteGrafanaWorkspace(DeleteGrafanaWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteGrafanaWorkspaceWithOptions(request, runtime);
+    }
+
     public DeleteIMRobotResponse deleteIMRobotWithOptions(DeleteIMRobotRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4476,6 +4580,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getExploreUrlWithOptions(request, runtime);
     }
 
+    public GetGrafanaWorkspaceResponse getGrafanaWorkspaceWithOptions(GetGrafanaWorkspaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aliyunLang)) {
+            query.put("AliyunLang", request.aliyunLang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.grafanaWorkspaceId)) {
+            query.put("GrafanaWorkspaceId", request.grafanaWorkspaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetGrafanaWorkspace"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGrafanaWorkspaceResponse());
+    }
+
+    public GetGrafanaWorkspaceResponse getGrafanaWorkspace(GetGrafanaWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getGrafanaWorkspaceWithOptions(request, runtime);
+    }
+
     public GetIntegrationStateResponse getIntegrationStateWithOptions(GetIntegrationStateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5459,6 +5600,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.environmentId)) {
             query.put("EnvironmentId", request.environmentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.managedType)) {
+            query.put("ManagedType", request.managedType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -9332,6 +9477,92 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateEnvironmentResponse updateEnvironment(UpdateEnvironmentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateEnvironmentWithOptions(request, runtime);
+    }
+
+    public UpdateGrafanaWorkspaceResponse updateGrafanaWorkspaceWithOptions(UpdateGrafanaWorkspaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aliyunLang)) {
+            query.put("AliyunLang", request.aliyunLang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.grafanaWorkspaceId)) {
+            query.put("GrafanaWorkspaceId", request.grafanaWorkspaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.grafanaWorkspaceName)) {
+            query.put("GrafanaWorkspaceName", request.grafanaWorkspaceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateGrafanaWorkspace"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateGrafanaWorkspaceResponse());
+    }
+
+    public UpdateGrafanaWorkspaceResponse updateGrafanaWorkspace(UpdateGrafanaWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateGrafanaWorkspaceWithOptions(request, runtime);
+    }
+
+    public UpdateGrafanaWorkspaceVersionResponse updateGrafanaWorkspaceVersionWithOptions(UpdateGrafanaWorkspaceVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aliyunLang)) {
+            query.put("AliyunLang", request.aliyunLang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.grafanaVersion)) {
+            query.put("GrafanaVersion", request.grafanaVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.grafanaWorkspaceId)) {
+            query.put("GrafanaWorkspaceId", request.grafanaWorkspaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateGrafanaWorkspaceVersion"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateGrafanaWorkspaceVersionResponse());
+    }
+
+    public UpdateGrafanaWorkspaceVersionResponse updateGrafanaWorkspaceVersion(UpdateGrafanaWorkspaceVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateGrafanaWorkspaceVersionWithOptions(request, runtime);
     }
 
     public UpdateIntegrationResponse updateIntegrationWithOptions(UpdateIntegrationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
