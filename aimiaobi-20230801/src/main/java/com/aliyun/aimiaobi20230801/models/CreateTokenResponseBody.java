@@ -11,7 +11,7 @@ public class CreateTokenResponseBody extends TeaModel {
     public CreateTokenResponseBodyData data;
 
     @NameInMap("HttpStatusCode")
-    public String httpStatusCode;
+    public Integer httpStatusCode;
 
     @NameInMap("Message")
     public String message;
@@ -43,11 +43,11 @@ public class CreateTokenResponseBody extends TeaModel {
         return this.data;
     }
 
-    public CreateTokenResponseBody setHttpStatusCode(String httpStatusCode) {
+    public CreateTokenResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
-    public String getHttpStatusCode() {
+    public Integer getHttpStatusCode() {
         return this.httpStatusCode;
     }
 
