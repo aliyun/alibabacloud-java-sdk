@@ -56,6 +56,9 @@ public class CreateUsersResponseBody extends TeaModel {
         @NameInMap("Phone")
         public String phone;
 
+        @NameInMap("RealNickName")
+        public String realNickName;
+
         /**
          * <p>The remarks of the end user.</p>
          */
@@ -89,6 +92,14 @@ public class CreateUsersResponseBody extends TeaModel {
         }
         public String getPhone() {
             return this.phone;
+        }
+
+        public CreateUsersResponseBodyCreateResultCreatedUsers setRealNickName(String realNickName) {
+            this.realNickName = realNickName;
+            return this;
+        }
+        public String getRealNickName() {
+            return this.realNickName;
         }
 
         public CreateUsersResponseBodyCreateResultCreatedUsers setRemark(String remark) {

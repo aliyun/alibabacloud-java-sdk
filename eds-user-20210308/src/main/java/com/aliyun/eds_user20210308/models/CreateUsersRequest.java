@@ -85,6 +85,9 @@ public class CreateUsersRequest extends TeaModel {
         @NameInMap("Phone")
         public String phone;
 
+        @NameInMap("RealNickName")
+        public String realNickName;
+
         /**
          * <p>The remarks of the end user.</p>
          */
@@ -142,6 +145,14 @@ public class CreateUsersRequest extends TeaModel {
         }
         public String getPhone() {
             return this.phone;
+        }
+
+        public CreateUsersRequestUsers setRealNickName(String realNickName) {
+            this.realNickName = realNickName;
+            return this;
+        }
+        public String getRealNickName() {
+            return this.realNickName;
         }
 
         public CreateUsersRequestUsers setRemark(String remark) {
