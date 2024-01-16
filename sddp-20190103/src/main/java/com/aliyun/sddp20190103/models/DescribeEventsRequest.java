@@ -107,6 +107,9 @@ public class DescribeEventsRequest extends TeaModel {
     @NameInMap("UserName")
     public String userName;
 
+    @NameInMap("WarnLevel")
+    public Integer warnLevel;
+
     public static DescribeEventsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEventsRequest self = new DescribeEventsRequest();
         return TeaModel.build(map, self);
@@ -230,6 +233,14 @@ public class DescribeEventsRequest extends TeaModel {
     }
     public String getUserName() {
         return this.userName;
+    }
+
+    public DescribeEventsRequest setWarnLevel(Integer warnLevel) {
+        this.warnLevel = warnLevel;
+        return this;
+    }
+    public Integer getWarnLevel() {
+        return this.warnLevel;
     }
 
 }

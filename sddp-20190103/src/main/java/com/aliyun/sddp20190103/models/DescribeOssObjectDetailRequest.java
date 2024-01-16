@@ -7,7 +7,7 @@ public class DescribeOssObjectDetailRequest extends TeaModel {
     /**
      * <p>The ID of the OSS object.</p>
      * <br>
-     * <p>> You can call the **DescribeOssObjects** operation to obtain the ID of the OSS object.</p>
+     * <p>>  You can call the [DescribeOssObjects](~~410152~~) operation to obtain the ID of the OSS object.</p>
      */
     @NameInMap("Id")
     public Long id;

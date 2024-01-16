@@ -11,7 +11,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>An array that consists of the OSS objects.</p>
+     * <p>A list of OSS objects.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeOssObjectsResponseBodyItems> items;
@@ -93,7 +93,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The sensitivity level of the OSS object. Valid values:</p>
+         * <p>The ID of the sensitivity level of the OSS object. Valid values:</p>
          * <br>
          * <p>*   **1**: N/A, which indicates that no sensitive data is detected.</p>
          * <p>*   **2**: S1, which indicates the low sensitivity level.</p>
@@ -137,26 +137,32 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
 
     public static class DescribeOssObjectsResponseBodyItems extends TeaModel {
         /**
-         * <p>The name of the OSS bucket.</p>
+         * <p>The name of the bucket.</p>
          */
         @NameInMap("BucketName")
         public String bucketName;
 
         /**
-         * <p>The type ID of the OSS object. Valid values include **900001**, **800015**, or **800005**, which indicates the MP4 file, PDF file, or OSS configuration file, respectively.</p>
+         * <p>The type of the OSS object. Valid values include **900001**, **800015**, or **800005**, which indicates the MP4 file, PDF file, or OSS configuration file, respectively.</p>
          */
         @NameInMap("Category")
         public Long category;
 
         /**
-         * <p>The file type of the OSS object.</p>
+         * <p>The name of the file type.</p>
          */
         @NameInMap("CategoryName")
         public String categoryName;
 
+        /**
+         * <p>The code of the file type.</p>
+         */
         @NameInMap("FileCategoryCode")
         public Long fileCategoryCode;
 
+        /**
+         * <p>The name of the file type.</p>
+         */
         @NameInMap("FileCategoryName")
         public String fileCategoryName;
 
@@ -191,7 +197,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The sensitivity level of the OSS object. Valid values:</p>
+         * <p>The ID of the sensitivity level of the OSS object. Valid values:</p>
          * <br>
          * <p>*   **1**: N/A, which indicates that no sensitive data is detected.</p>
          * <p>*   **2**: S1, which indicates the low sensitivity level.</p>
@@ -215,7 +221,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         public Integer ruleCount;
 
         /**
-         * <p>An array that consists of the rules.</p>
+         * <p>A list of rules.</p>
          */
         @NameInMap("RuleList")
         public java.util.List<DescribeOssObjectsResponseBodyItemsRuleList> ruleList;

@@ -38,9 +38,23 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeOssObjectDetailResponseBodyOssObjectDetailRuleListModelTags extends TeaModel {
+        /**
+         * <p>The tag ID.</p>
+         * <br>
+         * <p>*   **101**: sensitive personal information</p>
+         * <p>*   **102**: personal information</p>
+         * <p>*   **103**: important information</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The tag name.</p>
+         * <br>
+         * <p>*   Sensitive personal information</p>
+         * <p>*   Personal information</p>
+         * <p>*   Important information</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -80,11 +94,14 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>A list of tags for data that hits the recognition model.</p>
+         */
         @NameInMap("ModelTags")
         public java.util.List<DescribeOssObjectDetailResponseBodyOssObjectDetailRuleListModelTags> modelTags;
 
         /**
-         * <p>The sensitivity level of the OSS object.</p>
+         * <p>The ID of the sensitivity level of the OSS object.</p>
          * <br>
          * <p>*   **1**: No sensitive data is detected.</p>
          * <p>*   **2**: indicates the low sensitivity level.</p>
@@ -194,7 +211,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         public String riskLevelName;
 
         /**
-         * <p>An array consisting of the sensitive data detection rules that the OSS object hits.</p>
+         * <p>A list of the sensitive data detection rules that the OSS object hits.</p>
          */
         @NameInMap("RuleList")
         public java.util.List<DescribeOssObjectDetailResponseBodyOssObjectDetailRuleList> ruleList;

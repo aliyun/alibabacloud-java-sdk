@@ -101,6 +101,9 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         @NameInMap("InstanceNum")
         public Integer instanceNum;
 
+        /**
+         * <p>The total number of instances.</p>
+         */
         @NameInMap("InstanceTotalCount")
         public Long instanceTotalCount;
 
@@ -113,9 +116,15 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         @NameInMap("LabStatus")
         public Integer labStatus;
 
+        /**
+         * <p>OSS total storage capacity. Unit: Bytes.</p>
+         */
         @NameInMap("OssTotalSize")
         public Long ossTotalSize;
 
+        /**
+         * <p>Accumulate the number of days to protect user assets.</p>
+         */
         @NameInMap("ProtectionDays")
         public Integer protectionDays;
 
@@ -155,6 +164,12 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         @NameInMap("Trail")
         public Boolean trail;
 
+        /**
+         * <p>Indicates whether the agent audit feature is used. Valid values:</p>
+         * <br>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
+         */
         @NameInMap("UseAgentAudit")
         public Boolean useAgentAudit;
 
