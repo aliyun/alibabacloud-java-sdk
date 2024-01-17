@@ -1489,7 +1489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that the batch tasks have been executed.
+      * **Before you call this operation, make sure that the batch operation task is complete.
       *
       * @param request DescribeBatchResultDetailRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1540,7 +1540,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that the batch tasks have been executed.
+      * **Before you call this operation, make sure that the batch operation task is complete.
       *
       * @param request DescribeBatchResultDetailRequest
       * @return DescribeBatchResultDetailResponse
@@ -2701,7 +2701,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the domain name is bound to an Alibaba Cloud DNS instance of Enterprise Ultimate Edition. For more information about valid lines, see the return values of the RecordLines parameter.
+      * In this example, the domain name is bound to an instance of Alibaba Cloud DNS Enterprise Ultimate Edition. For more information about valid Domain Name System (DNS) request lines, see the return values of the RecordLines parameter.
       *
       * @param request DescribeDomainInfoRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2740,7 +2740,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the domain name is bound to an Alibaba Cloud DNS instance of Enterprise Ultimate Edition. For more information about valid lines, see the return values of the RecordLines parameter.
+      * In this example, the domain name is bound to an instance of Alibaba Cloud DNS Enterprise Ultimate Edition. For more information about valid Domain Name System (DNS) request lines, see the return values of the RecordLines parameter.
       *
       * @param request DescribeDomainInfoRequest
       * @return DescribeDomainInfoResponse
@@ -2808,7 +2808,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > This operation queries the authoritative servers of a domain name registry to obtain the name servers for a domain name. If the domain name is in an invalid state, such as serverHold or clientHold, an error may be returned.
+      * >  You can call this operation to query the authoritative servers of a domain name registry to obtain the name servers for a domain name. If the domain name is in an invalid state, such as serverHold or clientHold, an error may be returned.
       *
       * @param request DescribeDomainNsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2843,7 +2843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > This operation queries the authoritative servers of a domain name registry to obtain the name servers for a domain name. If the domain name is in an invalid state, such as serverHold or clientHold, an error may be returned.
+      * >  You can call this operation to query the authoritative servers of a domain name registry to obtain the name servers for a domain name. If the domain name is in an invalid state, such as serverHold or clientHold, an error may be returned.
       *
       * @param request DescribeDomainNsRequest
       * @return DescribeDomainNsResponse
@@ -2853,6 +2853,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDomainNsWithOptions(request, runtime);
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Alidns\\&api=DescribeDomainRecordInfo\\&type=RPC\\&version=2015-01-09)
+      *
+      * @param request DescribeDomainRecordInfoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDomainRecordInfoResponse
+     */
     public DescribeDomainRecordInfoResponse describeDomainRecordInfoWithOptions(DescribeDomainRecordInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2885,15 +2893,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDomainRecordInfoResponse());
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Alidns\\&api=DescribeDomainRecordInfo\\&type=RPC\\&version=2015-01-09)
+      *
+      * @param request DescribeDomainRecordInfoRequest
+      * @return DescribeDomainRecordInfoResponse
+     */
     public DescribeDomainRecordInfoResponse describeDomainRecordInfo(DescribeDomainRecordInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDomainRecordInfoWithOptions(request, runtime);
     }
 
     /**
-      * *   You can specify the DomainName, PageNumber, and PageSize parameters to query the DNS records of a domain name.
-      * *   You can also specify the RRKeyWord, TypeKeyWord, or ValueKeyWord parameter to query the DNS records that contain the specified keyword.
+      * *   You can specify DomainName, PageNumber, and PageSize to query the DNS records of the specified domain names.
+      * *   You can also specify RRKeyWord, TypeKeyWord, or ValueKeyWord to query the DNS records that contain the specified keyword.
       * *   By default, the DNS records are sorted in reverse chronological order based on the time when they were added.
+      * *   You can specify GroupId to query the DNS records of the specified domain names based on the group ID. You can query the DNS records of all domain names and the domain names in the default group.
       *
       * @param request DescribeDomainRecordsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2980,9 +2996,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can specify the DomainName, PageNumber, and PageSize parameters to query the DNS records of a domain name.
-      * *   You can also specify the RRKeyWord, TypeKeyWord, or ValueKeyWord parameter to query the DNS records that contain the specified keyword.
+      * *   You can specify DomainName, PageNumber, and PageSize to query the DNS records of the specified domain names.
+      * *   You can also specify RRKeyWord, TypeKeyWord, or ValueKeyWord to query the DNS records that contain the specified keyword.
       * *   By default, the DNS records are sorted in reverse chronological order based on the time when they were added.
+      * *   You can specify GroupId to query the DNS records of the specified domain names based on the group ID. You can query the DNS records of all domain names and the domain names in the default group.
       *
       * @param request DescribeDomainRecordsRequest
       * @return DescribeDomainRecordsResponse

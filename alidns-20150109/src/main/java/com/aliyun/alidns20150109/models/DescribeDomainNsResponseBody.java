@@ -11,7 +11,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
     public Boolean allAliDns;
 
     /**
-     * <p>检测失败原因编码</p>
+     * <p>The cause code of the detection failure.</p>
      */
     @NameInMap("DetectFailedReasonCode")
     public String detectFailedReasonCode;
@@ -23,7 +23,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
     public DescribeDomainNsResponseBodyDnsServers dnsServers;
 
     /**
-     * <p>The DNS server names assigned by Alibaba Cloud DNS.</p>
+     * <p>The Domain Name System (DNS) server names assigned by Alibaba Cloud DNS.</p>
      */
     @NameInMap("ExpectDnsServers")
     public DescribeDomainNsResponseBodyExpectDnsServers expectDnsServers;

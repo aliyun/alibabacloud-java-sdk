@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeRecordLogsResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The list of the operation logs of the domain name.</p>
+     * <p>The operation logs.</p>
      */
     @NameInMap("RecordLogs")
     public DescribeRecordLogsResponseBodyRecordLogs recordLogs;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of operation logs.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -87,13 +87,13 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>The time when the operation was performed.</p>
+         * <p>The time when you performed the operation.</p>
          */
         @NameInMap("ActionTime")
         public String actionTime;
 
         /**
-         * <p>The UNIX timestamp representing the time of the operation.</p>
+         * <p>The time when you performed the operation. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("ActionTimestamp")
         public Long actionTimestamp;
@@ -105,7 +105,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         public String clientIp;
 
         /**
-         * <p>The returned operation message.</p>
+         * <p>The operation message.</p>
          */
         @NameInMap("Message")
         public String message;

@@ -64,6 +64,9 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
     @NameInMap("RecordId")
     public String recordId;
 
+    /**
+     * <p>The remark of the DNS record.</p>
+     */
     @NameInMap("Remark")
     public String remark;
 

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of query volume records.</p>
+     * <p>The DNS requests.</p>
      */
     @NameInMap("Statistics")
     public DescribeDomainStatisticsResponseBodyStatistics statistics;
@@ -39,13 +39,13 @@ public class DescribeDomainStatisticsResponseBody extends TeaModel {
 
     public static class DescribeDomainStatisticsResponseBodyStatisticsStatistic extends TeaModel {
         /**
-         * <p>The number of queries.</p>
+         * <p>The number of DNS requests.</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
-         * <p>The UNIX timestamp representing the collection time.</p>
+         * <p>The statistical timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("Timestamp")
         public Long timestamp;

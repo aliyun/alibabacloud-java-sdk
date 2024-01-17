@@ -172,6 +172,9 @@ public class DescribeDomainsResponseBody extends TeaModel {
         @NameInMap("DomainId")
         public String domainId;
 
+        @NameInMap("DomainLoggingSwitchStatus")
+        public String domainLoggingSwitchStatus;
+
         /**
          * <p>The domain name.</p>
          */
@@ -299,6 +302,14 @@ public class DescribeDomainsResponseBody extends TeaModel {
         }
         public String getDomainId() {
             return this.domainId;
+        }
+
+        public DescribeDomainsResponseBodyDomainsDomain setDomainLoggingSwitchStatus(String domainLoggingSwitchStatus) {
+            this.domainLoggingSwitchStatus = domainLoggingSwitchStatus;
+            return this;
+        }
+        public String getDomainLoggingSwitchStatus() {
+            return this.domainLoggingSwitchStatus;
         }
 
         public DescribeDomainsResponseBodyDomainsDomain setDomainName(String domainName) {

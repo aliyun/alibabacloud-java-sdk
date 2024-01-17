@@ -10,13 +10,19 @@ public class DescribeRecordStatisticsSummaryRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The type of the domain name. The parameter value is not case-sensitive. Valid values:</p>
+     * <br>
+     * <p>*   PUBLIC (default): hosted public domain name</p>
+     * <p>*   CACHE: cache-accelerated domain name</p>
+     */
     @NameInMap("DomainType")
     public String domainType;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the **YYYY-MM-DD** format.</p>
+     * <p>The end date of the query. Specify the start date in the **YYYY-MM-DD** format.</p>
      * <br>
-     * <p>The default value is the day when you perform the operation.</p>
+     * <p>The default value is the day when you query the data.</p>
      */
     @NameInMap("EndDate")
     public String endDate;
@@ -28,19 +34,19 @@ public class DescribeRecordStatisticsSummaryRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The language type.</p>
+     * <p>The language.</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **100**. Minimum value: **1**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: **1 to 100**. Default value: **20**.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -48,22 +54,22 @@ public class DescribeRecordStatisticsSummaryRequest extends TeaModel {
     /**
      * <p>The search mode of the keyword. Valid values:</p>
      * <br>
-     * <p>*   **LIKE**: fuzzy match (default).</p>
-     * <p>*   **EXACT**: exact match.</p>
+     * <p>*   **LIKE** (default): fuzzy search</p>
+     * <p>*   **EXACT**: exact search</p>
      */
     @NameInMap("SearchMode")
     public String searchMode;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the **YYYY-MM-DD** format.</p>
+     * <p>The start date of the query. Specify the start date in the **YYYY-MM-DD** format.</p>
      * <br>
-     * <p>You can only query DNS records of the last 90 days.</p>
+     * <p>You can only query the DNS records within the last 90 days.``</p>
      */
     @NameInMap("StartDate")
     public String startDate;
 
     /**
-     * <p>The threshold of query volume that can be obtained. You can also obtain data about a domain name with the query volume less than or equal to the threshold. For example, if you set this parameter to 100, you can query domain names with less than 100 queries.</p>
+     * <p>The maximum number of DNS requests that you can obtain. You can obtain data about a domain name with DNS request volume less than or equal to the maximum number. For example, if you set this parameter to 100, you can query domain names with less than 100 DNS requests.</p>
      */
     @NameInMap("Threshold")
     public Long threshold;

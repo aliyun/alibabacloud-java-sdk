@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainRecordsResponseBody extends TeaModel {
     /**
-     * <p>The DNS records returned.</p>
+     * <p>The returned DNS records.</p>
      */
     @NameInMap("DomainRecords")
     public DescribeDomainRecordsResponseBodyDomainRecords domainRecords;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of DNS records.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -84,13 +84,13 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The domain name to which the DNS record belongs.</p>
+         * <p>The domain name.</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
-         * <p>The line that is used by the DNS record.</p>
+         * <p>The resolution line.</p>
          */
         @NameInMap("Line")
         public String line;
@@ -102,13 +102,13 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         public Boolean locked;
 
         /**
-         * <p>The priority of the MX record.</p>
+         * <p>The priority of the mail exchanger (MX) record.</p>
          */
         @NameInMap("Priority")
         public Long priority;
 
         /**
-         * <p>The RR value.</p>
+         * <p>The hostname.</p>
          */
         @NameInMap("RR")
         public String RR;
@@ -120,7 +120,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         public String recordId;
 
         /**
-         * <p>The description of the DNS record.</p>
+         * <p>The description.</p>
          */
         @NameInMap("Remark")
         public String remark;
@@ -132,7 +132,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time-to-live (TTL) of the DNS record.</p>
+         * <p>The time-to-live (TTL) of the cached data. Unit: seconds.</p>
          */
         @NameInMap("TTL")
         public Long TTL;

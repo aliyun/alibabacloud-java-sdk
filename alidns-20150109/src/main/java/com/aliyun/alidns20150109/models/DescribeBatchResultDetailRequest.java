@@ -9,35 +9,38 @@ public class DescribeBatchResultDetailRequest extends TeaModel {
      * <br>
      * <p>*   **DOMAIN_ADD**: adds domain names in batches.</p>
      * <p>*   **DOMAIN_DEL**: deletes domain names in batches.</p>
-     * <p>*   **RR_ADD**: adds DNS records in batches.</p>
+     * <p>*   **RR_ADD**: adds Domain Name System (DNS) records in batches.</p>
      * <p>*   **RR_DEL**: deletes DNS records in batches.</p>
      */
     @NameInMap("BatchType")
     public String batchType;
 
     /**
-     * <p>The language type.</p>
+     * <p>The language.</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The execution result. If you do not specify this parameter, all results are returned.</p>
+     */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The ID of the batch operation task.</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

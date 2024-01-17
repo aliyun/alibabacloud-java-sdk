@@ -4,6 +4,9 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmLogsRequest extends TeaModel {
+    /**
+     * <p>The timestamp that specifies the end of the time range to query.</p>
+     */
     @NameInMap("EndTimestamp")
     public Long endTimestamp;
 
@@ -32,7 +35,7 @@ public class DescribeGtmLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on per page. Maximum value: **100**. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Maximum value: **100**. Default value: **20**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
