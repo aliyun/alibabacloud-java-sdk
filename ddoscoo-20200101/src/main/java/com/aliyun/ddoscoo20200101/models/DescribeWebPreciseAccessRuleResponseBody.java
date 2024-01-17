@@ -44,6 +44,9 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        @NameInMap("ContentList")
+        public java.util.List<String> contentList;
+
         /**
          * <p>The match field.</p>
          */
@@ -75,6 +78,14 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList setContentList(java.util.List<String> contentList) {
+            this.contentList = contentList;
+            return this;
+        }
+        public java.util.List<String> getContentList() {
+            return this.contentList;
         }
 
         public DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList setField(String field) {

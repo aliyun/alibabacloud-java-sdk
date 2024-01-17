@@ -92,6 +92,9 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeSchedulerRulesResponseBodySchedulerRulesRules extends TeaModel {
+        @NameInMap("Line")
+        public String line;
+
         @NameInMap("Priority")
         public Integer priority;
 
@@ -116,6 +119,14 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         public static DescribeSchedulerRulesResponseBodySchedulerRulesRules build(java.util.Map<String, ?> map) throws Exception {
             DescribeSchedulerRulesResponseBodySchedulerRulesRules self = new DescribeSchedulerRulesResponseBodySchedulerRulesRules();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSchedulerRulesResponseBodySchedulerRulesRules setLine(String line) {
+            this.line = line;
+            return this;
+        }
+        public String getLine() {
+            return this.line;
         }
 
         public DescribeSchedulerRulesResponseBodySchedulerRulesRules setPriority(Integer priority) {
