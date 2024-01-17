@@ -81,14 +81,23 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     public String proto;
 
     /**
-     * <p>Specifies whether the access control policy is enabled. By default, an access control policy is enabled after the policy is created. Valid values:</p>
+     * <p>The status of the access control policy. Valid values:</p>
      * <br>
-     * <p>*   **true**: The access control policy is enabled.</p>
-     * <p>*   **false**: The access control policy is disabled.</p>
+     * <p>*   **true**: enabled</p>
+     * <p>*   **false**: disabled</p>
      */
     @NameInMap("Release")
     public String release;
 
+    /**
+     * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
+     * <br>
+     * <p>*   **Permanent** (default): The policy always takes effect.</p>
+     * <p>*   **None**: The policy takes effect for only once.</p>
+     * <p>*   **Daily**: The policy takes effect on a daily basis.</p>
+     * <p>*   **Weekly**: The policy takes effect on a weekly basis.</p>
+     * <p>*   **Monthly**: The policy takes effect on a monthly basis.</p>
+     */
     @NameInMap("RepeatType")
     public String repeatType;
 

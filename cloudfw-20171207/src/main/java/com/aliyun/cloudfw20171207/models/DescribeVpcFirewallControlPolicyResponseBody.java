@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
     /**
-     * <p>The information about the access control policies.</p>
+     * <p>The access control policies.</p>
      */
     @NameInMap("Policys")
     public java.util.List<DescribeVpcFirewallControlPolicyResponseBodyPolicys> policys;
@@ -56,14 +56,14 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
          * <p>The action that Cloud Firewall performs on the traffic. Valid values:</p>
          * <br>
          * <p>*   **accept**: allows the traffic.</p>
-         * <p>*   **drop**: blocks the traffic.</p>
+         * <p>*   **drop**: denies the traffic.</p>
          * <p>*   **log**: monitors the traffic.</p>
          */
         @NameInMap("AclAction")
         public String aclAction;
 
         /**
-         * <p>The unique ID of the access control policy.</p>
+         * <p>The UUID of the access control policy.</p>
          */
         @NameInMap("AclUuid")
         public String aclUuid;
@@ -75,7 +75,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>The application type in the access control policy. Valid values:</p>
+         * <p>The application types supported by the access control policy. We recommend that you specify ApplicationNameList. Valid values:</p>
          * <br>
          * <p>*   **HTTP**</p>
          * <p>*   **HTTPS**</p>
@@ -95,9 +95,15 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         @NameInMap("ApplicationName")
         public String applicationName;
 
+        /**
+         * <p>The application types supported by the access control policy.</p>
+         */
         @NameInMap("ApplicationNameList")
         public java.util.List<String> applicationNameList;
 
+        /**
+         * <p>The time when the access control policy was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
@@ -120,7 +126,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String destPortGroup;
 
         /**
-         * <p>An array that consists of the ports in the destination port address book of the access control policy.</p>
+         * <p>The ports in the destination port address book of the access control policy.</p>
          */
         @NameInMap("DestPortGroupPorts")
         public java.util.List<String> destPortGroupPorts;
@@ -145,7 +151,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String destination;
 
         /**
-         * <p>An array that consists of the CIDR blocks in the destination address book of the access control policy.</p>
+         * <p>The CIDR blocks in the destination address book of the access control policy.</p>
          */
         @NameInMap("DestinationGroupCidrs")
         public java.util.List<String> destinationGroupCidrs;
@@ -169,9 +175,17 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         @NameInMap("DestinationType")
         public String destinationType;
 
+        /**
+         * <p>The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of StartTime.</p>
+         * <br>
+         * <p>>  If RepeatType is set to Permanent, EndTime is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, EndTime must be specified.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The time when the access control policy was last hit. The value is a UNIX timestamp. Unit: seconds.</p>
+         */
         @NameInMap("HitLastTime")
         public Long hitLastTime;
 
@@ -187,6 +201,9 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         @NameInMap("MemberUid")
         public String memberUid;
 
+        /**
+         * <p>The time when the access control policy was modified. The value is a UNIX timestamp. Unit: seconds.</p>
+         */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
@@ -210,23 +227,54 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String proto;
 
         /**
-         * <p>Indicates whether the access control policy is enabled. By default, an access control policy is enabled after the policy is created. Valid values:</p>
+         * <p>Indicates whether the access control policy is enabled. By default, an access control policy is enabled after it is created. Valid values:</p>
          * <br>
-         * <p>*   **true**: The access control policy is enabled.</p>
-         * <p>*   **false**: The access control policy is disabled.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("Release")
         public String release;
 
+        /**
+         * <p>The days of a week or of a month on which the access control policy takes effect.</p>
+         * <br>
+         * <p>*   If RepeatType is set to `Permanent`, `None`, or `Daily`, RepeatDays is left empty. Example: \[].</p>
+         * <p>*   If RepeatType is set to Weekly, RepeatDays must be specified. Example: \[0, 6].</p>
+         * <br>
+         * <p>>  If RepeatType is set to Weekly, the fields in the value of RepeatDays cannot be repeated.</p>
+         * <br>
+         * <p>*   If RepeatType is set to `Monthly`, RepeatDays must be specified. Example: \[1, 31].</p>
+         * <br>
+         * <p>>  If RepeatType is set to Monthly, the fields in the value of RepeatDays cannot be repeated.</p>
+         */
         @NameInMap("RepeatDays")
         public java.util.List<Long> repeatDays;
 
+        /**
+         * <p>The point in time when the recurrence ends. Example: 23:30. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of RepeatStartTime.</p>
+         * <br>
+         * <p>>  If RepeatType is set to Permanent or None, RepeatEndTime is left empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatEndTime must be specified.</p>
+         */
         @NameInMap("RepeatEndTime")
         public String repeatEndTime;
 
+        /**
+         * <p>The point in time when the recurrence starts. Example: 08:00. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of RepeatEndTime.</p>
+         * <br>
+         * <p>>  If RepeatType is set to Permanent or None, RepeatStartTime is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.</p>
+         */
         @NameInMap("RepeatStartTime")
         public String repeatStartTime;
 
+        /**
+         * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
+         * <br>
+         * <p>*   **Permanent** (default): The policy always takes effect.</p>
+         * <p>*   **None**: The policy takes effect for only once.</p>
+         * <p>*   **Daily**: The policy takes effect on a daily basis.</p>
+         * <p>*   **Weekly**: The policy takes effect on a weekly basis.</p>
+         * <p>*   **Monthly**: The policy takes effect on a monthly basis.</p>
+         */
         @NameInMap("RepeatType")
         public String repeatType;
 
@@ -240,13 +288,13 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>An array that consists of the CIDR blocks in the source address book of the access control policy.</p>
+         * <p>The CIDR blocks in the source address book of the access control policy.</p>
          */
         @NameInMap("SourceGroupCidrs")
         public java.util.List<String> sourceGroupCidrs;
 
         /**
-         * <p>The type of the source address in the access control policy. The value is fixed as **ip**. The value indicates an address book that includes one or more CIDR blocks.</p>
+         * <p>The type of the source address book in the access control policy. The value is fixed as **ip**. The value indicates an address book that includes one or more CIDR blocks.</p>
          */
         @NameInMap("SourceGroupType")
         public String sourceGroupType;
@@ -260,9 +308,17 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         @NameInMap("SourceType")
         public String sourceType;
 
+        /**
+         * <p>The total quota consumed by the returned access control policies, which is the sum of the quota consumed by each policy. The quota that is consumed by an access control policy is calculated by using the following formula: Quota that is consumed by an access control policy = Number of source addresses × Number of destination addresses (number of CIDR blocks or domain names) × Number of applications × Number of port ranges.</p>
+         */
         @NameInMap("SpreadCnt")
         public Long spreadCnt;
 
+        /**
+         * <p>The time when the access control policy starts to take effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of EndTime.</p>
+         * <br>
+         * <p>>  If RepeatType is set to Permanent, StartTime is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, StartTime must be specified.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 

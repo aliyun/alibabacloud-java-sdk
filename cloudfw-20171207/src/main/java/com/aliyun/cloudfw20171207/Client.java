@@ -357,7 +357,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can use this operation to create an access control policy to allow, deny, or monitor traffic that passes through a NAT firewall.
+      * You can call this operation to create a policy that allows, denies, or monitors the traffic that passes through the NAT firewall.
       *
       * @param request CreateNatFirewallControlPolicyRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -480,7 +480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can use this operation to create an access control policy to allow, deny, or monitor traffic that passes through a NAT firewall.
+      * You can call this operation to create a policy that allows, denies, or monitors the traffic that passes through the NAT firewall.
       *
       * @param request CreateNatFirewallControlPolicyRequest
       * @return CreateNatFirewallControlPolicyResponse
@@ -5166,6 +5166,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PutEnableFwSwitchResponse putEnableFwSwitch(PutEnableFwSwitchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.putEnableFwSwitchWithOptions(request, runtime);
+    }
+
+    public ReleasePostInstanceResponse releasePostInstanceWithOptions(ReleasePostInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReleasePostInstance"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReleasePostInstanceResponse());
+    }
+
+    public ReleasePostInstanceResponse releasePostInstance(ReleasePostInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.releasePostInstanceWithOptions(request, runtime);
     }
 
     /**

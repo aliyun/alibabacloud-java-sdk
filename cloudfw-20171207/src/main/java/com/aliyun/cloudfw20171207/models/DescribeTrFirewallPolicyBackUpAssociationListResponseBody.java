@@ -4,9 +4,15 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends TeaModel {
+    /**
+     * <p>The route tables.</p>
+     */
     @NameInMap("PolicyAssociationBackupConfigs")
     public java.util.List<DescribeTrFirewallPolicyBackUpAssociationListResponseBodyPolicyAssociationBackupConfigs> policyAssociationBackupConfigs;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,33 @@ public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody extends T
     }
 
     public static class DescribeTrFirewallPolicyBackUpAssociationListResponseBodyPolicyAssociationBackupConfigs extends TeaModel {
+        /**
+         * <p>The ID of the traffic redirection instance.</p>
+         */
         @NameInMap("CandidateId")
         public String candidateId;
 
+        /**
+         * <p>The name of the traffic redirection instance.</p>
+         */
         @NameInMap("CandidateName")
         public String candidateName;
 
+        /**
+         * <p>The type of the traffic redirection instance.</p>
+         */
         @NameInMap("CandidateType")
         public String candidateType;
 
+        /**
+         * <p>The route table that is used after traffic redirection.</p>
+         */
         @NameInMap("CurrentRouteTableId")
         public String currentRouteTableId;
 
+        /**
+         * <p>The ID of the route table.</p>
+         */
         @NameInMap("OriginalRouteTableId")
         public String originalRouteTableId;
 
