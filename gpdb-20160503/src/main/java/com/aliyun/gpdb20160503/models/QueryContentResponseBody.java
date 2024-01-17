@@ -19,6 +19,9 @@ public class QueryContentResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("Usage")
+    public QueryContentResponseBodyUsage usage;
+
     public static QueryContentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryContentResponseBody self = new QueryContentResponseBody();
         return TeaModel.build(map, self);
@@ -64,6 +67,14 @@ public class QueryContentResponseBody extends TeaModel {
         return this.status;
     }
 
+    public QueryContentResponseBody setUsage(QueryContentResponseBodyUsage usage) {
+        this.usage = usage;
+        return this;
+    }
+    public QueryContentResponseBodyUsage getUsage() {
+        return this.usage;
+    }
+
     public static class QueryContentResponseBodyMatchesMatchListVector extends TeaModel {
         @NameInMap("VectorList")
         public java.util.List<Double> vectorList;
@@ -89,6 +100,9 @@ public class QueryContentResponseBody extends TeaModel {
 
         @NameInMap("FileName")
         public String fileName;
+
+        @NameInMap("FileURL")
+        public String fileURL;
 
         @NameInMap("Id")
         public String id;
@@ -127,6 +141,14 @@ public class QueryContentResponseBody extends TeaModel {
         }
         public String getFileName() {
             return this.fileName;
+        }
+
+        public QueryContentResponseBodyMatchesMatchList setFileURL(String fileURL) {
+            this.fileURL = fileURL;
+            return this;
+        }
+        public String getFileURL() {
+            return this.fileURL;
         }
 
         public QueryContentResponseBodyMatchesMatchList setId(String id) {
@@ -194,6 +216,36 @@ public class QueryContentResponseBody extends TeaModel {
         }
         public java.util.List<QueryContentResponseBodyMatchesMatchList> getMatchList() {
             return this.matchList;
+        }
+
+    }
+
+    public static class QueryContentResponseBodyUsage extends TeaModel {
+        @NameInMap("EmbeddingEntries")
+        public String embeddingEntries;
+
+        @NameInMap("EmbeddingTokens")
+        public String embeddingTokens;
+
+        public static QueryContentResponseBodyUsage build(java.util.Map<String, ?> map) throws Exception {
+            QueryContentResponseBodyUsage self = new QueryContentResponseBodyUsage();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryContentResponseBodyUsage setEmbeddingEntries(String embeddingEntries) {
+            this.embeddingEntries = embeddingEntries;
+            return this;
+        }
+        public String getEmbeddingEntries() {
+            return this.embeddingEntries;
+        }
+
+        public QueryContentResponseBodyUsage setEmbeddingTokens(String embeddingTokens) {
+            this.embeddingTokens = embeddingTokens;
+            return this;
+        }
+        public String getEmbeddingTokens() {
+            return this.embeddingTokens;
         }
 
     }
