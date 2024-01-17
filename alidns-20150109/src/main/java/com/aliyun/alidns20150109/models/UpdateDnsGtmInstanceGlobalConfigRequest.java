@@ -14,9 +14,9 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends TeaModel {
     public String alertGroup;
 
     /**
-     * <p>The type of the CNAME domain name that is used to access the instance. Valid value:</p>
+     * <p>The type of the canonical name (CNAME).</p>
      * <br>
-     * <p>*   PUBLIC: The CNAME domain name is used to access the instance over the Internet.</p>
+     * <p>*   Set the value to PUBLIC.</p>
      */
     @NameInMap("CnameType")
     public String cnameType;

@@ -10,27 +10,33 @@ public class DescribeDomainStatisticsRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The type of the domain name. Valid values:</p>
+     * <br>
+     * <p>*   PUBLIC (default): hosted public domain name</p>
+     * <p>*   CACHE: cached public domain name</p>
+     */
     @NameInMap("DomainType")
     public String domainType;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the **YYYY-MM-DD** format.</p>
+     * <p>The end date of the query. Specify the end date in the **YYYY-MM-DD** format.</p>
      * <br>
-     * <p>The default value is the day when you perform the operation.</p>
+     * <p>The default value is the day when you query the data.</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
-     * <p>The language type.</p>
+     * <p>The language.</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the **YYYY-MM-DD** format.</p>
+     * <p>The start date of the query. Specify the start date in the **YYYY-MM-DD** format.</p>
      * <br>
-     * <p>You can only query the DNS records of the last 90 days.</p>
+     * <p>You can only query the DNS records within the last 90 days.``</p>
      */
     @NameInMap("StartDate")
     public String startDate;

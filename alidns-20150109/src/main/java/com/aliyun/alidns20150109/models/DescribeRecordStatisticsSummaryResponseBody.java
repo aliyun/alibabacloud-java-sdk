@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class DescribeRecordStatisticsSummaryResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page. Valid values: **1 to 100**. Default value: **20**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of query volume records.</p>
+     * <p>The DNS requests.</p>
      */
     @NameInMap("Statistics")
     public DescribeRecordStatisticsSummaryResponseBodyStatistics statistics;
 
     /**
-     * <p>The total number of data records.The total number of data records.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
     /**
-     * <p>The total number of returned pages.</p>
+     * <p>The total number of pages returned.</p>
      */
     @NameInMap("TotalPages")
     public Integer totalPages;
@@ -95,13 +95,13 @@ public class DescribeRecordStatisticsSummaryResponseBody extends TeaModel {
 
     public static class DescribeRecordStatisticsSummaryResponseBodyStatisticsStatistic extends TeaModel {
         /**
-         * <p>The number of queries.</p>
+         * <p>The number of DNS requests.</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
-         * <p>The subdomain name.</p>
+         * <p>The subdomain.</p>
          */
         @NameInMap("SubDomain")
         public String subDomain;

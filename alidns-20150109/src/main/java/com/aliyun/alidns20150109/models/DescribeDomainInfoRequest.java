@@ -17,7 +17,7 @@ public class DescribeDomainInfoRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Specifies whether detailed attributes are required. Default value: **false**, which indicates that detailed attributes are not required.</p>
+     * <p>Specifies whether detailed attributes are required. The default value is **false**, which indicates that detailed attributes are not required.</p>
      * <br>
      * <p>If you set this parameter to **true**, the values of the following parameters are returned: LineType, MinTtl, RecordLineTreeJson, RecordLines, LineCode, LineDisplayName, LineName, RegionLines, and SlaveDns.</p>
      */

@@ -4,6 +4,9 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsProductInstanceResponseBody extends TeaModel {
+    @NameInMap("AutoRenewal")
+    public Boolean autoRenewal;
+
     /**
      * <p>The number of times that you can change the domain names that are bound to the paid Alibaba Cloud DNS instance. This parameter applies to Alibaba Cloud DNS instances of the custom edition.</p>
      */
@@ -226,6 +229,14 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
     public static DescribeDnsProductInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDnsProductInstanceResponseBody self = new DescribeDnsProductInstanceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDnsProductInstanceResponseBody setAutoRenewal(Boolean autoRenewal) {
+        this.autoRenewal = autoRenewal;
+        return this;
+    }
+    public Boolean getAutoRenewal() {
+        return this.autoRenewal;
     }
 
     public DescribeDnsProductInstanceResponseBody setBindCount(Long bindCount) {

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddGtmAddressPoolRequest extends TeaModel {
     /**
-     * <p>The addresses in the address pool.</p>
+     * <p>The address pools.</p>
      */
     @NameInMap("Addr")
     public java.util.List<AddGtmAddressPoolRequestAddr> addr;
 
     /**
-     * <p>The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.</p>
+     * <p>The number of consecutive failures.</p>
      */
     @NameInMap("EvaluationCount")
     public Integer evaluationCount;
@@ -47,26 +47,26 @@ public class AddGtmAddressPoolRequest extends TeaModel {
     public Integer minAvailableAddrNum;
 
     /**
-     * <p>The extended information, that is, the parameters required for the protocol. Different protocols require different parameters:</p>
+     * <p>The extended information. The required parameters vary based on the value of ProtocolType.</p>
      * <br>
-     * <p>HTTP or HTTPS:</p>
+     * <p>When ProtocolType is set to HTTP or HTTPS:</p>
      * <br>
-     * <p>*   port: the port to check.</p>
-     * <p>*   failureRate: the failure rate.</p>
-     * <p>*   code: the status code threshold. If the returned status code is greater than the specified threshold, the application service is deemed abnormal. Valid values: 400 and 500.</p>
-     * <p>*   host: the host configuration.</p>
-     * <p>*   path: the health check URL.</p>
+     * <p>*   port: the port that you want to check</p>
+     * <p>*   failureRate: the failure rate</p>
+     * <p>*   code: the return code. The health check result is deemed abnormal if the returned value is greater than the specified value. Valid values: 400 and 500.</p>
+     * <p>*   host: the host settings</p>
+     * <p>*   path: the URL path</p>
      * <br>
-     * <p>PING:</p>
+     * <p>When ProtocolType is set to PING:</p>
      * <br>
-     * <p>*   packetNum: the number of ping packets.</p>
-     * <p>*   packetLossRate: the loss rate of ping packets.</p>
-     * <p>*   failureRate: the failure rate.</p>
+     * <p>*   packetNum: the number of ping packets</p>
+     * <p>*   packetLossRate: the packet loss rate</p>
+     * <p>*   failureRate: the failure rate</p>
      * <br>
-     * <p>TCP:</p>
+     * <p>When ProtocolType is set to TCP:</p>
      * <br>
-     * <p>*   port: the port to check.</p>
-     * <p>*   failureRate: the failure rate.</p>
+     * <p>*   port: the port that you want to check</p>
+     * <p>*   failureRate: the failure rate</p>
      */
     @NameInMap("MonitorExtendInfo")
     public String monitorExtendInfo;
@@ -81,24 +81,24 @@ public class AddGtmAddressPoolRequest extends TeaModel {
     public String monitorStatus;
 
     /**
-     * <p>The name of the address pool that you want to create.</p>
+     * <p>The name of the address pool.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The protocol used for the health check. Valid values:</p>
+     * <p>The health check protocol. Valid values:</p>
      * <br>
      * <p>*   HTTP</p>
      * <p>*   HTTPS</p>
-     * <p>*   PING</p>
+     * <p>*   Ping</p>
      * <p>*   TCP</p>
      */
     @NameInMap("ProtocolType")
     public String protocolType;
 
     /**
-     * <p>The health check timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.</p>
+     * <p>The timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.</p>
      */
     @NameInMap("Timeout")
     public Integer timeout;
@@ -223,13 +223,13 @@ public class AddGtmAddressPoolRequest extends TeaModel {
 
     public static class AddGtmAddressPoolRequestAddr extends TeaModel {
         /**
-         * <p>The weight of the address.</p>
+         * <p>The weight of the address pool.</p>
          */
         @NameInMap("LbaWeight")
         public Integer lbaWeight;
 
         /**
-         * <p>The mode of the address. Valid values:</p>
+         * <p>The mode of the address pool. Valid values:</p>
          * <br>
          * <p>*   **SMART**: smart return</p>
          * <p>*   **ONLINE**: always online</p>
@@ -239,7 +239,7 @@ public class AddGtmAddressPoolRequest extends TeaModel {
         public String mode;
 
         /**
-         * <p>The address.</p>
+         * <p>The address in the address pool.</p>
          */
         @NameInMap("Value")
         public String value;

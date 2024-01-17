@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeBatchResultDetailResponseBody extends TeaModel {
     /**
-     * <p>Detailed information about the batch operation result.</p>
+     * <p>The detailed results of the batch operation.</p>
      */
     @NameInMap("BatchResultDetails")
     public DescribeBatchResultDetailResponseBodyBatchResultDetails batchResultDetails;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -99,7 +99,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         public String line;
 
         /**
-         * <p>The new host record.</p>
+         * <p>The new hostname.</p>
          */
         @NameInMap("NewRr")
         public String newRr;
@@ -111,13 +111,13 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         public String newValue;
 
         /**
-         * <p>The time when the operation was performed.</p>
+         * <p>The time when the operation was performed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
          */
         @NameInMap("OperateDateStr")
         public String operateDateStr;
 
         /**
-         * <p>The priority of an MX-type DNS record.</p>
+         * <p>The priority of the mail exchanger (MX) record.</p>
          */
         @NameInMap("Priority")
         public String priority;
@@ -141,7 +141,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         public String remark;
 
         /**
-         * <p>The host record.</p>
+         * <p>The hostname.</p>
          */
         @NameInMap("Rr")
         public String rr;
@@ -153,13 +153,13 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         public String rrStatus;
 
         /**
-         * <p>The execution result. Valid values:**true**: The execution succeeded.**false**: The execution failed.</p>
+         * <p>The execution result of the batch operation. Valid values: **true**: The operation succeeded. **false**: The operation failed.</p>
          */
         @NameInMap("Status")
         public Boolean status;
 
         /**
-         * <p>The TTL of the DNS record.</p>
+         * <p>The time-to-live (TTL) of the DNS record.</p>
          */
         @NameInMap("Ttl")
         public String ttl;
@@ -171,7 +171,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The value of the DNS record.</p>
+         * <p>The record value.</p>
          */
         @NameInMap("Value")
         public String value;

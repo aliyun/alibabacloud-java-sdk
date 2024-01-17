@@ -5,23 +5,26 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</p>
+     * <p>The language.</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The domain name.</p>
+     * <p>The resource ID.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource.</p>
+     * <p>The resource type.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tag to add to the resource.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
 
@@ -64,13 +67,13 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The key of tag N to add to the resource. The tag key can be up to 20 characters in length and cannot start with acs: or aliyun.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The value of tag N to add to the resource. The tag value can be up to 20 characters in length.</p>
          */
         @NameInMap("Value")
         public String value;

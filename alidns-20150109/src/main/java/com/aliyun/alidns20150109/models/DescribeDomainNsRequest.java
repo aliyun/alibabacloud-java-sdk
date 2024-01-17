@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainNsRequest extends TeaModel {
     /**
-     * <p>Indicates whether all the name servers were Alibaba Cloud DNS servers.</p>
+     * <p>The domain name.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The domain name that you want to resolve.</p>
+     * <p>The language.</p>
      */
     @NameInMap("Lang")
     public String lang;

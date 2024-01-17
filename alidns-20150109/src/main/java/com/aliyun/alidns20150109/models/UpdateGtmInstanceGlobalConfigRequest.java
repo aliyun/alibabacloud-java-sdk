@@ -5,30 +5,30 @@ import com.aliyun.tea.*;
 
 public class UpdateGtmInstanceGlobalConfigRequest extends TeaModel {
     /**
-     * <p>The alert group of the GTM instance. Currently, only one alert group is supported.</p>
+     * <p>The alert group. Only one alert group is supported.</p>
      * <br>
-     * <p>>  This parameter is required for the first update, but is optional for later updates.</p>
+     * <p>>  This parameter is required only for the first modification.</p>
      */
     @NameInMap("AlertGroup")
     public String alertGroup;
 
     /**
-     * <p>The CNAME record of a domain name, which must be the primary domain name. When **CnameMode** is **CUSTOM**, this parameter is required for access.</p>
+     * <p>If you set **CnameMode** to **CUSTOM**, you must specify the CnameCustomDomainName parameter, which must be set to a primary domain name.</p>
      */
     @NameInMap("CnameCustomDomainName")
     public String cnameCustomDomainName;
 
     /**
-     * <p>Specifies whether the CNAME record is user-defined or automatically assigned by the system. Valid values:</p>
+     * <p>Specifies whether to use a system-assigned canonical name (CNAME) or a custom CNAME to access GTM. Valid values:</p>
      * <br>
-     * <p>*   **SYSTEM_ASSIGN**: Assigned by the system</p>
-     * <p>*   **CUSTOM**: User-defined</p>
+     * <p>*   **SYSTEM_ASSIGN**: system-assigned CNAME</p>
+     * <p>*   **CUSTOM**: custom CNAME</p>
      */
     @NameInMap("CnameMode")
     public String cnameMode;
 
     /**
-     * <p>The ID of the GTM instance whose configuration you want to modify.</p>
+     * <p>The ID of the GTM instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -36,31 +36,30 @@ public class UpdateGtmInstanceGlobalConfigRequest extends TeaModel {
     /**
      * <p>The name of the GTM instance.</p>
      * <br>
-     * <p>>  This parameter is required for the first update, but is not required for later updates.</p>
+     * <p>>  This parameter is required only for the first modification.</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>The language used by the user.</p>
+     * <p>The language.</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The load balancing policy. Valid values:</p>
+     * <p>The balancing policy. Valid values:</p>
      * <br>
-     * <p>*   **ALL_RR**: Load balancing</p>
+     * <p>*   **ALL_RR**: load balancing</p>
+     * <p>*   **RATIO**: weighted round-robin</p>
      * <br>
-     * <p>*   **RATIO**: Weighted round robin</p>
-     * <br>
-     * <p>> This parameter is required for the first update, but is optional for later updates.</p>
+     * <p>>  This parameter is required only for the first modification.</p>
      */
     @NameInMap("LbaStrategy")
     public String lbaStrategy;
 
     /**
-     * <p>The time when the modification takes effect.</p>
+     * <p>The global time-to-live (TTL).</p>
      */
     @NameInMap("Ttl")
     public Integer ttl;
@@ -68,7 +67,7 @@ public class UpdateGtmInstanceGlobalConfigRequest extends TeaModel {
     /**
      * <p>The primary domain name.</p>
      * <br>
-     * <p>>  This parameter is required for the first update, but is optional for later updates.</p>
+     * <p>>  This parameter is required only for the first modification.</p>
      */
     @NameInMap("UserDomainName")
     public String userDomainName;

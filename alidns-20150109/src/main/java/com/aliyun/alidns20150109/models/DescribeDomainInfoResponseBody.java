@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainInfoResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the domain name is an Alibaba Cloud HiChina domain name.</p>
+     * <p>Indicates whether the domain name was registered in Alibaba Cloud.</p>
      */
     @NameInMap("AliDomain")
     public Boolean aliDomain;
 
     /**
-     * <p>The available time to live (TTL) values.</p>
+     * <p>The available time to live (TTL) values that can be configured for the domain name. Available TTL values are not returned by default. If you want to query such information, set NeedDetailAttributes to true.</p>
      */
     @NameInMap("AvailableTtls")
     public DescribeDomainInfoResponseBodyAvailableTtls availableTtls;
 
     /**
-     * <p>The time when the domain name was added to Alibaba Cloud CDN.</p>
+     * <p>The time when the domain name was created.</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
-     * <p>The information about DNS servers.</p>
+     * <p>The DNS servers that are used to resolve the domain name.</p>
      */
     @NameInMap("DnsServers")
     public DescribeDomainInfoResponseBodyDnsServers dnsServers;
@@ -33,6 +33,9 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
      */
     @NameInMap("DomainId")
     public String domainId;
+
+    @NameInMap("DomainLoggingSwitchStatus")
+    public String domainLoggingSwitchStatus;
 
     /**
      * <p>The domain name.</p>
@@ -59,7 +62,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     public Boolean inBlackHole;
 
     /**
-     * <p>Indicates whether traffic scrubbing was started.</p>
+     * <p>Indicates whether traffic scrubbing was in progress.</p>
      */
     @NameInMap("InClean")
     public Boolean inClean;
@@ -71,13 +74,13 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The type of line.</p>
+     * <p>The type of the DNS request line.</p>
      */
     @NameInMap("LineType")
     public String lineType;
 
     /**
-     * <p>The minimum TTL.</p>
+     * <p>The minimum TTL value.</p>
      */
     @NameInMap("MinTtl")
     public Long minTtl;
@@ -89,31 +92,31 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     public String punyCode;
 
     /**
-     * <p>The tree-based lines.</p>
+     * <p>The tree-structure DNS request lines.</p>
      */
     @NameInMap("RecordLineTreeJson")
     public String recordLineTreeJson;
 
     /**
-     * <p>The information about lines.</p>
+     * <p>The DNS request lines.</p>
      */
     @NameInMap("RecordLines")
     public DescribeDomainInfoResponseBodyRecordLines recordLines;
 
     /**
-     * <p>Indicates whether the lines are regional lines.</p>
+     * <p>Indicates whether the DNS request lines are regional lines.</p>
      */
     @NameInMap("RegionLines")
     public Boolean regionLines;
 
     /**
-     * <p>The description of the domain name.</p>
+     * <p>The description.</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -125,7 +128,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Indicates whether secondary DNS is allowed.</p>
+     * <p>Indicates whether secondary DNS is supported.</p>
      */
     @NameInMap("SlaveDns")
     public Boolean slaveDns;
@@ -134,13 +137,13 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     public Boolean subDomain;
 
     /**
-     * <p>The version of the Alibaba Cloud DNS instance.</p>
+     * <p>The version ID of Alibaba Cloud DNS.</p>
      */
     @NameInMap("VersionCode")
     public String versionCode;
 
     /**
-     * <p>The edition of the Alibaba Cloud DNS instance.</p>
+     * <p>The edition of Alibaba Cloud DNS.</p>
      */
     @NameInMap("VersionName")
     public String versionName;
@@ -188,6 +191,14 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     }
     public String getDomainId() {
         return this.domainId;
+    }
+
+    public DescribeDomainInfoResponseBody setDomainLoggingSwitchStatus(String domainLoggingSwitchStatus) {
+        this.domainLoggingSwitchStatus = domainLoggingSwitchStatus;
+        return this;
+    }
+    public String getDomainLoggingSwitchStatus() {
+        return this.domainLoggingSwitchStatus;
     }
 
     public DescribeDomainInfoResponseBody setDomainName(String domainName) {

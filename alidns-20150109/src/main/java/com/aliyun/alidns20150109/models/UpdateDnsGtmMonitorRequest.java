@@ -35,50 +35,50 @@ public class UpdateDnsGtmMonitorRequest extends TeaModel {
     public String monitorConfigId;
 
     /**
-     * <p>The extended information, that is, the parameters required for the protocol. Different protocols require different parameters:</p>
+     * <p>The extended information. The required parameters vary based on the health check protocol.</p>
      * <br>
-     * <p>*   HTTP or HTTPS:</p>
+     * <p>*   HTTP or HTTPS</p>
      * <br>
-     * <p>    *   port: the port to check.</p>
+     * <p>    *   port: the port that you want to check</p>
      * <br>
-     * <p>    *   host: the host configuration.</p>
+     * <p>    *   host: the host settings</p>
      * <br>
-     * <p>    *   path: the health check URL.</p>
+     * <p>    *   path: the URL path</p>
      * <br>
-     * <p>    *   code: the status code threshold. If the returned status code is greater than the specified threshold, the application service is deemed abnormal.</p>
+     * <p>    *   code: the return code. If the return value of code is greater than the specified value, the health check result is deemed abnormal. For example, if code is set to 400 and the code 404 is returned, the health check result is deemed abnormal.</p>
      * <br>
-     * <p>    *   failureRate: the failure rate.</p>
+     * <p>    *   failureRate: the failure rate</p>
      * <br>
-     * <p>    *   sni: specifies whether to enable Server Name Indication (SNI). This parameter is only required for the HTTPS protocol. Valid values:</p>
+     * <p>    *   sni: specifies whether to enable server name indication (SNI). This parameter is available only when ProtocolType is set to HTTPS. Valid values:</p>
      * <br>
      * <p>        *   true: enables SNI.</p>
      * <p>        *   false: disables SNI.</p>
      * <br>
-     * <p>    *   nodeType: the type of the monitored node when the address pool type is DOMAIN. Valid values:</p>
+     * <p>    *   nodeType: the type of the monitoring node when the address pool type is domain name. Valid values:</p>
      * <br>
      * <p>        *   IPV4</p>
      * <p>        *   IPV6</p>
      * <br>
-     * <p>*   PING:</p>
+     * <p>*   PING</p>
      * <br>
-     * <p>    *   failureRate: the failure rate.</p>
+     * <p>    *   failureRate: the failure rate</p>
      * <br>
-     * <p>    *   packetNum: the number of ping packets.</p>
+     * <p>    *   packetNum: the number of ping packets</p>
      * <br>
-     * <p>    *   packetLossRate: the loss rate of ping packets.</p>
+     * <p>    *   packetLossRate: the loss rate of ping packets</p>
      * <br>
-     * <p>    *   nodeType: the type of the monitored node when the address pool type is DOMAIN. Valid values:</p>
+     * <p>    *   nodeType: the type of the monitoring node when the address pool type is domain name. Valid values:</p>
      * <br>
      * <p>        *   IPV4</p>
      * <p>        *   IPV6</p>
      * <br>
-     * <p>*   TCP:</p>
+     * <p>*   TCP</p>
      * <br>
-     * <p>    *   port: the port to check.</p>
+     * <p>    *   port: the port that you want to check</p>
      * <br>
-     * <p>    *   failureRate: the failure rate.</p>
+     * <p>    *   failureRate: the failure rate</p>
      * <br>
-     * <p>    *   nodeType: the type of the monitored node when the address pool type is DOMAIN. Valid values:</p>
+     * <p>    *   nodeType: the type of the monitoring node when the address pool type is domain name. Valid values:</p>
      * <br>
      * <p>        *   IPV4</p>
      * <p>        *   IPV6</p>

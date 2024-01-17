@@ -11,7 +11,7 @@ public class AddGtmMonitorRequest extends TeaModel {
     public String addrPoolId;
 
     /**
-     * <p>The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.</p>
+     * <p>The number of consecutive failures.</p>
      */
     @NameInMap("EvaluationCount")
     public Integer evaluationCount;
@@ -23,38 +23,38 @@ public class AddGtmMonitorRequest extends TeaModel {
     public Integer interval;
 
     /**
-     * <p>The monitored nodes.</p>
+     * <p>The nodes for monitoring.</p>
      */
     @NameInMap("IspCityNode")
     public java.util.List<AddGtmMonitorRequestIspCityNode> ispCityNode;
 
     /**
-     * <p>The language of the values of specific response parameters.</p>
+     * <p>The language.</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The extended information, that is, the parameters required for the protocol. Different protocols require different parameters:</p>
+     * <p>The extended information. The required parameters vary based on the health check protocol.</p>
      * <br>
-     * <p>HTTP or HTTPS:</p>
+     * <p>HTTP or HTTPS</p>
      * <br>
-     * <p>*   port: the port to check.</p>
-     * <p>*   failureRate: the failure rate.</p>
-     * <p>*   code: the status code threshold. If the returned status code is greater than the specified threshold, the application service is deemed abnormal. Valid values: 400 and 500.</p>
-     * <p>*   host: the host configuration.</p>
-     * <p>*   path: the health check URL.</p>
+     * <p>*   port: the port that you want to check</p>
+     * <p>*   failureRate: the failure rate</p>
+     * <p>*   code: the return code. The health check result is deemed abnormal if the returned value is greater than the specified value. Valid values: 400 and 500.</p>
+     * <p>*   host: the host settings</p>
+     * <p>*   path: the URL path</p>
      * <br>
-     * <p>PING:</p>
+     * <p>PING</p>
      * <br>
-     * <p>*   packetNum: the number of ping packets.</p>
-     * <p>*   packetLossRate: the loss rate of ping packets.</p>
-     * <p>*   failureRate: the failure rate.</p>
+     * <p>*   packetNum: the number of ping packets</p>
+     * <p>*   packetLossRate: the packet loss rate</p>
+     * <p>*   failureRate: the failure rate</p>
      * <br>
-     * <p>TCP:</p>
+     * <p>TCP</p>
      * <br>
-     * <p>*   port: the port to check.</p>
-     * <p>*   failureRate: the failure rate.</p>
+     * <p>*   port: the port that you want to check</p>
+     * <p>*   failureRate: the failure rate</p>
      */
     @NameInMap("MonitorExtendInfo")
     public String monitorExtendInfo;
@@ -147,18 +147,18 @@ public class AddGtmMonitorRequest extends TeaModel {
 
     public static class AddGtmMonitorRequestIspCityNode extends TeaModel {
         /**
-         * <p>The code of the city where the monitored node is deployed.</p>
+         * <p>The city code.</p>
          * <br>
-         * <p>For more information about specific values, see the response parameters of DescribeGtmMonitorAvailableConfig.</p>
+         * <p>Specify the parameter according to the value of CityCode returned by the DescribeGtmMonitorAvailableConfig operation.</p>
          */
         @NameInMap("CityCode")
         public String cityCode;
 
         /**
-         * <p>The code of the Internet service provider (ISP) to which the monitored node belongs. For more information about specific values, see the response parameters of DescribeGtmMonitorAvailableConfig.</p>
+         * <p>The Internet service provider (ISP) node. Specify the parameter according to the value of IspCode returned by the DescribeGtmMonitorAvailableConfig operation.</p>
          * <br>
-         * <p>*   If the value of the GroupType parameter is BGP or OVERSEAS, IspCode is optional. The default value is 465.</p>
-         * <p>*   If the value of the GroupType parameter is not BGP or OVERSEAS, IspCode is required and is used together with CityCode.</p>
+         * <p>*   If the return value of GroupType for the DescribeGtmMonitorAvailableConfig operation is BGP or Overseas, IspCode is not required and is set to 465 by default.</p>
+         * <p>*   If the return value of GroupType for the DescribeGtmMonitorAvailableConfig operation is not BGP or Overseas, IspCode is required. When IspCode is specified, CityCode is required.</p>
          */
         @NameInMap("IspCode")
         public String ispCode;
