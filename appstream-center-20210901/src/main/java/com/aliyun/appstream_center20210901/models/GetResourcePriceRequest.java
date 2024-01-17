@@ -7,6 +7,9 @@ public class GetResourcePriceRequest extends TeaModel {
     @NameInMap("Amount")
     public Long amount;
 
+    @NameInMap("AppInstanceType")
+    public String appInstanceType;
+
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
@@ -36,6 +39,14 @@ public class GetResourcePriceRequest extends TeaModel {
     }
     public Long getAmount() {
         return this.amount;
+    }
+
+    public GetResourcePriceRequest setAppInstanceType(String appInstanceType) {
+        this.appInstanceType = appInstanceType;
+        return this;
+    }
+    public String getAppInstanceType() {
+        return this.appInstanceType;
     }
 
     public GetResourcePriceRequest setBizRegionId(String bizRegionId) {

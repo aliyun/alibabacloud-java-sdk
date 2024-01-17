@@ -229,6 +229,36 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         return this.users;
     }
 
+    public static class CreateAppInstanceGroupRequestNetworkDomainRules extends TeaModel {
+        @NameInMap("Domain")
+        public String domain;
+
+        @NameInMap("Policy")
+        public String policy;
+
+        public static CreateAppInstanceGroupRequestNetworkDomainRules build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppInstanceGroupRequestNetworkDomainRules self = new CreateAppInstanceGroupRequestNetworkDomainRules();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppInstanceGroupRequestNetworkDomainRules setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
+        }
+
+        public CreateAppInstanceGroupRequestNetworkDomainRules setPolicy(String policy) {
+            this.policy = policy;
+            return this;
+        }
+        public String getPolicy() {
+            return this.policy;
+        }
+
+    }
+
     public static class CreateAppInstanceGroupRequestNetworkRoutes extends TeaModel {
         @NameInMap("Destination")
         public String destination;
@@ -260,6 +290,9 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     }
 
     public static class CreateAppInstanceGroupRequestNetwork extends TeaModel {
+        @NameInMap("DomainRules")
+        public java.util.List<CreateAppInstanceGroupRequestNetworkDomainRules> domainRules;
+
         @NameInMap("IpExpireMinutes")
         public Integer ipExpireMinutes;
 
@@ -272,6 +305,14 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         public static CreateAppInstanceGroupRequestNetwork build(java.util.Map<String, ?> map) throws Exception {
             CreateAppInstanceGroupRequestNetwork self = new CreateAppInstanceGroupRequestNetwork();
             return TeaModel.build(map, self);
+        }
+
+        public CreateAppInstanceGroupRequestNetwork setDomainRules(java.util.List<CreateAppInstanceGroupRequestNetworkDomainRules> domainRules) {
+            this.domainRules = domainRules;
+            return this;
+        }
+        public java.util.List<CreateAppInstanceGroupRequestNetworkDomainRules> getDomainRules() {
+            return this.domainRules;
         }
 
         public CreateAppInstanceGroupRequestNetwork setIpExpireMinutes(Integer ipExpireMinutes) {

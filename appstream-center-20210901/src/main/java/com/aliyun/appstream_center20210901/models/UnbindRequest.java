@@ -10,6 +10,9 @@ public class UnbindRequest extends TeaModel {
     @NameInMap("AppInstanceId")
     public String appInstanceId;
 
+    @NameInMap("AppInstancePersistentId")
+    public String appInstancePersistentId;
+
     @NameInMap("EndUserId")
     public String endUserId;
 
@@ -35,6 +38,14 @@ public class UnbindRequest extends TeaModel {
     }
     public String getAppInstanceId() {
         return this.appInstanceId;
+    }
+
+    public UnbindRequest setAppInstancePersistentId(String appInstancePersistentId) {
+        this.appInstancePersistentId = appInstancePersistentId;
+        return this;
+    }
+    public String getAppInstancePersistentId() {
+        return this.appInstancePersistentId;
     }
 
     public UnbindRequest setEndUserId(String endUserId) {
