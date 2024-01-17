@@ -3,7 +3,7 @@ package com.aliyun.gpdb20160503.models;
 
 import com.aliyun.tea.*;
 
-public class QueryContentRequest extends TeaModel {
+public class QueryContentAdvanceRequest extends TeaModel {
     @NameInMap("Collection")
     public String collection;
 
@@ -17,7 +17,7 @@ public class QueryContentRequest extends TeaModel {
     public String fileName;
 
     @NameInMap("FileUrl")
-    public String fileUrl;
+    public java.io.InputStream fileUrlObject;
 
     @NameInMap("Filter")
     public String filter;
@@ -43,12 +43,12 @@ public class QueryContentRequest extends TeaModel {
     @NameInMap("UseFullTextRetrieval")
     public Boolean useFullTextRetrieval;
 
-    public static QueryContentRequest build(java.util.Map<String, ?> map) throws Exception {
-        QueryContentRequest self = new QueryContentRequest();
+    public static QueryContentAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
+        QueryContentAdvanceRequest self = new QueryContentAdvanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryContentRequest setCollection(String collection) {
+    public QueryContentAdvanceRequest setCollection(String collection) {
         this.collection = collection;
         return this;
     }
@@ -56,7 +56,7 @@ public class QueryContentRequest extends TeaModel {
         return this.collection;
     }
 
-    public QueryContentRequest setContent(String content) {
+    public QueryContentAdvanceRequest setContent(String content) {
         this.content = content;
         return this;
     }
@@ -64,7 +64,7 @@ public class QueryContentRequest extends TeaModel {
         return this.content;
     }
 
-    public QueryContentRequest setDBInstanceId(String DBInstanceId) {
+    public QueryContentAdvanceRequest setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
     }
@@ -72,7 +72,7 @@ public class QueryContentRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public QueryContentRequest setFileName(String fileName) {
+    public QueryContentAdvanceRequest setFileName(String fileName) {
         this.fileName = fileName;
         return this;
     }
@@ -80,15 +80,15 @@ public class QueryContentRequest extends TeaModel {
         return this.fileName;
     }
 
-    public QueryContentRequest setFileUrl(String fileUrl) {
-        this.fileUrl = fileUrl;
+    public QueryContentAdvanceRequest setFileUrlObject(java.io.InputStream fileUrlObject) {
+        this.fileUrlObject = fileUrlObject;
         return this;
     }
-    public String getFileUrl() {
-        return this.fileUrl;
+    public java.io.InputStream getFileUrlObject() {
+        return this.fileUrlObject;
     }
 
-    public QueryContentRequest setFilter(String filter) {
+    public QueryContentAdvanceRequest setFilter(String filter) {
         this.filter = filter;
         return this;
     }
@@ -96,7 +96,7 @@ public class QueryContentRequest extends TeaModel {
         return this.filter;
     }
 
-    public QueryContentRequest setMetrics(String metrics) {
+    public QueryContentAdvanceRequest setMetrics(String metrics) {
         this.metrics = metrics;
         return this;
     }
@@ -104,7 +104,7 @@ public class QueryContentRequest extends TeaModel {
         return this.metrics;
     }
 
-    public QueryContentRequest setNamespace(String namespace) {
+    public QueryContentAdvanceRequest setNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
@@ -112,7 +112,7 @@ public class QueryContentRequest extends TeaModel {
         return this.namespace;
     }
 
-    public QueryContentRequest setNamespacePassword(String namespacePassword) {
+    public QueryContentAdvanceRequest setNamespacePassword(String namespacePassword) {
         this.namespacePassword = namespacePassword;
         return this;
     }
@@ -120,7 +120,7 @@ public class QueryContentRequest extends TeaModel {
         return this.namespacePassword;
     }
 
-    public QueryContentRequest setOwnerId(Long ownerId) {
+    public QueryContentAdvanceRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -128,7 +128,7 @@ public class QueryContentRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public QueryContentRequest setRegionId(String regionId) {
+    public QueryContentAdvanceRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -136,7 +136,7 @@ public class QueryContentRequest extends TeaModel {
         return this.regionId;
     }
 
-    public QueryContentRequest setTopK(Integer topK) {
+    public QueryContentAdvanceRequest setTopK(Integer topK) {
         this.topK = topK;
         return this;
     }
@@ -144,7 +144,7 @@ public class QueryContentRequest extends TeaModel {
         return this.topK;
     }
 
-    public QueryContentRequest setUseFullTextRetrieval(Boolean useFullTextRetrieval) {
+    public QueryContentAdvanceRequest setUseFullTextRetrieval(Boolean useFullTextRetrieval) {
         this.useFullTextRetrieval = useFullTextRetrieval;
         return this;
     }
