@@ -505,6 +505,12 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        @NameInMap("MaxAmount")
+        public Integer maxAmount;
+
+        @NameInMap("MinAmount")
+        public Integer minAmount;
+
         @NameInMap("NodePool")
         public java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePool> nodePool;
 
@@ -520,8 +526,26 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ReserveAmountRatio")
+        public String reserveAmountRatio;
+
+        @NameInMap("ReserveMaxAmount")
+        public Integer reserveMaxAmount;
+
+        @NameInMap("ReserveMinAmount")
+        public Integer reserveMinAmount;
+
         @NameInMap("ResourceStatus")
         public String resourceStatus;
+
+        @NameInMap("ScalingDownAfterIdleMinutes")
+        public Integer scalingDownAfterIdleMinutes;
+
+        @NameInMap("ScalingStep")
+        public Integer scalingStep;
+
+        @NameInMap("ScalingUsageThreshold")
+        public String scalingUsageThreshold;
 
         @NameInMap("SessionTimeout")
         public String sessionTimeout;
@@ -628,6 +652,22 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setMaxAmount(Integer maxAmount) {
+            this.maxAmount = maxAmount;
+            return this;
+        }
+        public Integer getMaxAmount() {
+            return this.maxAmount;
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setMinAmount(Integer minAmount) {
+            this.minAmount = minAmount;
+            return this;
+        }
+        public Integer getMinAmount() {
+            return this.minAmount;
+        }
+
         public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setNodePool(java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePool> nodePool) {
             this.nodePool = nodePool;
             return this;
@@ -668,12 +708,60 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setReserveAmountRatio(String reserveAmountRatio) {
+            this.reserveAmountRatio = reserveAmountRatio;
+            return this;
+        }
+        public String getReserveAmountRatio() {
+            return this.reserveAmountRatio;
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setReserveMaxAmount(Integer reserveMaxAmount) {
+            this.reserveMaxAmount = reserveMaxAmount;
+            return this;
+        }
+        public Integer getReserveMaxAmount() {
+            return this.reserveMaxAmount;
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setReserveMinAmount(Integer reserveMinAmount) {
+            this.reserveMinAmount = reserveMinAmount;
+            return this;
+        }
+        public Integer getReserveMinAmount() {
+            return this.reserveMinAmount;
+        }
+
         public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setResourceStatus(String resourceStatus) {
             this.resourceStatus = resourceStatus;
             return this;
         }
         public String getResourceStatus() {
             return this.resourceStatus;
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setScalingDownAfterIdleMinutes(Integer scalingDownAfterIdleMinutes) {
+            this.scalingDownAfterIdleMinutes = scalingDownAfterIdleMinutes;
+            return this;
+        }
+        public Integer getScalingDownAfterIdleMinutes() {
+            return this.scalingDownAfterIdleMinutes;
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setScalingStep(Integer scalingStep) {
+            this.scalingStep = scalingStep;
+            return this;
+        }
+        public Integer getScalingStep() {
+            return this.scalingStep;
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setScalingUsageThreshold(String scalingUsageThreshold) {
+            this.scalingUsageThreshold = scalingUsageThreshold;
+            return this;
+        }
+        public String getScalingUsageThreshold() {
+            return this.scalingUsageThreshold;
         }
 
         public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setSessionTimeout(String sessionTimeout) {

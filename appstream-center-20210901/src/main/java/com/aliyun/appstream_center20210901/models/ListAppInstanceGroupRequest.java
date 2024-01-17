@@ -13,6 +13,9 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     @NameInMap("AppInstanceGroupName")
     public String appInstanceGroupName;
 
+    @NameInMap("BizRegionId")
+    public String bizRegionId;
+
     @NameInMap("NodeInstanceType")
     public String nodeInstanceType;
 
@@ -24,9 +27,6 @@ public class ListAppInstanceGroupRequest extends TeaModel {
 
     @NameInMap("ProductType")
     public String productType;
-
-    @NameInMap("RegionId")
-    public String regionId;
 
     @NameInMap("Status")
     public java.util.List<String> status;
@@ -60,6 +60,14 @@ public class ListAppInstanceGroupRequest extends TeaModel {
         return this.appInstanceGroupName;
     }
 
+    public ListAppInstanceGroupRequest setBizRegionId(String bizRegionId) {
+        this.bizRegionId = bizRegionId;
+        return this;
+    }
+    public String getBizRegionId() {
+        return this.bizRegionId;
+    }
+
     public ListAppInstanceGroupRequest setNodeInstanceType(String nodeInstanceType) {
         this.nodeInstanceType = nodeInstanceType;
         return this;
@@ -90,14 +98,6 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     }
     public String getProductType() {
         return this.productType;
-    }
-
-    public ListAppInstanceGroupRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListAppInstanceGroupRequest setStatus(java.util.List<String> status) {

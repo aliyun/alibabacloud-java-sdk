@@ -13,6 +13,9 @@ public class GetConnectionTicketRequest extends TeaModel {
     @NameInMap("AppInstanceId")
     public String appInstanceId;
 
+    @NameInMap("AppInstancePersistentId")
+    public String appInstancePersistentId;
+
     @NameInMap("AppStartParam")
     public String appStartParam;
 
@@ -58,6 +61,14 @@ public class GetConnectionTicketRequest extends TeaModel {
     }
     public String getAppInstanceId() {
         return this.appInstanceId;
+    }
+
+    public GetConnectionTicketRequest setAppInstancePersistentId(String appInstancePersistentId) {
+        this.appInstancePersistentId = appInstancePersistentId;
+        return this;
+    }
+    public String getAppInstancePersistentId() {
+        return this.appInstancePersistentId;
     }
 
     public GetConnectionTicketRequest setAppStartParam(String appStartParam) {

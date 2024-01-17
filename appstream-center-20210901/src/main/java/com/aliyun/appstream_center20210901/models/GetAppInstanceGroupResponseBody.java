@@ -35,15 +35,32 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
     }
 
     public static class GetAppInstanceGroupResponseBodyAppInstanceGroupModelsApps extends TeaModel {
+        @NameInMap("AppIcon")
+        public String appIcon;
+
         @NameInMap("AppId")
         public String appId;
 
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("AppVersion")
+        public String appVersion;
+
+        @NameInMap("AppVersionName")
+        public String appVersionName;
+
         public static GetAppInstanceGroupResponseBodyAppInstanceGroupModelsApps build(java.util.Map<String, ?> map) throws Exception {
             GetAppInstanceGroupResponseBodyAppInstanceGroupModelsApps self = new GetAppInstanceGroupResponseBodyAppInstanceGroupModelsApps();
             return TeaModel.build(map, self);
+        }
+
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModelsApps setAppIcon(String appIcon) {
+            this.appIcon = appIcon;
+            return this;
+        }
+        public String getAppIcon() {
+            return this.appIcon;
         }
 
         public GetAppInstanceGroupResponseBodyAppInstanceGroupModelsApps setAppId(String appId) {
@@ -60,6 +77,22 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModelsApps setAppVersion(String appVersion) {
+            this.appVersion = appVersion;
+            return this;
+        }
+        public String getAppVersion() {
+            return this.appVersion;
+        }
+
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModelsApps setAppVersionName(String appVersionName) {
+            this.appVersionName = appVersionName;
+            return this;
+        }
+        public String getAppVersionName() {
+            return this.appVersionName;
         }
 
     }
@@ -412,11 +445,17 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("AppInstanceType")
         public String appInstanceType;
 
+        @NameInMap("AppInstanceTypeName")
+        public String appInstanceTypeName;
+
         @NameInMap("AppPolicyId")
         public String appPolicyId;
 
         @NameInMap("Apps")
         public java.util.List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> apps;
+
+        @NameInMap("ChargeResourceMode")
+        public String chargeResourceMode;
 
         @NameInMap("ChargeType")
         public String chargeType;
@@ -426,6 +465,12 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
 
         @NameInMap("GmtCreate")
         public String gmtCreate;
+
+        @NameInMap("MaxAmount")
+        public Integer maxAmount;
+
+        @NameInMap("MinAmount")
+        public Integer minAmount;
 
         @NameInMap("NodePool")
         public java.util.List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePool> nodePool;
@@ -442,8 +487,26 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ReserveAmountRatio")
+        public String reserveAmountRatio;
+
+        @NameInMap("ReserveMaxAmount")
+        public Integer reserveMaxAmount;
+
+        @NameInMap("ReserveMinAmount")
+        public Integer reserveMinAmount;
+
         @NameInMap("ResourceStatus")
         public String resourceStatus;
+
+        @NameInMap("ScalingDownAfterIdleMinutes")
+        public Integer scalingDownAfterIdleMinutes;
+
+        @NameInMap("ScalingStep")
+        public Integer scalingStep;
+
+        @NameInMap("ScalingUsageThreshold")
+        public String scalingUsageThreshold;
 
         @NameInMap("SessionTimeout")
         public String sessionTimeout;
@@ -510,6 +573,14 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             return this.appInstanceType;
         }
 
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setAppInstanceTypeName(String appInstanceTypeName) {
+            this.appInstanceTypeName = appInstanceTypeName;
+            return this;
+        }
+        public String getAppInstanceTypeName() {
+            return this.appInstanceTypeName;
+        }
+
         public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setAppPolicyId(String appPolicyId) {
             this.appPolicyId = appPolicyId;
             return this;
@@ -524,6 +595,14 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         }
         public java.util.List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> getApps() {
             return this.apps;
+        }
+
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setChargeResourceMode(String chargeResourceMode) {
+            this.chargeResourceMode = chargeResourceMode;
+            return this;
+        }
+        public String getChargeResourceMode() {
+            return this.chargeResourceMode;
         }
 
         public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setChargeType(String chargeType) {
@@ -548,6 +627,22 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         }
         public String getGmtCreate() {
             return this.gmtCreate;
+        }
+
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setMaxAmount(Integer maxAmount) {
+            this.maxAmount = maxAmount;
+            return this;
+        }
+        public Integer getMaxAmount() {
+            return this.maxAmount;
+        }
+
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setMinAmount(Integer minAmount) {
+            this.minAmount = minAmount;
+            return this;
+        }
+        public Integer getMinAmount() {
+            return this.minAmount;
         }
 
         public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setNodePool(java.util.List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePool> nodePool) {
@@ -590,12 +685,60 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setReserveAmountRatio(String reserveAmountRatio) {
+            this.reserveAmountRatio = reserveAmountRatio;
+            return this;
+        }
+        public String getReserveAmountRatio() {
+            return this.reserveAmountRatio;
+        }
+
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setReserveMaxAmount(Integer reserveMaxAmount) {
+            this.reserveMaxAmount = reserveMaxAmount;
+            return this;
+        }
+        public Integer getReserveMaxAmount() {
+            return this.reserveMaxAmount;
+        }
+
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setReserveMinAmount(Integer reserveMinAmount) {
+            this.reserveMinAmount = reserveMinAmount;
+            return this;
+        }
+        public Integer getReserveMinAmount() {
+            return this.reserveMinAmount;
+        }
+
         public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setResourceStatus(String resourceStatus) {
             this.resourceStatus = resourceStatus;
             return this;
         }
         public String getResourceStatus() {
             return this.resourceStatus;
+        }
+
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setScalingDownAfterIdleMinutes(Integer scalingDownAfterIdleMinutes) {
+            this.scalingDownAfterIdleMinutes = scalingDownAfterIdleMinutes;
+            return this;
+        }
+        public Integer getScalingDownAfterIdleMinutes() {
+            return this.scalingDownAfterIdleMinutes;
+        }
+
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setScalingStep(Integer scalingStep) {
+            this.scalingStep = scalingStep;
+            return this;
+        }
+        public Integer getScalingStep() {
+            return this.scalingStep;
+        }
+
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setScalingUsageThreshold(String scalingUsageThreshold) {
+            this.scalingUsageThreshold = scalingUsageThreshold;
+            return this;
+        }
+        public String getScalingUsageThreshold() {
+            return this.scalingUsageThreshold;
         }
 
         public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setSessionTimeout(String sessionTimeout) {

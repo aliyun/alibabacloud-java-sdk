@@ -10,6 +10,9 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     @NameInMap("AppInstanceId")
     public String appInstanceId;
 
+    @NameInMap("AppInstancePersistentId")
+    public String appInstancePersistentId;
+
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
@@ -24,6 +27,9 @@ public class GetConnectionTicketResponseBody extends TeaModel {
 
     @NameInMap("TaskStatus")
     public String taskStatus;
+
+    @NameInMap("TenantId")
+    public Long tenantId;
 
     @NameInMap("Ticket")
     public String ticket;
@@ -47,6 +53,14 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     }
     public String getAppInstanceId() {
         return this.appInstanceId;
+    }
+
+    public GetConnectionTicketResponseBody setAppInstancePersistentId(String appInstancePersistentId) {
+        this.appInstancePersistentId = appInstancePersistentId;
+        return this;
+    }
+    public String getAppInstancePersistentId() {
+        return this.appInstancePersistentId;
     }
 
     public GetConnectionTicketResponseBody setBizRegionId(String bizRegionId) {
@@ -87,6 +101,14 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     }
     public String getTaskStatus() {
         return this.taskStatus;
+    }
+
+    public GetConnectionTicketResponseBody setTenantId(Long tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public Long getTenantId() {
+        return this.tenantId;
     }
 
     public GetConnectionTicketResponseBody setTicket(String ticket) {

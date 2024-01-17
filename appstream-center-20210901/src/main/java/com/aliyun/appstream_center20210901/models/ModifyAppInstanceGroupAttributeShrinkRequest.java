@@ -10,8 +10,17 @@ public class ModifyAppInstanceGroupAttributeShrinkRequest extends TeaModel {
     @NameInMap("AppInstanceGroupName")
     public String appInstanceGroupName;
 
+    @NameInMap("Network")
+    public String networkShrink;
+
     @NameInMap("NodePool")
     public String nodePoolShrink;
+
+    @NameInMap("PreOpenAppId")
+    public String preOpenAppId;
+
+    @NameInMap("PreOpenMode")
+    public String preOpenMode;
 
     @NameInMap("ProductType")
     public String productType;
@@ -46,12 +55,36 @@ public class ModifyAppInstanceGroupAttributeShrinkRequest extends TeaModel {
         return this.appInstanceGroupName;
     }
 
+    public ModifyAppInstanceGroupAttributeShrinkRequest setNetworkShrink(String networkShrink) {
+        this.networkShrink = networkShrink;
+        return this;
+    }
+    public String getNetworkShrink() {
+        return this.networkShrink;
+    }
+
     public ModifyAppInstanceGroupAttributeShrinkRequest setNodePoolShrink(String nodePoolShrink) {
         this.nodePoolShrink = nodePoolShrink;
         return this;
     }
     public String getNodePoolShrink() {
         return this.nodePoolShrink;
+    }
+
+    public ModifyAppInstanceGroupAttributeShrinkRequest setPreOpenAppId(String preOpenAppId) {
+        this.preOpenAppId = preOpenAppId;
+        return this;
+    }
+    public String getPreOpenAppId() {
+        return this.preOpenAppId;
+    }
+
+    public ModifyAppInstanceGroupAttributeShrinkRequest setPreOpenMode(String preOpenMode) {
+        this.preOpenMode = preOpenMode;
+        return this;
+    }
+    public String getPreOpenMode() {
+        return this.preOpenMode;
     }
 
     public ModifyAppInstanceGroupAttributeShrinkRequest setProductType(String productType) {
