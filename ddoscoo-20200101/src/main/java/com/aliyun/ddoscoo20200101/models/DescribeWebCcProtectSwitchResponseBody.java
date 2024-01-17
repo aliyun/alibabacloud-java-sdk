@@ -93,6 +93,9 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
         @NameInMap("CcEnable")
         public Integer ccEnable;
 
+        @NameInMap("CcGlobalSwitch")
+        public String ccGlobalSwitch;
+
         /**
          * <p>The mode of the Frequency Control policy. Valid values:</p>
          * <br>
@@ -179,6 +182,14 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
         }
         public Integer getCcEnable() {
             return this.ccEnable;
+        }
+
+        public DescribeWebCcProtectSwitchResponseBodyProtectSwitchList setCcGlobalSwitch(String ccGlobalSwitch) {
+            this.ccGlobalSwitch = ccGlobalSwitch;
+            return this;
+        }
+        public String getCcGlobalSwitch() {
+            return this.ccGlobalSwitch;
         }
 
         public DescribeWebCcProtectSwitchResponseBodyProtectSwitchList setCcTemplate(String ccTemplate) {
