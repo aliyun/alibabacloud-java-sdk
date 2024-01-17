@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>aliding20230426</artifactId>
-  <version>2.4.0</version>
+  <version>2.4.1</version>
   <packaging>jar</packaging>
   <name>aliding20230426</name>
   <description>Alibaba Cloud aliding (20230426) SDK for Java
