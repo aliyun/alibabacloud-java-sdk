@@ -4,18 +4,42 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyFirewallV2RoutePolicySwitchRequest extends TeaModel {
+    /**
+     * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+     */
     @NameInMap("FirewallId")
     public String firewallId;
 
+    /**
+     * <p>The language of the content within the response. Valid values:</p>
+     * <br>
+     * <p>*   **zh** (default): Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Specifies whether to restore the traffic redirection configurations. Valid values:</p>
+     * <br>
+     * <p>*   true: roll back</p>
+     * <p>*   false: withdraw</p>
+     */
     @NameInMap("ShouldRecover")
     public String shouldRecover;
 
+    /**
+     * <p>The ID of the routing policy.</p>
+     */
     @NameInMap("TrFirewallRoutePolicyId")
     public String trFirewallRoutePolicyId;
 
+    /**
+     * <p>The status of the routing policy. Valid values:</p>
+     * <br>
+     * <p>*   open: enabled</p>
+     * <p>*   close: disabled</p>
+     */
     @NameInMap("TrFirewallRoutePolicySwitchStatus")
     public String trFirewallRoutePolicySwitchStatus;
 

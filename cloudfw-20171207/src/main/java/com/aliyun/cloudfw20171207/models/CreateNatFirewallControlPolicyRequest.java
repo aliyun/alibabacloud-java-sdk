@@ -106,15 +106,20 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The domain name resolution method of the access control policy. By default, an access control policy is enabled after it is created. Valid values:</p>
+     * <p>The domain name resolution method of the access control policy. By default, the access control policy is enabled after the policy is created. Valid values:</p>
      * <br>
-     * <p>*   **0**: Fully qualified domain name (FQDN)-based resolution</p>
+     * <p>*   **0**: fully qualified domain name (FQDN)-based resolution</p>
      * <p>*   **1**: Domain Name System (DNS)-based dynamic resolution</p>
      * <p>*   **2**: FQDN and DNS-based dynamic resolution</p>
      */
     @NameInMap("DomainResolveType")
     public Integer domainResolveType;
 
+    /**
+     * <p>The time when the access control policy stops taking effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of StartTime.</p>
+     * <br>
+     * <p>>  If RepeatType is set to Permanent, EndTime is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter must be specified.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
@@ -144,7 +149,7 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>The new priority of the access control policy.</p>
+     * <p>The priority of the access control policy. The priority value starts from 1. A small priority value indicates a high priority.</p>
      */
     @NameInMap("NewOrder")
     public String newOrder;
@@ -171,15 +176,46 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     @NameInMap("Release")
     public String release;
 
+    /**
+     * <p>The days of a week or of a month on which the access control policy takes effect.</p>
+     * <br>
+     * <p>*   If RepeatType is set to `Permanent`, `None`, or `Daily`, RepeatDays is left empty. Example: \[].</p>
+     * <p>*   If RepeatType is set to Weekly, RepeatDays must be specified. Example: \[0, 6].</p>
+     * <br>
+     * <p>>  If RepeatType is set to Weekly, the fields in the value of RepeatDays cannot be repeated.</p>
+     * <br>
+     * <p>*   If RepeatType is set to `Monthly`, RepeatDays must be specified. Example: \[1, 31].</p>
+     * <br>
+     * <p>>  If RepeatType is set to Monthly, the fields in the value of RepeatDays cannot be repeated.</p>
+     */
     @NameInMap("RepeatDays")
     public java.util.List<Long> repeatDays;
 
+    /**
+     * <p>The point in time when the recurrence ends. Example: 23:30. The value must be on the hour or on the half hour, and at least 30 minutes later than the value of RepeatStartTime.</p>
+     * <br>
+     * <p>>  If RepeatType is set to Permanent or None, RepeatEndTime is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.</p>
+     */
     @NameInMap("RepeatEndTime")
     public String repeatEndTime;
 
+    /**
+     * <p>The point in time when the recurrence starts. Example: 08:00. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of RepeatEndTime.</p>
+     * <br>
+     * <p>>  If RepeatType is set to Permanent or None, RepeatStartTime is left empty. If RepeatType is set to Daily, Weekly, or Monthly, this parameter must be specified.</p>
+     */
     @NameInMap("RepeatStartTime")
     public String repeatStartTime;
 
+    /**
+     * <p>The recurrence type for the access control policy to take effect. Valid values:</p>
+     * <br>
+     * <p>*   **Permanent** (default): The policy always takes effect.</p>
+     * <p>*   **None**: The policy takes effect for only once.</p>
+     * <p>*   **Daily**: The policy takes effect on a daily basis.</p>
+     * <p>*   **Weekly**: The policy takes effect on a weekly basis.</p>
+     * <p>*   **Monthly**: The policy takes effect on a monthly basis.</p>
+     */
     @NameInMap("RepeatType")
     public String repeatType;
 
@@ -210,6 +246,11 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <p>The time when the access control policy starts to take effect. The value is a UNIX timestamp. Unit: seconds. The value must be on the hour or on the half hour, and at least 30 minutes earlier than the value of EndTime.</p>
+     * <br>
+     * <p>>  If RepeatType is set to Permanent, StartTime is left empty. If RepeatType is set to None, Daily, Weekly, or Monthly, this parameter must be specified.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
