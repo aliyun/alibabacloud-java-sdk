@@ -85,21 +85,19 @@ public class CreateConsumerGroupRequest extends TeaModel {
 
     public static class CreateConsumerGroupRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N.</p>
+         * <p>The tag key.</p>
          * <br>
-         * <p>*   Valid values of N: 1 to 20.</p>
          * <p>*   You must specify this parameter.</p>
-         * <p>*   The tag key can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag key cannot start with acs: or aliyun.</p>
+         * <p>*   The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N.</p>
+         * <p>The tag value.</p>
          * <br>
-         * <p>*   Valid values of N: 1 to 20.</p>
          * <p>*   You can leave this parameter empty.</p>
-         * <p>*   The tag value can be 1 to 128 characters in length and cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)</p>
+         * <p>*   The tag value can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

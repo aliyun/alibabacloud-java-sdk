@@ -179,13 +179,13 @@ public class GetInstanceListResponseBody extends TeaModel {
         public Integer deployType;
 
         /**
-         * <p>The disk size of the instance.</p>
+         * <p>The disk size of the instance. Unit: GB</p>
          */
         @NameInMap("DiskSize")
         public Integer diskSize;
 
         /**
-         * <p>The disk type of the instance. Unit: GB Valid values:</p>
+         * <p>The disk type. Valid values:</p>
          * <br>
          * <p>*   **0**: ultra disk</p>
          * <p>*   **1**: standard SSD</p>
@@ -218,7 +218,7 @@ public class GetInstanceListResponseBody extends TeaModel {
         public String endPoint;
 
         /**
-         * <p>The expiration time. Unit: milliseconds.</p>
+         * <p>The time when the instance expires. Unit: milliseconds.</p>
          */
         @NameInMap("ExpiredTime")
         public Long expiredTime;
@@ -292,7 +292,7 @@ public class GetInstanceListResponseBody extends TeaModel {
         /**
          * <p>The security group to which the instance belongs.</p>
          * <br>
-         * <p>*   If the instance is deployed by using the ApsaraMQ for Kafka console or calling the [StartInstance](~~157786~~) operation without a security group configured, the returned value is empty.</p>
+         * <p>*   If the instance is deployed by using the ApsaraMQ for Kafka console or calling the [StartInstance](~~157786~~) operation without a security group configured, no value is returned.</p>
          * <p>*   If the instance is deployed by calling the [StartInstance](~~157786~~) operation with a security group configured, the return value is the configured security group.</p>
          */
         @NameInMap("SecurityGroup")
@@ -394,13 +394,13 @@ public class GetInstanceListResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) to which the instance belongs.</p>
+         * <p>The ID of the virtual private cloud (VPC) in which the instance is deployed.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
-         * <p>The zone ID of the instance.</p>
+         * <p>The zone ID.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

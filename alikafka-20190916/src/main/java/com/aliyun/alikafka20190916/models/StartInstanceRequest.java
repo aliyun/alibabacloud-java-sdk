@@ -5,29 +5,37 @@ import com.aliyun.tea.*;
 
 public class StartInstanceRequest extends TeaModel {
     /**
-     * <p>The initial configuration of the instance. The value must be a valid JSON string.</p>
+     * <p>The initial configurations of ApsaraMQ for Kafka. The value must be a valid JSON string.</p>
      * <br>
-     * <p>If you do not specify a value for this parameter, the value is left empty by default.</p>
+     * <p>If you do not specify this parameter, it is left empty.</p>
      * <br>
      * <p>The following parameters can be configured for **Config**:</p>
      * <br>
      * <p>*   **enable.vpc_sasl_ssl**: specifies whether to enable VPC transmission encryption. Valid values:</p>
      * <br>
-     * <p>    *   **true**: enables VPC transmission encryption. If VPC transmission encryption is enabled, you must also enable the access control list (ACL) feature.</p>
-     * <p>    *   **false**: disables VPC transmission encryption. This is the default value.</p>
+     * <p>    *   **true**: enables VPC transmission encryption. If you enable VPC transmission encryption, you must also enable access control list (ACL).</p>
+     * <p>    *   **false**: disables VPC transmission encryption. By default, VPC transmission encryption is disabled.</p>
      * <br>
      * <p>*   **enable.acl**: specifies whether to enable ACL. Valid values:</p>
      * <br>
-     * <p>    *   **true**: enables the ACL feature.</p>
-     * <p>    *   **false**: disables the ACL feature. This is the default value.</p>
+     * <p>    *   **true**: enables ACL.</p>
+     * <p>    *   **false**: disables ACL. By default, ACL is disabled.</p>
      * <br>
-     * <p>*   **kafka.log.retention.hours**: the maximum period for which messages can be retained when the remaining disk space is sufficient. Unit: hours. Valid values: 24 to 480. Default value: **72**. When the disk usage reaches 85%, the system deletes messages in the order in which they are stored, starting from the earliest stored message. This ensures that the performance of the service is not degraded.</p>
+     * <p>*   **kafka.log.retention.hours**: the maximum message retention period when the disk capacity is sufficient. Unit: hours. Valid values: 24 to 480. Default value: **72**. When the disk usage reaches 85%, the disk capacity is considered insufficient and the system deletes messages in the order in which they are stored to ensure service availability.</p>
      * <br>
-     * <p>*   **kafka.message.max.bytes**: the maximum size of messages that Message Queue for Apache Kafka can send and receive. Unit: bytes. Valid values: 1048576 to 10485760. Default value: **1048576**. Before you change the maximum message size to a new value, make sure that the new value matches the configuration on the producers and consumers in the instance.</p>
+     * <p>*   **kafka.message.max.bytes**: the maximum size of messages that ApsaraMQ for Kafka can send and receive. Unit: bytes. Valid values: 1048576 to 10485760. Default value: **1048576**. Before you change the value of this parameter, make sure that the new value matches the corresponding configurations on the producers and consumers.</p>
      */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <p>Specifies whether cross-zone deployment is required. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     * <br>
+     * <p>Default value: true.</p>
+     */
     @NameInMap("CrossZone")
     public Boolean crossZone;
 
@@ -115,19 +123,27 @@ public class StartInstanceRequest extends TeaModel {
     /**
      * <p>The security group of the instance.</p>
      * <br>
-     * <p>If you do not configure this parameter, Message Queue for Apache Kafka automatically configures a security group for the instance. If you want to configure this parameter, you must create a security group for the instance in advance. For more information, see [Create a security group](~~25468~~).</p>
+     * <p>If you do not specify this parameter, ApsaraMQ for Kafka automatically configures a security group for your instance. If you specify this parameter, you must create a security group in advance. For more information, see [Create a security group](~~25468~~).</p>
      */
     @NameInMap("SecurityGroup")
     public String securityGroup;
 
     /**
-     * <p>The zones among which you want to deploy the instance.</p>
+     * <p>The two-dimensional arrays that consist of the candidate set for primary zones and the candidate set for secondary zones.</p>
+     * <br>
+     * <p>*   If you set CrossZone to true and specify Zone H and Zone F as the candidate set for primary zones and Zone K as the candidate set for secondary zones, set this parameter to `[[\"zoneh\",\"zonef\"],[\"zonek\"]]`.</p>
+     * <br>
+     * <p>    **</p>
+     * <br>
+     * <p>    **Note** If you specify multiple zones as the primary or secondary zones, the system deploys the instance in one of the zones without prioritizing them. For example, if you set this parameter to `[[\"zoneh\",\"zonef\"],[\"zonek\"]]`, the primary zone in which the instance is deployed can be Zone H or Zone F, and the secondary zone is Zone K.</p>
+     * <br>
+     * <p>*   If you set CrossZone to false and want to deploy the instance in Zone K, set this parameter to `[[\"zonek\"],[]]`. In this case, the value of this parameter must still be two-dimensional arrays, but the array that specifies the candidate for secondary zones is left empty.</p>
      */
     @NameInMap("SelectedZones")
     public String selectedZones;
 
     /**
-     * <p>The version number of the instance. Valid values: 0.10.2 and 2.2.0.</p>
+     * <p>The version of ApsaraMQ for Kafka. Valid values: 0.10.2 and 2.2.0.</p>
      */
     @NameInMap("ServiceVersion")
     public String serviceVersion;

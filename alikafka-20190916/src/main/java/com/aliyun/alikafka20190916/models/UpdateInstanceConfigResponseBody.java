@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceConfigResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the call is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

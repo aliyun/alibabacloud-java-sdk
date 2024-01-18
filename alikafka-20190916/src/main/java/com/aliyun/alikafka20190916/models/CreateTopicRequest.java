@@ -86,7 +86,7 @@ public class CreateTopicRequest extends TeaModel {
     public Long replicationFactor;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags that you want to add to the topic.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateTopicRequestTag> tag;
@@ -196,21 +196,19 @@ public class CreateTopicRequest extends TeaModel {
 
     public static class CreateTopicRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N.</p>
+         * <p>The tag key.</p>
          * <br>
-         * <p>*   Valid values of N: 1 to 20.</p>
-         * <p>*   If this parameter is left empty, the keys of all tags are matched.</p>
-         * <p>*   The tag key can be up to 128 characters in length. It cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)</p>
+         * <p>*   If you do not specify this parameter, the keys of all tags are matched.</p>
+         * <p>*   The tag key must be 1 to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N.</p>
+         * <p>The tag value.</p>
          * <br>
-         * <p>*   Valid values of N: 1 to 20.</p>
-         * <p>*   This parameter can be left empty.</p>
-         * <p>*   The tag value can be up to 128 characters in length. It cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)</p>
+         * <p>*   You can leave this parameter empty.</p>
+         * <p>*   The tag value must be 1 to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with aliyun or acs:.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -35,7 +35,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The key of the tag that you want to attach to the specified resource.</p>
+     * <p>The tag key.</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
