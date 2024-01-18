@@ -787,6 +787,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ChargeType", request.chargeType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterBackupId)) {
+            query.put("ClusterBackupId", request.clusterBackupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.connectionStringPrefix)) {
             query.put("ConnectionStringPrefix", request.connectionStringPrefix);
         }
@@ -1099,6 +1103,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterBackupId)) {
+            query.put("ClusterBackupId", request.clusterBackupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.couponNo)) {
@@ -2337,6 +2345,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCacheAnalysisReportListResponse describeCacheAnalysisReportList(DescribeCacheAnalysisReportListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCacheAnalysisReportListWithOptions(request, runtime);
+    }
+
+    public DescribeClusterBackupListResponse describeClusterBackupListWithOptions(DescribeClusterBackupListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeClusterBackupList"),
+            new TeaPair("version", "2015-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterBackupListResponse());
+    }
+
+    public DescribeClusterBackupListResponse describeClusterBackupList(DescribeClusterBackupListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeClusterBackupListWithOptions(request, runtime);
     }
 
     /**
@@ -5072,7 +5105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis](~~184337~~).
+      * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis] (~~184337~~).
       *
       * @param request InitializeKvstorePermissionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5123,7 +5156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis](~~184337~~).
+      * The log management feature of ApsaraDB for Redis requires the resources of [Log Service](~~48869~~). To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see [Associated RAM roles of ApsaraDB for Redis] (~~184337~~).
       *
       * @param request InitializeKvstorePermissionRequest
       * @return InitializeKvstorePermissionResponse
@@ -6960,7 +6993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter are added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](~~148267~~).
+      * > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter is added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](~~148267~~).
       *
       * @param request ModifySecurityGroupConfigurationRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7015,7 +7048,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter are added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](~~148267~~).
+      * > After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the **SecurityGroupId** parameter is added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see [Add security groups](~~148267~~).
       *
       * @param request ModifySecurityGroupConfigurationRequest
       * @return ModifySecurityGroupConfigurationResponse

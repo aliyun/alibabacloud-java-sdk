@@ -65,6 +65,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("ClusterBackupId")
+    public String clusterBackupId;
+
     /**
      * <p>The coupon code.</p>
      */
@@ -348,6 +351,14 @@ public class CreateTairInstanceRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateTairInstanceRequest setClusterBackupId(String clusterBackupId) {
+        this.clusterBackupId = clusterBackupId;
+        return this;
+    }
+    public String getClusterBackupId() {
+        return this.clusterBackupId;
     }
 
     public CreateTairInstanceRequest setCouponNo(String couponNo) {

@@ -218,6 +218,9 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("RuleIds")
         public DescribePriceResponseBodyOrderRuleIds ruleIds;
 
+        /**
+         * <p>Indicates whether the discount information is displayed.</p>
+         */
         @NameInMap("ShowDiscountInfo")
         public Boolean showDiscountInfo;
 
@@ -400,13 +403,13 @@ public class DescribePriceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The list price of the order.</p>
+         * <p>The original price of the order.</p>
          */
         @NameInMap("OriginalAmount")
         public String originalAmount;
 
         /**
-         * <p>The ID of the promotion rule.</p>
+         * <p>The rule IDs.</p>
          */
         @NameInMap("RuleIds")
         public DescribePriceResponseBodySubOrdersSubOrderRuleIds ruleIds;

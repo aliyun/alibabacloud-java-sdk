@@ -27,6 +27,12 @@ public class AddShardingNodeRequest extends TeaModel {
     @NameInMap("CouponNo")
     public String couponNo;
 
+    /**
+     * <p>Specifies whether to enable forced transmission during a configuration change. Valid values:</p>
+     * <br>
+     * <p>*   **false** (default): Before the configuration change, the system checks the minor version of the instance. If the minor version of the instance is outdated, an error is reported. You must update the minor version of the instance and try again.</p>
+     * <p>*   **true**: The system skips the version check and directly performs the configuration change.</p>
+     */
     @NameInMap("ForceTrans")
     public Boolean forceTrans;
 
@@ -54,9 +60,7 @@ public class AddShardingNodeRequest extends TeaModel {
     /**
      * <p>The number of data shards that you want to add. Default value: **1**.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   A cluster instance must contain 2 to 256 data shards. You can add a maximum of 64 data shards at a time.</p>
+     * <p>>  The instance can contain 2 to 256 data shards. You can add up to 64 data shards at a time. Make sure that the number of shards does not exceed this limit.</p>
      */
     @NameInMap("ShardCount")
     public Integer shardCount;
@@ -67,6 +71,9 @@ public class AddShardingNodeRequest extends TeaModel {
     @NameInMap("SourceBiz")
     public String sourceBiz;
 
+    /**
+     * <p>The vSwitch ID. You can specify a different vSwitch within the same virtual private cloud (VPC). In this case, the new data shards are created in the specified vSwitch. If you do not specify this parameter, the new data shards are created in the original vSwitch.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 

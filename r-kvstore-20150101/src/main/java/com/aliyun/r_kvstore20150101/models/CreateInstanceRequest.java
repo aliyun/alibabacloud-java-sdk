@@ -74,6 +74,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    @NameInMap("ClusterBackupId")
+    public String clusterBackupId;
+
     /**
      * <p>The operation that you want to perform. Set the value to **AllocateInstancePublicConnection**.</p>
      */
@@ -367,6 +370,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    public CreateInstanceRequest setClusterBackupId(String clusterBackupId) {
+        this.clusterBackupId = clusterBackupId;
+        return this;
+    }
+    public String getClusterBackupId() {
+        return this.clusterBackupId;
     }
 
     public CreateInstanceRequest setConnectionStringPrefix(String connectionStringPrefix) {
