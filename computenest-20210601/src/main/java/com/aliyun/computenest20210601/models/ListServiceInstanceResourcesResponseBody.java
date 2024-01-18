@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListServiceInstanceResourcesResponseBody extends TeaModel {
     @NameInMap("MaxResults")
-    public String maxResults;
+    public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
@@ -21,11 +21,11 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListServiceInstanceResourcesResponseBody setMaxResults(String maxResults) {
+    public ListServiceInstanceResourcesResponseBody setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
@@ -80,6 +80,9 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
 
         @NameInMap("ResourceARN")
         public String resourceARN;
+
+        @NameInMap("Status")
+        public String status;
 
         public static ListServiceInstanceResourcesResponseBodyResources build(java.util.Map<String, ?> map) throws Exception {
             ListServiceInstanceResourcesResponseBodyResources self = new ListServiceInstanceResourcesResponseBodyResources();
@@ -156,6 +159,14 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
         }
         public String getResourceARN() {
             return this.resourceARN;
+        }
+
+        public ListServiceInstanceResourcesResponseBodyResources setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

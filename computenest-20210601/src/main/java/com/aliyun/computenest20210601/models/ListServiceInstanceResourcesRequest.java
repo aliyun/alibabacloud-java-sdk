@@ -11,7 +11,7 @@ public class ListServiceInstanceResourcesRequest extends TeaModel {
     public String expireTimeStart;
 
     @NameInMap("MaxResults")
-    public String maxResults;
+    public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
@@ -19,11 +19,17 @@ public class ListServiceInstanceResourcesRequest extends TeaModel {
     @NameInMap("PayType")
     public String payType;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceARN")
     public java.util.List<String> resourceARN;
 
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;
+
+    @NameInMap("ServiceInstanceResourceType")
+    public String serviceInstanceResourceType;
 
     @NameInMap("Tag")
     public java.util.List<ListServiceInstanceResourcesRequestTag> tag;
@@ -49,11 +55,11 @@ public class ListServiceInstanceResourcesRequest extends TeaModel {
         return this.expireTimeStart;
     }
 
-    public ListServiceInstanceResourcesRequest setMaxResults(String maxResults) {
+    public ListServiceInstanceResourcesRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
@@ -73,6 +79,14 @@ public class ListServiceInstanceResourcesRequest extends TeaModel {
         return this.payType;
     }
 
+    public ListServiceInstanceResourcesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public ListServiceInstanceResourcesRequest setResourceARN(java.util.List<String> resourceARN) {
         this.resourceARN = resourceARN;
         return this;
@@ -87,6 +101,14 @@ public class ListServiceInstanceResourcesRequest extends TeaModel {
     }
     public String getServiceInstanceId() {
         return this.serviceInstanceId;
+    }
+
+    public ListServiceInstanceResourcesRequest setServiceInstanceResourceType(String serviceInstanceResourceType) {
+        this.serviceInstanceResourceType = serviceInstanceResourceType;
+        return this;
+    }
+    public String getServiceInstanceResourceType() {
+        return this.serviceInstanceResourceType;
     }
 
     public ListServiceInstanceResourcesRequest setTag(java.util.List<ListServiceInstanceResourcesRequestTag> tag) {
