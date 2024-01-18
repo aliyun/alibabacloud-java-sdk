@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListServiceInstancesResponseBody extends TeaModel {
     @NameInMap("MaxResults")
-    public String maxResults;
+    public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
@@ -24,11 +24,11 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListServiceInstancesResponseBody setMaxResults(String maxResults) {
+    public ListServiceInstancesResponseBody setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
@@ -265,6 +265,9 @@ public class ListServiceInstancesResponseBody extends TeaModel {
     }
 
     public static class ListServiceInstancesResponseBodyServiceInstances extends TeaModel {
+        @NameInMap("BizStatus")
+        public String bizStatus;
+
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -301,6 +304,9 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("Progress")
         public Long progress;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("Resources")
         public String resources;
 
@@ -334,6 +340,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         public static ListServiceInstancesResponseBodyServiceInstances build(java.util.Map<String, ?> map) throws Exception {
             ListServiceInstancesResponseBodyServiceInstances self = new ListServiceInstancesResponseBodyServiceInstances();
             return TeaModel.build(map, self);
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstances setBizStatus(String bizStatus) {
+            this.bizStatus = bizStatus;
+            return this;
+        }
+        public String getBizStatus() {
+            return this.bizStatus;
         }
 
         public ListServiceInstancesResponseBodyServiceInstances setCreateTime(String createTime) {
@@ -430,6 +444,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
         public Long getProgress() {
             return this.progress;
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstances setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListServiceInstancesResponseBodyServiceInstances setResources(String resources) {

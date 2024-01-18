@@ -4,6 +4,9 @@ package com.aliyun.computenest20210601.models;
 import com.aliyun.tea.*;
 
 public class GetServiceInstanceRequest extends TeaModel {
+    @NameInMap("MarketInstanceId")
+    public String marketInstanceId;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -13,6 +16,14 @@ public class GetServiceInstanceRequest extends TeaModel {
     public static GetServiceInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetServiceInstanceRequest self = new GetServiceInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetServiceInstanceRequest setMarketInstanceId(String marketInstanceId) {
+        this.marketInstanceId = marketInstanceId;
+        return this;
+    }
+    public String getMarketInstanceId() {
+        return this.marketInstanceId;
     }
 
     public GetServiceInstanceRequest setRegionId(String regionId) {

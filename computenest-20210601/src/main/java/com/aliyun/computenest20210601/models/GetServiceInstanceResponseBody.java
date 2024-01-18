@@ -4,11 +4,23 @@ package com.aliyun.computenest20210601.models;
 import com.aliyun.tea.*;
 
 public class GetServiceInstanceResponseBody extends TeaModel {
+    @NameInMap("BizStatus")
+    public String bizStatus;
+
+    /**
+     * <p>云市场额外计费项。</p>
+     */
+    @NameInMap("Components")
+    public String components;
+
     @NameInMap("CreateTime")
     public String createTime;
 
     @NameInMap("EnableInstanceOps")
     public Boolean enableInstanceOps;
+
+    @NameInMap("EnableUserPrometheus")
+    public Boolean enableUserPrometheus;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -18,6 +30,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
 
     @NameInMap("LicenseEndTime")
     public String licenseEndTime;
+
+    @NameInMap("MarketInstanceId")
+    public String marketInstanceId;
 
     @NameInMap("Name")
     public String name;
@@ -43,11 +58,20 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <p>套餐名称。</p>
+     */
+    @NameInMap("PredefinedParameterName")
+    public String predefinedParameterName;
+
     @NameInMap("Progress")
     public Long progress;
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("Resources")
     public String resources;
@@ -90,6 +114,22 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetServiceInstanceResponseBody setBizStatus(String bizStatus) {
+        this.bizStatus = bizStatus;
+        return this;
+    }
+    public String getBizStatus() {
+        return this.bizStatus;
+    }
+
+    public GetServiceInstanceResponseBody setComponents(String components) {
+        this.components = components;
+        return this;
+    }
+    public String getComponents() {
+        return this.components;
+    }
+
     public GetServiceInstanceResponseBody setCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -104,6 +144,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     }
     public Boolean getEnableInstanceOps() {
         return this.enableInstanceOps;
+    }
+
+    public GetServiceInstanceResponseBody setEnableUserPrometheus(Boolean enableUserPrometheus) {
+        this.enableUserPrometheus = enableUserPrometheus;
+        return this;
+    }
+    public Boolean getEnableUserPrometheus() {
+        return this.enableUserPrometheus;
     }
 
     public GetServiceInstanceResponseBody setEndTime(String endTime) {
@@ -128,6 +176,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     }
     public String getLicenseEndTime() {
         return this.licenseEndTime;
+    }
+
+    public GetServiceInstanceResponseBody setMarketInstanceId(String marketInstanceId) {
+        this.marketInstanceId = marketInstanceId;
+        return this;
+    }
+    public String getMarketInstanceId() {
+        return this.marketInstanceId;
     }
 
     public GetServiceInstanceResponseBody setName(String name) {
@@ -194,6 +250,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         return this.payType;
     }
 
+    public GetServiceInstanceResponseBody setPredefinedParameterName(String predefinedParameterName) {
+        this.predefinedParameterName = predefinedParameterName;
+        return this;
+    }
+    public String getPredefinedParameterName() {
+        return this.predefinedParameterName;
+    }
+
     public GetServiceInstanceResponseBody setProgress(Long progress) {
         this.progress = progress;
         return this;
@@ -208,6 +272,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetServiceInstanceResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public GetServiceInstanceResponseBody setResources(String resources) {
@@ -306,16 +378,143 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         return this.userId;
     }
 
+    public static class GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs extends TeaModel {
+        @NameInMap("ConnectBandwidth")
+        public Integer connectBandwidth;
+
+        /**
+         * <p>域名名称。</p>
+         */
+        @NameInMap("DomainName")
+        public String domainName;
+
+        @NameInMap("EndpointIps")
+        public java.util.List<String> endpointIps;
+
+        @NameInMap("IngressEndpointStatus")
+        public String ingressEndpointStatus;
+
+        @NameInMap("NetworkServiceStatus")
+        public String networkServiceStatus;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("SecurityGroups")
+        public java.util.List<String> securityGroups;
+
+        @NameInMap("VSwitches")
+        public java.util.List<String> vSwitches;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        public static GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs self = new GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs setConnectBandwidth(Integer connectBandwidth) {
+            this.connectBandwidth = connectBandwidth;
+            return this;
+        }
+        public Integer getConnectBandwidth() {
+            return this.connectBandwidth;
+        }
+
+        public GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
+        }
+
+        public GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs setEndpointIps(java.util.List<String> endpointIps) {
+            this.endpointIps = endpointIps;
+            return this;
+        }
+        public java.util.List<String> getEndpointIps() {
+            return this.endpointIps;
+        }
+
+        public GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs setIngressEndpointStatus(String ingressEndpointStatus) {
+            this.ingressEndpointStatus = ingressEndpointStatus;
+            return this;
+        }
+        public String getIngressEndpointStatus() {
+            return this.ingressEndpointStatus;
+        }
+
+        public GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs setNetworkServiceStatus(String networkServiceStatus) {
+            this.networkServiceStatus = networkServiceStatus;
+            return this;
+        }
+        public String getNetworkServiceStatus() {
+            return this.networkServiceStatus;
+        }
+
+        public GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs setSecurityGroups(java.util.List<String> securityGroups) {
+            this.securityGroups = securityGroups;
+            return this;
+        }
+        public java.util.List<String> getSecurityGroups() {
+            return this.securityGroups;
+        }
+
+        public GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs setVSwitches(java.util.List<String> vSwitches) {
+            this.vSwitches = vSwitches;
+            return this;
+        }
+        public java.util.List<String> getVSwitches() {
+            return this.vSwitches;
+        }
+
+        public GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+    }
+
     public static class GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnections extends TeaModel {
+        @NameInMap("ConnectionConfigs")
+        public java.util.List<GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs> connectionConfigs;
+
         @NameInMap("EndpointId")
         public String endpointId;
 
         @NameInMap("PrivateZoneId")
         public String privateZoneId;
 
+        @NameInMap("PrivateZoneName")
+        public String privateZoneName;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
         public static GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnections build(java.util.Map<String, ?> map) throws Exception {
             GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnections self = new GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnections();
             return TeaModel.build(map, self);
+        }
+
+        public GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnections setConnectionConfigs(java.util.List<GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs> connectionConfigs) {
+            this.connectionConfigs = connectionConfigs;
+            return this;
+        }
+        public java.util.List<GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnectionsConnectionConfigs> getConnectionConfigs() {
+            return this.connectionConfigs;
         }
 
         public GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnections setEndpointId(String endpointId) {
@@ -332,6 +531,22 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
         public String getPrivateZoneId() {
             return this.privateZoneId;
+        }
+
+        public GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnections setPrivateZoneName(String privateZoneName) {
+            this.privateZoneName = privateZoneName;
+            return this;
+        }
+        public String getPrivateZoneName() {
+            return this.privateZoneName;
+        }
+
+        public GetServiceInstanceResponseBodyNetworkConfigPrivateVpcConnections setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
     }

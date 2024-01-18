@@ -4,6 +4,9 @@ package com.aliyun.computenest20210601.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceInstanceResponseBody extends TeaModel {
+    @NameInMap("MarketInstanceId")
+    public String marketInstanceId;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -16,6 +19,14 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
     public static CreateServiceInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceInstanceResponseBody self = new CreateServiceInstanceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateServiceInstanceResponseBody setMarketInstanceId(String marketInstanceId) {
+        this.marketInstanceId = marketInstanceId;
+        return this;
+    }
+    public String getMarketInstanceId() {
+        return this.marketInstanceId;
     }
 
     public CreateServiceInstanceResponseBody setRequestId(String requestId) {

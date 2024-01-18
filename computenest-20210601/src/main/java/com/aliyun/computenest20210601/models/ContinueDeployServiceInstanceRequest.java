@@ -7,6 +7,12 @@ public class ContinueDeployServiceInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    @NameInMap("Option")
+    public java.util.List<String> option;
+
     @NameInMap("Parameters")
     public String parameters;
 
@@ -27,6 +33,22 @@ public class ContinueDeployServiceInstanceRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ContinueDeployServiceInstanceRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public ContinueDeployServiceInstanceRequest setOption(java.util.List<String> option) {
+        this.option = option;
+        return this;
+    }
+    public java.util.List<String> getOption() {
+        return this.option;
     }
 
     public ContinueDeployServiceInstanceRequest setParameters(String parameters) {

@@ -7,6 +7,12 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("Commodity")
+    public CreateServiceInstanceShrinkRequestCommodity commodity;
+
+    /**
+     * <p>接收告警的云监控联系人组。</p>
+     */
     @NameInMap("ContactGroup")
     public String contactGroup;
 
@@ -16,6 +22,16 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     @NameInMap("EnableInstanceOps")
     public Boolean enableInstanceOps;
 
+    @NameInMap("EnableUserPrometheus")
+    public Boolean enableUserPrometheus;
+
+    /**
+     * <p>服务实例名称。格式要求如下：</p>
+     * <br>
+     * <p>- 长度不超过64个字符。</p>
+     * <br>
+     * <p>- 必须以数字或英文字母开头，可包含数字、英文字母、短划线（-）和下划线（_）。</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -24,9 +40,6 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
 
     @NameInMap("Parameters")
     public String parametersShrink;
-
-    @NameInMap("PayType")
-    public Long payType;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -43,15 +56,28 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     @NameInMap("SpecificationCode")
     public String specificationCode;
 
+    /**
+     * <p>套餐规格名称。</p>
+     */
     @NameInMap("SpecificationName")
     public String specificationName;
 
+    /**
+     * <p>用户自定义标签。</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateServiceInstanceShrinkRequestTag> tag;
 
     @NameInMap("TemplateName")
     public String templateName;
 
+    /**
+     * <p>使用类型。可选值：</p>
+     * <br>
+     * <p>- Trial：支持试用。</p>
+     * <br>
+     * <p>- NotTrial：不支持试用。</p>
+     */
     @NameInMap("TrialType")
     public String trialType;
 
@@ -66,6 +92,14 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateServiceInstanceShrinkRequest setCommodity(CreateServiceInstanceShrinkRequestCommodity commodity) {
+        this.commodity = commodity;
+        return this;
+    }
+    public CreateServiceInstanceShrinkRequestCommodity getCommodity() {
+        return this.commodity;
     }
 
     public CreateServiceInstanceShrinkRequest setContactGroup(String contactGroup) {
@@ -92,6 +126,14 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         return this.enableInstanceOps;
     }
 
+    public CreateServiceInstanceShrinkRequest setEnableUserPrometheus(Boolean enableUserPrometheus) {
+        this.enableUserPrometheus = enableUserPrometheus;
+        return this;
+    }
+    public Boolean getEnableUserPrometheus() {
+        return this.enableUserPrometheus;
+    }
+
     public CreateServiceInstanceShrinkRequest setName(String name) {
         this.name = name;
         return this;
@@ -114,14 +156,6 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     }
     public String getParametersShrink() {
         return this.parametersShrink;
-    }
-
-    public CreateServiceInstanceShrinkRequest setPayType(Long payType) {
-        this.payType = payType;
-        return this;
-    }
-    public Long getPayType() {
-        return this.payType;
     }
 
     public CreateServiceInstanceShrinkRequest setRegionId(String regionId) {
@@ -196,9 +230,42 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         return this.trialType;
     }
 
+    public static class CreateServiceInstanceShrinkRequestCommodity extends TeaModel {
+        @NameInMap("PayPeriod")
+        public Long payPeriod;
+
+        @NameInMap("PayPeriodUnit")
+        public String payPeriodUnit;
+
+        public static CreateServiceInstanceShrinkRequestCommodity build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceInstanceShrinkRequestCommodity self = new CreateServiceInstanceShrinkRequestCommodity();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServiceInstanceShrinkRequestCommodity setPayPeriod(Long payPeriod) {
+            this.payPeriod = payPeriod;
+            return this;
+        }
+        public Long getPayPeriod() {
+            return this.payPeriod;
+        }
+
+        public CreateServiceInstanceShrinkRequestCommodity setPayPeriodUnit(String payPeriodUnit) {
+            this.payPeriodUnit = payPeriodUnit;
+            return this;
+        }
+        public String getPayPeriodUnit() {
+            return this.payPeriodUnit;
+        }
+
+    }
+
     public static class CreateServiceInstanceShrinkRequestOperationMetadata extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
+
+        @NameInMap("ExtraInfo")
+        public String extraInfo;
 
         @NameInMap("Resources")
         public String resources;
@@ -220,6 +287,14 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
+        }
+
+        public CreateServiceInstanceShrinkRequestOperationMetadata setExtraInfo(String extraInfo) {
+            this.extraInfo = extraInfo;
+            return this;
+        }
+        public String getExtraInfo() {
+            return this.extraInfo;
         }
 
         public CreateServiceInstanceShrinkRequestOperationMetadata setResources(String resources) {
@@ -249,9 +324,15 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     }
 
     public static class CreateServiceInstanceShrinkRequestTag extends TeaModel {
+        /**
+         * <p>标签键。</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>标签值。</p>
+         */
         @NameInMap("Value")
         public String value;
 

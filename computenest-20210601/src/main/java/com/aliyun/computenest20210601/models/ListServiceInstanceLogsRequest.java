@@ -4,8 +4,14 @@ package com.aliyun.computenest20210601.models;
 import com.aliyun.tea.*;
 
 public class ListServiceInstanceLogsRequest extends TeaModel {
+    @NameInMap("LogSource")
+    public String logSource;
+
+    @NameInMap("Logstore")
+    public String logstore;
+
     @NameInMap("MaxResults")
-    public String maxResults;
+    public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
@@ -21,11 +27,27 @@ public class ListServiceInstanceLogsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListServiceInstanceLogsRequest setMaxResults(String maxResults) {
+    public ListServiceInstanceLogsRequest setLogSource(String logSource) {
+        this.logSource = logSource;
+        return this;
+    }
+    public String getLogSource() {
+        return this.logSource;
+    }
+
+    public ListServiceInstanceLogsRequest setLogstore(String logstore) {
+        this.logstore = logstore;
+        return this;
+    }
+    public String getLogstore() {
+        return this.logstore;
+    }
+
+    public ListServiceInstanceLogsRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
