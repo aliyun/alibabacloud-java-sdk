@@ -23,6 +23,11 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
     @NameInMap("BandwidthExpireTime")
     public String bandwidthExpireTime;
 
+    /**
+     * <p>The billing methods of unexpired bandwith plans. Valid values:</p>
+     * <p>- **0**: Pay-as-you-go</p>
+     * <p>- **1**: Subscription</p>
+     */
     @NameInMap("BandwidthPrePaid")
     public String bandwidthPrePaid;
 

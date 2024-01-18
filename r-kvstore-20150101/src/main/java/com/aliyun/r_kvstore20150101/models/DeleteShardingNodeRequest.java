@@ -4,6 +4,12 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DeleteShardingNodeRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable forced transmission during a configuration change. Valid values:</p>
+     * <br>
+     * <p>*   **false** (default): Before the configuration change, the system checks the minor version of the instance. If the minor version of the instance is outdated, an error is reported. You must update the minor version of the instance and try again.</p>
+     * <p>*   **true**: The system skips the version check and directly performs the configuration change.</p>
+     */
     @NameInMap("ForceTrans")
     public Boolean forceTrans;
 
