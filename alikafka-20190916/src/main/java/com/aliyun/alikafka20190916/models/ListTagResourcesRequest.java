@@ -17,15 +17,15 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource. A resource ID complies with the following rules:</p>
+     * <p>The resource ID. The following items describe the formats of resource IDs:</p>
      * <br>
-     * <p>*   The resource ID of an instance is the value of the instanceId parameter.</p>
-     * <p>*   The resource ID of a topic is the value of the Kafka_alikafka_instanceId_topic parameter.</p>
-     * <p>*   The resource ID of a group is the value of the Kafka_alikafka_instanceId_consumerGroup parameter.</p>
+     * <p>*   Instance ID: instanceId</p>
+     * <p>*   Topic ID: Kafka_alikafka_instanceId_topic</p>
+     * <p>*   Group ID: Kafka_alikafka_instanceId_consumerGroup</p>
      * <br>
-     * <p>For example, the resources whose tags you want to query include the alikafka_post-cn-v0h1fgs2xxxx instance, the test-topic topic, and the test-consumer-group group. In this case, their resource IDs are alikafka_post-cn-v0h1fgs2xxxx, Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-topic, and Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-consumer-group.</p>
+     * <p>For example, you create an instance whose ID is alikafka_post-cn-v0h1fgs2xxxx, a topic whose name is test-topic, and a group whose ID is test-consumer-group. In this case, the resource IDs are alikafka_post-cn-v0h1fgs2xxxx, Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-topic, and Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-consumer-group.</p>
      * <br>
-     * <p>>  You must set at least one of the **ResourceId** and **Tag** parameters to query the tags of a specified resource. Otherwise, the request fails.</p>
+     * <p>>  You must specify one of the **ResourceId** and **Tag** parameters to query the tags that are attached to a resource. Otherwise, the call fails.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -41,7 +41,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag list.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -95,9 +95,8 @@ public class ListTagResourcesRequest extends TeaModel {
         /**
          * <p>The tag key.</p>
          * <br>
-         * <p>*   Valid values of N: 1 to 20.</p>
-         * <p>*   If this parameter is not configured, all tag keys are matched.</p>
-         * <p>*   The tag key can be up to 128 characters in length. The tag value cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)</p>
+         * <p>*   If you leave this parameter empty, the keys of all tags are matched.</p>
+         * <p>*   The tag key must be 1 to 128 characters in length and cannot start with acs: or aliyun. The tag key cannot contain http:// or https://.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -105,9 +104,8 @@ public class ListTagResourcesRequest extends TeaModel {
         /**
          * <p>The tag value.</p>
          * <br>
-         * <p>*   Valid values of N: 1 to 20.</p>
-         * <p>*   If the Key parameter is not configured, you cannot configure this parameter. If this parameter is not configured, all tag values are matched.</p>
-         * <p>*   The tag value can be 1 to 128 characters in length. The tag value cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)</p>
+         * <p>*   If you do not specify the tag key, you cannot specify the tag value. If you leave this parameter empty, the values of all tags are matched.</p>
+         * <p>*   The tag value must be 1 to 128 characters in length and cannot start with acs: or aliyun. The tag value cannot contain http:// or https://.</p>
          */
         @NameInMap("Value")
         public String value;

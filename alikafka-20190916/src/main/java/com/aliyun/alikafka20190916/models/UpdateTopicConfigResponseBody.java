@@ -3,45 +3,47 @@ package com.aliyun.alikafka20190916.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyInstanceNameResponseBody extends TeaModel {
-    /**
-     * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
-     */
+public class UpdateTopicConfigResponseBody extends TeaModel {
     @NameInMap("Code")
-    public Integer code;
+    public Long code;
 
-    /**
-     * <p>The returned message.</p>
-     */
+    @NameInMap("Data")
+    public String data;
+
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the call is successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
-    public static ModifyInstanceNameResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ModifyInstanceNameResponseBody self = new ModifyInstanceNameResponseBody();
+    public static UpdateTopicConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateTopicConfigResponseBody self = new UpdateTopicConfigResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModifyInstanceNameResponseBody setCode(Integer code) {
+    public UpdateTopicConfigResponseBody setCode(Long code) {
         this.code = code;
         return this;
     }
-    public Integer getCode() {
+    public Long getCode() {
         return this.code;
     }
 
-    public ModifyInstanceNameResponseBody setMessage(String message) {
+    public UpdateTopicConfigResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
+    }
+
+    public UpdateTopicConfigResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -49,7 +51,7 @@ public class ModifyInstanceNameResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ModifyInstanceNameResponseBody setRequestId(String requestId) {
+    public UpdateTopicConfigResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -57,7 +59,7 @@ public class ModifyInstanceNameResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ModifyInstanceNameResponseBody setSuccess(Boolean success) {
+    public UpdateTopicConfigResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
