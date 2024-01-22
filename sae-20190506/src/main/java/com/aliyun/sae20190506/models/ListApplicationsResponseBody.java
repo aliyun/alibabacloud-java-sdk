@@ -5,66 +5,55 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: indicates that the request was successful.</p>
-     * <p>*   **3xx**: indicates that the request was redirected.</p>
-     * <p>*   **4xx**: indicates that the request was invalid.</p>
-     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     * <p>Queries applications.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>20</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The information about applications.</p>
+     * <p>The number of the returned page.</p>
      */
     @NameInMap("Data")
     public ListApplicationsResponseBodyData data;
 
     /**
-     * <p>The error code. </p>
-     * <br>
-     * <p>- The **ErrorCode** parameter is not returned when the request succeeds.</p>
-     * <p>- The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+     * <p>The number of entries returned on each page.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>20</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>cn-beijing:demo</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The number of entries returned on each page.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the list of applications was obtained. Valid values:</p>
-     * <br>
-     * <p>*   **true**: indicates that the list was obtained.</p>
-     * <p>*   **false**: indicates that the list could not be obtained.</p>
+     * <p>1</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The total number of applications.</p>
+     * <p>demo-app</p>
      */
     @NameInMap("TotalSize")
     public Integer totalSize;
@@ -148,13 +137,13 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     public static class ListApplicationsResponseBodyDataApplicationsTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>appName</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -184,58 +173,61 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     public static class ListApplicationsResponseBodyDataApplications extends TeaModel {
         /**
-         * <p>Indicates whether the application is being deleted. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The application is being deleted.</p>
-         * <p>*   **false**: The application is not being deleted.</p>
+         * <p>demo-app</p>
          */
         @NameInMap("AppDeletingStatus")
         public Boolean appDeletingStatus;
 
         /**
-         * <p>The description of the application.</p>
+         * <p>\[{"key":"key","value":"value"}]</p>
          */
         @NameInMap("AppDescription")
         public String appDescription;
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The total number of applications.</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The ID of the application.</p>
          */
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("Cpu")
+        public Integer cpu;
+
         /**
-         * <p>The number of application instances.</p>
+         * <p>The total number of applications.</p>
          */
         @NameInMap("Instances")
         public Integer instances;
 
+        @NameInMap("Mem")
+        public Integer mem;
+
         /**
-         * <p>The ID of the namespace.</p>
+         * <p>demo-app</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The number of running instances.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The number of running instances.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("RunningInstances")
         public Integer runningInstances;
 
         /**
-         * <p>The tags of the application.</p>
+         * <p>cn-beijing:demo</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListApplicationsResponseBodyDataApplicationsTags> tags;
@@ -277,12 +269,28 @@ public class ListApplicationsResponseBody extends TeaModel {
             return this.appName;
         }
 
+        public ListApplicationsResponseBodyDataApplications setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
         public ListApplicationsResponseBodyDataApplications setInstances(Integer instances) {
             this.instances = instances;
             return this;
         }
         public Integer getInstances() {
             return this.instances;
+        }
+
+        public ListApplicationsResponseBodyDataApplications setMem(Integer mem) {
+            this.mem = mem;
+            return this;
+        }
+        public Integer getMem() {
+            return this.mem;
         }
 
         public ListApplicationsResponseBodyDataApplications setNamespaceId(String namespaceId) {
@@ -321,25 +329,25 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     public static class ListApplicationsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of applications.</p>
+         * <p>The description of the application.</p>
          */
         @NameInMap("Applications")
         public java.util.List<ListApplicationsResponseBodyDataApplications> applications;
 
         /**
-         * <p>The number of the returned page.</p>
+         * <p>The number of application instances.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The tags of the application.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of applications.</p>
+         * <p>The information about applications.</p>
          */
         @NameInMap("TotalSize")
         public Integer totalSize;

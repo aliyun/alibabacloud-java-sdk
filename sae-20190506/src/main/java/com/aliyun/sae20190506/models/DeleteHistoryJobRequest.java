@@ -4,9 +4,15 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DeleteHistoryJobRequest extends TeaModel {
+    /**
+     * <p>The ID of the job template to which the job that you want to delete belongs.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The ID of the job.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 

@@ -5,31 +5,39 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsRequest extends TeaModel {
     /**
-     * <p>demo-app</p>
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: indicates that the request was successful.</p>
+     * <p>*   **3xx**: indicates that the request was redirected.</p>
+     * <p>*   **4xx**: indicates that the request was invalid.</p>
+     * <p>*   **5xx**: indicates that a server error occurred.</p>
      */
     @NameInMap("AppName")
     public String appName;
 
+    @NameInMap("AppSource")
+    public String appSource;
+
     /**
-     * <p>1</p>
+     * <p>The number of the returned page.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>appName</p>
+     * <p>true</p>
      */
     @NameInMap("FieldType")
     public String fieldType;
 
     /**
-     * <p>demo-app</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("FieldValue")
     public String fieldValue;
 
     /**
-     * <p>cn-beijing:demo</p>
+     * <p>1</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
@@ -41,19 +49,22 @@ public class ListApplicationsRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>20</p>
+     * <p>Indicates whether the application is being deleted. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The application is being deleted.</p>
+     * <p>*   **false**: The application is not being deleted.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>true</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Reverse")
     public Boolean reverse;
 
     /**
-     * <p>\[{"key":"key","value":"value"}]</p>
+     * <p>The list of applications.</p>
      */
     @NameInMap("Tags")
     public String tags;
@@ -69,6 +80,14 @@ public class ListApplicationsRequest extends TeaModel {
     }
     public String getAppName() {
         return this.appName;
+    }
+
+    public ListApplicationsRequest setAppSource(String appSource) {
+        this.appSource = appSource;
+        return this;
+    }
+    public String getAppSource() {
+        return this.appSource;
     }
 
     public ListApplicationsRequest setCurrentPage(Integer currentPage) {

@@ -7,9 +7,6 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The returned data.</p>
-     */
     @NameInMap("Data")
     public CreateApplicationScalingRuleResponseBodyData data;
 
@@ -19,18 +16,12 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
-     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -96,29 +87,23 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     }
 
     public static class CreateApplicationScalingRuleResponseBodyDataMetricMetrics extends TeaModel {
-        /**
-         * <p>The limit on the metric.</p>
-         * <br>
-         * <p>*   The limit on the CPU utilization. Unit: percentage.</p>
-         * <p>*   The limit on the memory usage. Unit: percentage.</p>
-         * <p>*   The limit on the average number of active TCP connections per second.</p>
-         * <p>*   The limit on the QPS of the Internet-facing SLB instance.</p>
-         * <p>*   The limit on the response time of the Internet-facing SLB instance. Unit: milliseconds.</p>
-         */
         @NameInMap("MetricTargetAverageUtilization")
         public Integer metricTargetAverageUtilization;
 
-        /**
-         * <p>The metric that is used to trigger the auto scaling policy. Valid values:</p>
-         * <br>
-         * <p>*   **CPU**: the CPU utilization.</p>
-         * <p>*   **MEMORY**: the memory usage.</p>
-         * <p>*   **tcpActiveConn**: the average number of active TCP connections for an instance in 30 seconds.</p>
-         * <p>*   **SLB_QPS**: the average QPS of the Internet-facing SLB instance associated with an application instance in 15 seconds.</p>
-         * <p>*   **SLB_RT**: the average response time of the Internet-facing SLB instance in 15 seconds.</p>
-         */
         @NameInMap("MetricType")
         public String metricType;
+
+        @NameInMap("SlbId")
+        public String slbId;
+
+        @NameInMap("SlbLogstore")
+        public String slbLogstore;
+
+        @NameInMap("SlbProject")
+        public String slbProject;
+
+        @NameInMap("Vport")
+        public String vport;
 
         public static CreateApplicationScalingRuleResponseBodyDataMetricMetrics build(java.util.Map<String, ?> map) throws Exception {
             CreateApplicationScalingRuleResponseBodyDataMetricMetrics self = new CreateApplicationScalingRuleResponseBodyDataMetricMetrics();
@@ -141,24 +126,47 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
             return this.metricType;
         }
 
+        public CreateApplicationScalingRuleResponseBodyDataMetricMetrics setSlbId(String slbId) {
+            this.slbId = slbId;
+            return this;
+        }
+        public String getSlbId() {
+            return this.slbId;
+        }
+
+        public CreateApplicationScalingRuleResponseBodyDataMetricMetrics setSlbLogstore(String slbLogstore) {
+            this.slbLogstore = slbLogstore;
+            return this;
+        }
+        public String getSlbLogstore() {
+            return this.slbLogstore;
+        }
+
+        public CreateApplicationScalingRuleResponseBodyDataMetricMetrics setSlbProject(String slbProject) {
+            this.slbProject = slbProject;
+            return this;
+        }
+        public String getSlbProject() {
+            return this.slbProject;
+        }
+
+        public CreateApplicationScalingRuleResponseBodyDataMetricMetrics setVport(String vport) {
+            this.vport = vport;
+            return this;
+        }
+        public String getVport() {
+            return this.vport;
+        }
+
     }
 
     public static class CreateApplicationScalingRuleResponseBodyDataMetric extends TeaModel {
-        /**
-         * <p>The maximum number of instances.</p>
-         */
         @NameInMap("MaxReplicas")
         public Integer maxReplicas;
 
-        /**
-         * <p>The list of metrics that are used to trigger the auto scaling policy.</p>
-         */
         @NameInMap("Metrics")
         public java.util.List<CreateApplicationScalingRuleResponseBodyDataMetricMetrics> metrics;
 
-        /**
-         * <p>The minimum number of instances.</p>
-         */
         @NameInMap("MinReplicas")
         public Integer minReplicas;
 
@@ -194,15 +202,15 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     }
 
     public static class CreateApplicationScalingRuleResponseBodyDataTimerSchedules extends TeaModel {
-        /**
-         * <p>The point in time. Format: **Hour:Minute**.</p>
-         */
         @NameInMap("AtTime")
         public String atTime;
 
-        /**
-         * <p>The expected number of instances.</p>
-         */
+        @NameInMap("MaxReplicas")
+        public Integer maxReplicas;
+
+        @NameInMap("MinReplicas")
+        public Integer minReplicas;
+
         @NameInMap("TargetReplicas")
         public Integer targetReplicas;
 
@@ -219,6 +227,22 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
             return this.atTime;
         }
 
+        public CreateApplicationScalingRuleResponseBodyDataTimerSchedules setMaxReplicas(Integer maxReplicas) {
+            this.maxReplicas = maxReplicas;
+            return this;
+        }
+        public Integer getMaxReplicas() {
+            return this.maxReplicas;
+        }
+
+        public CreateApplicationScalingRuleResponseBodyDataTimerSchedules setMinReplicas(Integer minReplicas) {
+            this.minReplicas = minReplicas;
+            return this;
+        }
+        public Integer getMinReplicas() {
+            return this.minReplicas;
+        }
+
         public CreateApplicationScalingRuleResponseBodyDataTimerSchedules setTargetReplicas(Integer targetReplicas) {
             this.targetReplicas = targetReplicas;
             return this;
@@ -230,47 +254,15 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     }
 
     public static class CreateApplicationScalingRuleResponseBodyDataTimer extends TeaModel {
-        /**
-         * <p>The start date of the validity period of the scheduled auto scaling policy.</p>
-         * <br>
-         * <p>*   If both the **BeginDate** and **EndDate** parameters are set to **null**, the auto scaling policy can always be triggered. The default value for these parameters is null.</p>
-         * <p>*   If the two parameters are set to specific dates, the scheduled auto scaling policy can be triggered during the period between the two dates. For example, if **BeginDate** is 2021-03-25 and **EndDate** is 2021-04-25, the auto scaling policy is valid for one month.</p>
-         */
         @NameInMap("BeginDate")
         public String beginDate;
 
-        /**
-         * <p>The end date of the validity period of the scheduled auto scaling policy.</p>
-         * <br>
-         * <p>*   If both the **BeginDate** and **EndDate** parameters are set to **null**, the auto scaling policy can always be triggered. The default value for these parameters is null.</p>
-         * <p>*   If the two parameters are set to specific dates, the scheduled auto scaling policy can be triggered during the period between the two dates. For example, if **BeginDate** is 2021-03-25 and **EndDate** is 2021-04-25, the auto scaling policy is valid for one month.</p>
-         */
         @NameInMap("EndDate")
         public String endDate;
 
-        /**
-         * <p>The days on which the scheduled auto scaling policy takes effect. Valid values:</p>
-         * <br>
-         * <p>*   **\* \* \***: The scheduled auto scaling policy takes effect at a specified time every day.</p>
-         * <br>
-         * <p>*   **\* \* Fri,Mon**: The scheduled auto scaling policy takes effect at a specified time on one or multiple days of a week. The specified time is in the GMT+8 time zone. Valid values:</p>
-         * <br>
-         * <p>    *   **Sun**: Sunday</p>
-         * <p>    *   **Mon**: Monday</p>
-         * <p>    *   **Tue**: Tuesday</p>
-         * <p>    *   **Wed**: Wednesday</p>
-         * <p>    *   **Thu**: Thursday</p>
-         * <p>    *   **Fri**: Friday</p>
-         * <p>    *   **Sat**: Saturday</p>
-         * <br>
-         * <p>*   **1,2,3,28,31 \* \***: The scheduled auto scaling policy takes effect at a specified time on one or multiple days of a month. Valid values: 1 to 31. If the month does not have a 31st day, the auto scaling policy takes effect on the specified days other than the 31st day.</p>
-         */
         @NameInMap("Period")
         public String period;
 
-        /**
-         * <p>The points in time when the auto scaling policy is triggered within one day.</p>
-         */
         @NameInMap("Schedules")
         public java.util.List<CreateApplicationScalingRuleResponseBodyDataTimerSchedules> schedules;
 
@@ -314,64 +306,30 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     }
 
     public static class CreateApplicationScalingRuleResponseBodyData extends TeaModel {
-        /**
-         * <p>The ID of the application.</p>
-         */
         @NameInMap("AppId")
         public String appId;
 
-        /**
-         * <p>The time when the auto scaling policy was created. Unit: milliseconds.</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The time when the auto scaling policy was last disabled.</p>
-         */
         @NameInMap("LastDisableTime")
         public Long lastDisableTime;
 
-        /**
-         * <p>The details of the metric-based auto scaling policy.</p>
-         */
         @NameInMap("Metric")
         public CreateApplicationScalingRuleResponseBodyDataMetric metric;
 
-        /**
-         * <p>Indicates whether the auto scaling policy is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**: enabled</p>
-         * <p>*   **false**: disabled</p>
-         */
         @NameInMap("ScaleRuleEnabled")
         public Boolean scaleRuleEnabled;
 
-        /**
-         * <p>The name of the auto scaling policy.</p>
-         */
         @NameInMap("ScaleRuleName")
         public String scaleRuleName;
 
-        /**
-         * <p>The type of the auto scaling policy. Valid values:</p>
-         * <br>
-         * <p>*   **timing**: the scheduled auto scaling policy.</p>
-         * <p>*   **metric**: the metric-based auto scaling policy.</p>
-         * <p>*   **mix**: the hybrid auto scaling policy.</p>
-         */
         @NameInMap("ScaleRuleType")
         public String scaleRuleType;
 
-        /**
-         * <p>The details of the scheduled auto scaling policy.</p>
-         */
         @NameInMap("Timer")
         public CreateApplicationScalingRuleResponseBodyDataTimer timer;
 
-        /**
-         * <p>The time when the auto scaling policy was updated. Unit: milliseconds.</p>
-         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

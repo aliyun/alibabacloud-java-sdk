@@ -8,7 +8,7 @@ public class DescribeNamespaceRequest extends TeaModel {
     public String nameSpaceShortId;
 
     /**
-     * <p>cn-beijing:test</p>
+     * <p>The description of the namespace.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;

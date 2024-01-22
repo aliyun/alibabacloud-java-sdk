@@ -4,9 +4,15 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class SuspendJobRequest extends TeaModel {
+    /**
+     * <p>The ID of the job template.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>Specifies whether to suspend the job template.</p>
+     */
     @NameInMap("Suspend")
     public Boolean suspend;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateConfigMapRequest extends TeaModel {
     /**
-     * <p>1</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ConfigMapId")
     public Long configMapId;

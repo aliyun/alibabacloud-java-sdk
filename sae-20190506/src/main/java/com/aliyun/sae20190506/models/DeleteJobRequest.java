@@ -4,6 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DeleteJobRequest extends TeaModel {
+    /**
+     * <p>The ID of the job template that you want to delete.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 

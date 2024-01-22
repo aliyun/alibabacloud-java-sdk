@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListIngressesRequest extends TeaModel {
     /**
-     * <p>bbf3a590-6d13-46fe-8ca9-c947a20b\*\*\*\*</p>
+     * <p>The list of routing rules.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>cn-beijing</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;

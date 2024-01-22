@@ -7,23 +7,31 @@ public class CreateNamespaceRequest extends TeaModel {
     @NameInMap("EnableMicroRegistration")
     public Boolean enableMicroRegistration;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("NameSpaceShortId")
     public String nameSpaceShortId;
 
     /**
-     * <p>desc</p>
+     * <p>The name of the namespace.</p>
      */
     @NameInMap("NamespaceDescription")
     public String namespaceDescription;
 
     /**
-     * <p>cn-beijing:test</p>
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: indicates that the request was successful.</p>
+     * <p>*   **3xx**: indicates that the request was redirected.</p>
+     * <p>*   **4xx**: indicates that the request was invalid.</p>
+     * <p>*   **5xx**: indicates that a server error occurred.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>name</p>
+     * <p>cn-beijing:test</p>
      */
     @NameInMap("NamespaceName")
     public String namespaceName;

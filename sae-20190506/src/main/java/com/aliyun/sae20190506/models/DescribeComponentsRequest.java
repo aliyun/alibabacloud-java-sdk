@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeComponentsRequest extends TeaModel {
     /**
-     * <p>d700e680-aa4d-4ec1-afc2-6566b5ff\*\*\*\*</p>
+     * <p>TOMCAT</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>TOMCAT</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Type")
     public String type;

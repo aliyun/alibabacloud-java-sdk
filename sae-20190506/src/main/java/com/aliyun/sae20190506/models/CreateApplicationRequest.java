@@ -28,6 +28,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
+    @NameInMap("AppSource")
+    public String appSource;
+
     /**
      * <p>true</p>
      */
@@ -81,6 +84,9 @@ public class CreateApplicationRequest extends TeaModel {
      */
     @NameInMap("EdasContainerVersion")
     public String edasContainerVersion;
+
+    @NameInMap("EnableEbpf")
+    public String enableEbpf;
 
     /**
      * <p>\[{"name":"envtmp","value":"0"}]</p>
@@ -196,6 +202,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("PackageVersion")
     public String packageVersion;
 
+    @NameInMap("Php")
+    public String php;
+
     /**
      * <p>/usr/local/etc/php/conf.d/arms.ini</p>
      */
@@ -249,6 +258,9 @@ public class CreateApplicationRequest extends TeaModel {
      */
     @NameInMap("Replicas")
     public Integer replicas;
+
+    @NameInMap("SaeVersion")
+    public String saeVersion;
 
     /**
      * <p>sg-wz969ngg2e49q5i4\*\*\*\*</p>
@@ -341,6 +353,14 @@ public class CreateApplicationRequest extends TeaModel {
         return this.appName;
     }
 
+    public CreateApplicationRequest setAppSource(String appSource) {
+        this.appSource = appSource;
+        return this;
+    }
+    public String getAppSource() {
+        return this.appSource;
+    }
+
     public CreateApplicationRequest setAssociateEip(Boolean associateEip) {
         this.associateEip = associateEip;
         return this;
@@ -411,6 +431,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getEdasContainerVersion() {
         return this.edasContainerVersion;
+    }
+
+    public CreateApplicationRequest setEnableEbpf(String enableEbpf) {
+        this.enableEbpf = enableEbpf;
+        return this;
+    }
+    public String getEnableEbpf() {
+        return this.enableEbpf;
     }
 
     public CreateApplicationRequest setEnvs(String envs) {
@@ -581,6 +609,14 @@ public class CreateApplicationRequest extends TeaModel {
         return this.packageVersion;
     }
 
+    public CreateApplicationRequest setPhp(String php) {
+        this.php = php;
+        return this;
+    }
+    public String getPhp() {
+        return this.php;
+    }
+
     public CreateApplicationRequest setPhpArmsConfigLocation(String phpArmsConfigLocation) {
         this.phpArmsConfigLocation = phpArmsConfigLocation;
         return this;
@@ -667,6 +703,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public Integer getReplicas() {
         return this.replicas;
+    }
+
+    public CreateApplicationRequest setSaeVersion(String saeVersion) {
+        this.saeVersion = saeVersion;
+        return this;
+    }
+    public String getSaeVersion() {
+        return this.saeVersion;
     }
 
     public CreateApplicationRequest setSecurityGroupId(String securityGroupId) {

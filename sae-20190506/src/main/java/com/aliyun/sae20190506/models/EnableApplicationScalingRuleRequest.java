@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class EnableApplicationScalingRuleRequest extends TeaModel {
     /**
-     * <p>7171a6ca-d1cd-4928-8642-7d5cfe69\*\*\*\*</p>
+     * <p>The application ID.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>timer-0800-2100</p>
+     * <p>The name of the auto scaling policy.</p>
      */
     @NameInMap("ScalingRuleName")
     public String scalingRuleName;

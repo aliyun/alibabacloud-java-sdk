@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppVersionsRequest extends TeaModel {
     /**
-     * <p>7171a6ca-d1cd-4928-8642-7d5cfe69\*\*\*\*</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("AppId")
     public String appId;

@@ -8,13 +8,13 @@ public class UpdateNamespaceVpcRequest extends TeaModel {
     public String nameSpaceShortId;
 
     /**
-     * <p>cn-beijing:test</p>
+     * <p>vpc-2ze0i263cnn311nvj\*\*\*\*</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>vpc-2ze0i263cnn311nvj\*\*\*\*</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

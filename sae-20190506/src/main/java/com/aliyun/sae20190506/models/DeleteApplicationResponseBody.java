@@ -5,6 +5,21 @@ import com.aliyun.tea.*;
 
 public class DeleteApplicationResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the application is deleted. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
+    @NameInMap("Code")
+    public String code;
+
+    /**
+     * <p>The ID of the change order that is used to query the task execution status.</p>
+     */
+    @NameInMap("Data")
+    public DeleteApplicationResponseBodyData data;
+
+    /**
      * <p>The HTTP status code. Valid values:</p>
      * <br>
      * <p>*   **2xx**: The request is successful.</p>
@@ -12,23 +27,14 @@ public class DeleteApplicationResponseBody extends TeaModel {
      * <p>*   **4xx**: The request is invalid.</p>
      * <p>*   **5xx**: A server error occurred.</p>
      */
-    @NameInMap("Code")
-    public String code;
-
-    /**
-     * <p>The returned results.</p>
-     */
-    @NameInMap("Data")
-    public DeleteApplicationResponseBodyData data;
-
-    /**
-     * <p>The error code that is returned if the request fails.</p>
-     * <br>
-     * <p>*   If the request is successful, this parameter is not returned.****</p>
-     * <p>*   This parameter is returned only if the request failed.**** For more information about the values of this parameter, see the "**Error codes**" section of this topic.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
+
+    /**
+     * <p>The trace ID that is used to query details of the request.</p>
+     */
+    @NameInMap("Message")
+    public String message;
 
     /**
      * <p>The returned message.</p>
@@ -36,26 +42,14 @@ public class DeleteApplicationResponseBody extends TeaModel {
      * <p>*   If the request is successful, **success** is returned.</p>
      * <p>*   If an error occurred, the error code is returned.</p>
      */
-    @NameInMap("Message")
-    public String message;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the application is deleted. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The trace ID that is used to query details of the request.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -123,7 +117,10 @@ public class DeleteApplicationResponseBody extends TeaModel {
 
     public static class DeleteApplicationResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the change order that is used to query the task execution status.</p>
+         * <p>The error code that is returned if the request fails.</p>
+         * <br>
+         * <p>*   If the request is successful, this parameter is not returned.****</p>
+         * <p>*   This parameter is returned only if the request failed.**** For more information about the values of this parameter, see the "**Error codes**" section of this topic.</p>
          */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;

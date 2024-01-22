@@ -4,9 +4,15 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DeleteSecretRequest extends TeaModel {
+    /**
+     * <p>The ID of the namespace in which the Secret resides. By default, the namespace ID is the same as the region ID.</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    /**
+     * <p>The ID of the Secret to be deleted. You can call the [ListSecrets](~~466929~~) operation to view the Secret IDs.</p>
+     */
     @NameInMap("SecretId")
     public Long secretId;
 

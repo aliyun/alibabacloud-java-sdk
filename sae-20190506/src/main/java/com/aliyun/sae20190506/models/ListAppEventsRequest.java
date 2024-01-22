@@ -5,49 +5,58 @@ import com.aliyun.tea.*;
 
 public class ListAppEventsRequest extends TeaModel {
     /**
-     * <p>f7730764-d88f-4b9a-8d8e-cd8efbfe\*\*\*\*</p>
+     * <p>The application ID.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>1</p>
+     * <p>The page number of the page to return.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>Warning</p>
+     * <p>The type of the event. Valid values:</p>
+     * <br>
+     * <p>*   **Warning**: an alert.</p>
+     * <p>*   **Normal**: a normal event.</p>
      */
     @NameInMap("EventType")
     public String eventType;
 
     /**
-     * <p>cn-beijing</p>
+     * <p>The namespace ID.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>Pod</p>
+     * <p>The type of the object. Valid values:</p>
+     * <br>
+     * <p>*   **Deployment**: an application.</p>
+     * <p>*   **Pod**: an application instance.</p>
+     * <p>*   **Service**: a Server Load Balancer (SLB) instance.</p>
+     * <p>*   **HorizontalPodAutoscaler**: an auto scaling policy.</p>
+     * <p>*   **CloneSet**: an application.</p>
      */
     @NameInMap("ObjectKind")
     public String objectKind;
 
     /**
-     * <p>errew-b86bf540-b4dc-47d8-a42f-b4997c14bd8f-5595cbddd6-x\*\*\*\*</p>
+     * <p>The name of the object. Fuzzy search by prefix is supported.</p>
      */
     @NameInMap("ObjectName")
     public String objectName;
 
     /**
-     * <p>10</p>
+     * <p>The number of entries to return on each page. Valid values: 0 to 10000.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>Started</p>
+     * <p>The cause of the event. Fuzzy search by prefix is supported.</p>
      */
     @NameInMap("Reason")
     public String reason;

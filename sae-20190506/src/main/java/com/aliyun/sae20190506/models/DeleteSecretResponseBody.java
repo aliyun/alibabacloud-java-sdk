@@ -4,24 +4,59 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DeleteSecretResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: The call was successful.</p>
+     * <p>*   **3xx**: The call was redirected.</p>
+     * <p>*   **4xx**: The call failed.</p>
+     * <p>*   **5xx**: A server error occurred.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response.</p>
+     */
     @NameInMap("Data")
     public DeleteSecretResponseBodyData data;
 
+    /**
+     * <p>The error code returned. Valid values:</p>
+     * <br>
+     * <p>*   The **ErrorCode** parameter is not returned if the request succeeds.</p>
+     * <p>*   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The additional information that is returned. Valid values:</p>
+     * <br>
+     * <p>*   success: If the call is successful, **success** is returned.</p>
+     * <p>*   An error code: If the call fails, an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the Secret is successfully deleted. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The instance was deleted.</p>
+     * <p>*   **false**: The instance failed to be deleted.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The trace ID that is used to query the details of the request.</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -87,6 +122,9 @@ public class DeleteSecretResponseBody extends TeaModel {
     }
 
     public static class DeleteSecretResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the deleted Secret.</p>
+         */
         @NameInMap("SecretId")
         public Long secretId;
 

@@ -5,33 +5,33 @@ import com.aliyun.tea.*;
 
 public class RollbackApplicationResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The HTTP status code. Take note of the following rules:</p>
      * <br>
-     * <p>*   **2xx**: indicates that the request was successful.</p>
-     * <p>*   **3xx**: indicates that the request was redirected.</p>
-     * <p>*   **4xx**: indicates that the request was invalid.</p>
-     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     * <p>*   **2xx**: The call was successful.</p>
+     * <p>*   **3xx**: The call was redirected.</p>
+     * <p>*   **4xx**: The call failed.</p>
+     * <p>*   **5xx**: A server error occurred.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response.</p>
      */
     @NameInMap("Data")
     public RollbackApplicationResponseBodyData data;
 
     /**
-     * <p>The error code. Valid values:</p>
+     * <p>The error code returned if the request failed. Take note of the following rules:</p>
      * <br>
-     * <p>*   If the request is successful, this parameter is not returned.****</p>
-     * <p>*   This parameter is returned only if the request failed.**** For more information, see the "**Error codes**" section in this topic.</p>
+     * <p>*   The **ErrorCode** parameter is not returned if the request succeeds.</p>
+     * <p>*   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned for the operation.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -43,7 +43,7 @@ public class RollbackApplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the application is successfully rolled back. Valid values:</p>
+     * <p>Indicates whether the application is successfully rolled back. Take note of the following rules:</p>
      * <br>
      * <p>*   **true**</p>
      * <p>*   **false**</p>
@@ -52,7 +52,7 @@ public class RollbackApplicationResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. It is used to query the details of a request.</p>
+     * <p>The trace ID that is used to query the details of the request.</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -120,13 +120,13 @@ public class RollbackApplicationResponseBody extends TeaModel {
 
     public static class RollbackApplicationResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the change order.</p>
+         * <p>The ID of the change process.</p>
          */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;
 
         /**
-         * <p>Specifies whether approval is required when a RAM user performs release. Valid values:</p>
+         * <p>Specifies whether approval is required when a RAM user performs release. Take note of the following rules:</p>
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false**</p>

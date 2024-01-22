@@ -1,3 +1,6 @@
+2024-01-22 Version: 1.22.12
+- Generated java 2019-05-06 for sae.
+
 2023-03-23 Version: 1.22.11
 - Support Create Namespace Without Micro Service Registration.
 

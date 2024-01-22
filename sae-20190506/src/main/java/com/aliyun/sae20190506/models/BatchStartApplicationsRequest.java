@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class BatchStartApplicationsRequest extends TeaModel {
     /**
-     * <p>ebf491f0-c1a5-45e2-b2c4-710dbe2a\*\*\*\*</p>
+     * <p>The returned message.</p>
+     * <br>
+     * <p>*   **success** is returned when the request succeeds.</p>
+     * <p>*   An error code is returned when the request fails.</p>
      */
     @NameInMap("AppIds")
     public String appIds;
 
     /**
-     * <p>cn-shanghai</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;

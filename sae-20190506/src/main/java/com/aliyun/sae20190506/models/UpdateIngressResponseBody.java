@@ -4,56 +4,24 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class UpdateIngressResponseBody extends TeaModel {
-    /**
-     * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: indicates that the request was successful.</p>
-     * <p>*   **3xx**: indicates that the request was redirected.</p>
-     * <p>*   **4xx**: indicates that the request was invalid.</p>
-     * <p>*   **5xx**: indicates that a server error occurred.</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <p>The returned data.</p>
-     */
     @NameInMap("Data")
     public UpdateIngressResponseBodyData data;
 
-    /**
-     * <p>The error code.</p>
-     * <br>
-     * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
-     * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The returned message.</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the configurations of the routing rule were updated. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The configurations were updated.</p>
-     * <p>*   **false**: The configurations could not be updated.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The ID of the trace.</p>
-     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -119,9 +87,6 @@ public class UpdateIngressResponseBody extends TeaModel {
     }
 
     public static class UpdateIngressResponseBodyData extends TeaModel {
-        /**
-         * <p>The ID of the routing rule.</p>
-         */
         @NameInMap("IngressId")
         public Long ingressId;
 

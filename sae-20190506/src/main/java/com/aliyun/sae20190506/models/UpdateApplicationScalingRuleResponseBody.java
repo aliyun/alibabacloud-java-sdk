@@ -4,32 +4,58 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: The call was successful.</p>
+     * <p>*   **3xx**: The call was redirected.</p>
+     * <p>*   **4xx**: The call failed.</p>
+     * <p>*   **5xx**: A server error occurred.</p>
+     */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public UpdateApplicationScalingRuleResponseBodyData data;
 
+    /**
+     * <p>The error code returned. Take note of the following rules:</p>
+     * <br>
+     * <p>*   If the call is successful, **ErrorCode** is not returned.</p>
+     * <p>*   If the call fails, **ErrorCode** is returned. For more information, see the "**Error codes**" section in this topic.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The returned message. Take note of the following rules:</p>
+     * <br>
+     * <p>*   If the call is successful, **success** is returned.</p>
+     * <p>*   If the call fails, an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Specifies whether the instances are successfully restarted. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * <p>The trace ID that is used to query the details of the request.</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -113,12 +139,24 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
          * <br>
          * <p>*   **CPU**: the CPU utilization.</p>
          * <p>*   **MEMORY**: the memory usage.</p>
-         * <p>*   **tcpActiveConn**: the average number of active TCP connections for an instance in 30 seconds.</p>
-         * <p>*   **SLB_QPS**: the average QPS of the Internet-facing SLB instance associated with an application instance in 15 seconds.</p>
-         * <p>*   **SLB_RT**: the average response time of the Internet-facing SLB instance in 15 seconds.</p>
+         * <p>*   **tcpActiveConn**: the average number of active TCP connections of an application instance within 30 seconds.</p>
+         * <p>*   **SLB_QPS**: the average QPS of the Internet-facing SLB instance associated with an application instance within 15 seconds.</p>
+         * <p>*   **SLB_RT**: the average response time of the Internet-facing SLB instance within 15 seconds.</p>
          */
         @NameInMap("MetricType")
         public String metricType;
+
+        @NameInMap("SlbId")
+        public String slbId;
+
+        @NameInMap("SlbLogstore")
+        public String slbLogstore;
+
+        @NameInMap("SlbProject")
+        public String slbProject;
+
+        @NameInMap("Vport")
+        public String vport;
 
         public static UpdateApplicationScalingRuleResponseBodyDataMetricMetrics build(java.util.Map<String, ?> map) throws Exception {
             UpdateApplicationScalingRuleResponseBodyDataMetricMetrics self = new UpdateApplicationScalingRuleResponseBodyDataMetricMetrics();
@@ -141,6 +179,38 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
             return this.metricType;
         }
 
+        public UpdateApplicationScalingRuleResponseBodyDataMetricMetrics setSlbId(String slbId) {
+            this.slbId = slbId;
+            return this;
+        }
+        public String getSlbId() {
+            return this.slbId;
+        }
+
+        public UpdateApplicationScalingRuleResponseBodyDataMetricMetrics setSlbLogstore(String slbLogstore) {
+            this.slbLogstore = slbLogstore;
+            return this;
+        }
+        public String getSlbLogstore() {
+            return this.slbLogstore;
+        }
+
+        public UpdateApplicationScalingRuleResponseBodyDataMetricMetrics setSlbProject(String slbProject) {
+            this.slbProject = slbProject;
+            return this;
+        }
+        public String getSlbProject() {
+            return this.slbProject;
+        }
+
+        public UpdateApplicationScalingRuleResponseBodyDataMetricMetrics setVport(String vport) {
+            this.vport = vport;
+            return this;
+        }
+        public String getVport() {
+            return this.vport;
+        }
+
     }
 
     public static class UpdateApplicationScalingRuleResponseBodyDataMetric extends TeaModel {
@@ -151,7 +221,7 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
         public Integer maxReplicas;
 
         /**
-         * <p>The list of metrics that are used to trigger the auto scaling policy.</p>
+         * <p>The metrics that are used to trigger the auto scaling policy.</p>
          */
         @NameInMap("Metrics")
         public java.util.List<UpdateApplicationScalingRuleResponseBodyDataMetricMetrics> metrics;
@@ -200,6 +270,12 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
         @NameInMap("AtTime")
         public String atTime;
 
+        @NameInMap("MaxReplicas")
+        public Integer maxReplicas;
+
+        @NameInMap("MinReplicas")
+        public Integer minReplicas;
+
         /**
          * <p>The expected number of instances.</p>
          */
@@ -219,6 +295,22 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
             return this.atTime;
         }
 
+        public UpdateApplicationScalingRuleResponseBodyDataTimerSchedules setMaxReplicas(Integer maxReplicas) {
+            this.maxReplicas = maxReplicas;
+            return this;
+        }
+        public Integer getMaxReplicas() {
+            return this.maxReplicas;
+        }
+
+        public UpdateApplicationScalingRuleResponseBodyDataTimerSchedules setMinReplicas(Integer minReplicas) {
+            this.minReplicas = minReplicas;
+            return this;
+        }
+        public Integer getMinReplicas() {
+            return this.minReplicas;
+        }
+
         public UpdateApplicationScalingRuleResponseBodyDataTimerSchedules setTargetReplicas(Integer targetReplicas) {
             this.targetReplicas = targetReplicas;
             return this;
@@ -233,43 +325,43 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
         /**
          * <p>The start date of the validity period of the scheduled auto scaling policy. Parameter description:</p>
          * <br>
-         * <p>*   If both the **BeginDate** and **EndDate** parameters are set to **null**, the auto scaling policy can always be triggered. The default value for these parameters is null.</p>
-         * <p>*   If the two parameters are set to specific dates, the scheduled auto scaling policy can be triggered during the period between the two dates. For example, if **BeginDate** is 2021-03-25 and **EndDate** is 2021-04-25, the auto scaling policy is valid for one month.</p>
+         * <p>*   If **BeginDate** and **EndDate** are set to **null**, the auto scaling policy is a long-term policy. Default values of the beginDate and endDate parameters: null.</p>
+         * <p>*   If the two parameters are set to specific dates, the scheduled auto scaling policy can be triggered during the period between the two dates. For example, if **BeginDate** is set to 2021-03-25 and **EndDate** is set to 2021-04-25, the auto scaling policy is valid for one month.</p>
          */
         @NameInMap("BeginDate")
         public String beginDate;
 
         /**
-         * <p>The end date of the validity period of the scheduled auto scaling policy. Parameter description:</p>
+         * <p>The end date of the validity period of the scheduled auto scaling policy. Take note of the following rules:</p>
          * <br>
-         * <p>*   If both the **BeginDate** and **EndDate** parameters are set to **null**, the auto scaling policy can always be triggered. The default value for these parameters is null.</p>
-         * <p>*   If the two parameters are set to specific dates, the scheduled auto scaling policy can be triggered during the period between the two dates. For example, if **BeginDate** is 2021-03-25 and **EndDate** is 2021-04-25, the auto scaling policy is valid for one month.</p>
+         * <p>*   If **BeginDate** and **EndDate** are set to **null**, the auto scaling policy is a long-term policy. Default values of the beginDate and endDate parameters: null.</p>
+         * <p>*   If the two parameters are set to specific dates, the scheduled auto scaling policy can be triggered during the period between the two dates. For example, if **BeginDate** is set to 2021-03-25 and **EndDate** is set to 2021-04-25, the auto scaling policy is valid for one month.</p>
          */
         @NameInMap("EndDate")
         public String endDate;
 
         /**
-         * <p>The days on which the scheduled auto scaling policy takes effect. Valid values:</p>
+         * <p>The frequency at which the scheduled auto scaling policy is executed. Valid values:</p>
          * <br>
-         * <p>*   **\* \* \***: The scheduled auto scaling policy takes effect at a specified time every day.</p>
+         * <p>*   **\* \* \***: The scheduled auto scaling policy is executed at a specified point in time every day.</p>
          * <br>
-         * <p>*   **\* \* Fri,Mon**: The scheduled auto scaling policy takes effect at a specified time on one or multiple days of a week. The specified time is in the GMT+8 time zone. Valid values:</p>
+         * <p>*   **\* \* Fri,Mon**: The scheduled auto scaling policy is executed at a specified point in time on one or more days of each week. GMT+8 is used. Valid values:</p>
          * <br>
-         * <p>    *   **Sun**: Sunday</p>
-         * <p>    *   **Mon**: Monday</p>
-         * <p>    *   **Tue**: Tuesday</p>
-         * <p>    *   **Wed**: Wednesday</p>
-         * <p>    *   **Thu**: Thursday</p>
-         * <p>    *   **Fri**: Friday</p>
-         * <p>    *   **Sat**: Saturday</p>
+         * <p>    *   **Sun**</p>
+         * <p>    *   **Mon**</p>
+         * <p>    *   **Tue**</p>
+         * <p>    *   **Wed**</p>
+         * <p>    *   **Thu**</p>
+         * <p>    *   **Fri**</p>
+         * <p>    *   **Sat**</p>
          * <br>
-         * <p>*   **1,2,3,28,31 \* \***: The scheduled auto scaling policy takes effect at a specified time on one or multiple days of a month. Valid values: 1 to 31. If the month does not have a 31st day, the auto scaling policy takes effect on the specified days other than the 31st day.</p>
+         * <p>*   **1,2,3,28,31 \* \***: The scheduled auto scaling policy is executed at a specified point in time on one or more days of each month. Valid values: 1 to 31. If the month does not have a 31st day, the auto scaling policy is executed on the specified days other than the 31st day.</p>
          */
         @NameInMap("Period")
         public String period;
 
         /**
-         * <p>The points in time when the auto scaling policy is triggered within one day.</p>
+         * <p>The points in time at which the auto scaling policy is triggered within one day.</p>
          */
         @NameInMap("Schedules")
         public java.util.List<UpdateApplicationScalingRuleResponseBodyDataTimerSchedules> schedules;
@@ -315,7 +407,7 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
 
     public static class UpdateApplicationScalingRuleResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          */
         @NameInMap("AppId")
         public String appId;
@@ -339,10 +431,10 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
         public UpdateApplicationScalingRuleResponseBodyDataMetric metric;
 
         /**
-         * <p>Indicates whether the auto scaling policy is enabled. Valid values:</p>
+         * <p>Specifies whether to enable the auto scaling policy. Valid values:</p>
          * <br>
-         * <p>*   **true**: enabled</p>
-         * <p>*   **false**: disabled</p>
+         * <p>*   **true**: The auto scaling policy is enabled.</p>
+         * <p>*   **false**: The auto scaling policy is disabled.</p>
          */
         @NameInMap("ScaleRuleEnabled")
         public Boolean scaleRuleEnabled;
@@ -356,9 +448,9 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
         /**
          * <p>The type of the auto scaling policy. Valid values:</p>
          * <br>
-         * <p>*   **timing**: the scheduled auto scaling policy.</p>
-         * <p>*   **metric**: the metric-based auto scaling policy.</p>
-         * <p>*   **mix**: the hybrid auto scaling policy.</p>
+         * <p>*   **timing**: a scheduled auto scaling policy</p>
+         * <p>*   **metric**: a metric-based auto scaling policy</p>
+         * <p>*   **mix**: a hybrid auto scaling policy</p>
          */
         @NameInMap("ScaleRuleType")
         public String scaleRuleType;

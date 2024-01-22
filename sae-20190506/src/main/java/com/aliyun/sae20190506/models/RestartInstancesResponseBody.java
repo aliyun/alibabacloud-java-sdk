@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class RestartInstancesResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The HTTP status code. Take note of the following rules:</p>
      * <br>
-     * <p>*   **2xx**: indicates that the request was successful.</p>
-     * <p>*   **3xx**: indicates that the request was redirected.</p>
-     * <p>*   **4xx**: indicates that the request was invalid.</p>
-     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     * <p>*   **2xx**: The call was successful.</p>
+     * <p>*   **3xx**: The call was redirected.</p>
+     * <p>*   **4xx**: The call failed.</p>
+     * <p>*   **5xx**: A server error occurred.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -22,31 +22,31 @@ public class RestartInstancesResponseBody extends TeaModel {
     public RestartInstancesResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code returned if the request failed. Take note of the following rules:</p>
      * <br>
-     * <p>*   If the request is successful, this parameter is not returned.****</p>
-     * <p>*   This parameter is returned only if the request failed.**** For more information, see the "**Error codes**" section in this topic.</p>
+     * <p>*   The **ErrorCode** parameter is not returned if the request succeeds.</p>
+     * <p>*   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The additional information that is returned. Take note of the following rules:</p>
      * <br>
-     * <p>*   If the request is successful, **success** is returned.</p>
-     * <p>*   An error code is returned when the request fails.</p>
+     * <p>*   success: If the call is successful, **success** is returned.</p>
+     * <p>*   An error code: If the call fails, an error code is returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Specifies whether the instances are successfully restarted. Valid values:</p>
+     * <p>Specifies whether the instances are successfully restarted. Take note of the following rules:</p>
      * <br>
      * <p>*   **true**</p>
      * <p>*   **false**</p>
@@ -55,7 +55,7 @@ public class RestartInstancesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. It is used to query the details of a request.</p>
+     * <p>The trace ID that is used to query the details of the request.</p>
      */
     @NameInMap("TraceId")
     public String traceId;

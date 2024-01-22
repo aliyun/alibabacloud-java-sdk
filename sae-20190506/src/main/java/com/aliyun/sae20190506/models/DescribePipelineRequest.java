@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePipelineRequest extends TeaModel {
     /**
-     * <p>917660ba-5092-44ca-b8e0-80012c96\*\*\*\*</p>
+     * <p>The ID of the batch. You can call the [DescribeChangeOrder](~~126617~~) operation to obtain the ID.</p>
      */
     @NameInMap("PipelineId")
     public String pipelineId;

@@ -5,6 +5,21 @@ import com.aliyun.tea.*;
 
 public class BatchStopApplicationsResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the specified applications are stopped. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
+    @NameInMap("Code")
+    public String code;
+
+    /**
+     * <p>The ID of the change order.</p>
+     */
+    @NameInMap("Data")
+    public BatchStopApplicationsResponseBodyData data;
+
+    /**
      * <p>The HTTP status code. Valid values:</p>
      * <br>
      * <p>*   **2xx**: indicates that the request was successful.</p>
@@ -12,23 +27,14 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
      * <p>*   **4xx**: indicates that the request was invalid.</p>
      * <p>*   **5xx**: indicates that a server error occurred.</p>
      */
-    @NameInMap("Code")
-    public String code;
-
-    /**
-     * <p>The returned data.</p>
-     */
-    @NameInMap("Data")
-    public BatchStopApplicationsResponseBodyData data;
-
-    /**
-     * <p>The error code.</p>
-     * <br>
-     * <p>*   If the request is successful, this parameter is not returned.****</p>
-     * <p>*   This parameter is returned only if the request failed.**** For more information, see the "**Error codes**" section in this topic.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
+
+    /**
+     * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     */
+    @NameInMap("Message")
+    public String message;
 
     /**
      * <p>The returned message.</p>
@@ -36,26 +42,14 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
      * <p>*   **success** is returned when the request succeeds.</p>
      * <p>*   An error code is returned when the request fails.</p>
      */
-    @NameInMap("Message")
-    public String message;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the specified applications are stopped. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -123,7 +117,10 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
 
     public static class BatchStopApplicationsResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the change order.</p>
+         * <p>The error code.</p>
+         * <br>
+         * <p>*   If the request is successful, this parameter is not returned.****</p>
+         * <p>*   This parameter is returned only if the request failed.**** For more information, see the "**Error codes**" section in this topic.</p>
          */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;
