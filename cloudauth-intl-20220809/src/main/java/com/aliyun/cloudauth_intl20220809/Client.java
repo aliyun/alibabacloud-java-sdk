@@ -906,6 +906,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IdSpoof", request.idSpoof);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.languageConfig)) {
+            query.put("LanguageConfig", request.languageConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
             query.put("MerchantBizId", request.merchantBizId);
         }

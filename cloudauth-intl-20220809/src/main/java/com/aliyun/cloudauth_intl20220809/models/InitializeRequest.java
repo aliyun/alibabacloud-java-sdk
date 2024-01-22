@@ -37,6 +37,9 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("IdSpoof")
     public String idSpoof;
 
+    @NameInMap("LanguageConfig")
+    public String languageConfig;
+
     @NameInMap("MerchantBizId")
     public String merchantBizId;
 
@@ -167,6 +170,14 @@ public class InitializeRequest extends TeaModel {
     }
     public String getIdSpoof() {
         return this.idSpoof;
+    }
+
+    public InitializeRequest setLanguageConfig(String languageConfig) {
+        this.languageConfig = languageConfig;
+        return this;
+    }
+    public String getLanguageConfig() {
+        return this.languageConfig;
     }
 
     public InitializeRequest setMerchantBizId(String merchantBizId) {
