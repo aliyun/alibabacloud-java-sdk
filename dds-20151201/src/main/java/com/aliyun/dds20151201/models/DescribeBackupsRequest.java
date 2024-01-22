@@ -7,7 +7,7 @@ public class DescribeBackupsRequest extends TeaModel {
     /**
      * <p>The ID of the backup set. You can call the [CreateBackup](~~62171~~) operation to obtain the value of this parameter.</p>
      * <br>
-     * <p>If you set the DBInstanceId parameter to the ID of a sharded cluster instance, the number of backup IDs is the same as the number of shards. Multiple , with commas (,) in the middle.</p>
+     * <p>If you set the DBInstanceId parameter to the ID of a sharded cluster instance, the number of backup IDs is the same as the number of shards. Separate them with commas (,) in the middle.</p>
      */
     @NameInMap("BackupId")
     public String backupId;

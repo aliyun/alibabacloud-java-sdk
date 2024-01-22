@@ -23,7 +23,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -93,7 +93,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         public String DBName;
 
         /**
-         * <p>The time when the statement was executed. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the statement was executed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("ExecuteTime")
         public String executeTime;
@@ -129,7 +129,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         public String threadID;
 
         /**
-         * <p>The execution time of the statement. Unit: microseconds.</p>
+         * <p>The duration of the statement execution. Unit: microseconds.</p>
          */
         @NameInMap("TotalExecutionTimes")
         public Long totalExecutionTimes;

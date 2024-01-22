@@ -27,6 +27,15 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The logical relationship among multiple keywords.</p>
+     * <br>
+     * <p>*   **or**</p>
+     * <p>*   **and** (default value)</p>
+     */
+    @NameInMap("LogicalOperator")
+    public String logicalOperator;
+
+    /**
      * <p>The ID of the mongos node or shard node whose operational logs you want to query in the instance. If the instance is a sharded cluster instance, you must specify this parameter.</p>
      * <br>
      * <p>>  This parameter is valid only when **DBInstanceId** is set to the ID of a sharded cluster instance.</p>
@@ -60,6 +69,12 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
      */
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    /**
+     * <p>The keywords used for query. You can enter up to 10 keywords at a time. If you enter multiple keywords, separate the keywords with spaces.</p>
+     */
+    @NameInMap("QueryKeywords")
+    public String queryKeywords;
 
     /**
      * <p>The ID of the resource group.</p>
@@ -125,6 +140,14 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
         return this.endTime;
     }
 
+    public DescribeRunningLogRecordsRequest setLogicalOperator(String logicalOperator) {
+        this.logicalOperator = logicalOperator;
+        return this;
+    }
+    public String getLogicalOperator() {
+        return this.logicalOperator;
+    }
+
     public DescribeRunningLogRecordsRequest setNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -171,6 +194,14 @@ public class DescribeRunningLogRecordsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeRunningLogRecordsRequest setQueryKeywords(String queryKeywords) {
+        this.queryKeywords = queryKeywords;
+        return this;
+    }
+    public String getQueryKeywords() {
+        return this.queryKeywords;
     }
 
     public DescribeRunningLogRecordsRequest setResourceGroupId(String resourceGroupId) {

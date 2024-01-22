@@ -40,7 +40,7 @@ public class ModifyAuditPolicyRequest extends TeaModel {
     /**
      * <p>The type of the audit log feature. Valid values:</p>
      * <br>
-     * <p>*   **Trail**: the free trial edition</p>
+     * <p>*   **Trial**: the free trial edition</p>
      * <p>*   **Standard**: the official edition</p>
      * <br>
      * <p>>  Default value: **Trial**. Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and new applications for the free trial edition have ended. We recommend that you set this parameter to **Standard**.</p>

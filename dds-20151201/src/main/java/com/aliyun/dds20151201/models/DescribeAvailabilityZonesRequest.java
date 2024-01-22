@@ -74,7 +74,7 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>节点数，只适用于副本集。</p>
+     * <p>The number of nodes. This parameter is available only for replica set instances.</p>
      */
     @NameInMap("ReplicationFactor")
     public String replicationFactor;
@@ -92,7 +92,10 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The storage type of the instance. cloud: The system displays only zones in which cloud disk-based instances can be deployed. local: The system displays only zones in which local disk-based instances can be deployed. default or null: The system displays only zones in which cloud disk-based and local disk-based instances can be deployed.</p>
+     * <p>The storage type of the instance. </p>
+     * <p>- **cloud**: The system displays only zones in which cloud disk-based instances can be deployed. </p>
+     * <p>- **local**: The system displays only zones in which local disk-based instances can be deployed. </p>
+     * <p>- **default** or null: The system displays only zones in which cloud disk-based and local disk-based instances can be deployed.</p>
      */
     @NameInMap("StorageSupport")
     public String storageSupport;
@@ -105,11 +108,8 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
      * <p>*   **cloud_essd3**: PL3 ESSD</p>
      * <p>*   **local_ssd**: Local SSD</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   Instances that run MongoDB 4.4 or later support only cloud disks. **cloud_essd1** is selected if you leave this parameter empty.</p>
-     * <br>
-     * <p>*   Instances that run MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.</p>
+     * <p>> *   Instances that run MongoDB 4.4 or later support only cloud disks. **cloud_essd1** is selected if you leave this parameter empty.</p>
+     * <p>> *   Instances that run MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.</p>
      */
     @NameInMap("StorageType")
     public String storageType;

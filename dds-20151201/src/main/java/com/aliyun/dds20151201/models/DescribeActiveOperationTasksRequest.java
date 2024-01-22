@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTasksRequest extends TeaModel {
     /**
-     * <p>Specifies whether the task can be canceled.</p>
+     * <p>Specifies whether the task can be canceled. Valid values: -**0**: The task cannot be canceled. -**1**: The task can be canceled.</p>
      */
     @NameInMap("AllowCancel")
     public Integer allowCancel;
 
     /**
-     * <p>Specifies whether the time can be changed. Valid values: -**0**: The time cannot be changed. **1**: The time can be changed.</p>
+     * <p>Specifies whether the time can be modified. Valid values: -**0**: The time cannot be modified. -**1**: The time can be modified.</p>
      */
     @NameInMap("AllowChange")
     public Integer allowChange;
 
     /**
-     * <p>The change type.</p>
+     * <p>The type of configuration change. Valid values: -**all** (default): All O\&M tasks are returned. -**S0**: O\&M tasks that are executed for exception fixing are returned. -**S1**: O\&M tasks that are executed for regular O\&M are returned.</p>
      */
     @NameInMap("ChangeLevel")
     public String changeLevel;
@@ -41,13 +41,13 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the page to return.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Valid values: **30, 50, and 100**. Default value: **30**.</p>
+     * <p>The number of entries to return on each page. Valid values: **30, 50, and 100**. Default value: **30**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -59,7 +59,7 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String productId;
 
     /**
-     * <p>The region of the instance.</p>
+     * <p>The region of the instance. If you set the Region parameter to all, all tasks created within your Alibaba Cloud account are queried. In this case, you must also set the TaskType parameter to all.</p>
      */
     @NameInMap("Region")
     public String region;
