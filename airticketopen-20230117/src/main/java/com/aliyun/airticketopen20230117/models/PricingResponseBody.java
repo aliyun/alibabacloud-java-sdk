@@ -789,6 +789,9 @@ public class PricingResponseBody extends TeaModel {
         @NameInMap("original_price_info")
         public PricingResponseBodyDataOriginalPriceInfo originalPriceInfo;
 
+        @NameInMap("remain_seats")
+        public String remainSeats;
+
         /**
          * <p>solution</p>
          */
@@ -822,6 +825,14 @@ public class PricingResponseBody extends TeaModel {
         }
         public PricingResponseBodyDataOriginalPriceInfo getOriginalPriceInfo() {
             return this.originalPriceInfo;
+        }
+
+        public PricingResponseBodyData setRemainSeats(String remainSeats) {
+            this.remainSeats = remainSeats;
+            return this;
+        }
+        public String getRemainSeats() {
+            return this.remainSeats;
         }
 
         public PricingResponseBodyData setSolution(PricingResponseBodyDataSolution solution) {
