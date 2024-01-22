@@ -16,6 +16,9 @@ public class DescribeApiGroupsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static DescribeApiGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeApiGroupsRequest self = new DescribeApiGroupsRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class DescribeApiGroupsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeApiGroupsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }
