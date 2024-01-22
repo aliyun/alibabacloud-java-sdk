@@ -52,6 +52,15 @@ public class CreatePostgresExtensionsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>There are security risks associated with installing certain plug-ins on an instance of a minor version that is too low, and you can install it after confirming the risk. </p>
+     * <br>
+     * <p>Valid values:</p>
+     * <p>- true</p>
+     * <p>- false</p>
+     * <br>
+     * <p>> For more information about the risks, see [Limits on extension creation for ApsaraDB RDS for PostgreSQL instances](~~2587815~~).</p>
+     */
     @NameInMap("RiskConfirmed")
     public Boolean riskConfirmed;
 

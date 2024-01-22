@@ -5,33 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeHistoryEventsResponseBody extends TeaModel {
     /**
-     * <p>The details of the task execution.</p>
+     * <p>The events.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeHistoryEventsResponseBodyItems> items;
 
     /**
-     * <p>The number of the page to return. Valid values: any non-zero positive integer.</p>
-     * <br>
-     * <p>Default value: **1**.</p>
+     * <p>The page number. Valid values: any non-zero positive integer. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page. Default value: 30.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of tasks that meet these constraints without taking pagination into account.</p>
+     * <p>The total number of entries.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -83,86 +81,84 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
 
     public static class DescribeHistoryEventsResponseBodyItemsData extends TeaModel {
         /**
-         * <p>product.</p>
+         * <p>The cloud service type of the application group. Valid values: **web** and native. The value web indicates a web application. The value **native** indicates a local application.</p>
          */
         @NameInMap("CmsProduct")
         public String cmsProduct;
 
         /**
-         * <p>The type of the database engine.</p>
+         * <p>The database engine.</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
-         * <p>Detail impact.</p>
+         * <p>The pagination parameter.</p>
          */
         @NameInMap("DetailImpact")
         public String detailImpact;
 
         /**
-         * <p>Detail reason.</p>
+         * <p>The details of the instance operation.</p>
          */
         @NameInMap("DetailReason")
         public String detailReason;
 
         /**
-         * <p>The end date of the query.</p>
+         * <p>The time when the alert was closed. The time follows the ISO 8601 standard in the *yyyy-mm-dd*t*hh:mm*z format. The time is displayed in UTC.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
-         * <p>Event category.</p>
+         * <p>The system event category. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).</p>
          */
         @NameInMap("EventCategory")
         public String eventCategory;
 
         /**
-         * <p>The code of the extension point event.</p>
+         * <p>The event code.</p>
          */
         @NameInMap("EventCode")
         public String eventCode;
 
         /**
-         * <p>The output names of the current file.</p>
-         * <br>
-         * <p>This parameter is equivalent to the Output Name parameter under Output in the Dependencies section of the Properties panel in the [DataWorks console](https://workbench.data.aliyun.com/console).</p>
+         * <p>The event details.</p>
          */
         @NameInMap("EventDetail")
         public String eventDetail;
 
         /**
-         * <p>The ID of the custom event.</p>
+         * <p>The event ID.</p>
          */
         @NameInMap("EventId")
         public String eventId;
 
         /**
-         * <p>Event impact.</p>
+         * <p>The event impact.</p>
          */
         @NameInMap("EventImpact")
         public String eventImpact;
 
         /**
-         * <p>Event level.</p>
+         * <p>The event level. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).</p>
          */
         @NameInMap("EventLevel")
         public String eventLevel;
 
         /**
-         * <p>The cause of the event.</p>
+         * <p>The event source.</p>
          */
         @NameInMap("EventReason")
         public String eventReason;
 
         /**
-         * <p>The status of the exception. Valid values:</p>
+         * <p>The status of the alert event. Valid values:</p>
          * <br>
-         * <p>*   **1**: pending handling</p>
+         * <p>*   **1**: pending</p>
          * <p>*   **2**: ignored</p>
          * <p>*   **4**: confirmed</p>
-         * <p>*   **8**: marked as a false positive</p>
+         * <p>*   **8**: marked as false positive</p>
          * <p>*   **16**: handling</p>
          * <p>*   **32**: handled</p>
          * <p>*   **64**: expired</p>
@@ -171,59 +167,55 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         public String eventStatus;
 
         /**
-         * <p>The alert type.</p>
-         * <br>
-         * <p>*   Set the value to **sensitiveFile**.</p>
+         * <p>The event type. Valid values:</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
         /**
-         * <p>The time when the instance is created. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <p>The creation time. The time follows the ISO 8601 standard in the *yyyy-mm-dd*t*hh:mm*z format. The time is displayed in UTC.</p>
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
         /**
-         * <p>The time when the export task was modified.</p>
+         * <p>The update time. The time follows the ISO 8601 standard in the *yyyy-mm-dd*t*hh:mm*z format. The time is displayed in UTC.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
-         * <p>Processing status.</p>
+         * <p>The handling status.</p>
          */
         @NameInMap("HandleStatus")
         public String handleStatus;
 
         /**
-         * <p>Is there a lifecycle.</p>
+         * <p>Indicates whether the event has a lifecycle.</p>
          */
         @NameInMap("HasLifeCycle")
         public Integer hasLifeCycle;
 
         /**
-         * <p>The instance ID. Separate multiple instance IDs with commas (,). You can specify up to 30 instance IDs. This parameter is empty by default, which indicates that you can specify an unlimited number of instance IDs.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>Whether to close.</p>
+         * <p>Indicates whether the alert is closed. Valid values: **0**: closed. **1**: not closed.</p>
          */
         @NameInMap("IsClosed")
         public Integer isClosed;
 
         /**
-         * <p>The name of the cloud service in which the system event occurred.</p>
-         * <br>
-         * <p>You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter `Product`. The value of the Product parameter indicates the names of all cloud services in which the system events of your Alibaba Cloud account occurred. For more information, see [DescribeSystemEventMetaList](~~114972~~).</p>
+         * <p>The service name.</p>
          */
         @NameInMap("Product")
         public String product;
@@ -235,25 +227,25 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The type of resource. Set the value to INSTANCE.</p>
+         * <p>The resource type. The value is fixed as **INSTANCE**.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The type of the source resource.</p>
+         * <p>The type of the source data.</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+         * <p>The start time. The time follows the ISO 8601 standard in the *yyyy-mm-dd*t*hh:mm*z format. The time is displayed in UTC.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
-         * <p>The account ID. You can view the ID of the **logon account** by moving the pointer over the profile in the Alibaba Cloud console.</p>
+         * <p>The ID of the resource owner.</p>
          */
         @NameInMap("Uid")
         public String uid;
@@ -483,75 +475,49 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
 
     public static class DescribeHistoryEventsResponseBodyItems extends TeaModel {
         /**
-         * <p>The data returned.</p>
+         * <p>The details of the data.</p>
          */
         @NameInMap("Data")
         public DescribeHistoryEventsResponseBodyItemsData data;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The region of the instance.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
-         * <p>The instance username.</p>
+         * <p>The event source.</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
-         * <p>Specversion.</p>
+         * <p>The database engine version.</p>
          */
         @NameInMap("Specversion")
         public String specversion;
 
         /**
-         * <p>The subject of the certificate, which is in the DN format.</p>
+         * <p>The name of the pending event.</p>
          */
         @NameInMap("Subject")
         public String subject;
 
         /**
-         * <p>The time when the log was generated. The time is displayed in UTC.</p>
+         * <p>The amount of time that has elapsed from the start time of the query. Unit: seconds.</p>
          */
         @NameInMap("Time")
         public String time;
 
         /**
-         * <p>The notification type.</p>
-         * <br>
-         * <p>Valid values:</p>
-         * <br>
-         * <p>*   Sell</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Operation</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Promotion</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <p>The event type. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).</p>
          */
         @NameInMap("Type")
         public String type;

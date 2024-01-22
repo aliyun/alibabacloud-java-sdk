@@ -32,11 +32,8 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     /**
      * <p>The proxy endpoint ID. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If the instance runs MySQL and you set **DbEndpointOperator** to **Delete** or **Modify**, you must specify DBProxyEndpointId.</p>
-     * <br>
-     * <p>*   If the instance runs PostgreSQL and you set **DbEndpointOperator** to **Delete**, **Modify**, or **Create**, you must specify DBProxyEndpointId.</p>
+     * <p>> *   If the instance runs MySQL and you set **DbEndpointOperator** to **Delete** or **Modify**, you must specify DBProxyEndpointId.</p>
+     * <p>> *   If the instance runs PostgreSQL and you set **DbEndpointOperator** to **Delete**, **Modify**, or **Create**, you must specify DBProxyEndpointId.</p>
      */
     @NameInMap("DBProxyEndpointId")
     public String DBProxyEndpointId;
@@ -114,9 +111,7 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
      * <br>
      * <p>    Example: `{"rr-tfhfgk5****":"200","DBClusterNode":{"rn-2z****":"0","rn-2z****":"400","rn-2z****":"400"...}}`</p>
      * <br>
-     * <p>    **</p>
-     * <br>
-     * <p>    **Note** **DBClusterNode** is required if the instance runs RDS Cluster Edition. The DBClusterNode parameter includes information about **IDs** and **weights** of the primary and secondary nodes..</p>
+     * <p>    > **DBClusterNode** is required if the instance runs RDS Cluster Edition. The DBClusterNode parameter includes information about **IDs** and **weights** of the primary and secondary nodes..</p>
      */
     @NameInMap("ReadOnlyInstanceWeight")
     public String readOnlyInstanceWeight;

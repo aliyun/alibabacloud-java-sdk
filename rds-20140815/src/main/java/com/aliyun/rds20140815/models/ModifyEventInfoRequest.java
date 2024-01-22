@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyEventInfoRequest extends TeaModel {
     /**
-     * <p>Action params.</p>
+     * <p>The action parameter. Set this value in the JSON string format.</p>
      */
     @NameInMap("ActionParams")
     public String actionParams;
 
     /**
-     * <p>Event action.</p>
+     * <p>The event handling action. Set this value to archive or undo.</p>
      */
     @NameInMap("EventAction")
     public String eventAction;
 
     /**
-     * <p>The event ID.</p>
+     * <p>The event ID. Separate multiple event IDs with commas (,). You can configure up to 20 event IDs.</p>
      */
     @NameInMap("EventId")
     public String eventId;

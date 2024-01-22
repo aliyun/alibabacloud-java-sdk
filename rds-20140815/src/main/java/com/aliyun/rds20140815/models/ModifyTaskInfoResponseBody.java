@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyTaskInfoResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>Error taskId.</p>
+     * <p>The ID of the failed task. This parameter is returned when a task fails.</p>
      */
     @NameInMap("ErrorTaskId")
     public String errorTaskId;

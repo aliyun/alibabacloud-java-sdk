@@ -50,6 +50,15 @@ public class ModifyDBProxyRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Whether to enable connection keep. Valid values:</p>
+     * <br>
+     * <p>- Enabled: enables connection keeping</p>
+     * <p>- Disabled: disables connection hold</p>
+     * <br>
+     * <p>> - This parameter is supported only for an ApsaraDB RDS for MySQL.</p>
+     * <p>> - When you modify the connection persistence state, the value of **ConfigDBProxyService** is modify.</p>
+     */
     @NameInMap("PersistentConnectionStatus")
     public String persistentConnectionStatus;
 

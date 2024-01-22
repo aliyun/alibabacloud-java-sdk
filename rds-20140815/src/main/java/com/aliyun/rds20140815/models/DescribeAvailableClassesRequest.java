@@ -21,9 +21,7 @@ public class DescribeAvailableClassesRequest extends TeaModel {
      * <p>    *   **serverless_standard**: RDS High-availability Edition for ApsaraDB RDS for MySQL.</p>
      * <p>    *   **serverless_ha**: RDS High-availability Edition for ApsaraDB RDS for SQL Server.</p>
      * <br>
-     * <p>    **</p>
-     * <br>
-     * <p>    **Note** If you create a serverless instance, you must specify this parameter.</p>
+     * <p>    > If you create a serverless instance, you must specify this parameter.</p>
      */
     @NameInMap("Category")
     public String category;
@@ -94,9 +92,7 @@ public class DescribeAvailableClassesRequest extends TeaModel {
      * <p>    *   Valid values if you set Engine to SQLServer: **2016\_std_sl**, **2017\_std_sl**, and **2019\_std_sl**</p>
      * <p>    *   Valid value if you set Engine to PostgreSQL: **14.0**</p>
      * <br>
-     * <p>    **</p>
-     * <br>
-     * <p>    **Note** ApsaraDB RDS for MariaDB does not support serverless instances.</p>
+     * <p>    > ApsaraDB RDS for MariaDB does not support serverless instances.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;

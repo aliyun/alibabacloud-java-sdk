@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHistoryEventsStatResponseBody extends TeaModel {
     /**
-     * <p>The migration tasks.</p>
+     * <p>The event.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeHistoryEventsStatResponseBodyItems> items;
@@ -39,13 +39,13 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
 
     public static class DescribeHistoryEventsStatResponseBodyItems extends TeaModel {
         /**
-         * <p>Event category.</p>
+         * <p>The system event category. For more information, see [View the event history of an ApsaraDB RDS instance](~~129759~~).</p>
          */
         @NameInMap("EventCategory")
         public String eventCategory;
 
         /**
-         * <p>The total number of tasks that meet these constraints without taking pagination into account.</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

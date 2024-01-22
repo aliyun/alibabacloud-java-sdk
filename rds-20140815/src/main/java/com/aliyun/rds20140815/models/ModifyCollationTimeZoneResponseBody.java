@@ -11,25 +11,25 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
     public String collation;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
-     * <p>The time zone of the instance.</p>
+     * <p>The time zone.</p>
      */
     @NameInMap("Timezone")
     public String timezone;

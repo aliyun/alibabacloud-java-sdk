@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class ModifyEventInfoResponseBody extends TeaModel {
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>Error eventId.</p>
+     * <p>The error ID.</p>
      */
     @NameInMap("ErrorEventId")
     public String errorEventId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of devices that were created.</p>
+     * <p>The number of successful records.</p>
      */
     @NameInMap("SuccessCount")
     public Integer successCount;
 
     /**
-     * <p>Success eventId.</p>
+     * <p>The ID of the successful event.</p>
      */
     @NameInMap("SuccessEventId")
     public String successEventId;

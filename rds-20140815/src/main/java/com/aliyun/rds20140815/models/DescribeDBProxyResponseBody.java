@@ -78,6 +78,14 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;
 
+    /**
+     * <p>Connection Persistence State. </p>
+     * <br>
+     * <p>Valid values:</p>
+     * <p>- Enabled: Enabled</p>
+     * <p>- Disabled: Disabled</p>
+     * <p>- Unsupported: The instance does not support connection persistence</p>
+     */
     @NameInMap("DBProxyPersistentConnectionStatus")
     public String DBProxyPersistentConnectionStatus;
 
@@ -254,13 +262,13 @@ public class DescribeDBProxyResponseBody extends TeaModel {
 
     public static class DescribeDBProxyResponseBodyDBProxyConnectStringItemsDBProxyConnectStringItems extends TeaModel {
         /**
-         * <p>The endpoint of the proxy terminal.</p>
+         * <p>The database proxy endpoint.</p>
          */
         @NameInMap("DBProxyConnectString")
         public String DBProxyConnectString;
 
         /**
-         * <p>The network type of the proxy endpoint.</p>
+         * <p>The network type of the database proxy endpoint. A database proxy endpoint is formerly referred to as a proxy terminal. Valid values:</p>
          * <br>
          * <p>*   OuterString: Internet</p>
          * <p>*   InnerString: internal network</p>
@@ -269,7 +277,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         public String DBProxyConnectStringNetType;
 
         /**
-         * <p>The network type of the database proxy.</p>
+         * <p>The network type of the database proxy. Valid values:</p>
          * <br>
          * <p>*   0: Internet</p>
          * <p>*   1: classic network</p>
@@ -279,37 +287,37 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         public String DBProxyConnectStringNetWorkType;
 
         /**
-         * <p>The port number that is associated with the proxy endpoint.</p>
+         * <p>The port that is associated with the database proxy endpoint.</p>
          */
         @NameInMap("DBProxyConnectStringPort")
         public String DBProxyConnectStringPort;
 
         /**
-         * <p>The ID of the proxy terminal to which the proxy endpoint belongs.</p>
+         * <p>The ID of the backend database proxy endpoint.</p>
          */
         @NameInMap("DBProxyEndpointId")
         public String DBProxyEndpointId;
 
         /**
-         * <p>The name of the proxy terminal to which the proxy endpoint belongs.</p>
+         * <p>The name of the database proxy endpoint. The name can be replaced by the ID of the database proxy endpoint.</p>
          */
         @NameInMap("DBProxyEndpointName")
         public String DBProxyEndpointName;
 
         /**
-         * <p>The VPC that is associated with the proxy endpoint.</p>
+         * <p>The VPC of the database proxy.</p>
          */
         @NameInMap("DBProxyVpcId")
         public String DBProxyVpcId;
 
         /**
-         * <p>The proxy instance ID.</p>
+         * <p>The ID of the database proxy instance.</p>
          */
         @NameInMap("DBProxyVpcInstanceId")
         public String DBProxyVpcInstanceId;
 
         /**
-         * <p>The vSwitch of the proxy service.</p>
+         * <p>The vSwitch of the database proxy.</p>
          */
         @NameInMap("DBProxyVswitchId")
         public String DBProxyVswitchId;
@@ -414,31 +422,31 @@ public class DescribeDBProxyResponseBody extends TeaModel {
 
     public static class DescribeDBProxyResponseBodyDbProxyEndpointItemsDbProxyEndpointItems extends TeaModel {
         /**
-         * <p>The description of the proxy terminal.</p>
+         * <p>The description of the database proxy endpoint.</p>
          */
         @NameInMap("DbProxyEndpointAliases")
         public String dbProxyEndpointAliases;
 
         /**
-         * <p>The proxy terminal ID.</p>
+         * <p>The ID of the database proxy endpoint.</p>
          */
         @NameInMap("DbProxyEndpointName")
         public String dbProxyEndpointName;
 
         /**
-         * <p>The proxy terminal type. Valid values:</p>
+         * <p>The type of the database proxy endpoint. Valid values:</p>
          * <br>
-         * <p>*   Custom: custom proxy terminal</p>
-         * <p>*   RWSplit: default proxy terminal</p>
+         * <p>*   Custom: custom database proxy endpoint</p>
+         * <p>*   RWSplit: default database proxy endpoint</p>
          */
         @NameInMap("DbProxyEndpointType")
         public String dbProxyEndpointType;
 
         /**
-         * <p>The read and write attributes of the proxy terminal. Valid values:</p>
+         * <p>The read and write attributes of the database proxy endpoint.</p>
          * <br>
-         * <p>*   ReadOnly: The proxy terminal supports only read requests.</p>
-         * <p>*   ReadWrite: The proxy terminal supports read and write requests.</p>
+         * <p>*   ReadOnly</p>
+         * <p>*   ReadWrite</p>
          */
         @NameInMap("DbProxyReadWriteMode")
         public String dbProxyReadWriteMode;

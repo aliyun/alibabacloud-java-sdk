@@ -114,6 +114,9 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        /**
+         * <p>The expiration time of the minor engine version.</p>
+         */
         @NameInMap("ExpireDate")
         public String expireDate;
 
@@ -143,9 +146,9 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         /**
          * <p>The RDS edition of the instance that runs the minor engine version. Valid values:</p>
          * <br>
-         * <p>*   **Basic**: RDS Basic Edition</p>
-         * <p>*   **HighAvailability**: RDS High-availability Edition</p>
-         * <p>*   **Finance**: RDS Enterprise Edition</p>
+         * <p>*   **Basic**: RDS Basic Edition.</p>
+         * <p>*   **HighAvailability**: RDS High-availability Edition.</p>
+         * <p>*   **Finance**: RDS Enterprise Edition.</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
@@ -168,8 +171,8 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         /**
          * <p>The status of the minor engine version. Valid values:</p>
          * <br>
-         * <p>*   **Offline**: Discontinued</p>
-         * <p>*   **online**: Available</p>
+         * <p>*   **Offline**</p>
+         * <p>*   **online**</p>
          * <br>
          * <p>>  If the minor engine version is in the Offline state, the minor engine version is discontinued. In this case, ignore the expiration status. If the minor engine version is in the Online state and the expiration state is expired, the minor engine version expires. If the expiration state is vaild, the minor engine version is still in its lifecycle.</p>
          */

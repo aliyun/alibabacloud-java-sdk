@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyTaskInfoRequest extends TeaModel {
     /**
-     * <p>Action params.</p>
+     * <p>The action parameter.</p>
      */
     @NameInMap("ActionParams")
     public String actionParams;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -26,13 +26,13 @@ public class ModifyTaskInfoRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>Step name.</p>
+     * <p>The name of the execution step.</p>
      */
     @NameInMap("StepName")
     public String stepName;
 
     /**
-     * <p>The name of the operation that generates the task. Valid values:</p>
+     * <p>The name of the operation that you can call to execute the task. Valid values:</p>
      * <br>
      * <p>*   ImportImage</p>
      * <p>*   ExportImage</p>
