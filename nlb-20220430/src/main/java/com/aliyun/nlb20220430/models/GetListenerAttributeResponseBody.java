@@ -131,6 +131,9 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     @NameInMap("ProxyProtocolEnabled")
     public Boolean proxyProtocolEnabled;
 
+    /**
+     * <p>Indicates whether the Proxy protocol passes the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.</p>
+     */
     @NameInMap("ProxyProtocolV2Config")
     public GetListenerAttributeResponseBodyProxyProtocolV2Config proxyProtocolV2Config;
 
@@ -381,41 +384,59 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetListenerAttributeResponseBodyProxyProtocolV2Config extends TeaModel {
+        /**
+         * <p>Indicates whether the Proxy protocol passes the PrivateLinkEpId parameter to backend servers. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Ppv2PrivateLinkEpIdEnabled")
-        public String ppv2PrivateLinkEpIdEnabled;
+        public Boolean ppv2PrivateLinkEpIdEnabled;
 
+        /**
+         * <p>Indicates whether the Proxy protocol passes the PrivateLinkEpsId parameter to backend servers. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Ppv2PrivateLinkEpsIdEnabled")
-        public String ppv2PrivateLinkEpsIdEnabled;
+        public Boolean ppv2PrivateLinkEpsIdEnabled;
 
+        /**
+         * <p>Indicates whether the Proxy protocol passes the VpcId parameter to backend servers. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Ppv2VpcIdEnabled")
-        public String ppv2VpcIdEnabled;
+        public Boolean ppv2VpcIdEnabled;
 
         public static GetListenerAttributeResponseBodyProxyProtocolV2Config build(java.util.Map<String, ?> map) throws Exception {
             GetListenerAttributeResponseBodyProxyProtocolV2Config self = new GetListenerAttributeResponseBodyProxyProtocolV2Config();
             return TeaModel.build(map, self);
         }
 
-        public GetListenerAttributeResponseBodyProxyProtocolV2Config setPpv2PrivateLinkEpIdEnabled(String ppv2PrivateLinkEpIdEnabled) {
+        public GetListenerAttributeResponseBodyProxyProtocolV2Config setPpv2PrivateLinkEpIdEnabled(Boolean ppv2PrivateLinkEpIdEnabled) {
             this.ppv2PrivateLinkEpIdEnabled = ppv2PrivateLinkEpIdEnabled;
             return this;
         }
-        public String getPpv2PrivateLinkEpIdEnabled() {
+        public Boolean getPpv2PrivateLinkEpIdEnabled() {
             return this.ppv2PrivateLinkEpIdEnabled;
         }
 
-        public GetListenerAttributeResponseBodyProxyProtocolV2Config setPpv2PrivateLinkEpsIdEnabled(String ppv2PrivateLinkEpsIdEnabled) {
+        public GetListenerAttributeResponseBodyProxyProtocolV2Config setPpv2PrivateLinkEpsIdEnabled(Boolean ppv2PrivateLinkEpsIdEnabled) {
             this.ppv2PrivateLinkEpsIdEnabled = ppv2PrivateLinkEpsIdEnabled;
             return this;
         }
-        public String getPpv2PrivateLinkEpsIdEnabled() {
+        public Boolean getPpv2PrivateLinkEpsIdEnabled() {
             return this.ppv2PrivateLinkEpsIdEnabled;
         }
 
-        public GetListenerAttributeResponseBodyProxyProtocolV2Config setPpv2VpcIdEnabled(String ppv2VpcIdEnabled) {
+        public GetListenerAttributeResponseBodyProxyProtocolV2Config setPpv2VpcIdEnabled(Boolean ppv2VpcIdEnabled) {
             this.ppv2VpcIdEnabled = ppv2VpcIdEnabled;
             return this;
         }
-        public String getPpv2VpcIdEnabled() {
+        public Boolean getPpv2VpcIdEnabled() {
             return this.ppv2VpcIdEnabled;
         }
 
@@ -423,13 +444,13 @@ public class GetListenerAttributeResponseBody extends TeaModel {
 
     public static class GetListenerAttributeResponseBodyTags extends TeaModel {
         /**
-         * <p>The key of the tag that you want to remove. You can remove up to 20 tags in each call.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

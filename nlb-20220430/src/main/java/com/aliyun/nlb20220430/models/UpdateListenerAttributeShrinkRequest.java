@@ -109,6 +109,9 @@ public class UpdateListenerAttributeShrinkRequest extends TeaModel {
     @NameInMap("ProxyProtocolEnabled")
     public Boolean proxyProtocolEnabled;
 
+    /**
+     * <p>Specifies that the Proxy protocol passes the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.</p>
+     */
     @NameInMap("ProxyProtocolV2Config")
     public String proxyProtocolV2ConfigShrink;
 

@@ -135,6 +135,9 @@ public class CreateListenerRequest extends TeaModel {
     @NameInMap("ProxyProtocolEnabled")
     public Boolean proxyProtocolEnabled;
 
+    /**
+     * <p>Specifies that the Proxy protocol passes the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.</p>
+     */
     @NameInMap("ProxyProtocolV2Config")
     public CreateListenerRequestProxyProtocolV2Config proxyProtocolV2Config;
 
@@ -375,12 +378,30 @@ public class CreateListenerRequest extends TeaModel {
     }
 
     public static class CreateListenerRequestProxyProtocolV2Config extends TeaModel {
+        /**
+         * <p>Specifies whether to use the Proxy protocol to pass the Ppv2PrivateLinkEpId parameter to backend servers. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false** (default)</p>
+         */
         @NameInMap("Ppv2PrivateLinkEpIdEnabled")
         public Boolean ppv2PrivateLinkEpIdEnabled;
 
+        /**
+         * <p>Specifies whether to use the Proxy protocol to pass the PrivateLinkEpsId parameter to backend servers. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false** (default)</p>
+         */
         @NameInMap("Ppv2PrivateLinkEpsIdEnabled")
         public Boolean ppv2PrivateLinkEpsIdEnabled;
 
+        /**
+         * <p>Specifies whether to use the Proxy protocol to pass the VpcId parameter to backend servers. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false** (default)</p>
+         */
         @NameInMap("Ppv2VpcIdEnabled")
         public Boolean ppv2VpcIdEnabled;
 
