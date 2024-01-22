@@ -7,7 +7,7 @@ public class QueryIncidentTracingDetailRequest extends TeaModel {
     /**
      * <p>The ID of the event.</p>
      * <br>
-     * <p>>  You can call the [DescribeCloudSiemEvents](~~DescribeCloudSiemEvents~~) operation to query the IDs of events.</p>
+     * <p>>  You can call the [DescribeCloudSiemEvents](~~2621307~~) operation to query the IDs of events.</p>
      */
     @NameInMap("IncidentId")
     public String incidentId;

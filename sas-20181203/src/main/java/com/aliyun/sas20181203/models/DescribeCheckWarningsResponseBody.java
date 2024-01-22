@@ -139,6 +139,9 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         @NameInMap("Item")
         public String item;
 
+        /**
+         * <p>The timestamp of the latest processing of the check item risk of the machine. Unit: milliseconds.</p>
+         */
         @NameInMap("LastHandleTime")
         public Long lastHandleTime;
 
