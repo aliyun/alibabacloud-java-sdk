@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class RestartInstancesRequest extends TeaModel {
     /**
-     * <p>1daa7236-3844-4f36-b39a-605b0cc0\*\*\*\*</p>
+     * <p>The application ID.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>mysae-1daa7236-3844-4f36-b39a-605b0cc0caa6-\*\*\*\*\*</p>
+     * <p>The ID of the instance to be restarted. Separate multiple instance IDs with commas (,).</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;

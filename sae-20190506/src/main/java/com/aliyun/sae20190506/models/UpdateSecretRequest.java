@@ -8,7 +8,7 @@ public class UpdateSecretRequest extends TeaModel {
     public String namespaceId;
 
     @NameInMap("SecretData")
-    public String secretData;
+    public UpdateSecretRequestSecretData secretData;
 
     @NameInMap("SecretId")
     public Long secretId;
@@ -26,11 +26,11 @@ public class UpdateSecretRequest extends TeaModel {
         return this.namespaceId;
     }
 
-    public UpdateSecretRequest setSecretData(String secretData) {
+    public UpdateSecretRequest setSecretData(UpdateSecretRequestSecretData secretData) {
         this.secretData = secretData;
         return this;
     }
-    public String getSecretData() {
+    public UpdateSecretRequestSecretData getSecretData() {
         return this.secretData;
     }
 
@@ -40,6 +40,25 @@ public class UpdateSecretRequest extends TeaModel {
     }
     public Long getSecretId() {
         return this.secretId;
+    }
+
+    public static class UpdateSecretRequestSecretData extends TeaModel {
+        @NameInMap("SecretData")
+        public String secretData;
+
+        public static UpdateSecretRequestSecretData build(java.util.Map<String, ?> map) throws Exception {
+            UpdateSecretRequestSecretData self = new UpdateSecretRequestSecretData();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateSecretRequestSecretData setSecretData(String secretData) {
+            this.secretData = secretData;
+            return this;
+        }
+        public String getSecretData() {
+            return this.secretData;
+        }
+
     }
 
 }

@@ -4,24 +4,59 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListSecretsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: The call was successful.</p>
+     * <p>*   **3xx**: The call was redirected.</p>
+     * <p>*   **4xx**: The call failed.</p>
+     * <p>*   **5xx**: A server error occurred.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ListSecretsResponseBodyData data;
 
+    /**
+     * <p>The error code returned. Take note of the following rules:</p>
+     * <br>
+     * <p>*   If the call is successful, the **ErrorCode** parameter is not returned.</p>
+     * <p>*   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section in this topic.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The returned message. Take note of the following rules:</p>
+     * <br>
+     * <p>*   If the call is successful, **success** is returned.</p>
+     * <p>*   If the call fails, an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The trace ID that is used to query the details of the request.</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -87,9 +122,15 @@ public class ListSecretsResponseBody extends TeaModel {
     }
 
     public static class ListSecretsResponseBodyDataSecretsRelateApps extends TeaModel {
+        /**
+         * <p>The application ID.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The application name.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
@@ -117,24 +158,47 @@ public class ListSecretsResponseBody extends TeaModel {
     }
 
     public static class ListSecretsResponseBodyDataSecrets extends TeaModel {
+        /**
+         * <p>The time when the Secret was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The namespace ID.</p>
+         */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
+        /**
+         * <p>The associated applications.</p>
+         */
         @NameInMap("RelateApps")
         public java.util.List<ListSecretsResponseBodyDataSecretsRelateApps> relateApps;
 
+        /**
+         * <p>The Secret ID.</p>
+         */
         @NameInMap("SecretId")
         public Long secretId;
 
+        /**
+         * <p>The Secret name.</p>
+         */
         @NameInMap("SecretName")
         public String secretName;
 
+        /**
+         * <p>The Secret type.</p>
+         * <br>
+         * <p>Set the value to **kubernetes.io/dockerconfigjson**. The value indicates the secret for the username and password of the image repository and is used for authentication when images are pulled during application deployment.</p>
+         */
         @NameInMap("SecretType")
         public String secretType;
 
+        /**
+         * <p>The time when the Secret was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
@@ -202,6 +266,9 @@ public class ListSecretsResponseBody extends TeaModel {
     }
 
     public static class ListSecretsResponseBodyData extends TeaModel {
+        /**
+         * <p>The Secrets.</p>
+         */
         @NameInMap("Secrets")
         public java.util.List<ListSecretsResponseBodyDataSecrets> secrets;
 

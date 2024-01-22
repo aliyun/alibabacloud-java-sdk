@@ -5,6 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListConsumedServicesResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the microservice list was obtained. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The list was obtained.</p>
+     * <p>*   **false**: The list failed to be obtained.</p>
+     */
+    @NameInMap("Code")
+    public String code;
+
+    /**
+     * <p>The type of the published service.</p>
+     */
+    @NameInMap("Data")
+    public java.util.List<ListConsumedServicesResponseBodyData> data;
+
+    /**
      * <p>The HTTP status code. Valid values:</p>
      * <br>
      * <p>*   **2xx**: indicates that the call was successful.</p>
@@ -12,23 +27,14 @@ public class ListConsumedServicesResponseBody extends TeaModel {
      * <p>*   **4xx**: indicates that the call failed.</p>
      * <p>*   **5xx**: indicates that a server error occurred.</p>
      */
-    @NameInMap("Code")
-    public String code;
-
-    /**
-     * <p>The details of the microservices.</p>
-     */
-    @NameInMap("Data")
-    public java.util.List<ListConsumedServicesResponseBodyData> data;
-
-    /**
-     * <p>The returned error code. Valid values:</p>
-     * <br>
-     * <p>*   If the call is successful, the **ErrorCode** parameter is not returned.</p>
-     * <p>*   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
+
+    /**
+     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     */
+    @NameInMap("Message")
+    public String message;
 
     /**
      * <p>The returned information. Valid values:</p>
@@ -36,26 +42,14 @@ public class ListConsumedServicesResponseBody extends TeaModel {
      * <p>*   If the call is successful, **success** is returned.</p>
      * <p>*   If the call fails, an error code is returned.</p>
      */
-    @NameInMap("Message")
-    public String message;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the microservice list was obtained. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The list was obtained.</p>
-     * <p>*   **false**: The list failed to be obtained.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * <p>The details of the microservices.</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -123,43 +117,46 @@ public class ListConsumedServicesResponseBody extends TeaModel {
 
     public static class ListConsumedServicesResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>A reserved parameter.</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The subscription address of the service.</p>
          */
         @NameInMap("Group2Ip")
         public String group2Ip;
 
         /**
-         * <p>The service group that corresponds to the published service.</p>
+         * <p>The version of the published service</p>
          */
         @NameInMap("Groups")
         public java.util.List<String> groups;
 
         /**
-         * <p>The subscription address of the service.</p>
+         * <p>The name of the published service.</p>
          */
         @NameInMap("Ips")
         public java.util.List<String> ips;
 
         /**
-         * <p>The name of the published service.</p>
+         * <p>The returned error code. Valid values:</p>
+         * <br>
+         * <p>*   If the call is successful, the **ErrorCode** parameter is not returned.</p>
+         * <p>*   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The type of the published service.</p>
+         * <p>The service group that corresponds to the published service.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The version of the published service</p>
+         * <p>The ID of the application.</p>
          */
         @NameInMap("Version")
         public String version;

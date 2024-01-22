@@ -4,30 +4,68 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListJobsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: The call was successful.</p>
+     * <p>*   **3xx**: The call was redirected.</p>
+     * <p>*   **4xx**: The call failed.</p>
+     * <p>*   **5xx**: A server error occurred.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The job templates.</p>
+     */
     @NameInMap("Data")
     public ListJobsResponseBodyData data;
 
+    /**
+     * <p>The error code returned. Take note of the following rules:</p>
+     * <br>
+     * <p>*   If the call is successful, **ErrorCode** is not returned.</p>
+     * <p>*   If the call fails, **ErrorCode** is returned. For more information, see the "**Error codes**" section in this topic.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the applications were obtained. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of job templates.</p>
+     */
     @NameInMap("TotalSize")
     public Integer totalSize;
 
@@ -109,9 +147,15 @@ public class ListJobsResponseBody extends TeaModel {
     }
 
     public static class ListJobsResponseBodyDataApplicationsTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -139,51 +183,104 @@ public class ListJobsResponseBody extends TeaModel {
     }
 
     public static class ListJobsResponseBodyDataApplications extends TeaModel {
+        /**
+         * <p>The number of running instances.</p>
+         */
         @NameInMap("Active")
         public Long active;
 
+        /**
+         * <p>The description of the job template.</p>
+         */
         @NameInMap("AppDescription")
         public String appDescription;
 
+        /**
+         * <p>The ID of the job template.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the job template.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The time when the job was last completed.</p>
+         */
         @NameInMap("CompletionTime")
         public Long completionTime;
 
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>The number of instances that failed to run.</p>
+         */
         @NameInMap("Failed")
         public Long failed;
 
+        /**
+         * <p>Indicates whether the latest change order was executed. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The latest change order failed to be executed.</p>
+         * <p>*   **1**: The latest change order was executed.</p>
+         */
         @NameInMap("LastChangeorderState")
         public String lastChangeorderState;
 
+        /**
+         * <p>The running status of the latest job. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The job is not executed.</p>
+         * <p>*   **1**: The job was executed.</p>
+         * <p>*   **2**: The job failed to be executed.</p>
+         * <p>*   **3**: The job is being executed.</p>
+         */
         @NameInMap("LastJobState")
         public String lastJobState;
 
+        /**
+         * <p>The time when the job was last started.</p>
+         */
         @NameInMap("LastStartTime")
         public Long lastStartTime;
 
         @NameInMap("Mem")
         public Integer mem;
 
+        @NameInMap("Message")
+        public String message;
+
+        /**
+         * <p>The namespace ID.</p>
+         */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The number of instances that were successfully run.</p>
+         */
         @NameInMap("Succeeded")
         public Long succeeded;
 
+        /**
+         * <p>Indicates whether the job template is suspended.</p>
+         */
         @NameInMap("Suspend")
         public Boolean suspend;
 
+        /**
+         * <p>The tag of the job template.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListJobsResponseBodyDataApplicationsTags> tags;
 
@@ -283,6 +380,14 @@ public class ListJobsResponseBody extends TeaModel {
             return this.mem;
         }
 
+        public ListJobsResponseBodyDataApplications setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
         public ListJobsResponseBodyDataApplications setNamespaceId(String namespaceId) {
             this.namespaceId = namespaceId;
             return this;
@@ -334,15 +439,27 @@ public class ListJobsResponseBody extends TeaModel {
     }
 
     public static class ListJobsResponseBodyData extends TeaModel {
+        /**
+         * <p>The job templates.</p>
+         */
         @NameInMap("Applications")
         public java.util.List<ListJobsResponseBodyDataApplications> applications;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned on each page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of job templates.</p>
+         */
         @NameInMap("TotalSize")
         public Integer totalSize;
 

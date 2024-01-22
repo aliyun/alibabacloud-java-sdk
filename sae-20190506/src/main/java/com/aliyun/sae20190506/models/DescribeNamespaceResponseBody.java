@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNamespaceResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: indicates that the request was successful.</p>
-     * <p>*   **3xx**: indicates that the request was redirected.</p>
-     * <p>*   **4xx**: indicates that the request was invalid.</p>
-     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     * <p>The ID of the trace. It can be used to query the details of a request.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -22,40 +17,39 @@ public class DescribeNamespaceResponseBody extends TeaModel {
     public DescribeNamespaceResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
-     * <br>
-     * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
-     * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message.</p>
-     * <br>
-     * <p>*   **success** is returned when the request succeeds.</p>
-     * <p>*   An error code is returned when the request fails.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The error code.</p>
+     * <br>
+     * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
+     * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the information of the namespace was queried successfully. Valid values:</p>
-     * <br>
-     * <p>*   **true**: indicates that the query was successful.</p>
-     * <p>*   **false**: indicates that the query failed.</p>
+     * <p>The information of the namespace.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: indicates that the request was successful.</p>
+     * <p>*   **3xx**: indicates that the request was redirected.</p>
+     * <p>*   **4xx**: indicates that the request was invalid.</p>
+     * <p>*   **5xx**: indicates that a server error occurred.</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -129,13 +123,13 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         public String nameSpaceShortId;
 
         /**
-         * <p>The description of the namespace.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("NamespaceDescription")
         public String namespaceDescription;
 
         /**
-         * <p>The ID of the namespace. The information of the default namespace cannot be queried or modified. The default namespace cannot be deleted.</p>
+         * <p>cn-beijing:test</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
@@ -147,7 +141,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         public String namespaceName;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>cn-beijing:test</p>
          */
         @NameInMap("RegionId")
         public String regionId;

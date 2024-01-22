@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListLogConfigsRequest extends TeaModel {
     /**
-     * <p>56f77b65-788d-442a-9885-7f20d91f\*\*\*\*</p>
+     * <p>10</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>1</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>10</p>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

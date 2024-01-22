@@ -7,25 +7,25 @@ public class ListAppEventsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <br>
-     * <p>*   **2xx**: indicates that the request was successful.</p>
-     * <p>*   **3xx**: indicates that the request was redirected.</p>
-     * <p>*   **4xx**: indicates that the request was invalid.</p>
-     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     * <p>*   **2xx**: The call was successful.</p>
+     * <p>*   **3xx**: The call was redirected.</p>
+     * <p>*   **4xx**: The call failed.</p>
+     * <p>*   **5xx**: A server error occurred.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The details of events.</p>
+     * <p>The events.</p>
      */
     @NameInMap("Data")
     public ListAppEventsResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code returned if the call failed. Take note of the following rules:</p>
      * <br>
-     * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
-     * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+     * <p>*   If the call is successful, the **ErrorCode** parameter is not returned.</p>
+     * <p>*   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section in this topic.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -37,16 +37,16 @@ public class ListAppEventsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the events that occurred in an application were obtained. Valid values:</p>
+     * <p>Indicates whether the events that occurred in the application were queried. Valid values:</p>
      * <br>
-     * <p>*   **true**: indicates that the events were obtained.</p>
-     * <p>*   **false**: indicates that the events could not be obtained.</p>
+     * <p>*   **true**: The events were queried.</p>
+     * <p>*   **false**: The events failed to be queried.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -106,25 +106,25 @@ public class ListAppEventsResponseBody extends TeaModel {
 
     public static class ListAppEventsResponseBodyDataAppEventEntity extends TeaModel {
         /**
-         * <p>The type of the event.</p>
+         * <p>The type of the event. Valid values:</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
         /**
-         * <p>The timestamp of the first occurrence of an event.</p>
+         * <p>The timestamp of the first occurrence of the event.</p>
          */
         @NameInMap("FirstTimestamp")
         public String firstTimestamp;
 
         /**
-         * <p>The timestamp of the last occurrence of an event.</p>
+         * <p>The timestamp of the last occurrence of the event.</p>
          */
         @NameInMap("LastTimestamp")
         public String lastTimestamp;
 
         /**
-         * <p>The description of the event.</p>
+         * <p>The information about the event.</p>
          */
         @NameInMap("Message")
         public String message;
@@ -142,7 +142,7 @@ public class ListAppEventsResponseBody extends TeaModel {
         public String objectName;
 
         /**
-         * <p>The reason why the event occurred.</p>
+         * <p>The cause of the event.</p>
          */
         @NameInMap("Reason")
         public String reason;
@@ -212,7 +212,7 @@ public class ListAppEventsResponseBody extends TeaModel {
 
     public static class ListAppEventsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of events.</p>
+         * <p>The events.</p>
          */
         @NameInMap("AppEventEntity")
         public java.util.List<ListAppEventsResponseBodyDataAppEventEntity> appEventEntity;
@@ -224,13 +224,13 @@ public class ListAppEventsResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The number of entries returned per page.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of events that occurred in the application.</p>
+         * <p>The total number of events that occurred in an application.</p>
          */
         @NameInMap("TotalSize")
         public Integer totalSize;

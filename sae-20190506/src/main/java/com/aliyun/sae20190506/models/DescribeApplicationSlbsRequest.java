@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationSlbsRequest extends TeaModel {
     /**
-     * <p>017f39b8-dfa4-4e16-a84b-1dcee4b1\*\*\*\*</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("AppId")
     public String appId;

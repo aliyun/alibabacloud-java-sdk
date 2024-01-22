@@ -5,48 +5,37 @@ import com.aliyun.tea.*;
 
 public class CreateNamespaceResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: indicates that the request was successful.</p>
-     * <p>*   **3xx**: indicates that the request was redirected.</p>
-     * <p>*   **4xx**: indicates that the request was invalid.</p>
-     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     * <p>The ID of the trace. It can be used to query the details of a request.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The information of the namespace.</p>
+     * <p>The region where the namespace resides.</p>
      */
     @NameInMap("Data")
     public CreateNamespaceResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
-     * <br>
-     * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
-     * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>name</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The description of the namespace.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the namespace was created. Valid values:</p>
-     * <br>
-     * <p>*   **true**: indicates that the namespace was created.</p>
-     * <p>*   **false**: indicates that the namespace could not be created.</p>
+     * <p>The information of the namespace.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -122,29 +111,32 @@ public class CreateNamespaceResponseBody extends TeaModel {
         @NameInMap("EnableMicroRegistration")
         public Boolean enableMicroRegistration;
 
+        /**
+         * <p>desc</p>
+         */
         @NameInMap("NameSpaceShortId")
         public String nameSpaceShortId;
 
         /**
-         * <p>The description of the namespace.</p>
+         * <p>The information of the namespace.</p>
          */
         @NameInMap("NamespaceDescription")
         public String namespaceDescription;
 
         /**
-         * <p>The ID of the namespace.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>cn-beijing:test</p>
          */
         @NameInMap("NamespaceName")
         public String namespaceName;
 
         /**
-         * <p>The region where the namespace resides.</p>
+         * <p>name</p>
          */
         @NameInMap("RegionId")
         public String regionId;

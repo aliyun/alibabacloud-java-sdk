@@ -4,24 +4,59 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecretResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <br>
+     * <p>*   **2xx**: The call was successful.</p>
+     * <p>*   **3xx**: The call was redirected.</p>
+     * <p>*   **4xx**: The call failed.</p>
+     * <p>*   **5xx**: A server error occurred.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response.</p>
+     */
     @NameInMap("Data")
     public DescribeSecretResponseBodyData data;
 
+    /**
+     * <p>The error code returned. Valid values:</p>
+     * <br>
+     * <p>*   The **ErrorCode** parameter is not returned if the request succeeds.</p>
+     * <p>*   If the call fails, the **ErrorCode** parameter is returned. For more information, see **Error codes** in this topic.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The additional information that is returned. Valid values:</p>
+     * <br>
+     * <p>*   success: If the call is successful, **success** is returned.</p>
+     * <p>*   An error code: If the call fails, an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the details of the Secret instance are successfully queried. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The information was queried.</p>
+     * <p>*   **false**: The image failed to be found.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The trace ID that is used to query the details of the request.</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -87,9 +122,15 @@ public class DescribeSecretResponseBody extends TeaModel {
     }
 
     public static class DescribeSecretResponseBodyDataRelateApps extends TeaModel {
+        /**
+         * <p>The application ID.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
@@ -117,27 +158,51 @@ public class DescribeSecretResponseBody extends TeaModel {
     }
 
     public static class DescribeSecretResponseBodyData extends TeaModel {
+        /**
+         * <p>The time when the task was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The ID of the namespace.</p>
+         */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
+        /**
+         * <p>The associated application.</p>
+         */
         @NameInMap("RelateApps")
         public java.util.List<DescribeSecretResponseBodyDataRelateApps> relateApps;
 
+        /**
+         * <p>Secret key-value pair data.</p>
+         */
         @NameInMap("SecretData")
         public java.util.Map<String, String> secretData;
 
+        /**
+         * <p>The ID of the Secret instance.</p>
+         */
         @NameInMap("SecretId")
         public Long secretId;
 
+        /**
+         * <p>The name of the Secret instance.</p>
+         */
         @NameInMap("SecretName")
         public String secretName;
 
+        /**
+         * <p>The type of the Secret instance.</p>
+         */
         @NameInMap("SecretType")
         public String secretType;
 
+        /**
+         * <p>The time when the task was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

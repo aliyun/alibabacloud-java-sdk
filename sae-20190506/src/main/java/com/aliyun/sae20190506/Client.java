@@ -255,6 +255,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AppName", request.appName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.appSource)) {
+            query.put("AppSource", request.appSource);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoConfig)) {
             query.put("AutoConfig", request.autoConfig);
         }
@@ -281,6 +285,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.edasContainerVersion)) {
             query.put("EdasContainerVersion", request.edasContainerVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableEbpf)) {
+            query.put("EnableEbpf", request.enableEbpf);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.envs)) {
@@ -395,6 +403,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Replicas", request.replicas);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.saeVersion)) {
+            query.put("SaeVersion", request.saeVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.securityGroupId)) {
             query.put("SecurityGroupId", request.securityGroupId);
         }
@@ -456,6 +468,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("OssMountDescs", request.ossMountDescs);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.php)) {
+            body.put("Php", request.php);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.phpConfig)) {
             body.put("PhpConfig", request.phpConfig);
         }
@@ -486,11 +502,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can create up to five auto scaling policies for one application.
-      * *   You can create up to 20 points in time when the scheduled auto scaling policy is triggered within one day.
-      * *   You cannot manually manage application lifecycles when auto scaling policies are in effect. For example, you cannot deploy, scale, stop, or restart applications, or change the application specifications. The application deployment can be a single-batch release, phased release, or canary release. You must disable auto scaling policies before you manage application lifecycles.
-      * *   You cannot manage the lifecycle of an application and create or enable an auto scaling policy for the application at the same time.
-      * *   If you want to configure more than 50 instances for an application, you must submit a [ticket](https://workorder.console.aliyun.com/#/ticket/createIndex) to add your account to the allowlist.
+      * The HTTP status code. Take note of the following rules:
+      * *   **2xx**: The call was successful.
+      * *   **3xx**: The call was redirected.
+      * *   **4xx**: The call failed.
+      * *   **5xx**: A server error occurred.
       *
       * @param request CreateApplicationScalingRuleRequest
       * @param headers map
@@ -551,11 +567,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can create up to five auto scaling policies for one application.
-      * *   You can create up to 20 points in time when the scheduled auto scaling policy is triggered within one day.
-      * *   You cannot manually manage application lifecycles when auto scaling policies are in effect. For example, you cannot deploy, scale, stop, or restart applications, or change the application specifications. The application deployment can be a single-batch release, phased release, or canary release. You must disable auto scaling policies before you manage application lifecycles.
-      * *   You cannot manage the lifecycle of an application and create or enable an auto scaling policy for the application at the same time.
-      * *   If you want to configure more than 50 instances for an application, you must submit a [ticket](https://workorder.console.aliyun.com/#/ticket/createIndex) to add your account to the allowlist.
+      * The HTTP status code. Take note of the following rules:
+      * *   **2xx**: The call was successful.
+      * *   **3xx**: The call was redirected.
+      * *   **4xx**: The call failed.
+      * *   **5xx**: A server error occurred.
       *
       * @param request CreateApplicationScalingRuleRequest
       * @return CreateApplicationScalingRuleResponse
@@ -1037,11 +1053,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createNamespaceWithOptions(request, headers, runtime);
     }
 
-    public CreateSecretResponse createSecretWithOptions(CreateSecretRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateSecretResponse createSecretWithOptions(CreateSecretRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateSecretShrinkRequest request = new CreateSecretShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.secretData)) {
+            request.secretDataShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.secretData, "SecretData", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
             query.put("NamespaceId", request.namespaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.secretDataShrink)) {
+            query.put("SecretData", request.secretDataShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.secretName)) {
@@ -1052,15 +1078,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SecretType", request.secretType);
         }
 
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.secretData)) {
-            body.put("SecretData", request.secretData);
-        }
-
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateSecret"),
@@ -1408,6 +1428,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CommandArgs", request.commandArgs);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.cpu)) {
+            query.put("Cpu", request.cpu);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.customHostAlias)) {
             query.put("CustomHostAlias", request.customHostAlias);
         }
@@ -1458,6 +1482,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.liveness)) {
             query.put("Liveness", request.liveness);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memory)) {
+            query.put("Memory", request.memory);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.microRegistration)) {
@@ -1532,6 +1560,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Readiness", request.readiness);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.replicas)) {
+            query.put("Replicas", request.replicas);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupId)) {
+            query.put("SecurityGroupId", request.securityGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.slsConfigs)) {
             query.put("SlsConfigs", request.slsConfigs);
         }
@@ -1550,6 +1586,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.updateStrategy)) {
             query.put("UpdateStrategy", request.updateStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.warStartOptions)) {
@@ -1583,6 +1623,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ossMountDescs)) {
             body.put("OssMountDescs", request.ossMountDescs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.php)) {
+            body.put("Php", request.php);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.phpConfig)) {
@@ -3045,6 +3089,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AppName", request.appName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.appSource)) {
+            query.put("AppSource", request.appSource);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
         }
@@ -3561,7 +3609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  Make sure that your account balance is greater than 0. Otherwise, the SAE service cannot be activated.
+      * > Make sure that your account balance is greater than 0. Otherwise, the SAE service cannot be activated.
       *
       * @param headers map
       * @param runtime runtime options for this request RuntimeOptions
@@ -3586,7 +3634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  Make sure that your account balance is greater than 0. Otherwise, the SAE service cannot be activated.
+      * > Make sure that your account balance is greater than 0. Otherwise, the SAE service cannot be activated.
       *
       * @return OpenSaeServiceResponse
      */
@@ -3753,6 +3801,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoEnableApplicationScalingRule)) {
+            query.put("AutoEnableApplicationScalingRule", request.autoEnableApplicationScalingRule);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.minReadyInstanceRatio)) {
@@ -4174,7 +4226,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you want to configure more than 50 instances for an application, you must submit a [ticket](https://workorder.console.aliyun.com/#/ticket/createIndex) to add your account to the allowlist.
+      * ##
+      * If you want to configure more than 50 instances for an application, you must submit a [ticket](https://workorder.console.aliyun.com/#/ticket/createIndex) to add your account to the whitelist.
       *
       * @param request UpdateApplicationScalingRuleRequest
       * @param headers map
@@ -4227,7 +4280,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you want to configure more than 50 instances for an application, you must submit a [ticket](https://workorder.console.aliyun.com/#/ticket/createIndex) to add your account to the allowlist.
+      * ##
+      * If you want to configure more than 50 instances for an application, you must submit a [ticket](https://workorder.console.aliyun.com/#/ticket/createIndex) to add your account to the whitelist.
       *
       * @param request UpdateApplicationScalingRuleRequest
       * @return UpdateApplicationScalingRuleResponse
@@ -4721,26 +4775,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateNamespaceVpcWithOptions(request, headers, runtime);
     }
 
-    public UpdateSecretResponse updateSecretWithOptions(UpdateSecretRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateSecretResponse updateSecretWithOptions(UpdateSecretRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateSecretShrinkRequest request = new UpdateSecretShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.secretData)) {
+            request.secretDataShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.secretData, "SecretData", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
             query.put("NamespaceId", request.namespaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.secretDataShrink)) {
+            query.put("SecretData", request.secretDataShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.secretId)) {
             query.put("SecretId", request.secretId);
         }
 
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.secretData)) {
-            body.put("SecretData", request.secretData);
-        }
-
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateSecret"),

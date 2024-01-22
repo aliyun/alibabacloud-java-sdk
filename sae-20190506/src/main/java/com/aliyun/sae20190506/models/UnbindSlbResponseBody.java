@@ -5,6 +5,21 @@ import com.aliyun.tea.*;
 
 public class UnbindSlbResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the internal-facing or Internet-facing SLB instance was disassociated successfully. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The SLB instance was disassociated successfully.</p>
+     * <p>*   **false**: The SLB instance could not be disassociated.</p>
+     */
+    @NameInMap("Code")
+    public String code;
+
+    /**
+     * <p>The ID of the change order. It can be used to query the task status.</p>
+     */
+    @NameInMap("Data")
+    public UnbindSlbResponseBodyData data;
+
+    /**
      * <p>The HTTP status code. Valid values:</p>
      * <br>
      * <p>*   **2xx**: indicates that the request was successful.</p>
@@ -12,23 +27,14 @@ public class UnbindSlbResponseBody extends TeaModel {
      * <p>*   **4xx**: indicates that the request was invalid.</p>
      * <p>*   **5xx**: indicates that a server error occurred.</p>
      */
-    @NameInMap("Code")
-    public String code;
-
-    /**
-     * <p>The returned data.</p>
-     */
-    @NameInMap("Data")
-    public UnbindSlbResponseBodyData data;
-
-    /**
-     * <p>The error code.</p>
-     * <br>
-     * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
-     * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
+
+    /**
+     * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     */
+    @NameInMap("Message")
+    public String message;
 
     /**
      * <p>The returned message.</p>
@@ -36,26 +42,14 @@ public class UnbindSlbResponseBody extends TeaModel {
      * <p>*   **success** is returned when the request succeeds.</p>
      * <p>*   An error code is returned when the request fails.</p>
      */
-    @NameInMap("Message")
-    public String message;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the internal-facing or Internet-facing SLB instance was disassociated successfully. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The SLB instance was disassociated successfully.</p>
-     * <p>*   **false**: The SLB instance could not be disassociated.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -123,7 +117,10 @@ public class UnbindSlbResponseBody extends TeaModel {
 
     public static class UnbindSlbResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the change order. It can be used to query the task status.</p>
+         * <p>The error code.</p>
+         * <br>
+         * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
+         * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
          */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;

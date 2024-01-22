@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartApplicationRequest extends TeaModel {
     /**
-     * <p>0099b7be-5f5b-4512-a7fc-56049ef1\*\*\*\*</p>
+     * <p>The application ID.</p>
      */
     @NameInMap("AppId")
     public String appId;

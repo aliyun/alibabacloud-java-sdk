@@ -4,18 +4,44 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class GetChangeOrderMetricResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. The following limits are imposed on the ID:</p>
+     * <br>
+     * <p>*   **2xx**: The call was successful.</p>
+     * <p>*   **3xx**: The call was redirected.</p>
+     * <p>*   **4xx**: The call failed.</p>
+     * <p>*   **5xx**: A server error occurred.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The details of applications.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetChangeOrderMetricResponseBodyData> data;
 
+    /**
+     * <p>The additional information that is returned. The following limits are imposed on the ID:</p>
+     * <br>
+     * <p>*   success: If the call is successful, **success** is returned.</p>
+     * <p>*   An error code: If the call fails, an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the microservice list was obtained. The following limits are imposed on the ID:</p>
+     * <br>
+     * <p>*   **true**: The namespaces were obtained.</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +91,39 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
     }
 
     public static class GetChangeOrderMetricResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The number of abnormal change orders.</p>
+         */
         @NameInMap("Error")
         public Long error;
 
+        /**
+         * <p>The percentage of change failures.</p>
+         */
         @NameInMap("ErrorPercent")
         public Float errorPercent;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the namespace.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The total number of change orders.</p>
+         */
         @NameInMap("Total")
         public Long total;
 

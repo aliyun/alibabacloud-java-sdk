@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnbindSlbRequest extends TeaModel {
     /**
-     * <p>0099b7be-5f5b-4512-a7fc-56049ef1\*\*\*\*</p>
+     * <p>true</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -17,7 +17,7 @@ public class UnbindSlbRequest extends TeaModel {
     public Boolean internet;
 
     /**
-     * <p>true</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Intranet")
     public Boolean intranet;

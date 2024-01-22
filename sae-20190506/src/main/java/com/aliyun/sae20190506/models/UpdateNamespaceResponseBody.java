@@ -7,10 +7,10 @@ public class UpdateNamespaceResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <br>
-     * <p>*   **2xx**: indicates that the request was successful.</p>
-     * <p>*   **3xx**: indicates that the request was redirected.</p>
-     * <p>*   **4xx**: indicates that the request was invalid.</p>
-     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     * <p>*   **2xx**: The call was successful.</p>
+     * <p>*   **3xx**: The call was redirected.</p>
+     * <p>*   **4xx**: The call failed.</p>
+     * <p>*   **5xx**: A server error occurred.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -22,16 +22,16 @@ public class UpdateNamespaceResponseBody extends TeaModel {
     public UpdateNamespaceResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code returned. Take note of the following rules:</p>
      * <br>
-     * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
-     * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+     * <p>*   The **ErrorCode** parameter is not returned if the request succeeds.</p>
+     * <p>*   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned for the operation.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -43,16 +43,16 @@ public class UpdateNamespaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the information of the namespace was updated. Valid values:</p>
+     * <p>Indicates whether the information about the namespace was updated. Valid values:</p>
      * <br>
-     * <p>*   **true**: indicates that the information was updated.</p>
-     * <p>*   **false**: indicates that the information could not be updated.</p>
+     * <p>*   **true**: The instance was updated.</p>
+     * <p>*   **false**: The instance failed to be updated.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     * <p>The trace ID that is used to query the details of the request.</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -122,6 +122,9 @@ public class UpdateNamespaceResponseBody extends TeaModel {
         @NameInMap("EnableMicroRegistration")
         public Boolean enableMicroRegistration;
 
+        /**
+         * <p>The short ID of the namespace.</p>
+         */
         @NameInMap("NameSpaceShortId")
         public String nameSpaceShortId;
 

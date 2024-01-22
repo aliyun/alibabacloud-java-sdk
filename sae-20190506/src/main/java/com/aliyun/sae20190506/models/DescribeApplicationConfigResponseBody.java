@@ -352,6 +352,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("AppSource")
+        public String appSource;
+
         /**
          * <p>Indicates whether an elastic IP address (EIP) is associated with the application instance. Valid values:</p>
          * <br>
@@ -601,6 +604,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("MseApplicationId")
         public String mseApplicationId;
 
+        @NameInMap("MseApplicationName")
+        public String mseApplicationName;
+
         /**
          * <p>The ID of the namespace.</p>
          */
@@ -671,6 +677,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         @NameInMap("PackageVersion")
         public String packageVersion;
+
+        @NameInMap("Php")
+        public String php;
 
         /**
          * <p>The path on which the PHP configuration file for application monitoring is mounted. Make sure that the PHP server loads the configuration file.</p>
@@ -894,6 +903,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.appName;
         }
 
+        public DescribeApplicationConfigResponseBodyData setAppSource(String appSource) {
+            this.appSource = appSource;
+            return this;
+        }
+        public String getAppSource() {
+            return this.appSource;
+        }
+
         public DescribeApplicationConfigResponseBodyData setAssociateEip(Boolean associateEip) {
             this.associateEip = associateEip;
             return this;
@@ -1094,6 +1111,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.mseApplicationId;
         }
 
+        public DescribeApplicationConfigResponseBodyData setMseApplicationName(String mseApplicationName) {
+            this.mseApplicationName = mseApplicationName;
+            return this;
+        }
+        public String getMseApplicationName() {
+            return this.mseApplicationName;
+        }
+
         public DescribeApplicationConfigResponseBodyData setNamespaceId(String namespaceId) {
             this.namespaceId = namespaceId;
             return this;
@@ -1164,6 +1189,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getPackageVersion() {
             return this.packageVersion;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setPhp(String php) {
+            this.php = php;
+            return this;
+        }
+        public String getPhp() {
+            return this.php;
         }
 
         public DescribeApplicationConfigResponseBodyData setPhpArmsConfigLocation(String phpArmsConfigLocation) {

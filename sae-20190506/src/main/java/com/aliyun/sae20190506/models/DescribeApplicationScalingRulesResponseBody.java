@@ -120,6 +120,18 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         @NameInMap("MetricType")
         public String metricType;
 
+        @NameInMap("SlbId")
+        public String slbId;
+
+        @NameInMap("SlbLogstore")
+        public String slbLogstore;
+
+        @NameInMap("SlbProject")
+        public String slbProject;
+
+        @NameInMap("Vport")
+        public String vport;
+
         public static DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetricMetrics build(java.util.Map<String, ?> map) throws Exception {
             DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetricMetrics self = new DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetricMetrics();
             return TeaModel.build(map, self);
@@ -139,6 +151,38 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         }
         public String getMetricType() {
             return this.metricType;
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetricMetrics setSlbId(String slbId) {
+            this.slbId = slbId;
+            return this;
+        }
+        public String getSlbId() {
+            return this.slbId;
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetricMetrics setSlbLogstore(String slbLogstore) {
+            this.slbLogstore = slbLogstore;
+            return this;
+        }
+        public String getSlbLogstore() {
+            return this.slbLogstore;
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetricMetrics setSlbProject(String slbProject) {
+            this.slbProject = slbProject;
+            return this;
+        }
+        public String getSlbProject() {
+            return this.slbProject;
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetricMetrics setVport(String vport) {
+            this.vport = vport;
+            return this;
+        }
+        public String getVport() {
+            return this.vport;
         }
 
     }
@@ -754,6 +798,12 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         @NameInMap("Metric")
         public DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetric metric;
 
+        @NameInMap("MinReadyInstanceRatio")
+        public Integer minReadyInstanceRatio;
+
+        @NameInMap("MinReadyInstances")
+        public Integer minReadyInstances;
+
         /**
          * <p>Indicates whether the auto scaling policy is enabled. Valid values:</p>
          * <br>
@@ -826,6 +876,22 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         }
         public DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetric getMetric() {
             return this.metric;
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRules setMinReadyInstanceRatio(Integer minReadyInstanceRatio) {
+            this.minReadyInstanceRatio = minReadyInstanceRatio;
+            return this;
+        }
+        public Integer getMinReadyInstanceRatio() {
+            return this.minReadyInstanceRatio;
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRules setMinReadyInstances(Integer minReadyInstances) {
+            this.minReadyInstances = minReadyInstances;
+            return this;
+        }
+        public Integer getMinReadyInstances() {
+            return this.minReadyInstances;
         }
 
         public DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRules setScaleRuleEnabled(Boolean scaleRuleEnabled) {

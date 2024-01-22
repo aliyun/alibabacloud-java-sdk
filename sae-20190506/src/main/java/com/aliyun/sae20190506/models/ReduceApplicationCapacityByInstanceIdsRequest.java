@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ReduceApplicationCapacityByInstanceIdsRequest extends TeaModel {
     /**
-     * <p>0099b7be-5f5b-4512-a7fc-56049ef1\*\*\*\*</p>
+     * <p>The ID of the application.</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>b2a8a925-477a-4ed7-b825-d5e22500\*\*\*\*</p>
+     * <p>The ID of the instance. Separate multiple instances with commas (,).</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;

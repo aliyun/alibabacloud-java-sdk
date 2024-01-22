@@ -120,6 +120,18 @@ public class DescribeApplicationScalingRuleResponseBody extends TeaModel {
         @NameInMap("MetricType")
         public String metricType;
 
+        @NameInMap("SlbId")
+        public String slbId;
+
+        @NameInMap("SlbLogstore")
+        public String slbLogstore;
+
+        @NameInMap("SlbProject")
+        public String slbProject;
+
+        @NameInMap("Vport")
+        public String vport;
+
         public static DescribeApplicationScalingRuleResponseBodyDataMetricMetrics build(java.util.Map<String, ?> map) throws Exception {
             DescribeApplicationScalingRuleResponseBodyDataMetricMetrics self = new DescribeApplicationScalingRuleResponseBodyDataMetricMetrics();
             return TeaModel.build(map, self);
@@ -139,6 +151,38 @@ public class DescribeApplicationScalingRuleResponseBody extends TeaModel {
         }
         public String getMetricType() {
             return this.metricType;
+        }
+
+        public DescribeApplicationScalingRuleResponseBodyDataMetricMetrics setSlbId(String slbId) {
+            this.slbId = slbId;
+            return this;
+        }
+        public String getSlbId() {
+            return this.slbId;
+        }
+
+        public DescribeApplicationScalingRuleResponseBodyDataMetricMetrics setSlbLogstore(String slbLogstore) {
+            this.slbLogstore = slbLogstore;
+            return this;
+        }
+        public String getSlbLogstore() {
+            return this.slbLogstore;
+        }
+
+        public DescribeApplicationScalingRuleResponseBodyDataMetricMetrics setSlbProject(String slbProject) {
+            this.slbProject = slbProject;
+            return this;
+        }
+        public String getSlbProject() {
+            return this.slbProject;
+        }
+
+        public DescribeApplicationScalingRuleResponseBodyDataMetricMetrics setVport(String vport) {
+            this.vport = vport;
+            return this;
+        }
+        public String getVport() {
+            return this.vport;
         }
 
     }
@@ -560,6 +604,12 @@ public class DescribeApplicationScalingRuleResponseBody extends TeaModel {
         @NameInMap("AtTime")
         public String atTime;
 
+        @NameInMap("MaxReplicas")
+        public Integer maxReplicas;
+
+        @NameInMap("MinReplicas")
+        public Integer minReplicas;
+
         /**
          * <p>The expected number of instances.</p>
          */
@@ -577,6 +627,22 @@ public class DescribeApplicationScalingRuleResponseBody extends TeaModel {
         }
         public String getAtTime() {
             return this.atTime;
+        }
+
+        public DescribeApplicationScalingRuleResponseBodyDataTimerSchedules setMaxReplicas(Integer maxReplicas) {
+            this.maxReplicas = maxReplicas;
+            return this;
+        }
+        public Integer getMaxReplicas() {
+            return this.maxReplicas;
+        }
+
+        public DescribeApplicationScalingRuleResponseBodyDataTimerSchedules setMinReplicas(Integer minReplicas) {
+            this.minReplicas = minReplicas;
+            return this;
+        }
+        public Integer getMinReplicas() {
+            return this.minReplicas;
         }
 
         public DescribeApplicationScalingRuleResponseBodyDataTimerSchedules setTargetReplicas(Integer targetReplicas) {
@@ -698,6 +764,12 @@ public class DescribeApplicationScalingRuleResponseBody extends TeaModel {
         @NameInMap("Metric")
         public DescribeApplicationScalingRuleResponseBodyDataMetric metric;
 
+        @NameInMap("MinReadyInstanceRatio")
+        public Integer minReadyInstanceRatio;
+
+        @NameInMap("MinReadyInstances")
+        public Integer minReadyInstances;
+
         /**
          * <p>Indicates whether the auto scaling policy is enabled. Valid values:</p>
          * <br>
@@ -770,6 +842,22 @@ public class DescribeApplicationScalingRuleResponseBody extends TeaModel {
         }
         public DescribeApplicationScalingRuleResponseBodyDataMetric getMetric() {
             return this.metric;
+        }
+
+        public DescribeApplicationScalingRuleResponseBodyData setMinReadyInstanceRatio(Integer minReadyInstanceRatio) {
+            this.minReadyInstanceRatio = minReadyInstanceRatio;
+            return this;
+        }
+        public Integer getMinReadyInstanceRatio() {
+            return this.minReadyInstanceRatio;
+        }
+
+        public DescribeApplicationScalingRuleResponseBodyData setMinReadyInstances(Integer minReadyInstances) {
+            this.minReadyInstances = minReadyInstances;
+            return this;
+        }
+        public Integer getMinReadyInstances() {
+            return this.minReadyInstances;
         }
 
         public DescribeApplicationScalingRuleResponseBodyData setScaleRuleEnabled(Boolean scaleRuleEnabled) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeIngressRequest extends TeaModel {
     /**
-     * <p>87</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("IngressId")
     public Long ingressId;
