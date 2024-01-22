@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListListenersResponseBody extends TeaModel {
     /**
-     * <p>The list of listeners.</p>
+     * <p>A list of listeners.</p>
      */
     @NameInMap("Listeners")
     public java.util.List<ListListenersResponseBodyListeners> listeners;
@@ -83,41 +83,59 @@ public class ListListenersResponseBody extends TeaModel {
     }
 
     public static class ListListenersResponseBodyListenersProxyProtocolV2Config extends TeaModel {
+        /**
+         * <p>Indicates whether the Proxy protocol passes the PrivateLinkEpId parameter to backend servers. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Ppv2PrivateLinkEpIdEnabled")
-        public String ppv2PrivateLinkEpIdEnabled;
+        public Boolean ppv2PrivateLinkEpIdEnabled;
 
+        /**
+         * <p>Indicates whether the Proxy protocol passes the PrivateLinkEpsId parameter to backend servers. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Ppv2PrivateLinkEpsIdEnabled")
-        public String ppv2PrivateLinkEpsIdEnabled;
+        public Boolean ppv2PrivateLinkEpsIdEnabled;
 
+        /**
+         * <p>Indicates whether the Proxy protocol passes the VpcId parameter to backend servers. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Ppv2VpcIdEnabled")
-        public String ppv2VpcIdEnabled;
+        public Boolean ppv2VpcIdEnabled;
 
         public static ListListenersResponseBodyListenersProxyProtocolV2Config build(java.util.Map<String, ?> map) throws Exception {
             ListListenersResponseBodyListenersProxyProtocolV2Config self = new ListListenersResponseBodyListenersProxyProtocolV2Config();
             return TeaModel.build(map, self);
         }
 
-        public ListListenersResponseBodyListenersProxyProtocolV2Config setPpv2PrivateLinkEpIdEnabled(String ppv2PrivateLinkEpIdEnabled) {
+        public ListListenersResponseBodyListenersProxyProtocolV2Config setPpv2PrivateLinkEpIdEnabled(Boolean ppv2PrivateLinkEpIdEnabled) {
             this.ppv2PrivateLinkEpIdEnabled = ppv2PrivateLinkEpIdEnabled;
             return this;
         }
-        public String getPpv2PrivateLinkEpIdEnabled() {
+        public Boolean getPpv2PrivateLinkEpIdEnabled() {
             return this.ppv2PrivateLinkEpIdEnabled;
         }
 
-        public ListListenersResponseBodyListenersProxyProtocolV2Config setPpv2PrivateLinkEpsIdEnabled(String ppv2PrivateLinkEpsIdEnabled) {
+        public ListListenersResponseBodyListenersProxyProtocolV2Config setPpv2PrivateLinkEpsIdEnabled(Boolean ppv2PrivateLinkEpsIdEnabled) {
             this.ppv2PrivateLinkEpsIdEnabled = ppv2PrivateLinkEpsIdEnabled;
             return this;
         }
-        public String getPpv2PrivateLinkEpsIdEnabled() {
+        public Boolean getPpv2PrivateLinkEpsIdEnabled() {
             return this.ppv2PrivateLinkEpsIdEnabled;
         }
 
-        public ListListenersResponseBodyListenersProxyProtocolV2Config setPpv2VpcIdEnabled(String ppv2VpcIdEnabled) {
+        public ListListenersResponseBodyListenersProxyProtocolV2Config setPpv2VpcIdEnabled(Boolean ppv2VpcIdEnabled) {
             this.ppv2VpcIdEnabled = ppv2VpcIdEnabled;
             return this;
         }
-        public String getPpv2VpcIdEnabled() {
+        public Boolean getPpv2VpcIdEnabled() {
             return this.ppv2VpcIdEnabled;
         }
 
@@ -125,15 +143,13 @@ public class ListListenersResponseBody extends TeaModel {
 
     public static class ListListenersResponseBodyListenersTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag option.</p>
-         * <br>
-         * <p>The value can be up to 128 characters in length. It cannot start with `acs:` and cannot contain `http://` or `https://`.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -165,8 +181,8 @@ public class ListListenersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether Application-Layer Protocol Negotiation (ALPN) is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: enabled</p>
-         * <p>*   **false**: disabled</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("AlpnEnabled")
         public Boolean alpnEnabled;
@@ -183,7 +199,7 @@ public class ListListenersResponseBody extends TeaModel {
         public String alpnPolicy;
 
         /**
-         * <p>The list of CA certificates.</p>
+         * <p>A list of CA certificates.</p>
          * <br>
          * <p>>  This parameter takes effect only for listeners that use SSL over TCP.</p>
          */
@@ -193,14 +209,14 @@ public class ListListenersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether mutual authentication is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("CaEnabled")
         public Boolean caEnabled;
 
         /**
-         * <p>The list of server certificates.</p>
+         * <p>The server certificate.</p>
          * <br>
          * <p>>  This parameter takes effect only for listeners that use SSL over TCP.</p>
          */
@@ -214,13 +230,13 @@ public class ListListenersResponseBody extends TeaModel {
         public Integer cps;
 
         /**
-         * <p>The last port in the listening port range.</p>
+         * <p>The last port in the listener port range.</p>
          */
         @NameInMap("EndPort")
         public String endPort;
 
         /**
-         * <p>The timeout period of an idle connection. Unit: seconds. Valid values: **1** to **900**. Default value: **900**.</p>
+         * <p>The timeout period of idle connections. Unit: seconds. Valid values: **1** to **900**. Default value: **900**.</p>
          */
         @NameInMap("IdleTimeout")
         public Integer idleTimeout;
@@ -234,19 +250,19 @@ public class ListListenersResponseBody extends TeaModel {
         public String listenerDescription;
 
         /**
-         * <p>The ID of the listener.</p>
+         * <p>The listener ID.</p>
          */
         @NameInMap("ListenerId")
         public String listenerId;
 
         /**
-         * <p>The listening port.</p>
+         * <p>The information about the listener port of your server.</p>
          */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
         /**
-         * <p>The listening protocol. Valid values: **TCP**, **UDP**, and **TCPSSL**.</p>
+         * <p>The listener protocol. Valid values: **TCP**, **UDP**, and **TCPSSL**.</p>
          */
         @NameInMap("ListenerProtocol")
         public String listenerProtocol;
@@ -254,46 +270,49 @@ public class ListListenersResponseBody extends TeaModel {
         /**
          * <p>The status of the listener. Valid values:</p>
          * <br>
-         * <p>*   **Provisioning**</p>
-         * <p>*   **Running**</p>
-         * <p>*   **Configuring**</p>
-         * <p>*   **Stopping**</p>
-         * <p>*   **Stopped**</p>
-         * <p>*   **Starting**</p>
-         * <p>*   **Deleting**</p>
-         * <p>*   **Deleted**</p>
+         * <p>*   **Provisioning**: The listener is being created.</p>
+         * <p>*   **Running**: The listener is running.</p>
+         * <p>*   **Configuring**: The listener is being configured.</p>
+         * <p>*   **Stopping**: The listener is being stopped.</p>
+         * <p>*   **Stopped**: The listener is stopped.</p>
+         * <p>*   **Starting**: The listener is being started.</p>
+         * <p>*   **Deleting**: The listener is being deleted.</p>
+         * <p>*   **Deleted**: The listener is deleted.</p>
          */
         @NameInMap("ListenerStatus")
         public String listenerStatus;
 
         /**
-         * <p>The ID of the NLB instance.</p>
+         * <p>The CLB instance ID.</p>
          */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
         /**
-         * <p>The maximum size of a TCP segment. Unit: bytes. Valid values: **0** to **1500**. **0** indicates that the maximum segment size remains unchanged.</p>
+         * <p>The size of the largest TCP packet segment. Unit: bytes. Valid values: **0** to **1500**. **0** indicates that the Mss value of TCP packets remains unchanged.</p>
          * <br>
-         * <p>>  This parameter is supported only by listeners that use SSL over TCP.</p>
+         * <p>>  This parameter takes effect only for listeners that use SSL over TCP.</p>
          */
         @NameInMap("Mss")
         public Integer mss;
 
         /**
-         * <p>Indicates whether the Proxy protocol is used to pass client IP addresses to backend servers. Valid values:</p>
+         * <p>Indicates whether the Proxy protocol passes source client IP addresses to backend servers. Valid values:</p>
          * <br>
-         * <p>*   **true**: enabled</p>
-         * <p>*   **false**: disabled</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("ProxyProtocolEnabled")
         public Boolean proxyProtocolEnabled;
 
+        /**
+         * <p>Indicates whether the Proxy protocol passes the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.</p>
+         */
         @NameInMap("ProxyProtocolV2Config")
         public ListListenersResponseBodyListenersProxyProtocolV2Config proxyProtocolV2Config;
 
         /**
-         * <p>The ID of the region where the NLB instance is deployed.</p>
+         * <p>The region ID of the NLB instance.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -301,8 +320,8 @@ public class ListListenersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether fine-grained monitoring is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: enabled</p>
-         * <p>*   **false**: disabled</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("SecSensorEnabled")
         public Boolean secSensorEnabled;
@@ -316,19 +335,19 @@ public class ListListenersResponseBody extends TeaModel {
         public String securityPolicyId;
 
         /**
-         * <p>The ID of the server group.</p>
+         * <p>The server group ID.</p>
          */
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
         /**
-         * <p>The first port in the listening port range.</p>
+         * <p>The first port in the listener port range.</p>
          */
         @NameInMap("StartPort")
         public String startPort;
 
         /**
-         * <p>The tag key.</p>
+         * <p>A list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListListenersResponseBodyListenersTags> tags;
