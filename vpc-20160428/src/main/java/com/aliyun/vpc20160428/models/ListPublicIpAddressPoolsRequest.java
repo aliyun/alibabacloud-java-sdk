@@ -92,6 +92,9 @@ public class ListPublicIpAddressPoolsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SecurityProtectionEnabled")
+    public Boolean securityProtectionEnabled;
+
     /**
      * <p>The status of the IP address pool. Valid values:</p>
      * <br>
@@ -207,6 +210,14 @@ public class ListPublicIpAddressPoolsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ListPublicIpAddressPoolsRequest setSecurityProtectionEnabled(Boolean securityProtectionEnabled) {
+        this.securityProtectionEnabled = securityProtectionEnabled;
+        return this;
+    }
+    public Boolean getSecurityProtectionEnabled() {
+        return this.securityProtectionEnabled;
     }
 
     public ListPublicIpAddressPoolsRequest setStatus(String status) {

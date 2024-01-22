@@ -14,23 +14,27 @@ public class ModifyVpnConnectionAttributeRequest extends TeaModel {
     public Boolean autoConfigRoute;
 
     /**
-     * <p>You can specify this parameter if you modify the configuration of a single-tunnel IPsec-VPN connection.</p>
+     * <p>This parameter is supported by single-tunnel IPsec-VPN connections.</p>
      * <br>
-     * <p>The Border Gateway Protocol (BGP) configuration:</p>
+     * <p>The Border Gateway Protocol (BGP) configurations:</p>
      * <br>
      * <p>*   **BgpConfig.EnableBgp:** specifies whether to enable BGP. Valid values: **true** and **false**.</p>
      * <br>
-     * <p>*   **BgpConfig.LocalAsn**: the autonomous system number (ASN) on the Alibaba Cloud side. Valid values: **1** to **4294967295**.</p>
+     * <p>*   **BgpConfig.LocalAsn:** the autonomous system number (ASN) on the Alibaba Cloud side. Valid values: **1** to **4294967295**.</p>
      * <br>
-     * <p>*   **BgpConfig.TunnelCidr:** the CIDR block of the IPsec tunnel. The CIDR block falls within 169.254.0.0/16. The subnet mask of the CIDR block must be 30 bits in length.</p>
+     * <p>    You can enter the ASN in two segments. Separate the first 16 bits of the ASN from the remaining 16 bits with a period (.). Enter the number in each segment in decimal format.</p>
      * <br>
-     * <p>    >The CIDR block of the IPsec tunnel of each IPsec-VPN connection must be unique on a VPN gateway.</p>
+     * <p>    For example, if you enter 123.456, the ASN is: 123 × 65536 + 456 = 8061384.</p>
      * <br>
-     * <p>*   **LocalBgpIp**: the BGP IP address on the Alibaba Cloud side. This IP address must fall within the CIDR block of the IPsec tunnel.</p>
+     * <p>*   **BgpConfig.TunnelCidr**: the CIDR block of the IPsec tunnel. The CIDR block must belong to 169.254.0.0/16. The subnet mask of the CIDR block must be 30 bits in length.</p>
      * <br>
-     * <p>> *   This parameter is required when the VPN gateway has dynamic BGP enabled.</p>
-     * <p>>*   Before you configure BGP, we recommend that you learn how BGP dynamic routing works and the limits of using BGP dynamic routing. For more information, see [VPN Gateway supports BGP dynamic routing](~~170235~~).</p>
-     * <p>>*   We recommend that you use a private ASN to establish a connection with Alibaba Cloud over BGP. Refer to the relevant documentation for the private ASN range.</p>
+     * <p>    > The CIDR block of the IPsec tunnel of each IPsec-VPN connection must be unique on a VPN gateway.</p>
+     * <br>
+     * <p>*   **LocalBgpIp**: the BGP IP address on the Alibaba Cloud side. This IP address must fall within the CIDR block range of the IPsec tunnel.</p>
+     * <br>
+     * <p>> - This parameter is required when the VPN gateway has dynamic BGP enabled.</p>
+     * <p>> - Before you configure BGP, we recommend that you learn about how BGP works and its limits. For more information, see [BGP dynamic routing ](~~170235~~).</p>
+     * <p>> - We recommend that you use a private ASN to establish a connection with Alibaba Cloud over BGP. For information about the range of private ASNs, see the relevant documentation.</p>
      */
     @NameInMap("BgpConfig")
     public String bgpConfig;
@@ -411,17 +415,17 @@ public class ModifyVpnConnectionAttributeRequest extends TeaModel {
 
     public static class ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelBgpConfig extends TeaModel {
         /**
-         * <p>The ASN on the Alibaba Cloud side. Valid values: **1** to **4294967295**. Default value: **45104**.</p>
+         * <p>The ASN of the tunnel on the Alibaba Cloud side. Valid values: **1** to **4294967295**. Default value: **45104**.</p>
          * <br>
-         * <p>> *   You can specify or modify this parameter if BGP is enabled for the IPsec-VPN connection (**EnableTunnelsBgp** is set to **true**).</p>
-         * <p>> *   Before you configure BGP, we recommend that you learn about how BGP works and its limits. For more information, see [VPN Gateway supports BGP dynamic routing](~~170235~~).</p>
-         * <p>> *   We recommend that you use a private ASN to establish a connection with Alibaba Cloud over BGP. For information about the range of private ASNs, see the relevant documentation.</p>
+         * <p>> - You can specify or modify this parameter if BGP is enabled for the IPsec-VPN connection (**EnableTunnelsBgp** is set to **true**).</p>
+         * <p>> - Before you configure BGP, we recommend that you learn about how BGP works and its limits. For more information, see [VPN Gateway supports BGP dynamic routing](~~170235~~).</p>
+         * <p>> - We recommend that you use a private ASN to establish a connection with Alibaba Cloud over BGP. For information about the range of private ASNs, see the relevant documentation.</p>
          */
         @NameInMap("LocalAsn")
         public Long localAsn;
 
         /**
-         * <p>The BGP address on the Alibaba Cloud side. The address is an IP address that falls within the BGP CIDR block range.</p>
+         * <p>The BGP IP address of the tunnel on the Alibaba Cloud side. The address is an IP address that falls within the BGP CIDR block range.</p>
          */
         @NameInMap("LocalBgpIp")
         public String localBgpIp;
@@ -489,7 +493,7 @@ public class ModifyVpnConnectionAttributeRequest extends TeaModel {
         public Long ikeLifetime;
 
         /**
-         * <p>The negotiation mode of IKE. Valid values:</p>
+         * <p>The IKE negotiation mode. Valid values:</p>
          * <br>
          * <p>*   **main**: This mode offers higher security during negotiations.</p>
          * <p>*   **aggressive**: This mode is faster and has a higher success rate.</p>
@@ -506,7 +510,7 @@ public class ModifyVpnConnectionAttributeRequest extends TeaModel {
         /**
          * <p>The version of the IKE protocol. Valid values: **ikev1** and **ikev2**.</p>
          * <br>
-         * <p>Compared with IKEv1, IKEv2 simplifies the SA negotiation process and is more suitable for scenarios in which multiple CIDR blocks are used.</p>
+         * <p>Compared with IKEv1, IKEv2 simplifies the security association (SA) negotiation process and is more suitable for scenarios in which multiple CIDR blocks are used.</p>
          */
         @NameInMap("IkeVersion")
         public String ikeVersion;
@@ -522,7 +526,7 @@ public class ModifyVpnConnectionAttributeRequest extends TeaModel {
         /**
          * <p>The pre-shared key, which is used for identity authentication between the tunnel and the tunnel peer.</p>
          * <br>
-         * <p>*   It must be 1 to 100 characters in length, and can contain letters, digits, and the following characters: ``~!\`@#$%^&*()_-+={}[]|;:\",.<>/?``</p>
+         * <p>*   The key must be 1 to 100 characters in length and can contain digits, letters, and the following characters: ``~!\`@#$%^&*()_-+={}[]|;:\",.<>/?``</p>
          * <p>*   If you do not specify a pre-shared key, the system generates a random 16-character string as the pre-shared key. You can call the [DescribeVpnConnection](~~448847~~) operation to query the pre-shared key that is generated by the system.</p>
          * <br>
          * <p>>  The tunnel and the tunnel peer must use the same pre-shared key. Otherwise, the tunnel cannot be established.</p>
@@ -717,8 +721,8 @@ public class ModifyVpnConnectionAttributeRequest extends TeaModel {
         /**
          * <p>The tunnel role. Valid values:</p>
          * <br>
-         * <p>- **master**: The tunnel is an active tunnel.</p>
-         * <p>- **slave**: The tunnel is a standby tunnel.</p>
+         * <p>*   **master**: The tunnel is an active tunnel.</p>
+         * <p>*   **slave**: The tunnel is a standby tunnel.</p>
          */
         @NameInMap("Role")
         public String role;

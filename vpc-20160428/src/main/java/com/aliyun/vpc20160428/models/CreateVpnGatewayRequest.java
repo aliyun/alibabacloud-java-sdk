@@ -9,6 +9,8 @@ public class CreateVpnGatewayRequest extends TeaModel {
      * <br>
      * <p>*   **true**</p>
      * <p>*   **false** (default)</p>
+     * <br>
+     * <p>>  We recommend that you enable automatic payment. If you disable automatic payment, you must manually pay the bill for creating the VPN gateway.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
@@ -108,11 +110,13 @@ public class CreateVpnGatewayRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which the VPN gateway belongs.</p>
      * <br>
-     * <p>- You can call the [ListResourceGroups](~~158855~~) operation to query the resource group list.</p>
-     * <p>- If you do not specify a resource group, the VPN gateway will belong to the default resource group after being created.</p>
-     * <p>- After the VPN gateway is created, if you create an SSL server, SSL client certificate, IPsec server, or IPsec-VPN connection under the VPN gateway (when the IPsec-VPN connection is bound to the VPN gateway), these resources directly belong to the resource group to which the VPN gateway belongs and cannot be modified.</p>
+     * <p>*   You can call the [ListResourceGroups](~~158855~~) operation to query resource group IDs.</p>
      * <br>
-     * <p>    If you change the resource group to which the VPN gateway belongs, the resource group to which the resource belongs will also be changed.</p>
+     * <p>*   If you do not specify a resource group ID, the VPN gateway belongs to the default resource group.</p>
+     * <br>
+     * <p>*   After the VPN gateway is created, the following resources also belong to the resource group and you cannot change the resource group: SSL servers, SSL client certificates, IPsec servers, and IPsec-VPN connections.</p>
+     * <br>
+     * <p>    If you move the VPN gateway to a new resource group, the preceding resources are also moved to the new resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

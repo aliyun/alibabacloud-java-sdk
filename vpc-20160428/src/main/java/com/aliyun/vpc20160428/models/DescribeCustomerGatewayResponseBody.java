@@ -57,7 +57,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
     /**
      * <p>The ID of the resource group to which the customer gateway belongs.</p>
      * <br>
-     * <p>You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.</p>
+     * <p>You can call the [ListResourceGroups](~~158855~~) operation to query resource groups.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -155,13 +155,13 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
 
     public static class DescribeCustomerGatewayResponseBodyTagsTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of tag N.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of tag N.</p>
          */
         @NameInMap("Value")
         public String value;

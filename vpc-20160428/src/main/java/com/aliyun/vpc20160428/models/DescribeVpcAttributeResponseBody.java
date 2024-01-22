@@ -12,6 +12,9 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     @NameInMap("AssociatedCens")
     public DescribeVpcAttributeResponseBodyAssociatedCens associatedCens;
 
+    @NameInMap("AssociatedPropagationSources")
+    public DescribeVpcAttributeResponseBodyAssociatedPropagationSources associatedPropagationSources;
+
     /**
      * <p>The IPv4 CIDR block of the VPC.</p>
      */
@@ -184,6 +187,14 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     }
     public DescribeVpcAttributeResponseBodyAssociatedCens getAssociatedCens() {
         return this.associatedCens;
+    }
+
+    public DescribeVpcAttributeResponseBody setAssociatedPropagationSources(DescribeVpcAttributeResponseBodyAssociatedPropagationSources associatedPropagationSources) {
+        this.associatedPropagationSources = associatedPropagationSources;
+        return this;
+    }
+    public DescribeVpcAttributeResponseBodyAssociatedPropagationSources getAssociatedPropagationSources() {
+        return this.associatedPropagationSources;
     }
 
     public DescribeVpcAttributeResponseBody setCidrBlock(String cidrBlock) {
@@ -445,6 +456,88 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
         public java.util.List<DescribeVpcAttributeResponseBodyAssociatedCensAssociatedCen> getAssociatedCen() {
             return this.associatedCen;
+        }
+
+    }
+
+    public static class DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources extends TeaModel {
+        @NameInMap("RoutePropagated")
+        public Boolean routePropagated;
+
+        @NameInMap("SourceInstanceId")
+        public String sourceInstanceId;
+
+        @NameInMap("SourceOwnerId")
+        public Long sourceOwnerId;
+
+        @NameInMap("SourceType")
+        public String sourceType;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources self = new DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources setRoutePropagated(Boolean routePropagated) {
+            this.routePropagated = routePropagated;
+            return this;
+        }
+        public Boolean getRoutePropagated() {
+            return this.routePropagated;
+        }
+
+        public DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources setSourceInstanceId(String sourceInstanceId) {
+            this.sourceInstanceId = sourceInstanceId;
+            return this;
+        }
+        public String getSourceInstanceId() {
+            return this.sourceInstanceId;
+        }
+
+        public DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources setSourceOwnerId(Long sourceOwnerId) {
+            this.sourceOwnerId = sourceOwnerId;
+            return this;
+        }
+        public Long getSourceOwnerId() {
+            return this.sourceOwnerId;
+        }
+
+        public DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        public DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
+    public static class DescribeVpcAttributeResponseBodyAssociatedPropagationSources extends TeaModel {
+        @NameInMap("AssociatedPropagationSources")
+        public java.util.List<DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources> associatedPropagationSources;
+
+        public static DescribeVpcAttributeResponseBodyAssociatedPropagationSources build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpcAttributeResponseBodyAssociatedPropagationSources self = new DescribeVpcAttributeResponseBodyAssociatedPropagationSources();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcAttributeResponseBodyAssociatedPropagationSources setAssociatedPropagationSources(java.util.List<DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources> associatedPropagationSources) {
+            this.associatedPropagationSources = associatedPropagationSources;
+            return this;
+        }
+        public java.util.List<DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources> getAssociatedPropagationSources() {
+            return this.associatedPropagationSources;
         }
 
     }

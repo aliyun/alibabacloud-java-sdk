@@ -212,6 +212,9 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("RoutePropagationEnable")
+        public Boolean routePropagationEnable;
+
         /**
          * <p>The ID of the route table.</p>
          */
@@ -327,6 +330,14 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setRoutePropagationEnable(Boolean routePropagationEnable) {
+            this.routePropagationEnable = routePropagationEnable;
+            return this;
+        }
+        public Boolean getRoutePropagationEnable() {
+            return this.routePropagationEnable;
         }
 
         public DescribeRouteTableListResponseBodyRouterTableListRouterTableListType setRouteTableId(String routeTableId) {

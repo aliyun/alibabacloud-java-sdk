@@ -13,7 +13,7 @@ public class DescribeIpv6GatewaysRequest extends TeaModel {
     /**
      * <p>The name of the IPv6 gateway.</p>
      * <br>
-     * <p>The name must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. The name must start with a letter and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -43,7 +43,7 @@ public class DescribeIpv6GatewaysRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the resource group to which the IPv6 gateway belongs.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

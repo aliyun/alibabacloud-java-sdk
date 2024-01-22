@@ -94,6 +94,9 @@ public class CreatePublicIpAddressPoolRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SecurityProtectionTypes")
+    public java.util.List<String> securityProtectionTypes;
+
     /**
      * <p>The tag of the resource.</p>
      */
@@ -205,6 +208,14 @@ public class CreatePublicIpAddressPoolRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreatePublicIpAddressPoolRequest setSecurityProtectionTypes(java.util.List<String> securityProtectionTypes) {
+        this.securityProtectionTypes = securityProtectionTypes;
+        return this;
+    }
+    public java.util.List<String> getSecurityProtectionTypes() {
+        return this.securityProtectionTypes;
     }
 
     public CreatePublicIpAddressPoolRequest setTag(java.util.List<CreatePublicIpAddressPoolRequestTag> tag) {

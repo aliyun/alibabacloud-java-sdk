@@ -187,6 +187,9 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("SecurityProtectionTypes")
+        public java.util.List<String> securityProtectionTypes;
+
         /**
          * <p>Indicates whether the IP address pool is shared.</p>
          * <br>
@@ -322,6 +325,14 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList setSecurityProtectionTypes(java.util.List<String> securityProtectionTypes) {
+            this.securityProtectionTypes = securityProtectionTypes;
+            return this;
+        }
+        public java.util.List<String> getSecurityProtectionTypes() {
+            return this.securityProtectionTypes;
         }
 
         public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList setShareType(String shareType) {

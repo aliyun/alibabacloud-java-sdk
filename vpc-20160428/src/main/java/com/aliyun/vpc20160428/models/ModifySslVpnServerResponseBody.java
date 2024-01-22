@@ -100,9 +100,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     /**
      * <p>The ID of the resource group to which the SSL server belongs.</p>
      * <br>
-     * <p>The SSL server has the same resource group as its associated VPN gateway instance.</p>
-     * <br>
-     * <p>You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.</p>
+     * <p>The SSL server and the VPN gateway associated with the SSL server belong to the same resource group. You can call the [ListResourceGroups](~~158855~~) operation to query resource groups.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
