@@ -13,6 +13,15 @@ public class DescribeBackupsResponseBody extends TeaModel {
     @NameInMap("Backups")
     public DescribeBackupsResponseBodyBackups backups;
 
+    @NameInMap("FreeSize")
+    public Long freeSize;
+
+    @NameInMap("FullStorageSize")
+    public Long fullStorageSize;
+
+    @NameInMap("LogStorageSize")
+    public Long logStorageSize;
+
     /**
      * <p>The page number of the returned page.</p>
      */
@@ -56,6 +65,30 @@ public class DescribeBackupsResponseBody extends TeaModel {
     }
     public DescribeBackupsResponseBodyBackups getBackups() {
         return this.backups;
+    }
+
+    public DescribeBackupsResponseBody setFreeSize(Long freeSize) {
+        this.freeSize = freeSize;
+        return this;
+    }
+    public Long getFreeSize() {
+        return this.freeSize;
+    }
+
+    public DescribeBackupsResponseBody setFullStorageSize(Long fullStorageSize) {
+        this.fullStorageSize = fullStorageSize;
+        return this;
+    }
+    public Long getFullStorageSize() {
+        return this.fullStorageSize;
+    }
+
+    public DescribeBackupsResponseBody setLogStorageSize(Long logStorageSize) {
+        this.logStorageSize = logStorageSize;
+        return this;
+    }
+    public Long getLogStorageSize() {
+        return this.logStorageSize;
     }
 
     public DescribeBackupsResponseBody setPageNumber(Integer pageNumber) {

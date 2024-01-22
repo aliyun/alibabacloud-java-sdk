@@ -7,6 +7,15 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
     @NameInMap("ClusterBackups")
     public java.util.List<DescribeClusterBackupListResponseBodyClusterBackups> clusterBackups;
 
+    @NameInMap("FreeSize")
+    public Long freeSize;
+
+    @NameInMap("FullStorageSize")
+    public Long fullStorageSize;
+
+    @NameInMap("LogStorageSize")
+    public Long logStorageSize;
+
     @NameInMap("MaxResults")
     public Integer maxResults;
 
@@ -30,6 +39,30 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
     }
     public java.util.List<DescribeClusterBackupListResponseBodyClusterBackups> getClusterBackups() {
         return this.clusterBackups;
+    }
+
+    public DescribeClusterBackupListResponseBody setFreeSize(Long freeSize) {
+        this.freeSize = freeSize;
+        return this;
+    }
+    public Long getFreeSize() {
+        return this.freeSize;
+    }
+
+    public DescribeClusterBackupListResponseBody setFullStorageSize(Long fullStorageSize) {
+        this.fullStorageSize = fullStorageSize;
+        return this;
+    }
+    public Long getFullStorageSize() {
+        return this.fullStorageSize;
+    }
+
+    public DescribeClusterBackupListResponseBody setLogStorageSize(Long logStorageSize) {
+        this.logStorageSize = logStorageSize;
+        return this;
+    }
+    public Long getLogStorageSize() {
+        return this.logStorageSize;
     }
 
     public DescribeClusterBackupListResponseBody setMaxResults(Integer maxResults) {
