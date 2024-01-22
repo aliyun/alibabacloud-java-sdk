@@ -16,8 +16,8 @@ public class CreateMigrateTaskRequest extends TeaModel {
     /**
      * <p>The consistency check method for the database. Valid values:</p>
      * <br>
-     * <p>*   **SyncExecuteDBCheck**: synchronous database check</p>
-     * <p>*   **AsyncExecuteDBCheck**: asynchronous database check</p>
+     * <p>*   **SyncExecuteDBCheck**: synchronous database check.</p>
+     * <p>*   **AsyncExecuteDBCheck**: asynchronous database check.</p>
      * <br>
      * <p>Default value: **AsyncExecuteDBCheck** (compatible with SQL Server 2008 R2).</p>
      * <br>
@@ -44,13 +44,13 @@ public class CreateMigrateTaskRequest extends TeaModel {
      * <p>*   **True**</p>
      * <p>*   **False**</p>
      * <br>
-     * <p>> Set the value to **True** for instances that run SQL Server 2008 R2.</p>
+     * <p>>  Set the value to **True** for instances that run SQL Server 2008 R2.</p>
      */
     @NameInMap("IsOnlineDB")
     public String isOnlineDB;
 
     /**
-     * <p>The ID of the migration task.</p>
+     * <p>The migration task ID.</p>
      * <br>
      * <p>*   If you set **BackupMode** to **FULL**, the value of this parameter is empty. The full backup mode is compatible with instance that runs SQL Server 2008 R2.</p>
      * <p>*   If you set **BackupMode** to **UPDF**, the value of this parameter is the ID of the required full migration task.</p>
@@ -72,9 +72,7 @@ public class CreateMigrateTaskRequest extends TeaModel {
     public String OSSUrls;
 
     /**
-     * <p>The information about the backup file in the OSS bucket.</p>
-     * <br>
-     * <p>The values consist of three parts that are separated by colons (:):</p>
+     * <p>The information about the backup file in the OSS bucket. The values consist of three parts that are separated by colons (:):</p>
      * <br>
      * <p>*   OSS endpoint: oss-ap-southeast-1.aliyuncs.com.</p>
      * <p>*   Name of the OSS bucket: rdsmssqlsingapore.</p>

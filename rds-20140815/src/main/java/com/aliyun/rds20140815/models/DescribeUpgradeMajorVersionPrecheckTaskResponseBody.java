@@ -23,7 +23,7 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
     public Integer pageRecordCount;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

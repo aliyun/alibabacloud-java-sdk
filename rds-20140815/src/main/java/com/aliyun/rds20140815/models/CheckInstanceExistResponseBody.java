@@ -6,9 +6,8 @@ import com.aliyun.tea.*;
 public class CheckInstanceExistResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the instance exists. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The instance exists.</p>
-     * <p>*   **false**: The instance does not exist.</p>
+     * <p>- **true**: The instance exists.</p>
+     * <p>- **false**: The instance does not exist.</p>
      */
     @NameInMap("IsExistInstance")
     public Boolean isExistInstance;

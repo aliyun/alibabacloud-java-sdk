@@ -40,11 +40,8 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends TeaModel {
      * <p>*   **Immediate**: performs the upgrade immediately.</p>
      * <p>*   **SpecificTime**: performs the upgrade at a specified point in time.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If the instance runs MySQL, you can set this parameter to **MaintainTime**, **Immediate**, or **SpecificTime**.</p>
-     * <br>
-     * <p>*   If the instance runs PostgreSQL, you can set this parameter to **MaintainTime** or **Immediate**.</p>
+     * <p>> *   If the instance runs MySQL, you can set this parameter to **MaintainTime**, **Immediate**, or **SpecificTime**.</p>
+     * <p>> *   If the instance runs PostgreSQL, you can set this parameter to **MaintainTime** or **Immediate**.</p>
      */
     @NameInMap("UpgradeTime")
     public String upgradeTime;

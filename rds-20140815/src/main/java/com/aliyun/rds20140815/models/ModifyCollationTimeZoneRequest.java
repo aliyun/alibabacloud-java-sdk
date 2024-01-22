@@ -27,7 +27,7 @@ public class ModifyCollationTimeZoneRequest extends TeaModel {
     public String collation;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeHistoryTasksStatResponseBody extends TeaModel {
     /**
-     * <p>The details of the instance.</p>
+     * <p>The information about the task.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeHistoryTasksStatResponseBodyItems> items;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,19 +39,21 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
 
     public static class DescribeHistoryTasksStatResponseBodyItems extends TeaModel {
         /**
-         * <p>The status of the migration task. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <br>
-         * <p>*   **NoStart**: The task is not started.</p>
-         * <p>*   **Running**:The task is in progress.</p>
-         * <p>*   **Success**: The task is successful.</p>
-         * <p>*   **Failed**: The task failed.</p>
-         * <p>*   **Waiting**: The task is waiting for an incremental backup file to be imported.</p>
+         * <p>*   Scheduled</p>
+         * <p>*   Running</p>
+         * <p>*   Succeed</p>
+         * <p>*   Failed</p>
+         * <p>*   Cancelling</p>
+         * <p>*   Canceled</p>
+         * <p>*   Waiting</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The total number of tasks that meet these constraints without taking pagination into account.</p>
+         * <p>The total number of tasks.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

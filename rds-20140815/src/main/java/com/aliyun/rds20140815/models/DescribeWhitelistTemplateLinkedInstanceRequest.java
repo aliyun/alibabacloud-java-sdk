@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeWhitelistTemplateLinkedInstanceRequest extends TeaModel {
     /**
-     * <p>资源组ID，可以为空。</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

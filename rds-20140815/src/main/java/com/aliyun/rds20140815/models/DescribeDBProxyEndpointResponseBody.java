@@ -43,7 +43,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
      * <p>*   **TransactionReadSqlRouteOptimizeStatus**: the status of the transaction splitting feature. Valid values: **0** and **1**. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</p>
      * <p>*   **ConnectionPersist**: the status of the connection pooling feature. Valid values: **0**, **1**, and **2**. The value 0 indicates that the connection pooling feature is disabled. The value 1 indicates that the session connection pooling feature is enabled. The value 2 indicates that the transaction connection pooling feature is enabled.</p>
      * <p>*   **ReadWriteSpliting**: the status of the read/write splitting feature. Valid values: **0** and **1**. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</p>
-     * <p>*   **PinPreparedStmt**: an internal field that is available only for ApsaraDB RDS for PostgrSQL instances.</p>
+     * <p>*   **PinPreparedStmt**: an internal field that is available only for ApsaraDB RDS for PostgreSQL instances.</p>
      * <br>
      * <p>>  If the instance runs PostgreSQL, you can change only the value of the **ReadWriteSpliting** field. The **TransactionReadSqlRouteOptimizeStatus** and **PinPreparedStmt** fields are set to their default values 1.</p>
      */

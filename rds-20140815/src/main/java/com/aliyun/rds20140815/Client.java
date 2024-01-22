@@ -3179,10 +3179,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Supported database engines
+      * ### [](#)Supported database engine
       * SQL Server
+      * ### [](#)Limits
+      * Data migration across Alibaba Cloud accounts is not supported. For example, backup files in an Object Storage Service (OSS) bucket within Alibaba Cloud Account A cannot be migrated to an ApsaraDB RDS for SQL Server instance within Alibaba Cloud Account B.
+      * >  You can migrate backup files from an OSS bucket within Alibaba Cloud Account A to an OSS bucket within Alibaba Cloud Account B. Make sure that the data in the OSS bucket and the RDS instance belong to the same Alibaba Cloud account. Then, you can call this operation to create a migration task. For more information, see [Use Data Online Migration to migrate data between accounts](~~342762~~).
       * ### [](#)References
-      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * >  Before you call this operation, carefully read the following topic. Make sure that you fully understand the prerequisites, preparations, and impacts for calling this operation.
       * [Migrate data from a self-managed SQL Server instance to an ApsaraDB RDS for SQL Server instance](~~100019~~)
       *
       * @param request CreateMigrateTaskRequest
@@ -3254,10 +3257,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### [](#)Supported database engines
+      * ### [](#)Supported database engine
       * SQL Server
+      * ### [](#)Limits
+      * Data migration across Alibaba Cloud accounts is not supported. For example, backup files in an Object Storage Service (OSS) bucket within Alibaba Cloud Account A cannot be migrated to an ApsaraDB RDS for SQL Server instance within Alibaba Cloud Account B.
+      * >  You can migrate backup files from an OSS bucket within Alibaba Cloud Account A to an OSS bucket within Alibaba Cloud Account B. Make sure that the data in the OSS bucket and the RDS instance belong to the same Alibaba Cloud account. Then, you can call this operation to create a migration task. For more information, see [Use Data Online Migration to migrate data between accounts](~~342762~~).
       * ### [](#)References
-      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * >  Before you call this operation, carefully read the following topic. Make sure that you fully understand the prerequisites, preparations, and impacts for calling this operation.
       * [Migrate data from a self-managed SQL Server instance to an ApsaraDB RDS for SQL Server instance](~~100019~~)
       *
       * @param request CreateMigrateTaskRequest
@@ -8938,8 +8944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated : DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
-      * **
-      * **Description:** This operation is phased out. Use the [DescribeDBInstances](~~610396~~) operation instead.
+      * This operation is phased out. Use the DescribeDBInstances operation instead.
       *
       * @param request DescribeDBInstancesAsCsvRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9000,8 +9005,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated : DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
-      * **
-      * **Description:** This operation is phased out. Use the [DescribeDBInstances](~~610396~~) operation instead.
+      * This operation is phased out. Use the DescribeDBInstances operation instead.
       *
       * @param request DescribeDBInstancesAsCsvRequest
       * @return DescribeDBInstancesAsCsvResponse
@@ -10867,9 +10871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * ### [](#)Supported database engine
       * *   SQL Server
-      * ### [](#)Usage notes
-      * This operation is available only for ApsaraDB RDS for SQL Server instances and specific users. If you want to call this operation, contact **Alibaba Cloud technical support**.
-      * ### [](#)Prerequisites
+      * ### [](#)Prerequisite
       * *   The instance meets the following requirements:
       *     *   The instance resides in a region other than the China (Zhangjiakou) region.
       *     *   The instance runs RDS Basic Edition, RDS Cluster Edition, or RDS High-availability Edition. If your instance runs RDS High-availability Edition, make sure that the instance runs SQL Server 2012 or later.
@@ -10877,6 +10879,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
       *     *   The instance resides in a virtual private cloud (VPC). For more information about how to change the network type of an RDS instance, see [Change the network type](~~95707~~).
       *     *   If the instance runs RDS High-availability Edition or RDS Cluster Edition, the instance is created on or after January 1, 2021. If the instance runs RDS Basic Edition, the instance is created on or after September 02, 2022. You can view the **Creation Time** parameter of an instance in the **Status** section of the **Basic Information** page in the ApsaraDB RDS console.
       * *   Your **Alibaba Cloud account** is used for logons.
+      * ### [](#)References
+      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * [Create a host account and use the host account for logons](~~354862~~)
       *
       * @param request DescribeHostWebShellRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -10937,9 +10942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * ### [](#)Supported database engine
       * *   SQL Server
-      * ### [](#)Usage notes
-      * This operation is available only for ApsaraDB RDS for SQL Server instances and specific users. If you want to call this operation, contact **Alibaba Cloud technical support**.
-      * ### [](#)Prerequisites
+      * ### [](#)Prerequisite
       * *   The instance meets the following requirements:
       *     *   The instance resides in a region other than the China (Zhangjiakou) region.
       *     *   The instance runs RDS Basic Edition, RDS Cluster Edition, or RDS High-availability Edition. If your instance runs RDS High-availability Edition, make sure that the instance runs SQL Server 2012 or later.
@@ -10947,6 +10950,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
       *     *   The instance resides in a virtual private cloud (VPC). For more information about how to change the network type of an RDS instance, see [Change the network type](~~95707~~).
       *     *   If the instance runs RDS High-availability Edition or RDS Cluster Edition, the instance is created on or after January 1, 2021. If the instance runs RDS Basic Edition, the instance is created on or after September 02, 2022. You can view the **Creation Time** parameter of an instance in the **Status** section of the **Basic Information** page in the ApsaraDB RDS console.
       * *   Your **Alibaba Cloud account** is used for logons.
+      * ### [](#)References
+      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * [Create a host account and use the host account for logons](~~354862~~)
       *
       * @param request DescribeHostWebShellRequest
       * @return DescribeHostWebShellResponse
@@ -13467,6 +13473,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
@@ -17204,7 +17214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
       * *   [Set a maintenance window for an ApsaraDB RDS for MySQL instance](~~96052~~)
       * *   [Set a maintenance window for an ApsaraDB RDS for PostgreSQL instance](~~96799~~)
-      * *   [Set a maintenance window for an ApsaraDB RDS for SQL Sever instance](~~95657~~)
+      * *   [Set a maintenance window for an ApsaraDB RDS for SQL Server instance](~~95657~~)
       * *   [Set a maintenance window for an ApsaraDB RDS for MariaDB instance](~~97473~~)
       *
       * @param request ModifyDBInstanceMaintainTimeRequest
@@ -17269,7 +17279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
       * *   [Set a maintenance window for an ApsaraDB RDS for MySQL instance](~~96052~~)
       * *   [Set a maintenance window for an ApsaraDB RDS for PostgreSQL instance](~~96799~~)
-      * *   [Set a maintenance window for an ApsaraDB RDS for SQL Sever instance](~~95657~~)
+      * *   [Set a maintenance window for an ApsaraDB RDS for SQL Server instance](~~95657~~)
       * *   [Set a maintenance window for an ApsaraDB RDS for MariaDB instance](~~97473~~)
       *
       * @param request ModifyDBInstanceMaintainTimeRequest

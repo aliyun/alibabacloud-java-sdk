@@ -17,7 +17,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
     public DescribeSecurityGroupConfigurationResponseBodyItems items;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
