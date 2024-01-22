@@ -95,7 +95,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
 
     public static class DescribeRunningLogRecordsResponseBodyItemsLogRecords extends TeaModel {
         /**
-         * <p>The category of the log entry. Valid values:</p>
+         * <p>The category of the log entry.</p>
          */
         @NameInMap("Category")
         public String category;

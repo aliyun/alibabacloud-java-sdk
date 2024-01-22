@@ -23,7 +23,7 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The operation on the SSL feature. Valid values: Valid values:</p>
+     * <p>The operation on the SSL feature. Valid values:</p>
      * <br>
      * <p>*   **Open**: enables SSL encryption.</p>
      * <p>*   **Close**: disables SSL encryption.</p>

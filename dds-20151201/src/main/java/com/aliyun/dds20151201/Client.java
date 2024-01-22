@@ -1720,6 +1720,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Form", request.form);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.logicalOperator)) {
+            query.put("LogicalOperator", request.logicalOperator);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
             query.put("NodeId", request.nodeId);
         }
@@ -3068,6 +3072,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EndTime", request.endTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.logicalOperator)) {
+            query.put("LogicalOperator", request.logicalOperator);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
             query.put("NodeId", request.nodeId);
         }
@@ -3086,6 +3094,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryKeywords)) {
+            query.put("QueryKeywords", request.queryKeywords);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
@@ -4095,6 +4107,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EndTime", request.endTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.logicalOperator)) {
+            query.put("LogicalOperator", request.logicalOperator);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
             query.put("NodeId", request.nodeId);
         }
@@ -4117,6 +4133,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryKeywords)) {
+            query.put("QueryKeywords", request.queryKeywords);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
@@ -4351,6 +4371,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EndTime", request.endTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.logicalOperator)) {
+            query.put("LogicalOperator", request.logicalOperator);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
             query.put("NodeId", request.nodeId);
         }
@@ -4373,6 +4397,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryKeywords)) {
+            query.put("QueryKeywords", request.queryKeywords);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
@@ -5364,10 +5392,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  This operation is applicable only to the ApsaraDB for MongoDB console of the previous version due to the change in the frequency at which the monitoring data of an ApsaraDB for MongoDB instance is collected.
+      * >  This operation is applicable only to the ApsaraDB for MongoDB console of the previous version due to the change in the feature of adjusting collection intervals of monitoring data.
       * Before you call this operation, make sure that the following requirements are met:
-      * *   The instance is a replica set or sharded cluster instance.
-      * *   The instance runs MongoDB 3.4 (the latest minor version) or 4.0.
+      * *   A replica set or sharded cluster instance is used.
+      * *   MongoDB 3.4 (the latest minor version) or MongoDB 4.0 is selected.
       *
       * @param request ModifyDBInstanceMonitorRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5418,10 +5446,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  This operation is applicable only to the ApsaraDB for MongoDB console of the previous version due to the change in the frequency at which the monitoring data of an ApsaraDB for MongoDB instance is collected.
+      * >  This operation is applicable only to the ApsaraDB for MongoDB console of the previous version due to the change in the feature of adjusting collection intervals of monitoring data.
       * Before you call this operation, make sure that the following requirements are met:
-      * *   The instance is a replica set or sharded cluster instance.
-      * *   The instance runs MongoDB 3.4 (the latest minor version) or 4.0.
+      * *   A replica set or sharded cluster instance is used.
+      * *   MongoDB 3.4 (the latest minor version) or MongoDB 4.0 is selected.
       *
       * @param request ModifyDBInstanceMonitorRequest
       * @return ModifyDBInstanceMonitorResponse
@@ -5590,7 +5618,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * Before you call this operation, make sure that the following requirements are met:
       * *   The instance is in the running state.
       * *   The instance is a replica set instance.
-      * *   The engine version of the instance is \\<ph props="intl">3.4 or 4.0\\</ph>\\<ph props="china">3.4, 4.0, or 4.2\\</ph>.
+      * *   The engine version of the instance is 3.4 or 4.0.
       * >  When you enable or disable SSL encryption or update the SSL certificate, the instance restarts. We recommend that you call this operation during off-peak hours.
       *
       * @param request ModifyDBInstanceSSLRequest
@@ -5646,7 +5674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * Before you call this operation, make sure that the following requirements are met:
       * *   The instance is in the running state.
       * *   The instance is a replica set instance.
-      * *   The engine version of the instance is \\<ph props="intl">3.4 or 4.0\\</ph>\\<ph props="china">3.4, 4.0, or 4.2\\</ph>.
+      * *   The engine version of the instance is 3.4 or 4.0.
       * >  When you enable or disable SSL encryption or update the SSL certificate, the instance restarts. We recommend that you call this operation during off-peak hours.
       *
       * @param request ModifyDBInstanceSSLRequest
@@ -6355,7 +6383,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### Precautions
       * *   The instance must be in the Running state when you call this operation.
       * *   If you call this operation to modify specific instance parameters and the modification for part of the parameters can take effect only after an instance restart, the instance is automatically restarted after this operation is called. You can call the [DescribeParameterTemplates](~~67618~~) operation to query the parameters that take effect only after the instance is restarted.
       *
@@ -6420,7 +6447,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### Precautions
       * *   The instance must be in the Running state when you call this operation.
       * *   If you call this operation to modify specific instance parameters and the modification for part of the parameters can take effect only after an instance restart, the instance is automatically restarted after this operation is called. You can call the [DescribeParameterTemplates](~~67618~~) operation to query the parameters that take effect only after the instance is restarted.
       *

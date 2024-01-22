@@ -53,7 +53,7 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
         /**
          * <p>The method used to restore data. Valid values:</p>
          * <br>
-         * <p>*   \*\* PointInTime\*\* (default): Data is restored based on point in time</p>
+         * <p>*   **PointInTime** (default): Data is restored based on point in time</p>
          */
         @NameInMap("RestoreType")
         public String restoreType;

@@ -55,7 +55,7 @@ public class DescribeAvailabilityZonesResponseBody extends TeaModel {
          * <br>
          * <p>The return value of the ZoneName parameter is in the language that is specified by the **AcceptLanguage** parameter. For example, if the value of the ZoneId parameter in the response is **cn-hangzhou-h**, the following values are returned for the ZoneName parameter:</p>
          * <br>
-         * <p>*   If the value of the **AcceptLanguage** parameter is **zh**, ** H** is returned for the ZoneName parameter.</p>
+         * <p>*   If the value of the **AcceptLanguage** parameter is **zh**, **H** is returned for the ZoneName parameter.</p>
          * <p>*   If the value of the **AcceptLanguage** parameter is **en**, **Hangzhou Zone H** is returned for the ZoneName parameter.</p>
          */
         @NameInMap("ZoneName")

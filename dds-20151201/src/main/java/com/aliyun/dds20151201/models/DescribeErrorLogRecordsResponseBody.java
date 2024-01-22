@@ -123,7 +123,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The time when the log entry was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss***Z format. The time is displayed in UTC.</p>
+         * <p>The time when the log entry was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAuditRecordsRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <br>
      * <p>> If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.</p>
      */
@@ -19,7 +19,7 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     public String database;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      * <br>
      * <p>> The end time must be within 24 hours from the start time. Otherwise, the query fails.</p>
      */
@@ -27,18 +27,27 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The form of the audit log that the operation returns. Default value: File. Valid values:</p>
+     * <p>The form of the audit log that the operation returns. Valid values:</p>
      * <br>
-     * <p>*   **File** triggers the generation of audit logs. If this parameter is set to File, only common parameters are returned.</p>
-     * <p>*   **Stream**: returns data streams.</p>
+     * <p>*   **File**: triggers the generation of audit logs. If this parameter is set to File, only common parameters are returned.</p>
+     * <p>*   **Stream** (default): returns data streams.</p>
      */
     @NameInMap("Form")
     public String form;
 
     /**
-     * <p>The ID of the mongos node or shard node whose parameter modification records you want to query in the instance. If the instance is a sharded cluster instance, you must specify this parameter.</p>
+     * <p>The logical relationship between multiple keywords. Valid values:</p>
      * <br>
-     * <p>> This parameter is valid only when you specify the **DBInstanceId** parameter to the ID of a sharded cluster instance.</p>
+     * <p>*   **or**</p>
+     * <p>*   **and** (default value)</p>
+     */
+    @NameInMap("LogicalOperator")
+    public String logicalOperator;
+
+    /**
+     * <p>The ID of the mongos node or shard node in the instance.</p>
+     * <br>
+     * <p>> This parameter takes effect only when you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -59,7 +68,7 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Valid values: any non-zero positive integer. Default value: 1.</p>
+     * <p>The page number of the page to return. The valid value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -71,7 +80,7 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The keywords that are used for queries. Separate multiple keywords with spaces. The maximum number of keywords is 10.</p>
+     * <p>The keywords used for query. You can enter up to 10 keywords at a time. If you enter multiple keywords, separate the keywords with spaces.</p>
      */
     @NameInMap("QueryKeywords")
     public String queryKeywords;
@@ -83,13 +92,13 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The account of the database. If you do not specify this parameter, this operation returns records of all accounts.</p>
+     * <p>The user of the database. If you do not specify this parameter, this operation returns records of all users.</p>
      */
     @NameInMap("User")
     public String user;
@@ -129,6 +138,14 @@ public class DescribeAuditRecordsRequest extends TeaModel {
     }
     public String getForm() {
         return this.form;
+    }
+
+    public DescribeAuditRecordsRequest setLogicalOperator(String logicalOperator) {
+        this.logicalOperator = logicalOperator;
+        return this;
+    }
+    public String getLogicalOperator() {
+        return this.logicalOperator;
     }
 
     public DescribeAuditRecordsRequest setNodeId(String nodeId) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the audit log feature is enabled. Valid values:</p>
+     * <p>Indicates whether to enable the audit log feature.</p>
      * <br>
      * <p>*   **true**: The audit log feature is enabled.</p>
      * <p>*   **false**: The audit log feature is disabled.</p>

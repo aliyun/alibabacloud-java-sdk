@@ -11,13 +11,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>Details of the slow query logs.</p>
+     * <p>An array that consists of the information about each slow query.</p>
      */
     @NameInMap("Items")
     public DescribeSlowLogRecordsResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page. The value must be an integer that is greater than 0. Default value: **1**.</p>
+     * <p>The page number of the returned page. The value is a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -29,7 +29,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -113,7 +113,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public Long docsExamined;
 
         /**
-         * <p>The start time of the operation. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The start time of the operation. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("ExecutionStartTime")
         public String executionStartTime;
