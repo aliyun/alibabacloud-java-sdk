@@ -128,7 +128,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     /**
      * <p>The ID of the resource group to which the VPN gateway belongs.</p>
      * <br>
-     * <p>You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.</p>
+     * <p>You can call the [ListResourceGroups](~~158855~~) operation to query resource groups.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -231,7 +231,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     /**
      * <p>The type of the VPN gateway.</p>
      * <br>
-     * <p>Only **Normal** may be returned, which indicates a standard NAT gateway.</p>
+     * <p>Only **Normal** may be returned, which indicates a standard VPN gateway.</p>
      */
     @NameInMap("VpnType")
     public String vpnType;
@@ -580,13 +580,13 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
 
     public static class DescribeVpnGatewayResponseBodyTagsTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of tag N.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of tag N.</p>
          */
         @NameInMap("Value")
         public String value;

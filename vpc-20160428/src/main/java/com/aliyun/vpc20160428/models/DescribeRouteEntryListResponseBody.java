@@ -271,6 +271,9 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         @NameInMap("NextHops")
         public DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHops nextHops;
 
+        @NameInMap("Origin")
+        public String origin;
+
         /**
          * <p>The ID of the route.</p>
          */
@@ -361,6 +364,14 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
         }
         public DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHops getNextHops() {
             return this.nextHops;
+        }
+
+        public DescribeRouteEntryListResponseBodyRouteEntrysRouteEntry setOrigin(String origin) {
+            this.origin = origin;
+            return this;
+        }
+        public String getOrigin() {
+            return this.origin;
         }
 
         public DescribeRouteEntryListResponseBodyRouteEntrysRouteEntry setRouteEntryId(String routeEntryId) {

@@ -136,10 +136,11 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
 
     public static class DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway extends TeaModel {
         /**
-         * <p>The state of the IPv6 gateway. Valid values:</p>
+         * <p>The status of the IPv6 gateway. Valid values:</p>
          * <br>
-         * <p>*   **Normal**: The IPv6 gateway runs as expected.</p>
-         * <p>*   **FinancialLocked:** The IPv6 gateway is locked due to overdue payments.</p>
+         * <p>*   **Normal**</p>
+         * <p>*   **FinancialLocked**</p>
+         * <p>*   **SecurityLocked**</p>
          */
         @NameInMap("BusinessStatus")
         public String businessStatus;
@@ -189,7 +190,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -197,8 +198,8 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         /**
          * <p>The status of the IPv6 gateway. Valid values:</p>
          * <br>
-         * <p>*   **Pending**: The IPv6 gateway is being configured.</p>
-         * <p>*   **Available**: The IPv6 gateway is available.</p>
+         * <p>*   **Pending**</p>
+         * <p>*   **Available**</p>
          */
         @NameInMap("Status")
         public String status;
