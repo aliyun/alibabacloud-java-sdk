@@ -759,6 +759,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getTokenWithOptions(request, headers, runtime);
     }
 
+    public LuggageDirectResponse luggageDirectWithOptions(LuggageDirectRequest tmpReq, LuggageDirectHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        LuggageDirectShrinkRequest request = new LuggageDirectShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.flightSegmentParamList)) {
+            request.flightSegmentParamListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.flightSegmentParamList, "flight_segment_param_list", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.flightSegmentParamListShrink)) {
+            body.put("flight_segment_param_list", request.flightSegmentParamListShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAirticketAccessToken)) {
+            realHeaders.put("x-acs-airticket-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAirticketAccessToken));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAirticketLanguage)) {
+            realHeaders.put("x-acs-airticket-language", com.aliyun.teautil.Common.toJSONString(headers.xAcsAirticketLanguage));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "LuggageDirect"),
+            new TeaPair("version", "2023-01-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/airticket/v1/flight-data/luggage-direct"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new LuggageDirectResponse());
+    }
+
+    public LuggageDirectResponse luggageDirect(LuggageDirectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        LuggageDirectHeaders headers = new LuggageDirectHeaders();
+        return this.luggageDirectWithOptions(request, headers, runtime);
+    }
+
     public OrderDetailResponse orderDetailWithOptions(OrderDetailRequest request, OrderDetailHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1237,5 +1287,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         TicketingCheckHeaders headers = new TicketingCheckHeaders();
         return this.ticketingCheckWithOptions(request, headers, runtime);
+    }
+
+    public TransitVisaResponse transitVisaWithOptions(TransitVisaRequest tmpReq, TransitVisaHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        TransitVisaShrinkRequest request = new TransitVisaShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.flightSegmentParamList)) {
+            request.flightSegmentParamListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.flightSegmentParamList, "flight_segment_param_list", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.flightSegmentParamListShrink)) {
+            body.put("flight_segment_param_list", request.flightSegmentParamListShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAirticketAccessToken)) {
+            realHeaders.put("x-acs-airticket-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAirticketAccessToken));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAirticketLanguage)) {
+            realHeaders.put("x-acs-airticket-language", com.aliyun.teautil.Common.toJSONString(headers.xAcsAirticketLanguage));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TransitVisa"),
+            new TeaPair("version", "2023-01-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/airticket/v1/flight-data/transit-visa"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TransitVisaResponse());
+    }
+
+    public TransitVisaResponse transitVisa(TransitVisaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        TransitVisaHeaders headers = new TransitVisaHeaders();
+        return this.transitVisaWithOptions(request, headers, runtime);
     }
 }
