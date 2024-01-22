@@ -10,6 +10,9 @@ public class ExtractDocumentTextRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
+    @NameInMap("SourceType")
+    public String sourceType;
+
     @NameInMap("SourceURI")
     public String sourceURI;
 
@@ -32,6 +35,14 @@ public class ExtractDocumentTextRequest extends TeaModel {
     }
     public String getProjectName() {
         return this.projectName;
+    }
+
+    public ExtractDocumentTextRequest setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    public String getSourceType() {
+        return this.sourceType;
     }
 
     public ExtractDocumentTextRequest setSourceURI(String sourceURI) {
