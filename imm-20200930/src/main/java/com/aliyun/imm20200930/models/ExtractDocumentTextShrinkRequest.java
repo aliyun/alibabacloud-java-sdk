@@ -10,6 +10,9 @@ public class ExtractDocumentTextShrinkRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
+    @NameInMap("SourceType")
+    public String sourceType;
+
     @NameInMap("SourceURI")
     public String sourceURI;
 
@@ -32,6 +35,14 @@ public class ExtractDocumentTextShrinkRequest extends TeaModel {
     }
     public String getProjectName() {
         return this.projectName;
+    }
+
+    public ExtractDocumentTextShrinkRequest setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    public String getSourceType() {
+        return this.sourceType;
     }
 
     public ExtractDocumentTextShrinkRequest setSourceURI(String sourceURI) {

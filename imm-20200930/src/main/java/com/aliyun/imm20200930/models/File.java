@@ -76,6 +76,9 @@ public class File extends TeaModel {
     @NameInMap("EXIF")
     public String EXIF;
 
+    @NameInMap("Elements")
+    public java.util.List<Element> elements;
+
     @NameInMap("FigureCount")
     public Long figureCount;
 
@@ -126,6 +129,9 @@ public class File extends TeaModel {
 
     @NameInMap("OCRContents")
     public java.util.List<OCRContents> OCRContents;
+
+    @NameInMap("OCRTexts")
+    public String OCRTexts;
 
     @NameInMap("OSSCRC64")
     public String OSSCRC64;
@@ -186,6 +192,9 @@ public class File extends TeaModel {
 
     @NameInMap("ProjectName")
     public String projectName;
+
+    @NameInMap("SemanticTypes")
+    public java.util.List<String> semanticTypes;
 
     @NameInMap("ServerSideDataEncryption")
     public String serverSideDataEncryption;
@@ -432,6 +441,14 @@ public class File extends TeaModel {
         return this.EXIF;
     }
 
+    public File setElements(java.util.List<Element> elements) {
+        this.elements = elements;
+        return this;
+    }
+    public java.util.List<Element> getElements() {
+        return this.elements;
+    }
+
     public File setFigureCount(Long figureCount) {
         this.figureCount = figureCount;
         return this;
@@ -566,6 +583,14 @@ public class File extends TeaModel {
     }
     public java.util.List<OCRContents> getOCRContents() {
         return this.OCRContents;
+    }
+
+    public File setOCRTexts(String OCRTexts) {
+        this.OCRTexts = OCRTexts;
+        return this;
+    }
+    public String getOCRTexts() {
+        return this.OCRTexts;
     }
 
     public File setOSSCRC64(String OSSCRC64) {
@@ -726,6 +751,14 @@ public class File extends TeaModel {
     }
     public String getProjectName() {
         return this.projectName;
+    }
+
+    public File setSemanticTypes(java.util.List<String> semanticTypes) {
+        this.semanticTypes = semanticTypes;
+        return this;
+    }
+    public java.util.List<String> getSemanticTypes() {
+        return this.semanticTypes;
     }
 
     public File setServerSideDataEncryption(String serverSideDataEncryption) {

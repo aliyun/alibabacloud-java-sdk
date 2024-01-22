@@ -2892,6 +2892,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ProjectName", request.projectName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            query.put("SourceType", request.sourceType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceURI)) {
             query.put("SourceURI", request.sourceURI);
         }

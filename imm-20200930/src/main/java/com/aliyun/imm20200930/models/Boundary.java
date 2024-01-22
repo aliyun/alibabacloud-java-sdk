@@ -10,6 +10,9 @@ public class Boundary extends TeaModel {
     @NameInMap("Left")
     public Long left;
 
+    @NameInMap("Polygon")
+    public java.util.List<PointInt64> polygon;
+
     @NameInMap("Top")
     public Long top;
 
@@ -35,6 +38,14 @@ public class Boundary extends TeaModel {
     }
     public Long getLeft() {
         return this.left;
+    }
+
+    public Boundary setPolygon(java.util.List<PointInt64> polygon) {
+        this.polygon = polygon;
+        return this;
+    }
+    public java.util.List<PointInt64> getPolygon() {
+        return this.polygon;
     }
 
     public Boundary setTop(Long top) {
