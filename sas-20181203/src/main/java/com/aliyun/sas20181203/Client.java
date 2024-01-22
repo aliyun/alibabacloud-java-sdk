@@ -7568,6 +7568,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeFieldStatisticsWithOptions(request, runtime);
     }
 
+    public DescribeFixUsedCountResponse describeFixUsedCountWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeFixUsedCount"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeFixUsedCountResponse());
+    }
+
+    public DescribeFixUsedCountResponse describeFixUsedCount() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeFixUsedCountWithOptions(runtime);
+    }
+
     public DescribeFrontVulPatchListResponse describeFrontVulPatchListWithOptions(DescribeFrontVulPatchListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -14942,6 +14963,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ExportType", request.exportType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.isCleartextPwd)) {
             query.put("IsCleartextPwd", request.isCleartextPwd);
         }
@@ -15712,6 +15737,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetCheckSummaryResponse getCheckSummaryWithOptions(GetCheckSummaryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.isItemStatistic)) {
+            query.put("IsItemStatistic", request.isItemStatistic);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
         }
@@ -23791,6 +23820,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.tagList)) {
             query.put("TagList", request.tagList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.target)) {
+            query.put("Target", request.target);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.uuidList)) {

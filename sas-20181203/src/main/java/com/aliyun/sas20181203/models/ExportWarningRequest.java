@@ -20,6 +20,13 @@ public class ExportWarningRequest extends TeaModel {
     public String exportType;
 
     /**
+     * <p>The ID of the server group.</p>
+     * <p>> You can call the[DescribeAllGroups](~~130972~~)operation to query the IDs of server groups.</p>
+     */
+    @NameInMap("GroupId")
+    public Long groupId;
+
+    /**
      * <p>The export method of the results for the weak password baseline check. Valid values:</p>
      * <br>
      * <p>*   **0**: exports the check results after it is masked.</p>
@@ -138,6 +145,14 @@ public class ExportWarningRequest extends TeaModel {
     }
     public String getExportType() {
         return this.exportType;
+    }
+
+    public ExportWarningRequest setGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public Long getGroupId() {
+        return this.groupId;
     }
 
     public ExportWarningRequest setIsCleartextPwd(Integer isCleartextPwd) {

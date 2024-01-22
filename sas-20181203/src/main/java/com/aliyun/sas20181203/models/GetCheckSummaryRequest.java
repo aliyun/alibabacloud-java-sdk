@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetCheckSummaryRequest extends TeaModel {
+    @NameInMap("IsItemStatistic")
+    public Boolean isItemStatistic;
+
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
      * <br>
@@ -28,6 +31,14 @@ public class GetCheckSummaryRequest extends TeaModel {
     public static GetCheckSummaryRequest build(java.util.Map<String, ?> map) throws Exception {
         GetCheckSummaryRequest self = new GetCheckSummaryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetCheckSummaryRequest setIsItemStatistic(Boolean isItemStatistic) {
+        this.isItemStatistic = isItemStatistic;
+        return this;
+    }
+    public Boolean getIsItemStatistic() {
+        return this.isItemStatistic;
     }
 
     public GetCheckSummaryRequest setLang(String lang) {

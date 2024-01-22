@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetCheckSummaryResponseBody extends TeaModel {
+    @NameInMap("OverallItemStatistic")
+    public GetCheckSummaryResponseBodyOverallItemStatistic overallItemStatistic;
+
     /**
      * <p>overall risk statistics of check items.</p>
      */
@@ -25,6 +28,14 @@ public class GetCheckSummaryResponseBody extends TeaModel {
     public static GetCheckSummaryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCheckSummaryResponseBody self = new GetCheckSummaryResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetCheckSummaryResponseBody setOverallItemStatistic(GetCheckSummaryResponseBodyOverallItemStatistic overallItemStatistic) {
+        this.overallItemStatistic = overallItemStatistic;
+        return this;
+    }
+    public GetCheckSummaryResponseBodyOverallItemStatistic getOverallItemStatistic() {
+        return this.overallItemStatistic;
     }
 
     public GetCheckSummaryResponseBody setOverallStatistic(GetCheckSummaryResponseBodyOverallStatistic overallStatistic) {
@@ -49,6 +60,36 @@ public class GetCheckSummaryResponseBody extends TeaModel {
     }
     public java.util.List<GetCheckSummaryResponseBodySummarys> getSummarys() {
         return this.summarys;
+    }
+
+    public static class GetCheckSummaryResponseBodyOverallItemStatistic extends TeaModel {
+        @NameInMap("ReleaseCount")
+        public Integer releaseCount;
+
+        @NameInMap("ResultCount")
+        public Integer resultCount;
+
+        public static GetCheckSummaryResponseBodyOverallItemStatistic build(java.util.Map<String, ?> map) throws Exception {
+            GetCheckSummaryResponseBodyOverallItemStatistic self = new GetCheckSummaryResponseBodyOverallItemStatistic();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCheckSummaryResponseBodyOverallItemStatistic setReleaseCount(Integer releaseCount) {
+            this.releaseCount = releaseCount;
+            return this;
+        }
+        public Integer getReleaseCount() {
+            return this.releaseCount;
+        }
+
+        public GetCheckSummaryResponseBodyOverallItemStatistic setResultCount(Integer resultCount) {
+            this.resultCount = resultCount;
+            return this;
+        }
+        public Integer getResultCount() {
+            return this.resultCount;
+        }
+
     }
 
     public static class GetCheckSummaryResponseBodyOverallStatistic extends TeaModel {

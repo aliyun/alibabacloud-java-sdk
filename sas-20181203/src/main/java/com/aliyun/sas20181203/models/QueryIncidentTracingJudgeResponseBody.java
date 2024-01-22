@@ -11,13 +11,16 @@ public class QueryIncidentTracingJudgeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The result data.</p>
+     * <p>The request result.</p>
      */
     @NameInMap("TracingJudge")
     public java.util.Map<String, Integer> tracingJudge;

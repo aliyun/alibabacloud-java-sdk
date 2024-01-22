@@ -7,7 +7,7 @@ public class DescribeCheckWarningDetailRequest extends TeaModel {
     /**
      * <p>The ID of the check item.</p>
      * <br>
-     * <p>> You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of check items.</p>
+     * <p>>  You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of check items.</p>
      */
     @NameInMap("CheckId")
     public String checkId;
@@ -15,7 +15,7 @@ public class DescribeCheckWarningDetailRequest extends TeaModel {
     /**
      * <p>The ID of the alert that is triggered by the check item.</p>
      * <br>
-     * <p>>  To query the details about a specified check item, you must provide the ID of the alert that is triggered by the check item. You can call the [DescribeCheckWarnings](~~DescribeCheckWarnings~~) operation to query the IDs of alerts.</p>
+     * <p>>  To query the details of a check item, you must provide the ID of the alert that is triggered by the check item. You can call the [DescribeCheckWarnings](~~DescribeCheckWarnings~~) operation to query the IDs of alerts.</p>
      */
     @NameInMap("CheckWarningId")
     public Long checkWarningId;
@@ -32,7 +32,7 @@ public class DescribeCheckWarningDetailRequest extends TeaModel {
     /**
      * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
      * <br>
-     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.</p>
+     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the IDs of Alibaba Cloud accounts.</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
@@ -44,9 +44,9 @@ public class DescribeCheckWarningDetailRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The server UUID.</p>
+     * <p>The UUID of the server.</p>
      * <br>
-     * <p>>  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the server UUID.</p>
+     * <p>>  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

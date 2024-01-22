@@ -176,8 +176,8 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
 
         /**
          * <p>Display type. Value:</p>
-         * <p>- **grid**：Detection grid</p>
-         * <p>- **text**：text</p>
+         * <p>- **grid**: Detection grid</p>
+         * <p>- **text**: text</p>
          */
         @NameInMap("Type")
         public String type;
@@ -234,8 +234,8 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
 
         /**
          * <p>Display type. Value:</p>
-         * <p>- **grid**：Detection grid</p>
-         * <p>- **text**：text</p>
+         * <p>- **grid**: Detection grid</p>
+         * <p>- **text**: text</p>
          */
         @NameInMap("Type")
         public String type;

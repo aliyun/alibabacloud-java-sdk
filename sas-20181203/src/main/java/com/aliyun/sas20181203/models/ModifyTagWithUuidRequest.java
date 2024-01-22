@@ -13,6 +13,9 @@ public class ModifyTagWithUuidRequest extends TeaModel {
     @NameInMap("TagList")
     public String tagList;
 
+    @NameInMap("Target")
+    public String target;
+
     @NameInMap("UuidList")
     public String uuidList;
 
@@ -43,6 +46,14 @@ public class ModifyTagWithUuidRequest extends TeaModel {
     }
     public String getTagList() {
         return this.tagList;
+    }
+
+    public ModifyTagWithUuidRequest setTarget(String target) {
+        this.target = target;
+        return this;
+    }
+    public String getTarget() {
+        return this.target;
     }
 
     public ModifyTagWithUuidRequest setUuidList(String uuidList) {

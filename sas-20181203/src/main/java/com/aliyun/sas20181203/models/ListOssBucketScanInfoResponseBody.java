@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOssBucketScanInfoResponseBody extends TeaModel {
     /**
-     * <p>The data that is returned.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListOssBucketScanInfoResponseBodyData> data;
