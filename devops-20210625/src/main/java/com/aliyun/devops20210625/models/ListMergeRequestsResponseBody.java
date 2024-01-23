@@ -152,6 +152,58 @@ public class ListMergeRequestsResponseBody extends TeaModel {
 
     }
 
+    public static class ListMergeRequestsResponseBodyResultLabels extends TeaModel {
+        @NameInMap("color")
+        public String color;
+
+        @NameInMap("description")
+        public String description;
+
+        @NameInMap("id")
+        public String id;
+
+        @NameInMap("name")
+        public String name;
+
+        public static ListMergeRequestsResponseBodyResultLabels build(java.util.Map<String, ?> map) throws Exception {
+            ListMergeRequestsResponseBodyResultLabels self = new ListMergeRequestsResponseBodyResultLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public ListMergeRequestsResponseBodyResultLabels setColor(String color) {
+            this.color = color;
+            return this;
+        }
+        public String getColor() {
+            return this.color;
+        }
+
+        public ListMergeRequestsResponseBodyResultLabels setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListMergeRequestsResponseBodyResultLabels setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public ListMergeRequestsResponseBodyResultLabels setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class ListMergeRequestsResponseBodyResultReviewers extends TeaModel {
         @NameInMap("avatarUrl")
         public String avatarUrl;
@@ -344,6 +396,9 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         @NameInMap("iid")
         public Long iid;
 
+        @NameInMap("labels")
+        public java.util.List<ListMergeRequestsResponseBodyResultLabels> labels;
+
         @NameInMap("localId")
         public Long localId;
 
@@ -466,6 +521,14 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         }
         public Long getIid() {
             return this.iid;
+        }
+
+        public ListMergeRequestsResponseBodyResult setLabels(java.util.List<ListMergeRequestsResponseBodyResultLabels> labels) {
+            this.labels = labels;
+            return this;
+        }
+        public java.util.List<ListMergeRequestsResponseBodyResultLabels> getLabels() {
+            return this.labels;
         }
 
         public ListMergeRequestsResponseBodyResult setLocalId(Long localId) {

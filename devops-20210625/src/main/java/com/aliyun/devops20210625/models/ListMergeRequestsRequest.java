@@ -16,6 +16,9 @@ public class ListMergeRequestsRequest extends TeaModel {
     @NameInMap("groupIds")
     public String groupIds;
 
+    @NameInMap("labelIds")
+    public String labelIds;
+
     @NameInMap("orderBy")
     public String orderBy;
 
@@ -78,6 +81,14 @@ public class ListMergeRequestsRequest extends TeaModel {
     }
     public String getGroupIds() {
         return this.groupIds;
+    }
+
+    public ListMergeRequestsRequest setLabelIds(String labelIds) {
+        this.labelIds = labelIds;
+        return this;
+    }
+    public String getLabelIds() {
+        return this.labelIds;
     }
 
     public ListMergeRequestsRequest setOrderBy(String orderBy) {
