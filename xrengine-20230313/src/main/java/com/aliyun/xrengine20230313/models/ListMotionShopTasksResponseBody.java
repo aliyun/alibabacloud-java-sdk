@@ -191,6 +191,9 @@ public class ListMotionShopTasksResponseBody extends TeaModel {
     }
 
     public static class ListMotionShopTasksResponseBodyData extends TeaModel {
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
         @NameInMap("Material")
         public ListMotionShopTasksResponseBodyDataMaterial material;
 
@@ -206,6 +209,14 @@ public class ListMotionShopTasksResponseBody extends TeaModel {
         public static ListMotionShopTasksResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListMotionShopTasksResponseBodyData self = new ListMotionShopTasksResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListMotionShopTasksResponseBodyData setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         public ListMotionShopTasksResponseBodyData setMaterial(ListMotionShopTasksResponseBodyDataMaterial material) {
