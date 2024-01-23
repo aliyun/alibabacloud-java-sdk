@@ -99,6 +99,12 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
         @NameInMap("Concurrency")
         public Integer concurrency;
 
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("HasError")
+        public Boolean hasError;
+
         @NameInMap("HasReport")
         public Boolean hasReport;
 
@@ -107,6 +113,9 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
 
         @NameInMap("IsDebugging")
         public Boolean isDebugging;
+
+        @NameInMap("ReportId")
+        public String reportId;
 
         @NameInMap("SampleStatList")
         public java.util.List<java.util.Map<String, ?>> sampleStatList;
@@ -166,6 +175,22 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             return this.concurrency;
         }
 
+        public GetJMeterSceneRunningDataResponseBodyRunningData setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public GetJMeterSceneRunningDataResponseBodyRunningData setHasError(Boolean hasError) {
+            this.hasError = hasError;
+            return this;
+        }
+        public Boolean getHasError() {
+            return this.hasError;
+        }
+
         public GetJMeterSceneRunningDataResponseBodyRunningData setHasReport(Boolean hasReport) {
             this.hasReport = hasReport;
             return this;
@@ -188,6 +213,14 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
         }
         public Boolean getIsDebugging() {
             return this.isDebugging;
+        }
+
+        public GetJMeterSceneRunningDataResponseBodyRunningData setReportId(String reportId) {
+            this.reportId = reportId;
+            return this;
+        }
+        public String getReportId() {
+            return this.reportId;
         }
 
         public GetJMeterSceneRunningDataResponseBodyRunningData setSampleStatList(java.util.List<java.util.Map<String, ?>> sampleStatList) {

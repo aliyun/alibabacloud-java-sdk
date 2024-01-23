@@ -118,6 +118,9 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
         @NameInMap("SceneName")
         public String sceneName;
 
+        @NameInMap("Status")
+        public String status;
+
         public static ListOpenJMeterScenesResponseBodyJMeterScene build(java.util.Map<String, ?> map) throws Exception {
             ListOpenJMeterScenesResponseBodyJMeterScene self = new ListOpenJMeterScenesResponseBodyJMeterScene();
             return TeaModel.build(map, self);
@@ -145,6 +148,14 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
         }
         public String getSceneName() {
             return this.sceneName;
+        }
+
+        public ListOpenJMeterScenesResponseBodyJMeterScene setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

@@ -275,6 +275,36 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
 
     }
 
+    public static class GetOpenJMeterSceneResponseBodySceneRegionalCondition extends TeaModel {
+        @NameInMap("Amount")
+        public Integer amount;
+
+        @NameInMap("Region")
+        public String region;
+
+        public static GetOpenJMeterSceneResponseBodySceneRegionalCondition build(java.util.Map<String, ?> map) throws Exception {
+            GetOpenJMeterSceneResponseBodySceneRegionalCondition self = new GetOpenJMeterSceneResponseBodySceneRegionalCondition();
+            return TeaModel.build(map, self);
+        }
+
+        public GetOpenJMeterSceneResponseBodySceneRegionalCondition setAmount(Integer amount) {
+            this.amount = amount;
+            return this;
+        }
+        public Integer getAmount() {
+            return this.amount;
+        }
+
+        public GetOpenJMeterSceneResponseBodySceneRegionalCondition setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+    }
+
     public static class GetOpenJMeterSceneResponseBodyScene extends TeaModel {
         @NameInMap("AgentCount")
         public Integer agentCount;
@@ -317,6 +347,9 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
 
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("RegionalCondition")
+        public java.util.List<GetOpenJMeterSceneResponseBodySceneRegionalCondition> regionalCondition;
 
         @NameInMap("SceneId")
         public String sceneId;
@@ -463,6 +496,14 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetOpenJMeterSceneResponseBodyScene setRegionalCondition(java.util.List<GetOpenJMeterSceneResponseBodySceneRegionalCondition> regionalCondition) {
+            this.regionalCondition = regionalCondition;
+            return this;
+        }
+        public java.util.List<GetOpenJMeterSceneResponseBodySceneRegionalCondition> getRegionalCondition() {
+            return this.regionalCondition;
         }
 
         public GetOpenJMeterSceneResponseBodyScene setSceneId(String sceneId) {

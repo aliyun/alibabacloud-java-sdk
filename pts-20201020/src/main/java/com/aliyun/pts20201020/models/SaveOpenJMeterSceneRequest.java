@@ -176,6 +176,36 @@ public class SaveOpenJMeterSceneRequest extends TeaModel {
 
     }
 
+    public static class SaveOpenJMeterSceneRequestOpenJMeterSceneRegionalCondition extends TeaModel {
+        @NameInMap("Amount")
+        public Integer amount;
+
+        @NameInMap("Region")
+        public String region;
+
+        public static SaveOpenJMeterSceneRequestOpenJMeterSceneRegionalCondition build(java.util.Map<String, ?> map) throws Exception {
+            SaveOpenJMeterSceneRequestOpenJMeterSceneRegionalCondition self = new SaveOpenJMeterSceneRequestOpenJMeterSceneRegionalCondition();
+            return TeaModel.build(map, self);
+        }
+
+        public SaveOpenJMeterSceneRequestOpenJMeterSceneRegionalCondition setAmount(Integer amount) {
+            this.amount = amount;
+            return this;
+        }
+        public Integer getAmount() {
+            return this.amount;
+        }
+
+        public SaveOpenJMeterSceneRequestOpenJMeterSceneRegionalCondition setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+    }
+
     public static class SaveOpenJMeterSceneRequestOpenJMeterScene extends TeaModel {
         @NameInMap("AgentCount")
         public Integer agentCount;
@@ -218,6 +248,9 @@ public class SaveOpenJMeterSceneRequest extends TeaModel {
 
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("RegionalCondition")
+        public java.util.List<SaveOpenJMeterSceneRequestOpenJMeterSceneRegionalCondition> regionalCondition;
 
         @NameInMap("SceneId")
         public String sceneId;
@@ -364,6 +397,14 @@ public class SaveOpenJMeterSceneRequest extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public SaveOpenJMeterSceneRequestOpenJMeterScene setRegionalCondition(java.util.List<SaveOpenJMeterSceneRequestOpenJMeterSceneRegionalCondition> regionalCondition) {
+            this.regionalCondition = regionalCondition;
+            return this;
+        }
+        public java.util.List<SaveOpenJMeterSceneRequestOpenJMeterSceneRegionalCondition> getRegionalCondition() {
+            return this.regionalCondition;
         }
 
         public SaveOpenJMeterSceneRequestOpenJMeterScene setSceneId(String sceneId) {
