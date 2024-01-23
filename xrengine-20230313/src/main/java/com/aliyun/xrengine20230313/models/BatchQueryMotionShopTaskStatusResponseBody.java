@@ -106,6 +106,9 @@ public class BatchQueryMotionShopTaskStatusResponseBody extends TeaModel {
     }
 
     public static class BatchQueryMotionShopTaskStatusResponseBodyDataTasks extends TeaModel {
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
         @NameInMap("Result")
         public BatchQueryMotionShopTaskStatusResponseBodyDataTasksResult result;
 
@@ -118,6 +121,14 @@ public class BatchQueryMotionShopTaskStatusResponseBody extends TeaModel {
         public static BatchQueryMotionShopTaskStatusResponseBodyDataTasks build(java.util.Map<String, ?> map) throws Exception {
             BatchQueryMotionShopTaskStatusResponseBodyDataTasks self = new BatchQueryMotionShopTaskStatusResponseBodyDataTasks();
             return TeaModel.build(map, self);
+        }
+
+        public BatchQueryMotionShopTaskStatusResponseBodyDataTasks setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         public BatchQueryMotionShopTaskStatusResponseBodyDataTasks setResult(BatchQueryMotionShopTaskStatusResponseBodyDataTasksResult result) {
