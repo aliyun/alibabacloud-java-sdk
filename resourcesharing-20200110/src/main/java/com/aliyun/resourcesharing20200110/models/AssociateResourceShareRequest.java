@@ -22,6 +22,9 @@ public class AssociateResourceShareRequest extends TeaModel {
     @NameInMap("Resources")
     public java.util.List<AssociateResourceShareRequestResources> resources;
 
+    @NameInMap("TargetProperties")
+    public java.util.List<AssociateResourceShareRequestTargetProperties> targetProperties;
+
     /**
      * <p>The information about the principals.</p>
      */
@@ -55,6 +58,14 @@ public class AssociateResourceShareRequest extends TeaModel {
     }
     public java.util.List<AssociateResourceShareRequestResources> getResources() {
         return this.resources;
+    }
+
+    public AssociateResourceShareRequest setTargetProperties(java.util.List<AssociateResourceShareRequestTargetProperties> targetProperties) {
+        this.targetProperties = targetProperties;
+        return this;
+    }
+    public java.util.List<AssociateResourceShareRequestTargetProperties> getTargetProperties() {
+        return this.targetProperties;
     }
 
     public AssociateResourceShareRequest setTargets(java.util.List<String> targets) {
@@ -107,6 +118,36 @@ public class AssociateResourceShareRequest extends TeaModel {
         }
         public String getResourceType() {
             return this.resourceType;
+        }
+
+    }
+
+    public static class AssociateResourceShareRequestTargetProperties extends TeaModel {
+        @NameInMap("Property")
+        public String property;
+
+        @NameInMap("TargetId")
+        public String targetId;
+
+        public static AssociateResourceShareRequestTargetProperties build(java.util.Map<String, ?> map) throws Exception {
+            AssociateResourceShareRequestTargetProperties self = new AssociateResourceShareRequestTargetProperties();
+            return TeaModel.build(map, self);
+        }
+
+        public AssociateResourceShareRequestTargetProperties setProperty(String property) {
+            this.property = property;
+            return this;
+        }
+        public String getProperty() {
+            return this.property;
+        }
+
+        public AssociateResourceShareRequestTargetProperties setTargetId(String targetId) {
+            this.targetId = targetId;
+            return this;
+        }
+        public String getTargetId() {
+            return this.targetId;
         }
 
     }

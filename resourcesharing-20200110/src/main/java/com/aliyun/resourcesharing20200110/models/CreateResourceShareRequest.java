@@ -35,6 +35,9 @@ public class CreateResourceShareRequest extends TeaModel {
     @NameInMap("Resources")
     public java.util.List<CreateResourceShareRequestResources> resources;
 
+    @NameInMap("TargetProperties")
+    public java.util.List<CreateResourceShareRequestTargetProperties> targetProperties;
+
     /**
      * <p>The information about the principals.</p>
      */
@@ -76,6 +79,14 @@ public class CreateResourceShareRequest extends TeaModel {
     }
     public java.util.List<CreateResourceShareRequestResources> getResources() {
         return this.resources;
+    }
+
+    public CreateResourceShareRequest setTargetProperties(java.util.List<CreateResourceShareRequestTargetProperties> targetProperties) {
+        this.targetProperties = targetProperties;
+        return this;
+    }
+    public java.util.List<CreateResourceShareRequestTargetProperties> getTargetProperties() {
+        return this.targetProperties;
     }
 
     public CreateResourceShareRequest setTargets(java.util.List<String> targets) {
@@ -128,6 +139,36 @@ public class CreateResourceShareRequest extends TeaModel {
         }
         public String getResourceType() {
             return this.resourceType;
+        }
+
+    }
+
+    public static class CreateResourceShareRequestTargetProperties extends TeaModel {
+        @NameInMap("Property")
+        public String property;
+
+        @NameInMap("TargetId")
+        public String targetId;
+
+        public static CreateResourceShareRequestTargetProperties build(java.util.Map<String, ?> map) throws Exception {
+            CreateResourceShareRequestTargetProperties self = new CreateResourceShareRequestTargetProperties();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateResourceShareRequestTargetProperties setProperty(String property) {
+            this.property = property;
+            return this;
+        }
+        public String getProperty() {
+            return this.property;
+        }
+
+        public CreateResourceShareRequestTargetProperties setTargetId(String targetId) {
+            this.targetId = targetId;
+            return this;
+        }
+        public String getTargetId() {
+            return this.targetId;
         }
 
     }
