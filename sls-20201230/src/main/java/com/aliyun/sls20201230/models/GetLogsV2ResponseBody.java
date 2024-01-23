@@ -37,6 +37,58 @@ public class GetLogsV2ResponseBody extends TeaModel {
         return this.meta;
     }
 
+    public static class GetLogsV2ResponseBodyMetaPhraseQueryInfo extends TeaModel {
+        @NameInMap("beginOffset")
+        public Long beginOffset;
+
+        @NameInMap("endOffset")
+        public Long endOffset;
+
+        @NameInMap("endTime")
+        public Long endTime;
+
+        @NameInMap("scanAll")
+        public Boolean scanAll;
+
+        public static GetLogsV2ResponseBodyMetaPhraseQueryInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetLogsV2ResponseBodyMetaPhraseQueryInfo self = new GetLogsV2ResponseBodyMetaPhraseQueryInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetLogsV2ResponseBodyMetaPhraseQueryInfo setBeginOffset(Long beginOffset) {
+            this.beginOffset = beginOffset;
+            return this;
+        }
+        public Long getBeginOffset() {
+            return this.beginOffset;
+        }
+
+        public GetLogsV2ResponseBodyMetaPhraseQueryInfo setEndOffset(Long endOffset) {
+            this.endOffset = endOffset;
+            return this;
+        }
+        public Long getEndOffset() {
+            return this.endOffset;
+        }
+
+        public GetLogsV2ResponseBodyMetaPhraseQueryInfo setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        public GetLogsV2ResponseBodyMetaPhraseQueryInfo setScanAll(Boolean scanAll) {
+            this.scanAll = scanAll;
+            return this;
+        }
+        public Boolean getScanAll() {
+            return this.scanAll;
+        }
+
+    }
+
     public static class GetLogsV2ResponseBodyMeta extends TeaModel {
         /**
          * <p>The SQL statement after | in the query statement.</p>
@@ -44,11 +96,20 @@ public class GetLogsV2ResponseBody extends TeaModel {
         @NameInMap("aggQuery")
         public String aggQuery;
 
+        @NameInMap("columnTypes")
+        public java.util.List<String> columnTypes;
+
         /**
          * <p>The number of rows that are returned.</p>
          */
         @NameInMap("count")
         public Integer count;
+
+        @NameInMap("cpuCores")
+        public Integer cpuCores;
+
+        @NameInMap("cpuSec")
+        public Double cpuSec;
 
         /**
          * <p>The amount of time that is consumed by the request. Unit: milliseconds.</p>
@@ -62,6 +123,9 @@ public class GetLogsV2ResponseBody extends TeaModel {
         @NameInMap("hasSQL")
         public Boolean hasSQL;
 
+        @NameInMap("highlights")
+        public java.util.List<java.util.List<LogContent>> highlights;
+
         /**
          * <p>Indicates whether the returned result is accurate.</p>
          */
@@ -73,6 +137,15 @@ public class GetLogsV2ResponseBody extends TeaModel {
          */
         @NameInMap("keys")
         public java.util.List<String> keys;
+
+        @NameInMap("limited")
+        public Integer limited;
+
+        @NameInMap("mode")
+        public Integer mode;
+
+        @NameInMap("phraseQueryInfo")
+        public GetLogsV2ResponseBodyMetaPhraseQueryInfo phraseQueryInfo;
 
         /**
          * <p>The number of logs that are processed in the request.</p>
@@ -94,6 +167,9 @@ public class GetLogsV2ResponseBody extends TeaModel {
          */
         @NameInMap("progress")
         public String progress;
+
+        @NameInMap("scanBytes")
+        public Long scanBytes;
 
         /**
          * <p>The type of observable data.</p>
@@ -126,12 +202,36 @@ public class GetLogsV2ResponseBody extends TeaModel {
             return this.aggQuery;
         }
 
+        public GetLogsV2ResponseBodyMeta setColumnTypes(java.util.List<String> columnTypes) {
+            this.columnTypes = columnTypes;
+            return this;
+        }
+        public java.util.List<String> getColumnTypes() {
+            return this.columnTypes;
+        }
+
         public GetLogsV2ResponseBodyMeta setCount(Integer count) {
             this.count = count;
             return this;
         }
         public Integer getCount() {
             return this.count;
+        }
+
+        public GetLogsV2ResponseBodyMeta setCpuCores(Integer cpuCores) {
+            this.cpuCores = cpuCores;
+            return this;
+        }
+        public Integer getCpuCores() {
+            return this.cpuCores;
+        }
+
+        public GetLogsV2ResponseBodyMeta setCpuSec(Double cpuSec) {
+            this.cpuSec = cpuSec;
+            return this;
+        }
+        public Double getCpuSec() {
+            return this.cpuSec;
         }
 
         public GetLogsV2ResponseBodyMeta setElapsedMillisecond(Long elapsedMillisecond) {
@@ -150,6 +250,14 @@ public class GetLogsV2ResponseBody extends TeaModel {
             return this.hasSQL;
         }
 
+        public GetLogsV2ResponseBodyMeta setHighlights(java.util.List<java.util.List<LogContent>> highlights) {
+            this.highlights = highlights;
+            return this;
+        }
+        public java.util.List<java.util.List<LogContent>> getHighlights() {
+            return this.highlights;
+        }
+
         public GetLogsV2ResponseBodyMeta setIsAccurate(Boolean isAccurate) {
             this.isAccurate = isAccurate;
             return this;
@@ -164,6 +272,30 @@ public class GetLogsV2ResponseBody extends TeaModel {
         }
         public java.util.List<String> getKeys() {
             return this.keys;
+        }
+
+        public GetLogsV2ResponseBodyMeta setLimited(Integer limited) {
+            this.limited = limited;
+            return this;
+        }
+        public Integer getLimited() {
+            return this.limited;
+        }
+
+        public GetLogsV2ResponseBodyMeta setMode(Integer mode) {
+            this.mode = mode;
+            return this;
+        }
+        public Integer getMode() {
+            return this.mode;
+        }
+
+        public GetLogsV2ResponseBodyMeta setPhraseQueryInfo(GetLogsV2ResponseBodyMetaPhraseQueryInfo phraseQueryInfo) {
+            this.phraseQueryInfo = phraseQueryInfo;
+            return this;
+        }
+        public GetLogsV2ResponseBodyMetaPhraseQueryInfo getPhraseQueryInfo() {
+            return this.phraseQueryInfo;
         }
 
         public GetLogsV2ResponseBodyMeta setProcessedBytes(Long processedBytes) {
@@ -188,6 +320,14 @@ public class GetLogsV2ResponseBody extends TeaModel {
         }
         public String getProgress() {
             return this.progress;
+        }
+
+        public GetLogsV2ResponseBodyMeta setScanBytes(Long scanBytes) {
+            this.scanBytes = scanBytes;
+            return this;
+        }
+        public Long getScanBytes() {
+            return this.scanBytes;
         }
 
         public GetLogsV2ResponseBodyMeta setTelementryType(String telementryType) {

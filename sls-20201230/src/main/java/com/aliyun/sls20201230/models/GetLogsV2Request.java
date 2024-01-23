@@ -18,6 +18,9 @@ public class GetLogsV2Request extends TeaModel {
     @NameInMap("from")
     public Integer from;
 
+    @NameInMap("highlight")
+    public Boolean highlight;
+
     /**
      * <p>The maximum number of logs to return for the request. This parameter takes effect only when the query parameter is set to a search statement. Minimum value: 0. Maximum value: 100. Default value: 100.</p>
      */
@@ -99,6 +102,14 @@ public class GetLogsV2Request extends TeaModel {
     }
     public Integer getFrom() {
         return this.from;
+    }
+
+    public GetLogsV2Request setHighlight(Boolean highlight) {
+        this.highlight = highlight;
+        return this;
+    }
+    public Boolean getHighlight() {
+        return this.highlight;
     }
 
     public GetLogsV2Request setLine(Long line) {
