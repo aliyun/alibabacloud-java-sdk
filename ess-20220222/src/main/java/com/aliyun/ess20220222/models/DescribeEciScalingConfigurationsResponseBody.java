@@ -367,6 +367,48 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("ImagePullPolicy")
         public String imagePullPolicy;
 
+        @NameInMap("LifecyclePostStartHandlerExecs")
+        public java.util.List<String> lifecyclePostStartHandlerExecs;
+
+        @NameInMap("LifecyclePostStartHandlerHttpGetHost")
+        public String lifecyclePostStartHandlerHttpGetHost;
+
+        @NameInMap("LifecyclePostStartHandlerHttpGetPath")
+        public String lifecyclePostStartHandlerHttpGetPath;
+
+        @NameInMap("LifecyclePostStartHandlerHttpGetPort")
+        public Integer lifecyclePostStartHandlerHttpGetPort;
+
+        @NameInMap("LifecyclePostStartHandlerHttpGetScheme")
+        public String lifecyclePostStartHandlerHttpGetScheme;
+
+        @NameInMap("LifecyclePostStartHandlerTcpSocketHost")
+        public String lifecyclePostStartHandlerTcpSocketHost;
+
+        @NameInMap("LifecyclePostStartHandlerTcpSocketPort")
+        public Integer lifecyclePostStartHandlerTcpSocketPort;
+
+        @NameInMap("LifecyclePreStopHandlerExecs")
+        public java.util.List<String> lifecyclePreStopHandlerExecs;
+
+        @NameInMap("LifecyclePreStopHandlerHttpGetHost")
+        public String lifecyclePreStopHandlerHttpGetHost;
+
+        @NameInMap("LifecyclePreStopHandlerHttpGetPath")
+        public String lifecyclePreStopHandlerHttpGetPath;
+
+        @NameInMap("LifecyclePreStopHandlerHttpGetPort")
+        public Integer lifecyclePreStopHandlerHttpGetPort;
+
+        @NameInMap("LifecyclePreStopHandlerHttpGetScheme")
+        public String lifecyclePreStopHandlerHttpGetScheme;
+
+        @NameInMap("LifecyclePreStopHandlerTcpSocketHost")
+        public String lifecyclePreStopHandlerTcpSocketHost;
+
+        @NameInMap("LifecyclePreStopHandlerTcpSocketPort")
+        public Integer lifecyclePreStopHandlerTcpSocketPort;
+
         /**
          * <p>The commands that are run in the container when you use the CLI to perform probes.</p>
          */
@@ -633,6 +675,118 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         }
         public String getImagePullPolicy() {
             return this.imagePullPolicy;
+        }
+
+        public DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainers setLifecyclePostStartHandlerExecs(java.util.List<String> lifecyclePostStartHandlerExecs) {
+            this.lifecyclePostStartHandlerExecs = lifecyclePostStartHandlerExecs;
+            return this;
+        }
+        public java.util.List<String> getLifecyclePostStartHandlerExecs() {
+            return this.lifecyclePostStartHandlerExecs;
+        }
+
+        public DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainers setLifecyclePostStartHandlerHttpGetHost(String lifecyclePostStartHandlerHttpGetHost) {
+            this.lifecyclePostStartHandlerHttpGetHost = lifecyclePostStartHandlerHttpGetHost;
+            return this;
+        }
+        public String getLifecyclePostStartHandlerHttpGetHost() {
+            return this.lifecyclePostStartHandlerHttpGetHost;
+        }
+
+        public DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainers setLifecyclePostStartHandlerHttpGetPath(String lifecyclePostStartHandlerHttpGetPath) {
+            this.lifecyclePostStartHandlerHttpGetPath = lifecyclePostStartHandlerHttpGetPath;
+            return this;
+        }
+        public String getLifecyclePostStartHandlerHttpGetPath() {
+            return this.lifecyclePostStartHandlerHttpGetPath;
+        }
+
+        public DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainers setLifecyclePostStartHandlerHttpGetPort(Integer lifecyclePostStartHandlerHttpGetPort) {
+            this.lifecyclePostStartHandlerHttpGetPort = lifecyclePostStartHandlerHttpGetPort;
+            return this;
+        }
+        public Integer getLifecyclePostStartHandlerHttpGetPort() {
+            return this.lifecyclePostStartHandlerHttpGetPort;
+        }
+
+        public DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainers setLifecyclePostStartHandlerHttpGetScheme(String lifecyclePostStartHandlerHttpGetScheme) {
+            this.lifecyclePostStartHandlerHttpGetScheme = lifecyclePostStartHandlerHttpGetScheme;
+            return this;
+        }
+        public String getLifecyclePostStartHandlerHttpGetScheme() {
+            return this.lifecyclePostStartHandlerHttpGetScheme;
+        }
+
+        public DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainers setLifecyclePostStartHandlerTcpSocketHost(String lifecyclePostStartHandlerTcpSocketHost) {
+            this.lifecyclePostStartHandlerTcpSocketHost = lifecyclePostStartHandlerTcpSocketHost;
+            return this;
+        }
+        public String getLifecyclePostStartHandlerTcpSocketHost() {
+            return this.lifecyclePostStartHandlerTcpSocketHost;
+        }
+
+        public DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainers setLifecyclePostStartHandlerTcpSocketPort(Integer lifecyclePostStartHandlerTcpSocketPort) {
+            this.lifecyclePostStartHandlerTcpSocketPort = lifecyclePostStartHandlerTcpSocketPort;
+            return this;
+        }
+        public Integer getLifecyclePostStartHandlerTcpSocketPort() {
+            return this.lifecyclePostStartHandlerTcpSocketPort;
+        }
+
+        public DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainers setLifecyclePreStopHandlerExecs(java.util.List<String> lifecyclePreStopHandlerExecs) {
+            this.lifecyclePreStopHandlerExecs = lifecyclePreStopHandlerExecs;
+            return this;
+        }
+        public java.util.List<String> getLifecyclePreStopHandlerExecs() {
+            return this.lifecyclePreStopHandlerExecs;
+        }
+
+        public DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainers setLifecyclePreStopHandlerHttpGetHost(String lifecyclePreStopHandlerHttpGetHost) {
+            this.lifecyclePreStopHandlerHttpGetHost = lifecyclePreStopHandlerHttpGetHost;
+            return this;
+        }
+        public String getLifecyclePreStopHandlerHttpGetHost() {
+            return this.lifecyclePreStopHandlerHttpGetHost;
+        }
+
+        public DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainers setLifecyclePreStopHandlerHttpGetPath(String lifecyclePreStopHandlerHttpGetPath) {
+            this.lifecyclePreStopHandlerHttpGetPath = lifecyclePreStopHandlerHttpGetPath;
+            return this;
+        }
+        public String getLifecyclePreStopHandlerHttpGetPath() {
+            return this.lifecyclePreStopHandlerHttpGetPath;
+        }
+
+        public DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainers setLifecyclePreStopHandlerHttpGetPort(Integer lifecyclePreStopHandlerHttpGetPort) {
+            this.lifecyclePreStopHandlerHttpGetPort = lifecyclePreStopHandlerHttpGetPort;
+            return this;
+        }
+        public Integer getLifecyclePreStopHandlerHttpGetPort() {
+            return this.lifecyclePreStopHandlerHttpGetPort;
+        }
+
+        public DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainers setLifecyclePreStopHandlerHttpGetScheme(String lifecyclePreStopHandlerHttpGetScheme) {
+            this.lifecyclePreStopHandlerHttpGetScheme = lifecyclePreStopHandlerHttpGetScheme;
+            return this;
+        }
+        public String getLifecyclePreStopHandlerHttpGetScheme() {
+            return this.lifecyclePreStopHandlerHttpGetScheme;
+        }
+
+        public DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainers setLifecyclePreStopHandlerTcpSocketHost(String lifecyclePreStopHandlerTcpSocketHost) {
+            this.lifecyclePreStopHandlerTcpSocketHost = lifecyclePreStopHandlerTcpSocketHost;
+            return this;
+        }
+        public String getLifecyclePreStopHandlerTcpSocketHost() {
+            return this.lifecyclePreStopHandlerTcpSocketHost;
+        }
+
+        public DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainers setLifecyclePreStopHandlerTcpSocketPort(Integer lifecyclePreStopHandlerTcpSocketPort) {
+            this.lifecyclePreStopHandlerTcpSocketPort = lifecyclePreStopHandlerTcpSocketPort;
+            return this;
+        }
+        public Integer getLifecyclePreStopHandlerTcpSocketPort() {
+            return this.lifecyclePreStopHandlerTcpSocketPort;
         }
 
         public DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsContainers setLivenessProbeExecCommands(java.util.List<String> livenessProbeExecCommands) {
