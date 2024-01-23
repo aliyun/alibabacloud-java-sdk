@@ -7,7 +7,7 @@ public class ScaleInstanceRequest extends TeaModel {
     /**
      * <p>The infrequent access (IA) storage space of the instance. Unit: GB.</p>
      * <br>
-     * <p>> This parameter is invalid for pay-as-you-go instances.</p>
+     * <p>> Ignore this parameter for pay-as-you-go instances.</p>
      */
     @NameInMap("coldStorageSize")
     public Long coldStorageSize;
@@ -15,12 +15,12 @@ public class ScaleInstanceRequest extends TeaModel {
     /**
      * <p>The specifications of the instance. Valid values:</p>
      * <br>
-     * <p>*   8-core 32 GB (number of compute Nodes: 1)</p>
-     * <p>*   16-core 64 GB (number of compute nodes: 1)</p>
-     * <p>*   32-core 128 GB (number of compute nodes: 2)</p>
-     * <p>*   64-core 256 GB (number of compute nodes: 4)</p>
-     * <p>*   96-core 384 GB (number of compute nodes: 6)</p>
-     * <p>*   128-core 512 GB (number of compute nodes: 8)</p>
+     * <p>*   8-core 32GB (number of compute nodes: 1)</p>
+     * <p>*   16-core 64GB (number of compute nodes: 1)</p>
+     * <p>*   32-core 128GB (number of compute nodes: 2)</p>
+     * <p>*   64-core 256GB (number of compute nodes: 4)</p>
+     * <p>*   96-core 384GB (number of compute nodes: 6)</p>
+     * <p>*   128-core 512GB (number of compute nodes: 8)</p>
      * <p>*   Others</p>
      * <br>
      * <p>> </p>
@@ -29,13 +29,18 @@ public class ScaleInstanceRequest extends TeaModel {
      * <br>
      * <p>*   If you want to set this parameter to specifications with more than 1,024 compute units (CUs), you must submit a ticket.</p>
      * <br>
-     * <p>*   This parameter is invalid for shared instances.</p>
+     * <p>*   This parameter is invalid for Hologres Shared Cluster instances.</p>
      * <br>
-     * <p>*   The specifications of 8-core 32 GB (number of compute nodes: 1) are for trial use only and cannot be used for production.</p>
+     * <p>*   The specifications of 8-core 32GB (number of compute nodes: 1) are for trial use only and cannot be used for production.</p>
      */
     @NameInMap("cpu")
     public Long cpu;
 
+    /**
+     * <p>The number of gateways. Valid values: 2 to 50.</p>
+     * <br>
+     * <p>> This parameter is required only for virtual warehouse instances.</p>
+     */
     @NameInMap("gatewayCount")
     public Long gatewayCount;
 
@@ -57,7 +62,7 @@ public class ScaleInstanceRequest extends TeaModel {
     /**
      * <p>The standard storage space of the instance. Unit: GB.</p>
      * <br>
-     * <p>> This parameter is invalid for pay-as-you-go instances.</p>
+     * <p>> Ignore this parameter for pay-as-you-go instances.</p>
      */
     @NameInMap("storageSize")
     public Long storageSize;

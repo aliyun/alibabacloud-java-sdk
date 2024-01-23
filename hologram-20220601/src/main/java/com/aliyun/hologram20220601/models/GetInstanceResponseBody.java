@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class GetInstanceResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code that is returned if the request failed.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
     /**
-     * <p>The details of the instance.</p>
+     * <p>The information about the instance.</p>
      */
     @NameInMap("Instance")
     public GetInstanceResponseBodyInstance instance;
@@ -199,13 +199,13 @@ public class GetInstanceResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the VPC to which the instance belongs.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
-         * <p>The ID of VPC to which the instance belongs.</p>
+         * <p>The ID of the instance that is deployed in the VPC.</p>
          */
         @NameInMap("VpcInstanceId")
         public String vpcInstanceId;
@@ -275,13 +275,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyInstanceTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of tag N.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of tag N.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -457,19 +457,19 @@ public class GetInstanceResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
-         * <p>The number of compute nodes. In a typical configuration, a node has 16 vCPUs and 32 GB of memory.</p>
+         * <p>The number of compute nodes. In a typical configuration, a node has 16 CPU cores and 32 GB of memory.</p>
          */
         @NameInMap("ComputeNodeCount")
         public Long computeNodeCount;
 
         /**
-         * <p>The number of vCPUs.</p>
+         * <p>The number of CPU cores.</p>
          */
         @NameInMap("Cpu")
         public Long cpu;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the instance was created.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -499,21 +499,19 @@ public class GetInstanceResponseBody extends TeaModel {
         public String expirationTime;
 
         /**
-         * <p>网关节点数量。</p>
+         * <p>The number of gateway nodes.</p>
          */
         @NameInMap("GatewayCount")
         public Long gatewayCount;
 
         /**
-         * <p>网关cpu资源。</p>
-         * <p>单位：core。</p>
+         * <p>The number of CPU cores of the gateway. Unit: core.</p>
          */
         @NameInMap("GatewayCpu")
         public Long gatewayCpu;
 
         /**
-         * <p>网关内存资源。</p>
-         * <p>单位：GB。</p>
+         * <p>The size of memory resources of the gateway. Unit: GB.</p>
          */
         @NameInMap("GatewayMemory")
         public Long gatewayMemory;
@@ -660,8 +658,14 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("Memory")
         public Long memory;
 
+        /**
+         * <p>The ID of the region in which the instance resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("ReplicaRole")
+        public String replicaRole;
 
         /**
          * <p>The ID of the resource group.</p>
@@ -671,6 +675,50 @@ public class GetInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The reason for the suspension.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Indebet</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    The instance has an overdue payment</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   Manual</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    The instance is manually suspended</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   Overdue</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    The instance has expired</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
          */
         @NameInMap("SuspendReason")
         public String suspendReason;
@@ -872,6 +920,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetInstanceResponseBodyInstance setReplicaRole(String replicaRole) {
+            this.replicaRole = replicaRole;
+            return this;
+        }
+        public String getReplicaRole() {
+            return this.replicaRole;
         }
 
         public GetInstanceResponseBodyInstance setResourceGroupId(String resourceGroupId) {
