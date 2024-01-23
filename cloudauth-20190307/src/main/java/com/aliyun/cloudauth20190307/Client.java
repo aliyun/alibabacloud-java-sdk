@@ -879,6 +879,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ProductCode", request.productCode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.rarelyCharacters)) {
+            query.put("RarelyCharacters", request.rarelyCharacters);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.readImg)) {
             query.put("ReadImg", request.readImg);
         }
