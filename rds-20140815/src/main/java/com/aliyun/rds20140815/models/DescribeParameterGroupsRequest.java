@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterGroupsRequest extends TeaModel {
+    @NameInMap("EnableDetail")
+    public Boolean enableDetail;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -28,6 +31,14 @@ public class DescribeParameterGroupsRequest extends TeaModel {
     public static DescribeParameterGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeParameterGroupsRequest self = new DescribeParameterGroupsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeParameterGroupsRequest setEnableDetail(Boolean enableDetail) {
+        this.enableDetail = enableDetail;
+        return this;
+    }
+    public Boolean getEnableDetail() {
+        return this.enableDetail;
     }
 
     public DescribeParameterGroupsRequest setOwnerId(Long ownerId) {
