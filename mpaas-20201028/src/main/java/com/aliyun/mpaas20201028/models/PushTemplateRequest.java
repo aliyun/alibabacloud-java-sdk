@@ -4,6 +4,12 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class PushTemplateRequest extends TeaModel {
+    @NameInMap("ActivityContentState")
+    public Object activityContentState;
+
+    @NameInMap("ActivityEvent")
+    public String activityEvent;
+
     @NameInMap("AppId")
     public String appId;
 
@@ -15,6 +21,9 @@ public class PushTemplateRequest extends TeaModel {
 
     @NameInMap("DeliveryType")
     public Long deliveryType;
+
+    @NameInMap("DismissalDate")
+    public Long dismissalDate;
 
     @NameInMap("ExpiredSeconds")
     public Long expiredSeconds;
@@ -75,6 +84,22 @@ public class PushTemplateRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public PushTemplateRequest setActivityContentState(Object activityContentState) {
+        this.activityContentState = activityContentState;
+        return this;
+    }
+    public Object getActivityContentState() {
+        return this.activityContentState;
+    }
+
+    public PushTemplateRequest setActivityEvent(String activityEvent) {
+        this.activityEvent = activityEvent;
+        return this;
+    }
+    public String getActivityEvent() {
+        return this.activityEvent;
+    }
+
     public PushTemplateRequest setAppId(String appId) {
         this.appId = appId;
         return this;
@@ -105,6 +130,14 @@ public class PushTemplateRequest extends TeaModel {
     }
     public Long getDeliveryType() {
         return this.deliveryType;
+    }
+
+    public PushTemplateRequest setDismissalDate(Long dismissalDate) {
+        this.dismissalDate = dismissalDate;
+        return this;
+    }
+    public Long getDismissalDate() {
+        return this.dismissalDate;
     }
 
     public PushTemplateRequest setExpiredSeconds(Long expiredSeconds) {
