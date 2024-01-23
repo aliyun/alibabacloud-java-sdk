@@ -28,6 +28,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    @NameInMap("CrossRegionConnectionStatus")
+    public String crossRegionConnectionStatus;
+
     @NameInMap("DefaultLicenseDays")
     public Long defaultLicenseDays;
 
@@ -39,6 +42,9 @@ public class GetServiceResponseBody extends TeaModel {
 
     @NameInMap("Duration")
     public Long duration;
+
+    @NameInMap("EntityAdditionalInfo")
+    public java.util.Map<String, EntityAdditionalInfoValue> entityAdditionalInfo;
 
     @NameInMap("EntitySource")
     public java.util.Map<String, String> entitySource;
@@ -166,6 +172,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("VirtualInternetService")
     public String virtualInternetService;
 
+    @NameInMap("VirtualInternetServiceId")
+    public String virtualInternetServiceId;
+
     public static GetServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetServiceResponseBody self = new GetServiceResponseBody();
         return TeaModel.build(map, self);
@@ -235,6 +244,14 @@ public class GetServiceResponseBody extends TeaModel {
         return this.createTime;
     }
 
+    public GetServiceResponseBody setCrossRegionConnectionStatus(String crossRegionConnectionStatus) {
+        this.crossRegionConnectionStatus = crossRegionConnectionStatus;
+        return this;
+    }
+    public String getCrossRegionConnectionStatus() {
+        return this.crossRegionConnectionStatus;
+    }
+
     public GetServiceResponseBody setDefaultLicenseDays(Long defaultLicenseDays) {
         this.defaultLicenseDays = defaultLicenseDays;
         return this;
@@ -265,6 +282,14 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public Long getDuration() {
         return this.duration;
+    }
+
+    public GetServiceResponseBody setEntityAdditionalInfo(java.util.Map<String, EntityAdditionalInfoValue> entityAdditionalInfo) {
+        this.entityAdditionalInfo = entityAdditionalInfo;
+        return this;
+    }
+    public java.util.Map<String, EntityAdditionalInfoValue> getEntityAdditionalInfo() {
+        return this.entityAdditionalInfo;
     }
 
     public GetServiceResponseBody setEntitySource(java.util.Map<String, String> entitySource) {
@@ -601,6 +626,14 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public String getVirtualInternetService() {
         return this.virtualInternetService;
+    }
+
+    public GetServiceResponseBody setVirtualInternetServiceId(String virtualInternetServiceId) {
+        this.virtualInternetServiceId = virtualInternetServiceId;
+        return this;
+    }
+    public String getVirtualInternetServiceId() {
+        return this.virtualInternetServiceId;
     }
 
     public static class GetServiceResponseBodyBillEntityMappingsMappingConfigMappings extends TeaModel {
