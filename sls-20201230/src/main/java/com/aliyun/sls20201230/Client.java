@@ -2719,6 +2719,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("from", request.from);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.highlight)) {
+            body.put("highlight", request.highlight);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.line)) {
             body.put("line", request.line);
         }
