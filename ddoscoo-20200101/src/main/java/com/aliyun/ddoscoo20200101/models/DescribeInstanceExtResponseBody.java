@@ -4,12 +4,21 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceExtResponseBody extends TeaModel {
+    /**
+     * <p>The information about the instance.</p>
+     */
     @NameInMap("InstanceExtSpecs")
     public java.util.List<DescribeInstanceExtResponseBodyInstanceExtSpecs> instanceExtSpecs;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of queried instances.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,18 +52,42 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceExtResponseBodyInstanceExtSpecs extends TeaModel {
+        /**
+         * <p>The function plan. Valid values:</p>
+         * <br>
+         * <p>*   **0**: Standard</p>
+         * <p>*   **1**: Enhanced</p>
+         */
         @NameInMap("FunctionVersion")
         public Long functionVersion;
 
+        /**
+         * <p>The instance ID</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The clean bandwidth. Unit: Mbit/s.</p>
+         */
         @NameInMap("NormalBandwidth")
         public Long normalBandwidth;
 
+        /**
+         * <p>The type of the instance. Valid value:</p>
+         * <br>
+         * <p>*   **0**: Anti-DDoS Premium instance of the Insurance mitigation plan</p>
+         * <p>*   **1**: Anti-DDoS Premium instance of the Unlimited mitigation plan</p>
+         * <p>*   **2**: Anti-DDoS Premium instance of the CMA mitigation plan</p>
+         * <p>*   **3**: Anti-DDoS Premium instance of the Secure Chinese Mainland Acceleration (Sec-CMA) plan</p>
+         * <p>*   **9**: Anti-DDoS Pro instance of the Profession mitigation plan</p>
+         */
         @NameInMap("ProductPlan")
         public Long productPlan;
 
+        /**
+         * <p>The Internet service provider (ISP) line resource of the Anti-DDoS Pro instance.</p>
+         */
         @NameInMap("ServicePartner")
         public String servicePartner;
 

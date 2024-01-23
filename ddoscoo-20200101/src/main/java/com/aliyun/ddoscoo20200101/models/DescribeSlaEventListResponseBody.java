@@ -4,12 +4,21 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlaEventListResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The destination rate limit events.</p>
+     */
     @NameInMap("SlaEvent")
     public java.util.List<DescribeSlaEventListResponseBodySlaEvent> slaEvent;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -43,15 +52,30 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
     }
 
     public static class DescribeSlaEventListResponseBodySlaEvent extends TeaModel {
+        /**
+         * <p>The end of the time range. Unit: seconds.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The IP address of the instance.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The region to which the destination IP address belongs. Valid values:</p>
+         * <br>
+         * <p>*   **cn**: a region in the Chinese mainland</p>
+         * <p>*   **cn-hongkong**: China (Hong Kong)</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The beginning of the time range. Unit: seconds.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 

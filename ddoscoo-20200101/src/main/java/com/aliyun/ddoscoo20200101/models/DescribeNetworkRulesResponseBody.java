@@ -94,6 +94,9 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         @NameInMap("RealServers")
         public java.util.List<String> realServers;
 
+        @NameInMap("Remark")
+        public String remark;
+
         public static DescribeNetworkRulesResponseBodyNetworkRules build(java.util.Map<String, ?> map) throws Exception {
             DescribeNetworkRulesResponseBodyNetworkRules self = new DescribeNetworkRulesResponseBodyNetworkRules();
             return TeaModel.build(map, self);
@@ -145,6 +148,14 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         }
         public java.util.List<String> getRealServers() {
             return this.realServers;
+        }
+
+        public DescribeNetworkRulesResponseBodyNetworkRules setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
         }
 
     }
