@@ -36,6 +36,9 @@ public class RegisterInstanceRequest extends TeaModel {
     @NameInMap("DbaUid")
     public Long dbaUid;
 
+    /**
+     * <p>The ID of the user who assumes the DBA role of the database instance. If the user ID is a non-numeric value such as a role or an account, you can use this parameter to replace DbaUid.</p>
+     */
     @NameInMap("DbaUidByString")
     public String dbaUidByString;
 

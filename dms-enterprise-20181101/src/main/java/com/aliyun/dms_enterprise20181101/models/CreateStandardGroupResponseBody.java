@@ -95,6 +95,9 @@ public class CreateStandardGroupResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("GroupId")
+        public Long groupId;
+
         /**
          * <p>The control mode. Valid values:</p>
          * <br>
@@ -136,6 +139,14 @@ public class CreateStandardGroupResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public CreateStandardGroupResponseBodyStandardGroup setGroupId(Long groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public Long getGroupId() {
+            return this.groupId;
         }
 
         public CreateStandardGroupResponseBodyStandardGroup setGroupMode(String groupMode) {

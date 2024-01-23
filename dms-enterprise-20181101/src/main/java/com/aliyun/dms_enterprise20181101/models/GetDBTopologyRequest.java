@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDBTopologyRequest extends TeaModel {
     /**
-     * <p>The ID of the logical database.</p>
-     * <br>
-     * <p>> You can call the [ListLogicDatabases](~~141874~~) operation to query the ID of the logical database.</p>
+     * <p>The ID of the logical database. You can call the [ListLogicDatabases](https://www.alibabacloud.com/help/en/data-management-service/latest/listlogicdatabases) or [SearchDatabase](https://www.alibabacloud.com/help/en/data-management-service/latest/searchdatabase) operation to query the ID of the logical database.</p>
      */
     @NameInMap("LogicDbId")
     public Long logicDbId;
