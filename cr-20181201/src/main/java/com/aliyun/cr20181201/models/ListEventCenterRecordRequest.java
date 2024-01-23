@@ -34,6 +34,12 @@ public class ListEventCenterRecordRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RepoName")
+    public String repoName;
+
+    @NameInMap("RepoNamespaceName")
+    public String repoNamespaceName;
+
     /**
      * <p>The ID of the event notification rule.</p>
      */
@@ -75,6 +81,22 @@ public class ListEventCenterRecordRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListEventCenterRecordRequest setRepoName(String repoName) {
+        this.repoName = repoName;
+        return this;
+    }
+    public String getRepoName() {
+        return this.repoName;
+    }
+
+    public ListEventCenterRecordRequest setRepoNamespaceName(String repoNamespaceName) {
+        this.repoNamespaceName = repoNamespaceName;
+        return this;
+    }
+    public String getRepoNamespaceName() {
+        return this.repoNamespaceName;
     }
 
     public ListEventCenterRecordRequest setRuleId(String ruleId) {

@@ -19,6 +19,9 @@ public class ListInstanceEndpointRequest extends TeaModel {
     @NameInMap("ModuleName")
     public String moduleName;
 
+    @NameInMap("Summary")
+    public Boolean summary;
+
     public static ListInstanceEndpointRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstanceEndpointRequest self = new ListInstanceEndpointRequest();
         return TeaModel.build(map, self);
@@ -38,6 +41,14 @@ public class ListInstanceEndpointRequest extends TeaModel {
     }
     public String getModuleName() {
         return this.moduleName;
+    }
+
+    public ListInstanceEndpointRequest setSummary(Boolean summary) {
+        this.summary = summary;
+        return this;
+    }
+    public Boolean getSummary() {
+        return this.summary;
     }
 
 }

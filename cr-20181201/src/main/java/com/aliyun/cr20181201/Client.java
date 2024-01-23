@@ -2697,6 +2697,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ModuleName", request.moduleName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.summary)) {
+            query.put("Summary", request.summary);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
