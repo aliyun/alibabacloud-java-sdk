@@ -235,6 +235,9 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
         @NameInMap("Language")
         public String language;
 
+        @NameInMap("Managed")
+        public Boolean managed;
+
         /**
          * <p>The region ID.</p>
          */
@@ -366,6 +369,14 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
         }
         public String getLanguage() {
             return this.language;
+        }
+
+        public DescribeAddonReleaseResponseBodyDataRelease setManaged(Boolean managed) {
+            this.managed = managed;
+            return this;
+        }
+        public Boolean getManaged() {
+            return this.managed;
         }
 
         public DescribeAddonReleaseResponseBodyDataRelease setRegionId(String regionId) {

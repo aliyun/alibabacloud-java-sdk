@@ -11,8 +11,7 @@ public class CreateEnvironmentRequest extends TeaModel {
     public String aliyunLang;
 
     /**
-     * <p>The ID of the resource associated with the environment, such as the ACK cluster ID or VPC ID.</p>
-     * <p>For Cloud type environments, the current field value is RegionId.</p>
+     * <p>The ID of the resource bound to the environment, such as the container ID or VPC ID. For a Cloud environment, specify the region ID.</p>
      */
     @NameInMap("BindResourceId")
     public String bindResourceId;
@@ -44,10 +43,10 @@ public class CreateEnvironmentRequest extends TeaModel {
     public String environmentType;
 
     /**
-     * <p>type of managed：</p>
-     * <p>- none： not managed. default value of prometheus for ACK.</p>
-     * <p>- agent：managed agent. default value of  promehtues for ASK/ACS/AckOne.</p>
-     * <p>- agent-exproter： maanged agent and exporter. default of prometheus for Cloud.</p>
+     * <p>type of managed: </p>
+     * <p>- none: not managed. default value of prometheus for ACK.</p>
+     * <p>- agent: managed agent. default value of  promehtues for ASK/ACS/AckOne.</p>
+     * <p>- agent-exproter: maanged agent and exporter. default of prometheus for Cloud.</p>
      */
     @NameInMap("ManagedType")
     public String managedType;
@@ -65,7 +64,7 @@ public class CreateEnvironmentRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags to add to the instance.</p>
+     * <p>The tags of the instance. You can specify this parameter to manage tags for the instance.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateEnvironmentRequestTags> tags;

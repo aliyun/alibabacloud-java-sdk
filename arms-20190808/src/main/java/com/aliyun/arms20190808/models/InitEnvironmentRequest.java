@@ -5,17 +5,23 @@ import com.aliyun.tea.*;
 
 public class InitEnvironmentRequest extends TeaModel {
     /**
-     * <p>Locale, the default is Chinese zh.</p>
+     * <p>The language. Valid values: zh and en. Default value: zh.</p>
      */
     @NameInMap("AliyunLang")
     public String aliyunLang;
 
     /**
-     * <p>Environment ID.</p>
+     * <p>The ID of the environment instance.</p>
      */
     @NameInMap("EnvironmentId")
     public String environmentId;
 
+    /**
+     * <p>type of managed:</p>
+     * <p>- none: not managed. default value of prometheus for ACK.</p>
+     * <p>- agent: managed agent. default value of promehtues for ASK/ACS/AckOne.</p>
+     * <p>- agent-exproter: maanged agent and exporter. default of prometheus for Cloud.</p>
+     */
     @NameInMap("ManagedType")
     public String managedType;
 

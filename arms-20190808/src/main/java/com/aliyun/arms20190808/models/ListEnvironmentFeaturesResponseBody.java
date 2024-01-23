@@ -89,6 +89,9 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         @NameInMap("LatestVersion")
         public String latestVersion;
 
+        @NameInMap("Managed")
+        public Boolean managed;
+
         @NameInMap("Name")
         public String name;
 
@@ -157,6 +160,14 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         }
         public String getLatestVersion() {
             return this.latestVersion;
+        }
+
+        public ListEnvironmentFeaturesResponseBodyData setManaged(Boolean managed) {
+            this.managed = managed;
+            return this;
+        }
+        public Boolean getManaged() {
+            return this.managed;
         }
 
         public ListEnvironmentFeaturesResponseBodyData setName(String name) {
