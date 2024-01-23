@@ -4890,6 +4890,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("groupIds", request.groupIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.labelIds)) {
+            query.put("labelIds", request.labelIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
             query.put("orderBy", request.orderBy);
         }

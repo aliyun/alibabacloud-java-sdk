@@ -65,12 +65,56 @@ public class MergeMergeRequestResponseBody extends TeaModel {
     }
 
     public static class MergeMergeRequestResponseBodyResult extends TeaModel {
+        @NameInMap("bizId")
+        public String bizId;
+
+        @NameInMap("localId")
+        public Long localId;
+
+        @NameInMap("mergedRevision")
+        public String mergedRevision;
+
+        @NameInMap("projectId")
+        public Long projectId;
+
         @NameInMap("result")
         public Boolean result;
 
         public static MergeMergeRequestResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             MergeMergeRequestResponseBodyResult self = new MergeMergeRequestResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public MergeMergeRequestResponseBodyResult setBizId(String bizId) {
+            this.bizId = bizId;
+            return this;
+        }
+        public String getBizId() {
+            return this.bizId;
+        }
+
+        public MergeMergeRequestResponseBodyResult setLocalId(Long localId) {
+            this.localId = localId;
+            return this;
+        }
+        public Long getLocalId() {
+            return this.localId;
+        }
+
+        public MergeMergeRequestResponseBodyResult setMergedRevision(String mergedRevision) {
+            this.mergedRevision = mergedRevision;
+            return this;
+        }
+        public String getMergedRevision() {
+            return this.mergedRevision;
+        }
+
+        public MergeMergeRequestResponseBodyResult setProjectId(Long projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public Long getProjectId() {
+            return this.projectId;
         }
 
         public MergeMergeRequestResponseBodyResult setResult(Boolean result) {
