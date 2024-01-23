@@ -1313,6 +1313,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OutputTable", request.outputTable);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.paragraph)) {
+            query.put("Paragraph", request.paragraph);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.url)) {
             query.put("Url", request.url);
         }

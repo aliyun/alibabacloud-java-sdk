@@ -16,6 +16,9 @@ public class RecognizeHandwritingRequest extends TeaModel {
     @NameInMap("OutputTable")
     public Boolean outputTable;
 
+    @NameInMap("Paragraph")
+    public Boolean paragraph;
+
     @NameInMap("Url")
     public String url;
 
@@ -57,6 +60,14 @@ public class RecognizeHandwritingRequest extends TeaModel {
     }
     public Boolean getOutputTable() {
         return this.outputTable;
+    }
+
+    public RecognizeHandwritingRequest setParagraph(Boolean paragraph) {
+        this.paragraph = paragraph;
+        return this;
+    }
+    public Boolean getParagraph() {
+        return this.paragraph;
     }
 
     public RecognizeHandwritingRequest setUrl(String url) {
