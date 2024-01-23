@@ -4,6 +4,12 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class PushSimpleShrinkRequest extends TeaModel {
+    @NameInMap("ActivityContentState")
+    public Object activityContentState;
+
+    @NameInMap("ActivityEvent")
+    public String activityEvent;
+
     @NameInMap("AppId")
     public String appId;
 
@@ -18,6 +24,9 @@ public class PushSimpleShrinkRequest extends TeaModel {
 
     @NameInMap("DeliveryType")
     public Long deliveryType;
+
+    @NameInMap("DismissalDate")
+    public Long dismissalDate;
 
     @NameInMap("ExpiredSeconds")
     public Long expiredSeconds;
@@ -87,6 +96,22 @@ public class PushSimpleShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public PushSimpleShrinkRequest setActivityContentState(Object activityContentState) {
+        this.activityContentState = activityContentState;
+        return this;
+    }
+    public Object getActivityContentState() {
+        return this.activityContentState;
+    }
+
+    public PushSimpleShrinkRequest setActivityEvent(String activityEvent) {
+        this.activityEvent = activityEvent;
+        return this;
+    }
+    public String getActivityEvent() {
+        return this.activityEvent;
+    }
+
     public PushSimpleShrinkRequest setAppId(String appId) {
         this.appId = appId;
         return this;
@@ -125,6 +150,14 @@ public class PushSimpleShrinkRequest extends TeaModel {
     }
     public Long getDeliveryType() {
         return this.deliveryType;
+    }
+
+    public PushSimpleShrinkRequest setDismissalDate(Long dismissalDate) {
+        this.dismissalDate = dismissalDate;
+        return this;
+    }
+    public Long getDismissalDate() {
+        return this.dismissalDate;
     }
 
     public PushSimpleShrinkRequest setExpiredSeconds(Long expiredSeconds) {

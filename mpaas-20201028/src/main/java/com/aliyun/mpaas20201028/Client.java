@@ -4053,6 +4053,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.activityContentState)) {
+            body.put("ActivityContentState", request.activityContentState);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.activityEvent)) {
+            body.put("ActivityEvent", request.activityEvent);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             body.put("AppId", request.appId);
         }
@@ -4067,6 +4075,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.deliveryType)) {
             body.put("DeliveryType", request.deliveryType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dismissalDate)) {
+            body.put("DismissalDate", request.dismissalDate);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.expiredSeconds)) {
@@ -4229,6 +4241,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.activityContentState)) {
+            body.put("ActivityContentState", request.activityContentState);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.activityEvent)) {
+            body.put("ActivityEvent", request.activityEvent);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             body.put("AppId", request.appId);
         }
@@ -4247,6 +4267,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.deliveryType)) {
             body.put("DeliveryType", request.deliveryType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dismissalDate)) {
+            body.put("DismissalDate", request.dismissalDate);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.expiredSeconds)) {
@@ -4364,6 +4388,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.activityContentState)) {
+            body.put("ActivityContentState", request.activityContentState);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.activityEvent)) {
+            body.put("ActivityEvent", request.activityEvent);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             body.put("AppId", request.appId);
         }
@@ -4378,6 +4410,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.deliveryType)) {
             body.put("DeliveryType", request.deliveryType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dismissalDate)) {
+            body.put("DismissalDate", request.dismissalDate);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.expiredSeconds)) {
