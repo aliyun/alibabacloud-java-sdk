@@ -4,21 +4,46 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlaEventListRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <br>
+     * <p>>  This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     */
     @NameInMap("Ip")
     public String ip;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("Page")
     public Long page;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The type of the service Valid values:</p>
+     * <br>
+     * <p>*   **cn**: Anti-DDoS Pro</p>
+     * <p>*   **cn-hongkong**: Anti-DDoS Premium</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <br>
+     * <p>>  This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
