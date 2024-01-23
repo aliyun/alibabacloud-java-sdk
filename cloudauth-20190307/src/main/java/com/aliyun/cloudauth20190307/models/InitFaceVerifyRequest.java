@@ -79,6 +79,9 @@ public class InitFaceVerifyRequest extends TeaModel {
     @NameInMap("ProductCode")
     public String productCode;
 
+    @NameInMap("RarelyCharacters")
+    public String rarelyCharacters;
+
     @NameInMap("ReadImg")
     public String readImg;
 
@@ -303,6 +306,14 @@ public class InitFaceVerifyRequest extends TeaModel {
     }
     public String getProductCode() {
         return this.productCode;
+    }
+
+    public InitFaceVerifyRequest setRarelyCharacters(String rarelyCharacters) {
+        this.rarelyCharacters = rarelyCharacters;
+        return this;
+    }
+    public String getRarelyCharacters() {
+        return this.rarelyCharacters;
     }
 
     public InitFaceVerifyRequest setReadImg(String readImg) {

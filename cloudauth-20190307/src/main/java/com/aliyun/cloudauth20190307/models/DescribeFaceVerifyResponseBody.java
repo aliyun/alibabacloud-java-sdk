@@ -75,6 +75,9 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
         @NameInMap("Success")
         public String success;
 
+        @NameInMap("UserInfo")
+        public String userInfo;
+
         public static DescribeFaceVerifyResponseBodyResultObject build(java.util.Map<String, ?> map) throws Exception {
             DescribeFaceVerifyResponseBodyResultObject self = new DescribeFaceVerifyResponseBodyResultObject();
             return TeaModel.build(map, self);
@@ -134,6 +137,14 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
         }
         public String getSuccess() {
             return this.success;
+        }
+
+        public DescribeFaceVerifyResponseBodyResultObject setUserInfo(String userInfo) {
+            this.userInfo = userInfo;
+            return this;
+        }
+        public String getUserInfo() {
+            return this.userInfo;
         }
 
     }
