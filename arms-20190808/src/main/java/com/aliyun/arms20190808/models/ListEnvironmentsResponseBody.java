@@ -337,6 +337,9 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         @NameInMap("LatestReleaseCreateTime")
         public String latestReleaseCreateTime;
 
+        @NameInMap("ManagedType")
+        public String managedType;
+
         /**
          * <p>Prometheus ID.</p>
          */
@@ -502,6 +505,14 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
         public String getLatestReleaseCreateTime() {
             return this.latestReleaseCreateTime;
+        }
+
+        public ListEnvironmentsResponseBodyDataEnvironments setManagedType(String managedType) {
+            this.managedType = managedType;
+            return this;
+        }
+        public String getManagedType() {
+            return this.managedType;
         }
 
         public ListEnvironmentsResponseBodyDataEnvironments setPrometheusId(Long prometheusId) {

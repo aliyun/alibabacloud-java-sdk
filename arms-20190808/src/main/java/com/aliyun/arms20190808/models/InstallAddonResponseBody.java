@@ -235,6 +235,9 @@ public class InstallAddonResponseBody extends TeaModel {
         @NameInMap("Language")
         public String language;
 
+        @NameInMap("Managed")
+        public Boolean managed;
+
         /**
          * <p>The region ID.</p>
          */
@@ -366,6 +369,14 @@ public class InstallAddonResponseBody extends TeaModel {
         }
         public String getLanguage() {
             return this.language;
+        }
+
+        public InstallAddonResponseBodyData setManaged(Boolean managed) {
+            this.managed = managed;
+            return this;
+        }
+        public Boolean getManaged() {
+            return this.managed;
         }
 
         public InstallAddonResponseBodyData setRegionId(String regionId) {

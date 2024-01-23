@@ -235,6 +235,9 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         @NameInMap("Language")
         public String language;
 
+        @NameInMap("Managed")
+        public Boolean managed;
+
         /**
          * <p>The ID of the region.</p>
          */
@@ -366,6 +369,14 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         }
         public String getLanguage() {
             return this.language;
+        }
+
+        public ListAddonReleasesResponseBodyDataReleases setManaged(Boolean managed) {
+            this.managed = managed;
+            return this;
+        }
+        public Boolean getManaged() {
+            return this.managed;
         }
 
         public ListAddonReleasesResponseBodyDataReleases setRegionId(String regionId) {
