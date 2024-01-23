@@ -11,11 +11,8 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
      * <p>*   Public endpoint: `oss-<The ID of the region>.aliyuncs.com:<The name of the bucket>:<The name of the certificate file>` (The file name contains the extension.)</p>
      * <p>*   Internal endpoint: `oss-<The ID of the region>-internal.aliyuncs.com:<The name of the bucket>:<The name of the certificate file>` (The file name contains the extension.)</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</p>
-     * <br>
-     * <p>*   You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>> *   This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</p>
+     * <p>> *   You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
      */
     @NameInMap("Certificate")
     public String certificate;
@@ -76,11 +73,8 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
      * <p>*   Public endpoint: `oss-<The ID of the region>.aliyuncs.com:<The name of the bucket>:<The name of the file that contains the private key>` (The file name contains the extension.)</p>
      * <p>*   Internal endpoint: `oss-<The ID of the region>-internal.aliyuncs.com:<The name of the bucket>:<The name of the file that contains the private key>` (The file name contains the extension.)</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</p>
-     * <br>
-     * <p>*   You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>> *   This parameter is available when the instance runs SQL Server 2019 SE or an Enterprise Edition of SQL Server.</p>
+     * <p>> *   You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
      */
     @NameInMap("PrivateKey")
     public String privateKey;

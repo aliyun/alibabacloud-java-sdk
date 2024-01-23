@@ -34,7 +34,7 @@ public class ModifyDBProxyRequest extends TeaModel {
     public String DBProxyInstanceNum;
 
     /**
-     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * <p>This parameter is reserved. You do not need to specify this parameter.</p>
      */
     @NameInMap("DBProxyInstanceType")
     public String DBProxyInstanceType;
