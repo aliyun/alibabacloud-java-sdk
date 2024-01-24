@@ -107,6 +107,36 @@ public class ListInstanceResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListInstanceResponseBodyInstancesTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static ListInstanceResponseBodyInstancesTags build(java.util.Map<String, ?> map) throws Exception {
+            ListInstanceResponseBodyInstancesTags self = new ListInstanceResponseBodyInstancesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstanceResponseBodyInstancesTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListInstanceResponseBodyInstancesTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class ListInstanceResponseBodyInstances extends TeaModel {
         /**
          * <p>The time when the instance was created.</p>
@@ -161,6 +191,9 @@ public class ListInstanceResponseBody extends TeaModel {
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        @NameInMap("Tags")
+        public java.util.List<ListInstanceResponseBodyInstancesTags> tags;
 
         public static ListInstanceResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceResponseBodyInstances self = new ListInstanceResponseBodyInstances();
@@ -237,6 +270,14 @@ public class ListInstanceResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public ListInstanceResponseBodyInstances setTags(java.util.List<ListInstanceResponseBodyInstancesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListInstanceResponseBodyInstancesTags> getTags() {
+            return this.tags;
         }
 
     }
