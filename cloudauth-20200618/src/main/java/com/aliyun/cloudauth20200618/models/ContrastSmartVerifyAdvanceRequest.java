@@ -4,10 +4,6 @@ package com.aliyun.cloudauth20200618.models;
 import com.aliyun.tea.*;
 
 public class ContrastSmartVerifyAdvanceRequest extends TeaModel {
-    @NameInMap("FacePicFileObject")
-    @Validation(required = true)
-    public java.io.InputStream facePicFileObject;
-
     @NameInMap("CertName")
     public String certName;
 
@@ -16,6 +12,9 @@ public class ContrastSmartVerifyAdvanceRequest extends TeaModel {
 
     @NameInMap("CertType")
     public String certType;
+
+    @NameInMap("FacePicFile")
+    public java.io.InputStream facePicFileObject;
 
     @NameInMap("FacePicString")
     public String facePicString;
@@ -46,14 +45,6 @@ public class ContrastSmartVerifyAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ContrastSmartVerifyAdvanceRequest setFacePicFileObject(java.io.InputStream facePicFileObject) {
-        this.facePicFileObject = facePicFileObject;
-        return this;
-    }
-    public java.io.InputStream getFacePicFileObject() {
-        return this.facePicFileObject;
-    }
-
     public ContrastSmartVerifyAdvanceRequest setCertName(String certName) {
         this.certName = certName;
         return this;
@@ -76,6 +67,14 @@ public class ContrastSmartVerifyAdvanceRequest extends TeaModel {
     }
     public String getCertType() {
         return this.certType;
+    }
+
+    public ContrastSmartVerifyAdvanceRequest setFacePicFileObject(java.io.InputStream facePicFileObject) {
+        this.facePicFileObject = facePicFileObject;
+        return this;
+    }
+    public java.io.InputStream getFacePicFileObject() {
+        return this.facePicFileObject;
     }
 
     public ContrastSmartVerifyAdvanceRequest setFacePicString(String facePicString) {

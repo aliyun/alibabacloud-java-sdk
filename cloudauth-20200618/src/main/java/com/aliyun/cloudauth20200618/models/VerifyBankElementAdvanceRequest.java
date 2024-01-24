@@ -4,8 +4,7 @@ package com.aliyun.cloudauth20200618.models;
 import com.aliyun.tea.*;
 
 public class VerifyBankElementAdvanceRequest extends TeaModel {
-    @NameInMap("BankCardFileObject")
-    @Validation(required = true)
+    @NameInMap("BankCardFile")
     public java.io.InputStream bankCardFileObject;
 
     @NameInMap("BankCardNo")
