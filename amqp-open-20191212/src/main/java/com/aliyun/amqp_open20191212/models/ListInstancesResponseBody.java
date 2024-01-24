@@ -4,9 +4,15 @@ package com.aliyun.amqp_open20191212.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListInstancesResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyDataInstancesTags extends TeaModel {
+        /**
+         * <p>标签键。</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>标签值。</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -62,57 +74,125 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyDataInstances extends TeaModel {
+        /**
+         * <p>Indicates whether the instance is automatically renewed.</p>
+         */
         @NameInMap("AutoRenewInstance")
         public Boolean autoRenewInstance;
 
+        /**
+         * <p>The endpoint that is used to access the instance over the classic network. This parameter is no longer available.</p>
+         */
         @NameInMap("ClassicEndpoint")
         public String classicEndpoint;
 
+        /**
+         * <p>The timestamp that indicates when the instance expires. Unit: milliseconds.</p>
+         */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
+        /**
+         * <p>The instance ID</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The instance name.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The instance type.</p>
+         * <br>
+         * <p>*   PROFESSIONAL: Professional Edition</p>
+         * <p>*   ENTERPRISE: Enterprise Edition</p>
+         * <p>*   VIP: Enterprise Platinum Edition</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The maximum number of Internet-based transactions per second (TPS) for the instance.</p>
+         */
         @NameInMap("MaxEipTps")
         public Integer maxEipTps;
 
+        /**
+         * <p>The maximum number of queues on the instance.</p>
+         */
         @NameInMap("MaxQueue")
         public Integer maxQueue;
 
+        /**
+         * <p>The maximum number of VPC-based TPS for the instance.</p>
+         */
         @NameInMap("MaxTps")
         public Integer maxTps;
 
+        /**
+         * <p>The maximum number of vhosts on the instance.</p>
+         */
         @NameInMap("MaxVhost")
         public Integer maxVhost;
 
+        /**
+         * <p>The timestamp that indicates when the order was created. Unit: milliseconds.</p>
+         */
         @NameInMap("OrderCreateTime")
         public Long orderCreateTime;
 
+        /**
+         * <p>The billing method. Valid values:</p>
+         * <br>
+         * <p>*   PrePaid: the subscription billing method.</p>
+         * <p>*   POST_PAID: the pay-as-you-go billing method.</p>
+         */
         @NameInMap("OrderType")
         public String orderType;
 
+        /**
+         * <p>The virtual private cloud (VPC) endpoint of the instance.</p>
+         */
         @NameInMap("PrivateEndpoint")
         public String privateEndpoint;
 
+        /**
+         * <p>The public endpoint of the instance.</p>
+         */
         @NameInMap("PublicEndpoint")
         public String publicEndpoint;
 
+        /**
+         * <p>The instance status. Valid values:</p>
+         * <br>
+         * <p>*   DEPLOYING: The instance is being deployed.</p>
+         * <p>*   EXPIRED: The instance is expired.</p>
+         * <p>*   SERVING: The instance is running.</p>
+         * <p>*   RELEASED: The instance is released.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The disk size. Unit: GB.</p>
+         * <br>
+         * <p>>  For Professional Edition instances and Enterprise Edition instances, this parameter is unavailable and \*\*-1\*\* is returned.</p>
+         */
         @NameInMap("StorageSize")
         public Integer storageSize;
 
+        /**
+         * <p>Indicates whether the instance supports elastic IP addresses (EIPs).</p>
+         */
         @NameInMap("SupportEIP")
         public Boolean supportEIP;
 
+        /**
+         * <p>标签列表。</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListInstancesResponseBodyDataInstancesTags> tags;
 
@@ -268,12 +348,21 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyData extends TeaModel {
+        /**
+         * <p>The instances.</p>
+         */
         @NameInMap("Instances")
         public java.util.List<ListInstancesResponseBodyDataInstances> instances;
 
+        /**
+         * <p>The maximum number of entries returned.</p>
+         */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
+        /**
+         * <p>The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 

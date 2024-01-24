@@ -4,9 +4,15 @@ package com.aliyun.amqp_open20191212.models;
 import com.aliyun.tea.*;
 
 public class ListExchangesResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListExchangesResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,39 @@ public class ListExchangesResponseBody extends TeaModel {
     }
 
     public static class ListExchangesResponseBodyDataExchanges extends TeaModel {
+        /**
+         * <p>The attributes. This parameter is unavailable in the current version.</p>
+         */
         @NameInMap("Attributes")
         public java.util.Map<String, ?> attributes;
 
+        /**
+         * <p>Indicates whether the exchange was automatically deleted.</p>
+         */
         @NameInMap("AutoDeleteState")
         public Boolean autoDeleteState;
 
+        /**
+         * <p>The timestamp that indicates when the exchange was created. Unit: milliseconds.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The exchange type.</p>
+         */
         @NameInMap("ExchangeType")
         public String exchangeType;
 
+        /**
+         * <p>The exchange name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The vhost name.</p>
+         */
         @NameInMap("VHostName")
         public String VHostName;
 
@@ -107,14 +131,23 @@ public class ListExchangesResponseBody extends TeaModel {
 
     public static class ListExchangesResponseBodyData extends TeaModel {
         /**
-         * <p>Exchange。</p>
+         * <p>The exchanges.</p>
          */
         @NameInMap("Exchanges")
         public java.util.List<ListExchangesResponseBodyDataExchanges> exchanges;
 
+        /**
+         * <p>The maximum number of entries returned.</p>
+         */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
+        /**
+         * <p>The token that marks the end of the current returned page.``</p>
+         * <br>
+         * <p>*   If the value of this parameter is empty, the next query is not required and the token used to start the next query is unavailable.``</p>
+         * <p>*   If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.``</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 

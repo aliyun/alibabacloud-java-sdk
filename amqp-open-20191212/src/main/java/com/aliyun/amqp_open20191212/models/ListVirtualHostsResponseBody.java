@@ -4,9 +4,15 @@ package com.aliyun.amqp_open20191212.models;
 import com.aliyun.tea.*;
 
 public class ListVirtualHostsResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListVirtualHostsResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class ListVirtualHostsResponseBody extends TeaModel {
     }
 
     public static class ListVirtualHostsResponseBodyDataVirtualHosts extends TeaModel {
+        /**
+         * <p>The vhost name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -51,14 +60,20 @@ public class ListVirtualHostsResponseBody extends TeaModel {
     }
 
     public static class ListVirtualHostsResponseBodyData extends TeaModel {
+        /**
+         * <p>The maximum number of entries returned.</p>
+         */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
+        /**
+         * <p>The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
         /**
-         * <p>Vhost。</p>
+         * <p>The vhosts.</p>
          */
         @NameInMap("VirtualHosts")
         public java.util.List<ListVirtualHostsResponseBodyDataVirtualHosts> virtualHosts;

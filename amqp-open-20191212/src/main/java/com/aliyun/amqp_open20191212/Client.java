@@ -26,6 +26,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+      *
+      * @param request CreateAccountRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateAccountResponse
+     */
     public CreateAccountResponse createAccountWithOptions(CreateAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -70,6 +76,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAccountResponse());
     }
 
+    /**
+      *
+      * @param request CreateAccountRequest
+      * @return CreateAccountResponse
+     */
     public CreateAccountResponse createAccount(CreateAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createAccountWithOptions(request, runtime);
@@ -196,6 +207,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            query.put("InstanceName", request.instanceName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
             query.put("InstanceType", request.instanceType);
         }
@@ -226,6 +241,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.queueCapacity)) {
             query.put("QueueCapacity", request.queueCapacity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.renewStatus)) {
+            query.put("RenewStatus", request.renewStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.renewalDurationUnit)) {
+            query.put("RenewalDurationUnit", request.renewalDurationUnit);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.storageSize)) {
@@ -450,6 +473,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteBindingWithOptions(request, runtime);
     }
 
+    /**
+      * ## [](#)Usage notes
+      * *   You cannot delete exchanges of the **headers** and **x-jms-topic** types.
+      * *   You cannot delete built-in exchanges in a vhost. These exchanges are amq.direct, amq.topic, and amq.fanout.
+      *
+      * @param request DeleteExchangeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteExchangeResponse
+     */
     public DeleteExchangeResponse deleteExchangeWithOptions(DeleteExchangeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -482,6 +514,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteExchangeResponse());
     }
 
+    /**
+      * ## [](#)Usage notes
+      * *   You cannot delete exchanges of the **headers** and **x-jms-topic** types.
+      * *   You cannot delete built-in exchanges in a vhost. These exchanges are amq.direct, amq.topic, and amq.fanout.
+      *
+      * @param request DeleteExchangeRequest
+      * @return DeleteExchangeResponse
+     */
     public DeleteExchangeResponse deleteExchange(DeleteExchangeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteExchangeWithOptions(request, runtime);
@@ -524,6 +564,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteQueueWithOptions(request, runtime);
     }
 
+    /**
+      * Before you delete a vhost, make sure that all exchanges and queues in the vhost are deleted.
+      *
+      * @param request DeleteVirtualHostRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteVirtualHostResponse
+     */
     public DeleteVirtualHostResponse deleteVirtualHostWithOptions(DeleteVirtualHostRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -552,6 +599,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVirtualHostResponse());
     }
 
+    /**
+      * Before you delete a vhost, make sure that all exchanges and queues in the vhost are deleted.
+      *
+      * @param request DeleteVirtualHostRequest
+      * @return DeleteVirtualHostResponse
+     */
     public DeleteVirtualHostResponse deleteVirtualHost(DeleteVirtualHostRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteVirtualHostWithOptions(request, runtime);
@@ -736,6 +789,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listInstancesWithOptions(request, runtime);
     }
 
+    /**
+      * ApsaraMQ for RabbitMQ allows you to query only online consumers.
+      *
+      * @param request ListQueueConsumersRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListQueueConsumersResponse
+     */
     public ListQueueConsumersResponse listQueueConsumersWithOptions(ListQueueConsumersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -756,6 +816,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListQueueConsumersResponse());
     }
 
+    /**
+      * ApsaraMQ for RabbitMQ allows you to query only online consumers.
+      *
+      * @param request ListQueueConsumersRequest
+      * @return ListQueueConsumersResponse
+     */
     public ListQueueConsumersResponse listQueueConsumers(ListQueueConsumersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listQueueConsumersWithOptions(request, runtime);

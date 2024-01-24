@@ -4,6 +4,9 @@ package com.aliyun.amqp_open20191212.models;
 import com.aliyun.tea.*;
 
 public class GetMetadataAmountRequest extends TeaModel {
+    /**
+     * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

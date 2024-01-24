@@ -4,9 +4,15 @@ package com.aliyun.amqp_open20191212.models;
 import com.aliyun.tea.*;
 
 public class GetMetadataAmountResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetMetadataAmountResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,39 @@ public class GetMetadataAmountResponseBody extends TeaModel {
     }
 
     public static class GetMetadataAmountResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of created exchanges on the ApsaraMQ for RabbitMQ instance.</p>
+         */
         @NameInMap("CurrentExchanges")
         public Integer currentExchanges;
 
+        /**
+         * <p>The number of created queues on the ApsaraMQ for RabbitMQ instance.</p>
+         */
         @NameInMap("CurrentQueues")
         public Integer currentQueues;
 
+        /**
+         * <p>The number of created vhosts on the ApsaraMQ for RabbitMQ instance.</p>
+         */
         @NameInMap("CurrentVirtualHosts")
         public Integer currentVirtualHosts;
 
+        /**
+         * <p>The maximum number of exchanges that can be created on the ApsaraMQ for RabbitMQ instance.</p>
+         */
         @NameInMap("MaxExchanges")
         public Integer maxExchanges;
 
+        /**
+         * <p>The maximum number of queues that can be created on the ApsaraMQ for RabbitMQ instance.</p>
+         */
         @NameInMap("MaxQueues")
         public Integer maxQueues;
 
+        /**
+         * <p>The maximum number of vhosts that can be created on the ApsaraMQ for RabbitMQ instance.</p>
+         */
         @NameInMap("MaxVirtualHosts")
         public Integer maxVirtualHosts;
 
