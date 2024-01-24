@@ -7,6 +7,9 @@ public class ListQuotasRequest extends TeaModel {
     @NameInMap("Labels")
     public String labels;
 
+    @NameInMap("LayoutMode")
+    public String layoutMode;
+
     @NameInMap("Order")
     public String order;
 
@@ -48,6 +51,14 @@ public class ListQuotasRequest extends TeaModel {
     }
     public String getLabels() {
         return this.labels;
+    }
+
+    public ListQuotasRequest setLayoutMode(String layoutMode) {
+        this.layoutMode = layoutMode;
+        return this;
+    }
+    public String getLayoutMode() {
+        return this.layoutMode;
     }
 
     public ListQuotasRequest setOrder(String order) {

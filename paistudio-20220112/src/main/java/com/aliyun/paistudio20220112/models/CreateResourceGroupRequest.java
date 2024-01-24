@@ -16,6 +16,9 @@ public class CreateResourceGroupRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateResourceGroupRequestTag> tag;
+
     @NameInMap("UserVpc")
     public UserVpc userVpc;
 
@@ -56,12 +59,50 @@ public class CreateResourceGroupRequest extends TeaModel {
         return this.resourceType;
     }
 
+    public CreateResourceGroupRequest setTag(java.util.List<CreateResourceGroupRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateResourceGroupRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateResourceGroupRequest setUserVpc(UserVpc userVpc) {
         this.userVpc = userVpc;
         return this;
     }
     public UserVpc getUserVpc() {
         return this.userVpc;
+    }
+
+    public static class CreateResourceGroupRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateResourceGroupRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateResourceGroupRequestTag self = new CreateResourceGroupRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateResourceGroupRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateResourceGroupRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
