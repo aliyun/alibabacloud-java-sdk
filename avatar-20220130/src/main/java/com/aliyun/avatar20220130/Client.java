@@ -975,6 +975,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.commandRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.commandRequest, "CommandRequest", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.textRequest)) {
+            request.textRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.textRequest, "TextRequest", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.user)) {
             request.userShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.user, "User", "json");
         }
@@ -998,6 +1002,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
             query.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.textRequestShrink)) {
+            query.put("TextRequest", request.textRequestShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userShrink)) {

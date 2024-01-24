@@ -19,6 +19,9 @@ public class StartInstanceShrinkRequest extends TeaModel {
     @NameInMap("TenantId")
     public Long tenantId;
 
+    @NameInMap("TextRequest")
+    public String textRequestShrink;
+
     @NameInMap("User")
     public String userShrink;
 
@@ -65,6 +68,14 @@ public class StartInstanceShrinkRequest extends TeaModel {
     }
     public Long getTenantId() {
         return this.tenantId;
+    }
+
+    public StartInstanceShrinkRequest setTextRequestShrink(String textRequestShrink) {
+        this.textRequestShrink = textRequestShrink;
+        return this;
+    }
+    public String getTextRequestShrink() {
+        return this.textRequestShrink;
     }
 
     public StartInstanceShrinkRequest setUserShrink(String userShrink) {
