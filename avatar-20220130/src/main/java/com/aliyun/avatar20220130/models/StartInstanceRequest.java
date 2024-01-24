@@ -19,6 +19,9 @@ public class StartInstanceRequest extends TeaModel {
     @NameInMap("TenantId")
     public Long tenantId;
 
+    @NameInMap("TextRequest")
+    public StartInstanceRequestTextRequest textRequest;
+
     @NameInMap("User")
     public StartInstanceRequestUser user;
 
@@ -65,6 +68,14 @@ public class StartInstanceRequest extends TeaModel {
     }
     public Long getTenantId() {
         return this.tenantId;
+    }
+
+    public StartInstanceRequest setTextRequest(StartInstanceRequestTextRequest textRequest) {
+        this.textRequest = textRequest;
+        return this;
+    }
+    public StartInstanceRequestTextRequest getTextRequest() {
+        return this.textRequest;
     }
 
     public StartInstanceRequest setUser(StartInstanceRequestUser user) {
@@ -128,6 +139,12 @@ public class StartInstanceRequest extends TeaModel {
         @NameInMap("AlphaSwitch")
         public Boolean alphaSwitch;
 
+        @NameInMap("BackGroundImageUrl")
+        public String backGroundImageUrl;
+
+        @NameInMap("Locate")
+        public Integer locate;
+
         public static StartInstanceRequestCommandRequest build(java.util.Map<String, ?> map) throws Exception {
             StartInstanceRequestCommandRequest self = new StartInstanceRequestCommandRequest();
             return TeaModel.build(map, self);
@@ -139,6 +156,74 @@ public class StartInstanceRequest extends TeaModel {
         }
         public Boolean getAlphaSwitch() {
             return this.alphaSwitch;
+        }
+
+        public StartInstanceRequestCommandRequest setBackGroundImageUrl(String backGroundImageUrl) {
+            this.backGroundImageUrl = backGroundImageUrl;
+            return this;
+        }
+        public String getBackGroundImageUrl() {
+            return this.backGroundImageUrl;
+        }
+
+        public StartInstanceRequestCommandRequest setLocate(Integer locate) {
+            this.locate = locate;
+            return this;
+        }
+        public Integer getLocate() {
+            return this.locate;
+        }
+
+    }
+
+    public static class StartInstanceRequestTextRequest extends TeaModel {
+        @NameInMap("PitchRate")
+        public Integer pitchRate;
+
+        @NameInMap("SpeechRate")
+        public Integer speechRate;
+
+        @NameInMap("Voice")
+        public String voice;
+
+        @NameInMap("Volume")
+        public Integer volume;
+
+        public static StartInstanceRequestTextRequest build(java.util.Map<String, ?> map) throws Exception {
+            StartInstanceRequestTextRequest self = new StartInstanceRequestTextRequest();
+            return TeaModel.build(map, self);
+        }
+
+        public StartInstanceRequestTextRequest setPitchRate(Integer pitchRate) {
+            this.pitchRate = pitchRate;
+            return this;
+        }
+        public Integer getPitchRate() {
+            return this.pitchRate;
+        }
+
+        public StartInstanceRequestTextRequest setSpeechRate(Integer speechRate) {
+            this.speechRate = speechRate;
+            return this;
+        }
+        public Integer getSpeechRate() {
+            return this.speechRate;
+        }
+
+        public StartInstanceRequestTextRequest setVoice(String voice) {
+            this.voice = voice;
+            return this;
+        }
+        public String getVoice() {
+            return this.voice;
+        }
+
+        public StartInstanceRequestTextRequest setVolume(Integer volume) {
+            this.volume = volume;
+            return this;
+        }
+        public Integer getVolume() {
+            return this.volume;
         }
 
     }
