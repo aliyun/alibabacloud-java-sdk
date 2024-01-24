@@ -13,6 +13,9 @@ public class GetResourceGroupResponseBody extends TeaModel {
     @NameInMap("CreatorID")
     public String creatorID;
 
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("GmtCreatedTime")
     public String gmtCreatedTime;
 
@@ -33,6 +36,9 @@ public class GetResourceGroupResponseBody extends TeaModel {
 
     @NameInMap("SupportRDMA")
     public Boolean supportRDMA;
+
+    @NameInMap("Tags")
+    public java.util.List<GetResourceGroupResponseBodyTags> tags;
 
     @NameInMap("UserVpc")
     public UserVpc userVpc;
@@ -67,6 +73,14 @@ public class GetResourceGroupResponseBody extends TeaModel {
     }
     public String getCreatorID() {
         return this.creatorID;
+    }
+
+    public GetResourceGroupResponseBody setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public GetResourceGroupResponseBody setGmtCreatedTime(String gmtCreatedTime) {
@@ -125,6 +139,14 @@ public class GetResourceGroupResponseBody extends TeaModel {
         return this.supportRDMA;
     }
 
+    public GetResourceGroupResponseBody setTags(java.util.List<GetResourceGroupResponseBodyTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<GetResourceGroupResponseBodyTags> getTags() {
+        return this.tags;
+    }
+
     public GetResourceGroupResponseBody setUserVpc(UserVpc userVpc) {
         this.userVpc = userVpc;
         return this;
@@ -139,6 +161,36 @@ public class GetResourceGroupResponseBody extends TeaModel {
     }
     public String getWorkspaceID() {
         return this.workspaceID;
+    }
+
+    public static class GetResourceGroupResponseBodyTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetResourceGroupResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            GetResourceGroupResponseBodyTags self = new GetResourceGroupResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResourceGroupResponseBodyTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetResourceGroupResponseBodyTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
     }
 
 }

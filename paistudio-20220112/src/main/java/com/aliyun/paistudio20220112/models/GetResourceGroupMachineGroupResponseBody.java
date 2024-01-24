@@ -40,6 +40,9 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     @NameInMap("Memory")
     public String memory;
 
+    @NameInMap("Name")
+    public String name;
+
     @NameInMap("PaymentDuration")
     public String paymentDuration;
 
@@ -60,6 +63,9 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
 
     @NameInMap("SupportedDrivers")
     public java.util.List<String> supportedDrivers;
+
+    @NameInMap("Tags")
+    public java.util.List<GetResourceGroupMachineGroupResponseBodyTags> tags;
 
     public static GetResourceGroupMachineGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetResourceGroupMachineGroupResponseBody self = new GetResourceGroupMachineGroupResponseBody();
@@ -162,6 +168,14 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         return this.memory;
     }
 
+    public GetResourceGroupMachineGroupResponseBody setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
     public GetResourceGroupMachineGroupResponseBody setPaymentDuration(String paymentDuration) {
         this.paymentDuration = paymentDuration;
         return this;
@@ -216,6 +230,44 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     }
     public java.util.List<String> getSupportedDrivers() {
         return this.supportedDrivers;
+    }
+
+    public GetResourceGroupMachineGroupResponseBody setTags(java.util.List<GetResourceGroupMachineGroupResponseBodyTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<GetResourceGroupMachineGroupResponseBodyTags> getTags() {
+        return this.tags;
+    }
+
+    public static class GetResourceGroupMachineGroupResponseBodyTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetResourceGroupMachineGroupResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            GetResourceGroupMachineGroupResponseBodyTags self = new GetResourceGroupMachineGroupResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResourceGroupMachineGroupResponseBodyTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetResourceGroupMachineGroupResponseBodyTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
     }
 
 }

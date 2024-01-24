@@ -70,6 +70,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
     @NameInMap("Scheduler")
     public GetTrainingJobResponseBodyScheduler scheduler;
 
+    @NameInMap("Settings")
+    public GetTrainingJobResponseBodySettings settings;
+
     @NameInMap("Status")
     public String status;
 
@@ -276,6 +279,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
     public GetTrainingJobResponseBodyScheduler getScheduler() {
         return this.scheduler;
+    }
+
+    public GetTrainingJobResponseBody setSettings(GetTrainingJobResponseBodySettings settings) {
+        this.settings = settings;
+        return this;
+    }
+    public GetTrainingJobResponseBodySettings getSettings() {
+        return this.settings;
     }
 
     public GetTrainingJobResponseBody setStatus(String status) {
@@ -835,6 +846,58 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
         public Long getMaxRunningTimeInSeconds() {
             return this.maxRunningTimeInSeconds;
+        }
+
+    }
+
+    public static class GetTrainingJobResponseBodySettings extends TeaModel {
+        @NameInMap("AIMasterType")
+        public String AIMasterType;
+
+        @NameInMap("EnableErrorMonitoringInAIMaster")
+        public Boolean enableErrorMonitoringInAIMaster;
+
+        @NameInMap("ErrorMonitoringArgs")
+        public String errorMonitoringArgs;
+
+        @NameInMap("Priority")
+        public Integer priority;
+
+        public static GetTrainingJobResponseBodySettings build(java.util.Map<String, ?> map) throws Exception {
+            GetTrainingJobResponseBodySettings self = new GetTrainingJobResponseBodySettings();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTrainingJobResponseBodySettings setAIMasterType(String AIMasterType) {
+            this.AIMasterType = AIMasterType;
+            return this;
+        }
+        public String getAIMasterType() {
+            return this.AIMasterType;
+        }
+
+        public GetTrainingJobResponseBodySettings setEnableErrorMonitoringInAIMaster(Boolean enableErrorMonitoringInAIMaster) {
+            this.enableErrorMonitoringInAIMaster = enableErrorMonitoringInAIMaster;
+            return this;
+        }
+        public Boolean getEnableErrorMonitoringInAIMaster() {
+            return this.enableErrorMonitoringInAIMaster;
+        }
+
+        public GetTrainingJobResponseBodySettings setErrorMonitoringArgs(String errorMonitoringArgs) {
+            this.errorMonitoringArgs = errorMonitoringArgs;
+            return this;
+        }
+        public String getErrorMonitoringArgs() {
+            return this.errorMonitoringArgs;
+        }
+
+        public GetTrainingJobResponseBodySettings setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
         }
 
     }
