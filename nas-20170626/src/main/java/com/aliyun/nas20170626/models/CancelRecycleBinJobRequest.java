@@ -4,6 +4,9 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class CancelRecycleBinJobRequest extends TeaModel {
+    /**
+     * <p>The job ID.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 

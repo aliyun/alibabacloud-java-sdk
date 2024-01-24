@@ -4,27 +4,53 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogAnalysisResponseBody extends TeaModel {
+    /**
+     * <p>The collection of log dump information.</p>
+     */
+    @NameInMap("Analyses")
+    public DescribeLogAnalysisResponseBodyAnalyses analyses;
+
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of log dump entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of log dump entries in the region.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Analyses")
-    public DescribeLogAnalysisResponseBodyAnalyses analyses;
 
     public static DescribeLogAnalysisResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogAnalysisResponseBody self = new DescribeLogAnalysisResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLogAnalysisResponseBody setAnalyses(DescribeLogAnalysisResponseBodyAnalyses analyses) {
+        this.analyses = analyses;
+        return this;
+    }
+    public DescribeLogAnalysisResponseBodyAnalyses getAnalyses() {
+        return this.analyses;
     }
 
     public DescribeLogAnalysisResponseBody setCode(String code) {
@@ -67,26 +93,30 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeLogAnalysisResponseBody setAnalyses(DescribeLogAnalysisResponseBodyAnalyses analyses) {
-        this.analyses = analyses;
-        return this;
-    }
-    public DescribeLogAnalysisResponseBodyAnalyses getAnalyses() {
-        return this.analyses;
-    }
-
     public static class DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue extends TeaModel {
+        /**
+         * <p>The name of the dedicated Logstore that is used to store NAS operation logs.</p>
+         */
         @NameInMap("Logstore")
         public String logstore;
 
-        @NameInMap("RoleArn")
-        public String roleArn;
-
+        /**
+         * <p>The name of the project where the dedicated Logstore resides.</p>
+         */
         @NameInMap("Project")
         public String project;
 
+        /**
+         * <p>The region where the dedicated Logstore resides.</p>
+         */
         @NameInMap("Region")
         public String region;
+
+        /**
+         * <p>The role that is used by NAS to access Simple Log Service.</p>
+         */
+        @NameInMap("RoleArn")
+        public String roleArn;
 
         public static DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue build(java.util.Map<String, ?> map) throws Exception {
             DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue self = new DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue();
@@ -99,14 +129,6 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
         }
         public String getLogstore() {
             return this.logstore;
-        }
-
-        public DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue setRoleArn(String roleArn) {
-            this.roleArn = roleArn;
-            return this;
-        }
-        public String getRoleArn() {
-            return this.roleArn;
         }
 
         public DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue setProject(String project) {
@@ -125,12 +147,26 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
             return this.region;
         }
 
+        public DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue setRoleArn(String roleArn) {
+            this.roleArn = roleArn;
+            return this;
+        }
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
     }
 
     public static class DescribeLogAnalysisResponseBodyAnalysesAnalysis extends TeaModel {
+        /**
+         * <p>The ID of the file system.</p>
+         */
         @NameInMap("MetaKey")
         public String metaKey;
 
+        /**
+         * <p>The log dump information of the file system.</p>
+         */
         @NameInMap("MetaValue")
         public DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue metaValue;
 

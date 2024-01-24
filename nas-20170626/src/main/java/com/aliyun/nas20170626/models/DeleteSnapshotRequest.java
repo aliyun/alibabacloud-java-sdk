@@ -4,6 +4,9 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DeleteSnapshotRequest extends TeaModel {
+    /**
+     * <p>The snapshot ID.</p>
+     */
     @NameInMap("SnapshotId")
     public String snapshotId;
 

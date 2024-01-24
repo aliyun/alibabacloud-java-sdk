@@ -4,9 +4,15 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeZonesResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The queried zones.</p>
+     */
     @NameInMap("Zones")
     public DescribeZonesResponseBodyZones zones;
 
@@ -31,25 +37,6 @@ public class DescribeZonesResponseBody extends TeaModel {
         return this.zones;
     }
 
-    public static class DescribeZonesResponseBodyZonesZonePerformance extends TeaModel {
-        @NameInMap("Protocol")
-        public java.util.List<String> protocol;
-
-        public static DescribeZonesResponseBodyZonesZonePerformance build(java.util.Map<String, ?> map) throws Exception {
-            DescribeZonesResponseBodyZonesZonePerformance self = new DescribeZonesResponseBodyZonesZonePerformance();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeZonesResponseBodyZonesZonePerformance setProtocol(java.util.List<String> protocol) {
-            this.protocol = protocol;
-            return this;
-        }
-        public java.util.List<String> getProtocol() {
-            return this.protocol;
-        }
-
-    }
-
     public static class DescribeZonesResponseBodyZonesZoneCapacity extends TeaModel {
         @NameInMap("Protocol")
         public java.util.List<String> protocol;
@@ -70,23 +57,33 @@ public class DescribeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeZonesResponseBodyZonesZoneInstanceTypesInstanceType extends TeaModel {
-        @NameInMap("StorageType")
-        public String storageType;
-
+        /**
+         * <p>The protocol type.</p>
+         * <br>
+         * <p>*   If the FileSystemType parameter is set to standard, the protocol type is nfs or smb.</p>
+         * <p>*   If the FileSystemType parameter is set to extreme, the protocol type is nfs.</p>
+         * <p>*   If the FileSystemType parameter is set to cpfs, the protocol type is cpfs.</p>
+         * <br>
+         * <p>> CPFS file systems are available only on the China site (aliyun.com).</p>
+         */
         @NameInMap("ProtocolType")
         public String protocolType;
+
+        /**
+         * <p>The storage type.</p>
+         * <br>
+         * <p>*   If the FileSystemType parameter is set to standard, the storage type is Performance or Capacity.</p>
+         * <p>*   If the FileSystemType parameter is set to extreme, the storage type is standard or advance.</p>
+         * <p>*   If the FileSystemType parameter is set to cpfs, the storage type is advance\_100 (100 MB/s/TiB baseline) or advance\_200 (200 MB/s/TiB baseline).</p>
+         * <br>
+         * <p>> CPFS file systems are available only on the China site (aliyun.com).</p>
+         */
+        @NameInMap("StorageType")
+        public String storageType;
 
         public static DescribeZonesResponseBodyZonesZoneInstanceTypesInstanceType build(java.util.Map<String, ?> map) throws Exception {
             DescribeZonesResponseBodyZonesZoneInstanceTypesInstanceType self = new DescribeZonesResponseBodyZonesZoneInstanceTypesInstanceType();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeZonesResponseBodyZonesZoneInstanceTypesInstanceType setStorageType(String storageType) {
-            this.storageType = storageType;
-            return this;
-        }
-        public String getStorageType() {
-            return this.storageType;
         }
 
         public DescribeZonesResponseBodyZonesZoneInstanceTypesInstanceType setProtocolType(String protocolType) {
@@ -95,6 +92,14 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
         public String getProtocolType() {
             return this.protocolType;
+        }
+
+        public DescribeZonesResponseBodyZonesZoneInstanceTypesInstanceType setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
         }
 
     }
@@ -118,30 +123,53 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeZonesResponseBodyZonesZone extends TeaModel {
-        @NameInMap("Performance")
-        public DescribeZonesResponseBodyZonesZonePerformance performance;
+    public static class DescribeZonesResponseBodyZonesZonePerformance extends TeaModel {
+        @NameInMap("Protocol")
+        public java.util.List<String> protocol;
 
+        public static DescribeZonesResponseBodyZonesZonePerformance build(java.util.Map<String, ?> map) throws Exception {
+            DescribeZonesResponseBodyZonesZonePerformance self = new DescribeZonesResponseBodyZonesZonePerformance();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeZonesResponseBodyZonesZonePerformance setProtocol(java.util.List<String> protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public java.util.List<String> getProtocol() {
+            return this.protocol;
+        }
+
+    }
+
+    public static class DescribeZonesResponseBodyZonesZone extends TeaModel {
+        /**
+         * <p>This parameter is reserved. You can ignore this parameter.</p>
+         */
         @NameInMap("Capacity")
         public DescribeZonesResponseBodyZonesZoneCapacity capacity;
 
-        @NameInMap("ZoneId")
-        public String zoneId;
-
+        /**
+         * <p>The details about file system types.</p>
+         */
         @NameInMap("InstanceTypes")
         public DescribeZonesResponseBodyZonesZoneInstanceTypes instanceTypes;
+
+        /**
+         * <p>This parameter is reserved. You can ignore this parameter.</p>
+         */
+        @NameInMap("Performance")
+        public DescribeZonesResponseBodyZonesZonePerformance performance;
+
+        /**
+         * <p>The zone ID.</p>
+         */
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeZonesResponseBodyZonesZone build(java.util.Map<String, ?> map) throws Exception {
             DescribeZonesResponseBodyZonesZone self = new DescribeZonesResponseBodyZonesZone();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeZonesResponseBodyZonesZone setPerformance(DescribeZonesResponseBodyZonesZonePerformance performance) {
-            this.performance = performance;
-            return this;
-        }
-        public DescribeZonesResponseBodyZonesZonePerformance getPerformance() {
-            return this.performance;
         }
 
         public DescribeZonesResponseBodyZonesZone setCapacity(DescribeZonesResponseBodyZonesZoneCapacity capacity) {
@@ -152,20 +180,28 @@ public class DescribeZonesResponseBody extends TeaModel {
             return this.capacity;
         }
 
-        public DescribeZonesResponseBodyZonesZone setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
         public DescribeZonesResponseBodyZonesZone setInstanceTypes(DescribeZonesResponseBodyZonesZoneInstanceTypes instanceTypes) {
             this.instanceTypes = instanceTypes;
             return this;
         }
         public DescribeZonesResponseBodyZonesZoneInstanceTypes getInstanceTypes() {
             return this.instanceTypes;
+        }
+
+        public DescribeZonesResponseBodyZonesZone setPerformance(DescribeZonesResponseBodyZonesZonePerformance performance) {
+            this.performance = performance;
+            return this;
+        }
+        public DescribeZonesResponseBodyZonesZonePerformance getPerformance() {
+            return this.performance;
+        }
+
+        public DescribeZonesResponseBodyZonesZone setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

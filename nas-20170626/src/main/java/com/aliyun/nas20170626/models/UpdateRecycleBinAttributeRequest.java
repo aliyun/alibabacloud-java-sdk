@@ -4,9 +4,19 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class UpdateRecycleBinAttributeRequest extends TeaModel {
+    /**
+     * <p>The ID of the file system.</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <p>The retention period of the files in the recycle bin. Unit: days.</p>
+     * <br>
+     * <p>Valid values: 1 to 180.</p>
+     * <br>
+     * <p>Default value: 3.</p>
+     */
     @NameInMap("ReservedDays")
     public Long reservedDays;
 

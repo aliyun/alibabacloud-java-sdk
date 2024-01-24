@@ -4,9 +4,17 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class GetDirectoryOrFilePropertiesRequest extends TeaModel {
+    /**
+     * <p>The ID of the file system.</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <p>The absolute path of the directory.</p>
+     * <br>
+     * <p>The path must start with a forward slash (/) and must be a path that exists in the mount target.</p>
+     */
     @NameInMap("Path")
     public String path;
 

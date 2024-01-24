@@ -4,37 +4,24 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class RemoveClientFromBlackListRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("FileSystemId")
-    public String fileSystemId;
-
     @NameInMap("ClientIP")
     public String clientIP;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("FileSystemId")
+    public String fileSystemId;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static RemoveClientFromBlackListRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveClientFromBlackListRequest self = new RemoveClientFromBlackListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RemoveClientFromBlackListRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public RemoveClientFromBlackListRequest setFileSystemId(String fileSystemId) {
-        this.fileSystemId = fileSystemId;
-        return this;
-    }
-    public String getFileSystemId() {
-        return this.fileSystemId;
     }
 
     public RemoveClientFromBlackListRequest setClientIP(String clientIP) {
@@ -51,6 +38,22 @@ public class RemoveClientFromBlackListRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public RemoveClientFromBlackListRequest setFileSystemId(String fileSystemId) {
+        this.fileSystemId = fileSystemId;
+        return this;
+    }
+    public String getFileSystemId() {
+        return this.fileSystemId;
+    }
+
+    public RemoveClientFromBlackListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

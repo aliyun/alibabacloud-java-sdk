@@ -4,6 +4,11 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DeleteAutoSnapshotPolicyRequest extends TeaModel {
+    /**
+     * <p>The ID of the automatic snapshot policy.</p>
+     * <br>
+     * <p>You can call the [DescribeAutoSnapshotPolicies](~~126583~~) operation to view available automatic snapshot policies.</p>
+     */
     @NameInMap("AutoSnapshotPolicyId")
     public String autoSnapshotPolicyId;
 

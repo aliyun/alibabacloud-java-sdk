@@ -4,12 +4,26 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DeleteAccessRuleRequest extends TeaModel {
+    /**
+     * <p>The name of the permission group.</p>
+     */
     @NameInMap("AccessGroupName")
     public String accessGroupName;
 
+    /**
+     * <p>The rule ID.</p>
+     */
     @NameInMap("AccessRuleId")
     public String accessRuleId;
 
+    /**
+     * <p>The type of the file system.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   standard (default): General-purpose NAS file system</p>
+     * <p>*   extreme: Extreme NAS file system</p>
+     */
     @NameInMap("FileSystemType")
     public String fileSystemType;
 

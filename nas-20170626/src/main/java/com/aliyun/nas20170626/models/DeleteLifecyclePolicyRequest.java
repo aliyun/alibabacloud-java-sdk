@@ -4,9 +4,15 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DeleteLifecyclePolicyRequest extends TeaModel {
+    /**
+     * <p>The ID of the file system.</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <p>The name of the lifecycle policy.</p>
+     */
     @NameInMap("LifecyclePolicyName")
     public String lifecyclePolicyName;
 

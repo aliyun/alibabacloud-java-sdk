@@ -3,16 +3,19 @@ package com.aliyun.nas20170626.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeLDAPConfigRequest extends TeaModel {
+public class DisableSmbAclRequest extends TeaModel {
+    /**
+     * <p>The ID of the file system.</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
-    public static DescribeLDAPConfigRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeLDAPConfigRequest self = new DescribeLDAPConfigRequest();
+    public static DisableSmbAclRequest build(java.util.Map<String, ?> map) throws Exception {
+        DisableSmbAclRequest self = new DisableSmbAclRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLDAPConfigRequest setFileSystemId(String fileSystemId) {
+    public DisableSmbAclRequest setFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
     }

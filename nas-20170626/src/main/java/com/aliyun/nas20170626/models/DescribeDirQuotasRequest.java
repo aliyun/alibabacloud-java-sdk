@@ -4,17 +4,35 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeDirQuotasRequest extends TeaModel {
+    /**
+     * <p>The ID of the file system.</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
-    @NameInMap("Path")
-    public String path;
+    /**
+     * <p>The page number.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: 1.</p>
+     */
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * <br>
+     * <p>Valid values: 1 to 100.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    /**
+     * <p>The absolute path of a directory.</p>
+     * <br>
+     * <p>If you do not specify this parameter, all directories for which quotas are created are returned.</p>
+     */
+    @NameInMap("Path")
+    public String path;
 
     public static DescribeDirQuotasRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDirQuotasRequest self = new DescribeDirQuotasRequest();
@@ -29,12 +47,12 @@ public class DescribeDirQuotasRequest extends TeaModel {
         return this.fileSystemId;
     }
 
-    public DescribeDirQuotasRequest setPath(String path) {
-        this.path = path;
+    public DescribeDirQuotasRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getPath() {
-        return this.path;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeDirQuotasRequest setPageSize(Integer pageSize) {
@@ -45,12 +63,12 @@ public class DescribeDirQuotasRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeDirQuotasRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeDirQuotasRequest setPath(String path) {
+        this.path = path;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getPath() {
+        return this.path;
     }
 
 }
