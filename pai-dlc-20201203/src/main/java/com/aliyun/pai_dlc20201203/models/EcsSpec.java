@@ -25,6 +25,9 @@ public class EcsSpec extends TeaModel {
     @NameInMap("Memory")
     public Integer memory;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     public static EcsSpec build(java.util.Map<String, ?> map) throws Exception {
         EcsSpec self = new EcsSpec();
         return TeaModel.build(map, self);
@@ -84,6 +87,14 @@ public class EcsSpec extends TeaModel {
     }
     public Integer getMemory() {
         return this.memory;
+    }
+
+    public EcsSpec setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
 }

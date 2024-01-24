@@ -70,6 +70,9 @@ public class JobItem extends TeaModel {
     @NameInMap("ResourceName")
     public String resourceName;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     @NameInMap("Settings")
     public JobSettings settings;
 
@@ -85,11 +88,17 @@ public class JobItem extends TeaModel {
     @NameInMap("ThirdpartyLibs")
     public java.util.List<String> thirdpartyLibs;
 
+    @NameInMap("UseOversoldResource")
+    public Boolean useOversoldResource;
+
     @NameInMap("UserCommand")
     public String userCommand;
 
     @NameInMap("UserId")
     public String userId;
+
+    @NameInMap("Username")
+    public String username;
 
     @NameInMap("WorkspaceId")
     public String workspaceId;
@@ -278,6 +287,14 @@ public class JobItem extends TeaModel {
         return this.resourceName;
     }
 
+    public JobItem setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
     public JobItem setSettings(JobSettings settings) {
         this.settings = settings;
         return this;
@@ -318,6 +335,14 @@ public class JobItem extends TeaModel {
         return this.thirdpartyLibs;
     }
 
+    public JobItem setUseOversoldResource(Boolean useOversoldResource) {
+        this.useOversoldResource = useOversoldResource;
+        return this;
+    }
+    public Boolean getUseOversoldResource() {
+        return this.useOversoldResource;
+    }
+
     public JobItem setUserCommand(String userCommand) {
         this.userCommand = userCommand;
         return this;
@@ -332,6 +357,14 @@ public class JobItem extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
+    }
+
+    public JobItem setUsername(String username) {
+        this.username = username;
+        return this;
+    }
+    public String getUsername() {
+        return this.username;
     }
 
     public JobItem setWorkspaceId(String workspaceId) {
