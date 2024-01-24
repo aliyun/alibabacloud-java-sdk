@@ -4,6 +4,9 @@ package com.aliyun.amqp_open20191212.models;
 import com.aliyun.tea.*;
 
 public class CreateVirtualHostResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

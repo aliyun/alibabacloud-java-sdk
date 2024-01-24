@@ -4,12 +4,21 @@ package com.aliyun.amqp_open20191212.models;
 import com.aliyun.tea.*;
 
 public class DeleteExchangeRequest extends TeaModel {
+    /**
+     * <p>The name of the exchange that you want to delete.</p>
+     */
     @NameInMap("ExchangeName")
     public String exchangeName;
 
+    /**
+     * <p>The ID of the ApsaraMQ for RabbitMQ instance whose exchange you want to delete.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The vhost to which the exchange that you want to delete belongs.</p>
+     */
     @NameInMap("VirtualHost")
     public String virtualHost;
 

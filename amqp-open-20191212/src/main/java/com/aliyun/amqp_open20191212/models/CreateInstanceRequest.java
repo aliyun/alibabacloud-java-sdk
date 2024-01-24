@@ -13,6 +13,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("InstanceName")
+    public String instanceName;
+
     @NameInMap("InstanceType")
     public String instanceType;
 
@@ -36,6 +39,12 @@ public class CreateInstanceRequest extends TeaModel {
 
     @NameInMap("QueueCapacity")
     public Integer queueCapacity;
+
+    @NameInMap("RenewStatus")
+    public String renewStatus;
+
+    @NameInMap("RenewalDurationUnit")
+    public String renewalDurationUnit;
 
     @NameInMap("StorageSize")
     public Integer storageSize;
@@ -76,6 +85,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateInstanceRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     public CreateInstanceRequest setInstanceType(String instanceType) {
@@ -140,6 +157,22 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public Integer getQueueCapacity() {
         return this.queueCapacity;
+    }
+
+    public CreateInstanceRequest setRenewStatus(String renewStatus) {
+        this.renewStatus = renewStatus;
+        return this;
+    }
+    public String getRenewStatus() {
+        return this.renewStatus;
+    }
+
+    public CreateInstanceRequest setRenewalDurationUnit(String renewalDurationUnit) {
+        this.renewalDurationUnit = renewalDurationUnit;
+        return this;
+    }
+    public String getRenewalDurationUnit() {
+        return this.renewalDurationUnit;
     }
 
     public CreateInstanceRequest setStorageSize(Integer storageSize) {

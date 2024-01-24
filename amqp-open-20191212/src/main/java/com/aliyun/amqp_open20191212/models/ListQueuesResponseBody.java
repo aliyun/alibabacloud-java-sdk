@@ -4,9 +4,15 @@ package com.aliyun.amqp_open20191212.models;
 import com.aliyun.tea.*;
 
 public class ListQueuesResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListQueuesResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +38,51 @@ public class ListQueuesResponseBody extends TeaModel {
     }
 
     public static class ListQueuesResponseBodyDataQueues extends TeaModel {
+        /**
+         * <p>The attributes.</p>
+         */
         @NameInMap("Attributes")
         public java.util.Map<String, ?> attributes;
 
+        /**
+         * <p>Indicates whether the queue was automatically deleted.</p>
+         */
         @NameInMap("AutoDeleteState")
         public Boolean autoDeleteState;
 
+        /**
+         * <p>The time when the queue was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>Indicates whether the queue is an exclusive queue.</p>
+         */
         @NameInMap("ExclusiveState")
         public Boolean exclusiveState;
 
+        /**
+         * <p>The time when messages in the queue were last consumed.</p>
+         */
         @NameInMap("LastConsumeTime")
         public Long lastConsumeTime;
 
+        /**
+         * <p>The queue name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the ApsaraMQ for RabbitMQ instance to which the queue belongs.</p>
+         */
         @NameInMap("OwnerId")
         public String ownerId;
 
+        /**
+         * <p>The vhost name.</p>
+         */
         @NameInMap("VHostName")
         public String VHostName;
 
@@ -128,14 +158,20 @@ public class ListQueuesResponseBody extends TeaModel {
     }
 
     public static class ListQueuesResponseBodyData extends TeaModel {
+        /**
+         * <p>The maximum number of entries returned.</p>
+         */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
+        /**
+         * <p>The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
         /**
-         * <p>Queue。</p>
+         * <p>The queues.</p>
          */
         @NameInMap("Queues")
         public java.util.List<ListQueuesResponseBodyDataQueues> queues;

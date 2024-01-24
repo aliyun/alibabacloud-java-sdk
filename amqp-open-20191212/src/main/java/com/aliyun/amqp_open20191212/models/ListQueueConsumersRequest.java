@@ -4,18 +4,35 @@ package com.aliyun.amqp_open20191212.models;
 import com.aliyun.tea.*;
 
 public class ListQueueConsumersRequest extends TeaModel {
+    /**
+     * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The number of data entries to return. If you do not configure this parameter, the default value 1 is used.</p>
+     * <br>
+     * <p>Valid values: 1 to 100.</p>
+     */
     @NameInMap("QueryCount")
     public Integer queryCount;
 
+    /**
+     * <p>The name of the queue for which you want to query online consumers.</p>
+     */
     @NameInMap("Queue")
     public String queue;
 
+    /**
+     * <p>The virtual host (vhost) name.</p>
+     */
     @NameInMap("VirtualHost")
     public String virtualHost;
 

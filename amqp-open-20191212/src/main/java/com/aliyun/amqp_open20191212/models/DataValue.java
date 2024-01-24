@@ -4,24 +4,45 @@ package com.aliyun.amqp_open20191212.models;
 import com.aliyun.tea.*;
 
 public class DataValue extends TeaModel {
+    /**
+     * <p>The Alibaba Cloud account ID or Resource Access Management (RAM) user to which the AccessKey pair that is used to create the static username and password belongs.</p>
+     */
     @NameInMap("masterUid")
     public Long masterUid;
 
+    /**
+     * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
+     */
     @NameInMap("cInstanceId")
     public String cInstanceId;
 
+    /**
+     * <p>The AccessKey ID that is used to create the static username and password.</p>
+     */
     @NameInMap("accessKey")
     public String accessKey;
 
+    /**
+     * <p>The static username.</p>
+     */
     @NameInMap("userName")
     public String userName;
 
+    /**
+     * <p>The static password.</p>
+     */
     @NameInMap("password")
     public String password;
 
+    /**
+     * <p>The timestamp that indicates when the static username and password were deleted. Unit: milliseconds.</p>
+     */
     @NameInMap("deleted")
     public Long deleted;
 
+    /**
+     * <p>The timestamp that indicates when the static username and password were created. Unit: milliseconds.</p>
+     */
     @NameInMap("createTimestamp")
     public Long createTimestamp;
 

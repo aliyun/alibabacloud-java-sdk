@@ -4,9 +4,15 @@ package com.aliyun.amqp_open20191212.models;
 import com.aliyun.tea.*;
 
 public class ListQueueConsumersResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListQueueConsumersResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class ListQueueConsumersResponseBody extends TeaModel {
     }
 
     public static class ListQueueConsumersResponseBodyDataConsumers extends TeaModel {
+        /**
+         * <p>The consumer tag.</p>
+         */
         @NameInMap("ConsumerTag")
         public String consumerTag;
 
@@ -51,12 +60,21 @@ public class ListQueueConsumersResponseBody extends TeaModel {
     }
 
     public static class ListQueueConsumersResponseBodyData extends TeaModel {
+        /**
+         * <p>The consumers.</p>
+         */
         @NameInMap("Consumers")
         public java.util.List<ListQueueConsumersResponseBodyDataConsumers> consumers;
 
+        /**
+         * <p>The maximum number of entries returned.</p>
+         */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
+        /**
+         * <p>The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 

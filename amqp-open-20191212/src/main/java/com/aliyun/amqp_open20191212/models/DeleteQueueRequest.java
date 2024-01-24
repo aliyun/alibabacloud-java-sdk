@@ -4,12 +4,21 @@ package com.aliyun.amqp_open20191212.models;
 import com.aliyun.tea.*;
 
 public class DeleteQueueRequest extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The queue name.</p>
+     */
     @NameInMap("QueueName")
     public String queueName;
 
+    /**
+     * <p>The vhost name.</p>
+     */
     @NameInMap("VirtualHost")
     public String virtualHost;
 
