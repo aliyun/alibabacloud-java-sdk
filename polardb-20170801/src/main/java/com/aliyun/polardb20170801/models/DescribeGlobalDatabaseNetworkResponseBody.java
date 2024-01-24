@@ -469,6 +469,9 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         @NameInMap("Role")
         public String role;
 
+        @NameInMap("ServerlessType")
+        public String serverlessType;
+
         /**
          * <p>The storage space that is occupied by the cluster. Unit: bytes.</p>
          */
@@ -582,6 +585,14 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         }
         public String getRole() {
             return this.role;
+        }
+
+        public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setServerlessType(String serverlessType) {
+            this.serverlessType = serverlessType;
+            return this;
+        }
+        public String getServerlessType() {
+            return this.serverlessType;
         }
 
         public DescribeGlobalDatabaseNetworkResponseBodyDBClusters setStorageUsed(String storageUsed) {

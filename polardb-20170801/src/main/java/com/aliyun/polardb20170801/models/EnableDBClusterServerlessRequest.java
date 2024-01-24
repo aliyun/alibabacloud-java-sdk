@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class EnableDBClusterServerlessRequest extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -19,21 +22,39 @@ public class EnableDBClusterServerlessRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The maximum number of stable AP read-only nodes. Valid values: 0 to 7.</p>
+     */
     @NameInMap("ScaleApRoNumMax")
     public String scaleApRoNumMax;
 
+    /**
+     * <p>The minimum number of stable AP read-only nodes. Valid values: 0 to 7.</p>
+     */
     @NameInMap("ScaleApRoNumMin")
     public String scaleApRoNumMin;
 
+    /**
+     * <p>The maximum number of PCUs per node for scaling. Valid values: 1 to 8 PCUs.</p>
+     */
     @NameInMap("ScaleMax")
     public String scaleMax;
 
+    /**
+     * <p>The minimum number of PolarDB capacity units (PCUs) per node for scaling. Valid values: 1 to 8 PCUs.</p>
+     */
     @NameInMap("ScaleMin")
     public String scaleMin;
 
+    /**
+     * <p>The maximum number of read-only nodes for scaling. Valid values: 0 to 7.</p>
+     */
     @NameInMap("ScaleRoNumMax")
     public String scaleRoNumMax;
 
+    /**
+     * <p>The minimum number of read-only nodes for scaling. Valid values: 0 to 7.</p>
+     */
     @NameInMap("ScaleRoNumMin")
     public String scaleRoNumMin;
 

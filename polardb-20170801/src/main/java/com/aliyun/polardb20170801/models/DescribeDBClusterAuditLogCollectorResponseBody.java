@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterAuditLogCollectorResponseBody extends TeaModel {
     /**
-     * <p>The status of SQL data collector. Valid values:</p>
+     * <p>The status of SQL collector. Valid values:</p>
      * <br>
-     * <p>*   Enable: SQL data collector is enabled.</p>
-     * <p>*   Disabled: SQL data collector is disabled.</p>
+     * <p>*   Enable</p>
+     * <p>*   Disabled</p>
      */
     @NameInMap("CollectorStatus")
     public String collectorStatus;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
