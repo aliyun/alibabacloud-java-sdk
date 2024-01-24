@@ -7,6 +7,9 @@ public class ListEcsSpecsRequest extends TeaModel {
     @NameInMap("AcceleratorType")
     public String acceleratorType;
 
+    @NameInMap("InstanceTypes")
+    public String instanceTypes;
+
     @NameInMap("Order")
     public String order;
 
@@ -15,6 +18,9 @@ public class ListEcsSpecsRequest extends TeaModel {
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("ResourceType")
+    public String resourceType;
 
     @NameInMap("SortBy")
     public String sortBy;
@@ -30,6 +36,14 @@ public class ListEcsSpecsRequest extends TeaModel {
     }
     public String getAcceleratorType() {
         return this.acceleratorType;
+    }
+
+    public ListEcsSpecsRequest setInstanceTypes(String instanceTypes) {
+        this.instanceTypes = instanceTypes;
+        return this;
+    }
+    public String getInstanceTypes() {
+        return this.instanceTypes;
     }
 
     public ListEcsSpecsRequest setOrder(String order) {
@@ -54,6 +68,14 @@ public class ListEcsSpecsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListEcsSpecsRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public ListEcsSpecsRequest setSortBy(String sortBy) {

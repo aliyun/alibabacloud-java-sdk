@@ -79,6 +79,9 @@ public class GetJobResponseBody extends TeaModel {
     @NameInMap("ResourceLevel")
     public String resourceLevel;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     @NameInMap("RestartTimes")
     public String restartTimes;
 
@@ -88,8 +91,14 @@ public class GetJobResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("StatusHistory")
+    public java.util.List<StatusTransitionItem> statusHistory;
+
     @NameInMap("SubStatus")
     public String subStatus;
+
+    @NameInMap("TenantId")
+    public String tenantId;
 
     @NameInMap("ThirdpartyLibDir")
     public String thirdpartyLibDir;
@@ -314,6 +323,14 @@ public class GetJobResponseBody extends TeaModel {
         return this.resourceLevel;
     }
 
+    public GetJobResponseBody setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
     public GetJobResponseBody setRestartTimes(String restartTimes) {
         this.restartTimes = restartTimes;
         return this;
@@ -338,12 +355,28 @@ public class GetJobResponseBody extends TeaModel {
         return this.status;
     }
 
+    public GetJobResponseBody setStatusHistory(java.util.List<StatusTransitionItem> statusHistory) {
+        this.statusHistory = statusHistory;
+        return this;
+    }
+    public java.util.List<StatusTransitionItem> getStatusHistory() {
+        return this.statusHistory;
+    }
+
     public GetJobResponseBody setSubStatus(String subStatus) {
         this.subStatus = subStatus;
         return this;
     }
     public String getSubStatus() {
         return this.subStatus;
+    }
+
+    public GetJobResponseBody setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     public GetJobResponseBody setThirdpartyLibDir(String thirdpartyLibDir) {

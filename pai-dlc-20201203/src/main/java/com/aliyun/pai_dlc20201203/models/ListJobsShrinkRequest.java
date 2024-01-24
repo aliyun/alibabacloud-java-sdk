@@ -58,6 +58,9 @@ public class ListJobsShrinkRequest extends TeaModel {
     @NameInMap("UserIdForFilter")
     public String userIdForFilter;
 
+    @NameInMap("Username")
+    public String username;
+
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -208,6 +211,14 @@ public class ListJobsShrinkRequest extends TeaModel {
     }
     public String getUserIdForFilter() {
         return this.userIdForFilter;
+    }
+
+    public ListJobsShrinkRequest setUsername(String username) {
+        this.username = username;
+        return this;
+    }
+    public String getUsername() {
+        return this.username;
     }
 
     public ListJobsShrinkRequest setWorkspaceId(String workspaceId) {

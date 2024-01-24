@@ -25,6 +25,9 @@ public class JobSettings extends TeaModel {
     @NameInMap("EnableRDMA")
     public Boolean enableRDMA;
 
+    @NameInMap("EnableSanityCheck")
+    public Boolean enableSanityCheck;
+
     @NameInMap("EnableTideResource")
     public Boolean enableTideResource;
 
@@ -42,6 +45,9 @@ public class JobSettings extends TeaModel {
 
     @NameInMap("PipelineId")
     public String pipelineId;
+
+    @NameInMap("SanityCheckArgs")
+    public String sanityCheckArgs;
 
     @NameInMap("Tags")
     public java.util.Map<String, String> tags;
@@ -107,6 +113,14 @@ public class JobSettings extends TeaModel {
         return this.enableRDMA;
     }
 
+    public JobSettings setEnableSanityCheck(Boolean enableSanityCheck) {
+        this.enableSanityCheck = enableSanityCheck;
+        return this;
+    }
+    public Boolean getEnableSanityCheck() {
+        return this.enableSanityCheck;
+    }
+
     public JobSettings setEnableTideResource(Boolean enableTideResource) {
         this.enableTideResource = enableTideResource;
         return this;
@@ -153,6 +167,14 @@ public class JobSettings extends TeaModel {
     }
     public String getPipelineId() {
         return this.pipelineId;
+    }
+
+    public JobSettings setSanityCheckArgs(String sanityCheckArgs) {
+        this.sanityCheckArgs = sanityCheckArgs;
+        return this;
+    }
+    public String getSanityCheckArgs() {
+        return this.sanityCheckArgs;
     }
 
     public JobSettings setTags(java.util.Map<String, String> tags) {
