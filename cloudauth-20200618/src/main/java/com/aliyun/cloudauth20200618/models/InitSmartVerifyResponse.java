@@ -4,77 +4,45 @@ package com.aliyun.cloudauth20200618.models;
 import com.aliyun.tea.*;
 
 public class InitSmartVerifyResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("statusCode")
     @Validation(required = true)
-    public String message;
+    public Integer statusCode;
 
-    @NameInMap("RequestId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("ResultObject")
-    @Validation(required = true)
-    public InitSmartVerifyResponseResultObject resultObject;
+    public InitSmartVerifyResponseBody body;
 
     public static InitSmartVerifyResponse build(java.util.Map<String, ?> map) throws Exception {
         InitSmartVerifyResponse self = new InitSmartVerifyResponse();
         return TeaModel.build(map, self);
     }
 
-    public InitSmartVerifyResponse setCode(String code) {
-        this.code = code;
+    public InitSmartVerifyResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public InitSmartVerifyResponse setMessage(String message) {
-        this.message = message;
+    public InitSmartVerifyResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
         return this;
     }
-    public String getMessage() {
-        return this.message;
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
-    public InitSmartVerifyResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public InitSmartVerifyResponse setBody(InitSmartVerifyResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public InitSmartVerifyResponse setResultObject(InitSmartVerifyResponseResultObject resultObject) {
-        this.resultObject = resultObject;
-        return this;
-    }
-    public InitSmartVerifyResponseResultObject getResultObject() {
-        return this.resultObject;
-    }
-
-    public static class InitSmartVerifyResponseResultObject extends TeaModel {
-        @NameInMap("CertifyId")
-        @Validation(required = true)
-        public String certifyId;
-
-        public static InitSmartVerifyResponseResultObject build(java.util.Map<String, ?> map) throws Exception {
-            InitSmartVerifyResponseResultObject self = new InitSmartVerifyResponseResultObject();
-            return TeaModel.build(map, self);
-        }
-
-        public InitSmartVerifyResponseResultObject setCertifyId(String certifyId) {
-            this.certifyId = certifyId;
-            return this;
-        }
-        public String getCertifyId() {
-            return this.certifyId;
-        }
-
+    public InitSmartVerifyResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,8 +4,7 @@ package com.aliyun.cloudauth20200618.models;
 import com.aliyun.tea.*;
 
 public class ElementSmartVerifyAdvanceRequest extends TeaModel {
-    @NameInMap("CertFileObject")
-    @Validation(required = true)
+    @NameInMap("CertFile")
     public java.io.InputStream certFileObject;
 
     @NameInMap("CertName")

@@ -8,7 +8,6 @@ public class DescribeSmsDetailRequest extends TeaModel {
     public String bizId;
 
     @NameInMap("CurrentPage")
-    @Validation(required = true)
     public Integer currentPage;
 
     @NameInMap("ErrorCode")
@@ -21,11 +20,9 @@ public class DescribeSmsDetailRequest extends TeaModel {
     public String outerOrderNo;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("SendDate")
-    @Validation(required = true)
     public String sendDate;
 
     @NameInMap("SendStatus")
