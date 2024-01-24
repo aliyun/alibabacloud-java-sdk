@@ -4,9 +4,15 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class CreateAccessGroupResponseBody extends TeaModel {
+    /**
+     * <p>The name of the permission group.</p>
+     */
     @NameInMap("AccessGroupName")
     public String accessGroupName;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

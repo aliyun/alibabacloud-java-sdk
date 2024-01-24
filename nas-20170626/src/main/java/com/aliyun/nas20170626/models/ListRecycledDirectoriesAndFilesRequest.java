@@ -4,29 +4,41 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class ListRecycledDirectoriesAndFilesRequest extends TeaModel {
-    @NameInMap("FileSystemId")
-    public String fileSystemId;
-
+    /**
+     * <p>The ID of the directory that you want to query.</p>
+     * <br>
+     * <p>You can call the [ListRecycleBinJobs](~~264192~~) operation to query the value of the FileId parameter.</p>
+     */
     @NameInMap("FileId")
     public String fileId;
 
-    @NameInMap("NextToken")
-    public String nextToken;
+    /**
+     * <p>The ID of the file system.</p>
+     */
+    @NameInMap("FileSystemId")
+    public String fileSystemId;
 
+    /**
+     * <p>The number of files or directories to return for each query.</p>
+     * <br>
+     * <p>Valid values: 10 to 1000.</p>
+     * <br>
+     * <p>Default value: 100.</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
+
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+     * <br>
+     * <p>If all the files and directories are incompletely returned in a query, the return value of the NextToken parameter is not empty. In this case, you can specify a valid value for the NextToken parameter to continue the query.</p>
+     */
+    @NameInMap("NextToken")
+    public String nextToken;
 
     public static ListRecycledDirectoriesAndFilesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRecycledDirectoriesAndFilesRequest self = new ListRecycledDirectoriesAndFilesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListRecycledDirectoriesAndFilesRequest setFileSystemId(String fileSystemId) {
-        this.fileSystemId = fileSystemId;
-        return this;
-    }
-    public String getFileSystemId() {
-        return this.fileSystemId;
     }
 
     public ListRecycledDirectoriesAndFilesRequest setFileId(String fileId) {
@@ -37,12 +49,12 @@ public class ListRecycledDirectoriesAndFilesRequest extends TeaModel {
         return this.fileId;
     }
 
-    public ListRecycledDirectoriesAndFilesRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public ListRecycledDirectoriesAndFilesRequest setFileSystemId(String fileSystemId) {
+        this.fileSystemId = fileSystemId;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
+    public String getFileSystemId() {
+        return this.fileSystemId;
     }
 
     public ListRecycledDirectoriesAndFilesRequest setMaxResults(Long maxResults) {
@@ -51,6 +63,14 @@ public class ListRecycledDirectoriesAndFilesRequest extends TeaModel {
     }
     public Long getMaxResults() {
         return this.maxResults;
+    }
+
+    public ListRecycledDirectoriesAndFilesRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
 }

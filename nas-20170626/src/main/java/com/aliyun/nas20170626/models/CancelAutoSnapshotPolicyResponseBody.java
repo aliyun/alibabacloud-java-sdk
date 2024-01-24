@@ -4,6 +4,11 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class CancelAutoSnapshotPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * <br>
+     * <p>Every response returns a unique request ID regardless of whether the request is successful.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

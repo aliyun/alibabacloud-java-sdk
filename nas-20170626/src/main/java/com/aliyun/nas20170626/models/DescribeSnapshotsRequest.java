@@ -4,33 +4,88 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotsRequest extends TeaModel {
-    @NameInMap("FileSystemType")
-    public String fileSystemType;
-
+    /**
+     * <p>The ID of the file system.</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
-    @NameInMap("SnapshotIds")
-    public String snapshotIds;
+    /**
+     * <p>The type of the file system.</p>
+     * <br>
+     * <p>Valid value: extreme, which indicates Extreme NAS file systems.</p>
+     */
+    @NameInMap("FileSystemType")
+    public String fileSystemType;
 
-    @NameInMap("SnapshotName")
-    public String snapshotName;
+    /**
+     * <p>The page number.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: 1.</p>
+     */
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
-    @NameInMap("SnapshotType")
-    public String snapshotType;
-
-    @NameInMap("Status")
-    public String status;
-
+    /**
+     * <p>The number of entries per page.</p>
+     * <br>
+     * <p>Valid values: 1 to 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    /**
+     * <p>The snapshot IDs.</p>
+     * <br>
+     * <p>You can specify a maximum of 100 snapshot IDs. You must separate snapshot IDs with commas (,).</p>
+     */
+    @NameInMap("SnapshotIds")
+    public String snapshotIds;
+
+    /**
+     * <p>The snapshot name.</p>
+     */
+    @NameInMap("SnapshotName")
+    public String snapshotName;
+
+    /**
+     * <p>The type of the snapshot.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   auto: auto snapshot</p>
+     * <p>*   user: manual snapshot</p>
+     * <p>*   all (default): all snapshot types</p>
+     */
+    @NameInMap("SnapshotType")
+    public String snapshotType;
+
+    /**
+     * <p>The status of the snapshot.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   progressing: The snapshot is being created.</p>
+     * <p>*   accomplished: The snapshot is created.</p>
+     * <p>*   failed: The snapshot fails to be created.</p>
+     * <p>*   all (default): all snapshot states.</p>
+     */
+    @NameInMap("Status")
+    public String status;
 
     public static DescribeSnapshotsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnapshotsRequest self = new DescribeSnapshotsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSnapshotsRequest setFileSystemId(String fileSystemId) {
+        this.fileSystemId = fileSystemId;
+        return this;
+    }
+    public String getFileSystemId() {
+        return this.fileSystemId;
     }
 
     public DescribeSnapshotsRequest setFileSystemType(String fileSystemType) {
@@ -41,12 +96,20 @@ public class DescribeSnapshotsRequest extends TeaModel {
         return this.fileSystemType;
     }
 
-    public DescribeSnapshotsRequest setFileSystemId(String fileSystemId) {
-        this.fileSystemId = fileSystemId;
+    public DescribeSnapshotsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getFileSystemId() {
-        return this.fileSystemId;
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeSnapshotsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeSnapshotsRequest setSnapshotIds(String snapshotIds) {
@@ -79,22 +142,6 @@ public class DescribeSnapshotsRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
-    }
-
-    public DescribeSnapshotsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeSnapshotsRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
     }
 
 }

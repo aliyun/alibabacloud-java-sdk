@@ -4,6 +4,11 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class CancelAutoSnapshotPolicyRequest extends TeaModel {
+    /**
+     * <p>The IDs of file systems.</p>
+     * <br>
+     * <p>You can specify a maximum of 100 file system IDs. If you want to remove automatic snapshot policies from multiple file systems, separate the file system IDs with commas (,).</p>
+     */
     @NameInMap("FileSystemIds")
     public String fileSystemIds;
 

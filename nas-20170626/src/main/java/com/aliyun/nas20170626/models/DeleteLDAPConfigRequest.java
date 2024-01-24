@@ -4,6 +4,9 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DeleteLDAPConfigRequest extends TeaModel {
+    /**
+     * <p>The ID of the file system.</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 

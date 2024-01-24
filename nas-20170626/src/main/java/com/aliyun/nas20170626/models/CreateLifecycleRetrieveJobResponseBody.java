@@ -4,23 +4,21 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class CreateLifecycleRetrieveJobResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
+    /**
+     * <p>The ID of the data retrieval task.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
+
+    /**
+     * <p>The request ID.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateLifecycleRetrieveJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateLifecycleRetrieveJobResponseBody self = new CreateLifecycleRetrieveJobResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateLifecycleRetrieveJobResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateLifecycleRetrieveJobResponseBody setJobId(String jobId) {
@@ -29,6 +27,14 @@ public class CreateLifecycleRetrieveJobResponseBody extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public CreateLifecycleRetrieveJobResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

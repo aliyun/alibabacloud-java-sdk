@@ -4,9 +4,15 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class CreateAccessRuleResponseBody extends TeaModel {
+    /**
+     * <p>The rule ID.</p>
+     */
     @NameInMap("AccessRuleId")
     public String accessRuleId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,26 +4,27 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class CreateMountTargetResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
+    /**
+     * <p>The IPv4 domain name of the mount target.</p>
+     */
     @NameInMap("MountTargetDomain")
     public String mountTargetDomain;
 
+    /**
+     * <p>The information about the mount target.</p>
+     */
     @NameInMap("MountTargetExtra")
     public CreateMountTargetResponseBodyMountTargetExtra mountTargetExtra;
+
+    /**
+     * <p>The request ID.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateMountTargetResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateMountTargetResponseBody self = new CreateMountTargetResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateMountTargetResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateMountTargetResponseBody setMountTargetDomain(String mountTargetDomain) {
@@ -42,7 +43,18 @@ public class CreateMountTargetResponseBody extends TeaModel {
         return this.mountTargetExtra;
     }
 
+    public CreateMountTargetResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class CreateMountTargetResponseBodyMountTargetExtra extends TeaModel {
+        /**
+         * <p>The dual-stack (IPv4 and IPv6) domain name of the mount target.</p>
+         */
         @NameInMap("DualStackMountTargetDomain")
         public String dualStackMountTargetDomain;
 

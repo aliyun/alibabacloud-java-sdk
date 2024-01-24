@@ -4,9 +4,15 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class ResetFileSystemRequest extends TeaModel {
+    /**
+     * <p>The ID of the advanced Extreme NAS file system.</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <p>The snapshot ID.</p>
+     */
     @NameInMap("SnapshotId")
     public String snapshotId;
 

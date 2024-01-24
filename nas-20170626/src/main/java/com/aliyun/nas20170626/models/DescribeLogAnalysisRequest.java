@@ -4,26 +4,35 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogAnalysisRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    /**
+     * <p>The page number. Default value: 1.</p>
+     */
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    /**
+     * <p>The region ID.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DescribeLogAnalysisRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogAnalysisRequest self = new DescribeLogAnalysisRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLogAnalysisRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeLogAnalysisRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeLogAnalysisRequest setPageSize(Integer pageSize) {
@@ -34,12 +43,12 @@ public class DescribeLogAnalysisRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeLogAnalysisRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeLogAnalysisRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -4,6 +4,9 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class CancelLifecycleRetrieveJobRequest extends TeaModel {
+    /**
+     * <p>The ID of the data retrieval task.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 

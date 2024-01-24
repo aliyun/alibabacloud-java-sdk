@@ -4,6 +4,9 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class RemoveTagsRequest extends TeaModel {
+    /**
+     * <p>The ID of the file system.</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
@@ -32,9 +35,15 @@ public class RemoveTagsRequest extends TeaModel {
     }
 
     public static class RemoveTagsRequestTag extends TeaModel {
+        /**
+         * <p>The key (TagKey) of Tag N. Each tag that you want to remove includes a TagKey and TagValue. You can specify 1 to 10 tags at a time. A TagKey cannot be an empty string, but a TagValue can be an empty string.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value (TagValue) of Tag N. Each tag that you want to remove includes a TagKey and TagValue. You can specify a maximum of 5 tags at a time. A TagKey cannot be an empty string, but a TagValue can be an empty string.</p>
+         */
         @NameInMap("Value")
         public String value;
 

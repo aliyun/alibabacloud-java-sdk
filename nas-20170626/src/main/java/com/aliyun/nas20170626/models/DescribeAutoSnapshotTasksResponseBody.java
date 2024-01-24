@@ -4,56 +4,39 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
+    /**
+     * <p>The queried automatic snapshot tasks.</p>
+     */
+    @NameInMap("AutoSnapshotTasks")
+    public DescribeAutoSnapshotTasksResponseBodyAutoSnapshotTasks autoSnapshotTasks;
+
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>The total number of automatic snapshot tasks.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("AutoSnapshotTasks")
-    public DescribeAutoSnapshotTasksResponseBodyAutoSnapshotTasks autoSnapshotTasks;
 
     public static DescribeAutoSnapshotTasksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAutoSnapshotTasksResponseBody self = new DescribeAutoSnapshotTasksResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAutoSnapshotTasksResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeAutoSnapshotTasksResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeAutoSnapshotTasksResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeAutoSnapshotTasksResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeAutoSnapshotTasksResponseBody setAutoSnapshotTasks(DescribeAutoSnapshotTasksResponseBodyAutoSnapshotTasks autoSnapshotTasks) {
@@ -64,10 +47,48 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
         return this.autoSnapshotTasks;
     }
 
+    public DescribeAutoSnapshotTasksResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeAutoSnapshotTasksResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeAutoSnapshotTasksResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeAutoSnapshotTasksResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeAutoSnapshotTasksResponseBodyAutoSnapshotTasksAutoSnapshotTask extends TeaModel {
+        /**
+         * <p>The ID of the automatic snapshot policy.</p>
+         */
         @NameInMap("AutoSnapshotPolicyId")
         public String autoSnapshotPolicyId;
 
+        /**
+         * <p>The ID of the file system.</p>
+         */
         @NameInMap("SourceFileSystemId")
         public String sourceFileSystemId;
 

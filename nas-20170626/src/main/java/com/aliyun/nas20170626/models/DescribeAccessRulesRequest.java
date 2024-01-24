@@ -4,20 +4,46 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessRulesRequest extends TeaModel {
+    /**
+     * <p>The name of the permission group.</p>
+     */
     @NameInMap("AccessGroupName")
     public String accessGroupName;
 
+    /**
+     * <p>The ID of the rule.</p>
+     */
     @NameInMap("AccessRuleId")
     public String accessRuleId;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    /**
+     * <p>The type of the file system.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   standard (default): General-purpose NAS file system</p>
+     * <p>*   extreme: Extreme NAS file system</p>
+     */
+    @NameInMap("FileSystemType")
+    public String fileSystemType;
 
+    /**
+     * <p>The page number.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("FileSystemType")
-    public String fileSystemType;
+    /**
+     * <p>The number of entries per page.</p>
+     * <br>
+     * <p>Valid values: 1 to 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     public static DescribeAccessRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccessRulesRequest self = new DescribeAccessRulesRequest();
@@ -40,12 +66,12 @@ public class DescribeAccessRulesRequest extends TeaModel {
         return this.accessRuleId;
     }
 
-    public DescribeAccessRulesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeAccessRulesRequest setFileSystemType(String fileSystemType) {
+        this.fileSystemType = fileSystemType;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getFileSystemType() {
+        return this.fileSystemType;
     }
 
     public DescribeAccessRulesRequest setPageNumber(Integer pageNumber) {
@@ -56,12 +82,12 @@ public class DescribeAccessRulesRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeAccessRulesRequest setFileSystemType(String fileSystemType) {
-        this.fileSystemType = fileSystemType;
+    public DescribeAccessRulesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getFileSystemType() {
-        return this.fileSystemType;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }

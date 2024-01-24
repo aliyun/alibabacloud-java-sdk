@@ -4,15 +4,38 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class ListLifecycleRetrieveJobsRequest extends TeaModel {
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
+    /**
+     * <p>The ID of the file system.</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: 1.</p>
+     */
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: 1 to 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
+     * <p>The status of the data retrieval task. Valid values:</p>
+     * <br>
+     * <p>*   active: The task is running.</p>
+     * <p>*   canceled: The task is canceled.</p>
+     * <p>*   completed: The task is completed.</p>
+     * <p>*   failed: The task has failed.</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -21,12 +44,12 @@ public class ListLifecycleRetrieveJobsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListLifecycleRetrieveJobsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public ListLifecycleRetrieveJobsRequest setFileSystemId(String fileSystemId) {
+        this.fileSystemId = fileSystemId;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getFileSystemId() {
+        return this.fileSystemId;
     }
 
     public ListLifecycleRetrieveJobsRequest setPageNumber(Integer pageNumber) {
@@ -37,12 +60,12 @@ public class ListLifecycleRetrieveJobsRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListLifecycleRetrieveJobsRequest setFileSystemId(String fileSystemId) {
-        this.fileSystemId = fileSystemId;
+    public ListLifecycleRetrieveJobsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getFileSystemId() {
-        return this.fileSystemId;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListLifecycleRetrieveJobsRequest setStatus(String status) {
