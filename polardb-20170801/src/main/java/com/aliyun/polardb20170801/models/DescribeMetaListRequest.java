@@ -56,6 +56,9 @@ public class DescribeMetaListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region in which the instance resides. You can call the [DescribeDBClusterAttribute](~~2319132~~) operation to query the region ID of the instance.</p>
+     */
     @NameInMap("RegionCode")
     public String regionCode;
 

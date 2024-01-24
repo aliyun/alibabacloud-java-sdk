@@ -4,6 +4,11 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeVSwitchesRequest extends TeaModel {
+    /**
+     * <p>The dedicated cluster ID.</p>
+     * <br>
+     * <p>>  You must specify at least one of the **VpcId** and **DedicatedHostGroupId** parameters.</p>
+     */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
 
@@ -13,15 +18,27 @@ public class DescribeVSwitchesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number of the page to return. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return per page. Maximum value: 50. Default value: 50.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region where the vSwitch belongs.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the vSwitch belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -34,9 +51,17 @@ public class DescribeVSwitchesRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The ID of the virtual private type (VPC) to which the vSwitch belongs.</p>
+     * <br>
+     * <p>>  You must specify at least one of the **VpcId** and **DedicatedHostGroupId** parameters.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The ID of the zone to which the vSwitch belongs.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
