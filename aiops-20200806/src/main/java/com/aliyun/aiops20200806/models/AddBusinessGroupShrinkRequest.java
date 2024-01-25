@@ -7,26 +7,26 @@ public class AddBusinessGroupShrinkRequest extends TeaModel {
     @NameInMap("AliUid")
     public String aliUid;
 
-    @NameInMap("BusinessGroupName")
-    public String businessGroupName;
-
     @NameInMap("BusinessGroupDesc")
     public String businessGroupDesc;
 
-    @NameInMap("ResourceType")
-    public Integer resourceType;
+    @NameInMap("BusinessGroupName")
+    public String businessGroupName;
 
     @NameInMap("CreateUser")
     public String createUser;
-
-    @NameInMap("UpdateUser")
-    public String updateUser;
 
     @NameInMap("InstanceList")
     public String instanceListShrink;
 
     @NameInMap("OperaUid")
     public String operaUid;
+
+    @NameInMap("ResourceType")
+    public Integer resourceType;
+
+    @NameInMap("UpdateUser")
+    public String updateUser;
 
     public static AddBusinessGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         AddBusinessGroupShrinkRequest self = new AddBusinessGroupShrinkRequest();
@@ -41,14 +41,6 @@ public class AddBusinessGroupShrinkRequest extends TeaModel {
         return this.aliUid;
     }
 
-    public AddBusinessGroupShrinkRequest setBusinessGroupName(String businessGroupName) {
-        this.businessGroupName = businessGroupName;
-        return this;
-    }
-    public String getBusinessGroupName() {
-        return this.businessGroupName;
-    }
-
     public AddBusinessGroupShrinkRequest setBusinessGroupDesc(String businessGroupDesc) {
         this.businessGroupDesc = businessGroupDesc;
         return this;
@@ -57,12 +49,12 @@ public class AddBusinessGroupShrinkRequest extends TeaModel {
         return this.businessGroupDesc;
     }
 
-    public AddBusinessGroupShrinkRequest setResourceType(Integer resourceType) {
-        this.resourceType = resourceType;
+    public AddBusinessGroupShrinkRequest setBusinessGroupName(String businessGroupName) {
+        this.businessGroupName = businessGroupName;
         return this;
     }
-    public Integer getResourceType() {
-        return this.resourceType;
+    public String getBusinessGroupName() {
+        return this.businessGroupName;
     }
 
     public AddBusinessGroupShrinkRequest setCreateUser(String createUser) {
@@ -71,14 +63,6 @@ public class AddBusinessGroupShrinkRequest extends TeaModel {
     }
     public String getCreateUser() {
         return this.createUser;
-    }
-
-    public AddBusinessGroupShrinkRequest setUpdateUser(String updateUser) {
-        this.updateUser = updateUser;
-        return this;
-    }
-    public String getUpdateUser() {
-        return this.updateUser;
     }
 
     public AddBusinessGroupShrinkRequest setInstanceListShrink(String instanceListShrink) {
@@ -95,6 +79,22 @@ public class AddBusinessGroupShrinkRequest extends TeaModel {
     }
     public String getOperaUid() {
         return this.operaUid;
+    }
+
+    public AddBusinessGroupShrinkRequest setResourceType(Integer resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public Integer getResourceType() {
+        return this.resourceType;
+    }
+
+    public AddBusinessGroupShrinkRequest setUpdateUser(String updateUser) {
+        this.updateUser = updateUser;
+        return this;
+    }
+    public String getUpdateUser() {
+        return this.updateUser;
     }
 
 }

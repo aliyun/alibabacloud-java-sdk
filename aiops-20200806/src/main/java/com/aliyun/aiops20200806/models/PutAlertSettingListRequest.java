@@ -4,26 +4,26 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class PutAlertSettingListRequest extends TeaModel {
-    @NameInMap("ContactIdsJson")
-    public String contactIdsJson;
+    @NameInMap("AlertSettingEditRequestListJson")
+    public String alertSettingEditRequestListJson;
 
     @NameInMap("ContactGroupIdsJson")
     public String contactGroupIdsJson;
 
-    @NameInMap("AlertSettingEditRequestListJson")
-    public String alertSettingEditRequestListJson;
+    @NameInMap("ContactIdsJson")
+    public String contactIdsJson;
 
     public static PutAlertSettingListRequest build(java.util.Map<String, ?> map) throws Exception {
         PutAlertSettingListRequest self = new PutAlertSettingListRequest();
         return TeaModel.build(map, self);
     }
 
-    public PutAlertSettingListRequest setContactIdsJson(String contactIdsJson) {
-        this.contactIdsJson = contactIdsJson;
+    public PutAlertSettingListRequest setAlertSettingEditRequestListJson(String alertSettingEditRequestListJson) {
+        this.alertSettingEditRequestListJson = alertSettingEditRequestListJson;
         return this;
     }
-    public String getContactIdsJson() {
-        return this.contactIdsJson;
+    public String getAlertSettingEditRequestListJson() {
+        return this.alertSettingEditRequestListJson;
     }
 
     public PutAlertSettingListRequest setContactGroupIdsJson(String contactGroupIdsJson) {
@@ -34,12 +34,12 @@ public class PutAlertSettingListRequest extends TeaModel {
         return this.contactGroupIdsJson;
     }
 
-    public PutAlertSettingListRequest setAlertSettingEditRequestListJson(String alertSettingEditRequestListJson) {
-        this.alertSettingEditRequestListJson = alertSettingEditRequestListJson;
+    public PutAlertSettingListRequest setContactIdsJson(String contactIdsJson) {
+        this.contactIdsJson = contactIdsJson;
         return this;
     }
-    public String getAlertSettingEditRequestListJson() {
-        return this.alertSettingEditRequestListJson;
+    public String getContactIdsJson() {
+        return this.contactIdsJson;
     }
 
 }

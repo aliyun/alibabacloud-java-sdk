@@ -4,8 +4,11 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class UpdateAuthorizationResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public String data;
 
     @NameInMap("Message")
     public String message;
@@ -13,23 +16,28 @@ public class UpdateAuthorizationResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public String data;
-
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Status")
+    public String status;
 
     public static UpdateAuthorizationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateAuthorizationResponseBody self = new UpdateAuthorizationResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateAuthorizationResponseBody setStatus(String status) {
-        this.status = status;
+    public UpdateAuthorizationResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public String getCode() {
+        return this.code;
+    }
+
+    public UpdateAuthorizationResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
     public UpdateAuthorizationResponseBody setMessage(String message) {
@@ -48,20 +56,12 @@ public class UpdateAuthorizationResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateAuthorizationResponseBody setData(String data) {
-        this.data = data;
+    public UpdateAuthorizationResponseBody setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public String getData() {
-        return this.data;
-    }
-
-    public UpdateAuthorizationResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public String getStatus() {
+        return this.status;
     }
 
 }

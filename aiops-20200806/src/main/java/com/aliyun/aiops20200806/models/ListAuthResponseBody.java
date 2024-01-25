@@ -4,18 +4,26 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class ListAuthResponseBody extends TeaModel {
+    @NameInMap("List")
+    public java.util.List<String> list;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("List")
-    public java.util.List<String> list;
-
     public static ListAuthResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAuthResponseBody self = new ListAuthResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListAuthResponseBody setList(java.util.List<String> list) {
+        this.list = list;
+        return this;
+    }
+    public java.util.List<String> getList() {
+        return this.list;
     }
 
     public ListAuthResponseBody setMessage(String message) {
@@ -32,14 +40,6 @@ public class ListAuthResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ListAuthResponseBody setList(java.util.List<String> list) {
-        this.list = list;
-        return this;
-    }
-    public java.util.List<String> getList() {
-        return this.list;
     }
 
 }

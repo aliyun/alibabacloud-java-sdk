@@ -4,33 +4,24 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class GetEventDetailResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public Integer code;
-
-    @NameInMap("Msg")
-    public String msg;
-
-    @NameInMap("Status")
-    public String status;
 
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
+    @NameInMap("Msg")
+    public String msg;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Status")
+    public String status;
+
     public static GetEventDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetEventDetailResponseBody self = new GetEventDetailResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetEventDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetEventDetailResponseBody setCode(Integer code) {
@@ -41,6 +32,14 @@ public class GetEventDetailResponseBody extends TeaModel {
         return this.code;
     }
 
+    public GetEventDetailResponseBody setData(java.util.Map<String, ?> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.Map<String, ?> getData() {
+        return this.data;
+    }
+
     public GetEventDetailResponseBody setMsg(String msg) {
         this.msg = msg;
         return this;
@@ -49,20 +48,20 @@ public class GetEventDetailResponseBody extends TeaModel {
         return this.msg;
     }
 
+    public GetEventDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public GetEventDetailResponseBody setStatus(String status) {
         this.status = status;
         return this;
     }
     public String getStatus() {
         return this.status;
-    }
-
-    public GetEventDetailResponseBody setData(java.util.Map<String, ?> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.Map<String, ?> getData() {
-        return this.data;
     }
 
 }

@@ -4,15 +4,14 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class AddBusinessGroupResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Msg")
     public String msg;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Status")
     public String status;
@@ -20,14 +19,6 @@ public class AddBusinessGroupResponseBody extends TeaModel {
     public static AddBusinessGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddBusinessGroupResponseBody self = new AddBusinessGroupResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AddBusinessGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public AddBusinessGroupResponseBody setCode(Integer code) {
@@ -44,6 +35,14 @@ public class AddBusinessGroupResponseBody extends TeaModel {
     }
     public String getMsg() {
         return this.msg;
+    }
+
+    public AddBusinessGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public AddBusinessGroupResponseBody setStatus(String status) {

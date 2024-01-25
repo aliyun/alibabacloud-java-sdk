@@ -4,33 +4,24 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertContactWithAlertSettingIdResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public Integer code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("Status")
-    public String status;
 
     @NameInMap("Data")
     public java.util.List<DescribeAlertContactWithAlertSettingIdResponseBodyData> data;
 
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Status")
+    public String status;
+
     public static DescribeAlertContactWithAlertSettingIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAlertContactWithAlertSettingIdResponseBody self = new DescribeAlertContactWithAlertSettingIdResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAlertContactWithAlertSettingIdResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeAlertContactWithAlertSettingIdResponseBody setCode(Integer code) {
@@ -41,6 +32,14 @@ public class DescribeAlertContactWithAlertSettingIdResponseBody extends TeaModel
         return this.code;
     }
 
+    public DescribeAlertContactWithAlertSettingIdResponseBody setData(java.util.List<DescribeAlertContactWithAlertSettingIdResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<DescribeAlertContactWithAlertSettingIdResponseBodyData> getData() {
+        return this.data;
+    }
+
     public DescribeAlertContactWithAlertSettingIdResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -49,20 +48,20 @@ public class DescribeAlertContactWithAlertSettingIdResponseBody extends TeaModel
         return this.message;
     }
 
+    public DescribeAlertContactWithAlertSettingIdResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeAlertContactWithAlertSettingIdResponseBody setStatus(String status) {
         this.status = status;
         return this;
     }
     public String getStatus() {
         return this.status;
-    }
-
-    public DescribeAlertContactWithAlertSettingIdResponseBody setData(java.util.List<DescribeAlertContactWithAlertSettingIdResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<DescribeAlertContactWithAlertSettingIdResponseBodyData> getData() {
-        return this.data;
     }
 
     public static class DescribeAlertContactWithAlertSettingIdResponseBodyData extends TeaModel {

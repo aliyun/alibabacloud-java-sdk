@@ -10,14 +10,14 @@ public class GetUserLoginInfoRequest extends TeaModel {
     @NameInMap("AccountPrincipalName")
     public String accountPrincipalName;
 
-    @NameInMap("MainAccountPk")
-    public String mainAccountPk;
+    @NameInMap("AccountType")
+    public String accountType;
 
     @NameInMap("CurrentPk")
     public String currentPk;
 
-    @NameInMap("AccountType")
-    public String accountType;
+    @NameInMap("MainAccountPk")
+    public String mainAccountPk;
 
     public static GetUserLoginInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         GetUserLoginInfoRequest self = new GetUserLoginInfoRequest();
@@ -40,12 +40,12 @@ public class GetUserLoginInfoRequest extends TeaModel {
         return this.accountPrincipalName;
     }
 
-    public GetUserLoginInfoRequest setMainAccountPk(String mainAccountPk) {
-        this.mainAccountPk = mainAccountPk;
+    public GetUserLoginInfoRequest setAccountType(String accountType) {
+        this.accountType = accountType;
         return this;
     }
-    public String getMainAccountPk() {
-        return this.mainAccountPk;
+    public String getAccountType() {
+        return this.accountType;
     }
 
     public GetUserLoginInfoRequest setCurrentPk(String currentPk) {
@@ -56,12 +56,12 @@ public class GetUserLoginInfoRequest extends TeaModel {
         return this.currentPk;
     }
 
-    public GetUserLoginInfoRequest setAccountType(String accountType) {
-        this.accountType = accountType;
+    public GetUserLoginInfoRequest setMainAccountPk(String mainAccountPk) {
+        this.mainAccountPk = mainAccountPk;
         return this;
     }
-    public String getAccountType() {
-        return this.accountType;
+    public String getMainAccountPk() {
+        return this.mainAccountPk;
     }
 
 }

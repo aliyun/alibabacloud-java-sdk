@@ -7,26 +7,26 @@ public class AddBusinessGroupRequest extends TeaModel {
     @NameInMap("AliUid")
     public String aliUid;
 
-    @NameInMap("BusinessGroupName")
-    public String businessGroupName;
-
     @NameInMap("BusinessGroupDesc")
     public String businessGroupDesc;
 
-    @NameInMap("ResourceType")
-    public Integer resourceType;
+    @NameInMap("BusinessGroupName")
+    public String businessGroupName;
 
     @NameInMap("CreateUser")
     public String createUser;
-
-    @NameInMap("UpdateUser")
-    public String updateUser;
 
     @NameInMap("InstanceList")
     public java.util.List<String> instanceList;
 
     @NameInMap("OperaUid")
     public String operaUid;
+
+    @NameInMap("ResourceType")
+    public Integer resourceType;
+
+    @NameInMap("UpdateUser")
+    public String updateUser;
 
     public static AddBusinessGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         AddBusinessGroupRequest self = new AddBusinessGroupRequest();
@@ -41,14 +41,6 @@ public class AddBusinessGroupRequest extends TeaModel {
         return this.aliUid;
     }
 
-    public AddBusinessGroupRequest setBusinessGroupName(String businessGroupName) {
-        this.businessGroupName = businessGroupName;
-        return this;
-    }
-    public String getBusinessGroupName() {
-        return this.businessGroupName;
-    }
-
     public AddBusinessGroupRequest setBusinessGroupDesc(String businessGroupDesc) {
         this.businessGroupDesc = businessGroupDesc;
         return this;
@@ -57,12 +49,12 @@ public class AddBusinessGroupRequest extends TeaModel {
         return this.businessGroupDesc;
     }
 
-    public AddBusinessGroupRequest setResourceType(Integer resourceType) {
-        this.resourceType = resourceType;
+    public AddBusinessGroupRequest setBusinessGroupName(String businessGroupName) {
+        this.businessGroupName = businessGroupName;
         return this;
     }
-    public Integer getResourceType() {
-        return this.resourceType;
+    public String getBusinessGroupName() {
+        return this.businessGroupName;
     }
 
     public AddBusinessGroupRequest setCreateUser(String createUser) {
@@ -71,14 +63,6 @@ public class AddBusinessGroupRequest extends TeaModel {
     }
     public String getCreateUser() {
         return this.createUser;
-    }
-
-    public AddBusinessGroupRequest setUpdateUser(String updateUser) {
-        this.updateUser = updateUser;
-        return this;
-    }
-    public String getUpdateUser() {
-        return this.updateUser;
     }
 
     public AddBusinessGroupRequest setInstanceList(java.util.List<String> instanceList) {
@@ -95,6 +79,22 @@ public class AddBusinessGroupRequest extends TeaModel {
     }
     public String getOperaUid() {
         return this.operaUid;
+    }
+
+    public AddBusinessGroupRequest setResourceType(Integer resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public Integer getResourceType() {
+        return this.resourceType;
+    }
+
+    public AddBusinessGroupRequest setUpdateUser(String updateUser) {
+        this.updateUser = updateUser;
+        return this;
+    }
+    public String getUpdateUser() {
+        return this.updateUser;
     }
 
 }

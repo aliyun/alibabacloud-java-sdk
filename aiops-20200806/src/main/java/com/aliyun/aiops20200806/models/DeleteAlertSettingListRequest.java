@@ -7,6 +7,9 @@ public class DeleteAlertSettingListRequest extends TeaModel {
     @NameInMap("CustomerIdsJson")
     public String customerIdsJson;
 
+    @NameInMap("OperaUid")
+    public String operaUid;
+
     public static DeleteAlertSettingListRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAlertSettingListRequest self = new DeleteAlertSettingListRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class DeleteAlertSettingListRequest extends TeaModel {
     }
     public String getCustomerIdsJson() {
         return this.customerIdsJson;
+    }
+
+    public DeleteAlertSettingListRequest setOperaUid(String operaUid) {
+        this.operaUid = operaUid;
+        return this;
+    }
+    public String getOperaUid() {
+        return this.operaUid;
     }
 
 }

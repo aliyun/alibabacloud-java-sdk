@@ -4,7 +4,6 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertSettingByIdRequest extends TeaModel {
-    // 报警设置id
     @NameInMap("AlertSettingId")
     public Long alertSettingId;
 

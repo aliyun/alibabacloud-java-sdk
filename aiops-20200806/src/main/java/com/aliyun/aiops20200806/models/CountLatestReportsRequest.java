@@ -4,11 +4,11 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class CountLatestReportsRequest extends TeaModel {
-    @NameInMap("ProductCode")
-    public String productCode;
-
     @NameInMap("LogStore")
     public String logStore;
+
+    @NameInMap("ProductCode")
+    public String productCode;
 
     @NameInMap("Uid")
     public Long uid;
@@ -18,20 +18,20 @@ public class CountLatestReportsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CountLatestReportsRequest setProductCode(String productCode) {
-        this.productCode = productCode;
-        return this;
-    }
-    public String getProductCode() {
-        return this.productCode;
-    }
-
     public CountLatestReportsRequest setLogStore(String logStore) {
         this.logStore = logStore;
         return this;
     }
     public String getLogStore() {
         return this.logStore;
+    }
+
+    public CountLatestReportsRequest setProductCode(String productCode) {
+        this.productCode = productCode;
+        return this;
+    }
+    public String getProductCode() {
+        return this.productCode;
     }
 
     public CountLatestReportsRequest setUid(Long uid) {

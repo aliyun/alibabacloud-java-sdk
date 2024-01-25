@@ -4,33 +4,24 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class GetAvgRepairTimeResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public Integer code;
-
-    @NameInMap("Status")
-    public Boolean status;
-
-    @NameInMap("Msg")
-    public String msg;
 
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
+    @NameInMap("Msg")
+    public String msg;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Status")
+    public Boolean status;
+
     public static GetAvgRepairTimeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAvgRepairTimeResponseBody self = new GetAvgRepairTimeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetAvgRepairTimeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetAvgRepairTimeResponseBody setCode(Integer code) {
@@ -41,12 +32,12 @@ public class GetAvgRepairTimeResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetAvgRepairTimeResponseBody setStatus(Boolean status) {
-        this.status = status;
+    public GetAvgRepairTimeResponseBody setData(java.util.Map<String, ?> data) {
+        this.data = data;
         return this;
     }
-    public Boolean getStatus() {
-        return this.status;
+    public java.util.Map<String, ?> getData() {
+        return this.data;
     }
 
     public GetAvgRepairTimeResponseBody setMsg(String msg) {
@@ -57,12 +48,20 @@ public class GetAvgRepairTimeResponseBody extends TeaModel {
         return this.msg;
     }
 
-    public GetAvgRepairTimeResponseBody setData(java.util.Map<String, ?> data) {
-        this.data = data;
+    public GetAvgRepairTimeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, ?> getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetAvgRepairTimeResponseBody setStatus(Boolean status) {
+        this.status = status;
+        return this;
+    }
+    public Boolean getStatus() {
+        return this.status;
     }
 
 }

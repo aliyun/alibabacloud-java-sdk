@@ -4,28 +4,59 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class ListReportsResponseBody extends TeaModel {
-    // Id of the request
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public java.util.List<ListReportsResponseBodyData> data;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("PageTotal")
+    public Long pageTotal;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Status")
     public String status;
 
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("Code")
-    public Integer code;
-
-    @NameInMap("PageTotal")
-    public Long pageTotal;
-
-    @NameInMap("Data")
-    public java.util.List<ListReportsResponseBodyData> data;
-
     public static ListReportsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListReportsResponseBody self = new ListReportsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListReportsResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public ListReportsResponseBody setData(java.util.List<ListReportsResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListReportsResponseBodyData> getData() {
+        return this.data;
+    }
+
+    public ListReportsResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListReportsResponseBody setPageTotal(Long pageTotal) {
+        this.pageTotal = pageTotal;
+        return this;
+    }
+    public Long getPageTotal() {
+        return this.pageTotal;
     }
 
     public ListReportsResponseBody setRequestId(String requestId) {
@@ -42,38 +73,6 @@ public class ListReportsResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
-    }
-
-    public ListReportsResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListReportsResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
-    public ListReportsResponseBody setPageTotal(Long pageTotal) {
-        this.pageTotal = pageTotal;
-        return this;
-    }
-    public Long getPageTotal() {
-        return this.pageTotal;
-    }
-
-    public ListReportsResponseBody setData(java.util.List<ListReportsResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<ListReportsResponseBodyData> getData() {
-        return this.data;
     }
 
     public static class ListReportsResponseBodyData extends TeaModel {

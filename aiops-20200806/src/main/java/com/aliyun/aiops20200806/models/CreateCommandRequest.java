@@ -7,6 +7,9 @@ public class CreateCommandRequest extends TeaModel {
     @NameInMap("CommandContent")
     public String commandContent;
 
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("Name")
     public String name;
 
@@ -15,9 +18,6 @@ public class CreateCommandRequest extends TeaModel {
 
     @NameInMap("Type")
     public String type;
-
-    @NameInMap("Description")
-    public String description;
 
     @NameInMap("WorkingDir")
     public String workingDir;
@@ -36,6 +36,14 @@ public class CreateCommandRequest extends TeaModel {
     }
     public String getCommandContent() {
         return this.commandContent;
+    }
+
+    public CreateCommandRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateCommandRequest setName(String name) {
@@ -60,14 +68,6 @@ public class CreateCommandRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
-    }
-
-    public CreateCommandRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
     public CreateCommandRequest setWorkingDir(String workingDir) {

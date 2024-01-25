@@ -7,14 +7,17 @@ public class FeedbackAlertAlgorithmRequest extends TeaModel {
     @NameInMap("AlertId")
     public Long alertId;
 
-    @NameInMap("OperaUid")
-    public String operaUid;
+    @NameInMap("AlgorithmAccurateDescribe")
+    public String algorithmAccurateDescribe;
 
     @NameInMap("AlgorithmAccurateState")
     public Integer algorithmAccurateState;
 
-    @NameInMap("AlgorithmAccurateDescribe")
-    public String algorithmAccurateDescribe;
+    @NameInMap("FeedbackType")
+    public Integer feedbackType;
+
+    @NameInMap("OperaUid")
+    public String operaUid;
 
     public static FeedbackAlertAlgorithmRequest build(java.util.Map<String, ?> map) throws Exception {
         FeedbackAlertAlgorithmRequest self = new FeedbackAlertAlgorithmRequest();
@@ -29,12 +32,12 @@ public class FeedbackAlertAlgorithmRequest extends TeaModel {
         return this.alertId;
     }
 
-    public FeedbackAlertAlgorithmRequest setOperaUid(String operaUid) {
-        this.operaUid = operaUid;
+    public FeedbackAlertAlgorithmRequest setAlgorithmAccurateDescribe(String algorithmAccurateDescribe) {
+        this.algorithmAccurateDescribe = algorithmAccurateDescribe;
         return this;
     }
-    public String getOperaUid() {
-        return this.operaUid;
+    public String getAlgorithmAccurateDescribe() {
+        return this.algorithmAccurateDescribe;
     }
 
     public FeedbackAlertAlgorithmRequest setAlgorithmAccurateState(Integer algorithmAccurateState) {
@@ -45,12 +48,20 @@ public class FeedbackAlertAlgorithmRequest extends TeaModel {
         return this.algorithmAccurateState;
     }
 
-    public FeedbackAlertAlgorithmRequest setAlgorithmAccurateDescribe(String algorithmAccurateDescribe) {
-        this.algorithmAccurateDescribe = algorithmAccurateDescribe;
+    public FeedbackAlertAlgorithmRequest setFeedbackType(Integer feedbackType) {
+        this.feedbackType = feedbackType;
         return this;
     }
-    public String getAlgorithmAccurateDescribe() {
-        return this.algorithmAccurateDescribe;
+    public Integer getFeedbackType() {
+        return this.feedbackType;
+    }
+
+    public FeedbackAlertAlgorithmRequest setOperaUid(String operaUid) {
+        this.operaUid = operaUid;
+        return this;
+    }
+    public String getOperaUid() {
+        return this.operaUid;
     }
 
 }
