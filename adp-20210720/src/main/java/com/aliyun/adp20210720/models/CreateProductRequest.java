@@ -22,6 +22,9 @@ public class CreateProductRequest extends TeaModel {
     @NameInMap("vendor")
     public String vendor;
 
+    @NameInMap("withoutProductVersion")
+    public Boolean withoutProductVersion;
+
     public static CreateProductRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateProductRequest self = new CreateProductRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class CreateProductRequest extends TeaModel {
     }
     public String getVendor() {
         return this.vendor;
+    }
+
+    public CreateProductRequest setWithoutProductVersion(Boolean withoutProductVersion) {
+        this.withoutProductVersion = withoutProductVersion;
+        return this;
+    }
+    public Boolean getWithoutProductVersion() {
+        return this.withoutProductVersion;
     }
 
 }

@@ -79,6 +79,12 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        @NameInMap("expireAt")
+        public String expireAt;
+
+        @NameInMap("instanceStatus")
+        public String instanceStatus;
+
         @NameInMap("location")
         public String location;
 
@@ -90,6 +96,9 @@ public class ListEnvironmentsResponseBody extends TeaModel {
 
         @NameInMap("platformList")
         public java.util.List<Platform> platformList;
+
+        @NameInMap("platformStatus")
+        public String platformStatus;
 
         @NameInMap("productName")
         public String productName;
@@ -127,6 +136,22 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             return this.description;
         }
 
+        public ListEnvironmentsResponseBodyDataList setExpireAt(String expireAt) {
+            this.expireAt = expireAt;
+            return this;
+        }
+        public String getExpireAt() {
+            return this.expireAt;
+        }
+
+        public ListEnvironmentsResponseBodyDataList setInstanceStatus(String instanceStatus) {
+            this.instanceStatus = instanceStatus;
+            return this;
+        }
+        public String getInstanceStatus() {
+            return this.instanceStatus;
+        }
+
         public ListEnvironmentsResponseBodyDataList setLocation(String location) {
             this.location = location;
             return this;
@@ -157,6 +182,14 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
         public java.util.List<Platform> getPlatformList() {
             return this.platformList;
+        }
+
+        public ListEnvironmentsResponseBodyDataList setPlatformStatus(String platformStatus) {
+            this.platformStatus = platformStatus;
+            return this;
+        }
+        public String getPlatformStatus() {
+            return this.platformStatus;
         }
 
         public ListEnvironmentsResponseBodyDataList setProductName(String productName) {

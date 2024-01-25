@@ -13,6 +13,9 @@ public class ListComponentVersionsShrinkRequest extends TeaModel {
     @NameInMap("platforms")
     public String platformsShrink;
 
+    @NameInMap("version")
+    public String version;
+
     public static ListComponentVersionsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListComponentVersionsShrinkRequest self = new ListComponentVersionsShrinkRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class ListComponentVersionsShrinkRequest extends TeaModel {
     }
     public String getPlatformsShrink() {
         return this.platformsShrink;
+    }
+
+    public ListComponentVersionsShrinkRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

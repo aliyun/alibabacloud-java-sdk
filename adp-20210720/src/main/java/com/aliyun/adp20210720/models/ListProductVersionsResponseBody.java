@@ -83,6 +83,36 @@ public class ListProductVersionsResponseBody extends TeaModel {
 
     }
 
+    public static class ListProductVersionsResponseBodyDataListTags extends TeaModel {
+        @NameInMap("key")
+        public String key;
+
+        @NameInMap("value")
+        public String value;
+
+        public static ListProductVersionsResponseBodyDataListTags build(java.util.Map<String, ?> map) throws Exception {
+            ListProductVersionsResponseBodyDataListTags self = new ListProductVersionsResponseBodyDataListTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListProductVersionsResponseBodyDataListTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListProductVersionsResponseBodyDataListTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListProductVersionsResponseBodyDataList extends TeaModel {
         @NameInMap("annotations")
         public ListProductVersionsResponseBodyDataListAnnotations annotations;
@@ -101,6 +131,12 @@ public class ListProductVersionsResponseBody extends TeaModel {
 
         @NameInMap("provider")
         public String provider;
+
+        @NameInMap("releasedAt")
+        public String releasedAt;
+
+        @NameInMap("tags")
+        public java.util.List<ListProductVersionsResponseBodyDataListTags> tags;
 
         @NameInMap("uid")
         public String uid;
@@ -159,6 +195,22 @@ public class ListProductVersionsResponseBody extends TeaModel {
         }
         public String getProvider() {
             return this.provider;
+        }
+
+        public ListProductVersionsResponseBodyDataList setReleasedAt(String releasedAt) {
+            this.releasedAt = releasedAt;
+            return this;
+        }
+        public String getReleasedAt() {
+            return this.releasedAt;
+        }
+
+        public ListProductVersionsResponseBodyDataList setTags(java.util.List<ListProductVersionsResponseBodyDataListTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListProductVersionsResponseBodyDataListTags> getTags() {
+            return this.tags;
         }
 
         public ListProductVersionsResponseBodyDataList setUid(String uid) {

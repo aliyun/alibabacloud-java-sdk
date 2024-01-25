@@ -22,6 +22,12 @@ public class ProductComponentRelationDetail extends TeaModel {
     @NameInMap("componentUID")
     public String componentUID;
 
+    @NameInMap("componentVersionSpecUID")
+    public String componentVersionSpecUID;
+
+    @NameInMap("componentVersionSpecValues")
+    public String componentVersionSpecValues;
+
     @NameInMap("componentVersionUID")
     public String componentVersionUID;
 
@@ -54,6 +60,9 @@ public class ProductComponentRelationDetail extends TeaModel {
 
     @NameInMap("parentComponentVersionUID")
     public String parentComponentVersionUID;
+
+    @NameInMap("policy")
+    public ProductComponentRelationDetailPolicy policy;
 
     @NameInMap("priority")
     public Integer priority;
@@ -144,6 +153,22 @@ public class ProductComponentRelationDetail extends TeaModel {
         return this.componentUID;
     }
 
+    public ProductComponentRelationDetail setComponentVersionSpecUID(String componentVersionSpecUID) {
+        this.componentVersionSpecUID = componentVersionSpecUID;
+        return this;
+    }
+    public String getComponentVersionSpecUID() {
+        return this.componentVersionSpecUID;
+    }
+
+    public ProductComponentRelationDetail setComponentVersionSpecValues(String componentVersionSpecValues) {
+        this.componentVersionSpecValues = componentVersionSpecValues;
+        return this;
+    }
+    public String getComponentVersionSpecValues() {
+        return this.componentVersionSpecValues;
+    }
+
     public ProductComponentRelationDetail setComponentVersionUID(String componentVersionUID) {
         this.componentVersionUID = componentVersionUID;
         return this;
@@ -230,6 +255,14 @@ public class ProductComponentRelationDetail extends TeaModel {
     }
     public String getParentComponentVersionUID() {
         return this.parentComponentVersionUID;
+    }
+
+    public ProductComponentRelationDetail setPolicy(ProductComponentRelationDetailPolicy policy) {
+        this.policy = policy;
+        return this;
+    }
+    public ProductComponentRelationDetailPolicy getPolicy() {
+        return this.policy;
     }
 
     public ProductComponentRelationDetail setPriority(Integer priority) {
@@ -326,6 +359,44 @@ public class ProductComponentRelationDetail extends TeaModel {
     }
     public String getVersion() {
         return this.version;
+    }
+
+    public static class ProductComponentRelationDetailPolicyMultiCluster extends TeaModel {
+        @NameInMap("targetClusters")
+        public java.util.List<String> targetClusters;
+
+        public static ProductComponentRelationDetailPolicyMultiCluster build(java.util.Map<String, ?> map) throws Exception {
+            ProductComponentRelationDetailPolicyMultiCluster self = new ProductComponentRelationDetailPolicyMultiCluster();
+            return TeaModel.build(map, self);
+        }
+
+        public ProductComponentRelationDetailPolicyMultiCluster setTargetClusters(java.util.List<String> targetClusters) {
+            this.targetClusters = targetClusters;
+            return this;
+        }
+        public java.util.List<String> getTargetClusters() {
+            return this.targetClusters;
+        }
+
+    }
+
+    public static class ProductComponentRelationDetailPolicy extends TeaModel {
+        @NameInMap("multiCluster")
+        public ProductComponentRelationDetailPolicyMultiCluster multiCluster;
+
+        public static ProductComponentRelationDetailPolicy build(java.util.Map<String, ?> map) throws Exception {
+            ProductComponentRelationDetailPolicy self = new ProductComponentRelationDetailPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public ProductComponentRelationDetailPolicy setMultiCluster(ProductComponentRelationDetailPolicyMultiCluster multiCluster) {
+            this.multiCluster = multiCluster;
+            return this;
+        }
+        public ProductComponentRelationDetailPolicyMultiCluster getMultiCluster() {
+            return this.multiCluster;
+        }
+
     }
 
 }

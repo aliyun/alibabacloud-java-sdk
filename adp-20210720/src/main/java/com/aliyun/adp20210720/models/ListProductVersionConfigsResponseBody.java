@@ -70,11 +70,17 @@ public class ListProductVersionConfigsResponseBody extends TeaModel {
         @NameInMap("productVersionUID")
         public String productVersionUID;
 
+        @NameInMap("scope")
+        public String scope;
+
         @NameInMap("uid")
         public String uid;
 
         @NameInMap("value")
         public String value;
+
+        @NameInMap("valueType")
+        public String valueType;
 
         public static ListProductVersionConfigsResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListProductVersionConfigsResponseBodyDataList self = new ListProductVersionConfigsResponseBodyDataList();
@@ -153,6 +159,14 @@ public class ListProductVersionConfigsResponseBody extends TeaModel {
             return this.productVersionUID;
         }
 
+        public ListProductVersionConfigsResponseBodyDataList setScope(String scope) {
+            this.scope = scope;
+            return this;
+        }
+        public String getScope() {
+            return this.scope;
+        }
+
         public ListProductVersionConfigsResponseBodyDataList setUid(String uid) {
             this.uid = uid;
             return this;
@@ -167,6 +181,14 @@ public class ListProductVersionConfigsResponseBody extends TeaModel {
         }
         public String getValue() {
             return this.value;
+        }
+
+        public ListProductVersionConfigsResponseBodyDataList setValueType(String valueType) {
+            this.valueType = valueType;
+            return this;
+        }
+        public String getValueType() {
+            return this.valueType;
         }
 
     }

@@ -7,6 +7,9 @@ public class ListDeliveryPackageRequest extends TeaModel {
     @NameInMap("deliverableUID")
     public String deliverableUID;
 
+    @NameInMap("platform")
+    public String platform;
+
     public static ListDeliveryPackageRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDeliveryPackageRequest self = new ListDeliveryPackageRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class ListDeliveryPackageRequest extends TeaModel {
     }
     public String getDeliverableUID() {
         return this.deliverableUID;
+    }
+
+    public ListDeliveryPackageRequest setPlatform(String platform) {
+        this.platform = platform;
+        return this;
+    }
+    public String getPlatform() {
+        return this.platform;
     }
 
 }

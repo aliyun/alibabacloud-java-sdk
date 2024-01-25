@@ -4,6 +4,9 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ListProductVersionsRequest extends TeaModel {
+    @NameInMap("fuzzy")
+    public String fuzzy;
+
     @NameInMap("pageNum")
     public String pageNum;
 
@@ -25,12 +28,23 @@ public class ListProductVersionsRequest extends TeaModel {
     @NameInMap("supportedFoundationTypes")
     public java.util.List<String> supportedFoundationTypes;
 
+    @NameInMap("tag")
+    public ListProductVersionsRequestTag tag;
+
     @NameInMap("version")
     public String version;
 
     public static ListProductVersionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListProductVersionsRequest self = new ListProductVersionsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListProductVersionsRequest setFuzzy(String fuzzy) {
+        this.fuzzy = fuzzy;
+        return this;
+    }
+    public String getFuzzy() {
+        return this.fuzzy;
     }
 
     public ListProductVersionsRequest setPageNum(String pageNum) {
@@ -89,6 +103,14 @@ public class ListProductVersionsRequest extends TeaModel {
         return this.supportedFoundationTypes;
     }
 
+    public ListProductVersionsRequest setTag(ListProductVersionsRequestTag tag) {
+        this.tag = tag;
+        return this;
+    }
+    public ListProductVersionsRequestTag getTag() {
+        return this.tag;
+    }
+
     public ListProductVersionsRequest setVersion(String version) {
         this.version = version;
         return this;
@@ -123,6 +145,36 @@ public class ListProductVersionsRequest extends TeaModel {
         }
         public String getOs() {
             return this.os;
+        }
+
+    }
+
+    public static class ListProductVersionsRequestTag extends TeaModel {
+        @NameInMap("key")
+        public String key;
+
+        @NameInMap("value")
+        public String value;
+
+        public static ListProductVersionsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListProductVersionsRequestTag self = new ListProductVersionsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListProductVersionsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListProductVersionsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

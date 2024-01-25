@@ -95,6 +95,9 @@ public class GetDeliverableResponseBody extends TeaModel {
     }
 
     public static class GetDeliverableResponseBodyDataProducts extends TeaModel {
+        @NameInMap("namespace")
+        public String namespace;
+
         @NameInMap("productName")
         public String productName;
 
@@ -119,6 +122,14 @@ public class GetDeliverableResponseBody extends TeaModel {
         public static GetDeliverableResponseBodyDataProducts build(java.util.Map<String, ?> map) throws Exception {
             GetDeliverableResponseBodyDataProducts self = new GetDeliverableResponseBodyDataProducts();
             return TeaModel.build(map, self);
+        }
+
+        public GetDeliverableResponseBodyDataProducts setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
         }
 
         public GetDeliverableResponseBodyDataProducts setProductName(String productName) {

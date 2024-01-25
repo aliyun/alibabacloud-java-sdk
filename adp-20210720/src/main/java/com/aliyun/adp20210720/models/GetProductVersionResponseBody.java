@@ -155,6 +155,9 @@ public class GetProductVersionResponseBody extends TeaModel {
         @NameInMap("provider")
         public String provider;
 
+        @NameInMap("timeout")
+        public Long timeout;
+
         @NameInMap("uid")
         public String uid;
 
@@ -244,6 +247,14 @@ public class GetProductVersionResponseBody extends TeaModel {
         }
         public String getProvider() {
             return this.provider;
+        }
+
+        public GetProductVersionResponseBodyData setTimeout(Long timeout) {
+            this.timeout = timeout;
+            return this;
+        }
+        public Long getTimeout() {
+            return this.timeout;
         }
 
         public GetProductVersionResponseBodyData setUid(String uid) {

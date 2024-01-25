@@ -22,6 +22,9 @@ public class CreateProductDeploymentRequest extends TeaModel {
     @NameInMap("productVersionUID")
     public String productVersionUID;
 
+    @NameInMap("timeout")
+    public Long timeout;
+
     public static CreateProductDeploymentRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateProductDeploymentRequest self = new CreateProductDeploymentRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class CreateProductDeploymentRequest extends TeaModel {
     }
     public String getProductVersionUID() {
         return this.productVersionUID;
+    }
+
+    public CreateProductDeploymentRequest setTimeout(Long timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+    public Long getTimeout() {
+        return this.timeout;
     }
 
 }
