@@ -5,103 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateServerCertificateWithCsrRequest extends TeaModel {
     /**
-     * <p>The content of the server certificate.</p>
-     */
-    @NameInMap("AfterTime")
-    public Long afterTime;
-
-    /**
-     * <p>The unique identifier of the intermediate CA certificate from which the server certificate is issued.</p>
-     * <br>
-     * <p>>  You can call the [DescribeCACertificateList](~~328095~~) operation to query the unique identifier of an intermediate CA certificate.</p>
-     */
-    @NameInMap("Algorithm")
-    public String algorithm;
-
-    /**
-     * <p>Specifies whether to return the certificate. Valid values:</p>
-     * <br>
-     * <p>*   **0**: does not return the certificate. This is the default value.</p>
-     * <p>*   **1**: returns the certificate.</p>
-     * <p>*   **2**: returns the certificate and the certificate chain of the certificate.</p>
-     */
-    @NameInMap("BeforeTime")
-    public Long beforeTime;
-
-    /**
-     * <p>The name of the city in which the organization is located. The value can contain letters. The default value is the name of the city in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued.</p>
-     */
-    @NameInMap("CommonName")
-    public String commonName;
-
-    /**
-     * <p>The province, municipality, or autonomous region in which the organization is located. The value can contain letters. The default value is the name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued.</p>
-     */
-    @NameInMap("Country")
-    public String country;
-
-    /**
-     * <p>The name of the organization. Default value: Alibaba Inc.</p>
-     */
-    @NameInMap("Csr")
-    public String csr;
-
-    /**
      * <p>The expiration time of the server certificate. This value is a UNIX timestamp. Unit: seconds.</p>
      * <br>
      * <p>>  The **BeforeTime** and **AfterTime** parameters must be both empty or both specified.</p>
      */
-    @NameInMap("Days")
-    public Integer days;
-
-    /**
-     * <p>Alibaba Cloud</p>
-     */
-    @NameInMap("Domain")
-    public String domain;
-
-    @NameInMap("EnableCrl")
-    public Long enableCrl;
-
-    /**
-     * <p>The certificate chain of the server certificate.</p>
-     */
-    @NameInMap("Immediately")
-    public Integer immediately;
-
-    /**
-     * <p>The content of the CSR file. You can generate a CSR file by using the OpenSSL tool or Keytool. For more information, see [How do I create a CSR file?](~~42218~~) You can also create a CSR file in the Certificate Management Service console. For more information, see [Create a CSR](~~313297~~).</p>
-     */
-    @NameInMap("Locality")
-    public String locality;
-
-    /**
-     * <p>The issuance time of the server certificate. This value is a UNIX timestamp. The default value is the time when you call this operation. Unit: seconds.</p>
-     * <br>
-     * <p>>  The **BeforeTime** and **AfterTime** parameters must be both empty or both specified.</p>
-     */
-    @NameInMap("Months")
-    public Integer months;
-
-    /**
-     * <p>The name of the department. Default value: Aliyun CDN.</p>
-     */
-    @NameInMap("Organization")
-    public String organization;
-
-    /**
-     * <p>The common name of the certificate. The value can contain letters.</p>
-     * <br>
-     * <p>>  If you specify the **CsrPemString** parameter, the value of the **CommonName** parameter is determined by the **CsrPemString** parameter.</p>
-     */
-    @NameInMap("OrganizationUnit")
-    public String organizationUnit;
-
-    /**
-     * <p>The validity period of the server certificate. Unit: months.</p>
-     */
-    @NameInMap("ParentIdentifier")
-    public String parentIdentifier;
+    @NameInMap("AfterTime")
+    public Long afterTime;
 
     /**
      * <p>The key algorithm of the server certificate. The key algorithm is in the `<Encryption algorithm>_<Key length>` format. Valid values:</p>
@@ -118,8 +27,38 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
      * <br>
      * <p>>  You can call the [DescribeCACertificate](~~328096~~) operation to query the key algorithm of an intermediate CA certificate.</p>
      */
-    @NameInMap("State")
-    public String state;
+    @NameInMap("Algorithm")
+    public String algorithm;
+
+    /**
+     * <p>The issuance time of the server certificate. This value is a UNIX timestamp. The default value is the time when you call this operation. Unit: seconds.</p>
+     * <br>
+     * <p>>  The **BeforeTime** and **AfterTime** parameters must be both empty or both specified.</p>
+     */
+    @NameInMap("BeforeTime")
+    public Long beforeTime;
+
+    /**
+     * <p>The common name of the certificate. The value can contain letters.</p>
+     * <br>
+     * <p>>  If you specify the **CsrPemString** parameter, the value of the **CommonName** parameter is determined by the **CsrPemString** parameter.</p>
+     */
+    @NameInMap("CommonName")
+    public String commonName;
+
+    /**
+     * <p>The code of the country in which the organization is located, such as **CN**.</p>
+     * <br>
+     * <p>>  This parameter is available and required only when the **RegistrantProfileId** parameter is not specified. In this case, you must specify this parameter. If this parameter is not specified, the domain name fails to be registered.</p>
+     */
+    @NameInMap("Country")
+    public String country;
+
+    /**
+     * <p>The content of the CSR file. You can generate a CSR file by using the OpenSSL tool or Keytool. For more information, see [How do I create a CSR file?](~~42218~~) You can also create a CSR file in the Certificate Management Service console. For more information, see [Create a CSR](~~313297~~).</p>
+     */
+    @NameInMap("Csr")
+    public String csr;
 
     /**
      * <p>The validity period of the server certificate. Unit: days. You must specify at least one of the **Days**, **BeforeTime**, and **AfterTime** parameters. The **BeforeTime** and **AfterTime** parameters must be both empty or both specified. The following list describes how to specify these parameters:</p>
@@ -132,6 +71,77 @@ public class CreateServerCertificateWithCsrRequest extends TeaModel {
      * <p>*   If you specify the **Days**, **BeforeTime**, and **AfterTime** parameters together, the validity period of the server certificate is determined by the value of the **Days** parameter.</p>
      * <br>
      * <p>*   The validity period of the server certificate cannot exceed the validity period of the intermediate CA certificate. You can call the [DescribeCACertificate](~~328096~~) operation to query the validity period of an intermediate CA certificate.</p>
+     */
+    @NameInMap("Days")
+    public Integer days;
+
+    /**
+     * <p>The additional domain names or additional IP addresses of the server certificate. After you add additional domain names and additional IP addresses to a certificate, you can apply the certificate to the domain names and IP addresses.</p>
+     * <br>
+     * <p>You can specify multiple domain names and IP addresses. If you specify multiple domain names and IP addresses, separate them with commas (,).</p>
+     */
+    @NameInMap("Domain")
+    public String domain;
+
+    /**
+     * <p>include the CRL address.</p>
+     * <br>
+     * <p>- 0- No</p>
+     * <p>- 1- Yes</p>
+     */
+    @NameInMap("EnableCrl")
+    public Long enableCrl;
+
+    /**
+     * <p>Specifies whether to return the certificate. Valid values:</p>
+     * <br>
+     * <p>*   **0**: does not return the certificate. This is the default value.</p>
+     * <p>*   **1**: returns the certificate.</p>
+     * <p>*   **2**: returns the certificate and the certificate chain of the certificate.</p>
+     */
+    @NameInMap("Immediately")
+    public Integer immediately;
+
+    /**
+     * <p>The name of the city in which the organization is located. The value can contain letters. The default value is the name of the city in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued.</p>
+     */
+    @NameInMap("Locality")
+    public String locality;
+
+    /**
+     * <p>The validity period of the server certificate. Unit: months.</p>
+     */
+    @NameInMap("Months")
+    public Integer months;
+
+    /**
+     * <p>The name of the organization. Default value: Alibaba Inc.</p>
+     */
+    @NameInMap("Organization")
+    public String organization;
+
+    /**
+     * <p>The name of the department. Default value: Aliyun CDN.</p>
+     */
+    @NameInMap("OrganizationUnit")
+    public String organizationUnit;
+
+    /**
+     * <p>The unique identifier of the intermediate CA certificate from which the server certificate is issued.</p>
+     * <br>
+     * <p>>  You can call the [DescribeCACertificateList](~~328095~~) operation to query the unique identifier of an intermediate CA certificate.</p>
+     */
+    @NameInMap("ParentIdentifier")
+    public String parentIdentifier;
+
+    /**
+     * <p>The province, municipality, or autonomous region in which the organization is located. The value can contain letters. The default value is the name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued.</p>
+     */
+    @NameInMap("State")
+    public String state;
+
+    /**
+     * <p>The validity period of the server certificate. Unit: years.</p>
      */
     @NameInMap("Years")
     public Integer years;

@@ -34,9 +34,18 @@ public class CreateSubCACertificateRequest extends TeaModel {
     @NameInMap("CountryCode")
     public String countryCode;
 
+    /**
+     * <p>CRL validity period: 1-365 days</p>
+     */
     @NameInMap("CrlDay")
     public Integer crlDay;
 
+    /**
+     * <p>Enable Crl Service.</p>
+     * <br>
+     * <p>- 0- No</p>
+     * <p>- 1- Yes</p>
+     */
     @NameInMap("EnableCrl")
     public Boolean enableCrl;
 
@@ -67,7 +76,7 @@ public class CreateSubCACertificateRequest extends TeaModel {
     /**
      * <p>The unique identifier of the root CA certificate.</p>
      * <br>
-     * <p>> You can call the [DescribeCACertificateList](~~465957~~) operation to query the unique identifiers of all CA certificates.</p>
+     * <p>> You can call the [DescribeCACertificateList] operation to query the unique identifiers of all CA certificates.</p>
      */
     @NameInMap("ParentIdentifier")
     public String parentIdentifier;
@@ -89,7 +98,7 @@ public class CreateSubCACertificateRequest extends TeaModel {
      * <br>
      * <p>We recommend that you set this parameter to 5 to 10.</p>
      * <br>
-     * <p>> The validity period of the intermediate CA certificate cannot exceed the validity period of the root CA certificate. You can call the [DescribeCACertificate](~~465954~~) operation to query the validity period of a root CA certificate.</p>
+     * <p>> The validity period of the intermediate CA certificate cannot exceed the validity period of the root CA certificate. You can call the [DescribeCACertificate]operation to query the validity period of a root CA certificate.</p>
      */
     @NameInMap("Years")
     public Integer years;

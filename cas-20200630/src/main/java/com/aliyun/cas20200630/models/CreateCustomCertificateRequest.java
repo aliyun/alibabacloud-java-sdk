@@ -17,7 +17,7 @@ public class CreateCustomCertificateRequest extends TeaModel {
     public String csr;
 
     /**
-     * <p>Enable Crl.</p>
+     * <p>include the CRL address.</p>
      * <br>
      * <p>- 0- No</p>
      * <p>- 1- Yes</p>

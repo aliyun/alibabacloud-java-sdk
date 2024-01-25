@@ -23,9 +23,9 @@ public class CreateClientCertificateRequest extends TeaModel {
      * <p>*   **ECC\_512**: The signature algorithm is Sha256WithECDSA.</p>
      * <p>*   **SM2\_256**: The signature algorithm is SM3WithSM2.</p>
      * <br>
-     * <p>The encryption algorithm of the client certificate must be the same with the encryption algorithm of the intermediate CA certificate. The key length can be different. For example, if the key algorithm of the intermediate CA certificate is RSA\_2048, the key algorithm of the client certificate must be RSA\_1024, RSA\_2048, or RSA\_4096.</p>
+     * <p>The encryption algorithm of the client certificate must be the same with the encryption algorithm of the intermediate certificate authority (CA) certificate. The key length can be different. For example, if the key algorithm of the intermediate CA certificate is RSA\_2048, the key algorithm of the client certificate must be RSA\_1024, RSA\_2048, or RSA\_4096.</p>
      * <br>
-     * <p>>  You can call the [DescribeCACertificate](~~328096~~) operation to query the key algorithm of an intermediate CA certificate.</p>
+     * <p>> You can call the [DescribeCACertificate] operation to query the key algorithm of an intermediate CA certificate.</p>
      */
     @NameInMap("Algorithm")
     public String algorithm;
@@ -51,20 +51,26 @@ public class CreateClientCertificateRequest extends TeaModel {
     public String country;
 
     /**
-     * <p>The validity period of the client certificate. Unit: days. You must specify at least one of the **Days**, **BeforeTime**, and **AfterTime** parameters. The **BeforeTime** and **AfterTime** parameters must be both empty or both specified. The following list describes how to specify these parameters:</p>
+     * <p>The validity period of the client certificate. Unit: day. You must specify at least one of the **Days**, **BeforeTime**, and **AfterTime** parameters. The **BeforeTime** and **AfterTime** parameters must be both empty or both specified. The following list describes how to specify these parameters:</p>
      * <br>
      * <p>*   If you specify the **Days** parameter, you can specify both the **BeforeTime** and **AfterTime** parameters or leave them both empty.********</p>
      * <p>*   If you do not specify the **Days** parameter, you must specify both the **BeforeTime** and **AfterTime** parameters.</p>
      * <br>
      * <p>> </p>
      * <br>
-     * <p>*   If you specify the **Days**, **BeforeTime**, and **AfterTime** parameters together, the validity period of the client certificate is determined by the value of the **Days** parameter.</p>
+     * <p>*   If you specify the **Days**, **BeforeTime**, and **AfterTime** parameters at the same time, the validity period of the client certificate is determined by the value of the **Days** parameter.</p>
      * <br>
-     * <p>*   The validity period of the client certificate cannot exceed the validity period of the intermediate CA certificate. You can call the [DescribeCACertificate](~~328096~~) operation to query the validity period of an intermediate CA certificate.</p>
+     * <p>*   The validity period of the client certificate cannot exceed the validity period of the intermediate CA certificate. You can call the [DescribeCACertificate](~~465954~~) operation to query the validity period of an intermediate CA certificate.</p>
      */
     @NameInMap("Days")
     public Integer days;
 
+    /**
+     * <p>include the CRL address.</p>
+     * <br>
+     * <p>- 0- No</p>
+     * <p>- 1- Yes</p>
+     */
     @NameInMap("EnableCrl")
     public Long enableCrl;
 
@@ -103,9 +109,9 @@ public class CreateClientCertificateRequest extends TeaModel {
     public String organizationUnit;
 
     /**
-     * <p>The unique identifier of the intermediate CA certificate from which the client certificate is issued.</p>
+     * <p>The unique identifier of the intermediate CA certificate from which the server certificate is issued.</p>
      * <br>
-     * <p>>  You can call the [DescribeCACertificateList](~~328095~~) operation to query the unique identifier of an intermediate CA certificate.</p>
+     * <p>> You can call the [DescribeCACertificateList] operation to query the unique identifier of an intermediate CA certificate.</p>
      */
     @NameInMap("ParentIdentifier")
     public String parentIdentifier;
