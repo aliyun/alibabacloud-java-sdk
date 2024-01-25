@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteBackupClientResourceShrinkRequest extends TeaModel {
     /**
-     * <p>The IDs of HBR clients. You can specify a maximum of 100 client IDs.</p>
+     * <p>The IDs of HBR clients. The value can be a JSON array that consists of up to 100 client IDs. Separate the IDs with commas (,).</p>
      */
     @NameInMap("ClientIds")
     public String clientIdsShrink;

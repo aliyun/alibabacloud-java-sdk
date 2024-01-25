@@ -37,6 +37,36 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         return this.policyId;
     }
 
+    public static class CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsCommonFileSystemDetail extends TeaModel {
+        @NameInMap("FetchSliceSize")
+        public Long fetchSliceSize;
+
+        @NameInMap("FullOnIncrementFail")
+        public Boolean fullOnIncrementFail;
+
+        public static CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsCommonFileSystemDetail build(java.util.Map<String, ?> map) throws Exception {
+            CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsCommonFileSystemDetail self = new CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsCommonFileSystemDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsCommonFileSystemDetail setFetchSliceSize(Long fetchSliceSize) {
+            this.fetchSliceSize = fetchSliceSize;
+            return this;
+        }
+        public Long getFetchSliceSize() {
+            return this.fetchSliceSize;
+        }
+
+        public CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsCommonFileSystemDetail setFullOnIncrementFail(Boolean fullOnIncrementFail) {
+            this.fullOnIncrementFail = fullOnIncrementFail;
+            return this;
+        }
+        public Boolean getFullOnIncrementFail() {
+            return this.fullOnIncrementFail;
+        }
+
+    }
+
     public static class CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsCommonNasDetail extends TeaModel {
         @NameInMap("ClusterId")
         public String clusterId;
@@ -303,6 +333,9 @@ public class CreatePolicyBindingsRequest extends TeaModel {
     }
 
     public static class CreatePolicyBindingsRequestPolicyBindingListAdvancedOptions extends TeaModel {
+        @NameInMap("CommonFileSystemDetail")
+        public CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsCommonFileSystemDetail commonFileSystemDetail;
+
         @NameInMap("CommonNasDetail")
         public CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsCommonNasDetail commonNasDetail;
 
@@ -324,6 +357,14 @@ public class CreatePolicyBindingsRequest extends TeaModel {
         public static CreatePolicyBindingsRequestPolicyBindingListAdvancedOptions build(java.util.Map<String, ?> map) throws Exception {
             CreatePolicyBindingsRequestPolicyBindingListAdvancedOptions self = new CreatePolicyBindingsRequestPolicyBindingListAdvancedOptions();
             return TeaModel.build(map, self);
+        }
+
+        public CreatePolicyBindingsRequestPolicyBindingListAdvancedOptions setCommonFileSystemDetail(CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsCommonFileSystemDetail commonFileSystemDetail) {
+            this.commonFileSystemDetail = commonFileSystemDetail;
+            return this;
+        }
+        public CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsCommonFileSystemDetail getCommonFileSystemDetail() {
+            return this.commonFileSystemDetail;
         }
 
         public CreatePolicyBindingsRequestPolicyBindingListAdvancedOptions setCommonNasDetail(CreatePolicyBindingsRequestPolicyBindingListAdvancedOptionsCommonNasDetail commonNasDetail) {

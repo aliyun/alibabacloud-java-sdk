@@ -308,8 +308,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.checkRoleWithOptions(request, runtime);
     }
 
-    public CreateBackupJobResponse createBackupJobWithOptions(CreateBackupJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateBackupJobResponse createBackupJobWithOptions(CreateBackupJobRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateBackupJobShrinkRequest request = new CreateBackupJobShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.detail)) {
+            request.detailShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.detail, "Detail", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.backupType)) {
             query.put("BackupType", request.backupType);
@@ -337,6 +343,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.crossAccountUserId)) {
             query.put("CrossAccountUserId", request.crossAccountUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.detailShrink)) {
+            query.put("Detail", request.detailShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.exclude)) {
@@ -3590,8 +3600,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NextToken", request.nextToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.queryShrink)) {
             query.put("Query", request.queryShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
@@ -3952,7 +3970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to update the settings of a backup client of an earlier version or the latest version.
+      * You can call this operation to update the configurations of both the old and new HBR clients.
       *
       * @param request UpdateClientSettingsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4035,7 +4053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to update the settings of a backup client of an earlier version or the latest version.
+      * You can call this operation to update the configurations of both the old and new HBR clients.
       *
       * @param request UpdateClientSettingsRequest
       * @return UpdateClientSettingsResponse

@@ -4,6 +4,9 @@ package com.aliyun.hbr20170908.models;
 import com.aliyun.tea.*;
 
 public class UpdateBackupPlanRequest extends TeaModel {
+    /**
+     * <p>The configurations of the incremental file synchronization. This parameter is required for data synchronization only.</p>
+     */
     @NameInMap("ChangeListPath")
     public String changeListPath;
 

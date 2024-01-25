@@ -3,7 +3,7 @@ package com.aliyun.hbr20170908.models;
 
 import com.aliyun.tea.*;
 
-public class CreateBackupJobRequest extends TeaModel {
+public class CreateBackupJobShrinkRequest extends TeaModel {
     /**
      * <p>The backup type. Valid values:</p>
      * <br>
@@ -53,7 +53,7 @@ public class CreateBackupJobRequest extends TeaModel {
     public Long crossAccountUserId;
 
     @NameInMap("Detail")
-    public java.util.Map<String, ?> detail;
+    public String detailShrink;
 
     /**
      * <p>This parameter is required only if you set the **SourceType** parameter to **ECS_FILE**. This parameter specifies the paths to the files that are excluded from the backup job. The value must be 1 to 255 characters in length.</p>
@@ -127,12 +127,12 @@ public class CreateBackupJobRequest extends TeaModel {
     @NameInMap("VaultId")
     public String vaultId;
 
-    public static CreateBackupJobRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateBackupJobRequest self = new CreateBackupJobRequest();
+    public static CreateBackupJobShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateBackupJobShrinkRequest self = new CreateBackupJobShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateBackupJobRequest setBackupType(String backupType) {
+    public CreateBackupJobShrinkRequest setBackupType(String backupType) {
         this.backupType = backupType;
         return this;
     }
@@ -140,7 +140,7 @@ public class CreateBackupJobRequest extends TeaModel {
         return this.backupType;
     }
 
-    public CreateBackupJobRequest setClusterId(String clusterId) {
+    public CreateBackupJobShrinkRequest setClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
@@ -148,7 +148,7 @@ public class CreateBackupJobRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public CreateBackupJobRequest setContainerClusterId(String containerClusterId) {
+    public CreateBackupJobShrinkRequest setContainerClusterId(String containerClusterId) {
         this.containerClusterId = containerClusterId;
         return this;
     }
@@ -156,7 +156,7 @@ public class CreateBackupJobRequest extends TeaModel {
         return this.containerClusterId;
     }
 
-    public CreateBackupJobRequest setContainerResources(String containerResources) {
+    public CreateBackupJobShrinkRequest setContainerResources(String containerResources) {
         this.containerResources = containerResources;
         return this;
     }
@@ -164,7 +164,7 @@ public class CreateBackupJobRequest extends TeaModel {
         return this.containerResources;
     }
 
-    public CreateBackupJobRequest setCrossAccountRoleName(String crossAccountRoleName) {
+    public CreateBackupJobShrinkRequest setCrossAccountRoleName(String crossAccountRoleName) {
         this.crossAccountRoleName = crossAccountRoleName;
         return this;
     }
@@ -172,7 +172,7 @@ public class CreateBackupJobRequest extends TeaModel {
         return this.crossAccountRoleName;
     }
 
-    public CreateBackupJobRequest setCrossAccountType(String crossAccountType) {
+    public CreateBackupJobShrinkRequest setCrossAccountType(String crossAccountType) {
         this.crossAccountType = crossAccountType;
         return this;
     }
@@ -180,7 +180,7 @@ public class CreateBackupJobRequest extends TeaModel {
         return this.crossAccountType;
     }
 
-    public CreateBackupJobRequest setCrossAccountUserId(Long crossAccountUserId) {
+    public CreateBackupJobShrinkRequest setCrossAccountUserId(Long crossAccountUserId) {
         this.crossAccountUserId = crossAccountUserId;
         return this;
     }
@@ -188,15 +188,15 @@ public class CreateBackupJobRequest extends TeaModel {
         return this.crossAccountUserId;
     }
 
-    public CreateBackupJobRequest setDetail(java.util.Map<String, ?> detail) {
-        this.detail = detail;
+    public CreateBackupJobShrinkRequest setDetailShrink(String detailShrink) {
+        this.detailShrink = detailShrink;
         return this;
     }
-    public java.util.Map<String, ?> getDetail() {
-        return this.detail;
+    public String getDetailShrink() {
+        return this.detailShrink;
     }
 
-    public CreateBackupJobRequest setExclude(String exclude) {
+    public CreateBackupJobShrinkRequest setExclude(String exclude) {
         this.exclude = exclude;
         return this;
     }
@@ -204,7 +204,7 @@ public class CreateBackupJobRequest extends TeaModel {
         return this.exclude;
     }
 
-    public CreateBackupJobRequest setInclude(String include) {
+    public CreateBackupJobShrinkRequest setInclude(String include) {
         this.include = include;
         return this;
     }
@@ -212,7 +212,7 @@ public class CreateBackupJobRequest extends TeaModel {
         return this.include;
     }
 
-    public CreateBackupJobRequest setInitiatedByAck(Boolean initiatedByAck) {
+    public CreateBackupJobShrinkRequest setInitiatedByAck(Boolean initiatedByAck) {
         this.initiatedByAck = initiatedByAck;
         return this;
     }
@@ -220,7 +220,7 @@ public class CreateBackupJobRequest extends TeaModel {
         return this.initiatedByAck;
     }
 
-    public CreateBackupJobRequest setInstanceId(String instanceId) {
+    public CreateBackupJobShrinkRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -228,7 +228,7 @@ public class CreateBackupJobRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public CreateBackupJobRequest setJobName(String jobName) {
+    public CreateBackupJobShrinkRequest setJobName(String jobName) {
         this.jobName = jobName;
         return this;
     }
@@ -236,7 +236,7 @@ public class CreateBackupJobRequest extends TeaModel {
         return this.jobName;
     }
 
-    public CreateBackupJobRequest setOptions(String options) {
+    public CreateBackupJobShrinkRequest setOptions(String options) {
         this.options = options;
         return this;
     }
@@ -244,7 +244,7 @@ public class CreateBackupJobRequest extends TeaModel {
         return this.options;
     }
 
-    public CreateBackupJobRequest setRetention(Long retention) {
+    public CreateBackupJobShrinkRequest setRetention(Long retention) {
         this.retention = retention;
         return this;
     }
@@ -252,7 +252,7 @@ public class CreateBackupJobRequest extends TeaModel {
         return this.retention;
     }
 
-    public CreateBackupJobRequest setSourceType(String sourceType) {
+    public CreateBackupJobShrinkRequest setSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
     }
@@ -260,7 +260,7 @@ public class CreateBackupJobRequest extends TeaModel {
         return this.sourceType;
     }
 
-    public CreateBackupJobRequest setSpeedLimit(String speedLimit) {
+    public CreateBackupJobShrinkRequest setSpeedLimit(String speedLimit) {
         this.speedLimit = speedLimit;
         return this;
     }
@@ -268,7 +268,7 @@ public class CreateBackupJobRequest extends TeaModel {
         return this.speedLimit;
     }
 
-    public CreateBackupJobRequest setVaultId(String vaultId) {
+    public CreateBackupJobShrinkRequest setVaultId(String vaultId) {
         this.vaultId = vaultId;
         return this;
     }

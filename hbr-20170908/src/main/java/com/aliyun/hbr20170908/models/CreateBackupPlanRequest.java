@@ -17,7 +17,7 @@ public class CreateBackupPlanRequest extends TeaModel {
     public String bucket;
 
     /**
-     * <p>增量文件同步列表的配置。（仅同步需要）</p>
+     * <p>The configurations of the incremental file synchronization. This parameter is required for data synchronization only.</p>
      */
     @NameInMap("ChangeListPath")
     public String changeListPath;

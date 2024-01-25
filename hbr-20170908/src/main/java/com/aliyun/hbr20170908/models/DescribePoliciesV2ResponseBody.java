@@ -31,7 +31,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The list of backup policies.</p>
+     * <p>The backup policies.</p>
      */
     @NameInMap("Policies")
     public java.util.List<DescribePoliciesV2ResponseBodyPolicies> policies;
@@ -130,9 +130,9 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         /**
          * <p>The type of the special retention rule. Valid values:</p>
          * <br>
-         * <p>*   **WEEKLY**: retains weekly backups</p>
-         * <p>*   **MONTHLY**: retains monthly backups</p>
-         * <p>*   **YEARLY**: retains yearly backups</p>
+         * <p>*   **WEEKLY**: weekly backups.</p>
+         * <p>*   **MONTHLY**: monthly backups.</p>
+         * <p>*   **YEARLY**: yearly backups.</p>
          */
         @NameInMap("AdvancedRetentionType")
         public String advancedRetentionType;
@@ -182,11 +182,17 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
 
     public static class DescribePoliciesV2ResponseBodyPoliciesRules extends TeaModel {
         /**
-         * <p>This parameter is returned only if the value of the **RuleType** parameter is **BACKUP**. This parameter indicates the backup type. Valid value: **COMPLETE**, which indicates full backup.</p>
+         * <p>This parameter is returned only if the value of the **RuleType** parameter is **BACKUP**. This parameter indicates the backup type. Only **COMPLETE** may be returned, which indicates full backup.</p>
          */
         @NameInMap("BackupType")
         public String backupType;
 
+        /**
+         * <p>Indicates whether the feature of keeping at least one backup version is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **0**: This feature is disabled.</p>
+         * <p>*   **1**: This feature is enabled.</p>
+         */
         @NameInMap("KeepLatestSnapshots")
         public Long keepLatestSnapshots;
 
@@ -212,7 +218,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public java.util.List<DescribePoliciesV2ResponseBodyPoliciesRulesRetentionRules> retentionRules;
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
          */
         @NameInMap("RuleId")
         public String ruleId;
@@ -220,18 +226,18 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         /**
          * <p>The type of the rule. Each backup policy must have at least one rule of the **BACKUP** type and only one rule of the **TRANSITION** type.</p>
          * <br>
-         * <p>*   **BACKUP**: backup rule</p>
-         * <p>*   **TRANSITION**: lifecycle rule</p>
-         * <p>*   **REPLICATION**: replication rule</p>
+         * <p>*   **BACKUP**: the backup rule.</p>
+         * <p>*   **TRANSITION**: the lifecycle rule.</p>
+         * <p>*   **REPLICATION**: the replication rule.</p>
          */
         @NameInMap("RuleType")
         public String ruleType;
 
         /**
-         * <p>This parameter is returned only if the value of the **RuleType** parameter is **BACKUP**. This parameter indicates the backup schedule settings. Format: `I|{startTime}|{interval}`. The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, `I|1631685600|P1D` indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
+         * <p>This parameter is returned only if the value of the **RuleType** parameter is **BACKUP**. This parameter indicates the scheduling settings for the backups. Format: `I|{startTime}|{interval}`. The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is complete. For example, `I|1631685600|P1D` indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
          * <br>
-         * <p>*   startTime: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds.</p>
-         * <p>*   interval: the interval at which the system runs a backup job. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of one hour. P1D indicates an interval of one day.</p>
+         * <p>*   startTime: the time when the system starts to run a backup job. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>*   interval: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, PT1H indicates an interval of one hour. P1D indicates an interval of one day.</p>
          */
         @NameInMap("Schedule")
         public String schedule;
@@ -309,7 +315,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
 
     public static class DescribePoliciesV2ResponseBodyPolicies extends TeaModel {
         /**
-         * <p>The time when the backup policy was created. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the backup policy was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("CreatedTime")
         public Long createdTime;
@@ -345,7 +351,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public java.util.List<DescribePoliciesV2ResponseBodyPoliciesRules> rules;
 
         /**
-         * <p>The time when the backup policy was updated. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the backup policy was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("UpdatedTime")
         public Long updatedTime;

@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeHanaBackupSettingResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public DescribeHanaBackupSettingResponseBody body;
 
     public static DescribeHanaBackupSettingResponse build(java.util.Map<String, ?> map) throws Exception {
