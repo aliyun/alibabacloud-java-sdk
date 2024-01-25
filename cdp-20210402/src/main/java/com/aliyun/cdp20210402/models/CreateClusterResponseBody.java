@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClusterResponseBody extends TeaModel {
     @NameInMap("Data")
-    public Boolean data;
+    public String data;
 
     @NameInMap("ErrCode")
     public String errCode;
@@ -27,11 +27,11 @@ public class CreateClusterResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateClusterResponseBody setData(Boolean data) {
+    public CreateClusterResponseBody setData(String data) {
         this.data = data;
         return this;
     }
-    public Boolean getData() {
+    public String getData() {
         return this.data;
     }
 

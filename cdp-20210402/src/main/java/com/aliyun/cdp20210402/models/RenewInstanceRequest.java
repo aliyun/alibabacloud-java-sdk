@@ -4,42 +4,31 @@ package com.aliyun.cdp20210402.models;
 import com.aliyun.tea.*;
 
 public class RenewInstanceRequest extends TeaModel {
-    @NameInMap("Duration")
-    public Integer duration;
+    @NameInMap("ClusterBizId")
+    public String clusterBizId;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("PricingCycle")
-    public String pricingCycle;
+    @NameInMap("Instances")
+    public String instances;
 
     public static RenewInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RenewInstanceRequest self = new RenewInstanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public RenewInstanceRequest setDuration(Integer duration) {
-        this.duration = duration;
+    public RenewInstanceRequest setClusterBizId(String clusterBizId) {
+        this.clusterBizId = clusterBizId;
         return this;
     }
-    public Integer getDuration() {
-        return this.duration;
+    public String getClusterBizId() {
+        return this.clusterBizId;
     }
 
-    public RenewInstanceRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public RenewInstanceRequest setInstances(String instances) {
+        this.instances = instances;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public RenewInstanceRequest setPricingCycle(String pricingCycle) {
-        this.pricingCycle = pricingCycle;
-        return this;
-    }
-    public String getPricingCycle() {
-        return this.pricingCycle;
+    public String getInstances() {
+        return this.instances;
     }
 
 }

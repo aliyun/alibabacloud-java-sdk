@@ -16,7 +16,6 @@ public class ScaleUpClusterResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Long httpStatusCode;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

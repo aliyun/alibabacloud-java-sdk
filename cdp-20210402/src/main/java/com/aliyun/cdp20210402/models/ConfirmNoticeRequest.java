@@ -4,20 +4,20 @@ package com.aliyun.cdp20210402.models;
 import com.aliyun.tea.*;
 
 public class ConfirmNoticeRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("ClusterBizId")
+    public String clusterBizId;
 
     public static ConfirmNoticeRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfirmNoticeRequest self = new ConfirmNoticeRequest();
         return TeaModel.build(map, self);
     }
 
-    public ConfirmNoticeRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public ConfirmNoticeRequest setClusterBizId(String clusterBizId) {
+        this.clusterBizId = clusterBizId;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getClusterBizId() {
+        return this.clusterBizId;
     }
 
 }

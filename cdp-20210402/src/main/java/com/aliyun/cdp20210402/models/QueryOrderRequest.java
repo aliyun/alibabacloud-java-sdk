@@ -4,20 +4,20 @@ package com.aliyun.cdp20210402.models;
 import com.aliyun.tea.*;
 
 public class QueryOrderRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("ClusterBizId")
+    public String clusterBizId;
 
     public static QueryOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryOrderRequest self = new QueryOrderRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryOrderRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public QueryOrderRequest setClusterBizId(String clusterBizId) {
+        this.clusterBizId = clusterBizId;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getClusterBizId() {
+        return this.clusterBizId;
     }
 
 }

@@ -4,21 +4,23 @@ package com.aliyun.cdp20210402.models;
 import com.aliyun.tea.*;
 
 public class ScaleUpClusterRequest extends TeaModel {
+    @NameInMap("ClusterBizId")
+    public String clusterBizId;
+
     @NameInMap("CoreNumber")
     public Long coreNumber;
 
     @NameInMap("Duration")
     public Long duration;
 
-    // A short description of struct
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("InstanceType")
     public String instanceType;
 
-    @NameInMap("NodeGroupId")
-    public String nodeGroupId;
+    @NameInMap("NodeGroupType")
+    public String nodeGroupType;
 
     @NameInMap("PricingCycle")
     public String pricingCycle;
@@ -26,6 +28,14 @@ public class ScaleUpClusterRequest extends TeaModel {
     public static ScaleUpClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         ScaleUpClusterRequest self = new ScaleUpClusterRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ScaleUpClusterRequest setClusterBizId(String clusterBizId) {
+        this.clusterBizId = clusterBizId;
+        return this;
+    }
+    public String getClusterBizId() {
+        return this.clusterBizId;
     }
 
     public ScaleUpClusterRequest setCoreNumber(Long coreNumber) {
@@ -60,12 +70,12 @@ public class ScaleUpClusterRequest extends TeaModel {
         return this.instanceType;
     }
 
-    public ScaleUpClusterRequest setNodeGroupId(String nodeGroupId) {
-        this.nodeGroupId = nodeGroupId;
+    public ScaleUpClusterRequest setNodeGroupType(String nodeGroupType) {
+        this.nodeGroupType = nodeGroupType;
         return this;
     }
-    public String getNodeGroupId() {
-        return this.nodeGroupId;
+    public String getNodeGroupType() {
+        return this.nodeGroupType;
     }
 
     public ScaleUpClusterRequest setPricingCycle(String pricingCycle) {

@@ -3,9 +3,9 @@ package com.aliyun.cdp20210402.models;
 
 import com.aliyun.tea.*;
 
-public class CreateServiceLinkedRoleResponseBody extends TeaModel {
+public class ListDefaultComponentsResponseBody extends TeaModel {
     @NameInMap("Data")
-    public Boolean data;
+    public java.util.List<String> data;
 
     @NameInMap("ErrCode")
     public String errCode;
@@ -14,7 +14,7 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
     public String errMessage;
 
     @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
+    public String httpStatusCode;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -22,20 +22,20 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static CreateServiceLinkedRoleResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateServiceLinkedRoleResponseBody self = new CreateServiceLinkedRoleResponseBody();
+    public static ListDefaultComponentsResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListDefaultComponentsResponseBody self = new ListDefaultComponentsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateServiceLinkedRoleResponseBody setData(Boolean data) {
+    public ListDefaultComponentsResponseBody setData(java.util.List<String> data) {
         this.data = data;
         return this;
     }
-    public Boolean getData() {
+    public java.util.List<String> getData() {
         return this.data;
     }
 
-    public CreateServiceLinkedRoleResponseBody setErrCode(String errCode) {
+    public ListDefaultComponentsResponseBody setErrCode(String errCode) {
         this.errCode = errCode;
         return this;
     }
@@ -43,7 +43,7 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
         return this.errCode;
     }
 
-    public CreateServiceLinkedRoleResponseBody setErrMessage(String errMessage) {
+    public ListDefaultComponentsResponseBody setErrMessage(String errMessage) {
         this.errMessage = errMessage;
         return this;
     }
@@ -51,15 +51,15 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
         return this.errMessage;
     }
 
-    public CreateServiceLinkedRoleResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public ListDefaultComponentsResponseBody setHttpStatusCode(String httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
-    public Integer getHttpStatusCode() {
+    public String getHttpStatusCode() {
         return this.httpStatusCode;
     }
 
-    public CreateServiceLinkedRoleResponseBody setRequestId(String requestId) {
+    public ListDefaultComponentsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -67,7 +67,7 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateServiceLinkedRoleResponseBody setSuccess(Boolean success) {
+    public ListDefaultComponentsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

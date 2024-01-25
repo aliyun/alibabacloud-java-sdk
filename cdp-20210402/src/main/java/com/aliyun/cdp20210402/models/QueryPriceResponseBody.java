@@ -75,25 +75,25 @@ public class QueryPriceResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class QueryPriceResponseBodyData extends TeaModel {
+    public static class QueryPriceResponseBodyDataEcsPriceInfo extends TeaModel {
         @NameInMap("Currency")
         public String currency;
 
         @NameInMap("DiscountPrice")
-        public Float discountPrice;
+        public Double discountPrice;
 
         @NameInMap("OriginalPrice")
-        public Float originalPrice;
+        public Double originalPrice;
 
         @NameInMap("TradePrice")
-        public Float tradePrice;
+        public Double tradePrice;
 
-        public static QueryPriceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            QueryPriceResponseBodyData self = new QueryPriceResponseBodyData();
+        public static QueryPriceResponseBodyDataEcsPriceInfo build(java.util.Map<String, ?> map) throws Exception {
+            QueryPriceResponseBodyDataEcsPriceInfo self = new QueryPriceResponseBodyDataEcsPriceInfo();
             return TeaModel.build(map, self);
         }
 
-        public QueryPriceResponseBodyData setCurrency(String currency) {
+        public QueryPriceResponseBodyDataEcsPriceInfo setCurrency(String currency) {
             this.currency = currency;
             return this;
         }
@@ -101,28 +101,132 @@ public class QueryPriceResponseBody extends TeaModel {
             return this.currency;
         }
 
-        public QueryPriceResponseBodyData setDiscountPrice(Float discountPrice) {
+        public QueryPriceResponseBodyDataEcsPriceInfo setDiscountPrice(Double discountPrice) {
             this.discountPrice = discountPrice;
             return this;
         }
-        public Float getDiscountPrice() {
+        public Double getDiscountPrice() {
             return this.discountPrice;
         }
 
-        public QueryPriceResponseBodyData setOriginalPrice(Float originalPrice) {
+        public QueryPriceResponseBodyDataEcsPriceInfo setOriginalPrice(Double originalPrice) {
             this.originalPrice = originalPrice;
             return this;
         }
-        public Float getOriginalPrice() {
+        public Double getOriginalPrice() {
             return this.originalPrice;
         }
 
-        public QueryPriceResponseBodyData setTradePrice(Float tradePrice) {
+        public QueryPriceResponseBodyDataEcsPriceInfo setTradePrice(Double tradePrice) {
             this.tradePrice = tradePrice;
             return this;
         }
-        public Float getTradePrice() {
+        public Double getTradePrice() {
             return this.tradePrice;
+        }
+
+    }
+
+    public static class QueryPriceResponseBodyDataSoftPriceInfo extends TeaModel {
+        @NameInMap("Currency")
+        public String currency;
+
+        @NameInMap("DiscountPrice")
+        public Double discountPrice;
+
+        @NameInMap("OriginalPrice")
+        public Double originalPrice;
+
+        @NameInMap("TradePrice")
+        public Double tradePrice;
+
+        public static QueryPriceResponseBodyDataSoftPriceInfo build(java.util.Map<String, ?> map) throws Exception {
+            QueryPriceResponseBodyDataSoftPriceInfo self = new QueryPriceResponseBodyDataSoftPriceInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryPriceResponseBodyDataSoftPriceInfo setCurrency(String currency) {
+            this.currency = currency;
+            return this;
+        }
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        public QueryPriceResponseBodyDataSoftPriceInfo setDiscountPrice(Double discountPrice) {
+            this.discountPrice = discountPrice;
+            return this;
+        }
+        public Double getDiscountPrice() {
+            return this.discountPrice;
+        }
+
+        public QueryPriceResponseBodyDataSoftPriceInfo setOriginalPrice(Double originalPrice) {
+            this.originalPrice = originalPrice;
+            return this;
+        }
+        public Double getOriginalPrice() {
+            return this.originalPrice;
+        }
+
+        public QueryPriceResponseBodyDataSoftPriceInfo setTradePrice(Double tradePrice) {
+            this.tradePrice = tradePrice;
+            return this;
+        }
+        public Double getTradePrice() {
+            return this.tradePrice;
+        }
+
+    }
+
+    public static class QueryPriceResponseBodyData extends TeaModel {
+        @NameInMap("DiscountPrice")
+        public Double discountPrice;
+
+        @NameInMap("EcsPriceInfo")
+        public QueryPriceResponseBodyDataEcsPriceInfo ecsPriceInfo;
+
+        @NameInMap("SoftPriceInfo")
+        public QueryPriceResponseBodyDataSoftPriceInfo softPriceInfo;
+
+        @NameInMap("SumPrice")
+        public Double sumPrice;
+
+        public static QueryPriceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            QueryPriceResponseBodyData self = new QueryPriceResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryPriceResponseBodyData setDiscountPrice(Double discountPrice) {
+            this.discountPrice = discountPrice;
+            return this;
+        }
+        public Double getDiscountPrice() {
+            return this.discountPrice;
+        }
+
+        public QueryPriceResponseBodyData setEcsPriceInfo(QueryPriceResponseBodyDataEcsPriceInfo ecsPriceInfo) {
+            this.ecsPriceInfo = ecsPriceInfo;
+            return this;
+        }
+        public QueryPriceResponseBodyDataEcsPriceInfo getEcsPriceInfo() {
+            return this.ecsPriceInfo;
+        }
+
+        public QueryPriceResponseBodyData setSoftPriceInfo(QueryPriceResponseBodyDataSoftPriceInfo softPriceInfo) {
+            this.softPriceInfo = softPriceInfo;
+            return this;
+        }
+        public QueryPriceResponseBodyDataSoftPriceInfo getSoftPriceInfo() {
+            return this.softPriceInfo;
+        }
+
+        public QueryPriceResponseBodyData setSumPrice(Double sumPrice) {
+            this.sumPrice = sumPrice;
+            return this;
+        }
+        public Double getSumPrice() {
+            return this.sumPrice;
         }
 
     }
