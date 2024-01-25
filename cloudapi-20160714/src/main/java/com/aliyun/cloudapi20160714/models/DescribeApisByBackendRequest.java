@@ -4,18 +4,36 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisByBackendRequest extends TeaModel {
+    /**
+     * <p>The ID of the backend service.</p>
+     */
     @NameInMap("BackendId")
     public String backendId;
 
+    /**
+     * <p>The number of the current page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The environment to which the API is published. Valid values:</p>
+     * <br>
+     * <p>*   **RELEASE**</p>
+     * <p>*   **PRE**</p>
+     * <p>*   **TEST**</p>
+     * <br>
+     * <p>If you do not specify this parameter, APIs in the draft state are returned.</p>
+     */
     @NameInMap("StageName")
     public String stageName;
 

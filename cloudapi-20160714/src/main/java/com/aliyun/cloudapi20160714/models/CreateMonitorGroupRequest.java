@@ -4,12 +4,21 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateMonitorGroupRequest extends TeaModel {
+    /**
+     * <p>The caller authentication status of the API. Valid values: **ok**: The authentication is successful. **mismatch**: The request is redirected. **servicenotfound**: A request error occurred. **Unknown**: An unknown error occurred.</p>
+     */
     @NameInMap("Auth")
     public String auth;
 
+    /**
+     * <p>The ID of the API group.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The ID of the monitoring group.</p>
+     */
     @NameInMap("RawMonitorGroupId")
     public Long rawMonitorGroupId;
 

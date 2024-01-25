@@ -4176,6 +4176,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeAppAttributesWithOptions(request, runtime);
     }
 
+    /**
+      * *   This operation is intended for API callers.
+      *
+      * @param request DescribeAppSecurityRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeAppSecurityResponse
+     */
     public DescribeAppSecurityResponse describeAppSecurityWithOptions(DescribeAppSecurityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4208,6 +4215,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAppSecurityResponse());
     }
 
+    /**
+      * *   This operation is intended for API callers.
+      *
+      * @param request DescribeAppSecurityRequest
+      * @return DescribeAppSecurityResponse
+     */
     public DescribeAppSecurityResponse describeAppSecurity(DescribeAppSecurityRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAppSecurityWithOptions(request, runtime);
@@ -7985,6 +7998,85 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyDatasetItemWithOptions(request, runtime);
     }
 
+    public ModifyInstanceAttributeResponse modifyInstanceAttributeWithOptions(ModifyInstanceAttributeRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyInstanceAttributeShrinkRequest request = new ModifyInstanceAttributeShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.toConnectVpcIpBlock)) {
+            request.toConnectVpcIpBlockShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.toConnectVpcIpBlock, "ToConnectVpcIpBlock", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteVpcIpBlock)) {
+            query.put("DeleteVpcIpBlock", request.deleteVpcIpBlock);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.egressIpv6Enable)) {
+            query.put("EgressIpv6Enable", request.egressIpv6Enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.httpsPolicy)) {
+            query.put("HttpsPolicy", request.httpsPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.IPV6Enabled)) {
+            query.put("IPV6Enabled", request.IPV6Enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            query.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.intranetSegments)) {
+            query.put("IntranetSegments", request.intranetSegments);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maintainEndTime)) {
+            query.put("MaintainEndTime", request.maintainEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maintainStartTime)) {
+            query.put("MaintainStartTime", request.maintainStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toConnectVpcIpBlockShrink)) {
+            query.put("ToConnectVpcIpBlock", request.toConnectVpcIpBlockShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            query.put("Token", request.token);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcSlbIntranetEnable)) {
+            query.put("VpcSlbIntranetEnable", request.vpcSlbIntranetEnable);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyInstanceAttribute"),
+            new TeaPair("version", "2016-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyInstanceAttributeResponse());
+    }
+
+    public ModifyInstanceAttributeResponse modifyInstanceAttribute(ModifyInstanceAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyInstanceAttributeWithOptions(request, runtime);
+    }
+
     public ModifyInstanceSpecResponse modifyInstanceSpecWithOptions(ModifyInstanceSpecRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10053,6 +10145,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.setTrafficControlApisWithOptions(request, runtime);
     }
 
+    /**
+      * * This operation is intended for API providers.
+      * * This operation is used to authorize API Gateway to access your VPC instance.
+      *
+      * @param request SetVpcAccessRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetVpcAccessResponse
+     */
     public SetVpcAccessResponse setVpcAccessWithOptions(SetVpcAccessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -10105,6 +10205,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetVpcAccessResponse());
     }
 
+    /**
+      * * This operation is intended for API providers.
+      * * This operation is used to authorize API Gateway to access your VPC instance.
+      *
+      * @param request SetVpcAccessRequest
+      * @return SetVpcAccessResponse
+     */
     public SetVpcAccessResponse setVpcAccess(SetVpcAccessRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setVpcAccessWithOptions(request, runtime);

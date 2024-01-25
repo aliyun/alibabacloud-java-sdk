@@ -4,18 +4,33 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcAccessesResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The information about the VPC access authorization. The information is an array consisting of VpcAccessAttribute data.</p>
+     */
     @NameInMap("VpcAccessAttributes")
     public DescribeVpcAccessesResponseBodyVpcAccessAttributes vpcAccessAttributes;
 
@@ -65,9 +80,15 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTagsTagInfo extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -114,33 +135,63 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttribute extends TeaModel {
+        /**
+         * <p>The time when the authorization was created.</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>The description of the VPC access authorization.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the Elastic Compute Service (ECS) or Server Load Balancer (SLB) instance in the VPC.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the authorization.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The port number that corresponds to the instance.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public DescribeVpcAccessesResponseBodyVpcAccessAttributesVpcAccessAttributeTags tags;
 
+        /**
+         * <p>The ID of the VPC access authorization.</p>
+         */
         @NameInMap("VpcAccessId")
         public String vpcAccessId;
 
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The host of the backend service.</p>
+         */
         @NameInMap("VpcTargetHostName")
         public String vpcTargetHostName;
 

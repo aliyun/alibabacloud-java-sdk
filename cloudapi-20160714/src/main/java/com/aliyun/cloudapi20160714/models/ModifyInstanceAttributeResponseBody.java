@@ -3,19 +3,16 @@ package com.aliyun.cloudapi20160714.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteBackendResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
+public class ModifyInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteBackendResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteBackendResponseBody self = new DeleteBackendResponseBody();
+    public static ModifyInstanceAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ModifyInstanceAttributeResponseBody self = new ModifyInstanceAttributeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteBackendResponseBody setRequestId(String requestId) {
+    public ModifyInstanceAttributeResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

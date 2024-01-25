@@ -4,6 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeployApiTaskRequest extends TeaModel {
+    /**
+     * <p>The task ID.</p>
+     */
     @NameInMap("OperationUid")
     public String operationUid;
 

@@ -4,21 +4,39 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppSecurityResponseBody extends TeaModel {
+    /**
+     * <p>The AppCode of the app.</p>
+     */
     @NameInMap("AppCode")
     public String appCode;
 
+    /**
+     * <p>The key of the app.</p>
+     */
     @NameInMap("AppKey")
     public String appKey;
 
+    /**
+     * <p>The password of the app.</p>
+     */
     @NameInMap("AppSecret")
     public String appSecret;
 
+    /**
+     * <p>The creation time (UTC) of the key, which is the same as the app creation time.</p>
+     */
     @NameInMap("CreatedTime")
     public String createdTime;
 
+    /**
+     * <p>The modification time (UTC) of the key.</p>
+     */
     @NameInMap("ModifiedTime")
     public String modifiedTime;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

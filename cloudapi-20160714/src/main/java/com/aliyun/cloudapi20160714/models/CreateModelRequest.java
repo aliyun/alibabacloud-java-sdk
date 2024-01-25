@@ -28,6 +28,9 @@ public class CreateModelRequest extends TeaModel {
     @NameInMap("Schema")
     public String schema;
 
+    /**
+     * <p>The object tags that match the lifecycle rule. You can specify multiple tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateModelRequestTag> tag;
 
@@ -77,9 +80,15 @@ public class CreateModelRequest extends TeaModel {
     }
 
     public static class CreateModelRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The values of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
