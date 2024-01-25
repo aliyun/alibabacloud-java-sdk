@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The list of resource IDs.</p>
+     * <p>The resource ID. You can specify at most 20 IDs.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -17,7 +17,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tag information.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -55,9 +55,9 @@ public class TagResourcesRequest extends TeaModel {
         /**
          * <p>The key of tag N to add to the resource. You must enter at least one tag key and at most 20 tag keys. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.</p>
          * <br>
-         * <p>>  When you call this operation, you must specify **Tag.N.Key**.</p>
+         * <p>> When you call this operation, **Tag.N.Key** is required.</p>
          */
         @NameInMap("Key")
         public String key;
@@ -65,9 +65,9 @@ public class TagResourcesRequest extends TeaModel {
         /**
          * <p>The value of tag N to add to the resource. You must enter at least one tag value and at most 20 tag values. The tag value can be an empty string.</p>
          * <br>
-         * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          * <br>
-         * <p>>  When you call this operation, you must specify **Tag.N.Value**.</p>
+         * <p>> When you call this operation, **Tag.N.Value** is required.</p>
          */
         @NameInMap("Value")
         public String value;

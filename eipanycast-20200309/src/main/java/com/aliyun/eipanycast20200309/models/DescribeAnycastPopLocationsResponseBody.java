@@ -17,7 +17,7 @@ public class DescribeAnycastPopLocationsResponseBody extends TeaModel {
     public String count;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

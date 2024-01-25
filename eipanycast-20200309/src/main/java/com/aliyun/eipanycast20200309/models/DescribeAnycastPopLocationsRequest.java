@@ -7,7 +7,7 @@ public class DescribeAnycastPopLocationsRequest extends TeaModel {
     /**
      * <p>The access area of the Anycast elastic IP address (EIP).</p>
      * <br>
-     * <p>Set the value to **international**, which specifies the regions outside the Chinese mainland.</p>
+     * <p>Set the value to **international**, which specifies the areas outside the Chinese mainland.</p>
      */
     @NameInMap("ServiceLocation")
     public String serviceLocation;

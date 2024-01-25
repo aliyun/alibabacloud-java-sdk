@@ -11,7 +11,7 @@ public class UntagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <br>
      * <p>**true**</p>
      * <br>
