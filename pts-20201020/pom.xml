@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>pts20201020</artifactId>
-  <version>1.9.0</version>
+  <version>1.9.1</version>
   <packaging>jar</packaging>
   <name>pts20201020</name>
   <description>Alibaba Cloud Performance Testing (20201020) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.1</version>
+      <version>0.3.2</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -61,7 +61,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea</artifactId>
-      <version>1.2.0</version>
+      <version>1.2.7</version>
     </dependency>
   </dependencies>
   <build>
