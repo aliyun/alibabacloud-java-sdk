@@ -5,26 +5,38 @@ import com.aliyun.tea.*;
 
 public class ListRevokeCertificateResponseBody extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>An array that consists of the details about the revoked client certificates or server certificates.</p>
      */
     @NameInMap("CertificateList")
     public java.util.List<ListRevokeCertificateResponseBodyCertificateList> certificateList;
 
     /**
-     * <p>Queries the details about all client certificates and server certificates that are revoked.</p>
+     * <p>The page number of the current page.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The total number of pages returned.</p>
+     */
     @NameInMap("PageCount")
     public Integer pageCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of revoked certificates that are returned per page.</p>
+     */
     @NameInMap("ShowSize")
     public Integer showSize;
 
+    /**
+     * <p>The total number of revoked client certificates and server certificates that are returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -83,45 +95,49 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
 
     public static class ListRevokeCertificateResponseBodyCertificateList extends TeaModel {
         /**
-         * <p>The object.</p>
+         * <p>The expiration date of the certificate. The date is in the `yyyy-MM-ddT00:00Z` format. For example, the value `2021-12-31T00:00Z` indicates December 31, 2021.</p>
          */
         @NameInMap("AfterDate")
         public String afterDate;
+
+        /**
+         * <p>The type of the encryption algorithm of the certificate. Valid values:</p>
+         * <br>
+         * <p>*   **RSA**: the Rivest-Shamir-Adleman (RSA) algorithm.</p>
+         * <p>*   **ECC**: the elliptic curve cryptography (ECC) algorithm.</p>
+         * <p>*   **SM2**: the SM2 algorithm, which is developed and approved by the State Cryptography Administration of China.</p>
+         */
+        @NameInMap("Algorithm")
+        public String algorithm;
+
+        /**
+         * <p>The issuance date of the certificate. The date is in the `yyyy-MM-ddT00:00Z` format. For example, the value `2021-01-01T00:00Z` indicates January 1, 2021.</p>
+         */
+        @NameInMap("BeforeDate")
+        public String beforeDate;
+
+        /**
+         * <p>The type of the certificate.</p>
+         */
+        @NameInMap("CertificateType")
+        public String certificateType;
+
+        /**
+         * <p>The common name of the certificate.</p>
+         */
+        @NameInMap("CommonName")
+        public String commonName;
 
         /**
          * <p>The code of the country in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
          * <br>
          * <p>For more information about country codes, see the **"Country codes"** section of the [Manage company profiles](~~198289~~) topic.</p>
          */
-        @NameInMap("Algorithm")
-        public String algorithm;
-
-        /**
-         * <p>The name of the city in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
-         */
-        @NameInMap("BeforeDate")
-        public String beforeDate;
-
-        /**
-         * <p>The number of revoked certificates that are returned per page.</p>
-         */
-        @NameInMap("CertificateType")
-        public String certificateType;
-
-        /**
-         * <p>The number of revoked certificates to return on each page. Default value: **20**.</p>
-         */
-        @NameInMap("CommonName")
-        public String commonName;
-
-        /**
-         * <p>The name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
-         */
         @NameInMap("CountryCode")
         public String countryCode;
 
         /**
-         * <p>The serial number of the certificate.</p>
+         * <p>The unique identifier of the certificate.</p>
          */
         @NameInMap("Identifier")
         public String identifier;
@@ -133,24 +149,87 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         public Integer keySize;
 
         /**
-         * <p>The issuance date of the certificate. The date is in the `yyyy-MM-ddT00:00Z` format. For example, the value `2021-01-01T00:00Z` indicates January 1, 2021.</p>
+         * <p>The name of the city in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
          */
         @NameInMap("Locality")
         public String locality;
 
         /**
-         * <p>All Alibaba Cloud API requests must include common request parameters.</p>
-         * <br>
-         * <p>For more information about sample requests, see the **"Examples"** section of this topic.</p>
+         * <p>The MD5 fingerprint of the certificate.</p>
          */
         @NameInMap("Md5")
         public String md5;
 
         /**
-         * <p>The expiration date of the certificate. The date is in the `yyyy-MM-ddT00:00Z` format. For example, the value `2021-12-31T00:00Z` indicates December 31, 2021.</p>
+         * <p>The name of the organization. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
          */
         @NameInMap("Organization")
         public String organization;
+
+        /**
+         * <p>The name of the department in the organization. The organization is associated with the intermediate certificate authority (CA) certificate from which the certificate is issued.</p>
+         */
+        @NameInMap("OrganizationUnit")
+        public String organizationUnit;
+
+        /**
+         * <p>The identifier of the root certificate.</p>
+         */
+        @NameInMap("ParentIdentifier")
+        public String parentIdentifier;
+
+        /**
+         * <p>The date on which the certificate was revoked. The value is in the `yyyy-MM-ddT00:00Z` format. For example, the value `2021-09-01T00:00Z` indicates September 1, 2021.</p>
+         */
+        @NameInMap("RevokeDate")
+        public String revokeDate;
+
+        /**
+         * <p>The subject alternative name (SAN) extension of the certificate.</p>
+         * <br>
+         * <p>The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that corresponds to a SAN extension. A SAN extension struct contains the following parameters:</p>
+         * <br>
+         * <p>*   **Type**: the type of the extension. Data type: integer. Valid values:</p>
+         * <br>
+         * <p>    *   **1**: an email address</p>
+         * <p>    *   **2**: a domain name</p>
+         * <p>    *   **6**: a Uniform Resource Identifier (URI)</p>
+         * <p>    *   **7**: an IP address</p>
+         * <br>
+         * <p>*   **Value**: the value of the extension. Data type: string.</p>
+         */
+        @NameInMap("Sans")
+        public String sans;
+
+        /**
+         * <p>The serial number of the certificate.</p>
+         */
+        @NameInMap("SerialNumber")
+        public String serialNumber;
+
+        /**
+         * <p>The SHA-256 fingerprint of the certificate.</p>
+         */
+        @NameInMap("Sha2")
+        public String sha2;
+
+        /**
+         * <p>The signature algorithm of the certificate.</p>
+         */
+        @NameInMap("SignAlgorithm")
+        public String signAlgorithm;
+
+        /**
+         * <p>The name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
+         */
+        @NameInMap("State")
+        public String state;
+
+        /**
+         * <p>The status.</p>
+         */
+        @NameInMap("Status")
+        public String status;
 
         /**
          * <p>The distinguished name (DN) extension of the certificate, which indicates the user of the certificate. The DN extension includes the following information:</p>
@@ -161,60 +240,6 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
          * <p>*   **L**: the city</p>
          * <p>*   **ST**: the province, municipality, or autonomous region</p>
          * <p>*   **CN**: the common name</p>
-         */
-        @NameInMap("OrganizationUnit")
-        public String organizationUnit;
-
-        /**
-         * <p>The unique identifier of the certificate.</p>
-         */
-        @NameInMap("ParentIdentifier")
-        public String parentIdentifier;
-
-        /**
-         * <p>The page number of the current page.</p>
-         */
-        @NameInMap("RevokeDate")
-        public String revokeDate;
-
-        /**
-         * <p>Alibaba Cloud Computing Co., Ltd.</p>
-         */
-        @NameInMap("Sans")
-        public String sans;
-
-        /**
-         * <p>The name of the organization. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
-         */
-        @NameInMap("SerialNumber")
-        public String serialNumber;
-
-        /**
-         * <p>The ID of the request.</p>
-         */
-        @NameInMap("Sha2")
-        public String sha2;
-
-        /**
-         * <p>An array that consists of the details about the revoked client certificates or server certificates.</p>
-         */
-        @NameInMap("SignAlgorithm")
-        public String signAlgorithm;
-
-        /**
-         * <p>The SHA-256 fingerprint of the certificate.</p>
-         */
-        @NameInMap("State")
-        public String state;
-
-        /**
-         * <p>The common name of the certificate.</p>
-         */
-        @NameInMap("Status")
-        public String status;
-
-        /**
-         * <p>The type of the certificate.</p>
          */
         @NameInMap("SubjectDN")
         public String subjectDN;

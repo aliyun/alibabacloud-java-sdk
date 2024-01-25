@@ -74,12 +74,21 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         @NameInMap("BeforeDate")
         public Long beforeDate;
 
+        /**
+         * <p>The number of certificates issued by private CA instances.</p>
+         */
         @NameInMap("CertIssuedCount")
         public Long certIssuedCount;
 
+        /**
+         * <p>The remaining number of assignable certificate quotas.</p>
+         */
         @NameInMap("CertRemainingCount")
         public Long certRemainingCount;
 
+        /**
+         * <p>The total number of purchased certificate quotas.</p>
+         */
         @NameInMap("CertTotalCount")
         public Long certTotalCount;
 

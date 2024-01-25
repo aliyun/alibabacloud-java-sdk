@@ -23,7 +23,7 @@ public class CreateClientCertificateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The serial number of the server certificate.</p>
+     * <p>The serial number of the certificate.</p>
      */
     @NameInMap("SerialNumber")
     public String serialNumber;
