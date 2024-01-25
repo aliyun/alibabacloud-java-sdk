@@ -4,23 +4,18 @@ package com.aliyun.umeng_finplus20211130.models;
 import com.aliyun.tea.*;
 
 public class GetComputeResultResponseBody extends TeaModel {
-    // 状态码
     @NameInMap("Code")
     public String code;
 
-    // 返回内容
     @NameInMap("Data")
     public GetComputeResultResponseBodyData data;
 
-    // 消息描述
     @NameInMap("Msg")
     public String msg;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -70,7 +65,6 @@ public class GetComputeResultResponseBody extends TeaModel {
     }
 
     public static class GetComputeResultResponseBodyData extends TeaModel {
-        // 计算任务ID
         @NameInMap("bcId")
         public Long bcId;
 
@@ -86,22 +80,18 @@ public class GetComputeResultResponseBody extends TeaModel {
         @NameInMap("code109Num")
         public Long code109Num;
 
-        // 文件地址
         @NameInMap("exportFileName")
         public String exportFileName;
 
         @NameInMap("fileLineNumber")
         public Long fileLineNumber;
 
-        // 计算任务名称
         @NameInMap("name")
         public String name;
 
-        // 文件密码
         @NameInMap("password")
         public String password;
 
-        // 任务状态
         @NameInMap("state")
         public String state;
 

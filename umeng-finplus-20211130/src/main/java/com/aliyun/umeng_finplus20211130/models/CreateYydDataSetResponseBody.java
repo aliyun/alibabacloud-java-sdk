@@ -4,23 +4,18 @@ package com.aliyun.umeng_finplus20211130.models;
 import com.aliyun.tea.*;
 
 public class CreateYydDataSetResponseBody extends TeaModel {
-    // 状态码
     @NameInMap("Code")
     public String code;
 
-    // 数据集ID
     @NameInMap("Data")
     public Long data;
 
-    // 状态描述
     @NameInMap("Msg")
     public String msg;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
-    // Id of the request
     @NameInMap("requestId")
     public String requestId;
 
