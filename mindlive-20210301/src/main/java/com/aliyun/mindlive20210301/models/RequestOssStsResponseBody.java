@@ -4,6 +4,12 @@ package com.aliyun.mindlive20210301.models;
 import com.aliyun.tea.*;
 
 public class RequestOssStsResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public RequestOssStsResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
@@ -13,15 +19,25 @@ public class RequestOssStsResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Data")
-    public RequestOssStsResponseBodyData data;
-
     public static RequestOssStsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RequestOssStsResponseBody self = new RequestOssStsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RequestOssStsResponseBody setData(RequestOssStsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public RequestOssStsResponseBodyData getData() {
+        return this.data;
+    }
+
+    public RequestOssStsResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public RequestOssStsResponseBody setErrorMessage(String errorMessage) {
@@ -48,47 +64,71 @@ public class RequestOssStsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public RequestOssStsResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public RequestOssStsResponseBody setData(RequestOssStsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public RequestOssStsResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class RequestOssStsResponseBodyData extends TeaModel {
+        @NameInMap("AccessKeyId")
+        public String accessKeyId;
+
+        @NameInMap("AccessKeySecret")
+        public String accessKeySecret;
+
+        @NameInMap("Bucket")
+        public String bucket;
+
+        @NameInMap("EndPoint")
+        public String endPoint;
+
+        @NameInMap("Expire")
+        public String expire;
+
         @NameInMap("ObjectKeyPrefix")
         public String objectKeyPrefix;
 
         @NameInMap("SecurityToken")
         public String securityToken;
 
-        @NameInMap("AccessKeySecret")
-        public String accessKeySecret;
-
-        @NameInMap("Expire")
-        public String expire;
-
-        @NameInMap("EndPoint")
-        public String endPoint;
-
-        @NameInMap("AccessKeyId")
-        public String accessKeyId;
-
-        @NameInMap("Bucket")
-        public String bucket;
-
         public static RequestOssStsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             RequestOssStsResponseBodyData self = new RequestOssStsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public RequestOssStsResponseBodyData setAccessKeyId(String accessKeyId) {
+            this.accessKeyId = accessKeyId;
+            return this;
+        }
+        public String getAccessKeyId() {
+            return this.accessKeyId;
+        }
+
+        public RequestOssStsResponseBodyData setAccessKeySecret(String accessKeySecret) {
+            this.accessKeySecret = accessKeySecret;
+            return this;
+        }
+        public String getAccessKeySecret() {
+            return this.accessKeySecret;
+        }
+
+        public RequestOssStsResponseBodyData setBucket(String bucket) {
+            this.bucket = bucket;
+            return this;
+        }
+        public String getBucket() {
+            return this.bucket;
+        }
+
+        public RequestOssStsResponseBodyData setEndPoint(String endPoint) {
+            this.endPoint = endPoint;
+            return this;
+        }
+        public String getEndPoint() {
+            return this.endPoint;
+        }
+
+        public RequestOssStsResponseBodyData setExpire(String expire) {
+            this.expire = expire;
+            return this;
+        }
+        public String getExpire() {
+            return this.expire;
         }
 
         public RequestOssStsResponseBodyData setObjectKeyPrefix(String objectKeyPrefix) {
@@ -105,46 +145,6 @@ public class RequestOssStsResponseBody extends TeaModel {
         }
         public String getSecurityToken() {
             return this.securityToken;
-        }
-
-        public RequestOssStsResponseBodyData setAccessKeySecret(String accessKeySecret) {
-            this.accessKeySecret = accessKeySecret;
-            return this;
-        }
-        public String getAccessKeySecret() {
-            return this.accessKeySecret;
-        }
-
-        public RequestOssStsResponseBodyData setExpire(String expire) {
-            this.expire = expire;
-            return this;
-        }
-        public String getExpire() {
-            return this.expire;
-        }
-
-        public RequestOssStsResponseBodyData setEndPoint(String endPoint) {
-            this.endPoint = endPoint;
-            return this;
-        }
-        public String getEndPoint() {
-            return this.endPoint;
-        }
-
-        public RequestOssStsResponseBodyData setAccessKeyId(String accessKeyId) {
-            this.accessKeyId = accessKeyId;
-            return this;
-        }
-        public String getAccessKeyId() {
-            return this.accessKeyId;
-        }
-
-        public RequestOssStsResponseBodyData setBucket(String bucket) {
-            this.bucket = bucket;
-            return this;
-        }
-        public String getBucket() {
-            return this.bucket;
         }
 
     }

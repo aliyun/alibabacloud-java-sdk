@@ -4,6 +4,12 @@ package com.aliyun.mindlive20210301.models;
 import com.aliyun.tea.*;
 
 public class RequestBindingStateResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public RequestBindingStateResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
@@ -13,15 +19,25 @@ public class RequestBindingStateResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Data")
-    public RequestBindingStateResponseBodyData data;
-
     public static RequestBindingStateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RequestBindingStateResponseBody self = new RequestBindingStateResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RequestBindingStateResponseBody setData(RequestBindingStateResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public RequestBindingStateResponseBodyData getData() {
+        return this.data;
+    }
+
+    public RequestBindingStateResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public RequestBindingStateResponseBody setErrorMessage(String errorMessage) {
@@ -48,76 +64,28 @@ public class RequestBindingStateResponseBody extends TeaModel {
         return this.success;
     }
 
-    public RequestBindingStateResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public RequestBindingStateResponseBody setData(RequestBindingStateResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public RequestBindingStateResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class RequestBindingStateResponseBodyData extends TeaModel {
-        @NameInMap("UserAvatar")
-        public String userAvatar;
+        @NameInMap("BindAt")
+        public Long bindAt;
 
         @NameInMap("DeviceId")
         public String deviceId;
 
-        @NameInMap("UserSource")
-        public String userSource;
+        @NameInMap("UserAvatar")
+        public String userAvatar;
 
         @NameInMap("UserId")
         public String userId;
 
-        @NameInMap("BindAt")
-        public Long bindAt;
-
         @NameInMap("UserNick")
         public String userNick;
+
+        @NameInMap("UserSource")
+        public String userSource;
 
         public static RequestBindingStateResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             RequestBindingStateResponseBodyData self = new RequestBindingStateResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public RequestBindingStateResponseBodyData setUserAvatar(String userAvatar) {
-            this.userAvatar = userAvatar;
-            return this;
-        }
-        public String getUserAvatar() {
-            return this.userAvatar;
-        }
-
-        public RequestBindingStateResponseBodyData setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
-            return this;
-        }
-        public String getDeviceId() {
-            return this.deviceId;
-        }
-
-        public RequestBindingStateResponseBodyData setUserSource(String userSource) {
-            this.userSource = userSource;
-            return this;
-        }
-        public String getUserSource() {
-            return this.userSource;
-        }
-
-        public RequestBindingStateResponseBodyData setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
         }
 
         public RequestBindingStateResponseBodyData setBindAt(Long bindAt) {
@@ -128,12 +96,44 @@ public class RequestBindingStateResponseBody extends TeaModel {
             return this.bindAt;
         }
 
+        public RequestBindingStateResponseBodyData setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
+        }
+
+        public RequestBindingStateResponseBodyData setUserAvatar(String userAvatar) {
+            this.userAvatar = userAvatar;
+            return this;
+        }
+        public String getUserAvatar() {
+            return this.userAvatar;
+        }
+
+        public RequestBindingStateResponseBodyData setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
         public RequestBindingStateResponseBodyData setUserNick(String userNick) {
             this.userNick = userNick;
             return this;
         }
         public String getUserNick() {
             return this.userNick;
+        }
+
+        public RequestBindingStateResponseBodyData setUserSource(String userSource) {
+            this.userSource = userSource;
+            return this;
+        }
+        public String getUserSource() {
+            return this.userSource;
         }
 
     }

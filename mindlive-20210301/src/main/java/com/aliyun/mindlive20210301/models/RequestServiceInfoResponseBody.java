@@ -4,37 +4,24 @@ package com.aliyun.mindlive20210301.models;
 import com.aliyun.tea.*;
 
 public class RequestServiceInfoResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
-    // Service pack info
     @NameInMap("Data")
     public RequestServiceInfoResponseBodyData data;
 
-    // Error code
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // Error message
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // Whether request succeeds
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
     public Boolean success;
 
     public static RequestServiceInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RequestServiceInfoResponseBody self = new RequestServiceInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RequestServiceInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RequestServiceInfoResponseBody setData(RequestServiceInfoResponseBodyData data) {
@@ -61,6 +48,14 @@ public class RequestServiceInfoResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public RequestServiceInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public RequestServiceInfoResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -70,15 +65,12 @@ public class RequestServiceInfoResponseBody extends TeaModel {
     }
 
     public static class RequestServiceInfoResponseBodyData extends TeaModel {
-        // Service start time
         @NameInMap("ServiceEffectAt")
         public Long serviceEffectAt;
 
-        // Service end time
         @NameInMap("ServiceExpireAt")
         public Long serviceExpireAt;
 
-        // Name of service
         @NameInMap("ServicePackName")
         public String servicePackName;
 

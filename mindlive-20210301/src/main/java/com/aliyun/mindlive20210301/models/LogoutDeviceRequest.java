@@ -4,23 +4,15 @@ package com.aliyun.mindlive20210301.models;
 import com.aliyun.tea.*;
 
 public class LogoutDeviceRequest extends TeaModel {
-    @NameInMap("UserSource")
-    public String userSource;
-
     @NameInMap("UserId")
     public String userId;
+
+    @NameInMap("UserSource")
+    public String userSource;
 
     public static LogoutDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         LogoutDeviceRequest self = new LogoutDeviceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public LogoutDeviceRequest setUserSource(String userSource) {
-        this.userSource = userSource;
-        return this;
-    }
-    public String getUserSource() {
-        return this.userSource;
     }
 
     public LogoutDeviceRequest setUserId(String userId) {
@@ -29,6 +21,14 @@ public class LogoutDeviceRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
+    }
+
+    public LogoutDeviceRequest setUserSource(String userSource) {
+        this.userSource = userSource;
+        return this;
+    }
+    public String getUserSource() {
+        return this.userSource;
     }
 
 }

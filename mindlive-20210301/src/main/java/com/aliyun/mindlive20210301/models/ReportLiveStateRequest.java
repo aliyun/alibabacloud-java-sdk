@@ -4,43 +4,27 @@ package com.aliyun.mindlive20210301.models;
 import com.aliyun.tea.*;
 
 public class ReportLiveStateRequest extends TeaModel {
-    @NameInMap("Type")
-    public String type;
+    @NameInMap("AnchorId")
+    public String anchorId;
 
     @NameInMap("Id")
     public String id;
 
-    @NameInMap("AnchorId")
-    public String anchorId;
+    @NameInMap("LiveMode")
+    public String liveMode;
 
     @NameInMap("LiveState")
     public String liveState;
 
-    @NameInMap("LiveMode")
-    public String liveMode;
-
     @NameInMap("StartTime")
     public Long startTime;
+
+    @NameInMap("Type")
+    public String type;
 
     public static ReportLiveStateRequest build(java.util.Map<String, ?> map) throws Exception {
         ReportLiveStateRequest self = new ReportLiveStateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ReportLiveStateRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
-    public ReportLiveStateRequest setId(String id) {
-        this.id = id;
-        return this;
-    }
-    public String getId() {
-        return this.id;
     }
 
     public ReportLiveStateRequest setAnchorId(String anchorId) {
@@ -51,12 +35,12 @@ public class ReportLiveStateRequest extends TeaModel {
         return this.anchorId;
     }
 
-    public ReportLiveStateRequest setLiveState(String liveState) {
-        this.liveState = liveState;
+    public ReportLiveStateRequest setId(String id) {
+        this.id = id;
         return this;
     }
-    public String getLiveState() {
-        return this.liveState;
+    public String getId() {
+        return this.id;
     }
 
     public ReportLiveStateRequest setLiveMode(String liveMode) {
@@ -67,12 +51,28 @@ public class ReportLiveStateRequest extends TeaModel {
         return this.liveMode;
     }
 
+    public ReportLiveStateRequest setLiveState(String liveState) {
+        this.liveState = liveState;
+        return this;
+    }
+    public String getLiveState() {
+        return this.liveState;
+    }
+
     public ReportLiveStateRequest setStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public ReportLiveStateRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

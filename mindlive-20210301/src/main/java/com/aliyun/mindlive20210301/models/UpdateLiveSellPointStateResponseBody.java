@@ -4,15 +4,14 @@ package com.aliyun.mindlive20210301.models;
 import com.aliyun.tea.*;
 
 public class UpdateLiveSellPointStateResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -20,14 +19,6 @@ public class UpdateLiveSellPointStateResponseBody extends TeaModel {
     public static UpdateLiveSellPointStateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateLiveSellPointStateResponseBody self = new UpdateLiveSellPointStateResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateLiveSellPointStateResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdateLiveSellPointStateResponseBody setErrorCode(String errorCode) {
@@ -44,6 +35,14 @@ public class UpdateLiveSellPointStateResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public UpdateLiveSellPointStateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public UpdateLiveSellPointStateResponseBody setSuccess(Boolean success) {

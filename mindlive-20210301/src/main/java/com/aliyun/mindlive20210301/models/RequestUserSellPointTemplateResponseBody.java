@@ -4,6 +4,12 @@ package com.aliyun.mindlive20210301.models;
 import com.aliyun.tea.*;
 
 public class RequestUserSellPointTemplateResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public RequestUserSellPointTemplateResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
@@ -13,15 +19,25 @@ public class RequestUserSellPointTemplateResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Data")
-    public RequestUserSellPointTemplateResponseBodyData data;
-
     public static RequestUserSellPointTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RequestUserSellPointTemplateResponseBody self = new RequestUserSellPointTemplateResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RequestUserSellPointTemplateResponseBody setData(RequestUserSellPointTemplateResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public RequestUserSellPointTemplateResponseBodyData getData() {
+        return this.data;
+    }
+
+    public RequestUserSellPointTemplateResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public RequestUserSellPointTemplateResponseBody setErrorMessage(String errorMessage) {
@@ -48,25 +64,9 @@ public class RequestUserSellPointTemplateResponseBody extends TeaModel {
         return this.success;
     }
 
-    public RequestUserSellPointTemplateResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public RequestUserSellPointTemplateResponseBody setData(RequestUserSellPointTemplateResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public RequestUserSellPointTemplateResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class RequestUserSellPointTemplateResponseBodyData extends TeaModel {
-        @NameInMap("Url")
-        public String url;
+        @NameInMap("DisplayConfig")
+        public java.util.Map<String, ?> displayConfig;
 
         @NameInMap("TemplateConfig")
         public java.util.Map<String, ?> templateConfig;
@@ -74,20 +74,20 @@ public class RequestUserSellPointTemplateResponseBody extends TeaModel {
         @NameInMap("TemplateUuid")
         public String templateUuid;
 
-        @NameInMap("DisplayConfig")
-        public java.util.Map<String, ?> displayConfig;
+        @NameInMap("Url")
+        public String url;
 
         public static RequestUserSellPointTemplateResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             RequestUserSellPointTemplateResponseBodyData self = new RequestUserSellPointTemplateResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public RequestUserSellPointTemplateResponseBodyData setUrl(String url) {
-            this.url = url;
+        public RequestUserSellPointTemplateResponseBodyData setDisplayConfig(java.util.Map<String, ?> displayConfig) {
+            this.displayConfig = displayConfig;
             return this;
         }
-        public String getUrl() {
-            return this.url;
+        public java.util.Map<String, ?> getDisplayConfig() {
+            return this.displayConfig;
         }
 
         public RequestUserSellPointTemplateResponseBodyData setTemplateConfig(java.util.Map<String, ?> templateConfig) {
@@ -106,12 +106,12 @@ public class RequestUserSellPointTemplateResponseBody extends TeaModel {
             return this.templateUuid;
         }
 
-        public RequestUserSellPointTemplateResponseBodyData setDisplayConfig(java.util.Map<String, ?> displayConfig) {
-            this.displayConfig = displayConfig;
+        public RequestUserSellPointTemplateResponseBodyData setUrl(String url) {
+            this.url = url;
             return this;
         }
-        public java.util.Map<String, ?> getDisplayConfig() {
-            return this.displayConfig;
+        public String getUrl() {
+            return this.url;
         }
 
     }

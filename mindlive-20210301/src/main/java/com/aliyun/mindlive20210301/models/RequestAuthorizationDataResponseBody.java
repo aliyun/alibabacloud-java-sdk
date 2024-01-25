@@ -4,6 +4,12 @@ package com.aliyun.mindlive20210301.models;
 import com.aliyun.tea.*;
 
 public class RequestAuthorizationDataResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public RequestAuthorizationDataResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
@@ -13,15 +19,25 @@ public class RequestAuthorizationDataResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Data")
-    public RequestAuthorizationDataResponseBodyData data;
-
     public static RequestAuthorizationDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RequestAuthorizationDataResponseBody self = new RequestAuthorizationDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RequestAuthorizationDataResponseBody setData(RequestAuthorizationDataResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public RequestAuthorizationDataResponseBodyData getData() {
+        return this.data;
+    }
+
+    public RequestAuthorizationDataResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public RequestAuthorizationDataResponseBody setErrorMessage(String errorMessage) {
@@ -46,22 +62,6 @@ public class RequestAuthorizationDataResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public RequestAuthorizationDataResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public RequestAuthorizationDataResponseBody setData(RequestAuthorizationDataResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public RequestAuthorizationDataResponseBodyData getData() {
-        return this.data;
     }
 
     public static class RequestAuthorizationDataResponseBodyData extends TeaModel {

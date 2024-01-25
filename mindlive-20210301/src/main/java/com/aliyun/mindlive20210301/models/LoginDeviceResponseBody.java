@@ -4,6 +4,9 @@ package com.aliyun.mindlive20210301.models;
 import com.aliyun.tea.*;
 
 public class LoginDeviceResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
@@ -13,12 +16,17 @@ public class LoginDeviceResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     public static LoginDeviceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         LoginDeviceResponseBody self = new LoginDeviceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public LoginDeviceResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public LoginDeviceResponseBody setErrorMessage(String errorMessage) {
@@ -43,14 +51,6 @@ public class LoginDeviceResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public LoginDeviceResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
 }
