@@ -10,7 +10,6 @@ public class DescribeMeterRtcDurationResponseBody extends TeaModel {
     @NameInMap("ReadyTs")
     public Long readyTs;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

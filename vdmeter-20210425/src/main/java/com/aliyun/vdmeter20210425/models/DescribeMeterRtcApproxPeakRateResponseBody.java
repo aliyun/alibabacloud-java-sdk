@@ -13,7 +13,6 @@ public class DescribeMeterRtcApproxPeakRateResponseBody extends TeaModel {
     @NameInMap("PeakRateVoList")
     public java.util.List<DescribeMeterRtcApproxPeakRateResponseBodyPeakRateVoList> peakRateVoList;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

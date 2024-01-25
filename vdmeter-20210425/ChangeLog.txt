@@ -1,3 +1,6 @@
+2024-01-25 Version: 1.0.1
+- Update Tea.
+
 2021-12-20 Version: 1.0.0
 - JavaSdk.
 

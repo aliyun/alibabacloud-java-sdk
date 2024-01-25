@@ -7,7 +7,6 @@ public class DescribeMeterRecordRtUsageByTaskProfileResponseBody extends TeaMode
     @NameInMap("Data")
     public java.util.List<DescribeMeterRecordRtUsageByTaskProfileResponseBodyData> data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
