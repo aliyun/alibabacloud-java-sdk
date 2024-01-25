@@ -1,3 +1,6 @@
+2024-01-25 Version: 1.0.96
+- Update Tea.
+
 2022-02-12 Version: 1.0.95
 - For Aliyunape20210922.
 
