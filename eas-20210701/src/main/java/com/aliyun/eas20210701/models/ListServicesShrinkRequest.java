@@ -88,6 +88,9 @@ public class ListServicesShrinkRequest extends TeaModel {
     @NameInMap("ParentServiceUid")
     public String parentServiceUid;
 
+    @NameInMap("QuotaId")
+    public String quotaId;
+
     /**
      * <p>服务所属的资源组名称或ID。</p>
      */
@@ -180,6 +183,14 @@ public class ListServicesShrinkRequest extends TeaModel {
     }
     public String getParentServiceUid() {
         return this.parentServiceUid;
+    }
+
+    public ListServicesShrinkRequest setQuotaId(String quotaId) {
+        this.quotaId = quotaId;
+        return this;
+    }
+    public String getQuotaId() {
+        return this.quotaId;
     }
 
     public ListServicesShrinkRequest setResourceName(String resourceName) {

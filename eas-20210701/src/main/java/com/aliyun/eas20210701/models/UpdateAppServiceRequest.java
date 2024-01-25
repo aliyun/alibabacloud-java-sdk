@@ -52,7 +52,7 @@ public class UpdateAppServiceRequest extends TeaModel {
      * <p>The number of instances.</p>
      */
     @NameInMap("Replicas")
-    public String replicas;
+    public Integer replicas;
 
     /**
      * <p>The service specifications.</p>
@@ -105,11 +105,11 @@ public class UpdateAppServiceRequest extends TeaModel {
         return this.config;
     }
 
-    public UpdateAppServiceRequest setReplicas(String replicas) {
+    public UpdateAppServiceRequest setReplicas(Integer replicas) {
         this.replicas = replicas;
         return this;
     }
-    public String getReplicas() {
+    public Integer getReplicas() {
         return this.replicas;
     }
 

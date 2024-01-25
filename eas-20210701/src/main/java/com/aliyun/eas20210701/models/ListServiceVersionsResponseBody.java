@@ -77,6 +77,9 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         @NameInMap("Message")
         public String message;
 
+        @NameInMap("ServiceConfig")
+        public String serviceConfig;
+
         @NameInMap("ServiceRunnable")
         public String serviceRunnable;
 
@@ -115,6 +118,14 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         }
         public String getMessage() {
             return this.message;
+        }
+
+        public ListServiceVersionsResponseBodyVersions setServiceConfig(String serviceConfig) {
+            this.serviceConfig = serviceConfig;
+            return this;
+        }
+        public String getServiceConfig() {
+            return this.serviceConfig;
         }
 
         public ListServiceVersionsResponseBodyVersions setServiceRunnable(String serviceRunnable) {

@@ -1841,6 +1841,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ParentServiceUid", request.parentServiceUid);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.quotaId)) {
+            query.put("QuotaId", request.quotaId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceName)) {
             query.put("ResourceName", request.resourceName);
         }
