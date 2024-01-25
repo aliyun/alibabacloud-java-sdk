@@ -4,23 +4,18 @@ package com.aliyun.aiearth_meteorology20210928.models;
 import com.aliyun.tea.*;
 
 public class GridQueryResponseBody extends TeaModel {
-    // 响应码
     @NameInMap("code")
     public Long code;
 
-    // 响应信息
     @NameInMap("message")
     public String message;
 
-    // 响应结果
     @NameInMap("module")
     public GridQueryResponseBodyModule module;
 
-    // Id of the request
     @NameInMap("requestId")
     public String requestId;
 
-    // 请求是否成功
     @NameInMap("success")
     public Boolean success;
 
@@ -70,35 +65,27 @@ public class GridQueryResponseBody extends TeaModel {
     }
 
     public static class GridQueryResponseBodyModuleList extends TeaModel {
-        // 数据类型
         @NameInMap("dataType")
         public String dataType;
 
-        // 要素
         @NameInMap("element")
         public String element;
 
-        // 要素单位
         @NameInMap("elementUnit")
         public String elementUnit;
 
-        // 预报时间
         @NameInMap("forecastTimestamp")
         public String forecastTimestamp;
 
-        // 查询点纬度
         @NameInMap("latitude")
         public Double latitude;
 
-        // 查询点经度
         @NameInMap("longitude")
         public Double longitude;
 
-        // 起报时间
         @NameInMap("reportTimestamp")
         public String reportTimestamp;
 
-        // 当前网格值
         @NameInMap("value")
         public Double value;
 
@@ -174,15 +161,12 @@ public class GridQueryResponseBody extends TeaModel {
     }
 
     public static class GridQueryResponseBodyModule extends TeaModel {
-        // 分页结果列表
         @NameInMap("list")
         public java.util.List<GridQueryResponseBodyModuleList> list;
 
-        // 分页编号
         @NameInMap("pageNo")
         public Integer pageNo;
 
-        // 分页大小
         @NameInMap("pageSize")
         public Integer pageSize;
 

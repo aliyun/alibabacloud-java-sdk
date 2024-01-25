@@ -3,16 +3,10 @@ package com.aliyun.aiearth_meteorology20210928;
 
 import com.aliyun.tea.*;
 import com.aliyun.aiearth_meteorology20210928.models.*;
-import com.aliyun.teautil.*;
-import com.aliyun.teautil.models.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.openapiutil.*;
-import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "";
         this.checkConfig(config);
@@ -32,15 +26,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public GridQueryResponse gridQuery(String dataType, GridQueryRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.gridQueryWithOptions(dataType, request, headers, runtime);
-    }
-
-    public GridQueryResponse gridQueryWithOptions(String dataType, GridQueryRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GridQueryResponse gridQueryWithOptions(String dataType, GridQueryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        dataType = com.aliyun.openapiutil.Client.getEncodeParam(dataType);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.element)) {
             query.put("element", request.element);
@@ -74,10 +61,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("reportTimestamp", request.reportTimestamp);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("GridQuery", "2021-09-28", "HTTPS", "GET", "AK", "/grid/" + dataType + "/v1", "json", req, runtime), new GridQueryResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GridQuery"),
+            new TeaPair("version", "2021-09-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/grid/" + com.aliyun.openapiutil.Client.getEncodeParam(dataType) + "/v1"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GridQueryResponse());
+    }
+
+    public GridQueryResponse gridQuery(String dataType, GridQueryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.gridQueryWithOptions(dataType, request, headers, runtime);
     }
 }

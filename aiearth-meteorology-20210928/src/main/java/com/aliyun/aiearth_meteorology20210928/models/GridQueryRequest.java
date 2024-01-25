@@ -4,35 +4,27 @@ package com.aliyun.aiearth_meteorology20210928.models;
 import com.aliyun.tea.*;
 
 public class GridQueryRequest extends TeaModel {
-    // 要素
     @NameInMap("element")
     public String element;
 
-    // 预报时间
     @NameInMap("forecastTimestamp")
     public String forecastTimestamp;
 
-    // 纬度
     @NameInMap("latitude")
     public Double latitude;
 
-    // 经度
     @NameInMap("longitude")
     public Double longitude;
 
-    // 分页编号
     @NameInMap("pageNo")
     public Integer pageNo;
 
-    // 分页大小
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    // 产品
     @NameInMap("product")
     public String product;
 
-    // 起报时间
     @NameInMap("reportTimestamp")
     public String reportTimestamp;
 
