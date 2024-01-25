@@ -156,6 +156,9 @@ public class DescribeItemsResponseBody extends TeaModel {
         @NameInMap("ActionPrice")
         public Integer actionPrice;
 
+        @NameInMap("BeClearance")
+        public Boolean beClearance;
+
         @NameInMap("BeMember")
         public Boolean beMember;
 
@@ -330,6 +333,9 @@ public class DescribeItemsResponseBody extends TeaModel {
         @NameInMap("SalesPrice")
         public Integer salesPrice;
 
+        /**
+         * <p>SKuID。</p>
+         */
         @NameInMap("SkuId")
         public String skuId;
 
@@ -359,6 +365,14 @@ public class DescribeItemsResponseBody extends TeaModel {
         }
         public Integer getActionPrice() {
             return this.actionPrice;
+        }
+
+        public DescribeItemsResponseBodyItems setBeClearance(Boolean beClearance) {
+            this.beClearance = beClearance;
+            return this;
+        }
+        public Boolean getBeClearance() {
+            return this.beClearance;
         }
 
         public DescribeItemsResponseBodyItems setBeMember(Boolean beMember) {

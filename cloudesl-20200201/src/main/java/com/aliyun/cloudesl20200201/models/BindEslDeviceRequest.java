@@ -7,6 +7,12 @@ public class BindEslDeviceRequest extends TeaModel {
     @NameInMap("Column")
     public String column;
 
+    @NameInMap("ContainerId")
+    public String containerId;
+
+    @NameInMap("ContainerName")
+    public String containerName;
+
     @NameInMap("EslBarCode")
     public String eslBarCode;
 
@@ -18,6 +24,12 @@ public class BindEslDeviceRequest extends TeaModel {
 
     @NameInMap("Layer")
     public Integer layer;
+
+    @NameInMap("LayoutId")
+    public String layoutId;
+
+    @NameInMap("LayoutName")
+    public String layoutName;
 
     @NameInMap("Shelf")
     public String shelf;
@@ -36,6 +48,22 @@ public class BindEslDeviceRequest extends TeaModel {
     }
     public String getColumn() {
         return this.column;
+    }
+
+    public BindEslDeviceRequest setContainerId(String containerId) {
+        this.containerId = containerId;
+        return this;
+    }
+    public String getContainerId() {
+        return this.containerId;
+    }
+
+    public BindEslDeviceRequest setContainerName(String containerName) {
+        this.containerName = containerName;
+        return this;
+    }
+    public String getContainerName() {
+        return this.containerName;
     }
 
     public BindEslDeviceRequest setEslBarCode(String eslBarCode) {
@@ -68,6 +96,22 @@ public class BindEslDeviceRequest extends TeaModel {
     }
     public Integer getLayer() {
         return this.layer;
+    }
+
+    public BindEslDeviceRequest setLayoutId(String layoutId) {
+        this.layoutId = layoutId;
+        return this;
+    }
+    public String getLayoutId() {
+        return this.layoutId;
+    }
+
+    public BindEslDeviceRequest setLayoutName(String layoutName) {
+        this.layoutName = layoutName;
+        return this;
+    }
+    public String getLayoutName() {
+        return this.layoutName;
     }
 
     public BindEslDeviceRequest setShelf(String shelf) {

@@ -160,6 +160,9 @@ public class DescribeUserLogResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        @NameInMap("I18nResultKey")
+        public String i18nResultKey;
+
         @NameInMap("ItemBarCode")
         public String itemBarCode;
 
@@ -250,6 +253,14 @@ public class DescribeUserLogResponseBody extends TeaModel {
         }
         public String getGmtModified() {
             return this.gmtModified;
+        }
+
+        public DescribeUserLogResponseBodyUserLogs setI18nResultKey(String i18nResultKey) {
+            this.i18nResultKey = i18nResultKey;
+            return this;
+        }
+        public String getI18nResultKey() {
+            return this.i18nResultKey;
         }
 
         public DescribeUserLogResponseBodyUserLogs setItemBarCode(String itemBarCode) {

@@ -142,6 +142,15 @@ public class DescribeStoresResponseBody extends TeaModel {
     }
 
     public static class DescribeStoresResponseBodyStores extends TeaModel {
+        @NameInMap("AutoUnbindDays")
+        public Integer autoUnbindDays;
+
+        @NameInMap("AutoUnbindOfflineEsl")
+        public Boolean autoUnbindOfflineEsl;
+
+        @NameInMap("BarCodeEncode")
+        public Integer barCodeEncode;
+
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
@@ -175,6 +184,30 @@ public class DescribeStoresResponseBody extends TeaModel {
         public static DescribeStoresResponseBodyStores build(java.util.Map<String, ?> map) throws Exception {
             DescribeStoresResponseBodyStores self = new DescribeStoresResponseBodyStores();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeStoresResponseBodyStores setAutoUnbindDays(Integer autoUnbindDays) {
+            this.autoUnbindDays = autoUnbindDays;
+            return this;
+        }
+        public Integer getAutoUnbindDays() {
+            return this.autoUnbindDays;
+        }
+
+        public DescribeStoresResponseBodyStores setAutoUnbindOfflineEsl(Boolean autoUnbindOfflineEsl) {
+            this.autoUnbindOfflineEsl = autoUnbindOfflineEsl;
+            return this;
+        }
+        public Boolean getAutoUnbindOfflineEsl() {
+            return this.autoUnbindOfflineEsl;
+        }
+
+        public DescribeStoresResponseBodyStores setBarCodeEncode(Integer barCodeEncode) {
+            this.barCodeEncode = barCodeEncode;
+            return this;
+        }
+        public Integer getBarCodeEncode() {
+            return this.barCodeEncode;
         }
 
         public DescribeStoresResponseBodyStores setGmtCreate(String gmtCreate) {

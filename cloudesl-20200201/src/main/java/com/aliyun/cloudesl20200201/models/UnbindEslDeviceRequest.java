@@ -7,6 +7,9 @@ public class UnbindEslDeviceRequest extends TeaModel {
     @NameInMap("Column")
     public String column;
 
+    @NameInMap("ContainerName")
+    public String containerName;
+
     @NameInMap("EslBarCode")
     public String eslBarCode;
 
@@ -36,6 +39,14 @@ public class UnbindEslDeviceRequest extends TeaModel {
     }
     public String getColumn() {
         return this.column;
+    }
+
+    public UnbindEslDeviceRequest setContainerName(String containerName) {
+        this.containerName = containerName;
+        return this;
+    }
+    public String getContainerName() {
+        return this.containerName;
     }
 
     public UnbindEslDeviceRequest setEslBarCode(String eslBarCode) {

@@ -31,14 +31,6 @@ public class DescribeEslDevicesRequest extends TeaModel {
     @NameInMap("Type")
     public String type;
 
-    // 类型编码
-    // 取值范围如下：
-    // NORMAL 常规
-    // LOW_TEMPLATE 低温价签
-    // THREE_COLOR 三色价签
-    // ESL_TYPE_DM_LCD  段码屏幕
-    // ESL_TYPE_FULL_COLOR 彩色屏幕
-    // ESL_TYPE_MUTIMEDIA 多媒体
     @NameInMap("TypeEncode")
     public String typeEncode;
 
