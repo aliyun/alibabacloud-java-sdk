@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeAnycastServerRegionsResponseBody extends TeaModel {
     /**
-     * <p>The list of regions where you can associate Anycast EIPs with backend servers.</p>
+     * <p>The list of regions where you can associate Anycast EIPs with endpoints.</p>
      */
     @NameInMap("AnycastServerRegionList")
     public java.util.List<DescribeAnycastServerRegionsResponseBodyAnycastServerRegionList> anycastServerRegionList;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of returned entries.</p>
      */
     @NameInMap("Count")
     public String count;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

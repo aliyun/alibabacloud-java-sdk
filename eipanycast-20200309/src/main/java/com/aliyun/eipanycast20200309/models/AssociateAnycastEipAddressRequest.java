@@ -13,36 +13,37 @@ public class AssociateAnycastEipAddressRequest extends TeaModel {
     /**
      * <p>The association mode. Valid values:</p>
      * <br>
-     * <p>*   **Default**: the default mode. In this mode, cloud resources to be associated are set as default origin servers.</p>
-     * <p>*   **Normal**: the standard mode. In this mode, cloud resources to be associated are set as standard origin servers.</p>
+     * <p>*   **Default**: the default mode. In this mode, the endpoint to be associated serves as the default origin server.</p>
+     * <p>*   **Normal**: the standard mode. In this mode, the endpoint to be associated serves as a standard origin server.</p>
      * <br>
-     * <p>> You can associate an Anycast EIP with cloud resources in multiple regions. However, you can set only one cloud resource as the default origin server. Other cloud resources are set as standard origin servers. If you do not specify or add an access point, requests are forwarded to the default origin server.</p>
+     * <p>> You can associate endpoints in multiple regions with an Anycast EIP. However, only one endpoint can serve as the default origin server. Others serve as standard origin servers. If you do not specify or add an access point, requests are forwarded to the default origin server.\</p>
      * <br>
-     * <p>*   If this is your first time to associate an Anycast EIP with a cloud resource, set the value to **Default**.</p>
+     * <br>
+     * <p>*   If this is your first time to associate an Anycast EIP with an endpoint, set the value to **Default**.</p>
      * <p>*   If not, you can also set the value to **Default**, which specifies a new default origin server. In this case, the previous origin server functions as a standard origin server.</p>
      */
     @NameInMap("AssociationMode")
     public String associationMode;
 
     /**
-     * <p>The ID of the cloud resource with which you want to associate the Anycast EIP.</p>
+     * <p>The ID of the endpoint with which you want to associate the Anycast EIP.</p>
      */
     @NameInMap("BindInstanceId")
     public String bindInstanceId;
 
     /**
-     * <p>The ID of the region where the cloud resource is deployed.</p>
+     * <p>The ID of the region where the endpoint is deployed.</p>
      * <br>
-     * <p>You can associate Anycast EIPs only with cloud resources in specific regions. You can call the [DescribeAnycastServerRegions](~~171939~~) operation to query the region IDs.</p>
+     * <p>You can associate Anycast EIPs only with endpoints in specific regions. You can call the [DescribeAnycastServerRegions](~~171939~~) operation to query the region IDs.</p>
      */
     @NameInMap("BindInstanceRegionId")
     public String bindInstanceRegionId;
 
     /**
-     * <p>The type of cloud resource with which you want to associate the Anycast EIP. Valid values:</p>
+     * <p>The type of endpoint with which you want to associate the Anycast EIP. Valid values:</p>
      * <br>
-     * <p>*   **SlbInstance**: an internal-facing Server Load Balancer (SLB) instance that is deployed in a virtual private cloud (VPC)</p>
-     * <p>*   **NetworkInterface**: an elastic network interface (ENI)</p>
+     * <p>*   **SlbInstance**: internal-facing Server Load Balancer (SLB) instance that is deployed in a virtual private cloud (VPC)</p>
+     * <p>*   **NetworkInterface**: elastic network interface (ENI)</p>
      */
     @NameInMap("BindInstanceType")
     public String bindInstanceType;
@@ -50,26 +51,26 @@ public class AssociateAnycastEipAddressRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * <br>
-     * <p>>  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
+     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to only precheck the request. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <br>
-     * <p>*   **true**: prechecks the request. After the request passes the precheck, the Anycast EIP is not associated with the instance. The system checks the required parameters, request syntax, and limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): sends the API request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false**(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The information about the access points in associated access areas when you associate an Anycast EIP with a cloud resource.</p>
+     * <p>The information about the access points in associated access areas when you associate an Anycast EIP with an endpoint.</p>
      * <br>
-     * <p>If this is your first time to associate an Anycast EIP with a cloud resource, ignore this parameter. The system automatically associates all access areas.</p>
+     * <p>If this is your first time to associate an Anycast EIP with an endpoint, ignore this parameter. The system automatically associates all access areas.</p>
      * <br>
      * <p>You can call the [DescribeAnycastPopLocations](~~171938~~) operation to query information about access points in supported access areas.</p>
      */
@@ -163,9 +164,9 @@ public class AssociateAnycastEipAddressRequest extends TeaModel {
 
     public static class AssociateAnycastEipAddressRequestPopLocations extends TeaModel {
         /**
-         * <p>The information about the access points in associated access areas when you associate an Anycast EIP with a cloud resource.</p>
+         * <p>The information about the access points in associated access areas when you associate an Anycast EIP with an endpoint.</p>
          * <br>
-         * <p>If this is your first time to associate an Anycast EIP with a cloud resource, ignore this parameter. The system automatically associates all access areas.</p>
+         * <p>If this is your first time to associate an Anycast EIP with an endpoint, ignore this parameter. The system automatically associates all access areas.</p>
          * <br>
          * <p>You can call the [DescribeAnycastPopLocations](~~171938~~) operation to query information about access points in supported access areas.</p>
          */

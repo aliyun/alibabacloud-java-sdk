@@ -11,13 +11,13 @@ public class AllocateAnycastEipAddressResponseBody extends TeaModel {
     public String anycastId;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
