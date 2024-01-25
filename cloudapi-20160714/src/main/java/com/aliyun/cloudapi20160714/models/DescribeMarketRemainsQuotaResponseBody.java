@@ -4,9 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeMarketRemainsQuotaResponseBody extends TeaModel {
+    /**
+     * <p>The remaining quota.</p>
+     */
     @NameInMap("RemainsQuota")
     public Long remainsQuota;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

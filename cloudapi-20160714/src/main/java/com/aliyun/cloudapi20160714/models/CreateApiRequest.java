@@ -145,6 +145,9 @@ public class CreateApiRequest extends TeaModel {
     @NameInMap("SystemParameters")
     public String systemParameters;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateApiRequestTag> tag;
 
@@ -393,9 +396,15 @@ public class CreateApiRequest extends TeaModel {
     }
 
     public static class CreateApiRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 

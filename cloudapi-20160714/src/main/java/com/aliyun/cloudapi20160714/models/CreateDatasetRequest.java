@@ -4,15 +4,28 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateDatasetRequest extends TeaModel {
+    /**
+     * <p>The name of the dataset.</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 
+    /**
+     * <p>The type of the dataset. Valid values:</p>
+     * <br>
+     * <p>* JWT_BLOCKING: a JSON Web Token (JWT) blacklist</p>
+     * <p>* IP_WHITELIST_CIDR : an IP address whitelist</p>
+     * <p>* PARAMETER_ACCESS : parameter-based access control</p>
+     */
     @NameInMap("DatasetType")
     public String datasetType;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateDatasetRequestTag> tag;
 
@@ -54,9 +67,15 @@ public class CreateDatasetRequest extends TeaModel {
     }
 
     public static class CreateDatasetRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 

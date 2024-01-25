@@ -3,7 +3,7 @@ package com.aliyun.cloudapi20160714.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeApisResponse extends TeaModel {
+public class ModifyInstanceAttributeResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeApisResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeApisResponseBody body;
+    public ModifyInstanceAttributeResponseBody body;
 
-    public static DescribeApisResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeApisResponse self = new DescribeApisResponse();
+    public static ModifyInstanceAttributeResponse build(java.util.Map<String, ?> map) throws Exception {
+        ModifyInstanceAttributeResponse self = new ModifyInstanceAttributeResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeApisResponse setHeaders(java.util.Map<String, String> headers) {
+    public ModifyInstanceAttributeResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeApisResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeApisResponse setStatusCode(Integer statusCode) {
+    public ModifyInstanceAttributeResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeApisResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeApisResponse setBody(DescribeApisResponseBody body) {
+    public ModifyInstanceAttributeResponse setBody(ModifyInstanceAttributeResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeApisResponseBody getBody() {
+    public ModifyInstanceAttributeResponseBody getBody() {
         return this.body;
     }
 

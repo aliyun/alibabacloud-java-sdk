@@ -4,12 +4,18 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppSecurityRequest extends TeaModel {
+    /**
+     * <p>The ID of the app.</p>
+     */
     @NameInMap("AppId")
     public Long appId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeAppSecurityRequestTag> tag;
 
@@ -43,9 +49,15 @@ public class DescribeAppSecurityRequest extends TeaModel {
     }
 
     public static class DescribeAppSecurityRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -4,6 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DeleteBackendRequest extends TeaModel {
+    /**
+     * <p>The ID of the backend service.</p>
+     */
     @NameInMap("BackendId")
     public String backendId;
 
