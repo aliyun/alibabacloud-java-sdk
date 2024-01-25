@@ -7,14 +7,14 @@ public class RequestUserConfigResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
 
     @NameInMap("Success")
     public Boolean success;
@@ -32,6 +32,14 @@ public class RequestUserConfigResponseBody extends TeaModel {
         return this.data;
     }
 
+    public RequestUserConfigResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
     public RequestUserConfigResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -46,14 +54,6 @@ public class RequestUserConfigResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public RequestUserConfigResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     public RequestUserConfigResponseBody setSuccess(Boolean success) {

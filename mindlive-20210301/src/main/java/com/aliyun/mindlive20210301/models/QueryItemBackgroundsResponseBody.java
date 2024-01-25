@@ -7,14 +7,14 @@ public class QueryItemBackgroundsResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
 
     @NameInMap("Success")
     public Boolean success;
@@ -32,6 +32,14 @@ public class QueryItemBackgroundsResponseBody extends TeaModel {
         return this.data;
     }
 
+    public QueryItemBackgroundsResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
     public QueryItemBackgroundsResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -46,14 +54,6 @@ public class QueryItemBackgroundsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public QueryItemBackgroundsResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     public QueryItemBackgroundsResponseBody setSuccess(Boolean success) {

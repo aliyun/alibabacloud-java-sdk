@@ -4,36 +4,24 @@ package com.aliyun.mindlive20210301.models;
 import com.aliyun.tea.*;
 
 public class RequestLiveSellPointStateResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RequestLiveSellPointStateResponseBodyData data;
 
-    // error code
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    // error detail
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    // whether succeeds
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
     public Boolean success;
 
     public static RequestLiveSellPointStateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RequestLiveSellPointStateResponseBody self = new RequestLiveSellPointStateResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RequestLiveSellPointStateResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RequestLiveSellPointStateResponseBody setData(RequestLiveSellPointStateResponseBodyData data) {
@@ -60,6 +48,14 @@ public class RequestLiveSellPointStateResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public RequestLiveSellPointStateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public RequestLiveSellPointStateResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -69,7 +65,6 @@ public class RequestLiveSellPointStateResponseBody extends TeaModel {
     }
 
     public static class RequestLiveSellPointStateResponseBodyData extends TeaModel {
-        // whether display
         @NameInMap("Display")
         public Boolean display;
 

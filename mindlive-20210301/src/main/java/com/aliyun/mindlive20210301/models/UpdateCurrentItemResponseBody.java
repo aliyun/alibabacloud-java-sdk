@@ -4,6 +4,12 @@ package com.aliyun.mindlive20210301.models;
 import com.aliyun.tea.*;
 
 public class UpdateCurrentItemResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public UpdateCurrentItemResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
@@ -13,15 +19,25 @@ public class UpdateCurrentItemResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Data")
-    public UpdateCurrentItemResponseBodyData data;
-
     public static UpdateCurrentItemResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateCurrentItemResponseBody self = new UpdateCurrentItemResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateCurrentItemResponseBody setData(UpdateCurrentItemResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public UpdateCurrentItemResponseBodyData getData() {
+        return this.data;
+    }
+
+    public UpdateCurrentItemResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public UpdateCurrentItemResponseBody setErrorMessage(String errorMessage) {
@@ -48,25 +64,12 @@ public class UpdateCurrentItemResponseBody extends TeaModel {
         return this.success;
     }
 
-    public UpdateCurrentItemResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public UpdateCurrentItemResponseBody setData(UpdateCurrentItemResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public UpdateCurrentItemResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class UpdateCurrentItemResponseBodyDataItemBackground extends TeaModel {
-        @NameInMap("Scope")
-        public String scope;
+        @NameInMap("DownloadUrl")
+        public String downloadUrl;
+
+        @NameInMap("FileType")
+        public String fileType;
 
         @NameInMap("ItemId")
         public String itemId;
@@ -74,23 +77,28 @@ public class UpdateCurrentItemResponseBody extends TeaModel {
         @NameInMap("ResourceUuid")
         public String resourceUuid;
 
-        @NameInMap("DownloadUrl")
-        public String downloadUrl;
-
-        @NameInMap("FileType")
-        public String fileType;
+        @NameInMap("Scope")
+        public String scope;
 
         public static UpdateCurrentItemResponseBodyDataItemBackground build(java.util.Map<String, ?> map) throws Exception {
             UpdateCurrentItemResponseBodyDataItemBackground self = new UpdateCurrentItemResponseBodyDataItemBackground();
             return TeaModel.build(map, self);
         }
 
-        public UpdateCurrentItemResponseBodyDataItemBackground setScope(String scope) {
-            this.scope = scope;
+        public UpdateCurrentItemResponseBodyDataItemBackground setDownloadUrl(String downloadUrl) {
+            this.downloadUrl = downloadUrl;
             return this;
         }
-        public String getScope() {
-            return this.scope;
+        public String getDownloadUrl() {
+            return this.downloadUrl;
+        }
+
+        public UpdateCurrentItemResponseBodyDataItemBackground setFileType(String fileType) {
+            this.fileType = fileType;
+            return this;
+        }
+        public String getFileType() {
+            return this.fileType;
         }
 
         public UpdateCurrentItemResponseBodyDataItemBackground setItemId(String itemId) {
@@ -109,20 +117,12 @@ public class UpdateCurrentItemResponseBody extends TeaModel {
             return this.resourceUuid;
         }
 
-        public UpdateCurrentItemResponseBodyDataItemBackground setDownloadUrl(String downloadUrl) {
-            this.downloadUrl = downloadUrl;
+        public UpdateCurrentItemResponseBodyDataItemBackground setScope(String scope) {
+            this.scope = scope;
             return this;
         }
-        public String getDownloadUrl() {
-            return this.downloadUrl;
-        }
-
-        public UpdateCurrentItemResponseBodyDataItemBackground setFileType(String fileType) {
-            this.fileType = fileType;
-            return this;
-        }
-        public String getFileType() {
-            return this.fileType;
+        public String getScope() {
+            return this.scope;
         }
 
     }

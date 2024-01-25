@@ -4,10 +4,6 @@ package com.aliyun.mindlive20210301.models;
 import com.aliyun.tea.*;
 
 public class RequestLiveTeleprompterStateResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RequestLiveTeleprompterStateResponseBodyData data;
 
@@ -17,20 +13,15 @@ public class RequestLiveTeleprompterStateResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
     public Boolean success;
 
     public static RequestLiveTeleprompterStateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RequestLiveTeleprompterStateResponseBody self = new RequestLiveTeleprompterStateResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RequestLiveTeleprompterStateResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RequestLiveTeleprompterStateResponseBody setData(RequestLiveTeleprompterStateResponseBodyData data) {
@@ -55,6 +46,14 @@ public class RequestLiveTeleprompterStateResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public RequestLiveTeleprompterStateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public RequestLiveTeleprompterStateResponseBody setSuccess(Boolean success) {

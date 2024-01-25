@@ -4,6 +4,12 @@ package com.aliyun.mindlive20210301.models;
 import com.aliyun.tea.*;
 
 public class RequestDeviceInfoResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public RequestDeviceInfoResponseBodyData data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
@@ -13,15 +19,25 @@ public class RequestDeviceInfoResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("Data")
-    public RequestDeviceInfoResponseBodyData data;
-
     public static RequestDeviceInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RequestDeviceInfoResponseBody self = new RequestDeviceInfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RequestDeviceInfoResponseBody setData(RequestDeviceInfoResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public RequestDeviceInfoResponseBodyData getData() {
+        return this.data;
+    }
+
+    public RequestDeviceInfoResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public RequestDeviceInfoResponseBody setErrorMessage(String errorMessage) {
@@ -48,43 +64,30 @@ public class RequestDeviceInfoResponseBody extends TeaModel {
         return this.success;
     }
 
-    public RequestDeviceInfoResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public RequestDeviceInfoResponseBody setData(RequestDeviceInfoResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public RequestDeviceInfoResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class RequestDeviceInfoResponseBodyData extends TeaModel {
-        @NameInMap("PublicIp")
-        public String publicIp;
+        @NameInMap("DeviceId")
+        public String deviceId;
 
         @NameInMap("DeviceName")
         public String deviceName;
 
-        @NameInMap("DeviceId")
-        public String deviceId;
+        @NameInMap("DeviceSn")
+        public String deviceSn;
+
+        @NameInMap("PublicIp")
+        public String publicIp;
 
         public static RequestDeviceInfoResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             RequestDeviceInfoResponseBodyData self = new RequestDeviceInfoResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public RequestDeviceInfoResponseBodyData setPublicIp(String publicIp) {
-            this.publicIp = publicIp;
+        public RequestDeviceInfoResponseBodyData setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
             return this;
         }
-        public String getPublicIp() {
-            return this.publicIp;
+        public String getDeviceId() {
+            return this.deviceId;
         }
 
         public RequestDeviceInfoResponseBodyData setDeviceName(String deviceName) {
@@ -95,12 +98,20 @@ public class RequestDeviceInfoResponseBody extends TeaModel {
             return this.deviceName;
         }
 
-        public RequestDeviceInfoResponseBodyData setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
+        public RequestDeviceInfoResponseBodyData setDeviceSn(String deviceSn) {
+            this.deviceSn = deviceSn;
             return this;
         }
-        public String getDeviceId() {
-            return this.deviceId;
+        public String getDeviceSn() {
+            return this.deviceSn;
+        }
+
+        public RequestDeviceInfoResponseBodyData setPublicIp(String publicIp) {
+            this.publicIp = publicIp;
+            return this;
+        }
+        public String getPublicIp() {
+            return this.publicIp;
         }
 
     }

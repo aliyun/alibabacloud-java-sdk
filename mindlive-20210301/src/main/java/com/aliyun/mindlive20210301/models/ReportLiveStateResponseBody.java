@@ -4,6 +4,9 @@ package com.aliyun.mindlive20210301.models;
 import com.aliyun.tea.*;
 
 public class ReportLiveStateResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
@@ -13,12 +16,17 @@ public class ReportLiveStateResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     public static ReportLiveStateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ReportLiveStateResponseBody self = new ReportLiveStateResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ReportLiveStateResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ReportLiveStateResponseBody setErrorMessage(String errorMessage) {
@@ -43,14 +51,6 @@ public class ReportLiveStateResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public ReportLiveStateResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
 }
