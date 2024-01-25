@@ -4,25 +4,15 @@ package com.aliyun.tablestore20201209.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("requestId")
-    public String requestId;
-
-    // region list
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     public static DescribeRegionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsResponseBody self = new DescribeRegionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRegionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeRegionsResponseBody setRegions(java.util.List<DescribeRegionsResponseBodyRegions> regions) {
@@ -33,26 +23,24 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return this.regions;
     }
 
-    public static class DescribeRegionsResponseBodyRegions extends TeaModel {
-        // region id
-        @NameInMap("RegionId")
-        public String regionId;
+    public DescribeRegionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        // region key
+    public static class DescribeRegionsResponseBodyRegions extends TeaModel {
         @NameInMap("I18nKey")
         public String i18nKey;
+
+        @NameInMap("RegionId")
+        public String regionId;
 
         public static DescribeRegionsResponseBodyRegions build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseBodyRegions self = new DescribeRegionsResponseBodyRegions();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRegionsResponseBodyRegions setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
         }
 
         public DescribeRegionsResponseBodyRegions setI18nKey(String i18nKey) {
@@ -61,6 +49,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
         public String getI18nKey() {
             return this.i18nKey;
+        }
+
+        public DescribeRegionsResponseBodyRegions setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
     }

@@ -1,3 +1,6 @@
+2024-01-25 Version: 1.0.2
+- Generated java 2020-12-09 for Tablestore.
+
 2021-10-19 Version: 1.0.1
 - Tablestore init.
 
