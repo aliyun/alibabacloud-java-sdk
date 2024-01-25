@@ -4,23 +4,18 @@ package com.aliyun.umeng_finplus20211130.models;
 import com.aliyun.tea.*;
 
 public class GetAvailableDataSetListResponseBody extends TeaModel {
-    // 状态码
     @NameInMap("Code")
     public String code;
 
-    // 数据集列表
     @NameInMap("Data")
     public java.util.List<GetAvailableDataSetListResponseBodyData> data;
 
-    // 状态描述
     @NameInMap("Msg")
     public String msg;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功
     @NameInMap("Success")
     public String success;
 
@@ -70,27 +65,21 @@ public class GetAvailableDataSetListResponseBody extends TeaModel {
     }
 
     public static class GetAvailableDataSetListResponseBodyData extends TeaModel {
-        // 创建时间
         @NameInMap("createTime")
         public String createTime;
 
-        // 数据集类型
         @NameInMap("dataSetType")
         public Integer dataSetType;
 
-        // 数据集id
         @NameInMap("datasetId")
         public Long datasetId;
 
-        // id类型描述
         @NameInMap("idTypeDesc")
         public String idTypeDesc;
 
-        // 数据集名称
         @NameInMap("name")
         public String name;
 
-        // 状态描述
         @NameInMap("statusDesc")
         public String statusDesc;
 

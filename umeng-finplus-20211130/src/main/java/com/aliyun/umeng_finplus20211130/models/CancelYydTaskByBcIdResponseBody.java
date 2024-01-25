@@ -4,23 +4,18 @@ package com.aliyun.umeng_finplus20211130.models;
 import com.aliyun.tea.*;
 
 public class CancelYydTaskByBcIdResponseBody extends TeaModel {
-    // 状态码
     @NameInMap("Code")
     public String code;
 
-    // 逻辑删除操作是否成功
     @NameInMap("Data")
     public Boolean data;
 
-    // 消息描述
     @NameInMap("Msg")
     public String msg;
 
-    // 请求Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // http请求是否成功
     @NameInMap("Success")
     public Boolean success;
 

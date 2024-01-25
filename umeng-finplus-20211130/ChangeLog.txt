@@ -1,3 +1,6 @@
+2024-01-25 Version: 1.0.7
+- Update Tea.
+
 2022-07-25 Version: 1.0.6
 - New Interface.
 

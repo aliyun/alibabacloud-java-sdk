@@ -4,23 +4,18 @@ package com.aliyun.umeng_finplus20211130.models;
 import com.aliyun.tea.*;
 
 public class GetDataSetStsAKResponseBody extends TeaModel {
-    // 状态编码
     @NameInMap("Code")
     public String code;
 
-    // 数据对象
     @NameInMap("Data")
     public GetDataSetStsAKResponseBodyData data;
 
-    // 消息描述
     @NameInMap("Msg")
     public String msg;
 
-    // request标识Id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -70,27 +65,21 @@ public class GetDataSetStsAKResponseBody extends TeaModel {
     }
 
     public static class GetDataSetStsAKResponseBodyData extends TeaModel {
-        // bucket名
         @NameInMap("Bucket")
         public String bucket;
 
-        // 地址信息
         @NameInMap("Endpoint")
         public String endpoint;
 
-        // 编码
         @NameInMap("Id")
         public String id;
 
-        // 路径
         @NameInMap("Path")
         public String path;
 
-        // 密码
         @NameInMap("Secret")
         public String secret;
 
-        // token
         @NameInMap("Token")
         public String token;
 

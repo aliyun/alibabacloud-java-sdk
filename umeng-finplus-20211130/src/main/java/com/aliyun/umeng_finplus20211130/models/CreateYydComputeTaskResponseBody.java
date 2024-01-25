@@ -4,22 +4,18 @@ package com.aliyun.umeng_finplus20211130.models;
 import com.aliyun.tea.*;
 
 public class CreateYydComputeTaskResponseBody extends TeaModel {
-    // 状态码
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public Long data;
 
-    // 状态描述
     @NameInMap("Msg")
     public String msg;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
