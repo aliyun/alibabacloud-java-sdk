@@ -102,6 +102,9 @@ public class SearchImageResponseBody extends TeaModel {
         @NameInMap("ProductId")
         public String productId;
 
+        @NameInMap("Score")
+        public Float score;
+
         @NameInMap("SortExprValues")
         public String sortExprValues;
 
@@ -151,6 +154,14 @@ public class SearchImageResponseBody extends TeaModel {
         }
         public String getProductId() {
             return this.productId;
+        }
+
+        public SearchImageResponseBodyAuctions setScore(Float score) {
+            this.score = score;
+            return this;
+        }
+        public Float getScore() {
+            return this.score;
         }
 
         public SearchImageResponseBodyAuctions setSortExprValues(String sortExprValues) {
@@ -242,12 +253,34 @@ public class SearchImageResponseBody extends TeaModel {
 
     }
 
+    public static class SearchImageResponseBodyPicInfoMultiRegion extends TeaModel {
+        @NameInMap("Region")
+        public String region;
+
+        public static SearchImageResponseBodyPicInfoMultiRegion build(java.util.Map<String, ?> map) throws Exception {
+            SearchImageResponseBodyPicInfoMultiRegion self = new SearchImageResponseBodyPicInfoMultiRegion();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchImageResponseBodyPicInfoMultiRegion setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+    }
+
     public static class SearchImageResponseBodyPicInfo extends TeaModel {
         @NameInMap("AllCategories")
         public java.util.List<SearchImageResponseBodyPicInfoAllCategories> allCategories;
 
         @NameInMap("CategoryId")
         public Integer categoryId;
+
+        @NameInMap("MultiRegion")
+        public java.util.List<SearchImageResponseBodyPicInfoMultiRegion> multiRegion;
 
         @NameInMap("Region")
         public String region;
@@ -271,6 +304,14 @@ public class SearchImageResponseBody extends TeaModel {
         }
         public Integer getCategoryId() {
             return this.categoryId;
+        }
+
+        public SearchImageResponseBodyPicInfo setMultiRegion(java.util.List<SearchImageResponseBodyPicInfoMultiRegion> multiRegion) {
+            this.multiRegion = multiRegion;
+            return this;
+        }
+        public java.util.List<SearchImageResponseBodyPicInfoMultiRegion> getMultiRegion() {
+            return this.multiRegion;
         }
 
         public SearchImageResponseBodyPicInfo setRegion(String region) {
