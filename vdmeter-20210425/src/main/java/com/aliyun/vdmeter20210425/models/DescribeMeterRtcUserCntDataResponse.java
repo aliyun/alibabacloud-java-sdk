@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeMeterRtcUserCntDataResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
     @NameInMap("body")
-    @Validation(required = true)
     public DescribeMeterRtcUserCntDataResponseBody body;
 
     public static DescribeMeterRtcUserCntDataResponse build(java.util.Map<String, ?> map) throws Exception {
@@ -23,6 +24,14 @@ public class DescribeMeterRtcUserCntDataResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public DescribeMeterRtcUserCntDataResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public DescribeMeterRtcUserCntDataResponse setBody(DescribeMeterRtcUserCntDataResponseBody body) {

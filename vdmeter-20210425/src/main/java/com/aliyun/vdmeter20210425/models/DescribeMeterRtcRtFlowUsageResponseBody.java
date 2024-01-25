@@ -7,7 +7,6 @@ public class DescribeMeterRtcRtFlowUsageResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeMeterRtcRtFlowUsageResponseBodyData> data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

@@ -7,7 +7,6 @@ public class DescribeMeterRtcRtBandWidthUsageResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeMeterRtcRtBandWidthUsageResponseBodyData> data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

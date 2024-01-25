@@ -4,7 +4,6 @@ package com.aliyun.vdmeter20210425.models;
 import com.aliyun.tea.*;
 
 public class DescribeHuYaRecordByDomainResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

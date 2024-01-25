@@ -7,7 +7,6 @@ public class DescribeMeterRtcPeakUserCntDataResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeMeterRtcPeakUserCntDataResponseBodyData> data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

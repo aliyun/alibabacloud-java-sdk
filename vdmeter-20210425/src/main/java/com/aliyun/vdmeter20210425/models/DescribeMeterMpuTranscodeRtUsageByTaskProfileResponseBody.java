@@ -7,7 +7,6 @@ public class DescribeMeterMpuTranscodeRtUsageByTaskProfileResponseBody extends T
     @NameInMap("Data")
     public java.util.List<DescribeMeterMpuTranscodeRtUsageByTaskProfileResponseBodyData> data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
