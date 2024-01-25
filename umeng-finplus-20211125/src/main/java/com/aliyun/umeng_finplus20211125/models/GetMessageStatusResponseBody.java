@@ -4,19 +4,15 @@ package com.aliyun.umeng_finplus20211125.models;
 import com.aliyun.tea.*;
 
 public class GetMessageStatusResponseBody extends TeaModel {
-    // code
     @NameInMap("Code")
     public String code;
 
-    // data
     @NameInMap("Data")
     public GetMessageStatusResponseBodyData data;
 
-    // message
     @NameInMap("Message")
     public String message;
 
-    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
