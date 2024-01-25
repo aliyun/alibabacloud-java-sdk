@@ -4,18 +4,33 @@ package com.aliyun.rmc20211104.models;
 import com.aliyun.tea.*;
 
 public class SearchResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The filter conditions.</p>
+     */
     @NameInMap("Filters")
     public java.util.List<SearchResourcesResponseBodyFilters> filters;
 
+    /**
+     * <p>The maximum number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used to initiate the next request.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information of the resources.</p>
+     */
     @NameInMap("Resources")
     public java.util.List<SearchResourcesResponseBodyResources> resources;
 
@@ -65,12 +80,21 @@ public class SearchResourcesResponseBody extends TeaModel {
     }
 
     public static class SearchResourcesResponseBodyFilters extends TeaModel {
+        /**
+         * <p>The key of the filter condition.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The matching method.</p>
+         */
         @NameInMap("MatchType")
         public String matchType;
 
+        /**
+         * <p>The values of the filter condition.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -106,9 +130,15 @@ public class SearchResourcesResponseBody extends TeaModel {
     }
 
     public static class SearchResourcesResponseBodyResourcesTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -136,33 +166,69 @@ public class SearchResourcesResponseBody extends TeaModel {
     }
 
     public static class SearchResourcesResponseBodyResources extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The time when the resource was created.</p>
+         * <br>
+         * <p>>  Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The IP addresses.</p>
+         * <br>
+         * <p>>  Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         */
         @NameInMap("IpAddresses")
         public java.util.List<String> ipAddresses;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The name of the resource.</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<SearchResourcesResponseBodyResourcesTags> tags;
 
+        /**
+         * <p>The zone ID.</p>
+         * <br>
+         * <p>>  Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

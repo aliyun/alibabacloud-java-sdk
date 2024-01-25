@@ -3,16 +3,10 @@ package com.aliyun.rmc20211104;
 
 import com.aliyun.tea.*;
 import com.aliyun.rmc20211104.models.*;
-import com.aliyun.teautil.*;
-import com.aliyun.teautil.models.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.openapiutil.*;
-import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "";
         this.checkConfig(config);
@@ -32,7 +26,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public ListResourceRelationshipsResponse listResourceRelationshipsWithOptions(ListResourceRelationshipsRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * This section provides the types of resources that can be queried. Two-way queries are supported. For example, you can query the disks (ACS::ECS::Disk) that are associated with a specific Elastic Compute Service (ECS) instance (ACS::ECS::Instance) or query the ECS instance that is associated with a specific disk.  
+      * - For ECS instances, the following types of resources can be queried:    - ACS::ECS::Disk
+      *   - ACS::EIP::EipAddress
+      *   - ACS::VPC::VPC
+      *   - ACS::ECS::KeyPair
+      *   - ACS::ECS::SecurityGroup
+      *   - ACS::ECS::NetworkInterface
+      *   - ACS::ECS::Image
+      * - For virtual private clouds (VPCs), which are indicated by ACS::VPC::VPC, the following types of resources can be queried:    - ACS::ECS::Instance
+      *   - ACS::RDS::DBInstance
+      *   - ACS::SLB::LoadBalancer
+      *   - ACS::ALB::LoadBalancer
+      *   - ACS::Elasticsearch::Instance
+      *   - ACS::Redis::DBInstance
+      *   - ACS::PolarDB::DBCluster
+      *   - ACS::MongoDB::DBInstance
+      *   - ACS::DRDS::PolarDBXInstance
+      *   - ACS::EDAS::Cluster
+      *   - ACS::ECI::ContainerGroup
+      *   - ACS::ADB::DBCluster
+      *   - ACS::DRDS::DBInstance
+      *   - ACS::HBase::Cluster
+      *   - ACS::EMR::Cluster
+      * This topic provides an example on how to call the API operation to query the resources that are associated with the ECS instance `i-uf6imlgyr1nudhud****` in the China (Shanghai) region.
+      * ## Prerequisites
+      * Resource Meta Center (RMC) is enabled. For more information, see [Query resources that belong to different resource groups](~~310198~~).
+      * ## QPS limits
+      * You can call this API operation up to 20 times per second per account. Requests that exceed this limit will fail, and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      *
+      * @param request ListResourceRelationshipsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListResourceRelationshipsResponse
+     */
+    public ListResourceRelationshipsResponse listResourceRelationshipsWithOptions(ListResourceRelationshipsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
@@ -59,10 +87,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TargetResourceType", request.targetResourceType);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListResourceRelationships"),
             new TeaPair("version", "2021-11-04"),
             new TeaPair("protocol", "HTTPS"),
@@ -76,12 +104,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourceRelationshipsResponse());
     }
 
+    /**
+      * This section provides the types of resources that can be queried. Two-way queries are supported. For example, you can query the disks (ACS::ECS::Disk) that are associated with a specific Elastic Compute Service (ECS) instance (ACS::ECS::Instance) or query the ECS instance that is associated with a specific disk.  
+      * - For ECS instances, the following types of resources can be queried:    - ACS::ECS::Disk
+      *   - ACS::EIP::EipAddress
+      *   - ACS::VPC::VPC
+      *   - ACS::ECS::KeyPair
+      *   - ACS::ECS::SecurityGroup
+      *   - ACS::ECS::NetworkInterface
+      *   - ACS::ECS::Image
+      * - For virtual private clouds (VPCs), which are indicated by ACS::VPC::VPC, the following types of resources can be queried:    - ACS::ECS::Instance
+      *   - ACS::RDS::DBInstance
+      *   - ACS::SLB::LoadBalancer
+      *   - ACS::ALB::LoadBalancer
+      *   - ACS::Elasticsearch::Instance
+      *   - ACS::Redis::DBInstance
+      *   - ACS::PolarDB::DBCluster
+      *   - ACS::MongoDB::DBInstance
+      *   - ACS::DRDS::PolarDBXInstance
+      *   - ACS::EDAS::Cluster
+      *   - ACS::ECI::ContainerGroup
+      *   - ACS::ADB::DBCluster
+      *   - ACS::DRDS::DBInstance
+      *   - ACS::HBase::Cluster
+      *   - ACS::EMR::Cluster
+      * This topic provides an example on how to call the API operation to query the resources that are associated with the ECS instance `i-uf6imlgyr1nudhud****` in the China (Shanghai) region.
+      * ## Prerequisites
+      * Resource Meta Center (RMC) is enabled. For more information, see [Query resources that belong to different resource groups](~~310198~~).
+      * ## QPS limits
+      * You can call this API operation up to 20 times per second per account. Requests that exceed this limit will fail, and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      *
+      * @param request ListResourceRelationshipsRequest
+      * @return ListResourceRelationshipsResponse
+     */
     public ListResourceRelationshipsResponse listResourceRelationships(ListResourceRelationshipsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listResourceRelationshipsWithOptions(request, runtime);
     }
 
-    public SearchResourcesResponse searchResourcesWithOptions(SearchResourcesRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+      * For more information about resource types that support RMC, see [Resource types that support RMC](https://www.alibabacloud.com/help/en/resource-management/latest/resource-types-that-support-rmc).  
+      * This topic provides an example on how to call the API operation to query the resources that can be accessed within the current account in the China (Hangzhou) region.
+      * ## Prerequisites
+      * Resource Meta Center (RMC) is enabled. For more information, see [Query resources that belong to different resource groups](~~310198~~).
+      * ## QPS limits
+      * You can call this API operation up to 20 times per second per account. Requests that exceed this limit will fail, and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      *
+      * @param request SearchResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SearchResourcesResponse
+     */
+    public SearchResourcesResponse searchResourcesWithOptions(SearchResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
@@ -100,14 +173,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.sortCriterion))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.sortCriterion)) {
             query.put("SortCriterion", request.sortCriterion);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SearchResources"),
             new TeaPair("version", "2021-11-04"),
             new TeaPair("protocol", "HTTPS"),
@@ -121,8 +194,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SearchResourcesResponse());
     }
 
+    /**
+      * For more information about resource types that support RMC, see [Resource types that support RMC](https://www.alibabacloud.com/help/en/resource-management/latest/resource-types-that-support-rmc).  
+      * This topic provides an example on how to call the API operation to query the resources that can be accessed within the current account in the China (Hangzhou) region.
+      * ## Prerequisites
+      * Resource Meta Center (RMC) is enabled. For more information, see [Query resources that belong to different resource groups](~~310198~~).
+      * ## QPS limits
+      * You can call this API operation up to 20 times per second per account. Requests that exceed this limit will fail, and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.
+      *
+      * @param request SearchResourcesRequest
+      * @return SearchResourcesResponse
+     */
     public SearchResourcesResponse searchResources(SearchResourcesRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.searchResourcesWithOptions(request, runtime);
     }
 }
