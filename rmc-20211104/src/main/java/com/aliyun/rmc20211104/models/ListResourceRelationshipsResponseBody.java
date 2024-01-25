@@ -4,15 +4,27 @@ package com.aliyun.rmc20211104.models;
 import com.aliyun.tea.*;
 
 public class ListResourceRelationshipsResponseBody extends TeaModel {
+    /**
+     * <p>The maximum number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used to initiate the next request.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information of the associated resources.</p>
+     */
     @NameInMap("ResourceRelationships")
     public java.util.List<ListResourceRelationshipsResponseBodyResourceRelationships> resourceRelationships;
 
@@ -54,24 +66,45 @@ public class ListResourceRelationshipsResponseBody extends TeaModel {
     }
 
     public static class ListResourceRelationshipsResponseBodyResourceRelationships extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The region ID of the specified resource.</p>
+         */
         @NameInMap("SourceRegionId")
         public String sourceRegionId;
 
+        /**
+         * <p>The ID of the specified resource.</p>
+         */
         @NameInMap("SourceResourceId")
         public String sourceResourceId;
 
+        /**
+         * <p>The type of the specified resource.</p>
+         */
         @NameInMap("SourceResourceType")
         public String sourceResourceType;
 
+        /**
+         * <p>The region ID of the associated resource.</p>
+         */
         @NameInMap("TargetRegionId")
         public String targetRegionId;
 
+        /**
+         * <p>The ID of the associated resource.</p>
+         */
         @NameInMap("TargetResourceId")
         public String targetResourceId;
 
+        /**
+         * <p>The type of the associated resource.</p>
+         */
         @NameInMap("TargetResourceType")
         public String targetResourceType;
 
