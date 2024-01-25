@@ -4,15 +4,17 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertContactGroupResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public Integer code;
 
+    @NameInMap("Data")
+    public java.util.List<DescribeAlertContactGroupResponseBodyData> data;
+
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Status")
     public String status;
@@ -20,20 +22,9 @@ public class DescribeAlertContactGroupResponseBody extends TeaModel {
     @NameInMap("Total")
     public Integer total;
 
-    @NameInMap("Data")
-    public java.util.List<DescribeAlertContactGroupResponseBodyData> data;
-
     public static DescribeAlertContactGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAlertContactGroupResponseBody self = new DescribeAlertContactGroupResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAlertContactGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeAlertContactGroupResponseBody setCode(Integer code) {
@@ -44,12 +35,28 @@ public class DescribeAlertContactGroupResponseBody extends TeaModel {
         return this.code;
     }
 
+    public DescribeAlertContactGroupResponseBody setData(java.util.List<DescribeAlertContactGroupResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<DescribeAlertContactGroupResponseBodyData> getData() {
+        return this.data;
+    }
+
     public DescribeAlertContactGroupResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public DescribeAlertContactGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeAlertContactGroupResponseBody setStatus(String status) {
@@ -68,15 +75,10 @@ public class DescribeAlertContactGroupResponseBody extends TeaModel {
         return this.total;
     }
 
-    public DescribeAlertContactGroupResponseBody setData(java.util.List<DescribeAlertContactGroupResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<DescribeAlertContactGroupResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class DescribeAlertContactGroupResponseBodyData extends TeaModel {
+        @NameInMap("createTime")
+        public String createTime;
+
         @NameInMap("description")
         public String description;
 
@@ -95,9 +97,20 @@ public class DescribeAlertContactGroupResponseBody extends TeaModel {
         @NameInMap("uid")
         public Long uid;
 
+        @NameInMap("updateTime")
+        public String updateTime;
+
         public static DescribeAlertContactGroupResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeAlertContactGroupResponseBodyData self = new DescribeAlertContactGroupResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAlertContactGroupResponseBodyData setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeAlertContactGroupResponseBodyData setDescription(String description) {
@@ -146,6 +159,14 @@ public class DescribeAlertContactGroupResponseBody extends TeaModel {
         }
         public Long getUid() {
             return this.uid;
+        }
+
+        public DescribeAlertContactGroupResponseBodyData setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
     }

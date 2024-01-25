@@ -7,11 +7,11 @@ public class ListRootCauseRequest extends TeaModel {
     @NameInMap("EventId")
     public String eventId;
 
-    @NameInMap("RootCauseId")
-    public String rootCauseId;
-
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("RootCauseId")
+    public String rootCauseId;
 
     public static ListRootCauseRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRootCauseRequest self = new ListRootCauseRequest();
@@ -26,20 +26,20 @@ public class ListRootCauseRequest extends TeaModel {
         return this.eventId;
     }
 
-    public ListRootCauseRequest setRootCauseId(String rootCauseId) {
-        this.rootCauseId = rootCauseId;
-        return this;
-    }
-    public String getRootCauseId() {
-        return this.rootCauseId;
-    }
-
     public ListRootCauseRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListRootCauseRequest setRootCauseId(String rootCauseId) {
+        this.rootCauseId = rootCauseId;
+        return this;
+    }
+    public String getRootCauseId() {
+        return this.rootCauseId;
     }
 
 }

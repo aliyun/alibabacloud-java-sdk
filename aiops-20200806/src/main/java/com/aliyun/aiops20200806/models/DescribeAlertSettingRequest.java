@@ -4,19 +4,17 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertSettingRequest extends TeaModel {
-    @NameInMap("PageSize")
-    public Long pageSize;
-
     @NameInMap("CurrentPage")
     public Long currentPage;
 
-    // 废弃
     @NameInMap("CustomerName")
     public String customerName;
 
-    // 废弃
-    @NameInMap("Uid")
-    public Long uid;
+    @NameInMap("OperaUid")
+    public String operaUid;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
 
     @NameInMap("SearchKeyword")
     public String searchKeyword;
@@ -24,20 +22,12 @@ public class DescribeAlertSettingRequest extends TeaModel {
     @NameInMap("SettingStatus")
     public String settingStatus;
 
-    @NameInMap("OperaUid")
-    public String operaUid;
+    @NameInMap("Uid")
+    public Long uid;
 
     public static DescribeAlertSettingRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAlertSettingRequest self = new DescribeAlertSettingRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAlertSettingRequest setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
     }
 
     public DescribeAlertSettingRequest setCurrentPage(Long currentPage) {
@@ -56,12 +46,20 @@ public class DescribeAlertSettingRequest extends TeaModel {
         return this.customerName;
     }
 
-    public DescribeAlertSettingRequest setUid(Long uid) {
-        this.uid = uid;
+    public DescribeAlertSettingRequest setOperaUid(String operaUid) {
+        this.operaUid = operaUid;
         return this;
     }
-    public Long getUid() {
-        return this.uid;
+    public String getOperaUid() {
+        return this.operaUid;
+    }
+
+    public DescribeAlertSettingRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeAlertSettingRequest setSearchKeyword(String searchKeyword) {
@@ -80,12 +78,12 @@ public class DescribeAlertSettingRequest extends TeaModel {
         return this.settingStatus;
     }
 
-    public DescribeAlertSettingRequest setOperaUid(String operaUid) {
-        this.operaUid = operaUid;
+    public DescribeAlertSettingRequest setUid(Long uid) {
+        this.uid = uid;
         return this;
     }
-    public String getOperaUid() {
-        return this.operaUid;
+    public Long getUid() {
+        return this.uid;
     }
 
 }

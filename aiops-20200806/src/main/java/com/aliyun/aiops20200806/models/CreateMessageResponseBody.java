@@ -4,33 +4,24 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class CreateMessageResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public Integer code;
-
-    @NameInMap("Status")
-    public Boolean status;
-
-    @NameInMap("Message")
-    public String message;
 
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Status")
+    public Boolean status;
+
     public static CreateMessageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateMessageResponseBody self = new CreateMessageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateMessageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateMessageResponseBody setCode(Integer code) {
@@ -41,12 +32,12 @@ public class CreateMessageResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateMessageResponseBody setStatus(Boolean status) {
-        this.status = status;
+    public CreateMessageResponseBody setData(java.util.Map<String, ?> data) {
+        this.data = data;
         return this;
     }
-    public Boolean getStatus() {
-        return this.status;
+    public java.util.Map<String, ?> getData() {
+        return this.data;
     }
 
     public CreateMessageResponseBody setMessage(String message) {
@@ -57,12 +48,20 @@ public class CreateMessageResponseBody extends TeaModel {
         return this.message;
     }
 
-    public CreateMessageResponseBody setData(java.util.Map<String, ?> data) {
-        this.data = data;
+    public CreateMessageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, ?> getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateMessageResponseBody setStatus(Boolean status) {
+        this.status = status;
+        return this;
+    }
+    public Boolean getStatus() {
+        return this.status;
     }
 
 }

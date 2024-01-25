@@ -4,33 +4,24 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class PutAlertSettingListResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public Integer code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("Status")
-    public String status;
 
     @NameInMap("Data")
     public Boolean data;
 
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Status")
+    public String status;
+
     public static PutAlertSettingListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PutAlertSettingListResponseBody self = new PutAlertSettingListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public PutAlertSettingListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public PutAlertSettingListResponseBody setCode(Integer code) {
@@ -41,6 +32,14 @@ public class PutAlertSettingListResponseBody extends TeaModel {
         return this.code;
     }
 
+    public PutAlertSettingListResponseBody setData(Boolean data) {
+        this.data = data;
+        return this;
+    }
+    public Boolean getData() {
+        return this.data;
+    }
+
     public PutAlertSettingListResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -49,20 +48,20 @@ public class PutAlertSettingListResponseBody extends TeaModel {
         return this.message;
     }
 
+    public PutAlertSettingListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public PutAlertSettingListResponseBody setStatus(String status) {
         this.status = status;
         return this;
     }
     public String getStatus() {
         return this.status;
-    }
-
-    public PutAlertSettingListResponseBody setData(Boolean data) {
-        this.data = data;
-        return this;
-    }
-    public Boolean getData() {
-        return this.data;
     }
 
 }

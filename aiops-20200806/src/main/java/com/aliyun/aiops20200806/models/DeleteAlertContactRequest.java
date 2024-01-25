@@ -4,12 +4,14 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class DeleteAlertContactRequest extends TeaModel {
-    // 要删除的数组,json格式
     @NameInMap("ContactIdListJson")
     public String contactIdListJson;
 
     @NameInMap("GroupId")
     public Long groupId;
+
+    @NameInMap("OperaUid")
+    public String operaUid;
 
     public static DeleteAlertContactRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAlertContactRequest self = new DeleteAlertContactRequest();
@@ -30,6 +32,14 @@ public class DeleteAlertContactRequest extends TeaModel {
     }
     public Long getGroupId() {
         return this.groupId;
+    }
+
+    public DeleteAlertContactRequest setOperaUid(String operaUid) {
+        this.operaUid = operaUid;
+        return this;
+    }
+    public String getOperaUid() {
+        return this.operaUid;
     }
 
 }

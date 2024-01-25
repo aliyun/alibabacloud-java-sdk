@@ -7,17 +7,17 @@ public class CreateAlertContactRequest extends TeaModel {
     @NameInMap("Email")
     public String email;
 
-    @NameInMap("Phone")
-    public String phone;
-
-    @NameInMap("Webhook")
-    public String webhook;
-
     @NameInMap("Name")
     public String name;
 
     @NameInMap("OperaUid")
     public String operaUid;
+
+    @NameInMap("Phone")
+    public String phone;
+
+    @NameInMap("Webhook")
+    public String webhook;
 
     public static CreateAlertContactRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAlertContactRequest self = new CreateAlertContactRequest();
@@ -30,22 +30,6 @@ public class CreateAlertContactRequest extends TeaModel {
     }
     public String getEmail() {
         return this.email;
-    }
-
-    public CreateAlertContactRequest setPhone(String phone) {
-        this.phone = phone;
-        return this;
-    }
-    public String getPhone() {
-        return this.phone;
-    }
-
-    public CreateAlertContactRequest setWebhook(String webhook) {
-        this.webhook = webhook;
-        return this;
-    }
-    public String getWebhook() {
-        return this.webhook;
     }
 
     public CreateAlertContactRequest setName(String name) {
@@ -62,6 +46,22 @@ public class CreateAlertContactRequest extends TeaModel {
     }
     public String getOperaUid() {
         return this.operaUid;
+    }
+
+    public CreateAlertContactRequest setPhone(String phone) {
+        this.phone = phone;
+        return this;
+    }
+    public String getPhone() {
+        return this.phone;
+    }
+
+    public CreateAlertContactRequest setWebhook(String webhook) {
+        this.webhook = webhook;
+        return this;
+    }
+    public String getWebhook() {
+        return this.webhook;
     }
 
 }

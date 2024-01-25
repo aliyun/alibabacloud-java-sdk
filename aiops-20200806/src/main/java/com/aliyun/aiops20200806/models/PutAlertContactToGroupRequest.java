@@ -13,6 +13,9 @@ public class PutAlertContactToGroupRequest extends TeaModel {
     @NameInMap("GroupIdListJson")
     public String groupIdListJson;
 
+    @NameInMap("OperaUid")
+    public String operaUid;
+
     public static PutAlertContactToGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         PutAlertContactToGroupRequest self = new PutAlertContactToGroupRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class PutAlertContactToGroupRequest extends TeaModel {
     }
     public String getGroupIdListJson() {
         return this.groupIdListJson;
+    }
+
+    public PutAlertContactToGroupRequest setOperaUid(String operaUid) {
+        this.operaUid = operaUid;
+        return this;
+    }
+    public String getOperaUid() {
+        return this.operaUid;
     }
 
 }

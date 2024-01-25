@@ -4,33 +4,24 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class FeedbackAlertAlgorithmResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public Integer code;
-
-    @NameInMap("Msg")
-    public String msg;
-
-    @NameInMap("Status")
-    public String status;
 
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
+    @NameInMap("Msg")
+    public String msg;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Status")
+    public String status;
+
     public static FeedbackAlertAlgorithmResponseBody build(java.util.Map<String, ?> map) throws Exception {
         FeedbackAlertAlgorithmResponseBody self = new FeedbackAlertAlgorithmResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public FeedbackAlertAlgorithmResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public FeedbackAlertAlgorithmResponseBody setCode(Integer code) {
@@ -41,6 +32,14 @@ public class FeedbackAlertAlgorithmResponseBody extends TeaModel {
         return this.code;
     }
 
+    public FeedbackAlertAlgorithmResponseBody setData(java.util.Map<String, ?> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.Map<String, ?> getData() {
+        return this.data;
+    }
+
     public FeedbackAlertAlgorithmResponseBody setMsg(String msg) {
         this.msg = msg;
         return this;
@@ -49,20 +48,20 @@ public class FeedbackAlertAlgorithmResponseBody extends TeaModel {
         return this.msg;
     }
 
+    public FeedbackAlertAlgorithmResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public FeedbackAlertAlgorithmResponseBody setStatus(String status) {
         this.status = status;
         return this;
     }
     public String getStatus() {
         return this.status;
-    }
-
-    public FeedbackAlertAlgorithmResponseBody setData(java.util.Map<String, ?> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.Map<String, ?> getData() {
-        return this.data;
     }
 
 }

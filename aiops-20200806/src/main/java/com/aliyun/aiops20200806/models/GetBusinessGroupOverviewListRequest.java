@@ -10,11 +10,11 @@ public class GetBusinessGroupOverviewListRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("OperaUid")
     public String operaUid;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     public static GetBusinessGroupOverviewListRequest build(java.util.Map<String, ?> map) throws Exception {
         GetBusinessGroupOverviewListRequest self = new GetBusinessGroupOverviewListRequest();
@@ -37,20 +37,20 @@ public class GetBusinessGroupOverviewListRequest extends TeaModel {
         return this.currentPage;
     }
 
-    public GetBusinessGroupOverviewListRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public GetBusinessGroupOverviewListRequest setOperaUid(String operaUid) {
         this.operaUid = operaUid;
         return this;
     }
     public String getOperaUid() {
         return this.operaUid;
+    }
+
+    public GetBusinessGroupOverviewListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }

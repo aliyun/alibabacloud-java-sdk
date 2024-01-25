@@ -4,11 +4,11 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class DescribeRiskRequest extends TeaModel {
-    @NameInMap("StartTime")
-    public Long startTime;
-
     @NameInMap("EndTime")
     public Long endTime;
+
+    @NameInMap("StartTime")
+    public Long startTime;
 
     @NameInMap("Types")
     public String types;
@@ -21,20 +21,20 @@ public class DescribeRiskRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeRiskRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Long getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeRiskRequest setEndTime(Long endTime) {
         this.endTime = endTime;
         return this;
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeRiskRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
     public DescribeRiskRequest setTypes(String types) {

@@ -7,6 +7,9 @@ public class DeleteAlertContactGroupRequest extends TeaModel {
     @NameInMap("GroupId")
     public Long groupId;
 
+    @NameInMap("OperaUid")
+    public String operaUid;
+
     public static DeleteAlertContactGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAlertContactGroupRequest self = new DeleteAlertContactGroupRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class DeleteAlertContactGroupRequest extends TeaModel {
     }
     public Long getGroupId() {
         return this.groupId;
+    }
+
+    public DeleteAlertContactGroupRequest setOperaUid(String operaUid) {
+        this.operaUid = operaUid;
+        return this;
+    }
+    public String getOperaUid() {
+        return this.operaUid;
     }
 
 }

@@ -4,11 +4,11 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class GetEventDetailRequest extends TeaModel {
-    @NameInMap("Id")
-    public Long id;
-
     @NameInMap("EventId")
     public String eventId;
+
+    @NameInMap("Id")
+    public Long id;
 
     @NameInMap("OperaUid")
     public String operaUid;
@@ -18,20 +18,20 @@ public class GetEventDetailRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetEventDetailRequest setId(Long id) {
-        this.id = id;
-        return this;
-    }
-    public Long getId() {
-        return this.id;
-    }
-
     public GetEventDetailRequest setEventId(String eventId) {
         this.eventId = eventId;
         return this;
     }
     public String getEventId() {
         return this.eventId;
+    }
+
+    public GetEventDetailRequest setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
     }
 
     public GetEventDetailRequest setOperaUid(String operaUid) {

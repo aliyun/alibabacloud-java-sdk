@@ -4,15 +4,17 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertSettingResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public Integer code;
 
+    @NameInMap("Data")
+    public java.util.List<DescribeAlertSettingResponseBodyData> data;
+
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Status")
     public String status;
@@ -20,20 +22,9 @@ public class DescribeAlertSettingResponseBody extends TeaModel {
     @NameInMap("Total")
     public Integer total;
 
-    @NameInMap("Data")
-    public java.util.List<DescribeAlertSettingResponseBodyData> data;
-
     public static DescribeAlertSettingResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAlertSettingResponseBody self = new DescribeAlertSettingResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAlertSettingResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeAlertSettingResponseBody setCode(Integer code) {
@@ -44,12 +35,28 @@ public class DescribeAlertSettingResponseBody extends TeaModel {
         return this.code;
     }
 
+    public DescribeAlertSettingResponseBody setData(java.util.List<DescribeAlertSettingResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<DescribeAlertSettingResponseBodyData> getData() {
+        return this.data;
+    }
+
     public DescribeAlertSettingResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public DescribeAlertSettingResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeAlertSettingResponseBody setStatus(String status) {
@@ -68,15 +75,10 @@ public class DescribeAlertSettingResponseBody extends TeaModel {
         return this.total;
     }
 
-    public DescribeAlertSettingResponseBody setData(java.util.List<DescribeAlertSettingResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<DescribeAlertSettingResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class DescribeAlertSettingResponseBodyData extends TeaModel {
+        @NameInMap("AlarmLevel")
+        public String alarmLevel;
+
         @NameInMap("AlertName")
         public String alertName;
 
@@ -116,6 +118,14 @@ public class DescribeAlertSettingResponseBody extends TeaModel {
         public static DescribeAlertSettingResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeAlertSettingResponseBodyData self = new DescribeAlertSettingResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAlertSettingResponseBodyData setAlarmLevel(String alarmLevel) {
+            this.alarmLevel = alarmLevel;
+            return this;
+        }
+        public String getAlarmLevel() {
+            return this.alarmLevel;
         }
 
         public DescribeAlertSettingResponseBodyData setAlertName(String alertName) {

@@ -4,11 +4,11 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class GetAlertTrentRequest extends TeaModel {
-    @NameInMap("EventId")
-    public String eventId;
-
     @NameInMap("AliUid")
     public String aliUid;
+
+    @NameInMap("EventId")
+    public String eventId;
 
     @NameInMap("OperaUid")
     public String operaUid;
@@ -18,20 +18,20 @@ public class GetAlertTrentRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetAlertTrentRequest setEventId(String eventId) {
-        this.eventId = eventId;
-        return this;
-    }
-    public String getEventId() {
-        return this.eventId;
-    }
-
     public GetAlertTrentRequest setAliUid(String aliUid) {
         this.aliUid = aliUid;
         return this;
     }
     public String getAliUid() {
         return this.aliUid;
+    }
+
+    public GetAlertTrentRequest setEventId(String eventId) {
+        this.eventId = eventId;
+        return this;
+    }
+    public String getEventId() {
+        return this.eventId;
     }
 
     public GetAlertTrentRequest setOperaUid(String operaUid) {

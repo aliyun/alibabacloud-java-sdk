@@ -7,17 +7,20 @@ public class PutAlertContactRequest extends TeaModel {
     @NameInMap("Email")
     public String email;
 
-    @NameInMap("Phone")
-    public String phone;
-
-    @NameInMap("Webhook")
-    public String webhook;
-
     @NameInMap("Id")
     public Long id;
 
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("OperaUid")
+    public String operaUid;
+
+    @NameInMap("Phone")
+    public String phone;
+
+    @NameInMap("Webhook")
+    public String webhook;
 
     public static PutAlertContactRequest build(java.util.Map<String, ?> map) throws Exception {
         PutAlertContactRequest self = new PutAlertContactRequest();
@@ -30,22 +33,6 @@ public class PutAlertContactRequest extends TeaModel {
     }
     public String getEmail() {
         return this.email;
-    }
-
-    public PutAlertContactRequest setPhone(String phone) {
-        this.phone = phone;
-        return this;
-    }
-    public String getPhone() {
-        return this.phone;
-    }
-
-    public PutAlertContactRequest setWebhook(String webhook) {
-        this.webhook = webhook;
-        return this;
-    }
-    public String getWebhook() {
-        return this.webhook;
     }
 
     public PutAlertContactRequest setId(Long id) {
@@ -62,6 +49,30 @@ public class PutAlertContactRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public PutAlertContactRequest setOperaUid(String operaUid) {
+        this.operaUid = operaUid;
+        return this;
+    }
+    public String getOperaUid() {
+        return this.operaUid;
+    }
+
+    public PutAlertContactRequest setPhone(String phone) {
+        this.phone = phone;
+        return this;
+    }
+    public String getPhone() {
+        return this.phone;
+    }
+
+    public PutAlertContactRequest setWebhook(String webhook) {
+        this.webhook = webhook;
+        return this;
+    }
+    public String getWebhook() {
+        return this.webhook;
     }
 
 }

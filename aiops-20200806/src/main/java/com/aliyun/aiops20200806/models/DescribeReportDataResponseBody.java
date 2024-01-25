@@ -4,33 +4,24 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class DescribeReportDataResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public Integer code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("Status")
-    public String status;
 
     @NameInMap("Data")
     public DescribeReportDataResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Status")
+    public String status;
+
     public static DescribeReportDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeReportDataResponseBody self = new DescribeReportDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeReportDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeReportDataResponseBody setCode(Integer code) {
@@ -41,6 +32,14 @@ public class DescribeReportDataResponseBody extends TeaModel {
         return this.code;
     }
 
+    public DescribeReportDataResponseBody setData(DescribeReportDataResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeReportDataResponseBodyData getData() {
+        return this.data;
+    }
+
     public DescribeReportDataResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -49,20 +48,20 @@ public class DescribeReportDataResponseBody extends TeaModel {
         return this.message;
     }
 
+    public DescribeReportDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeReportDataResponseBody setStatus(String status) {
         this.status = status;
         return this;
     }
     public String getStatus() {
         return this.status;
-    }
-
-    public DescribeReportDataResponseBody setData(DescribeReportDataResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DescribeReportDataResponseBodyData getData() {
-        return this.data;
     }
 
     public static class DescribeReportDataResponseBodyData extends TeaModel {

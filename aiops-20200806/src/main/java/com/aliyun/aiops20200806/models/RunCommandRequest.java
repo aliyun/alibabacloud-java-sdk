@@ -7,17 +7,17 @@ public class RunCommandRequest extends TeaModel {
     @NameInMap("CommandContent")
     public String commandContent;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("InstanceIds")
     public String instanceIds;
 
-    @NameInMap("Type")
-    public String type;
-
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("Type")
+    public String type;
 
     public static RunCommandRequest build(java.util.Map<String, ?> map) throws Exception {
         RunCommandRequest self = new RunCommandRequest();
@@ -32,14 +32,6 @@ public class RunCommandRequest extends TeaModel {
         return this.commandContent;
     }
 
-    public RunCommandRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public RunCommandRequest setInstanceIds(String instanceIds) {
         this.instanceIds = instanceIds;
         return this;
@@ -48,20 +40,28 @@ public class RunCommandRequest extends TeaModel {
         return this.instanceIds;
     }
 
-    public RunCommandRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
     public RunCommandRequest setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
+    }
+
+    public RunCommandRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public RunCommandRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

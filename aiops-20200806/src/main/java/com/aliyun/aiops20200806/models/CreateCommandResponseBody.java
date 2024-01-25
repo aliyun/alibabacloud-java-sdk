@@ -4,7 +4,6 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class CreateCommandResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 

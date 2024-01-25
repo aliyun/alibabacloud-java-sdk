@@ -4,33 +4,24 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class DescribeAllBusinessGroupInfoResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public Integer code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("Status")
-    public String status;
 
     @NameInMap("Data")
     public java.util.List<DescribeAllBusinessGroupInfoResponseBodyData> data;
 
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Status")
+    public String status;
+
     public static DescribeAllBusinessGroupInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAllBusinessGroupInfoResponseBody self = new DescribeAllBusinessGroupInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAllBusinessGroupInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeAllBusinessGroupInfoResponseBody setCode(Integer code) {
@@ -41,6 +32,14 @@ public class DescribeAllBusinessGroupInfoResponseBody extends TeaModel {
         return this.code;
     }
 
+    public DescribeAllBusinessGroupInfoResponseBody setData(java.util.List<DescribeAllBusinessGroupInfoResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<DescribeAllBusinessGroupInfoResponseBodyData> getData() {
+        return this.data;
+    }
+
     public DescribeAllBusinessGroupInfoResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -49,20 +48,20 @@ public class DescribeAllBusinessGroupInfoResponseBody extends TeaModel {
         return this.message;
     }
 
+    public DescribeAllBusinessGroupInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeAllBusinessGroupInfoResponseBody setStatus(String status) {
         this.status = status;
         return this;
     }
     public String getStatus() {
         return this.status;
-    }
-
-    public DescribeAllBusinessGroupInfoResponseBody setData(java.util.List<DescribeAllBusinessGroupInfoResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<DescribeAllBusinessGroupInfoResponseBodyData> getData() {
-        return this.data;
     }
 
     public static class DescribeAllBusinessGroupInfoResponseBodyData extends TeaModel {

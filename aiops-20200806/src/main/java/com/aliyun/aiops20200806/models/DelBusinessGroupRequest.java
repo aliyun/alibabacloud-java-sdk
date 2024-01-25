@@ -7,9 +7,6 @@ public class DelBusinessGroupRequest extends TeaModel {
     @NameInMap("BusinessGroupId")
     public String businessGroupId;
 
-    @NameInMap("OperaUid")
-    public String operaUid;
-
     public static DelBusinessGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         DelBusinessGroupRequest self = new DelBusinessGroupRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class DelBusinessGroupRequest extends TeaModel {
     }
     public String getBusinessGroupId() {
         return this.businessGroupId;
-    }
-
-    public DelBusinessGroupRequest setOperaUid(String operaUid) {
-        this.operaUid = operaUid;
-        return this;
-    }
-    public String getOperaUid() {
-        return this.operaUid;
     }
 
 }

@@ -4,26 +4,18 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class ListEventRequest extends TeaModel {
-    @NameInMap("Uid")
-    public Long uid;
-
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Uid")
+    public Long uid;
+
     public static ListEventRequest build(java.util.Map<String, ?> map) throws Exception {
         ListEventRequest self = new ListEventRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListEventRequest setUid(Long uid) {
-        this.uid = uid;
-        return this;
-    }
-    public Long getUid() {
-        return this.uid;
     }
 
     public ListEventRequest setCurrentPage(Integer currentPage) {
@@ -40,6 +32,14 @@ public class ListEventRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListEventRequest setUid(Long uid) {
+        this.uid = uid;
+        return this;
+    }
+    public Long getUid() {
+        return this.uid;
     }
 
 }

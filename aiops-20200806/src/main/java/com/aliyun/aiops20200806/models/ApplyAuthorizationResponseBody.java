@@ -4,33 +4,24 @@ package com.aliyun.aiops20200806.models;
 import com.aliyun.tea.*;
 
 public class ApplyAuthorizationResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Code")
     public Integer code;
+
+    @NameInMap("Data")
+    public java.util.Map<String, ?> data;
+
+    @NameInMap("Msg")
+    public String msg;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Status")
     public String status;
 
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("Data")
-    public String data;
-
     public static ApplyAuthorizationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ApplyAuthorizationResponseBody self = new ApplyAuthorizationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ApplyAuthorizationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ApplyAuthorizationResponseBody setCode(Integer code) {
@@ -41,28 +32,36 @@ public class ApplyAuthorizationResponseBody extends TeaModel {
         return this.code;
     }
 
+    public ApplyAuthorizationResponseBody setData(java.util.Map<String, ?> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.Map<String, ?> getData() {
+        return this.data;
+    }
+
+    public ApplyAuthorizationResponseBody setMsg(String msg) {
+        this.msg = msg;
+        return this;
+    }
+    public String getMsg() {
+        return this.msg;
+    }
+
+    public ApplyAuthorizationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public ApplyAuthorizationResponseBody setStatus(String status) {
         this.status = status;
         return this;
     }
     public String getStatus() {
         return this.status;
-    }
-
-    public ApplyAuthorizationResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ApplyAuthorizationResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
     }
 
 }
