@@ -7,6 +7,9 @@ public class DescribeBidByUserIdForInnerRequest extends TeaModel {
     @NameInMap("AliUid")
     public Long aliUid;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static DescribeBidByUserIdForInnerRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBidByUserIdForInnerRequest self = new DescribeBidByUserIdForInnerRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class DescribeBidByUserIdForInnerRequest extends TeaModel {
     }
     public Long getAliUid() {
         return this.aliUid;
+    }
+
+    public DescribeBidByUserIdForInnerRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }
