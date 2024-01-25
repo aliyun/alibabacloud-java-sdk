@@ -4,8 +4,20 @@ package com.aliyun.gpdb20190620.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesForDmsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Count")
+    public Long count;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
+
+    @NameInMap("Instances")
+    public java.util.List<DescribeDBInstancesForDmsResponseBodyInstances> instances;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -13,21 +25,25 @@ public class DescribeDBInstancesForDmsResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("Count")
-    public Long count;
-
-    @NameInMap("Instances")
-    public java.util.List<DescribeDBInstancesForDmsResponseBodyInstances> instances;
-
     public static DescribeDBInstancesForDmsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstancesForDmsResponseBody self = new DescribeDBInstancesForDmsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBInstancesForDmsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public DescribeDBInstancesForDmsResponseBody setCount(Long count) {
+        this.count = count;
+        return this;
+    }
+    public Long getCount() {
+        return this.count;
     }
 
     public DescribeDBInstancesForDmsResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -36,6 +52,22 @@ public class DescribeDBInstancesForDmsResponseBody extends TeaModel {
     }
     public Integer getHttpStatusCode() {
         return this.httpStatusCode;
+    }
+
+    public DescribeDBInstancesForDmsResponseBody setInstances(java.util.List<DescribeDBInstancesForDmsResponseBodyInstances> instances) {
+        this.instances = instances;
+        return this;
+    }
+    public java.util.List<DescribeDBInstancesForDmsResponseBodyInstances> getInstances() {
+        return this.instances;
+    }
+
+    public DescribeDBInstancesForDmsResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public DescribeDBInstancesForDmsResponseBody setRequestId(String requestId) {
@@ -54,77 +86,48 @@ public class DescribeDBInstancesForDmsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeDBInstancesForDmsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public DescribeDBInstancesForDmsResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public DescribeDBInstancesForDmsResponseBody setCount(Long count) {
-        this.count = count;
-        return this;
-    }
-    public Long getCount() {
-        return this.count;
-    }
-
-    public DescribeDBInstancesForDmsResponseBody setInstances(java.util.List<DescribeDBInstancesForDmsResponseBodyInstances> instances) {
-        this.instances = instances;
-        return this;
-    }
-    public java.util.List<DescribeDBInstancesForDmsResponseBodyInstances> getInstances() {
-        return this.instances;
-    }
-
     public static class DescribeDBInstancesForDmsResponseBodyInstances extends TeaModel {
-        @NameInMap("VpcId")
-        public String vpcId;
-
         @NameInMap("AliUid")
         public String aliUid;
 
-        @NameInMap("Port")
-        public String port;
-
+        /**
+         * <p>BID。</p>
+         */
         @NameInMap("Bid")
         public String bid;
-
-        @NameInMap("VpcCloudInstanceId")
-        public String vpcCloudInstanceId;
-
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("DbType")
-        public String dbType;
-
-        @NameInMap("Version")
-        public String version;
 
         @NameInMap("ConnectionString")
         public String connectionString;
 
-        @NameInMap("Region")
-        public String region;
+        @NameInMap("DbInstanceName")
+        public String dbInstanceName;
+
+        @NameInMap("DbType")
+        public String dbType;
+
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("InstanceNetworkType")
         public String instanceNetworkType;
 
-        @NameInMap("DbInstanceName")
-        public String dbInstanceName;
+        @NameInMap("Port")
+        public String port;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("Version")
+        public String version;
+
+        @NameInMap("VpcCloudInstanceId")
+        public String vpcCloudInstanceId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
 
         @NameInMap("VpcIp")
         public String vpcIp;
@@ -132,14 +135,6 @@ public class DescribeDBInstancesForDmsResponseBody extends TeaModel {
         public static DescribeDBInstancesForDmsResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstancesForDmsResponseBodyInstances self = new DescribeDBInstancesForDmsResponseBodyInstances();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDBInstancesForDmsResponseBodyInstances setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
         }
 
         public DescribeDBInstancesForDmsResponseBodyInstances setAliUid(String aliUid) {
@@ -150,60 +145,12 @@ public class DescribeDBInstancesForDmsResponseBody extends TeaModel {
             return this.aliUid;
         }
 
-        public DescribeDBInstancesForDmsResponseBodyInstances setPort(String port) {
-            this.port = port;
-            return this;
-        }
-        public String getPort() {
-            return this.port;
-        }
-
         public DescribeDBInstancesForDmsResponseBodyInstances setBid(String bid) {
             this.bid = bid;
             return this;
         }
         public String getBid() {
             return this.bid;
-        }
-
-        public DescribeDBInstancesForDmsResponseBodyInstances setVpcCloudInstanceId(String vpcCloudInstanceId) {
-            this.vpcCloudInstanceId = vpcCloudInstanceId;
-            return this;
-        }
-        public String getVpcCloudInstanceId() {
-            return this.vpcCloudInstanceId;
-        }
-
-        public DescribeDBInstancesForDmsResponseBodyInstances setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        public DescribeDBInstancesForDmsResponseBodyInstances setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeDBInstancesForDmsResponseBodyInstances setDbType(String dbType) {
-            this.dbType = dbType;
-            return this;
-        }
-        public String getDbType() {
-            return this.dbType;
-        }
-
-        public DescribeDBInstancesForDmsResponseBodyInstances setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
         }
 
         public DescribeDBInstancesForDmsResponseBodyInstances setConnectionString(String connectionString) {
@@ -214,12 +161,28 @@ public class DescribeDBInstancesForDmsResponseBody extends TeaModel {
             return this.connectionString;
         }
 
-        public DescribeDBInstancesForDmsResponseBodyInstances setRegion(String region) {
-            this.region = region;
+        public DescribeDBInstancesForDmsResponseBodyInstances setDbInstanceName(String dbInstanceName) {
+            this.dbInstanceName = dbInstanceName;
             return this;
         }
-        public String getRegion() {
-            return this.region;
+        public String getDbInstanceName() {
+            return this.dbInstanceName;
+        }
+
+        public DescribeDBInstancesForDmsResponseBodyInstances setDbType(String dbType) {
+            this.dbType = dbType;
+            return this;
+        }
+        public String getDbType() {
+            return this.dbType;
+        }
+
+        public DescribeDBInstancesForDmsResponseBodyInstances setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeDBInstancesForDmsResponseBodyInstances setInstanceNetworkType(String instanceNetworkType) {
@@ -230,12 +193,52 @@ public class DescribeDBInstancesForDmsResponseBody extends TeaModel {
             return this.instanceNetworkType;
         }
 
-        public DescribeDBInstancesForDmsResponseBodyInstances setDbInstanceName(String dbInstanceName) {
-            this.dbInstanceName = dbInstanceName;
+        public DescribeDBInstancesForDmsResponseBodyInstances setPort(String port) {
+            this.port = port;
             return this;
         }
-        public String getDbInstanceName() {
-            return this.dbInstanceName;
+        public String getPort() {
+            return this.port;
+        }
+
+        public DescribeDBInstancesForDmsResponseBodyInstances setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public DescribeDBInstancesForDmsResponseBodyInstances setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public DescribeDBInstancesForDmsResponseBodyInstances setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+        public DescribeDBInstancesForDmsResponseBodyInstances setVpcCloudInstanceId(String vpcCloudInstanceId) {
+            this.vpcCloudInstanceId = vpcCloudInstanceId;
+            return this;
+        }
+        public String getVpcCloudInstanceId() {
+            return this.vpcCloudInstanceId;
+        }
+
+        public DescribeDBInstancesForDmsResponseBodyInstances setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
         public DescribeDBInstancesForDmsResponseBodyInstances setVpcIp(String vpcIp) {

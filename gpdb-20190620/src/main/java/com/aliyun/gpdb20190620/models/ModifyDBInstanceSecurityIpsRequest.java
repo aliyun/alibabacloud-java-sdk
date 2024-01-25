@@ -7,11 +7,14 @@ public class ModifyDBInstanceSecurityIpsRequest extends TeaModel {
     @NameInMap("AliUid")
     public Long aliUid;
 
+    @NameInMap("GroupName")
+    public String groupName;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("GroupName")
-    public String groupName;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("WhileList")
     public String whileList;
@@ -29,6 +32,14 @@ public class ModifyDBInstanceSecurityIpsRequest extends TeaModel {
         return this.aliUid;
     }
 
+    public ModifyDBInstanceSecurityIpsRequest setGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    public String getGroupName() {
+        return this.groupName;
+    }
+
     public ModifyDBInstanceSecurityIpsRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -37,12 +48,12 @@ public class ModifyDBInstanceSecurityIpsRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ModifyDBInstanceSecurityIpsRequest setGroupName(String groupName) {
-        this.groupName = groupName;
+    public ModifyDBInstanceSecurityIpsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getGroupName() {
-        return this.groupName;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ModifyDBInstanceSecurityIpsRequest setWhileList(String whileList) {
