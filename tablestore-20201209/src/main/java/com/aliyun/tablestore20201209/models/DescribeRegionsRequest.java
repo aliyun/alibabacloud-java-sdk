@@ -4,7 +4,6 @@ package com.aliyun.tablestore20201209.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
-    // 幂等参数
     @NameInMap("ClientToken")
     public String clientToken;
 
