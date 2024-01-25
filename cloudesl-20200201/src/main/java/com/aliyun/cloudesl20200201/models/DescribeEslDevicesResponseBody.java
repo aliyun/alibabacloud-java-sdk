@@ -157,6 +157,12 @@ public class DescribeEslDevicesResponseBody extends TeaModel {
         @NameInMap("LastCommunicateTime")
         public String lastCommunicateTime;
 
+        @NameInMap("LayoutId")
+        public String layoutId;
+
+        @NameInMap("LayoutName")
+        public String layoutName;
+
         @NameInMap("Mac")
         public String mac;
 
@@ -175,14 +181,6 @@ public class DescribeEslDevicesResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        // 类型编码
-        // 取值范围如下：
-        // NORMAL 常规
-        // LOW_TEMPLATE 低温价签
-        // THREE_COLOR 三色价签
-        // ESL_TYPE_DM_LCD  段码屏幕
-        // ESL_TYPE_FULL_COLOR 彩色屏幕
-        // ESL_TYPE_MUTIMEDIA 多媒体
         @NameInMap("TypeEncode")
         public String typeEncode;
 
@@ -229,6 +227,22 @@ public class DescribeEslDevicesResponseBody extends TeaModel {
         }
         public String getLastCommunicateTime() {
             return this.lastCommunicateTime;
+        }
+
+        public DescribeEslDevicesResponseBodyEslDevices setLayoutId(String layoutId) {
+            this.layoutId = layoutId;
+            return this;
+        }
+        public String getLayoutId() {
+            return this.layoutId;
+        }
+
+        public DescribeEslDevicesResponseBodyEslDevices setLayoutName(String layoutName) {
+            this.layoutName = layoutName;
+            return this;
+        }
+        public String getLayoutName() {
+            return this.layoutName;
         }
 
         public DescribeEslDevicesResponseBodyEslDevices setMac(String mac) {

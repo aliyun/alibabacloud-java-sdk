@@ -108,6 +108,69 @@ public class DescribeStoreConfigResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class DescribeStoreConfigResponseBodyStoreConfigInfoSubscribeContents extends TeaModel {
+        @NameInMap("AtAll")
+        public Boolean atAll;
+
+        @NameInMap("AtMobileList")
+        public String atMobileList;
+
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("Enable")
+        public Boolean enable;
+
+        @NameInMap("Threshold")
+        public String threshold;
+
+        public static DescribeStoreConfigResponseBodyStoreConfigInfoSubscribeContents build(java.util.Map<String, ?> map) throws Exception {
+            DescribeStoreConfigResponseBodyStoreConfigInfoSubscribeContents self = new DescribeStoreConfigResponseBodyStoreConfigInfoSubscribeContents();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeStoreConfigResponseBodyStoreConfigInfoSubscribeContents setAtAll(Boolean atAll) {
+            this.atAll = atAll;
+            return this;
+        }
+        public Boolean getAtAll() {
+            return this.atAll;
+        }
+
+        public DescribeStoreConfigResponseBodyStoreConfigInfoSubscribeContents setAtMobileList(String atMobileList) {
+            this.atMobileList = atMobileList;
+            return this;
+        }
+        public String getAtMobileList() {
+            return this.atMobileList;
+        }
+
+        public DescribeStoreConfigResponseBodyStoreConfigInfoSubscribeContents setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public DescribeStoreConfigResponseBodyStoreConfigInfoSubscribeContents setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public DescribeStoreConfigResponseBodyStoreConfigInfoSubscribeContents setThreshold(String threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public String getThreshold() {
+            return this.threshold;
+        }
+
+    }
+
     public static class DescribeStoreConfigResponseBodyStoreConfigInfo extends TeaModel {
         @NameInMap("EnableNotification")
         public Boolean enableNotification;
@@ -120,6 +183,9 @@ public class DescribeStoreConfigResponseBody extends TeaModel {
 
         @NameInMap("StoreId")
         public String storeId;
+
+        @NameInMap("SubscribeContents")
+        public java.util.List<DescribeStoreConfigResponseBodyStoreConfigInfoSubscribeContents> subscribeContents;
 
         public static DescribeStoreConfigResponseBodyStoreConfigInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeStoreConfigResponseBodyStoreConfigInfo self = new DescribeStoreConfigResponseBodyStoreConfigInfo();
@@ -156,6 +222,14 @@ public class DescribeStoreConfigResponseBody extends TeaModel {
         }
         public String getStoreId() {
             return this.storeId;
+        }
+
+        public DescribeStoreConfigResponseBodyStoreConfigInfo setSubscribeContents(java.util.List<DescribeStoreConfigResponseBodyStoreConfigInfoSubscribeContents> subscribeContents) {
+            this.subscribeContents = subscribeContents;
+            return this;
+        }
+        public java.util.List<DescribeStoreConfigResponseBodyStoreConfigInfoSubscribeContents> getSubscribeContents() {
+            return this.subscribeContents;
         }
 
     }

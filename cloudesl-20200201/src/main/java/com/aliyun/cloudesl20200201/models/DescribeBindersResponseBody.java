@@ -151,6 +151,9 @@ public class DescribeBindersResponseBody extends TeaModel {
         @NameInMap("BindId")
         public String bindId;
 
+        @NameInMap("ContainerName")
+        public String containerName;
+
         @NameInMap("EslBarCode")
         public String eslBarCode;
 
@@ -196,6 +199,9 @@ public class DescribeBindersResponseBody extends TeaModel {
         @NameInMap("PromotionText")
         public String promotionText;
 
+        /**
+         * <p>SkuID。</p>
+         */
         @NameInMap("SkuId")
         public String skuId;
 
@@ -235,6 +241,14 @@ public class DescribeBindersResponseBody extends TeaModel {
         }
         public String getBindId() {
             return this.bindId;
+        }
+
+        public DescribeBindersResponseBodyEslItemBindInfos setContainerName(String containerName) {
+            this.containerName = containerName;
+            return this;
+        }
+        public String getContainerName() {
+            return this.containerName;
         }
 
         public DescribeBindersResponseBodyEslItemBindInfos setEslBarCode(String eslBarCode) {

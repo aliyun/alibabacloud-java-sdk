@@ -19,6 +19,9 @@ public class UpdateStoreConfigRequest extends TeaModel {
     @NameInMap("StoreId")
     public String storeId;
 
+    @NameInMap("SubscribeContents")
+    public String subscribeContents;
+
     public static UpdateStoreConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateStoreConfigRequest self = new UpdateStoreConfigRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class UpdateStoreConfigRequest extends TeaModel {
     }
     public String getStoreId() {
         return this.storeId;
+    }
+
+    public UpdateStoreConfigRequest setSubscribeContents(String subscribeContents) {
+        this.subscribeContents = subscribeContents;
+        return this;
+    }
+    public String getSubscribeContents() {
+        return this.subscribeContents;
     }
 
 }

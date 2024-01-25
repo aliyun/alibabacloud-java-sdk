@@ -4,6 +4,15 @@ package com.aliyun.cloudesl20200201.models;
 import com.aliyun.tea.*;
 
 public class UpdateStoreRequest extends TeaModel {
+    @NameInMap("AutoUnbindDays")
+    public Integer autoUnbindDays;
+
+    @NameInMap("AutoUnbindOfflineEsl")
+    public Boolean autoUnbindOfflineEsl;
+
+    @NameInMap("BarCodeEncode")
+    public Integer barCodeEncode;
+
     @NameInMap("ExtraParams")
     public String extraParams;
 
@@ -28,6 +37,30 @@ public class UpdateStoreRequest extends TeaModel {
     public static UpdateStoreRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateStoreRequest self = new UpdateStoreRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateStoreRequest setAutoUnbindDays(Integer autoUnbindDays) {
+        this.autoUnbindDays = autoUnbindDays;
+        return this;
+    }
+    public Integer getAutoUnbindDays() {
+        return this.autoUnbindDays;
+    }
+
+    public UpdateStoreRequest setAutoUnbindOfflineEsl(Boolean autoUnbindOfflineEsl) {
+        this.autoUnbindOfflineEsl = autoUnbindOfflineEsl;
+        return this;
+    }
+    public Boolean getAutoUnbindOfflineEsl() {
+        return this.autoUnbindOfflineEsl;
+    }
+
+    public UpdateStoreRequest setBarCodeEncode(Integer barCodeEncode) {
+        this.barCodeEncode = barCodeEncode;
+        return this;
+    }
+    public Integer getBarCodeEncode() {
+        return this.barCodeEncode;
     }
 
     public UpdateStoreRequest setExtraParams(String extraParams) {

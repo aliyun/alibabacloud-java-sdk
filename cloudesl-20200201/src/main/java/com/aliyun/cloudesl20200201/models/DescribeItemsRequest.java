@@ -25,6 +25,9 @@ public class DescribeItemsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>SkuID。</p>
+     */
     @NameInMap("SkuId")
     public String skuId;
 

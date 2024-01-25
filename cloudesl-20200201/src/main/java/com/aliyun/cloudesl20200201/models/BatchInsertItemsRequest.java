@@ -57,6 +57,9 @@ public class BatchInsertItemsRequest extends TeaModel {
         @NameInMap("ActionPrice")
         public Integer actionPrice;
 
+        @NameInMap("BeClearance")
+        public Boolean beClearance;
+
         @NameInMap("BeMember")
         public Boolean beMember;
 
@@ -254,6 +257,14 @@ public class BatchInsertItemsRequest extends TeaModel {
         }
         public Integer getActionPrice() {
             return this.actionPrice;
+        }
+
+        public BatchInsertItemsRequestItemInfo setBeClearance(Boolean beClearance) {
+            this.beClearance = beClearance;
+            return this;
+        }
+        public Boolean getBeClearance() {
+            return this.beClearance;
         }
 
         public BatchInsertItemsRequestItemInfo setBeMember(Boolean beMember) {
