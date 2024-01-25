@@ -3,7 +3,7 @@ package com.aliyun.cdp20210402.models;
 
 import com.aliyun.tea.*;
 
-public class QueryRenewPriceResponse extends TeaModel {
+public class ListNodeGroupConstraintsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class QueryRenewPriceResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public QueryRenewPriceResponseBody body;
+    public ListNodeGroupConstraintsResponseBody body;
 
-    public static QueryRenewPriceResponse build(java.util.Map<String, ?> map) throws Exception {
-        QueryRenewPriceResponse self = new QueryRenewPriceResponse();
+    public static ListNodeGroupConstraintsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListNodeGroupConstraintsResponse self = new ListNodeGroupConstraintsResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryRenewPriceResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListNodeGroupConstraintsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class QueryRenewPriceResponse extends TeaModel {
         return this.headers;
     }
 
-    public QueryRenewPriceResponse setStatusCode(Integer statusCode) {
+    public ListNodeGroupConstraintsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class QueryRenewPriceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public QueryRenewPriceResponse setBody(QueryRenewPriceResponseBody body) {
+    public ListNodeGroupConstraintsResponse setBody(ListNodeGroupConstraintsResponseBody body) {
         this.body = body;
         return this;
     }
-    public QueryRenewPriceResponseBody getBody() {
+    public ListNodeGroupConstraintsResponseBody getBody() {
         return this.body;
     }
 

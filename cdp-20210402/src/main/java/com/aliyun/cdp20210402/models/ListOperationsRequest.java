@@ -4,8 +4,8 @@ package com.aliyun.cdp20210402.models;
 import com.aliyun.tea.*;
 
 public class ListOperationsRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("ClusterBizId")
+    public String clusterBizId;
 
     @NameInMap("ParentOperationNodeId")
     public String parentOperationNodeId;
@@ -15,12 +15,12 @@ public class ListOperationsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListOperationsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public ListOperationsRequest setClusterBizId(String clusterBizId) {
+        this.clusterBizId = clusterBizId;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getClusterBizId() {
+        return this.clusterBizId;
     }
 
     public ListOperationsRequest setParentOperationNodeId(String parentOperationNodeId) {

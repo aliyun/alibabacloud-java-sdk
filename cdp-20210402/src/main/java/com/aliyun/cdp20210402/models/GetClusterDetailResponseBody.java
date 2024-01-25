@@ -86,147 +86,10 @@ public class GetClusterDetailResponseBody extends TeaModel {
         return this.total;
     }
 
-    public static class GetClusterDetailResponseBodyDataEcsGroupList extends TeaModel {
-        @NameInMap("CpuCount")
-        public Integer cpuCount;
-
-        @NameInMap("DiskCapacity")
-        public Integer diskCapacity;
-
-        @NameInMap("DiskCount")
-        public Integer diskCount;
-
-        @NameInMap("DiskType")
-        public String diskType;
-
-        @NameInMap("HostGroupName")
-        public String hostGroupName;
-
-        @NameInMap("HostGroupType")
-        public String hostGroupType;
-
-        @NameInMap("InstanceType")
-        public String instanceType;
-
-        @NameInMap("MemorySize")
-        public Integer memorySize;
-
-        @NameInMap("NodeCount")
-        public Integer nodeCount;
-
-        @NameInMap("SystemDiskCapacity")
-        public String systemDiskCapacity;
-
-        @NameInMap("SystemDiskCount")
-        public Integer systemDiskCount;
-
-        @NameInMap("SystemDiskType")
-        public String systemDiskType;
-
-        public static GetClusterDetailResponseBodyDataEcsGroupList build(java.util.Map<String, ?> map) throws Exception {
-            GetClusterDetailResponseBodyDataEcsGroupList self = new GetClusterDetailResponseBodyDataEcsGroupList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetClusterDetailResponseBodyDataEcsGroupList setCpuCount(Integer cpuCount) {
-            this.cpuCount = cpuCount;
-            return this;
-        }
-        public Integer getCpuCount() {
-            return this.cpuCount;
-        }
-
-        public GetClusterDetailResponseBodyDataEcsGroupList setDiskCapacity(Integer diskCapacity) {
-            this.diskCapacity = diskCapacity;
-            return this;
-        }
-        public Integer getDiskCapacity() {
-            return this.diskCapacity;
-        }
-
-        public GetClusterDetailResponseBodyDataEcsGroupList setDiskCount(Integer diskCount) {
-            this.diskCount = diskCount;
-            return this;
-        }
-        public Integer getDiskCount() {
-            return this.diskCount;
-        }
-
-        public GetClusterDetailResponseBodyDataEcsGroupList setDiskType(String diskType) {
-            this.diskType = diskType;
-            return this;
-        }
-        public String getDiskType() {
-            return this.diskType;
-        }
-
-        public GetClusterDetailResponseBodyDataEcsGroupList setHostGroupName(String hostGroupName) {
-            this.hostGroupName = hostGroupName;
-            return this;
-        }
-        public String getHostGroupName() {
-            return this.hostGroupName;
-        }
-
-        public GetClusterDetailResponseBodyDataEcsGroupList setHostGroupType(String hostGroupType) {
-            this.hostGroupType = hostGroupType;
-            return this;
-        }
-        public String getHostGroupType() {
-            return this.hostGroupType;
-        }
-
-        public GetClusterDetailResponseBodyDataEcsGroupList setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-        public String getInstanceType() {
-            return this.instanceType;
-        }
-
-        public GetClusterDetailResponseBodyDataEcsGroupList setMemorySize(Integer memorySize) {
-            this.memorySize = memorySize;
-            return this;
-        }
-        public Integer getMemorySize() {
-            return this.memorySize;
-        }
-
-        public GetClusterDetailResponseBodyDataEcsGroupList setNodeCount(Integer nodeCount) {
-            this.nodeCount = nodeCount;
-            return this;
-        }
-        public Integer getNodeCount() {
-            return this.nodeCount;
-        }
-
-        public GetClusterDetailResponseBodyDataEcsGroupList setSystemDiskCapacity(String systemDiskCapacity) {
-            this.systemDiskCapacity = systemDiskCapacity;
-            return this;
-        }
-        public String getSystemDiskCapacity() {
-            return this.systemDiskCapacity;
-        }
-
-        public GetClusterDetailResponseBodyDataEcsGroupList setSystemDiskCount(Integer systemDiskCount) {
-            this.systemDiskCount = systemDiskCount;
-            return this;
-        }
-        public Integer getSystemDiskCount() {
-            return this.systemDiskCount;
-        }
-
-        public GetClusterDetailResponseBodyDataEcsGroupList setSystemDiskType(String systemDiskType) {
-            this.systemDiskType = systemDiskType;
-            return this;
-        }
-        public String getSystemDiskType() {
-            return this.systemDiskType;
-        }
-
-    }
-
     public static class GetClusterDetailResponseBodyData extends TeaModel {
+        @NameInMap("AutoRenew")
+        public Boolean autoRenew;
+
         @NameInMap("BeginTime")
         public Long beginTime;
 
@@ -245,6 +108,9 @@ public class GetClusterDetailResponseBody extends TeaModel {
         @NameInMap("ClusterStatusValue")
         public Integer clusterStatusValue;
 
+        @NameInMap("ClusterType")
+        public String clusterType;
+
         @NameInMap("ControlCenterUrl")
         public String controlCenterUrl;
 
@@ -254,11 +120,8 @@ public class GetClusterDetailResponseBody extends TeaModel {
         @NameInMap("Duration")
         public Integer duration;
 
-        @NameInMap("EcsGroupList")
-        public java.util.List<GetClusterDetailResponseBodyDataEcsGroupList> ecsGroupList;
-
         @NameInMap("ExpireTime")
-        public Boolean expireTime;
+        public Long expireTime;
 
         @NameInMap("GmtCreate")
         public Long gmtCreate;
@@ -268,6 +131,9 @@ public class GetClusterDetailResponseBody extends TeaModel {
 
         @NameInMap("InstanceConf")
         public java.util.Map<String, ?> instanceConf;
+
+        @NameInMap("NoticeConfirmed")
+        public Boolean noticeConfirmed;
 
         @NameInMap("OrderBizId")
         public String orderBizId;
@@ -284,12 +150,23 @@ public class GetClusterDetailResponseBody extends TeaModel {
         @NameInMap("RunningTime")
         public Long runningTime;
 
+        @NameInMap("Version")
+        public String version;
+
         @NameInMap("ZoneId")
         public String zoneId;
 
         public static GetClusterDetailResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetClusterDetailResponseBodyData self = new GetClusterDetailResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetClusterDetailResponseBodyData setAutoRenew(Boolean autoRenew) {
+            this.autoRenew = autoRenew;
+            return this;
+        }
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
         }
 
         public GetClusterDetailResponseBodyData setBeginTime(Long beginTime) {
@@ -340,6 +217,14 @@ public class GetClusterDetailResponseBody extends TeaModel {
             return this.clusterStatusValue;
         }
 
+        public GetClusterDetailResponseBodyData setClusterType(String clusterType) {
+            this.clusterType = clusterType;
+            return this;
+        }
+        public String getClusterType() {
+            return this.clusterType;
+        }
+
         public GetClusterDetailResponseBodyData setControlCenterUrl(String controlCenterUrl) {
             this.controlCenterUrl = controlCenterUrl;
             return this;
@@ -364,19 +249,11 @@ public class GetClusterDetailResponseBody extends TeaModel {
             return this.duration;
         }
 
-        public GetClusterDetailResponseBodyData setEcsGroupList(java.util.List<GetClusterDetailResponseBodyDataEcsGroupList> ecsGroupList) {
-            this.ecsGroupList = ecsGroupList;
-            return this;
-        }
-        public java.util.List<GetClusterDetailResponseBodyDataEcsGroupList> getEcsGroupList() {
-            return this.ecsGroupList;
-        }
-
-        public GetClusterDetailResponseBodyData setExpireTime(Boolean expireTime) {
+        public GetClusterDetailResponseBodyData setExpireTime(Long expireTime) {
             this.expireTime = expireTime;
             return this;
         }
-        public Boolean getExpireTime() {
+        public Long getExpireTime() {
             return this.expireTime;
         }
 
@@ -402,6 +279,14 @@ public class GetClusterDetailResponseBody extends TeaModel {
         }
         public java.util.Map<String, ?> getInstanceConf() {
             return this.instanceConf;
+        }
+
+        public GetClusterDetailResponseBodyData setNoticeConfirmed(Boolean noticeConfirmed) {
+            this.noticeConfirmed = noticeConfirmed;
+            return this;
+        }
+        public Boolean getNoticeConfirmed() {
+            return this.noticeConfirmed;
         }
 
         public GetClusterDetailResponseBodyData setOrderBizId(String orderBizId) {
@@ -442,6 +327,14 @@ public class GetClusterDetailResponseBody extends TeaModel {
         }
         public Long getRunningTime() {
             return this.runningTime;
+        }
+
+        public GetClusterDetailResponseBodyData setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
         public GetClusterDetailResponseBodyData setZoneId(String zoneId) {

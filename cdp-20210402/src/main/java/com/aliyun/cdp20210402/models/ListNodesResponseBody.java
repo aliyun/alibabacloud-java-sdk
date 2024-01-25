@@ -112,6 +112,9 @@ public class ListNodesResponseBody extends TeaModel {
         @NameInMap("NodeGroupId")
         public String nodeGroupId;
 
+        @NameInMap("NodeGroupName")
+        public String nodeGroupName;
+
         @NameInMap("NodeGroupType")
         public String nodeGroupType;
 
@@ -247,6 +250,14 @@ public class ListNodesResponseBody extends TeaModel {
         }
         public String getNodeGroupId() {
             return this.nodeGroupId;
+        }
+
+        public ListNodesResponseBodyDataEcsNodeDtoList setNodeGroupName(String nodeGroupName) {
+            this.nodeGroupName = nodeGroupName;
+            return this;
+        }
+        public String getNodeGroupName() {
+            return this.nodeGroupName;
         }
 
         public ListNodesResponseBodyDataEcsNodeDtoList setNodeGroupType(String nodeGroupType) {

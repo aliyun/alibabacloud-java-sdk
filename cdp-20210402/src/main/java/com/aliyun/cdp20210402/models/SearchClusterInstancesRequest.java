@@ -16,6 +16,9 @@ public class SearchClusterInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static SearchClusterInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchClusterInstancesRequest self = new SearchClusterInstancesRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class SearchClusterInstancesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public SearchClusterInstancesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

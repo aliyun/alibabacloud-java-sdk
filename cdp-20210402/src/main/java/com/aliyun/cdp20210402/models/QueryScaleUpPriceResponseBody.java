@@ -183,7 +183,6 @@ public class QueryScaleUpPriceResponseBody extends TeaModel {
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
-        // Id of the request
         @NameInMap("EcsPriceInfo")
         public QueryScaleUpPriceResponseBodyDataEcsPriceInfo ecsPriceInfo;
 

@@ -4,18 +4,23 @@ package com.aliyun.cdp20210402.models;
 import com.aliyun.tea.*;
 
 public class QueryScaleUpPriceRequest extends TeaModel {
+    @NameInMap("ClusterBizId")
+    public String clusterBizId;
+
     @NameInMap("CoreNumber")
     public Long coreNumber;
 
     @NameInMap("Duration")
     public Long duration;
 
-    // A short description of struct
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("InstanceType")
     public String instanceType;
+
+    @NameInMap("NodeGroupType")
+    public String nodeGroupType;
 
     @NameInMap("PricingCycle")
     public String pricingCycle;
@@ -23,6 +28,14 @@ public class QueryScaleUpPriceRequest extends TeaModel {
     public static QueryScaleUpPriceRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryScaleUpPriceRequest self = new QueryScaleUpPriceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryScaleUpPriceRequest setClusterBizId(String clusterBizId) {
+        this.clusterBizId = clusterBizId;
+        return this;
+    }
+    public String getClusterBizId() {
+        return this.clusterBizId;
     }
 
     public QueryScaleUpPriceRequest setCoreNumber(Long coreNumber) {
@@ -55,6 +68,14 @@ public class QueryScaleUpPriceRequest extends TeaModel {
     }
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    public QueryScaleUpPriceRequest setNodeGroupType(String nodeGroupType) {
+        this.nodeGroupType = nodeGroupType;
+        return this;
+    }
+    public String getNodeGroupType() {
+        return this.nodeGroupType;
     }
 
     public QueryScaleUpPriceRequest setPricingCycle(String pricingCycle) {

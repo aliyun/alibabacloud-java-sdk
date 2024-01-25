@@ -4,15 +4,23 @@ package com.aliyun.cdp20210402.models;
 import com.aliyun.tea.*;
 
 public class UpdateClusterNameRequest extends TeaModel {
+    @NameInMap("ClusterBizId")
+    public String clusterBizId;
+
     @NameInMap("ClusterName")
     public String clusterName;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
 
     public static UpdateClusterNameRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateClusterNameRequest self = new UpdateClusterNameRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateClusterNameRequest setClusterBizId(String clusterBizId) {
+        this.clusterBizId = clusterBizId;
+        return this;
+    }
+    public String getClusterBizId() {
+        return this.clusterBizId;
     }
 
     public UpdateClusterNameRequest setClusterName(String clusterName) {
@@ -21,14 +29,6 @@ public class UpdateClusterNameRequest extends TeaModel {
     }
     public String getClusterName() {
         return this.clusterName;
-    }
-
-    public UpdateClusterNameRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
 }

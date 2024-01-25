@@ -311,6 +311,9 @@ public class SearchClusterInstancesResponseBody extends TeaModel {
         @NameInMap("ClusterStatusValue")
         public Integer clusterStatusValue;
 
+        @NameInMap("ClusterType")
+        public String clusterType;
+
         @NameInMap("ControlCenterUrl")
         public String controlCenterUrl;
 
@@ -415,6 +418,14 @@ public class SearchClusterInstancesResponseBody extends TeaModel {
         }
         public Integer getClusterStatusValue() {
             return this.clusterStatusValue;
+        }
+
+        public SearchClusterInstancesResponseBodyData setClusterType(String clusterType) {
+            this.clusterType = clusterType;
+            return this;
+        }
+        public String getClusterType() {
+            return this.clusterType;
         }
 
         public SearchClusterInstancesResponseBodyData setControlCenterUrl(String controlCenterUrl) {
