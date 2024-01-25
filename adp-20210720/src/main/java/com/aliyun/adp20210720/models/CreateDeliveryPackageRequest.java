@@ -7,6 +7,9 @@ public class CreateDeliveryPackageRequest extends TeaModel {
     @NameInMap("deliverableUID")
     public String deliverableUID;
 
+    @NameInMap("deliveryInstanceUID")
+    public String deliveryInstanceUID;
+
     @NameInMap("originDeliverableUID")
     public String originDeliverableUID;
 
@@ -30,6 +33,14 @@ public class CreateDeliveryPackageRequest extends TeaModel {
     }
     public String getDeliverableUID() {
         return this.deliverableUID;
+    }
+
+    public CreateDeliveryPackageRequest setDeliveryInstanceUID(String deliveryInstanceUID) {
+        this.deliveryInstanceUID = deliveryInstanceUID;
+        return this;
+    }
+    public String getDeliveryInstanceUID() {
+        return this.deliveryInstanceUID;
     }
 
     public CreateDeliveryPackageRequest setOriginDeliverableUID(String originDeliverableUID) {

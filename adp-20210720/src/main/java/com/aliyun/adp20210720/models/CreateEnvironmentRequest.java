@@ -4,8 +4,14 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class CreateEnvironmentRequest extends TeaModel {
+    @NameInMap("annotations")
+    public String annotations;
+
     @NameInMap("description")
     public String description;
+
+    @NameInMap("expiredAt")
+    public String expiredAt;
 
     @NameInMap("location")
     public String location;
@@ -36,12 +42,28 @@ public class CreateEnvironmentRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateEnvironmentRequest setAnnotations(String annotations) {
+        this.annotations = annotations;
+        return this;
+    }
+    public String getAnnotations() {
+        return this.annotations;
+    }
+
     public CreateEnvironmentRequest setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateEnvironmentRequest setExpiredAt(String expiredAt) {
+        this.expiredAt = expiredAt;
+        return this;
+    }
+    public String getExpiredAt() {
+        return this.expiredAt;
     }
 
     public CreateEnvironmentRequest setLocation(String location) {

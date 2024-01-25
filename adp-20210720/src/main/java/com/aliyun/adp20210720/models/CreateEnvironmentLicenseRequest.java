@@ -13,6 +13,9 @@ public class CreateEnvironmentLicenseRequest extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    @NameInMap("expireTime")
+    public String expireTime;
+
     @NameInMap("licenseQuota")
     public CreateEnvironmentLicenseRequestLicenseQuota licenseQuota;
 
@@ -61,6 +64,14 @@ public class CreateEnvironmentLicenseRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateEnvironmentLicenseRequest setExpireTime(String expireTime) {
+        this.expireTime = expireTime;
+        return this;
+    }
+    public String getExpireTime() {
+        return this.expireTime;
     }
 
     public CreateEnvironmentLicenseRequest setLicenseQuota(CreateEnvironmentLicenseRequestLicenseQuota licenseQuota) {

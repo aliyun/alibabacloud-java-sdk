@@ -10,6 +10,9 @@ public class UpdateDeliverableRequest extends TeaModel {
     @NameInMap("products")
     public java.util.List<UpdateDeliverableRequestProducts> products;
 
+    @NameInMap("status")
+    public String status;
+
     public static UpdateDeliverableRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDeliverableRequest self = new UpdateDeliverableRequest();
         return TeaModel.build(map, self);
@@ -31,6 +34,14 @@ public class UpdateDeliverableRequest extends TeaModel {
         return this.products;
     }
 
+    public UpdateDeliverableRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
     public static class UpdateDeliverableRequestFoundation extends TeaModel {
         @NameInMap("clusterConfig")
         public String clusterConfig;
@@ -43,6 +54,9 @@ public class UpdateDeliverableRequest extends TeaModel {
 
         @NameInMap("foundationVersionUID")
         public String foundationVersionUID;
+
+        @NameInMap("reusable")
+        public Boolean reusable;
 
         public static UpdateDeliverableRequestFoundation build(java.util.Map<String, ?> map) throws Exception {
             UpdateDeliverableRequestFoundation self = new UpdateDeliverableRequestFoundation();
@@ -81,9 +95,20 @@ public class UpdateDeliverableRequest extends TeaModel {
             return this.foundationVersionUID;
         }
 
+        public UpdateDeliverableRequestFoundation setReusable(Boolean reusable) {
+            this.reusable = reusable;
+            return this;
+        }
+        public Boolean getReusable() {
+            return this.reusable;
+        }
+
     }
 
     public static class UpdateDeliverableRequestProducts extends TeaModel {
+        @NameInMap("namespace")
+        public String namespace;
+
         @NameInMap("productName")
         public String productName;
 
@@ -108,6 +133,14 @@ public class UpdateDeliverableRequest extends TeaModel {
         public static UpdateDeliverableRequestProducts build(java.util.Map<String, ?> map) throws Exception {
             UpdateDeliverableRequestProducts self = new UpdateDeliverableRequestProducts();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateDeliverableRequestProducts setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
         }
 
         public UpdateDeliverableRequestProducts setProductName(String productName) {

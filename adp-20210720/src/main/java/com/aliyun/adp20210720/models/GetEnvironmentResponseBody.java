@@ -241,6 +241,12 @@ public class GetEnvironmentResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        @NameInMap("expiredAt")
+        public String expiredAt;
+
+        @NameInMap("foundationType")
+        public String foundationType;
+
         @NameInMap("foundationVersion")
         public String foundationVersion;
 
@@ -335,6 +341,22 @@ public class GetEnvironmentResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public GetEnvironmentResponseBodyData setExpiredAt(String expiredAt) {
+            this.expiredAt = expiredAt;
+            return this;
+        }
+        public String getExpiredAt() {
+            return this.expiredAt;
+        }
+
+        public GetEnvironmentResponseBodyData setFoundationType(String foundationType) {
+            this.foundationType = foundationType;
+            return this;
+        }
+        public String getFoundationType() {
+            return this.foundationType;
         }
 
         public GetEnvironmentResponseBodyData setFoundationVersion(String foundationVersion) {

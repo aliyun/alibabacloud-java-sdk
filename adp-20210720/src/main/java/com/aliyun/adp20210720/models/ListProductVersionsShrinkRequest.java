@@ -4,6 +4,9 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ListProductVersionsShrinkRequest extends TeaModel {
+    @NameInMap("fuzzy")
+    public String fuzzy;
+
     @NameInMap("pageNum")
     public String pageNum;
 
@@ -25,12 +28,23 @@ public class ListProductVersionsShrinkRequest extends TeaModel {
     @NameInMap("supportedFoundationTypes")
     public String supportedFoundationTypesShrink;
 
+    @NameInMap("tag")
+    public String tagShrink;
+
     @NameInMap("version")
     public String version;
 
     public static ListProductVersionsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListProductVersionsShrinkRequest self = new ListProductVersionsShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListProductVersionsShrinkRequest setFuzzy(String fuzzy) {
+        this.fuzzy = fuzzy;
+        return this;
+    }
+    public String getFuzzy() {
+        return this.fuzzy;
     }
 
     public ListProductVersionsShrinkRequest setPageNum(String pageNum) {
@@ -87,6 +101,14 @@ public class ListProductVersionsShrinkRequest extends TeaModel {
     }
     public String getSupportedFoundationTypesShrink() {
         return this.supportedFoundationTypesShrink;
+    }
+
+    public ListProductVersionsShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
+        return this;
+    }
+    public String getTagShrink() {
+        return this.tagShrink;
     }
 
     public ListProductVersionsShrinkRequest setVersion(String version) {

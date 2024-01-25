@@ -4,6 +4,9 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ListProductsRequest extends TeaModel {
+    @NameInMap("description")
+    public String description;
+
     @NameInMap("fuzzy")
     public String fuzzy;
 
@@ -19,6 +22,14 @@ public class ListProductsRequest extends TeaModel {
     public static ListProductsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListProductsRequest self = new ListProductsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListProductsRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public ListProductsRequest setFuzzy(String fuzzy) {

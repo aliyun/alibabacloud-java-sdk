@@ -11,10 +11,10 @@ public class ListProductInstancesRequest extends TeaModel {
     public ListProductInstancesRequestOptions options;
 
     @NameInMap("pageNum")
-    public String pageNum;
+    public Integer pageNum;
 
     @NameInMap("pageSize")
-    public String pageSize;
+    public Integer pageSize;
 
     @NameInMap("productVersionUID")
     public String productVersionUID;
@@ -40,19 +40,19 @@ public class ListProductInstancesRequest extends TeaModel {
         return this.options;
     }
 
-    public ListProductInstancesRequest setPageNum(String pageNum) {
+    public ListProductInstancesRequest setPageNum(Integer pageNum) {
         this.pageNum = pageNum;
         return this;
     }
-    public String getPageNum() {
+    public Integer getPageNum() {
         return this.pageNum;
     }
 
-    public ListProductInstancesRequest setPageSize(String pageSize) {
+    public ListProductInstancesRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 

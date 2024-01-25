@@ -44,6 +44,9 @@ public class CreateDeliverableRequest extends TeaModel {
         @NameInMap("foundationVersionUID")
         public String foundationVersionUID;
 
+        @NameInMap("reusable")
+        public Boolean reusable;
+
         public static CreateDeliverableRequestFoundation build(java.util.Map<String, ?> map) throws Exception {
             CreateDeliverableRequestFoundation self = new CreateDeliverableRequestFoundation();
             return TeaModel.build(map, self);
@@ -81,9 +84,20 @@ public class CreateDeliverableRequest extends TeaModel {
             return this.foundationVersionUID;
         }
 
+        public CreateDeliverableRequestFoundation setReusable(Boolean reusable) {
+            this.reusable = reusable;
+            return this;
+        }
+        public Boolean getReusable() {
+            return this.reusable;
+        }
+
     }
 
     public static class CreateDeliverableRequestProducts extends TeaModel {
+        @NameInMap("namespace")
+        public String namespace;
+
         @NameInMap("productName")
         public String productName;
 
@@ -108,6 +122,14 @@ public class CreateDeliverableRequest extends TeaModel {
         public static CreateDeliverableRequestProducts build(java.util.Map<String, ?> map) throws Exception {
             CreateDeliverableRequestProducts self = new CreateDeliverableRequestProducts();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDeliverableRequestProducts setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
         }
 
         public CreateDeliverableRequestProducts setProductName(String productName) {

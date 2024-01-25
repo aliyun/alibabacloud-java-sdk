@@ -13,6 +13,9 @@ public class ListComponentVersionsRequest extends TeaModel {
     @NameInMap("platforms")
     public java.util.List<ListComponentVersionsRequestPlatforms> platforms;
 
+    @NameInMap("version")
+    public String version;
+
     public static ListComponentVersionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListComponentVersionsRequest self = new ListComponentVersionsRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class ListComponentVersionsRequest extends TeaModel {
     }
     public java.util.List<ListComponentVersionsRequestPlatforms> getPlatforms() {
         return this.platforms;
+    }
+
+    public ListComponentVersionsRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
     public static class ListComponentVersionsRequestPlatforms extends TeaModel {

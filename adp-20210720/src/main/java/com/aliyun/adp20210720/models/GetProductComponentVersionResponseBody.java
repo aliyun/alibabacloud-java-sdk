@@ -46,6 +46,9 @@ public class GetProductComponentVersionResponseBody extends TeaModel {
         @NameInMap("appVersion")
         public String appVersion;
 
+        @NameInMap("category")
+        public String category;
+
         @NameInMap("componentDescription")
         public String componentDescription;
 
@@ -94,6 +97,9 @@ public class GetProductComponentVersionResponseBody extends TeaModel {
         @NameInMap("sequence")
         public Integer sequence;
 
+        @NameInMap("source")
+        public String source;
+
         @NameInMap("values")
         public String values;
 
@@ -111,6 +117,14 @@ public class GetProductComponentVersionResponseBody extends TeaModel {
         }
         public String getAppVersion() {
             return this.appVersion;
+        }
+
+        public GetProductComponentVersionResponseBodyData setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
         }
 
         public GetProductComponentVersionResponseBodyData setComponentDescription(String componentDescription) {
@@ -239,6 +253,14 @@ public class GetProductComponentVersionResponseBody extends TeaModel {
         }
         public Integer getSequence() {
             return this.sequence;
+        }
+
+        public GetProductComponentVersionResponseBodyData setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
         }
 
         public GetProductComponentVersionResponseBodyData setValues(String values) {

@@ -7,6 +7,12 @@ public class UpdateProductComponentVersionRequest extends TeaModel {
     @NameInMap("componentOrchestrationValues")
     public String componentOrchestrationValues;
 
+    @NameInMap("componentSpecificationUid")
+    public String componentSpecificationUid;
+
+    @NameInMap("componentSpecificationValues")
+    public String componentSpecificationValues;
+
     @NameInMap("enable")
     public Boolean enable;
 
@@ -19,6 +25,9 @@ public class UpdateProductComponentVersionRequest extends TeaModel {
     @NameInMap("releaseName")
     public String releaseName;
 
+    @NameInMap("unsetComponentVersionSpec")
+    public Boolean unsetComponentVersionSpec;
+
     public static UpdateProductComponentVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateProductComponentVersionRequest self = new UpdateProductComponentVersionRequest();
         return TeaModel.build(map, self);
@@ -30,6 +39,22 @@ public class UpdateProductComponentVersionRequest extends TeaModel {
     }
     public String getComponentOrchestrationValues() {
         return this.componentOrchestrationValues;
+    }
+
+    public UpdateProductComponentVersionRequest setComponentSpecificationUid(String componentSpecificationUid) {
+        this.componentSpecificationUid = componentSpecificationUid;
+        return this;
+    }
+    public String getComponentSpecificationUid() {
+        return this.componentSpecificationUid;
+    }
+
+    public UpdateProductComponentVersionRequest setComponentSpecificationValues(String componentSpecificationValues) {
+        this.componentSpecificationValues = componentSpecificationValues;
+        return this;
+    }
+    public String getComponentSpecificationValues() {
+        return this.componentSpecificationValues;
     }
 
     public UpdateProductComponentVersionRequest setEnable(Boolean enable) {
@@ -62,6 +87,14 @@ public class UpdateProductComponentVersionRequest extends TeaModel {
     }
     public String getReleaseName() {
         return this.releaseName;
+    }
+
+    public UpdateProductComponentVersionRequest setUnsetComponentVersionSpec(Boolean unsetComponentVersionSpec) {
+        this.unsetComponentVersionSpec = unsetComponentVersionSpec;
+        return this;
+    }
+    public Boolean getUnsetComponentVersionSpec() {
+        return this.unsetComponentVersionSpec;
     }
 
     public static class UpdateProductComponentVersionRequestPolicyMultiCluster extends TeaModel {

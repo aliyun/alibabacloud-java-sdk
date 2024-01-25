@@ -10,6 +10,9 @@ public class UpdateDeliveryInstanceRequest extends TeaModel {
     @NameInMap("deliverableUID")
     public String deliverableUID;
 
+    @NameInMap("desc")
+    public String desc;
+
     public static UpdateDeliveryInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDeliveryInstanceRequest self = new UpdateDeliveryInstanceRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class UpdateDeliveryInstanceRequest extends TeaModel {
     }
     public String getDeliverableUID() {
         return this.deliverableUID;
+    }
+
+    public UpdateDeliveryInstanceRequest setDesc(String desc) {
+        this.desc = desc;
+        return this;
+    }
+    public String getDesc() {
+        return this.desc;
     }
 
 }

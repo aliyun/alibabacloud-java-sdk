@@ -13,6 +13,9 @@ public class ListFoundationReferenceComponentsRequest extends TeaModel {
     @NameInMap("onlyEnabled")
     public Boolean onlyEnabled;
 
+    @NameInMap("parentComponentReferenceUID")
+    public String parentComponentReferenceUID;
+
     @NameInMap("productVersionUID")
     public String productVersionUID;
 
@@ -43,6 +46,14 @@ public class ListFoundationReferenceComponentsRequest extends TeaModel {
     }
     public Boolean getOnlyEnabled() {
         return this.onlyEnabled;
+    }
+
+    public ListFoundationReferenceComponentsRequest setParentComponentReferenceUID(String parentComponentReferenceUID) {
+        this.parentComponentReferenceUID = parentComponentReferenceUID;
+        return this;
+    }
+    public String getParentComponentReferenceUID() {
+        return this.parentComponentReferenceUID;
     }
 
     public ListFoundationReferenceComponentsRequest setProductVersionUID(String productVersionUID) {

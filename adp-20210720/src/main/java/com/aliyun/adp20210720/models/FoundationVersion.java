@@ -25,6 +25,9 @@ public class FoundationVersion extends TeaModel {
     @NameInMap("features")
     public java.util.List<String> features;
 
+    @NameInMap("isDefault")
+    public Boolean isDefault;
+
     @NameInMap("labels")
     public String labels;
 
@@ -37,14 +40,23 @@ public class FoundationVersion extends TeaModel {
     @NameInMap("platforms")
     public java.util.List<Platform> platforms;
 
+    @NameInMap("specName")
+    public String specName;
+
     @NameInMap("status")
     public String status;
+
+    @NameInMap("tools")
+    public FoundationVersionTools tools;
 
     @NameInMap("type")
     public String type;
 
     @NameInMap("uid")
     public String uid;
+
+    @NameInMap("userWhiteList")
+    public java.util.List<String> userWhiteList;
 
     @NameInMap("version")
     public String version;
@@ -110,6 +122,14 @@ public class FoundationVersion extends TeaModel {
         return this.features;
     }
 
+    public FoundationVersion setIsDefault(Boolean isDefault) {
+        this.isDefault = isDefault;
+        return this;
+    }
+    public Boolean getIsDefault() {
+        return this.isDefault;
+    }
+
     public FoundationVersion setLabels(String labels) {
         this.labels = labels;
         return this;
@@ -142,12 +162,28 @@ public class FoundationVersion extends TeaModel {
         return this.platforms;
     }
 
+    public FoundationVersion setSpecName(String specName) {
+        this.specName = specName;
+        return this;
+    }
+    public String getSpecName() {
+        return this.specName;
+    }
+
     public FoundationVersion setStatus(String status) {
         this.status = status;
         return this;
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public FoundationVersion setTools(FoundationVersionTools tools) {
+        this.tools = tools;
+        return this;
+    }
+    public FoundationVersionTools getTools() {
+        return this.tools;
     }
 
     public FoundationVersion setType(String type) {
@@ -164,6 +200,14 @@ public class FoundationVersion extends TeaModel {
     }
     public String getUid() {
         return this.uid;
+    }
+
+    public FoundationVersion setUserWhiteList(java.util.List<String> userWhiteList) {
+        this.userWhiteList = userWhiteList;
+        return this;
+    }
+    public java.util.List<String> getUserWhiteList() {
+        return this.userWhiteList;
     }
 
     public FoundationVersion setVersion(String version) {
@@ -378,6 +422,9 @@ public class FoundationVersion extends TeaModel {
         @NameInMap("os")
         public String os;
 
+        @NameInMap("platforms")
+        public java.util.List<Platform> platforms;
+
         @NameInMap("url")
         public String url;
 
@@ -400,6 +447,14 @@ public class FoundationVersion extends TeaModel {
         }
         public String getOs() {
             return this.os;
+        }
+
+        public FoundationVersionClusterEnginesPackages setPlatforms(java.util.List<Platform> platforms) {
+            this.platforms = platforms;
+            return this;
+        }
+        public java.util.List<Platform> getPlatforms() {
+            return this.platforms;
         }
 
         public FoundationVersionClusterEnginesPackages setUrl(String url) {
@@ -561,6 +616,55 @@ public class FoundationVersion extends TeaModel {
         }
         public String getVersion() {
             return this.version;
+        }
+
+    }
+
+    public static class FoundationVersionToolsSiteSurvey extends TeaModel {
+        @NameInMap("clusterCheckerURL")
+        public String clusterCheckerURL;
+
+        @NameInMap("clusterInfoBrief")
+        public String clusterInfoBrief;
+
+        public static FoundationVersionToolsSiteSurvey build(java.util.Map<String, ?> map) throws Exception {
+            FoundationVersionToolsSiteSurvey self = new FoundationVersionToolsSiteSurvey();
+            return TeaModel.build(map, self);
+        }
+
+        public FoundationVersionToolsSiteSurvey setClusterCheckerURL(String clusterCheckerURL) {
+            this.clusterCheckerURL = clusterCheckerURL;
+            return this;
+        }
+        public String getClusterCheckerURL() {
+            return this.clusterCheckerURL;
+        }
+
+        public FoundationVersionToolsSiteSurvey setClusterInfoBrief(String clusterInfoBrief) {
+            this.clusterInfoBrief = clusterInfoBrief;
+            return this;
+        }
+        public String getClusterInfoBrief() {
+            return this.clusterInfoBrief;
+        }
+
+    }
+
+    public static class FoundationVersionTools extends TeaModel {
+        @NameInMap("siteSurvey")
+        public FoundationVersionToolsSiteSurvey siteSurvey;
+
+        public static FoundationVersionTools build(java.util.Map<String, ?> map) throws Exception {
+            FoundationVersionTools self = new FoundationVersionTools();
+            return TeaModel.build(map, self);
+        }
+
+        public FoundationVersionTools setSiteSurvey(FoundationVersionToolsSiteSurvey siteSurvey) {
+            this.siteSurvey = siteSurvey;
+            return this;
+        }
+        public FoundationVersionToolsSiteSurvey getSiteSurvey() {
+            return this.siteSurvey;
         }
 
     }

@@ -79,6 +79,9 @@ public class GetFoundationVersionResponseBody extends TeaModel {
         @NameInMap("features")
         public java.util.List<String> features;
 
+        @NameInMap("isDefault")
+        public Boolean isDefault;
+
         @NameInMap("labels")
         public String labels;
 
@@ -91,6 +94,9 @@ public class GetFoundationVersionResponseBody extends TeaModel {
         @NameInMap("siteSurveyTool")
         public GetFoundationVersionResponseBodyDataSiteSurveyTool siteSurveyTool;
 
+        @NameInMap("specName")
+        public String specName;
+
         @NameInMap("status")
         public String status;
 
@@ -100,6 +106,9 @@ public class GetFoundationVersionResponseBody extends TeaModel {
         @NameInMap("uid")
         public String uid;
 
+        /**
+         * <p>version</p>
+         */
         @NameInMap("version")
         public String version;
 
@@ -122,6 +131,14 @@ public class GetFoundationVersionResponseBody extends TeaModel {
         }
         public java.util.List<String> getFeatures() {
             return this.features;
+        }
+
+        public GetFoundationVersionResponseBodyData setIsDefault(Boolean isDefault) {
+            this.isDefault = isDefault;
+            return this;
+        }
+        public Boolean getIsDefault() {
+            return this.isDefault;
         }
 
         public GetFoundationVersionResponseBodyData setLabels(String labels) {
@@ -154,6 +171,14 @@ public class GetFoundationVersionResponseBody extends TeaModel {
         }
         public GetFoundationVersionResponseBodyDataSiteSurveyTool getSiteSurveyTool() {
             return this.siteSurveyTool;
+        }
+
+        public GetFoundationVersionResponseBodyData setSpecName(String specName) {
+            this.specName = specName;
+            return this;
+        }
+        public String getSpecName() {
+            return this.specName;
         }
 
         public GetFoundationVersionResponseBodyData setStatus(String status) {

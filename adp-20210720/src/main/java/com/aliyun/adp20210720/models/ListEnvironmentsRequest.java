@@ -7,6 +7,9 @@ public class ListEnvironmentsRequest extends TeaModel {
     @NameInMap("clusterUID")
     public String clusterUID;
 
+    @NameInMap("endpoint")
+    public String endpoint;
+
     @NameInMap("foundationType")
     public String foundationType;
 
@@ -42,6 +45,14 @@ public class ListEnvironmentsRequest extends TeaModel {
     }
     public String getClusterUID() {
         return this.clusterUID;
+    }
+
+    public ListEnvironmentsRequest setEndpoint(String endpoint) {
+        this.endpoint = endpoint;
+        return this;
+    }
+    public String getEndpoint() {
+        return this.endpoint;
     }
 
     public ListEnvironmentsRequest setFoundationType(String foundationType) {

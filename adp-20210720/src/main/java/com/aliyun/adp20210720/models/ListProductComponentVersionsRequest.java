@@ -13,6 +13,9 @@ public class ListProductComponentVersionsRequest extends TeaModel {
     @NameInMap("pageSize")
     public String pageSize;
 
+    @NameInMap("releaseName")
+    public String releaseName;
+
     @NameInMap("sortDirect")
     public String sortDirect;
 
@@ -46,6 +49,14 @@ public class ListProductComponentVersionsRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public ListProductComponentVersionsRequest setReleaseName(String releaseName) {
+        this.releaseName = releaseName;
+        return this;
+    }
+    public String getReleaseName() {
+        return this.releaseName;
     }
 
     public ListProductComponentVersionsRequest setSortDirect(String sortDirect) {

@@ -203,6 +203,9 @@ public class GetEnvironmentLicenseResponseBody extends TeaModel {
         @NameInMap("scope")
         public String scope;
 
+        /**
+         * <p>kubernetes secret yaml。</p>
+         */
         @NameInMap("secretYAML")
         public String secretYAML;
 

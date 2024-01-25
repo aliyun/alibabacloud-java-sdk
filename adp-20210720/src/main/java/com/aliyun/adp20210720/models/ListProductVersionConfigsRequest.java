@@ -4,8 +4,14 @@ package com.aliyun.adp20210720.models;
 import com.aliyun.tea.*;
 
 public class ListProductVersionConfigsRequest extends TeaModel {
+    @NameInMap("componentReleaseName")
+    public String componentReleaseName;
+
     @NameInMap("configType")
     public String configType;
+
+    @NameInMap("fuzzy")
+    public String fuzzy;
 
     @NameInMap("pageNum")
     public String pageNum;
@@ -24,12 +30,28 @@ public class ListProductVersionConfigsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListProductVersionConfigsRequest setComponentReleaseName(String componentReleaseName) {
+        this.componentReleaseName = componentReleaseName;
+        return this;
+    }
+    public String getComponentReleaseName() {
+        return this.componentReleaseName;
+    }
+
     public ListProductVersionConfigsRequest setConfigType(String configType) {
         this.configType = configType;
         return this;
     }
     public String getConfigType() {
         return this.configType;
+    }
+
+    public ListProductVersionConfigsRequest setFuzzy(String fuzzy) {
+        this.fuzzy = fuzzy;
+        return this;
+    }
+    public String getFuzzy() {
+        return this.fuzzy;
     }
 
     public ListProductVersionConfigsRequest setPageNum(String pageNum) {
