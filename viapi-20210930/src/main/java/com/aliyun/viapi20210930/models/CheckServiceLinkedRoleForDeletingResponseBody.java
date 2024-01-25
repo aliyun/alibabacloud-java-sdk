@@ -4,12 +4,11 @@ package com.aliyun.viapi20210930.models;
 import com.aliyun.tea.*;
 
 public class CheckServiceLinkedRoleForDeletingResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Deletable")
     public Boolean deletable;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("RoleUsages")
     public java.util.List<CheckServiceLinkedRoleForDeletingResponseBodyRoleUsages> roleUsages;
@@ -19,20 +18,20 @@ public class CheckServiceLinkedRoleForDeletingResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CheckServiceLinkedRoleForDeletingResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public CheckServiceLinkedRoleForDeletingResponseBody setDeletable(Boolean deletable) {
         this.deletable = deletable;
         return this;
     }
     public Boolean getDeletable() {
         return this.deletable;
+    }
+
+    public CheckServiceLinkedRoleForDeletingResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CheckServiceLinkedRoleForDeletingResponseBody setRoleUsages(java.util.List<CheckServiceLinkedRoleForDeletingResponseBodyRoleUsages> roleUsages) {

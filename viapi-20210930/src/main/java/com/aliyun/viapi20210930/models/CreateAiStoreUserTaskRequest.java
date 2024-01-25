@@ -4,17 +4,17 @@ package com.aliyun.viapi20210930.models;
 import com.aliyun.tea.*;
 
 public class CreateAiStoreUserTaskRequest extends TeaModel {
-    @NameInMap("Product")
-    public String product;
-
     @NameInMap("ApiName")
     public String apiName;
+
+    @NameInMap("BucketKeyPrefix")
+    public String bucketKeyPrefix;
 
     @NameInMap("BucketName")
     public String bucketName;
 
-    @NameInMap("BucketKeyPrefix")
-    public String bucketKeyPrefix;
+    @NameInMap("CreateConfig")
+    public String createConfig;
 
     @NameInMap("Name")
     public String name;
@@ -22,11 +22,14 @@ public class CreateAiStoreUserTaskRequest extends TeaModel {
     @NameInMap("ParamInfo")
     public String paramInfo;
 
-    @NameInMap("Remark")
-    public String remark;
+    @NameInMap("Product")
+    public String product;
 
     @NameInMap("ReceiveConfig")
     public String receiveConfig;
+
+    @NameInMap("Remark")
+    public String remark;
 
     @NameInMap("Status")
     public String status;
@@ -34,14 +37,6 @@ public class CreateAiStoreUserTaskRequest extends TeaModel {
     public static CreateAiStoreUserTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAiStoreUserTaskRequest self = new CreateAiStoreUserTaskRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateAiStoreUserTaskRequest setProduct(String product) {
-        this.product = product;
-        return this;
-    }
-    public String getProduct() {
-        return this.product;
     }
 
     public CreateAiStoreUserTaskRequest setApiName(String apiName) {
@@ -52,6 +47,14 @@ public class CreateAiStoreUserTaskRequest extends TeaModel {
         return this.apiName;
     }
 
+    public CreateAiStoreUserTaskRequest setBucketKeyPrefix(String bucketKeyPrefix) {
+        this.bucketKeyPrefix = bucketKeyPrefix;
+        return this;
+    }
+    public String getBucketKeyPrefix() {
+        return this.bucketKeyPrefix;
+    }
+
     public CreateAiStoreUserTaskRequest setBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -60,12 +63,12 @@ public class CreateAiStoreUserTaskRequest extends TeaModel {
         return this.bucketName;
     }
 
-    public CreateAiStoreUserTaskRequest setBucketKeyPrefix(String bucketKeyPrefix) {
-        this.bucketKeyPrefix = bucketKeyPrefix;
+    public CreateAiStoreUserTaskRequest setCreateConfig(String createConfig) {
+        this.createConfig = createConfig;
         return this;
     }
-    public String getBucketKeyPrefix() {
-        return this.bucketKeyPrefix;
+    public String getCreateConfig() {
+        return this.createConfig;
     }
 
     public CreateAiStoreUserTaskRequest setName(String name) {
@@ -84,12 +87,12 @@ public class CreateAiStoreUserTaskRequest extends TeaModel {
         return this.paramInfo;
     }
 
-    public CreateAiStoreUserTaskRequest setRemark(String remark) {
-        this.remark = remark;
+    public CreateAiStoreUserTaskRequest setProduct(String product) {
+        this.product = product;
         return this;
     }
-    public String getRemark() {
-        return this.remark;
+    public String getProduct() {
+        return this.product;
     }
 
     public CreateAiStoreUserTaskRequest setReceiveConfig(String receiveConfig) {
@@ -98,6 +101,14 @@ public class CreateAiStoreUserTaskRequest extends TeaModel {
     }
     public String getReceiveConfig() {
         return this.receiveConfig;
+    }
+
+    public CreateAiStoreUserTaskRequest setRemark(String remark) {
+        this.remark = remark;
+        return this;
+    }
+    public String getRemark() {
+        return this.remark;
     }
 
     public CreateAiStoreUserTaskRequest setStatus(String status) {
