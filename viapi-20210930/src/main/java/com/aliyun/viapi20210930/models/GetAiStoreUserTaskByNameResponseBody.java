@@ -4,24 +4,15 @@ package com.aliyun.viapi20210930.models;
 import com.aliyun.tea.*;
 
 public class GetAiStoreUserTaskByNameResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public AiStoreUserTask data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetAiStoreUserTaskByNameResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAiStoreUserTaskByNameResponseBody self = new GetAiStoreUserTaskByNameResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetAiStoreUserTaskByNameResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetAiStoreUserTaskByNameResponseBody setData(AiStoreUserTask data) {
@@ -30,6 +21,14 @@ public class GetAiStoreUserTaskByNameResponseBody extends TeaModel {
     }
     public AiStoreUserTask getData() {
         return this.data;
+    }
+
+    public GetAiStoreUserTaskByNameResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

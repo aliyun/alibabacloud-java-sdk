@@ -4,93 +4,117 @@ package com.aliyun.viapi20210930.models;
 import com.aliyun.tea.*;
 
 public class AiStoreUserTask extends TeaModel {
-    // ID
-    @NameInMap("Id")
-    public Long id;
-
-    // 创建时间
-    @NameInMap("GmtCreate")
-    public String gmtCreate;
-
-    // 修改时间
-    @NameInMap("GmtModified")
-    public String gmtModified;
-
-    // 地域
-    @NameInMap("Region")
-    public String region;
-
-    // 地域描述
-    @NameInMap("RegionDesc")
-    public String regionDesc;
-
-    // 任务名称
-    @NameInMap("Name")
-    public String name;
-
-    // 产品名称
-    @NameInMap("Product")
-    public String product;
-
-    // 产品描述
-    @NameInMap("ProductDesc")
-    public String productDesc;
-
-    // API名称
-    @NameInMap("ApiName")
-    public String apiName;
-
-    // API描述
     @NameInMap("ApiDesc")
     public String apiDesc;
 
-    // API版本
-    @NameInMap("Version")
-    public String version;
+    @NameInMap("ApiName")
+    public String apiName;
 
-    // 参数信息
-    @NameInMap("ParamInfo")
-    public String paramInfo;
-
-    // bucket名称
-    @NameInMap("BucketName")
-    public String bucketName;
-
-    // bucketKey前缀
     @NameInMap("BucketKeyPrefix")
     public String bucketKeyPrefix;
 
-    // 备注
-    @NameInMap("Remark")
-    public String remark;
+    @NameInMap("BucketName")
+    public String bucketName;
 
-    // 接收消息配置
-    @NameInMap("ReceiveConfig")
-    public String receiveConfig;
+    @NameInMap("DisableTime")
+    public String disableTime;
 
-    // 状态
-    @NameInMap("Status")
-    public String status;
-
-    // 启用时间
     @NameInMap("EnableTime")
     public String enableTime;
 
-    // 停用时间
-    @NameInMap("DisableTime")
-    public String disableTime;
+    @NameInMap("GmtCreate")
+    public String gmtCreate;
+
+    @NameInMap("GmtModified")
+    public String gmtModified;
+
+    @NameInMap("Id")
+    public Long id;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("ParamInfo")
+    public String paramInfo;
+
+    @NameInMap("Product")
+    public String product;
+
+    @NameInMap("ProductDesc")
+    public String productDesc;
+
+    @NameInMap("ReceiveConfig")
+    public String receiveConfig;
+
+    @NameInMap("Region")
+    public String region;
+
+    @NameInMap("RegionDesc")
+    public String regionDesc;
+
+    @NameInMap("Remark")
+    public String remark;
+
+    @NameInMap("Status")
+    public String status;
+
+    @NameInMap("TaskVersion")
+    public String taskVersion;
+
+    @NameInMap("Version")
+    public String version;
 
     public static AiStoreUserTask build(java.util.Map<String, ?> map) throws Exception {
         AiStoreUserTask self = new AiStoreUserTask();
         return TeaModel.build(map, self);
     }
 
-    public AiStoreUserTask setId(Long id) {
-        this.id = id;
+    public AiStoreUserTask setApiDesc(String apiDesc) {
+        this.apiDesc = apiDesc;
         return this;
     }
-    public Long getId() {
-        return this.id;
+    public String getApiDesc() {
+        return this.apiDesc;
+    }
+
+    public AiStoreUserTask setApiName(String apiName) {
+        this.apiName = apiName;
+        return this;
+    }
+    public String getApiName() {
+        return this.apiName;
+    }
+
+    public AiStoreUserTask setBucketKeyPrefix(String bucketKeyPrefix) {
+        this.bucketKeyPrefix = bucketKeyPrefix;
+        return this;
+    }
+    public String getBucketKeyPrefix() {
+        return this.bucketKeyPrefix;
+    }
+
+    public AiStoreUserTask setBucketName(String bucketName) {
+        this.bucketName = bucketName;
+        return this;
+    }
+    public String getBucketName() {
+        return this.bucketName;
+    }
+
+    public AiStoreUserTask setDisableTime(String disableTime) {
+        this.disableTime = disableTime;
+        return this;
+    }
+    public String getDisableTime() {
+        return this.disableTime;
+    }
+
+    public AiStoreUserTask setEnableTime(String enableTime) {
+        this.enableTime = enableTime;
+        return this;
+    }
+    public String getEnableTime() {
+        return this.enableTime;
     }
 
     public AiStoreUserTask setGmtCreate(String gmtCreate) {
@@ -109,20 +133,12 @@ public class AiStoreUserTask extends TeaModel {
         return this.gmtModified;
     }
 
-    public AiStoreUserTask setRegion(String region) {
-        this.region = region;
+    public AiStoreUserTask setId(Long id) {
+        this.id = id;
         return this;
     }
-    public String getRegion() {
-        return this.region;
-    }
-
-    public AiStoreUserTask setRegionDesc(String regionDesc) {
-        this.regionDesc = regionDesc;
-        return this;
-    }
-    public String getRegionDesc() {
-        return this.regionDesc;
+    public Long getId() {
+        return this.id;
     }
 
     public AiStoreUserTask setName(String name) {
@@ -131,6 +147,14 @@ public class AiStoreUserTask extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public AiStoreUserTask setParamInfo(String paramInfo) {
+        this.paramInfo = paramInfo;
+        return this;
+    }
+    public String getParamInfo() {
+        return this.paramInfo;
     }
 
     public AiStoreUserTask setProduct(String product) {
@@ -149,52 +173,28 @@ public class AiStoreUserTask extends TeaModel {
         return this.productDesc;
     }
 
-    public AiStoreUserTask setApiName(String apiName) {
-        this.apiName = apiName;
+    public AiStoreUserTask setReceiveConfig(String receiveConfig) {
+        this.receiveConfig = receiveConfig;
         return this;
     }
-    public String getApiName() {
-        return this.apiName;
+    public String getReceiveConfig() {
+        return this.receiveConfig;
     }
 
-    public AiStoreUserTask setApiDesc(String apiDesc) {
-        this.apiDesc = apiDesc;
+    public AiStoreUserTask setRegion(String region) {
+        this.region = region;
         return this;
     }
-    public String getApiDesc() {
-        return this.apiDesc;
+    public String getRegion() {
+        return this.region;
     }
 
-    public AiStoreUserTask setVersion(String version) {
-        this.version = version;
+    public AiStoreUserTask setRegionDesc(String regionDesc) {
+        this.regionDesc = regionDesc;
         return this;
     }
-    public String getVersion() {
-        return this.version;
-    }
-
-    public AiStoreUserTask setParamInfo(String paramInfo) {
-        this.paramInfo = paramInfo;
-        return this;
-    }
-    public String getParamInfo() {
-        return this.paramInfo;
-    }
-
-    public AiStoreUserTask setBucketName(String bucketName) {
-        this.bucketName = bucketName;
-        return this;
-    }
-    public String getBucketName() {
-        return this.bucketName;
-    }
-
-    public AiStoreUserTask setBucketKeyPrefix(String bucketKeyPrefix) {
-        this.bucketKeyPrefix = bucketKeyPrefix;
-        return this;
-    }
-    public String getBucketKeyPrefix() {
-        return this.bucketKeyPrefix;
+    public String getRegionDesc() {
+        return this.regionDesc;
     }
 
     public AiStoreUserTask setRemark(String remark) {
@@ -205,14 +205,6 @@ public class AiStoreUserTask extends TeaModel {
         return this.remark;
     }
 
-    public AiStoreUserTask setReceiveConfig(String receiveConfig) {
-        this.receiveConfig = receiveConfig;
-        return this;
-    }
-    public String getReceiveConfig() {
-        return this.receiveConfig;
-    }
-
     public AiStoreUserTask setStatus(String status) {
         this.status = status;
         return this;
@@ -221,20 +213,20 @@ public class AiStoreUserTask extends TeaModel {
         return this.status;
     }
 
-    public AiStoreUserTask setEnableTime(String enableTime) {
-        this.enableTime = enableTime;
+    public AiStoreUserTask setTaskVersion(String taskVersion) {
+        this.taskVersion = taskVersion;
         return this;
     }
-    public String getEnableTime() {
-        return this.enableTime;
+    public String getTaskVersion() {
+        return this.taskVersion;
     }
 
-    public AiStoreUserTask setDisableTime(String disableTime) {
-        this.disableTime = disableTime;
+    public AiStoreUserTask setVersion(String version) {
+        this.version = version;
         return this;
     }
-    public String getDisableTime() {
-        return this.disableTime;
+    public String getVersion() {
+        return this.version;
     }
 
 }
