@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupJobs2ResponseBody extends TeaModel {
     /**
-     * <p>The returned backup jobs that meet the specified conditions.</p>
+     * <p>The backup jobs that meet the specified conditions.</p>
      */
     @NameInMap("BackupJobs")
     public DescribeBackupJobs2ResponseBodyBackupJobs backupJobs;
@@ -163,7 +163,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         public Integer destinationNativeSnapshotProgress;
 
         /**
-         * <p>The status of the remote replication.</p>
+         * <p>The state of the remote replication.</p>
          */
         @NameInMap("DestinationNativeSnapshotStatus")
         public String destinationNativeSnapshotStatus;
@@ -339,28 +339,31 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
 
     public static class DescribeBackupJobs2ResponseBodyBackupJobsBackupJob extends TeaModel {
         /**
-         * <p>The actual amount of data that is backed up after duplicates are removed. Unit: bytes.</p>
+         * <p>The actual amount of data that is backed up after the system removes duplicate files. Unit: bytes.</p>
          */
         @NameInMap("ActualBytes")
         public Long actualBytes;
 
+        /**
+         * <p>The number of files that are actually processed.</p>
+         */
         @NameInMap("ActualFiles")
         public Long actualFiles;
 
         /**
-         * <p>This parameter is returned only if the **SourceType** parameter is set to **ECS_FILE**. This parameter indicates the actual number of objects that are backed up by the backup job.</p>
+         * <p>The actual number of objects that are backed up by the backup job. This parameter is returned only if the value of **SourceType** is **ECS_FILE**.</p>
          */
         @NameInMap("ActualItems")
         public Long actualItems;
 
         /**
-         * <p>The backup type. Valid value: **COMPLETE**, which indicates full backup.</p>
+         * <p>The backup type. Only **COMPLETE** may be returned, which indicates full backup.</p>
          */
         @NameInMap("BackupType")
         public String backupType;
 
         /**
-         * <p>This parameter is returned only if the **SourceType** parameter is set to **OSS**. This parameter indicates the name of the OSS bucket that is backed up.</p>
+         * <p>The name of the OSS bucket that is backed up. This parameter is returned only if the value of **SourceType** is **OSS**.</p>
          */
         @NameInMap("Bucket")
         public String bucket;
@@ -377,41 +380,44 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         @NameInMap("BytesTotal")
         public Long bytesTotal;
 
+        /**
+         * <p>The configurations of the incremental file synchronization. This parameter is returned only for data synchronization.</p>
+         */
         @NameInMap("ChangeListPath")
         public String changeListPath;
 
         /**
-         * <p>This parameter is returned only if the **SourceType** parameter is set to **ECS_FILE**. This parameter indicates the ID of the HBR client.</p>
+         * <p>The ID of the backup client. This parameter is returned only if the value of **SourceType** is **ECS_FILE**.</p>
          */
         @NameInMap("ClientId")
         public String clientId;
 
         /**
-         * <p>The time when the backup job was completed. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the backup job was complete. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("CompleteTime")
         public Long completeTime;
 
         /**
-         * <p>This parameter is returned only if the **SourceType** parameter is set to **NAS**. This parameter indicates the time when the file system was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the file system was created. This parameter is returned only if the value of **SourceType** is **NAS**. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>The time when the backup job was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the backup job was created. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
         /**
-         * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+         * <p>The name of the Resource Access Management (RAM) role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
          */
         @NameInMap("CrossAccountRoleName")
         public String crossAccountRoleName;
 
         /**
-         * <p>Indicates whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
+         * <p>The backup type. Valid values:</p>
          * <br>
          * <p>*   SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</p>
          * <p>*   CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</p>
@@ -425,12 +431,21 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         @NameInMap("CrossAccountUserId")
         public Long crossAccountUserId;
 
+        /**
+         * <p>The data source details at the destination. This parameter is returned only for data synchronization.</p>
+         */
         @NameInMap("DestDataSourceDetail")
         public String destDataSourceDetail;
 
+        /**
+         * <p>The data source ID at the destination. This parameter is returned only for data synchronization.</p>
+         */
         @NameInMap("DestDataSourceId")
         public String destDataSourceId;
 
+        /**
+         * <p>The data source type at the destination. This parameter is returned only for data synchronization.</p>
+         */
         @NameInMap("DestSourceType")
         public String destSourceType;
 
@@ -447,25 +462,31 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>This parameter is returned only if the **SourceType** parameter is set to **ECS_FILE**. This parameter indicates the paths to the files that are excluded from the backup job. The value must be 1 to 255 characters in length.</p>
+         * <p>The paths to the files that are excluded from the backup job. This parameter is returned only if the value of **SourceType** is **ECS_FILE**. The value can be up to 255 characters in length.</p>
          */
         @NameInMap("Exclude")
         public String exclude;
 
         /**
-         * <p>This parameter is returned only if the **SourceType** parameter is set to **NAS**. This parameter indicates the ID of the NAS file system.</p>
+         * <p>The ID of the NAS file system. This parameter is returned only if the value of **SourceType** is **NAS**.</p>
          */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
+        /**
+         * <p>The number of files that have been processed.</p>
+         */
         @NameInMap("FilesDone")
         public Long filesDone;
 
+        /**
+         * <p>The total number of files to be processed.</p>
+         */
         @NameInMap("FilesTotal")
         public Long filesTotal;
 
         /**
-         * <p>仅SourceType=CONTAINER时返回，表示容器备份任务备份的集群标识。当集群类型为阿里云容器服务Kubernetes集群时，该值为Kubernetes集群ID。</p>
+         * <p>The identifier of the cluster that is backed up in the container backup job. This parameter is returned only if the value of SourceType is CONTAINER. If the cluster is a Container Service for Kubernetes (ACK) cluster, the value of this parameter is the ACK cluster ID.</p>
          */
         @NameInMap("Identifier")
         public String identifier;
@@ -477,7 +498,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         public String include;
 
         /**
-         * <p>This parameter is returned only if the **SourceType** parameter is set to **NAS**. This parameter indicates the ID of the ECS instance.</p>
+         * <p>The ID of the ECS instance. This parameter is returned only if the value of **SourceType** is **NAS**.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -489,13 +510,13 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>This parameter is returned only if the **SourceType** parameter is set to **ECS_FILE**. This parameter indicates the number of objects that are backed up.</p>
+         * <p>The number of objects that are backed up. This parameter is returned only if the value of **SourceType** is **ECS_FILE**.</p>
          */
         @NameInMap("ItemsDone")
         public Long itemsDone;
 
         /**
-         * <p>This parameter is returned only if the **SourceType** parameter is set to **ECS_FILE**. This parameter indicates the total number of objects in the data source.</p>
+         * <p>The total number of objects in the data source. This parameter is returned only if the value of **SourceType** is **ECS_FILE**.</p>
          */
         @NameInMap("ItemsTotal")
         public Long itemsTotal;
@@ -513,11 +534,11 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         public String jobName;
 
         /**
-         * <p>This parameter is returned only if the **SourceType** parameter is set to **ECS_FILE**. This parameter indicates whether Windows Volume Shadow Copy Service (VSS) is used to define a source path.</p>
+         * <p>Indicates whether Windows Volume Shadow Copy Service (VSS) is used to define a source path. This parameter is returned only if the value of **SourceType** is **ECS_FILE**.</p>
          * <br>
          * <p>*   This parameter is available only for Windows ECS instances.</p>
-         * <p>*   If data changes occur in the backup source, the source data must be the same as the data to be backed up before you can set this parameter to `["UseVSS":true]`.</p>
-         * <p>*   If you use VSS, you cannot back up data from multiple directories.</p>
+         * <p>*   A value of `["UseVSS":true]` indicates that the consistency between the source data and backup data is ensured while data changes occur in the source data.</p>
+         * <p>*   If VSS is used, multiple directories cannot be backed up at a time.</p>
          */
         @NameInMap("Options")
         public String options;
@@ -541,13 +562,13 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         public String planId;
 
         /**
-         * <p>This parameter is returned only if the **SourceType** parameter is set to **OSS**. This parameter indicates the prefix of objects that are backed up.</p>
+         * <p>The prefix of objects that are backed up. This parameter is returned only if the value of **SourceType** is **OSS**.</p>
          */
         @NameInMap("Prefix")
         public String prefix;
 
         /**
-         * <p>The backup progress. For example, 10000 indicates that the progress is 100%.</p>
+         * <p>The backup progress. Valid values: 0 to 10000. For example, a value of 10000 indicates that the progress is 100%.</p>
          */
         @NameInMap("Progress")
         public Integer progress;
@@ -555,9 +576,9 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         /**
          * <p>The type of the data source. Valid values:</p>
          * <br>
-         * <p>*   **ECS_FILE**: ECS files</p>
-         * <p>*   **OSS**: OSS buckets</p>
-         * <p>*   **NAS**: NAS file systems</p>
+         * <p>*   **ECS_FILE**: ECS file.</p>
+         * <p>*   **OSS**: OSS bucket.</p>
+         * <p>*   **NAS**: NAS file system.</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
@@ -569,39 +590,39 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         public Long speed;
 
         /**
-         * <p>This parameter is returned only if the **SourceType** parameter is set to **ECS_FILE**. This parameter indicates the throttling rules. Format: `{start}|{end}|{bandwidth}`. Separate multiple throttling rules with vertical bars (`|`). A specified time range cannot overlap with another one.</p>
+         * <p>The throttling rules. This parameter is returned only if the value of **SourceType** is **ECS_FILE**. Format: `{start}:{end}:{bandwidth}`. Multiple throttling rules are separated by vertical bars (`|`). The time ranges of the throttling rules cannot overlap.</p>
          * <br>
          * <p>*   **start**: the start hour.</p>
-         * <p>*   **end**: the end hour.</p>
+         * <p>*   **end**: the end hour</p>
          * <p>*   **bandwidth**: the bandwidth. Unit: KB/s.</p>
          */
         @NameInMap("SpeedLimit")
         public String speedLimit;
 
         /**
-         * <p>The time when the backup job started. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the backup job started. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
-         * <p>The status of the backup job. Valid values:</p>
+         * <p>The state of the backup job. Valid values:</p>
          * <br>
-         * <p>*   **COMPLETE**: The backup job is completed.</p>
-         * <p>*   **PARTIAL_COMPLETE**: The backup job is partially completed.</p>
-         * <p>*   **FAILED**: The backup job has failed.</p>
+         * <p>*   **COMPLETE**</p>
+         * <p>*   **PARTIAL_COMPLETE**</p>
+         * <p>*   **FAILED**</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The name of a table in the Tablestore instance.</p>
+         * <p>The name of the table in the Tablestore instance.</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
-         * <p>The time when the backup job was updated. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the backup job was last updated. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("UpdatedTime")
         public Long updatedTime;

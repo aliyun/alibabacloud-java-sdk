@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePolicyBindingShrinkRequest extends TeaModel {
     /**
-     * <p>Advanced options.</p>
+     * <p>The advanced options.</p>
      */
     @NameInMap("AdvancedOptions")
     public String advancedOptionsShrink;

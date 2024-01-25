@@ -16,6 +16,9 @@ public class SearchHistoricalSnapshotsShrinkRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("Order")
+    public String order;
+
     /**
      * <p>The query conditions. Example:</p>
      * <br>
@@ -66,6 +69,9 @@ public class SearchHistoricalSnapshotsShrinkRequest extends TeaModel {
     @NameInMap("Query")
     public String queryShrink;
 
+    @NameInMap("SortBy")
+    public String sortBy;
+
     /**
      * <p>The type of the data source. Valid values:</p>
      * <br>
@@ -97,12 +103,28 @@ public class SearchHistoricalSnapshotsShrinkRequest extends TeaModel {
         return this.nextToken;
     }
 
+    public SearchHistoricalSnapshotsShrinkRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
+    }
+
     public SearchHistoricalSnapshotsShrinkRequest setQueryShrink(String queryShrink) {
         this.queryShrink = queryShrink;
         return this;
     }
     public String getQueryShrink() {
         return this.queryShrink;
+    }
+
+    public SearchHistoricalSnapshotsShrinkRequest setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    public String getSortBy() {
+        return this.sortBy;
     }
 
     public SearchHistoricalSnapshotsShrinkRequest setSourceType(String sourceType) {

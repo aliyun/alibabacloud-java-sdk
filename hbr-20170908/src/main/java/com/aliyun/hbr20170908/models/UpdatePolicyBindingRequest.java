@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePolicyBindingRequest extends TeaModel {
     /**
-     * <p>Advanced options.</p>
+     * <p>The advanced options.</p>
      */
     @NameInMap("AdvancedOptions")
     public UpdatePolicyBindingRequestAdvancedOptions advancedOptions;
@@ -98,10 +98,53 @@ public class UpdatePolicyBindingRequest extends TeaModel {
         return this.sourceType;
     }
 
+    public static class UpdatePolicyBindingRequestAdvancedOptionsCommonFileSystemDetail extends TeaModel {
+        @NameInMap("FetchSliceSize")
+        public Long fetchSliceSize;
+
+        @NameInMap("FullOnIncrementFail")
+        public Boolean fullOnIncrementFail;
+
+        public static UpdatePolicyBindingRequestAdvancedOptionsCommonFileSystemDetail build(java.util.Map<String, ?> map) throws Exception {
+            UpdatePolicyBindingRequestAdvancedOptionsCommonFileSystemDetail self = new UpdatePolicyBindingRequestAdvancedOptionsCommonFileSystemDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdatePolicyBindingRequestAdvancedOptionsCommonFileSystemDetail setFetchSliceSize(Long fetchSliceSize) {
+            this.fetchSliceSize = fetchSliceSize;
+            return this;
+        }
+        public Long getFetchSliceSize() {
+            return this.fetchSliceSize;
+        }
+
+        public UpdatePolicyBindingRequestAdvancedOptionsCommonFileSystemDetail setFullOnIncrementFail(Boolean fullOnIncrementFail) {
+            this.fullOnIncrementFail = fullOnIncrementFail;
+            return this;
+        }
+        public Boolean getFullOnIncrementFail() {
+            return this.fullOnIncrementFail;
+        }
+
+    }
+
     public static class UpdatePolicyBindingRequestAdvancedOptionsOssDetail extends TeaModel {
+        /**
+         * <p>Specifies whether the system deletes the inventory lists after a backup is complete. This parameter is available only when OSS inventory lists are used. Valid values:</p>
+         * <br>
+         * <p>*   **NO_CLEANUP**: Does not delete inventory lists.</p>
+         * <p>*   **DELETE_CURRENT**: Deletes the current inventory list.</p>
+         * <p>*   **DELETE_CURRENT_AND_PREVIOUS**: Deletes all inventory lists.</p>
+         */
         @NameInMap("InventoryCleanupPolicy")
         public String inventoryCleanupPolicy;
 
+        /**
+         * <p>The name of the OSS inventory list. The OSS inventory list specified for this parameter is used for performance optimization.</p>
+         * <br>
+         * <p>*   If you want to back up more than 100 million OSS objects, we recommend that you use inventory lists to accelerate incremental backup. Storage fees for inventory lists are included in your OSS bills.</p>
+         * <p>*   An extended period of time is required for OSS to generate inventory lists. Before inventory lists are generated, OSS objects may fail to be backed up. In this case, you can back up the OSS objects in the next backup cycle.</p>
+         */
         @NameInMap("InventoryId")
         public String inventoryId;
 
@@ -136,7 +179,7 @@ public class UpdatePolicyBindingRequest extends TeaModel {
         public Boolean appConsistent;
 
         /**
-         * <p>The IDs of the disks that need to be protected. If all disks need to be protected, this parameter is empty.</p>
+         * <p>The IDs of the disks that require protection. This parameter is not required if all disks require protection.</p>
          */
         @NameInMap("DiskIdList")
         public java.util.List<String> diskIdList;
@@ -159,7 +202,7 @@ public class UpdatePolicyBindingRequest extends TeaModel {
         public Boolean enableWriters;
 
         /**
-         * <p>The IDs of the disks that do not need to be protected. If the DiskIdList parameter is not empty, this parameter is ignored.</p>
+         * <p>The IDs of the disks that require no protection. This parameter is not required if the DiskIdList parameter is specified.</p>
          */
         @NameInMap("ExcludeDiskIdList")
         public java.util.List<String> excludeDiskIdList;
@@ -177,13 +220,13 @@ public class UpdatePolicyBindingRequest extends TeaModel {
         public String preScriptPath;
 
         /**
-         * <p>This parameter is required only if the **AppConsistent** parameter is set to **true**. This parameter specifies the name of the RAM role that is required to create application-consistent snapshots.</p>
+         * <p>This parameter is required only if the **AppConsistent** parameter is set to **true**. This parameter specifies the name of the Resource Access Management (RAM) role that is required to create application-consistent snapshots.</p>
          */
         @NameInMap("RamRoleName")
         public String ramRoleName;
 
         /**
-         * <p>Specifies whether to create a snapshot-consistent group. You can create a snapshot-consistent group only if all disks are ESSDs.</p>
+         * <p>Specifies whether to create a snapshot-consistent group. You can create a snapshot-consistent group only if all disks are enhanced SSDs (ESSDs).</p>
          */
         @NameInMap("SnapshotGroup")
         public Boolean snapshotGroup;
@@ -282,11 +325,17 @@ public class UpdatePolicyBindingRequest extends TeaModel {
     }
 
     public static class UpdatePolicyBindingRequestAdvancedOptions extends TeaModel {
+        @NameInMap("CommonFileSystemDetail")
+        public UpdatePolicyBindingRequestAdvancedOptionsCommonFileSystemDetail commonFileSystemDetail;
+
+        /**
+         * <p>The details of the Object Storage Service (OSS) backup.</p>
+         */
         @NameInMap("OssDetail")
         public UpdatePolicyBindingRequestAdvancedOptionsOssDetail ossDetail;
 
         /**
-         * <p>The details of ECS instance backup.</p>
+         * <p>The backup details of the Elastic Compute Service (ECS) instance.</p>
          */
         @NameInMap("UdmDetail")
         public UpdatePolicyBindingRequestAdvancedOptionsUdmDetail udmDetail;
@@ -294,6 +343,14 @@ public class UpdatePolicyBindingRequest extends TeaModel {
         public static UpdatePolicyBindingRequestAdvancedOptions build(java.util.Map<String, ?> map) throws Exception {
             UpdatePolicyBindingRequestAdvancedOptions self = new UpdatePolicyBindingRequestAdvancedOptions();
             return TeaModel.build(map, self);
+        }
+
+        public UpdatePolicyBindingRequestAdvancedOptions setCommonFileSystemDetail(UpdatePolicyBindingRequestAdvancedOptionsCommonFileSystemDetail commonFileSystemDetail) {
+            this.commonFileSystemDetail = commonFileSystemDetail;
+            return this;
+        }
+        public UpdatePolicyBindingRequestAdvancedOptionsCommonFileSystemDetail getCommonFileSystemDetail() {
+            return this.commonFileSystemDetail;
         }
 
         public UpdatePolicyBindingRequestAdvancedOptions setOssDetail(UpdatePolicyBindingRequestAdvancedOptionsOssDetail ossDetail) {

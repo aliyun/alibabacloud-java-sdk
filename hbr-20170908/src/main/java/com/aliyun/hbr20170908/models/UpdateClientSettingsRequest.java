@@ -4,91 +4,97 @@ package com.aliyun.hbr20170908.models;
 import com.aliyun.tea.*;
 
 public class UpdateClientSettingsRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to generate alert for partially completed jobs. This parameter is valid only for on-premises file backup and ECS file backup.</p>
+     */
     @NameInMap("AlertOnPartialComplete")
     public Boolean alertOnPartialComplete;
 
     /**
-     * <p>The ID of the backup client.</p>
+     * <p>The ID of the HBR client.</p>
      */
     @NameInMap("ClientId")
     public String clientId;
 
     /**
-     * <p>The network type of the backup client. Valid values:</p>
+     * <p>The type of the endpoint on the data plane. Valid values:</p>
      * <br>
-     * <p>*   **PUBLIC**: public network</p>
-     * <p>*   **VPC**: VPC.</p>
+     * <p>*   **PUBLIC**: Internet</p>
+     * <p>*   **VPC**: virtual private cloud (VPC)</p>
      * <p>*   **CLASSIC**: classic network</p>
      */
     @NameInMap("DataNetworkType")
     public String dataNetworkType;
 
     /**
-     * <p>The proxy settings of the backup client. Valid values:</p>
+     * <p>The proxy configuration on the data plane. Valid values:</p>
      * <br>
-     * <p>*   **DISABLE**: No proxy is configured.</p>
-     * <p>*   **USE_CONTROL_PROXY**: The proxy settings are the same as the settings that are predefined by the system. Default value: USE_CONTROL_PROXY.</p>
-     * <p>*   **CUSTOM**: Custom HTTP proxy settings are configured.</p>
+     * <p>*   **DISABLE**: No proxy is used.</p>
+     * <p>*   **USE_CONTROL_PROXY** (default): The configuration is the same as that on the control plane.</p>
+     * <p>*   **CUSTOM**: The configuration is customized (HTTP).</p>
      */
     @NameInMap("DataProxySetting")
     public String dataProxySetting;
 
     /**
-     * <p>The number of CPU cores that can be used by a single backup job. A value of 0 indicates no limits.</p>
+     * <p>The number of CPU cores used by a single backup job. The value 0 indicates that the number is unlimited.</p>
      */
     @NameInMap("MaxCpuCore")
     public Integer maxCpuCore;
 
+    /**
+     * <p>The maximum memory that can be used by the client. Unit: bytes. Only V2.13.0 and later are supported.</p>
+     */
     @NameInMap("MaxMemory")
     public Long maxMemory;
 
     /**
-     * <p>The number of concurrent tasks that can be included in a backup job. A value of 0 indicates no limits.</p>
+     * <p>The number of concurrent backup jobs. The value 0 indicates that the number is unlimited.</p>
      */
     @NameInMap("MaxWorker")
     public Integer maxWorker;
 
     /**
-     * <p>The custom IP address of the proxy server.</p>
+     * <p>The custom host IP address of the proxy server on the data plane.</p>
      */
     @NameInMap("ProxyHost")
     public String proxyHost;
 
     /**
-     * <p>The custom password of the proxy server.</p>
+     * <p>The custom password of the proxy server on the data plane.</p>
      */
     @NameInMap("ProxyPassword")
     public String proxyPassword;
 
     /**
-     * <p>The custom port number of the proxy server.</p>
+     * <p>The custom host port of the proxy server on the data plane.</p>
      */
     @NameInMap("ProxyPort")
     public Integer proxyPort;
 
     /**
-     * <p>The custom username of the proxy server.</p>
+     * <p>The custom username of the proxy server on the data plane.</p>
      */
     @NameInMap("ProxyUser")
     public String proxyUser;
 
     /**
-     * <p>The ID of resource group.</p>
+     * <p>The ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>Specifies whether to transmit data over HTTPS.</p>
+     * <p>Specifies whether to transmit the data on the data plane over HTTPS. Valid values:</p>
      * <br>
-     * <p>*   true: The system transmits data over HTTPS.</p>
-     * <p>*   false: The system transmits data over HTTP.</p>
+     * <p>*   true: Data is transmitted over HTTPS.</p>
+     * <p>*   false: Data is transmitted over HTTP.</p>
      */
     @NameInMap("UseHttps")
     public Boolean useHttps;
 
     /**
-     * <p>The ID of the backup vault. If you use a backup client of an earlier version, you must set this parameter.</p>
+     * <p>The ID of the backup vault. This parameter is required for the old HBR client.</p>
      */
     @NameInMap("VaultId")
     public String vaultId;

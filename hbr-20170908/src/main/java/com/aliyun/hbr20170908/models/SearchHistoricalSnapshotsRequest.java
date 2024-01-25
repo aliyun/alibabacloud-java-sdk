@@ -16,6 +16,9 @@ public class SearchHistoricalSnapshotsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("Order")
+    public String order;
+
     /**
      * <p>The query conditions. Example:</p>
      * <br>
@@ -66,6 +69,9 @@ public class SearchHistoricalSnapshotsRequest extends TeaModel {
     @NameInMap("Query")
     public java.util.List<?> query;
 
+    @NameInMap("SortBy")
+    public String sortBy;
+
     /**
      * <p>The type of the data source. Valid values:</p>
      * <br>
@@ -97,12 +103,28 @@ public class SearchHistoricalSnapshotsRequest extends TeaModel {
         return this.nextToken;
     }
 
+    public SearchHistoricalSnapshotsRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
+    }
+
     public SearchHistoricalSnapshotsRequest setQuery(java.util.List<?> query) {
         this.query = query;
         return this;
     }
     public java.util.List<?> getQuery() {
         return this.query;
+    }
+
+    public SearchHistoricalSnapshotsRequest setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    public String getSortBy() {
+        return this.sortBy;
     }
 
     public SearchHistoricalSnapshotsRequest setSourceType(String sourceType) {
