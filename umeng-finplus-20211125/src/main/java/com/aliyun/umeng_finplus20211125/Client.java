@@ -3,17 +3,12 @@ package com.aliyun.umeng_finplus20211125;
 
 import com.aliyun.tea.*;
 import com.aliyun.umeng_finplus20211125.models.*;
-import com.aliyun.teautil.*;
-import com.aliyun.teautil.models.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.openapiutil.*;
-import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._signatureAlgorithm = "v2";
         this._endpointRule = "";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("umeng-finplus", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -32,24 +27,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public GetMessageStatusResponse getMessageStatus(GetMessageStatusRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getMessageStatusWithOptions(request, headers, runtime);
-    }
-
-    public GetMessageStatusResponse getMessageStatusWithOptions(GetMessageStatusRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetMessageStatusResponse getMessageStatusWithOptions(GetMessageStatusRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             query.put("TaskId", request.taskId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetMessageStatus"),
             new TeaPair("version", "2021-11-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -63,13 +52,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetMessageStatusResponse());
     }
 
-    public SendBatchMessageResponse sendBatchMessage(SendBatchMessageRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetMessageStatusResponse getMessageStatus(GetMessageStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.sendBatchMessageWithOptions(request, headers, runtime);
+        return this.getMessageStatusWithOptions(request, headers, runtime);
     }
 
-    public SendBatchMessageResponse sendBatchMessageWithOptions(SendBatchMessageRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public SendBatchMessageResponse sendBatchMessageWithOptions(SendBatchMessageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.batchFlag)) {
@@ -104,11 +93,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TemplateParamJson", request.templateParamJson);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SendBatchMessage"),
             new TeaPair("version", "2021-11-25"),
             new TeaPair("protocol", "HTTPS"),
@@ -120,5 +109,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new SendBatchMessageResponse());
+    }
+
+    public SendBatchMessageResponse sendBatchMessage(SendBatchMessageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.sendBatchMessageWithOptions(request, headers, runtime);
     }
 }
