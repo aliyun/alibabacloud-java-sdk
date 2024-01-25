@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class QueryTaskInfoHistoryResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public QueryTaskInfoHistoryResponseBody body;
 
     public static QueryTaskInfoHistoryResponse build(java.util.Map<String, ?> map) throws Exception {

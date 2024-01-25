@@ -1,3 +1,6 @@
+2024-01-25 Version: 3.15.1
+- Generated java 2018-01-29 for Domain.
+
 2023-09-15 Version: 3.15.0
 - Generated java 2018-01-29 for Domain.
 

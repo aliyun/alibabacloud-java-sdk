@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class QueryRegistrantProfilesResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public QueryRegistrantProfilesResponseBody body;
 
     public static QueryRegistrantProfilesResponse build(java.util.Map<String, ?> map) throws Exception {
