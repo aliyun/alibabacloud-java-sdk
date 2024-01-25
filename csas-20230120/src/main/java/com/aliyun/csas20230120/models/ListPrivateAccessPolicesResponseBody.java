@@ -110,6 +110,9 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("DeviceAttributeId")
+        public String deviceAttributeId;
+
         @NameInMap("Name")
         public String name;
 
@@ -177,6 +180,14 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListPrivateAccessPolicesResponseBodyPolices setDeviceAttributeId(String deviceAttributeId) {
+            this.deviceAttributeId = deviceAttributeId;
+            return this;
+        }
+        public String getDeviceAttributeId() {
+            return this.deviceAttributeId;
         }
 
         public ListPrivateAccessPolicesResponseBodyPolices setName(String name) {

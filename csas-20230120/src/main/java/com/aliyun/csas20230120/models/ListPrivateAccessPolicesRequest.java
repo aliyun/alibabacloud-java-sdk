@@ -7,6 +7,9 @@ public class ListPrivateAccessPolicesRequest extends TeaModel {
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    @NameInMap("ApplicationName")
+    public String applicationName;
+
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -28,6 +31,9 @@ public class ListPrivateAccessPolicesRequest extends TeaModel {
     @NameInMap("TagId")
     public String tagId;
 
+    @NameInMap("TagName")
+    public String tagName;
+
     /**
      * <p>用户组ID。取值来源：</p>
      * <p>- [ListUserGroups](~~ListUserGroups~~)：批量查询用户组。</p>
@@ -47,6 +53,14 @@ public class ListPrivateAccessPolicesRequest extends TeaModel {
     }
     public String getApplicationId() {
         return this.applicationId;
+    }
+
+    public ListPrivateAccessPolicesRequest setApplicationName(String applicationName) {
+        this.applicationName = applicationName;
+        return this;
+    }
+    public String getApplicationName() {
+        return this.applicationName;
     }
 
     public ListPrivateAccessPolicesRequest setCurrentPage(Integer currentPage) {
@@ -103,6 +117,14 @@ public class ListPrivateAccessPolicesRequest extends TeaModel {
     }
     public String getTagId() {
         return this.tagId;
+    }
+
+    public ListPrivateAccessPolicesRequest setTagName(String tagName) {
+        this.tagName = tagName;
+        return this;
+    }
+    public String getTagName() {
+        return this.tagName;
     }
 
     public ListPrivateAccessPolicesRequest setUserGroupId(String userGroupId) {

@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListConnectorsResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public ListConnectorsResponseBody body;
 
     public static ListConnectorsResponse build(java.util.Map<String, ?> map) throws Exception {
