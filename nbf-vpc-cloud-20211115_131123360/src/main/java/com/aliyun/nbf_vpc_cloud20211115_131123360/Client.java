@@ -3,15 +3,10 @@ package com.aliyun.nbf_vpc_cloud20211115_131123360;
 
 import com.aliyun.tea.*;
 import com.aliyun.nbf_vpc_cloud20211115_131123360.models.*;
-import com.aliyun.teautil.*;
-import com.aliyun.teautil.models.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "";
         this.checkConfig(config);
@@ -31,29 +26,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public AdadaAResponse adadaAWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AdadaA"),
+            new TeaPair("version", "2021-11-15_13-11-23-360"),
+            new TeaPair("protocol", "HTTP"),
+            new TeaPair("pathname", "/caihe_cloud_product_1/1_0_0/adadaA"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AdadaAResponse());
+    }
+
     public AdadaAResponse adadaA() throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.adadaAWithOptions(headers, runtime);
     }
 
-    public AdadaAResponse adadaAWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+    public YxTestApiResponse yxTestApiWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        return TeaModel.toModel(this.doROARequest("AdadaA", "2021-11-15_13-11-23-360", "HTTP", "POST", "AK", "/caihe_cloud_product_1/1_0_0/adadaA", "json", req, runtime), new AdadaAResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "YxTestApi"),
+            new TeaPair("version", "2021-11-15_13-11-23-360"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/caihe_cloud_product_1/1_0_0/yxTestApi"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new YxTestApiResponse());
     }
 
     public YxTestApiResponse yxTestApi() throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.yxTestApiWithOptions(headers, runtime);
-    }
-
-    public YxTestApiResponse yxTestApiWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        return TeaModel.toModel(this.doROARequest("YxTestApi", "2021-11-15_13-11-23-360", "HTTPS", "POST", "AK", "/caihe_cloud_product_1/1_0_0/yxTestApi", "json", req, runtime), new YxTestApiResponse());
     }
 }
