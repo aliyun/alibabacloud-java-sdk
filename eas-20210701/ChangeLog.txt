@@ -1,3 +1,6 @@
+2024-01-25 Version: 4.0.2
+- Generated java 2021-07-01 for eas.
+
 2023-12-26 Version: 4.0.1
 - Generated java 2021-07-01 for eas.
 
