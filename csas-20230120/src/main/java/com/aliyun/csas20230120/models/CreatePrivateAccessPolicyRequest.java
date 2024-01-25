@@ -16,6 +16,9 @@ public class CreatePrivateAccessPolicyRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DeviceAttributeId")
+    public String deviceAttributeId;
+
     @NameInMap("Name")
     public String name;
 
@@ -80,6 +83,14 @@ public class CreatePrivateAccessPolicyRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreatePrivateAccessPolicyRequest setDeviceAttributeId(String deviceAttributeId) {
+        this.deviceAttributeId = deviceAttributeId;
+        return this;
+    }
+    public String getDeviceAttributeId() {
+        return this.deviceAttributeId;
     }
 
     public CreatePrivateAccessPolicyRequest setName(String name) {

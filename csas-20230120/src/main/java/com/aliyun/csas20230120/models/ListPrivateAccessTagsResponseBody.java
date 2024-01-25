@@ -4,12 +4,21 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListPrivateAccessTagsResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The internal access tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListPrivateAccessTagsResponseBodyTags> tags;
 
+    /**
+     * <p>The total number of internal access tags.</p>
+     */
     @NameInMap("TotalNum")
     public Integer totalNum;
 
@@ -43,24 +52,48 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
     }
 
     public static class ListPrivateAccessTagsResponseBodyTags extends TeaModel {
+        /**
+         * <p>The IDs of the internal access applications.</p>
+         */
         @NameInMap("ApplicationIds")
         public java.util.List<String> applicationIds;
 
+        /**
+         * <p>The time when the internal access tag was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the internal access tag.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the internal access tag.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The IDs of the internal access policies.</p>
+         */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
+        /**
+         * <p>The ID of the internal access tag.</p>
+         */
         @NameInMap("TagId")
         public String tagId;
 
+        /**
+         * <p>The type of the internal access tag. Valid values:</p>
+         * <br>
+         * <p>*   **Default**</p>
+         * <p>*   **Custom**</p>
+         */
         @NameInMap("TagType")
         public String tagType;
 
