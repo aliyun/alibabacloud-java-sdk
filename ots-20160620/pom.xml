@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ots20160620</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.5</version>
   <packaging>jar</packaging>
   <name>ots20160620</name>
   <description>Alibaba Cloud Tablestore (20160620) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.8</version>
+      <version>0.3.2</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
