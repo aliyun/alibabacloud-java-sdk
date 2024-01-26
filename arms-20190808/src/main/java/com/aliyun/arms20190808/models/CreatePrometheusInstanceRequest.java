@@ -32,7 +32,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
      * <p>- aliyun-cs: Prometheus Instance for Container Service</p>
      * <p>- cloud-product: Prometheus for cloud monitor</p>
      * <p>- cloud-monitor: Prometheus for enterprise cloud monitor</p>
-     * <p>- flink: Prometheus for FLink</p>
+     * <p>- flink: Prometheus for Flink</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;

@@ -3,7 +3,7 @@ package com.aliyun.arms20190808.models;
 
 import com.aliyun.tea.*;
 
-public class GetClusterAllUrlResponse extends TeaModel {
+public class ListEnvironmentDashboardsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetClusterAllUrlResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetClusterAllUrlResponseBody body;
+    public ListEnvironmentDashboardsResponseBody body;
 
-    public static GetClusterAllUrlResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetClusterAllUrlResponse self = new GetClusterAllUrlResponse();
+    public static ListEnvironmentDashboardsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListEnvironmentDashboardsResponse self = new ListEnvironmentDashboardsResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetClusterAllUrlResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListEnvironmentDashboardsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetClusterAllUrlResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetClusterAllUrlResponse setStatusCode(Integer statusCode) {
+    public ListEnvironmentDashboardsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetClusterAllUrlResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetClusterAllUrlResponse setBody(GetClusterAllUrlResponseBody body) {
+    public ListEnvironmentDashboardsResponse setBody(ListEnvironmentDashboardsResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetClusterAllUrlResponseBody getBody() {
+    public ListEnvironmentDashboardsResponseBody getBody() {
         return this.body;
     }
 
