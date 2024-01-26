@@ -479,6 +479,12 @@ public class CreatePolicyGroupRequest extends TeaModel {
     @NameInMap("RecordingStartTime")
     public String recordingStartTime;
 
+    @NameInMap("RecordingUserNotify")
+    public String recordingUserNotify;
+
+    @NameInMap("RecordingUserNotifyMessage")
+    public String recordingUserNotifyMessage;
+
     /**
      * <p>The ID of the region.</p>
      */
@@ -490,17 +496,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
      * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>*   \-</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    optionalControl</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    : By default, this feature is disabled. You can enable it by applying permissions.</p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <p>*    optionalControl: By default, this feature is disabled. You can enable it by applying permissions.</p>
      * <br>
      * <p>*   fullControl: The permission is granted.</p>
      * <br>
@@ -639,6 +635,9 @@ public class CreatePolicyGroupRequest extends TeaModel {
     @NameInMap("Watermark")
     public String watermark;
 
+    @NameInMap("WatermarkAntiCam")
+    public String watermarkAntiCam;
+
     /**
      * <p>The font color of the watermark. Valid values: 0 to 16777215.</p>
      */
@@ -665,6 +664,9 @@ public class CreatePolicyGroupRequest extends TeaModel {
      */
     @NameInMap("WatermarkFontStyle")
     public String watermarkFontStyle;
+
+    @NameInMap("WatermarkPower")
+    public String watermarkPower;
 
     /**
      * <p>The number of watermark rows. This parameter is now invalid.</p>
@@ -993,6 +995,22 @@ public class CreatePolicyGroupRequest extends TeaModel {
         return this.recordingStartTime;
     }
 
+    public CreatePolicyGroupRequest setRecordingUserNotify(String recordingUserNotify) {
+        this.recordingUserNotify = recordingUserNotify;
+        return this;
+    }
+    public String getRecordingUserNotify() {
+        return this.recordingUserNotify;
+    }
+
+    public CreatePolicyGroupRequest setRecordingUserNotifyMessage(String recordingUserNotifyMessage) {
+        this.recordingUserNotifyMessage = recordingUserNotifyMessage;
+        return this;
+    }
+    public String getRecordingUserNotifyMessage() {
+        return this.recordingUserNotifyMessage;
+    }
+
     public CreatePolicyGroupRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -1065,6 +1083,14 @@ public class CreatePolicyGroupRequest extends TeaModel {
         return this.watermark;
     }
 
+    public CreatePolicyGroupRequest setWatermarkAntiCam(String watermarkAntiCam) {
+        this.watermarkAntiCam = watermarkAntiCam;
+        return this;
+    }
+    public String getWatermarkAntiCam() {
+        return this.watermarkAntiCam;
+    }
+
     public CreatePolicyGroupRequest setWatermarkColor(Integer watermarkColor) {
         this.watermarkColor = watermarkColor;
         return this;
@@ -1095,6 +1121,14 @@ public class CreatePolicyGroupRequest extends TeaModel {
     }
     public String getWatermarkFontStyle() {
         return this.watermarkFontStyle;
+    }
+
+    public CreatePolicyGroupRequest setWatermarkPower(String watermarkPower) {
+        this.watermarkPower = watermarkPower;
+        return this;
+    }
+    public String getWatermarkPower() {
+        return this.watermarkPower;
     }
 
     public CreatePolicyGroupRequest setWatermarkRowAmount(Integer watermarkRowAmount) {

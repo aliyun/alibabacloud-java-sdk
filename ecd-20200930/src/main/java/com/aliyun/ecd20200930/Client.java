@@ -2523,6 +2523,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RecordingStartTime", request.recordingStartTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingUserNotify)) {
+            query.put("RecordingUserNotify", request.recordingUserNotify);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingUserNotifyMessage)) {
+            query.put("RecordingUserNotifyMessage", request.recordingUserNotifyMessage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -2559,6 +2567,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Watermark", request.watermark);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkAntiCam)) {
+            query.put("WatermarkAntiCam", request.watermarkAntiCam);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.watermarkColor)) {
             query.put("WatermarkColor", request.watermarkColor);
         }
@@ -2573,6 +2585,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.watermarkFontStyle)) {
             query.put("WatermarkFontStyle", request.watermarkFontStyle);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkPower)) {
+            query.put("WatermarkPower", request.watermarkPower);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.watermarkRowAmount)) {
@@ -3351,7 +3367,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * Before you delete a workspace, make sure that the following requirements are met:
       * *   All cloud desktops in the workspace are released.
       * *   The data that you want to retain is backed up.
-      * **
       * **Warning** After you delete a workspace, the resources and data of the workspace cannot be recovered. Exercise with caution.
       *
       * @param request DeleteOfficeSitesRequest
@@ -3390,7 +3405,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * Before you delete a workspace, make sure that the following requirements are met:
       * *   All cloud desktops in the workspace are released.
       * *   The data that you want to retain is backed up.
-      * **
       * **Warning** After you delete a workspace, the resources and data of the workspace cannot be recovered. Exercise with caution.
       *
       * @param request DeleteOfficeSitesRequest
@@ -9407,6 +9421,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RecordingStartTime", request.recordingStartTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingUserNotify)) {
+            query.put("RecordingUserNotify", request.recordingUserNotify);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingUserNotifyMessage)) {
+            query.put("RecordingUserNotifyMessage", request.recordingUserNotifyMessage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -9451,6 +9473,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Watermark", request.watermark);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkAntiCam)) {
+            query.put("WatermarkAntiCam", request.watermarkAntiCam);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.watermarkColor)) {
             query.put("WatermarkColor", request.watermarkColor);
         }
@@ -9465,6 +9491,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.watermarkFontStyle)) {
             query.put("WatermarkFontStyle", request.watermarkFontStyle);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkPower)) {
+            query.put("WatermarkPower", request.watermarkPower);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.watermarkRowAmount)) {
