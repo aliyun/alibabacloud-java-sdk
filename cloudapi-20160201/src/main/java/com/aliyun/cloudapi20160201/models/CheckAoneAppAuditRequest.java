@@ -7,6 +7,9 @@ public class CheckAoneAppAuditRequest extends TeaModel {
     @NameInMap("AoneAppName")
     public String aoneAppName;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static CheckAoneAppAuditRequest build(java.util.Map<String, ?> map) throws Exception {
         CheckAoneAppAuditRequest self = new CheckAoneAppAuditRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class CheckAoneAppAuditRequest extends TeaModel {
     }
     public String getAoneAppName() {
         return this.aoneAppName;
+    }
+
+    public CheckAoneAppAuditRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }
