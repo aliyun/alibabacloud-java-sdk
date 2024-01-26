@@ -267,6 +267,12 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("RecordingStartTime")
     public String recordingStartTime;
 
+    @NameInMap("RecordingUserNotify")
+    public String recordingUserNotify;
+
+    @NameInMap("RecordingUserNotifyMessage")
+    public String recordingUserNotifyMessage;
+
     /**
      * <p>The ID of the region where the cloud desktop resides.</p>
      */
@@ -351,6 +357,9 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("Watermark")
     public String watermark;
 
+    @NameInMap("WatermarkAntiCam")
+    public String watermarkAntiCam;
+
     /**
      * <p>The font color of the watermark. Valid values: 0 to 16777215.</p>
      */
@@ -377,6 +386,9 @@ public class ModifyPolicyGroupRequest extends TeaModel {
      */
     @NameInMap("WatermarkFontStyle")
     public String watermarkFontStyle;
+
+    @NameInMap("WatermarkPower")
+    public String watermarkPower;
 
     /**
      * <p>The number of watermark rows. This parameter is not in use.</p>
@@ -676,6 +688,22 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         return this.recordingStartTime;
     }
 
+    public ModifyPolicyGroupRequest setRecordingUserNotify(String recordingUserNotify) {
+        this.recordingUserNotify = recordingUserNotify;
+        return this;
+    }
+    public String getRecordingUserNotify() {
+        return this.recordingUserNotify;
+    }
+
+    public ModifyPolicyGroupRequest setRecordingUserNotifyMessage(String recordingUserNotifyMessage) {
+        this.recordingUserNotifyMessage = recordingUserNotifyMessage;
+        return this;
+    }
+    public String getRecordingUserNotifyMessage() {
+        return this.recordingUserNotifyMessage;
+    }
+
     public ModifyPolicyGroupRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -764,6 +792,14 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         return this.watermark;
     }
 
+    public ModifyPolicyGroupRequest setWatermarkAntiCam(String watermarkAntiCam) {
+        this.watermarkAntiCam = watermarkAntiCam;
+        return this;
+    }
+    public String getWatermarkAntiCam() {
+        return this.watermarkAntiCam;
+    }
+
     public ModifyPolicyGroupRequest setWatermarkColor(Integer watermarkColor) {
         this.watermarkColor = watermarkColor;
         return this;
@@ -794,6 +830,14 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     }
     public String getWatermarkFontStyle() {
         return this.watermarkFontStyle;
+    }
+
+    public ModifyPolicyGroupRequest setWatermarkPower(String watermarkPower) {
+        this.watermarkPower = watermarkPower;
+        return this;
+    }
+    public String getWatermarkPower() {
+        return this.watermarkPower;
     }
 
     public ModifyPolicyGroupRequest setWatermarkRowAmount(Integer watermarkRowAmount) {

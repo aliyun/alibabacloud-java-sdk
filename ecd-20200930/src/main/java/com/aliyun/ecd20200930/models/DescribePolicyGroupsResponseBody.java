@@ -1211,6 +1211,12 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("RecordingStartTime")
         public String recordingStartTime;
 
+        @NameInMap("RecordingUserNotify")
+        public String recordingUserNotify;
+
+        @NameInMap("RecordingUserNotifyMessage")
+        public String recordingUserNotifyMessage;
+
         /**
          * <p>The permissions on the keyboard and mouse to control the cloud desktop during remote assistance. Valid values:</p>
          * <br>
@@ -1352,6 +1358,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("Watermark")
         public String watermark;
 
+        @NameInMap("WatermarkAntiCam")
+        public String watermarkAntiCam;
+
         /**
          * <p>The font color of the watermark. Valid values: 0 to 16777215.</p>
          */
@@ -1384,6 +1393,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         @NameInMap("WatermarkFontStyle")
         public String watermarkFontStyle;
+
+        @NameInMap("WatermarkPower")
+        public String watermarkPower;
 
         /**
          * <p>The number of watermark rows. This parameter is now invalid.</p>
@@ -1861,6 +1873,22 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.recordingStartTime;
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setRecordingUserNotify(String recordingUserNotify) {
+            this.recordingUserNotify = recordingUserNotify;
+            return this;
+        }
+        public String getRecordingUserNotify() {
+            return this.recordingUserNotify;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setRecordingUserNotifyMessage(String recordingUserNotifyMessage) {
+            this.recordingUserNotifyMessage = recordingUserNotifyMessage;
+            return this;
+        }
+        public String getRecordingUserNotifyMessage() {
+            return this.recordingUserNotifyMessage;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setRemoteCoordinate(String remoteCoordinate) {
             this.remoteCoordinate = remoteCoordinate;
             return this;
@@ -1925,6 +1953,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.watermark;
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setWatermarkAntiCam(String watermarkAntiCam) {
+            this.watermarkAntiCam = watermarkAntiCam;
+            return this;
+        }
+        public String getWatermarkAntiCam() {
+            return this.watermarkAntiCam;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setWatermarkColor(Integer watermarkColor) {
             this.watermarkColor = watermarkColor;
             return this;
@@ -1963,6 +1999,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getWatermarkFontStyle() {
             return this.watermarkFontStyle;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setWatermarkPower(String watermarkPower) {
+            this.watermarkPower = watermarkPower;
+            return this;
+        }
+        public String getWatermarkPower() {
+            return this.watermarkPower;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setWatermarkRowAmount(Integer watermarkRowAmount) {

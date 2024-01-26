@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelAutoSnapshotPolicyRequest extends TeaModel {
     /**
-     * <p>The IDs of the cloud desktops. Valid values of N: 1 to 50. You cannot leave this parameter empty. The value can be up to 64 characters in length and cannot start with acs: or aliyun. It cannot contain [http:// or https://.](http://https://。)</p>
+     * <p>The IDs of the cloud desktops. Valid values of N: 1 to 50. You cannot leave this parameter empty. The value can be up to 64 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
