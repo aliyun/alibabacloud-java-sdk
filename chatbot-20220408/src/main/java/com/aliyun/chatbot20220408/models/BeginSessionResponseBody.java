@@ -4,6 +4,12 @@ package com.aliyun.chatbot20220408.models;
 import com.aliyun.tea.*;
 
 public class BeginSessionResponseBody extends TeaModel {
+    @NameInMap("AsrMaxEndSilence")
+    public Integer asrMaxEndSilence;
+
+    @NameInMap("Interruptible")
+    public Boolean interruptible;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -19,6 +25,22 @@ public class BeginSessionResponseBody extends TeaModel {
     public static BeginSessionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BeginSessionResponseBody self = new BeginSessionResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public BeginSessionResponseBody setAsrMaxEndSilence(Integer asrMaxEndSilence) {
+        this.asrMaxEndSilence = asrMaxEndSilence;
+        return this;
+    }
+    public Integer getAsrMaxEndSilence() {
+        return this.asrMaxEndSilence;
+    }
+
+    public BeginSessionResponseBody setInterruptible(Boolean interruptible) {
+        this.interruptible = interruptible;
+        return this;
+    }
+    public Boolean getInterruptible() {
+        return this.interruptible;
     }
 
     public BeginSessionResponseBody setRequestId(String requestId) {

@@ -1,3 +1,7 @@
+2024-01-29 Version: 1.1.1
+- Update API BeginSessionupdate response param.
+
+
 2023-12-07 Version: 1.1.0
 - Generated java 2022-04-08 for Chatbot.
 
