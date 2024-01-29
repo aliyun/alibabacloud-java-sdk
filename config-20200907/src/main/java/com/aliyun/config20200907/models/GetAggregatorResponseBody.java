@@ -167,6 +167,9 @@ public class GetAggregatorResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("FolderId")
+        public String folderId;
+
         public static GetAggregatorResponseBodyAggregator build(java.util.Map<String, ?> map) throws Exception {
             GetAggregatorResponseBodyAggregator self = new GetAggregatorResponseBodyAggregator();
             return TeaModel.build(map, self);
@@ -242,6 +245,14 @@ public class GetAggregatorResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public GetAggregatorResponseBodyAggregator setFolderId(String folderId) {
+            this.folderId = folderId;
+            return this;
+        }
+        public String getFolderId() {
+            return this.folderId;
         }
 
     }

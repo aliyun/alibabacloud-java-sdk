@@ -13,6 +13,12 @@ public class GetIntegratedServiceStatusResponseBody extends TeaModel {
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <p>The types of the integrated events. Separate multiple event types with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   ConfigurationItemChangeNotification: resource change event</p>
+     * <p>*   NonCompliantNotification: non-compliance event</p>
+     */
     @NameInMap("IntegratedTypes")
     public String integratedTypes;
 

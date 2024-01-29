@@ -30,6 +30,9 @@ public class ListAggregateDiscoveredResourcesRequest extends TeaModel {
     @NameInMap("Regions")
     public String regions;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the resources in the account group belong.</p>
+     */
     @NameInMap("ResourceAccountId")
     public Long resourceAccountId;
 

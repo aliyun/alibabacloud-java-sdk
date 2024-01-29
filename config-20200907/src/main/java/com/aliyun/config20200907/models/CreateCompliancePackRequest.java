@@ -87,6 +87,9 @@ public class CreateCompliancePackRequest extends TeaModel {
     @NameInMap("TagValueScope")
     public String tagValueScope;
 
+    @NameInMap("TemplateContent")
+    public String templateContent;
+
     public static CreateCompliancePackRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCompliancePackRequest self = new CreateCompliancePackRequest();
         return TeaModel.build(map, self);
@@ -186,6 +189,14 @@ public class CreateCompliancePackRequest extends TeaModel {
     }
     public String getTagValueScope() {
         return this.tagValueScope;
+    }
+
+    public CreateCompliancePackRequest setTemplateContent(String templateContent) {
+        this.templateContent = templateContent;
+        return this;
+    }
+    public String getTemplateContent() {
+        return this.templateContent;
     }
 
     public static class CreateCompliancePackRequestConfigRulesConfigRuleParameters extends TeaModel {

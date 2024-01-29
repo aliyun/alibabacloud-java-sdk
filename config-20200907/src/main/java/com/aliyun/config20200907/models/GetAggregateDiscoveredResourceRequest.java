@@ -21,8 +21,8 @@ public class GetAggregateDiscoveredResourceRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>账号组内待查询资源所属的阿里云账号ID。 </p>
-     * <p>> 参数ResourceAccountId和ResourceOwnerId必须设置其中一个，推荐使用本参数。</p>
+     * <p>The ID of the Alibaba Cloud account to which the resources in the account group belong.</p>
+     * <p>> You can use either the `ResourceAccountId` or `ResourceOwnerId` parameter. We recommend that you use the ResourceAccountId parameter.</p>
      */
     @NameInMap("ResourceAccountId")
     public Long resourceAccountId;
