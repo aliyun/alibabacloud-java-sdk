@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsGtmInstanceStatusRequest extends TeaModel {
     /**
-     * <p>The number of unavailable addresses.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</p>
      */
     @NameInMap("Lang")
     public String lang;
