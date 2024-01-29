@@ -4,6 +4,9 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class GetModelFeatureResponseBody extends TeaModel {
+    @NameInMap("ExportTrainingSetTableScript")
+    public String exportTrainingSetTableScript;
+
     @NameInMap("Features")
     public java.util.List<GetModelFeatureResponseBodyFeatures> features;
 
@@ -46,6 +49,14 @@ public class GetModelFeatureResponseBody extends TeaModel {
     public static GetModelFeatureResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetModelFeatureResponseBody self = new GetModelFeatureResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetModelFeatureResponseBody setExportTrainingSetTableScript(String exportTrainingSetTableScript) {
+        this.exportTrainingSetTableScript = exportTrainingSetTableScript;
+        return this;
+    }
+    public String getExportTrainingSetTableScript() {
+        return this.exportTrainingSetTableScript;
     }
 
     public GetModelFeatureResponseBody setFeatures(java.util.List<GetModelFeatureResponseBodyFeatures> features) {

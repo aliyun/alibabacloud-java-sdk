@@ -43,6 +43,9 @@ public class GetFeatureViewResponseBody extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
+    @NameInMap("PublishTableScript")
+    public String publishTableScript;
+
     @NameInMap("RegisterDatasourceId")
     public String registerDatasourceId;
 
@@ -177,6 +180,14 @@ public class GetFeatureViewResponseBody extends TeaModel {
     }
     public String getProjectName() {
         return this.projectName;
+    }
+
+    public GetFeatureViewResponseBody setPublishTableScript(String publishTableScript) {
+        this.publishTableScript = publishTableScript;
+        return this;
+    }
+    public String getPublishTableScript() {
+        return this.publishTableScript;
     }
 
     public GetFeatureViewResponseBody setRegisterDatasourceId(String registerDatasourceId) {
