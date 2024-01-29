@@ -68,6 +68,9 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("SubJobMaterials")
+        public String subJobMaterials;
+
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -179,6 +182,14 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetMediaProducingJobResponseBodyMediaProducingJob setSubJobMaterials(String subJobMaterials) {
+            this.subJobMaterials = subJobMaterials;
+            return this;
+        }
+        public String getSubJobMaterials() {
+            return this.subJobMaterials;
         }
 
         public GetMediaProducingJobResponseBodyMediaProducingJob setTemplateId(String templateId) {

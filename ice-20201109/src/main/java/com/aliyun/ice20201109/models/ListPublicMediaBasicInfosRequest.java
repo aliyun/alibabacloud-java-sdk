@@ -4,6 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListPublicMediaBasicInfosRequest extends TeaModel {
+    @NameInMap("BusinessType")
+    public String businessType;
+
     @NameInMap("IncludeFileBasicInfo")
     public Boolean includeFileBasicInfo;
 
@@ -25,6 +28,14 @@ public class ListPublicMediaBasicInfosRequest extends TeaModel {
     public static ListPublicMediaBasicInfosRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPublicMediaBasicInfosRequest self = new ListPublicMediaBasicInfosRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListPublicMediaBasicInfosRequest setBusinessType(String businessType) {
+        this.businessType = businessType;
+        return this;
+    }
+    public String getBusinessType() {
+        return this.businessType;
     }
 
     public ListPublicMediaBasicInfosRequest setIncludeFileBasicInfo(Boolean includeFileBasicInfo) {

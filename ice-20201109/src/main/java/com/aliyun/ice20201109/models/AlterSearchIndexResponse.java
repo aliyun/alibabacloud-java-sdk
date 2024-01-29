@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class AlterSearchIndexResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public AlterSearchIndexResponseBody body;
 
     public static AlterSearchIndexResponse build(java.util.Map<String, ?> map) throws Exception {
