@@ -3,7 +3,7 @@ package com.aliyun.resourcemanager20200331.models;
 
 import com.aliyun.tea.*;
 
-public class ListHandshakesForAccountResponse extends TeaModel {
+public class ListAssociatedTransferSettingResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ListHandshakesForAccountResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ListHandshakesForAccountResponseBody body;
+    public ListAssociatedTransferSettingResponseBody body;
 
-    public static ListHandshakesForAccountResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListHandshakesForAccountResponse self = new ListHandshakesForAccountResponse();
+    public static ListAssociatedTransferSettingResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListAssociatedTransferSettingResponse self = new ListAssociatedTransferSettingResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListHandshakesForAccountResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListAssociatedTransferSettingResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ListHandshakesForAccountResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListHandshakesForAccountResponse setStatusCode(Integer statusCode) {
+    public ListAssociatedTransferSettingResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ListHandshakesForAccountResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListHandshakesForAccountResponse setBody(ListHandshakesForAccountResponseBody body) {
+    public ListAssociatedTransferSettingResponse setBody(ListAssociatedTransferSettingResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListHandshakesForAccountResponseBody getBody() {
+    public ListAssociatedTransferSettingResponseBody getBody() {
         return this.body;
     }
 

@@ -3,19 +3,19 @@ package com.aliyun.resourcemanager20200331.models;
 
 import com.aliyun.tea.*;
 
-public class EnableAssociatedTransferResponseBody extends TeaModel {
+public class UpdateAssociatedTransferSettingResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static EnableAssociatedTransferResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        EnableAssociatedTransferResponseBody self = new EnableAssociatedTransferResponseBody();
+    public static UpdateAssociatedTransferSettingResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateAssociatedTransferSettingResponseBody self = new UpdateAssociatedTransferSettingResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public EnableAssociatedTransferResponseBody setRequestId(String requestId) {
+    public UpdateAssociatedTransferSettingResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

@@ -3,7 +3,7 @@ package com.aliyun.resourcemanager20200331.models;
 
 import com.aliyun.tea.*;
 
-public class ListHandshakesForAccountResponse extends TeaModel {
+public class UpdateAssociatedTransferSettingResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ListHandshakesForAccountResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ListHandshakesForAccountResponseBody body;
+    public UpdateAssociatedTransferSettingResponseBody body;
 
-    public static ListHandshakesForAccountResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListHandshakesForAccountResponse self = new ListHandshakesForAccountResponse();
+    public static UpdateAssociatedTransferSettingResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateAssociatedTransferSettingResponse self = new UpdateAssociatedTransferSettingResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListHandshakesForAccountResponse setHeaders(java.util.Map<String, String> headers) {
+    public UpdateAssociatedTransferSettingResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ListHandshakesForAccountResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListHandshakesForAccountResponse setStatusCode(Integer statusCode) {
+    public UpdateAssociatedTransferSettingResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ListHandshakesForAccountResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListHandshakesForAccountResponse setBody(ListHandshakesForAccountResponseBody body) {
+    public UpdateAssociatedTransferSettingResponse setBody(UpdateAssociatedTransferSettingResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListHandshakesForAccountResponseBody getBody() {
+    public UpdateAssociatedTransferSettingResponseBody getBody() {
         return this.body;
     }
 
