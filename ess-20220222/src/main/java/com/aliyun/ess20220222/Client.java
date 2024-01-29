@@ -1234,6 +1234,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CreditSpecification", request.creditSpecification);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.customPriorities)) {
+            query.put("CustomPriorities", request.customPriorities);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dataDisks)) {
             query.put("DataDisks", request.dataDisks);
         }
@@ -4840,6 +4844,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.creditSpecification)) {
             query.put("CreditSpecification", request.creditSpecification);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customPriorities)) {
+            query.put("CustomPriorities", request.customPriorities);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dataDisks)) {

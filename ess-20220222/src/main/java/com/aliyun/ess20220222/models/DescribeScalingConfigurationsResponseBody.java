@@ -79,6 +79,36 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsCustomPriorities extends TeaModel {
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("VswitchId")
+        public String vswitchId;
+
+        public static DescribeScalingConfigurationsResponseBodyScalingConfigurationsCustomPriorities build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScalingConfigurationsResponseBodyScalingConfigurationsCustomPriorities self = new DescribeScalingConfigurationsResponseBodyScalingConfigurationsCustomPriorities();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsCustomPriorities setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsCustomPriorities setVswitchId(String vswitchId) {
+            this.vswitchId = vswitchId;
+            return this;
+        }
+        public String getVswitchId() {
+            return this.vswitchId;
+        }
+
+    }
+
     public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsDataDisks extends TeaModel {
         /**
          * <p>The ID of the automatic snapshot policy that is applied to the data disk.</p>
@@ -574,6 +604,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("CreditSpecification")
         public String creditSpecification;
 
+        @NameInMap("CustomPriorities")
+        public java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsCustomPriorities> customPriorities;
+
         /**
          * <p>Details of the data disks.</p>
          */
@@ -1023,6 +1056,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
         public String getCreditSpecification() {
             return this.creditSpecification;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurations setCustomPriorities(java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsCustomPriorities> customPriorities) {
+            this.customPriorities = customPriorities;
+            return this;
+        }
+        public java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsCustomPriorities> getCustomPriorities() {
+            return this.customPriorities;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurations setDataDisks(java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsDataDisks> dataDisks) {
