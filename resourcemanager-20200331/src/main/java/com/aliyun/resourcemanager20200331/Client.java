@@ -743,7 +743,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about common request parameters, see [Common parameters](~~159973~~).
+      * >  A maximum of 30 resource groups can be created within an Alibaba Cloud account.
       *
       * @param request CreateResourceGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -758,6 +758,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -778,7 +782,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about common request parameters, see [Common parameters](~~159973~~).
+      * >  A maximum of 30 resource groups can be created within an Alibaba Cloud account.
       *
       * @param request CreateResourceGroupRequest
       * @return CreateResourceGroupResponse
@@ -2321,6 +2325,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAncestorsResponse listAncestors(ListAncestorsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAncestorsWithOptions(request, runtime);
+    }
+
+    public ListAssociatedTransferSettingResponse listAssociatedTransferSettingWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAssociatedTransferSetting"),
+            new TeaPair("version", "2020-03-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAssociatedTransferSettingResponse());
+    }
+
+    public ListAssociatedTransferSettingResponse listAssociatedTransferSetting() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAssociatedTransferSettingWithOptions(runtime);
     }
 
     /**
@@ -3877,6 +3902,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateAccountResponse updateAccount(UpdateAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateAccountWithOptions(request, runtime);
+    }
+
+    /**
+      * For information about the resources that support the Transfer Associated Resources feature, see [Use the Transfer Associated Resources feature](~~2639129~~).
+      *
+      * @param request UpdateAssociatedTransferSettingRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateAssociatedTransferSettingResponse
+     */
+    public UpdateAssociatedTransferSettingResponse updateAssociatedTransferSettingWithOptions(UpdateAssociatedTransferSettingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableExistingResourcesTransfer)) {
+            query.put("EnableExistingResourcesTransfer", request.enableExistingResourcesTransfer);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleSettings)) {
+            query.put("RuleSettings", request.ruleSettings);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAssociatedTransferSetting"),
+            new TeaPair("version", "2020-03-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAssociatedTransferSettingResponse());
+    }
+
+    /**
+      * For information about the resources that support the Transfer Associated Resources feature, see [Use the Transfer Associated Resources feature](~~2639129~~).
+      *
+      * @param request UpdateAssociatedTransferSettingRequest
+      * @return UpdateAssociatedTransferSettingResponse
+     */
+    public UpdateAssociatedTransferSettingResponse updateAssociatedTransferSetting(UpdateAssociatedTransferSettingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAssociatedTransferSettingWithOptions(request, runtime);
     }
 
     /**

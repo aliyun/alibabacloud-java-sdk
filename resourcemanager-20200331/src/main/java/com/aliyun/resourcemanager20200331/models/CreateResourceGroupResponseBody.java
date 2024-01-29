@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateResourceGroupResponseBody extends TeaModel {
     /**
-     * <p>The information of the resource group.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The display name of the resource group.</p>
+     * <p>The information of the resource group.</p>
      */
     @NameInMap("ResourceGroup")
     public CreateResourceGroupResponseBodyResourceGroup resourceGroup;
@@ -39,13 +39,16 @@ public class CreateResourceGroupResponseBody extends TeaModel {
 
     public static class CreateResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account to which the resource group belongs.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The status of the resource group. Valid values:</p>
+         * <br>
+         * <p>*   Creating: The resource group is being created.</p>
+         * <p>*   OK: The resource group is created.</p>
          */
         @NameInMap("Status")
         public String status;
@@ -94,46 +97,46 @@ public class CreateResourceGroupResponseBody extends TeaModel {
 
     public static class CreateResourceGroupResponseBodyResourceGroup extends TeaModel {
         /**
-         * <p>The unique identifier of the resource group.</p>
+         * <p>The ID of the Alibaba Cloud account to which the resource group belongs.</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The time when the resource group was created. The time is displayed in UTC.</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
-         * <p>The status of the resource group. Valid values:</p>
-         * <br>
-         * <p>*   Creating: The resource group is being created.</p>
-         * <p>*   OK: The resource group is created.</p>
+         * <p>The display name of the resource group.</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The time when the resource group was created. The time is displayed in UTC.</p>
+         * <p>The unique identifier of the resource group.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The status of the resource group. Valid values:</p>
-         * <br>
-         * <p>*   Creating: The resource group is being created.</p>
-         * <p>*   OK: The resource group is created.</p>
+         * <p>The status of the resource group in all regions.</p>
          */
         @NameInMap("RegionStatuses")
         public CreateResourceGroupResponseBodyResourceGroupRegionStatuses regionStatuses;
 
         /**
-         * <p>The status of the resource group in all regions.</p>
+         * <p>The status of the resource group. Valid values:</p>
+         * <br>
+         * <p>*   Creating: The resource group is being created.</p>
+         * <p>*   OK: The resource group is created.</p>
          */
         @NameInMap("Status")
         public String status;
