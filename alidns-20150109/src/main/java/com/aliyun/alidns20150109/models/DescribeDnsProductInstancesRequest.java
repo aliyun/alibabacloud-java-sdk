@@ -4,41 +4,60 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsProductInstancesRequest extends TeaModel {
+    /**
+     * <p>The Sorting direction. Values:</p>
+     * <p>* **DESC**: Descending (if not specified, the default is descending order)</p>
+     * <p>* **ASC**: Ascending</p>
+     */
     @NameInMap("Direction")
     public String direction;
 
+    /**
+     * <p>The type of the domain name. Valid values:</p>
+     * <br>
+     * <p>*   PUBLIC (default): hosted public domain name</p>
+     * <p>*   CACHE: cached public domain name</p>
+     */
     @NameInMap("DomainType")
     public String domainType;
 
     /**
-     * <p>The version code of the Alibaba Cloud DNS instance.</p>
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh** : Chinese</p>
+     * <p>*   **en** (default) : English</p>
      */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The Sorting parameter. Values:</p>
+     * <p>* createDate: Sort by creation time (if not specified, the default is to sort by creation time)</p>
+     * <p>* expireDate: Sort by expiration time</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The number of entries to return on each page. Maximum value: **100**. Default value: **20**.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The total number of domain names.</p>
+     * <p>The IP address of the client.</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The version code of the Alibaba Cloud DNS instance.</p>
      */
     @NameInMap("VersionCode")
     public String versionCode;

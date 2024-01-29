@@ -5,35 +5,38 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsGtmInstanceStatusResponseBody extends TeaModel {
     /**
-     * <p>The number of unavailable address pool groups.</p>
+     * <p>The number of available addresses.</p>
      */
     @NameInMap("AddrAvailableNum")
     public Integer addrAvailableNum;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The number of unavailable addresses.</p>
      */
     @NameInMap("AddrNotAvailableNum")
     public Integer addrNotAvailableNum;
 
     /**
-     * <p>The number of access policies switched to the secondary address pool group.</p>
+     * <p>The number of unavailable address pool groups.</p>
      */
     @NameInMap("AddrPoolGroupNotAvailableNum")
     public Integer addrPoolGroupNotAvailableNum;
 
     /**
-     * <p>The number of access policies that are unavailable in the current active address pool group.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of available addresses.</p>
+     * <p>The number of access policies that are unavailable in the current active address pool group.</p>
      */
     @NameInMap("StrategyNotAvailableNum")
     public Integer strategyNotAvailableNum;
 
+    /**
+     * <p>The number of access policies switched to the secondary address pool group.</p>
+     */
     @NameInMap("SwitchToFailoverStrategyNum")
     public Integer switchToFailoverStrategyNum;
 

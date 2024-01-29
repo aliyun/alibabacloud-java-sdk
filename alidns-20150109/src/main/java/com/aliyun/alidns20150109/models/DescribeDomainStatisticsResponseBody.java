@@ -44,6 +44,9 @@ public class DescribeDomainStatisticsResponseBody extends TeaModel {
         @NameInMap("Count")
         public Long count;
 
+        @NameInMap("DomainName")
+        public String domainName;
+
         /**
          * <p>The statistical timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
@@ -61,6 +64,14 @@ public class DescribeDomainStatisticsResponseBody extends TeaModel {
         }
         public Long getCount() {
             return this.count;
+        }
+
+        public DescribeDomainStatisticsResponseBodyStatisticsStatistic setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
         }
 
         public DescribeDomainStatisticsResponseBodyStatisticsStatistic setTimestamp(Long timestamp) {

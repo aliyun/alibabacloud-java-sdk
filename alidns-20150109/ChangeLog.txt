@@ -1,3 +1,9 @@
+2024-01-29 Version: 3.0.10
+- Update API DescribeDomainStatisticsupdate DomainName param.
+update response param.
+- Update API DescribeDomainStatisticsSummaryupdate response param.
+
+
 2024-01-17 Version: 3.0.9
 - Generated java 2015-01-09 for Alidns.
 

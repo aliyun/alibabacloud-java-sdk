@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribePdnsRequestStatisticsResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public DescribePdnsRequestStatisticsResponseBody body;
 
     public static DescribePdnsRequestStatisticsResponse build(java.util.Map<String, ?> map) throws Exception {
