@@ -131,7 +131,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         public Integer halfOpenRecoveryStepNum;
 
         /**
-         * <p>The maximum response time (RT). Unit: milliseconds. If the RT of a request is greater than the value of this parameter, a slow call is counted. If you set Strategy to 0, you must specify this parameter.</p>
+         * <p>The maximum RT. Unit: milliseconds. If the RT of a request is greater than the value of this parameter, a slow call is counted. If you set Strategy to 0, you must specify this parameter.</p>
          */
         @NameInMap("MaxAllowedRtMs")
         public Integer maxAllowedRtMs;
@@ -149,7 +149,7 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The region where the cluster resides.</p>
+         * <p>The region in which the instance resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

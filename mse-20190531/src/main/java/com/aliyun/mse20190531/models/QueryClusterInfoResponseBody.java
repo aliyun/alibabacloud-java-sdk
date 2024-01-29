@@ -260,6 +260,9 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         @NameInMap("AppVersion")
         public String appVersion;
 
+        @NameInMap("CanUpdate")
+        public Boolean canUpdate;
+
         /**
          * <p>The billing method, such as subscription or pay-as-you-go.</p>
          */
@@ -483,6 +486,9 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        @NameInMap("VersionCode")
+        public String versionCode;
+
         /**
          * <p>The ID of the VPC where the instance resides.</p>
          */
@@ -516,6 +522,14 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         }
         public String getAppVersion() {
             return this.appVersion;
+        }
+
+        public QueryClusterInfoResponseBodyData setCanUpdate(Boolean canUpdate) {
+            this.canUpdate = canUpdate;
+            return this;
+        }
+        public Boolean getCanUpdate() {
+            return this.canUpdate;
         }
 
         public QueryClusterInfoResponseBodyData setChargeType(String chargeType) {
@@ -812,6 +826,14 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         }
         public String getVSwitchId() {
             return this.vSwitchId;
+        }
+
+        public QueryClusterInfoResponseBodyData setVersionCode(String versionCode) {
+            this.versionCode = versionCode;
+            return this;
+        }
+        public String getVersionCode() {
+            return this.versionCode;
         }
 
         public QueryClusterInfoResponseBodyData setVpcId(String vpcId) {

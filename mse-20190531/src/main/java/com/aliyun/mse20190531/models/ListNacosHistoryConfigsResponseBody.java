@@ -175,6 +175,9 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         @NameInMap("OpType")
         public String opType;
 
+        @NameInMap("SrcUser")
+        public String srcUser;
+
         public static ListNacosHistoryConfigsResponseBodyHistoryItems build(java.util.Map<String, ?> map) throws Exception {
             ListNacosHistoryConfigsResponseBodyHistoryItems self = new ListNacosHistoryConfigsResponseBodyHistoryItems();
             return TeaModel.build(map, self);
@@ -226,6 +229,14 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         }
         public String getOpType() {
             return this.opType;
+        }
+
+        public ListNacosHistoryConfigsResponseBodyHistoryItems setSrcUser(String srcUser) {
+            this.srcUser = srcUser;
+            return this;
+        }
+        public String getSrcUser() {
+            return this.srcUser;
         }
 
     }

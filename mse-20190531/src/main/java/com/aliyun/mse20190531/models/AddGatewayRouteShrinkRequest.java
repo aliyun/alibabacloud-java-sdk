@@ -13,6 +13,9 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("Description")
+    public String description;
+
     /**
      * <p>The type of the destination service. Valid values:</p>
      * <br>
@@ -128,6 +131,14 @@ public class AddGatewayRouteShrinkRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public AddGatewayRouteShrinkRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public AddGatewayRouteShrinkRequest setDestinationType(String destinationType) {

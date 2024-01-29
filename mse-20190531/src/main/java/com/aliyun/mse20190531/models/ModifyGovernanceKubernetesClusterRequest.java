@@ -70,7 +70,7 @@ public class ModifyGovernanceKubernetesClusterRequest extends TeaModel {
 
     public static class ModifyGovernanceKubernetesClusterRequestNamespaceInfos extends TeaModel {
         /**
-         * <p>The microservice namespace.If you do not specify this parameter, Microservice Governance is not enabled for the namespace.</p>
+         * <p>The microservice namespace. If you do not specify this parameter, Microservice Governance is not enabled for the namespace.</p>
          */
         @NameInMap("MseNamespace")
         public String mseNamespace;

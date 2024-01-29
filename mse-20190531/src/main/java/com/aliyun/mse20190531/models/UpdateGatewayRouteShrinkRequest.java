@@ -13,6 +13,9 @@ public class UpdateGatewayRouteShrinkRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("Description")
+    public String description;
+
     /**
      * <p>The destination service type.</p>
      */
@@ -71,6 +74,7 @@ public class UpdateGatewayRouteShrinkRequest extends TeaModel {
      * <p>The name of the route.</p>
      */
     @NameInMap("Name")
+    @Deprecated
     public String name;
 
     /**
@@ -108,6 +112,14 @@ public class UpdateGatewayRouteShrinkRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public UpdateGatewayRouteShrinkRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public UpdateGatewayRouteShrinkRequest setDestinationType(String destinationType) {
