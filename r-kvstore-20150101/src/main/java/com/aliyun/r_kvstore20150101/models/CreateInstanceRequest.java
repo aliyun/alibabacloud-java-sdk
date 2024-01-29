@@ -74,6 +74,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>Backup files ID of cluster instance.</p>
+     */
     @NameInMap("ClusterBackupId")
     public String clusterBackupId;
 

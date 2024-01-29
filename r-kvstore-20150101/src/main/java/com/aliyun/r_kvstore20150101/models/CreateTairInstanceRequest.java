@@ -65,6 +65,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>集群备份集ID。</p>
+     */
     @NameInMap("ClusterBackupId")
     public String clusterBackupId;
 
@@ -137,7 +140,7 @@ public class CreateTairInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>参数模板ID，根据新创建的参数模板参数创建实例，不可重复。</p>
+     * <p>The ID of the parameter template. The instance is created based on the parameters in the parameter template. The ID must be unique.</p>
      */
     @NameInMap("ParamGroupId")
     public String paramGroupId;
@@ -233,6 +236,9 @@ public class CreateTairInstanceRequest extends TeaModel {
      */
     @NameInMap("ShardType")
     public String shardType;
+
+    @NameInMap("SlaveReadOnlyCount")
+    public Integer slaveReadOnlyCount;
 
     /**
      * <p>The ID of the source instance.</p>
@@ -551,6 +557,14 @@ public class CreateTairInstanceRequest extends TeaModel {
     }
     public String getShardType() {
         return this.shardType;
+    }
+
+    public CreateTairInstanceRequest setSlaveReadOnlyCount(Integer slaveReadOnlyCount) {
+        this.slaveReadOnlyCount = slaveReadOnlyCount;
+        return this;
+    }
+    public Integer getSlaveReadOnlyCount() {
+        return this.slaveReadOnlyCount;
     }
 
     public CreateTairInstanceRequest setSrcDBInstanceId(String srcDBInstanceId) {

@@ -26,9 +26,9 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public String IPType;
 
     /**
-     * <p>The prefix of the new endpoint. Specify the endpoint in the `<prefix>.redis.rds.aliyuncs.com` format. The prefix can contain lowercase letters and digits, and must start with a lowercase letter. The prefix can be 8 to 40 characters in length.</p>
+     * <p>The prefix of the new endpoint. Specify the endpoint in the `<prefix>.redis.rds.aliyuncs.com` format. The prefix must be 8 to 40 characters in length and can contain lowercase letters and digits. It must start with a lowercase letter.</p>
      * <br>
-     * <p>> You must specify one of the **NewConnectionString** and **Port** parameters.</p>
+     * <p>>  You must specify one of the **NewConnectionString** and **Port** parameters.</p>
      */
     @NameInMap("NewConnectionString")
     public String newConnectionString;
