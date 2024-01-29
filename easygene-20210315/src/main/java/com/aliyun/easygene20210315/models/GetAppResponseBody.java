@@ -61,6 +61,9 @@ public class GetAppResponseBody extends TeaModel {
     @NameInMap("RevisionComment")
     public String revisionComment;
 
+    @NameInMap("RevisionTag")
+    public String revisionTag;
+
     @NameInMap("Revisions")
     public java.util.List<GetAppResponseBodyRevisions> revisions;
 
@@ -234,6 +237,14 @@ public class GetAppResponseBody extends TeaModel {
     }
     public String getRevisionComment() {
         return this.revisionComment;
+    }
+
+    public GetAppResponseBody setRevisionTag(String revisionTag) {
+        this.revisionTag = revisionTag;
+        return this;
+    }
+    public String getRevisionTag() {
+        return this.revisionTag;
     }
 
     public GetAppResponseBody setRevisions(java.util.List<GetAppResponseBodyRevisions> revisions) {
@@ -524,6 +535,9 @@ public class GetAppResponseBody extends TeaModel {
         @NameInMap("RevisionComment")
         public String revisionComment;
 
+        @NameInMap("RevisionTag")
+        public String revisionTag;
+
         public static GetAppResponseBodyRevisions build(java.util.Map<String, ?> map) throws Exception {
             GetAppResponseBodyRevisions self = new GetAppResponseBodyRevisions();
             return TeaModel.build(map, self);
@@ -551,6 +565,14 @@ public class GetAppResponseBody extends TeaModel {
         }
         public String getRevisionComment() {
             return this.revisionComment;
+        }
+
+        public GetAppResponseBodyRevisions setRevisionTag(String revisionTag) {
+            this.revisionTag = revisionTag;
+            return this;
+        }
+        public String getRevisionTag() {
+            return this.revisionTag;
         }
 
     }

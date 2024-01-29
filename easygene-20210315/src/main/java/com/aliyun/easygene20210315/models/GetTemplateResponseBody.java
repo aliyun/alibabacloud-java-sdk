@@ -34,6 +34,9 @@ public class GetTemplateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("RevisionTag")
+    public String revisionTag;
+
     @NameInMap("RootEntity")
     public String rootEntity;
 
@@ -129,6 +132,14 @@ public class GetTemplateResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetTemplateResponseBody setRevisionTag(String revisionTag) {
+        this.revisionTag = revisionTag;
+        return this;
+    }
+    public String getRevisionTag() {
+        return this.revisionTag;
     }
 
     public GetTemplateResponseBody setRootEntity(String rootEntity) {

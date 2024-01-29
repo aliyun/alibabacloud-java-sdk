@@ -178,6 +178,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RevisionComment", request.revisionComment);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.revisionTag)) {
+            query.put("RevisionTag", request.revisionTag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
             query.put("Workspace", request.workspace);
         }
@@ -275,8 +279,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateRunShrinkRequest request = new CreateRunShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.executeOptions))) {
-            request.executeOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.executeOptions), "ExecuteOptions", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.executeOptions)) {
+            request.executeOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.executeOptions, "ExecuteOptions", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -318,6 +322,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.outputFolder)) {
             query.put("OutputFolder", request.outputFolder);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.revisionTag)) {
+            query.put("RevisionTag", request.revisionTag);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.role)) {
@@ -407,6 +415,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Revision", request.revision);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.revisionTag)) {
+            query.put("RevisionTag", request.revisionTag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
             query.put("Workspace", request.workspace);
         }
@@ -464,6 +476,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.labels)) {
             query.put("Labels", request.labels);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.revisionTag)) {
+            query.put("RevisionTag", request.revisionTag);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.rootEntity)) {
@@ -823,6 +839,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.revision)) {
             query.put("Revision", request.revision);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.revisionTag)) {
+            query.put("RevisionTag", request.revisionTag);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
@@ -1690,6 +1710,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.resumeSubmissionWithOptions(request, runtime);
     }
 
+    public TagAppResponse tagAppWithOptions(TagAppRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            query.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appRevision)) {
+            query.put("AppRevision", request.appRevision);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.revisionTag)) {
+            query.put("RevisionTag", request.revisionTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            query.put("Workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TagApp"),
+            new TeaPair("version", "2021-03-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TagAppResponse());
+    }
+
+    public TagAppResponse tagApp(TagAppRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.tagAppWithOptions(request, runtime);
+    }
+
+    /**
+      * @deprecated
+      *
+      * @param tmpReq UpdateEntityRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateEntityResponse
+     */
+    // Deprecated
     public UpdateEntityResponse updateEntityWithOptions(UpdateEntityRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateEntityShrinkRequest request = new UpdateEntityShrinkRequest();
@@ -1730,6 +1799,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateEntityResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request UpdateEntityRequest
+      * @return UpdateEntityResponse
+     */
+    // Deprecated
     public UpdateEntityResponse updateEntity(UpdateEntityRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateEntityWithOptions(request, runtime);

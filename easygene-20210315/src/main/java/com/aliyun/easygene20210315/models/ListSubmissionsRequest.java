@@ -10,6 +10,9 @@ public class ListSubmissionsRequest extends TeaModel {
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>Next Token</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

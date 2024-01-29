@@ -25,6 +25,9 @@ public class CreateTemplateRequest extends TeaModel {
     @NameInMap("OutputsExpression")
     public java.util.List<CreateTemplateRequestOutputsExpression> outputsExpression;
 
+    @NameInMap("RevisionTag")
+    public String revisionTag;
+
     @NameInMap("RootEntity")
     public String rootEntity;
 
@@ -93,6 +96,14 @@ public class CreateTemplateRequest extends TeaModel {
     }
     public java.util.List<CreateTemplateRequestOutputsExpression> getOutputsExpression() {
         return this.outputsExpression;
+    }
+
+    public CreateTemplateRequest setRevisionTag(String revisionTag) {
+        this.revisionTag = revisionTag;
+        return this;
+    }
+    public String getRevisionTag() {
+        return this.revisionTag;
     }
 
     public CreateTemplateRequest setRootEntity(String rootEntity) {

@@ -16,6 +16,9 @@ public class CreateAppResponseBody extends TeaModel {
     @NameInMap("Revision")
     public String revision;
 
+    @NameInMap("RevisionTag")
+    public String revisionTag;
+
     @NameInMap("Workspace")
     public String workspace;
 
@@ -54,6 +57,14 @@ public class CreateAppResponseBody extends TeaModel {
     }
     public String getRevision() {
         return this.revision;
+    }
+
+    public CreateAppResponseBody setRevisionTag(String revisionTag) {
+        this.revisionTag = revisionTag;
+        return this;
+    }
+    public String getRevisionTag() {
+        return this.revisionTag;
     }
 
     public CreateAppResponseBody setWorkspace(String workspace) {

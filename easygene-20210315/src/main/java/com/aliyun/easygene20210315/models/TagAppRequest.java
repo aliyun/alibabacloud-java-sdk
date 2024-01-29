@@ -3,12 +3,12 @@ package com.aliyun.easygene20210315.models;
 
 import com.aliyun.tea.*;
 
-public class GetAppRequest extends TeaModel {
+public class TagAppRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
-    @NameInMap("Revision")
-    public String revision;
+    @NameInMap("AppRevision")
+    public String appRevision;
 
     @NameInMap("RevisionTag")
     public String revisionTag;
@@ -16,12 +16,12 @@ public class GetAppRequest extends TeaModel {
     @NameInMap("Workspace")
     public String workspace;
 
-    public static GetAppRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetAppRequest self = new GetAppRequest();
+    public static TagAppRequest build(java.util.Map<String, ?> map) throws Exception {
+        TagAppRequest self = new TagAppRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetAppRequest setAppName(String appName) {
+    public TagAppRequest setAppName(String appName) {
         this.appName = appName;
         return this;
     }
@@ -29,15 +29,15 @@ public class GetAppRequest extends TeaModel {
         return this.appName;
     }
 
-    public GetAppRequest setRevision(String revision) {
-        this.revision = revision;
+    public TagAppRequest setAppRevision(String appRevision) {
+        this.appRevision = appRevision;
         return this;
     }
-    public String getRevision() {
-        return this.revision;
+    public String getAppRevision() {
+        return this.appRevision;
     }
 
-    public GetAppRequest setRevisionTag(String revisionTag) {
+    public TagAppRequest setRevisionTag(String revisionTag) {
         this.revisionTag = revisionTag;
         return this;
     }
@@ -45,7 +45,7 @@ public class GetAppRequest extends TeaModel {
         return this.revisionTag;
     }
 
-    public GetAppRequest setWorkspace(String workspace) {
+    public TagAppRequest setWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
