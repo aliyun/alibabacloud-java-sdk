@@ -4882,6 +4882,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("authorIds", request.authorIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.createdAfter)) {
+            query.put("createdAfter", request.createdAfter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createdBefore)) {
+            query.put("createdBefore", request.createdBefore);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
             query.put("filter", request.filter);
         }
