@@ -145,6 +145,9 @@ public class GetMergeRequestResponseBody extends TeaModel {
         @NameInMap("email")
         public String email;
 
+        @NameInMap("hasCommented")
+        public Boolean hasCommented;
+
         @NameInMap("hasReviewed")
         public Boolean hasReviewed;
 
@@ -185,6 +188,14 @@ public class GetMergeRequestResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
+        }
+
+        public GetMergeRequestResponseBodyResultReviewers setHasCommented(Boolean hasCommented) {
+            this.hasCommented = hasCommented;
+            return this;
+        }
+        public Boolean getHasCommented() {
+            return this.hasCommented;
         }
 
         public GetMergeRequestResponseBodyResultReviewers setHasReviewed(Boolean hasReviewed) {
@@ -396,6 +407,9 @@ public class GetMergeRequestResponseBody extends TeaModel {
         @NameInMap("localId")
         public Long localId;
 
+        @NameInMap("mergedRevision")
+        public String mergedRevision;
+
         @NameInMap("mrBizId")
         public String mrBizId;
 
@@ -522,6 +536,14 @@ public class GetMergeRequestResponseBody extends TeaModel {
         }
         public Long getLocalId() {
             return this.localId;
+        }
+
+        public GetMergeRequestResponseBodyResult setMergedRevision(String mergedRevision) {
+            this.mergedRevision = mergedRevision;
+            return this;
+        }
+        public String getMergedRevision() {
+            return this.mergedRevision;
         }
 
         public GetMergeRequestResponseBodyResult setMrBizId(String mrBizId) {

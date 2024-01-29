@@ -211,11 +211,20 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         @NameInMap("email")
         public String email;
 
+        @NameInMap("hasCommented")
+        public Boolean hasCommented;
+
+        @NameInMap("hasReviewed")
+        public Boolean hasReviewed;
+
         @NameInMap("id")
         public Long id;
 
         @NameInMap("name")
         public String name;
+
+        @NameInMap("reviewOpinionStatus")
+        public String reviewOpinionStatus;
 
         @NameInMap("reviewTime")
         public String reviewTime;
@@ -250,6 +259,22 @@ public class ListMergeRequestsResponseBody extends TeaModel {
             return this.email;
         }
 
+        public ListMergeRequestsResponseBodyResultReviewers setHasCommented(Boolean hasCommented) {
+            this.hasCommented = hasCommented;
+            return this;
+        }
+        public Boolean getHasCommented() {
+            return this.hasCommented;
+        }
+
+        public ListMergeRequestsResponseBodyResultReviewers setHasReviewed(Boolean hasReviewed) {
+            this.hasReviewed = hasReviewed;
+            return this;
+        }
+        public Boolean getHasReviewed() {
+            return this.hasReviewed;
+        }
+
         public ListMergeRequestsResponseBodyResultReviewers setId(Long id) {
             this.id = id;
             return this;
@@ -264,6 +289,14 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListMergeRequestsResponseBodyResultReviewers setReviewOpinionStatus(String reviewOpinionStatus) {
+            this.reviewOpinionStatus = reviewOpinionStatus;
+            return this;
+        }
+        public String getReviewOpinionStatus() {
+            return this.reviewOpinionStatus;
         }
 
         public ListMergeRequestsResponseBodyResultReviewers setReviewTime(String reviewTime) {
@@ -402,6 +435,9 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         @NameInMap("localId")
         public Long localId;
 
+        @NameInMap("mergedRevision")
+        public String mergedRevision;
+
         @NameInMap("mrBizId")
         public String mrBizId;
 
@@ -537,6 +573,14 @@ public class ListMergeRequestsResponseBody extends TeaModel {
         }
         public Long getLocalId() {
             return this.localId;
+        }
+
+        public ListMergeRequestsResponseBodyResult setMergedRevision(String mergedRevision) {
+            this.mergedRevision = mergedRevision;
+            return this;
+        }
+        public String getMergedRevision() {
+            return this.mergedRevision;
         }
 
         public ListMergeRequestsResponseBodyResult setMrBizId(String mrBizId) {

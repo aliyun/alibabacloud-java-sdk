@@ -10,6 +10,12 @@ public class ListMergeRequestsRequest extends TeaModel {
     @NameInMap("authorIds")
     public String authorIds;
 
+    @NameInMap("createdAfter")
+    public String createdAfter;
+
+    @NameInMap("createdBefore")
+    public String createdBefore;
+
     @NameInMap("filter")
     public String filter;
 
@@ -65,6 +71,22 @@ public class ListMergeRequestsRequest extends TeaModel {
     }
     public String getAuthorIds() {
         return this.authorIds;
+    }
+
+    public ListMergeRequestsRequest setCreatedAfter(String createdAfter) {
+        this.createdAfter = createdAfter;
+        return this;
+    }
+    public String getCreatedAfter() {
+        return this.createdAfter;
+    }
+
+    public ListMergeRequestsRequest setCreatedBefore(String createdBefore) {
+        this.createdBefore = createdBefore;
+        return this;
+    }
+    public String getCreatedBefore() {
+        return this.createdBefore;
     }
 
     public ListMergeRequestsRequest setFilter(String filter) {

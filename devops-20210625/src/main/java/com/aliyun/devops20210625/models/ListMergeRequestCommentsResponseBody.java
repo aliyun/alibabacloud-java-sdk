@@ -74,6 +74,9 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
         @NameInMap("email")
         public String email;
 
+        @NameInMap("id")
+        public Long id;
+
         @NameInMap("name")
         public String name;
 
@@ -112,6 +115,14 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
             return this.email;
         }
 
+        public ListMergeRequestCommentsResponseBodyResultAuthor setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
         public ListMergeRequestCommentsResponseBodyResultAuthor setName(String name) {
             this.name = name;
             return this;
@@ -147,6 +158,9 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
 
         @NameInMap("email")
         public String email;
+
+        @NameInMap("id")
+        public Long id;
 
         @NameInMap("name")
         public String name;
@@ -186,6 +200,14 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
             return this.email;
         }
 
+        public ListMergeRequestCommentsResponseBodyResultChildCommentsAuthor setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
         public ListMergeRequestCommentsResponseBodyResultChildCommentsAuthor setName(String name) {
             this.name = name;
             return this;
@@ -221,6 +243,9 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
 
         @NameInMap("email")
         public String email;
+
+        @NameInMap("id")
+        public Long id;
 
         @NameInMap("name")
         public String name;
@@ -258,6 +283,14 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
+        }
+
+        public ListMergeRequestCommentsResponseBodyResultChildCommentsFinalChildCommentsAuthor setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
         public ListMergeRequestCommentsResponseBodyResultChildCommentsFinalChildCommentsAuthor setName(String name) {
