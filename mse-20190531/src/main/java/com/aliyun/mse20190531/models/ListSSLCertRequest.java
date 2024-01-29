@@ -13,6 +13,9 @@ public class ListSSLCertRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("CertName")
+    public String certName;
+
     /**
      * <p>The unique ID of the gateway.</p>
      */
@@ -30,6 +33,14 @@ public class ListSSLCertRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public ListSSLCertRequest setCertName(String certName) {
+        this.certName = certName;
+        return this;
+    }
+    public String getCertName() {
+        return this.certName;
     }
 
     public ListSSLCertRequest setGatewayUniqueId(String gatewayUniqueId) {

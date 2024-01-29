@@ -59,6 +59,9 @@ public class AddServiceSourceRequest extends TeaModel {
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>The list of security groups to be authorized. You can specify security groups to allow backend services to access data sources that you create.</p>
+     */
     @NameInMap("ToAuthorizeSecurityGroups")
     public java.util.List<AddServiceSourceRequestToAuthorizeSecurityGroups> toAuthorizeSecurityGroups;
 
@@ -225,12 +228,21 @@ public class AddServiceSourceRequest extends TeaModel {
     }
 
     public static class AddServiceSourceRequestToAuthorizeSecurityGroups extends TeaModel {
+        /**
+         * <p>The description of the authorization record.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The authorized port range of the security group. You can select multiple port ranges. Separate each port range with a comma (,).</p>
+         */
         @NameInMap("PortRange")
         public String portRange;
 
+        /**
+         * <p>The ID of the security group.</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 

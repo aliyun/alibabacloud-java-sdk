@@ -14,33 +14,9 @@ public class CreateClusterRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The billing method.</p>
+     * <p>The billing method. Valid values: PREPAY and POSTPAY.</p>
      * <br>
-     * <p>Valid values:</p>
-     * <br>
-     * <p>*   PREPAY</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    the subscription billing method</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   POSTPAY</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    the pay-as-you-go billing method</p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <p>Ignore this parameter for serverless instances.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
@@ -60,6 +36,10 @@ public class CreateClusterRequest extends TeaModel {
      * <br>
      * <p>*   `MSE_SC_1_2_60_c`: 1 vCPU and 2 GB of memory</p>
      * <p>*   `MSE_SC_2_4_60_c`: 2 vCPUs and 4 GB of memory</p>
+     * <br>
+     * <p>\[Serverless Edition]</p>
+     * <br>
+     * <p>Ignore this parameter or set this parameter to `MSE_SC_SERVERLESS`.</p>
      */
     @NameInMap("ClusterSpecification")
     public String clusterSpecification;
@@ -73,33 +53,32 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The engine version of the instance. Valid values:</p>
      * <br>
-     * <p>\[Professional version]</p>
+     * <p>\[Professional Edition]</p>
      * <br>
-     * <p>*   `NACOS_2_0_0`: Nacos 2.0.0</p>
-     * <p>*   `ZooKeeper_3_8_0`: ZooKeeper 3.8.0</p>
+     * <p>*   `NACOS_2_0_0`</p>
+     * <p>*   `ZooKeeper_3_8_0`</p>
      * <br>
      * <p>\[Developer Edition]</p>
      * <br>
-     * <p>*   `NACOS_2_0_0`: Nacos 2.0.0</p>
-     * <p>*   `ZooKeeper_3_8_0`: ZooKeeper 3.8.0</p>
+     * <p>*   `NACOS_2_0_0`</p>
+     * <p>*   `ZooKeeper_3_8_0`</p>
+     * <br>
+     * <p>\[Serverless Edition]</p>
+     * <br>
+     * <p>*   `NACOS_2_0_0`</p>
+     * <p>*   `ZooKeeper_3_8_0`</p>
      */
     @NameInMap("ClusterVersion")
     public String clusterVersion;
 
     /**
-     * <p>The network connection type. Valid values:</p>
-     * <br>
-     * <p>*   slb</p>
-     * <p>*   eni</p>
+     * <p>The network connection type. Valid values: `slb` or `single_eni`. For instances of the Developer Edition in some regions, only the value `single_eni` is supported.</p>
      */
     @NameInMap("ConnectionType")
     public String connectionType;
 
     /**
-     * <p>The type of the disk. Valid values:</p>
-     * <br>
-     * <p>*   alicloud-disk-ssd</p>
-     * <p>*   alicloud-disk-essd-pl1</p>
+     * <p>This parameter is obsolete.</p>
      */
     @NameInMap("DiskType")
     @Deprecated
@@ -107,6 +86,24 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable Internet access (Elastic IP Address) if ConnectionType is set to `single_eni`.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   false</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("EipEnabled")
     public Boolean eipEnabled;
@@ -116,17 +113,21 @@ public class CreateClusterRequest extends TeaModel {
      * <br>
      * <p>\[Professional Edition]</p>
      * <br>
-     * <p>*   The number of nodes in an instance is greater than or equal to 3 and must be an odd number.</p>
+     * <p>*   The value must be greater than or equal to 3 and must be an odd number.</p>
      * <br>
      * <p>\[Developer Edition]</p>
      * <br>
-     * <p>*   Only one node can be deployed for an instance.</p>
+     * <p>*   The value must be 1.</p>
+     * <br>
+     * <p>\[Serverless Edition]</p>
+     * <br>
+     * <p>Ignore this parameter.</p>
      */
     @NameInMap("InstanceCount")
     public Integer instanceCount;
 
     /**
-     * <p>The name of the MSE instance.</p>
+     * <p>The custom name of the instance.</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
@@ -135,7 +136,8 @@ public class CreateClusterRequest extends TeaModel {
      * <p>Configure this parameter unless otherwise specified. Valid values:</p>
      * <br>
      * <p>*   `mse_pro`: Professional Edition</p>
-     * <p>*   `mse_dev`: Developer Edition.</p>
+     * <p>*   `mse_dev`: Developer Edition</p>
+     * <p>*   `mse_dev`: Serverless Edition</p>
      */
     @NameInMap("MseVersion")
     public String mseVersion;
@@ -150,27 +152,22 @@ public class CreateClusterRequest extends TeaModel {
     public String netType;
 
     /**
-     * <p>The specifications of the internal-facing SLB instance. Valid values:</p>
-     * <br>
-     * <p>*   `slb.s1.small`</p>
-     * <p>*   `slb.s3.medium`</p>
+     * <p>This parameter is obsolete.</p>
      */
     @NameInMap("PrivateSlbSpecification")
     @Deprecated
     public String privateSlbSpecification;
 
     /**
-     * <p>The public bandwidth. Unit: Mbit/s. This parameter is required.\</p>
-     * <p>Valid values: 0 to 5000. A value of 0 indicates no access to the Internet.</p>
+     * <p>This parameter is valid only if the ConnectionType parameter is set to `slb`. The value 0 indicates that the Server Load Balancer (SLB) instance is not connected over the Internet. A value greater than 1 indicates the fixed bandwidth that is used to access the SLB instance over the Internet. Unit: Mbit/s.</p>
+     * <br>
+     * <p>Valid values: 0 to 5000.</p>
      */
     @NameInMap("PubNetworkFlow")
     public String pubNetworkFlow;
 
     /**
-     * <p>The specifications of the Internet-facing Server Load Balancer (SLB) instance. Valid values:</p>
-     * <br>
-     * <p>*   `slb.s1.small`</p>
-     * <p>*   `slb.s3.medium`</p>
+     * <p>This parameter is obsolete.</p>
      */
     @NameInMap("PubSlbSpecification")
     @Deprecated
@@ -201,7 +198,7 @@ public class CreateClusterRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The type of the security group to which the instance belongs. This parameter is valid only when the ConnectionType parameter is set to `single_eni`.</p>
+     * <p>The type of the security group to which the instance belongs. This parameter is valid only if the ConnectionType parameter is set to `single_eni`.</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
@@ -212,7 +209,7 @@ public class CreateClusterRequest extends TeaModel {
     public String securityGroupType;
 
     /**
-     * <p>The list of the tags that you want to add.</p>
+     * <p>The tags to add to the resource. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateClusterRequestTag> tag;
@@ -412,13 +409,13 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestTag extends TeaModel {
         /**
-         * <p>The key of a tag.</p>
+         * <p>The key of tag N to add to the resource.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of a tag.</p>
+         * <p>The value of tag N to add to the resource.</p>
          */
         @NameInMap("Value")
         public String value;

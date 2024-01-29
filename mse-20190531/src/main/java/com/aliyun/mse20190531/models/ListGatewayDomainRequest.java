@@ -13,6 +13,9 @@ public class ListGatewayDomainRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("DomainName")
+    public String domainName;
+
     /**
      * <p>The unique ID of the gateway.</p>
      */
@@ -36,6 +39,14 @@ public class ListGatewayDomainRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public ListGatewayDomainRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public ListGatewayDomainRequest setGatewayUniqueId(String gatewayUniqueId) {

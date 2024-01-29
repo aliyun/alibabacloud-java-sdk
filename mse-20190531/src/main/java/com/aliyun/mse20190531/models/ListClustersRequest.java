@@ -19,6 +19,9 @@ public class ListClustersRequest extends TeaModel {
     @NameInMap("ClusterAliasName")
     public String clusterAliasName;
 
+    @NameInMap("KeyId")
+    public String keyId;
+
     /**
      * <p>The number of the page to return.</p>
      */
@@ -74,6 +77,14 @@ public class ListClustersRequest extends TeaModel {
     }
     public String getClusterAliasName() {
         return this.clusterAliasName;
+    }
+
+    public ListClustersRequest setKeyId(String keyId) {
+        this.keyId = keyId;
+        return this;
+    }
+    public String getKeyId() {
+        return this.keyId;
     }
 
     public ListClustersRequest setPageNum(Integer pageNum) {

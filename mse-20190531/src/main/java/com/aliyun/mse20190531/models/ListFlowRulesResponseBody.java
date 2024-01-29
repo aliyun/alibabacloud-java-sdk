@@ -127,7 +127,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          */
         @NameInMap("AppName")
         public String appName;
@@ -201,7 +201,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         public Integer maxQueueingTimeMs;
 
         /**
-         * <p>The statistical dimension. The value 1 indicates the number of accepted requests.</p>
+         * <p>The statistical dimension. The value 1 indicates that the number of accepted requests is used for statistics.</p>
          */
         @NameInMap("MetricType")
         public Integer metricType;
@@ -213,7 +213,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The ID of the region in which the instance resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -228,7 +228,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         public Integer resourceType;
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;

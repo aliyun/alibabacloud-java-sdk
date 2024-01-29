@@ -1,3 +1,26 @@
+2024-01-29 Version: 6.2.5
+- Update API AddGatewayRouteadd Description param.
+- Update API ExportZookeeperDataupdate ExportType param.
+update InstanceId param.
+- Update API GetGatewayRouteDetailupdate response param.
+- Update API ListApplicationsWithTagRulesupdate Region param.
+- Update API ListClustersadd KeyId param.
+- Update API ListExportZookeeperDataupdate PageNumber param.
+update PageSize param.
+- Update API ListGatewayDomainadd DomainName param.
+update response param.
+- Update API ListGatewayRouteupdate FilterParams param.
+update response param.
+- Update API ListNacosHistoryConfigsupdate response param.
+- Update API ListSSLCertadd CertName param.
+update response param.
+- Update API ListServiceSourceupdate response param.
+- Update API QueryClusterInfoupdate response param.
+- Update API UpdateGatewayRouteadd Description param.
+update Name param.
+update response param.
+
+
 2023-12-19 Version: 6.2.4
 - Generated java 2019-05-31 for mse.
 

@@ -101,6 +101,7 @@ public class ListGatewayRouteRequest extends TeaModel {
          * <p>The default service ID.</p>
          */
         @NameInMap("DefaultServiceId")
+        @Deprecated
         public Long defaultServiceId;
 
         /**
@@ -132,6 +133,9 @@ public class ListGatewayRouteRequest extends TeaModel {
          */
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Path")
+        public String path;
 
         /**
          * <p>The order.</p>
@@ -196,6 +200,14 @@ public class ListGatewayRouteRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListGatewayRouteRequestFilterParams setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
         }
 
         public ListGatewayRouteRequestFilterParams setRouteOrder(Integer routeOrder) {

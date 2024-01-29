@@ -13,6 +13,9 @@ public class AddGatewayRouteRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("Description")
+    public String description;
+
     /**
      * <p>The type of the destination service. Valid values:</p>
      * <br>
@@ -128,6 +131,14 @@ public class AddGatewayRouteRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public AddGatewayRouteRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public AddGatewayRouteRequest setDestinationType(String destinationType) {

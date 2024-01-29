@@ -815,6 +815,9 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         @NameInMap("GroupName")
         public String groupName;
 
+        @NameInMap("HealthStatus")
+        public String healthStatus;
+
         /**
          * <p>The transcoder of the Dubbo protocol.</p>
          */
@@ -863,6 +866,9 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         @NameInMap("SourceType")
         public String sourceType;
 
+        @NameInMap("UnhealthyEndpoints")
+        public java.util.List<String> unhealthyEndpoints;
+
         /**
          * <p>The version of the service.</p>
          */
@@ -888,6 +894,14 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         }
         public String getGroupName() {
             return this.groupName;
+        }
+
+        public ListGatewayRouteResponseBodyDataResultRouteServices setHealthStatus(String healthStatus) {
+            this.healthStatus = healthStatus;
+            return this;
+        }
+        public String getHealthStatus() {
+            return this.healthStatus;
         }
 
         public ListGatewayRouteResponseBodyDataResultRouteServices setHttpDubboTranscoder(ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoder httpDubboTranscoder) {
@@ -952,6 +966,14 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         }
         public String getSourceType() {
             return this.sourceType;
+        }
+
+        public ListGatewayRouteResponseBodyDataResultRouteServices setUnhealthyEndpoints(java.util.List<String> unhealthyEndpoints) {
+            this.unhealthyEndpoints = unhealthyEndpoints;
+            return this;
+        }
+        public java.util.List<String> getUnhealthyEndpoints() {
+            return this.unhealthyEndpoints;
         }
 
         public ListGatewayRouteResponseBodyDataResultRouteServices setVersion(String version) {

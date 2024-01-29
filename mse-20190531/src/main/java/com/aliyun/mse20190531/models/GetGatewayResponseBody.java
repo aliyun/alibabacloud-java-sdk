@@ -408,18 +408,19 @@ public class GetGatewayResponseBody extends TeaModel {
         public String spec;
 
         /**
-         * <p>The status of the gateway. Valid values: </p>
-         * <p>* 0: The gateway is being created. </p>
-         * <p>* 1: The gateway fails to be created. </p>
-         * <p>* 2: The gateway is running. </p>
-         * <p>* 3: The gateway is changing. </p>
-         * <p>* 4: The gateway is scaling down. </p>
-         * <p>* 6: The gateway is scaling up. </p>
-         * <p>* 8: The gateway is being deleted. </p>
-         * <p>* 10: The gateway is restarting. </p>
-         * <p>* 11: The gateway is being rebuilt. </p>
-         * <p>* 12: The gateway is updating. </p>
-         * <p>* 13: The gateway fails to be updated.</p>
+         * <p>The status of the gateway. Valid values:</p>
+         * <br>
+         * <p>*   0: The gateway is being created.</p>
+         * <p>*   1: The gateway fails to be created.</p>
+         * <p>*   2: The gateway is running.</p>
+         * <p>*   3: The gateway is changing.</p>
+         * <p>*   4: The gateway is scaling in.</p>
+         * <p>*   6: The gateway is scaling out.</p>
+         * <p>*   8: The gateway is being deleted.</p>
+         * <p>*   10: The gateway is restarting.</p>
+         * <p>*   11: The gateway is being rebuilt.</p>
+         * <p>*   12: The gateway is updating.</p>
+         * <p>*   13: The gateway fails to be updated.</p>
          */
         @NameInMap("Status")
         public Integer status;

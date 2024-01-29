@@ -59,6 +59,9 @@ public class AddServiceSourceShrinkRequest extends TeaModel {
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>The list of security groups to be authorized. You can specify security groups to allow backend services to access data sources that you create.</p>
+     */
     @NameInMap("ToAuthorizeSecurityGroups")
     public String toAuthorizeSecurityGroupsShrink;
 

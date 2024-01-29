@@ -1014,6 +1014,9 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("GroupName")
         public String groupName;
 
+        @NameInMap("HealthStatus")
+        public String healthStatus;
+
         /**
          * <p>The service name.</p>
          */
@@ -1056,6 +1059,9 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("SourceType")
         public String sourceType;
 
+        @NameInMap("UnhealthyEndpoints")
+        public java.util.List<String> unhealthyEndpoints;
+
         /**
          * <p>The service version.</p>
          */
@@ -1081,6 +1087,14 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         }
         public String getGroupName() {
             return this.groupName;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataRouteServices setHealthStatus(String healthStatus) {
+            this.healthStatus = healthStatus;
+            return this;
+        }
+        public String getHealthStatus() {
+            return this.healthStatus;
         }
 
         public GetGatewayRouteDetailResponseBodyDataRouteServices setName(String name) {
@@ -1137,6 +1151,14 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         }
         public String getSourceType() {
             return this.sourceType;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataRouteServices setUnhealthyEndpoints(java.util.List<String> unhealthyEndpoints) {
+            this.unhealthyEndpoints = unhealthyEndpoints;
+            return this;
+        }
+        public java.util.List<String> getUnhealthyEndpoints() {
+            return this.unhealthyEndpoints;
         }
 
         public GetGatewayRouteDetailResponseBodyDataRouteServices setVersion(String version) {
@@ -1223,6 +1245,9 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
          */
         @NameInMap("DefaultServiceName")
         public String defaultServiceName;
+
+        @NameInMap("Description")
+        public String description;
 
         /**
          * <p>The destination service type.</p>
@@ -1434,6 +1459,14 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         }
         public String getDefaultServiceName() {
             return this.defaultServiceName;
+        }
+
+        public GetGatewayRouteDetailResponseBodyData setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public GetGatewayRouteDetailResponseBodyData setDestinationType(String destinationType) {
