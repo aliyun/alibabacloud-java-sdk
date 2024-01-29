@@ -37,6 +37,9 @@ public class CreateAggregatorRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("FolderId")
+    public String folderId;
+
     public static CreateAggregatorRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAggregatorRequest self = new CreateAggregatorRequest();
         return TeaModel.build(map, self);
@@ -80,6 +83,14 @@ public class CreateAggregatorRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateAggregatorRequest setFolderId(String folderId) {
+        this.folderId = folderId;
+        return this;
+    }
+    public String getFolderId() {
+        return this.folderId;
     }
 
     public static class CreateAggregatorRequestAggregatorAccounts extends TeaModel {

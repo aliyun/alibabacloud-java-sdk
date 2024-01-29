@@ -95,6 +95,9 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
     @NameInMap("TagValueScope")
     public String tagValueScope;
 
+    @NameInMap("TemplateContent")
+    public String templateContent;
+
     public static CreateAggregateCompliancePackRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAggregateCompliancePackRequest self = new CreateAggregateCompliancePackRequest();
         return TeaModel.build(map, self);
@@ -202,6 +205,14 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
     }
     public String getTagValueScope() {
         return this.tagValueScope;
+    }
+
+    public CreateAggregateCompliancePackRequest setTemplateContent(String templateContent) {
+        this.templateContent = templateContent;
+        return this;
+    }
+    public String getTemplateContent() {
+        return this.templateContent;
     }
 
     public static class CreateAggregateCompliancePackRequestConfigRulesConfigRuleParameters extends TeaModel {

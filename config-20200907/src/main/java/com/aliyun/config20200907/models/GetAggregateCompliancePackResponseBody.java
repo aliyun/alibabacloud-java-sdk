@@ -53,8 +53,8 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the input parameter is required. Valid values:</p>
          * <br>
-         * <p>*   true: The input parameter is required.</p>
-         * <p>*   false: The input parameter is optional.</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("Required")
         public Boolean required;
@@ -110,7 +110,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters> configRuleParameters;
 
         /**
-         * <p>The description of the rule.</p>
+         * <p>The rule description.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -128,7 +128,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String resourceTypesScope;
 
         /**
-         * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+         * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
          * <br>
          * <p>*   1: high</p>
          * <p>*   2: medium</p>
@@ -352,6 +352,9 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("TemplateContent")
+        public String templateContent;
+
         public static GetAggregateCompliancePackResponseBodyCompliancePack build(java.util.Map<String, ?> map) throws Exception {
             GetAggregateCompliancePackResponseBodyCompliancePack self = new GetAggregateCompliancePackResponseBodyCompliancePack();
             return TeaModel.build(map, self);
@@ -443,6 +446,14 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetAggregateCompliancePackResponseBodyCompliancePack setTemplateContent(String templateContent) {
+            this.templateContent = templateContent;
+            return this;
+        }
+        public String getTemplateContent() {
+            return this.templateContent;
         }
 
     }

@@ -40,8 +40,6 @@ public class GetAggregateResourceConfigurationTimelineRequest extends TeaModel {
 
     /**
      * <p>The ID of the Alibaba Cloud account to which the resource in the account group belongs.</p>
-     * <br>
-     * <p>> You can use either the ResourceAccountId or ResourceOwnerId parameter. We recommend that you use the ResourceAccountId parameter.</p>
      */
     @NameInMap("ResourceAccountId")
     public Long resourceAccountId;

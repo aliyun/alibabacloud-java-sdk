@@ -419,6 +419,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TagValueScope", request.tagValueScope);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.templateContent)) {
+            body.put("TemplateContent", request.templateContent);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -780,6 +784,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.folderId)) {
+            body.put("FolderId", request.folderId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -877,6 +885,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.tagValueScope)) {
             body.put("TagValueScope", request.tagValueScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateContent)) {
+            body.put("TemplateContent", request.templateContent);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -991,10 +1003,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### Limits
-      * You can use an ordinary account to create up to 200 rules.
-      * ### Usage notes
-      * This topic provides an example on how to create a managed rule named required-tags. The returned result indicates that the rule is created and the ID of the rule is `cr-5772ba41209e007b****`.
+      * ## Limits
+      * You can use a common account to create up to 200 rules.
       *
       * @param tmpReq CreateConfigRuleRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1095,10 +1105,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### Limits
-      * You can use an ordinary account to create up to 200 rules.
-      * ### Usage notes
-      * This topic provides an example on how to create a managed rule named required-tags. The returned result indicates that the rule is created and the ID of the rule is `cr-5772ba41209e007b****`.
+      * ## Limits
+      * You can use a common account to create up to 200 rules.
       *
       * @param request CreateConfigRuleRequest
       * @return CreateConfigRuleResponse
@@ -3094,7 +3102,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public GetAggregatorResponse getAggregatorWithOptions(GetAggregatorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregatorId)) {
+            query.put("AggregatorId", request.aggregatorId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -3103,7 +3115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2020-09-07"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),

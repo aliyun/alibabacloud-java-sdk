@@ -381,7 +381,7 @@ public class ListConfigRulesResponseBody extends TeaModel {
 
     public static class ListConfigRulesResponseBodyConfigRules extends TeaModel {
         /**
-         * <p>The types of resources evaluated by the rule. Separate multiple resource types with commas (,).</p>
+         * <p>The rule list.</p>
          */
         @NameInMap("ConfigRuleList")
         public java.util.List<ListConfigRulesResponseBodyConfigRulesConfigRuleList> configRuleList;

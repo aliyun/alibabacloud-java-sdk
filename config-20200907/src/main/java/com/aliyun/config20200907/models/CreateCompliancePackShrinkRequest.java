@@ -87,6 +87,9 @@ public class CreateCompliancePackShrinkRequest extends TeaModel {
     @NameInMap("TagValueScope")
     public String tagValueScope;
 
+    @NameInMap("TemplateContent")
+    public String templateContent;
+
     public static CreateCompliancePackShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCompliancePackShrinkRequest self = new CreateCompliancePackShrinkRequest();
         return TeaModel.build(map, self);
@@ -186,6 +189,14 @@ public class CreateCompliancePackShrinkRequest extends TeaModel {
     }
     public String getTagValueScope() {
         return this.tagValueScope;
+    }
+
+    public CreateCompliancePackShrinkRequest setTemplateContent(String templateContent) {
+        this.templateContent = templateContent;
+        return this;
+    }
+    public String getTemplateContent() {
+        return this.templateContent;
     }
 
 }
