@@ -123,6 +123,9 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     @NameInMap("ShardCount")
     public Integer shardCount;
 
+    @NameInMap("SlaveReadOnlyCount")
+    public Integer slaveReadOnlyCount;
+
     /**
      * <p>The source of the operation. This parameter is used only for internal maintenance. You do not need to specify this parameter.</p>
      */
@@ -284,6 +287,14 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     }
     public Integer getShardCount() {
         return this.shardCount;
+    }
+
+    public ModifyInstanceSpecRequest setSlaveReadOnlyCount(Integer slaveReadOnlyCount) {
+        this.slaveReadOnlyCount = slaveReadOnlyCount;
+        return this;
+    }
+    public Integer getSlaveReadOnlyCount() {
+        return this.slaveReadOnlyCount;
     }
 
     public ModifyInstanceSpecRequest setSourceBiz(String sourceBiz) {
