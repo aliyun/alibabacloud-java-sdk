@@ -41,6 +41,9 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
     @NameInMap("CreditSpecification")
     public String creditSpecification;
 
+    @NameInMap("CustomPriorities")
+    public java.util.List<ModifyScalingConfigurationRequestCustomPriorities> customPriorities;
+
     /**
      * <p>The data disks.</p>
      */
@@ -390,6 +393,14 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
     }
     public String getCreditSpecification() {
         return this.creditSpecification;
+    }
+
+    public ModifyScalingConfigurationRequest setCustomPriorities(java.util.List<ModifyScalingConfigurationRequestCustomPriorities> customPriorities) {
+        this.customPriorities = customPriorities;
+        return this;
+    }
+    public java.util.List<ModifyScalingConfigurationRequestCustomPriorities> getCustomPriorities() {
+        return this.customPriorities;
     }
 
     public ModifyScalingConfigurationRequest setDataDisks(java.util.List<ModifyScalingConfigurationRequestDataDisks> dataDisks) {
@@ -1001,6 +1012,36 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
         }
         public Integer getSize() {
             return this.size;
+        }
+
+    }
+
+    public static class ModifyScalingConfigurationRequestCustomPriorities extends TeaModel {
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("VswitchId")
+        public String vswitchId;
+
+        public static ModifyScalingConfigurationRequestCustomPriorities build(java.util.Map<String, ?> map) throws Exception {
+            ModifyScalingConfigurationRequestCustomPriorities self = new ModifyScalingConfigurationRequestCustomPriorities();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyScalingConfigurationRequestCustomPriorities setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public ModifyScalingConfigurationRequestCustomPriorities setVswitchId(String vswitchId) {
+            this.vswitchId = vswitchId;
+            return this;
+        }
+        public String getVswitchId() {
+            return this.vswitchId;
         }
 
     }
