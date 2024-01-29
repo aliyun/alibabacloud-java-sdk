@@ -37,6 +37,9 @@ public class CreateSubmissionRequest extends TeaModel {
     @NameInMap("Revision")
     public String revision;
 
+    @NameInMap("RevisionTag")
+    public String revisionTag;
+
     @NameInMap("Workspace")
     public String workspace;
 
@@ -131,6 +134,14 @@ public class CreateSubmissionRequest extends TeaModel {
     }
     public String getRevision() {
         return this.revision;
+    }
+
+    public CreateSubmissionRequest setRevisionTag(String revisionTag) {
+        this.revisionTag = revisionTag;
+        return this;
+    }
+    public String getRevisionTag() {
+        return this.revisionTag;
     }
 
     public CreateSubmissionRequest setWorkspace(String workspace) {

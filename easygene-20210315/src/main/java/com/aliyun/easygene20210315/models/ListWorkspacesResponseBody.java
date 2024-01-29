@@ -97,6 +97,9 @@ public class ListWorkspacesResponseBody extends TeaModel {
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>RAM Role</p>
+         */
         @NameInMap("Role")
         public String role;
 

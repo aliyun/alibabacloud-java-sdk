@@ -34,6 +34,9 @@ public class CreateRunRequest extends TeaModel {
     @NameInMap("OutputFolder")
     public String outputFolder;
 
+    @NameInMap("RevisionTag")
+    public String revisionTag;
+
     @NameInMap("Role")
     public String role;
 
@@ -126,6 +129,14 @@ public class CreateRunRequest extends TeaModel {
     }
     public String getOutputFolder() {
         return this.outputFolder;
+    }
+
+    public CreateRunRequest setRevisionTag(String revisionTag) {
+        this.revisionTag = revisionTag;
+        return this;
+    }
+    public String getRevisionTag() {
+        return this.revisionTag;
     }
 
     public CreateRunRequest setRole(String role) {

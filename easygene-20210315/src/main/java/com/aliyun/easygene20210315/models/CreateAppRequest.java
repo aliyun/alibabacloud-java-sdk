@@ -43,6 +43,9 @@ public class CreateAppRequest extends TeaModel {
     @NameInMap("RevisionComment")
     public String revisionComment;
 
+    @NameInMap("RevisionTag")
+    public String revisionTag;
+
     @NameInMap("Workspace")
     public String workspace;
 
@@ -153,6 +156,14 @@ public class CreateAppRequest extends TeaModel {
     }
     public String getRevisionComment() {
         return this.revisionComment;
+    }
+
+    public CreateAppRequest setRevisionTag(String revisionTag) {
+        this.revisionTag = revisionTag;
+        return this;
+    }
+    public String getRevisionTag() {
+        return this.revisionTag;
     }
 
     public CreateAppRequest setWorkspace(String workspace) {

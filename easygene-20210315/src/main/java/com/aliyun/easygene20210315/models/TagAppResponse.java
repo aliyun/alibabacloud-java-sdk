@@ -3,7 +3,7 @@ package com.aliyun.easygene20210315.models;
 
 import com.aliyun.tea.*;
 
-public class ResumeSubmissionResponse extends TeaModel {
+public class TagAppResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ResumeSubmissionResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ResumeSubmissionResponseBody body;
+    public TagAppResponseBody body;
 
-    public static ResumeSubmissionResponse build(java.util.Map<String, ?> map) throws Exception {
-        ResumeSubmissionResponse self = new ResumeSubmissionResponse();
+    public static TagAppResponse build(java.util.Map<String, ?> map) throws Exception {
+        TagAppResponse self = new TagAppResponse();
         return TeaModel.build(map, self);
     }
 
-    public ResumeSubmissionResponse setHeaders(java.util.Map<String, String> headers) {
+    public TagAppResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ResumeSubmissionResponse extends TeaModel {
         return this.headers;
     }
 
-    public ResumeSubmissionResponse setStatusCode(Integer statusCode) {
+    public TagAppResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ResumeSubmissionResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ResumeSubmissionResponse setBody(ResumeSubmissionResponseBody body) {
+    public TagAppResponse setBody(TagAppResponseBody body) {
         this.body = body;
         return this;
     }
-    public ResumeSubmissionResponseBody getBody() {
+    public TagAppResponseBody getBody() {
         return this.body;
     }
 

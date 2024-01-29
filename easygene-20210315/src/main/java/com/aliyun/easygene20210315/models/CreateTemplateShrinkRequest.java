@@ -25,6 +25,9 @@ public class CreateTemplateShrinkRequest extends TeaModel {
     @NameInMap("OutputsExpression")
     public String outputsExpressionShrink;
 
+    @NameInMap("RevisionTag")
+    public String revisionTag;
+
     @NameInMap("RootEntity")
     public String rootEntity;
 
@@ -93,6 +96,14 @@ public class CreateTemplateShrinkRequest extends TeaModel {
     }
     public String getOutputsExpressionShrink() {
         return this.outputsExpressionShrink;
+    }
+
+    public CreateTemplateShrinkRequest setRevisionTag(String revisionTag) {
+        this.revisionTag = revisionTag;
+        return this;
+    }
+    public String getRevisionTag() {
+        return this.revisionTag;
     }
 
     public CreateTemplateShrinkRequest setRootEntity(String rootEntity) {

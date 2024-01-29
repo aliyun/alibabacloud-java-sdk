@@ -34,6 +34,9 @@ public class CreateRunShrinkRequest extends TeaModel {
     @NameInMap("OutputFolder")
     public String outputFolder;
 
+    @NameInMap("RevisionTag")
+    public String revisionTag;
+
     @NameInMap("Role")
     public String role;
 
@@ -126,6 +129,14 @@ public class CreateRunShrinkRequest extends TeaModel {
     }
     public String getOutputFolder() {
         return this.outputFolder;
+    }
+
+    public CreateRunShrinkRequest setRevisionTag(String revisionTag) {
+        this.revisionTag = revisionTag;
+        return this;
+    }
+    public String getRevisionTag() {
+        return this.revisionTag;
     }
 
     public CreateRunShrinkRequest setRole(String role) {

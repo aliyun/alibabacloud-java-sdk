@@ -13,6 +13,9 @@ public class ListWorkspacesRequest extends TeaModel {
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>NextToken</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
