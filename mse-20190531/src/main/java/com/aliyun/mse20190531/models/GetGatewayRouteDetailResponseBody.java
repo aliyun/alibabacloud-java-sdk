@@ -1001,6 +1001,173 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
 
     }
 
+    public static class GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapListParamMapsList extends TeaModel {
+        @NameInMap("ExtractKey")
+        public String extractKey;
+
+        @NameInMap("ExtractKeySpec")
+        public String extractKeySpec;
+
+        @NameInMap("MappingType")
+        public String mappingType;
+
+        public static GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapListParamMapsList build(java.util.Map<String, ?> map) throws Exception {
+            GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapListParamMapsList self = new GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapListParamMapsList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapListParamMapsList setExtractKey(String extractKey) {
+            this.extractKey = extractKey;
+            return this;
+        }
+        public String getExtractKey() {
+            return this.extractKey;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapListParamMapsList setExtractKeySpec(String extractKeySpec) {
+            this.extractKeySpec = extractKeySpec;
+            return this;
+        }
+        public String getExtractKeySpec() {
+            return this.extractKeySpec;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapListParamMapsList setMappingType(String mappingType) {
+            this.mappingType = mappingType;
+            return this;
+        }
+        public String getMappingType() {
+            return this.mappingType;
+        }
+
+    }
+
+    public static class GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapList extends TeaModel {
+        @NameInMap("DubboMothedName")
+        public String dubboMothedName;
+
+        @NameInMap("HttpMothed")
+        public String httpMothed;
+
+        @NameInMap("Mothedpath")
+        public String mothedpath;
+
+        @NameInMap("ParamMapsList")
+        public java.util.List<GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapListParamMapsList> paramMapsList;
+
+        @NameInMap("PassThroughAllHeaders")
+        public String passThroughAllHeaders;
+
+        @NameInMap("PassThroughList")
+        public java.util.List<String> passThroughList;
+
+        public static GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapList build(java.util.Map<String, ?> map) throws Exception {
+            GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapList self = new GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapList setDubboMothedName(String dubboMothedName) {
+            this.dubboMothedName = dubboMothedName;
+            return this;
+        }
+        public String getDubboMothedName() {
+            return this.dubboMothedName;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapList setHttpMothed(String httpMothed) {
+            this.httpMothed = httpMothed;
+            return this;
+        }
+        public String getHttpMothed() {
+            return this.httpMothed;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapList setMothedpath(String mothedpath) {
+            this.mothedpath = mothedpath;
+            return this;
+        }
+        public String getMothedpath() {
+            return this.mothedpath;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapList setParamMapsList(java.util.List<GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapListParamMapsList> paramMapsList) {
+            this.paramMapsList = paramMapsList;
+            return this;
+        }
+        public java.util.List<GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapListParamMapsList> getParamMapsList() {
+            return this.paramMapsList;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapList setPassThroughAllHeaders(String passThroughAllHeaders) {
+            this.passThroughAllHeaders = passThroughAllHeaders;
+            return this;
+        }
+        public String getPassThroughAllHeaders() {
+            return this.passThroughAllHeaders;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapList setPassThroughList(java.util.List<String> passThroughList) {
+            this.passThroughList = passThroughList;
+            return this;
+        }
+        public java.util.List<String> getPassThroughList() {
+            return this.passThroughList;
+        }
+
+    }
+
+    public static class GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoder extends TeaModel {
+        @NameInMap("DubboServiceGroup")
+        public String dubboServiceGroup;
+
+        @NameInMap("DubboServiceName")
+        public String dubboServiceName;
+
+        @NameInMap("DubboServiceVersion")
+        public String dubboServiceVersion;
+
+        @NameInMap("MothedMapList")
+        public java.util.List<GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapList> mothedMapList;
+
+        public static GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoder build(java.util.Map<String, ?> map) throws Exception {
+            GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoder self = new GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoder();
+            return TeaModel.build(map, self);
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoder setDubboServiceGroup(String dubboServiceGroup) {
+            this.dubboServiceGroup = dubboServiceGroup;
+            return this;
+        }
+        public String getDubboServiceGroup() {
+            return this.dubboServiceGroup;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoder setDubboServiceName(String dubboServiceName) {
+            this.dubboServiceName = dubboServiceName;
+            return this;
+        }
+        public String getDubboServiceName() {
+            return this.dubboServiceName;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoder setDubboServiceVersion(String dubboServiceVersion) {
+            this.dubboServiceVersion = dubboServiceVersion;
+            return this;
+        }
+        public String getDubboServiceVersion() {
+            return this.dubboServiceVersion;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoder setMothedMapList(java.util.List<GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapList> mothedMapList) {
+            this.mothedMapList = mothedMapList;
+            return this;
+        }
+        public java.util.List<GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoderMothedMapList> getMothedMapList() {
+            return this.mothedMapList;
+        }
+
+    }
+
     public static class GetGatewayRouteDetailResponseBodyDataRouteServices extends TeaModel {
         /**
          * <p>The protocol type.</p>
@@ -1016,6 +1183,9 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
 
         @NameInMap("HealthStatus")
         public String healthStatus;
+
+        @NameInMap("HttpDubboTranscoder")
+        public GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoder httpDubboTranscoder;
 
         /**
          * <p>The service name.</p>
@@ -1095,6 +1265,14 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         }
         public String getHealthStatus() {
             return this.healthStatus;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataRouteServices setHttpDubboTranscoder(GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoder httpDubboTranscoder) {
+            this.httpDubboTranscoder = httpDubboTranscoder;
+            return this;
+        }
+        public GetGatewayRouteDetailResponseBodyDataRouteServicesHttpDubboTranscoder getHttpDubboTranscoder() {
+            return this.httpDubboTranscoder;
         }
 
         public GetGatewayRouteDetailResponseBodyDataRouteServices setName(String name) {
