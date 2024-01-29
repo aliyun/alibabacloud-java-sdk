@@ -10,6 +10,12 @@ public class GetDatasourceResponseBody extends TeaModel {
     @NameInMap("DatasourceId")
     public String datasourceId;
 
+    @NameInMap("GmtCreateTime")
+    public String gmtCreateTime;
+
+    @NameInMap("GmtModifiedTime")
+    public String gmtModifiedTime;
+
     @NameInMap("Name")
     public String name;
 
@@ -44,6 +50,22 @@ public class GetDatasourceResponseBody extends TeaModel {
     }
     public String getDatasourceId() {
         return this.datasourceId;
+    }
+
+    public GetDatasourceResponseBody setGmtCreateTime(String gmtCreateTime) {
+        this.gmtCreateTime = gmtCreateTime;
+        return this;
+    }
+    public String getGmtCreateTime() {
+        return this.gmtCreateTime;
+    }
+
+    public GetDatasourceResponseBody setGmtModifiedTime(String gmtModifiedTime) {
+        this.gmtModifiedTime = gmtModifiedTime;
+        return this;
+    }
+    public String getGmtModifiedTime() {
+        return this.gmtModifiedTime;
     }
 
     public GetDatasourceResponseBody setName(String name) {
