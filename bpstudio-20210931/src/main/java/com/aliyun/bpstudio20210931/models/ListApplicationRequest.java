@@ -34,11 +34,17 @@ public class ListApplicationRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("ResourceId")
+    public String resourceId;
+
     /**
      * <p>The status of the applications to be returned.</p>
      */
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("TemplateId")
+    public String templateId;
 
     public static ListApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         ListApplicationRequest self = new ListApplicationRequest();
@@ -85,12 +91,28 @@ public class ListApplicationRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public ListApplicationRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
     public ListApplicationRequest setStatus(String status) {
         this.status = status;
         return this;
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListApplicationRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
     }
 
 }

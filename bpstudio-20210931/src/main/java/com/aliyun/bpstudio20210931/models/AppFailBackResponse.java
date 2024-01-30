@@ -3,7 +3,7 @@ package com.aliyun.bpstudio20210931.models;
 
 import com.aliyun.tea.*;
 
-public class GetApplicationResponse extends TeaModel {
+public class AppFailBackResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetApplicationResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetApplicationResponseBody body;
+    public AppFailBackResponseBody body;
 
-    public static GetApplicationResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetApplicationResponse self = new GetApplicationResponse();
+    public static AppFailBackResponse build(java.util.Map<String, ?> map) throws Exception {
+        AppFailBackResponse self = new AppFailBackResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetApplicationResponse setHeaders(java.util.Map<String, String> headers) {
+    public AppFailBackResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetApplicationResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetApplicationResponse setStatusCode(Integer statusCode) {
+    public AppFailBackResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetApplicationResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetApplicationResponse setBody(GetApplicationResponseBody body) {
+    public AppFailBackResponse setBody(AppFailBackResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetApplicationResponseBody getBody() {
+    public AppFailBackResponseBody getBody() {
         return this.body;
     }
 
