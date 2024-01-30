@@ -4,6 +4,9 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyRequest extends TeaModel {
+    @NameInMap("BackupRetentionPeriod")
+    public Integer backupRetentionPeriod;
+
     /**
      * <p>Enables or disables the data flashback feature for the instance. Valid values:</p>
      * <br>
@@ -65,6 +68,14 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public static ModifyBackupPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyBackupPolicyRequest self = new ModifyBackupPolicyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyBackupPolicyRequest setBackupRetentionPeriod(Integer backupRetentionPeriod) {
+        this.backupRetentionPeriod = backupRetentionPeriod;
+        return this;
+    }
+    public Integer getBackupRetentionPeriod() {
+        return this.backupRetentionPeriod;
     }
 
     public ModifyBackupPolicyRequest setEnableBackupLog(Integer enableBackupLog) {
