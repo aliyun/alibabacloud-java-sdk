@@ -10,13 +10,6 @@ public class UpdateTemplateRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.</p>
-     * <br>
-     * <p>If the length of the template body is longer than required, we recommend that you add parameters to the HTTP POST request body to avoid request failures due to excessive length of URLs.</p>
-     * <br>
-     * <p>You can specify only one of the TemplateBody and TemplateURL parameters.</p>
-     */
     @NameInMap("TemplateBody")
     public String templateBody;
 
