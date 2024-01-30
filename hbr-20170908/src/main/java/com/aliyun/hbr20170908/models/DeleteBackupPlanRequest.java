@@ -10,6 +10,9 @@ public class DeleteBackupPlanRequest extends TeaModel {
     @NameInMap("PlanId")
     public String planId;
 
+    @NameInMap("RequireNoRunningJobs")
+    public Boolean requireNoRunningJobs;
+
     /**
      * <p>The type of the data source. Valid values:</p>
      * <br>
@@ -39,6 +42,14 @@ public class DeleteBackupPlanRequest extends TeaModel {
     }
     public String getPlanId() {
         return this.planId;
+    }
+
+    public DeleteBackupPlanRequest setRequireNoRunningJobs(Boolean requireNoRunningJobs) {
+        this.requireNoRunningJobs = requireNoRunningJobs;
+        return this;
+    }
+    public Boolean getRequireNoRunningJobs() {
+        return this.requireNoRunningJobs;
     }
 
     public DeleteBackupPlanRequest setSourceType(String sourceType) {

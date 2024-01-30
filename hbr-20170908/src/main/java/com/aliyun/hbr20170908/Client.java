@@ -482,6 +482,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Detail", request.detailShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.disabled)) {
+            query.put("Disabled", request.disabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
             query.put("FileSystemId", request.fileSystemId);
         }
@@ -1490,6 +1494,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.planId)) {
             query.put("PlanId", request.planId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requireNoRunningJobs)) {
+            query.put("RequireNoRunningJobs", request.requireNoRunningJobs);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {

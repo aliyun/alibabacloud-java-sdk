@@ -69,6 +69,9 @@ public class CreateBackupPlanShrinkRequest extends TeaModel {
     @NameInMap("Detail")
     public String detailShrink;
 
+    @NameInMap("Disabled")
+    public Boolean disabled;
+
     /**
      * <p>This parameter is required only if the **SourceType** parameter is set to **ECS_FILE**. This parameter specifies the paths to the files that are excluded from the backup job. The value can be up to 255 characters in length.</p>
      */
@@ -288,6 +291,14 @@ public class CreateBackupPlanShrinkRequest extends TeaModel {
     }
     public String getDetailShrink() {
         return this.detailShrink;
+    }
+
+    public CreateBackupPlanShrinkRequest setDisabled(Boolean disabled) {
+        this.disabled = disabled;
+        return this;
+    }
+    public Boolean getDisabled() {
+        return this.disabled;
     }
 
     public CreateBackupPlanShrinkRequest setExclude(String exclude) {
