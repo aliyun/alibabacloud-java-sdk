@@ -11,7 +11,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data that is returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListK8sIngressRulesResponseBodyData> data;
@@ -67,13 +67,13 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
 
     public static class ListK8sIngressRulesResponseBodyDataIngressConfsRulesPathsBackend extends TeaModel {
         /**
-         * <p>The name of the backend service.</p>
+         * <p>The name of the backend Service.</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
-         * <p>The port of the backend service.</p>
+         * <p>The port of the backend Service.</p>
          */
         @NameInMap("ServicePort")
         public String servicePort;
@@ -115,13 +115,13 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The configuration of the backend service.</p>
+         * <p>The configurations of the backend Service.</p>
          */
         @NameInMap("Backend")
         public ListK8sIngressRulesResponseBodyDataIngressConfsRulesPathsBackend backend;
 
         /**
-         * <p>The collection rate that is set based on the trace query feature. You can add a TraceID to a gateway to use the trace query feature of EDAS.</p>
+         * <p>The collection rate that is set based on the trace query feature. You can add a trace ID to a gateway to use the trace query feature of EDAS.</p>
          */
         @NameInMap("CollectRate")
         public Integer collectRate;
@@ -132,16 +132,23 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <p>The path type that determines how a path is matched.</p>
+         * <br>
+         * <p>*   ImplementationSpecific (default)</p>
+         * <p>*   Exact</p>
+         * <p>*   Prefix</p>
+         */
         @NameInMap("PathType")
         public String pathType;
 
         /**
-         * <p>The status of the Ingress. Valid values:</p>
+         * <p>The state of the Ingress. Valid values:</p>
          * <br>
-         * <p>*   **Normal**: The Ingress works properly.</p>
-         * <p>*   **ServiceNotFound**: The backend service does not exist.</p>
-         * <p>*   **InvalidServicePort**: The service port is invalid.</p>
-         * <p>*   **NotManagedService**: The service is not managed by EDAS.</p>
+         * <p>*   **Normal**: The Ingress works as expected.</p>
+         * <p>*   **ServiceNotFound**: The backend Service does not exist.</p>
+         * <p>*   **InvalidServicePort**: The Service port is invalid.</p>
+         * <p>*   **NotManagedService**: The Service is not managed by EDAS.</p>
          * <p>*   **Unknown**: An unknown error occurred.</p>
          */
         @NameInMap("Status")
@@ -214,8 +221,8 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether TLS is enabled. Valid values:</p>
          * <br>
-         * <p>*   true: TLS is enabled.</p>
-         * <p>*   false: TLS is disabled.</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("EnableTls")
         public Boolean enableTls;
@@ -227,13 +234,13 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         public String host;
 
         /**
-         * <p>The list of paths to be accessed.</p>
+         * <p>The paths to be accessed.</p>
          */
         @NameInMap("Paths")
         public java.util.List<ListK8sIngressRulesResponseBodyDataIngressConfsRulesPaths> paths;
 
         /**
-         * <p>The name of the Secret that stores the information about the Transport Layer Security (TLS) certificate.</p>
+         * <p>The name of the Secret that stores the Transport Layer Security (TLS) certificate.</p>
          */
         @NameInMap("SecretName")
         public String secretName;
@@ -279,7 +286,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
 
     public static class ListK8sIngressRulesResponseBodyDataIngressConfs extends TeaModel {
         /**
-         * <p>The ID of the Application Load Balancer (ALB) instance.</p>
+         * <p>The ID of the ALB instance.</p>
          */
         @NameInMap("AlbId")
         public String albId;
@@ -309,7 +316,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The type of the Ingress. Valid values:</p>
+         * <p>The Ingress type. Valid values:</p>
          * <br>
          * <p>*   **NginxIngress**: NGINX Ingress controller</p>
          * <p>*   **AlbIngress**: ALB Ingress controller</p>
@@ -320,13 +327,13 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         public String ingressType;
 
         /**
-         * <p>The labels.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Labels")
         public String labels;
 
         /**
-         * <p>The ID of the Microservices Engine (MSE) gateway.</p>
+         * <p>The ID of the MSE gateway.</p>
          */
         @NameInMap("MseGatewayId")
         public String mseGatewayId;
@@ -338,7 +345,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         public String mseGatewayName;
 
         /**
-         * <p>The name of the Ingress.</p>
+         * <p>The Ingress name.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -362,16 +369,16 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         public String officalRequestUrl;
 
         /**
-         * <p>The list of routing rules.</p>
+         * <p>The routing rules.</p>
          */
         @NameInMap("Rules")
         public java.util.List<ListK8sIngressRulesResponseBodyDataIngressConfsRules> rules;
 
         /**
-         * <p>Indicates whether SSL redirect is enabled. Valid values:</p>
+         * <p>Indicates whether SSL redirection is enabled. Valid values:</p>
          * <br>
-         * <p>*   true: SSL redirect is enabled.</p>
-         * <p>*   false: SSL redirect is disabled.</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("SslRedirect")
         public Boolean sslRedirect;
@@ -505,13 +512,13 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
 
     public static class ListK8sIngressRulesResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the Kubernetes cluster.</p>
+         * <p>The cluster ID.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
-         * <p>The name of the Kubernetes cluster.</p>
+         * <p>The cluster name.</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
@@ -523,7 +530,7 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
         public java.util.List<ListK8sIngressRulesResponseBodyDataIngressConfs> ingressConfs;
 
         /**
-         * <p>The ID of the region where the cluster resides.</p>
+         * <p>The ID of the Alibaba Cloud region.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

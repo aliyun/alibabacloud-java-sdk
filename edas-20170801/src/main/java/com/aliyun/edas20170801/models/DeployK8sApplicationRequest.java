@@ -95,6 +95,9 @@ public class DeployK8sApplicationRequest extends TeaModel {
     @NameInMap("CustomAffinity")
     public String customAffinity;
 
+    @NameInMap("CustomAgentVersion")
+    public String customAgentVersion;
+
     /**
      * <p>The scheduling tolerance configuration of the pod. This parameter takes effect only if both the DeployAcrossNodes and DeployAcrossZones parameters are set to false.</p>
      */
@@ -628,6 +631,14 @@ public class DeployK8sApplicationRequest extends TeaModel {
     }
     public String getCustomAffinity() {
         return this.customAffinity;
+    }
+
+    public DeployK8sApplicationRequest setCustomAgentVersion(String customAgentVersion) {
+        this.customAgentVersion = customAgentVersion;
+        return this;
+    }
+    public String getCustomAgentVersion() {
+        return this.customAgentVersion;
     }
 
     public DeployK8sApplicationRequest setCustomTolerations(String customTolerations) {

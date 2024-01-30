@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListK8sIngressRulesRequest extends TeaModel {
     /**
-     * <p>The ID of the Kubernetes cluster.</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

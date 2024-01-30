@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class RollbackChangeOrderResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public RollbackChangeOrderResponseBody body;
 
     public static RollbackChangeOrderResponse build(java.util.Map<String, ?> map) throws Exception {

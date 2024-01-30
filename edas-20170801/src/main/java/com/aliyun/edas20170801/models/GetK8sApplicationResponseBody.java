@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetK8sApplicationResponseBody extends TeaModel {
     /**
-     * <p>The details of the application.</p>
+     * <p>The information about the application.</p>
      */
     @NameInMap("Applcation")
     public GetK8sApplicationResponseBodyApplcation applcation;
@@ -201,7 +201,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         public String deployType;
 
         /**
-         * <p>The type of the application. Valid values:</p>
+         * <p>The application type. Valid values:</p>
          * <br>
          * <p>*   General: native Java application</p>
          * <p>*   Pandora: Pandora application</p>
@@ -217,13 +217,13 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         public String edasContainerVersion;
 
         /**
-         * <p>应用是否开启了推空保护。</p>
+         * <p>Indicates whether the Empty List Protection feature is enabled for the application.</p>
          */
         @NameInMap("EnableEmptyPushReject")
         public Boolean enableEmptyPushReject;
 
         /**
-         * <p>应用是否开启了无损上线。</p>
+         * <p>Indicates whether the Graceful Release feature is enabled for the application.</p>
          */
         @NameInMap("EnableLosslessRule")
         public Boolean enableLosslessRule;
@@ -233,6 +233,17 @@ public class GetK8sApplicationResponseBody extends TeaModel {
          */
         @NameInMap("EnvList")
         public GetK8sApplicationResponseBodyApplcationAppEnvList envList;
+
+        /**
+         * <p>The feature annotations. Possible values:</p>
+         * <br>
+         * <p>*   base.combination.edas: enables EDAS integrated management solution.</p>
+         * <p>*   base.combination.arms: enables ARMS monitoring.</p>
+         * <p>*   base.combination.mse: enables MSE microservices governance.</p>
+         * <p>*   base.combination.none: enables lifecycle management.</p>
+         */
+        @NameInMap("FeatureAnnotations")
+        public String featureAnnotations;
 
         /**
          * <p>The number of application instances.</p>
@@ -277,31 +288,31 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         public Integer limitMem;
 
         /**
-         * <p>应用是否启用了无损滚动发布模式配置通过就绪检查前完成服务注册。</p>
+         * <p>Indicates whether the Graceful Rolling Release and Configure Complete Service Registration before Readiness Probing feature is enabled for the application.</p>
          */
         @NameInMap("LosslessRuleAligned")
         public Boolean losslessRuleAligned;
 
         /**
-         * <p>应用配置的服务延迟注册时长，单位：秒。</p>
+         * <p>The delay of service registration. Unit: seconds.</p>
          */
         @NameInMap("LosslessRuleDelayTime")
         public Integer losslessRuleDelayTime;
 
         /**
-         * <p>应用设置的服务预热曲线。</p>
+         * <p>The number of prefetching curves.</p>
          */
         @NameInMap("LosslessRuleFuncType")
         public Integer losslessRuleFuncType;
 
         /**
-         * <p>应用是否启用了无损滚动发布模式配置通过就绪检查前完成服务预热。</p>
+         * <p>Indicates whether the Graceful Rolling Release and Configure Complete Service Prefetching before Readiness Probing feature is enabled for the application.</p>
          */
         @NameInMap("LosslessRuleRelated")
         public Boolean losslessRuleRelated;
 
         /**
-         * <p>应用设置的服务预热时长，单位：秒。</p>
+         * <p>The service prefetching duration. Unit: seconds.</p>
          */
         @NameInMap("LosslessRuleWarmupTime")
         public Integer losslessRuleWarmupTime;
@@ -341,6 +352,12 @@ public class GetK8sApplicationResponseBody extends TeaModel {
          */
         @NameInMap("TomcatVersion")
         public String tomcatVersion;
+
+        /**
+         * <p>The workload type. Valid values: Deployment and StatefulSet. If you do not specify this parameter, Deployment is used.</p>
+         */
+        @NameInMap("WorkloadType")
+        public String workloadType;
 
         public static GetK8sApplicationResponseBodyApplcationApp build(java.util.Map<String, ?> map) throws Exception {
             GetK8sApplicationResponseBodyApplcationApp self = new GetK8sApplicationResponseBodyApplcationApp();
@@ -465,6 +482,14 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         }
         public GetK8sApplicationResponseBodyApplcationAppEnvList getEnvList() {
             return this.envList;
+        }
+
+        public GetK8sApplicationResponseBodyApplcationApp setFeatureAnnotations(String featureAnnotations) {
+            this.featureAnnotations = featureAnnotations;
+            return this;
+        }
+        public String getFeatureAnnotations() {
+            return this.featureAnnotations;
         }
 
         public GetK8sApplicationResponseBodyApplcationApp setInstances(Integer instances) {
@@ -611,6 +636,14 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             return this.tomcatVersion;
         }
 
+        public GetK8sApplicationResponseBodyApplcationApp setWorkloadType(String workloadType) {
+            this.workloadType = workloadType;
+            return this;
+        }
+        public String getWorkloadType() {
+            return this.workloadType;
+        }
+
     }
 
     public static class GetK8sApplicationResponseBodyApplcationConf extends TeaModel {
@@ -723,7 +756,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         public String tolerations;
 
         /**
-         * <p>使用自定义OpenJDK运行时，配置的基础镜像地址。</p>
+         * <p>The URL of the base image. If you use a custom Java Development Kit (JDK) runtime, you must specify this parameter.</p>
          */
         @NameInMap("UserBaseImageUrl")
         public String userBaseImageUrl;
@@ -881,7 +914,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
 
     public static class GetK8sApplicationResponseBodyApplcationDeployGroupsDeployGroupComponentsComponents extends TeaModel {
         /**
-         * <p>The ID of the component.</p>
+         * <p>The component ID.</p>
          */
         @NameInMap("ComponentId")
         public String componentId;
@@ -893,7 +926,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         public String componentKey;
 
         /**
-         * <p>The type of the component. Valid values:</p>
+         * <p>The component type. Valid values:</p>
          */
         @NameInMap("Type")
         public String type;

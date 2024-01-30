@@ -86,6 +86,9 @@ public class InsertK8sApplicationRequest extends TeaModel {
     @NameInMap("CustomAffinity")
     public String customAffinity;
 
+    @NameInMap("CustomAgentVersion")
+    public String customAgentVersion;
+
     /**
      * <p>The custom tolerances.</p>
      */
@@ -188,6 +191,9 @@ public class InsertK8sApplicationRequest extends TeaModel {
      */
     @NameInMap("Envs")
     public String envs;
+
+    @NameInMap("FeatureConfig")
+    public String featureConfig;
 
     @NameInMap("ImagePlatforms")
     public String imagePlatforms;
@@ -717,6 +723,14 @@ public class InsertK8sApplicationRequest extends TeaModel {
         return this.customAffinity;
     }
 
+    public InsertK8sApplicationRequest setCustomAgentVersion(String customAgentVersion) {
+        this.customAgentVersion = customAgentVersion;
+        return this;
+    }
+    public String getCustomAgentVersion() {
+        return this.customAgentVersion;
+    }
+
     public InsertK8sApplicationRequest setCustomTolerations(String customTolerations) {
         this.customTolerations = customTolerations;
         return this;
@@ -803,6 +817,14 @@ public class InsertK8sApplicationRequest extends TeaModel {
     }
     public String getEnvs() {
         return this.envs;
+    }
+
+    public InsertK8sApplicationRequest setFeatureConfig(String featureConfig) {
+        this.featureConfig = featureConfig;
+        return this;
+    }
+    public String getFeatureConfig() {
+        return this.featureConfig;
     }
 
     public InsertK8sApplicationRequest setImagePlatforms(String imagePlatforms) {

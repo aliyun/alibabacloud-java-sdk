@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetServiceDetailResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The data that is returned.</p>
+     * <p>The data structure.</p>
      */
     @NameInMap("Data")
     public GetServiceDetailResponseBodyData data;
@@ -23,7 +23,7 @@ public class GetServiceDetailResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -73,7 +73,7 @@ public class GetServiceDetailResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The type.</p>
+         * <p>The type of the response.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -109,7 +109,7 @@ public class GetServiceDetailResponseBody extends TeaModel {
         public String methodController;
 
         /**
-         * <p>The name.</p>
+         * <p>The name of the service.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -121,37 +121,37 @@ public class GetServiceDetailResponseBody extends TeaModel {
         public String nameDetail;
 
         /**
-         * <p>The definition of the parameter.</p>
+         * <p>The parameter definitions.</p>
          */
         @NameInMap("ParameterDefinitions")
         public String parameterDefinitions;
 
         /**
-         * <p>The details of the parameters.</p>
+         * <p>The parameter details.</p>
          */
         @NameInMap("ParameterDetails")
         public String parameterDetails;
 
         /**
-         * <p>The name of the parameter.</p>
+         * <p>The parameter names.</p>
          */
         @NameInMap("ParameterNames")
         public String parameterNames;
 
         /**
-         * <p>The data type of the parameter.</p>
+         * <p>The parameter types.</p>
          */
         @NameInMap("ParameterTypes")
         public String parameterTypes;
 
         /**
-         * <p>The method path.</p>
+         * <p>The method paths.</p>
          */
         @NameInMap("Paths")
         public String paths;
 
         /**
-         * <p>The request method.</p>
+         * <p>The request methods.</p>
          */
         @NameInMap("RequestMethods")
         public String requestMethods;
@@ -163,13 +163,13 @@ public class GetServiceDetailResponseBody extends TeaModel {
         public GetServiceDetailResponseBodyDataMethodsReturnDefinition returnDefinition;
 
         /**
-         * <p>The details of the response.</p>
+         * <p>The response details.</p>
          */
         @NameInMap("ReturnDetails")
         public String returnDetails;
 
         /**
-         * <p>The data format of the response.</p>
+         * <p>The type of the response.</p>
          */
         @NameInMap("ReturnType")
         public String returnType;
@@ -291,7 +291,7 @@ public class GetServiceDetailResponseBody extends TeaModel {
         public String edasAppName;
 
         /**
-         * <p>The group to which the service belongs.</p>
+         * <p>The group.</p>
          */
         @NameInMap("Group")
         public String group;
