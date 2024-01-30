@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFoCreatedAppsResponseBody extends TeaModel {
     @NameInMap("Code")
-    public Integer code;
+    public String code;
 
     @NameInMap("Data")
     public java.util.List<ListFoCreatedAppsResponseBodyData> data;
@@ -24,11 +24,11 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListFoCreatedAppsResponseBody setCode(Integer code) {
+    public ListFoCreatedAppsResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
     }
 
@@ -57,8 +57,8 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
     }
 
     public static class ListFoCreatedAppsResponseBodyData extends TeaModel {
-        @NameInMap("AppId")
-        public String appId;
+        @NameInMap("ApplicationId")
+        public String applicationId;
 
         @NameInMap("ReportUrl")
         public String reportUrl;
@@ -74,12 +74,12 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListFoCreatedAppsResponseBodyData setAppId(String appId) {
-            this.appId = appId;
+        public ListFoCreatedAppsResponseBodyData setApplicationId(String applicationId) {
+            this.applicationId = applicationId;
             return this;
         }
-        public String getAppId() {
-            return this.appId;
+        public String getApplicationId() {
+            return this.applicationId;
         }
 
         public ListFoCreatedAppsResponseBodyData setReportUrl(String reportUrl) {

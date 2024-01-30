@@ -3,7 +3,7 @@ package com.aliyun.bpstudio20210931.models;
 
 import com.aliyun.tea.*;
 
-public class GetApplicationResponse extends TeaModel {
+public class GetFoTaskStatusResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetApplicationResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetApplicationResponseBody body;
+    public GetFoTaskStatusResponseBody body;
 
-    public static GetApplicationResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetApplicationResponse self = new GetApplicationResponse();
+    public static GetFoTaskStatusResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetFoTaskStatusResponse self = new GetFoTaskStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetApplicationResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetFoTaskStatusResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetApplicationResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetApplicationResponse setStatusCode(Integer statusCode) {
+    public GetFoTaskStatusResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetApplicationResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetApplicationResponse setBody(GetApplicationResponseBody body) {
+    public GetFoTaskStatusResponse setBody(GetFoTaskStatusResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetApplicationResponseBody getBody() {
+    public GetFoTaskStatusResponseBody getBody() {
         return this.body;
     }
 
