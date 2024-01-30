@@ -5644,6 +5644,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyBackupPolicyResponse modifyBackupPolicyWithOptions(ModifyBackupPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.backupRetentionPeriod)) {
+            query.put("BackupRetentionPeriod", request.backupRetentionPeriod);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enableBackupLog)) {
             query.put("EnableBackupLog", request.enableBackupLog);
         }
@@ -7417,6 +7421,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
             query.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            query.put("AutoRenew", request.autoRenew);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.businessInfo)) {
