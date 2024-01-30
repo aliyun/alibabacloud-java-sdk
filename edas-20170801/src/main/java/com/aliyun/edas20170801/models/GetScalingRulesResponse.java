@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetScalingRulesResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public GetScalingRulesResponseBody body;
 
     public static GetScalingRulesResponse build(java.util.Map<String, ?> map) throws Exception {

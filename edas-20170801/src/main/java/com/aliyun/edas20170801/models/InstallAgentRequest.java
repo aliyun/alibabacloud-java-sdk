@@ -11,7 +11,7 @@ public class InstallAgentRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p>This parameter is discontinued.</p>
      */
     @NameInMap("DoAsync")
     public Boolean doAsync;

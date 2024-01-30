@@ -28,6 +28,18 @@ public class StartK8sAppPrecheckRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The ID of the application component. You can call the ListComponents operation to query application components. This parameter must be specified when the application runs in Apache Tomcat or in a standard Java application runtime environment. The Apache Tomcat application runtime environment is applicable to Dubbo applications that are deployed by using WAR packages. A standard Java application runtime environment is applicable to Spring Boot or Spring Cloud applications that are deployed by using JAR packages.</p>
+     * <br>
+     * <p>Valid values for regular application component IDs:</p>
+     * <br>
+     * <p>*   4: Apache Tomcat 7.0.91</p>
+     * <p>*   5: OpenJDK 1.8.x</p>
+     * <p>*   6: OpenJDK 1.7.x</p>
+     * <p>*   7: Apache Tomcat 8.5.42</p>
+     * <br>
+     * <p>This parameter is available only for Java SDK 2.57.3 or later, or Python SDK 2.57.3 or later. Assume that you use an SDK that is not provided by Enterprise Distributed Application Service (EDAS), such as aliyun-python-sdk-core, aliyun-java-sdk-core, and Alibaba Cloud CLI. In this case, you can directly specify this parameter.</p>
+     */
     @NameInMap("ComponentIds")
     public String componentIds;
 
@@ -54,15 +66,15 @@ public class StartK8sAppPrecheckRequest extends TeaModel {
     /**
      * <p>The Kubernetes environment variables that are configured in EnvFrom mode. A ConfigMap or Secret is mounted to a directory. Each key corresponds to a file in the directory, and the content of the file is the value of the key.</p>
      * <br>
-     * <p>The following parameters are included in the configuration:</p>
+     * <p>The following parameters are included in the configuration of the EnvFroms parameter:</p>
      * <br>
-     * <p>*   configMapRef: the ConfigMap that is referenced. The following parameter is contained:</p>
+     * <p>*   configMapRef: the ConfigMap that is referenced. The following parameter is included:</p>
      * <br>
-     * <p>    *   name: the name of the ConfigMap.</p>
+     * <p>    name: the name of the ConfigMap.</p>
      * <br>
-     * <p>*   secretRef: the Secret that is referenced. The following parameter is contained:</p>
+     * <p>*   secretRef: the Secret that is referenced. The following parameter is included:</p>
      * <br>
-     * <p>    *   name: the name of the Secret.</p>
+     * <p>    name: the name of the Secret.</p>
      */
     @NameInMap("EnvFroms")
     public String envFroms;
@@ -161,6 +173,9 @@ public class StartK8sAppPrecheckRequest extends TeaModel {
     @NameInMap("PvcMountDescs")
     public String pvcMountDescs;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -11,7 +11,7 @@ public class GetServiceProvidersPageResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data that is returned.</p>
+     * <p>The data structure.</p>
      */
     @NameInMap("Data")
     public GetServiceProvidersPageResponseBodyData data;
@@ -66,6 +66,9 @@ public class GetServiceProvidersPageResponseBody extends TeaModel {
     }
 
     public static class GetServiceProvidersPageResponseBodyDataContent extends TeaModel {
+        /**
+         * <p>The remarks of the service provider.</p>
+         */
         @NameInMap("Iannotations")
         public String iannotations;
 

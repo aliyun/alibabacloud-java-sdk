@@ -38,7 +38,7 @@ public class GetServiceDetailRequest extends TeaModel {
     public String origin;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID of the service.</p>
      */
     @NameInMap("region")
     public String region;

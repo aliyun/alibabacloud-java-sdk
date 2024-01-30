@@ -1662,6 +1662,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CustomAffinity", request.customAffinity);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.customAgentVersion)) {
+            query.put("CustomAgentVersion", request.customAgentVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.customTolerations)) {
             query.put("CustomTolerations", request.customTolerations);
         }
@@ -3335,6 +3339,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CustomAffinity", request.customAffinity);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.customAgentVersion)) {
+            query.put("CustomAgentVersion", request.customAgentVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.customTolerations)) {
             query.put("CustomTolerations", request.customTolerations);
         }
@@ -3377,6 +3385,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.envs)) {
             query.put("Envs", request.envs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.featureConfig)) {
+            query.put("FeatureConfig", request.featureConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.imagePlatforms)) {

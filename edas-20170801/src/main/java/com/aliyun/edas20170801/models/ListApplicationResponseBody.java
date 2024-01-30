@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApplicationResponseBody extends TeaModel {
     /**
-     * <p>The applications that are queried.</p>
+     * <p>The information about applications.</p>
      */
     @NameInMap("ApplicationList")
     public ListApplicationResponseBodyApplicationList applicationList;
@@ -67,7 +67,7 @@ public class ListApplicationResponseBody extends TeaModel {
 
     public static class ListApplicationResponseBodyApplicationListApplication extends TeaModel {
         /**
-         * <p>The application ID.</p>
+         * <p>The ID of the application.</p>
          */
         @NameInMap("AppId")
         public String appId;
@@ -90,7 +90,7 @@ public class ListApplicationResponseBody extends TeaModel {
         public Long buildPackageId;
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the cluster.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
@@ -141,6 +141,9 @@ public class ListApplicationResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the microservices namespace.</p>
+         */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
@@ -151,7 +154,7 @@ public class ListApplicationResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID of the application.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

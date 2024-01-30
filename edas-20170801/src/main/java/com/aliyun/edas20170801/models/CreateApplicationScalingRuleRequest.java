@@ -11,7 +11,7 @@ public class CreateApplicationScalingRuleRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>配置自定义弹性行为，具体数据结构参考样例。</p>
+     * <p>Configure custom elastic behavior, refer to the example for specific data structure.</p>
      */
     @NameInMap("ScalingBehaviour")
     public String scalingBehaviour;
