@@ -14,6 +14,7 @@ public class DescribeVaultReplicationRegionsRequest extends TeaModel {
      * <p>The ID of the backup vault.</p>
      */
     @NameInMap("VaultId")
+    @Deprecated
     public String vaultId;
 
     public static DescribeVaultReplicationRegionsRequest build(java.util.Map<String, ?> map) throws Exception {
