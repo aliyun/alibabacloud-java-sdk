@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>easygene20210315</artifactId>
-  <version>1.2.0</version>
+  <version>1.3.0</version>
   <packaging>jar</packaging>
   <name>easygene20210315</name>
   <description>Alibaba Cloud EasyGene (20210315) SDK for Java
