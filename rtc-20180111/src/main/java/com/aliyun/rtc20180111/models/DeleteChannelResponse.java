@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteChannelResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public DeleteChannelResponseBody body;
 
     public static DeleteChannelResponse build(java.util.Map<String, ?> map) throws Exception {

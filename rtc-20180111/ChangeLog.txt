@@ -1,3 +1,33 @@
+2024-01-31 Version: 1.5.0
+- Support API CreateAppStreamingOutTemplate.
+- Support API DeleteAppStreamingOutTemplate.
+- Support API DescribeAppStreamingOutTemplates.
+- Support API DescribeCall.
+- Support API DescribeChannelAreaDistributionStatData.
+- Support API DescribeChannelDistributionStatData.
+- Support API DescribeChannelOverallData.
+- Support API DescribeChannelTopPubUserList.
+- Support API DescribeChannelUserMetrics.
+- Support API DescribeEndPointEventList.
+- Support API DescribeEndPointMetricData.
+- Support API DescribeFaultDiagnosisFactorDistributionStat.
+- Support API DescribeFaultDiagnosisOverallData.
+- Support API DescribeFaultDiagnosisUserDetail.
+- Support API DescribeFaultDiagnosisUserList.
+- Support API DescribePubUserListBySubUser.
+- Support API DescribeQoeMetricData.
+- Support API DescribeQualityAreaDistributionStatData.
+- Support API DescribeQualityDistributionStatData.
+- Support API DescribeQualityOsSdkVersionDistributionStatData.
+- Support API DescribeQualityOverallData.
+- Support API DescribeUsageAreaDistributionStatData.
+- Support API DescribeUsageDistributionStatData.
+- Support API DescribeUsageOsSdkVersionDistributionStatData.
+- Support API DescribeUsageOverallData.
+- Support API ModifyAppStreamingOutTemplate.
+- Update API DescribeAppsupdate response param.
+
+
 2023-12-27 Version: 1.4.0
 - Generated java 2018-01-11 for rtc.
 
