@@ -16,6 +16,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
      * <p>The number of nodes in the node pool.</p>
      */
     @NameInMap("count")
+    @Deprecated
     public Long count;
 
     /**
@@ -24,6 +25,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
      * <p>The configuration of the edge node pool.</p>
      */
     @NameInMap("interconnect_config")
+    @Deprecated
     public CreateClusterNodePoolRequestInterconnectConfig interconnectConfig;
 
     /**
@@ -52,6 +54,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
      * <p>The maximum number of nodes that can be created in the edge node pool. You must specify a value that is equal to or larger than 0. A value of 0 indicates that the number of nodes in the node pool is limited only by the quota of nodes in the cluster. In most cases, this parameter is set to a value larger than 0 for edge node pools. This parameter is set to 0 for node pools of the ess type or default edge node pools.</p>
      */
     @NameInMap("max_nodes")
+    @Deprecated
     public Long maxNodes;
 
     @NameInMap("node_config")
@@ -175,6 +178,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>The maximum bandwidth of the EIP. Unit: Mbit/s.</p>
          */
         @NameInMap("eip_bandwidth")
+        @Deprecated
         public Long eipBandwidth;
 
         /**
@@ -188,6 +192,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>Default value: `PayByBandwidth`.</p>
          */
         @NameInMap("eip_internet_charge_type")
+        @Deprecated
         public String eipInternetChargeType;
 
         /**
@@ -212,6 +217,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>Default value: `false`.</p>
          */
         @NameInMap("is_bond_eip")
+        @Deprecated
         public Boolean isBondEip;
 
         /**
@@ -612,6 +618,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>*   `false`: disables auto update.</p>
          */
         @NameInMap("auto_upgrade")
+        @Deprecated
         public Boolean autoUpgrade;
 
         /**
@@ -1174,6 +1181,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>Specifies the ID of the security group to which you want to add the node pool. You must set this parameter or `security_group_ids`. We recommend that you set `security_group_ids`.</p>
          */
         @NameInMap("security_group_id")
+        @Deprecated
         public String securityGroupId;
 
         /**

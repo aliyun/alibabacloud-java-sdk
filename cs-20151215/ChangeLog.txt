@@ -1,3 +1,14 @@
+2024-01-31 Version: 3.2.5
+- Update API CreateClusterNodePoolupdate body param.
+update response param.
+- Update API DescribeClusterNodePoolDetailupdate response param.
+- Update API DescribeClusterNodePoolsupdate response param.
+- Update API ModifyClusterNodePoolupdate body param.
+update response param.
+- Update API RemoveNodePoolNodesupdate nodes param.
+- Update API UpgradeClusterupdate response param.
+
+
 2024-01-11 Version: 3.2.4
 - Generated java 2015-12-15 for CS.
 

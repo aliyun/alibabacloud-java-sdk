@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyClusterAddonResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     public static ModifyClusterAddonResponse build(java.util.Map<String, ?> map) throws Exception {

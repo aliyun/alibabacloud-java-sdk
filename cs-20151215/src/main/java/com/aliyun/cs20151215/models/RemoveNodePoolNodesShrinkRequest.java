@@ -29,6 +29,7 @@ public class RemoveNodePoolNodesShrinkRequest extends TeaModel {
      * <p>A list of nodes that you want to remove.</p>
      */
     @NameInMap("nodes")
+    @Deprecated
     public String nodesShrink;
 
     /**

@@ -10,6 +10,9 @@ public class ModifyClusterNodePoolResponseBody extends TeaModel {
     @NameInMap("nodepool_id")
     public String nodepoolId;
 
+    @NameInMap("request_id")
+    public String requestId;
+
     /**
      * <p>The task ID.</p>
      */
@@ -27,6 +30,14 @@ public class ModifyClusterNodePoolResponseBody extends TeaModel {
     }
     public String getNodepoolId() {
         return this.nodepoolId;
+    }
+
+    public ModifyClusterNodePoolResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ModifyClusterNodePoolResponseBody setTaskId(String taskId) {
