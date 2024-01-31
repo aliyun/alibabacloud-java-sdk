@@ -4426,6 +4426,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteVpcHoneyPotWithOptions(request, runtime);
     }
 
+    public DeleteVulAutoRepairConfigResponse deleteVulAutoRepairConfigWithOptions(DeleteVulAutoRepairConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aliasName)) {
+            query.put("AliasName", request.aliasName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configIdList)) {
+            query.put("ConfigIdList", request.configIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteVulAutoRepairConfig"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVulAutoRepairConfigResponse());
+    }
+
+    public DeleteVulAutoRepairConfigResponse deleteVulAutoRepairConfig(DeleteVulAutoRepairConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteVulAutoRepairConfigWithOptions(request, runtime);
+    }
+
     public DeleteVulWhitelistResponse deleteVulWhitelistWithOptions(DeleteVulWhitelistRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -14683,6 +14720,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ExportRecordResponse exportRecordWithOptions(ExportRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.exportFileType)) {
+            query.put("ExportFileType", request.exportFileType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.exportType)) {
             query.put("ExportType", request.exportType);
         }

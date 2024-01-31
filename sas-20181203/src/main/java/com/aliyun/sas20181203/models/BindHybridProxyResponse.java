@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class BindHybridProxyResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public BindHybridProxyResponseBody body;
 
     public static BindHybridProxyResponse build(java.util.Map<String, ?> map) throws Exception {

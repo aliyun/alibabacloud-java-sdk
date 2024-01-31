@@ -5,9 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListPrivateRegistryTypeRequest extends TeaModel {
     /**
-     * <p>请求和接收消息的语言类型。取值：</p>
-     * <p>- **zh**：中文</p>
-     * <p>- **en**：英文</p>
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
      */
     @NameInMap("Lang")
     public String lang;

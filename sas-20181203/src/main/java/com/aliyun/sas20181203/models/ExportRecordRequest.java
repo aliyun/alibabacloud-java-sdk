@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ExportRecordRequest extends TeaModel {
+    @NameInMap("ExportFileType")
+    public String exportFileType;
+
     /**
      * <p>The type of the check result list to export. Valid values:</p>
      * <br>
@@ -49,6 +52,14 @@ public class ExportRecordRequest extends TeaModel {
     public static ExportRecordRequest build(java.util.Map<String, ?> map) throws Exception {
         ExportRecordRequest self = new ExportRecordRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ExportRecordRequest setExportFileType(String exportFileType) {
+        this.exportFileType = exportFileType;
+        return this;
+    }
+    public String getExportFileType() {
+        return this.exportFileType;
     }
 
     public ExportRecordRequest setExportType(String exportType) {

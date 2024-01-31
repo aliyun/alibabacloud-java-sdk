@@ -76,11 +76,23 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        @NameInMap("MeasureSpace")
+        public Long measureSpace;
+
         /**
          * <p>The progress of the task.</p>
          */
         @NameInMap("Progress")
         public Integer progress;
+
+        @NameInMap("ProgressByProject")
+        public String progressByProject;
+
+        @NameInMap("ReportDownloadUrl")
+        public String reportDownloadUrl;
+
+        @NameInMap("ReportStatus")
+        public String reportStatus;
 
         /**
          * <p>The result of the detection.</p>
@@ -175,12 +187,44 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             return this.intranetIp;
         }
 
+        public ListAgentlessTaskResponseBodyList setMeasureSpace(Long measureSpace) {
+            this.measureSpace = measureSpace;
+            return this;
+        }
+        public Long getMeasureSpace() {
+            return this.measureSpace;
+        }
+
         public ListAgentlessTaskResponseBodyList setProgress(Integer progress) {
             this.progress = progress;
             return this;
         }
         public Integer getProgress() {
             return this.progress;
+        }
+
+        public ListAgentlessTaskResponseBodyList setProgressByProject(String progressByProject) {
+            this.progressByProject = progressByProject;
+            return this;
+        }
+        public String getProgressByProject() {
+            return this.progressByProject;
+        }
+
+        public ListAgentlessTaskResponseBodyList setReportDownloadUrl(String reportDownloadUrl) {
+            this.reportDownloadUrl = reportDownloadUrl;
+            return this;
+        }
+        public String getReportDownloadUrl() {
+            return this.reportDownloadUrl;
+        }
+
+        public ListAgentlessTaskResponseBodyList setReportStatus(String reportStatus) {
+            this.reportStatus = reportStatus;
+            return this;
+        }
+        public String getReportStatus() {
+            return this.reportStatus;
         }
 
         public ListAgentlessTaskResponseBodyList setResult(String result) {
