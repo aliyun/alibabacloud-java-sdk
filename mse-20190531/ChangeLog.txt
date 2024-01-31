@@ -1,3 +1,9 @@
+2024-01-31 Version: 6.2.7
+- Update API UpdateClusterSpecadd AutoPay param.
+add PubNetworkFlow param.
+update response param.
+
+
 2024-01-29 Version: 6.2.6
 - Update API GetGatewayRouteDetailupdate response param.
 
