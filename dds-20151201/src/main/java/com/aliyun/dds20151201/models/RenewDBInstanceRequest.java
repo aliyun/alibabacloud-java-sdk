@@ -15,6 +15,9 @@ public class RenewDBInstanceRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    @NameInMap("AutoRenew")
+    public Boolean autoRenew;
+
     /**
      * <p>The business information.</p>
      */
@@ -68,6 +71,14 @@ public class RenewDBInstanceRequest extends TeaModel {
     }
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    public RenewDBInstanceRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
     }
 
     public RenewDBInstanceRequest setBusinessInfo(String businessInfo) {

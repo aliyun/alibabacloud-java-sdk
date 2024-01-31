@@ -297,11 +297,17 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("DiscountAmount")
         public String discountAmount;
 
+        @NameInMap("OptionalPromotions")
+        public String optionalPromotions;
+
         /**
          * <p>The original price of the order.</p>
          */
         @NameInMap("OriginalAmount")
         public String originalAmount;
+
+        @NameInMap("PromDetailList")
+        public String promDetailList;
 
         /**
          * <p>The rules of the order.</p>
@@ -350,12 +356,28 @@ public class DescribePriceResponseBody extends TeaModel {
             return this.discountAmount;
         }
 
+        public DescribePriceResponseBodyOrder setOptionalPromotions(String optionalPromotions) {
+            this.optionalPromotions = optionalPromotions;
+            return this;
+        }
+        public String getOptionalPromotions() {
+            return this.optionalPromotions;
+        }
+
         public DescribePriceResponseBodyOrder setOriginalAmount(String originalAmount) {
             this.originalAmount = originalAmount;
             return this;
         }
         public String getOriginalAmount() {
             return this.originalAmount;
+        }
+
+        public DescribePriceResponseBodyOrder setPromDetailList(String promDetailList) {
+            this.promDetailList = promDetailList;
+            return this;
+        }
+        public String getPromDetailList() {
+            return this.promDetailList;
         }
 
         public DescribePriceResponseBodyOrder setRuleIds(DescribePriceResponseBodyOrderRuleIds ruleIds) {
