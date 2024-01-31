@@ -181,6 +181,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.attachInstancesToNodePoolWithOptions(ClusterId, NodepoolId, request, headers, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CancelClusterUpgradeResponse
+     */
+    // Deprecated
     public CancelClusterUpgradeResponse cancelClusterUpgradeWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -199,6 +207,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CancelClusterUpgradeResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @return CancelClusterUpgradeResponse
+     */
+    // Deprecated
     public CancelClusterUpgradeResponse cancelClusterUpgrade(String ClusterId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -420,9 +434,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   [Create an ACK managed cluster](~~90776~~)
       * *   [Create an ACK dedicated cluster](~~197620~~)
       * *   [Create an ACK Serverless cluster](~~144246~~)
-      * *   [Create an ACK Edge cluster](128204)
+      * *   [Create an ACK Edge cluster](~~128204~~)
       * *   [Create an ACK Basic cluster that supports sandboxed containers](~~196321~~)
-      * *   [Create an ACK Pro cluster that supports sandboxed containers](140623)
+      * *   [Create an ACK Pro cluster that supports sandboxed containers](~~140623~~)
       *
       * @param request CreateClusterRequest
       * @param headers map
@@ -815,9 +829,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   [Create an ACK managed cluster](~~90776~~)
       * *   [Create an ACK dedicated cluster](~~197620~~)
       * *   [Create an ACK Serverless cluster](~~144246~~)
-      * *   [Create an ACK Edge cluster](128204)
+      * *   [Create an ACK Edge cluster](~~128204~~)
       * *   [Create an ACK Basic cluster that supports sandboxed containers](~~196321~~)
-      * *   [Create an ACK Pro cluster that supports sandboxed containers](140623)
+      * *   [Create an ACK Pro cluster that supports sandboxed containers](~~140623~~)
       *
       * @param request CreateClusterRequest
       * @return CreateClusterResponse
@@ -1368,7 +1382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteTrigger"),
             new TeaPair("version", "2015-12-15"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/clusters/%5Bcluster_id%5D/triggers/%5BId%5D"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterId) + "/triggers/" + com.aliyun.openapiutil.Client.getEncodeParam(Id) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -1502,6 +1516,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeAddonWithOptions(addonName, request, headers, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request DescribeAddonsRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeAddonsResponse
+     */
+    // Deprecated
     public DescribeAddonsResponse describeAddonsWithOptions(DescribeAddonsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1543,12 +1566,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAddonsResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request DescribeAddonsRequest
+      * @return DescribeAddonsResponse
+     */
+    // Deprecated
     public DescribeAddonsResponse describeAddons(DescribeAddonsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeAddonsWithOptions(request, headers, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeClusterAddonInstanceResponse
+     */
+    // Deprecated
     public DescribeClusterAddonInstanceResponse describeClusterAddonInstanceWithOptions(String ClusterID, String AddonName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1567,12 +1605,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterAddonInstanceResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @return DescribeClusterAddonInstanceResponse
+     */
+    // Deprecated
     public DescribeClusterAddonInstanceResponse describeClusterAddonInstance(String ClusterID, String AddonName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeClusterAddonInstanceWithOptions(ClusterID, AddonName, headers, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeClusterAddonMetadataResponse
+     */
+    // Deprecated
     public DescribeClusterAddonMetadataResponse describeClusterAddonMetadataWithOptions(String clusterId, String componentId, String version, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1591,6 +1643,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterAddonMetadataResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @return DescribeClusterAddonMetadataResponse
+     */
+    // Deprecated
     public DescribeClusterAddonMetadataResponse describeClusterAddonMetadata(String clusterId, String componentId, String version) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1635,6 +1693,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeClusterAddonUpgradeStatusWithOptions(ClusterId, ComponentId, headers, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param tmpReq DescribeClusterAddonsUpgradeStatusRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeClusterAddonsUpgradeStatusResponse
+     */
+    // Deprecated
     public DescribeClusterAddonsUpgradeStatusResponse describeClusterAddonsUpgradeStatusWithOptions(String ClusterId, DescribeClusterAddonsUpgradeStatusRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DescribeClusterAddonsUpgradeStatusShrinkRequest request = new DescribeClusterAddonsUpgradeStatusShrinkRequest();
@@ -1666,12 +1733,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterAddonsUpgradeStatusResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request DescribeClusterAddonsUpgradeStatusRequest
+      * @return DescribeClusterAddonsUpgradeStatusResponse
+     */
+    // Deprecated
     public DescribeClusterAddonsUpgradeStatusResponse describeClusterAddonsUpgradeStatus(String ClusterId, DescribeClusterAddonsUpgradeStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeClusterAddonsUpgradeStatusWithOptions(ClusterId, request, headers, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeClusterAddonsVersionResponse
+     */
+    // Deprecated
     public DescribeClusterAddonsVersionResponse describeClusterAddonsVersionWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -1690,6 +1772,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClusterAddonsVersionResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @return DescribeClusterAddonsVersionResponse
+     */
+    // Deprecated
     public DescribeClusterAddonsVersionResponse describeClusterAddonsVersion(String ClusterId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3839,6 +3927,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.openAckServiceWithOptions(request, headers, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return PauseClusterUpgradeResponse
+     */
+    // Deprecated
     public PauseClusterUpgradeResponse pauseClusterUpgradeWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -3857,6 +3953,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PauseClusterUpgradeResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @return PauseClusterUpgradeResponse
+     */
+    // Deprecated
     public PauseClusterUpgradeResponse pauseClusterUpgrade(String ClusterId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -4158,6 +4260,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.resumeTaskWithOptions(taskId, headers, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ResumeUpgradeClusterResponse
+     */
+    // Deprecated
     public ResumeUpgradeClusterResponse resumeUpgradeClusterWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -4176,6 +4286,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ResumeUpgradeClusterResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @return ResumeUpgradeClusterResponse
+     */
+    // Deprecated
     public ResumeUpgradeClusterResponse resumeUpgradeCluster(String ClusterId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -5018,7 +5134,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradeClusterResponse());
     }

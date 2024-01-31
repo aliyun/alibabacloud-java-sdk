@@ -5,12 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpgradeClusterResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
+
+    @NameInMap("body")
+    public UpgradeClusterResponseBody body;
 
     public static UpgradeClusterResponse build(java.util.Map<String, ?> map) throws Exception {
         UpgradeClusterResponse self = new UpgradeClusterResponse();
@@ -31,6 +32,14 @@ public class UpgradeClusterResponse extends TeaModel {
     }
     public Integer getStatusCode() {
         return this.statusCode;
+    }
+
+    public UpgradeClusterResponse setBody(UpgradeClusterResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UpgradeClusterResponseBody getBody() {
+        return this.body;
     }
 
 }

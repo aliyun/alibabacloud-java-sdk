@@ -123,6 +123,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
          * <p>The maximum bandwidth of the elastic IP address (EIP).</p>
          */
         @NameInMap("eip_bandwidth")
+        @Deprecated
         public Long eipBandwidth;
 
         /**
@@ -134,6 +135,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
          * <p>Default value: `PayByBandwidth`.</p>
          */
         @NameInMap("eip_internet_charge_type")
+        @Deprecated
         public String eipInternetChargeType;
 
         /**
@@ -156,6 +158,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
          * <p>Default value: `false`.</p>
          */
         @NameInMap("is_bond_eip")
+        @Deprecated
         public Boolean isBondEip;
 
         /**
@@ -181,6 +184,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
          * <p>Default value: `cpu`.</p>
          */
         @NameInMap("type")
+        @Deprecated
         public String type;
 
         public static ModifyClusterNodePoolRequestAutoScaling build(java.util.Map<String, ?> map) throws Exception {
@@ -296,6 +300,9 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         @NameInMap("taints")
         public java.util.List<Taint> taints;
 
+        @NameInMap("unschedulable")
+        public Boolean unschedulable;
+
         /**
          * <p>The user-defined data of the node pool. For more information, see [Prepare user data](~~49121~~).</p>
          */
@@ -353,6 +360,14 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         }
         public java.util.List<Taint> getTaints() {
             return this.taints;
+        }
+
+        public ModifyClusterNodePoolRequestKubernetesConfig setUnschedulable(Boolean unschedulable) {
+            this.unschedulable = unschedulable;
+            return this;
+        }
+        public Boolean getUnschedulable() {
+            return this.unschedulable;
         }
 
         public ModifyClusterNodePoolRequestKubernetesConfig setUserData(String userData) {
@@ -464,6 +479,7 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
          * <p>Default value: `true`.</p>
          */
         @NameInMap("auto_upgrade")
+        @Deprecated
         public Boolean autoUpgrade;
 
         /**
