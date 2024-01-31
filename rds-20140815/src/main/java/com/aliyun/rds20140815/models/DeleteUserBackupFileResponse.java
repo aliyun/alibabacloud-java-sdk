@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteUserBackupFileResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public DeleteUserBackupFileResponseBody body;
 
     public static DeleteUserBackupFileResponse build(java.util.Map<String, ?> map) throws Exception {

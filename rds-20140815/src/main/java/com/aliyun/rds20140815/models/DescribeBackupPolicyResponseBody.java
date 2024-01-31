@@ -109,6 +109,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("EnableIncrementDataBackup")
     public Boolean enableIncrementDataBackup;
 
+    @NameInMap("EnablePitrProtection")
+    public Boolean enablePitrProtection;
+
     /**
      * <p>Indicates whether the log backup deletion feature is enabled. If the disk usage exceeds 80% or the remaining disk space is less than 5 GB on the instance, this feature deletes binary log files. Valid values:</p>
      * <br>
@@ -152,6 +155,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
      */
     @NameInMap("LogBackupRetentionPeriod")
     public Integer logBackupRetentionPeriod;
+
+    @NameInMap("PitrRetentionPeriod")
+    public Integer pitrRetentionPeriod;
 
     /**
      * <p>The cycle based on which you want to perform a backup. Separate multiple values with commas (,). Valid values:</p>
@@ -322,6 +328,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return this.enableIncrementDataBackup;
     }
 
+    public DescribeBackupPolicyResponseBody setEnablePitrProtection(Boolean enablePitrProtection) {
+        this.enablePitrProtection = enablePitrProtection;
+        return this;
+    }
+    public Boolean getEnablePitrProtection() {
+        return this.enablePitrProtection;
+    }
+
     public DescribeBackupPolicyResponseBody setHighSpaceUsageProtection(String highSpaceUsageProtection) {
         this.highSpaceUsageProtection = highSpaceUsageProtection;
         return this;
@@ -368,6 +382,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
     public Integer getLogBackupRetentionPeriod() {
         return this.logBackupRetentionPeriod;
+    }
+
+    public DescribeBackupPolicyResponseBody setPitrRetentionPeriod(Integer pitrRetentionPeriod) {
+        this.pitrRetentionPeriod = pitrRetentionPeriod;
+        return this;
+    }
+    public Integer getPitrRetentionPeriod() {
+        return this.pitrRetentionPeriod;
     }
 
     public DescribeBackupPolicyResponseBody setPreferredBackupPeriod(String preferredBackupPeriod) {
