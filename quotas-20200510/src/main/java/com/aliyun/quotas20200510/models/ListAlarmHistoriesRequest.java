@@ -4,6 +4,9 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListAlarmHistoriesRequest extends TeaModel {
+    @NameInMap("AlarmId")
+    public String alarmId;
+
     /**
      * <p>The end of the time range to query.</p>
      */
@@ -47,6 +50,14 @@ public class ListAlarmHistoriesRequest extends TeaModel {
     public static ListAlarmHistoriesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAlarmHistoriesRequest self = new ListAlarmHistoriesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListAlarmHistoriesRequest setAlarmId(String alarmId) {
+        this.alarmId = alarmId;
+        return this;
+    }
+    public String getAlarmId() {
+        return this.alarmId;
     }
 
     public ListAlarmHistoriesRequest setEndTime(Long endTime) {

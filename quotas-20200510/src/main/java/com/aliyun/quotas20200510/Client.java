@@ -484,7 +484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about common request parameters, see [Common parameters](~~171299~~).
+      * In this example, the operation is called to query the details of a quota alert whose ID is `78d7e436-4b25-4897-84b5-d7b656bb****`. The details of the alert are returned. The query result includes the alert ID, alert name, alert contact, and the time when the quota alert was created.
       *
       * @param request GetQuotaAlarmRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -515,7 +515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about common request parameters, see [Common parameters](~~171299~~).
+      * In this example, the operation is called to query the details of a quota alert whose ID is `78d7e436-4b25-4897-84b5-d7b656bb****`. The details of the alert are returned. The query result includes the alert ID, alert name, alert contact, and the time when the quota alert was created.
       *
       * @param request GetQuotaAlarmRequest
       * @return GetQuotaAlarmResponse
@@ -599,6 +599,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAlarmHistoriesResponse listAlarmHistoriesWithOptions(ListAlarmHistoriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alarmId)) {
+            body.put("AlarmId", request.alarmId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             body.put("EndTime", request.endTime);
         }

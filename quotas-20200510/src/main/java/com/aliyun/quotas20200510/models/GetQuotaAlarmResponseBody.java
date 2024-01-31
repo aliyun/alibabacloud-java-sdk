@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetQuotaAlarmResponseBody extends TeaModel {
     /**
-     * <p>The details of the quota alert rule.</p>
+     * <p>The details of the quota alert.</p>
      */
     @NameInMap("QuotaAlarm")
     public GetQuotaAlarmResponseBodyQuotaAlarm quotaAlarm;
 
     /**
-     * <p>The details of the quota alert.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,19 +39,19 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
 
     public static class GetQuotaAlarmResponseBodyQuotaAlarm extends TeaModel {
         /**
-         * <p>The numeric value of the alert threshold.</p>
+         * <p>The ID of the quota alert.</p>
          */
         @NameInMap("AlarmId")
         public String alarmId;
 
         /**
-         * <p>security_groups</p>
+         * <p>The name of the quota alert.</p>
          */
         @NameInMap("AlarmName")
         public String alarmName;
 
         /**
-         * <p>The ID of the quota.</p>
+         * <p>The time when the quota alert was created.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -63,58 +63,58 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
         public java.util.List<String> notifyChannels;
 
         /**
-         * <p>The used quota.</p>
+         * <p>The alert contact.</p>
          */
         @NameInMap("NotifyTarget")
         public String notifyTarget;
 
         /**
-         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * <p>The abbreviation of the cloud service name.</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
-         * <p>The name of the quota alert.</p>
+         * <p>The ID of the quota.</p>
          */
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
 
         /**
-         * <p>The time when the quota alert was created.</p>
+         * <p>The quota dimension.</p>
          */
         @NameInMap("QuotaDimension")
         public java.util.Map<String, ?> quotaDimension;
 
         /**
-         * <p>The value of the quota.</p>
+         * <p>The used quota.</p>
          */
         @NameInMap("QuotaUsage")
         public Float quotaUsage;
 
         /**
-         * <p>The ID of the quota alert.</p>
+         * <p>The quota value.</p>
          */
         @NameInMap("QuotaValue")
         public Float quotaValue;
 
         /**
-         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * <p>The numeric value of the alert threshold.</p>
          */
         @NameInMap("Threshold")
         public Float threshold;
+
+        /**
+         * <p>The percentage of the alert threshold.</p>
+         */
+        @NameInMap("ThresholdPercent")
+        public Float thresholdPercent;
 
         /**
          * <p>The type of the quota alert. Valid values:</p>
          * <br>
          * <p>*   used: The alert is created for the used quota.</p>
          * <p>*   usable: The alert is created for the available quota.</p>
-         */
-        @NameInMap("ThresholdPercent")
-        public Float thresholdPercent;
-
-        /**
-         * <p>The quota dimension.</p>
          */
         @NameInMap("ThresholdType")
         public String thresholdType;
