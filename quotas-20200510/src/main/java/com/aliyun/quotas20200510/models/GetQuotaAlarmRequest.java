@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetQuotaAlarmRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the quota alert.</p>
+     * <br>
+     * <p>For more information about how to query the ID of a quota alert, see [ListQuotaAlarms](~~184348~~).</p>
      */
     @NameInMap("AlarmId")
     public String alarmId;
