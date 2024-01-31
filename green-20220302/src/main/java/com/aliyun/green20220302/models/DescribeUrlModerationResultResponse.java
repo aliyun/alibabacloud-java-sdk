@@ -3,7 +3,7 @@ package com.aliyun.green20220302.models;
 
 import com.aliyun.tea.*;
 
-public class VoiceModerationResultResponse extends TeaModel {
+public class DescribeUrlModerationResultResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class VoiceModerationResultResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public VoiceModerationResultResponseBody body;
+    public DescribeUrlModerationResultResponseBody body;
 
-    public static VoiceModerationResultResponse build(java.util.Map<String, ?> map) throws Exception {
-        VoiceModerationResultResponse self = new VoiceModerationResultResponse();
+    public static DescribeUrlModerationResultResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeUrlModerationResultResponse self = new DescribeUrlModerationResultResponse();
         return TeaModel.build(map, self);
     }
 
-    public VoiceModerationResultResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeUrlModerationResultResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class VoiceModerationResultResponse extends TeaModel {
         return this.headers;
     }
 
-    public VoiceModerationResultResponse setStatusCode(Integer statusCode) {
+    public DescribeUrlModerationResultResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class VoiceModerationResultResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public VoiceModerationResultResponse setBody(VoiceModerationResultResponseBody body) {
+    public DescribeUrlModerationResultResponse setBody(DescribeUrlModerationResultResponseBody body) {
         this.body = body;
         return this;
     }
-    public VoiceModerationResultResponseBody getBody() {
+    public DescribeUrlModerationResultResponseBody getBody() {
         return this.body;
     }
 
