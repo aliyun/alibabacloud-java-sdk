@@ -3,19 +3,7 @@ package com.aliyun.hitsdb20200615.models;
 
 import com.aliyun.tea.*;
 
-public class SwitchLSQLV3MySQLServiceRequest extends TeaModel {
-    /**
-     * <p>The type of the operation. Valid value:</p>
-     * <br>
-     * <p>*   1: enables the MySQL compatibility feature.</p>
-     * <p>*   0: disables the MySQL compatibility feature.</p>
-     */
-    @NameInMap("ActionType")
-    public Integer actionType;
-
-    /**
-     * <p>The cluster ID.</p>
-     */
+public class GetClientSourceIpRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -24,6 +12,9 @@ public class SwitchLSQLV3MySQLServiceRequest extends TeaModel {
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -34,20 +25,12 @@ public class SwitchLSQLV3MySQLServiceRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    public static SwitchLSQLV3MySQLServiceRequest build(java.util.Map<String, ?> map) throws Exception {
-        SwitchLSQLV3MySQLServiceRequest self = new SwitchLSQLV3MySQLServiceRequest();
+    public static GetClientSourceIpRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetClientSourceIpRequest self = new GetClientSourceIpRequest();
         return TeaModel.build(map, self);
     }
 
-    public SwitchLSQLV3MySQLServiceRequest setActionType(Integer actionType) {
-        this.actionType = actionType;
-        return this;
-    }
-    public Integer getActionType() {
-        return this.actionType;
-    }
-
-    public SwitchLSQLV3MySQLServiceRequest setInstanceId(String instanceId) {
+    public GetClientSourceIpRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -55,7 +38,7 @@ public class SwitchLSQLV3MySQLServiceRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public SwitchLSQLV3MySQLServiceRequest setOwnerAccount(String ownerAccount) {
+    public GetClientSourceIpRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -63,7 +46,7 @@ public class SwitchLSQLV3MySQLServiceRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public SwitchLSQLV3MySQLServiceRequest setOwnerId(Long ownerId) {
+    public GetClientSourceIpRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -71,7 +54,15 @@ public class SwitchLSQLV3MySQLServiceRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public SwitchLSQLV3MySQLServiceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public GetClientSourceIpRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public GetClientSourceIpRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -79,7 +70,7 @@ public class SwitchLSQLV3MySQLServiceRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public SwitchLSQLV3MySQLServiceRequest setResourceOwnerId(Long resourceOwnerId) {
+    public GetClientSourceIpRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -87,7 +78,7 @@ public class SwitchLSQLV3MySQLServiceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public SwitchLSQLV3MySQLServiceRequest setSecurityToken(String securityToken) {
+    public GetClientSourceIpRequest setSecurityToken(String securityToken) {
         this.securityToken = securityToken;
         return this;
     }

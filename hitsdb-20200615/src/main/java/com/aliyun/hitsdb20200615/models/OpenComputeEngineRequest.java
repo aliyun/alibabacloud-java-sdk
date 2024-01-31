@@ -3,21 +3,15 @@ package com.aliyun.hitsdb20200615.models;
 
 import com.aliyun.tea.*;
 
-public class SwitchLSQLV3MySQLServiceRequest extends TeaModel {
-    /**
-     * <p>The type of the operation. Valid value:</p>
-     * <br>
-     * <p>*   1: enables the MySQL compatibility feature.</p>
-     * <p>*   0: disables the MySQL compatibility feature.</p>
-     */
-    @NameInMap("ActionType")
-    public Integer actionType;
+public class OpenComputeEngineRequest extends TeaModel {
+    @NameInMap("CpuLimit")
+    public String cpuLimit;
 
-    /**
-     * <p>The cluster ID.</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("MemoryLimit")
+    public String memoryLimit;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -34,20 +28,20 @@ public class SwitchLSQLV3MySQLServiceRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    public static SwitchLSQLV3MySQLServiceRequest build(java.util.Map<String, ?> map) throws Exception {
-        SwitchLSQLV3MySQLServiceRequest self = new SwitchLSQLV3MySQLServiceRequest();
+    public static OpenComputeEngineRequest build(java.util.Map<String, ?> map) throws Exception {
+        OpenComputeEngineRequest self = new OpenComputeEngineRequest();
         return TeaModel.build(map, self);
     }
 
-    public SwitchLSQLV3MySQLServiceRequest setActionType(Integer actionType) {
-        this.actionType = actionType;
+    public OpenComputeEngineRequest setCpuLimit(String cpuLimit) {
+        this.cpuLimit = cpuLimit;
         return this;
     }
-    public Integer getActionType() {
-        return this.actionType;
+    public String getCpuLimit() {
+        return this.cpuLimit;
     }
 
-    public SwitchLSQLV3MySQLServiceRequest setInstanceId(String instanceId) {
+    public OpenComputeEngineRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -55,7 +49,15 @@ public class SwitchLSQLV3MySQLServiceRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public SwitchLSQLV3MySQLServiceRequest setOwnerAccount(String ownerAccount) {
+    public OpenComputeEngineRequest setMemoryLimit(String memoryLimit) {
+        this.memoryLimit = memoryLimit;
+        return this;
+    }
+    public String getMemoryLimit() {
+        return this.memoryLimit;
+    }
+
+    public OpenComputeEngineRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -63,7 +65,7 @@ public class SwitchLSQLV3MySQLServiceRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public SwitchLSQLV3MySQLServiceRequest setOwnerId(Long ownerId) {
+    public OpenComputeEngineRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -71,7 +73,7 @@ public class SwitchLSQLV3MySQLServiceRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public SwitchLSQLV3MySQLServiceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public OpenComputeEngineRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -79,7 +81,7 @@ public class SwitchLSQLV3MySQLServiceRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public SwitchLSQLV3MySQLServiceRequest setResourceOwnerId(Long resourceOwnerId) {
+    public OpenComputeEngineRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -87,7 +89,7 @@ public class SwitchLSQLV3MySQLServiceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public SwitchLSQLV3MySQLServiceRequest setSecurityToken(String securityToken) {
+    public OpenComputeEngineRequest setSecurityToken(String securityToken) {
         this.securityToken = securityToken;
         return this;
     }
