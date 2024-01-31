@@ -13,6 +13,9 @@ public class UpdateClusterSpecRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
     /**
      * <p>The ID of the cluster.</p>
      */
@@ -43,6 +46,9 @@ public class UpdateClusterSpecRequest extends TeaModel {
     @NameInMap("MseVersion")
     public String mseVersion;
 
+    @NameInMap("PubNetworkFlow")
+    public Integer pubNetworkFlow;
+
     public static UpdateClusterSpecRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateClusterSpecRequest self = new UpdateClusterSpecRequest();
         return TeaModel.build(map, self);
@@ -54,6 +60,14 @@ public class UpdateClusterSpecRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public UpdateClusterSpecRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     public UpdateClusterSpecRequest setClusterId(String clusterId) {
@@ -94,6 +108,14 @@ public class UpdateClusterSpecRequest extends TeaModel {
     }
     public String getMseVersion() {
         return this.mseVersion;
+    }
+
+    public UpdateClusterSpecRequest setPubNetworkFlow(Integer pubNetworkFlow) {
+        this.pubNetworkFlow = pubNetworkFlow;
+        return this;
+    }
+    public Integer getPubNetworkFlow() {
+        return this.pubNetworkFlow;
     }
 
 }
