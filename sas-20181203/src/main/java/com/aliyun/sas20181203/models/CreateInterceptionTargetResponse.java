@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateInterceptionTargetResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public CreateInterceptionTargetResponseBody body;
 
     public static CreateInterceptionTargetResponse build(java.util.Map<String, ?> map) throws Exception {

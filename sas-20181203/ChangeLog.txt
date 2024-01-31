@@ -1,3 +1,17 @@
+2024-01-31 Version: 2.22.0
+- Support API DeleteVulAutoRepairConfig.
+- Support API DescribeFixUsedCount.
+- Update API DescribeSuspEventDetailupdate Lang param.
+- Update API DescribeSuspEventsupdate Lang param.
+- Update API ExportRecordadd ExportFileType param.
+- Update API ExportWarningadd GroupId param.
+update response param.
+- Update API GetCheckSummaryadd IsItemStatistic param.
+update response param.
+- Update API ListAgentlessTaskupdate response param.
+- Update API ModifyTagWithUuidadd Target param.
+
+
 2024-01-22 Version: 2.21.0
 - Generated java 2018-12-03 for Sas.
 

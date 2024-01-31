@@ -21,7 +21,8 @@ public class ExportWarningRequest extends TeaModel {
 
     /**
      * <p>The ID of the server group.</p>
-     * <p>> You can call the[DescribeAllGroups](~~130972~~)operation to query the IDs of server groups.</p>
+     * <br>
+     * <p>>  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.</p>
      */
     @NameInMap("GroupId")
     public Long groupId;

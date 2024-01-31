@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetBackupStorageCountResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public GetBackupStorageCountResponseBody body;
 
     public static GetBackupStorageCountResponse build(java.util.Map<String, ?> map) throws Exception {
