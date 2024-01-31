@@ -264,6 +264,9 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @NameInMap("agent_code")
         public String agentCode;
 
+        @NameInMap("apply_id")
+        public String applyId;
+
         @NameInMap("bill_date")
         public String billDate;
 
@@ -362,6 +365,14 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         }
         public String getAgentCode() {
             return this.agentCode;
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItems setApplyId(String applyId) {
+            this.applyId = applyId;
+            return this;
+        }
+        public String getApplyId() {
+            return this.applyId;
         }
 
         public FlightItineraryScanQueryResponseBodyModuleItems setBillDate(String billDate) {
