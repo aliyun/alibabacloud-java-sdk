@@ -82,6 +82,9 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
     }
 
     public static class TrainTicketScanQueryResponseBodyModuleItems extends TeaModel {
+        @NameInMap("apply_id")
+        public String applyId;
+
         @NameInMap("arr_station")
         public String arrStation;
 
@@ -154,6 +157,14 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         public static TrainTicketScanQueryResponseBodyModuleItems build(java.util.Map<String, ?> map) throws Exception {
             TrainTicketScanQueryResponseBodyModuleItems self = new TrainTicketScanQueryResponseBodyModuleItems();
             return TeaModel.build(map, self);
+        }
+
+        public TrainTicketScanQueryResponseBodyModuleItems setApplyId(String applyId) {
+            this.applyId = applyId;
+            return this;
+        }
+        public String getApplyId() {
+            return this.applyId;
         }
 
         public TrainTicketScanQueryResponseBodyModuleItems setArrStation(String arrStation) {

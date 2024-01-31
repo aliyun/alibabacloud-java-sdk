@@ -79,6 +79,12 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         @NameInMap("apply_id")
         public String applyId;
 
+        @NameInMap("arr_airport")
+        public String arrAirport;
+
+        @NameInMap("arr_city")
+        public String arrCity;
+
         @NameInMap("arr_time")
         public String arrTime;
 
@@ -103,8 +109,17 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         @NameInMap("change_type")
         public Integer changeType;
 
+        @NameInMap("dep_airport")
+        public String depAirport;
+
+        @NameInMap("dep_city")
+        public String depCity;
+
         @NameInMap("dep_time")
         public String depTime;
+
+        @NameInMap("discount")
+        public String discount;
 
         @NameInMap("gmt_create")
         public String gmtCreate;
@@ -117,6 +132,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
 
         @NameInMap("out_apply_id")
         public String outApplyId;
+
+        @NameInMap("stop_city")
+        public String stopCity;
 
         @NameInMap("ticket_no")
         public String ticketNo;
@@ -141,6 +159,22 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
         public String getApplyId() {
             return this.applyId;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList setArrAirport(String arrAirport) {
+            this.arrAirport = arrAirport;
+            return this;
+        }
+        public String getArrAirport() {
+            return this.arrAirport;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList setArrCity(String arrCity) {
+            this.arrCity = arrCity;
+            return this;
+        }
+        public String getArrCity() {
+            return this.arrCity;
         }
 
         public FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList setArrTime(String arrTime) {
@@ -207,12 +241,36 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             return this.changeType;
         }
 
+        public FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList setDepAirport(String depAirport) {
+            this.depAirport = depAirport;
+            return this;
+        }
+        public String getDepAirport() {
+            return this.depAirport;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList setDepCity(String depCity) {
+            this.depCity = depCity;
+            return this;
+        }
+        public String getDepCity() {
+            return this.depCity;
+        }
+
         public FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList setDepTime(String depTime) {
             this.depTime = depTime;
             return this;
         }
         public String getDepTime() {
             return this.depTime;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList setDiscount(String discount) {
+            this.discount = discount;
+            return this;
+        }
+        public String getDiscount() {
+            return this.discount;
         }
 
         public FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList setGmtCreate(String gmtCreate) {
@@ -245,6 +303,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
         public String getOutApplyId() {
             return this.outApplyId;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList setStopCity(String stopCity) {
+            this.stopCity = stopCity;
+            return this;
+        }
+        public String getStopCity() {
+            return this.stopCity;
         }
 
         public FlightOrderQueryResponseBodyModuleFlightChangeTicketInfoList setTicketNo(String ticketNo) {
@@ -491,6 +557,21 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         @NameInMap("apply_id")
         public String applyId;
 
+        @NameInMap("arr_airport")
+        public String arrAirport;
+
+        @NameInMap("arr_city")
+        public String arrCity;
+
+        @NameInMap("dep_airport")
+        public String depAirport;
+
+        @NameInMap("dep_city")
+        public String depCity;
+
+        @NameInMap("flight_no")
+        public String flightNo;
+
         @NameInMap("gmt_create")
         public String gmtCreate;
 
@@ -526,6 +607,46 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
         public String getApplyId() {
             return this.applyId;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightRefundTicketInfoList setArrAirport(String arrAirport) {
+            this.arrAirport = arrAirport;
+            return this;
+        }
+        public String getArrAirport() {
+            return this.arrAirport;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightRefundTicketInfoList setArrCity(String arrCity) {
+            this.arrCity = arrCity;
+            return this;
+        }
+        public String getArrCity() {
+            return this.arrCity;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightRefundTicketInfoList setDepAirport(String depAirport) {
+            this.depAirport = depAirport;
+            return this;
+        }
+        public String getDepAirport() {
+            return this.depAirport;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightRefundTicketInfoList setDepCity(String depCity) {
+            this.depCity = depCity;
+            return this;
+        }
+        public String getDepCity() {
+            return this.depCity;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightRefundTicketInfoList setFlightNo(String flightNo) {
+            this.flightNo = flightNo;
+            return this;
+        }
+        public String getFlightNo() {
+            return this.flightNo;
         }
 
         public FlightOrderQueryResponseBodyModuleFlightRefundTicketInfoList setGmtCreate(String gmtCreate) {

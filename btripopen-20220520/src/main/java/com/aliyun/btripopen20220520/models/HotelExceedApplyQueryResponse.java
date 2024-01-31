@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class HotelExceedApplyQueryResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public HotelExceedApplyQueryResponseBody body;
 
     public static HotelExceedApplyQueryResponse build(java.util.Map<String, ?> map) throws Exception {
