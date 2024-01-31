@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class SwitchLSQLV3MySQLServiceResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public SwitchLSQLV3MySQLServiceResponseBody body;
 
     public static SwitchLSQLV3MySQLServiceResponse build(java.util.Map<String, ?> map) throws Exception {

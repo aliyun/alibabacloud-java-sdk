@@ -3,7 +3,7 @@ package com.aliyun.hitsdb20200615.models;
 
 import com.aliyun.tea.*;
 
-public class GetLindormInstanceEngineListResponse extends TeaModel {
+public class OpenComputeEngineResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetLindormInstanceEngineListResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetLindormInstanceEngineListResponseBody body;
+    public OpenComputeEngineResponseBody body;
 
-    public static GetLindormInstanceEngineListResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetLindormInstanceEngineListResponse self = new GetLindormInstanceEngineListResponse();
+    public static OpenComputeEngineResponse build(java.util.Map<String, ?> map) throws Exception {
+        OpenComputeEngineResponse self = new OpenComputeEngineResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetLindormInstanceEngineListResponse setHeaders(java.util.Map<String, String> headers) {
+    public OpenComputeEngineResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetLindormInstanceEngineListResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetLindormInstanceEngineListResponse setStatusCode(Integer statusCode) {
+    public OpenComputeEngineResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetLindormInstanceEngineListResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetLindormInstanceEngineListResponse setBody(GetLindormInstanceEngineListResponseBody body) {
+    public OpenComputeEngineResponse setBody(OpenComputeEngineResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetLindormInstanceEngineListResponseBody getBody() {
+    public OpenComputeEngineResponseBody getBody() {
         return this.body;
     }
 
