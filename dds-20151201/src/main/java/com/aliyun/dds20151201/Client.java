@@ -6845,6 +6845,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AutoPay", request.autoPay);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            query.put("AutoRenew", request.autoRenew);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.businessInfo)) {
             query.put("BusinessInfo", request.businessInfo);
         }
