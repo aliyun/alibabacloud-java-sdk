@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class DisableAutoLiveStreamRuleResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public DisableAutoLiveStreamRuleResponseBody body;
 
     public static DisableAutoLiveStreamRuleResponse build(java.util.Map<String, ?> map) throws Exception {

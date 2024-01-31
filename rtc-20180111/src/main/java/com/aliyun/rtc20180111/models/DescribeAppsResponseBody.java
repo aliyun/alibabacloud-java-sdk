@@ -88,14 +88,14 @@ public class DescribeAppsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("Region")
-        public String region;
-
         @NameInMap("ServiceAreas")
         public DescribeAppsResponseBodyAppListAppServiceAreas serviceAreas;
 
         @NameInMap("Status")
         public Integer status;
+
+        @NameInMap("Version")
+        public String version;
 
         public static DescribeAppsResponseBodyAppListApp build(java.util.Map<String, ?> map) throws Exception {
             DescribeAppsResponseBodyAppListApp self = new DescribeAppsResponseBodyAppListApp();
@@ -142,14 +142,6 @@ public class DescribeAppsResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeAppsResponseBodyAppListApp setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
-        }
-
         public DescribeAppsResponseBodyAppListApp setServiceAreas(DescribeAppsResponseBodyAppListAppServiceAreas serviceAreas) {
             this.serviceAreas = serviceAreas;
             return this;
@@ -164,6 +156,14 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public DescribeAppsResponseBodyAppListApp setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }
