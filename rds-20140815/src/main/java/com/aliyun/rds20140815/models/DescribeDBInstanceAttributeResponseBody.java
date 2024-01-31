@@ -822,6 +822,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <br>
          * <p>*   **Postpaid**: pay-as-you-go</p>
          * <p>*   **Prepaid**: subscription</p>
+         * <p>*   **SERVERLESS**: Serverless</p>
          */
         @NameInMap("PayType")
         public String payType;
