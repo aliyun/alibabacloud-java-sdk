@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyScalingGroupResponseBody extends TeaModel {
     /**
-     * <p>auditing</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

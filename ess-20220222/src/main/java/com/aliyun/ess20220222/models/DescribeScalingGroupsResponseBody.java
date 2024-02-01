@@ -389,6 +389,9 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         @NameInMap("HealthCheckType")
         public String healthCheckType;
 
+        @NameInMap("HealthCheckTypes")
+        public java.util.List<String> healthCheckTypes;
+
         @NameInMap("InitCapacity")
         public Integer initCapacity;
 
@@ -646,6 +649,14 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         }
         public String getHealthCheckType() {
             return this.healthCheckType;
+        }
+
+        public DescribeScalingGroupsResponseBodyScalingGroups setHealthCheckTypes(java.util.List<String> healthCheckTypes) {
+            this.healthCheckTypes = healthCheckTypes;
+            return this;
+        }
+        public java.util.List<String> getHealthCheckTypes() {
+            return this.healthCheckTypes;
         }
 
         public DescribeScalingGroupsResponseBodyScalingGroups setInitCapacity(Integer initCapacity) {
