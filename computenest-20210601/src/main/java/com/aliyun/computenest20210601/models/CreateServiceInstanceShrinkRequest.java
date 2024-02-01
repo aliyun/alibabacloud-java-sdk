@@ -4,6 +4,9 @@ package com.aliyun.computenest20210601.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceInstanceShrinkRequest extends TeaModel {
+    @NameInMap("BusinessInfo")
+    public String businessInfoShrink;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -84,6 +87,14 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public static CreateServiceInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceInstanceShrinkRequest self = new CreateServiceInstanceShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateServiceInstanceShrinkRequest setBusinessInfoShrink(String businessInfoShrink) {
+        this.businessInfoShrink = businessInfoShrink;
+        return this;
+    }
+    public String getBusinessInfoShrink() {
+        return this.businessInfoShrink;
     }
 
     public CreateServiceInstanceShrinkRequest setClientToken(String clientToken) {
