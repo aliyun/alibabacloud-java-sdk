@@ -4,6 +4,9 @@ package com.aliyun.computenest20210601.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceInstanceRequest extends TeaModel {
+    @NameInMap("BusinessInfo")
+    public CreateServiceInstanceRequestBusinessInfo businessInfo;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -84,6 +87,14 @@ public class CreateServiceInstanceRequest extends TeaModel {
     public static CreateServiceInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceInstanceRequest self = new CreateServiceInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateServiceInstanceRequest setBusinessInfo(CreateServiceInstanceRequestBusinessInfo businessInfo) {
+        this.businessInfo = businessInfo;
+        return this;
+    }
+    public CreateServiceInstanceRequestBusinessInfo getBusinessInfo() {
+        return this.businessInfo;
     }
 
     public CreateServiceInstanceRequest setClientToken(String clientToken) {
@@ -228,6 +239,25 @@ public class CreateServiceInstanceRequest extends TeaModel {
     }
     public String getTrialType() {
         return this.trialType;
+    }
+
+    public static class CreateServiceInstanceRequestBusinessInfo extends TeaModel {
+        @NameInMap("OrderParams")
+        public java.util.Map<String, String> orderParams;
+
+        public static CreateServiceInstanceRequestBusinessInfo build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceInstanceRequestBusinessInfo self = new CreateServiceInstanceRequestBusinessInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServiceInstanceRequestBusinessInfo setOrderParams(java.util.Map<String, String> orderParams) {
+            this.orderParams = orderParams;
+            return this;
+        }
+        public java.util.Map<String, String> getOrderParams() {
+            return this.orderParams;
+        }
+
     }
 
     public static class CreateServiceInstanceRequestCommodity extends TeaModel {
