@@ -118,6 +118,9 @@ public class CreateScalingGroupRequest extends TeaModel {
     @NameInMap("HealthCheckType")
     public String healthCheckType;
 
+    @NameInMap("HealthCheckTypes")
+    public java.util.List<String> healthCheckTypes;
+
     /**
      * <p>The ID of the existing ECS instance that provides instance configurations for Auto Scaling to create a scaling configuration.</p>
      */
@@ -458,6 +461,14 @@ public class CreateScalingGroupRequest extends TeaModel {
     }
     public String getHealthCheckType() {
         return this.healthCheckType;
+    }
+
+    public CreateScalingGroupRequest setHealthCheckTypes(java.util.List<String> healthCheckTypes) {
+        this.healthCheckTypes = healthCheckTypes;
+        return this;
+    }
+    public java.util.List<String> getHealthCheckTypes() {
+        return this.healthCheckTypes;
     }
 
     public CreateScalingGroupRequest setInstanceId(String instanceId) {
