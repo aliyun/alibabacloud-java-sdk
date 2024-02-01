@@ -468,6 +468,9 @@ public class DescribeVaultsResponseBody extends TeaModel {
         @NameInMap("ReplicationSourceVaultId")
         public String replicationSourceVaultId;
 
+        @NameInMap("ReplicationTargetRegionId")
+        public String replicationTargetRegionId;
+
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -706,6 +709,14 @@ public class DescribeVaultsResponseBody extends TeaModel {
         }
         public String getReplicationSourceVaultId() {
             return this.replicationSourceVaultId;
+        }
+
+        public DescribeVaultsResponseBodyVaultsVault setReplicationTargetRegionId(String replicationTargetRegionId) {
+            this.replicationTargetRegionId = replicationTargetRegionId;
+            return this;
+        }
+        public String getReplicationTargetRegionId() {
+            return this.replicationTargetRegionId;
         }
 
         public DescribeVaultsResponseBodyVaultsVault setResourceGroupId(String resourceGroupId) {
