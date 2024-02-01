@@ -86,8 +86,8 @@ public class ListUserKeysResponseBody extends TeaModel {
         @NameInMap("publicKey")
         public String publicKey;
 
-        @NameInMap("tittle")
-        public String tittle;
+        @NameInMap("title")
+        public String title;
 
         public static ListUserKeysResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListUserKeysResponseBodyResult self = new ListUserKeysResponseBodyResult();
@@ -150,12 +150,12 @@ public class ListUserKeysResponseBody extends TeaModel {
             return this.publicKey;
         }
 
-        public ListUserKeysResponseBodyResult setTittle(String tittle) {
-            this.tittle = tittle;
+        public ListUserKeysResponseBodyResult setTitle(String title) {
+            this.title = title;
             return this;
         }
-        public String getTittle() {
-            return this.tittle;
+        public String getTitle() {
+            return this.title;
         }
 
     }
