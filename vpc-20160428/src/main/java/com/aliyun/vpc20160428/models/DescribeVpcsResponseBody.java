@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcsResponseBody extends TeaModel {
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -29,7 +29,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The details of the VPCs.</p>
+     * <p>The details about the VPC.</p>
      */
     @NameInMap("Vpcs")
     public DescribeVpcsResponseBodyVpcs vpcs;
@@ -89,12 +89,12 @@ public class DescribeVpcsResponseBody extends TeaModel {
         /**
          * <p>The type of IPv6 CIDR block. Valid values:</p>
          * <br>
-         * <p>- **BGP**: an IPv6 CIDR block provided by Alibaba Cloud over Border Gateway Protocol (BGP)</p>
-         * <p>- **ChinaMobile**: an IPv6 CIDR block provided by China Mobile (single ISP)</p>
-         * <p>- **ChinaUnicom**: an IPv6 CIDR block provided by China Unicom (single ISP)</p>
-         * <p>- **ChinaTelecom**: an IPv6 CIDR block provided by China Telecom (single ISP)</p>
+         * <p>*   **BGP**</p>
+         * <p>*   **ChinaMobile**</p>
+         * <p>*   **ChinaUnicom**</p>
+         * <p>*   **ChinaTelecom**</p>
          * <br>
-         * <p>>  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, valid values are: **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**.</p>
+         * <p>>  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to **ChinaTelecom**, **ChinaUnicom**, or **ChinaMobile**.</p>
          */
         @NameInMap("Ipv6Isp")
         public String ipv6Isp;
@@ -200,13 +200,13 @@ public class DescribeVpcsResponseBody extends TeaModel {
 
     public static class DescribeVpcsResponseBodyVpcsVpcTagsTag extends TeaModel {
         /**
-         * <p>The key of the tag that is added to the VPC.</p>
+         * <p>The key of tag N.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag that is added to the VPC.</p>
+         * <p>The value of tag N.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -293,9 +293,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
 
     public static class DescribeVpcsResponseBodyVpcsVpc extends TeaModel {
         /**
-         * <p>The status of the Cloud Enterprise Network (CEN) instance to which the VPC is attached.</p>
-         * <br>
-         * <p>**Attached** is returned only if the VPC is attached to a CEN instance.</p>
+         * <p>The status of the Cloud Enterprise Network (CEN) instance to which the VPC is attached. **Attached** is returned only if the VPC is attached to a CEN instance.</p>
          */
         @NameInMap("CenStatus")
         public String cenStatus;
@@ -327,10 +325,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
         /**
          * <p>The status of the DHCP options set. Valid values:</p>
          * <br>
-         * <p>*   **Available**: available</p>
-         * <p>*   **InUse**: in use</p>
-         * <p>*   **Deleted**: deleted</p>
-         * <p>*   **Pending**: being configured</p>
+         * <p>*   **Available**</p>
+         * <p>*   **InUse**</p>
+         * <p>*   **Deleted**</p>
+         * <p>*   **Pending**</p>
          */
         @NameInMap("DhcpOptionsSetStatus")
         public String dhcpOptionsSetStatus;
@@ -342,7 +340,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
         public String ipv6CidrBlock;
 
         /**
-         * <p>The IPv6 CIDR blocks of the VPC.</p>
+         * <p>The IPv6 CIDR block of the VPC.</p>
          */
         @NameInMap("Ipv6CidrBlocks")
         public DescribeVpcsResponseBodyVpcsVpcIpv6CidrBlocks ipv6CidrBlocks;
@@ -350,14 +348,14 @@ public class DescribeVpcsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the VPC is the default VPC in the region. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
         /**
-         * <p>The IDs of the NAT gateways.</p>
+         * <p>The ID of the Internet NAT gateway.</p>
          */
         @NameInMap("NatGatewayIds")
         public DescribeVpcsResponseBodyVpcsVpcNatGatewayIds natGatewayIds;
@@ -381,13 +379,13 @@ public class DescribeVpcsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The IDs of the route tables.</p>
+         * <p>The information about the route table.</p>
          */
         @NameInMap("RouterTableIds")
         public DescribeVpcsResponseBodyVpcsVpcRouterTableIds routerTableIds;
 
         /**
-         * <p>The secondary CIDR blocks of the VPC.</p>
+         * <p>The information about the secondary CIDR block.</p>
          */
         @NameInMap("SecondaryCidrBlocks")
         public DescribeVpcsResponseBodyVpcsVpcSecondaryCidrBlocks secondaryCidrBlocks;
@@ -395,8 +393,8 @@ public class DescribeVpcsResponseBody extends TeaModel {
         /**
          * <p>The status of the VPC. Valid values:</p>
          * <br>
-         * <p>*   **Pending**: being configured</p>
-         * <p>*   **Available**: available</p>
+         * <p>*   **Pending**</p>
+         * <p>*   **Available**</p>
          */
         @NameInMap("Status")
         public String status;
@@ -420,15 +418,15 @@ public class DescribeVpcsResponseBody extends TeaModel {
         public String VRouterId;
 
         /**
-         * <p>The vSwitches in the VPC. </p>
+         * <p>The vSwitches in the VPC.</p>
          * <br>
-         * <p>You can query up to 300 vSwitches in the VPC. The information about the latest vSwitches is returned. If you want to query the information about all vSwitches in a VPC, call the [DescribeVSwitches](/help/en/virtual-private-cloud/latest/describevswitches) operation.</p>
+         * <p>You can query up to 300 vSwitches in the VPC. The information about the latest vSwitches is returned. If you want to query the information about all vSwitches in a VPC, call the [DescribeVSwitches](~~35748~~) operation.</p>
          */
         @NameInMap("VSwitchIds")
         public DescribeVpcsResponseBodyVpcsVpcVSwitchIds vSwitchIds;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

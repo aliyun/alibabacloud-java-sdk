@@ -47,9 +47,15 @@ public class ListTrafficMirrorFiltersRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tag list.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListTrafficMirrorFiltersRequestTags> tags;
 
+    /**
+     * <p>The ID of the traffic mirror filter. The maximum value of **N** is **100**, which specifies that you can query up to 100 filters at a time.</p>
+     */
     @NameInMap("TrafficMirrorFilterIds")
     public java.util.List<String> trafficMirrorFilterIds;
 
@@ -154,17 +160,17 @@ public class ListTrafficMirrorFiltersRequest extends TeaModel {
 
     public static class ListTrafficMirrorFiltersRequestTags extends TeaModel {
         /**
-         * <p>The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>The tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
          * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkAclsRequest extends TeaModel {
     /**
-     * <p>The client token that you want to use to ensure the idempotence of the request.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, the system sets **ClientToken** to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -35,13 +35,13 @@ public class DescribeNetworkAclsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -69,16 +69,19 @@ public class DescribeNetworkAclsRequest extends TeaModel {
     /**
      * <p>The type of the associated instance. Set the value to **VSwitch**.</p>
      * <br>
-     * <p>This parameter is valid only if **ResourceType** and **ResourceId** are both set.</p>
+     * <p>This parameter is valid only if **ResourceType** and **ResourceId** are both specified.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tag list.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<DescribeNetworkAclsRequestTags> tags;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the network ACL belongs.</p>
+     * <p>The ID of the VPC to which the network ACL belongs.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -202,17 +205,17 @@ public class DescribeNetworkAclsRequest extends TeaModel {
 
     public static class DescribeNetworkAclsRequestTags extends TeaModel {
         /**
-         * <p>The tag key. You can specify at most 20 tag keys. It cannot be an empty string.</p>
+         * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value. You can specify at most 20 tag values. It can be an empty string.</p>
+         * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
          * <br>
-         * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
          */
         @NameInMap("Value")
         public String value;

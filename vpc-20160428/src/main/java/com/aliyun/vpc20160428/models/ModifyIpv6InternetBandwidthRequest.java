@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
     /**
-     * <p>The Internet bandwidth for the IPv6 CIDR block. Unit: Mbit/s. Valid values: **1** to **5000**.</p>
+     * <p>The Internet bandwidth value of the IPv6 address. Unit: Mbit/s.</p>
+     * <br>
+     * <p>*   If the billing method is pay-by-data-transfer, valid values are **1** to **1000**.</p>
+     * <p>*   If the billing method is pay-by-bandwidth, valid values are **1** to **2000**.</p>
      */
     @NameInMap("Bandwidth")
     public Long bandwidth;
@@ -29,9 +32,7 @@ public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
     public String ipv6AddressId;
 
     /**
-     * <p>The ID of the Internet bandwidth that you purchased for the IPv6 CIDR block.</p>
-     * <br>
-     * <p>>  You must specify one of **Ipv6AddressId** and **Ipv6InternetBandwidthId**.</p>
+     * <p>The instance ID of the Internet bandwidth of the IPv6 address.</p>
      */
     @NameInMap("Ipv6InternetBandwidthId")
     public String ipv6InternetBandwidthId;

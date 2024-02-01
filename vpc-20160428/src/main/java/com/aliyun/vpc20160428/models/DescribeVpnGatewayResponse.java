@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeVpnGatewayResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public DescribeVpnGatewayResponseBody body;
 
     public static DescribeVpnGatewayResponse build(java.util.Map<String, ?> map) throws Exception {

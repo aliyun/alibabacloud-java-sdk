@@ -23,9 +23,15 @@ public class CreateTrafficMirrorFilterRulesRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>The list of outbound rules.</p>
+     */
     @NameInMap("EgressRules")
     public java.util.List<CreateTrafficMirrorFilterRulesRequestEgressRules> egressRules;
 
+    /**
+     * <p>The list of inbound rules.</p>
+     */
     @NameInMap("IngressRules")
     public java.util.List<CreateTrafficMirrorFilterRulesRequestIngressRules> ingressRules;
 

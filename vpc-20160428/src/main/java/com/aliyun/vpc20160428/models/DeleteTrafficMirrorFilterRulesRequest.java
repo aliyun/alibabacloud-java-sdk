@@ -47,6 +47,9 @@ public class DeleteTrafficMirrorFilterRulesRequest extends TeaModel {
     @NameInMap("TrafficMirrorFilterId")
     public String trafficMirrorFilterId;
 
+    /**
+     * <p>The ID of the inbound or outbound rule.</p>
+     */
     @NameInMap("TrafficMirrorFilterRuleIds")
     public java.util.List<String> trafficMirrorFilterRuleIds;
 

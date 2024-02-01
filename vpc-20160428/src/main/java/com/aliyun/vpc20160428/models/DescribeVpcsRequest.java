@@ -11,9 +11,9 @@ public class DescribeVpcsRequest extends TeaModel {
     public String dhcpOptionsSetId;
 
     /**
-     * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <br>
-     * <p>*   **true**: checks the request but does not query VPCs. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether the required parameters are set. If the request fails to pass the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **true**: performs only a dry run. The system prechecks whether your AccessKey pair is valid, whether the RAM user is authorized, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
      * <p>*   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and VPCs are queried.</p>
      */
     @NameInMap("DryRun")
@@ -22,8 +22,8 @@ public class DescribeVpcsRequest extends TeaModel {
     /**
      * <p>Specifies whether to query the default VPC in the specified region. Valid values:</p>
      * <br>
-     * <p>*   **true** (default): yes</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **true** (default)</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("IsDefault")
     public Boolean isDefault;
@@ -41,7 +41,7 @@ public class DescribeVpcsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -66,11 +66,14 @@ public class DescribeVpcsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags of the resource.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeVpcsRequestTag> tag;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The VPC ID.</p>
      * <br>
      * <p>You can specify up to 20 VPC IDs. Separate multiple IDs with commas (,).</p>
      */
@@ -215,9 +218,19 @@ public class DescribeVpcsRequest extends TeaModel {
     }
 
     public static class DescribeVpcsRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

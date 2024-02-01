@@ -27,7 +27,7 @@ public class DeleteIpv6EgressOnlyRuleRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the IPv6 gateway.</p>
+     * <p>The region ID of the IPv6 gateway. You can call the [DescribeRegions](~~448570~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

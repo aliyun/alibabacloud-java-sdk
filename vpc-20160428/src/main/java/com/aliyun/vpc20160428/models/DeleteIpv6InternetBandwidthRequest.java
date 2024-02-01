@@ -7,15 +7,13 @@ public class DeleteIpv6InternetBandwidthRequest extends TeaModel {
     /**
      * <p>The ID of the IPv6 address.</p>
      * <br>
-     * <p>>  You must set one of the **Ipv6AddressId** and **Ipv6InternetBandwidthId** parameters.</p>
+     * <p>>  You must specify one of **Ipv6AddressId** and **Ipv6InternetBandwidthId**.</p>
      */
     @NameInMap("Ipv6AddressId")
     public String ipv6AddressId;
 
     /**
-     * <p>The ID of the Internet bandwidth that you purchase for the IPv6 gateway.</p>
-     * <br>
-     * <p>>  You must set one of the **Ipv6AddressId** and **Ipv6InternetBandwidthId** parameters.</p>
+     * <p>The instance ID of the Internet bandwidth of the IPv6 address.</p>
      */
     @NameInMap("Ipv6InternetBandwidthId")
     public String ipv6InternetBandwidthId;
@@ -27,9 +25,9 @@ public class DeleteIpv6InternetBandwidthRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the IPv6 gateway is deployed.</p>
+     * <p>The region ID of the IPv6 gateway.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
