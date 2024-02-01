@@ -1,3 +1,20 @@
+2024-02-01 Version: 2.5.0
+- Support API CreateStreamPushJob.
+- Support API CreateStreamSnapshotJob.
+- Support API DeleteGbDevice.
+- Support API DeleteStreamPushJob.
+- Support API DeleteStreamSnapshotJob.
+- Support API EnableGbSubDevice.
+- Support API QueryGbSubDeviceList.
+- Support API QueryStreamPushJob.
+- Support API QueryStreamPushJobList.
+- Support API QueryStreamSnapshotJob.
+- Support API RefreshGbSubDeviceList.
+- Support API UpdateGbDevice.
+- Update API CreateGbDeviceadd DeviceName param.
+update MediaNetProtocol param.
+
+
 2024-01-16 Version: 2.4.1
 - Generated java 2018-01-20 for Linkvisual.
 

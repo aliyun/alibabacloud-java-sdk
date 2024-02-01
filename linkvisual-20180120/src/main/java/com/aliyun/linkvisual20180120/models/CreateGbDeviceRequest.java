@@ -7,6 +7,9 @@ public class CreateGbDeviceRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DeviceName")
+    public String deviceName;
+
     @NameInMap("DeviceType")
     public Integer deviceType;
 
@@ -39,6 +42,14 @@ public class CreateGbDeviceRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateGbDeviceRequest setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    public String getDeviceName() {
+        return this.deviceName;
     }
 
     public CreateGbDeviceRequest setDeviceType(Integer deviceType) {
