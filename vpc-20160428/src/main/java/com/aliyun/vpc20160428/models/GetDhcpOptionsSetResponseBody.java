@@ -46,6 +46,9 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -60,6 +63,9 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tag list.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<GetDhcpOptionsSetResponseBodyTags> tags;
 
@@ -258,9 +264,15 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
     }
 
     public static class GetDhcpOptionsSetResponseBodyTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

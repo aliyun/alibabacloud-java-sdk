@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeIpv6AddressesResponseBody extends TeaModel {
     /**
-     * <p>The details about the IPv6 addresses.</p>
+     * <p>The details of the IPv6 address.</p>
      */
     @NameInMap("Ipv6Addresses")
     public DescribeIpv6AddressesResponseBodyIpv6Addresses ipv6Addresses;
@@ -81,7 +81,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
 
     public static class DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressIpv6InternetBandwidth extends TeaModel {
         /**
-         * <p>The exclusive Internet bandwidth of the IPv6 address. Unit: Mbit/s.</p>
+         * <p>The dedicated Internet bandwidth of the IPv6 address. Unit: Mbit/s.</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
@@ -97,16 +97,16 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         public String businessStatus;
 
         /**
-         * <p>Indicates whether renewal data is included.</p>
+         * <p>Indicates whether renewal data is included. Valid values:</p>
          * <br>
          * <p>*   **false**</p>
-         * <p>*   **true** This parameter returns **true** only if **IncludeReservationData** is set to **true** and some orders have not taken effect.</p>
+         * <p>*   **true** **true** is returned only when **IncludeReservationData** is set to **true** and some orders have not taken effect.</p>
          */
         @NameInMap("HasReservationData")
         public Boolean hasReservationData;
 
         /**
-         * <p>The billing method of the Internet bandwidth of the IPv6 address.</p>
+         * <p>The billing method of the Internet bandwidth of the IPv6 address. Valid values:</p>
          * <br>
          * <p>Only **PostPaid** may be returned, which indicates the pay-as-you-go billing method.</p>
          */
@@ -116,20 +116,20 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         /**
          * <p>The billing method of the Internet bandwidth of the IPv6 address. Valid values:</p>
          * <br>
-         * <p>*   **PayByTraffic**: pay-by-data-transfer</p>
+         * <p>*   **PayByTraffic**</p>
          * <p>*   **PayByBandwidth**: pay-by-bandwidth</p>
          */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
         /**
-         * <p>The instance ID of the Internet bandwidth of the IPv6 address.</p>
+         * <p>The Internet bandwidth ID of the IPv6 address.</p>
          */
         @NameInMap("Ipv6InternetBandwidthId")
         public String ipv6InternetBandwidthId;
 
         /**
-         * <p>The time when the renewal took effect. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         * <p>The time when the renewal took effect. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
          */
         @NameInMap("ReservationActiveTime")
         public String reservationActiveTime;
@@ -143,7 +143,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         /**
          * <p>The metering method that is used after the renewal takes effect.</p>
          * <br>
-         * <p>*   **PayByTraffic**: pay-by-data-transfer</p>
+         * <p>*   **PayByTraffic**</p>
          * <p>*   **PayByBandwidth**: pay-by-bandwidth</p>
          */
         @NameInMap("ReservationInternetChargeType")
@@ -243,9 +243,21 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
     }
 
     public static class DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressTagsTag extends TeaModel {
+        /**
+         * <p>The key of tag N. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length. It can be an empty string. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>Each tag key corresponds to one tag value. You can specify at most 20 tag values at a time.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -299,23 +311,26 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         public String allocationTime;
 
         /**
-         * <p>The ID of the instance that is assigned the IPv6 address.</p>
+         * <p>The ID of the instance associated with the IPv6 address.</p>
          */
         @NameInMap("AssociatedInstanceId")
         public String associatedInstanceId;
 
         /**
-         * <p>The type of the instance that is assigned the IPv6 address.</p>
+         * <p>The type of instance associated with the IPv6 address.</p>
          */
         @NameInMap("AssociatedInstanceType")
         public String associatedInstanceType;
 
         /**
-         * <p>The IPv6 address of the instance.</p>
+         * <p>The IPv6 address.</p>
          */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
+        /**
+         * <p>The description of the IPv6 address.</p>
+         */
         @NameInMap("Ipv6AddressDescription")
         public String ipv6AddressDescription;
 
@@ -338,13 +353,13 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         public String ipv6GatewayId;
 
         /**
-         * <p>The information about the Internet bandwidth of the IPv6 address.</p>
+         * <p>The Internet bandwidth of the IPv6 address.</p>
          */
         @NameInMap("Ipv6InternetBandwidth")
         public DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressIpv6InternetBandwidth ipv6InternetBandwidth;
 
         /**
-         * <p>The service provider of the IPv6 address. Valid values:</p>
+         * <p>The ISP of the IPv6 address.</p>
          * <br>
          * <p>*   **BGP** (default)</p>
          * <p>*   **ChinaMobile**</p>
@@ -355,7 +370,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         public String ipv6Isp;
 
         /**
-         * <p>The type of communication supported by the IPv6 address. Valid values:</p>
+         * <p>The type of connection supported by the IPv6 address. Valid values:</p>
          * <br>
          * <p>*   **Private**</p>
          * <p>*   **Public**</p>
@@ -364,20 +379,19 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         public String networkType;
 
         /**
-         * <p>The maximum bandwidth value of the IPv6 address.</p>
-         * <br>
-         * <p>*   If the IPv6 address is associated with an EIP bandwidth plan, the value of **RealBandwidth** is the maximum bandwidth value of the EIP bandwidth plan.</p>
-         * <p>*   If the IPv6 address is not associated with an EIP bandwidth plan, the value of **RealBandwidth** is the maximum bandwidth value of the Internet bandwidth of the IPv6 address.</p>
-         * <p>*   If the IPv6 address is not associated with an EIP bandwidth plan or an Internet bandwidth plan, the values of **RealBandwidth** and **Bandwidth** are both 0.</p>
+         * <p>The peak bandwidth of the IPv6 address.</p>
          */
         @NameInMap("RealBandwidth")
         public Integer realBandwidth;
 
+        /**
+         * <p>The ID of the resource group to which the IPv6 gateway belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The status of the IPv6 address. Valid values:</p>
+         * <p>The status of the IPv6 address.</p>
          * <br>
          * <p>*   **Pending**</p>
          * <p>*   **Available**</p>
@@ -385,6 +399,9 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tag list.</p>
+         */
         @NameInMap("Tags")
         public DescribeIpv6AddressesResponseBodyIpv6AddressesIpv6AddressTags tags;
 

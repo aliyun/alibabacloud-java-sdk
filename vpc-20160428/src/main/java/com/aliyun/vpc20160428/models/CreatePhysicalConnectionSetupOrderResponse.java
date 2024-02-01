@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreatePhysicalConnectionSetupOrderResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public CreatePhysicalConnectionSetupOrderResponseBody body;
 
     public static CreatePhysicalConnectionSetupOrderResponse build(java.util.Map<String, ?> map) throws Exception {

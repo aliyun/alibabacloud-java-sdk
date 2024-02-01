@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyIPv6TranslatorBandwidthResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public ModifyIPv6TranslatorBandwidthResponseBody body;
 
     public static ModifyIPv6TranslatorBandwidthResponse build(java.util.Map<String, ?> map) throws Exception {

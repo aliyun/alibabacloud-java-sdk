@@ -59,6 +59,9 @@ public class ListIpv4GatewaysRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags of the resource.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListIpv4GatewaysRequestTags> tags;
 

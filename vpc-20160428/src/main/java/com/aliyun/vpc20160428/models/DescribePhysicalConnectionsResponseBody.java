@@ -333,6 +333,9 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         @NameInMap("ProductType")
         public String productType;
 
+        @NameInMap("QosId")
+        public String qosId;
+
         /**
          * <p>The ID of the redundant Express Connect circuit.</p>
          */
@@ -630,6 +633,14 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         }
         public String getProductType() {
             return this.productType;
+        }
+
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setQosId(String qosId) {
+            this.qosId = qosId;
+            return this;
+        }
+        public String getQosId() {
+            return this.qosId;
         }
 
         public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setRedundantPhysicalConnectionId(String redundantPhysicalConnectionId) {

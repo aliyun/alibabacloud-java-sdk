@@ -38,7 +38,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
     public String totalCount;
 
     /**
-     * <p>The details about the filters.</p>
+     * <p>The information about the filters.</p>
      */
     @NameInMap("TrafficMirrorFilters")
     public java.util.List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFilters> trafficMirrorFilters;
@@ -454,13 +454,13 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
 
     public static class ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersTags extends TeaModel {
         /**
-         * <p>The key of tag N.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -496,25 +496,25 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The details about the outbound rules.</p>
+         * <p>The information about the outbound rules.</p>
          */
         @NameInMap("EgressRules")
         public java.util.List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersEgressRules> egressRules;
 
         /**
-         * <p>The details about the inbound rules.</p>
+         * <p>The information about the inbound rules.</p>
          */
         @NameInMap("IngressRules")
         public java.util.List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersIngressRules> ingressRules;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the resource group to which the traffic mirror session belongs.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The list of tags.</p>
+         * <p>The tag list.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersTags> tags;
@@ -526,13 +526,13 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         public String trafficMirrorFilterDescription;
 
         /**
-         * <p>The ID of the traffic mirror filter.</p>
+         * <p>The ID of the filter.</p>
          */
         @NameInMap("TrafficMirrorFilterId")
         public String trafficMirrorFilterId;
 
         /**
-         * <p>The name of the filter.</p>
+         * <p>The filter name.</p>
          */
         @NameInMap("TrafficMirrorFilterName")
         public String trafficMirrorFilterName;

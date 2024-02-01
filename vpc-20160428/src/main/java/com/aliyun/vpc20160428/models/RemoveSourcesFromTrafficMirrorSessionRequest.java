@@ -47,6 +47,9 @@ public class RemoveSourcesFromTrafficMirrorSessionRequest extends TeaModel {
     @NameInMap("TrafficMirrorSessionId")
     public String trafficMirrorSessionId;
 
+    /**
+     * <p>The ID of the traffic mirror source to be deleted. Maximum value of N: 10.</p>
+     */
     @NameInMap("TrafficMirrorSourceIds")
     public java.util.List<String> trafficMirrorSourceIds;
 

@@ -32,6 +32,11 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
+    /**
+     * <p>The ID of the gateway route table associated with the IPv6 gateway.</p>
+     * <br>
+     * <p>>  This parameter is available only when the IPv6 gateway is associated with a gateway route table.</p>
+     */
     @NameInMap("GatewayRouteTableId")
     public String gatewayRouteTableId;
 

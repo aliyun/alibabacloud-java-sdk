@@ -11,9 +11,9 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     public String associatedInstanceId;
 
     /**
-     * <p>The type of the instance that is assigned the IPv6 address.</p>
+     * <p>The type of instance associated with the IPv6 address. Valid values:</p>
      * <br>
-     * <p>Set the value to **EcsInstance**, which specifies an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC). This is the default value.</p>
+     * <p>**EcsInstance**: Elastic Compute Service (ECS) instance in a virtual private cloud (VPC).</p>
      */
     @NameInMap("AssociatedInstanceType")
     public String associatedInstanceType;
@@ -86,6 +86,9 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the IPv6 gateway belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -95,6 +98,9 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tag list.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeIpv6AddressesRequestTag> tag;
 
@@ -268,9 +274,21 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     }
 
     public static class DescribeIpv6AddressesRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length. It can be an empty string. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+         * <br>
+         * <p>Each tag key corresponds to one tag value. You can specify at most 20 tag values at a time.</p>
+         */
         @NameInMap("Value")
         public String value;
 

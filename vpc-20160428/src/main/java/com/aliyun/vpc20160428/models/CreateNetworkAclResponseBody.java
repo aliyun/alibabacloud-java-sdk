@@ -17,7 +17,7 @@ public class CreateNetworkAclResponseBody extends TeaModel {
     public String networkAclId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -77,31 +77,31 @@ public class CreateNetworkAclResponseBody extends TeaModel {
         public String networkAclEntryName;
 
         /**
-         * <p>The action that is performed on network traffic that matches the rule. Valid values:</p>
+         * <p>The action to be performed on network traffic that matches the rule. Valid values:</p>
          * <br>
-         * <p>- **accept**: allows the network traffic.</p>
-         * <p>- **drop**: blocks the network traffic.</p>
+         * <p>*   **accept**</p>
+         * <p>*   **drop**</p>
          */
         @NameInMap("Policy")
         public String policy;
 
         /**
-         * <p>The destination port range of the outbound rule. </p>
+         * <p>The destination port range of the outbound traffic.</p>
          * <br>
-         * <p>- If **Protocol** of the outbound rule is set to **all**, **icmp**, or **gre**, the port range is **-1/-1**, which indicates all ports.</p>
-         * <p>- If **Protocol** of the outbound rule is set to **tcp** or **udp**, the port range is in the following format: **1/200** or **80/80**. 1/200 indicates port 1 to port 200. 80/80 indicates port 80. Valid values for a port: **1** to **65535**.</p>
+         * <p>*   If the **protocol** of the outbound rule is set to **all**, **icmp**, or **gre**, the port range is -1/-1, which specified all ports.</p>
+         * <p>*   If the **protocol** of the outbound rule is set to **tcp** or **udp**, set the port range in the following format: **1/200** or **80/80**, which specifies port 1 to port 200 or port 80. Valid values for a port: **1** to **65535**.</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
-         * <p>The protocol type. Valid values:</p>
+         * <p>The protocol. Valid values:</p>
          * <br>
-         * <p>- **icmp**: ICMP</p>
-         * <p>- **gre**: GRE</p>
-         * <p>- **tcp**: TCP</p>
-         * <p>- **udp**: UDP</p>
-         * <p>- **all**: all protocols</p>
+         * <p>*   **icmp**</p>
+         * <p>*   **gre**</p>
+         * <p>*   **tcp**</p>
+         * <p>*   **udp**</p>
+         * <p>*   **all**</p>
          */
         @NameInMap("Protocol")
         public String protocol;
@@ -208,31 +208,31 @@ public class CreateNetworkAclResponseBody extends TeaModel {
         public String networkAclEntryName;
 
         /**
-         * <p>The action that is performed on network traffic that matches the rule. Valid values:</p>
+         * <p>The action to be performed on network traffic that matches the rule. Valid values:</p>
          * <br>
-         * <p>*   **accept**: allows the network traffic.</p>
-         * <p>*   **drop**: blocks the network traffic.</p>
+         * <p>*   **accept**</p>
+         * <p>*   **drop**</p>
          */
         @NameInMap("Policy")
         public String policy;
 
         /**
-         * <p>The destination port range of the inbound rule.</p>
+         * <p>The destination port range of the inbound traffic.</p>
          * <br>
-         * <p>*   If **Protocol** of the inbound rule is set to **all**, **icmp**, or **gre**, the port range is **-1/-1**, which indicates all ports.</p>
-         * <p>*   If **Protocol** of the inbound rule is set to **tcp** or **udp**, the port range is in the following format: **1/200** or **80/80**. 1/200 indicates port 1 to port 200. 80/80 indicates port 80. Valid values for a port: **1** to **65535**.</p>
+         * <p>*   If the **protocol** of the inbound rule is set to **all**, **icmp**, or **gre**, the port range is -1/-1, which specifies all ports.</p>
+         * <p>*   If the **protocol** of the inbound rule is set to **tcp** or **udp**, set the port range in the following format: **1/200** or **80/80**, which specifies port 1 to port 200 or port 80. Valid ports: **1** to **65535**.</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
-         * <p>The protocol type. Valid values:</p>
+         * <p>The protocol. Valid values:</p>
          * <br>
-         * <p>*   **icmp**: ICMP</p>
-         * <p>*   **gre**: GRE</p>
-         * <p>*   **tcp**: TCP</p>
-         * <p>*   **udp**: UDP</p>
-         * <p>*   **all**: all protocols</p>
+         * <p>*   **icmp**</p>
+         * <p>*   **gre**</p>
+         * <p>*   **tcp**</p>
+         * <p>*   **udp**</p>
+         * <p>*   **all**</p>
          */
         @NameInMap("Protocol")
         public String protocol;
@@ -333,7 +333,7 @@ public class CreateNetworkAclResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the associated resource.</p>
+         * <p>The type of resource with which you want to associate the network ACL.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -341,9 +341,9 @@ public class CreateNetworkAclResponseBody extends TeaModel {
         /**
          * <p>The association status of the resource. Valid values:</p>
          * <br>
-         * <p>- **BINDED**: The resource is associated with the network ACL.</p>
-         * <p>- **BINDING**: The resource is being associated with the network ACL.</p>
-         * <p>- **UNBINDING**: The resource is disassociated from the network ACL.</p>
+         * <p>*   **BINDED**</p>
+         * <p>*   **BINDING**</p>
+         * <p>*   **UNBINDING**</p>
          */
         @NameInMap("Status")
         public String status;
@@ -412,13 +412,13 @@ public class CreateNetworkAclResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The details about the outbound rule.</p>
+         * <p>The outbound rules.</p>
          */
         @NameInMap("EgressAclEntries")
         public CreateNetworkAclResponseBodyNetworkAclAttributeEgressAclEntries egressAclEntries;
 
         /**
-         * <p>The details about the inbound rule.</p>
+         * <p>The inbound rules.</p>
          */
         @NameInMap("IngressAclEntries")
         public CreateNetworkAclResponseBodyNetworkAclAttributeIngressAclEntries ingressAclEntries;
@@ -442,7 +442,7 @@ public class CreateNetworkAclResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The details about the resource that is associated with the network ACL.</p>
+         * <p>The information about the associated resources.</p>
          */
         @NameInMap("Resources")
         public CreateNetworkAclResponseBodyNetworkAclAttributeResources resources;
@@ -450,8 +450,8 @@ public class CreateNetworkAclResponseBody extends TeaModel {
         /**
          * <p>The status of the network ACL. Valid values:</p>
          * <br>
-         * <p>*   **Available**: The network ACL is available.</p>
-         * <p>*   **Modifying**: The network ACL is being configured.</p>
+         * <p>*   **Available**</p>
+         * <p>*   **Modifying**</p>
          */
         @NameInMap("Status")
         public String status;

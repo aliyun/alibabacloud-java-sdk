@@ -39,7 +39,9 @@ public class CreateTrafficMirrorSessionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The maximum transmission unit (MTU). Default value: **1500**.</p>
+     * <p>The maximum transmission unit.</p>
+     * <br>
+     * <p>Valid values: **64 to 9600**. Default value: **1500**.</p>
      */
     @NameInMap("PacketLength")
     public Integer packetLength;
@@ -70,6 +72,9 @@ public class CreateTrafficMirrorSessionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tag of the resource.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateTrafficMirrorSessionRequestTag> tag;
 
@@ -95,6 +100,9 @@ public class CreateTrafficMirrorSessionRequest extends TeaModel {
     @NameInMap("TrafficMirrorSessionName")
     public String trafficMirrorSessionName;
 
+    /**
+     * <p>The ID of the traffic mirror source. You can specify only an elastic network interface (ENI) as the traffic mirror source. The default value of **N** is **1**, which indicates that you can add only one traffic mirror source to a traffic mirror session.</p>
+     */
     @NameInMap("TrafficMirrorSourceIds")
     public java.util.List<String> trafficMirrorSourceIds;
 
@@ -280,15 +288,17 @@ public class CreateTrafficMirrorSessionRequest extends TeaModel {
 
     public static class CreateTrafficMirrorSessionRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.</p>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value. The format of Tag.N.Value when you call the operation. Valid values of N: 1 to 20. It cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+         * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

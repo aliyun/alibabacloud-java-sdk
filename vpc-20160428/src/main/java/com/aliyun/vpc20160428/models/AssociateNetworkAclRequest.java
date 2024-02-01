@@ -14,6 +14,9 @@ public class AssociateNetworkAclRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
