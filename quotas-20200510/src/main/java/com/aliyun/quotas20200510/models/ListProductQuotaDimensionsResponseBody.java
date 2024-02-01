@@ -79,7 +79,40 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetailDependentDimensions extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetailDependentDimensions build(java.util.Map<String, ?> map) throws Exception {
+            ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetailDependentDimensions self = new ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetailDependentDimensions();
+            return TeaModel.build(map, self);
+        }
+
+        public ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetailDependentDimensions setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetailDependentDimensions setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail extends TeaModel {
+        @NameInMap("DependentDimensions")
+        public java.util.List<ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetailDependentDimensions> dependentDimensions;
+
         /**
          * <p>The name of the quota dimension.</p>
          */
@@ -95,6 +128,14 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         public static ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail build(java.util.Map<String, ?> map) throws Exception {
             ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail self = new ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail();
             return TeaModel.build(map, self);
+        }
+
+        public ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail setDependentDimensions(java.util.List<ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetailDependentDimensions> dependentDimensions) {
+            this.dependentDimensions = dependentDimensions;
+            return this;
+        }
+        public java.util.List<ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetailDependentDimensions> getDependentDimensions() {
+            return this.dependentDimensions;
         }
 
         public ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail setName(String name) {
