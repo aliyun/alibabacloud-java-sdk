@@ -93,6 +93,9 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("Type")
+        public String type;
+
         public static ListProjectFeatureViewsResponseBodyFeatureViews build(java.util.Map<String, ?> map) throws Exception {
             ListProjectFeatureViewsResponseBodyFeatureViews self = new ListProjectFeatureViewsResponseBodyFeatureViews();
             return TeaModel.build(map, self);
@@ -120,6 +123,14 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListProjectFeatureViewsResponseBodyFeatureViews setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
