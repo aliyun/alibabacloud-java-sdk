@@ -4,30 +4,63 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnterpriseSnapshotPolicyRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The list of disks.</p>
+     */
+    @NameInMap("DiskIds")
+    public java.util.List<String> diskIds;
+
+    /**
+     * <p>The maximum number of entries per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The IDs of enterprise-level snapshot policies.</p>
+     */
     @NameInMap("PolicyIds")
     public java.util.List<String> policyIds;
 
+    /**
+     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the enterprise-level snapshot policy belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags of the enterprise-level snapshot policies. Valid values of N: 1 to 20.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeEnterpriseSnapshotPolicyRequestTag> tag;
 
@@ -42,6 +75,14 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public DescribeEnterpriseSnapshotPolicyRequest setDiskIds(java.util.List<String> diskIds) {
+        this.diskIds = diskIds;
+        return this;
+    }
+    public java.util.List<String> getDiskIds() {
+        return this.diskIds;
     }
 
     public DescribeEnterpriseSnapshotPolicyRequest setMaxResults(Integer maxResults) {
@@ -109,9 +150,15 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends TeaModel {
     }
 
     public static class DescribeEnterpriseSnapshotPolicyRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N of the enterprise-level snapshot policy.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N of the enterprise-level snapshot policy.</p>
+         */
         @NameInMap("Value")
         public String value;
 

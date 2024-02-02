@@ -4,18 +4,33 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class UpdateSolutionInstanceAttributeRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the instance.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the instance.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the region where the dedicated block storage cluster resides. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("SolutionInstanceId")
     public String solutionInstanceId;
 

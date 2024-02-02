@@ -4,36 +4,72 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class UpdateEnterpriseSnapshotPolicyRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Snapshot replication destination information.</p>
+     */
     @NameInMap("CrossRegionCopyInfo")
     public UpdateEnterpriseSnapshotPolicyRequestCrossRegionCopyInfo crossRegionCopyInfo;
 
+    /**
+     * <p>The description of the policy.</p>
+     */
     @NameInMap("Desc")
     public String desc;
 
+    /**
+     * <p>The name of the policy.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The id of the policy.</p>
+     */
     @NameInMap("PolicyId")
     public String policyId;
 
+    /**
+     * <p>The region ID . You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which snapshot policy is supported.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Snapshot retention rule.</p>
+     */
     @NameInMap("RetainRule")
     public UpdateEnterpriseSnapshotPolicyRequestRetainRule retainRule;
 
+    /**
+     * <p>The rule for scheduling.</p>
+     */
     @NameInMap("Schedule")
     public UpdateEnterpriseSnapshotPolicyRequestSchedule schedule;
 
+    /**
+     * <p>The special snapshot retention rules.</p>
+     */
     @NameInMap("SpecialRetainRules")
     public UpdateEnterpriseSnapshotPolicyRequestSpecialRetainRules specialRetainRules;
 
+    /**
+     * <p>The status of the policy. Valid values:</p>
+     * <br>
+     * <p>*   **ENABLED**: Enable snapshot policy execution.</p>
+     * <p>*   **DISABLED**: Disable snapshot policy execution.</p>
+     */
     @NameInMap("State")
     public String state;
 
+    /**
+     * <p>Advanced snapshot features.</p>
+     */
     @NameInMap("StorageRule")
     public UpdateEnterpriseSnapshotPolicyRequestStorageRule storageRule;
 
@@ -131,9 +167,15 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends TeaModel {
     }
 
     public static class UpdateEnterpriseSnapshotPolicyRequestCrossRegionCopyInfoRegions extends TeaModel {
+        /**
+         * <p>The region ID. You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions in which async replication is supported.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Number of days to retain the destination snapshot. The range of values is greater than 1.</p>
+         */
         @NameInMap("RetainDays")
         public Integer retainDays;
 
@@ -161,9 +203,19 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends TeaModel {
     }
 
     public static class UpdateEnterpriseSnapshotPolicyRequestCrossRegionCopyInfo extends TeaModel {
+        /**
+         * <p>Whether cross-region replication is enabled. The range of values:</p>
+         * <br>
+         * <p>- true</p>
+         * <br>
+         * <p>- false</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>Destination region information.</p>
+         */
         @NameInMap("Regions")
         public java.util.List<UpdateEnterpriseSnapshotPolicyRequestCrossRegionCopyInfoRegions> regions;
 
@@ -191,12 +243,24 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends TeaModel {
     }
 
     public static class UpdateEnterpriseSnapshotPolicyRequestRetainRule extends TeaModel {
+        /**
+         * <p>Maximum number of retained snapshots.</p>
+         */
         @NameInMap("Number")
         public Integer number;
 
+        /**
+         * <p>The time interval , valid value greater than 1.</p>
+         */
         @NameInMap("TimeInterval")
         public Integer timeInterval;
 
+        /**
+         * <p>The unit of time, valid values:</p>
+         * <br>
+         * <p>- DAYS</p>
+         * <p>- WEEKS</p>
+         */
         @NameInMap("TimeUnit")
         public String timeUnit;
 
@@ -232,6 +296,11 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends TeaModel {
     }
 
     public static class UpdateEnterpriseSnapshotPolicyRequestSchedule extends TeaModel {
+        /**
+         * <p>The time when the policy will to be scheduled. Valid values: Set the parameter in a cron expression.</p>
+         * <br>
+         * <p>For example, you can use `0 0 4 1/1 * ?` to specify 04:00:00 (UTC+8) on the first day of each month.</p>
+         */
         @NameInMap("CronExpression")
         public String cronExpression;
 
@@ -251,12 +320,28 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends TeaModel {
     }
 
     public static class UpdateEnterpriseSnapshotPolicyRequestSpecialRetainRulesRules extends TeaModel {
+        /**
+         * <p>The periodic unit for specially retained snapshots. If configured to WEEKS, it provides special retention for the first snapshot of each week. The retention period is determined by TimeUnit and TimeInterval. The range of values are:</p>
+         * <p>- WEEKS</p>
+         * <p>- MONTHS</p>
+         * <p>- YEARS"</p>
+         */
         @NameInMap("SpecialPeriodUnit")
         public String specialPeriodUnit;
 
+        /**
+         * <p>Retention Time Value. The range of values is greater than 1.</p>
+         */
         @NameInMap("TimeInterval")
         public Integer timeInterval;
 
+        /**
+         * <p>Retention time unit for special snapshots. The range of values:</p>
+         * <br>
+         * <p>- DAYS</p>
+         * <br>
+         * <p>- WEEKS</p>
+         */
         @NameInMap("TimeUnit")
         public String timeUnit;
 
@@ -292,9 +377,18 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends TeaModel {
     }
 
     public static class UpdateEnterpriseSnapshotPolicyRequestSpecialRetainRules extends TeaModel {
+        /**
+         * <p>Indicates whether the special retention is enabled.</p>
+         * <br>
+         * <p>*   true: enable</p>
+         * <p>*   false: disable</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The special retention rules.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<UpdateEnterpriseSnapshotPolicyRequestSpecialRetainRulesRules> rules;
 
@@ -322,6 +416,13 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends TeaModel {
     }
 
     public static class UpdateEnterpriseSnapshotPolicyRequestStorageRule extends TeaModel {
+        /**
+         * <p>Whether to enable the rapid availability of snapshots. The range of values:</p>
+         * <br>
+         * <p>- true</p>
+         * <br>
+         * <p>- false</p>
+         */
         @NameInMap("EnableImmediateAccess")
         public Boolean enableImmediateAccess;
 

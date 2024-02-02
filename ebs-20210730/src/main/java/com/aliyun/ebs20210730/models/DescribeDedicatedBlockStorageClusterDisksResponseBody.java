@@ -100,6 +100,9 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         @NameInMap("BdfId")
         public String bdfId;
 
+        /**
+         * <p>Whether the ESSD AutoPL disk is enabled burst IOPS / BPS. This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).</p>
+         */
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
 
@@ -241,6 +244,10 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         @NameInMap("Portable")
         public Boolean portable;
 
+        /**
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. </p>
+         * <p>>  This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).</p>
+         */
         @NameInMap("ProvisionedIops")
         public Long provisionedIops;
 
@@ -301,6 +308,9 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         @NameInMap("Tags")
         public java.util.List<DescribeDedicatedBlockStorageClusterDisksResponseBodyDisksDiskTags> tags;
 
+        /**
+         * <p>The maximum number of BPS.</p>
+         */
         @NameInMap("Throughput")
         public Long throughput;
 

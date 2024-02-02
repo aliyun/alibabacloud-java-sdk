@@ -306,6 +306,9 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
     }
 
     public static class DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters extends TeaModel {
+        /**
+         * <p>The unique ID (UID) of the Alibaba Cloud account.</p>
+         */
         @NameInMap("AliUid")
         public String aliUid;
 
@@ -345,6 +348,9 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The dedicated block storage cluster enable thin provison.</p>
+         */
         @NameInMap("EnableThinProvision")
         public Boolean enableThinProvision;
 
@@ -379,6 +385,9 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>Oversold ratio of cluster space capacity for creating disk.</p>
+         */
         @NameInMap("SizeOverSoldRatio")
         public Double sizeOverSoldRatio;
 
@@ -393,6 +402,9 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>StorageDomain.</p>
+         */
         @NameInMap("StorageDomain")
         public String storageDomain;
 
