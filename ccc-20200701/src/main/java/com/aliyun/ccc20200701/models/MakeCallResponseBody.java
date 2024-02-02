@@ -94,6 +94,9 @@ public class MakeCallResponseBody extends TeaModel {
         @NameInMap("JobId")
         public String jobId;
 
+        @NameInMap("MediaType")
+        public String mediaType;
+
         @NameInMap("Originator")
         public String originator;
 
@@ -163,6 +166,14 @@ public class MakeCallResponseBody extends TeaModel {
         }
         public String getJobId() {
             return this.jobId;
+        }
+
+        public MakeCallResponseBodyDataCallContextChannelContexts setMediaType(String mediaType) {
+            this.mediaType = mediaType;
+            return this;
+        }
+        public String getMediaType() {
+            return this.mediaType;
         }
 
         public MakeCallResponseBodyDataCallContextChannelContexts setOriginator(String originator) {

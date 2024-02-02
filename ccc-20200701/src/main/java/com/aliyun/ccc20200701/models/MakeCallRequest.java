@@ -19,6 +19,9 @@ public class MakeCallRequest extends TeaModel {
     @NameInMap("MaskedCallee")
     public String maskedCallee;
 
+    @NameInMap("MediaType")
+    public String mediaType;
+
     @NameInMap("Tags")
     public String tags;
 
@@ -71,6 +74,14 @@ public class MakeCallRequest extends TeaModel {
     }
     public String getMaskedCallee() {
         return this.maskedCallee;
+    }
+
+    public MakeCallRequest setMediaType(String mediaType) {
+        this.mediaType = mediaType;
+        return this;
+    }
+    public String getMediaType() {
+        return this.mediaType;
     }
 
     public MakeCallRequest setTags(String tags) {

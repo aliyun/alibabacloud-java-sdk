@@ -323,9 +323,6 @@ public class CoachCallResponseBody extends TeaModel {
         @NameInMap("SignedSkillGroupIdList")
         public java.util.List<String> signedSkillGroupIdList;
 
-        @NameInMap("Uri")
-        public String uri;
-
         @NameInMap("UserId")
         public String userId;
 
@@ -426,14 +423,6 @@ public class CoachCallResponseBody extends TeaModel {
         }
         public java.util.List<String> getSignedSkillGroupIdList() {
             return this.signedSkillGroupIdList;
-        }
-
-        public CoachCallResponseBodyDataUserContext setUri(String uri) {
-            this.uri = uri;
-            return this;
-        }
-        public String getUri() {
-            return this.uri;
         }
 
         public CoachCallResponseBodyDataUserContext setUserId(String userId) {

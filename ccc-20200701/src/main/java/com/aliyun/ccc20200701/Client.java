@@ -5382,6 +5382,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MaskedCallee", request.maskedCallee);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaType)) {
+            query.put("MediaType", request.mediaType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
             query.put("Tags", request.tags);
         }
