@@ -3,7 +3,7 @@ package com.aliyun.xrengine20230313.models;
 
 import com.aliyun.tea.*;
 
-public class SubmitLongTtsTaskResponse extends TeaModel {
+public class LoginHuggingFaceResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class SubmitLongTtsTaskResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public SubmitLongTtsTaskResponseBody body;
+    public LoginHuggingFaceResponseBody body;
 
-    public static SubmitLongTtsTaskResponse build(java.util.Map<String, ?> map) throws Exception {
-        SubmitLongTtsTaskResponse self = new SubmitLongTtsTaskResponse();
+    public static LoginHuggingFaceResponse build(java.util.Map<String, ?> map) throws Exception {
+        LoginHuggingFaceResponse self = new LoginHuggingFaceResponse();
         return TeaModel.build(map, self);
     }
 
-    public SubmitLongTtsTaskResponse setHeaders(java.util.Map<String, String> headers) {
+    public LoginHuggingFaceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class SubmitLongTtsTaskResponse extends TeaModel {
         return this.headers;
     }
 
-    public SubmitLongTtsTaskResponse setStatusCode(Integer statusCode) {
+    public LoginHuggingFaceResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class SubmitLongTtsTaskResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public SubmitLongTtsTaskResponse setBody(SubmitLongTtsTaskResponseBody body) {
+    public LoginHuggingFaceResponse setBody(LoginHuggingFaceResponseBody body) {
         this.body = body;
         return this;
     }
-    public SubmitLongTtsTaskResponseBody getBody() {
+    public LoginHuggingFaceResponseBody getBody() {
         return this.body;
     }
 
