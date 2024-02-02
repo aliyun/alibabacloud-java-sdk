@@ -106,6 +106,9 @@ public class MuteCallResponseBody extends TeaModel {
         @NameInMap("ReleaseReason")
         public String releaseReason;
 
+        @NameInMap("SkillGroupId")
+        public String skillGroupId;
+
         @NameInMap("Timestamp")
         public Long timestamp;
 
@@ -198,6 +201,14 @@ public class MuteCallResponseBody extends TeaModel {
         }
         public String getReleaseReason() {
             return this.releaseReason;
+        }
+
+        public MuteCallResponseBodyDataCallContextChannelContexts setSkillGroupId(String skillGroupId) {
+            this.skillGroupId = skillGroupId;
+            return this;
+        }
+        public String getSkillGroupId() {
+            return this.skillGroupId;
         }
 
         public MuteCallResponseBodyDataCallContextChannelContexts setTimestamp(Long timestamp) {

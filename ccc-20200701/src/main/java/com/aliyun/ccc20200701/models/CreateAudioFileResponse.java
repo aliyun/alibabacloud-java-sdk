@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateAudioFileResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public CreateAudioFileResponseBody body;
 
     public static CreateAudioFileResponse build(java.util.Map<String, ?> map) throws Exception {
