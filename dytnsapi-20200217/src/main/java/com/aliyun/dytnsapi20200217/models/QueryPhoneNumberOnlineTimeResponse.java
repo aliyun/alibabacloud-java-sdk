@@ -3,7 +3,7 @@ package com.aliyun.dytnsapi20200217.models;
 
 import com.aliyun.tea.*;
 
-public class QueryUsageStatisticsByTagIdResponse extends TeaModel {
+public class QueryPhoneNumberOnlineTimeResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class QueryUsageStatisticsByTagIdResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public QueryUsageStatisticsByTagIdResponseBody body;
+    public QueryPhoneNumberOnlineTimeResponseBody body;
 
-    public static QueryUsageStatisticsByTagIdResponse build(java.util.Map<String, ?> map) throws Exception {
-        QueryUsageStatisticsByTagIdResponse self = new QueryUsageStatisticsByTagIdResponse();
+    public static QueryPhoneNumberOnlineTimeResponse build(java.util.Map<String, ?> map) throws Exception {
+        QueryPhoneNumberOnlineTimeResponse self = new QueryPhoneNumberOnlineTimeResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryUsageStatisticsByTagIdResponse setHeaders(java.util.Map<String, String> headers) {
+    public QueryPhoneNumberOnlineTimeResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class QueryUsageStatisticsByTagIdResponse extends TeaModel {
         return this.headers;
     }
 
-    public QueryUsageStatisticsByTagIdResponse setStatusCode(Integer statusCode) {
+    public QueryPhoneNumberOnlineTimeResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class QueryUsageStatisticsByTagIdResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public QueryUsageStatisticsByTagIdResponse setBody(QueryUsageStatisticsByTagIdResponseBody body) {
+    public QueryPhoneNumberOnlineTimeResponse setBody(QueryPhoneNumberOnlineTimeResponseBody body) {
         this.body = body;
         return this;
     }
-    public QueryUsageStatisticsByTagIdResponseBody getBody() {
+    public QueryPhoneNumberOnlineTimeResponseBody getBody() {
         return this.body;
     }
 
