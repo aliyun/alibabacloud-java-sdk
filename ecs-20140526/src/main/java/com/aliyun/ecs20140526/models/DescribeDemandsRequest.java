@@ -5,38 +5,38 @@ import com.aliyun.tea.*;
 
 public class DescribeDemandsRequest extends TeaModel {
     /**
-     * <p>The ID of the filing ticket. If this parameter is specified, other optional request parameters are ignored.</p>
+     * <p>The ID of the demand. If this parameter is specified, other optional request parameters are ignored.</p>
      */
     @NameInMap("DemandId")
     public String demandId;
 
     /**
-     * <p>The status of the filing ticket or resource consumption. Valid values:</p>
+     * <p>The status of the demand or filed resources. Valid values:</p>
      * <br>
-     * <p>*   Creating: The filing ticket is being created.</p>
+     * <p>*   Creating: The demand is being created.</p>
      * <p>*   Active: The filed resources are being supplied.</p>
-     * <p>*   Expired: The filing ticket expires.</p>
+     * <p>*   Expired: The demand has expired.</p>
      * <p>*   Finished: The filed resources are consumed.</p>
-     * <p>*   Refused: The filing request is denied. To view the reason for denial, see the `Comment` parameter in the response.</p>
-     * <p>*   Cancelled: The filing request is canceled.</p>
+     * <p>*   Refused: The demand is rejected. To view the reason for rejection, see the `Comment` parameter in the response.</p>
+     * <p>*   Cancelled: The demand is canceled.</p>
      */
     @NameInMap("DemandStatus")
     public java.util.List<String> demandStatus;
 
     /**
-     * <p>The source of the filed instance. Default value: System. Valid values:</p>
+     * <p>The source of the instance. Valid values:</p>
      * <br>
      * <p>*   Custom: filed on your own.</p>
-     * <p>*   System: filed by Alibaba Cloud.</p>
+     * <p>*   System (default): filed by Alibaba Cloud.</p>
      */
     @NameInMap("DemandType")
     public String demandType;
 
     /**
-     * <p>Specifies whether to perform a dry run. Default value: false. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values: Valid values:</p>
      * <br>
-     * <p>*   true: performs a dry run. The system checks whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are set. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</p>
-     * <p>*   false: performs a dry run and sends the request . If the request passes the dry run, a 2XX HTTP status code is returned and the operation is performed.</p>
+     * <p>*   true: performs only a dry run. The system checks whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</p>
+     * <p>*   false (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -44,20 +44,20 @@ public class DescribeDemandsRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <br>
-     * <p>*   PostPaid: pay-as-you-go</p>
-     * <p>*   PrePaid: subscription</p>
+     * <p>*   PostPaid: pay-as-you-go.</p>
+     * <p>*   PrePaid: subscription.</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     /**
-     * <p>The instance type of the filed instance.</p>
+     * <p>The instance type of the instance.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
-     * <p>The instance family of the filed instance.</p>
+     * <p>The instance family of the instance.</p>
      */
     @NameInMap("InstanceTypeFamily")
     public String instanceTypeFamily;
@@ -69,7 +69,7 @@ public class DescribeDemandsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the page to return. Pages start from page 1.</p>
+     * <p>The page number. Pages start from page 1.</p>
      * <br>
      * <p>Default value: 1.</p>
      */
@@ -77,7 +77,7 @@ public class DescribeDemandsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100.</p>
+     * <p>The number of entries per page. Maximum value: 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -85,7 +85,7 @@ public class DescribeDemandsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region for which to query resources. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -97,13 +97,13 @@ public class DescribeDemandsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDemandsRequestTag> tag;
 
     /**
-     * <p>The ID of the zone for which to query resources. You can call the [DescribeZones](~~25610~~) operation to query the most recent list of zones.</p>
+     * <p>The zone ID of the resource. You can call the [DescribeZones](~~25610~~) operation to query the most recent region list.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -243,13 +243,13 @@ public class DescribeDemandsRequest extends TeaModel {
 
     public static class DescribeDemandsRequestTag extends TeaModel {
         /**
-         * <p>> This parameter is unavailable.</p>
+         * <p>> This parameter is not publicly available.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>> This parameter is unavailable.</p>
+         * <p>> This parameter is not publicly available.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UnassignPrivateIpAddressesRequest extends TeaModel {
     /**
-     * <p>> This parameter is in invitational preview and is unavailable for general users.</p>
+     * <p>IPv4 prefix N. Valid values of N: 1 to 10.</p>
      */
     @NameInMap("Ipv4Prefix")
     public java.util.List<String> ipv4Prefix;
 
     /**
-     * <p>The secondary private IP addresses to unassign.</p>
+     * <p>The ID of the ENI.</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
@@ -23,13 +23,13 @@ public class UnassignPrivateIpAddressesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Secondary private IP address N to unassign Valid values of N: 1 to 10.</p>
+     * <p>Secondary private IP address N to unassign. Valid values of N: 1 to 32.</p>
      */
     @NameInMap("PrivateIpAddress")
     public java.util.List<String> privateIpAddress;
 
     /**
-     * <p>The ID of the ENI.</p>
+     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

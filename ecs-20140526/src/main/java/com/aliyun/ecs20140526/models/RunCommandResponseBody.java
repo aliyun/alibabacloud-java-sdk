@@ -17,7 +17,7 @@ public class RunCommandResponseBody extends TeaModel {
     public String invokeId;
 
     /**
-     * <p>58928</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

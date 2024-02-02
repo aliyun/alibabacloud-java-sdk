@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListPluginStatusResponseBody extends TeaModel {
     /**
-     * <p>The states of the Cloud Assistant plug-ins on the ECS instances.</p>
+     * <p>The states of Cloud Assistant plug-ins on the instances.</p>
      */
     @NameInMap("InstancePluginStatusSet")
     public ListPluginStatusResponseBodyInstancePluginStatusSet instancePluginStatusSet;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     */
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    /**
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -45,6 +51,14 @@ public class ListPluginStatusResponseBody extends TeaModel {
     }
     public ListPluginStatusResponseBodyInstancePluginStatusSet getInstancePluginStatusSet() {
         return this.instancePluginStatusSet;
+    }
+
+    public ListPluginStatusResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListPluginStatusResponseBody setPageNumber(Long pageNumber) {
@@ -101,13 +115,13 @@ public class ListPluginStatusResponseBody extends TeaModel {
         /**
          * <p>The state of the Cloud Assistant plug-in. Valid values:</p>
          * <br>
-         * <p>*   NotInstalled</p>
-         * <p>*   Installed</p>
-         * <p>*   Running</p>
-         * <p>*   Stopped</p>
-         * <p>*   Crashed</p>
-         * <p>*   Removed</p>
-         * <p>*   Unknown</p>
+         * <p>*   NotInstalled: The plug-in is not installed.</p>
+         * <p>*   Installed: The one-time plug-in is installed.</p>
+         * <p>*   Running: The long-running plug-in is running.</p>
+         * <p>*   Stopped: The long-running plug-in is not running.</p>
+         * <p>*   Crashed: The plug-in is abnormal.</p>
+         * <p>*   Removed: The plug-in is uninstalled.</p>
+         * <p>*   Unknown: The state of the plug-in is unknown.</p>
          */
         @NameInMap("PluginStatus")
         public String pluginStatus;
@@ -186,13 +200,13 @@ public class ListPluginStatusResponseBody extends TeaModel {
 
     public static class ListPluginStatusResponseBodyInstancePluginStatusSetInstancePluginStatus extends TeaModel {
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The states of the Cloud Assistant plug-ins.</p>
+         * <p>The queried Cloud Assistant plug-ins.</p>
          */
         @NameInMap("PluginStatusSet")
         public ListPluginStatusResponseBodyInstancePluginStatusSetInstancePluginStatusPluginStatusSet pluginStatusSet;

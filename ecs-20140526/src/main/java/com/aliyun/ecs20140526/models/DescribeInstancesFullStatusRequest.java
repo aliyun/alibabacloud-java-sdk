@@ -11,13 +11,13 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     public DescribeInstancesFullStatusRequestNotBefore notBefore;
 
     /**
-     * <p>The IDs of the event. You can specify up to 100 event IDs in a single request.</p>
+     * <p>The IDs of the system events. You can specify up to 100 event IDs in a single request.</p>
      */
     @NameInMap("EventId")
     public java.util.List<String> eventId;
 
     /**
-     * <p>The type of the system event. This parameter is valid only when the InstanceEventType.N parameter is not specified. Valid values:</p>
+     * <p>The type of the system event. This parameter is valid only when InstanceEventType.N is not specified. Valid values:</p>
      * <br>
      * <p>*   SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</p>
      * <p>*   SystemFailure.Reboot: The instance is restarted due to a system failure.</p>
@@ -64,7 +64,7 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be a positive integer.</p>
+     * <p>The page number. The value must be a positive integer.</p>
      * <br>
      * <p>Default value: 1.</p>
      */
@@ -72,7 +72,7 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -80,7 +80,7 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -94,9 +94,9 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     /**
      * <p>The lifecycle state of the instance. Valid values:</p>
      * <br>
-     * <p>*   Starting</p>
-     * <p>*   Running</p>
-     * <p>*   Stopped</p>
+     * <p>*   Starting: The instance is being started.</p>
+     * <p>*   Running: The instance is running.</p>
+     * <p>*   Stopped: The instance is stopped.</p>
      */
     @NameInMap("Status")
     public String status;
@@ -228,13 +228,13 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
 
     public static class DescribeInstancesFullStatusRequestEventPublishTime extends TeaModel {
         /**
-         * <p>The end of the period during which system events are published. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end of the time range during which system events are published. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          */
         @NameInMap("End")
         public String end;
 
         /**
-         * <p>The beginning of the period during which system events are published. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The beginning of the time range during which system events are published. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          */
         @NameInMap("Start")
         public String start;
@@ -264,13 +264,13 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
 
     public static class DescribeInstancesFullStatusRequestNotBefore extends TeaModel {
         /**
-         * <p>The end of the period during which O\&M tasks related to scheduled system events are executed. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end of the time range during which O\&M tasks related to scheduled system events are executed. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          */
         @NameInMap("End")
         public String end;
 
         /**
-         * <p>The beginning of the period during which O\&M tasks related to scheduled system events are executed. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The beginning of the time range during which O\&M tasks related to scheduled system events are executed. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          */
         @NameInMap("Start")
         public String start;

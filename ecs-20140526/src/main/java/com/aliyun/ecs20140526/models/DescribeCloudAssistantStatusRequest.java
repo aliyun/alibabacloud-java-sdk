@@ -5,16 +5,33 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudAssistantStatusRequest extends TeaModel {
     /**
-     * <p>The IDs of instances.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
+
+    /**
+     * <p>The maximum number of entries per page. If you specify InstanceId, this parameter does not take effect. </p>
+     * <br>
+     * <p>Valid values: 1 to 50. </p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     */
+    @NameInMap("NextToken")
+    public String nextToken;
 
     /**
      * <p>The operating system type of the instance. Valid values:</p>
      * <br>
      * <p>*   Windows</p>
      * <p>*   Linux</p>
+     * <p>*   FreeBSD</p>
      */
     @NameInMap("OSType")
     public String OSType;
@@ -44,7 +61,7 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call [DescribeRegions](~~25609~~) to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -66,6 +83,22 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
     }
     public java.util.List<String> getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeCloudAssistantStatusRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public DescribeCloudAssistantStatusRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeCloudAssistantStatusRequest setOSType(String OSType) {

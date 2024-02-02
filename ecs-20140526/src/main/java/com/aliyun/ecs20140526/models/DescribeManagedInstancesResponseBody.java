@@ -11,6 +11,12 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
     public java.util.List<DescribeManagedInstancesResponseBodyInstances> instances;
 
     /**
+     * <p>The query token returned in the call.</p>
+     */
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    /**
      * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
@@ -45,6 +51,14 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
     }
     public java.util.List<DescribeManagedInstancesResponseBodyInstances> getInstances() {
         return this.instances;
+    }
+
+    public DescribeManagedInstancesResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeManagedInstancesResponseBody setPageNumber(Long pageNumber) {
@@ -210,6 +224,12 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         public String registrationTime;
 
         /**
+         * <p>The ID of the resource group to which the managed instance belongs.</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
          * <p>The tags of the managed instance.</p>
          */
         @NameInMap("Tags")
@@ -330,6 +350,14 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         }
         public String getRegistrationTime() {
             return this.registrationTime;
+        }
+
+        public DescribeManagedInstancesResponseBodyInstances setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeManagedInstancesResponseBodyInstances setTags(java.util.List<DescribeManagedInstancesResponseBodyInstancesTags> tags) {

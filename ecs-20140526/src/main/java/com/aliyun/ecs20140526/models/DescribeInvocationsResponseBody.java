@@ -11,6 +11,12 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     public DescribeInvocationsResponseBodyInvocations invocations;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     */
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    /**
      * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
@@ -45,6 +51,14 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     }
     public DescribeInvocationsResponseBodyInvocations getInvocations() {
         return this.invocations;
+    }
+
+    public DescribeInvocationsResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeInvocationsResponseBody setPageNumber(Long pageNumber) {

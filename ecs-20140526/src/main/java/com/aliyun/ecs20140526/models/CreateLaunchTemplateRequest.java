@@ -17,6 +17,12 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     @NameInMap("AutoReleaseTime")
     public String autoReleaseTime;
 
+    /**
+     * <p>The performance mode of the burstable instance. Valid values:</p>
+     * <br>
+     * <p>*   Standard: the standard mode. For more information, see the "Standard mode" section in [Burstable instances](~~59977~~).</p>
+     * <p>*   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Burstable instances](~~59977~~).</p>
+     */
     @NameInMap("CreditSpecification")
     public String creditSpecification;
 
@@ -256,12 +262,15 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     public java.util.List<String> securityGroupIds;
 
     /**
-     * <p>The protection period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.</p>
+     * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:</p>
      * <br>
-     * <p>*   The following protection periods are available in invitational preview: 2, 3, 4, 5, and 6 hours. If you want to set this parameter to one of these values, submit a ticket.</p>
-     * <p>*   A value of 0 indicates that no protection period is configured for the preemptible instance.</p>
+     * <p>- 1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bidding price with the market price and checks the resource inventory to determine whether to retain or release the instance. </p>
      * <br>
-     * <p>Default value: 1.</p>
+     * <p>- 0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the biding price with the market price and checks the resource inventory to determine whether to retain or release the instance. </p>
+     * <br>
+     * <p>Alibaba Cloud sends ECS system events to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements. </p>
+     * <br>
+     * <p>>If you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo, this parameter takes effect.</p>
      */
     @NameInMap("SpotDuration")
     public Integer spotDuration;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class StopInstancesResponseBody extends TeaModel {
     /**
-     * <p>The error code that is returned for the operation on the ECS instance. When a value of 200 is returned, the operation is successful. For more information, see the "Error codes" section in this topic.</p>
+     * <p>Details about the responses returned for the instances, which contain the status of each instance before and after the operation is called and the operation results.</p>
      */
     @NameInMap("InstanceResponses")
     public StopInstancesResponseBodyInstanceResponses instanceResponses;
 
     /**
-     * <p>Details about the responses returned for the instances, which contain the state of each instance before and after the operation is called, and the results of the operation.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,29 +39,32 @@ public class StopInstancesResponseBody extends TeaModel {
 
     public static class StopInstancesResponseBodyInstanceResponsesInstanceResponse extends TeaModel {
         /**
-         * <p>The error message that is returned for the operation on the ECS instance. When Success is returned, the operation is successful. For more information, see the "Error codes" section in this topic.</p>
+         * <p>The error code that is returned for the operation on the instance. A return value of 200 indicates success. For more information, see the "Error codes" section in this topic.</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The state of the instance before the operation is called.</p>
+         * <p>The current state of the instance.</p>
          */
         @NameInMap("CurrentStatus")
         public String currentStatus;
 
         /**
-         * <p>The current state of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The ECS instance ID.</p>
+         * <p>The error message that is returned for the operation on the instance. A return value of Success indicates that this operation is successful. For more information, see the "Error codes" section in this topic.</p>
          */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The state of the instance before the operation is called.</p>
+         */
         @NameInMap("PreviousStatus")
         public String previousStatus;
 

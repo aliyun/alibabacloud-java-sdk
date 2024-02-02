@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDemandsResponseBody extends TeaModel {
     /**
-     * <p>The filing tickets whose regions meet the filter condition.</p>
+     * <p>The demands in the region.</p>
      */
     @NameInMap("Demands")
     public DescribeDemandsResponseBodyDemands demands;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -29,13 +29,13 @@ public class DescribeDemandsResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of queried filing tickets.</p>
+     * <p>The number of queried demands.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -101,19 +101,19 @@ public class DescribeDemandsResponseBody extends TeaModel {
         public Integer amount;
 
         /**
-         * <p>The ID of the private pool that corresponds to the demand.</p>
+         * <p>需求单对应的私有池ID。</p>
          */
         @NameInMap("PrivatePoolId")
         public String privatePoolId;
 
         /**
-         * <p>The end time when the filed resources are delivered and available. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The end of the time range during which the filed resources are delivered and available. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("SupplyEndTime")
         public String supplyEndTime;
 
         /**
-         * <p>The start time when the filed resources are delivered and available. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The beginning of the time range during which the filed resources are delivered and available. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("SupplyStartTime")
         public String supplyStartTime;
@@ -195,56 +195,56 @@ public class DescribeDemandsResponseBody extends TeaModel {
 
     public static class DescribeDemandsResponseBodyDemandsDemand extends TeaModel {
         /**
-         * <p>The number of instances available for the filed resources.</p>
+         * <p>The number of available instances.</p>
          */
         @NameInMap("AvailableAmount")
         public Integer availableAmount;
 
         /**
-         * <p>The feedback on the denied request for filing resources.</p>
+         * <p>The feedback on the rejected demands.</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
-         * <p>The number of instances to be delivered in the filed resources.</p>
+         * <p>The number of instances to be delivered.</p>
          */
         @NameInMap("DeliveringAmount")
         public Integer deliveringAmount;
 
         /**
-         * <p>The description of the filing ticket.</p>
+         * <p>The description of the demand.</p>
          */
         @NameInMap("DemandDescription")
         public String demandDescription;
 
         /**
-         * <p>The ID of the filing ticket.</p>
+         * <p>The ID of the demand.</p>
          */
         @NameInMap("DemandId")
         public String demandId;
 
         /**
-         * <p>The name of the filing ticket.</p>
+         * <p>The name of the demand.</p>
          */
         @NameInMap("DemandName")
         public String demandName;
 
         /**
-         * <p>The status of the filing ticket or resource consumption. Valid values:</p>
+         * <p>The status of the demand or filed resources. Valid values:</p>
          * <br>
-         * <p>*   Creating: The filing ticket is being created.</p>
+         * <p>*   Creating: The demand is being created.</p>
          * <p>*   Active: The filed resources are being supplied.</p>
-         * <p>*   Expired: The filing ticket expires.</p>
+         * <p>*   Expired: The demand has expired.</p>
          * <p>*   Finished: The filed resources are consumed.</p>
-         * <p>*   Refused: The filing request is denied. For reasons why the request is denied, see the `Comment` parameter in the response.</p>
-         * <p>*   Cancelled: The filing request is canceled. After the filing request is canceled, the delivery status of the resources becomes invalid.</p>
+         * <p>*   Refused: The demand is rejected. To view the reason for rejection, see the `Comment` parameter.</p>
+         * <p>*   Cancelled: The demand is canceled. After the demand is canceled, the delivery status of the resources becomes invalid.</p>
          */
         @NameInMap("DemandStatus")
         public String demandStatus;
 
         /**
-         * <p>The time when the filing ticket was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the demand was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("DemandTime")
         public String demandTime;
@@ -258,8 +258,8 @@ public class DescribeDemandsResponseBody extends TeaModel {
         /**
          * <p>The billing method of the filed resources. Valid values:</p>
          * <br>
-         * <p>*   Prepaid: subscription</p>
-         * <p>*   Postpaid: pay-as-you-go</p>
+         * <p>*   Prepaid: subscription.</p>
+         * <p>*   Postpaid: pay-as-you-go.</p>
          */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
@@ -300,7 +300,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>Details about the delivery status of the filed resources.</p>
+         * <p>The delivery status of the filed resources.</p>
          */
         @NameInMap("SupplyInfos")
         public DescribeDemandsResponseBodyDemandsDemandSupplyInfos supplyInfos;

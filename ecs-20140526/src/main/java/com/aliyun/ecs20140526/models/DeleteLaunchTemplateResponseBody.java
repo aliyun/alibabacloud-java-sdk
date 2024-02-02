@@ -12,6 +12,9 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
 
+    @NameInMap("LaunchTemplateVersionNumbers")
+    public DeleteLaunchTemplateResponseBodyLaunchTemplateVersionNumbers launchTemplateVersionNumbers;
+
     /**
      * <p>The ID of the request.</p>
      */
@@ -31,12 +34,39 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
         return this.launchTemplateId;
     }
 
+    public DeleteLaunchTemplateResponseBody setLaunchTemplateVersionNumbers(DeleteLaunchTemplateResponseBodyLaunchTemplateVersionNumbers launchTemplateVersionNumbers) {
+        this.launchTemplateVersionNumbers = launchTemplateVersionNumbers;
+        return this;
+    }
+    public DeleteLaunchTemplateResponseBodyLaunchTemplateVersionNumbers getLaunchTemplateVersionNumbers() {
+        return this.launchTemplateVersionNumbers;
+    }
+
     public DeleteLaunchTemplateResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class DeleteLaunchTemplateResponseBodyLaunchTemplateVersionNumbers extends TeaModel {
+        @NameInMap("versionNumbers")
+        public java.util.List<Long> versionNumbers;
+
+        public static DeleteLaunchTemplateResponseBodyLaunchTemplateVersionNumbers build(java.util.Map<String, ?> map) throws Exception {
+            DeleteLaunchTemplateResponseBodyLaunchTemplateVersionNumbers self = new DeleteLaunchTemplateResponseBodyLaunchTemplateVersionNumbers();
+            return TeaModel.build(map, self);
+        }
+
+        public DeleteLaunchTemplateResponseBodyLaunchTemplateVersionNumbers setVersionNumbers(java.util.List<Long> versionNumbers) {
+            this.versionNumbers = versionNumbers;
+            return this;
+        }
+        public java.util.List<Long> getVersionNumbers() {
+            return this.versionNumbers;
+        }
+
     }
 
 }

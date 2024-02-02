@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityGroupRuleResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public ModifySecurityGroupRuleResponseBody body;
 
     public static ModifySecurityGroupRuleResponse build(java.util.Map<String, ?> map) throws Exception {

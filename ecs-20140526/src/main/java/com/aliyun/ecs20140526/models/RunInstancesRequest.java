@@ -246,7 +246,7 @@ public class RunInstancesRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>镜像相关属性信息。</p>
+     * <p>The image-related attribute parameters.</p>
      */
     @NameInMap("ImageOptions")
     public RunInstancesRequestImageOptions imageOptions;
@@ -406,7 +406,7 @@ public class RunInstancesRequest extends TeaModel {
     public Integer networkInterfaceQueueNumber;
 
     /**
-     * <p>网络相关属性参数。</p>
+     * <p>The network-related attribute parameters.</p>
      */
     @NameInMap("NetworkOptions")
     public RunInstancesRequestNetworkOptions networkOptions;
@@ -1279,6 +1279,20 @@ public class RunInstancesRequest extends TeaModel {
         @NameInMap("ThreadsPerCore")
         public Integer threadsPerCore;
 
+        /**
+         * <p>The CPU topology type of the instance. Valid values:</p>
+         * <br>
+         * <p>- ContinuousCoreToHTMapping: The Hyper-Threading (HT) technology allows continuous threads to run on the same core in the CPU topology of the instance.</p>
+         * <br>
+         * <p>- DiscreteCoreToHTMapping: The HT technology allows discrete threads to run on the same core in the CPU topology of the instance.</p>
+         * <br>
+         * <p>This parameter is empty by default.</p>
+         * <br>
+         * <p>>This parameter is supported only for specific instance families. For more information about the supported instance families, see [View and modify the CPU topology](~~2636059~~).</p>
+         */
+        @NameInMap("TopologyType")
+        public String topologyType;
+
         public static RunInstancesRequestCpuOptions build(java.util.Map<String, ?> map) throws Exception {
             RunInstancesRequestCpuOptions self = new RunInstancesRequestCpuOptions();
             return TeaModel.build(map, self);
@@ -1306,6 +1320,14 @@ public class RunInstancesRequest extends TeaModel {
         }
         public Integer getThreadsPerCore() {
             return this.threadsPerCore;
+        }
+
+        public RunInstancesRequestCpuOptions setTopologyType(String topologyType) {
+            this.topologyType = topologyType;
+            return this;
+        }
+        public String getTopologyType() {
+            return this.topologyType;
         }
 
     }
@@ -1578,7 +1600,7 @@ public class RunInstancesRequest extends TeaModel {
         public Long provisionedIops;
 
         /**
-         * <p>The ID of the dedicated block storage cluster. If you want to use disks in a dedicated block storage cluster as system disks when you create instances, you must specify this parameter. For more information about dedicated block storage clusters, see [What is Dedicated Block Storage Cluster?](~~208883~~)</p>
+         * <p>The ID of the dedicated block storage cluster. If you want to use disks in a dedicated block storage cluster as system disks when you create instances, you must specify this parameter.</p>
          */
         @NameInMap("StorageClusterId")
         public String storageClusterId;
@@ -2007,11 +2029,11 @@ public class RunInstancesRequest extends TeaModel {
 
     public static class RunInstancesRequestImageOptions extends TeaModel {
         /**
-         * <p>使用该镜像的实例是否支持使用ecs-user用户登录。可能值：</p>
+         * <p>Specifies whether the instance that uses the image support logons from the ecs-user user. Valid values:</p>
          * <br>
-         * <p>- true：是</p>
+         * <p>- true</p>
          * <br>
-         * <p>- false：否</p>
+         * <p>- false</p>
          */
         @NameInMap("LoginAsNonRoot")
         public Boolean loginAsNonRoot;
@@ -2032,6 +2054,18 @@ public class RunInstancesRequest extends TeaModel {
     }
 
     public static class RunInstancesRequestNetworkInterface extends TeaModel {
+        /**
+         * <p>Specifies whether to release ENI N when the instance is released. Valid values:</p>
+         * <br>
+         * <p>- true</p>
+         * <br>
+         * <p>- false</p>
+         * <br>
+         * <p>Default value: true.</p>
+         * <br>
+         * <p>> Note This parameter takes effect only for secondary ENIs.</p>
+         * <p>Example: true.</p>
+         */
         @NameInMap("DeleteOnRelease")
         public Boolean deleteOnRelease;
 
@@ -2085,16 +2119,22 @@ public class RunInstancesRequest extends TeaModel {
         public Long ipv6AddressCount;
 
         /**
-         * <p>网卡指定的物理网卡索引。</p>
+         * <p>The network interface controller (NIC) index specified for an ENI. </p>
          * <br>
-         * <p>您需要注意：</p>
-         * <p>- 只有特定实例规格支持指定物理网卡索引。</p>
-         * <p>- NetworkInterface.N.InstanceType取值为Primary时，对于支持物理网卡的实例规格，如果设置此参数，只能设置为0。</p>
-         * <p>- NetworkInterface.N.InstanceType取值为Secondary或者空值，对于支持物理网卡的实例规格，此参数可以依据实例规格设置。更多信息，请参见[实例规格族](~~25378~~)。</p>
+         * <p>Take note of the following items:</p>
+         * <p>- You can specify NIC indexes only for instances of specific instance types. </p>
+         * <p>- If NetworkInterface.N.InstanceType is set to Primary, set this parameter to 0 for the instance that supports NICs. </p>
+         * <p>- If NetworkInterface.N.InstanceType is set to Secondary or left empty, specify this parameter based on the instance type of the instance that supports NICs. For more information, see [Overview of instance families](~~25378~~).</p>
          */
         @NameInMap("NetworkCardIndex")
         public Integer networkCardIndex;
 
+        /**
+         * <p>The ID of ENI N.</p>
+         * <br>
+         * <p>> Note This parameter takes effect only for secondary ENIs.</p>
+         * <p>Example: eni-bp1gn106np8jhxhj****.</p>
+         */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
@@ -2161,6 +2201,9 @@ public class RunInstancesRequest extends TeaModel {
         @NameInMap("QueuePairNumber")
         public Long queuePairNumber;
 
+        @NameInMap("RxQueueSize")
+        public Integer rxQueueSize;
+
         /**
          * <p>The ID of the security group to which to assign secondary ENI N.</p>
          * <br>
@@ -2186,6 +2229,9 @@ public class RunInstancesRequest extends TeaModel {
          */
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
+
+        @NameInMap("TxQueueSize")
+        public Integer txQueueSize;
 
         /**
          * <p>The ID of the vSwitch to which to connect to ENI N.</p>
@@ -2300,6 +2346,14 @@ public class RunInstancesRequest extends TeaModel {
             return this.queuePairNumber;
         }
 
+        public RunInstancesRequestNetworkInterface setRxQueueSize(Integer rxQueueSize) {
+            this.rxQueueSize = rxQueueSize;
+            return this;
+        }
+        public Integer getRxQueueSize() {
+            return this.rxQueueSize;
+        }
+
         public RunInstancesRequestNetworkInterface setSecurityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
@@ -2316,6 +2370,14 @@ public class RunInstancesRequest extends TeaModel {
             return this.securityGroupIds;
         }
 
+        public RunInstancesRequestNetworkInterface setTxQueueSize(Integer txQueueSize) {
+            this.txQueueSize = txQueueSize;
+            return this;
+        }
+        public Integer getTxQueueSize() {
+            return this.txQueueSize;
+        }
+
         public RunInstancesRequestNetworkInterface setVSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
             return this;
@@ -2328,15 +2390,15 @@ public class RunInstancesRequest extends TeaModel {
 
     public static class RunInstancesRequestNetworkOptions extends TeaModel {
         /**
-         * <p>实例是否开启Jumbo frame特性。参数取值范围：</p>
+         * <p>Specifies whether to enable the Jumbo Frame feature for the instance. Valid values:</p>
          * <br>
-         * <p>- false：不开启Jumbo frame, 该实例下的所有网卡（包括主网卡及辅助网卡）MTU取值为1500。</p>
+         * <p>- false: does not enable the Jumbo Frame feature for the instance. The maximum transmission unit (MTU) values of all primary and secondary elastic network interfaces (ENIs) on the instance are set to 1500. </p>
          * <br>
-         * <p>- true：开启Jumbo frame, 该实例下的所有网卡（包括主网卡及辅助网卡）的MTU取值为8500。</p>
+         * <p>- true: enables the Jumbo Frame feature for the instance. The MTU values of all primary and secondary ENIs on the instance are set to 8500. </p>
          * <br>
-         * <p>默认值：true。</p>
+         * <p>Default value: true. </p>
          * <br>
-         * <p>>只有八代以上部分实例规格支持开启Jumbo frame特性，更多信息，请参见[ECS实例MTU](~~200512~~)。</p>
+         * <p>> Only instances of some 8th-generation or later instance types support the Jumbo Frame feature. For more information, see [MTUs](~~200512~~).</p>
          */
         @NameInMap("EnableJumboFrame")
         public Boolean enableJumboFrame;

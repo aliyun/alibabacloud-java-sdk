@@ -79,7 +79,73 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsagesCapacityReservationUsage extends TeaModel {
+        @NameInMap("AccountId")
+        public String accountId;
+
+        @NameInMap("ServiceName")
+        public String serviceName;
+
+        @NameInMap("UsedAmount")
+        public Integer usedAmount;
+
+        public static DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsagesCapacityReservationUsage build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsagesCapacityReservationUsage self = new DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsagesCapacityReservationUsage();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsagesCapacityReservationUsage setAccountId(String accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public String getAccountId() {
+            return this.accountId;
+        }
+
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsagesCapacityReservationUsage setServiceName(String serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsagesCapacityReservationUsage setUsedAmount(Integer usedAmount) {
+            this.usedAmount = usedAmount;
+            return this;
+        }
+        public Integer getUsedAmount() {
+            return this.usedAmount;
+        }
+
+    }
+
+    public static class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsages extends TeaModel {
+        @NameInMap("CapacityReservationUsage")
+        public java.util.List<DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsagesCapacityReservationUsage> capacityReservationUsage;
+
+        public static DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsages build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsages self = new DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsages();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsages setCapacityReservationUsage(java.util.List<DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsagesCapacityReservationUsage> capacityReservationUsage) {
+            this.capacityReservationUsage = capacityReservationUsage;
+            return this;
+        }
+        public java.util.List<DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsagesCapacityReservationUsage> getCapacityReservationUsage() {
+            return this.capacityReservationUsage;
+        }
+
+    }
+
     public static class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource extends TeaModel {
+        @NameInMap("AvailableAmount")
+        public Integer availableAmount;
+
+        @NameInMap("CapacityReservationUsages")
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsages capacityReservationUsages;
+
         /**
          * <p>The instance type.</p>
          */
@@ -107,6 +173,22 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         public static DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource self = new DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource setAvailableAmount(Integer availableAmount) {
+            this.availableAmount = availableAmount;
+            return this;
+        }
+        public Integer getAvailableAmount() {
+            return this.availableAmount;
+        }
+
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource setCapacityReservationUsages(DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsages capacityReservationUsages) {
+            this.capacityReservationUsages = capacityReservationUsages;
+            return this;
+        }
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsages getCapacityReservationUsages() {
+            return this.capacityReservationUsages;
         }
 
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource setInstanceType(String instanceType) {
@@ -223,6 +305,9 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
          */
         @NameInMap("AllocatedResources")
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResources allocatedResources;
+
+        @NameInMap("CapacityReservationOwnerId")
+        public String capacityReservationOwnerId;
 
         /**
          * <p>The description of the capacity reservation.</p>
@@ -358,6 +443,14 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         }
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResources getAllocatedResources() {
             return this.allocatedResources;
+        }
+
+        public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setCapacityReservationOwnerId(String capacityReservationOwnerId) {
+            this.capacityReservationOwnerId = capacityReservationOwnerId;
+            return this;
+        }
+        public String getCapacityReservationOwnerId() {
+            return this.capacityReservationOwnerId;
         }
 
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItem setDescription(String description) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotGroupsRequest extends TeaModel {
     /**
-     * <p>This parameter is unavailable.</p>
+     * <p>This parameter is not publicly available.</p>
      */
     @NameInMap("AdditionalAttributes")
     public java.util.List<String> additionalAttributes;
@@ -17,9 +17,9 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <br>
-     * <p>Maximum value: 100.</p>
+     * <p>Valid values: 1 to 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */

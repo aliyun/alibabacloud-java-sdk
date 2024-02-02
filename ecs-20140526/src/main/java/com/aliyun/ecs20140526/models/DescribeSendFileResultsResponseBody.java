@@ -11,6 +11,12 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
     public DescribeSendFileResultsResponseBodyInvocations invocations;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     */
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    /**
      * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
@@ -45,6 +51,14 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
     }
     public DescribeSendFileResultsResponseBodyInvocations getInvocations() {
         return this.invocations;
+    }
+
+    public DescribeSendFileResultsResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeSendFileResultsResponseBody setPageNumber(Long pageNumber) {

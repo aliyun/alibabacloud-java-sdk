@@ -10,6 +10,9 @@ public class CreateLaunchTemplateResponseBody extends TeaModel {
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
 
+    /**
+     * <p>The version number of the launch template.</p>
+     */
     @NameInMap("LaunchTemplateVersionNumber")
     public Long launchTemplateVersionNumber;
 

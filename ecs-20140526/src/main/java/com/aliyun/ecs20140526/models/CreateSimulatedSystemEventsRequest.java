@@ -14,7 +14,6 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
      * <p>*   SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</p>
      * <p>*   SystemFailure.Redeploy: The instance is redeployed due to a system error.</p>
      * <p>*   SystemFailure.Stop: The instance is stopped due to a system error.</p>
-     * <p>*</p>
      */
     @NameInMap("EventType")
     public String eventType;

@@ -16,6 +16,22 @@ public class DescribeActivationsRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The maximum number of entries per page.</p>
+     * <br>
+     * <p>Valid values: 1 to 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     */
+    @NameInMap("NextToken")
+    public String nextToken;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -50,6 +66,9 @@ public class DescribeActivationsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the activation code belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -84,6 +103,22 @@ public class DescribeActivationsRequest extends TeaModel {
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public DescribeActivationsRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public DescribeActivationsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeActivationsRequest setOwnerAccount(String ownerAccount) {

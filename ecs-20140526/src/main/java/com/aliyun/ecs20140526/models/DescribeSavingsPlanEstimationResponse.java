@@ -3,25 +3,22 @@ package com.aliyun.ecs20140526.models;
 
 import com.aliyun.tea.*;
 
-public class ImportSnapshotResponse extends TeaModel {
+public class DescribeSavingsPlanEstimationResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
-    public ImportSnapshotResponseBody body;
+    public DescribeSavingsPlanEstimationResponseBody body;
 
-    public static ImportSnapshotResponse build(java.util.Map<String, ?> map) throws Exception {
-        ImportSnapshotResponse self = new ImportSnapshotResponse();
+    public static DescribeSavingsPlanEstimationResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeSavingsPlanEstimationResponse self = new DescribeSavingsPlanEstimationResponse();
         return TeaModel.build(map, self);
     }
 
-    public ImportSnapshotResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeSavingsPlanEstimationResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +26,7 @@ public class ImportSnapshotResponse extends TeaModel {
         return this.headers;
     }
 
-    public ImportSnapshotResponse setStatusCode(Integer statusCode) {
+    public DescribeSavingsPlanEstimationResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +34,11 @@ public class ImportSnapshotResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ImportSnapshotResponse setBody(ImportSnapshotResponseBody body) {
+    public DescribeSavingsPlanEstimationResponse setBody(DescribeSavingsPlanEstimationResponseBody body) {
         this.body = body;
         return this;
     }
-    public ImportSnapshotResponseBody getBody() {
+    public DescribeSavingsPlanEstimationResponseBody getBody() {
         return this.body;
     }
 

@@ -78,7 +78,7 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -98,7 +98,7 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     public String dedicatedHostClusterId;
 
     /**
-     * <p>The name of the dedicated host. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the dedicated host. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("DedicatedHostName")
     public String dedicatedHostName;
@@ -158,7 +158,7 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     public Integer quantity;
 
     /**
-     * <p>The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region in which to create the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -176,7 +176,7 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags of the command.</p>
+     * <p>The tags to add to the dedicated host.</p>
      */
     @NameInMap("Tag")
     public java.util.List<AllocateDedicatedHostsRequestTag> tag;
@@ -434,7 +434,7 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
         /**
          * <p>The key of tag N to add to the dedicated host. Valid values of N: 1 to 20.</p>
          * <br>
-         * <p>The tag value cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;

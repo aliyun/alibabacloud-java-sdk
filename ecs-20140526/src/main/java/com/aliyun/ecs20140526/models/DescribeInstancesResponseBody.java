@@ -114,6 +114,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ThreadsPerCore")
         public Integer threadsPerCore;
 
+        /**
+         * <p>The CPU topology type of the instance. Valid values:</p>
+         * <br>
+         * <p>- ContinuousCoreToHTMapping: Hyper-Threading (HT) continuous mode</p>
+         * <br>
+         * <p>- DiscreteCoreToHTMapping: HT discrete mode</p>
+         */
+        @NameInMap("TopologyType")
+        public String topologyType;
+
         public static DescribeInstancesResponseBodyInstancesInstanceCpuOptions build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstancesInstanceCpuOptions self = new DescribeInstancesResponseBodyInstancesInstanceCpuOptions();
             return TeaModel.build(map, self);
@@ -141,6 +151,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Integer getThreadsPerCore() {
             return this.threadsPerCore;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceCpuOptions setTopologyType(String topologyType) {
+            this.topologyType = topologyType;
+            return this;
+        }
+        public String getTopologyType() {
+            return this.topologyType;
         }
 
     }
@@ -1405,6 +1423,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Integer spotDuration;
 
         /**
+         * <p>The interruption mode of the preemptible instance when the system initiates a preemptible instance interruption operation. Valid values:</p>
+         * <br>
+         * <p>- Terminate: releases the instance. </p>
+         * <br>
+         * <p>- Stop: stops the instance in economical mode.</p>
+         */
+        @NameInMap("SpotInterruptionBehavior")
+        public String spotInterruptionBehavior;
+
+        /**
          * <p>The maximum hourly price of the instance. It can be accurate to three decimal places. This parameter is valid only when the SpotStrategy parameter is set to SpotWithPriceLimit.</p>
          */
         @NameInMap("SpotPriceLimit")
@@ -1903,6 +1931,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Integer getSpotDuration() {
             return this.spotDuration;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setSpotInterruptionBehavior(String spotInterruptionBehavior) {
+            this.spotInterruptionBehavior = spotInterruptionBehavior;
+            return this;
+        }
+        public String getSpotInterruptionBehavior() {
+            return this.spotInterruptionBehavior;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setSpotPriceLimit(Float spotPriceLimit) {

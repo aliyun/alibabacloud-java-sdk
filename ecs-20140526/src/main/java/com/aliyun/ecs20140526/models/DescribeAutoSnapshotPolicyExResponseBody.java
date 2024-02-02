@@ -226,6 +226,9 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         @NameInMap("TimePoints")
         public String timePoints;
 
+        @NameInMap("Type")
+        public String type;
+
         /**
          * <p>The ID of the resource group.</p>
          */
@@ -347,6 +350,14 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         }
         public String getTimePoints() {
             return this.timePoints;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy setVolumeNums(Integer volumeNums) {

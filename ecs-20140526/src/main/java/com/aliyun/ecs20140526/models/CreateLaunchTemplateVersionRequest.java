@@ -17,6 +17,12 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     @NameInMap("AutoReleaseTime")
     public String autoReleaseTime;
 
+    /**
+     * <p>The performance mode of the burstable instance. Valid values:</p>
+     * <br>
+     * <p>*   Standard: the standard mode. For more information, see the "Standard mode" section in [Burstable instances](~~59977~~).</p>
+     * <p>*   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Burstable instances](~~59977~~).</p>
+     */
     @NameInMap("CreditSpecification")
     public String creditSpecification;
 
@@ -718,7 +724,8 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
          * <br>
          * <p>*   cloud: basic disk</p>
          * <p>*   cloud_efficiency: ultra disk</p>
-         * <p>*   cloud_ssd: standard SSD.</p>
+         * <p>*   cloud_ssd: standard SSD</p>
+         * <p>*   cloud_auto: ESSD AutoPL disk</p>
          * <p>*   cloud_essd: enhanced SSD (ESSD). You can use the `SystemDisk.PerformanceLevel` parameter to set the performance level of the ESSD to use as the system disk.</p>
          * <br>
          * <p>For non-I/O optimized instances of a retired instance type, the default value is cloud. For other types of instances, the default value is cloud_efficiency.</p>
@@ -915,7 +922,8 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
          * <br>
          * <p>*   cloud: basic disk</p>
          * <p>*   cloud_efficiency: ultra disk</p>
-         * <p>*   cloud_ssd: standard SSD.</p>
+         * <p>*   cloud_ssd: standard SSD</p>
+         * <p>*   cloud_auto: ESSD AutoPL disk</p>
          * <p>*   cloud_essd: ESSD</p>
          * <br>
          * <p>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</p>

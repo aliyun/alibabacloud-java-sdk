@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateCommandResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the command.</p>
      */
     @NameInMap("CommandId")
     public String commandId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

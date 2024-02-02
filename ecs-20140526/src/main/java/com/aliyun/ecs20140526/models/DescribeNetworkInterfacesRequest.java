@@ -54,27 +54,17 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <br>
-     * <p>Pages start from page 1.</p>
-     * <br>
-     * <p>Default value: 1.</p>
-     * <br>
-     * <p>> This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters to perform a paged query.</p>
+     * <p>>This parameter is no longer used. We recommend that you specify the MaxResults or NextToken parameter for a paged query.</p>
      */
     @NameInMap("PageNumber")
+    @Deprecated
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>Maximum value: 1000.</p>
-     * <br>
-     * <p>Default value: 10.</p>
-     * <br>
-     * <p>> This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
+     * <p>>This parameter is no longer used. We recommend that you specify the MaxResults or NextToken parameter for a paged query.</p>
      */
     @NameInMap("PageSize")
+    @Deprecated
     public Integer pageSize;
 
     /**

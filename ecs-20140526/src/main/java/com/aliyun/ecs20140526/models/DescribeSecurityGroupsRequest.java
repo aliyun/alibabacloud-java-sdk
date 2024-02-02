@@ -131,6 +131,9 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     @NameInMap("SecurityGroupType")
     public String securityGroupType;
 
+    @NameInMap("ServiceManaged")
+    public Boolean serviceManaged;
+
     /**
      * <p>The tags to add to the security groups.</p>
      */
@@ -290,6 +293,14 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     }
     public String getSecurityGroupType() {
         return this.securityGroupType;
+    }
+
+    public DescribeSecurityGroupsRequest setServiceManaged(Boolean serviceManaged) {
+        this.serviceManaged = serviceManaged;
+        return this;
+    }
+    public Boolean getServiceManaged() {
+        return this.serviceManaged;
     }
 
     public DescribeSecurityGroupsRequest setTag(java.util.List<DescribeSecurityGroupsRequestTag> tag) {

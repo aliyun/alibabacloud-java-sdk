@@ -11,7 +11,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets networkInterfaceSets;
 
     /**
-     * <p>The returned pagination token which can be used in the next request to retrieve a new page of results.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -526,6 +526,12 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>Specifies whether to retain the ENI when the associated instance is released. Valid values:</p>
+         * <br>
+         * <p>- true</p>
+         * <p>- false</p>
+         */
         @NameInMap("DeleteOnRelease")
         public Boolean deleteOnRelease;
 
@@ -582,10 +588,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         /**
          * <p>The communication mode of the ENI. Valid values:</p>
          * <br>
-         * <p>*   Standard: the TCP communication mode is used.</p>
-         * <p>*   HighPerformance: enables the Elastic RDMA Interface (ERI) and uses the remote direct memory access (RDMA) communication mode.</p>
+         * <p>*   Standard: uses the TCP communication mode. </p>
+         * <p>*   HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled. </p>
          * <br>
-         * <p>> You can set this parameter to HighPerformance only when the ENI is attached to a c7re RDMA-enhanced instance that resides in Beijing Zone K.</p>
+         * <p>> The parameter can have a value of HighPerformance only when the ENI is attached to a c7re RDMA-enhanced instance that resides in Beijing Zone K.</p>
          */
         @NameInMap("NetworkInterfaceTrafficMode")
         public String networkInterfaceTrafficMode;

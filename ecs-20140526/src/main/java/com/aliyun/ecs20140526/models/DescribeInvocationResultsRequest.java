@@ -5,48 +5,73 @@ import com.aliyun.tea.*;
 
 public class DescribeInvocationResultsRequest extends TeaModel {
     /**
-     * <p>The execution results.</p>
+     * <p>The ID of the command.</p>
      */
     @NameInMap("CommandId")
     public String commandId;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The encoding method of the `Output` response parameter. Valid values:</p>
      * <br>
-     * <p>Maximum value: 50.</p>
+     * <p>*   PlainText: returns the original command content and command output.</p>
+     * <p>*   Base64: returns the Base64-encoded command content and command output.</p>
      * <br>
-     * <p>Default value: 10.</p>
+     * <p>Default value: Base64.</p>
      */
     @NameInMap("ContentEncoding")
     public String contentEncoding;
 
     /**
-     * <p>The information about the tag.</p>
+     * <p>Specifies whether to return the results of historical scheduled executions. Valid values:</p>
+     * <br>
+     * <p>*   true: returns the results of historical scheduled executions. When this parameter is set to true, the `InvokeId` parameter must be set to the ID of a scheduled command task.</p>
+     * <p>*   false: does not return the results of historical scheduled executions.</p>
+     * <br>
+     * <p>Default value: false.</p>
      */
     @NameInMap("IncludeHistory")
     public Boolean includeHistory;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the command execution.</p>
+     * <p>The ID of the command task. You can call the [DescribeInvocations](~~64840~~) operation to query the IDs of all command tasks.</p>
      */
     @NameInMap("InvokeId")
     public String invokeId;
 
     /**
-     * <p>The page number of the page to return.</p>
+     * <p>The execution state of the command task. Valid values:</p>
      * <br>
-     * <p>Pages start from page 1.</p>
+     * <p>*   Running</p>
+     * <p>*   Finished</p>
+     * <p>*   Failed</p>
+     * <p>*   Stopped</p>
      * <br>
-     * <p>Default value: 1.</p>
+     * <p>> To ensure compatibility, we recommend that you use `InvocationStatus` instead of InvokeRecordStatus.</p>
      */
     @NameInMap("InvokeRecordStatus")
     public String invokeRecordStatus;
+
+    /**
+     * <p>The maximum number of entries per page. </p>
+     * <br>
+     * <p>Valid values: 1 to 50. </p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     */
+    @NameInMap("NextToken")
+    public String nextToken;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -55,25 +80,33 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the command.</p>
+     * <p>The page number.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The ID of the container.</p>
+     * <p>The number of entries per page.</p>
+     * <br>
+     * <p>Valid values: 1 to 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the user who ran the command on the instance.</p>
+     * <p>The ID of the resource group. After you set this parameter, command execution results in the specified resource group are queried.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -85,25 +118,7 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The error code returned when the command cannot be sent or run. Valid values:</p>
-     * <br>
-     * <p>*   If this parameter is empty, the command is run normally.</p>
-     * <p>*   InstanceNotExists: The specified instance does not exist is released.</p>
-     * <p>*   InstanceReleased: The instance was released while the command was being run on the instance.</p>
-     * <p>*   InstanceNotRunning: The instance is not in the Running state while the command is being run.</p>
-     * <p>*   CommandNotApplicable: The command is not applicable to the specified instance.</p>
-     * <p>*   AccountNotExists: The specified account does not exist.</p>
-     * <p>*   DirectoryNotExists: The specified directory does not exist.</p>
-     * <p>*   BadCronExpression: The cron expression used to specify the execution time is invalid.</p>
-     * <p>*   ClientNotRunning: The Cloud Assistant client is not running.</p>
-     * <p>*   ClientNotResponse: The Cloud Assistant client is not responding.</p>
-     * <p>*   ClientIsUpgrading: The Cloud Assistant client is being upgraded.</p>
-     * <p>*   ClientNeedUpgrade: The Cloud Assistant client needs to be upgraded.</p>
-     * <p>*   DeliveryTimeout: The request to send the command timed out.</p>
-     * <p>*   ExecutionTimeout: The command execution timed out.</p>
-     * <p>*   ExecutionException: An exception occurred while the command was being run.</p>
-     * <p>*   ExecutionInterrupted: The execution was interrupted.</p>
-     * <p>*   ExitCodeNonzero: The command execution is complete, but the exit code is not 0.</p>
+     * <p>The tags of the command task.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeInvocationResultsRequestTag> tag;
@@ -159,6 +174,22 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     }
     public String getInvokeRecordStatus() {
         return this.invokeRecordStatus;
+    }
+
+    public DescribeInvocationResultsRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public DescribeInvocationResultsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeInvocationResultsRequest setOwnerAccount(String ownerAccount) {
@@ -235,13 +266,19 @@ public class DescribeInvocationResultsRequest extends TeaModel {
 
     public static class DescribeInvocationResultsRequestTag extends TeaModel {
         /**
-         * <p>The ID of the instance</p>
+         * <p>The key of tag N of the command task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
+         * <br>
+         * <p>The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The execution state of the command.</p>
+         * <p>The value of tag N of the command task. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;
