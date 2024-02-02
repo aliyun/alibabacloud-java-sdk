@@ -18,6 +18,9 @@ public class CreateDedicatedBlockStorageClusterRequest extends TeaModel {
     @NameInMap("Capacity")
     public Long capacity;
 
+    /**
+     * <p>This parameter is no longer used.</p>
+     */
     @NameInMap("DbscId")
     @Deprecated
     public String dbscId;
@@ -28,9 +31,18 @@ public class CreateDedicatedBlockStorageClusterRequest extends TeaModel {
     @NameInMap("DbscName")
     public String dbscName;
 
+    /**
+     * <p>The specific number of PeriodUnit.</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <p>The unit of the subscription duration for the dedicated block storage cluster,</p>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   **Month**</p>
+     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
@@ -40,9 +52,15 @@ public class CreateDedicatedBlockStorageClusterRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which to assign the dedicated block storage cluster.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The resource tags. You can specify up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateDedicatedBlockStorageClusterRequestTag> tag;
 
@@ -145,9 +163,21 @@ public class CreateDedicatedBlockStorageClusterRequest extends TeaModel {
     }
 
     public static class CreateDedicatedBlockStorageClusterRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N used for exact search of EBS resources. The tag key must be 1 to 128 characters in length. Valid values of N: 1 to 20.</p>
+         * <br>
+         * <p>The `Tag.N` parameter pair (Tag.N.Key and Tag.N.Value) is used for exact search of EBS resources that have specified tags added. Each tag is a key-value pair.</p>
+         * <br>
+         * <p>*   If you specify only `Tag.N.Key`, all EBS resources whose tags contain the specified tag key are returned.</p>
+         * <p>*   If you specify only `Tag.N.Value`, the `InvalidParameter.TagValue` error is returned.</p>
+         * <p>*   If you specify multiple tag key-value pairs at the same time, only EBS resources that match all tag key-value pairs are returned.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N to add to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:` or contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

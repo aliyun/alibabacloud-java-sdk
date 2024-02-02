@@ -4,12 +4,21 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricDataResponseBody extends TeaModel {
+    /**
+     * <p>The disk monitoring data.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeMetricDataResponseBodyDataList> dataList;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of data entries queried.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,9 +52,15 @@ public class DescribeMetricDataResponseBody extends TeaModel {
     }
 
     public static class DescribeMetricDataResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The datapoints that consist of consecutive timestamps in seconds and metric values that were recorded at these time points.</p>
+         */
         @NameInMap("Datapoints")
         public Object datapoints;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Labels")
         public Object labels;
 

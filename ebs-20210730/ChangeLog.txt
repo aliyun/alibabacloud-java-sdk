@@ -1,3 +1,14 @@
+2024-02-02 Version: 2.0.0
+- Support API QueryDedicatedBlockStorageClusterInventoryData.
+- Delete API StartDiskMonitor.
+- Delete API StopDiskMonitor.
+- Update API BindEnterpriseSnapshotPolicyupdate response param.
+- Update API DescribeEnterpriseSnapshotPolicyadd DiskIds param.
+update Tag param.
+update response param.
+- Update API UnbindEnterpriseSnapshotPolicyupdate response param.
+
+
 2024-01-03 Version: 1.5.0
 - Generated java 2021-07-30 for ebs.
 
