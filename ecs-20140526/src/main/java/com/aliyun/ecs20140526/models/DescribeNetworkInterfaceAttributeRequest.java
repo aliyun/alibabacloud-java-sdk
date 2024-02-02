@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     /**
-     * <p>The attributes of the ENI.</p>
+     * <p>The attribute of the ENI. Valid values:</p>
+     * <br>
+     * <p>attachment: attachment information about the ENI </p>
+     * <br>
+     * <p>>This parameter is in invitational preview and is not publicly available.</p>
      */
     @NameInMap("Attribute")
     public String attribute;
@@ -35,7 +39,7 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>> This parameter is unavailable.</p>
+     * <p>>  This parameter is unavailable.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeNetworkInterfaceAttributeRequestTag> tag;
@@ -111,13 +115,13 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeRequestTag extends TeaModel {
         /**
-         * <p>> This parameter is unavailable.</p>
+         * <p>>  This parameter is unavailable.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>> This parameter is unavailable.</p>
+         * <p>>  This parameter is unavailable.</p>
          */
         @NameInMap("Value")
         public String value;

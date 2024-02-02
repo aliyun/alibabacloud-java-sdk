@@ -63,7 +63,7 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The charged amount.</p>
+         * <p>The cost value.</p>
          */
         @NameInMap("Fee")
         public String fee;

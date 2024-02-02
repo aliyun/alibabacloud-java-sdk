@@ -35,10 +35,26 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public String invokeId;
 
     /**
+     * <p>The maximum number of entries per page. </p>
+     * <br>
+     * <p>Valid values: 1 to 50. </p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    /**
      * <p>The name of the file whose sending records you want to query.</p>
      */
     @NameInMap("Name")
     public String name;
+
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     */
+    @NameInMap("NextToken")
+    public String nextToken;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -119,12 +135,28 @@ public class DescribeSendFileResultsRequest extends TeaModel {
         return this.invokeId;
     }
 
+    public DescribeSendFileResultsRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
     public DescribeSendFileResultsRequest setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
+    }
+
+    public DescribeSendFileResultsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeSendFileResultsRequest setOwnerAccount(String ownerAccount) {

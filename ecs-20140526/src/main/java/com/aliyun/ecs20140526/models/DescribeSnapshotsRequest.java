@@ -8,17 +8,17 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public java.util.List<DescribeSnapshotsRequestFilter> filter;
 
     /**
-     * <p>The type of the snapshot. Valid values:</p>
+     * <p>The category of the snapshot. Valid values:</p>
      * <br>
      * <p>*   Standard: normal snapshot</p>
      * <p>*   Flash: local snapshot</p>
      * <br>
-     * <p>The local snapshot feature is replaced by the instant access feature. When you configure this parameter, take note of the following items:</p>
+     * <p>The local snapshot feature is replaced by the instant access feature. When you specify this parameter, take note of the following items:</p>
      * <br>
      * <p>*   If you have used local snapshots before December 14, 2020, you can use this parameter.</p>
      * <p>*   If you have not used local snapshots before December 14, 2020, you cannot use this parameter.</p>
      * <br>
-     * <p>> This parameter will be deprecated in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+     * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
      */
     @NameInMap("Category")
     public String category;
@@ -57,7 +57,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String KMSKeyId;
 
     /**
-     * <p>The maximum number of entries per page. Maximum value: 1 to 100.</p>
+     * <p>The maximum number of entries per page. Valid values: 1 to 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -77,7 +77,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The page number. Page starts from page 1.</p>
      * <br>
      * <p>Default value: 1.</p>
      */
@@ -143,10 +143,10 @@ public class DescribeSnapshotsRequest extends TeaModel {
     /**
      * <p>The type of the source disk. Valid values:</p>
      * <br>
-     * <p>*   System: system disk</p>
+     * <p>*   system: system disk</p>
      * <p>*   data: data disk</p>
      * <br>
-     * <p>> The value of this parameter is case-insensitive.</p>
+     * <p>>  The value of this parameter is not case-sensitive.</p>
      */
     @NameInMap("SourceDiskType")
     public String sourceDiskType;
@@ -163,7 +163,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags of the snapshot.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeSnapshotsRequestTag> tag;
@@ -422,15 +422,15 @@ public class DescribeSnapshotsRequest extends TeaModel {
 
     public static class DescribeSnapshotsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the snapshot. Valid values of N: 1 to 20.</p>
+         * <p>The key of tag N of the snapshot. Valid values of N: 1 to 20</p>
          * <br>
-         * <p>Up to 1,000 resources that match the tags specified can be returned in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added are returned. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added are returned. To query more than 1,000 resources with the specified tags, call the [ListTagResources](~~110425~~) operation.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N to add to the snapshot. Valid values of N: 1 to 20.</p>
+         * <p>The value of tag N of the snapshot. Valid values of N: 1 to 20.</p>
          */
         @NameInMap("Value")
         public String value;

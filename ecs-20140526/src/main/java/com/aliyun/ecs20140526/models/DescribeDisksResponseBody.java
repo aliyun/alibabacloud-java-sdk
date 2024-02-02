@@ -634,6 +634,12 @@ public class DescribeDisksResponseBody extends TeaModel {
         @NameInMap("Throughput")
         public Integer throughput;
 
+        @NameInMap("ThroughputRead")
+        public Integer throughputRead;
+
+        @NameInMap("ThroughputWrite")
+        public Integer throughputWrite;
+
         /**
          * <p>The disk type. Valid values:</p>
          * <br>
@@ -1004,6 +1010,22 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
         public Integer getThroughput() {
             return this.throughput;
+        }
+
+        public DescribeDisksResponseBodyDisksDisk setThroughputRead(Integer throughputRead) {
+            this.throughputRead = throughputRead;
+            return this;
+        }
+        public Integer getThroughputRead() {
+            return this.throughputRead;
+        }
+
+        public DescribeDisksResponseBodyDisksDisk setThroughputWrite(Integer throughputWrite) {
+            this.throughputWrite = throughputWrite;
+            return this;
+        }
+        public Integer getThroughputWrite() {
+            return this.throughputWrite;
         }
 
         public DescribeDisksResponseBodyDisksDisk setType(String type) {

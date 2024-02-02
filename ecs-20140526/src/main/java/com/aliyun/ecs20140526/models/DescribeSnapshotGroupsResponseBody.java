@@ -19,7 +19,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details of the snapshot-consistent groups.</p>
+     * <p>The snapshot-consistent groups.</p>
      */
     @NameInMap("SnapshotGroups")
     public DescribeSnapshotGroupsResponseBodySnapshotGroups snapshotGroups;
@@ -55,13 +55,13 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
 
     public static class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshotTagsTag extends TeaModel {
         /**
-         * <p>The tag key of each snapshot in the snapshot-consistent group. The default values of Key and Value contain the details of the instance to which the snapshot belongs.</p>
+         * <p>The tag key of the snapshot. The default values of Key and Value contain snapshot source information.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value of each snapshot in the snapshot- consistent group. The default values of Key and Value contain the details of the instance to which the snapshot belongs.</p>
+         * <p>The tag value of the snapshot. The default values of Key and Value contain snapshot source information.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -109,6 +109,12 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshot extends TeaModel {
+        /**
+         * <p>Indicates whether the snapshot can be used to create or roll back disks. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("Available")
         public Boolean available;
 
@@ -116,13 +122,13 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
          * <p>Indicates whether the instant access feature was enabled. Valid values:</p>
          * <br>
          * <p>*   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
-         * <p>*   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature was disabled.</p>
+         * <p>*   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.</p>
          */
         @NameInMap("InstantAccess")
         public Boolean instantAccess;
 
         /**
-         * <p>The retention period of the instant access feature. After the retention period ends, the snapshot is automatically released.</p>
+         * <p>The validity period of the instant access feature. When the period expires, the instant access snapshot is automatically released.</p>
          */
         @NameInMap("InstantAccessRetentionDays")
         public Integer instantAccessRetentionDays;
@@ -155,7 +161,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         public String sourceDiskType;
 
         /**
-         * <p>The tags of the snapshots in the snapshot-consistent group. The default value contains the details of the instance to which the snapshot belongs.</p>
+         * <p>The tags of the snapshot. The default values contain snapshot source information.</p>
          */
         @NameInMap("Tags")
         public DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshotTags tags;
@@ -319,7 +325,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the instance to which the snapshot-consistent group belongs. This parameter has a value only when all disk snapshots in the snapshot-consistent group belong to the same instance. If disk snapshots in the snapshot-consistent group belong to different instances, you can use parameters starting with `Snapshots.Snapshot.Tags.` in the response to view the ID of the instance to which each snapshot in the snapshot-consistent group belongs.</p>
+         * <p>The ID of the instance to which the snapshot-consistent group belongs. This parameter has a value only when all snapshots in the snapshot-consistent group belong to the same instance. If snapshots in the snapshot-consistent group belong to different instances, you can check the response parameters that start with `Snapshots.Snapshot.Tags.` for the ID of the instance to which each snapshot in the snapshot-consistent group belongs.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -331,7 +337,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>> This parameter is unavailable.</p>
+         * <p>>  This parameter is not publicly available.</p>
          */
         @NameInMap("ProgressStatus")
         public String progressStatus;
@@ -349,7 +355,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         public String snapshotGroupId;
 
         /**
-         * <p>Details of the snapshots in the snapshot-consistent group.</p>
+         * <p>The snapshots in the snapshot-consistent group.</p>
          */
         @NameInMap("Snapshots")
         public DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshots snapshots;
@@ -357,9 +363,9 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         /**
          * <p>The state of the snapshot-consistent group. Valid values:</p>
          * <br>
-         * <p>*   progressing: The snapshot-consistent group is being created.</p>
-         * <p>*   accomplished: The snapshot-consistent group is created.</p>
-         * <p>*   failed: The snapshot-consistent group fails to be created.</p>
+         * <p>*   progressing: The snapshot-consistent group was being created.</p>
+         * <p>*   accomplished: The snapshot-consistent group was created.</p>
+         * <p>*   failed: The snapshot-consistent group failed to be created.</p>
          */
         @NameInMap("Status")
         public String status;

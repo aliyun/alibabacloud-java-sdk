@@ -11,6 +11,12 @@ public class DescribeCommandsResponseBody extends TeaModel {
     public DescribeCommandsResponseBodyCommands commands;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     */
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    /**
      * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
@@ -23,7 +29,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -45,6 +51,14 @@ public class DescribeCommandsResponseBody extends TeaModel {
     }
     public DescribeCommandsResponseBodyCommands getCommands() {
         return this.commands;
+    }
+
+    public DescribeCommandsResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeCommandsResponseBody setPageNumber(Long pageNumber) {
@@ -118,13 +132,13 @@ public class DescribeCommandsResponseBody extends TeaModel {
         public String parameterName;
 
         /**
-         * <p>The valid values of the custom enumeration parameter.</p>
+         * <p>The valid values of the custom parameter of the enumeration type.</p>
          */
         @NameInMap("PossibleValues")
         public DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinitionPossibleValues possibleValues;
 
         /**
-         * <p>Indicates whether the custom parameter is required. Valid values:</p>
+         * <p>Indicates whether the custom parameter is required.</p>
          * <br>
          * <p>*   true</p>
          * <p>*   false</p>
@@ -221,13 +235,13 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
     public static class DescribeCommandsResponseBodyCommandsCommandTagsTag extends TeaModel {
         /**
-         * <p>The key of the tag of the command.</p>
+         * <p>The tag key of the command.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The value of the tag of the command.</p>
+         * <p>The tag value of the command.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -283,12 +297,15 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
         /**
          * <p>The Base64-encoded command content.</p>
+         * <br>
+         * <p>*   If you set ContentEncoding to PlainText, the original command content is returned.</p>
+         * <p>*   If you set ContentEncoding to Base64, the Base64-encoded command content is returned.</p>
          */
         @NameInMap("CommandContent")
         public String commandContent;
 
         /**
-         * <p>The command ID.</p>
+         * <p>The ID of the command.</p>
          */
         @NameInMap("CommandId")
         public String commandId;
@@ -300,13 +317,13 @@ public class DescribeCommandsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The command description.</p>
+         * <p>The description of the command.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Indicates whether the custom parameter feature was enabled for the command.</p>
+         * <p>Indicates whether the custom parameter feature is enabled for the command.</p>
          */
         @NameInMap("EnableParameter")
         public Boolean enableParameter;
@@ -318,13 +335,13 @@ public class DescribeCommandsResponseBody extends TeaModel {
         public Integer invokeTimes;
 
         /**
-         * <p>Indicates whether the common command is of the latest version. If multiple common commands from the same provider (`Provider`) belong to the same category and share the same name, these commands are different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.</p>
+         * <p>Indicates whether the common command is of the latest version. If multiple common commands from the same provider (`Provider`) belong to the same category and have the same name, these commands are different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.</p>
          */
         @NameInMap("Latest")
         public Boolean latest;
 
         /**
-         * <p>The command name.</p>
+         * <p>The name of the command.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -336,7 +353,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
         public DescribeCommandsResponseBodyCommandsCommandParameterDefinitions parameterDefinitions;
 
         /**
-         * <p>The custom parameter names that are parsed from the command content specified when the command was being created. If the custom parameter feature is not enabled, an empty list is returned.</p>
+         * <p>The list of custom parameter names that are parsed from the command content specified when the command was being created. If the custom parameter feature is disabled, an empty list is returned.</p>
          */
         @NameInMap("ParameterNames")
         public DescribeCommandsResponseBodyCommandsCommandParameterNames parameterNames;
@@ -347,6 +364,9 @@ public class DescribeCommandsResponseBody extends TeaModel {
         @NameInMap("Provider")
         public String provider;
 
+        /**
+         * <p>The ID of the resource group to which the command belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -357,25 +377,25 @@ public class DescribeCommandsResponseBody extends TeaModel {
         public DescribeCommandsResponseBodyCommandsCommandTags tags;
 
         /**
-         * <p>The timeout period.</p>
+         * <p>The timeout period. Unit: seconds.</p>
          */
         @NameInMap("Timeout")
         public Long timeout;
 
         /**
-         * <p>The command type.</p>
+         * <p>The type of the command.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The version of the common command. If multiple common commands from the same provider (`Provider`) belong to the same category and share the same name, these commands are different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.</p>
+         * <p>The version of the common command. If multiple common commands from the same provider (`Provider`) belong to the same category and have the same name, these commands are different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.</p>
          */
         @NameInMap("Version")
         public Integer version;
 
         /**
-         * <p>The working directory of the command.</p>
+         * <p>The execution path of the command.</p>
          */
         @NameInMap("WorkingDir")
         public String workingDir;

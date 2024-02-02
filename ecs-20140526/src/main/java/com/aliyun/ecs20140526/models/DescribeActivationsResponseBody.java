@@ -11,6 +11,12 @@ public class DescribeActivationsResponseBody extends TeaModel {
     public java.util.List<DescribeActivationsResponseBodyActivationList> activationList;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     */
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    /**
      * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
@@ -45,6 +51,14 @@ public class DescribeActivationsResponseBody extends TeaModel {
     }
     public java.util.List<DescribeActivationsResponseBodyActivationList> getActivationList() {
         return this.activationList;
+    }
+
+    public DescribeActivationsResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeActivationsResponseBody setPageNumber(Long pageNumber) {
@@ -170,6 +184,9 @@ public class DescribeActivationsResponseBody extends TeaModel {
         @NameInMap("RegisteredCount")
         public Integer registeredCount;
 
+        /**
+         * <p>The ID of the resource group to which the activation code belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 

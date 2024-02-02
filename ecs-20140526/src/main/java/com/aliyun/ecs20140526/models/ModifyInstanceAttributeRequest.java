@@ -4,13 +4,16 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceAttributeRequest extends TeaModel {
+    @NameInMap("CpuOptions")
+    public ModifyInstanceAttributeRequestCpuOptions cpuOptions;
+
     /**
      * <p>The performance mode of the burstable instance. Valid values:</p>
      * <br>
-     * <p>*   Standard: standard mode</p>
-     * <p>*   Unlimited: unlimited mode</p>
+     * <p>*   Standard</p>
+     * <p>*   Unlimited</p>
      * <br>
-     * <p>For more information about the performance modes of burstable instances, see [Burstable instances](~~59977~~).</p>
+     * <p>For more information about the performance modes of burstable instances, see [Overview](~~59977~~).</p>
      */
     @NameInMap("CreditSpecification")
     public String creditSpecification;
@@ -18,13 +21,13 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     /**
      * <p>The release protection attribute of the instance. This parameter specifies whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance.</p>
      * <br>
-     * <p>> This parameter is applicable to only pay-as-you-go instances. It can protect instances against manual releases, but not against automatic releases.</p>
+     * <p>>  This parameter is applicable only to pay-as-you-go instances. The release protection attribute can protect instances against manual releases, but not against automatic releases.</p>
      */
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
 
     /**
-     * <p>The instance description. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The instance description. The description must be 2 to 256 characters in length, and cannot start with `http://` or `https://`.</p>
      * <br>
      * <p>This parameter is empty by default.</p>
      */
@@ -32,13 +35,13 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>实例MTU是否开启Jumbo frame通信模式，取值范围：</p>
+     * <p>Specifies whether to enable the Jumbo Frame feature for the MTU of the instance.</p>
      * <br>
-     * <p>-true：开启。</p>
+     * <p>* true</p>
      * <br>
-     * <p>-false：不开启。</p>
+     * <p>* false</p>
      * <br>
-     * <p>目前仅部分规格支持开启Jumbo frame，更多详情，请参见[ECS实例MTU](~~200512~~)。</p>
+     * <p>You can enable the Jumbo Frame feature for only specific instance types. For more information, see [MTUs](~~200512~~).</p>
      */
     @NameInMap("EnableJumboFrame")
     public Boolean enableJumboFrame;
@@ -47,7 +50,7 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
      * <p>The hostname of the instance. Take note of the following items:</p>
      * <br>
      * <p>*   When you modify the hostname of an instance, the instance must not be in the Creating (Pending) or Starting (Starting) state. Otherwise, the new hostname and the configurations in `/etc/hosts` cannot take effect. You can call the [DescribeInstances](~~25506~~) operation to query the state of the instance.</p>
-     * <p>*   After the hostname is modified, you must call the [RebootInstance](~~25502~~) operation for the new hostname to take effect.</p>
+     * <p>*   After you modify the hostname, you must call the [RebootInstance](~~25502~~) operation for the new hostname to take effect.</p>
      * <br>
      * <p>The following limits apply to the hostnames of instances that run different operating systems:</p>
      * <br>
@@ -58,13 +61,13 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The instance name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the instance. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
@@ -84,23 +87,27 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     /**
      * <p>The password of the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:</p>
      * <br>
-     * <p>    ()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/</p>
+     * <p>```</p>
+     * <br>
+     * <p>()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/</p>
+     * <p>                                </p>
+     * <p>```</p>
      * <br>
      * <p>For Windows instances, passwords cannot start with a forward slash (/).</p>
      * <br>
-     * <p>> If the `Password` parameter is specified, we recommend that you send requests over HTTPS to prevent password leaks.</p>
+     * <p>>  For security reasons, we recommend that you use HTTPS to send requests if `Password` is specified.</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
-     * <p>> This parameter is in invitational preview and is not publicly available.</p>
+     * <p>>  This parameter is in invitational preview and is not publicly available.</p>
      */
     @NameInMap("Recyclable")
     public Boolean recyclable;
 
     /**
-     * <p>> This parameter is in invitational preview and is not publicly available.</p>
+     * <p>>  This parameter is in invitational preview and is not publicly available.</p>
      */
     @NameInMap("RemoteConnectionOptions")
     public ModifyInstanceAttributeRequestRemoteConnectionOptions remoteConnectionOptions;
@@ -113,13 +120,13 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
 
     /**
      * <p>The IDs of replacement security groups.</p>
-     * <br>
+     * <p> </p>
      * <p>*   All security group IDs must be unique.</p>
      * <p>*   The instance is moved from the current security groups to the replacement security groups. If you want the instance to remain in the current security groups, you must add the IDs of the current security groups to the list.</p>
      * <p>*   You can move the instance to security groups of a different type. However, the list cannot contain the IDs of both basic and advanced security groups.</p>
-     * <p>*   The specified security group and instance must belong to the same virtual private cloud (VPC).</p>
+     * <p>*   The specified security groups and instance must belong to the same virtual private cloud (VPC).</p>
      * <p>*   The valid values of N are based on the maximum number of security groups to which the instance can belong. For more information, see [Limits](~~25412#SecurityGroupQuota1~~).</p>
-     * <p>*   New security groups become valid for corresponding instances after a short latency.</p>
+     * <p>*   New security groups become valid for the instance after a short latency.</p>
      */
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
@@ -127,7 +134,7 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     /**
      * <p>The user data of the instance. User data must be encoded in Base64.</p>
      * <br>
-     * <p>The size of the user data must be no greater than 16 KB before it is encoded in Base64. We recommend that you do not pass in confidential information such as passwords and private keys in the plaintext format. If you must pass in confidential information, we recommend that you encrypt and Base64-encode the information before you pass it in. Then you can decode and decrypt the information in the same way within the instance.</p>
+     * <p>The size of the user data cannot exceed 16 KB before it is encoded in Base64. We recommend that you do not pass in confidential information such as passwords and private keys in plaintext. If you must pass in confidential information, we recommend that you encrypt and Base64-encode the information before you pass it in. Then, you can decode and decrypt the information in the same way within the instance.</p>
      */
     @NameInMap("UserData")
     public String userData;
@@ -135,6 +142,14 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     public static ModifyInstanceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceAttributeRequest self = new ModifyInstanceAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyInstanceAttributeRequest setCpuOptions(ModifyInstanceAttributeRequestCpuOptions cpuOptions) {
+        this.cpuOptions = cpuOptions;
+        return this;
+    }
+    public ModifyInstanceAttributeRequestCpuOptions getCpuOptions() {
+        return this.cpuOptions;
     }
 
     public ModifyInstanceAttributeRequest setCreditSpecification(String creditSpecification) {
@@ -273,15 +288,46 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
         return this.userData;
     }
 
+    public static class ModifyInstanceAttributeRequestCpuOptions extends TeaModel {
+        /**
+         * <p>The CPU topology type of the instance. Valid values: </p>
+         * <br>
+         * <p>- ContinuousCoreToHTMapping: The Hyper-Threading (HT) technology allows continuous threads to run on the same core in the CPU topology of the instance. </p>
+         * <br>
+         * <p>- DiscreteCoreToHTMapping: The HT technology allows discrete threads to run on the same core in the CPU topology of the instance. </p>
+         * <br>
+         * <p>This parameter is empty by default. </p>
+         * <br>
+         * <p>>- This parameter is supported only by specific instance families. For more information about the supported instance families, see [View and modify the CPU topology](~~2636059~~).</p>
+         * <p>>- Before you specify this parameter, make sure that the instance is in the Stopped state.</p>
+         */
+        @NameInMap("TopologyType")
+        public String topologyType;
+
+        public static ModifyInstanceAttributeRequestCpuOptions build(java.util.Map<String, ?> map) throws Exception {
+            ModifyInstanceAttributeRequestCpuOptions self = new ModifyInstanceAttributeRequestCpuOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyInstanceAttributeRequestCpuOptions setTopologyType(String topologyType) {
+            this.topologyType = topologyType;
+            return this;
+        }
+        public String getTopologyType() {
+            return this.topologyType;
+        }
+
+    }
+
     public static class ModifyInstanceAttributeRequestRemoteConnectionOptions extends TeaModel {
         /**
-         * <p>> This parameter is in invitational preview and is not publicly available.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("Password")
         public String password;
 
         /**
-         * <p>> This parameter is in invitational preview and is not publicly available.</p>
+         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
          */
         @NameInMap("Type")
         public String type;

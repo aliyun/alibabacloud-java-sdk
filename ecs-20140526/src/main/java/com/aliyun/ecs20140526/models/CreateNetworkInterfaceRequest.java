@@ -16,6 +16,12 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to retain the ENI when the associated instance is released. Valid values:</p>
+     * <br>
+     * <p>- true</p>
+     * <p>- false</p>
+     */
     @NameInMap("DeleteOnRelease")
     public Boolean deleteOnRelease;
 
@@ -152,8 +158,12 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("RxQueueSize")
+    public Integer rxQueueSize;
+
     /**
      * <p>The number of private IP addresses to be automatically created by ECS.</p>
+     * <p>Valid values: 1 to 49.</p>
      */
     @NameInMap("SecondaryPrivateIpAddressCount")
     public Integer secondaryPrivateIpAddressCount;
@@ -181,6 +191,9 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
      */
     @NameInMap("Tag")
     public java.util.List<CreateNetworkInterfaceRequestTag> tag;
+
+    @NameInMap("TxQueueSize")
+    public Integer txQueueSize;
 
     /**
      * <p>The ID of the vSwitch with which to associate the ENI. Private IP addresses are assigned to the ENI from within the CIDR block of the vSwitch.</p>
@@ -383,6 +396,14 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public CreateNetworkInterfaceRequest setRxQueueSize(Integer rxQueueSize) {
+        this.rxQueueSize = rxQueueSize;
+        return this;
+    }
+    public Integer getRxQueueSize() {
+        return this.rxQueueSize;
+    }
+
     public CreateNetworkInterfaceRequest setSecondaryPrivateIpAddressCount(Integer secondaryPrivateIpAddressCount) {
         this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
         return this;
@@ -413,6 +434,14 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     }
     public java.util.List<CreateNetworkInterfaceRequestTag> getTag() {
         return this.tag;
+    }
+
+    public CreateNetworkInterfaceRequest setTxQueueSize(Integer txQueueSize) {
+        this.txQueueSize = txQueueSize;
+        return this;
+    }
+    public Integer getTxQueueSize() {
+        return this.txQueueSize;
     }
 
     public CreateNetworkInterfaceRequest setVSwitchId(String vSwitchId) {

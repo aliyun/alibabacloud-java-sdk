@@ -215,12 +215,15 @@ public class DescribePriceRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>The retention period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6</p>
+     * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:</p>
      * <br>
-     * <p>*   The following protection periods are unavailable: 2, 3, 4, 5, and 6 hours. If you want to set this parameter to one of these values, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) and enter the following information: - The specifications and number of the resources. Example: ecs.g6.8xlarge 1000. - The region where the resources reside. Example: China (Beijing). - The period of time during which the resources are used every day. Example: 1:00 to 4: 00 every day.</p>
-     * <p>*   A value of 0 indicates that no protection period is specified for the preemptible instance.</p>
+     * <p>- 1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bidding price with the market price and checks the resource inventory to determine whether to retain or release the instance.</p>
      * <br>
-     * <p>Default value: 1.</p>
+     * <p>- 0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the biding price with the market price and checks the resource inventory to determine whether to retain or release the instance.</p>
+     * <br>
+     * <p>Alibaba Cloud sends ECS system events to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
+     * <br>
+     * <p>>If you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo, this parameter takes effect.</p>
      */
     @NameInMap("SpotDuration")
     public Integer spotDuration;

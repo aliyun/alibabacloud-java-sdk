@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCommandsRequest extends TeaModel {
     /**
-     * <p>The command ID.</p>
+     * <p>The ID of the command.</p>
      */
     @NameInMap("CommandId")
     public String commandId;
 
     /**
-     * <p>The encoding mode of the `CommandContent` and `Output` response parameters. Valid values:</p>
+     * <p>The encoding mode of the `CommandContent` and `Output` values in the response. Valid values:</p>
      * <br>
      * <p>*   PlainText: returns the original command content and command output.</p>
      * <p>*   Base64: returns the Base64-encoded command content and command output.</p>
@@ -22,13 +22,13 @@ public class DescribeCommandsRequest extends TeaModel {
     public String contentEncoding;
 
     /**
-     * <p>> This parameter is deprecated and does not take effect.</p>
+     * <p>The description of the common command. This parameter takes effect and fuzzy search is supported by default only when `Provider` is specified.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>Specifies whether to query only the latest version of common commands if common commands are queried. This parameter does not affect the query for private commands. Valid values:</p>
+     * <p>Specifies whether to query only the latest version of common commands when common commands are queried. This parameter does not affect the query for private commands.</p>
      * <br>
      * <p>*   true: queries only the latest version of common commands.</p>
      * <p>*   false: queries all versions of common commands.</p>
@@ -39,10 +39,26 @@ public class DescribeCommandsRequest extends TeaModel {
     public Boolean latest;
 
     /**
-     * <p>The command name. Partial command names are not supported.</p>
+     * <p>The maximum number of entries per page. </p>
+     * <br>
+     * <p>Valid values: 1 to 50. </p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    /**
+     * <p>The name of the command. If you specify `Provider`, fuzzy search is supported by default.</p>
      */
     @NameInMap("Name")
     public String name;
+
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     */
+    @NameInMap("NextToken")
+    public String nextToken;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -91,6 +107,9 @@ public class DescribeCommandsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the command belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -101,17 +120,17 @@ public class DescribeCommandsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags of the command.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeCommandsRequestTag> tag;
 
     /**
-     * <p>The command type. Valid values:</p>
+     * <p>The type of the command. Valid values:</p>
      * <br>
-     * <p>*   RunBatScript: batch command, applicable to Windows instances.</p>
-     * <p>*   RunPowerShellScript: PowerShell command, applicable to Windows instances.</p>
-     * <p>*   RunShellScript: shell command, applicable to Linux instances.</p>
+     * <p>*   RunBatScript: batch command, applicable to Windows instances</p>
+     * <p>*   RunPowerShellScript: PowerShell command, applicable to Windows instances</p>
+     * <p>*   RunShellScript: shell command, applicable to Linux instances</p>
      */
     @NameInMap("Type")
     public String type;
@@ -153,12 +172,28 @@ public class DescribeCommandsRequest extends TeaModel {
         return this.latest;
     }
 
+    public DescribeCommandsRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
     public DescribeCommandsRequest setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
+    }
+
+    public DescribeCommandsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeCommandsRequest setOwnerAccount(String ownerAccount) {
@@ -253,7 +288,7 @@ public class DescribeCommandsRequest extends TeaModel {
         /**
          * <p>The key of tag N of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the [ListTagResources](~~110425~~) operation.</p>
          * <br>
          * <p>The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          */
@@ -263,7 +298,7 @@ public class DescribeCommandsRequest extends TeaModel {
         /**
          * <p>The value of tag N of the command. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
          * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
+         * <p>It can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

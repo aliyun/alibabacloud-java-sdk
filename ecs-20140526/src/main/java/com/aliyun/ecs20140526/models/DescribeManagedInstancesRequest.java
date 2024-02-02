@@ -29,6 +29,22 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The maximum number of entries per page.</p>
+     * <br>
+     * <p>Valid values: 1 to 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     */
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    /**
      * <p>The operating system type of the managed instance. Valid values:</p>
      * <br>
      * <p>*   windows</p>
@@ -70,6 +86,12 @@ public class DescribeManagedInstancesRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    /**
+     * <p>The ID of the resource group to which the managed instance belongs.</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -120,6 +142,22 @@ public class DescribeManagedInstancesRequest extends TeaModel {
         return this.instanceName;
     }
 
+    public DescribeManagedInstancesRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public DescribeManagedInstancesRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
     public DescribeManagedInstancesRequest setOsType(String osType) {
         this.osType = osType;
         return this;
@@ -166,6 +204,14 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeManagedInstancesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeManagedInstancesRequest setResourceOwnerAccount(String resourceOwnerAccount) {

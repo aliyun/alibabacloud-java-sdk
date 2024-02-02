@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeBandwidthLimitationRequest extends TeaModel {
     /**
-     * <p>The preemption policy for the preemptible or pay-as-you-go instance. Valid values:</p>
+     * <p>The billing method of the instance. For more information, see [Billing overview](~~25398~~). Valid values:</p>
      * <br>
-     * <p>*   NoSpot: The instance is a regular pay-as-you-go instance.</p>
-     * <p>*   SpotWithPriceLimit: The instance is a preemptible instance with user-defined maximum hourly prices.</p>
-     * <p>*   SpotAsPriceGo: The system automatically offers a bid, which is not higher than the pay-as-you-go price for the same instance type.</p>
+     * <p>*   PrePaid: subscription</p>
+     * <p>*   PostPaid: pay-as-you-go</p>
      * <br>
-     * <p>Default value: NoSpot.</p>
-     * <br>
-     * <p>>  This parameter takes effect only when the InstanceChargeType parameter is set to PostPaid.</p>
+     * <p>Default value: PostPaid.</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
+
+    /**
+     * <p>The instance type. For information about the values, see [Instance families](~~25378~~).</p>
+     */
+    @NameInMap("InstanceType")
+    public String instanceType;
 
     /**
      * <p>Specifies the operation for which to query the maximum public bandwidth. Valid values:</p>
@@ -26,12 +29,6 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
      * <p>*   Create: creates an ECS instance.</p>
      * <br>
      * <p>Default value: Create.</p>
-     */
-    @NameInMap("InstanceType")
-    public String instanceType;
-
-    /**
-     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("OperationType")
     public String operationType;
@@ -43,13 +40,15 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>PrePaid</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the resource.</p>
+     * <br>
+     * <p>>  This parameter is required when the OperationType parameter is set to Upgrade or Downgrade.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -61,9 +60,15 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the resource.</p>
+     * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
      * <br>
-     * <p>>  This parameter is required when the OperationType parameter is set to Upgrade or Downgrade.</p>
+     * <p>*   NoSpot: The instance is a regular pay-as-you-go instance.</p>
+     * <p>*   SpotWithPriceLimit: The instance is a preemptible instance with user-defined maximum hourly prices.</p>
+     * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</p>
+     * <br>
+     * <p>Default value: NoSpot.</p>
+     * <br>
+     * <p>>  The SpotStrategy parameter takes effect only when the InstanceChargeType parameter is set to PostPaid.</p>
      */
     @NameInMap("SpotStrategy")
     public String spotStrategy;

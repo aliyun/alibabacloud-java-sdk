@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeregisterManagedInstanceResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The managed instance.</p>
      */
     @NameInMap("Instance")
     public DeregisterManagedInstanceResponseBodyInstance instance;
 
     /**
-     * <p>The ID of the managed instance.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,76 +39,88 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
 
     public static class DeregisterManagedInstanceResponseBodyInstance extends TeaModel {
         /**
-         * <p>The ID of the managed instance.</p>
+         * <p>The activation code ID.</p>
          */
         @NameInMap("ActivationId")
         public String activationId;
 
         /**
-         * <p>The internal IP address of the managed instance.</p>
+         * <p>The version number of Cloud Assistant Agent.</p>
          */
         @NameInMap("AgentVersion")
         public String agentVersion;
 
         /**
-         * <p>The public IP address of the managed instance.</p>
+         * <p>The hostname of the managed instance.</p>
          */
         @NameInMap("Hostname")
         public String hostname;
 
         /**
-         * <p>The hostname of the managed instance.</p>
+         * <p>The managed instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The time when the managed instance was registered.</p>
+         * <p>The name of the managed instance.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The time when the Cloud Assistant task was last executed.</p>
+         * <p>The public IP address of the managed instance.</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
-         * <p>The ID of the activation code.</p>
+         * <p>The internal IP address of the managed instance.</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The number of times that Cloud Assistant tasks were executed on the managed instance.</p>
+         */
         @NameInMap("InvocationCount")
         public Long invocationCount;
 
         /**
-         * <p>Details of the managed instance.</p>
+         * <p>The time when the Cloud Assistant task was last executed.</p>
          */
         @NameInMap("LastInvokedTime")
         public String lastInvokedTime;
 
+        /**
+         * <p>The machine code of the managed instance.</p>
+         */
         @NameInMap("MachineId")
         public String machineId;
 
         /**
-         * <p>The name of the managed instance.</p>
+         * <p>The operating system type of the managed instance.</p>
          */
         @NameInMap("OsType")
         public String osType;
 
         /**
-         * <p>The operating system type of the managed instance.</p>
+         * <p>The version information about the operating system.</p>
          */
         @NameInMap("OsVersion")
         public String osVersion;
 
         /**
-         * <p>The version number of the Cloud Assistant client.</p>
+         * <p>The time when the managed instance was registered.</p>
          */
         @NameInMap("RegistrationTime")
         public String registrationTime;
+
+        /**
+         * <p>The ID of the resource group to which the managed instance belongs.</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         public static DeregisterManagedInstanceResponseBodyInstance build(java.util.Map<String, ?> map) throws Exception {
             DeregisterManagedInstanceResponseBodyInstance self = new DeregisterManagedInstanceResponseBodyInstance();
@@ -217,6 +229,14 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         }
         public String getRegistrationTime() {
             return this.registrationTime;
+        }
+
+        public DeregisterManagedInstanceResponseBodyInstance setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
     }

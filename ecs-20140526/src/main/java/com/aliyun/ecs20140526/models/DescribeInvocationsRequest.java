@@ -84,6 +84,22 @@ public class DescribeInvocationsRequest extends TeaModel {
     @NameInMap("InvokeStatus")
     public String invokeStatus;
 
+    /**
+     * <p>The maximum number of entries per page. </p>
+     * <br>
+     * <p>Valid values: 1 to 50. </p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     */
+    @NameInMap("NextToken")
+    public String nextToken;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -229,6 +245,22 @@ public class DescribeInvocationsRequest extends TeaModel {
     }
     public String getInvokeStatus() {
         return this.invokeStatus;
+    }
+
+    public DescribeInvocationsRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public DescribeInvocationsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeInvocationsRequest setOwnerAccount(String ownerAccount) {

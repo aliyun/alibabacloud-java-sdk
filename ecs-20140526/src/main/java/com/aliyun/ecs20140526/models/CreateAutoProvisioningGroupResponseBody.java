@@ -11,13 +11,13 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
     public String autoProvisioningGroupId;
 
     /**
-     * <p>Details about the instances created by the auto provisioning group. The values of the parameters in this array are returned only when the AutoProvisioningGroupType parameter is set to `instant`.</p>
+     * <p>The instances created by the auto provisioning group. The values of parameters in this array are returned only when AutoProvisioningGroupType is set to `instant`.</p>
      */
     @NameInMap("LaunchResults")
     public CreateAutoProvisioningGroupResponseBodyLaunchResults launchResults;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -90,13 +90,13 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
-         * <p>The IDs of created instances.</p>
+         * <p>The IDs of instances created.</p>
          */
         @NameInMap("InstanceIds")
         public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResultInstanceIds instanceIds;
 
         /**
-         * <p>The instance type.</p>
+         * <p>The instance type of the instance.</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;

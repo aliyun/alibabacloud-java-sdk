@@ -29,7 +29,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details about the snapshots.</p>
+     * <p>The information about the snapshots.</p>
      */
     @NameInMap("Snapshots")
     public DescribeSnapshotsResponseBodySnapshots snapshots;
@@ -149,13 +149,19 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotsResponseBodySnapshotsSnapshot extends TeaModel {
+        /**
+         * <p>Indicates whether the snapshot can be used to create or roll back disks. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("Available")
         public Boolean available;
 
         /**
-         * <p>The type of the snapshot.</p>
+         * <p>The category of the snapshot.</p>
          * <br>
-         * <p>>  This parameter will be deprecated in the future. We recommend that you use `InstantAccess` to ensure future compatibility.</p>
+         * <p>>  This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.</p>
          */
         @NameInMap("Category")
         public String category;
@@ -173,30 +179,30 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the snapshot was encrypted.</p>
+         * <p>Indicates whether the snapshot is encrypted.</p>
          */
         @NameInMap("Encrypted")
         public Boolean encrypted;
 
         /**
-         * <p>Indicates whether the instant access feature is enabled. Valid values:</p>
+         * <p>Indicates whether the instant access feature was enabled. Valid values:</p>
          * <br>
-         * <p>*   true. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
-         * <p>*   false. The snapshot is a normal snapshot for which the instant access feature is disabled.</p>
+         * <p>*   true: The instant access feature was enabled. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
+         * <p>*   false: The instant access feature was disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.</p>
          */
         @NameInMap("InstantAccess")
         public Boolean instantAccess;
 
         /**
-         * <p>The validity period of the instant access feature. The instant access feature is automatically disabled when the specified period expires.</p>
+         * <p>Indicates the validity period of the instant access feature. When the specified period expires, the instant access feature is automatically disabled.</p>
          * <br>
-         * <p>By default, the value of this parameter is the same as the value of the `RetentionDays` parameter.</p>
+         * <p>By default, the value of this parameter is the same as that of `RetentionDays`.</p>
          */
         @NameInMap("InstantAccessRetentionDays")
         public Integer instantAccessRetentionDays;
 
         /**
-         * <p>The ID of the KMS key used for the data disk.</p>
+         * <p>The ID of the Key Management Service (KMS) key used for the data disk.</p>
          */
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
@@ -208,43 +214,46 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String lastModifiedTime;
 
         /**
-         * <p>The product number inherited from Alibaba Cloud Marketplace.</p>
+         * <p>The product code of the Alibaba Cloud Marketplace image.</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
-         * <p>The progress of the snapshot creation task in percentage.</p>
+         * <p>The progress of the snapshot creation task. Unit: percent (%).</p>
          */
         @NameInMap("Progress")
         public String progress;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
         /**
-         * <p>The remaining time that is required to create the snapshot. Unit: seconds.</p>
+         * <p>The remaining time required to create the snapshot. Unit: seconds.</p>
          */
         @NameInMap("RemainTime")
         public Integer remainTime;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The resource group ID to which the snapshot belongs.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The retention period of the automatic snapshot. Unit: day.</p>
+         * <p>The retention period of the automatic snapshot. Unit: days.</p>
          */
         @NameInMap("RetentionDays")
         public Integer retentionDays;
 
         /**
-         * <p>The snapshot ID.</p>
+         * <p>The ID of the snapshot.</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
         /**
-         * <p>The display name of the snapshot. This parameter is returned only if a snapshot display name was specified when the snapshot was created.</p>
+         * <p>The name of the snapshot. This parameter is returned only if a snapshot name was specified when the snapshot was created.</p>
          */
         @NameInMap("SnapshotName")
         public String snapshotName;
@@ -256,17 +265,17 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String snapshotSN;
 
         /**
-         * <p>The type of the snapshot. Valid values:</p>
+         * <p>The type of snapshot. Valid values:</p>
          * <br>
-         * <p>*   auto or timer: automatic snapshot</p>
-         * <p>*   user: manual snapshot</p>
-         * <p>*   all: all snapshot types</p>
+         * <p>*   auto or timer: automatic snapshot.</p>
+         * <p>*   user: manually created snapshot.</p>
+         * <p>*   all: all snapshot types.</p>
          */
         @NameInMap("SnapshotType")
         public String snapshotType;
 
         /**
-         * <p>The source disk ID. This parameter is retained even after the source disk is released.</p>
+         * <p>The ID of the source disk. This parameter is retained even after the source disk is released.</p>
          */
         @NameInMap("SourceDiskId")
         public String sourceDiskId;
@@ -293,21 +302,21 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String sourceRegionId;
 
         /**
-         * <p>The source snapshot ID.</p>
+         * <p>The ID of the source snapshot.</p>
          */
         @NameInMap("SourceSnapshotId")
         public String sourceSnapshotId;
 
         /**
-         * <p>The type of the source disk.</p>
+         * <p>The category of the source disk.</p>
          * <br>
-         * <p>> This parameter will be deprecated in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
          */
         @NameInMap("SourceStorageType")
         public String sourceStorageType;
 
         /**
-         * <p>The status of the snapshot. Valid values:</p>
+         * <p>The state of the snapshot. Valid values:</p>
          * <br>
          * <p>*   progressing</p>
          * <p>*   accomplished</p>
@@ -317,13 +326,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tags.</p>
+         * <p>The tags of the snapshot.</p>
          */
         @NameInMap("Tags")
         public DescribeSnapshotsResponseBodySnapshotsSnapshotTags tags;
 
         /**
-         * <p>Indicates whether the snapshot has been used to create custom images or disks. Valid values:</p>
+         * <p>Indicates whether the snapshot has been used to create images or disks. Valid values:</p>
          * <br>
          * <p>*   image</p>
          * <p>*   disk</p>
@@ -424,6 +433,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
         public String getProgress() {
             return this.progress;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeSnapshotsResponseBodySnapshotsSnapshot setRemainTime(Integer remainTime) {

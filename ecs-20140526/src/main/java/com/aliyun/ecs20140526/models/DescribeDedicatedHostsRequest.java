@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostsRequest extends TeaModel {
     /**
-     * <p>The ID of the dedicated host cluster to which the dedicated host belongs.</p>
+     * <p>The ID of the dedicated host cluster.</p>
      */
     @NameInMap("DedicatedHostClusterId")
     public String dedicatedHostClusterId;
@@ -23,7 +23,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public String dedicatedHostName;
 
     /**
-     * <p>The dedicated host type. You can call the [DescribeDedicatedHostTypes](~~134240~~) operation to obtain the most recent list of dedicated host types.</p>
+     * <p>The dedicated host type. You can call the [DescribeDedicatedHostTypes](~~134240~~) operation to query the most recent list of dedicated host types.</p>
      */
     @NameInMap("DedicatedHostType")
     public String dedicatedHostType;
@@ -31,8 +31,8 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     /**
      * <p>The reason why the dedicated host is locked. Valid values:</p>
      * <br>
-     * <p>*   financial</p>
-     * <p>*   security</p>
+     * <p>*   financial: The dedicated host is locked due to overdue payments.</p>
+     * <p>*   security: The dedicated host is locked due to security reasons.</p>
      */
     @NameInMap("LockReason")
     public String lockReason;
@@ -70,7 +70,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which the dedicated host belongs. When this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
      * <br>
-     * <p>>  Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     * <p>> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -82,10 +82,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to display socket information. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <p>Whether to display socket capacity information</p>
      */
     @NameInMap("SocketDetails")
     public String socketDetails;
@@ -105,7 +102,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The key of tag N of the dedicated host. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+     * <p>The tags of the dedicated host.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDedicatedHostsRequestTag> tag;
@@ -259,13 +256,13 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
 
     public static class DescribeDedicatedHostsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the dedicated host. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The key of tag N of the dedicated host. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the dedicated host. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The value of tag N to add to the dedicated host. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

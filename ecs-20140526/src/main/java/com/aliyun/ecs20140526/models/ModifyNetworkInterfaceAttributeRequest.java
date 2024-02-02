@@ -4,6 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to retain the ENI when the associated instance is released. Valid values:</p>
+     * <br>
+     * <p>- true</p>
+     * <p>- false</p>
+     */
     @NameInMap("DeleteOnRelease")
     public Boolean deleteOnRelease;
 
@@ -57,6 +63,9 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("RxQueueSize")
+    public Integer rxQueueSize;
+
     /**
      * <p>The ID of security group N to which the secondary ENI finally belongs. If a security group to which the ENI has belonged is in the ID list, that security group is removed from the list. Valid values of N: 1, 2, 3, 4, and 5.</p>
      * <br>
@@ -64,6 +73,9 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
      */
     @NameInMap("SecurityGroupId")
     public java.util.List<String> securityGroupId;
+
+    @NameInMap("TxQueueSize")
+    public Integer txQueueSize;
 
     public static ModifyNetworkInterfaceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyNetworkInterfaceAttributeRequest self = new ModifyNetworkInterfaceAttributeRequest();
@@ -150,12 +162,28 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public ModifyNetworkInterfaceAttributeRequest setRxQueueSize(Integer rxQueueSize) {
+        this.rxQueueSize = rxQueueSize;
+        return this;
+    }
+    public Integer getRxQueueSize() {
+        return this.rxQueueSize;
+    }
+
     public ModifyNetworkInterfaceAttributeRequest setSecurityGroupId(java.util.List<String> securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
     }
     public java.util.List<String> getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    public ModifyNetworkInterfaceAttributeRequest setTxQueueSize(Integer txQueueSize) {
+        this.txQueueSize = txQueueSize;
+        return this;
+    }
+    public Integer getTxQueueSize() {
+        return this.txQueueSize;
     }
 
 }

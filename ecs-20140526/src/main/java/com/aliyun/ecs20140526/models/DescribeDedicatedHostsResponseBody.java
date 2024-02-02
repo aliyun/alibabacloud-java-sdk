@@ -23,7 +23,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -100,31 +100,31 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacitiesSocketCapacity extends TeaModel {
         /**
-         * <p>The remaining capacity of the memory. Unit: GiB.</p>
+         * <p>Remaining memory capacity, unit: GiB.</p>
          */
         @NameInMap("AvailableMemory")
         public Float availableMemory;
 
         /**
-         * <p>The total number of vCPUs.</p>
+         * <p>The remaining number of vCPU cores.</p>
          */
         @NameInMap("AvailableVcpu")
         public Integer availableVcpu;
 
         /**
-         * <p>The socket ID.</p>
+         * <p>The ID of the socket.</p>
          */
         @NameInMap("SocketId")
         public Integer socketId;
 
         /**
-         * <p>The total capacity of the memory. Unit: GiB.</p>
+         * <p>Total memory capacity, unit: GiB.</p>
          */
         @NameInMap("TotalMemory")
         public Float totalMemory;
 
         /**
-         * <p>The number of available vCPUs.</p>
+         * <p>Total number of vCPU cores.</p>
          */
         @NameInMap("TotalVcpu")
         public Integer totalVcpu;
@@ -197,13 +197,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity extends TeaModel {
         /**
-         * <p>The amount of available capacity on the local disks. Unit: GiB.</p>
+         * <p>The amount of available space on the local disks. Unit: GiB.</p>
          */
         @NameInMap("AvailableLocalStorage")
         public Integer availableLocalStorage;
 
         /**
-         * <p>The amount of available memory. Unit: GiB.</p>
+         * <p>The amount of available memory space. Unit: GiB.</p>
          */
         @NameInMap("AvailableMemory")
         public Float availableMemory;
@@ -221,19 +221,19 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public Integer availableVgpus;
 
         /**
-         * <p>The instance family that uses local disks.</p>
+         * <p>The category of local disks.</p>
          */
         @NameInMap("LocalStorageCategory")
         public String localStorageCategory;
 
         /**
-         * <p>The socket capacities.</p>
+         * <p>Socket capacity information.</p>
          */
         @NameInMap("SocketCapacities")
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacities socketCapacities;
 
         /**
-         * <p>The total capacity of local disks. Unit: GiB.</p>
+         * <p>The total capacity of the local disks. Unit: GiB.</p>
          */
         @NameInMap("TotalLocalStorage")
         public Integer totalLocalStorage;
@@ -367,25 +367,25 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance extends TeaModel {
         /**
-         * <p>The ID of the ECS instance.</p>
+         * <p>The ID of the ECS instance created on the dedicated host.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The ID of the ECS instance owner.</p>
+         * <p>ECS实例所有者的用户ID。</p>
          */
         @NameInMap("InstanceOwnerId")
         public Long instanceOwnerId;
 
         /**
-         * <p>The instance type of the ECS instance.</p>
+         * <p>The instance type of the ECS instance created on the dedicated host.</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
-         * <p>The ID of the socket to which the ECS instance belongs.</p>
+         * <p>The ID of the socket to which the instance belongs.</p>
          */
         @NameInMap("SocketId")
         public String socketId;
@@ -456,7 +456,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public Integer slbUdpTimeout;
 
         /**
-         * <p>The timeout period of the UDP session that is established between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Valid value: 60.</p>
+         * <p>The timeout period of the UDP session that was established between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Valid value: 60.</p>
          */
         @NameInMap("UdpTimeout")
         public Integer udpTimeout;
@@ -486,10 +486,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocksOperationLock extends TeaModel {
         /**
-         * <p>The reason why the EIP is locked. Valid values:</p>
+         * <p>The reason why the dedicated host was locked. Valid values:</p>
          * <br>
-         * <p>*   **financial**: The EIP is locked due to overdue payments.</p>
-         * <p>*   **security**: The EIP is locked for security reasons.</p>
+         * <p>*   financial</p>
+         * <p>*   security</p>
          */
         @NameInMap("LockReason")
         public String lockReason;
@@ -661,13 +661,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
          * <p>*   on: The dedicated host was added to the resource pool for automatic deployment.</p>
          * <p>*   off: The dedicated host was not added to the resource pool for automatic deployment.</p>
          * <br>
-         * <p>For more information about automatic deployment, see the "[Automatic deployment](~~118938~~)" section in the Functions and features topic.</p>
+         * <p>For more information about automatic deployment, see the "Automatic deployment" section in [Functions and features](~~118938~~).</p>
          */
         @NameInMap("AutoPlacement")
         public String autoPlacement;
 
         /**
-         * <p>The automatic release time of the dedicated host. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.</p>
+         * <p>The automatic release time of the instance. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.</p>
          */
         @NameInMap("AutoReleaseTime")
         public String autoReleaseTime;
@@ -721,7 +721,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public String dedicatedHostName;
 
         /**
-         * <p>The ID of the dedicated host owner.</p>
+         * <p>专有宿主机所有者的用户ID。</p>
          */
         @NameInMap("DedicatedHostOwnerId")
         public Long dedicatedHostOwnerId;
@@ -814,29 +814,29 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public Integer sockets;
 
         /**
-         * <p>The service state of the dedicated host. Valid values:</p>
+         * <p>The state of the dedicated host. Valid values:</p>
          * <br>
          * <p>*   Available: The dedicated host is running normally.</p>
          * <p>*   UnderAssessment: The dedicated host is available but has potential risks that may cause the ECS instances on the dedicated host to fail.</p>
-         * <p>*   PermanentFailure: The dedicated host encounters permanent failures and is unavailable.</p>
+         * <p>*   PermanentFailure: The dedicated host has permanent failures and is unavailable.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The custom ECS instance families supported by the dedicated host.</p>
+         * <p>The custom ECS instance families that are supported by the dedicated host.</p>
          */
         @NameInMap("SupportedCustomInstanceTypeFamilies")
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedCustomInstanceTypeFamilies supportedCustomInstanceTypeFamilies;
 
         /**
-         * <p>The ECS instance families supported by the dedicated host.</p>
+         * <p>The ECS instance families that are supported by the dedicated host.</p>
          */
         @NameInMap("SupportedInstanceTypeFamilies")
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypeFamilies supportedInstanceTypeFamilies;
 
         /**
-         * <p>The ECS instance types supported by the dedicated host.</p>
+         * <p>The ECS instance types that are supported by the dedicated host.</p>
          */
         @NameInMap("SupportedInstanceTypesList")
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypesList supportedInstanceTypesList;
