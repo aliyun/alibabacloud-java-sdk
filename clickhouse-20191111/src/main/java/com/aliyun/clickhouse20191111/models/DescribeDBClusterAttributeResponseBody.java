@@ -139,6 +139,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("AliUid")
         public String aliUid;
 
+        /**
+         * <p>The scheduled restart time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in Coordinated Universal Time (UTC).</p>
+         */
         @NameInMap("AppointmentRestartTime")
         public String appointmentRestartTime;
 
@@ -319,9 +322,20 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The extended storage space. Unit: GB.</p>
+         */
         @NameInMap("ExtStorageSize")
         public Integer extStorageSize;
 
+        /**
+         * <p>The extended storage type. Valid values:</p>
+         * <br>
+         * <p>*   **CloudESSD**: The cluster uses an enhanced SSD (ESSD) of performance level (PL) 1.</p>
+         * <p>*   **CloudESSD_PL2**: The cluster uses an ESSD of PL 2.</p>
+         * <p>*   **CloudESSD_PL3**: The cluster uses an ESSD of PL 3.</p>
+         * <p>*   **CloudEfficiency**: The cluster uses an ultra disk.</p>
+         */
         @NameInMap("ExtStorageType")
         public String extStorageType;
 
@@ -407,6 +421,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The resource group ID.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -502,6 +519,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("ZoneIdVswitchMap")
         public java.util.Map<String, ?> zoneIdVswitchMap;
 
+        /**
+         * <p>The ZooKeeper specifications.</p>
+         */
         @NameInMap("ZookeeperClass")
         public String zookeeperClass;
 

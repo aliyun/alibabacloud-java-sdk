@@ -4,9 +4,15 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeSynDbsResponseBody extends TeaModel {
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -22,6 +28,9 @@ public class DescribeSynDbsResponseBody extends TeaModel {
     @NameInMap("SynDbs")
     public java.util.List<DescribeSynDbsResponseBodySynDbs> synDbs;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -72,8 +81,8 @@ public class DescribeSynDbsResponseBody extends TeaModel {
 
     public static class DescribeSynDbsResponseBodySynDbs extends TeaModel {
         /**
-         * <p>*   When the value **true** is returned for the **SynStatus** parameter, the system does not return the ErrorMsg parameter.</p>
-         * <p>*   When the value **false** is returned for the **SynStatus** parameter, the system returns for the ErrorMsg parameter the cause why the data synchronization failed.</p>
+         * <p>*   If the value **true** is returned for the **SynStatus** parameter, this parameter is not returned.</p>
+         * <p>*   If the value **false** is returned for the **SynStatus** parameter, the system returns the ErrorMsg parameter that provides the cause why the data synchronization failed.</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
@@ -85,7 +94,7 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         public String rdsId;
 
         /**
-         * <p>The account that is used to log on to the ApsaraDB RDS for MySQL database.</p>
+         * <p>The database account that is used to log on to the ApsaraDB RDS for MySQL instance.</p>
          */
         @NameInMap("RdsUserName")
         public String rdsUserName;

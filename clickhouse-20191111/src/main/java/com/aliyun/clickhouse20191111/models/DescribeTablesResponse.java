@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeTablesResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public DescribeTablesResponseBody body;
 
     public static DescribeTablesResponse build(java.util.Map<String, ?> map) throws Exception {
