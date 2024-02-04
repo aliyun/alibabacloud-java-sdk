@@ -11,6 +11,12 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The ID of the endpoint.</p>
+     */
+    @NameInMap("DBEndpointId")
+    public String DBEndpointId;
+
+    /**
      * <p>The end of the time range to query. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.</p>
      */
     @NameInMap("EndTime")
@@ -39,6 +45,14 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public DescribeDBProxyPerformanceRequest setDBEndpointId(String DBEndpointId) {
+        this.DBEndpointId = DBEndpointId;
+        return this;
+    }
+    public String getDBEndpointId() {
+        return this.DBEndpointId;
     }
 
     public DescribeDBProxyPerformanceRequest setEndTime(String endTime) {

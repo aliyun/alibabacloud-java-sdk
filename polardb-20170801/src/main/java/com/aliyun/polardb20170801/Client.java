@@ -3994,6 +3994,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBClusterId", request.DBClusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.DBEndpointId)) {
+            query.put("DBEndpointId", request.DBEndpointId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
         }
@@ -8981,79 +8985,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > You can upgrade only the revision version of a PolarDB for MySQL cluster. For example, you can upgrade the version 8.0.1.1.3 of a PolarDB for MySQL cluster to the version 8.0.1.1.4.
-      *
-      * @param request UpgradeDBClusterMinorVersionRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpgradeDBClusterMinorVersionResponse
-     */
-    public UpgradeDBClusterMinorVersionResponse upgradeDBClusterMinorVersionWithOptions(UpgradeDBClusterMinorVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
-            query.put("DBClusterId", request.DBClusterId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.fromTimeService)) {
-            query.put("FromTimeService", request.fromTimeService);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
-            query.put("OwnerAccount", request.ownerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.plannedEndTime)) {
-            query.put("PlannedEndTime", request.plannedEndTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.plannedStartTime)) {
-            query.put("PlannedStartTime", request.plannedStartTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpgradeDBClusterMinorVersion"),
-            new TeaPair("version", "2017-08-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradeDBClusterMinorVersionResponse());
-    }
-
-    /**
-      * > You can upgrade only the revision version of a PolarDB for MySQL cluster. For example, you can upgrade the version 8.0.1.1.3 of a PolarDB for MySQL cluster to the version 8.0.1.1.4.
-      *
-      * @param request UpgradeDBClusterMinorVersionRequest
-      * @return UpgradeDBClusterMinorVersionResponse
-     */
-    public UpgradeDBClusterMinorVersionResponse upgradeDBClusterMinorVersion(UpgradeDBClusterMinorVersionRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.upgradeDBClusterMinorVersionWithOptions(request, runtime);
-    }
-
-    /**
-      * > 
-      * *   You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.
-      * *   You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.
+      * > *  You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.
+      * >*   You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.
       *
       * @param request UpgradeDBClusterVersionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9128,9 +9061,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
-      * *   You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.
-      * *   You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.
+      * > *  You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.
+      * >*   You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.
       *
       * @param request UpgradeDBClusterVersionRequest
       * @return UpgradeDBClusterVersionResponse

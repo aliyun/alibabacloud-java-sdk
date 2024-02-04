@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class FailoverDBClusterResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public FailoverDBClusterResponseBody body;
 
     public static FailoverDBClusterResponse build(java.util.Map<String, ?> map) throws Exception {
