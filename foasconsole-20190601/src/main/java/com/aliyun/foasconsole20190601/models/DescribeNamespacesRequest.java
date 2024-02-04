@@ -51,6 +51,9 @@ public class DescribeNamespacesRequest extends TeaModel {
     }
 
     public static class DescribeNamespacesRequestDescribeNamespacesRequest extends TeaModel {
+        @NameInMap("Ha")
+        public Boolean ha;
+
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -72,6 +75,14 @@ public class DescribeNamespacesRequest extends TeaModel {
         public static DescribeNamespacesRequestDescribeNamespacesRequest build(java.util.Map<String, ?> map) throws Exception {
             DescribeNamespacesRequestDescribeNamespacesRequest self = new DescribeNamespacesRequestDescribeNamespacesRequest();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeNamespacesRequestDescribeNamespacesRequest setHa(Boolean ha) {
+            this.ha = ha;
+            return this;
+        }
+        public Boolean getHa() {
+            return this.ha;
         }
 
         public DescribeNamespacesRequestDescribeNamespacesRequest setInstanceId(String instanceId) {

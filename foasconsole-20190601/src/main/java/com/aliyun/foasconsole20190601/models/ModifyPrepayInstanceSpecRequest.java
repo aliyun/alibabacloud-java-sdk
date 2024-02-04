@@ -20,6 +20,36 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
         return this.modifyPrepayInstanceSpecRequest;
     }
 
+    public static class ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequestHaResourceSpec extends TeaModel {
+        @NameInMap("Cpu")
+        public Integer cpu;
+
+        @NameInMap("MemoryGB")
+        public Integer memoryGB;
+
+        public static ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequestHaResourceSpec build(java.util.Map<String, ?> map) throws Exception {
+            ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequestHaResourceSpec self = new ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequestHaResourceSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequestHaResourceSpec setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequestHaResourceSpec setMemoryGB(Integer memoryGB) {
+            this.memoryGB = memoryGB;
+            return this;
+        }
+        public Integer getMemoryGB() {
+            return this.memoryGB;
+        }
+
+    }
+
     public static class ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequestResourceSpec extends TeaModel {
         @NameInMap("Cpu")
         public Integer cpu;
@@ -51,6 +81,18 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     }
 
     public static class ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequest extends TeaModel {
+        @NameInMap("Ha")
+        public Boolean ha;
+
+        @NameInMap("HaResourceSpec")
+        public ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequestHaResourceSpec haResourceSpec;
+
+        @NameInMap("HaVSwitchIds")
+        public java.util.List<String> haVSwitchIds;
+
+        @NameInMap("HaZoneId")
+        public String haZoneId;
+
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -63,6 +105,38 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
         public static ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequest build(java.util.Map<String, ?> map) throws Exception {
             ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequest self = new ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequest();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequest setHa(Boolean ha) {
+            this.ha = ha;
+            return this;
+        }
+        public Boolean getHa() {
+            return this.ha;
+        }
+
+        public ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequest setHaResourceSpec(ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequestHaResourceSpec haResourceSpec) {
+            this.haResourceSpec = haResourceSpec;
+            return this;
+        }
+        public ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequestHaResourceSpec getHaResourceSpec() {
+            return this.haResourceSpec;
+        }
+
+        public ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequest setHaVSwitchIds(java.util.List<String> haVSwitchIds) {
+            this.haVSwitchIds = haVSwitchIds;
+            return this;
+        }
+        public java.util.List<String> getHaVSwitchIds() {
+            return this.haVSwitchIds;
+        }
+
+        public ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequest setHaZoneId(String haZoneId) {
+            this.haZoneId = haZoneId;
+            return this;
+        }
+        public String getHaZoneId() {
+            return this.haZoneId;
         }
 
         public ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequest setInstanceId(String instanceId) {

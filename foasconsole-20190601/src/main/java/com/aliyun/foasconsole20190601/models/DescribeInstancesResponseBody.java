@@ -86,6 +86,36 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return this.totalPage;
     }
 
+    public static class DescribeInstancesResponseBodyInstancesHaResourceSpec extends TeaModel {
+        @NameInMap("Cpu")
+        public Integer cpu;
+
+        @NameInMap("MemoryGB")
+        public Integer memoryGB;
+
+        public static DescribeInstancesResponseBodyInstancesHaResourceSpec build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesHaResourceSpec self = new DescribeInstancesResponseBodyInstancesHaResourceSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesHaResourceSpec setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public DescribeInstancesResponseBodyInstancesHaResourceSpec setMemoryGB(Integer memoryGB) {
+            this.memoryGB = memoryGB;
+            return this;
+        }
+        public Integer getMemoryGB() {
+            return this.memoryGB;
+        }
+
+    }
+
     public static class DescribeInstancesResponseBodyInstancesHostAliases extends TeaModel {
         @NameInMap("HostNames")
         public java.util.List<String> hostNames;
@@ -227,6 +257,18 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ClusterStatus")
         public String clusterStatus;
 
+        @NameInMap("Ha")
+        public Boolean ha;
+
+        @NameInMap("HaResourceSpec")
+        public DescribeInstancesResponseBodyInstancesHaResourceSpec haResourceSpec;
+
+        @NameInMap("HaVSwitchIds")
+        public java.util.List<String> haVSwitchIds;
+
+        @NameInMap("HaZoneId")
+        public String haZoneId;
+
         @NameInMap("HostAliases")
         public java.util.List<DescribeInstancesResponseBodyInstancesHostAliases> hostAliases;
 
@@ -235,6 +277,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         @NameInMap("InstanceName")
         public String instanceName;
+
+        @NameInMap("MonitorType")
+        public String monitorType;
 
         @NameInMap("OrderState")
         public String orderState;
@@ -312,6 +357,38 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.clusterStatus;
         }
 
+        public DescribeInstancesResponseBodyInstances setHa(Boolean ha) {
+            this.ha = ha;
+            return this;
+        }
+        public Boolean getHa() {
+            return this.ha;
+        }
+
+        public DescribeInstancesResponseBodyInstances setHaResourceSpec(DescribeInstancesResponseBodyInstancesHaResourceSpec haResourceSpec) {
+            this.haResourceSpec = haResourceSpec;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesHaResourceSpec getHaResourceSpec() {
+            return this.haResourceSpec;
+        }
+
+        public DescribeInstancesResponseBodyInstances setHaVSwitchIds(java.util.List<String> haVSwitchIds) {
+            this.haVSwitchIds = haVSwitchIds;
+            return this;
+        }
+        public java.util.List<String> getHaVSwitchIds() {
+            return this.haVSwitchIds;
+        }
+
+        public DescribeInstancesResponseBodyInstances setHaZoneId(String haZoneId) {
+            this.haZoneId = haZoneId;
+            return this;
+        }
+        public String getHaZoneId() {
+            return this.haZoneId;
+        }
+
         public DescribeInstancesResponseBodyInstances setHostAliases(java.util.List<DescribeInstancesResponseBodyInstancesHostAliases> hostAliases) {
             this.hostAliases = hostAliases;
             return this;
@@ -334,6 +411,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getInstanceName() {
             return this.instanceName;
+        }
+
+        public DescribeInstancesResponseBodyInstances setMonitorType(String monitorType) {
+            this.monitorType = monitorType;
+            return this;
+        }
+        public String getMonitorType() {
+            return this.monitorType;
         }
 
         public DescribeInstancesResponseBodyInstances setOrderState(String orderState) {

@@ -194,6 +194,9 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        @NameInMap("Ha")
+        public Boolean ha;
+
         @NameInMap("Namespace")
         public String namespace;
 
@@ -228,6 +231,14 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         }
         public Long getGmtModified() {
             return this.gmtModified;
+        }
+
+        public DescribeNamespacesResponseBodyNamespaces setHa(Boolean ha) {
+            this.ha = ha;
+            return this;
+        }
+        public Boolean getHa() {
+            return this.ha;
         }
 
         public DescribeNamespacesResponseBodyNamespaces setNamespace(String namespace) {
