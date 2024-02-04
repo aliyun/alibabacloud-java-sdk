@@ -61,6 +61,15 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
         @NameInMap("AssociateType")
         public String associateType;
 
+        @NameInMap("FailureDescription")
+        public String failureDescription;
+
+        @NameInMap("FailureReason")
+        public String failureReason;
+
+        @NameInMap("OperationType")
+        public String operationType;
+
         /**
          * <p>The ID of the shared resource.</p>
          */
@@ -104,6 +113,30 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
         }
         public String getAssociateType() {
             return this.associateType;
+        }
+
+        public ListResourceShareInvitationsResponseBodyResourceShareInvitationsInvitationFailedDetails setFailureDescription(String failureDescription) {
+            this.failureDescription = failureDescription;
+            return this;
+        }
+        public String getFailureDescription() {
+            return this.failureDescription;
+        }
+
+        public ListResourceShareInvitationsResponseBodyResourceShareInvitationsInvitationFailedDetails setFailureReason(String failureReason) {
+            this.failureReason = failureReason;
+            return this;
+        }
+        public String getFailureReason() {
+            return this.failureReason;
+        }
+
+        public ListResourceShareInvitationsResponseBodyResourceShareInvitationsInvitationFailedDetails setOperationType(String operationType) {
+            this.operationType = operationType;
+            return this;
+        }
+        public String getOperationType() {
+            return this.operationType;
         }
 
         public ListResourceShareInvitationsResponseBodyResourceShareInvitationsInvitationFailedDetails setResourceId(String resourceId) {
