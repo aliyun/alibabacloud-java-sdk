@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class BatchUpdateFileMetaResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public BatchUpdateFileMetaResponseBody body;
 
     public static BatchUpdateFileMetaResponse build(java.util.Map<String, ?> map) throws Exception {
