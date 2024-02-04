@@ -31,6 +31,9 @@ public class CreateTenantRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The size of the log disk allocated to the tenant, in GB.</p>
+     */
     @NameInMap("LogDisk")
     public Long logDisk;
 
@@ -49,6 +52,10 @@ public class CreateTenantRequest extends TeaModel {
     @NameInMap("PrimaryZone")
     public String primaryZone;
 
+    /**
+     * <p>Specifies to create a read-only zone. Separate the names of multiple zones with commas (,).</p>
+     * <p>><notice><br>At present, this parameter is unavailable.></notice></p>
+     */
     @NameInMap("ReadOnlyZoneList")
     public String readOnlyZoneList;
 

@@ -50,6 +50,9 @@ public class ModifyTenantPrimaryZoneRequest extends TeaModel {
     @NameInMap("UserVSwitchId")
     public String userVSwitchId;
 
+    @NameInMap("VpcId")
+    public String vpcId;
+
     public static ModifyTenantPrimaryZoneRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyTenantPrimaryZoneRequest self = new ModifyTenantPrimaryZoneRequest();
         return TeaModel.build(map, self);
@@ -117,6 +120,14 @@ public class ModifyTenantPrimaryZoneRequest extends TeaModel {
     }
     public String getUserVSwitchId() {
         return this.userVSwitchId;
+    }
+
+    public ModifyTenantPrimaryZoneRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

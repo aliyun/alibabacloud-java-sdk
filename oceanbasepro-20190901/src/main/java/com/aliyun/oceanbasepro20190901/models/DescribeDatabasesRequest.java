@@ -5,45 +5,49 @@ import com.aliyun.tea.*;
 
 public class DescribeDatabasesRequest extends TeaModel {
     /**
-     * <p>It is an Alibaba Cloud asset management and configuration tool, with which you can manage multiple Alibaba Cloud products and services by using commands. It is easy to use and a good helper in migration to cloud.</p>
+     * <p>The name of the database.    </p>
+     * <p>You cannot use reserved keywords, such as test and mysql.</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <p>Instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The return result of the request.</p>
+     * <p>The number of the page returned.  </p>
+     * <p>- Start value: 1   </p>
+     * <p>- Default value: 1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>Alibaba Cloud provides SDKs in different languages to help you quickly integrate Alibaba Cloud products and services by using APIs. We recommend that you use an SDK to call APIs. In this way, you do not need to sign for verification.</p>
+     * <p>The number of rows returned on each page.  </p>
+     * <p>- Maximum value: 100.  </p>
+     * <p>- Default value: 10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The information about the database tables.</p>
+     * <p>The search keyword.</p>
      */
     @NameInMap("SearchKey")
     public String searchKey;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the tenant.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
-     * <p>The role of the account.    </p>
-     * <p>In MySQL mode, a role is a database-level role. Valid values:  </p>
-     * <p>- ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.  </p>
-     * <p>- ReadOnly: a role that has only the read-only privilege SELECT.   </p>
-     * <p>- DDL: a role that has the DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.   </p>
-     * <p>- DML: a role that has the DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.</p>
+     * <p>Specifies whether to return the information of tables in the database.   </p>
+     * <p>Default value: false.</p>
      */
     @NameInMap("WithTables")
     public Boolean withTables;

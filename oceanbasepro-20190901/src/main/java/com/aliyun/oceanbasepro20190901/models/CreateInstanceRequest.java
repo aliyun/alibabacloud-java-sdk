@@ -42,11 +42,19 @@ public class CreateInstanceRequest extends TeaModel {
     public Long diskSize;
 
     /**
-     * <p>The return result of the request.</p>
+     * <p>The type of the storage disk where the cluster is deployed. This parameter takes effect only for Standard Cluster Edition (Cloud Disk).</p>
+     * <p>Valid values:</p>
+     * <p>- cloud_essd_pl1: ESSD PL1.</p>
+     * <p>- cloud_essd_pl0: ESSD PL0. Default value: cloud_essd_pl1.</p>
      */
     @NameInMap("DiskType")
     public String diskType;
 
+    /**
+     * <p>Specifies whether to perform only a dry run for the request. Default value: false. Valid values:</p>
+     * <p>- true: Only a dry-run request is sent and the instance is not created. If the dry run succeeds, DryRunResult=true is returned. If the dry run fails, an error code is returned.</p>
+     * <p>- false: The actual request is sent and no dry run is performed. The instance is created if the requirements are met. By default, the DryRunResult parameter returns false if you set DryRun to false.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -69,6 +77,12 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>Specifies whether to enable the control group feature.</p>
+     * <p>Valid values:</p>
+     * <p>- true</p>
+     * <p>- false</p>
+     */
     @NameInMap("IsolationOptimization")
     public String isolationOptimization;
 
@@ -96,12 +110,29 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <p>Primary instance ID.</p>
+     */
     @NameInMap("PrimaryInstance")
     public String primaryInstance;
 
+    /**
+     * <p>Primary instance region.</p>
+     */
     @NameInMap("PrimaryRegion")
     public String primaryRegion;
 
+    /**
+     * <p>The number of full-featured replicas.</p>
+     * <p>- 3F: three full-featured replicas.</p>
+     * <p>- 2F1L: two full-featured replicas and one log replica.</p>
+     * <p>- 2F1A: two full-featured replicas and one arbitration service.</p>
+     * <p>- ApsaraDB for OceanBase earlier than V4.1 supports 3F and 2F1L.</p>
+     * <p>- ApsaraDB for OceanBase V4.1 or later supports 3F and 2F1A.</p>
+     * <p>- An ApsaraDB for OceanBase instance deployed across three zones supports only 3F.</p>
+     * <p>- An ApsaraDB for OceanBase instance deployed across two zones supports 2F1A or 2F1L, depending on the version.</p>
+     * <p>- An ApsaraDB for OceanBase instance deployed in a single zone supports 3F, 2F1A, or 2F1L, depending on the version.</p>
+     */
     @NameInMap("ReplicaMode")
     public String replicaMode;
 

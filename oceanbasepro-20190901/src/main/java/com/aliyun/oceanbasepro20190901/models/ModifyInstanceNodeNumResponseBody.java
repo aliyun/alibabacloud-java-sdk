@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceNodeNumResponseBody extends TeaModel {
+    /**
+     * <p>The return result of the request.</p>
+     */
     @NameInMap("Data")
     public ModifyInstanceNodeNumResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,17 @@ public class ModifyInstanceNodeNumResponseBody extends TeaModel {
     }
 
     public static class ModifyInstanceNodeNumResponseBodyData extends TeaModel {
+        /**
+         * <p>The result of the dry-run request.</p>
+         * <p>- If the DryRun parameter is set to true and the dry run succeeds, the DryRunResult parameter returns true. Otherwise, an error code is returned.</p>
+         * <p>- If the DryRun parameter is set to false, no dry run is performed and the DryRunResult parameter returns false.</p>
+         */
         @NameInMap("DryRunResult")
         public Boolean dryRunResult;
 
+        /**
+         * <p>The ID of the order.</p>
+         */
         @NameInMap("OrderId")
         public String orderId;
 

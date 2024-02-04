@@ -1042,6 +1042,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("EnableParallelQuery")
         public Boolean enableParallelQuery;
 
+        @NameInMap("EnableReadOnlyReplica")
+        public Boolean enableReadOnlyReplica;
+
         @NameInMap("EnableReadWriteSplit")
         public Boolean enableReadWriteSplit;
 
@@ -1372,6 +1375,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
         public Boolean getEnableParallelQuery() {
             return this.enableParallelQuery;
+        }
+
+        public DescribeTenantResponseBodyTenant setEnableReadOnlyReplica(Boolean enableReadOnlyReplica) {
+            this.enableReadOnlyReplica = enableReadOnlyReplica;
+            return this;
+        }
+        public Boolean getEnableReadOnlyReplica() {
+            return this.enableReadOnlyReplica;
         }
 
         public DescribeTenantResponseBodyTenant setEnableReadWriteSplit(Boolean enableReadWriteSplit) {

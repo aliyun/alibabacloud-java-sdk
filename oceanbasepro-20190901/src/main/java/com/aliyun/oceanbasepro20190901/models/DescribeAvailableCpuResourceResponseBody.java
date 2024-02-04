@@ -32,11 +32,17 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableCpuResourceResponseBodyData extends TeaModel {
+        @NameInMap("Comment")
+        public String comment;
+
         @NameInMap("MaxCpu")
         public Long maxCpu;
 
         @NameInMap("MinCpu")
         public Long minCpu;
+
+        @NameInMap("ReviewCode")
+        public String reviewCode;
 
         @NameInMap("UnitNum")
         public Long unitNum;
@@ -44,6 +50,14 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
         public static DescribeAvailableCpuResourceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableCpuResourceResponseBodyData self = new DescribeAvailableCpuResourceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAvailableCpuResourceResponseBodyData setComment(String comment) {
+            this.comment = comment;
+            return this;
+        }
+        public String getComment() {
+            return this.comment;
         }
 
         public DescribeAvailableCpuResourceResponseBodyData setMaxCpu(Long maxCpu) {
@@ -60,6 +74,14 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
         }
         public Long getMinCpu() {
             return this.minCpu;
+        }
+
+        public DescribeAvailableCpuResourceResponseBodyData setReviewCode(String reviewCode) {
+            this.reviewCode = reviewCode;
+            return this;
+        }
+        public String getReviewCode() {
+            return this.reviewCode;
         }
 
         public DescribeAvailableCpuResourceResponseBodyData setUnitNum(Long unitNum) {

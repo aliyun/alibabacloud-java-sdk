@@ -89,6 +89,9 @@ public class DescribeTenantsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("EnableReadOnlyReplica")
+        public Boolean enableReadOnlyReplica;
+
         /**
          * <p>The number of the page to return.   </p>
          * <p>Start value: 1</p>
@@ -236,6 +239,14 @@ public class DescribeTenantsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeTenantsResponseBodyTenants setEnableReadOnlyReplica(Boolean enableReadOnlyReplica) {
+            this.enableReadOnlyReplica = enableReadOnlyReplica;
+            return this;
+        }
+        public Boolean getEnableReadOnlyReplica() {
+            return this.enableReadOnlyReplica;
         }
 
         public DescribeTenantsResponseBodyTenants setMem(Integer mem) {

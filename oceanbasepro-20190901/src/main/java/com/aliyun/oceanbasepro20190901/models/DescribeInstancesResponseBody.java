@@ -61,6 +61,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("UpperMergeThreshold")
         public Long upperMergeThreshold;
 
+        @NameInMap("UpperScaleStrategy")
+        public String upperScaleStrategy;
+
         @NameInMap("UpperThreshold")
         public Long upperThreshold;
 
@@ -110,6 +113,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Long getUpperMergeThreshold() {
             return this.upperMergeThreshold;
+        }
+
+        public DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig setUpperScaleStrategy(String upperScaleStrategy) {
+            this.upperScaleStrategy = upperScaleStrategy;
+            return this;
+        }
+        public String getUpperScaleStrategy() {
+            return this.upperScaleStrategy;
         }
 
         public DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig setUpperThreshold(Long upperThreshold) {
@@ -505,6 +516,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("DiskType")
         public String diskType;
 
+        @NameInMap("EnableReadOnlyReplicaManagement")
+        public Boolean enableReadOnlyReplicaManagement;
+
         /**
          * <p>The ID of the OceanBase cluster.</p>
          */
@@ -699,6 +713,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getDiskType() {
             return this.diskType;
+        }
+
+        public DescribeInstancesResponseBodyInstances setEnableReadOnlyReplicaManagement(Boolean enableReadOnlyReplicaManagement) {
+            this.enableReadOnlyReplicaManagement = enableReadOnlyReplicaManagement;
+            return this;
+        }
+        public Boolean getEnableReadOnlyReplicaManagement() {
+            return this.enableReadOnlyReplicaManagement;
         }
 
         public DescribeInstancesResponseBodyInstances setEnableUpgradeNodes(Boolean enableUpgradeNodes) {
