@@ -19,6 +19,12 @@ public class ModifyDBClusterServerlessConfRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>Specifies an immediate or scheduled task to modify parameters and restart the cluster. Valid values:</p>
+     * <br>
+     * <p>*   false: scheduled task</p>
+     * <p>*   true: immediate task</p>
+     */
     @NameInMap("FromTimeService")
     public Boolean fromTimeService;
 
@@ -28,9 +34,20 @@ public class ModifyDBClusterServerlessConfRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The latest start time for upgrading the specifications within the scheduled time period. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
+     * <p>> * The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.</p>
+     * <p>>*   If you specify PlannedStartTime but do not specify PlannedEndTime, the latest start time of the task is set to a value that is calculated by using the following formula: `PlannedEndTime value + 30 minutes`. For example, if you set PlannedStartTime to `2021-01-14T09:00:00Z` and you do not specify PlannedEndTime, the latest start time of the task is set to `2021-01-14T09:30:00Z`.</p>
+     */
     @NameInMap("PlannedEndTime")
     public String plannedEndTime;
 
+    /**
+     * <p>The earliest start time of the scheduled task for adding the read-only node. The scheduled task specifies that the task is run in the required period. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>> *   The earliest start time of the scheduled task can be a point in time within the next 24 hours. For example, if the current time is `2021-01-14T09:00:00Z`, you can specify a point in time between `2021-01-14T09:00:00Z` and `2021-01-15T09:00:00Z`.</p>
+     * <p>>*   If you leave this parameter empty, the task for adding the read-only node is immediately run by default.</p>
+     */
     @NameInMap("PlannedStartTime")
     public String plannedStartTime;
 
@@ -40,9 +57,15 @@ public class ModifyDBClusterServerlessConfRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The maximum number of stable AP read-only nodes. Valid values: 0 to 7.</p>
+     */
     @NameInMap("ScaleApRoNumMax")
     public String scaleApRoNumMax;
 
+    /**
+     * <p>The minimum number of stable AP read-only nodes. Valid values: 0 to 7.</p>
+     */
     @NameInMap("ScaleApRoNumMin")
     public String scaleApRoNumMin;
 

@@ -10,6 +10,9 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>Cluster key list.</p>
+     */
     @NameInMap("KeyList")
     public java.util.List<String> keyList;
 
