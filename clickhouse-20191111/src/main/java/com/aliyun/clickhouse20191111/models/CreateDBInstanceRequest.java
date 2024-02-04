@@ -177,9 +177,15 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("VPCId")
     public String VPCId;
 
+    /**
+     * <p>备专有网络交换机</p>
+     */
     @NameInMap("VSwitchBak")
     public String vSwitchBak;
 
+    /**
+     * <p>备专有网络交换机2</p>
+     */
     @NameInMap("VSwitchBak2")
     public String vSwitchBak2;
 

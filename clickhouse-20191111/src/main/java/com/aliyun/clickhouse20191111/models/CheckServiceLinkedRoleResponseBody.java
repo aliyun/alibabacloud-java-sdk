@@ -4,9 +4,15 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class CheckServiceLinkedRoleResponseBody extends TeaModel {
+    /**
+     * <p>The role.</p>
+     */
     @NameInMap("HasServiceLinkedRole")
     public Boolean hasServiceLinkedRole;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

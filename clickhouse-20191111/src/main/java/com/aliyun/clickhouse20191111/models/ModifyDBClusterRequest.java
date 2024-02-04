@@ -53,6 +53,9 @@ public class ModifyDBClusterRequest extends TeaModel {
     @NameInMap("DBNodeStorage")
     public String DBNodeStorage;
 
+    @NameInMap("DbNodeStorageType")
+    public String dbNodeStorageType;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -106,6 +109,14 @@ public class ModifyDBClusterRequest extends TeaModel {
     }
     public String getDBNodeStorage() {
         return this.DBNodeStorage;
+    }
+
+    public ModifyDBClusterRequest setDbNodeStorageType(String dbNodeStorageType) {
+        this.dbNodeStorageType = dbNodeStorageType;
+        return this;
+    }
+    public String getDbNodeStorageType() {
+        return this.dbNodeStorageType;
     }
 
     public ModifyDBClusterRequest setOwnerAccount(String ownerAccount) {

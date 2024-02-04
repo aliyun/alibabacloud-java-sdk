@@ -2975,6 +2975,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBNodeStorage", request.DBNodeStorage);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dbNodeStorageType)) {
+            query.put("DbNodeStorageType", request.dbNodeStorageType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
