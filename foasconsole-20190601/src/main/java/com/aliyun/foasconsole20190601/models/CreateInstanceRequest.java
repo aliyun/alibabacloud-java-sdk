@@ -20,6 +20,36 @@ public class CreateInstanceRequest extends TeaModel {
         return this.createInstanceRequest;
     }
 
+    public static class CreateInstanceRequestCreateInstanceRequestHaResourceSpec extends TeaModel {
+        @NameInMap("Cpu")
+        public Integer cpu;
+
+        @NameInMap("MemoryGB")
+        public Integer memoryGB;
+
+        public static CreateInstanceRequestCreateInstanceRequestHaResourceSpec build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestCreateInstanceRequestHaResourceSpec self = new CreateInstanceRequestCreateInstanceRequestHaResourceSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestCreateInstanceRequestHaResourceSpec setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public CreateInstanceRequestCreateInstanceRequestHaResourceSpec setMemoryGB(Integer memoryGB) {
+            this.memoryGB = memoryGB;
+            return this;
+        }
+        public Integer getMemoryGB() {
+            return this.memoryGB;
+        }
+
+    }
+
     public static class CreateInstanceRequestCreateInstanceRequestResourceSpec extends TeaModel {
         @NameInMap("Cpu")
         public Integer cpu;
@@ -104,8 +134,23 @@ public class CreateInstanceRequest extends TeaModel {
         @NameInMap("Extra")
         public String extra;
 
+        @NameInMap("Ha")
+        public Boolean ha;
+
+        @NameInMap("HaResourceSpec")
+        public CreateInstanceRequestCreateInstanceRequestHaResourceSpec haResourceSpec;
+
+        @NameInMap("HaVSwitchIds")
+        public java.util.List<String> haVSwitchIds;
+
+        @NameInMap("HaZoneId")
+        public String haZoneId;
+
         @NameInMap("InstanceName")
         public String instanceName;
+
+        @NameInMap("MonitorType")
+        public String monitorType;
 
         @NameInMap("PricingCycle")
         public String pricingCycle;
@@ -185,12 +230,52 @@ public class CreateInstanceRequest extends TeaModel {
             return this.extra;
         }
 
+        public CreateInstanceRequestCreateInstanceRequest setHa(Boolean ha) {
+            this.ha = ha;
+            return this;
+        }
+        public Boolean getHa() {
+            return this.ha;
+        }
+
+        public CreateInstanceRequestCreateInstanceRequest setHaResourceSpec(CreateInstanceRequestCreateInstanceRequestHaResourceSpec haResourceSpec) {
+            this.haResourceSpec = haResourceSpec;
+            return this;
+        }
+        public CreateInstanceRequestCreateInstanceRequestHaResourceSpec getHaResourceSpec() {
+            return this.haResourceSpec;
+        }
+
+        public CreateInstanceRequestCreateInstanceRequest setHaVSwitchIds(java.util.List<String> haVSwitchIds) {
+            this.haVSwitchIds = haVSwitchIds;
+            return this;
+        }
+        public java.util.List<String> getHaVSwitchIds() {
+            return this.haVSwitchIds;
+        }
+
+        public CreateInstanceRequestCreateInstanceRequest setHaZoneId(String haZoneId) {
+            this.haZoneId = haZoneId;
+            return this;
+        }
+        public String getHaZoneId() {
+            return this.haZoneId;
+        }
+
         public CreateInstanceRequestCreateInstanceRequest setInstanceName(String instanceName) {
             this.instanceName = instanceName;
             return this;
         }
         public String getInstanceName() {
             return this.instanceName;
+        }
+
+        public CreateInstanceRequestCreateInstanceRequest setMonitorType(String monitorType) {
+            this.monitorType = monitorType;
+            return this;
+        }
+        public String getMonitorType() {
+            return this.monitorType;
         }
 
         public CreateInstanceRequestCreateInstanceRequest setPricingCycle(String pricingCycle) {

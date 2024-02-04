@@ -20,6 +20,36 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
         return this.createInstanceRequest;
     }
 
+    public static class QueryCreateInstancePriceRequestCreateInstanceRequestHaResourceSpec extends TeaModel {
+        @NameInMap("Cpu")
+        public Integer cpu;
+
+        @NameInMap("MemoryGB")
+        public Integer memoryGB;
+
+        public static QueryCreateInstancePriceRequestCreateInstanceRequestHaResourceSpec build(java.util.Map<String, ?> map) throws Exception {
+            QueryCreateInstancePriceRequestCreateInstanceRequestHaResourceSpec self = new QueryCreateInstancePriceRequestCreateInstanceRequestHaResourceSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryCreateInstancePriceRequestCreateInstanceRequestHaResourceSpec setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public QueryCreateInstancePriceRequestCreateInstanceRequestHaResourceSpec setMemoryGB(Integer memoryGB) {
+            this.memoryGB = memoryGB;
+            return this;
+        }
+        public Integer getMemoryGB() {
+            return this.memoryGB;
+        }
+
+    }
+
     public static class QueryCreateInstancePriceRequestCreateInstanceRequestResourceSpec extends TeaModel {
         @NameInMap("Cpu")
         public Integer cpu;
@@ -104,6 +134,12 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
         @NameInMap("Extra")
         public String extra;
 
+        @NameInMap("Ha")
+        public Boolean ha;
+
+        @NameInMap("HaResourceSpec")
+        public QueryCreateInstancePriceRequestCreateInstanceRequestHaResourceSpec haResourceSpec;
+
         @NameInMap("InstanceName")
         public String instanceName;
 
@@ -180,6 +216,22 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
         }
         public String getExtra() {
             return this.extra;
+        }
+
+        public QueryCreateInstancePriceRequestCreateInstanceRequest setHa(Boolean ha) {
+            this.ha = ha;
+            return this;
+        }
+        public Boolean getHa() {
+            return this.ha;
+        }
+
+        public QueryCreateInstancePriceRequestCreateInstanceRequest setHaResourceSpec(QueryCreateInstancePriceRequestCreateInstanceRequestHaResourceSpec haResourceSpec) {
+            this.haResourceSpec = haResourceSpec;
+            return this;
+        }
+        public QueryCreateInstancePriceRequestCreateInstanceRequestHaResourceSpec getHaResourceSpec() {
+            return this.haResourceSpec;
         }
 
         public QueryCreateInstancePriceRequestCreateInstanceRequest setInstanceName(String instanceName) {

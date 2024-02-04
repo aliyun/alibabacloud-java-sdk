@@ -1,3 +1,14 @@
+2024-02-04 Version: 1.0.7
+- Update API CreateInstanceupdate CreateInstanceRequest param.
+- Update API CreateNamespaceupdate CreateNamespaceRequest param.
+- Update API DescribeInstancesupdate response param.
+- Update API DescribeNamespacesupdate DescribeNamespacesRequest param.
+update response param.
+- Update API ModifyPrepayInstanceSpecupdate ModifyPrepayInstanceSpecRequest param.
+- Update API QueryCreateInstancePriceupdate CreateInstanceRequest param.
+- Update API QueryModifyInstancePriceupdate ModifyPrepayInstanceSpecRequest param.
+
+
 2023-11-01 Version: 1.0.6
 - Generated java 2019-06-01 for foasconsole.
 
