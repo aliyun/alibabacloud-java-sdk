@@ -419,6 +419,9 @@ public class QueryTrademarkModelEspListResponseBody extends TeaModel {
         @NameInMap("TrademarkNumber")
         public String trademarkNumber;
 
+        @NameInMap("UserId")
+        public String userId;
+
         public static QueryTrademarkModelEspListResponseBodyMoudleDataItem build(java.util.Map<String, ?> map) throws Exception {
             QueryTrademarkModelEspListResponseBodyMoudleDataItem self = new QueryTrademarkModelEspListResponseBodyMoudleDataItem();
             return TeaModel.build(map, self);
@@ -606,6 +609,14 @@ public class QueryTrademarkModelEspListResponseBody extends TeaModel {
         }
         public String getTrademarkNumber() {
             return this.trademarkNumber;
+        }
+
+        public QueryTrademarkModelEspListResponseBodyMoudleDataItem setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

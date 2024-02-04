@@ -469,6 +469,9 @@ public class QueryTrademarkDetailByApplyNumberResponseBody extends TeaModel {
         @NameInMap("TrademarkNumber")
         public String trademarkNumber;
 
+        @NameInMap("UserId")
+        public String userId;
+
         public static QueryTrademarkDetailByApplyNumberResponseBodyMoudle build(java.util.Map<String, ?> map) throws Exception {
             QueryTrademarkDetailByApplyNumberResponseBodyMoudle self = new QueryTrademarkDetailByApplyNumberResponseBodyMoudle();
             return TeaModel.build(map, self);
@@ -672,6 +675,14 @@ public class QueryTrademarkDetailByApplyNumberResponseBody extends TeaModel {
         }
         public String getTrademarkNumber() {
             return this.trademarkNumber;
+        }
+
+        public QueryTrademarkDetailByApplyNumberResponseBodyMoudle setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }
