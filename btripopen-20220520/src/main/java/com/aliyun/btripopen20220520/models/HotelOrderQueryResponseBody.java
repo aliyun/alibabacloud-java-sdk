@@ -461,6 +461,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
     }
 
     public static class HotelOrderQueryResponseBodyModulePassengerList extends TeaModel {
+        @NameInMap("apply_id")
+        public String applyId;
+
         @NameInMap("cost_center_id")
         public Long costCenterId;
 
@@ -470,6 +473,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         @NameInMap("cost_center_number")
         public String costCenterNumber;
 
+        @NameInMap("itinerary_id")
+        public String itineraryId;
+
         @NameInMap("project_code")
         public String projectCode;
 
@@ -478,6 +484,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
 
         @NameInMap("project_title")
         public String projectTitle;
+
+        @NameInMap("thirdpart_apply_id")
+        public String thirdpartApplyId;
 
         @NameInMap("thirdpart_cost_center_id")
         public String thirdpartCostCenterId;
@@ -497,6 +506,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         public static HotelOrderQueryResponseBodyModulePassengerList build(java.util.Map<String, ?> map) throws Exception {
             HotelOrderQueryResponseBodyModulePassengerList self = new HotelOrderQueryResponseBodyModulePassengerList();
             return TeaModel.build(map, self);
+        }
+
+        public HotelOrderQueryResponseBodyModulePassengerList setApplyId(String applyId) {
+            this.applyId = applyId;
+            return this;
+        }
+        public String getApplyId() {
+            return this.applyId;
         }
 
         public HotelOrderQueryResponseBodyModulePassengerList setCostCenterId(Long costCenterId) {
@@ -523,6 +540,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             return this.costCenterNumber;
         }
 
+        public HotelOrderQueryResponseBodyModulePassengerList setItineraryId(String itineraryId) {
+            this.itineraryId = itineraryId;
+            return this;
+        }
+        public String getItineraryId() {
+            return this.itineraryId;
+        }
+
         public HotelOrderQueryResponseBodyModulePassengerList setProjectCode(String projectCode) {
             this.projectCode = projectCode;
             return this;
@@ -545,6 +570,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         }
         public String getProjectTitle() {
             return this.projectTitle;
+        }
+
+        public HotelOrderQueryResponseBodyModulePassengerList setThirdpartApplyId(String thirdpartApplyId) {
+            this.thirdpartApplyId = thirdpartApplyId;
+            return this;
+        }
+        public String getThirdpartApplyId() {
+            return this.thirdpartApplyId;
         }
 
         public HotelOrderQueryResponseBodyModulePassengerList setThirdpartCostCenterId(String thirdpartCostCenterId) {
