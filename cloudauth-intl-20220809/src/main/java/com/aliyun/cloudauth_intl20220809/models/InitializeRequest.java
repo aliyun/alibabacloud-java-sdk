@@ -76,6 +76,9 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("SceneCode")
     public String sceneCode;
 
+    @NameInMap("SecurityLevel")
+    public String securityLevel;
+
     @NameInMap("ServiceLevel")
     public String serviceLevel;
 
@@ -266,6 +269,14 @@ public class InitializeRequest extends TeaModel {
     }
     public String getSceneCode() {
         return this.sceneCode;
+    }
+
+    public InitializeRequest setSecurityLevel(String securityLevel) {
+        this.securityLevel = securityLevel;
+        return this;
+    }
+    public String getSecurityLevel() {
+        return this.securityLevel;
     }
 
     public InitializeRequest setServiceLevel(String serviceLevel) {
