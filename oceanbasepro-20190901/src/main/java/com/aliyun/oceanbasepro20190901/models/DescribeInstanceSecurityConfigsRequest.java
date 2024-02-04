@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSecurityConfigsRequest extends TeaModel {
+    /**
+     * <p>The unique identifier of the check.</p>
+     */
     @NameInMap("CheckId")
     public String checkId;
 
+    /**
+     * <p>The ID of the OceanBase cluster.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

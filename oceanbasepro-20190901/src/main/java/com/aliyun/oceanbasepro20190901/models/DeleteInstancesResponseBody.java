@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DeleteInstancesResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,11 @@ public class DeleteInstancesResponseBody extends TeaModel {
     }
 
     public static class DeleteInstancesResponseBodyData extends TeaModel {
+        /**
+         * <p>The result of the dry-run request.</p>
+         * <p>- If the DryRun parameter is set to true and the dry run succeeds, the DryRunResult parameter returns true. Otherwise, an error code is returned.</p>
+         * <p>- If the DryRun parameter is set to false, no dry run is performed and the DryRunResult parameter returns false.</p>
+         */
         @NameInMap("DryRunResult")
         public Boolean dryRunResult;
 

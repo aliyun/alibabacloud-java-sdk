@@ -53,6 +53,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("UpperMergeThreshold")
         public Long upperMergeThreshold;
 
+        @NameInMap("UpperScaleStep")
+        public String upperScaleStep;
+
+        @NameInMap("UpperScaleStrategy")
+        public String upperScaleStrategy;
+
         @NameInMap("UpperThreshold")
         public Long upperThreshold;
 
@@ -102,6 +108,22 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public Long getUpperMergeThreshold() {
             return this.upperMergeThreshold;
+        }
+
+        public DescribeInstanceResponseBodyInstanceDataDiskAutoScaleConfig setUpperScaleStep(String upperScaleStep) {
+            this.upperScaleStep = upperScaleStep;
+            return this;
+        }
+        public String getUpperScaleStep() {
+            return this.upperScaleStep;
+        }
+
+        public DescribeInstanceResponseBodyInstanceDataDiskAutoScaleConfig setUpperScaleStrategy(String upperScaleStrategy) {
+            this.upperScaleStrategy = upperScaleStrategy;
+            return this;
+        }
+        public String getUpperScaleStrategy() {
+            return this.upperScaleStrategy;
         }
 
         public DescribeInstanceResponseBodyInstanceDataDiskAutoScaleConfig setUpperThreshold(Long upperThreshold) {
@@ -1052,8 +1074,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("EnableProxyService")
         public Boolean enableProxyService;
 
+        @NameInMap("EnableReadOnlyReplica")
+        public Boolean enableReadOnlyReplica;
+
+        @NameInMap("EnableReadOnlyReplicaManagement")
+        public Boolean enableReadOnlyReplicaManagement;
+
         @NameInMap("EnableUpgradeLogDisk")
         public Boolean enableUpgradeLogDisk;
+
+        @NameInMap("ExclusiveUnitNumLimit")
+        public Integer exclusiveUnitNumLimit;
 
         /**
          * <p>The information of the OceanBase cluster.</p>
@@ -1139,6 +1170,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("Series")
         public String series;
 
+        @NameInMap("SharedUnitNumLimit")
+        public Integer sharedUnitNumLimit;
+
         /**
          * <p>The information about cluster resources.</p>
          */
@@ -1147,6 +1181,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         @NameInMap("TenantCreatable")
         public DescribeInstanceResponseBodyInstanceTenantCreatable tenantCreatable;
+
+        @NameInMap("UnitSpec")
+        public String unitSpec;
 
         /**
          * <p>You can call this operation to query the detailed information of an OceanBase cluster.</p>
@@ -1266,12 +1303,36 @@ public class DescribeInstanceResponseBody extends TeaModel {
             return this.enableProxyService;
         }
 
+        public DescribeInstanceResponseBodyInstance setEnableReadOnlyReplica(Boolean enableReadOnlyReplica) {
+            this.enableReadOnlyReplica = enableReadOnlyReplica;
+            return this;
+        }
+        public Boolean getEnableReadOnlyReplica() {
+            return this.enableReadOnlyReplica;
+        }
+
+        public DescribeInstanceResponseBodyInstance setEnableReadOnlyReplicaManagement(Boolean enableReadOnlyReplicaManagement) {
+            this.enableReadOnlyReplicaManagement = enableReadOnlyReplicaManagement;
+            return this;
+        }
+        public Boolean getEnableReadOnlyReplicaManagement() {
+            return this.enableReadOnlyReplicaManagement;
+        }
+
         public DescribeInstanceResponseBodyInstance setEnableUpgradeLogDisk(Boolean enableUpgradeLogDisk) {
             this.enableUpgradeLogDisk = enableUpgradeLogDisk;
             return this;
         }
         public Boolean getEnableUpgradeLogDisk() {
             return this.enableUpgradeLogDisk;
+        }
+
+        public DescribeInstanceResponseBodyInstance setExclusiveUnitNumLimit(Integer exclusiveUnitNumLimit) {
+            this.exclusiveUnitNumLimit = exclusiveUnitNumLimit;
+            return this;
+        }
+        public Integer getExclusiveUnitNumLimit() {
+            return this.exclusiveUnitNumLimit;
         }
 
         public DescribeInstanceResponseBodyInstance setExpireTime(String expireTime) {
@@ -1426,6 +1487,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             return this.series;
         }
 
+        public DescribeInstanceResponseBodyInstance setSharedUnitNumLimit(Integer sharedUnitNumLimit) {
+            this.sharedUnitNumLimit = sharedUnitNumLimit;
+            return this;
+        }
+        public Integer getSharedUnitNumLimit() {
+            return this.sharedUnitNumLimit;
+        }
+
         public DescribeInstanceResponseBodyInstance setStatus(String status) {
             this.status = status;
             return this;
@@ -1440,6 +1509,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public DescribeInstanceResponseBodyInstanceTenantCreatable getTenantCreatable() {
             return this.tenantCreatable;
+        }
+
+        public DescribeInstanceResponseBodyInstance setUnitSpec(String unitSpec) {
+            this.unitSpec = unitSpec;
+            return this;
+        }
+        public String getUnitSpec() {
+            return this.unitSpec;
         }
 
         public DescribeInstanceResponseBodyInstance setVersion(String version) {

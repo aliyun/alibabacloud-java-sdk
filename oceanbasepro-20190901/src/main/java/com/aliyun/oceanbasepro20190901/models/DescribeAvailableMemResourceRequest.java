@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableMemResourceRequest extends TeaModel {
     /**
-     * <p>The available memory size.</p>
+     * <p>The number of CPU cores.</p>
      */
     @NameInMap("CpuNum")
     public Long cpuNum;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the OceanBase cluster.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -23,7 +23,8 @@ public class DescribeAvailableMemResourceRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The number of resource units in the tenant.</p>
+     * <p>The number of resource distribution nodes in the tenant.   </p>
+     * <p>The number is determined by the deployment mode of the cluster. If the cluster is deployed in 2-2-2 mode, the maximum number of resource distribution nodes is 2.</p>
      */
     @NameInMap("UnitNum")
     public Long unitNum;

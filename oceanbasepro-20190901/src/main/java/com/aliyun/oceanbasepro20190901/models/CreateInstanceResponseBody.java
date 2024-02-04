@@ -4,14 +4,11 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
-    /**
-     * <p>实例ID</p>
-     */
     @NameInMap("Data")
     public CreateInstanceResponseBodyData data;
 
     /**
-     * <p>Response parameters</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,21 +35,31 @@ public class CreateInstanceResponseBody extends TeaModel {
     }
 
     public static class CreateInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The result of the dry-run request.</p>
+         * <br>
+         * <p>If the DryRun parameter is set to true and the dry run succeeds, the DryRunResult parameter returns true. Otherwise, an error code is returned.</p>
+         * <p>If the DryRun parameter is set to false, no dry run is performed and the DryRunResult parameter returns false.</p>
+         */
         @NameInMap("DryRunResult")
         public Boolean dryRunResult;
 
         /**
-         * <p>订单ID。该参数只有创建包年包月ECS实例（请求参数InstanceChargeType=PrePaid）时有返回值。</p>
+         * <p>Instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>资源组ID</p>
+         * <p>Order ID. The ID of the order that you have placed.</p>
+         * <p>This parameter returns a value after you create a pre-paid or post-paid cluster.</p>
          */
         @NameInMap("OrderId")
         public String orderId;
 
+        /**
+         * <p>Resource group ID.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 

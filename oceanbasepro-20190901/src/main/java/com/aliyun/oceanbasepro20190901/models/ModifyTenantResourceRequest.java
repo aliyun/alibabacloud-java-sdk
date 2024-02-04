@@ -5,32 +5,37 @@ import com.aliyun.tea.*;
 
 public class ModifyTenantResourceRequest extends TeaModel {
     /**
-     * <p>The memory size of the tenant, in GB.</p>
+     * <p>The information about the CPU resources of the tenant.</p>
      */
     @NameInMap("Cpu")
     public Integer cpu;
 
     /**
-     * <p>The operation that you want to perform.   </p>
-     * <p>Set the value to **ModifyTenantResource**.</p>
+     * <p>The ID of the OceanBase cluster.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The size of the log disk allocated to the tenant, in GB.</p>
+     */
     @NameInMap("LogDisk")
     public Long logDisk;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>The memory size of the tenant, in GB.</p>
      */
     @NameInMap("Memory")
     public Integer memory;
 
+    /**
+     * <p>Specifies to create a read-only zone. Separate the names of multiple zones with commas (,).</p>
+     */
     @NameInMap("ReadOnlyZoneList")
     public String readOnlyZoneList;
 
     /**
-     * <p>The information about the CPU resources of the tenant.</p>
+     * <p>The ID of the tenant.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

@@ -80,6 +80,9 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         @NameInMap("AvgCpuTime")
         public Double avgCpuTime;
 
+        @NameInMap("AvgDbTime")
+        public Double avgDbTime;
+
         /**
          * <p>Average syntax parsing time (in milliseconds) during the execution period.</p>
          */
@@ -398,6 +401,9 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         @NameInMap("StrongConsistencyPercentage")
         public Double strongConsistencyPercentage;
 
+        @NameInMap("SumDbTime")
+        public Double sumDbTime;
+
         /**
          * <p>Total response time (in milliseconds) during the execution period.</p>
          */
@@ -499,6 +505,14 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         }
         public Double getAvgCpuTime() {
             return this.avgCpuTime;
+        }
+
+        public DescribeOasSQLHistoryListResponseBodyData setAvgDbTime(Double avgDbTime) {
+            this.avgDbTime = avgDbTime;
+            return this;
+        }
+        public Double getAvgDbTime() {
+            return this.avgDbTime;
         }
 
         public DescribeOasSQLHistoryListResponseBodyData setAvgDecodeTime(Double avgDecodeTime) {
@@ -923,6 +937,14 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         }
         public Double getStrongConsistencyPercentage() {
             return this.strongConsistencyPercentage;
+        }
+
+        public DescribeOasSQLHistoryListResponseBodyData setSumDbTime(Double sumDbTime) {
+            this.sumDbTime = sumDbTime;
+            return this;
+        }
+        public Double getSumDbTime() {
+            return this.sumDbTime;
         }
 
         public DescribeOasSQLHistoryListResponseBodyData setSumElapsedTime(Double sumElapsedTime) {

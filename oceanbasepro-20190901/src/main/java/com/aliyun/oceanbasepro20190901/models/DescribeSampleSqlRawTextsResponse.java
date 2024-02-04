@@ -3,7 +3,7 @@ package com.aliyun.oceanbasepro20190901.models;
 
 import com.aliyun.tea.*;
 
-public class CreateOmsMysqlDataSourceResponse extends TeaModel {
+public class DescribeSampleSqlRawTextsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class CreateOmsMysqlDataSourceResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public CreateOmsMysqlDataSourceResponseBody body;
+    public DescribeSampleSqlRawTextsResponseBody body;
 
-    public static CreateOmsMysqlDataSourceResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateOmsMysqlDataSourceResponse self = new CreateOmsMysqlDataSourceResponse();
+    public static DescribeSampleSqlRawTextsResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeSampleSqlRawTextsResponse self = new DescribeSampleSqlRawTextsResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateOmsMysqlDataSourceResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeSampleSqlRawTextsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class CreateOmsMysqlDataSourceResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateOmsMysqlDataSourceResponse setStatusCode(Integer statusCode) {
+    public DescribeSampleSqlRawTextsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class CreateOmsMysqlDataSourceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateOmsMysqlDataSourceResponse setBody(CreateOmsMysqlDataSourceResponseBody body) {
+    public DescribeSampleSqlRawTextsResponse setBody(DescribeSampleSqlRawTextsResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateOmsMysqlDataSourceResponseBody getBody() {
+    public DescribeSampleSqlRawTextsResponseBody getBody() {
         return this.body;
     }
 

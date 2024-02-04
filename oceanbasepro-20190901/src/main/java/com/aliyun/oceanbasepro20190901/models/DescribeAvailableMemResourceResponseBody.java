@@ -5,20 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableMemResourceResponseBody extends TeaModel {
     /**
-     * <p>```</p>
-     * <p>http(s)://[Endpoint]/?Action=DescribeAvailableMemResource</p>
-     * <p>&InstanceId=ob317v4uif****</p>
-     * <p>&TenantId=ob2mr3oae0****</p>
-     * <p>&UnitNum=2</p>
-     * <p>&CpuNum=14</p>
-     * <p>&Common request parameters</p>
-     * <p>```</p>
+     * <p>The available memory size.</p>
      */
     @NameInMap("Data")
     public DescribeAvailableMemResourceResponseBodyData data;
 
     /**
-     * <p>The number of CPU cores.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -45,18 +38,27 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableMemResourceResponseBodyData extends TeaModel {
+        /**
+         * <p>The maximum memory size for each resource unit, in GB.</p>
+         */
         @NameInMap("MaxMem")
         public Long maxMem;
 
         /**
-         * <p>You can call this operation to query the available memory resource of an OceanBase Database tenant.</p>
+         * <p>The minimum memory size required for each resource unit, in GB.</p>
          */
         @NameInMap("MinMem")
         public Long minMem;
 
+        /**
+         * <p>The maximum allowed memory usage, in GB.</p>
+         */
         @NameInMap("SafeMem")
         public String safeMem;
 
+        /**
+         * <p>The number of resource units in the tenant.</p>
+         */
         @NameInMap("UsedMem")
         public Long usedMem;
 
