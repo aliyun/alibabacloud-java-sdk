@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>trademark20180724</artifactId>
-  <version>3.2.17</version>
+  <version>3.2.18</version>
   <packaging>jar</packaging>
   <name>trademark20180724</name>
   <description>Alibaba Cloud trademark (20180724) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.2.8</version>
+      <version>0.3.2</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
