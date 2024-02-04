@@ -391,6 +391,15 @@ public class CreateLoadBalancerRequest extends TeaModel {
         @NameInMap("AllocationId")
         public String allocationId;
 
+        @NameInMap("Ipv4LocalAddresses")
+        public java.util.List<String> ipv4LocalAddresses;
+
+        @NameInMap("Ipv6Address")
+        public String ipv6Address;
+
+        @NameInMap("Ipv6LocalAddresses")
+        public java.util.List<String> ipv6LocalAddresses;
+
         /**
          * <p>The private IP address. You must add at least two zones. You can add a maximum of 10 zones.</p>
          */
@@ -422,6 +431,30 @@ public class CreateLoadBalancerRequest extends TeaModel {
         }
         public String getAllocationId() {
             return this.allocationId;
+        }
+
+        public CreateLoadBalancerRequestZoneMappings setIpv4LocalAddresses(java.util.List<String> ipv4LocalAddresses) {
+            this.ipv4LocalAddresses = ipv4LocalAddresses;
+            return this;
+        }
+        public java.util.List<String> getIpv4LocalAddresses() {
+            return this.ipv4LocalAddresses;
+        }
+
+        public CreateLoadBalancerRequestZoneMappings setIpv6Address(String ipv6Address) {
+            this.ipv6Address = ipv6Address;
+            return this;
+        }
+        public String getIpv6Address() {
+            return this.ipv6Address;
+        }
+
+        public CreateLoadBalancerRequestZoneMappings setIpv6LocalAddresses(java.util.List<String> ipv6LocalAddresses) {
+            this.ipv6LocalAddresses = ipv6LocalAddresses;
+            return this;
+        }
+        public java.util.List<String> getIpv6LocalAddresses() {
+            return this.ipv6LocalAddresses;
         }
 
         public CreateLoadBalancerRequestZoneMappings setPrivateIPv4Address(String privateIPv4Address) {

@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class EnableLoadBalancerIpv6InternetResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public EnableLoadBalancerIpv6InternetResponseBody body;
 
     public static EnableLoadBalancerIpv6InternetResponse build(java.util.Map<String, ?> map) throws Exception {
