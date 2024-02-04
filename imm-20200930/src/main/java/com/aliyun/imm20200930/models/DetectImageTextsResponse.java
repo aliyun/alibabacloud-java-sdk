@@ -3,7 +3,7 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class DetectImageScoreResponse extends TeaModel {
+public class DetectImageTextsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DetectImageScoreResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DetectImageScoreResponseBody body;
+    public DetectImageTextsResponseBody body;
 
-    public static DetectImageScoreResponse build(java.util.Map<String, ?> map) throws Exception {
-        DetectImageScoreResponse self = new DetectImageScoreResponse();
+    public static DetectImageTextsResponse build(java.util.Map<String, ?> map) throws Exception {
+        DetectImageTextsResponse self = new DetectImageTextsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DetectImageScoreResponse setHeaders(java.util.Map<String, String> headers) {
+    public DetectImageTextsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DetectImageScoreResponse extends TeaModel {
         return this.headers;
     }
 
-    public DetectImageScoreResponse setStatusCode(Integer statusCode) {
+    public DetectImageTextsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DetectImageScoreResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DetectImageScoreResponse setBody(DetectImageScoreResponseBody body) {
+    public DetectImageTextsResponse setBody(DetectImageTextsResponseBody body) {
         this.body = body;
         return this;
     }
-    public DetectImageScoreResponseBody getBody() {
+    public DetectImageTextsResponseBody getBody() {
         return this.body;
     }
 
