@@ -19,6 +19,9 @@ public class ExportConversationDetailsRequest extends TeaModel {
     @NameInMap("Options")
     public java.util.List<String> options;
 
+    @NameInMap("Result")
+    public Integer result;
+
     @NameInMap("RoundsLeftRange")
     public Integer roundsLeftRange;
 
@@ -68,6 +71,14 @@ public class ExportConversationDetailsRequest extends TeaModel {
     }
     public java.util.List<String> getOptions() {
         return this.options;
+    }
+
+    public ExportConversationDetailsRequest setResult(Integer result) {
+        this.result = result;
+        return this;
+    }
+    public Integer getResult() {
+        return this.result;
     }
 
     public ExportConversationDetailsRequest setRoundsLeftRange(Integer roundsLeftRange) {

@@ -104,6 +104,9 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
         @NameInMap("FinalPrompt")
         public String finalPrompt;
 
+        /**
+         * <p>""</p>
+         */
         @NameInMap("IntentTrigger")
         public String intentTrigger;
 

@@ -7,6 +7,12 @@ public class ModifyTTSConfigRequest extends TeaModel {
     @NameInMap("AppKey")
     public String appKey;
 
+    @NameInMap("Engine")
+    public String engine;
+
+    @NameInMap("EngineXunfei")
+    public String engineXunfei;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -33,6 +39,22 @@ public class ModifyTTSConfigRequest extends TeaModel {
     }
     public String getAppKey() {
         return this.appKey;
+    }
+
+    public ModifyTTSConfigRequest setEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    public String getEngine() {
+        return this.engine;
+    }
+
+    public ModifyTTSConfigRequest setEngineXunfei(String engineXunfei) {
+        this.engineXunfei = engineXunfei;
+        return this;
+    }
+    public String getEngineXunfei() {
+        return this.engineXunfei;
     }
 
     public ModifyTTSConfigRequest setInstanceId(String instanceId) {

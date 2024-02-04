@@ -71,6 +71,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("Concurrency")
         public Long concurrency;
 
+        @NameInMap("CreateTime")
+        public Long createTime;
+
         @NameInMap("Description")
         public String description;
 
@@ -86,8 +89,20 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("NluServiceParamsJson")
+        public String nluServiceParamsJson;
+
+        @NameInMap("Numbers")
+        public java.util.List<String> numbers;
+
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("UnionInstanceId")
+        public String unionInstanceId;
+
+        @NameInMap("UnionSource")
+        public String unionSource;
 
         public static ListInstancesResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesResponseBodyInstances self = new ListInstancesResponseBodyInstances();
@@ -108,6 +123,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public Long getConcurrency() {
             return this.concurrency;
+        }
+
+        public ListInstancesResponseBodyInstances setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public ListInstancesResponseBodyInstances setDescription(String description) {
@@ -150,12 +173,44 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.name;
         }
 
+        public ListInstancesResponseBodyInstances setNluServiceParamsJson(String nluServiceParamsJson) {
+            this.nluServiceParamsJson = nluServiceParamsJson;
+            return this;
+        }
+        public String getNluServiceParamsJson() {
+            return this.nluServiceParamsJson;
+        }
+
+        public ListInstancesResponseBodyInstances setNumbers(java.util.List<String> numbers) {
+            this.numbers = numbers;
+            return this;
+        }
+        public java.util.List<String> getNumbers() {
+            return this.numbers;
+        }
+
         public ListInstancesResponseBodyInstances setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListInstancesResponseBodyInstances setUnionInstanceId(String unionInstanceId) {
+            this.unionInstanceId = unionInstanceId;
+            return this;
+        }
+        public String getUnionInstanceId() {
+            return this.unionInstanceId;
+        }
+
+        public ListInstancesResponseBodyInstances setUnionSource(String unionSource) {
+            this.unionSource = unionSource;
+            return this;
+        }
+        public String getUnionSource() {
+            return this.unionSource;
         }
 
     }
