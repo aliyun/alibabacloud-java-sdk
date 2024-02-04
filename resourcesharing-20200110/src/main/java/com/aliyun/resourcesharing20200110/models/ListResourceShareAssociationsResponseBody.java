@@ -61,6 +61,15 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
         @NameInMap("EntityType")
         public String entityType;
 
+        @NameInMap("FailureDescription")
+        public String failureDescription;
+
+        @NameInMap("FailureReason")
+        public String failureReason;
+
+        @NameInMap("OperationType")
+        public String operationType;
+
         @NameInMap("Status")
         public String status;
 
@@ -94,6 +103,30 @@ public class ListResourceShareAssociationsResponseBody extends TeaModel {
         }
         public String getEntityType() {
             return this.entityType;
+        }
+
+        public ListResourceShareAssociationsResponseBodyResourceShareAssociationsAssociationFailedDetails setFailureDescription(String failureDescription) {
+            this.failureDescription = failureDescription;
+            return this;
+        }
+        public String getFailureDescription() {
+            return this.failureDescription;
+        }
+
+        public ListResourceShareAssociationsResponseBodyResourceShareAssociationsAssociationFailedDetails setFailureReason(String failureReason) {
+            this.failureReason = failureReason;
+            return this;
+        }
+        public String getFailureReason() {
+            return this.failureReason;
+        }
+
+        public ListResourceShareAssociationsResponseBodyResourceShareAssociationsAssociationFailedDetails setOperationType(String operationType) {
+            this.operationType = operationType;
+            return this;
+        }
+        public String getOperationType() {
+            return this.operationType;
         }
 
         public ListResourceShareAssociationsResponseBodyResourceShareAssociationsAssociationFailedDetails setStatus(String status) {
