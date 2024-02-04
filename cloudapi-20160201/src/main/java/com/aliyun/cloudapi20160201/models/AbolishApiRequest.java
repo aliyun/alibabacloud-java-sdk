@@ -10,6 +10,9 @@ public class AbolishApiRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("StageName")
     public String stageName;
 
@@ -32,6 +35,14 @@ public class AbolishApiRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public AbolishApiRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public AbolishApiRequest setStageName(String stageName) {
