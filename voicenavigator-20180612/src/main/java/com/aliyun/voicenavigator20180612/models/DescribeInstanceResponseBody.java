@@ -4,6 +4,9 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceResponseBody extends TeaModel {
+    @NameInMap("AbilityType")
+    public String abilityType;
+
     @NameInMap("ApplicableOperations")
     public java.util.List<String> applicableOperations;
 
@@ -25,15 +28,32 @@ public class DescribeInstanceResponseBody extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("NluServiceParamsJson")
+    public String nluServiceParamsJson;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("UnionInstanceId")
+    public String unionInstanceId;
+
+    @NameInMap("UnionSource")
+    public String unionSource;
+
     public static DescribeInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceResponseBody self = new DescribeInstanceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceResponseBody setAbilityType(String abilityType) {
+        this.abilityType = abilityType;
+        return this;
+    }
+    public String getAbilityType() {
+        return this.abilityType;
     }
 
     public DescribeInstanceResponseBody setApplicableOperations(java.util.List<String> applicableOperations) {
@@ -92,6 +112,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         return this.name;
     }
 
+    public DescribeInstanceResponseBody setNluServiceParamsJson(String nluServiceParamsJson) {
+        this.nluServiceParamsJson = nluServiceParamsJson;
+        return this;
+    }
+    public String getNluServiceParamsJson() {
+        return this.nluServiceParamsJson;
+    }
+
     public DescribeInstanceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -106,6 +134,22 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public DescribeInstanceResponseBody setUnionInstanceId(String unionInstanceId) {
+        this.unionInstanceId = unionInstanceId;
+        return this;
+    }
+    public String getUnionInstanceId() {
+        return this.unionInstanceId;
+    }
+
+    public DescribeInstanceResponseBody setUnionSource(String unionSource) {
+        this.unionSource = unionSource;
+        return this;
+    }
+    public String getUnionSource() {
+        return this.unionSource;
     }
 
 }

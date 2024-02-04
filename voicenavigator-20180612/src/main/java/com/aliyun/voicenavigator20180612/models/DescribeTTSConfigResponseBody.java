@@ -7,8 +7,17 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     @NameInMap("AppKey")
     public String appKey;
 
+    @NameInMap("Engine")
+    public String engine;
+
+    @NameInMap("EngineXunfei")
+    public String engineXunfei;
+
     @NameInMap("NlsServiceType")
     public String nlsServiceType;
+
+    @NameInMap("PitchRate")
+    public Integer pitchRate;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -35,12 +44,36 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         return this.appKey;
     }
 
+    public DescribeTTSConfigResponseBody setEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    public String getEngine() {
+        return this.engine;
+    }
+
+    public DescribeTTSConfigResponseBody setEngineXunfei(String engineXunfei) {
+        this.engineXunfei = engineXunfei;
+        return this;
+    }
+    public String getEngineXunfei() {
+        return this.engineXunfei;
+    }
+
     public DescribeTTSConfigResponseBody setNlsServiceType(String nlsServiceType) {
         this.nlsServiceType = nlsServiceType;
         return this;
     }
     public String getNlsServiceType() {
         return this.nlsServiceType;
+    }
+
+    public DescribeTTSConfigResponseBody setPitchRate(Integer pitchRate) {
+        this.pitchRate = pitchRate;
+        return this;
+    }
+    public Integer getPitchRate() {
+        return this.pitchRate;
     }
 
     public DescribeTTSConfigResponseBody setRequestId(String requestId) {

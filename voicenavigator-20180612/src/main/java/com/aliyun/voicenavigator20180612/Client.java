@@ -41,6 +41,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.nluServiceParamsJson)) {
+            query.put("NluServiceParamsJson", request.nluServiceParamsJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nluServiceType)) {
+            query.put("NluServiceType", request.nluServiceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.unionSource)) {
+            query.put("UnionSource", request.unionSource);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -66,8 +78,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AuditTTSVoiceResponse auditTTSVoiceWithOptions(AuditTTSVoiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessKey)) {
+            query.put("AccessKey", request.accessKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appKey)) {
+            query.put("AppKey", request.appKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.engine)) {
+            query.put("Engine", request.engine);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pitchRate)) {
+            query.put("PitchRate", request.pitchRate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.secretKey)) {
+            query.put("SecretKey", request.secretKey);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.speechRate)) {
@@ -160,6 +192,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CollectedNumberResponse collectedNumberWithOptions(CollectedNumberRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.additionalContext)) {
+            query.put("AdditionalContext", request.additionalContext);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.conversationId)) {
             query.put("ConversationId", request.conversationId);
         }
@@ -236,6 +272,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nluServiceParamsJson)) {
+            query.put("NluServiceParamsJson", request.nluServiceParamsJson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.unionInstanceId)) {
+            query.put("UnionInstanceId", request.unionInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.unionSource)) {
+            query.put("UnionSource", request.unionSource);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -789,6 +837,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.options)) {
             query.put("Options", request.options);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.result)) {
+            query.put("Result", request.result);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.roundsLeftRange)) {
@@ -1367,6 +1419,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appKey)) {
             query.put("AppKey", request.appKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.engine)) {
+            query.put("Engine", request.engine);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.engineXunfei)) {
+            query.put("EngineXunfei", request.engineXunfei);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {

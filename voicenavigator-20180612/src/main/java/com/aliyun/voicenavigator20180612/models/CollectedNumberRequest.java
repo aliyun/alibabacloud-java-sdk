@@ -4,6 +4,9 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class CollectedNumberRequest extends TeaModel {
+    @NameInMap("AdditionalContext")
+    public String additionalContext;
+
     @NameInMap("ConversationId")
     public String conversationId;
 
@@ -19,6 +22,14 @@ public class CollectedNumberRequest extends TeaModel {
     public static CollectedNumberRequest build(java.util.Map<String, ?> map) throws Exception {
         CollectedNumberRequest self = new CollectedNumberRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CollectedNumberRequest setAdditionalContext(String additionalContext) {
+        this.additionalContext = additionalContext;
+        return this;
+    }
+    public String getAdditionalContext() {
+        return this.additionalContext;
     }
 
     public CollectedNumberRequest setConversationId(String conversationId) {

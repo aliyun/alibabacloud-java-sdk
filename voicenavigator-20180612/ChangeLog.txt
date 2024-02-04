@@ -1,3 +1,14 @@
+2024-02-04 Version: 1.0.2
+- Update API AuditTTSVoiceadd AccessKey param.
+add AppKey param.
+add Engine param.
+add PitchRate param.
+add SecretKey param.
+- Update API DescribeTTSConfigupdate response param.
+- Update API ModifyTTSConfigadd Engine param.
+add EngineXunfei param.
+
+
 2022-10-13 Version: 1.0.1
 - Generated java 2018-06-12 for VoiceNavigator.
 

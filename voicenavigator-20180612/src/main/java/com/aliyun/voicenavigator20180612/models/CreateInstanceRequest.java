@@ -13,6 +13,15 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("NluServiceParamsJson")
+    public String nluServiceParamsJson;
+
+    @NameInMap("UnionInstanceId")
+    public String unionInstanceId;
+
+    @NameInMap("UnionSource")
+    public String unionSource;
+
     public static CreateInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceRequest self = new CreateInstanceRequest();
         return TeaModel.build(map, self);
@@ -40,6 +49,30 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateInstanceRequest setNluServiceParamsJson(String nluServiceParamsJson) {
+        this.nluServiceParamsJson = nluServiceParamsJson;
+        return this;
+    }
+    public String getNluServiceParamsJson() {
+        return this.nluServiceParamsJson;
+    }
+
+    public CreateInstanceRequest setUnionInstanceId(String unionInstanceId) {
+        this.unionInstanceId = unionInstanceId;
+        return this;
+    }
+    public String getUnionInstanceId() {
+        return this.unionInstanceId;
+    }
+
+    public CreateInstanceRequest setUnionSource(String unionSource) {
+        this.unionSource = unionSource;
+        return this;
+    }
+    public String getUnionSource() {
+        return this.unionSource;
     }
 
 }
