@@ -301,6 +301,9 @@ public class LoginInstanceRequest extends TeaModel {
         @NameInMap("LoginByInstanceCredential")
         public Boolean loginByInstanceCredential;
 
+        @NameInMap("LoginByInstanceShortcut")
+        public Boolean loginByInstanceShortcut;
+
         @NameInMap("NetworkAccessMode")
         public String networkAccessMode;
 
@@ -324,6 +327,9 @@ public class LoginInstanceRequest extends TeaModel {
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        @NameInMap("ShortcutToken")
+        public String shortcutToken;
 
         @NameInMap("Username")
         public String username;
@@ -424,6 +430,14 @@ public class LoginInstanceRequest extends TeaModel {
             return this.loginByInstanceCredential;
         }
 
+        public LoginInstanceRequestInstanceLoginInfo setLoginByInstanceShortcut(Boolean loginByInstanceShortcut) {
+            this.loginByInstanceShortcut = loginByInstanceShortcut;
+            return this;
+        }
+        public Boolean getLoginByInstanceShortcut() {
+            return this.loginByInstanceShortcut;
+        }
+
         public LoginInstanceRequestInstanceLoginInfo setNetworkAccessMode(String networkAccessMode) {
             this.networkAccessMode = networkAccessMode;
             return this;
@@ -486,6 +500,14 @@ public class LoginInstanceRequest extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public LoginInstanceRequestInstanceLoginInfo setShortcutToken(String shortcutToken) {
+            this.shortcutToken = shortcutToken;
+            return this;
+        }
+        public String getShortcutToken() {
+            return this.shortcutToken;
         }
 
         public LoginInstanceRequestInstanceLoginInfo setUsername(String username) {
