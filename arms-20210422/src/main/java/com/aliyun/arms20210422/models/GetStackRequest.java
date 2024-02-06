@@ -4,6 +4,9 @@ package com.aliyun.arms20210422.models;
 import com.aliyun.tea.*;
 
 public class GetStackRequest extends TeaModel {
+    @NameInMap("EndTime")
+    public Long endTime;
+
     @NameInMap("Pid")
     public String pid;
 
@@ -13,12 +16,23 @@ public class GetStackRequest extends TeaModel {
     @NameInMap("RpcID")
     public String rpcID;
 
+    @NameInMap("StartTime")
+    public Long startTime;
+
     @NameInMap("TraceID")
     public String traceID;
 
     public static GetStackRequest build(java.util.Map<String, ?> map) throws Exception {
         GetStackRequest self = new GetStackRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetStackRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     public GetStackRequest setPid(String pid) {
@@ -43,6 +57,14 @@ public class GetStackRequest extends TeaModel {
     }
     public String getRpcID() {
         return this.rpcID;
+    }
+
+    public GetStackRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
     public GetStackRequest setTraceID(String traceID) {
