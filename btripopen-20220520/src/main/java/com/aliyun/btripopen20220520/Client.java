@@ -546,6 +546,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.applyApproveWithOptions(request, headers, runtime);
     }
 
+    public ApplyExternalNodeStatusUpdateResponse applyExternalNodeStatusUpdateWithOptions(ApplyExternalNodeStatusUpdateRequest tmpReq, ApplyExternalNodeStatusUpdateHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ApplyExternalNodeStatusUpdateShrinkRequest request = new ApplyExternalNodeStatusUpdateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.operationRecords)) {
+            request.operationRecordsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.operationRecords, "operation_records", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            body.put("node_id", request.nodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationRecordsShrink)) {
+            body.put("operation_records", request.operationRecordsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.processActionResult)) {
+            body.put("process_action_result", request.processActionResult);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ApplyExternalNodeStatusUpdate"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/apply/v1/external-nodes/action/status-update"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ApplyExternalNodeStatusUpdateResponse());
+    }
+
+    public ApplyExternalNodeStatusUpdateResponse applyExternalNodeStatusUpdate(ApplyExternalNodeStatusUpdateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ApplyExternalNodeStatusUpdateHeaders headers = new ApplyExternalNodeStatusUpdateHeaders();
+        return this.applyExternalNodeStatusUpdateWithOptions(request, headers, runtime);
+    }
+
     public ApplyInvoiceTaskResponse applyInvoiceTaskWithOptions(ApplyInvoiceTaskRequest tmpReq, ApplyInvoiceTaskHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ApplyInvoiceTaskShrinkRequest request = new ApplyInvoiceTaskShrinkRequest();
