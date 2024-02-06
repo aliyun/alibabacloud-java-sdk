@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeTaskInfoResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The description of the task.</p>
+     * <p>The queried task.</p>
      */
     @NameInMap("TaskInfo")
     public DescribeTaskInfoResponseBodyTaskInfo taskInfo;
@@ -39,13 +39,13 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
 
     public static class DescribeTaskInfoResponseBodyTaskInfo extends TeaModel {
         /**
-         * <p>The start time of the task. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * <p>The start time of the task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          */
         @NameInMap("BeginTime")
         public String beginTime;
 
         /**
-         * <p>The end time of the task. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * <p>The end time of the task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          */
         @NameInMap("FinishTime")
         public String finishTime;
@@ -57,7 +57,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         public String progress;
 
         /**
-         * <p>The status of the task.</p>
+         * <p>The status. Valid values:</p>
          * <br>
          * <p>*   Waiting</p>
          * <p>*   Running</p>
@@ -73,7 +73,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          */
         @NameInMap("TaskId")
         public Integer taskId;

@@ -4,9 +4,19 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class ModifySQAConfigRequest extends TeaModel {
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The name of the resource group.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBResourceGroup](~~459446~~) operation to query the resource group name of a cluster.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
@@ -16,6 +26,9 @@ public class ModifySQAConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -25,6 +38,14 @@ public class ModifySQAConfigRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>Specifies whether to enable short query acceleration (SQA).</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   on</p>
+     * <p>*   off</p>
+     */
     @NameInMap("SQAStatus")
     public String SQAStatus;
 

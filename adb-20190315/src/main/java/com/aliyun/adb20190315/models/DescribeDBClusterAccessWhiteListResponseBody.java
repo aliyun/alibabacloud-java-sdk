@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the information of IP whitelists.</p>
+     * <p>The queried IP address whitelists.</p>
      */
     @NameInMap("Items")
     public DescribeDBClusterAccessWhiteListResponseBodyItems items;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,9 +39,9 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
 
     public static class DescribeDBClusterAccessWhiteListResponseBodyItemsIPArray extends TeaModel {
         /**
-         * <p>The attribute of the whitelist group. It is empty by default.</p>
+         * <p>The attribute of the IP address whitelist. By default, this parameter is empty.</p>
          * <br>
-         * <p>>  The groups with hidden attribute are not displayed in the console. The groups with hidden attribute are used to access DTS and PolarDB-X.</p>
+         * <p>>  The IP address whitelists that have the **hidden** attribute are not displayed in the console. These IP address whitelists are used to access services such as Data Transmission Service (DTS) and PolarDB-X.</p>
          */
         @NameInMap("DBClusterIPArrayAttribute")
         public String DBClusterIPArrayAttribute;
@@ -49,14 +49,14 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
         /**
          * <p>The name of the IP address whitelist.</p>
          * <br>
-         * <p>*   The name of the IP address whitelist group must be 2 to 32 characters in length and can contain lowercase letters, digits, and underscores (\_). The name must start with a lowercase letter and end with a digit or lowercase letter.</p>
-         * <p>*   You can create up to 50 whitelists for a cluster.</p>
+         * <p>*   The name of an IP address whitelist must be 2 to 32 characters in length. The name can contain lowercase letters, digits, and underscores (\_). The name must start with a lowercase letter and end with a lowercase letter or digit.</p>
+         * <p>*   Each cluster supports up to 50 IP address whitelists.</p>
          */
         @NameInMap("DBClusterIPArrayName")
         public String DBClusterIPArrayName;
 
         /**
-         * <p>The IP addresses in an IP address whitelist. A maximum of 1,000 IP addresses can be returned. These addresses are separated with commas (,).</p>
+         * <p>The IP addresses in the IP address whitelist. Up to 1,000 IP addresses can be returned. Multiple IP addresses are separated by commas (,).</p>
          */
         @NameInMap("SecurityIPList")
         public String securityIPList;

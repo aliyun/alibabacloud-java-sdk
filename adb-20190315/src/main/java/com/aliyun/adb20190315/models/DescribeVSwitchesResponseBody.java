@@ -69,7 +69,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>Indicates whether the vSwitch is the default vSwitch. Valid values: **true** **false**</p>
+         * <p>Indicates whether the vSwitch is the default vSwitch. Valid values: **true**: The vSwitch is the default vSwitch. **false**: The vSwitch is not the default vSwitch.</p>
          */
         @NameInMap("IsDefault")
         public Boolean isDefault;
@@ -200,6 +200,9 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     }
 
     public static class DescribeVSwitchesResponseBodyVSwitches extends TeaModel {
+        /**
+         * <p>The queried vSwitch.</p>
+         */
         @NameInMap("VSwitch")
         public java.util.List<DescribeVSwitchesResponseBodyVSwitchesVSwitch> vSwitch;
 

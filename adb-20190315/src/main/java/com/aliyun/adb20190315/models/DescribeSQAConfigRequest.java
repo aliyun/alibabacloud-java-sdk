@@ -4,9 +4,19 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQAConfigRequest extends TeaModel {
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The name of the resource group.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBResourceGroup](~~612410~~) operation to query the resource group name of a cluster.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
@@ -16,9 +26,17 @@ public class DescribeSQAConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

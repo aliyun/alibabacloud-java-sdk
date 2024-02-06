@@ -4,12 +4,23 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeResubmitConfigResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The job resubmission rules.</p>
+     */
     @NameInMap("Rules")
     public java.util.List<DescribeResubmitConfigResponseBodyRules> rules;
 
@@ -43,18 +54,33 @@ public class DescribeResubmitConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeResubmitConfigResponseBodyRules extends TeaModel {
+        /**
+         * <p>Indicates whether out-of-memory (OOM) check is configured.</p>
+         */
         @NameInMap("ExceedMemoryException")
         public Boolean exceedMemoryException;
 
+        /**
+         * <p>The name of the source resource group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The peak memory usage.</p>
+         */
         @NameInMap("PeakMemory")
         public String peakMemory;
 
+        /**
+         * <p>The duration of the SQL statement. Unit: milliseconds.</p>
+         */
         @NameInMap("QueryTime")
         public String queryTime;
 
+        /**
+         * <p>The name of the destination resource group.</p>
+         */
         @NameInMap("TargetGroupName")
         public String targetGroupName;
 

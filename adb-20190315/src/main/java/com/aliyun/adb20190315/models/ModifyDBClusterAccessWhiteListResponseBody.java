@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterAccessWhiteListResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      */
     @NameInMap("TaskId")
     public Integer taskId;

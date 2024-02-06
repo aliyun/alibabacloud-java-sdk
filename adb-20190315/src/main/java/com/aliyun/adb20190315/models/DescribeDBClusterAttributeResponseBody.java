@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     /**
-     * <p>The information about the cluster.</p>
+     * <p>The queried cluster information.</p>
      */
     @NameInMap("Items")
     public DescribeDBClusterAttributeResponseBodyItems items;
@@ -117,13 +117,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
-         * <p>The specifications of computing resources that are used in the cluster in elastic mode. The increase of computing resources can speed up queries. You can adjust the value of this parameter to scale the cluster.</p>
+         * <p>The specifications of computing resources that are used in the cluster in elastic mode. Computing resources are used to compute data. The increase in the computing resources can accelerate queries. You can scale computing resources based on your business requirements.</p>
          */
         @NameInMap("ComputeResource")
         public String computeResource;
 
         /**
-         * <p>The Virtual Private Cloud (VPC) endpoint of the cluster.</p>
+         * <p>The Virtual Private Cloud (VPC) endpoint that is used to connect to the cluster.</p>
          */
         @NameInMap("ConnectionString")
         public String connectionString;
@@ -159,7 +159,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String DBClusterStatus;
 
         /**
-         * <p>The type of the cluster. Valid values:</p>
+         * <p>The cluster type. Valid values:</p>
          * <br>
          * <p>*   **Common**: common cluster.</p>
          * <p>*   **RDS_ANALYSIS**: MySQL analytic instance.</p>
@@ -186,11 +186,17 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public Long DBNodeStorage;
 
         /**
-         * <p>The version of the database engine. **3.0** is returned.</p>
+         * <p>The engine version of the cluster. **3.0** is returned.</p>
          */
         @NameInMap("DBVersion")
         public String DBVersion;
 
+        /**
+         * <p>Indicates whether disk encryption is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("DiskEncryption")
         public String diskEncryption;
 
@@ -218,7 +224,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String diskType;
 
         /**
-         * <p>The ID of the Data Transmission Service (DTS) synchronization task. This parameter is returned only for MySQL analytic instances.</p>
+         * <p>The ID of the Data Transmission Service (DTS) synchronization job. This parameter is returned only for MySQL analytic instances.</p>
          */
         @NameInMap("DtsJobId")
         public String dtsJobId;
@@ -232,8 +238,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         /**
          * <p>The single-node specifications of an EIU. Valid values:</p>
          * <br>
-         * <p>*   8Core64GB: If this value is returned, an EIU of the cluster has 24 cores and 192 GB memory.</p>
-         * <p>*   12Core96GB: If this value is returned, an EIU of the cluster has 36 cores and 288 GB memory.</p>
+         * <p>*   8Core64GB: If this value is returned, the specifications of an EIU are 24 cores and 192 GB memory.</p>
+         * <p>*   12Core96GB: If this value is returned, the specifications of an EIU are 36 cores and 288 GB memory.</p>
          */
         @NameInMap("ElasticIOResourceSize")
         public String elasticIOResourceSize;
@@ -275,7 +281,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String executorCount;
 
         /**
-         * <p>The time when the cluster expires. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC. Example: *2999-09-08T16:00:00Z*.</p>
+         * <p>The expiration time of the cluster. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC. Example: *2999-09-08T16:00:00Z*.</p>
          * <br>
          * <p>> </p>
          * <br>
@@ -296,7 +302,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String expired;
 
         /**
-         * <p>The public IP address.</p>
+         * <p>The public IP address of the cluster.</p>
          */
         @NameInMap("InnerIp")
         public String innerIp;
@@ -322,7 +328,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          * <p>*   **ManualLock**: The cluster is manually locked.</p>
          * <p>*   **LockByExpiration**: The cluster is automatically locked due to cluster expiration.</p>
          * <p>*   **LockByRestoration**: The cluster is automatically locked due to cluster restoration.</p>
-         * <p>*   **LockByDiskQuota**: The cluster is automatically locked when it has used 90% of its storage.</p>
+         * <p>*   **LockByDiskQuota**: The cluster is automatically locked when 90% of the cluster storage is used.</p>
          */
         @NameInMap("LockMode")
         public String lockMode;
@@ -336,7 +342,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String lockReason;
 
         /**
-         * <p>The maintenance window of the cluster. The window follows the ISO 8601 standard in the *HH:mmZ- HH:mmZ* format. The time is displayed in UTC. An example is *04:00Z-05:00Z*, which indicates that routine maintenance can be performed from 04:00 to 05:00.</p>
+         * <p>The maintenance window of the cluster. The time is displayed in the *HH:mmZ-HH:mmZ* format in UTC. An example is *04:00Z-05:00Z*, which indicates that routine maintenance is performed from 04:00 to 05:00.</p>
          * <br>
          * <p>>  For more information about maintenance windows, see [Configure a maintenance window](~~122569~~).</p>
          */
@@ -388,7 +394,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The specifications of storage resources that are used in the cluster in elastic mode. These resources are used to read and write data. You can increase the value of this parameter to improve the read and write performance of the cluster.</p>
+         * <p>The specifications of storage resources that are used in the cluster in elastic mode. Storage resources are used to read and write data. The increase in the storage resources can improve the read and write performance of the cluster.</p>
          */
         @NameInMap("StorageResource")
         public String storageResource;

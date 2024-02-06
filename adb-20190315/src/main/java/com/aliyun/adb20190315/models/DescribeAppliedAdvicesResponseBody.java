@@ -97,13 +97,13 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         public String benefit;
 
         /**
-         * <p>The SQL statement used to execute the BUILD task.</p>
+         * <p>The SQL statement that is used to execute the BUILD job.</p>
          */
         @NameInMap("BuildSQL")
         public String buildSQL;
 
         /**
-         * <p>The state of the suggestion execution task. Valid values:</p>
+         * <p>The state of the suggestion execution job. Valid values:</p>
          * <br>
          * <p>*   **SUCCEED**</p>
          * <p>*   **FAILED**</p>
@@ -112,7 +112,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         public String jobStatus;
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          */
         @NameInMap("PageNumber")
         public Long pageNumber;
@@ -128,7 +128,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The SQL statement used to roll back the suggestion.</p>
+         * <p>The SQL statement that is used to roll back the suggestion.</p>
          */
         @NameInMap("RollbackSQL")
         public String rollbackSQL;
@@ -155,7 +155,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         public String submitTime;
 
         /**
-         * <p>The total number of entries returned. The value is an integer that is greater than or equal to 0. Default value: 0.</p>
+         * <p>The total number of entries returned. Minimum value: 0. Default value: 0.</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceRequest extends TeaModel {
     /**
-     * <p>The supported mode. Valid values:</p>
+     * <p>The language of query results. Valid values:</p>
      * <br>
-     * <p>*   **flexible**: elastic mode</p>
-     * <p>*   **reserver**: reserved mode</p>
+     * <p>*   **zh-CN** (default): Chinese.</p>
+     * <p>*   **en-US**: English.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
@@ -19,6 +19,9 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The version of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     */
     @NameInMap("DBClusterVersion")
     public String DBClusterVersion;
 
@@ -29,7 +32,9 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The resources available in the zones.</p>
+     * <p>The region ID.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -41,7 +46,9 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the zone.</p>
+     * <p>The zone ID.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent zone list.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

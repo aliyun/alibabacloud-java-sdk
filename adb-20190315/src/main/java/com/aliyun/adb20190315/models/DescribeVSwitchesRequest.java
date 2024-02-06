@@ -35,6 +35,9 @@ public class DescribeVSwitchesRequest extends TeaModel {
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The vSwitch ID.</p>
+     */
     @NameInMap("VswId")
     public String vswId;
 

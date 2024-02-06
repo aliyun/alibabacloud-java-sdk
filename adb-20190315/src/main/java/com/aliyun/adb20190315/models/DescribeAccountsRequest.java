@@ -6,19 +6,25 @@ import com.aliyun.tea.*;
 public class DescribeAccountsRequest extends TeaModel {
     /**
      * <p>The name of the database account.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, the information about all database accounts is returned.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
-     * <p>*   Normal: standard account.</p>
-     * <p>*   Super: privileged account.</p>
+     * <p>The type of the database account. If you do not specify this parameter, the information about all account types is returned. Valid values:</p>
+     * <br>
+     * <p>*   **Normal**: standard account.</p>
+     * <p>*   **Super**: privileged account.</p>
      */
     @NameInMap("AccountType")
     public String accountType;
 
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

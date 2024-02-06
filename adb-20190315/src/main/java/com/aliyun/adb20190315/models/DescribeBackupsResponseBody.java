@@ -87,7 +87,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupEndTime;
 
         /**
-         * <p>The ID of the backup set.</p>
+         * <p>The backup set ID.</p>
          */
         @NameInMap("BackupId")
         public String backupId;
@@ -99,7 +99,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupMethod;
 
         /**
-         * <p>The backup size. Unit: bytes.</p>
+         * <p>The size of the backup set. Unit: bytes.</p>
          */
         @NameInMap("BackupSize")
         public Long backupSize;

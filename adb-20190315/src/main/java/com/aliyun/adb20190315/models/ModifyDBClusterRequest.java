@@ -64,7 +64,12 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String DBNodeStorage;
 
     /**
-     * <p>The enhanced SSD (ESSD) performance level of the cluster. Valid values: PL1 PL2 PL3</p>
+     * <p>The enhanced SSD (ESSD) performance level of the cluster. Valid values:</p>
+     * <br>
+     * <p>*   PL0</p>
+     * <p>*   PL1</p>
+     * <p>*   PL2</p>
+     * <p>*   PL3</p>
      */
     @NameInMap("DiskPerformanceLevel")
     public String diskPerformanceLevel;
@@ -84,7 +89,7 @@ public class ModifyDBClusterRequest extends TeaModel {
      * <p>*   **8Core64GB**: If you set the parameter to **8Core64GB**, the specifications of an EIU are 24 cores and 192 GB memory.</p>
      * <p>*   **12Core96GB**: If you set the parameter to **12Core96GB**, the specifications of an EIU are 36 cores and 288 GB memory.</p>
      * <br>
-     * <p>> This parameter is available only when the cluster meets the following conditions:</p>
+     * <p>>  This parameter takes effect only when your cluster meets the following requirements:</p>
      * <br>
      * <p>*   The cluster is in elastic mode.</p>
      * <br>
