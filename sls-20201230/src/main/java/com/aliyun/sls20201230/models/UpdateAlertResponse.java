@@ -5,16 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateAlertResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public Object body;
 
     public static UpdateAlertResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateAlertResponse self = new UpdateAlertResponse();
@@ -35,14 +29,6 @@ public class UpdateAlertResponse extends TeaModel {
     }
     public Integer getStatusCode() {
         return this.statusCode;
-    }
-
-    public UpdateAlertResponse setBody(Object body) {
-        this.body = body;
-        return this;
-    }
-    public Object getBody() {
-        return this.body;
     }
 
 }

@@ -5,16 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteAlertResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public Object body;
 
     public static DeleteAlertResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteAlertResponse self = new DeleteAlertResponse();
@@ -35,14 +29,6 @@ public class DeleteAlertResponse extends TeaModel {
     }
     public Integer getStatusCode() {
         return this.statusCode;
-    }
-
-    public DeleteAlertResponse setBody(Object body) {
-        this.body = body;
-        return this;
-    }
-    public Object getBody() {
-        return this.body;
     }
 
 }

@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAlertResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
-    public AlertResp body;
+    public Alert body;
 
     public static GetAlertResponse build(java.util.Map<String, ?> map) throws Exception {
         GetAlertResponse self = new GetAlertResponse();
@@ -37,11 +34,11 @@ public class GetAlertResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetAlertResponse setBody(AlertResp body) {
+    public GetAlertResponse setBody(Alert body) {
         this.body = body;
         return this;
     }
-    public AlertResp getBody() {
+    public Alert getBody() {
         return this.body;
     }
 
