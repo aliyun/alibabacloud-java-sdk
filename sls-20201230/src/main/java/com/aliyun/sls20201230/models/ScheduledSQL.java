@@ -3,9 +3,9 @@ package com.aliyun.sls20201230.models;
 
 import com.aliyun.tea.*;
 
-public class AlertResp extends TeaModel {
+public class ScheduledSQL extends TeaModel {
     @NameInMap("configuration")
-    public AlertConfiguration configuration;
+    public ScheduledSQLConfiguration configuration;
 
     @NameInMap("createTime")
     public Long createTime;
@@ -25,23 +25,23 @@ public class AlertResp extends TeaModel {
     @NameInMap("schedule")
     public Schedule schedule;
 
-    @NameInMap("status")
-    public String status;
+    @NameInMap("scheduleId")
+    public String scheduleId;
 
-    public static AlertResp build(java.util.Map<String, ?> map) throws Exception {
-        AlertResp self = new AlertResp();
+    public static ScheduledSQL build(java.util.Map<String, ?> map) throws Exception {
+        ScheduledSQL self = new ScheduledSQL();
         return TeaModel.build(map, self);
     }
 
-    public AlertResp setConfiguration(AlertConfiguration configuration) {
+    public ScheduledSQL setConfiguration(ScheduledSQLConfiguration configuration) {
         this.configuration = configuration;
         return this;
     }
-    public AlertConfiguration getConfiguration() {
+    public ScheduledSQLConfiguration getConfiguration() {
         return this.configuration;
     }
 
-    public AlertResp setCreateTime(Long createTime) {
+    public ScheduledSQL setCreateTime(Long createTime) {
         this.createTime = createTime;
         return this;
     }
@@ -49,7 +49,7 @@ public class AlertResp extends TeaModel {
         return this.createTime;
     }
 
-    public AlertResp setDescription(String description) {
+    public ScheduledSQL setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -57,7 +57,7 @@ public class AlertResp extends TeaModel {
         return this.description;
     }
 
-    public AlertResp setDisplayName(String displayName) {
+    public ScheduledSQL setDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
@@ -65,7 +65,7 @@ public class AlertResp extends TeaModel {
         return this.displayName;
     }
 
-    public AlertResp setLastModifiedTime(Long lastModifiedTime) {
+    public ScheduledSQL setLastModifiedTime(Long lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
     }
@@ -73,7 +73,7 @@ public class AlertResp extends TeaModel {
         return this.lastModifiedTime;
     }
 
-    public AlertResp setName(String name) {
+    public ScheduledSQL setName(String name) {
         this.name = name;
         return this;
     }
@@ -81,7 +81,7 @@ public class AlertResp extends TeaModel {
         return this.name;
     }
 
-    public AlertResp setSchedule(Schedule schedule) {
+    public ScheduledSQL setSchedule(Schedule schedule) {
         this.schedule = schedule;
         return this;
     }
@@ -89,12 +89,12 @@ public class AlertResp extends TeaModel {
         return this.schedule;
     }
 
-    public AlertResp setStatus(String status) {
-        this.status = status;
+    public ScheduledSQL setScheduleId(String scheduleId) {
+        this.scheduleId = scheduleId;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public String getScheduleId() {
+        return this.scheduleId;
     }
 
 }

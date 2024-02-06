@@ -8,7 +8,7 @@ public class ListAlertsResponseBody extends TeaModel {
     public Integer count;
 
     @NameInMap("results")
-    public java.util.List<AlertResp> results;
+    public java.util.List<Alert> results;
 
     @NameInMap("total")
     public Integer total;
@@ -26,11 +26,11 @@ public class ListAlertsResponseBody extends TeaModel {
         return this.count;
     }
 
-    public ListAlertsResponseBody setResults(java.util.List<AlertResp> results) {
+    public ListAlertsResponseBody setResults(java.util.List<Alert> results) {
         this.results = results;
         return this;
     }
-    public java.util.List<AlertResp> getResults() {
+    public java.util.List<Alert> getResults() {
         return this.results;
     }
 
