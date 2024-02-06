@@ -4,15 +4,38 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeEIURangeRequest extends TeaModel {
+    /**
+     * <p>The specifications of computing resources.</p>
+     * <br>
+     * <p>>  You can call the [DescribeComputeResource](~~469002~~) operation to query the specifications of computing resources.</p>
+     */
     @NameInMap("ComputeResource")
     public String computeResource;
 
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <br>
+     * <p>*   This parameter can be left empty when **Operation** is set to **Buy**.</p>
+     * <p>*   This parameter must be specified when **Operation** is set to **Upgrade** or **Downgrade**.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The version of the AnalyticDB for MySQL Data Warehouse Edition cluster. Set the value to **3.0**.</p>
+     */
     @NameInMap("DBClusterVersion")
     public String DBClusterVersion;
 
+    /**
+     * <p>The type of the operation. Valid values:</p>
+     * <br>
+     * <p>*   **Buy**: purchases a cluster.</p>
+     * <p>*   **Upgrade**: upgrades a cluster.</p>
+     * <p>*   **Downgrade**: downgrades a cluster.</p>
+     */
     @NameInMap("Operation")
     public String operation;
 
@@ -22,6 +45,11 @@ public class DescribeEIURangeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -37,6 +65,11 @@ public class DescribeEIURangeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The zone ID of the cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~612293~~) operation to query the most recent zone list.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

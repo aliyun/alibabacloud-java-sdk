@@ -795,6 +795,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ElasticPlanEndDay", request.elasticPlanEndDay);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.elasticPlanMonthlyRepeat)) {
+            query.put("ElasticPlanMonthlyRepeat", request.elasticPlanMonthlyRepeat);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.elasticPlanName)) {
             query.put("ElasticPlanName", request.elasticPlanName);
         }
@@ -5666,6 +5670,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.elasticPlanEndDay)) {
             query.put("ElasticPlanEndDay", request.elasticPlanEndDay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.elasticPlanMonthlyRepeat)) {
+            query.put("ElasticPlanMonthlyRepeat", request.elasticPlanMonthlyRepeat);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.elasticPlanName)) {

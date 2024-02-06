@@ -92,6 +92,9 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        @NameInMap("MonthlyRepeat")
+        public String monthlyRepeat;
+
         /**
          * <p>The name of the scaling plan.</p>
          */
@@ -173,6 +176,14 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
+        }
+
+        public DescribeElasticPlanResponseBodyElasticPlanList setMonthlyRepeat(String monthlyRepeat) {
+            this.monthlyRepeat = monthlyRepeat;
+            return this;
+        }
+        public String getMonthlyRepeat() {
+            return this.monthlyRepeat;
         }
 
         public DescribeElasticPlanResponseBodyElasticPlanList setPlanName(String planName) {

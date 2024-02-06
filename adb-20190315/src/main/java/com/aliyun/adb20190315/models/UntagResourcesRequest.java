@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to detach all tags. This parameter takes effect only when the TagKey.N parameter is not specified. Valid values:</p>
+     * <p>Specifies whether to remove all tags from clusters. Default value: false. Valid values:</p>
      * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      * <br>
-     * <p>Default value: false.</p>
+     * <p>>  If you specify TagKey and this parameter, this parameter does not take effect.</p>
      */
     @NameInMap("All")
     public Boolean all;
@@ -22,11 +22,16 @@ public class UntagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     * <p>The region ID.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of cluster N. Valid values of N: 1 to 50.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -37,11 +42,14 @@ public class UntagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the cluster. Set the value to `ALIYUN::ADB::CLUSTER`.</p>
+     * <p>The resource type. Set the value to **ALIYUN::ADB::CLUSTER**.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The key of tag N. Valid values of N: 1 to 20.</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

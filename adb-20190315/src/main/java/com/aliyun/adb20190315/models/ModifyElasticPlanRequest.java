@@ -27,6 +27,9 @@ public class ModifyElasticPlanRequest extends TeaModel {
     @NameInMap("ElasticPlanEndDay")
     public String elasticPlanEndDay;
 
+    @NameInMap("ElasticPlanMonthlyRepeat")
+    public String elasticPlanMonthlyRepeat;
+
     /**
      * <p>The name of the scaling plan.</p>
      * <br>
@@ -148,6 +151,14 @@ public class ModifyElasticPlanRequest extends TeaModel {
     }
     public String getElasticPlanEndDay() {
         return this.elasticPlanEndDay;
+    }
+
+    public ModifyElasticPlanRequest setElasticPlanMonthlyRepeat(String elasticPlanMonthlyRepeat) {
+        this.elasticPlanMonthlyRepeat = elasticPlanMonthlyRepeat;
+        return this;
+    }
+    public String getElasticPlanMonthlyRepeat() {
+        return this.elasticPlanMonthlyRepeat;
     }
 
     public ModifyElasticPlanRequest setElasticPlanName(String elasticPlanName) {

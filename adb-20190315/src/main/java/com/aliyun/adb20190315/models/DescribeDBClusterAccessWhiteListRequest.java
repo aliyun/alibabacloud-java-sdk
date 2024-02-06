@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterAccessWhiteListRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

@@ -4,6 +4,11 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class ModifyResubmitConfigShrinkRequest extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -13,6 +18,9 @@ public class ModifyResubmitConfigShrinkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -22,6 +30,9 @@ public class ModifyResubmitConfigShrinkRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The job resubmission rules.</p>
+     */
     @NameInMap("Rules")
     public String rulesShrink;
 

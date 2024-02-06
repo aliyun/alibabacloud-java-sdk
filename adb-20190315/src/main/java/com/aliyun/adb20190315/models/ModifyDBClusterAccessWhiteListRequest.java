@@ -5,35 +5,31 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterAccessWhiteListRequest extends TeaModel {
     /**
-     * <p>The attribute of the whitelist. This parameter is empty by default.</p>
-     * <br>
-     * <p>The IP address whitelists that have the hidden attribute are not displayed in the AnalyticDB for MySQL console. These IP address whitelists are used to access Alibaba Cloud services such as Data Transmission Service (DTS) and PolarDB-X.</p>
+     * <p>The attribute of the IP address whitelist. By default, this parameter is empty. The IP address whitelists that have the **hidden** attribute are not displayed in the console. These IP address whitelists are used to access services such as Data Transmission Service (DTS) and PolarDB-X.</p>
      */
     @NameInMap("DBClusterIPArrayAttribute")
     public String DBClusterIPArrayAttribute;
 
     /**
-     * <p>The name of the IP address whitelist to be modified. Default value: Default.</p>
+     * <p>The name of the IP address whitelist that you want to modify. Default value: **Default**. The name of an IP address whitelist must be 2 to 32 characters in length. The name can contain lowercase letters, digits, and underscores (\_). The name must start with a lowercase letter and end with a lowercase letter or digit.</p>
      * <br>
-     * <p>The name of an IP address whitelist must be 2 to 32 characters in length. The name must contain lowercase letters, digits, and underscores (\_). The name must start with a lowercase letter and end with a digit or lowercase letter.</p>
-     * <br>
-     * <p>You can create up to 50 whitelists for a cluster.</p>
+     * <p>Each cluster supports up to 50 IP address whitelists.</p>
      */
     @NameInMap("DBClusterIPArrayName")
     public String DBClusterIPArrayName;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>The method used to modify the whitelist. Valid values:</p>
+     * <p>The method that you want to use to modify the IP address whitelist. Valid values:</p>
      * <br>
-     * <p>*   Cover: overwrites the original IP address whitelist.</p>
-     * <p>*   Append: adds one or more IP addresses.</p>
-     * <p>*   Delete: deletes one or more IP addresses.</p>
+     * <p>*   Cover: overwrites the IP address whitelist.</p>
+     * <p>*   Append: adds IP addresses to the IP address whitelist.</p>
+     * <p>*   Delete: removes IP addresses from the IP address whitelist.</p>
      * <br>
      * <p>Default value: Cover.</p>
      */
@@ -53,12 +49,12 @@ public class ModifyDBClusterAccessWhiteListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IP addresses in an IP address whitelist of a cluster. Separate multiple IP addresses with commas (,). You can add a maximum of 500 different IP addresses to a whitelist. The following formats are supported:</p>
+     * <p>The IP addresses that you want to use to modify the IP address whitelist of the cluster. Separate multiple IP addresses with commas (,). You can specify up to 500 distinct IP addresses. The following formats are supported:</p>
      * <br>
-     * <p>*   IP addresses. Example: 10.23.12.24.</p>
-     * <p>*   CIDR blocks. Example: 10.23.12.24/24. 24 indicates that the prefix of the CIDR block is 24-bit long. You can replace 24 with a value within the range of 1 to 32.</p>
+     * <p>*   IP address. Example: 10.23.12.24.</p>
+     * <p>*   CIDR block. Example: 10.23.12.24/24. In this example, 24 indicates that the prefix of the CIDR block is 24 bits in length. You can replace 24 with a value that ranges from 1 to 32.</p>
      * <br>
-     * <p>This parameter must be specified unless the ModifyMode parameter is set to Delete.</p>
+     * <p>>  This parameter must be specified unless ModifyMode is set to Delete.</p>
      */
     @NameInMap("SecurityIps")
     public String securityIps;

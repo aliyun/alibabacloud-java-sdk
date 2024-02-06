@@ -4,6 +4,11 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class ModifyResubmitConfigRequest extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -13,6 +18,9 @@ public class ModifyResubmitConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -22,6 +30,9 @@ public class ModifyResubmitConfigRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The job resubmission rules.</p>
+     */
     @NameInMap("Rules")
     public java.util.List<ModifyResubmitConfigRequestRules> rules;
 
@@ -87,18 +98,33 @@ public class ModifyResubmitConfigRequest extends TeaModel {
     }
 
     public static class ModifyResubmitConfigRequestRules extends TeaModel {
+        /**
+         * <p>Specifies whether to configure out-of-memory (OOM) check.</p>
+         */
         @NameInMap("ExceedMemoryException")
         public Boolean exceedMemoryException;
 
+        /**
+         * <p>The name of the source resource group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The peak memory usage.</p>
+         */
         @NameInMap("PeakMemory")
         public String peakMemory;
 
+        /**
+         * <p>The duration of the SQL statement. Unit: milliseconds.</p>
+         */
         @NameInMap("QueryTime")
         public String queryTime;
 
+        /**
+         * <p>The name of the destination resource group.</p>
+         */
         @NameInMap("TargetGroupName")
         public String targetGroupName;
 

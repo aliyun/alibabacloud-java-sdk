@@ -53,16 +53,18 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * <p>The state of the database account. Valid values:</p>
          * <br>
-         * <p>*   Creating</p>
-         * <p>*   Available</p>
-         * <p>*   Deleting</p>
+         * <p>*   **Creating**</p>
+         * <p>*   **Available**</p>
+         * <p>*   **Deleting**</p>
          */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
         /**
-         * <p>*   Normal: standard account.</p>
-         * <p>*   Super: privileged account.</p>
+         * <p>The type of the database account. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**: standard account.</p>
+         * <p>*   **Super**: privileged account.</p>
          */
         @NameInMap("AccountType")
         public String accountType;

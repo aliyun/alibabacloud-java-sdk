@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableAdvicesResponseBody extends TeaModel {
     /**
-     * <p>Details of the suggestions.</p>
+     * <p>The queried suggestions.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeAvailableAdvicesResponseBodyItems> items;
@@ -85,7 +85,7 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
 
     public static class DescribeAvailableAdvicesResponseBodyItems extends TeaModel {
         /**
-         * <p>The date when the suggestion was generated. The date follows the yyyyMMdd format. The date is displayed in UTC.</p>
+         * <p>The time when the suggestion was generated. The time follows the ISO 8601 standard in the yyyyMMdd format. The time is displayed in UTC.</p>
          */
         @NameInMap("AdviceDate")
         public String adviceDate;
@@ -99,8 +99,8 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         /**
          * <p>The type of the suggestion. Valid values:</p>
          * <br>
-         * <p>*   **Index**: index optimization</p>
-         * <p>*   **Tiering**: hot and cold data optimization</p>
+         * <p>*   **Index**: index optimization.</p>
+         * <p>*   **Tiering**: hot and cold data optimization.</p>
          */
         @NameInMap("AdviceType")
         public String adviceType;
@@ -112,15 +112,15 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         public String benefit;
 
         /**
-         * <p>The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          */
         @NameInMap("PageNumber")
         public Long pageNumber;
 
         /**
-         * <p>The number of entries returned per page. Default value: 30. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <br>
-         * <p>*   **30**</p>
+         * <p>*   **30** (default)</p>
          * <p>*   **50**</p>
          * <p>*   **100**</p>
          */
@@ -134,13 +134,13 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>The SQL statement used to apply the suggestion.</p>
+         * <p>The SQL statement that is used to apply the suggestion.</p>
          */
         @NameInMap("SQL")
         public String SQL;
 
         /**
-         * <p>The total number of entries returned. The value must be an integer that is greater than or equal to 0. Default value: 0.</p>
+         * <p>The total number of entries returned. Minimum value: 0. Default value: 0.</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

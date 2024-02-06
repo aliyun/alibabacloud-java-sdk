@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceResponseBody extends TeaModel {
     /**
-     * <p>The resources available in elastic mode.</p>
+     * <p>The supported zones.</p>
      */
     @NameInMap("AvailableZoneList")
     public java.util.List<DescribeAvailableResourceResponseBodyAvailableZoneList> availableZoneList;
@@ -56,12 +56,21 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedFlexibleResourceSupportedElasticIOResource extends TeaModel {
+        /**
+         * <p>The maximum amount of elastic I/O resources.</p>
+         */
         @NameInMap("MaxCount")
         public String maxCount;
 
+        /**
+         * <p>The minimum amount of elastic I/O resources.</p>
+         */
         @NameInMap("MinCount")
         public String minCount;
 
+        /**
+         * <p>The step size.</p>
+         */
         @NameInMap("Step")
         public String step;
 
@@ -98,17 +107,29 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     public static class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedFlexibleResource extends TeaModel {
         /**
-         * <p>The maximum number of EIUs.</p>
+         * <p>The disk storage type. Valid values:</p>
+         * <br>
+         * <p>*   **hdd**</p>
+         * <p>*   **ssd**</p>
          */
         @NameInMap("StorageType")
         public String storageType;
 
+        /**
+         * <p>The supported computing resources.</p>
+         */
         @NameInMap("SupportedComputeResource")
         public java.util.List<String> supportedComputeResource;
 
+        /**
+         * <p>The supported elastic I/O resources.</p>
+         */
         @NameInMap("SupportedElasticIOResource")
         public DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedFlexibleResourceSupportedElasticIOResource supportedElasticIOResource;
 
+        /**
+         * <p>The supported storage resources.</p>
+         */
         @NameInMap("SupportedStorageResource")
         public java.util.List<String> supportedStorageResource;
 
@@ -152,12 +173,21 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedInstanceClassListSupportedExecutorListNodeCount extends TeaModel {
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("MaxCount")
         public String maxCount;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("MinCount")
         public String minCount;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("Step")
         public String step;
 
@@ -193,6 +223,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedInstanceClassListSupportedExecutorList extends TeaModel {
+        /**
+         * <p>The information about the supported compute nodes.</p>
+         */
         @NameInMap("NodeCount")
         public DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedInstanceClassListSupportedExecutorListNodeCount nodeCount;
 
@@ -212,12 +245,21 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedInstanceClassListSupportedNodeCountListNodeCount extends TeaModel {
+        /**
+         * <p>The maximum number of compute nodes.</p>
+         */
         @NameInMap("MaxCount")
         public String maxCount;
 
+        /**
+         * <p>The minimum number of compute nodes.</p>
+         */
         @NameInMap("MinCount")
         public String minCount;
 
+        /**
+         * <p>The step size.</p>
+         */
         @NameInMap("Step")
         public String step;
 
@@ -253,9 +295,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedInstanceClassListSupportedNodeCountList extends TeaModel {
+        /**
+         * <p>The number of the supported compute nodes.</p>
+         */
         @NameInMap("NodeCount")
         public DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedInstanceClassListSupportedNodeCountListNodeCount nodeCount;
 
+        /**
+         * <p>The support storage capacity. Unit: GB.</p>
+         */
         @NameInMap("StorageSize")
         public java.util.List<String> storageSize;
 
@@ -283,15 +331,27 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedInstanceClassList extends TeaModel {
+        /**
+         * <p>The supported instance type.</p>
+         */
         @NameInMap("InstanceClass")
         public String instanceClass;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("SupportedExecutorList")
         public java.util.List<DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedInstanceClassListSupportedExecutorList> supportedExecutorList;
 
+        /**
+         * <p>The supported compute nodes.</p>
+         */
         @NameInMap("SupportedNodeCountList")
         public java.util.List<DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedInstanceClassListSupportedNodeCountList> supportedNodeCountList;
 
+        /**
+         * <p>The description of the instance type.</p>
+         */
         @NameInMap("Tips")
         public String tips;
 
@@ -336,17 +396,24 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     public static class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialList extends TeaModel {
         /**
-         * <p>The step size.</p>
+         * <p>The supported edition. Valid values:</p>
+         * <br>
+         * <p>*   **basic**: Basic Edition.</p>
+         * <p>*   **cluster**: Cluster Edition.</p>
+         * <p>*   **mixed_storage**: elastic mode for Cluster Edition.</p>
          */
         @NameInMap("Serial")
         public String serial;
 
         /**
-         * <p>The minimum number of EIUs.</p>
+         * <p>The supported resources in elastic mode.</p>
          */
         @NameInMap("SupportedFlexibleResource")
         public java.util.List<DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedFlexibleResource> supportedFlexibleResource;
 
+        /**
+         * <p>The supported resources in reserved mode.</p>
+         */
         @NameInMap("SupportedInstanceClassList")
         public java.util.List<DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedInstanceClassList> supportedInstanceClassList;
 
@@ -383,13 +450,16 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     public static class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedMode extends TeaModel {
         /**
-         * <p>N/A</p>
+         * <p>The supported mode. Valid values:</p>
+         * <br>
+         * <p>*   **flexible**: elastic mode.</p>
+         * <p>*   **reserver**: reserved mode.</p>
          */
         @NameInMap("Mode")
         public String mode;
 
         /**
-         * <p>The available elastic I/O units (EIUs).</p>
+         * <p>The supported editions.</p>
          */
         @NameInMap("SupportedSerialList")
         public java.util.List<DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialList> supportedSerialList;
@@ -418,23 +488,26 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZoneList extends TeaModel {
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("SupportedComputeResource")
         public java.util.List<String> supportedComputeResource;
 
         /**
-         * <p>The available computing resources.</p>
+         * <p>The supported modes.</p>
          */
         @NameInMap("SupportedMode")
         public java.util.List<DescribeAvailableResourceResponseBodyAvailableZoneListSupportedMode> supportedMode;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("SupportedStorageResource")
         public java.util.List<String> supportedStorageResource;
 
         /**
-         * <p>The storage type. Valid values:</p>
-         * <br>
-         * <p>*   **hdd**</p>
-         * <p>*   **ssd**</p>
+         * <p>The zone ID.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

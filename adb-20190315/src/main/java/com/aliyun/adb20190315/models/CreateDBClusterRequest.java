@@ -90,6 +90,14 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("DBNodeStorage")
     public String DBNodeStorage;
 
+    /**
+     * <p>Specifies whether to enable disk encryption.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("DiskEncryption")
     public String diskEncryption;
 
@@ -105,16 +113,17 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("ExecutorCount")
     public String executorCount;
 
+    /**
+     * <p>The Key Management Service (KMS) ID that is used for disk encryption. This parameter is valid only when DiskEncryption is set to true.</p>
+     */
     @NameInMap("KmsId")
     public String kmsId;
 
     /**
      * <p>The mode of the cluster. Valid values:</p>
      * <br>
-     * <p>*   **Reserver**: the reserved mode</p>
-     * <p>*   **Flexible**: the elastic mode</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the cluster is in reserved mode.</p>
+     * <p>*   **Reserver**: the reserved mode.</p>
+     * <p>*   **Flexible**: the elastic mode.</p>
      */
     @NameInMap("Mode")
     public String mode;

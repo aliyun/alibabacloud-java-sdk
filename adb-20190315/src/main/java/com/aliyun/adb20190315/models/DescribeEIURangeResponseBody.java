@@ -4,9 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeEIURangeResponseBody extends TeaModel {
+    /**
+     * <p>The queried information about the number of EIUs.</p>
+     */
     @NameInMap("EIUInfo")
     public DescribeEIURangeResponseBodyEIUInfo EIUInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class DescribeEIURangeResponseBody extends TeaModel {
     }
 
     public static class DescribeEIURangeResponseBodyEIUInfo extends TeaModel {
+        /**
+         * <p>The suggested value for the number of EIUs.</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <p>The queried range for the number of EIUs.</p>
+         */
         @NameInMap("EIURange")
         public java.util.List<Long> EIURange;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("StorageResourceRange")
         public java.util.List<String> storageResourceRange;
 
