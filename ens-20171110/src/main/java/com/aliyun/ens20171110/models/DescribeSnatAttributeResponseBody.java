@@ -10,9 +10,15 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     @NameInMap("CreationTime")
     public String creationTime;
 
+    /**
+     * <p>The destination CIDR block. The rule takes effect only on requests that access the destination CIDR block.</p>
+     */
     @NameInMap("DestCIDR")
     public String destCIDR;
 
+    /**
+     * <p>Timeout period.</p>
+     */
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 
@@ -85,6 +91,13 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The type of the NAT. Valid values: </p>
+     * <br>
+     * <p>- Empty: symmetric NAT.</p>
+     * <br>
+     * <p>- FullCone: full cone NAT.</p>
+     */
     @NameInMap("Type")
     public String type;
 
@@ -207,7 +220,7 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
 
     public static class DescribeSnatAttributeResponseBodySnatIps extends TeaModel {
         /**
-         * <p>The time when the EIP was created. The time is displayed in UTC.</p>
+         * <p>The time when the IP address was created. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -219,7 +232,7 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The status of the EIP.</p>
+         * <p>The status of the IP address.</p>
          * <br>
          * <p>*   Running</p>
          * <p>*   Stopping</p>

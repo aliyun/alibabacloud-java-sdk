@@ -4,12 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsNetDistrictResponseBody extends TeaModel {
+    /**
+     * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about the regions.</p>
+     */
     @NameInMap("EnsNetDistricts")
     public DescribeEnsNetDistrictResponseBodyEnsNetDistricts ensNetDistricts;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,21 +52,43 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsNetDistrictResponseBodyEnsNetDistrictsEnsNetDistrict extends TeaModel {
+        /**
+         * <p>The number of nodes in the region.</p>
+         */
         @NameInMap("EnsRegionIdCount")
         public String ensRegionIdCount;
 
+        /**
+         * <p>The code of the region.</p>
+         */
         @NameInMap("NetDistrictCode")
         public String netDistrictCode;
 
+        /**
+         * <p>The name of the region.</p>
+         */
         @NameInMap("NetDistrictEnName")
         public String netDistrictEnName;
 
+        /**
+         * <p>The parent code of the region.</p>
+         */
         @NameInMap("NetDistrictFatherCode")
         public String netDistrictFatherCode;
 
+        /**
+         * <p>The level of the region.</p>
+         * <br>
+         * <p>*   **Big**: area</p>
+         * <p>*   **Middle**: province</p>
+         * <p>*   **Small**: city</p>
+         */
         @NameInMap("NetDistrictLevel")
         public String netDistrictLevel;
 
+        /**
+         * <p>The name of the region.</p>
+         */
         @NameInMap("NetDistrictName")
         public String netDistrictName;
 

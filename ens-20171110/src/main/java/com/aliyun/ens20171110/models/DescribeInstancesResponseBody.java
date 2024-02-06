@@ -11,7 +11,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The information about instances returned. The value is an array that consists of InstanceAttributesType data.</p>
+     * <p>The returned instance information. It is an array that consists of InstanceAttributesType data.</p>
      */
     @NameInMap("Instances")
     public DescribeInstancesResponseBodyInstances instances;
@@ -105,7 +105,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The disk ID.</p>
+         * <p>The ID of the disk.</p>
          */
         @NameInMap("DiskId")
         public String diskId;
@@ -115,6 +115,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         @NameInMap("DiskName")
         public String diskName;
+
+        @NameInMap("DiskSize")
+        public Integer diskSize;
 
         /**
          * <p>The size of the disk. Unit: MiB.</p>
@@ -185,6 +188,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getDiskName() {
             return this.diskName;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk setDiskSize(Integer diskSize) {
+            this.diskSize = diskSize;
+            return this;
+        }
+        public Integer getDiskSize() {
+            return this.diskSize;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceDataDiskDataDisk setSize(Integer size) {
@@ -302,7 +313,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String networkId;
 
         /**
-         * <p>The details of the private IP addresses.</p>
+         * <p>Details of the private IP addresses.</p>
          */
         @NameInMap("PrivateIpAddress")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributesPrivateIpAddress privateIpAddress;
@@ -358,7 +369,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The information about the ISP.</p>
+         * <p>The ISP.</p>
          */
         @NameInMap("Isp")
         public String isp;
@@ -446,7 +457,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The information about the ISP.</p>
+         * <p>The Internet service provider (ISP).</p>
          */
         @NameInMap("Isp")
         public String isp;
@@ -532,7 +543,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The disk ID.</p>
+         * <p>The ID of the disk.</p>
          */
         @NameInMap("DiskId")
         public String diskId;
@@ -665,6 +676,55 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstancesResponseBodyInstancesInstanceTagsTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceTagsTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceTagsTags self = new DescribeInstancesResponseBodyInstancesInstanceTagsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceTagsTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceTagsTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesInstanceTags extends TeaModel {
+        @NameInMap("Tags")
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstanceTagsTags> tags;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceTags self = new DescribeInstancesResponseBodyInstancesInstanceTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceTags setTags(java.util.List<DescribeInstancesResponseBodyInstancesInstanceTagsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstanceTagsTags> getTags() {
+            return this.tags;
+        }
+
+    }
+
     public static class DescribeInstancesResponseBodyInstancesInstance extends TeaModel {
         /**
          * <p>The number of vCPUs.</p>
@@ -673,13 +733,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String cpu;
 
         /**
-         * <p>The time when the instance is created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The details of the data disk.</p>
+         * <p>Details of the data disk.</p>
          */
         @NameInMap("DataDisk")
         public DescribeInstancesResponseBodyInstancesInstanceDataDisk dataDisk;
@@ -697,7 +757,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String ensRegionId;
 
         /**
-         * <p>The expiration time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The expiration time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
@@ -706,8 +766,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>The hostname of the instance.</p>
          * <br>
          * <p>*   The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).</p>
-         * <p>*   For a Windows instance, the hostname must be 2 to 15 characters in length and can contain letters, digits, and hyphens (-). It cannot contain periods (.) or contain only digits.</p>
-         * <p>*   For an instance that runs an operating system of another type such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).</p>
+         * <p>*   For a Windows instance, the hostname must be 2 to 15 characters in length and can contain letters, digits, and hyphens (-). The hostname cannot contain periods (.) or contain only digits.</p>
+         * <p>*   For an instance that runs another operating system such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).</p>
          */
         @NameInMap("HostName")
         public String hostName;
@@ -719,7 +779,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>Internal IP addresses of instances.</p>
+         * <p>The private IP addresses of the instances.</p>
          */
         @NameInMap("InnerIpAddress")
         public DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress innerIpAddress;
@@ -742,7 +802,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>*   EnsInstance: ENS instances that you purchase.</p>
          * <p>*   EnsService: ENS instances that belong to edge services.</p>
          * <p>*   BuildMachine: ENS instances that are configured with image builders.</p>
-         * <p>*   EnsPostPaidInstance: Pay-as-you-go ENS instances that you purchase.</p>
+         * <p>*   EnsPostPaidInstance: pay-as-you-go ENS instances that you purchase.</p>
          */
         @NameInMap("InstanceResourceType")
         public String instanceResourceType;
@@ -753,10 +813,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>*   x86\_vm: x86-based computing instance.</p>
          * <p>*   x86\_pm: x86-based physical machine.</p>
          * <p>*   x86\_bmi: x86-based bare metal instance.</p>
-         * <p>*   x86\_bm: SmartNIC bare metal.</p>
-         * <p>*   pc_bmi: heterogeneous bare metal.</p>
+         * <p>*   x86\_bm: bare metal instance with the SmartNIC.</p>
+         * <p>*   pc_bmi: heterogeneous bare metal instance.</p>
          * <p>*   pc_vm: heterogeneous virtual machine.</p>
-         * <p>*   arm_bmi: ARM-based computing instance.</p>
+         * <p>*   arm_bmi: Arm-based computing instance.</p>
          */
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
@@ -792,25 +852,25 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String OSName;
 
         /**
-         * <p>The details of the private IP addresses.</p>
+         * <p>Details of the private IP addresses.</p>
          */
         @NameInMap("PrivateIpAddresses")
         public DescribeInstancesResponseBodyInstancesInstancePrivateIpAddresses privateIpAddresses;
 
         /**
-         * <p>The public IP addresses.</p>
+         * <p>The public IP addresses of the instances.</p>
          */
         @NameInMap("PublicIpAddress")
         public DescribeInstancesResponseBodyInstancesInstancePublicIpAddress publicIpAddress;
 
         /**
-         * <p>The details of the public IP addresses.</p>
+         * <p>Details of the public IP addresses.</p>
          */
         @NameInMap("PublicIpAddresses")
         public DescribeInstancesResponseBodyInstancesInstancePublicIpAddresses publicIpAddresses;
 
         /**
-         * <p>IDs of security groups.</p>
+         * <p>The IDs of the security groups.</p>
          */
         @NameInMap("SecurityGroupIds")
         public DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds securityGroupIds;
@@ -836,6 +896,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         @NameInMap("SystemDisk")
         public DescribeInstancesResponseBodyInstancesInstanceSystemDisk systemDisk;
+
+        @NameInMap("Tags")
+        public DescribeInstancesResponseBodyInstancesInstanceTags tags;
 
         public static DescribeInstancesResponseBodyInstancesInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstancesInstance self = new DescribeInstancesResponseBodyInstancesInstance();
@@ -1040,6 +1103,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public DescribeInstancesResponseBodyInstancesInstanceSystemDisk getSystemDisk() {
             return this.systemDisk;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setTags(DescribeInstancesResponseBodyInstancesInstanceTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesInstanceTags getTags() {
+            return this.tags;
         }
 
     }

@@ -104,8 +104,9 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to use the preset password of the image. Valid values:</p>
      * <br>
-     * <p>*   **true**: The password preset in the image is used, and the **Password** parameter must be null. For secure access, make sure that the selected image has a password configured.</p>
-     * <p>*   **false: does not use the password preset in the image.</p>
+     * <p>- **true**: The password preset in the image is used, and the **Password** parameter must be null. For secure access, make sure that the selected image has a password configured.</p>
+     * <br>
+     * <p>- **false**: does not use the password preset in the image.</p>
      */
     @NameInMap("PasswordInherit")
     public Boolean passwordInherit;

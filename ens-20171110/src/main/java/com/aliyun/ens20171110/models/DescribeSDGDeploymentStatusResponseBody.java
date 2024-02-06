@@ -4,18 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
+    /**
+     * <p>The deployment information of the SDG.</p>
+     */
     @NameInMap("DeploymentStatus")
     public java.util.List<DescribeSDGDeploymentStatusResponseBodyDeploymentStatus> deploymentStatus;
 
+    /**
+     * <p>The page number. Pages start from page 1. Default value: 1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of queried deployment records.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,18 +80,89 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeSDGDeploymentStatusResponseBodyDeploymentStatus extends TeaModel {
+        /**
+         * <p>The ID of the instance</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The deployment type.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   overlay</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    read/write splitting</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   common</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    common deployment</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         */
         @NameInMap("MountType")
         public String mountType;
 
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The deployment status of the SDG.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   sdg_deploying</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   success</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   failed</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The time when the status was last updated.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

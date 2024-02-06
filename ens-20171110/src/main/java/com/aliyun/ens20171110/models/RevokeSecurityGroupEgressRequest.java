@@ -71,12 +71,6 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
     @NameInMap("SourcePortRange")
     public String sourcePortRange;
 
-    /**
-     * <p>The version number. Set the value to 2017-11-10.</p>
-     */
-    @NameInMap("Version")
-    public String version;
-
     public static RevokeSecurityGroupEgressRequest build(java.util.Map<String, ?> map) throws Exception {
         RevokeSecurityGroupEgressRequest self = new RevokeSecurityGroupEgressRequest();
         return TeaModel.build(map, self);
@@ -136,14 +130,6 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
     }
     public String getSourcePortRange() {
         return this.sourcePortRange;
-    }
-
-    public RevokeSecurityGroupEgressRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

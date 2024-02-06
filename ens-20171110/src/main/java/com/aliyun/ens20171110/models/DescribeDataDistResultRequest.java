@@ -29,7 +29,7 @@ public class DescribeDataDistResultRequest extends TeaModel {
     public java.util.List<String> ensRegionIds;
 
     /**
-     * <p>The ID of the Edge Node Service (ENS) instance. Separate multiple IDs with commas (,). By default, all edge instances are queried.</p>
+     * <p>The IDs of ENS instances. Separate multiple IDs with commas (,). By default, all instances are queried.</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;

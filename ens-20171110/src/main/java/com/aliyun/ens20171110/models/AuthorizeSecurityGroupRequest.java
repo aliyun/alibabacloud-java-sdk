@@ -71,12 +71,6 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
     @NameInMap("SourcePortRange")
     public String sourcePortRange;
 
-    /**
-     * <p>2017-11-10</p>
-     */
-    @NameInMap("Version")
-    public String version;
-
     public static AuthorizeSecurityGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         AuthorizeSecurityGroupRequest self = new AuthorizeSecurityGroupRequest();
         return TeaModel.build(map, self);
@@ -136,14 +130,6 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
     }
     public String getSourcePortRange() {
         return this.sourcePortRange;
-    }
-
-    public AuthorizeSecurityGroupRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

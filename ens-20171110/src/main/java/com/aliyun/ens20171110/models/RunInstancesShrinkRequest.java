@@ -22,7 +22,11 @@ public class RunInstancesShrinkRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>是否使用代金券，默认为使用，即AutoUseCoupon=true。</p>
+     * <p>Specifies whether to use vouchers. Default values: true. Valid values:</p>
+     * <br>
+     * <p>- true </p>
+     * <br>
+     * <p>- false</p>
      */
     @NameInMap("AutoUseCoupon")
     public String autoUseCoupon;
@@ -120,6 +124,13 @@ public class RunInstancesShrinkRequest extends TeaModel {
     @NameInMap("InternetMaxBandwidthOut")
     public Long internetMaxBandwidthOut;
 
+    /**
+     * <p>The type of IP address. Valid values:</p>
+     * <br>
+     * <p>*   **ipv4**: IPv4. This is the default value.</p>
+     * <p>*   **ipv6**: IPv6.</p>
+     * <p>*   **ipv4Andipv6**: IPv4 and IPv6.</p>
+     */
     @NameInMap("IpType")
     public String ipType;
 
@@ -240,6 +251,9 @@ public class RunInstancesShrinkRequest extends TeaModel {
      */
     @NameInMap("SystemDisk")
     public String systemDiskShrink;
+
+    @NameInMap("Tag")
+    public java.util.List<RunInstancesShrinkRequestTag> tag;
 
     /**
      * <p>Specifies whether to append sequential suffixes to the hostname specified by the **HostName** parameter and to the instance name specified by the **InstanceName** parameter. The sequential suffixes range from 001 to 999.</p>
@@ -506,6 +520,14 @@ public class RunInstancesShrinkRequest extends TeaModel {
         return this.systemDiskShrink;
     }
 
+    public RunInstancesShrinkRequest setTag(java.util.List<RunInstancesShrinkRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<RunInstancesShrinkRequestTag> getTag() {
+        return this.tag;
+    }
+
     public RunInstancesShrinkRequest setUniqueSuffix(Boolean uniqueSuffix) {
         this.uniqueSuffix = uniqueSuffix;
         return this;
@@ -528,6 +550,36 @@ public class RunInstancesShrinkRequest extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public static class RunInstancesShrinkRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static RunInstancesShrinkRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            RunInstancesShrinkRequestTag self = new RunInstancesShrinkRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public RunInstancesShrinkRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public RunInstancesShrinkRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

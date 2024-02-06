@@ -10,12 +10,6 @@ public class DescribeExportImageStatusRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
-    /**
-     * <p>The version number. Set the value to 2017-11-10.</p>
-     */
-    @NameInMap("Version")
-    public String version;
-
     public static DescribeExportImageStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeExportImageStatusRequest self = new DescribeExportImageStatusRequest();
         return TeaModel.build(map, self);
@@ -27,14 +21,6 @@ public class DescribeExportImageStatusRequest extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
-    }
-
-    public DescribeExportImageStatusRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

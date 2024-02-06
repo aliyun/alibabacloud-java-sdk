@@ -4,18 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
+    /**
+     * <p>The returned data. For more information, see EnsRegionIdResources in sample JSON responses.</p>
+     */
     @NameInMap("EnsRegionIdResources")
     public DescribeEnsRegionIdResourceResponseBodyEnsRegionIdResources ensRegionIdResources;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of queried nodes.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,30 +80,62 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsRegionIdResourceResponseBodyEnsRegionIdResourcesEnsRegionIdResource extends TeaModel {
+        /**
+         * <p>The region. Set the value to West.</p>
+         */
         @NameInMap("Area")
         public String area;
 
+        /**
+         * <p>The code of the region.</p>
+         */
         @NameInMap("AreaCode")
         public String areaCode;
 
+        /**
+         * <p>The date when the transaction was processed.</p>
+         */
         @NameInMap("BizDate")
         public String bizDate;
 
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("EnsRegionIdName")
         public String ensRegionIdName;
 
+        /**
+         * <p>The number of instances.</p>
+         */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
+        /**
+         * <p>The public bandwidth of the instance. Unit: Bits/s.</p>
+         */
         @NameInMap("InternetBandwidth")
         public Long internetBandwidth;
 
+        /**
+         * <p>The ISP. Valid values:</p>
+         * <br>
+         * <p>*   cmcc: China Mobile</p>
+         * <p>*   unicom: China Unicom</p>
+         * <p>*   telecom: China Telecom</p>
+         * <p>*   multiCarrier: multi-line ISP</p>
+         */
         @NameInMap("Isp")
         public String isp;
 
+        /**
+         * <p>The number of vCPUs.</p>
+         */
         @NameInMap("VCpu")
         public Integer VCpu;
 

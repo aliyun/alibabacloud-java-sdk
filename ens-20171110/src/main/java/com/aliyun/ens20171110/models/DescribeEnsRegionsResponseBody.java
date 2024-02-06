@@ -4,12 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The service code. 0 is returned for a successful request. An error code is returned for a failed request.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about the regions.</p>
+     */
     @NameInMap("EnsRegions")
     public DescribeEnsRegionsResponseBodyEnsRegions ensRegions;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,18 +52,33 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsRegionsResponseBodyEnsRegionsEnsRegions extends TeaModel {
+        /**
+         * <p>The code of the region.</p>
+         */
         @NameInMap("Area")
         public String area;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("EnName")
         public String enName;
 
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The province where the node is deployed.</p>
+         */
         @NameInMap("Province")
         public String province;
 

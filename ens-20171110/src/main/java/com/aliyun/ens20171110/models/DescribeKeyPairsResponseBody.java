@@ -92,6 +92,9 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         @NameInMap("KeyPairFingerPrint")
         public String keyPairFingerPrint;
 
+        @NameInMap("KeyPairId")
+        public String keyPairId;
+
         /**
          * <p>The name of the SSH key pair.</p>
          */
@@ -117,6 +120,14 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
         public String getKeyPairFingerPrint() {
             return this.keyPairFingerPrint;
+        }
+
+        public DescribeKeyPairsResponseBodyKeyPairsKeyPair setKeyPairId(String keyPairId) {
+            this.keyPairId = keyPairId;
+            return this;
+        }
+        public String getKeyPairId() {
+            return this.keyPairId;
         }
 
         public DescribeKeyPairsResponseBodyKeyPairsKeyPair setKeyPairName(String keyPairName) {

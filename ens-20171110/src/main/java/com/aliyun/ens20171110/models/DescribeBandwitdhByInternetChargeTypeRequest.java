@@ -39,12 +39,6 @@ public class DescribeBandwitdhByInternetChargeTypeRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    /**
-     * <p>The version number. Set the value to 2017-11-10.</p>
-     */
-    @NameInMap("Version")
-    public String version;
-
     public static DescribeBandwitdhByInternetChargeTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBandwitdhByInternetChargeTypeRequest self = new DescribeBandwitdhByInternetChargeTypeRequest();
         return TeaModel.build(map, self);
@@ -80,14 +74,6 @@ public class DescribeBandwitdhByInternetChargeTypeRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeBandwitdhByInternetChargeTypeRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

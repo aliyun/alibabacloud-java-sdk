@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateEnsServiceResponseBody extends TeaModel {
+    /**
+     * <p>The service code. 0 is returned for a successful request. An error code is returned for a failed request.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -34,12 +34,6 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     @NameInMap("SecurityGroupName")
     public String securityGroupName;
 
-    /**
-     * <p>The version number.</p>
-     */
-    @NameInMap("Version")
-    public String version;
-
     public static DescribeSecurityGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecurityGroupsRequest self = new DescribeSecurityGroupsRequest();
         return TeaModel.build(map, self);
@@ -75,14 +69,6 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     }
     public String getSecurityGroupName() {
         return this.securityGroupName;
-    }
-
-    public DescribeSecurityGroupsRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

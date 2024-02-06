@@ -4,11 +4,14 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsResourceUsageResponseBody extends TeaModel {
+    /**
+     * <p>The resource usage data.</p>
+     */
     @NameInMap("EnsResourceUsage")
     public java.util.List<DescribeEnsResourceUsageResponseBodyEnsResourceUsage> ensResourceUsage;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,36 +38,73 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsResourceUsageResponseBodyEnsResourceUsage extends TeaModel {
+        /**
+         * <p>The number of edge services. This parameter is available only when you set the ServiceType parameter to 2.</p>
+         */
         @NameInMap("ComputeResourceCount")
         public Integer computeResourceCount;
 
+        /**
+         * <p>The CPU usage. Unit: cores.</p>
+         */
         @NameInMap("CpuSum")
         public Long cpuSum;
 
+        /**
+         * <p>The number of data disks.</p>
+         */
         @NameInMap("DiskCount")
         public Integer diskCount;
 
+        /**
+         * <p>The number of stopped VMs.</p>
+         */
         @NameInMap("DownCount")
         public Integer downCount;
 
+        /**
+         * <p>The number of expired VM instances.</p>
+         */
         @NameInMap("ExpiredCount")
         public Integer expiredCount;
 
+        /**
+         * <p>The number of VM instances that are about to expire.</p>
+         */
         @NameInMap("ExpiringCount")
         public Integer expiringCount;
 
+        /**
+         * <p>The number of GPUs.</p>
+         */
         @NameInMap("GpuSum")
         public Long gpuSum;
 
+        /**
+         * <p>The number of instances.</p>
+         */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
+        /**
+         * <p>The number of running instances.</p>
+         */
         @NameInMap("RunningCount")
         public Integer runningCount;
 
+        /**
+         * <p>The type of the service. Valid values:</p>
+         * <br>
+         * <p>*   1: subscription instance.</p>
+         * <p>*   2: edge service instance.</p>
+         * <p>*   3: pay-as-you-go instance.</p>
+         */
         @NameInMap("ServiceType")
         public String serviceType;
 
+        /**
+         * <p>The total disk size.</p>
+         */
         @NameInMap("StorageSum")
         public Long storageSum;
 

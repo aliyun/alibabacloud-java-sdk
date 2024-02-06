@@ -16,18 +16,6 @@ public class ModifyImageAttributeRequest extends TeaModel {
     @NameInMap("ImageName")
     public String imageName;
 
-    /**
-     * <p>2017-11-10</p>
-     */
-    @NameInMap("Version")
-    public String version;
-
-    /**
-     * <p>This parameter is unavailable.</p>
-     */
-    @NameInMap("product")
-    public String product;
-
     public static ModifyImageAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyImageAttributeRequest self = new ModifyImageAttributeRequest();
         return TeaModel.build(map, self);
@@ -47,22 +35,6 @@ public class ModifyImageAttributeRequest extends TeaModel {
     }
     public String getImageName() {
         return this.imageName;
-    }
-
-    public ModifyImageAttributeRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
-    }
-
-    public ModifyImageAttributeRequest setProduct(String product) {
-        this.product = product;
-        return this;
-    }
-    public String getProduct() {
-        return this.product;
     }
 
 }

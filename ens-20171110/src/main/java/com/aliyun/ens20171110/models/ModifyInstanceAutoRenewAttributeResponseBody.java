@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceAutoRenewAttributeResponseBody extends TeaModel {
     /**
-     * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+     * <p>The returned service code. 0 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

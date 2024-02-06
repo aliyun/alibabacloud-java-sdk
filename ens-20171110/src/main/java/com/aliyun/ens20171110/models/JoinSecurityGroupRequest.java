@@ -10,6 +10,9 @@ public class JoinSecurityGroupRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the ENI.</p>
+     */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 

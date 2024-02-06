@@ -22,7 +22,11 @@ public class RunInstancesRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>是否使用代金券，默认为使用，即AutoUseCoupon=true。</p>
+     * <p>Specifies whether to use vouchers. Default values: true. Valid values:</p>
+     * <br>
+     * <p>- true </p>
+     * <br>
+     * <p>- false</p>
      */
     @NameInMap("AutoUseCoupon")
     public String autoUseCoupon;
@@ -120,6 +124,13 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("InternetMaxBandwidthOut")
     public Long internetMaxBandwidthOut;
 
+    /**
+     * <p>The type of IP address. Valid values:</p>
+     * <br>
+     * <p>*   **ipv4**: IPv4. This is the default value.</p>
+     * <p>*   **ipv6**: IPv6.</p>
+     * <p>*   **ipv4Andipv6**: IPv4 and IPv6.</p>
+     */
     @NameInMap("IpType")
     public String ipType;
 
@@ -240,6 +251,9 @@ public class RunInstancesRequest extends TeaModel {
      */
     @NameInMap("SystemDisk")
     public RunInstancesRequestSystemDisk systemDisk;
+
+    @NameInMap("Tag")
+    public java.util.List<RunInstancesRequestTag> tag;
 
     /**
      * <p>Specifies whether to append sequential suffixes to the hostname specified by the **HostName** parameter and to the instance name specified by the **InstanceName** parameter. The sequential suffixes range from 001 to 999.</p>
@@ -506,6 +520,14 @@ public class RunInstancesRequest extends TeaModel {
         return this.systemDisk;
     }
 
+    public RunInstancesRequest setTag(java.util.List<RunInstancesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<RunInstancesRequestTag> getTag() {
+        return this.tag;
+    }
+
     public RunInstancesRequest setUniqueSuffix(Boolean uniqueSuffix) {
         this.uniqueSuffix = uniqueSuffix;
         return this;
@@ -542,9 +564,28 @@ public class RunInstancesRequest extends TeaModel {
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>Specifies whether to encrypt data disk N. Valid values:</p>
+         * <br>
+         * <p>*   true: encrypts the data disk.</p>
+         * <p>*   false: does not encrypt the data disk.</p>
+         * <br>
+         * <p>Default value: false.</p>
+         */
         @NameInMap("Encrypted")
         public Boolean encrypted;
 
+        /**
+         * <p>The ID of the Key Management Service (KMS) key that is used by the cloud disk. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         * <br>
+         * <p>Default value: false.</p>
+         * <br>
+         * <br>
+         * <p>>  If you set the **Encrypted** parameter to **true**, the default service key is used when the **KMSKeyId** parameter is empty.</p>
+         */
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
 
@@ -625,6 +666,36 @@ public class RunInstancesRequest extends TeaModel {
         }
         public Long getSize() {
             return this.size;
+        }
+
+    }
+
+    public static class RunInstancesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static RunInstancesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            RunInstancesRequestTag self = new RunInstancesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public RunInstancesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public RunInstancesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

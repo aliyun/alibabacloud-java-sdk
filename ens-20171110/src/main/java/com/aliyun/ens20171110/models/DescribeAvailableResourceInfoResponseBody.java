@@ -172,19 +172,19 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         public String enName;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The ID of the edge node.</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
         /**
-         * <p>The Internet service provider (ISP).</p>
+         * <p>The information about the Internet service provider (ISP).</p>
          */
         @NameInMap("Isp")
         public String isp;
 
         /**
-         * <p>The name of the node.</p>
+         * <p>The name of the edge node.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -335,9 +335,6 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
         @NameInMap("InstanceSpeces")
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceInstanceSpeces instanceSpeces;
 
-        /**
-         * <p>The Internet service provider (ISP).</p>
-         */
         @NameInMap("Isp")
         public DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceIsp isp;
 

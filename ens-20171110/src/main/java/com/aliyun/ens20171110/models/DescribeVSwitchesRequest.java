@@ -48,12 +48,6 @@ public class DescribeVSwitchesRequest extends TeaModel {
     @NameInMap("VSwitchName")
     public String vSwitchName;
 
-    /**
-     * <p>The version of the API.</p>
-     */
-    @NameInMap("Version")
-    public String version;
-
     public static DescribeVSwitchesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVSwitchesRequest self = new DescribeVSwitchesRequest();
         return TeaModel.build(map, self);
@@ -113,14 +107,6 @@ public class DescribeVSwitchesRequest extends TeaModel {
     }
     public String getVSwitchName() {
         return this.vSwitchName;
-    }
-
-    public DescribeVSwitchesRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

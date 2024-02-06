@@ -11,19 +11,19 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The information about images.</p>
+     * <p>The information about the image.</p>
      */
     @NameInMap("Images")
     public DescribeReservedResourceResponseBodyImages images;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The specifications of resources that you can purchase.</p>
+     * <p>The resources.</p>
      */
     @NameInMap("SupportResources")
     public DescribeReservedResourceResponseBodySupportResources supportResources;
@@ -160,19 +160,19 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
 
     public static class DescribeReservedResourceResponseBodySupportResourcesSupportResource extends TeaModel {
         /**
-         * <p>The information of the data disk.</p>
+         * <p>The sizes of data disks.</p>
          */
         @NameInMap("DataDiskSizes")
         public DescribeReservedResourceResponseBodySupportResourcesSupportResourceDataDiskSizes dataDiskSizes;
 
         /**
-         * <p>The node ID.</p>
+         * <p>The ID of the node.</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
         /**
-         * <p>The instance type.</p>
+         * <p>The specifications of instances.</p>
          */
         @NameInMap("InstanceSpec")
         public String instanceSpec;
@@ -184,7 +184,7 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
         public String supportResourcesCount;
 
         /**
-         * <p>The information of the system disk.</p>
+         * <p>The sizes of system disks.</p>
          */
         @NameInMap("SystemDiskSizes")
         public DescribeReservedResourceResponseBodySupportResourcesSupportResourceSystemDiskSizes systemDiskSizes;
