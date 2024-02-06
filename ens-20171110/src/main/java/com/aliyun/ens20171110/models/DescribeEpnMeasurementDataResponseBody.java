@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
+    /**
+     * <p>The metering data returned.</p>
+     */
     @NameInMap("MeasurementDatas")
     public DescribeEpnMeasurementDataResponseBodyMeasurementDatas measurementDatas;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,36 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
     }
 
     public static class DescribeEpnMeasurementDataResponseBodyMeasurementDatasMeasurementDataBandWidthFeeDatasBandWidthFeeData extends TeaModel {
+        /**
+         * <p>The code of the billable item.</p>
+         */
         @NameInMap("CostCode")
         public String costCode;
 
+        /**
+         * <p>The name of the billable item.</p>
+         */
         @NameInMap("CostName")
         public String costName;
 
+        /**
+         * <p>Metering method</p>
+         * <br>
+         * <p>*   SpeedUp: bandwidth of intelligent acceleration</p>
+         * <p>*   IntranetConnection: internal bandwidth</p>
+         */
         @NameInMap("CostType")
         public String costType;
 
+        /**
+         * <p>The value of the billable item.</p>
+         */
         @NameInMap("CostVal")
         public Integer costVal;
 
+        /**
+         * <p>This parameter is unavailable.</p>
+         */
         @NameInMap("IspLine")
         public String ispLine;
 
@@ -114,18 +138,36 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
     }
 
     public static class DescribeEpnMeasurementDataResponseBodyMeasurementDatasMeasurementData extends TeaModel {
+        /**
+         * <p>The bandwidth data returned.</p>
+         */
         @NameInMap("BandWidthFeeDatas")
         public DescribeEpnMeasurementDataResponseBodyMeasurementDatasMeasurementDataBandWidthFeeDatas bandWidthFeeDatas;
 
+        /**
+         * <p>The metering method. Valid values:</p>
+         * <br>
+         * <p>*   ChargeByUnified: unified metering.</p>
+         * <p>*   ChargeByGrade: differential metering.</p>
+         */
         @NameInMap("ChargeModel")
         public String chargeModel;
 
+        /**
+         * <p>The metering cycle.</p>
+         */
         @NameInMap("CostCycle")
         public String costCycle;
 
+        /**
+         * <p>The end time of the metering cycle.</p>
+         */
         @NameInMap("CostEndTime")
         public String costEndTime;
 
+        /**
+         * <p>The start time of the metering cycle.</p>
+         */
         @NameInMap("CostStartTime")
         public String costStartTime;
 

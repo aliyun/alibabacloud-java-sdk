@@ -22,12 +22,6 @@ public class ImportKeyPairRequest extends TeaModel {
     @NameInMap("PublicKeyBody")
     public String publicKeyBody;
 
-    /**
-     * <p>The version number. Set the value to 2017-11-10.</p>
-     */
-    @NameInMap("Version")
-    public String version;
-
     public static ImportKeyPairRequest build(java.util.Map<String, ?> map) throws Exception {
         ImportKeyPairRequest self = new ImportKeyPairRequest();
         return TeaModel.build(map, self);
@@ -47,14 +41,6 @@ public class ImportKeyPairRequest extends TeaModel {
     }
     public String getPublicKeyBody() {
         return this.publicKeyBody;
-    }
-
-    public ImportKeyPairRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

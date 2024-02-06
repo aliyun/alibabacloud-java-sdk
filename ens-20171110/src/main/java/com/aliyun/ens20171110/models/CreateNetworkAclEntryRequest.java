@@ -13,7 +13,7 @@ public class CreateNetworkAclEntryRequest extends TeaModel {
     /**
      * <p>The description of the network ACL.</p>
      * <br>
-     * <p>The description must be 1 to 256 characters in length. The description cannot start with \*\*http:// **or** https://\*\*.</p>
+     * <p>The description must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -30,7 +30,7 @@ public class CreateNetworkAclEntryRequest extends TeaModel {
     /**
      * <p>The name of the rule.</p>
      * <br>
-     * <p>The name must be 1 to 128 characters in length. The name cannot start with \*\*http:// **or** https://\*\*.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with http:// or https://.</p>
      */
     @NameInMap("NetworkAclEntryName")
     public String networkAclEntryName;
@@ -53,8 +53,8 @@ public class CreateNetworkAclEntryRequest extends TeaModel {
     /**
      * <p>The port range.</p>
      * <br>
-     * <p>*   If you set **Protocol** to **all** or **icmp**, set this parameter to \*\*-1/-1\*\*. \*\*-1/-1\*\* specifies all ports.</p>
-     * <p>*   If you set **Protocol** to **tcp** or **udp**, the port range must be in the following format: **1/200** or **80/80**. 1/200 specifies port 1 to port 200 and 80/80 specifies port 80. Valid values for a port: **1 to 65535**.</p>
+     * <p>*   If you set **Protocol** to **all** or **icmp**, set this parameter to -1/-1, which specifies all ports.</p>
+     * <p>*   If you set **Protocol** to **tcp** or **udp**, the port can be **1 to 65535**. You can set this parameter to **1/200** or **80/80**, which specifies ports 1 to 200 or port 80.</p>
      */
     @NameInMap("PortRange")
     public String portRange;

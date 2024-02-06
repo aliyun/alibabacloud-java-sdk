@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class JoinPublicIpsToEpnInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the EPN instance.</p>
+     */
     @NameInMap("EPNInstanceId")
     public String EPNInstanceId;
 
+    /**
+     * <p>The information about the public IP address that you want to add to the EPN instance.</p>
+     */
     @NameInMap("InstanceInfos")
     public String instanceInfos;
 

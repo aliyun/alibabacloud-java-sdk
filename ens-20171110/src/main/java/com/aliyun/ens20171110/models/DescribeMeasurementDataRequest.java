@@ -16,12 +16,6 @@ public class DescribeMeasurementDataRequest extends TeaModel {
     @NameInMap("StartDate")
     public String startDate;
 
-    /**
-     * <p>The version number.</p>
-     */
-    @NameInMap("Version")
-    public String version;
-
     public static DescribeMeasurementDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMeasurementDataRequest self = new DescribeMeasurementDataRequest();
         return TeaModel.build(map, self);
@@ -41,14 +35,6 @@ public class DescribeMeasurementDataRequest extends TeaModel {
     }
     public String getStartDate() {
         return this.startDate;
-    }
-
-    public DescribeMeasurementDataRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

@@ -4,6 +4,11 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsRegionsRequest extends TeaModel {
+    /**
+     * <p>The ID of the node.</p>
+     * <br>
+     * <p>By default, all available node IDs are returned.</p>
+     */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 

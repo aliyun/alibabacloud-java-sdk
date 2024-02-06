@@ -4,24 +4,49 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The information about the EPN configurations.</p>
+     */
     @NameInMap("ConfVersions")
     public java.util.List<DescribeEpnInstanceAttributeResponseBodyConfVersions> confVersions;
 
+    /**
+     * <p>The ID of the EPN instance.</p>
+     */
     @NameInMap("EPNInstanceId")
     public String EPNInstanceId;
 
+    /**
+     * <p>The name of the EPN instance.</p>
+     */
     @NameInMap("EPNInstanceName")
     public String EPNInstanceName;
 
+    /**
+     * <p>The information about the instance.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<DescribeEpnInstanceAttributeResponseBodyInstances> instances;
 
+    /**
+     * <p>The networking mode. Valid values:</p>
+     * <br>
+     * <p>*   SpeedUp: intelligent acceleration network (Internet)</p>
+     * <p>*   Connection: internal network</p>
+     * <p>*   SpeedUpAndConnection: intelligent acceleration network and internal network</p>
+     */
     @NameInMap("NetworkingModel")
     public String networkingModel;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details of the vSwitch.</p>
+     */
     @NameInMap("VSwitches")
     public java.util.List<DescribeEpnInstanceAttributeResponseBodyVSwitches> vSwitches;
 
@@ -87,9 +112,15 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeEpnInstanceAttributeResponseBodyConfVersions extends TeaModel {
+        /**
+         * <p>The version number.</p>
+         */
         @NameInMap("ConfVersion")
         public String confVersion;
 
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
@@ -117,24 +148,53 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeEpnInstanceAttributeResponseBodyInstances extends TeaModel {
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The ISP. Valid values:</p>
+         * <br>
+         * <p>*   cmcc: China Mobile</p>
+         * <p>*   unicom: China Unicom</p>
+         * <p>*   telecom: China Telecom</p>
+         */
         @NameInMap("Isp")
         public String isp;
 
+        /**
+         * <p>The private IP address.</p>
+         */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
+        /**
+         * <p>The public IP address.</p>
+         */
         @NameInMap("PublicIpAddress")
         public String publicIpAddress;
 
+        /**
+         * <p>The status of the instance. Valid values:</p>
+         * <br>
+         * <p>*   Running</p>
+         * <p>*   Stopped</p>
+         * <p>*   Expired</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -202,15 +262,27 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeEpnInstanceAttributeResponseBodyVSwitches extends TeaModel {
+        /**
+         * <p>The CIDR block.</p>
+         */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The name of the vSwitch.</p>
+         */
         @NameInMap("VSwitchName")
         public String vSwitchName;
 

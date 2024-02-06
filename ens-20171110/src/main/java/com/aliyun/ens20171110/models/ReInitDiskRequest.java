@@ -16,12 +16,6 @@ public class ReInitDiskRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
-    /**
-     * <p>2017-11-10</p>
-     */
-    @NameInMap("Version")
-    public String version;
-
     public static ReInitDiskRequest build(java.util.Map<String, ?> map) throws Exception {
         ReInitDiskRequest self = new ReInitDiskRequest();
         return TeaModel.build(map, self);
@@ -41,14 +35,6 @@ public class ReInitDiskRequest extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
-    }
-
-    public ReInitDiskRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

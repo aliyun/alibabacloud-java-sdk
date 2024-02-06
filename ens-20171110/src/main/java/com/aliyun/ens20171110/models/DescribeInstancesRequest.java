@@ -35,7 +35,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The IDs of the instances. The value is a JSON array that consists of up to 100 IDs. Separate multiple IDs with commas (,).</p>
+     * <p>The IDs of the instances. The value is a JSON array that consists of up to 100 IDs. Separate IDs with commas (,).</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
@@ -72,7 +72,7 @@ public class DescribeInstancesRequest extends TeaModel {
     /**
      * <p>The method that you want to use to sort instances. The value of this parameter is in the JSON format.</p>
      * <br>
-     * <p>You can sort instances by name, expiration time, region ID, or time when the instances were created. You can specify one or more methods.</p>
+     * <p>You can sort instances by name, expiration time, node ID, or creation time. You can specify one or more methods.</p>
      */
     @NameInMap("OrderByParams")
     public String orderByParams;
@@ -114,6 +114,9 @@ public class DescribeInstancesRequest extends TeaModel {
      */
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("Tags")
+    public java.util.List<DescribeInstancesRequestTags> tags;
 
     /**
      * <p>The ID of the vSwitch.</p>
@@ -254,12 +257,56 @@ public class DescribeInstancesRequest extends TeaModel {
         return this.status;
     }
 
+    public DescribeInstancesRequest setTags(java.util.List<DescribeInstancesRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<DescribeInstancesRequestTags> getTags() {
+        return this.tags;
+    }
+
     public DescribeInstancesRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public static class DescribeInstancesRequestTags extends TeaModel {
+        /**
+         * <p>实例的标签键。N的取值范围为1~20。</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>实例的标签值。N的取值范围：1~20。</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeInstancesRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesRequestTags self = new DescribeInstancesRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeInstancesRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

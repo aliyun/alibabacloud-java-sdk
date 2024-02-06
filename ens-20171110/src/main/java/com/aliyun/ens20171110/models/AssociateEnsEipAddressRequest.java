@@ -21,11 +21,11 @@ public class AssociateEnsEipAddressRequest extends TeaModel {
     /**
      * <p>The type of instance with which you want to associate the EIP. Valid values:</p>
      * <br>
-     * <p>*   **Nat**: a NAT gateway</p>
+     * <p>*   **Nat**: a NAT gateway.</p>
      * <p>*   **SlbInstance**: an ELB instance.</p>
-     * <p>*   **NetworkInterface**: a secondary ENI</p>
+     * <p>*   **NetworkInterface**: a secondary ENI.</p>
      * <p>*   **NatSlbInstance**: If you want to associate multiple EIPs to an ELB instance, you need to set the parameter to this value.</p>
-     * <p>*   **EnsInstance** (default): an ENS instance</p>
+     * <p>*   **EnsInstance** (default): an ENS instance.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;

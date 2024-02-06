@@ -32,12 +32,6 @@ public class DescribeInstanceMonitorDataRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    /**
-     * <p>The version number.</p>
-     */
-    @NameInMap("Version")
-    public String version;
-
     public static DescribeInstanceMonitorDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceMonitorDataRequest self = new DescribeInstanceMonitorDataRequest();
         return TeaModel.build(map, self);
@@ -73,14 +67,6 @@ public class DescribeInstanceMonitorDataRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeInstanceMonitorDataRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

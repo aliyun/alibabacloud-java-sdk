@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class RenewARMServerInstanceRequest extends TeaModel {
+    @NameInMap("AutoRenew")
+    public Boolean autoRenew;
+
     /**
      * <p>The ID of the instance that you want to renew.</p>
      */
@@ -28,6 +31,14 @@ public class RenewARMServerInstanceRequest extends TeaModel {
     public static RenewARMServerInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RenewARMServerInstanceRequest self = new RenewARMServerInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RenewARMServerInstanceRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
     }
 
     public RenewARMServerInstanceRequest setInstanceId(String instanceId) {

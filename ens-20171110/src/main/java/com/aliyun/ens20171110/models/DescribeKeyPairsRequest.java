@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeKeyPairsRequest extends TeaModel {
+    @NameInMap("KeyPairId")
+    public String keyPairId;
+
     /**
      * <p>The name of the key pair. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain the following characters:</p>
      * <br>
@@ -29,15 +32,17 @@ public class DescribeKeyPairsRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
-    /**
-     * <p>The version number. Set the value to 2017-11-10.</p>
-     */
-    @NameInMap("Version")
-    public String version;
-
     public static DescribeKeyPairsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeKeyPairsRequest self = new DescribeKeyPairsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeKeyPairsRequest setKeyPairId(String keyPairId) {
+        this.keyPairId = keyPairId;
+        return this;
+    }
+    public String getKeyPairId() {
+        return this.keyPairId;
     }
 
     public DescribeKeyPairsRequest setKeyPairName(String keyPairName) {
@@ -62,14 +67,6 @@ public class DescribeKeyPairsRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
-    }
-
-    public DescribeKeyPairsRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

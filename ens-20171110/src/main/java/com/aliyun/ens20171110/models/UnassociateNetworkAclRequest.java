@@ -46,8 +46,6 @@ public class UnassociateNetworkAclRequest extends TeaModel {
 
         /**
          * <p>The type of the resource from which you want to disassociate the network ACL. Set the value to **Network**.</p>
-         * <br>
-         * <p>****</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

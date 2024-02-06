@@ -34,7 +34,7 @@ public class CreateFileSystemRequest extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The ID of the ENS node.</p>
+         * <p>The ID of the node.</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;

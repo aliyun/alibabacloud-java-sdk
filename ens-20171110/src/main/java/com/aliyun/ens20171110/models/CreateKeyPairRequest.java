@@ -13,12 +13,6 @@ public class CreateKeyPairRequest extends TeaModel {
     @NameInMap("KeyPairName")
     public String keyPairName;
 
-    /**
-     * <p>The version number. Set the value to 2017-11-10.</p>
-     */
-    @NameInMap("Version")
-    public String version;
-
     public static CreateKeyPairRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateKeyPairRequest self = new CreateKeyPairRequest();
         return TeaModel.build(map, self);
@@ -30,14 +24,6 @@ public class CreateKeyPairRequest extends TeaModel {
     }
     public String getKeyPairName() {
         return this.keyPairName;
-    }
-
-    public CreateKeyPairRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

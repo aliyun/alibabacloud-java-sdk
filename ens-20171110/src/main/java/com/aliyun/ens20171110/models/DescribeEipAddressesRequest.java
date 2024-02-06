@@ -16,12 +16,6 @@ public class DescribeEipAddressesRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
-    /**
-     * <p>The version number. Set the value to 2017-11-10.</p>
-     */
-    @NameInMap("Version")
-    public String version;
-
     public static DescribeEipAddressesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEipAddressesRequest self = new DescribeEipAddressesRequest();
         return TeaModel.build(map, self);
@@ -41,14 +35,6 @@ public class DescribeEipAddressesRequest extends TeaModel {
     }
     public String getEnsRegionId() {
         return this.ensRegionId;
-    }
-
-    public DescribeEipAddressesRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsResourceUsageRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query. Format: yyyy-MM-dd or yyyy-MM-dd HH:mm:ss.</p>
+     */
     @NameInMap("ExpiredEndTime")
     public String expiredEndTime;
 
+    /**
+     * <p>The beginning of the time range to query. Format: yyyy-MM-dd or yyyy-MM-dd HH:mm:ss.</p>
+     */
     @NameInMap("ExpiredStartTime")
     public String expiredStartTime;
 

@@ -68,7 +68,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         public String computeType;
 
         /**
-         * <p>The image creation time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The image creation time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -88,8 +88,8 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         /**
          * <p>The source of the image. Valid values:</p>
          * <br>
-         * <p>*   **system: public images**</p>
-         * <p>*   **self: your custom images**</p>
+         * <p>*   **system**: public images</p>
+         * <p>*   **self**: your custom images</p>
          */
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
@@ -101,7 +101,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         public String imageSize;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

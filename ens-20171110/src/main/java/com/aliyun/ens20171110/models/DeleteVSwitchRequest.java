@@ -10,12 +10,6 @@ public class DeleteVSwitchRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    /**
-     * <p>The version number.</p>
-     */
-    @NameInMap("Version")
-    public String version;
-
     public static DeleteVSwitchRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteVSwitchRequest self = new DeleteVSwitchRequest();
         return TeaModel.build(map, self);
@@ -27,14 +21,6 @@ public class DeleteVSwitchRequest extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
-    }
-
-    public DeleteVSwitchRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

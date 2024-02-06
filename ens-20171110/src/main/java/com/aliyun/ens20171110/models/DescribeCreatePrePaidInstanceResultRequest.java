@@ -10,12 +10,6 @@ public class DescribeCreatePrePaidInstanceResultRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The version number.</p>
-     */
-    @NameInMap("Version")
-    public String version;
-
     public static DescribeCreatePrePaidInstanceResultRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCreatePrePaidInstanceResultRequest self = new DescribeCreatePrePaidInstanceResultRequest();
         return TeaModel.build(map, self);
@@ -27,14 +21,6 @@ public class DescribeCreatePrePaidInstanceResultRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public DescribeCreatePrePaidInstanceResultRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

@@ -19,12 +19,6 @@ public class StopInstanceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    /**
-     * <p>The version number.</p>
-     */
-    @NameInMap("Version")
-    public String version;
-
     public static StopInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         StopInstanceRequest self = new StopInstanceRequest();
         return TeaModel.build(map, self);
@@ -44,14 +38,6 @@ public class StopInstanceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public StopInstanceRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

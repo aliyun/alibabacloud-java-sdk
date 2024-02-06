@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class RemovePublicIpsFromEpnInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the EPN instance.</p>
+     */
     @NameInMap("EPNInstanceId")
     public String EPNInstanceId;
 
+    /**
+     * <p>The information about the public IP addresses that you want to delete.</p>
+     */
     @NameInMap("InstanceInfos")
     public String instanceInfos;
 

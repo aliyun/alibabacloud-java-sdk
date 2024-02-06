@@ -4,14 +4,17 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEpnMeasurementDataRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the yyyy-mm-ddthh:mm:ssz format. The time must be in UTC.</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
-
-    @NameInMap("Version")
-    public String version;
 
     public static DescribeEpnMeasurementDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEpnMeasurementDataRequest self = new DescribeEpnMeasurementDataRequest();
@@ -32,14 +35,6 @@ public class DescribeEpnMeasurementDataRequest extends TeaModel {
     }
     public String getStartDate() {
         return this.startDate;
-    }
-
-    public DescribeEpnMeasurementDataRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

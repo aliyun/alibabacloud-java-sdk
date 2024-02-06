@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEipAddressesResponseBody extends TeaModel {
     /**
-     * <p>Details about the EIP.</p>
+     * <p>Details of the EIPs.</p>
      */
     @NameInMap("EipAddresses")
     public DescribeEipAddressesResponseBodyEipAddresses eipAddresses;
@@ -39,7 +39,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
 
     public static class DescribeEipAddressesResponseBodyEipAddressesEipAddress extends TeaModel {
         /**
-         * <p>The information about the EIP.</p>
+         * <p>The information about an EIP.</p>
          */
         @NameInMap("Eip")
         public String eip;

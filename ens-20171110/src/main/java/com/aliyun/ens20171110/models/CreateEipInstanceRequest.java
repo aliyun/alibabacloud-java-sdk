@@ -11,7 +11,7 @@ public class CreateEipInstanceRequest extends TeaModel {
     public Long bandwidth;
 
     /**
-     * <p>The description of elastic IP address (EIP).</p>
+     * <p>The description of the EIP.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -23,21 +23,13 @@ public class CreateEipInstanceRequest extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The billing method of the EIP. Valid values:</p>
-     * <br>
-     * <p>*   **PrePaid**: subscription</p>
-     * <p>*   **PostPaid** (default): pay-as-you-go on a monthly basis</p>
-     * <br>
-     * <p>>  If you set **InstanceChargeType** to **PostPaid**, you cannot set **InternetChargeType** to **PayByBandwidth**.</p>
+     * <p>The billing method of the EIP. Set the value to **PostPaid**.</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     /**
-     * <p>The metering method of the EIP. Valid values:</p>
-     * <br>
-     * <p>*   **PayByBandwidth** (default): pay-by-bandwidth</p>
-     * <p>*   **95BandwidthByMonth**: pay-by-monthly-95th-percentile-bandwidth</p>
+     * <p>The metering method of the EIP. Set the value to **95BandwidthByMonth**.</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;

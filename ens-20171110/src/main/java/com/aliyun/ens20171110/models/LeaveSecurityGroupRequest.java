@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class LeaveSecurityGroupRequest extends TeaModel {
     /**
-     * <p>The ID of instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the ENI.</p>
+     */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 

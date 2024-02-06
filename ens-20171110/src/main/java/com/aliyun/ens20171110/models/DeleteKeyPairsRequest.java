@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DeleteKeyPairsRequest extends TeaModel {
+    @NameInMap("KeyPairId")
+    public String keyPairId;
+
     /**
      * <p>The key pair name. The name must conform to the following naming conventions:</p>
      * <br>
@@ -19,6 +22,14 @@ public class DeleteKeyPairsRequest extends TeaModel {
     public static DeleteKeyPairsRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteKeyPairsRequest self = new DeleteKeyPairsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteKeyPairsRequest setKeyPairId(String keyPairId) {
+        this.keyPairId = keyPairId;
+        return this;
+    }
+    public String getKeyPairId() {
+        return this.keyPairId;
     }
 
     public DeleteKeyPairsRequest setKeyPairName(String keyPairName) {

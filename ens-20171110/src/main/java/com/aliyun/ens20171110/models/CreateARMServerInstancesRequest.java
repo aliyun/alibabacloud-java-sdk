@@ -20,11 +20,7 @@ public class CreateARMServerInstancesRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>Specifies whether to use vouchers. Default values: true. Valid values:</p>
-     * <br>
-     * <p>- true </p>
-     * <br>
-     * <p>- false</p>
+     * <p>Specifies whether to use coupons. Valid values: true and false Default value: true.</p>
      */
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
@@ -59,6 +55,18 @@ public class CreateARMServerInstancesRequest extends TeaModel {
      * <p>*   aic.cf53r.c7.np</p>
      * <p>*   aic.cf53r.c8.np</p>
      * <p>*   ens.a6c2</p>
+     * <p>*   aic.cf52m1r.c1.np</p>
+     * <p>*   aic.cf52m1r.c2.np</p>
+     * <p>*   aic.cf52m1r.c3.np</p>
+     * <p>*   aic.cf52m1r.c4.np</p>
+     * <p>*   aic.cf52m1r.c5.np</p>
+     * <p>*   aic.cf53r.c6</p>
+     * <p>*   aic.cf52m1r.c6</p>
+     * <p>*   aic.cf53r.c7</p>
+     * <p>*   aic.cf52r.c1.np</p>
+     * <p>*   aic.cf52r.c2.np</p>
+     * <p>*   aic.cf52r.c3.np</p>
+     * <p>*   aic.cf52r.c4.np</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -107,9 +115,24 @@ public class CreateARMServerInstancesRequest extends TeaModel {
      * <p>The resolution. Valid values:</p>
      * <br>
      * <p>*   1920\*1080</p>
-     * <p>*   1280\*720</p>
      * <p>*   1080\*1920</p>
+     * <p>*   1280\*720</p>
      * <p>*   720\*1280</p>
+     * <p>*   2400\*1080</p>
+     * <p>*   1920\*864</p>
+     * <p>*   1080\*2400</p>
+     * <p>*   864\*1920</p>
+     * <br>
+     * <p><!----></p>
+     * <br>
+     * <p>*   1920\*1080</p>
+     * <p>*   1080\*1920</p>
+     * <p>*   1280\*720</p>
+     * <p>*   720\*1280</p>
+     * <p>*   2400\*1080</p>
+     * <p>*   1920\*864</p>
+     * <p>*   1080\*2400</p>
+     * <p>*   864\*1920</p>
      */
     @NameInMap("Resolution")
     public String resolution;

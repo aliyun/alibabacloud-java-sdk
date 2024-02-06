@@ -4,23 +4,50 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEpnBandwitdhByInternetChargeTypeRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query.</p>
+     * <br>
+     * <p>*   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>*   If the value of the seconds place is not 00, the start time is automatically set to the next minute.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the Edge Node Service (ENS) node.</p>
+     */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The Internet service provider (ISP). Valid values:</p>
+     * <br>
+     * <p>*   cmcc: China Mobile</p>
+     * <p>*   telecom: China Telecom</p>
+     * <p>*   unicom: China Unicom</p>
+     * <p>*   multiCarrier: multi-line ISP</p>
+     */
     @NameInMap("Isp")
     public String isp;
 
+    /**
+     * <p>The networking mode. Valid values:</p>
+     * <br>
+     * <p>*   **SpeedUp**: intelligent acceleration network (Internet)</p>
+     * <p>*   **Connection**: internal network</p>
+     * <p>*   **SpeedUpAndConnection**: intelligent acceleration network and internal network</p>
+     */
     @NameInMap("NetworkingModel")
     public String networkingModel;
 
+    /**
+     * <p>The beginning of the time range to query.</p>
+     * <br>
+     * <p>*   Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>*   If the value of the seconds place is not 00, the start time is automatically set to the next minute.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("Version")
-    public String version;
 
     public static DescribeEpnBandwitdhByInternetChargeTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEpnBandwitdhByInternetChargeTypeRequest self = new DescribeEpnBandwitdhByInternetChargeTypeRequest();
@@ -65,14 +92,6 @@ public class DescribeEpnBandwitdhByInternetChargeTypeRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeEpnBandwitdhByInternetChargeTypeRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

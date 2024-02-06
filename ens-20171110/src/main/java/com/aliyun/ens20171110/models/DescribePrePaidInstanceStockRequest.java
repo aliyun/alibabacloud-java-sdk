@@ -10,6 +10,9 @@ public class DescribePrePaidInstanceStockRequest extends TeaModel {
     @NameInMap("DataDiskSize")
     public Integer dataDiskSize;
 
+    /**
+     * <p>The ID of the edge node.</p>
+     */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 

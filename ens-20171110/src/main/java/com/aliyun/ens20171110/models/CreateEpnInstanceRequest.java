@@ -4,18 +4,44 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateEpnInstanceRequest extends TeaModel {
+    /**
+     * <p>The name of the EPN instance.</p>
+     */
     @NameInMap("EPNInstanceName")
     public String EPNInstanceName;
 
+    /**
+     * <p>The type of the EPN instance. Set the value to **EdgeToEdge**.</p>
+     */
     @NameInMap("EPNInstanceType")
     public String EPNInstanceType;
 
+    /**
+     * <p>The billing method for network usage. Valid values:</p>
+     * <br>
+     * <p>*   **BandwidthByDay**: Pay by daily peak bandwidth.</p>
+     * <p>*   **95BandwidthByMonth**: Pay by monthly 95th percentile bandwidth.</p>
+     * <p>*   **PayByBandwidth4thMonth**: Pay by monthly fourth peak bandwidth.</p>
+     * <p>*   **PayByBandwidth**: Pay by fixed bandwidth.</p>
+     * <br>
+     * <p>You can specify only one metering method for network usage and cannot overwrite the existing metering method.</p>
+     */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
+    /**
+     * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 1 to 100.</p>
+     */
     @NameInMap("InternetMaxBandwidthOut")
     public Integer internetMaxBandwidthOut;
 
+    /**
+     * <p>The networking mode. Valid values:</p>
+     * <br>
+     * <p>*   **SpeedUp**: intelligent acceleration network (Internet)</p>
+     * <p>*   **Connection**: internal network</p>
+     * <p>*   **SpeedUpAndConnection**: intelligent acceleration network and internal network</p>
+     */
     @NameInMap("NetworkingModel")
     public String networkingModel;
 

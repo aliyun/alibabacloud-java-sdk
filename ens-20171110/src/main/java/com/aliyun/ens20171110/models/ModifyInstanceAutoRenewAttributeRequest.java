@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     /**
-     * <p>Specify whether to automatically renew the subscription of the nodes. Valid values: true and false. Default value: false.</p>
+     * <p>Specifies whether to enable the auto-renewal feature. Valid values: **True and False**. Default value: False.</p>
      */
     @NameInMap("AutoRenew")
     public String autoRenew;
@@ -17,7 +17,7 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     public String duration;
 
     /**
-     * <p>The ID of the instance. Separate multiple instance IDs with semicolons (;).</p>
+     * <p>The IDs of the instances. Separate IDs with semicolons (;).</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;

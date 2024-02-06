@@ -4,14 +4,20 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateEnsServiceRequest extends TeaModel {
+    /**
+     * <p>The ID of the resource that you want to obtain. You can specify only one ID in a request.</p>
+     */
     @NameInMap("EnsServiceId")
     public String ensServiceId;
 
+    /**
+     * <p>The operation to perform after you preview the created edge service. Valid values:</p>
+     * <br>
+     * <p>*   **Buy**: create</p>
+     * <p>*   **Upgrade**: change</p>
+     */
     @NameInMap("OrderType")
     public String orderType;
-
-    @NameInMap("Version")
-    public String version;
 
     public static CreateEnsServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEnsServiceRequest self = new CreateEnsServiceRequest();
@@ -32,14 +38,6 @@ public class CreateEnsServiceRequest extends TeaModel {
     }
     public String getOrderType() {
         return this.orderType;
-    }
-
-    public CreateEnsServiceRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }
