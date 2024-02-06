@@ -3,7 +3,7 @@ package com.aliyun.mpaas20201028.models;
 
 import com.aliyun.tea.*;
 
-public class GetMcubeNebulaResourceResponse extends TeaModel {
+public class QueryInfoFromMdpResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetMcubeNebulaResourceResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetMcubeNebulaResourceResponseBody body;
+    public QueryInfoFromMdpResponseBody body;
 
-    public static GetMcubeNebulaResourceResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetMcubeNebulaResourceResponse self = new GetMcubeNebulaResourceResponse();
+    public static QueryInfoFromMdpResponse build(java.util.Map<String, ?> map) throws Exception {
+        QueryInfoFromMdpResponse self = new QueryInfoFromMdpResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetMcubeNebulaResourceResponse setHeaders(java.util.Map<String, String> headers) {
+    public QueryInfoFromMdpResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetMcubeNebulaResourceResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetMcubeNebulaResourceResponse setStatusCode(Integer statusCode) {
+    public QueryInfoFromMdpResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetMcubeNebulaResourceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetMcubeNebulaResourceResponse setBody(GetMcubeNebulaResourceResponseBody body) {
+    public QueryInfoFromMdpResponse setBody(QueryInfoFromMdpResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetMcubeNebulaResourceResponseBody getBody() {
+    public QueryInfoFromMdpResponseBody getBody() {
         return this.body;
     }
 

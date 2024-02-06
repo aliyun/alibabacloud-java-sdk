@@ -4551,6 +4551,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.pushUnBindWithOptions(request, runtime);
     }
 
+    public QueryInfoFromMdpResponse queryInfoFromMdpWithOptions(QueryInfoFromMdpRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
+            body.put("Mobile", request.mobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobileMd5)) {
+            body.put("MobileMd5", request.mobileMd5);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobileSha256)) {
+            body.put("MobileSha256", request.mobileSha256);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskScene)) {
+            body.put("RiskScene", request.riskScene);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryInfoFromMdp"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryInfoFromMdpResponse());
+    }
+
+    public QueryInfoFromMdpResponse queryInfoFromMdp(QueryInfoFromMdpRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryInfoFromMdpWithOptions(request, runtime);
+    }
+
     public QueryMappCenterAppResponse queryMappCenterAppWithOptions(QueryMappCenterAppRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
