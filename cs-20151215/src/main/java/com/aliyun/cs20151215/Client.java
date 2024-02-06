@@ -5198,6 +5198,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("runtime_version", request.runtimeVersion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.useReplace)) {
+            body.put("use_replace", request.useReplace);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))

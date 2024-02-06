@@ -28,6 +28,9 @@ public class UpgradeClusterNodepoolRequest extends TeaModel {
     @NameInMap("runtime_version")
     public String runtimeVersion;
 
+    @NameInMap("use_replace")
+    public Boolean useReplace;
+
     public static UpgradeClusterNodepoolRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeClusterNodepoolRequest self = new UpgradeClusterNodepoolRequest();
         return TeaModel.build(map, self);
@@ -63,6 +66,14 @@ public class UpgradeClusterNodepoolRequest extends TeaModel {
     }
     public String getRuntimeVersion() {
         return this.runtimeVersion;
+    }
+
+    public UpgradeClusterNodepoolRequest setUseReplace(Boolean useReplace) {
+        this.useReplace = useReplace;
+        return this;
+    }
+    public Boolean getUseReplace() {
+        return this.useReplace;
     }
 
 }
