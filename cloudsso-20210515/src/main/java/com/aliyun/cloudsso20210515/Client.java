@@ -229,7 +229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, an asynchronous task is created. You can call the [GetTask](~~340670~~) operation to query the progress of task execution by using the value of the `TaskId` response parameter.
+      * When you call this operation, an asynchronous task is created. You can call the [GetTask](~~340670~~) operation to query the progress of the task based on the value of the `TaskId` response parameter.
       * For more information about how to assign permissions on an account in your resource directory, see [Overview of multi-account authorization](~~266726~~).
       * This topic provides an example on how to assign access permissions on the account `114240524784****` in your resource directory to the CloudSSO user `u-00q8wbq42wiltcrk****` by using the access configuration `ac-00jhtfl8thteu6uj****`. After the call is successful, the CloudSSO user can access resources within the account in the resource directory.
       *
@@ -282,7 +282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, an asynchronous task is created. You can call the [GetTask](~~340670~~) operation to query the progress of task execution by using the value of the `TaskId` response parameter.
+      * When you call this operation, an asynchronous task is created. You can call the [GetTask](~~340670~~) operation to query the progress of the task based on the value of the `TaskId` response parameter.
       * For more information about how to assign permissions on an account in your resource directory, see [Overview of multi-account authorization](~~266726~~).
       * This topic provides an example on how to assign access permissions on the account `114240524784****` in your resource directory to the CloudSSO user `u-00q8wbq42wiltcrk****` by using the access configuration `ac-00jhtfl8thteu6uj****`. After the call is successful, the CloudSSO user can access resources within the account in the resource directory.
       *
@@ -1481,6 +1481,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getGroupWithOptions(request, runtime);
     }
 
+    public GetLoginPreferenceResponse getLoginPreferenceWithOptions(GetLoginPreferenceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLoginPreference"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLoginPreferenceResponse());
+    }
+
+    public GetLoginPreferenceResponse getLoginPreference(GetLoginPreferenceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getLoginPreferenceWithOptions(request, runtime);
+    }
+
     /**
       * If you enable username-password logon for CloudSSO users, you can also configure MFA for the users.
       * This topic provides an example on how to query the MFA setting of all CloudSSO users that belong to the directory named `00q8wbq42wiltcrk****`.
@@ -1611,6 +1640,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getMFAAuthenticationStatusWithOptions(request, runtime);
     }
 
+    public GetPasswordPolicyResponse getPasswordPolicyWithOptions(GetPasswordPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPasswordPolicy"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPasswordPolicyResponse());
+    }
+
+    public GetPasswordPolicyResponse getPasswordPolicy(GetPasswordPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getPasswordPolicyWithOptions(request, runtime);
+    }
+
     /**
       * This topic provides an example on how to query the status of SCIM synchronization within the directory `d-00fc2p61****`. The returned result shows that SCIM synchronization is in the Enabled state.
       *
@@ -1721,7 +1779,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the GetTaskStatus operation to query the status of an asynchronous task. If you want to query more information about an asynchronous task, you can call the [GetTask](~~340670~~) operation.
+      * You can call the GetTaskStatus operation to query the status of an asynchronous task. If you want to query more information about an asynchronous task, call the [GetTask](~~340670~~) operation.
       * This topic provides an example on how to query the information about the task whose ID is `t-shfqw1u1edszvxw5****`.
       *
       * @param request GetTaskStatusRequest
@@ -1757,7 +1815,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the GetTaskStatus operation to query the status of an asynchronous task. If you want to query more information about an asynchronous task, you can call the [GetTask](~~340670~~) operation.
+      * You can call the GetTaskStatus operation to query the status of an asynchronous task. If you want to query more information about an asynchronous task, call the [GetTask](~~340670~~) operation.
       * This topic provides an example on how to query the information about the task whose ID is `t-shfqw1u1edszvxw5****`.
       *
       * @param request GetTaskStatusRequest
@@ -2022,7 +2080,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the assigned access permissions on the account `114240524784****` in your resource directory. The returned result shows that access permissions on the account in your resource directory are assigned to one user.
+      * This topic provides an example on how to query the assigned access permissions on the account `114240524784****` in your resource directory. The returned result shows that access permissions on the account in your resource directory is assigned to one user.
       *
       * @param request ListAccessAssignmentsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2081,7 +2139,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the assigned access permissions on the account `114240524784****` in your resource directory. The returned result shows that access permissions on the account in your resource directory are assigned to one user.
+      * This topic provides an example on how to query the assigned access permissions on the account `114240524784****` in your resource directory. The returned result shows that access permissions on the account in your resource directory is assigned to one user.
       *
       * @param request ListAccessAssignmentsRequest
       * @return ListAccessAssignmentsResponse
@@ -3225,6 +3283,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.setExternalSAMLIdentityProviderWithOptions(request, runtime);
     }
 
+    public SetLoginPreferenceResponse setLoginPreferenceWithOptions(SetLoginPreferenceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loginNetworkMasks)) {
+            query.put("LoginNetworkMasks", request.loginNetworkMasks);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetLoginPreference"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetLoginPreferenceResponse());
+    }
+
+    public SetLoginPreferenceResponse setLoginPreference(SetLoginPreferenceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setLoginPreferenceWithOptions(request, runtime);
+    }
+
     /**
       * If a CloudSSO administrator enables username-password logon for users, CloudSSO automatically enables MFA to improve security. The administrator can call this operation to enable or disable MFA based on the business requirements.
       * This topic provides an example on how to enable MFA for users.
@@ -3271,6 +3362,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetMFAAuthenticationStatusResponse setMFAAuthenticationStatus(SetMFAAuthenticationStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setMFAAuthenticationStatusWithOptions(request, runtime);
+    }
+
+    public SetPasswordPolicyResponse setPasswordPolicyWithOptions(SetPasswordPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxLoginAttempts)) {
+            query.put("MaxLoginAttempts", request.maxLoginAttempts);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxPasswordAge)) {
+            query.put("MaxPasswordAge", request.maxPasswordAge);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minPasswordDifferentChars)) {
+            query.put("MinPasswordDifferentChars", request.minPasswordDifferentChars);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minPasswordLength)) {
+            query.put("MinPasswordLength", request.minPasswordLength);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.passwordNotContainUsername)) {
+            query.put("PasswordNotContainUsername", request.passwordNotContainUsername);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.passwordReusePrevention)) {
+            query.put("PasswordReusePrevention", request.passwordReusePrevention);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetPasswordPolicy"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetPasswordPolicyResponse());
+    }
+
+    public SetPasswordPolicyResponse setPasswordPolicy(SetPasswordPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setPasswordPolicyWithOptions(request, runtime);
     }
 
     /**

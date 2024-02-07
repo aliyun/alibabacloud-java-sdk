@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetTaskResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information about the task.</p>
+     * <p>The task information.</p>
      */
     @NameInMap("Task")
     public GetTaskResponseBodyTask task;
@@ -51,7 +51,7 @@ public class GetTaskResponseBody extends TeaModel {
         public String accessConfigurationName;
 
         /**
-         * <p>The time when the task ended.</p>
+         * <p>The end time of the task.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
@@ -86,13 +86,13 @@ public class GetTaskResponseBody extends TeaModel {
         public String principalType;
 
         /**
-         * <p>The time when the task started.</p>
+         * <p>The start time of the task.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
-         * <p>The status of the task. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <br>
          * <p>*   InProgress: The task is running.</p>
          * <p>*   Success: The task is successful.</p>
@@ -132,13 +132,13 @@ public class GetTaskResponseBody extends TeaModel {
         public String targetType;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
-         * <p>The type of the task. Valid values:</p>
+         * <p>The task type. Valid values:</p>
          * <br>
          * <p>*   ProvisionAccessConfiguration: An access configuration is provisioned.</p>
          * <p>*   DeprovisionAccessConfiguration: An access configuration is de-provisioned.</p>

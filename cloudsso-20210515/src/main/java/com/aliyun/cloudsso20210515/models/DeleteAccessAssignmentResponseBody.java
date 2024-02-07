@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteAccessAssignmentResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information about the task.</p>
+     * <p>The task information.</p>
      */
     @NameInMap("Task")
     public DeleteAccessAssignmentResponseBodyTask task;
@@ -72,7 +72,7 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
         public String principalType;
 
         /**
-         * <p>The status of the task. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <br>
          * <p>*   InProgress: The task is running.</p>
          * <p>*   Success: The task is successful.</p>
@@ -112,13 +112,13 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
         public String targetType;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
-         * <p>The type of the task. The value is fixed as DeleteAccessAssignment, which indicates that access permissions on an account in your resource directory are removed.</p>
+         * <p>The task type. The value is fixed as DeleteAccessAssignment, which indicates that access permissions on an account in your resource directory are removed.</p>
          */
         @NameInMap("TaskType")
         public String taskType;

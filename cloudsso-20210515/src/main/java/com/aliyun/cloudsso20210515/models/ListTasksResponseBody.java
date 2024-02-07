@@ -7,20 +7,20 @@ public class ListTasksResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the queried entries are truncated. Valid values:</p>
      * <br>
-     * <p>*   true: The queried entries are truncated.</p>
-     * <p>*   false: The queried entries are not truncated.</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The maximum number of entries returned per page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that is returned for the next page.</p>
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
      * <br>
      * <p>>  This parameter is returned only when the value of `IsTruncated` is `true`.</p>
      */
@@ -28,7 +28,7 @@ public class ListTasksResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -112,7 +112,7 @@ public class ListTasksResponseBody extends TeaModel {
         public String accessConfigurationName;
 
         /**
-         * <p>The time when the task ended.</p>
+         * <p>The end time of the task.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
@@ -147,13 +147,13 @@ public class ListTasksResponseBody extends TeaModel {
         public String principalType;
 
         /**
-         * <p>The time when the task started.</p>
+         * <p>The start time of the task.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
-         * <p>The status of the task. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <br>
          * <p>*   InProgress: The task is running.</p>
          * <p>*   Success: The task is successful.</p>
@@ -175,13 +175,13 @@ public class ListTasksResponseBody extends TeaModel {
         public String targetName;
 
         /**
-         * <p>The path ID of the task object in your resource directory.</p>
+         * <p>The path ID of the task object in the resource directory.</p>
          */
         @NameInMap("TargetPath")
         public String targetPath;
 
         /**
-         * <p>The path name of the task object in your resource directory.</p>
+         * <p>The path name of the task object in the resource directory.</p>
          */
         @NameInMap("TargetPathName")
         public String targetPathName;
@@ -189,24 +189,24 @@ public class ListTasksResponseBody extends TeaModel {
         /**
          * <p>The type of the task object.</p>
          * <br>
-         * <p>The value is fixed as RD-Account, which indicates an account in your resource directory.</p>
+         * <p>The value is fixed as RD-Account, which indicates the accounts in the resource directory.</p>
          */
         @NameInMap("TargetType")
         public String targetType;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The ID of the job.</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
-         * <p>The type of the task. Valid values:</p>
+         * <p>The task type. Valid values:</p>
          * <br>
          * <p>*   ProvisionAccessConfiguration: An access configuration is provisioned.</p>
          * <p>*   DeprovisionAccessConfiguration: An access configuration is de-provisioned.</p>
-         * <p>*   CreateAccessAssignment: Access permissions on an account in your resource directory are assigned.</p>
-         * <p>*   DeleteAccessAssignment: Access permissions on an account in your resource directory are removed.</p>
+         * <p>*   CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.</p>
+         * <p>*   DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.</p>
          */
         @NameInMap("TaskType")
         public String taskType;

@@ -11,7 +11,7 @@ public class DeprovisionAccessConfigurationRequest extends TeaModel {
     public String accessConfigurationId;
 
     /**
-     * <p>The ID of the directory.</p>
+     * <p>The directory ID.</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
@@ -23,7 +23,7 @@ public class DeprovisionAccessConfigurationRequest extends TeaModel {
     public String targetId;
 
     /**
-     * <p>The type of the task object. Set the value to RD-Account, which indicates an account in your resource directory.</p>
+     * <p>The type of the task object. Set the value to RD-Account, which specifies the accounts in the resource directory.</p>
      */
     @NameInMap("TargetType")
     public String targetType;

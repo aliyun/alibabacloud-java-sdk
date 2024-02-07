@@ -11,13 +11,13 @@ public class ListAccessAssignmentsRequest extends TeaModel {
     public String accessConfigurationId;
 
     /**
-     * <p>The ID of the directory.</p>
+     * <p>The directory ID.</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of entries per page.</p>
      * <br>
      * <p>Valid values: 1 to 20.</p>
      * <br>
@@ -27,7 +27,7 @@ public class ListAccessAssignmentsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to return for the next page. If this is your first time to call this operation, you do not need to specify `NextToken`.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If this is your first time to call this operation, you do not need to specify the `NextToken` parameter.</p>
      * <br>
      * <p>When you call this operation for the first time, if the total number of entries to return exceeds the value of `MaxResults`, the entries are truncated. Only the entries that match the value of `MaxResults` are returned, and the excess entries are not returned. In this case, the value of the response parameter `IsTruncated` is `true`, and `NextToken` is returned. In the next call, you can use the value of `NextToken` and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of `IsTruncated` becomes `false`. This way, all entries are returned.</p>
      */
@@ -37,10 +37,10 @@ public class ListAccessAssignmentsRequest extends TeaModel {
     /**
      * <p>The ID of the CloudSSO identity. The ID can be used to filter access permissions.</p>
      * <br>
-     * <p>*   If you set `PrincipalType` to User, set `PrincipalId` to the ID of the Cloud SSO user.</p>
+     * <p>*   If you set `PrincipalType` to User, set `PrincipalId` to the ID of the CloudSSO user.</p>
      * <p>*   If you set `PrincipalType` to Group, set `PrincipalId` to the ID of the CloudSSO group.</p>
      * <br>
-     * <p>>  You can use the ID to filter access permissions only if you specify both `PrincipalId` and `PrincipalType`.</p>
+     * <p>>  You can use the type to filter access permissions only if you specify both PrincipalId and `PrincipalType`.``</p>
      */
     @NameInMap("PrincipalId")
     public String principalId;
@@ -51,7 +51,7 @@ public class ListAccessAssignmentsRequest extends TeaModel {
      * <p>*   User</p>
      * <p>*   Group</p>
      * <br>
-     * <p>>  You can use the type to filter access permissions only if you specify both `PrincipalId` and `PrincipalType`.</p>
+     * <p>>  You can use the type to filter access permissions only if you specify both PrincipalId and `PrincipalType`.``</p>
      */
     @NameInMap("PrincipalType")
     public String principalType;
@@ -59,7 +59,7 @@ public class ListAccessAssignmentsRequest extends TeaModel {
     /**
      * <p>The ID of the task object. The ID can be used to filter access permissions.</p>
      * <br>
-     * <p>>  You can use the ID to filter access permissions only if you specify both `TargetId` and `TargetType`.</p>
+     * <p>>  You can use the type to filter access permissions only if you specify both `TargetId` and `TargetType`.</p>
      */
     @NameInMap("TargetId")
     public String targetId;
@@ -67,7 +67,7 @@ public class ListAccessAssignmentsRequest extends TeaModel {
     /**
      * <p>The type of the task object. The type can be used to filter access permissions.</p>
      * <br>
-     * <p>Set the value to RD-Account, which indicates an account in your resource directory.</p>
+     * <p>Set the value to RD-Account, which specifies the accounts in the resource directory.</p>
      * <br>
      * <p>>  You can use the type to filter access permissions only if you specify both `TargetId` and `TargetType`.</p>
      */

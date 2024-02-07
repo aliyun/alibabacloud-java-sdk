@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetAccessConfigurationResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public GetAccessConfigurationResponseBody body;
 
     public static GetAccessConfigurationResponse build(java.util.Map<String, ?> map) throws Exception {
