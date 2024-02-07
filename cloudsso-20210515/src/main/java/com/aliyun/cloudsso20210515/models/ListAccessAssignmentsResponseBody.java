@@ -13,28 +13,28 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the queried entries are truncated. Valid values:</p>
      * <br>
-     * <p>*   true: The queried entries are truncated.</p>
-     * <p>*   false: The queried entries are not truncated.</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The maximum number of entries returned per page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that is returned for the next page.</p>
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
      * <br>
-     * <p>>  This parameter is returned only when the value of `IsTruncated` is `true`.</p>
+     * <p>>  This parameter is returned only when the value of IsTruncated is `true`.``</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -151,13 +151,13 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
         public String targetName;
 
         /**
-         * <p>The path ID of the task object in your resource directory.</p>
+         * <p>The path ID of the task object in the resource directory.</p>
          */
         @NameInMap("TargetPath")
         public String targetPath;
 
         /**
-         * <p>The path name of the task object in your resource directory.</p>
+         * <p>The path name of the task object in the resource directory.</p>
          */
         @NameInMap("TargetPathName")
         public String targetPathName;
@@ -165,7 +165,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
         /**
          * <p>The type of the task object.</p>
          * <br>
-         * <p>The value is fixed as RD-Account, which indicates an account in your resource directory.</p>
+         * <p>The value is fixed as RD-Account, which indicates the accounts in the resource directory.</p>
          */
         @NameInMap("TargetType")
         public String targetType;

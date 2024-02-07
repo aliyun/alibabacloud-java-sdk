@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAccessConfigurationProvisioningsRequest extends TeaModel {
     /**
-     * <p>The ID of the access configuration. The ID can be used to filter accounts.</p>
+     * <p>The ID of the access configuration. The ID can be used to filter access permissions.</p>
      */
     @NameInMap("AccessConfigurationId")
     public String accessConfigurationId;
@@ -17,7 +17,7 @@ public class ListAccessConfigurationProvisioningsRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of entries per page.</p>
      * <br>
      * <p>Valid values: 1 to 20.</p>
      * <br>
@@ -27,7 +27,7 @@ public class ListAccessConfigurationProvisioningsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to return for the next page. If this is your first time to call this operation, you do not need to specify `NextToken`.</p>
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. If this is your first time to call this operation, you do not need to specify the `NextToken` parameter.</p>
      * <br>
      * <p>When you call this operation for the first time, if the total number of entries to return exceeds the value of `MaxResults`, the entries are truncated. Only the entries that match the value of `MaxResults` are returned, and the excess entries are not returned. In this case, the value of the response parameter `IsTruncated` is `true`, and `NextToken` is returned. In the next call, you can use the value of `NextToken` and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of `IsTruncated` becomes `false`. This way, all entries are returned.</p>
      */
@@ -45,19 +45,19 @@ public class ListAccessConfigurationProvisioningsRequest extends TeaModel {
     public String provisioningStatus;
 
     /**
-     * <p>The ID of the task object. The ID can be used to filter accounts.</p>
+     * <p>The ID of the task object. The ID can be used to filter access permissions.</p>
      * <br>
-     * <p>>  You can use the ID to filter accounts only if you specify both `TargetId` and `TargetType`.</p>
+     * <p>>  You can use the type to filter access permissions only if you specify both `TargetId` and `TargetType`.</p>
      */
     @NameInMap("TargetId")
     public String targetId;
 
     /**
-     * <p>The type of the task object. The type can be used to filter accounts.</p>
+     * <p>The type of the task object. The type can be used to filter access permissions.</p>
      * <br>
-     * <p>Set the value to RD-Account, which indicates an account in your resource directory.</p>
+     * <p>Set the value to RD-Account, which specifies the accounts in the resource directory.</p>
      * <br>
-     * <p>>  You can use the type to filter accounts only if you specify both `TargetId` and `TargetType`.</p>
+     * <p>>  You can use the type to filter access permissions only if you specify both `TargetId` and `TargetType`.</p>
      */
     @NameInMap("TargetType")
     public String targetType;
