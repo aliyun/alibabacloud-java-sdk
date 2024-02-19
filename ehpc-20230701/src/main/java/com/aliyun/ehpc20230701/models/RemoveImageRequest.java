@@ -7,9 +7,6 @@ public class RemoveImageRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static RemoveImageRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveImageRequest self = new RemoveImageRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class RemoveImageRequest extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
-    }
-
-    public RemoveImageRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }
