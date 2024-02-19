@@ -82,11 +82,17 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         @NameInMap("ReadBPS")
         public Long readBPS;
 
+        @NameInMap("ReadBlockSize")
+        public Long readBlockSize;
+
         /**
          * <p>The maximum number of read IOPS.</p>
          */
         @NameInMap("ReadIOPS")
         public Long readIOPS;
+
+        @NameInMap("ReadLatency")
+        public Long readLatency;
 
         /**
          * <p>The timestamp that is used to query the near real-time monitoring data of the disk. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
@@ -100,11 +106,17 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         @NameInMap("WriteBPS")
         public Long writeBPS;
 
+        @NameInMap("WriteBlockSize")
+        public Long writeBlockSize;
+
         /**
          * <p>The maximum number of write IOPS.</p>
          */
         @NameInMap("WriteIOPS")
         public Long writeIOPS;
+
+        @NameInMap("WriteLatency")
+        public Long writeLatency;
 
         public static DescribeDiskMonitorDataResponseBodyMonitorData build(java.util.Map<String, ?> map) throws Exception {
             DescribeDiskMonitorDataResponseBodyMonitorData self = new DescribeDiskMonitorDataResponseBodyMonitorData();
@@ -151,12 +163,28 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             return this.readBPS;
         }
 
+        public DescribeDiskMonitorDataResponseBodyMonitorData setReadBlockSize(Long readBlockSize) {
+            this.readBlockSize = readBlockSize;
+            return this;
+        }
+        public Long getReadBlockSize() {
+            return this.readBlockSize;
+        }
+
         public DescribeDiskMonitorDataResponseBodyMonitorData setReadIOPS(Long readIOPS) {
             this.readIOPS = readIOPS;
             return this;
         }
         public Long getReadIOPS() {
             return this.readIOPS;
+        }
+
+        public DescribeDiskMonitorDataResponseBodyMonitorData setReadLatency(Long readLatency) {
+            this.readLatency = readLatency;
+            return this;
+        }
+        public Long getReadLatency() {
+            return this.readLatency;
         }
 
         public DescribeDiskMonitorDataResponseBodyMonitorData setTimestamp(String timestamp) {
@@ -175,12 +203,28 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             return this.writeBPS;
         }
 
+        public DescribeDiskMonitorDataResponseBodyMonitorData setWriteBlockSize(Long writeBlockSize) {
+            this.writeBlockSize = writeBlockSize;
+            return this;
+        }
+        public Long getWriteBlockSize() {
+            return this.writeBlockSize;
+        }
+
         public DescribeDiskMonitorDataResponseBodyMonitorData setWriteIOPS(Long writeIOPS) {
             this.writeIOPS = writeIOPS;
             return this;
         }
         public Long getWriteIOPS() {
             return this.writeIOPS;
+        }
+
+        public DescribeDiskMonitorDataResponseBodyMonitorData setWriteLatency(Long writeLatency) {
+            this.writeLatency = writeLatency;
+            return this;
+        }
+        public Long getWriteLatency() {
+            return this.writeLatency;
         }
 
     }
