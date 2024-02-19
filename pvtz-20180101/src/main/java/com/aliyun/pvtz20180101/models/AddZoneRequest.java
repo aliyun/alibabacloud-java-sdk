@@ -7,6 +7,9 @@ public class AddZoneRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DnsGroup")
+    public String dnsGroup;
+
     @NameInMap("Lang")
     public String lang;
 
@@ -36,6 +39,14 @@ public class AddZoneRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public AddZoneRequest setDnsGroup(String dnsGroup) {
+        this.dnsGroup = dnsGroup;
+        return this;
+    }
+    public String getDnsGroup() {
+        return this.dnsGroup;
     }
 
     public AddZoneRequest setLang(String lang) {
